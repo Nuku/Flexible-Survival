@@ -263,15 +263,13 @@ carry out bargainhunting:
 				increase carried of food by 1;
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
-				say "[bold type]Your libido has increased by 25![roman type][line break]";
-				increase libido of player by 25;
+				LibidoBoost 25;
 			else if "Horny Bastard" is listed in feats of the player:
 				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a [bold type]small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or]goat[or]dolphin[or]bestial[or]bear[at random] cock[roman type]. The small piece of jewelry glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock making you grin. Somehow owning it leaves you feeling hornier and perhaps more bestial than ever, and you slip the little thing onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it...";
 				LineBreak;
 				say "[bold type]Your libido has increased to 100![roman type][line break]";
 				now libido of player is 100;
-				say "[bold type]Your sanity has decreased by 10![roman type][line break]";
-				decrease humanity of player by 10;
+				SanLoss 10;
 			else:
 				say "     Pushing through the strange piles of unusual items stuffed into the overflowing bin, you blink as you come across a [bold type]shiny silver charm[roman type] on a charm bracelet [bold type]shaped a bit like a canine cock[roman type]. Grinning you pull the small piece of jewelry out of the bin, feeling slightly amused that someone would actually go to such great effort to make and design such a thing. With a chuckle, you experimentally slip the bracelet onto your arm where it seems to fit perfectly. Somehow the feel of the silver cock-charm against your skin makes you feel slightly more aroused almost immediately. You can feel your body warming up in arousal as your libido goes into high gear, and somehow thoughts of all sorts of bestial sex seem to become even more attractive to your increasingly lust-fogged mind. Your hands stray down to rub your groin needfully as you begin to pant, finding it impossible to think of anything other than sex anymore, lovely, hot, bestial, sex... mmmmm yum...";
 				LineBreak;
@@ -623,11 +621,7 @@ the usedesc of jackal romance novels is "[jackal romance novels use]";
 
 to say jackal romance novels use:
 	say "     You page through one of the novels and start reading about the adventures of the hero of the book, a dashing jackalman who is a devil with his sword - and an amazing lover too, as it turns out. For books that are really quite explicit and hardcore, you have to say that you do enjoy the writing in its own right as well. Nermine certainly has a good taste in her special literature...";
-	LineBreak;
-	say "[bold type]Your libido increases by 10![roman type][line break]";
-	increase libido of player by 10;
-	if libido of player > 100:
-		now libido of player is 100;
+	LibidoBoost 10;
 
 instead of trading the jackal romance novels when the current action involves the Nermine:
 	say "     As you offer the books to her, Nermine instantly snatches them from your grasp and quickly hides them under her counter. Then she tells you, 'The humble storekeeper is grateful for the return of her private property. As she has offered her vistior before, she will pay twice the buying price.' With a slightle embarrassed expression, she quickly hands you two packets of food and also two water bottles, then acts as if the whole deal didn't happen.";

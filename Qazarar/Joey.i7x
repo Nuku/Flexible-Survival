@@ -215,7 +215,7 @@ instead of resolving a Stray Catboy:
 		now Stray Catboy is resolved;
 	now inasituation is false;
 	
-to say JoeyTraining: [Training Joey]
+to say JoeyTraining: [Training Joey] [{]
 	if hp of Joey is 3:
 		say "     The first thing you do is explain to Joey exactly how the training is going to work. You'll definitely teach him some things the normal way, but that isn't enough to really learn how to fight. For that, he needs practical experience. Because of that, the main thing you'll be doing is taking him to fight creatures out in the city, and telling him how to improve, to let him put his skills to use. Once the catboy understands the purpose of the combat, you move on and explain the other major thing. If the fight doesn't feel real, if there are no consequences, he won't be able to learn anywhere near as well. Because of that, you won't step in for any of his fights or what may follow, unless his life is in serious danger. Joey is a bit more nervous about that, but you eventually convince him, and are ready to take him for his first day of training.";
 	say "     When you tell him you're going to take him out for training, it doesn't take long at all for Joey to get ready, and to meet you at the door. He looks at you expectantly, leaving the training up to you. You know that the best way for him to get better at fighting is to fight something he can beat, though the thought of taking him to fight something he can't handle to watch what would happen is tempting.";
@@ -344,5 +344,6 @@ to say MinotaurTraining:
 		if hp of Joey < 10:
 			increase hp of Joey by 1;
 			now libido of Joey is 1;
+[}]
 
 Joey ends here.

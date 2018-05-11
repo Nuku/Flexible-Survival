@@ -1,7 +1,7 @@
 Version 1 of Human Infections by Wahn begins here.
 [Version 1.1 - Tweaked description stuff]
 
-Section 1 - Monster Insertion [human]
+Section 1 - Monster Insertion [Human]
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -9,7 +9,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "human";
+	now name entry is "Human";
 	now attack entry is "[one of]The human slaps you.[or]You get hit by a balled fist.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
@@ -64,7 +64,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "herm human";
+	now name entry is "Herm Human";
 	now attack entry is "[one of]The hermaphrodite human slaps you.[or]You get hit by a balled fist.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
@@ -112,7 +112,7 @@ When Play begins:
 	now altcombat entry is "default";
 
 when play ends:
-	if bodyname of player is "herm human":
+	if bodyname of player is "Herm Human":
 		if humanity of player < 10: [succumbed]
 			say "     Succumbing to the inner voice that tells you to return to your master, you make your way back to the dark tunnels under the Trevor Labs. Walking through the shadowy hallways filled with tentacled aberrations without fear, you soon find the thought eater again, joining his growing throng of obedient slaves.";
 			if cunts of player > 0 and "Sterile" is not listed in feats of player: [has a vag, not sterile]

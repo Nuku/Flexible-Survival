@@ -98,6 +98,20 @@ to SanBoost (N - number):
 	increase humanity of player by N;
 	if humanity of player > 100:
 		now humanity of player is 100;
+		
+to LibidoLoss (N - number):
+	LineBreak;
+	say "[bold type]Your libido has decreased by [N]![roman type][line break]";
+	decrease libido of player by N;
+	if libido of player < 0:
+		now libido of player is 0;
+
+to LibidoBoost (N - number):
+	LineBreak;
+	say "[bold type]Your libido has increased by [N]![roman type][line break]";
+	increase libido of player by N;
+	if libido of player > 100:
+		now libido of player is 100;
 
 to ScoreLoss (N - number):
 	LineBreak;
@@ -141,5 +155,130 @@ to FindHighestPlayerStat:
 	if Perception of player > CurrentStat:
 		now CurrentStat is Perception of player;
 		now HighestPlayerStat is "perception";
+
+Section 2 - Stripping
+
+understand "teststripcrotch" as StripCrotchAction.
+
+StripCrotchAction is an action applying to one topic.
+
+carry out StripCrotchAction:
+	say "[StripCrotch]";
+
+[
+Example Use:
+say "     Korvin [StripCrotch], then grins eagerly.";
+]
+
+to say StripCrotch:
+	let WaistItem be a grab object;
+	let CrotchItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is nothing and CrotchItem is nothing: [already naked]
+		say "strokes over your bare crotch";
+	else if WaistItem is nothing and CrotchItem is not nothing:
+		say "pulls down your [CrotchItem] and bares your crotch";
+	else if WaistItem is not nothing and CrotchItem is nothing:
+		say "pulls down your [WaistItem] and bares your crotch";
+	else if WaistItem is not nothing and CrotchItem is not nothing:
+		say "pulls down your [Waistitem] and [CrotchItem], baring your crotch";
+
+
+understand "testselfstripcrotch" as SelfStripCrotchAction.
+
+SelfStripCrotchAction is an action applying to one topic.
+
+carry out SelfStripCrotchAction:
+	say "[SelfStripCrotch]";
+
+[
+Example Use:
+say "     You [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
+]
+
+to say SelfStripCrotch:
+	let WaistItem be a grab object;
+	let CrotchItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is nothing and CrotchItem is nothing: [already naked]
+		say "stroke over your bare crotch";
+	else if WaistItem is nothing and CrotchItem is not nothing:
+		say "pull down your [CrotchItem] and bare your crotch";
+	else if WaistItem is not nothing and CrotchItem is nothing:
+		say "pull down your [WaistItem] and bare your crotch";
+	else if WaistItem is not nothing and CrotchItem is not nothing:
+		say "pull down your [Waistitem] and [CrotchItem], baring your crotch";
+
+understand "testselfdresscrotch" as SelfDressCrotchAction.
+
+SelfDressCrotchAction is an action applying to one topic.
+
+carry out SelfDressCrotchAction:
+	say "[SelfDressCrotch]";
+
+[
+Example Use:
+say "     You [SelfDressCrotch], then get ready to move out again.";
+]
+
+to say SelfDressCrotch:
+	let WaistItem be a grab object;
+	let CrotchItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is nothing and CrotchItem is nothing: [already naked]
+		say "casually stroke over your bare crotch";
+	else if WaistItem is nothing and CrotchItem is not nothing:
+		say "collect and put your [CrotchItem] back on";
+	else if WaistItem is not nothing and CrotchItem is nothing:
+		say "collect and put your [WaistItem] back on";
+	else if WaistItem is not nothing and CrotchItem is not nothing:
+		say "collect your [CrotchItem] and [Waistitem] to put them back on";
+
+
+
+understand "teststripchest" as StripChestAction.
+
+StripChestAction is an action applying to one topic.
+
+carry out StripChestAction:
+	say "[StripChest]";
+
+[
+Example Use:
+say "     Korvin [StripChest], then grins eagerly.";
+]
+
+to say StripChest:
+	let ChestItem be a grab object;
+	let BodyItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "chest":
+			now ChestItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "Body":
+			now BodyItem is z;
+	if ChestItem is nothing and BodyItem is nothing: [already naked]
+		say "strokes over your bare chest";
+	else if ChestItem is nothing and BodyItem is not nothing:
+		say "pulls off your [ChestItem] and bares your chest";
+	else if ChestItem is not nothing and BodyItem is nothing:
+		say "pulls off your [ChestItem] and bares your chest";
+	else if ChestItem is not nothing and BodyItem is not nothing:
+		say "pulls off your [ChestItem] and [BodyItem], baring your chest";
 
 Basic Functions ends here.

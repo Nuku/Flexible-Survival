@@ -66,7 +66,7 @@ Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
-Figure of Mammoth_icon is the file "Mammoth_ig.jpg".
+Figure of Mammoth_icon is the file "Mammoth.jpg".
 Figure of Mannequin_icon is the file "Mannequin.jpg".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
@@ -142,7 +142,7 @@ Figure of BrutusEvil_icon is the file "Brutus_evil.jpg".
 Figure of Brutus_evil_face_icon is the file "Brutus_evil_face.jpg".
 Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of Carl_clothed_icon is the file "Carl_clothed.jpg".
-Figure of Carl_naked_icon is the file "Carl_clothed.jpg".
+Figure of Carl_naked_icon is the file "Carl_naked.jpg".
 Figure of Carl_face_icon is the file "Carl_face.jpg".
 Figure of Carl_knot_icon is the file "Carl_knot.jpg".
 Figure of Carl_Eric_training_icon is the file "Carl_Eric_training.jpg".
@@ -186,12 +186,13 @@ Figure of Eric_clothed_icon is the file "Eric_clothed.jpg".
 Figure of Eric_face_icon is the file "Eric_face.jpg".
 Figure of Eric_naked_icon is the file "Eric_naked.jpg".
 Figure of Eric_sofa_icon is the file "Eric1.jpg".
+Figure of Erin_face_icon is the file "Erin_face.jpg".
 Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
 Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
-Figure of Frank_icon is the file "Frank_paw_ig.jpg".
+Figure of Frank_icon is the file "Frank.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
@@ -295,6 +296,7 @@ Figure of Urik_clothed_icon is the file "Urik_clothed.jpg".
 Figure of Urik_face_icon is the file "Urik_face.jpg".
 Figure of Urik_naked_icon is the file "Urik_naked.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
+Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
@@ -313,12 +315,12 @@ Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
 Figure of Malakhi_Barnabas_icon is the file "Malakhi_Barnabas.jpg".
 Figure of Malakhi_Kano_icon is the file "Malakhi_Kano.jpg".
-Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
-Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
-Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.jpg".	[Mammoth cock-vore scene 3.]
-Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.jpg".	[Mammoth cock-vore scene 4.]
-Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.jpg".	[Mammoth cock-vore scene 5.]
-Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
+Figure of Mammoth_CV1_icon is the file "Mammoth_CV1.jpg".	[Mammoth cock-vore scene 1.]
+Figure of Mammoth_CV2_icon is the file "Mammoth_CV2.jpg".	[Mammoth cock-vore scene 2.]
+Figure of Mammoth_CV3_icon is the file "Mammoth_CV3.jpg".	[Mammoth cock-vore scene 3.]
+Figure of Mammoth_CV4_icon is the file "Mammoth_CV4.jpg".	[Mammoth cock-vore scene 4.]
+Figure of Mammoth_CV5_icon is the file "Mammoth_CV5.jpg".	[Mammoth cock-vore scene 5.]
+Figure of Mammoth_CVF_icon is the file "Mammoth_CVF.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
 Figure of Parasol_Nap_icon is the file "Parasol_Nap.jpg". [female canine lying on the beach]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of Shy_Vixen_icon is the file "Shy_Vixen.jpg".
@@ -476,52 +478,52 @@ Table of game art
 title	icon(figure name)	artist	backgroundcolor	formatrule
 "Abcdefghij"	Figure of pixel	""	g-black	"normal" [blocker for first position]
 "Abcdefghij"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
-"Adam"	Figure of Adam_icon	"Kadel"	g-black	"normal"
+"Adam"	Figure of Adam_icon	"Kadel"	g-white	"normal"
 "Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_face"	Figure of Alexandra_face_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
-"Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"	g-black	"normal"
-"Amy"	Figure of Amy_icon	"Sususmiles"	g-black	"normal"
-"Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-black	"normal"
+"Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
+"Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
+"Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
 "Andre"	Figure of Andre_icon	"Wemd"	g-black	"normal"
-"Andre_face"	Figure of Andre_face_icon	"Wemd"	g-black	"normal"
+"Andre_face"	Figure of Andre_face_icon	"Wemd"	g-white	"normal"
 "Andrew"	Figure of Andrew_icon	"Rukis"	g-black	"normal"
-"Angie"	Figure of Angie_icon	"Anymouse1968"	g-black	"normal"
+"Angie"	Figure of Angie_icon	"Anymouse1968"	g-white	"normal"
 "Anthony_naked"	Figure of Anthony_naked_icon	"FsMaverick"	g-black	"normal"
-"Anthony_clothed"	Figure of Anthony_clothed_icon	"Laylo"	g-black	"normal"
+"Anthony_clothed"	Figure of Anthony_clothed_icon	"Laylo"	g-white	"normal"
 "Anthony_face"	Figure of Anthony_face_icon	"Laylo"	g-black	"normal"
-"Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-black	"normal"
-"Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-black	"normal"
-"Athanasia"	Figure of Athanasia_icon	"SandySchreiber"	g-black	"normal"
-"Bear"	Figure of Bear_icon	"Anymouse1968"	g-black	"normal"
-"Beaver"	Figure of Beaver2_icon	"HBruton"	g-black	"normal"
-"Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"	g-black	"normal"
-"Blanche1"	Figure of Blanche1_icon	"The_Negative"	g-black	"normal"
-"Blanche2"	Figure of Blanche2_icon	"Xenotropos"	g-black	"normal"
-"Blot"	Figure of Blot_icon	"Anymouse1968"	g-black	"normal"
+"Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-white	"normal"
+"Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-white	"normal"
+"Athanasia"	Figure of Athanasia_icon	"SandySchreiber"	g-white	"normal"
+"Bear"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
+"Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
+"Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"	g-white	"normal"
+"Blanche1"	Figure of Blanche1_icon	"The_Negative"	g-white	"normal"
+"Blanche2"	Figure of Blanche2_icon	"Xenotropos"	g-white	"normal"
+"Blot"	Figure of Blot_icon	"Anymouse1968"	g-white	"normal"
 "Blue Gel"	Figure of BlueGel_icon	"Rastear"	g-black	"normal"
-"Bobcat"	Figure of Bobcat1_icon	"Uniformvixen"	g-black	"normal"
-"Boghrim_clothed"	Figure of Boghrim_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Boghrim_naked"	Figure of Boghrim_naked_icon	"Kupo Klein"	g-black	"normal"
+"Bobcat"	Figure of Bobcat1_icon	"Uniformvixen"	g-white	"normal"
+"Boghrim_clothed"	Figure of Boghrim_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Boghrim_naked"	Figure of Boghrim_naked_icon	"Kupo Klein"	g-white	"normal"
 "Boghrim_face"	Figure of Boghrim_face_icon	"Kupo Klein"	g-black	"normal"
-"Bottlenose Toy_Human"	Figure of Bottlenose_icon	"Anymouse1968"	g-black	"normal"	[only shown for humanoid version]
-"Bovine_F"	Figure of Bovine_F_icon	""	g-black	"normal"	[only shown for female version]
+"Bottlenose Toy_Human"	Figure of Bottlenose_icon	"Anymouse1968"	g-white	"normal"	[only shown for humanoid version]
+"Bovine_F"	Figure of Bovine_F_icon	""	g-white	"normal"	[only shown for female version]
 "Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
 "Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
-"Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-black	"normal"
+"Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-white	"normal"
 "Brennan_clothed"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
 "Brennan_face"	Figure of Brennan_face_icon	"Sinealas"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
-"Brian"	Figure of Brian_icon	"dhstein"	g-black	"normal"
+"Brian"	Figure of Brian_icon	"dhstein"	g-white	"normal"
 "BrutusGood"	Figure of BrutusGood_icon	"Inkydemon"	g-black	"normal"
 "Brutus_good_face"	Figure of Brutus_good_face_icon	"Inkydemon"	g-black	"normal"
 "BrutusEvil"	Figure of BrutusEvil_icon	"Inkydemon"	g-black	"normal"
 "Brutus_evil_face"	Figure of Brutus_evil_face_icon	"Inkydemon"	g-black	"normal"
 "Bunker"	Figure of Bunker_icon	"Luneth"	g-white	"inline_only"
 "Bunny Jock"	Figure of BunnyJock_icon	"Darian821"	g-black	"normal"
-"Buster"	Figure of Buster_icon	"Padunk"	g-black	"normal"
+"Buster"	Figure of Buster_icon	"Padunk"	g-white	"normal"
 "Candy"	Figure of Candy_icon	"uniformvixen"	g-black	"normal"
 "Carl_clothed"	Figure of Carl_clothed_icon	"Hufnaar"	g-black	"normal"
 "Carl_naked"	Figure of Carl_naked_icon	"Hufnaar"	g-black	"normal"
@@ -532,40 +534,40 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Carl_Eric_sofa_fuck_2"	Figure of Carl_Eric_sofa_fuck_2_icon	"Lyttathebug"	g-black	"normal"
 "Carl_Eric_sofa_fuck_3"	Figure of Carl_Eric_sofa_fuck_3_icon	"Lyttathebug"	g-black	"normal"
 "Carl_Eric_sofa_fuck_4"	Figure of Carl_Eric_sofa_fuck_4_icon	"Lyttathebug"	g-black	"normal"
-"Catgirl"	Figure of Fiona_icon	"Valen"	g-black	"normal"
+"Catgirl"	Figure of Fiona_icon	"Valen"	g-white	"normal"
 "Cerberus"	Figure of Cerberus_icon	"Anonymous"	g-white	"normal"
-"Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"	g-black	"normal"
-"Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"	g-black	"normal"
+"Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"	g-white	"normal"
+"Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Chris_face_icon"	Figure of Chris_face_icon	"Kupo Klein"	g-black	"normal"
-"Christy_pregnant"	Figure of Christy_pregnant_icon	"Anymouse1968"	g-black	"normal"
-"Cougar"	Figure of Cougar_icon	"catnamedfish"	g-black	"normal"
-"Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-black	"normal"
-"Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-black	"normal"
-"Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-black	"normal"
-"David_naked"	Figure of David_naked_icon	"Keitaro87"	g-black	"normal"
-"David_clothed"	Figure of David_clothed_icon	"Keitaro87"	g-black	"normal"
-"David_hurt"	Figure of David_hurt_icon	"Keitaro87"	g-black	"normal"
-"David_barechest"	Figure of David_barechest_icon	"Keitaro87"	g-black	"normal"
-"David_face_hurt"	Figure of David_face_hurt_icon	"Keitaro87"	g-black	"normal"
-"David_face_naked"	Figure of David_face_naked_icon	"Keitaro87"	g-black	"normal"
-"David_face"	Figure of David_face_icon	"Keitaro87"	g-black	"normal"
+"Christy_pregnant"	Figure of Christy_pregnant_icon	"Anymouse1968"	g-white	"normal"
+"Cougar"	Figure of Cougar_icon	"catnamedfish"	g-white	"normal"
+"Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-white	"normal"
+"Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
+"Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-white	"normal"
+"David_naked"	Figure of David_naked_icon	"Keitaro87"	g-white	"normal"
+"David_clothed"	Figure of David_clothed_icon	"Keitaro87"	g-white	"normal"
+"David_hurt"	Figure of David_hurt_icon	"Keitaro87"	g-white	"normal"
+"David_barechest"	Figure of David_barechest_icon	"Keitaro87"	g-white	"normal"
+"David_face_hurt"	Figure of David_face_hurt_icon	"Keitaro87"	g-white	"normal"
+"David_face_naked"	Figure of David_face_naked_icon	"Keitaro87"	g-white	"normal"
+"David_face"	Figure of David_face_icon	"Keitaro87"	g-white	"normal"
 "Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
 "Dark Elf"	Figure of DarkElf_icon	"Nokturnalkittie"	g-black	"normal"
 "Diego"	Figure of Diego_icon	"valdericblackstag"	g-black	"normal"
 "Diego_face"	Figure of Diego_face_icon	"valdericblackstag"	g-black	"normal"
 "DiegoFem"	Figure of DiegoFem_icon	"Damdidoo"	g-black	"normal"
 "DiegoFem_face"	Figure of DiegoFem_face_icon	"Damdidoo"	g-black	"normal"
-"Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	g-black	"normal"	[only shown after defeating her]
-"Donkeywoman"	figure of Donkeywoman_icon	"Anymouse1968"	g-black	"normal"
-"Doran"	Figure of Doran_icon	"Anymouse1968"	g-black	"normal"
-"Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-black	"normal"
-"Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-black	"normal"
-"DrMatt"	Figure of DrMatt_icon	"The_Negative"	g-black	"normal"
-"DrMedea"	Figure of DrMedea_icon	"Candy"	g-black	"normal"
+"Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	g-white	"normal"	[only shown after defeating her]
+"Donkeywoman"	figure of Donkeywoman_icon	"Anymouse1968"	g-white	"normal"
+"Doran"	Figure of Doran_icon	"Anymouse1968"	g-white	"normal"
+"Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
+"Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-white	"normal"
+"DrMatt"	Figure of DrMatt_icon	"The_Negative"	g-white	"normal"
+"DrMedea"	Figure of DrMedea_icon	"Candy"	g-white	"normal"
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
-"DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-black	"normal"
-"DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-black	"normal"
+"DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-white	"normal"
+"DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-white	"normal"
 "Ebonflame Draken"	Figure of Ebonflame_Draken_icon	"Anonymous"	g-white	"normal"
 "Elijah_evil"	Figure of Elijah_evil_icon	"Banni"	g-black	"normal"
 "Elijah_evil_naked"	Figure of Elijah_evil_naked_icon	"Banni"	g-black	"normal"
@@ -575,155 +577,163 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Elijah_virgin"	Figure of Elijah_virgin_icon	"Banni"	g-black	"normal"
 "Elijah_good_naked"	Figure of Elijah_good_naked_icon	"Banni"	g-black	"normal"
 "Elven Hunter"	Figure of ElvenHunter_icon	"Aosuka"	g-black	"normal"
-"Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Eric_face"	Figure of Eric_face_icon	"Kupo Klein"	g-black	"normal"
-"Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"	g-black	"normal"
-"Eric_sofa"	Figure of Eric_sofa_icon	"Bludwing"	g-black	"normal"
+"Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Eric_face"	Figure of Eric_face_icon	"Sinealas"	g-black	"normal"
+"Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"	g-white	"normal"
+"Eric_sofa"	Figure of Eric_sofa_icon	"Bludwing"	g-white	"normal"
 "Eric & Urik Naked"	Figure of Eric_Urik_naked_icon	"Kupo Klein"	g-black	"normal"
-"Ewe"	Figure of Ewe_icon	"Anymouse1968"	g-black	"normal"
-"Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-black	"normal"
-"Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-black	"normal"	[shows one of these two for female Feline]
-"Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	g-black	"normal"	[shows one of these two for female Feline]
+"Erin_face"	Figure of Erin_face_icon	"Sinealas"	g-black	"normal"
+"Ewe"	Figure of Ewe_icon	"Anymouse1968"	g-white	"normal"
+"Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-white	"normal"
+"Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
+"Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
 "Felix_face"	Figure of Felix_face_icon	"Geir"	g-black	"normal"
 "Felix"	Figure of Felix_icon	"Geir"	g-black	"normal"
-"Francois"	Figure of Francois_icon	"Xenotropos"	g-black	"normal"
+"Francois"	Figure of Francois_icon	"Xenotropos"	g-white	"normal"
 "Frank"	Figure of Frank_icon	"Dolphpup"	g-black	"normal"
-"Feral Shaft Beast"	Figure of FeralShaftBeast_icon	"Demon-Man"	g-black	"normal"
-"Fiona"	Figure of Fiona_icon	"Valen"	g-black	"normal"
+"Feral Shaft Beast"	Figure of FeralShaftBeast_icon	"Demon-Man"	g-white	"normal"
+"Fiona"	Figure of Fiona_icon	"Valen"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
-"Gillian"	Figure of Gillian_icon	"Eevachu"	g-black	"normal"
-"Giraffe"	Figure of Giraffe_icon	"Sharei"	g-black	"normal"
-"Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-black	"normal"
-"Grant"	Figure of Grant_icon	"uniformvixen"	g-black	"normal"
-"Grant2"	Figure of Grant2_icon	"Familliar"	g-black	"normal"
-"Gunbunny"	Figure of Gunbunny_icon	"HBruton"	g-black	"normal"
-"Friendship Pony"	Figure of FrPony_icon	"Anymouse1968"	g-black	"normal"
+"Gillian"	Figure of Gillian_icon	"Eevachu"	g-white	"normal"
+"Giraffe"	Figure of Giraffe_icon	"Sharei"	g-white	"normal"
+"Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
+"Grant"	Figure of Grant_icon	"uniformvixen"	g-white	"normal"
+"Grant2"	Figure of Grant2_icon	"Familliar"	g-white	"normal"
+"Gunbunny"	Figure of Gunbunny_icon	"HBruton"	g-white	"normal"
+"Friendship Pony"	Figure of FrPony_icon	"Anymouse1968"	g-white	"normal"
 "Goo Girl"	Figure of GooGirl_icon	"Rastear"	g-black	"normal"
-"Hadiya"	Figure of Hadiya_0_icon	"lionsilverwolf"	g-black	"normal"
+"Hadiya"	Figure of Hadiya_0_icon	"lionsilverwolf"	g-white	"normal"
 "Hadiya_icon"	Figure of Hadiya_icon	""	g-black	"normal"
 "Harold"	Figure of Harold_icon	"Hufnaar"	g-black	"normal"
 "Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"	g-black	"normal"
 "Hayato"	Figure of Hayato_icon	"Darian821"	g-black	"normal"
-"Helot"	Figure of Helot_icon	"Obieblu"	g-black	"normal"
+"Helot"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
 "Hermaphrodite Gryphon"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
-"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-black	"normal"
+"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
-"Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-black	"normal"	[only shown for males]
+"Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"Sinealas"	g-black	"normal"
-"Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-black	"normal"
-"Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-black	"normal"
-"Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-black	"normal"
-"Incubus"	Figure of Incubus_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Incubus_naked"	Figure of Incubus_naked_icon	"Kupo Klein"	g-black	"normal"
-"James"	Figure of James_icon	"Anyare"	g-black	"normal"
-"Janice"	Figure of Janice_icon	"Anymouse1968"	g-black	"normal"
-"Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Jason_naked"	Figure of Jason_naked_icon	"Kupo Klein"	g-black	"normal"
+"Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
+"Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-white	"normal"
+"Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-white	"normal"
+"Incubus"	Figure of Incubus_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Incubus_naked"	Figure of Incubus_naked_icon	"Kupo Klein"	g-white	"normal"
+"James"	Figure of James_icon	"Anyare"	g-white	"normal"
+"Janice"	Figure of Janice_icon	"Anymouse1968"	g-white	"normal"
+"Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Jason_naked"	Figure of Jason_naked_icon	"Kupo Klein"	g-white	"normal"
 "Jay_elf_outfit"	Figure of Jay_elf_outfit_icon	"Lytta"	g-black	"normal"
 "Jay_leggins"	Figure of Jay_leggins_icon	"Lytta"	g-black	"normal"
 "Jay_naked"	Figure of Jay_naked_icon	"Lytta"	g-black	"normal"
 "Jay_suit"	Figure of Jay_suit_icon	"Lytta"	g-black	"normal"
 "Jay_suit_quest"	Figure of Jay_suit_quest_icon	"Lytta"	g-black	"normal"
 "Jay_undies"	Figure of Jay_undies_icon	"Lytta"	g-black	"normal"
-"Jill"	Figure of Jill_icon	"Sususmiles"	g-black	"normal"
-"Jimmy"	Figure of Jimmy_icon	"Redragon"	g-black	"normal"
-"Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"	g-black	"normal"
-"Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"	g-black	"normal"
+"Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
+"Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
+"Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"	g-white	"normal"
+"Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Korvin_blackcollar"	Figure of Korvin_blackcollar_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_blackcollar_face"	Figure of Korvin_blackcollar_face_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar"	Figure of Korvin_pinkcollar_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar_face"	Figure of Korvin_pinkcollar_face_icon	"Lyttathebug"	g-black	"normal"
-"Lamia"	Figure of Lamia_icon	"Anymouse1968"	g-black	"normal"
-"Latex Ermine_Defeat"	Figure of LatexErmine_icon	"Anymouse1968"	g-black	"normal"	[only used in defeat]
-"Latex Ermine_Blue"	Figure of LatexErmineBlue_icon	"Anymouse1968"	g-black	"normal"
-"Latex Ermine_Green"	Figure of LatexErmineGreen_icon	"Anymouse1968"	g-black	"normal"
-"Latex Ermine_Indigo"	Figure of LatexErmineIndigo_icon	"Anymouse1968"	g-black	"normal"
-"Latex Ermine_Pink"	Figure of LatexErminePink_icon	"Anymouse1968"	g-black	"normal"
-"Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"	g-black	"normal"
-"Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"	g-black	"normal"
-"LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"	g-black	"normal"
+"Lamia"	Figure of Lamia_icon	"Anymouse1968"	g-white	"normal"
+"Latex Ermine_Defeat"	Figure of LatexErmine_icon	"Anymouse1968"	g-white	"normal"	[only used in defeat]
+"Latex Ermine_Blue"	Figure of LatexErmineBlue_icon	"Anymouse1968"	g-white	"normal"
+"Latex Ermine_Green"	Figure of LatexErmineGreen_icon	"Anymouse1968"	g-white	"normal"
+"Latex Ermine_Indigo"	Figure of LatexErmineIndigo_icon	"Anymouse1968"	g-white	"normal"
+"Latex Ermine_Pink"	Figure of LatexErminePink_icon	"Anymouse1968"	g-white	"normal"
+"Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"	g-white	"normal"
+"Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"	g-white	"normal"
+"LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"	g-white	"normal"
 "Library1stfloor"	Figure of Library1stfloor_icon	"Luneth"	g-white	"inline_only"
 "Library2ndfloor"	Figure of Library2ndfloor_icon	"Luneth"	g-white	"inline_only"
 "Lilith_boobs_icon"	Figure of Lilith_boobs_icon	"Kupo Klein"	g-black	"normal"
-"Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"	g-black	"normal"
+"Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Lilith_face"	Figure of Lilith_face_icon	"Kupo Klein"	g-black	"normal"
-"Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-black	"normal"
-"Lindsey"	Figure of Lindsey_icon	"Anymouse1968"	g-black	"normal"
-"Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-black	"normal"
+"Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-white	"normal"
+"Lindsey"	Figure of Lindsey_icon	"Anymouse1968"	g-white	"normal"
+"Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-white	"normal"
 "Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
 "Malakhi & Kano"	Figure of Malakhi_Kano_icon	"Jahi"	g-black	"normal"
 "Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"inline_only"
-"Mammoth"	Figure of Mammoth_icon	"Boo3"	g-black	"normal"
+"Mammoth"	Figure of Mammoth_icon	"Boo3"	g-white	"normal"
+"Mammoth_CV1"	Figure of Mammoth_CV1_icon	"Boo3"	g-white	"normal"
+"Mammoth_CV2"	Figure of Mammoth_CV2_icon	"Boo3"	g-white	"normal"
+"Mammoth_CV3"	Figure of Mammoth_CV3_icon	"Boo3"	g-white	"normal"
+"Mammoth_CV4"	Figure of Mammoth_CV4_icon	"Boo3"	g-white	"normal"
+"Mammoth_CV5"	Figure of Mammoth_CV5_icon	"Boo3"	g-white	"normal"
+"Mammoth_CVF_icon"	Figure of Mammoth_CVF_icon	"Boo3"	g-white	"normal"
 "Mannequin"	Figure of Mannequin_icon	"Rastear"	g-black	"normal"
 "MarcOrwell"	Figure of MarcOrwell_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"	g-black	"normal"
-"MasterMind"	Figure of MasterMind_icon	""	g-black	"normal"
-"Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-black	"normal"
-"Mental Mouse"	Figure of MentalMice_icon	""	g-black	"normal"
-"Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-black	"normal"
-"Micaela"	Figure of Micaela_icon	"Kattzie"	g-black	"normal"
+"MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
+"Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
+"Mental Mouse"	Figure of MentalMice_icon	""	g-white	"normal"
+"Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-white	"normal"
+"Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
 "Mike"	Figure of Mike_icon	"Darian821"	g-black	"normal"
-"Monty_ass"	Figure of Monty_ass_icon	"Obieblu"	g-black	"normal"
-"Monty_combat"	Figure of Monty_combat_icon	"Obieblu"	g-black	"normal"
-"Monty_postcombat"	Figure of Monty_postcombat_icon	"Obieblu"	g-black	"normal"
-"Monty_face"	Figure of Monty_face_icon	"Obieblu"	g-black	"normal"
-"Monty_naked"	Figure of Monty_naked_icon	"Obieblu"	g-black	"normal"
+"Monty_ass"	Figure of Monty_ass_icon	"Obieblu"	g-white	"normal"
+"Monty_combat"	Figure of Monty_combat_icon	"Obieblu"	g-white	"normal"
+"Monty_postcombat"	Figure of Monty_postcombat_icon	"Obieblu"	g-white	"normal"
+"Monty_face"	Figure of Monty_face_icon	"Obieblu"	g-white	"normal"
+"Monty_naked"	Figure of Monty_naked_icon	"Obieblu"	g-white	"normal"
 "Moreau_face"	Figure of Moreau_face_icon	"Lytta"	g-black	"normal"
 "Moreau_hard"	Figure of Moreau_hard_icon	"Lytta"	g-black	"normal"
 "Moreau_soft"	Figure of Moreau_soft_icon	"Lytta"	g-black	"normal"
-"Mul_clothed"	Figure of Mul_clothed_icon	"Kupo Klein"	g-black	"normal"
+"Mul_clothed"	Figure of Mul_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Mul_face"	Figure of Mul_face_icon	"Kupo Klein"	g-black	"normal"
-"Nadia"	Figure of Nadia_icon	"Anymouse1968"	g-black	"normal"
+"Nadia"	Figure of Nadia_icon	"Anymouse1968"	g-white	"normal"
 "Naga"	Figure of Naga_icon	"Rastear"	g-black	"normal"
 "Nermine_clothed"	Figure of Nermine_clothed_icon	"Lytta"	g-black	"normal"
 "Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lytta"	g-black	"normal"
 "Nermine_naked"	Figure of Nermine_naked_icon	"Lytta"	g-black	"normal"
 "Nermine_naked_face"	Figure of Nermine_naked_face_icon	"Lytta"	g-black	"normal"
-"Newt"	Figure of Newt_icon	"Anyare"	g-black	"normal"
-"Ninja Cat_F"	Figure of NinjaCat_F_icon	"Bix707"	g-black	"normal"	[only shown for female succumb ending]
-"Ninja Cat"	Figure of NinjaCat_M_icon	""	g-black	"normal"
-"Orbul_clothed"	Figure of Orbul_clothed_icon	"Kupo Klein"	g-black	"normal"
+"Newt"	Figure of Newt_icon	"Anyare"	g-white	"normal"
+"Ninja Cat_F"	Figure of NinjaCat_F_icon	"Bix707"	g-white	"normal"	[only shown for female succumb ending]
+"Ninja Cat"	Figure of NinjaCat_M_icon	""	g-white	"normal"
+"Orbul_clothed"	Figure of Orbul_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Orc Breeder"	Figure of OrcBreeder_random_icon	"Gene Lightfoot"	g-black	"normal"
-"Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-black	"normal"
-"Orthas"	Figure of Orthas_icon	"The_Negative"	g-black	"normal"
-"Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-white	"normal"
-"Paula"	Figure of Paula_icon	"Kikeri-arts"	g-black	"normal"
-"Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-black	"normal"
+"Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-white	"normal"
+"Orthas"	Figure of Orthas_icon	"The_Negative"	g-white	"normal"
+"Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-black	"normal"
+"Paula"	Figure of Paula_icon	"Kikeri-arts"	g-white	"normal"
+"Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-white	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
-"Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-black	"normal"
-"Pirate Shark"	Figure of PirateShark_icon	"Zealot"	g-black	"normal"
-"Rachel"	Figure of Rachel_icon	"o-kemono"	g-black	"normal"
-"Ram"	Figure of Ram_icon	"Anymouse1968"	g-black	"normal"
+"Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
+"Pirate Shark"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
+"Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
+"Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
+"Ram"	Figure of Ram_icon	"Anymouse1968"	g-white	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
-"Rod"	Figure of Rod_icon	"The_Negative"	g-black	"normal"
+"Rod"	Figure of Rod_icon	"The_Negative"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_wink"	Figure of Ryousei_wink_icon	"ValdericBlackstag"	g-black	"normal"
-"Sally"	Figure of Sally_icon	"Furball"	g-black	"normal"
+"Sally"	Figure of Sally_icon	"Furball"	g-white	"normal"
 "Sand Man"	Figure of SandMan_icon	"Rastear"	g-black	"normal"
-"Sandy"	Figure of sandy_icon	""	g-black	"normal"
-"Sarah_clothed"	Figure of Sarah_clothed_icon	"Lyttathebug"	g-black	"normal"
-"Sarah_face"	Figure of Sarah_face_icon	"Lyttathebug"	g-black	"normal"
-"Sarah_face_naked"	Figure of Sarah_face_naked_icon	"Lyttathebug"	g-black	"normal"
-"Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"	g-black	"normal"
+"Sandy"	Figure of sandy_icon	""	g-white	"normal"
+"Sarah_clothed"	Figure of Sarah_clothed_icon	"Lyttathebug"	g-white	"normal"
+"Sarah_face"	Figure of Sarah_face_icon	"Lyttathebug"	g-white	"normal"
+"Sarah_face_naked"	Figure of Sarah_face_naked_icon	"Lyttathebug"	g-white	"normal"
+"Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"	g-white	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
-"SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-black	"normal"
-"Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-black	"normal"
-"Shemale Smooth Collie"	Figure of SSCollie_icon	"Anymouse1968"	g-black	"normal"
+"SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
+"Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
+"Shemale Smooth Collie"	Figure of SSCollie_icon	"Anymouse1968"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
-"Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-black	"normal"
-"Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-black	"normal"
-"Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-black	"normal"
-"Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-black	"normal"
+"Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-white	"normal"
+"Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-white	"normal"
+"Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-white	"normal"
+"Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-white	"normal"
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"	g-black	"normal"
 "Snow Bat"	Figure of SnowBat_icon	"Rosali"	g-black	"normal"
 "Snow Leopard"	Figure of SnowLeopard_icon	"Anymouse1968"	g-black	"normal"
@@ -732,40 +742,41 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sonny_shaved_jeans"	Figure of Sonny_shaved_jeans_icon	"The_Negative"	g-black	"normal"
 "Sonny_shaved_nude_icon"	Figure of Sonny_shaved_nude_icon	"The_Negative"	g-black	"normal"
 "Sonny_face"	Figure of Sonny_face_icon	"The_Negative"	g-black	"normal"
-"Spartan"	Figure of Spartan_icon	"Obieblu"	g-black	"normal"
-"Stella"	Figure of Stella_icon	"Furball"	g-black	"normal"
-"Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-black	"normal"
+"Spartan"	Figure of Spartan_icon	"Obieblu"	g-white	"normal"
+"Stella"	Figure of Stella_icon	"Furball"	g-white	"normal"
+"Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
 "Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"	g-black	"normal"
 "Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"	g-black	"normal"
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
-"Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-black	"normal"
-"Tiger Shark"	Figure of TSW_icon	"Zealot"	g-black	"normal"
+"Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
+"Tiger Shark"	Figure of TSW_icon	"Zealot"	g-white	"normal"
 "TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
-"TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-black	"normal"
-"TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-black	"normal"
+"TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
+"TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
 "Tigress Hooker"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
 "Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"	g-black	"normal"
-"Toven_clothed"	Figure of Toven_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Toven_naked"	Figure of Toven_naked_icon	"Kupo Klein"	g-black	"normal"
-"Triceratops"	Figure of Triceratops_icon	"HBruton"	g-black	"normal"
+"Toven_clothed"	Figure of Toven_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Toven_naked"	Figure of Toven_naked_icon	"Kupo Klein"	g-white	"normal"
+"Triceratops"	Figure of Triceratops_icon	"HBruton"	g-white	"normal"
 "Tristian"	Figure of Tristian_icon	"Enaya-TheWhiteWolfen"	g-black	"normal"
-"Urik_ass"	Figure of Urik_ass_icon	"Kupo Klein"	g-black	"normal"
-"Urik_clothed"	Figure of Urik_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Urik_face"	Figure of Urik_face_icon	"Kupo Klein"	g-black	"normal"
-"Urik_naked"	Figure of Urik_naked_icon	"Kupo Klein"	g-black	"normal"
-"Valerie"	Figure of Valerie_icon	"Sususmiles"	g-black	"normal"
-"Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-black	"normal"
-"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-black	"normal"
+"Urik_ass"	Figure of Urik_ass_icon	"Kupo Klein"	g-white	"normal"
+"Urik_clothed"	Figure of Urik_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Urik_face"	Figure of Urik_face_icon	"Sinealas"	g-black	"normal"
+"Urik_naked"	Figure of Urik_naked_icon	"Kupo Klein"	g-white	"normal"
+"Valerie"	Figure of Valerie_icon	"Sususmiles"	g-white	"normal"
+"Violet_face"	Figure of Violet_face_icon	"Sinealas"	g-black	"normal"
+"Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
+"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
-"Wildcat"	Figure of Wildcat_icon	"Strype"	g-black	"normal"
+"Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
 "Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
-"Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-black	"normal"
-"Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-black	"normal"
-"Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-black	"normal"	[only shown for female version]
+"Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-white	"normal"
+"Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
 "Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
 [emap - special]
@@ -930,8 +941,10 @@ carry out artistcredits:
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
 	say "     Doran by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elijah by Banni @ https://www.furaffinity.net/user/banniart/[line break]";
+	say "     Eric Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Eric (on sofa) by Bludwing @ http://bludwingart.tumblr.com[line break]";
 	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Erin Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     François by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
@@ -973,6 +986,7 @@ carry out artistcredits:
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
+	say "     Rane Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Rod by The_Negative @ furaffinity.net[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
@@ -992,8 +1006,10 @@ carry out artistcredits:
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
+	say "     Urik Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Urik by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
+	say "     Violet Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
@@ -1040,8 +1056,8 @@ understand "disable artists" as ArtistBanning.
 carry out ArtistBanning:
 	artistbanmenu;
 
-to artistbanmenu: [more compact version, unfinished.]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+to artistbanmenu: [more compact version]
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
@@ -1080,5 +1096,16 @@ to artistbanswitch (name - text):
 	else if name is listed in Blocklist of player:
 		remove name from Blocklist of player;
 		say "[name] Unblocked!";
+
+
+ArtworkTest is an action applying to nothing.
+understand "art test" as ArtworkTest.
+
+carry out ArtworkTest:
+	repeat with y running from 1 to number of filled rows in table of game art:
+		choose row y in table of game art;
+		say "[title entry]:";
+		project icon entry;
+		wait for any key;
 
 FS Graphics ends here.

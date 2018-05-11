@@ -101,7 +101,7 @@ to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting 
 This is the check heat rule:
 	if heat enabled is true and heatlevel is not 1:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if cunts of player > 0 and (cockname of player is not "human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
+			if cunts of player > 0 and (cockname of player is not "Human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -140,7 +140,7 @@ This is the check heat rule:
 				else:		[not in heat period]
 					if heatlevel is 3 and a random chance of 1 in 4 succeeds:
 						increase turns in heat by 1;	[20% duration of non-heated period lost]
-			else if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
+			else if cunts of player is 0 and cockname of player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
@@ -188,14 +188,14 @@ This is the check heat rule:
 [This accelerates a new heat or extends the duration of a current heat.  If the trigger is during combat, post-combat or otherwise during an event that might be thrown off by heat effects occurring, make sure heatdrive is set to 0 before running.]
 to drive heat:
 	if animal heat is true:
-		if cunts of player > 0 and (cockname of player is not "human") and player is impreg_able:
+		if cunts of player > 0 and (cockname of player is not "Human") and player is impreg_able:
 			if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 				choose a row with a infect name of (cockname of player) in Table of infection heat;
 				if fheat entry is false:	[no female heat for that form]
 					choose row 1 in table of infection heat;
 			else: [No specific Data, use Generic entry.]
 				choose a row 1 in Table of infection heat;
-		else if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:
+		else if cunts of player is 0 and cockname of player is not "Human" and player is mpreg_able:
 			if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 				choose a row with a infect name of (cockname of player) in Table of infection heat;
 				if mpregheat entry is false:	[no mpreg heat for that form]
@@ -222,7 +222,7 @@ to drive heat:
 This is the check heat rule:
 	if heat enabled is true:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if cunts of player > 0 and (cockname of player is not "human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
+			if cunts of player > 0 and (cockname of player is not "Human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -256,7 +256,7 @@ This is the check heat rule:
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
 					now libido of player is libido of player divided by 2;	[Halve the players libido.]
 					now inheat is False;
-			else if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
+			else if cunts of player is 0 and cockname of player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;

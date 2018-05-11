@@ -112,7 +112,7 @@ when play ends:
 			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
 			if cocks of player > 1:
 				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
-		if skinname of player matches the text "human", case insensitively:
+		if skinname of player matches the text "Human", case insensitively:
 			increase score by 0;
 		else:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";

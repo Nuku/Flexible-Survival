@@ -32,7 +32,7 @@ instead of sniffing Warehouse Door:
 Section 2 - Entering the Warehouse
 
 Definition: a person is facially human:
-	if the facename of the player is "human", yes;
+	if the facename of the player is "Human", yes;
 	if the facename of the player is "Herm Human", yes;
 	if the facename of the player is "Awesome tree", yes;
 	if the facename of the player is "Siren", yes;
@@ -48,7 +48,7 @@ Definition: a person is facially human:
 	no;
 
 Definition: a person is skintone human:
-	if the skinname of the player is "human", yes;
+	if the skinname of the player is "Human", yes;
 	if the skinname of the player is "Herm Human", yes;
 	if the skinname of the player is "Awesome tree", yes;
 	if the skinname of the player is "City Sprite", yes;
@@ -72,7 +72,7 @@ Definition: a person is skintone human:
 	no;
 
 Definition: a person is bodily human:
-	if the bodyname of the player is "human", yes;
+	if the bodyname of the player is "Human", yes;
 	if the bodyname of the player is "Herm Human", yes;
 	if the bodyname of the player is "Wood Elf", yes;
 	if the bodyname of the player is "Elven Hunter", yes;
@@ -183,7 +183,7 @@ After going to Storage Room from Steven's Office:
 To say Steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
-			if tailname is not "human":
+			if tailname is not "Human":
 				if breast size of player < 4:
 					if cock length of player < 12 or the cock width of player < 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
