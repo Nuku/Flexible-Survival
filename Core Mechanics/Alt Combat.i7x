@@ -384,7 +384,7 @@ This is the player attack rule:
 				increase dam by 1;
 			if "Black Belt" is listed in feats of player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
-			if "Natural Armaments" is listed in feats of player and bodyname of player is not "human":
+			if "Natural Armaments" is listed in feats of player and bodyname of player is not "Human":
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry matches the text bodyname of player, case insensitively:

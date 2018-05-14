@@ -25,6 +25,7 @@ Erin is a person.
 the description of Erin is "[ErinDesc]".
 
 to say ErinDesc:
+	project the figure of Erin_face_icon;
 	say "     Erin is one half of the pair of adventuring rats whom you saved from the pirate sharks. He looks fairly young, eighteen if you had to guess, and shares a lean and energetic build with his sister. His youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at his sister whenever their eyes meet. Like his false twin, his fur is mostly snow white, like his hair, with dark grey patches here and there. He wears a pair of army pants but no top, giving him a bad boy look. The backside of his pants have been cut open with scissors, to let his hairless tail wiggle freely behind him. Noticing that you look at him, Erin leans on a table and winks at you while he takes the pose";
 instead of sniffing Erin:
 	say "     Erin's fur retains the salty smell coming from the ocean. The rat looks at you quizzically. 'Why are you sniffing like this? Am I smelling?' he asks, a concerned look on his face.";
@@ -32,6 +33,7 @@ instead of sniffing Erin:
 Part B - Dialogue
 
 instead of conversing Erin:
+	project the figure of Erin_face_icon;
 	let randomnumber be a random number from 1 to 4;
 	if randomnumber is:
 		-- 1:
@@ -150,7 +152,7 @@ to say ErinFuckBottom:
 	say "     Erin helps you get on all fours, and spread your legs apart. He deftly slides under you, placing his erect cock at your level. Just as you were about to make a comment about his flexibility, Erin cuts you off by burying his muzzle into your buttcrack and giving your [if player is male or anallevel is 3]anal ring[else]cleft[end if] a long lash of the tongue. Shivering, you bury your [face of player] head into his crotch and take his the boy's average cock into your mouth. A heated 69 unfolds[if isTwinHere is 1] under the pleased gaze of Violet[end if]. Erin goes to town on your crotch, and you return the favor in kind. [if isTwinHere is 1 and player is not male]You can hear Violet give her brother some advice: 'Don't forget her clit.' 'Bite it a little, she'll love it.' 'Not so fast, bro. You'll make her cum already!' [end if]Eventually, the both of you agree that you should take it up a notch. You roll off on your back and spread your legs, and Erin gets on top of you. You can feel his cock, now wet with your saliva, grinding against your [if player is male or anallevel is 3]ass[else]pussy[end if]. [if isTwinHere is 1]'How's the view, sis?' he asks. You realize that Violet has a full view on your and Erin's crotches. 'A fucking plus,' she answers.[end if]";
 	WaitLineBreak;
 	say "     The pendulum movement of Erin's hips has him eventually point the tip of his cock against your [if player is male or anallevel is 3]ass[else][cunt size desc of player] pussy[end if]. Like a ram it pushes forward, parting your inner walls in one fluid movement. Erin groans in pleasure on top of you, and wastes no time pumping his pelvis into you. The room fills with the loud and rhythmic slaps of your two bodies slamming together; first distanced and wet, then rapid and dry as you wrap your legs around the rat's torso and squeeze him against your [breast size desc of player] bosom.[if isTwinHere is 1] Violet pumps her finger inside her pussy, trying to follow the more and more frantic pace of her sibling. You cannot see her from your position, but her loud moans are a testimony to her current state of arousal.[end if]";
-	if tailname of player is not "human":
+	if tailname of player is not "Human":
 		say "     Erin keeps slamming into you. His tail is entangling with yours during the intercourse, and you can feel it rub against your [tail of player] tail. You reach your respective climax nearly at the same time, and your muscles clench around his virile member, as he paints your [if player is male or anallevel is 3]anal cavity[else]womb[end if] white with his seed.[if isTwinHere is 1] A long shrill tells you that Violet has cummed hard as well.[end if]";
 	else:
 		say "     Erin keeps slamming into you. You reach your respective climax nearly at the same time, and your muscles clench around his virile member, as he paints your [if player is male or anallevel is 3]anal cavity[else]womb[end if] white with his seed.[if isTwinHere is 1] A long shrill tells you that Violet has cummed hard as well.[end if]";
@@ -207,13 +209,16 @@ Violet is a person.
 the description of Violet is "[VioletDesc]".
 
 to say VioletDesc:
+	project the figure of Violet_face_icon;
 	say "     Violet is one half of the pair of adventuring rats whom you saved from the pirate sharks. She looks fairly young, maybe eighteen if you had to guess, and shares a lean and energetic build with her brother. Her youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at her brother whenever their eyes meet. Like his false twin, his fur is mostly snow white, like her hair, with dark grey patches here and there. Her hair is made up in unruly dreadlocks, dyed in several neon colors, although the color looks worn out, hair dyes must be rare in these times. Violet wears a black bra and a pair of used denims. She seems also fond of leather accessories: she wears a choker, a spiked wristband, and adorned her tail with bangles made of old leather belts. Noticing that you look at her, Violet grins, then flashes her breasts at you: 'Izzat what you want to see? Ha ha... Perv['].' She winks at you and pulls up her bra.";
+	
 instead of sniffing Violet:
 	say "     Violet's fur smells of sea salt, despite visibly taking great care of her fur. 'I smell of salt, right?' she asks, guessing your thoughts. 'Goddammit. And I keep taking showers, though.";
 
 Part B - Dialogue
 
 instead of conversing Violet:
+	project the figure of Violet_face_icon;
 	let randomnumber be a random number from 1 to 5;
 	if randomnumber is:
 		-- 1:

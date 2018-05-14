@@ -29,11 +29,11 @@ ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0.
 ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True.
 ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can't help but notice the lack of undergarments through its sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest, exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles[else]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly[end if] as her wings flap.".
 ButterflyBaby is a person.
-The butterflybaby has a text called bodyname. Bodyname is usually "human".
-The butterflybaby has a text called facename. Facename is usually "human".
-The butterflybaby has a text called skinname. Skinname is usually "human".
-The butterflybaby has a text called cockname. cockname is usually "human".
-The butterflybaby has a text called tailname. Tailname is usually "human".
+The butterflybaby has a text called bodyname. Bodyname is usually "Human".
+The butterflybaby has a text called facename. Facename is usually "Human".
+The butterflybaby has a text called skinname. Skinname is usually "Human".
+The butterflybaby has a text called cockname. cockname is usually "Human".
+The butterflybaby has a text called tailname. Tailname is usually "Human".
 
 ButterflyBaby has a number called Gestation.
 

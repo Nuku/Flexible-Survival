@@ -555,17 +555,17 @@ to SetHermPronouns for (x - a person):
 	now PronounSet of x is "Herm";
 
 To SetNeutralPronouns for (x - a person):
-    now SubjectPro of x is "it";
-    now ObjectPro of x is "it";
-    now PosAdj of x is "its";
-    now PosPro of x is "its";
-    now ReflexPro of x is "itself";
-    now SubjectProCap of x is "It";
-    now ObjectProCap of x is "It";
-    now PosAdjCap of x is "Its";
-    now PosProCap of x is "Its";
-    now ReflexProCap of x is "Itself";
-    now PronounSet of x is "Neutral";
+	now SubjectPro of x is "it";
+	now ObjectPro of x is "it";
+	now PosAdj of x is "its";
+	now PosPro of x is "its";
+	now ReflexPro of x is "itself";
+	now SubjectProCap of x is "It";
+	now ObjectProCap of x is "It";
+	now PosAdjCap of x is "Its";
+	now PosProCap of x is "Its";
+	now ReflexProCap of x is "Itself";
+	now PronounSet of x is "Neutral";
 
 This is the SetPlayerPronouns rule:
 	if PronounChoice of player is:
@@ -668,13 +668,25 @@ to say mister:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
 		say "mister";
 	else:
-		say "missy";
+		say "miss";
 
 to say Mister:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
 		say "Mister";
 	else:
-		say "Missy";
+		say "Miss";
+
+to say Sir:
+	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+		say "Sir";
+	else:
+		say "Ma'am";
+
+to say sir:
+	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+		say "sir";
+	else:
+		say "ma'am";
 
 [Being verbs]
 

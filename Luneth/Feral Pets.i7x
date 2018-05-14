@@ -41,7 +41,7 @@ to say SummonSnips:
 to say DismissSnips:
 	move Snips to Computer Lab;
 	if player is not in Computer Lab: [regular dismiss]
-		say "     Looking at you for a long moment, it finally relents and burrows under the ground.";
+		say "     Looking at you for a long moment, he finally relents and burrows under the ground.";
 	else: [dismissing him in the Computer Lab]
 		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, cleary more than happy to be able to rest.";
 
