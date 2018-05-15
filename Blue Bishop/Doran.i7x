@@ -3900,7 +3900,8 @@ to say dorrptk: [Doran RP: The Knight Query]
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
 
 to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
-	if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
+	say "[bold tpye]This scene is not yet implemented! Sorry about that.[regular type]";
+	[if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
 		say "     You explain your desires for Doran to treat you like his pet and your desires for him to be [italic type]your[roman type] master for a while. He gives a contemplative hum, lost in thought for a moment, before nodding his large head. 'I do believe I can try that for my [DoranPlayerRegard]. However, I will make no assurances to your enjoyment, as I have little experience in such a role.'";
 		say "     'Now,' he says, 'there are some details we should discuss before we begin. Do you wish for me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
 		say "([link]y[as]y[end link]/[link]n[as]n[end link])>";
@@ -3926,7 +3927,7 @@ to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
 	else if DoranRole is -1: [Player is dom-locked, but Doran doesn't call them any subby names.]
 		say "     'Ah, though I would enjoy that, [DoranPlayerRegard],' the [gdragon] begins, 'I do believe I should be calling you something other than [DoranPlayerRegard] first, no?' Perhaps you should change what he calls you?";
 	else:
-		say "     'I'm not too sure I'm comfortable with that, [DoranPlayerRegard],' the [gdragon] admits sheepishly. Perhaps you need to get him in a more dominant role?";
+		say "     'I'm not too sure I'm comfortable with that, [DoranPlayerRegard],' the [gdragon] admits sheepishly. Perhaps you need to get him in a more dominant role?";]
 
 Section 4.3 - Doran Roleplay Sex Protocol
 
@@ -4145,8 +4146,8 @@ to say dorrptks:
 		say "     '...[run paragraph on][one of]Wake up[or]Rise and shine[or]Up, up[at random], [DoranPlayerRegard]! [one of]I hope they found our little adventure satisfactory[or]I hope I didn't wear them out too much[or]I'm certain they enjoyed themselves[at random]!' Taking a moment to look you over after the session had concluded, Doran eventually lets you off once [ghe]'s certain that you appear fine, allowing you to go about your business once more.";
 
 to say DoranRP_DragonsPet:
-	say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";
-	if 
+	[say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";
+	if ]
 
 
 Chapter 5 - Miscellaneous
