@@ -827,7 +827,7 @@ when play begins:
 
 Felinelist is a marker. [list of feline infections]
 when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber Puma","Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
 Caninelist is a marker. [list of canine/lupine infections]
 when play begins:
@@ -867,7 +867,7 @@ when play begins:
 
 Latexlist is a marker. [list of infections w/latex/rubber/plastic skin]
 when play begins:
-	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber tigress" } to infections of Latexlist;
+	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of Latexlist;
 
 Slimelist is a marker. [list of slime infections]
 when play begins:
@@ -904,7 +904,7 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of BarbedCocklist;
+	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
@@ -4979,6 +4979,7 @@ Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital For Fs by Stripes.
 Include Hyena Hideout by Stripes.
+Include Island by Kernog.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hide Away by Kaleem mcintyre.
 Include Mall Community Center by Wahn.

@@ -11,6 +11,11 @@ Part A - Character Variables
 [2 - Twins met again at the restaurant]
 [3 - Player admitted as liking voyeurism/exhibitionism]
 
+[Level of Erin saves the step for Strange Island dialogue
+0 - First time
+1 - Repeat
+]
+
 Part B - Non-Essential
 
 isTwinHere is a number that varies. [0 no, 1 yes]
@@ -483,10 +488,14 @@ instead of going to Restaurant while Rat Twins Invitation is not resolved and HP
 
 Part D - Restaurant Events
 
-Rat Twincest is a situation.
-The sarea of Rat Twincest is "Nowhere".
+[Add additional scenes here]
+instead of going to Restaurant while HP of Erin > 2 and a random chance of 1 in 3 succeeds :
+	if vorelevel >= 2 and ublevel >= 2 and Strange Island is not resolved:
+		say "[strangeIsland]";
+	else:
+		say "[ratTwincest]";
 
-instead of going to Restaurant while HP of Erin > 2 and Rat Twincest is not resolved and a random chance of 1 in 4 succeeds:
+to say ratTwincest:
 	move player to Restaurant;
 	say "     As you enter the restaurant, you head towards Erin and Violet's shelter, to say hi. The siblings do not seem to be at their usual spot at the moment. However, the door to the nearby storage room is ajar, and light peers from the opening. You approach from the door, only to hear familiar voices on the other side. 'Oh... Oh, Erin.'";
 	say "     [bold type]Do you peep on the rodent twins?[roman type][line break]";
@@ -502,8 +511,32 @@ instead of going to Restaurant while HP of Erin > 2 and Rat Twincest is not reso
 	else:
 		LineBreak;
 		say "     You walk away, and pass the time getting some rest and chatting with the regular patrons of the place. A dozen minutes or so later, the door to the storage room opens and Violet comes out. 'Hey, it's nice to see you again. Don't be a stranger, come here,' she says as she notices you. Erin is on her heels, and wrap his arms around her chest, but freezes as he sees you, and turn the embrace into an awkward hug.'";
-	now Rat Twincest is resolved;
 
+
+Strange Island is a situation.
+The sarea of Strange Island is "Nowhere".
+
+to say strangeIsland:
+	move player to Restaurant;
+	if level of Erin is 0:
+		say "    As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. ' Do you know about Vohr Island?'[line break]After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.[line break]'With all the mayhem going on, we totally forgot about the place as well,' Erin said. 'But then, now that we had time to settle a little, we remembered the rumors about this place.'[line break]'You remember them too, right?' Violet asks. 'That place is basically the local Zone 51. And with this infection apocalypse going on, me and Bro wonder if the place had something to do with it.'";
+		say "    'We won't ask much of you,' Erin said in reassurance. 'We would feel safer with you going forward and scouting the area, but for now, we would simply ask if you had found a boat during your exploring.'";
+	else:
+		say "     'What about the island?' the rat replies. 'Did you find us a boat?'";
+	if boatfound is 0:
+		say "     You shake your head negatively. 'Too bad,' Violet notes. 'Could you be on the lookout for one, if you explore the beach?' Erin asks.";
+		now boatfound is 1;
+	else if boatfound is 3:
+		say "     You mention your boat to the twins. 'Yay, you got us a boat! Awesome!' the sister says loudly, before hugging you tight against her furry body.[line break]'Okay. Now that step 1 is a-go, we can start collecting some supplies for the trip. A tent, some food... You know, the essentials.'[line break]'For now, could you just make a short trip there and see if there's a safe place we could stay? I don't mind if you want to explore further, but don't go into the military base without us, yet.'";
+		say "    'Remember to [bold type]save your position[roman type] on your phone. Just in case,' Erin warns.";
+		say "    A relatively short journey in boat later, you find a pier where you can land your small boat on. After securing your mean of transportation to one of the posts, you begin to look around.";
+		now Island Pier is known;
+		move player to Island Pier;
+	now level of Erin is 1;
+	now Strange Island is resolved;
+
+
+		
 
 [to say VioletVoyeurFun:
 	say "     As you enter the restaurant, every patron looks at the rat twins' corner, where there is some activity going on, mostly hidden by the bar and other patrons looking. You can hear Violet moan loudly. 'You're doing great, sis,' you can hear Erin say. You eavesdrop a patron next to you: '[one of]Lucky rats[or]Lucky otters[or]A drink and a live show, what's more to ask[or]They really have no shame, doing it in public[at random].'";
