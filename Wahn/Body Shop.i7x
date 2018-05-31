@@ -234,7 +234,8 @@ to say MoreauFaceSale:
 				say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 				now facename of player is name entry;
 				now face of player is face entry;
-			remove "Body Shop Guarantee - Face" from feats of player;
+			if "Body Shop Guarantee - Face" is listed in feats of player:
+				remove "Body Shop Guarantee - Face" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -256,7 +257,8 @@ to say MoreauBodySale:
 				now bodyname of player is name entry;
 				now body of player is body entry;
 				attributeinfect;			[sets the new attributes]
-			remove "Body Shop Guarantee - Body" from feats of player;
+			if "Body Shop Guarantee - Body" is listed in feats of player:
+				remove "Body Shop Guarantee - Body" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -277,7 +279,8 @@ to say MoreauSkinSale:
 				say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 				now skinname of player is name entry;
 				now skin of player is skin entry;
-			remove "Body Shop Guarantee - Skin" from feats of player;
+			if "Body Shop Guarantee - Skin" is listed in feats of player:
+				remove "Body Shop Guarantee - Skin" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -298,7 +301,8 @@ to say MoreauAssSale:
 				say "     Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 				now tailname of player is name entry;
 				now tail of player is tail entry;
-			remove "Body Shop Guarantee - Tail" from feats of player;
+			if "Body Shop Guarantee - Tail" is listed in feats of player:
+				remove "Body Shop Guarantee - Tail" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -323,7 +327,8 @@ to say MoreauDickSale:
 			now cunts of player is 0;
 			now cockname of player is name entry;
 			now cock of player is cock entry;
-			remove "Body Shop Guarantee - Crotch" from feats of player;
+			if "Body Shop Guarantee - Crotch" is listed in feats of player:
+				remove "Body Shop Guarantee - Crotch" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 

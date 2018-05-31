@@ -3,7 +3,7 @@ Version 3 of Daisy by Sarokcat n Verath begins here.
 
 "Adds an NPC to Flexible Survival with a variety of responses and goals..."
 
-section 1-
+Section 1
 
 Daisytalk is a number that varies.
 daisyimpreg is a number that varies. daisyimpreg is usually 255.

@@ -88,9 +88,9 @@ to say SonnyTalkMenu:
 	[]
 	if HP of Sonny is 2: [Sonny is in the half renovated room of the library]
 		choose a blank row in table of fucking options;
-		now title entry is "Take him to the mall";
+		now title entry is "Send him to the mall";
 		now sortorder entry is 4;
-		now description entry is "Take Sonny back to the mall";
+		now description entry is "Tell Sonny to go back to the mall";
 	[]
 	if SonnyRelationship is 6: [has learned that he misses the taste of home]
 		choose a blank row in table of fucking options;

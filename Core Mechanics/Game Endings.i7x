@@ -93,11 +93,17 @@ when play ends:
 		now tailname of player is "starvation";
 		now cockname of player is "starvation";
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[else if hunger of player >= 100]starvation[else]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	else if bodyname of player is "Tigertaur Sex Toy":
+		say "     Even though you try a few times, you never manage to escape the clutches of your tigertuar masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
+		stop the action;		
 	else if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
 		stop the action;
 	else if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
+		stop the action;
+	else if bodyname of player is "Lucifer's Mare":
+		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
 		stop the action;
 	else if bodyname of player is "dead":
 		stop the action;

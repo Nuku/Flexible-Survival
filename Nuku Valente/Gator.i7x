@@ -1,5 +1,6 @@
 Gator by Nuku Valente begins here.
-[Version 2 - Grammar/code cleanup. Added victory facesitting scenes and vore scenes]
+[Version 2 - Grammar/code cleanup. Added victory facesitting scenes and vore scenes - Kurainyx]
+[Version 2.1 - Add being able to trigger vore scene from her den - Kurainyx]
 
 "Adds a gator to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -97,7 +98,7 @@ When Play begins:
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]She manages to get your head under the surface of the water, holding you down a moment.[or]Her excited member grinds against your sensitive regions needfully as her powerful claws grapple at you.[or]Her terrible teeth snap at you, sending pain through your form.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[gator loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]The gator emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway, [one of]'I was looking for someone to play with,[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over. Her erect cock dangles between her scaly things, and her breasts heave with her breath as she readies for battle.";
+	now desc entry is "[mongendernum 5]The gator emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway. [one of]'I was looking for someone to play with,[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over. Her erect cock dangles between her scaly things, and her breasts heave with her breath as she readies for battle.";
 	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your crocodilian maw";
 	now body entry is "full-bodied, with wide hips and a narrow waist. Your form feels full of strength and tough to boot. Peeking behind you reveals that you have two sets of bony ridges running down towards your ass";
 	now skin entry is "[one of]green-scaled[or]softly-scaled[or]thick-scaled[at random]";
@@ -144,9 +145,9 @@ when play ends:
 	if bodyname of player is "Sewer Gator":
 		if voreloss is true:
 			if gator den is known:
-				say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, ‘Don't worry, I'm sure that you'll make my lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
+				say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, ‘Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
 			else:
-				say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, ‘Don't worry, I'm sure that you'll make my lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
+				say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, ‘Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
 		else if humanity of player < 10:
 			if gatorconsent is 1:
 				say "     You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
@@ -174,17 +175,57 @@ to gatorfy:
 
 to say gator den scene:
 	say "     As you enter the den, you give a quick look around. It's dry and clean, with a large bed propped in a corner. It looks like someone grabbed a bed and dragged it down here, but it is also clean and soft-looking. Laying across it is the gator. She's smiling at you, laying on her belly, breasts gently compressed beneath her. She gazes at you with her head on her hands. Her tail sways slowly behind her wide, round hips. [one of]'I am so glad that you took some time to visit, lover. We have so much to talk about, to do...[or]'I feel as horny as anything. You are just in time to keep me company.[or]'You have no idea how happy you just made me, visiting me. It gets so lonely down here.[at random]'";
-	say "     [bold type]Do you want to stay with the gator?[roman type][line break]";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Spend some time with the reptile.";
-	say "     ([link]N[as]n[end link]) - Leave the den.";
-	if the player consents:
-		now gatorconsent is 1;
-	else:
-		say "     You decide that you don't really want to spend time with her, and head back to the library.";
-		move the player to Grey Abbey Library;
-		follow the turnpass rule;
-		stop the action;
+	say "     Do you want to stay with the gator?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Spend time with the gator";
+	now sortorder entry is 1;
+	now description entry is "Have sex or just talk with the gator, depending on her mood";
+	[]
+	if vorelevel > 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Feed the gator";
+		now sortorder entry is 2;
+		now description entry is "Offer yourself as a meal for the predator";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if nam is "Spend time with the gator":
+					say "[GatorDenSex]";
+				if nam is "Feed the gator":
+					say "[GatorDenVore]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You decide that you don't really want to spend time with her, and head back to the Library.";
+				move the player to Grey Abbey Library;
+				follow the turnpass rule;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say GatorDenSex:
+	now gatorconsent is 1;
 	if bodyname of player is "Sewer Gator":
 		say "     'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip onto the bed to join her, she wraps her arms around you, pressing her soft, warm scales to your [skin of player] front, grinding gently as she presses her snout to you and gives a slow kiss. She's quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
 	else:
@@ -249,6 +290,13 @@ to say gator den scene:
 		end the story saying "You decide against leaving after all.";
 	else:
 		say "     You head home afterwards.";
+
+to say GatorDenVore:
+	say "     'What?' is all the gator asks when you tell her that you're willing to offer yourself to help with her hunger. The reptile's brow arches upward in equal parts amusement and curiosity. 'Seriously? You actually want me to eat you?' She shrugs and strides up to you, her thick hips swaying seductively. 'Whatever floats your boat, I guess, but fair warning; [one of]don't expect me to spit you out without a fight[or]don't expect me to spit you out. I'm famished[or]I won't mind if you make me spit you out, but if you're too weak to resist my stomach, don't be surprised if I let you become gator food[at random]. I'm only interested in hanging out with the strong,' she says in a low rumble, [one of]licking her lips[or]smacking her lips[at random] and eyeing you ravenously.";
+	say "     Before you could have any second thoughts, the ravenous reptile places her hands on your shoulders and shoves your head into her maw. Even though you put up a struggle because of her warnings, a part of you is excited, even wanting, to explore the gator's stomach. As the scaly herm roughly stuffs the rest of you into her mouth, her sharp teeth nicks and scratches you more than a few times, but thankfully, you don't receive any deep or serious wounds. As expected, the gator is as strong on the inside as she is on the outside, her throat walls squeezing you tightly, almost crushingly so, while you are pulled deeper into the reptile. She gives your legs a playful lick as they pass through her mouth before she snaps her jaws shut, enjoying the feel of your squirming form going through her. Her powerful muscles quickly move you through her body until you land with a splash in the belly of the beast.";
+	say "     The gator lets out a satisfied sigh as you settle down inside of her stomach. 'Nothing beats the feeling of having live prey wriggling inside of you,' she says, patting her stomach and the new occupant inside of it. 'See you soon, and if I don't, well, thanks for the free meal.'";
+	WaitLineBreak;
+	GatorBind;
 
 Gator Den is a room. "[gator den scene]". It is unknown. It is fasttravel. It is private.
 

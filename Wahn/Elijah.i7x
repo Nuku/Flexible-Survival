@@ -139,6 +139,7 @@ Instead of resolving a Angel vs Demons:
 
 Burned-Out Chapel is a room. It is fasttravel.
 The description of Burned-Out Chapel is "[chapelplacedesc]".
+earea of Burned-Out Chapel is "Outside".
 
 instead of sniffing Burned-Out Chapel:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";

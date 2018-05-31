@@ -628,19 +628,7 @@ Instead of resolving a DbLD:
 	increase score by 5;
 	now DbLD is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	2	shoulder pad
 
-shoulder pad is equipment.
-It is not temporary.
-The AC of shoulder pad is 13.
-The effectiveness of shoulder pad is 13.
-The placement of shoulder pad is "body".
-The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
-The slot of shoulder pad is "body".
-
-the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 
 
 Section 14 - Hospital Scavenging

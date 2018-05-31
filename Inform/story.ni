@@ -322,6 +322,30 @@ Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
 
+A person can be MProN. A person is usually not MProN.
+
+Definition: A person (called x) is MProN:
+	if PronounSet of x is "Male", yes;
+	no;
+
+A person can be FProN. A person is usually not FProN.
+
+Definition: A person (called x) is FProN:
+	if PronounSet of x is "Female", yes;
+	no;
+
+A person can be HProN. A person is usually not HProN.
+
+Definition: A person (called x) is HProN:
+	if PronounSet of x is "Herm", yes;
+	no;
+
+A person can be NProN. A person is usually not NProN.
+
+Definition: A person (called x) is NProN:
+	if PronounSet of x is "Neuter", yes;
+	no;
+
 A person can be internal. A person is usually not internal.
 
 internalbypass is a truth state that varies. internalbypass is usually false.
@@ -770,6 +794,7 @@ A flag has a list of text called infections.
 A flag has a list of situations called badspots.
 A flag can be banned. A flag is usually not banned.
 A flag can be warded. A flag is usually not warded.
+Cockvore is a flag.
 Furry is a flag.
 Guy is a flag.
 Girl is a flag.
@@ -781,6 +806,7 @@ Transgender is a flag.
 Incest is a flag.
 Noncon is a flag.
 Mindcontrol is a flag.
+Vore is a flag.
 
 when play begins:
 	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of humorous;
@@ -1446,15 +1472,15 @@ carry out Inventorying:
 					let notval be 0;
 					[! for every if block here there has to be a corresponding if before the loop !]
 					if Ronda is visible and HP of Ronda is 0 and itemname is "demon seed":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
 					if Xerxes is visible and lust of Xerxes is 2 and itemname is "awesome fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
 					if Helen is visible and lust of Helen is 2 and itemname is "awesomer fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
 					if Kristen is visible and HP of Kristen is 10 and itemname is "Janice's blouse":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
 					if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
 				else if traderavailable is 1:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
 				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player > 0:
@@ -1482,6 +1508,7 @@ carry out Inventorying:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 	if the number of entries in tapes of player > 0:
 		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
+	say "(You can adjust the number of inventory columns with the command [link]set columns[end link].)";
 	now invlinklistfilled is one;
 
 [used to speed up link command lookup in between clears on the hyperlink list, because we know something about the list:
@@ -2070,7 +2097,7 @@ Conversing is an action applying to one thing.
 
 Check Conversing:
 	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
-	if the number of entries in conversation of noun is 0, say "They have nothing to say" instead.
+	if the number of entries in conversation of noun is 0, say "They have nothing to say." instead.
 
 carry out conversing:
 	sort conversation of the noun in random order;
@@ -3073,19 +3100,20 @@ to attributeinfect:		[sets the player values from the new attributes]
 				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
 	if there is a scale in row monster of the table of random critters:
-		now scalevalue of player is scale entry;
-		repeat with z running through equipped equipment:
-			if size of z > 0: [size restricted equipment]
-				if (scalevalue of player - size of z > 1):
-					say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
-					now z is not equipped;
-				else if (scalevalue of player - size of z is 1):
-					say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
-				else if (scalevalue of player - size of z < -1):
-					say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
-					now z is not equipped;
-				else if (scalevalue of player - size of z is -1):
-					say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
+		if scalevalue of player is not scale entry:
+			now scalevalue of player is scale entry;
+			repeat with z running through equipped equipment:
+				if size of z > 0: [size restricted equipment]
+					if (scalevalue of player - size of z > 1):
+						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
+						now z is not equipped;
+					else if (scalevalue of player - size of z is 1):
+						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+					else if (scalevalue of player - size of z < -1):
+						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
+						now z is not equipped;
+					else if (scalevalue of player - size of z is -1):
+						say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of player is 3;
 	if there is a body descriptor in row monster of the table of random critters:
@@ -3305,6 +3333,8 @@ To level up:
 Before combat is a number that varies.
 
 To fight:
+	if debugactive is 1:
+		say "     DEBUG: Random Monster Choosing Started[line break]";
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
@@ -3347,11 +3377,11 @@ To fight:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of the player:
-				if bodyname of player is name entry, add x to q;
-				if facename of player is name entry, add x to q;
-				if skinname of player is name entry, add x to q;
-				if tailname of player is name entry, add x to q;
-				if cockname of player is name entry, add x to q;	]
+				if bodyname of player is name entry, add x to Q;
+				if facename of player is name entry, add x to Q;
+				if skinname of player is name entry, add x to Q;
+				if tailname of player is name entry, add x to Q;
+				if cockname of player is name entry, add x to Q;	]
 		if area entry matches the text battleground:
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
@@ -3364,14 +3394,16 @@ To fight:
 			if skipit is 1, next;
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of the player:
-				if bodyname of player is name entry, add x to q;
-				if facename of player is name entry, add x to q;
-				if skinname of player is name entry, add x to q;
-				if tailname of player is name entry, add x to q;
-				if cockname of player is name entry, add x to q;
-	if the number of entries in q is not 0:
+				if bodyname of player is name entry, add x to Q;
+				if facename of player is name entry, add x to Q;
+				if skinname of player is name entry, add x to Q;
+				if tailname of player is name entry, add x to Q;
+				if cockname of player is name entry, add x to Q;
+	if the number of entries in Q is 0 and debugactive is 1:
+		say "     DEBUG: No Possible Monsters Found![line break]";
+	if the number of entries in Q is not 0:
 		sort Q in random order;
-		repeat with Z running through q:
+		repeat with Z running through Q:
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
@@ -3424,6 +3456,8 @@ To fight:
 			now needed is ( level of companion of player ) times 6;
 		if XP of companion of player >= needed and level of companion of player < level of player and humanity of player > 0 and player is not lonely:
 			pet level up;
+	if debugactive is 1:
+		say "     DEBUG: Random Monster Choosing Ended[line break]";
 	rule succeeds;
 
 To challenge:
@@ -4218,6 +4252,8 @@ This is the self examine rule:
 		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
 	if "Boghrim's Mark" is listed in feats of player:
 		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
+	if "Top Dog" is listed in feats of player:
+		say "Your back still bears the scars left by Alexandra's claws during a bout of intense mating, a reminder of your dominance over her and your status as 'Top Dog'. ";
 	if tail of player is empty:
 		say "";
 	else:
@@ -4938,6 +4974,7 @@ Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp For FS by Stripes.
 Include Farm by Wahn.
+Include Gloryhole by SgtPepper234.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital For Fs by Stripes.
@@ -4988,7 +5025,7 @@ Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
 Include Control Pills by Hellerhound.
-[Include Disorganization by Kaleem mcintyre.] [excluded till review/flagging]
+[Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
@@ -5136,7 +5173,7 @@ Include Dark Elf for FS by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Dire Wolf by Qazarar.
-Include Doberman for FS by Stripes.
+Include Doberman Cop by Stripes.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
 Include Dracovixentaur for FS by Stripes.
@@ -5443,6 +5480,7 @@ Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
+Include Kurt by Rikaeus.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
@@ -5664,21 +5702,29 @@ To startgenderlockshift:
 			now cock length of player is 6;
 			now the cock width of the player is 4;
 			now breast size of player is 0;
+			now cunts of player is 0;
+			now cunt length of player is 0;
 		-- 4:		[female]
 			now cunts of player is 1;
 			now cunt length of player is 6;
 			now cunt width of player is 4;
 			now breast size of player is 2;
+			now cocks of player is 0;
+			now cock length of player is 0;
 		-- 5:		[shemale]
 			now cocks of player is 1;
 			now cock length of player is 6;
 			now the cock width of the player is 4;
 			now breast size of player is 2;
+			now cunts of player is 0;
+			now cunt length of player is 0;
 		-- 6: [cuntboy]
 			now cunts of player is 1;
 			now cunt length of player is 6;
 			now cunt width of player is 4;
 			now breast size of player is 0;
+			now cocks of player is 0;
+			now cock length of player is 0;			
 		-- 7: [male herm]
 			now cocks of player is 1;
 			now cock length of player is 6;
@@ -6025,8 +6071,10 @@ to playernaming:
 	now name of player is playerinput;
 
 to say menuwardlist:
-	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:
+	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or noncon is warded:
 		say "[bold type]Warded: [bracket] ";
+		if cockvore is warded:
+			say "Cockvore ";
 		if feral is warded:
 			say "Feral ";
 		if furry is warded:
@@ -6054,8 +6102,10 @@ to say menuwardlist:
 		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned:
+	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or noncon is banned:
 		say "[bold type]Banned: [bracket] ";
+		if cockvore is banned:
+			say "Cockvore ";
 		if feral is banned:
 			say "Feral ";
 		if furry is banned:
@@ -6565,7 +6615,9 @@ to say promptsay:
 	say "Exits: ";
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
-	if location of player is fasttravel:
+	if location of player is fasttravel and earea of location of player is "void":
+		say "[bracket][link]nav[end link][close bracket]";
+	else if location of player is fasttravel:
 		say "[bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
 	else if earea of location of player is not "void":
 		say "[bracket][link]scavenge[end link], [link]explore[end link][close bracket]";

@@ -38,6 +38,7 @@ the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with t
 
 Broken Fence is a door. "Though the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
 Plant Lobby is a room. "Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.".
+earea of Plant Lobby is "Outside".
 Plant Lobby is west of Broken Fence.
 Broken Fence is west of Wandering Around.
 Broken Fence is dangerous.

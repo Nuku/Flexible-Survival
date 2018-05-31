@@ -14,7 +14,7 @@ Version 4 of Nermine by Wahn begins here.
 [  1: the fennec walked off with the ritual supplies                 ]
 [  2: the bet was declared                                           ]
 
-[ libido of Danny (Mall Rat involvement)                             ]
+[ libido of Danny (Mall Rat involvement with Nermine)                ]
 [   0: not had any public scene with them yet                        ]
 [   1: fucked Nermine in front of Danny and watching rats            ]
 [   2: offer for bukkake rat involvement accepted                    ]
@@ -28,9 +28,9 @@ Version 4 of Nermine by Wahn begins here.
 [  12: Cole wants control to be a girl freely                        ]
 [  13: rejected Cole's request for the doll, continue status quo     ]
 [  14: doll destroyed, Cole stuck as a guy                           ]
-[  15: player let Cole have the doll, option A                       ]
-[  16: player let Cole have the doll, option B                       ]
-[  17: player let Cole have the doll, option C                       ]
+[  15: doll destroyed, Cole stuck as a girl                          ]
+[  16: player let Cole have the doll, he must work at the store      ]
+[  17: player let Cole have the doll, ...                            ]
 [  99: refused the revenge offer                                     ]
 [ 100: refused the harness offer                                     ]
 
@@ -178,12 +178,18 @@ instead of conversing the Nermine:
 		now sortorder entry is 9;
 		now description entry is "Give your jackal bitch the go-ahead for her spell";
 	[]
-	if (libido of Danny > 5 and libido of Danny < 90):
+	if (libido of Danny > 5 and libido of Danny < 14):
 		choose a blank row in table of fucking options;
 		now title entry is "Let her turn Cole into a girl again";
 		now sortorder entry is 10;
 		now description entry is "Time for Coura to make another appearance";
 	[]
+	if (libido of Danny > 15):
+		choose a blank row in table of fucking options;
+		now title entry is "Let her call Coura from the back room";
+		now sortorder entry is 11;
+		now description entry is "Time for Coura to make another appearance";
+	[]	
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -216,7 +222,7 @@ instead of conversing the Nermine:
 					say "[NermineBrennanTalk]";
 				if (nam is "Starting her ritual to transform the mall rat"):
 					say "[NermineRatRitual]";
-				if (nam is "Let her turn Cole into a girl again"):
+				if (nam is "Let her turn Cole into a girl again" or nam is "Let her call Coura from the back room"):
 					say "[NermineCouraSpell]";
 				wait for any key;
 		else if calcnumber is 100:
