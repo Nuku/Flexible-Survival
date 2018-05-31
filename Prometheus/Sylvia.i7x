@@ -419,7 +419,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
 
-instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 2):
+instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 1 or hp of Sylvia is 2):
 	move player to Tenvale College Female Dorms;
 	Room059Event;
 
@@ -440,6 +440,7 @@ to Room059Event: [First time to Sylvia's room]
 		say "     You step up next to her and encircle her within your arms. Smiling at how forward you are, she returns the hug, her soft chest pressed against your body. You can feel her heart beat, its percussion sounding at similar interval to your own. Suddenly, you feel the collie's hands squeeze your backside, causing you to jump away from her slightly. You give her an accusatory stare as she doubles over laughing. 'I thought that was what you wanted,' Sylvia says between sniggers. 'To feel my hands upon your body as we embraced. But it seems perhaps you aren't ready judging from that reaction to me only touching your rear.'";
 		say "     Wanting revenge, you close the distance between you, her eyes carefully watching your movement but allowing your response. As you attempt to grab her, she sidesteps you before licking you behind your ear and dancing away as you swing your arm around in a vain attempt to catch her. 'Growing up a girl, I was taught how to avoid the grasps of overly enthusiastic men, with a few lessons from my brother and father,' Sylvia chides, tapping you on the nose as you straighten. 'Come and talk to me again at some point. For now though, I have things to study.' Sylvia dismisses you with a hand gesture. As you leave, you suddenly wonder whether she meant studying a book, herself, ... or others. You dismiss the thought and walk back down the dorm hallway.";
 	now hp of Sylvia is 3; [Met her in her room]
+	now A Wolf's Invitation is unresolved;
 
 instead of going northeast from Tenvale College Female Dorms while (SylviaConv is 5 and hp of Sylvia is 3 and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
@@ -568,6 +569,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 	now Badminton One is not resolved;
 
 Beach Field Research is a situation.
+Beach Field Research is resolved.
 The level of Beach Field Research is 0.
 The sarea of Beach Field Research is "Beach".
 

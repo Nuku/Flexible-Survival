@@ -29,7 +29,7 @@ when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 to new ban menu:
-	let flaglist be {"Furry", "Guy", "Girl", "Humorous", "Hermaphrodite", "Hellspawn", "Feral", "Transgender", "Incest", "Noncon", "Mindcontrol"};
+	let flaglist be {"Cockvore","Furry", "Guy", "Girl", "Humorous", "Hermaphrodite", "Hellspawn", "Feral", "Transgender", "Incest", "Noncon", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
@@ -86,6 +86,8 @@ to banchange (name - text):
 	
 to oldflagban (flagname - text):
 	if flagname is:
+		-- "Cockvore":
+			now Cockvore is banned;
 		-- "Furry":
 			now Furry is banned;
 		-- "Guy":
@@ -108,9 +110,13 @@ to oldflagban (flagname - text):
 			now Noncon is banned;
 		-- "Mindcontrol":
 			now Mindcontrol is banned;
+		-- "Vore":
+			now Vore is banned;
 
 to oldflagward (flagname - text):
 	if flagname is:
+		-- "Cockvore":
+			now Cockvore is warded;
 		-- "Furry":
 			now Furry is warded;
 		-- "Guy":
@@ -133,9 +139,13 @@ to oldflagward (flagname - text):
 			now Noncon is warded;
 		-- "Mindcontrol":
 			now Mindcontrol is warded;
+		-- "Vore":
+			now Vore is warded;
 
 to oldflagunban (flagname - text):
 	if flagname is:
+		-- "Cockvore":
+			now Cockvore is not banned;
 		-- "Furry":
 			now Furry is not banned;
 		-- "Guy":
@@ -158,9 +168,13 @@ to oldflagunban (flagname - text):
 			now Noncon is not banned;
 		-- "Mindcontrol":
 			now Mindcontrol is not banned;
+		-- "Vore":
+			now Vore is not banned;
 
 to oldflagunward (flagname - text):
 	if flagname is:
+		-- "Cockvore":
+			now Cockvore is not warded;
 		-- "Furry":
 			now Furry is not warded;
 		-- "Guy":
@@ -183,5 +197,7 @@ to oldflagunward (flagname - text):
 			now Noncon is not warded;
 		-- "Mindcontrol":
 			now Mindcontrol is not warded;
+		-- "Vore":
+			now Vore is not warded;
 
 Banning ends here.

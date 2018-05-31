@@ -35,6 +35,10 @@ Version 1 of Atlantis by Rikaeus begins here.
 [   0: Hasnt visited yet                                   ]
 [   1: First Visit                                         ]
 
+[ KurtRelationship                                         ]
+[   0: Hasnt seen yet                                      ]
+[   1: Has heard him perform                               ]
+
 PoseidonRelationship is a number that varies.
 FirstAtlantisVisit is a number that varies.
 TritonRelationship is a number that varies.
@@ -107,6 +111,7 @@ South of Royal Palace Entrance is Atlantis City Center.
 North of Atlantis City Residential is Atlantis City Center.
 Atlantis City Center is a room.
 The description of Atlantis City Center is "[AtlantisCenter]".
+earea of Atlantis City Center is "Atlantis".
 
 to say AtlantisCenter:
 	say "     The beautiful city center is teeming with people of all kinds. You see a shark man talking with what looks to be a greenish-toned catfish like man. Also, you are surrounded by a lot of human-looking males and females. Although if you didn't know this already you'd think they were actual humans rather than the mermen and mermaids they are. What really hits you is the fact that the city appears to be so peaceful in such a hectic world, as if the apocalypse changed nothing for them. It really lives up to the legends of being a utopia. Looking around you notice to your north is the Royal Palace of the city, with stairs leading right up to it. To the south is the residential area of Atlantis, where the various citizens live. To your west is the marketplace where everyone trades goods and services. Lastly, to your east is where you came into the city.";
@@ -114,6 +119,7 @@ to say AtlantisCenter:
 West of Atlantis City Center is Atlantis City Market.
 Atlantis City Market is a room.
 The description of Atlantis City Market is "[AtlantisMarket]".
+earea of Atlantis City Market is "Atlantis".
 
 to say AtlantisMarket:
 	say "     Upon entering the market you are met with sounds of people talking and bartering. At a stall selling weapons you hear a Pirate Shark trying to reduce the price of the sword they're attempting to buy but to no avail. Over towards another one you see what you assume to be a mermaid couple wondering whether or not they should have fish for dinner. You're sure that at some point you can find something to buy here as well. To the east is the city center that you arrived from.";
@@ -121,14 +127,22 @@ to say AtlantisMarket:
 South of Atlantis City Center is Atlantis City Residential.
 Atlantis City Residential is a room.
 The description of Atlantis City Residential is "[AtlantisResidential]".
+earea of Atlantis City Residential is "Atlantis".
 
 to say AtlantisResidential:
 	say "     The living area of the city looks nice, just like the rest of the city. The houses are made out of various colors of coral and have a modern yet rustic look to them. Just like the other places in Atlantis there are people wandering around and some even just lounging out in front of their houses or apartment complexes. You're sure that you could meet some people who live here at a point in the future. To the north is the center of the city.";
+
+Kurt's Abode is a room.
+The description of Kurt's Abode is "[KurtsAbode]".
+
+to say KurtsAbode:
+	say "     The living room of the shark-musician is rather quaint, though from what you know of the man it[']s to be expected. The area is decorated with simple paintings of the city as well as various types of guitars, which you[']re sure he can play. To your right is a doorway that leads to his kitchen which from where you[']re standing you can see it is rather spick and span. Wandering around a bit more you muse that your friend is a very clean person but you guess that[']s not exactly a bad thing in any situation really. Though you do have a thought to tell the shark-morph that he needs more furniture or something to spruce up the place.";
 
 North of Atlantis City Center is Royal Palace Entrance.
 South of Royal Throne Room is Royal Palace Entrance.
 Royal Palace Entrance is a room.
 The description of Royal Palace Entrance is "[RoyalPalace]".
+earea of Royal Palace Entrance is "Atlantis".
 
 to say RoyalPalace:
 	say "     The entrance to the royal palace of Atlantis is, in your opinion, the most beautiful thing in the world. It's appears to be made of dark blue stone and sapphire gems. The gates to the north are guarded by a couple of mermaid and merman guards, though they appear to be unconcerned about you, as if they were allowing you to go ahead. To the south of the palace is the center of the city.";
@@ -136,12 +150,14 @@ to say RoyalPalace:
 North of Royal Palace Entrance is Royal Throne Room.
 Royal Throne Room is a room.
 The description of Royal Throne Room is "[ThroneRoom]".
+earea of Royal Throne Room is "Atlantis".
 
 to say ThroneRoom:
 	say "     The throne room of the entire palace is as opulent as the rest of the place, although at the back is a simple sapphire throne, as odd as that sounds. [if Poseidon is in Royal Throne Room]The friendly yet powerful god is sitting on said throne, overlooking the entire area. [end if]Behind it is a large golden trident that is hung on the wall Across the walls are various murals of ocean scenery. To your back is the hallway that leads to the outside, and just like the entrance is guarded by a couple guards.[if Poseidon is not in Royal Throne Room and PoseidonRelationship is 2] It appears that Poseidon is not here, perhaps he is in his room?[end if]";
 
 North of Royal Throne Room is Royal Bed Chambers.
 The description of Royal Bed Chambers is "[PoseidonBedroom]".
+earea of Royal Bed Chambers is "Atlantis".
 
 to say PoseidonBedroom:
 	say "     The room around you seems a bit vague and indistinct, as if the forces that are shaping reality are still undecided what it shall look like.";
@@ -194,12 +210,13 @@ instead of going to Atlantis City Market while MarketVisits is 0:
 	now MarketVisits is 1;
 
 instead of going to Atlantis City Market while MarketVisits is 1 and (LastMarketWalkin - turns < 4): [Has been there in the past 12 hours]
-	say "     When walking past the entrance to the market you hear the wondrous sounds of an acoustic guitar. It's so good that you instantly are drawn to the location of where it originates from, taking you into the shopping area and to a large crowd of people. At the center of the crowd is a familiar shark man, Kurt, who is playing his instrument for everyone to hear. And boy does he play, the music permeating your body and soothing your emotions. Soon enough you find yourself just standing and listening to the amazing tunes coming from the male playing the guitar. Your worries go away and you can feel your sanity coming back bit by bit, thanks to the peaceful guitar sounds that you are hearing. A few hours later sadly, the song ends and everyone applauds Kurt, who promptly blushes and thanks everyone before the crowd parts, leaving you in the market trying to remember what you were doing before. As a stray thought you wonder if you can run into him playing again.";
+	say "     When walking past the entrance to the market you hear the wondrous sounds of an acoustic guitar. It's so good that you instantly are drawn to the location of where it originates from, taking you into the shopping area and to a large crowd of people. At the center of the crowd is a familiar shark man, Kurt, who is playing his instrument for everyone to hear, singing a soothing tone that accompanies the sound. And boy does he play, the music permeating your body and soothing your emotions. Soon enough you find yourself just standing and listening to the amazing tunes coming from the male playing the guitar. Your worries go away and you can feel your sanity coming back bit by bit, thanks to the peaceful guitar sounds that you are hearing. A few hours later sadly, the song ends and everyone applauds Kurt, who promptly blushes and thanks everyone before the crowd parts, leaving you in the market trying to remember what you were doing before. As a stray thought you wonder if you can run into him playing again.";
+	if KurtRelationship is 0:
+		now KurtRelationship is 1;
 	move player to Atlantis City Market;
 	now LastMarketWalkin is turns;
-	increase humanity of player by 30;
-	if humanity of player > 100:
-		now humanity of player is 100;
+	SanBoost 30;
+
 
 instead of going to Atlantis City Residential while ResidentialVisits is 0:
 	say "     Upon your entrance to the residential area you don't really notice much with your sight but with your smell you do. Following the scent that attacks your senses you soon come upon a large entrance leading to someone's backyard in the neighborhood. At the top of the arc is a sign that reads 'Residential Cookout - All Welcome!' Out of curiosity you wander on in and are set upon by what looks to be a female... humanoid cat-fish morph? Upon closer examination she doesn't appear to have any gills but does have a mix of traits from both feline and fish. Redirecting your attention to her face the woman is smiling at you widely, looking pretty inviting.";
@@ -213,12 +230,8 @@ instead of going to Atlantis City Residential while ResidentialVisits is 1 and (
 	say "     When you enter the living area of Atlantis you smell a very familiar scent that you follow to a destination that you've been to. Just as you thought, it brings you to the residential cookout but upon looking into it this time you notice that there are actually people in there and food on the table. Servng at the food tables is Namazu who notices you and waves you on to come in before she goes back to feeding others. Shrugging your shoulders, you walk on in and grab a plate at what you presume to be the beginning of the buffet line. Proceeding through the line you get what food you want, accompanied by a cup of something to drink. Once you have your food you sit at one of the many tables set out and talk and eat with the people. As the time passes by you finish your food and drink, as well as the random conversation with the people at your table. Getting up you go and throw away your trash, heading your way out of the cookout. A last though before you enter the residential area is that perhaps later you could visit once more.";
 	move player to Atlantis City Residential;
 	now LastResidentialWalkin is turns;
-	decrease thirst of player by 20;
-	decrease hunger of player by 20;
-	if hunger of player < 0:
-		now hunger of player is 0;
-	if thirst of player < 0:
-		now thirst of player is 0;
+	PlayerEat 20;
+	PlayerDrink 20;
 
 Section 4 - NPCs
 

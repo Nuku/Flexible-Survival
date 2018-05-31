@@ -80,6 +80,13 @@ to PlayerDrink (N - number):
 	if thirst of player < 0:
 		now thirst of player is 0;
 
+to PlayerHealed (N - number): 
+	LineBreak;
+	say "[bold type]Your hitpoints increase by [N]![roman type][line break]";
+	increase HP of player by N;
+	if HP of player > maxHP of player:
+		now HP of player is maxHP of player;
+
 to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
 	LineBreak;
 	say "[bold type]Your hitpoints are reduced by [N]![roman type][line break]";
@@ -116,12 +123,74 @@ to LibidoBoost (N - number):
 to ScoreLoss (N - number):
 	LineBreak;
 	say "[bold type]Your score decreases by [N]![roman type][line break]";
-	increase the score by N;
+	decrease the score by N;
 
 to ScoreGain (N - number):
 	LineBreak;
 	say "[bold type]Your score rises by [N]![roman type][line break]";
 	increase the score by N;
+
+to CreditLoss (N - number):
+	LineBreak;
+	say "[bold type][N] freecred have been deducted from your Zephyr account![roman type][line break]";
+	decrease freecred by N;
+
+to CreditGain (N - number):
+	LineBreak;
+	say "[bold type][N] freecred have been added to your Zephyr account![roman type][line break]";
+	increase freecred by N;
+
+to FeatLoss (Featname - text):
+	LineBreak;
+	if Featname is listed in feats of player:
+		say "[bold type][Featname] has been removed from your feats![roman type][line break]";
+		remove Featname from feats of the player;
+	else if debugactive is 1:
+		say "ERROR: Trying to remove [Featname], which the player does not have.";
+
+to FeatGain (Featname - text):
+	LineBreak;
+	if Featname is not listed in feats of player:
+		say "[bold type][Featname] has been added to your feats![roman type][line break]";
+		add Featname to feats of the player;
+	else if debugactive is 1:
+		say "ERROR: Trying to add [Featname], which the player already has.";
+
+
+to StatChange (Statname - a text) using (Value - a number):
+	if Value is 0:
+		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
+	now Statname is Statname in lower case;
+	say "[bold type]Your [statname] has [if Value > 0]in[else]de[end if]creased by [value]![roman type][line break]";
+	if Statname is:
+		-- "strength":
+			increase strength of player by Value;
+		-- "dexterity":
+			increase dexterity of player by Value;
+		-- "stamina":
+			increase stamina of player by Value;
+		-- "charisma":
+			increase charisma of player by Value;
+		-- "intelligence":
+			increase intelligence of player by Value;
+		-- "perception":
+			increase perception of player by Value;
+
+understand "teststatgain" as StatGainAction.
+
+StatGainAction is an action applying to one topic.
+
+carry out StatGainAction:
+	say "StatChange 'Strength' using 2[line break]";
+	StatChange "Strength" using 2;
+	
+understand "teststatloss" as StatLossAction.
+
+StatLossAction is an action applying to one topic.
+
+carry out StatLossAction:
+	say "StatChange 'Strength' using -2[line break]";
+	StatChange "Strength" using -2;
 
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
@@ -275,10 +344,72 @@ to say StripChest:
 	if ChestItem is nothing and BodyItem is nothing: [already naked]
 		say "strokes over your bare chest";
 	else if ChestItem is nothing and BodyItem is not nothing:
-		say "pulls off your [ChestItem] and bares your chest";
+		say "pulls off your [BodyItem] and bares your chest";
 	else if ChestItem is not nothing and BodyItem is nothing:
 		say "pulls off your [ChestItem] and bares your chest";
 	else if ChestItem is not nothing and BodyItem is not nothing:
 		say "pulls off your [ChestItem] and [BodyItem], baring your chest";
+
+
+understand "testselfstripchest" as SelfStripChestAction.
+
+SelfStripChestAction is an action applying to one topic.
+
+carry out SelfStripChestAction:
+	say "[SelfStripChest]";
+
+[
+Example Use:
+say "     You [SelfStripChest], then grin eagerly.";
+]
+
+to say SelfStripChest:
+	let ChestItem be a grab object;
+	let BodyItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "chest":
+			now ChestItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "Body":
+			now BodyItem is z;
+	if ChestItem is nothing and BodyItem is nothing: [already naked]
+		say "casually stroke over your bare chest";
+	else if ChestItem is nothing and BodyItem is not nothing:
+		say "pull off your [BodyItem] and bare your chest";
+	else if ChestItem is not nothing and BodyItem is nothing:
+		say "pull off your [ChestItem] and bare your chest";
+	else if ChestItem is not nothing and BodyItem is not nothing:
+		say "pull off your [ChestItem] and [BodyItem], baring your chest";
+
+
+understand "testselfdresschest" as SelfDressChestAction.
+
+SelfDressChestAction is an action applying to one topic.
+
+carry out SelfDressChestAction:
+	say "[SelfDressChest]";
+
+[
+Example Use:
+say "     You [SelfDressChest], then get ready to move out again.";
+]
+
+to say SelfDressChest:
+	let ChestItem be a grab object;
+	let BodyItem be a grab object;
+	repeat with z running through equipped equipment:
+		if slot of z is "chest":
+			now ChestItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "Body":
+			now BodyItem is z;
+	if ChestItem is nothing and BodyItem is nothing: [already naked]
+		say "casually stroke over your bare chest";
+	else if ChestItem is nothing and BodyItem is not nothing:
+		say "collect and put your [BodyItem] back on";
+	else if ChestItem is not nothing and BodyItem is nothing:
+		say "collect and put your [ChestItem] back on";
+	else if ChestItem is not nothing and BodyItem is not nothing:
+		say "collect your [ChestItem] and [BodyItem] to put them back on";
 
 Basic Functions ends here.

@@ -223,6 +223,7 @@ to say BeatTheKoballoon:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say KoballoonBeaten1: [Player fucking the koballoon anally]
