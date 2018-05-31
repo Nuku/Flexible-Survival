@@ -195,7 +195,7 @@ name	price	object	allowed
 "medkit"	275	medkit	true rule
 "pistol"	550	pistol	true rule
 "pepperspray"	320	pepperspray	pepper rule
-"water bottle"		100	water bottle	true rule
+"water bottle"	100	water bottle	true rule
 
 nanitemeter is a number that varies. nanitemeter is normally 0.	[marks if player bought a nanite collector]
 pepped is a number that varies. pepped is normally 0.	[marks how many pepperspray a player's bought]

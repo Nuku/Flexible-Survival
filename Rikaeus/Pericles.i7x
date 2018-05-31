@@ -9,8 +9,6 @@ Version 1 of Pericles by Rikaeus begins here.
 [   4: Has seen his fourth event                           ]
 [   5: Has seen his fifth event, now available in room     ]
 
-SatyrFratPericlesRelationship is a number that varies.
-
 Daily Training Session is a situation.
 Daily Training Session is resolved.
 The sarea of Daily Training Session is "Campus".
@@ -167,14 +165,14 @@ Section 2 - Talking with Pericles
 
 instead of conversing the Pericles:
 	if PericlesRelationship < 5: [should be not yet available]
-		say "     ERROR: Pericles shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [SatyrFratPericlesRelationship]";
+		say "     ERROR: Pericles shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [PericlesRelationship]";
 	else:
 		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' He asks, clearly happy to see you.";
 		say "[PericlesTalkMenu]";
 
 to say PericlesTalkMenu:
 	say "[line break]";
-	say "What do you wish to talk about with the satyr?";
+	say "What do you wish to talk about with the Spartan?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

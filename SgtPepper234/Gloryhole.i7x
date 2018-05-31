@@ -18,33 +18,28 @@ check UseGloryhole:
 	if Gloryhole is not visible, say "What? There is nothing like that here." instead;
 
 carry out UseGloryhole:
-	say "     [bold type]Looking at the dingy surroundings and patches of dried cum does bring up some second thoughts. Are you really sure?[roman type][line break]";	
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Make use of the gloryhole and get your rocks off.";
-	say "     ([link]N[as]n[end link]) - Nope, get the hell out of this filthy cesspool.";
-	if player consents:
+	say "     [bold type]Looking at the dingy surroundings and patches of dried cum does bring up some second thoughts. Are you really sure, and what exactly do you want to do?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Put your crotch up against the hole and have someone pleasure you.";
+	say "     [link](2)[as]2[end link] - Put your ass up against the hole and offer yourself to fuck.";
+	say "     [link](3)[as]3[end link] - Kneel in front of the hole and offer your mouth to a willing stranger.";
+	say "     [link](4)[as]4[end link] - Nope, get the hell out of this filthy cesspool.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to put your crotch against the hole, [link]2[end link] to offer yourself to fuck, [link]3[end link] to give a blowjob or [link]4[end link] to leave..";
+	if calcnumber is 1: 
 		LineBreak;
-		say "     [bold type]What exactly do you want to do?[roman type][line break]";
-		say "     [link](1)[as]1[end link] - Put your crotch up against the hole and have someone pleasure you.";
-		say "     [link](2)[as]2[end link] - Put your ass up against the hole and offer yourself to fuck.";
-		say "     [link](3)[as]3[end link] - Kneel in front of the hole and offer your mouth to a willing stranger.";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to put your crotch against the hole, [link]2[end link] to offer yourself to fuck or [link]3[end link] to give a blowjob.";
-		if calcnumber is 1: 
-			LineBreak;
-			say "[GholeGiverRandomChoice]";
-		else if calcnumber is 2: 
-			LineBreak;
-			say "[GholeFuckRandomChoice]";
-		else: 
-			LineBreak;
-			say "[GholeBJRandomChoice]";
+		say "[GholeGiverRandomChoice]";
+	else if calcnumber is 2: 
+		LineBreak;
+		say "[GholeFuckRandomChoice]";
+	else if calcnumber is 3: 
+		LineBreak;
+		say "[GholeBJRandomChoice]";
 	else:
 		LineBreak;
 		say "     Deciding you want no part of what this disgusting bathroom has to offer today, you turn tail and leave the gloryholes, taking note of its location... Just so you know to avoid it later of course.";
@@ -58,16 +53,12 @@ to say GholeGiverRandomChoice:
 			say "[GholeGiverScene1]";
 
 to say GholeFuckRandomChoice:
-	let randomnumber be a random number from 1 to 4;
+	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:
 			say "[GholeFuckCollie]";
 		-- 2:
-			say "[GholeFuckBehemoth]";
-		-- 3:
-			say "[GholeFuckGryphon]";
-		-- 4:
-			say "[GholeFuckHyena]";
+			say "[GholeFuckHorse]";
 
 to say GholeBJRandomChoice:
 	let randomnumber be a random number from 1 to 4;
@@ -124,22 +115,77 @@ to say GholeGiverScene1:
 		say "     You stand around at the hole for some time but sadly no one enters to pleasure you.";
 
 to say GholeFuckCollie:
+	setmonster "Shemale Smooth Collie";
 	if cunts of player > 0:
-		if anallevel is 3 and a random chance of 1 in 2 succeeds: [more anal active, 50% chance]
-			say "     <Player ass-fucked by Shemale Smooth Collie>";
-		else: 
-			say "     <Player pussy-fucked by Shemale Smooth Collie>";
+		say "     A fat, veiny dog cock slides through the hole, belonging to a shemale collie. A wet slick covers the member, glistening and exuding a strong musk. The desire to taste it is overwhelming. Dropping to you knees you bring your face closer to the twitching hot pole. The cock smells like raw power, and the pair of balls beneath them look fit to burst, hopefully into you. Taking it into your mouth is easy, given your eagerness. The salty tang dominates your taste buds and you suck at it eagerly. A yelp of delight can be heard from the opposing stall as you throat the member, earning you a spray of salty precum that makes you salivate even more on the canine rod. You continue to suck and slobber all over the dog-dick, preparing it for the main course. The fortunate soul next door to you is groaning and yipping in their ecstasy, humping forcefully into your wet mouth and adding to the slick with more precum. The collie groans and becomes erratic in her movements, clearly she is getting close.";
+		say "     Backing off the cock makes your eager shemale whine in frustration. The steel-hard cock twitches and spurts pre at you, dripping wet from your oral attention. You don't want to keep your mate waiting and you turn to present your eager quim to the canine morph. Pressing back into it causes her to moan in appreciation. The heat from the puppy pecker is intense between your labia. The pointed tip presses against your opening, firm and ready to fuck you. You arch your back and press against the stiff pecker, sliding it easily into your slick tunnel. The sounds of panting can be heard from the other stall, mirrored by your own moans of pleasure as she penetrates you deeply. Eager to get her rocks off in your sweet cunt, the collie begins to fuck your hole in earnest, rutting hard against the stall barrier. You in turn press eagerly against her thrusts, relishing the feeling of the dog's hot cock sliding through your tight passage.";
+		WaitLineBreak;
+		say "     A constant supply of precum keeps your pussy greased, allowing the collie access to the deepest part of you. Her hammering is relentless and your knees quake as you try keep your senses about you. The intense stimulation of the hot dick pressing against your g-spot over and over makes you squirt clear lust juices all over the floor and toilet. Adding to the sweet sensation of getting fucked is an insistent pressure at you opening each time the dog dick slides deep enough, clearly the shemale wishes to knot you.";
+		say "     [bold type]Let her knot you? You could be here for some time.[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, take that canine cock to the fullest.";
+		say "     ([link]N[as]n[end link]) - Nah, keep the knot outside.";
+		if player consents:
+			LineBreak;
+			say "     The thought of having this horny bitch tie with you sends shivers down your spine, and in your eagerness to be taken completely, you push even harder into the shemale's frantic thrusts. Each time you slam your pelvis back against the knot your vaginal opening stretches a little more. Though it's tricky with a barrier between you, you finally manage to slip your tight cock sleeve over the tennis ball sized knot, giving a satisfied sigh as you do. The excited collie bitch gives exultant yips and you feel the tennis ball knot swell to the size of a grapefruit and anchor itself inside your spasming walls. You spread your legs wide and press back against the gloryhole, along your mate to press in just that little bit deeper, using what little space she has to shift the knot a bit deeper inside you.";
+			say "     As the thick bulb pushes that little bit deeper, it steamrolls your sensitive g-spot, causing you cum suddenly and violently in an explosive orgasm. You howl in pleasure as fountains of girlcum spray out over your legs and feet, your spasming entrance clenching tightly and repeatedly around the base of the huge knot inside you. This repeated clenching sends your mate over the edge who joins you in the howl as the bitches throbbing cock explodes inside you. The force of the breeding is such that you can feel the jets of semen hosing down your womb with an intensely hot ejaculate. The knot anchoring your collie lover to you has created a tight seal, meaning the cum has nowhere to go but in. Your legs are like rubber, but you do all you can to stay upright, though it is made all the more difficult by the river of cum filling you up from below.[fimpregchance]";
+			WaitLineBreak;
+			say "     The hot weight of the collie's seed inside you is distractingly pleasant, and your lower abdomen feels heavy with her issue. Her quivering member soon ceases firing into you, though you still get to enjoy the sensation of that huge knot for another quarter of an hour before it deflates enough to slip out of your abused pussy, followed swiftly by a thick stream of the shemale's alabaster cock juice. 'Thanks sweet-cheeks.' The spent shemale grins through the hole as you clean cum off your legs. Winking back at the grateful girl, you quickly change and leave.";
+		else:
+			LineBreak;
+			say "     You decide it's probably best if you don't knot with the lusty dog as it could mean being stuck here for quite some time. Instead you steady yourself against the cum covered toilet and reach back to grab her cock around the base affording you more control of her thrusts. The thick bulb balloons at your fingers and the shaking shemale howls with pleasure. You thrust your tight hole vigorously on the wide doggy dong, eager to receive the shemale's fertile seed. Suddenly an intense heat fills your waiting tunnel and you know the bitch has started cumming. The hot collie cum flows deep inside you, and you relish the sensation of dog seed splashing against your cervix. You keep riding the cock, milking it for all it's worth. Rivers of seed spill out around the thrusting knob, flowing down your shaking legs. Before long the panting dog has emptied herself inside you completely. 'Thanks sweet-cheeks.' The spent shemale grins through the hole as you clean cum off your legs. Winking back at the grateful girl, you quickly change and leave.[fimpregchance]";
 	else:
-		say "     <Player ass-fucked by Shemale Smooth Collie>";
+		say "     The thrill of having some stranger use you for their own pleasure fills you with arousal, and your cock hardens at the very thought. It only takes moments for you to discard your gear and wait for a gloryhole partner. Before long someone enters the stall next to yours and you wait excitedly to see what manner of cock you'll be fucking today. A fat, veiny dog cock slides through the hole, belonging to a shemale collie. A wet slick covers the member, glistening and exuding a strong musk. The desire to taste it is overwhelming. Dropping to you knees you bring your face closer to the twitching hot pole. The cock smells like raw power, and the pair of balls beneath them look fit to burst, hopefully into you. Taking it into your mouth is easy, given your eagerness. The salty tang dominates your taste buds and you suck at it eagerly.";
+		say "     A yelp of delight can be heard from the opposing stall as you throat the member, earning you a spray of salty precum that makes you salivate even more on the canine rod. You continue to suck and slobber all over the dog-dick, preparing it for the main course. The fortunate soul next door to you is groaning and yipping in their ecstasy, humping forcefully into your wet mouth and adding to the slick with more precum. The collie groans and becomes erratic in her movements, clearly she is getting close. Backing off the cock makes your eager shemale whine in frustration. The steel-hard cock twitches and spurts pre at you, dripping wet from your oral attention. You don't want to keep your mate waiting and you turn to present your eager hole to the canine morph. Pressing back into it causes her to moan in appreciation. The heat from the puppy pecker is intense between your cheeks. The pointed tip presses against your ring, firm and ready to fuck you.";
+		WaitLineBreak;
+		say "     You arch your back and press against the stiff pecker, sliding it easily into your ass. The sounds of panting can be heard from the other stall, mirrored by your own moans of pleasure as she penetrates you deeply. Eager to get her rocks off in your sweet ass, the collie begins to fuck your hole in earnest, rutting hard against the stall barrier. You in turn press eagerly against her thrusts, relishing the feeling of the dog's hot cock sliding through your tight passage. A constant supply of precum keeps your anus greased, allowing the collie access to the deepest part of you. Her hammering is relentless and your knees quake as you try keep your senses about you. The intense stimulation of the hot dick pressing against your prostate over and over makes your own cock spray ropes of cum over the floor and toilet. Adding to the sweet sensation of getting fucked is an insistent pressure at you ring each time the dog dick slides deep enough, clearly the shemale wishes to knot you.";
+		say "     [bold type]Let her knot you? You could be here for some time.[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, take that canine cock to the fullest.";
+		say "     ([link]N[as]n[end link]) - Nah, keep the knot outside.";
+		if player consents:
+			LineBreak;
+			say "     The thought of having this horny bitch tie with you sends shivers down your spine, and in your eagerness to be taken completely, you push even harder into the shemale's frantic thrusts. Each time you slam your ass back against the knot your anal ring stretches a little more. Though it's tricky with a barrier between you, you finally manage to slip your clenching sphincter over the tennis ball sized knot, giving a satisfied sigh as you do. The excited collie bitch gives exultant yips and you feel the tennis ball knot swell to the size of a grapefruit and anchor itself inside your spasming anus. You spread your cheeks wide and press back against the gloryhole, along your mate to press in just that little bit deeper, using what little space she has to shift the knot a bit deeper inside you.";
+			say "     As the thick bulb pushes that little bit deeper, it steamrolls your sensitive prostate causing you cum suddenly and violently in an explosive orgasm. You howl in pleasure as ropes of your semen spray out against the adjacent barrier, your anal sphincter clenching tightly and repeatedly around the base of the huge knot inside you. This repeated clenching sends your mate over the edge who joins you in the howl as the bitches throbbing cock explodes inside you. The force of the breeding is such that you can feel the jets of semen hosing down your colonic walls with an intensely hot ejaculate. The knot anchoring your collie lover to you has created a tight seal, meaning the cum has nowhere to go but in. Your legs are like rubber, but you do all you can to stay upright, though it is made all the more difficult by the river of cum filling you up from behind.[mimpregchance]";
+			WaitLineBreak;
+			say "     The hot weight of the collie's seed inside you is distractingly pleasant, and your lower abdomen feels heavy with her issue. Her quivering member soon ceases firing into you, though you still get to enjoy the sensation of that huge knot for another quarter of an hour before it deflates enough to slip out of your abused asshole, followed swiftly by a thick stream of the shemale's alabaster cock juice. 'Thanks sweet-cheeks.' The spent shemale grins through the hole as you clean cum off your legs. Winking back at the grateful girl, you quickly change and leave.";
+		else:
+			LineBreak;
+			say "     You decide it's probably best if you don't knot with the lusty dog as it could mean being stuck here for quite some time. Instead you steady yourself against the cum covered toilet and reach back to grab her cock around the base affording you more control of her thrusts. The thick bulb balloons at your fingers and the shaking shemale howls with pleasure. You thrust your tight hole vigorously on the wide doggy dong, eager to receive the shemale's fertile seed.";
+			say "     Suddenly an intense heat fills your ass and you know the bitch has started cumming. The hot collie cum flows deeper inside your colon and you relish the sensation of dog seed filling you up. You keep riding the cock, milking it for all it's worth. Rivers of seed spill out around the thrusting knob, flowing down your ass and shaking legs. Before long the panting dog has emptied herself inside you completely. 'Thanks sweet-cheeks.' The spent shemale grins through the hole as you clean cum off your legs. Winking back at the grateful girl, you quickly change and leave.[mimpregchance]";
 		
-to say GholeFuckBehemoth: 
+to say GholeFuckHorse:
+	setmonster "Horseman";
 	if cunts of player > 0:
-		if anallevel is 3 and a random chance of 1 in 2 succeeds: [more anal active, 50% chance]
-			say "     <Player ass-fucked by Behemoth>";
-		else: 
-			say "     <Player pussy-fucked by Behemoth>";
+		say "     A powerful male musk hits you full in the face even before you see what kind of cock you'll be servicing. Following on the heels of its own scent is a horse cock as thick as your arm with a head like a balled fist. The beast twitches and jumps in front of your eyes, and you bend over instinctively to give it a long luxurious lick from the head to the medial ring. The equine cock has a salty tang that makes your head spin, and upon reaching the ring you catch a glimpse of the beast's balls behind the gloryhole opening. Two massive globes as big around as a melon each, sit pendulously waiting to empty themselves inside you.";
+		say "     Excitedly you return to the head of the member and rub the flat face into your lips and open mouth, savouring the heady flavour that overrides all other senses. You want to make sure the cock is good and slippery when you take it inside you, so you use your tongue to explore the wide urethral opening, tasting the horse pre that collects inside it. Pushing forward you manage to get the whole head into your wide-open mouth relatively easily. The powerful stallion in the opposite stall grunts his appreciation, thrusting forward a little into your welcoming cock holster. With effort you straighten your gullet and move forward along the massive pole. The thick horse rod is difficult to swallow, but you muster your strength and successfully take the beast past your oesophageal sphincter, allowing him to delve deeper.";
+		WaitLineBreak;
+		say "     Your equine companion gives and exultant whinny as he claims your oral tube, and you roughly throat him over and over, trying your darndest to lube the thick cock as best you are able. As his precum is mostly leaking out straight into your belly, you need to work extra hard to ensure a slick member. The stall barrier quakes and creaks under the forceful thrusting of your companion and you feel the flare swell slightly within you. You quickly pull back so as to stop the rutting male from exploding too soon. The flare drags along your lubricated throat like a spatula, bringing with it all the pre and spit it needs to lubricate it for the next stage.";
+		say "     The stallion yells out in frustration and bangs his fists against the barrier. Not wanting him to break down the walls, you quickly turn around and rub his shrinking head against your pussy. His frustrated lust cools somewhat knowing you're not going to leave him unsatisfied. He humps his iron hard horse cock against your opening, eager to penetrate you. Straightening your back and bending just slightly, you brace yourself against the other wall and allow him to slip past your lips.";
+		WaitLineBreak;
+		say "     Even with all the lubrication it's a hard stretch! Your grit your teeth as the fist size head slides inside, followed closely by half a foot of pure muscle. There is the sound of stomping hooves and the barrier quivers. He ruts hard against the deepest recesses of your cunt, his pre spurting tip kissing the very back of your velvet tunnel. There is simply no more room in your cunt for more and he gives a shout of frustration knowing you are unable to accommodate all of the arm-sized beast.";
+		say "     Your legs are feeling weak, but the half-a-foot of beastly cock helps keep you suspended. Shaking and sweating somewhat from the exertion, you ready yourself and start to slide forward, feeling quite hollow in the wake of the pillar sliding through your now gaping tunnel. The nubbed rim of the equine flare scrapes delightfully along your passage and grinds over your sensitive g-spot, causing a wave of pleasure to spike through your quivering sex. Wasting no time you push back again, taking him inside you once more before you start to repeat the whole process.";
+		WaitLineBreak;
+		say "     The stall space is actually quite narrow, for which you are grateful as it enables you to brace yourself against the opposite barrier. The rutting male helps by matching his thrusts with your decent, slamming deep inside your slick passage and sending tiny orgasms shuddering through you each time his head grinds against your pleasure button. You cum a number of times, despite the fact that you can't seem to focus with your pussy tightly sleeved around a thick horse cock. The toilet bowl is covered in horse pre mixed with vaginal spray, and your feet are in no better condition. Still you persevere, eager for the beast to finish inside you.";
+		say "     Some time and many of your own orgasms later, you feel the flare bloom wide inside your gaping sleeve. Despite your exhaustion, you force yourself to work harder to pull the broad head up and down your raw cock-tunnel. The stallion lets out a final whinny of satisfaction as he slams himself flush against the straining barrier, burying deep in you. The outline of his flared cock is visible in your abdomen, and you watch in amazement as it bulges slightly with the first squirt of horse cum. You can actually feel the pressure of the semen force itself past your cervix opening and bath your ovaries in hot stallion seed. Two squirts later and there is no visible definition around the head any more, only a rapidly growing paunch.";
+		WaitLineBreak;
+		say "     The heavy weight warms your lower abdomen, but you remove the cock before the pressure becomes too great. His broad flare catches at your already widened cunt ring, and with a yelp you wrench free of the still-spurting monstrosity, collapsing immediately to your knees as all strength leaves your legs. Rivers of jizz pour from your gaped opening to pool around your knees, while the jerking equine cock continues to rain hot wads of cum over your prone figure.[fimpregchance]";
+		say "     Too weak to move out of the way, you catch your breath while he finishes over you, actually enjoying the cum bath. Finally, the virile stallion removes his now flaccid cock from the gloryhole and leaves without saying a word to you. Ungrateful bastard you think with a smirk, but still, at least you had fun. You creep out of the stalls to find some old towels to wipe clean with before changing and going about your merry way, your gaping pussy still leaking cum into your gear as you walk.";
 	else:
-		say "     <Player ass-fucked by Behemoth>";
+		say "     A powerful male musk hits you full in the face even before you see what kind of cock you'll be servicing. Following on the heels of its own scent is a horse cock as thick as your arm with a head like a balled fist. The beast twitches and jumps in front of your eyes, and you bend over instinctively to give it a long luxurious lick from the head to the medial ring. The equine cock has a salty tang that makes your head spin, and upon reaching the ring you catch a glimpse of the beast's balls behind the gloryhole opening. Two massive globes as big around as a melon each, sit pendulously waiting to empty themselves inside you.";
+		say "     Excitedly you return to the head of the member and rub the flat face into your lips and open mouth, savouring the heady flavour that overrides all other senses. You want to make sure the cock is good and slippery when you take it inside you, so you use your tongue to explore the wide urethral opening, tasting the horse pre that collects inside it. Pushing forward you manage to get the whole head into your wide-open mouth relatively easily. The powerful stallion in the opposite stall grunts his appreciation, thrusting forward a little into your welcoming cock holster. With effort you straighten your gullet and move forward along the massive pole. The thick horse rod is difficult to swallow, but you muster your strength and successfully take the beast past your oesophageal sphincter, allowing him to delve deeper.";
+		WaitLineBreak;
+		say "     Your equine companion gives and exultant whinny as he claims your oral tube, and you roughly throat him over and over, trying your darndest to lube the thick cock as best you are able. As his precum is mostly leaking out straight into your belly, you need to work extra hard to ensure a slick member. The stall barrier quakes and creaks under the forceful thrusting of your companion and you feel the flare swell slightly within you. You quickly pull back so as to stop the rutting male from exploding too soon. The flare drags along your lubricated throat like a spatula, bringing with it all the pre and spit it needs to lubricate it for the next stage.";
+		say "     The stallion yells out in frustration and bangs his fists against the barrier. Not wanting him to break down the walls, you quickly turn around and rub his shrinking head against your pucker. His frustrated lust cools somewhat knowing you're not going to leave him unsatisfied. He humps his iron hard horse cock against your sphincter, eager to penetrate you. Straightening your back and bending just slightly, you brace yourself against the other wall and allow him to slip past your outer ring.";
+		WaitLineBreak;
+		say "     Even with all the lubrication it's a hard stretch! Your grit your teeth as the fist size head slides inside, followed closely by half a foot of pure muscle. There is the sound of stomping hooves and the barrier quivers. You hold yourself steady as the virile male gives another powerful shove, forcing the rest his massive cock past your internal ring and into your descending colon. He gives a shout of satisfactions and you give a shout of pain as your body is forced to accommodate the arm-sized beast.";
+		say "     Your legs are feeling weak, but the foot of beastly cock helps keep you suspended. Shaking and sweating somewhat from the exertion, you ready yourself and start to slide forward, feeling quite hollow in the wake of the pillar sliding through your now gaping tunnel. The nubbed rim of the equine flare scrapes delightfully along your passage and grinds over your sensitive prostate, causing a glut of semen to pour out of your semi-flaccid cock. Wasting no time you push back again, taking him inside you once more before you start to repeat the whole process.";
+		WaitLineBreak;
+		say "     The stall space is actually quite narrow, for which you are grateful as it enables you to brace yourself against the opposite barrier. The rutting male helps by matching his thrusts with your decent, slamming deep inside your cavernous colon and milking wads of cum from your own pecker each time his head grinds against your prostate. You cum a few times, despite the fact that you can't seem to maintain an erection with your asshole tightly sleeved around a thick horse cock. The toilet bowl is covered in your semen, and your feet are in no better condition. Still you persevere, eager for the beast to finish inside you.";
+		say "     Some time and many of your own orgasms later, you feel the flare bloom wide inside your straightened bowel. Despite your exhaustion, you force yourself to work harder to pull the broad head up and down your raw cock-tunnel. The stallion lets out a final whinny of satisfaction as he slams himself flush against the straining barrier, burying deep in you. The outline of his flared cock is visible in your belly, and you watch in amazement as it bulges slightly with the first squirt of horse cum. Two squirts later and there is no visible definition around the head any more, only a rapidly growing paunch.";
+		WaitLineBreak;
+		say "     The heavy weight warms your lower abdomen, but you remove the cock before the semen starts making its way into your belly. As you move your ass off the mighty equine pole it fills any space given way to with more heavy ejaculate. His broad flare catches at your already widened anal ring, and with a yelp you wrench free of the still-spurting monstrosity, collapsing immediately to your knees as all strength leaves your legs. Rivers of jizz pour from your gaped anus to pool around your knees, while the jerking equine cock continues to rain hot wads of cum over your prone figure.[mimpregchance]";
+		say "     Too weak to move out of the way, you catch your breath while he finishes over you, actually enjoying the cum bath. Finally, the virile stallion removes his now flaccid cock from the gloryhole and leaves without saying a word to you. Ungrateful bastard you think with a smirk, but still, at least you had fun. You creep out of the stalls to find some old towels to wipe clean with before changing and going about your merry way, your gaping ass still leaking cum into your gear as you walk.";
 		
 to say GholeFuckGryphon:
 	if cunts of player > 0:
@@ -190,7 +236,14 @@ to say GholeBJMichael:
 		say "     Through all his stuttering and apologising you manage to assure him that you really enjoyed it and are actually quite pleased he was able to let loose like he did. He continues to thank you multiple times as he gets dressed. Before he leaves he bends down to the hole and whispers, 'I kn-kn-know this is s-s-supposed to be an-an-an-anonymous and all b-but... M-M-M-Michael, m-my name is M-Michael.' You wonder whether you'll see Michael again.";
 		now MichaelGholeMeetings is 1;
 	else if MichaelGholeMeetings is 1: [repeat]
-		say "     ...";
+		say "     'Uh hi.' You hear from the adjacent box. 'Can you umm p-p-please su-su-suck me?' Looking through the hole in the wall, you see Michael, the same nervous mall rat from before. Whispering through the hole, you tell him that you look forward to tasting his delicious cock again. 'Oh i-i-it's you again!' he says with a smile, dropping his pants and eagerly pushing his pink rod through the gloryhole.";
+		say "     Gripping the twitching pink length in your hand, you smile to hear your fretful partners sharp intake of breath. You begin to gently stroke his cock, eliciting a moan from the other side. The shaky rat releases a generous amount of precum, which you use to add slickness to the rock-hard pole in your hand, before descending to take the whole member into your mouth in one smooth motion.";
+		WaitLineBreak;
+		say "     Your ratty partner gasps at the pleasurable sensation of your mouth enveloping him and starts to hump his cock in and out of your willing mouth. 'O-oh y-yes your mouth always feels s-so g-goooood!' he moans as he thrusts into your cock holster. Using your tongue, you apply your expert ministrations to his slickened rod, causing the rodent to groan with pleasure each time your skilled muscle slides along his vas deferens or over his sensitive helmet.";
+		say "     'Y-yeah use that s-slutty tongue!' Michael squeaks in surprise at his own attempt at dirty talk. 'P-p-please don't stop!' The eager rat starts humping harder and faster into your mouth, his breathing has become fast and you can hear his tail thrashing about behind him. He is about to cum.";
+		WaitLineBreak;
+		say "     Sucking hard and deep as your tongue goes to town on his urethra is all it takes to send him over the edge. His hips lurch forward pushing his twitching cock towards your throat. 'Oh fuck here it comes again! Drink it! DRINK IT!' he shouts, filling the bathroom with his cries of ecstasy. Your close your eyes and relish the rodent's delicious cum, swallowing quickly as another squirt fills your mouth, followed by another and another. Some of his sweet semen spills out past your lips to dribble down over your chin and chest, there is just so much.";
+		say "     realise Michael is shaking as you remove his sloppy rat dick from your mouth, only to get one last shot to the face. 'Gods that w-w-was just as g-g-good as last t-time!' He stammers. Michael continues to thank you multiple times as he gets dressed. Before he leaves he bends down to the hole and whispers, 'I c-c-can't w-wait to d-do that again… s-s-slut!' Michael pauses for a moment before realising what he's said. 'Eeep!' The nervous rat scurries out of the stalls before you have a chance to say anything back.";
 
 to say GholeBJNaga:
 	if player is male: [male + herm]

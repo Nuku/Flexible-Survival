@@ -262,6 +262,14 @@ to say BPReceptionDesc:
 		say "     The reception of the firm 'Branson & Partner Land Management' has an air of understated elegance that shows you're in a respectable business establishment. A granite-tiled floor and light grey walls set the frame for a modern-looking reception desk with a curved glass front. Beside it, a bright green potted plant gives the whole room a friendly feeling. The rest of the room is filled with several stands holding brochures about current lots the firm owns, flanking a small seating area of white leather armchairs.";
 		say "     Surprisingly, the reception is staffed even in the midst of everything going on - a pretty anthro doe wearing a pristine white shirt is sitting behind the desk, giving you a well-practiced welcoming smile. On second look, you notice that the glass front of the desk is only very lightly frosted, allowing a teasing view of the woman's long, cream-colored legs behind it.";
 
+B&P Company Offices is a room. B&P Company Offices is sleepsafe.
+The description of B&P Company Offices is "[BPOfficesDesc]".
+
+to say BPOfficesDesc:
+	say "     The offices of the firm 'Branson & Partner Land Management' have an air of understated elegance that shows you're in a respectable business establishment. A granite-tiled floor and light grey walls set the frame for a a row of modern-looking desks all lined up so that the attractive women sitting at them are facing your way and can greet you with professional smiles. As with the front desk, sheets of lightly frosted glass maintain allow some enticing glimpses of their long legs usually ending in hooves or paws. Even the potted plants scattered throughout the large room are obviously still getting watered, shining in a healthy green. All in all, Branson's office staff makes the scene before you appear like it was set in a perfectly normal office on a perfectly normal day.";
+	say "     Only the fact that none of the young women in here is human breaks the illusion a bit, as does the fact that a meeting room further back resembles a sleepover locale. There are mattresses spread out over the floor back there, complete with numerous blankets and pillows, creating a communal sleeping pad from the looks of it.";
+
+
 
 [Further content in the file Wahn/Branson & Partner.i7x]
 

@@ -664,6 +664,7 @@ name	desc	weight	object
 "baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
 "knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
 "football helmet"	"A white football helmet with the logo of the Tenvale Gorillas on both sides. Heavy, but protective."	3	football helmet
+"urban explorer helmet"	"A protective helmet with flashy crimson-red finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on."	2	urban explorer helmet
 
 motorcycle helmet is a grab object.
 motorcycle helmet is equipment.
@@ -768,6 +769,19 @@ The placement of football helmet is "head".
 The descmod of football helmet is "Your head is encased in the thick shell of a football helmet.".
 The slot of football helmet is "head".
 the scent of football helmet is "The helmet smells of plastic and fabric.".
+
+urban explorer helmet is a grab object.
+urban explorer helmet is equipment.
+It is not temporary.
+The plural of urban explorer helmet is false.
+The taur-compatible of urban explorer helmet is true.
+The size of urban explorer helmet is 3.
+The AC of urban explorer helmet is 30.
+The effectiveness of urban explorer helmet is 80.
+The placement of urban explorer helmet is "head".
+The descmod of urban explorer helmet is "Your head is encased in a protective helmet with crimson-red finish.".
+The slot of urban explorer helmet is "head".
+the scent of urban explorer helmet is "The helmet smells of plastic and fabric.".
 
 [ Section 6 - Helmets ]
 

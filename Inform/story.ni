@@ -322,6 +322,30 @@ Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
 
+A person can be MProN. A person is usually not MProN.
+
+Definition: A person (called x) is MProN:
+	if PronounSet of x is "Male", yes;
+	no;
+
+A person can be FProN. A person is usually not FProN.
+
+Definition: A person (called x) is FProN:
+	if PronounSet of x is "Female", yes;
+	no;
+
+A person can be HProN. A person is usually not HProN.
+
+Definition: A person (called x) is HProN:
+	if PronounSet of x is "Herm", yes;
+	no;
+
+A person can be NProN. A person is usually not NProN.
+
+Definition: A person (called x) is NProN:
+	if PronounSet of x is "Neuter", yes;
+	no;
+
 A person can be internal. A person is usually not internal.
 
 internalbypass is a truth state that varies. internalbypass is usually false.
@@ -1448,15 +1472,15 @@ carry out Inventorying:
 					let notval be 0;
 					[! for every if block here there has to be a corresponding if before the loop !]
 					if Ronda is visible and HP of Ronda is 0 and itemname is "demon seed":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
 					if Xerxes is visible and lust of Xerxes is 2 and itemname is "awesome fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
 					if Helen is visible and lust of Helen is 2 and itemname is "awesomer fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
 					if Kristen is visible and HP of Kristen is 10 and itemname is "Janice's blouse":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
 					if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
 				else if traderavailable is 1:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
 				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player > 0:
@@ -2073,7 +2097,7 @@ Conversing is an action applying to one thing.
 
 Check Conversing:
 	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
-	if the number of entries in conversation of noun is 0, say "They have nothing to say" instead.
+	if the number of entries in conversation of noun is 0, say "They have nothing to say." instead.
 
 carry out conversing:
 	sort conversation of the noun in random order;
@@ -3076,19 +3100,20 @@ to attributeinfect:		[sets the player values from the new attributes]
 				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
 	if there is a scale in row monster of the table of random critters:
-		now scalevalue of player is scale entry;
-		repeat with z running through equipped equipment:
-			if size of z > 0: [size restricted equipment]
-				if (scalevalue of player - size of z > 1):
-					say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
-					now z is not equipped;
-				else if (scalevalue of player - size of z is 1):
-					say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
-				else if (scalevalue of player - size of z < -1):
-					say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
-					now z is not equipped;
-				else if (scalevalue of player - size of z is -1):
-					say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
+		if scalevalue of player is not scale entry:
+			now scalevalue of player is scale entry;
+			repeat with z running through equipped equipment:
+				if size of z > 0: [size restricted equipment]
+					if (scalevalue of player - size of z > 1):
+						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
+						now z is not equipped;
+					else if (scalevalue of player - size of z is 1):
+						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+					else if (scalevalue of player - size of z < -1):
+						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
+						now z is not equipped;
+					else if (scalevalue of player - size of z is -1):
+						say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of player is 3;
 	if there is a body descriptor in row monster of the table of random critters:
@@ -5455,6 +5480,7 @@ Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
+Include Kurt by Rikaeus.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
