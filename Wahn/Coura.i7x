@@ -65,15 +65,15 @@ an everyturn rule:
 						say "     Standing where you are, you see a shape step out of the crowd that you know. It is Coura the mall rat, dressed in her usual tank top and short skirt. She glances at the entrance of Nermine's shop with apprehension as she walks towards it. Then her eyes fall upon you and the mall rat immediately shows a friendly little smile on her face, making a beeline towards you. 'Good morning [master],' she says happily, then leans in to give you a kiss on the cheek. '[one of]I just, just needed to thank you again. It feels good to be me more than just once in a while. The freedom to shift is amazing.[or]It is so great to see you here.[or]It makes me happy to see a friendly face here, before I go in.[at random]' The young woman's gaze rests on your face for a few seconds longer, full of worshipfulness and adoration, then she looks down at her wristwatch and flinches. 'Damn, I'm gonna be late!' With that shout, she hurriedly waves and rushes into the store.";
 					-- 2:
 						say "     Standing where you are, you see a shape step out of the crowd that you know. It is Coura the mall rat, dressed in her usual tank top and short skirt. She glances at the entrance of Nermine's shop with apprehension as she walks towards it, pausing for a second at the door to steel her nerves. Then the young woman enters and you can see her approach Nermine through the window of the store, who shoos her into the back room in short notice.";
-		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
-			if player is in Nowhere:
-				say "     X";
+[		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
+[			if player is in Nowhere:
+				say "     X";]
 		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-			if player is in Nowhere:
-				say "     X";
+[			if player is in Nowhere:
+				say "     X";]
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-			if player is in Nowhere:
-				say "     X";
+[			if player is in Nowhere:
+				say "     X";] [Is nowhere a room? No, it's an area, which only appears right as you search for something.]]
 		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - Cole/Coura goes to bed]
 			if player is in Mall Foodcourt:
 				let randomnumber be a random number from 1 to 4;
