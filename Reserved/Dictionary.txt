@@ -1041,10 +1041,11 @@
 |Stripes|Hospital For Fs|rondahosp|value|
 |Stripes|Hospital For Fs|rodhosp|value|
 |Stripes|Hospital For Fs|progress|property|
-|Stripes|Equinoid Camp For Fs|20140908213124/4492:Mon 8 September 2014 21:31|indexing|
-|Stripes|Equinoid Camp For Fs|Equinoid Camp|room|
-|Stripes|Equinoid Camp For Fs|equinoid warrior|Pet|
-|Stripes|Equinoid Camp For Fs|blequinoidbodied|adjective|
+|Stripes|Equinoid Camp|20140908213124/4492:Mon 8 September 2014 21:31|indexing|
+|Stripes|Equinoid Camp|Equinoid Camp|room|
+|Stripes|Equinoid Camp|Nakoma's Tent|room|
+|Stripes|Equinoid Camp|equinoid warrior|Pet|
+|Stripes|Equinoid Camp|blequinoidbodied|adjective|
 |Stripes|Pig Frat|20140908213124/6252:Mon 8 September 2014 21:31|indexing|
 |Stripes|Pig Frat|Frat House|situation|
 |Stripes|Pig Frat|Phi Iota Gamma|room|
@@ -1973,10 +1974,10 @@
 |Stripes|Candy Striper|candytalk|value|
 |Stripes|Candy Striper|lastCandyfucked|value|
 |Stripes|Candy Striper|coonsex|value|
-|Nuku Valente|Equine For Fs|20140908213124/2934:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Equine For Fs|lucky horseshoe|Grab Object|
-|Nuku Valente|Equine For Fs|equinoiddefeat|value|
-|Nuku Valente|Equine For Fs|equinoidstatus|value|
+|Song|Black Equinoid|20140908213124/2934:Mon 8 September 2014 21:31|indexing|
+|Song|Black Equinoid|lucky horseshoe|Grab Object|
+|Song|Black Equinoid|equinoiddefeat|value|
+|Song|Black Equinoid|equinoidstatus|value|
 |Leo X|Demon Brute For Fs|20140908213124/45725:Mon 8 September 2014 21:31|indexing|
 |Leo X|Demon Brute For Fs|demon tooth|Grab Object|
 |Leo X|Demon Brute For Fs|demon brute|Pet|

@@ -184,11 +184,14 @@ to say DmitriSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the peacock's avian rod";
 	[]
+[
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the captivating bird";
 		now sortorder entry is 3;
 		now description entry is "Take Dmitri's ass for a ride";
+]
+[ The above content is commented out until written to prevent frustrating placeholder text. ]
 	[]
 	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;

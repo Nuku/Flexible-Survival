@@ -151,7 +151,7 @@ Section 1.5 - Fox Kit Ending
 when play ends:
 	if little fox is tamed:
 		if humanity of player < 10:
-			say "     When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best he can, trying to help you hunt and teasing at you to play with him. Finally though he grows large enough that one day he leaves on his own, fully able to forage for himself now, and leaving you to your fate. You miss the little creature occasionally.... when you can remember him anyways.";
+			say "     When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best he can, trying to help you hunt and teasing at you to play with him. Finally though he grows large enough that one day he leaves on his own, fully able to forage for himself now, and leaving you to your fate. You miss the little creature occasionally... when you can remember him anyways.";
 		else:
 			say "     After your rescue, you manage to convince the distracted military that Dash isn't a threat, and he comes with you out into your new life. Being a mostly wild creature, he doesn't really fit in anywhere that you take him however, and so eventually you decide to find a wilderness preservation to release him into, where you hear there are several other foxes for the little fellow to play with. Several years later though, you are surprised to find someone has left another little baby fox at your door while you slept, a roughly scrawled note just says 'thanks mom,' with a little paw mark in the corner.";
 

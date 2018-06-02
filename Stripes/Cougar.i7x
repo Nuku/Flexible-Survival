@@ -37,7 +37,7 @@ to say beatthecougar:
 	now cougarfight is 1;
 	say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. ";
 	if a random number between 30 and 125 < libido of player:
-		say "     You ponder having a little fun with the aroused feline, now that she's calmed down a little.";
+		say "You ponder having a little fun with the aroused feline, now that she's calmed down a little.";
 		say "     [bold type]Will you sex up the poor, aroused puma?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -51,7 +51,7 @@ to say beatthecougar:
 		else:
 			say "     Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 	else:
-		say "     Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
+		say "Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 
 
 to say cougardesc:
