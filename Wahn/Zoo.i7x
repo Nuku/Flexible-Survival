@@ -3,6 +3,7 @@ Version 6 of Zoo by Wahn begins here.
 
 Zoo Entrance is a room. It is fasttravel.
 The description of Zoo Entrance is "[ZooEntranceDesc]".
+The earea of Zoo Entrance is "Outside".
 
 to say ZooEntranceDesc:
 	say "     This area is the grand entrance to the zoo, with wrought iron gates and a fence surrounding the zoo grounds. A number of booths stand ready to accommodate large groups of visitors, although they're of course empty now. A large sign that looks as if it was just put up a short while ago says 'free admission'. You know from experience that the tall fence extends all the way around the whole zoo, so it's very likely that most of the animals (and transformed visitors) are still inside. The zoo's gift shop is west of your position, to the southwest lies a parking area and in the south, you can go back out into the city along the road leading here.";

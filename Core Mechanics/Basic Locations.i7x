@@ -3,6 +3,7 @@ Version 1 of Basic Locations by Core Mechanics begins here.
 
 Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.  Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
+The earea of Grey Abbey Library is "Outside".
 Bunker is a room.  The description of Bunker is "[bunker desc]".
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
@@ -199,6 +200,7 @@ earea of Outside Trevor Labs is "Outside".
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
 Trevor Labs Lobby is a room. "You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to the stairs leading up and down.".
+The earea of Trevor Labs Lobby is "Sealed".
 
 West of Outside Trevor Labs is Trevor Labs Lobby.
 
@@ -211,6 +213,7 @@ There is an Infection Terminal in Primary Lab. "A glowing infection terminal qui
 
 Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
+The earea of Park Entrance is "Park".
 
 Park Trail is a room. "Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
 earea of Park Trail is "Park".
@@ -247,5 +250,14 @@ The description of Green Lobby is "[GreenLobbyDesc]";
 to say GreenLobbyDesc:
 	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about 20 feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them, while the door of apartment 1C is just leaned to.";
 
+understand "plains" as Dry Plains.
+
+Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoof prints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake leveled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
+The earea of Dry Plains is "Plains".
+Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
+Plains door is west of wandering the plains.
+Wandering the plains is a room.
+
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
 Basic Locations ends here.

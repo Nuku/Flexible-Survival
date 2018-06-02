@@ -2,7 +2,7 @@ Version 1 of Rane Events by KorekaBii begins here.
 
 RaneDeedsTracker is a number that varies.
 
-Rane's Good Deed is a situation.
+Rane's Good Deed is a situation. Rane's Good Deed is resolved.
 the sarea of Rane's Good Deed is "Outside".
 
 instead of resolving Rane's Good Deed:
