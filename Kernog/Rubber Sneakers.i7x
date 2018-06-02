@@ -39,15 +39,15 @@ Instead of taking rubber sneakers:
 		increase carried of rubber sneakers by 1;
 
 Instead of using the rubber sneakers:
-	if the rubber snearkers are equiped:
+	if the rubber sneakers are equipped:
 		if Doctor Matt is visible:
 			say "     Doctor Matt stares at your shoes. 'This is a rather uncommon infection', he finally says, after studying your body extensively. 'It seems that the nanites infecting these shoes have integrated a defense mechanism, which explains why removing them is so difficult. Talking to me about it was a good call. Matt fetches a small pot filled with a yellow-green powder. 'You will make geiger counters scream for a few days, but your nanites will protect you from any lasting effect. I think. Anyway, try removing your shoes, now.'";
 			say "     You do as asked, and grit your teeth, expecting another painful backlash. However, this time, the sneakers remove themselves, like an ordinary pair of shoes. 'Your current infection marks remain, but, with their source gone, they will behave like any other strain, and disappear when the next strain takes over,' the scientist explains. 'Just don't try and put these shoes again. Not mistakingly, at least.'";
-			now the rubber sneakers are not equiped;
+			now the rubber sneakers are not equipped;
 		else if Doctor Mouse is visible:
 			say "     'Where did you find that?' Mouse asks excitedly, as soon as you bring the issue. 'This is quite mysterious. And exciting. Is a nanite colony living [italic type]in[roman type] the shoes? Is it a living species so infected it has transformed into shoes? A new parasitic species brought from the spread of the nanites. Oh, dear, so many things to...' The deadpan look you give the doctor makes him stop his monologue. 'I think I know what they need. Bear with me a moment.' Doctor Mouse prepares a syringe, and plants it into each of your feet. You wince as you feel the syringe prick you, despite the shoe. 'And done. Wait for a couple minutes, then try to remove them again.'";
 			say "     You do as asked, and grit your teeth, expecting another painful backlash. However, this time, the sneakers remove themselves, like an ordinary pair of shoes. 'The rest of the infection will be overtaken by the other strains, in the usual ways. I can ask some of my nurses to help if you want,' the scientist says with a green. 'If you notice extra limbs sprouting from unusual places on your body, just come to see me again. I need the extra data on this experimental retro-nanite treatment.'";
-			now the rubber sneakers are not equiped;
+			now the rubber sneakers are not equipped;
 		else if Doctor Moffatt is visible:
 			say "     'As much as I would like to help you remove these disgracious things from your feet, I am a [italic type]psychologist[roman type], not a physician,' Moffatt replies. 'Sorry.'";
 		else if Doctor Utah is visible:
@@ -55,7 +55,7 @@ Instead of using the rubber sneakers:
 		else if Nermine is visible:
 			say "      'Oh my, you brought me quite the item,' Nermine says, when you show her your rubber sneakers. 'I could remove them, yes. Yes... Just go sit on that chair and stay still. Good. Now, stretch your legs in front of you. Like that. Yes.' Nermine kneels in front of you, giving you a straight view into her cleavage. The jackal begins to rub your legs. She starts at your knees, then slowly goes down towards your feet. Several times, you cannot help but let a moan escape from your lips, as the massage is more than pleasurable in your state.";
 			say "      Nermine's hands reach your feet. She massages your feet through the rubber, tracing forms between your toes and on your soles. You close your mind in content, when... 'Done.' You open your eyes in surprise. Nermine was indeed done, holding your sneakers in her hands with a soft smile. Your eyes go from the shoes to your now naked feet, in amazement. 'They simply needed some encouragement,' was her only answer, as she gives you back the shoes.";
-			now the rubber sneakers are not equiped;
+			now the rubber sneakers are not equipped;
 		else:
 			say "      You reach down to your shoes and attempt to remove them. An intense burning sensation makes you stop right away, and repeats with every new try. You realize that you are in trouble, and will need help in order to remove these shoes. [bold type]You need to go to a medical doctor, or a person knowledgable in this kind of items, and try to remove these rubber sneakers with them around[roman type].";
 	else:
@@ -65,12 +65,12 @@ Instead of using the rubber sneakers:
 		if player consents:
 			say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
 			say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
-		now the rubber sneakers are equiped;
+		now the rubber sneakers are equipped;
 
 Section 3 - Everyturn rule
 
 an everyturn rule:
-	if the rubber sneakers are equiped:
+	if the rubber sneakers are equipped:
 		if skinname of player is not "Rubber Puma":
 			say "     The tingles coming from your rubber shoes, which you got used to until now, suddenly peak. You get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [skinname of player] skin.";
 			now skinname of player is "Rubber Puma";
@@ -82,13 +82,13 @@ an everyturn rule:
 			if cocks of player is 1:
 				now cock length of player  is 7;
 				now cock width of player is 5;
-		else if tailname of player is not "Rubber Puma";
+		else if tailname of player is not "Rubber Puma":
 			say "     This time, the tingles focus on the small of your back, then your cocccyx. A long blue tail sprouts out. A flexible rubbery tube, which feels like a natural part of your body, as the elecritc tingles running back to your brain tell you, as soon as you grab it.";
 			now tailname of player is "Rubber Puma";
-		else if bodyname of player is not "Rubber Puma";
+		else if bodyname of player is not "Rubber Puma":
 			say "     Your body shifts and changes. You feel your body become a little smaller, and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance.";
 			now bodyname of player is "Rubber Puma";
-		else if facename of player is not "Rubber Puma";
+		else if facename of player is not "Rubber Puma":
 			say "     The rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind.";
 			now bodyname of player is "Rubber Puma";
 		say "    The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
@@ -96,7 +96,7 @@ an everyturn rule:
 			increase libido of player by 20;
 		else:
 			increase libido of player by 10;
-		if libido of player > 100;
+		if libido of player > 100:
 			say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [smv][else]cunt[sfn] [sfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconcisously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
 			decrease humanity of player by 15;
 			now libido of player is 20;

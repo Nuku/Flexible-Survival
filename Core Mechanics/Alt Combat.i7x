@@ -642,7 +642,7 @@ Chapter 5 - Flee
 
 This is the flee rule:
 	choose row monster from the table of random critters;
-	if rubber sneakers are equiped:
+	if rubber sneakers are equipped:
 		increase libido of player by 30;
 		if libido of player >= 100:
 			say "     You start running away as fast as you can. Unfortunately, your already aroused body cannot sustain the side-effect of the rubber sneakers. You cum hard ,and tumble on the ground in exhaustion. You barely have the time to stand back up before your adversary catches up with you. The cursed item keeps your libido high, and you remain terribly aroused, about to cum at the smallest attempt to sprint. [bold type]It may not be a good idea to attempt fleeing again, unless you find a way to reduce your libido first.[roman type]";

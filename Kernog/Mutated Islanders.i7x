@@ -1,4 +1,4 @@
-Version 1 of Mutated Islanders by K5ernog begins here.
+Version 1 of Mutated Islanders by Kernog begins here.
 
 "Adds male and female version of Mutated Islander, with cock-vore content"
 
@@ -6,14 +6,14 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Mutated Islanded" } to infections of guy;
-		
+
 to say mutatedIslanderDesc:
 	if inasituation is true:
 		say "";
 	else:
 		say "    The nearby bushes crack and bristle, as a muscular man rushes out at you. He is massive in more than one regard. Not only do you [if scalevalue of player is 5]get easily matched in height[else if scalevalue of player is 4]barely reach his neck[else if scalevalue is 3]barely reach his chest[else if scalevalue is 2]barely reach his belly[else]barely reach his groin[end if], his massive girth bouncing with each of his steps on his tanned thighs. '[one of]There you are![or]Found you![or]Fill me, Stranger![or]My balls feel so empty...[at random]'";
-		
-		
+
+
 [ Player is forcefully cock-vored. No bonus ]
 to say loseMutatedIslander:
 	if inasituation is true:
@@ -27,7 +27,7 @@ to say loseMutatedIslander:
 		else:
 			say "      Your shoulders, then your chest follows it, with some effort, and your [bodyname of player] form slowly disappears inside his cock. As your head reaches the base of his shaft, the mutant lets out a shudder which reverberates all the way down your prison. 'Damn, that feels good.' As soon as [if scalevalue of player is 3]only your ankles pathetically jiggle out[else]your entire body is squished inside[end if], the islander grabs his massive erection with both hands, and resume his prior jerk off. Each of your panicked struggles only make the man even more aroused and pleasured. Eventually, with a loud moan, he cums hard.  A torrent of cum geyzers out from his ball and straight into your face. the gallons of cum force their way through your mouth and into your stomach. Your belly bulges out almost comically. Eventually even your body and the nanites cannot keep up, and the pressure pushes you back outside. You crash several meters away, covered from head to toe in thick globs of semen, and your belly filled with the stuff.";
 		say "     The islander falls on his back, knocked out by the power of his own orgasm. Dizzled by the quantites of pre and cum spilled over and inside you, you do not waste your chance, and walk away, while your nanites cope with what you endured.";
-		
+
 [ Player can voluntarily be cock-vored. This allows him to recover health as time passes]
 to say beatMutatedIslander:
 	if inasituation is true:
@@ -47,9 +47,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutated Islanded M";
 	now attack entry is "[one of][or][or][or][at random]";
-	now defeated entry is "[beatMutatedIslanderM]";
-	now victory entry is "[loseMutatedIslanderM]";
-	now desc entry is "[mutatedIslanderMDesc]";
+	now defeated entry is "[beatMutatedIslander]";
+	now victory entry is "[loseMutatedIslander]";
+	now desc entry is "[mutatedIslanderDesc]";
 	now face entry is "charmingly human";
 	now body entry is "charmingly human";
 	now skin entry is "smooth";
@@ -99,7 +99,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Mutated Islander":
 		if humanity of player < 10:
-			say "     Having lost your mind, the mutated islander's infection takes over your body in dramatic fashion. [if cock size of player < 20]Your cock grows to inhuman proportions and it[else]your already inhumanly-sized cock[end if] begins to fill empty, desperately empy despite the humongous testicles hanging below. Before the military eventually put you down, you scour the island's forest, ambushing any unfortunate passerby investigating the island's secret, and push them down inside your scrotum.";
+			say "     Having lost your mind, the mutated islander's infection takes over your body in dramatic fashion. [if cock length of player < 20]Your cock grows to inhuman proportions and it[else]your already inhumanly-sized cock[end if] begins to fill empty, desperately empy despite the humongous testicles hanging below. Before the military eventually put you down, you scour the island's forest, ambushing any unfortunate passerby investigating the island's secret, and push them down inside your scrotum.";
 		else:
 			say "     Keeping a semblance of sanity, you return to Vohr Island, and manage to find other mutated islanders, who have retained their wits like you. They guide you to the abandoned military base, in the process of being reconstructed into a small village. You live there in autarcy with your kin, until the noise of the helicopters replace the seagulls.'";
 
