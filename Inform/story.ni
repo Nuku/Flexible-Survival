@@ -4979,7 +4979,6 @@ Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital For Fs by Stripes.
 Include Hyena Hideout by Stripes.
-Include Island by Kernog.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hide Away by Kaleem mcintyre.
 Include Mall Community Center by Wahn.
@@ -5001,6 +5000,7 @@ Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
+Include Vohr Island by Kernog.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
 
@@ -5093,6 +5093,7 @@ Include Recordings by Wahn.
 Include Red Events by Stripes.
 Include Researcher Studio by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
+Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
@@ -5294,6 +5295,7 @@ Include MothGirl for Fs by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
+Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
@@ -5351,6 +5353,7 @@ Include Sierrasaur by Blue Bishop.
 Include Siren For Fs by Stripes.
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
+Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
 Include Small Feline And Lion For Fs by Damaged.
 Include Snake For Fs by Stripes.
