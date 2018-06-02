@@ -141,7 +141,7 @@ to manEatingPlantVore:
 					increase lustatt by 7 + (lustadjust * 2);
 					wyvhumanityroll; [aka humanity loss]
 					wait for any key;
-				else if struggleatt is 3:
+				else if struggleatt < 5:
 					say "     You can finally feel your fingers stretch the outer layer of the slime. Liberty is only a few strokes away.";
 					increase lustatt by 7 + (lustadjust * 2);
 					wyvhumanityroll; [aka humanity loss]
@@ -149,7 +149,6 @@ to manEatingPlantVore:
 				else:
 					say "     Your arms eventually escape the confines of the slime. The firmer outer skin of the slime acts against it, and gives you additional leeway to push yourself out. You instinctively run as fast as you can away from the much slower slime.";
 					cleanboundmemory;
-					now pewtergenitalcap is 0;
 					now trixieexit is 1;
 					follow the turnpass rule;
 				next;
@@ -183,13 +182,13 @@ to manEatingPlantVore:
 			say "Invalid action.";
 
 to say maneatingPlantStruggleBar:
-	say "< [italic type][bracket]-[if struggleatt is 1]---[bold type]X[roman type][else if struggleatt is 2]--[bold type]XX[roman type][else if struggleatt is 3]-[bold type]XXX[roman type][else]-[bold type]XXXX[roman type]";
+	say "< [bracket][if struggleatt is 0]-----[else if struggleatt is 1]----[bold type]X[roman type][else if struggleatt is 2]---[bold type]XX[roman type][else if struggleatt is 3]--[bold type]XXX[roman type][else]-[bold type]XXXX[roman type][end if][close bracket]";
 
 
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Man-eating Plant":
+	if bodyname of player is "Slime Cube":
 		say "     The last of your consciousness fades away. You are already comatose when the hotness upon your skin turns into a burning sensation and your body dissolves piece by piece, until only your bones remain, to be digested for the weeks to come.";
 
 

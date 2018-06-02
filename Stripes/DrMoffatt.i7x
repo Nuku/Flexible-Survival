@@ -110,14 +110,7 @@ to say psychfirstarrival:
 				increase carried of water bottle by 1;
 				now XP of Doctor Moffatt is 2;
 				now HP of doctor moffatt is 2;
-<<<<<<< HEAD
 		now battleground is "void";
-=======
-	LineBreak;
-	say "[bold type]You gain 1 water bottle![roman type][line break]";
-	increase carried of water bottle by 1;
-	now battleground is "void";
->>>>>>> 874b1324... Last commit
 
 
 the scent of Psych Department is "The room smells strongly of its sexy skunk occupant, though there's traces of the scents of others, mainly mustelids, having been in here as well.".
@@ -761,43 +754,24 @@ carry out hypnoSession:
 			-- 4: say "[hypnoCatch4]";
 			-- 5: say "[hypnoCatch5]";
 	if dexterity of Doctor Moffatt is:
-<<<<<<< HEAD
 		-- 1: 
 			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase strength of player by level of Doctor Moffatt;
 		-- 2: 
-=======
-		-- 1:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
-			increase strength of player by level of Doctor Moffatt;
-		-- 2:
->>>>>>> 874b1324... Last commit
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your dexterity raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase dexterity of player by level of Doctor Moffatt;
 		-- 3:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your stamina raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase stamina of player by level of Doctor Moffatt;
-<<<<<<< HEAD
 		-- 4: 
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your perception raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase perception of player by level of Doctor Moffatt;
 		-- 5: 
-=======
-		-- 4:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
-			increase perception of player by level of Doctor Moffatt;
-		-- 5:
->>>>>>> 874b1324... Last commit
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your charisma raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase charisma of player by level of Doctor Moffatt;
 		-- 6:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your intelligence raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase intelligence of player by level of Doctor Moffatt;
-<<<<<<< HEAD
-													
-=======
-
->>>>>>> 874b1324... Last commit
 
 to say hypnoScene1: [Raising strength]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";

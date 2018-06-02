@@ -9,12 +9,12 @@ name	desc	weight	object
 "rubber sneakers"	"Dark blue sport shoes made of a shiny rubbery material. A stylised feline figure is painted on the side."	2	rubber sneakers
 
 When play begins:
-	now the plural of rubber sneakers is true;
 	add "Rubber Puma" to infections of furry;
+	add "rubber sneakers" to invent of Astroslide Field Locker-room;
 
 rubber sneakers is a grab object.
 rubber sneakers is equipment.
-It is not temporary.
+rubber sneakers is not temporary.
 The plural of rubber sneakers is true.
 The taur-compatible of rubber sneakers is false.
 The size of rubber sneakers is 3.
@@ -27,7 +27,7 @@ The slot of rubber sneakers is "feet".
 
 the scent of rubber sneakers is "The rubber sneakers smell mostly of rubber, with a faint hint of sweat.".
 
-The rubber sneakers are in Astroslide Field Locker-room.
+rubber sneakers is in Astroslide Field Locker-room.
 
 Section 2 - Usage specifics
 
@@ -65,7 +65,7 @@ Instead of using the rubber sneakers:
 		if player consents:
 			say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
 			say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
-		now the rubber sneakers are equipped;
+			now the rubber sneakers are equipped;
 
 Section 3 - Everyturn rule
 
