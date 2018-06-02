@@ -6,7 +6,7 @@ Version 1 of Julian by Prometheus begins here.
 [   2: Got his room number.                                  ]
 [   3: Met him in his room                                   ]
 [   4: Met at beach                                          ]
-[   5: Got the libido pills                                                      ]
+[   5: Got the libido pills                                  ]
 [   6:                                                       ]
 [   7:                                                       ]
 [ 100: Refused his conversation.                             ]

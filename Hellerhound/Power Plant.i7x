@@ -38,10 +38,11 @@ the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with t
 
 Broken Fence is a door. "Though the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
 Plant Lobby is a room. "Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.".
-earea of Plant Lobby is "Outside".
+The earea of Plant Lobby is "Outside".
 Plant Lobby is west of Broken Fence.
 Broken Fence is west of Wandering Around.
 Broken Fence is dangerous.
+The marea of Broken Fence is "Outside".
 
 Plant Overview is a room. It is fasttravel. "The city's main power plant rises before you, a great accomplishment of geothermal engineering. Though it seems that someone - or rather something - went on a rampage here. The outside walls of the huge structure are burnt and blackened in arcs and spots, as if someone spent a while going at it with a flamethrower. On the long side of the building, a massive rend in the wall allows entry to the inside - for those who have no problem walking through the bubbling pit of lava in front of it at least. You on the other hand will have to use the side entrance of the administration annex to the north if you want to explore the power plant.".
 Plant Overview is south of Plant Lobby.

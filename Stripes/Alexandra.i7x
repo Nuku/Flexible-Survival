@@ -809,6 +809,7 @@ an everyturn rule:
 Section 6 - Police Station
 
 Police Station is a room. It is fasttravel. It is private. It is sleepsafe.
+The earea of Police Station is "Outside".
 The description of Police Station is "[policestationdesc]".
 the scent of Police Station is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 The Police Station has a number called population.
