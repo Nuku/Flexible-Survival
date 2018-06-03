@@ -1,5 +1,6 @@
 Version 1 of Rachel Mouse by Stripes begins here.
-[Version 1.2 - Player initiated pet sex]
+[ Version 1.2 - Player initiated pet sex                                        ]
+[ Version 1.3 - Rachel has become an NPC - Luneth                               ]
 
 "Adds a Mental Mouse 'companion' named Rachel."
 
@@ -91,6 +92,7 @@ to say mouseapts:
 		if the player is not lonely:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
+		move Rachel to Pantry;
 		now the companion of the player is mouse girl;
 		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
@@ -118,37 +120,133 @@ to say fullmousification:
 
 Section 2 - Mouse Girl Pet
 
+the linkaction of Rachel is "[rachellinkaction]".
+
+to say rachellinkaction:
+	say "Possible Actions: [link]talk[as]talk Rachel[end link], [link]smell[as]smell Rachel[end link], [link]fuck[as]fuck Rachel[end link][line break]";
+
 mouse girl is a pet. mouse girl is a part of the player.
-The description of mouse girl is "[racheldesc]".
+understand "Rachel" as mouse girl.
+The description of mouse girl is "[RachelDesc]".
 The weapon damage of mouse girl is 5.
 The level of mouse girl is 3.
 The Dexterity of mouse girl is 15.
-The summondesc of mouse girl is "Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you."
-The assault of mouse girl is "[rachelattack]".
-the fuckscene of mouse girl is "[sexwithmousegirl]".
+The summondesc of mouse girl is "[SummonRachel]".
+The dismissdesc of mouse girl is "[DismissRachel]".
+The assault of mouse girl is "[RachelAttack]".
+the fuckscene of mouse girl is "[SexWithMousegirl]".
 rachelfuck is a number that varies.
 The icon of mouse girl is Figure of Rachel_icon.
 
-understand "Rachel" as mouse girl.
+to say SummonRachel:
+	remove Rachel from play;
+	if player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
+		say "     Rachel stands up from where she was meditating and without a word comes to stand by your side.";
+	else: [regular summoning]
+		say "     Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
 
-to say rachelattack:
+to say DismissRachel:
+	move Rachel to Pantry;
+	if player is not in Pantry: [regular dismiss]
+		say "     Before you can say a word Rachel come up behind you. 'Alright, I'll head back to the library then, seeya soon.' With that she makes her way back.";
+	else: [dismissing her in the abbey]
+		say "      Rachel goes back to her meditating claiming she will continue to commune with the rest of the collective.";
+
+Rachel is a woman.
+The description of Rachel is "[RachelDesc]".
+
+instead of sniffing Rachel:
+	say "[RachelScent]";
+
+instead of fucking Rachel:
+	say "[SexWithMousegirl]";
+
+
+to say RachelAttack:
 	choose row monster from table of random critters;
 	if name entry is "Mental Mouse":
 		say "[one of]The mouse girl glares angrily at one of the mice facing you, causing her to reel back from your mate's mental assault![or]The psychic mouse girl clenches her paw in a squeezing motion and tenses her face in concentration. While not held or hurt by this, one of the mice is slowed momentarily, allowing you to get in a glancing blow![or]Pressing her fingertips to her temples, Rachel focuses hard, causing one of them to groan in mental pain![or]The mouse girl makes firm, grabbing motions with her hands and one of the mice collapses to her knees and cums hard, as if groped from afar![or]Rachel moves up behind one of the mice and pinches her ear. Your enemy becomes glassy-eyed and wobbles as your mate's mind slams into hers![at random]";
 	else:
 		say "[one of]The mouse girl glares angrily at your foe, causing them to reel back from her mental assault![or]The psychic mouse girl clenches her paw in a squeezing motion and tenses her face in concentration. While not held or hurt by this, your enemy is slowed momentarily, allowing you to get in a glancing blow![or]Rachel, putting her fingertips to her temples, focuses hard on your enemy, causing them to groan in mental pain![or]The mouse girl makes firm, grabbing motions with her hands and your foe groans softly, as if groped from afar![or]Rachel moves up behind your foe, placing a paw lightly on their back. Your enemy becomes glassy-eyed for a moment as their fighting resolve is weakened![at random]";
 
-to say racheldesc:
+to say RachelDesc:
 	say "     This short, grey mouse is cute and sexy, with an idealized feminine body in miniature. While only three feet tall, the bosom and cock on this rodent herm are above average for a normal human. She has long, grey hair that flows down her back and her round, mouse ears poke out from it. She has found a cute sundress somewhere. It is a light blue that goes well with her fur colour, but does little to hide her large tits or erection when aroused. That's probably why she chose it.";
 	say "     Despite her small size, this mouse girl has considerable psychic powers. From what you've seen and sensed, she's probably one of the strongest among them. Having been selected by the mouse collective's hive mind as your intended mate, you sensed her powerful mind and can't help but feel a strong attachment to her. Intent on coaxing you back to them, she has chosen to accompany you to show you the pleasures of mousedom to convince you to return. You'll have to keep her close by if you want to avoid having the mice constantly tracking you down.";
 	say "     As if sensing your mind focused on her, the mouse girl [one of]bends over to pick something up, swishing her tail to lift the back of her dress and flash her pussy at you[or]runs her paws along her feminine body[or]teases her nipples in a little show for you[or]brushes the front of her dress, making the growing erection under it more prominent[or]grins coquettishly[or]sends a fresh wave of her love for you into your mind[or]nibbles at some cheese and crackers she found, somehow making it seem sexy[at random]. You can't help but think as you look at her that joining the mouse collective wouldn't be so bad if it means being with her.";
 	if a random chance of 2 in 5 succeeds, decrease humanity of player by 1;
 
-the scent of the mouse girl is "[mousegirlscent]".
+instead of sniffing mouse girl:
+	say "[RachelScent]";
 
-to say mousegirlscent:
+to say RachelScent:
 	say "Rachel smells faintly of mice and arousal, and you find yourself thinking back on the wonderful experience you had with them.";
 	if a random chance of 1 in 3 succeeds, decrease humanity of player by 1;
+
+instead of conversing the Rachel:
+	if player is in Pantry and Rachel is in Pantry:
+		say "[RachelTalkMenu]";
+	else if companion of player is mouse girl:
+		say "[RachelTalkMenu]";
+	else:
+		say "     Rachel isn't here.";
+
+instead of conversing mouse girl:
+	if mouse girl is not tamed:
+		say "     Who?";
+	else:
+		if player is in Pantry and Rachel is in Pantry:
+			say "[RachelTalkMenu]";
+		else if companion of player is mouse girl:
+			say "[RachelTalkMenu]";
+		else:
+			say "     Rachel isn't here.";
+
+to say RachelTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Chit Chat";
+	now sortorder entry is 1;
+	now description entry is "Just have some simple chit chat";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Chit Chat"):
+					say "[RachelTalk1]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the mouse girl, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say RachelTalk1:
+	let randomnumber be a random number from 1 to 2;
+	if randomnumber is:
+		-- 1:
+			say "     'Can you feel the others? Even though we are seperated I can feel them everywhere!'";
+		-- 2:
+			say "     'I hope that you decide to join the collective soon, everything is just better once you give yourself fully to the hive-mind.'";
 
 
 Section 3 - Sexxxings
