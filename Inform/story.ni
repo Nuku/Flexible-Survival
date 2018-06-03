@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 220000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 230000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
@@ -63,8 +63,8 @@ title	description
 "Socializing"	"You can [bold type]talk (person)[roman type] to chat. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early. Alternatively you can [bold type]give in[roman type] to the infection."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
-"Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]Waits On[roman type] to return to the default."
-"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]Clears On[roman type] to return to the default."
+"Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back? Type [bold type]Waits On[roman type] to return to the default."
+"Clear Less"	"Don't like the page clearing of text? Want the combat interface at the bottom of the screen? Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back? Type [bold type]Clears On[roman type] to return to the default."
 "Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/ ."
 "Further Help"	"For further help and information, check out the wiki at: http://wiki.flexiblesurvival.com/w/Main_Page or join the Discord at: https://discord.gg/b54Mbkb ."
@@ -72,7 +72,7 @@ title	description
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
 	now the title in row 2 of Table of Instruction Options is "What to do with >";
-	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?'  You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
+	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?' You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
 	now the title in row 1 of Table of Basic Help Options is "Q to quit help, enter to select entry";
 	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
 
@@ -656,7 +656,7 @@ name	desc	weight	object	sortname (indexed text)
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A basic filtered face mask. Maybe it will help?  Probably not[first time]. You doubt it was designed with this madness in mind[only]."	3	face mask
+"face mask"	"A basic filtered face mask. Maybe it will help? Probably not[first time]. You doubt it was designed with this madness in mind[only]."	3	face mask
 [
 "heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
 "reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites. It's too bulky, and doesn't have the processing capacity to be of any use in the field. Perhaps you could find a way around those limitations?"	13	reprogramming device
@@ -827,7 +827,7 @@ when play begins:
 
 Felinelist is a marker. [list of feline infections]
 when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber Puma","Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
 Caninelist is a marker. [list of canine/lupine infections]
 when play begins:
@@ -867,9 +867,9 @@ when play begins:
 
 Latexlist is a marker. [list of infections w/latex/rubber/plastic skin]
 when play begins:
-	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber tigress" } to infections of Latexlist;
+	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of Latexlist;
 
-Slimelist is a marker.  [list of slime infections]
+Slimelist is a marker. [list of slime infections]
 when play begins:
 	add { "Liquidshifter" } to infections of Slimelist;
 
@@ -904,7 +904,7 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of BarbedCocklist;
+	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
@@ -1831,7 +1831,7 @@ To process (X - a grab object):
 			if hunger of player > 14:
 				increase score by 5;
 			PlayerEat 15;
-			say "Snack time!  You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight. YUM!";
+			say "Snack time! You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight. YUM!";
 			if morale of player < 0:
 				increase morale of player by 36;
 				if morale of player > 0, now morale of player is 0;
@@ -1915,7 +1915,7 @@ To process (X - a grab object):
 				if thirst of player > 30:
 					decrease score by ( thirst of player minus 30 ) divided by 3;
 			PlayerDrink 30;
-			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if]. YUM!";
+			say "Awesome! Soda! You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if]. YUM!";
 			if morale of player < 0:
 				increase morale of player by 75;
 				if morale of player > 0, now morale of player is 0;
@@ -3422,7 +3422,7 @@ To fight:
 		increase bonus by a random number from 1 to 20;
 		if bonus < 6:
 			if "Wary Watcher" is listed in feats of player:
-				say "The creature is about to get the drop on you, but your vigilance spots it just in time!  You ready yourself for battle.";
+				say "The creature is about to get the drop on you, but your vigilance spots it just in time! You ready yourself for battle.";
 			else:
 				say "The creature gets the drop on you!";
 				follow the monster combat mode rule;		[select the combat mode for first-strike]
@@ -4972,7 +4972,7 @@ Include Tenvale College Campus by Rikaeus.
 [Include Church Of The Maternal Beast For Fs by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
-Include Equinoid Camp For FS by Stripes.
+Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
 Include High Rise District by Guest Writers.
@@ -5000,6 +5000,7 @@ Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
+Include Vohr Island by Kernog.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
 
@@ -5092,6 +5093,7 @@ Include Recordings by Wahn.
 Include Red Events by Stripes.
 Include Researcher Studio by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
+Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
@@ -5140,6 +5142,7 @@ Include Bear For Fs by Nuku Valente.
 Include Beaver for FS by Stripes.
 Include Behemoth by Kaleem mcintyre.
 Include Bird of Paradise for FS by Stripes.
+Include Black Equinoid by Song.
 Include Black Wolf For Fs by Stripes.
 Include Blob by Kaleem Mcintyre.
 Include Blue Chaffinch for FS by Stripes.
@@ -5188,7 +5191,6 @@ Include Elf by Nuku Valente.
 Include Elk for FS by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
-Include Equine for FS by Nuku Valente.
 Include Erica by Wahn.
 Include Ewe by Sarokcat.
 Include Feline Gymnast by Guest Writers.
@@ -5293,6 +5295,7 @@ Include MothGirl for Fs by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
+Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
@@ -5350,6 +5353,7 @@ Include Sierrasaur by Blue Bishop.
 Include Siren For Fs by Stripes.
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
+Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
 Include Small Feline And Lion For Fs by Damaged.
 Include Snake For Fs by Stripes.
@@ -5402,6 +5406,7 @@ Include Alex by Stripes.
 Include Alexandra by Stripes.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
+Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Stripes.
 Include Angie by Sarokcat.
@@ -5418,6 +5423,7 @@ Include Bradford by Stripes.
 Include Brennan by Wahn. [WIP]
 Include Brian by Vinickus.
 Include Brooke by Stripes.
+Include Bryony by Song.
 Include Bubble by Stripes.
 Include Campus Gym by UrsaOmega.
 Include Carl by Wahn.
@@ -5498,6 +5504,7 @@ Include Micaela by Stripes.
 Include Midnight by Sarokcat.
 Include Mouse Taur by Nuku Valente.
 Include Nadia by Wahn.
+Include Nakoma by Song.
 Include Nala by CrimsonAsh.
 Include Nermine by Wahn.
 Include Nermine Quests by Wahn.
@@ -5560,6 +5567,7 @@ Include Zigor by Stripes.
 Include Artemis by Stripes.
 Include Aurora by Stripes.
 Include Baby Pets by Luneth.
+Include Equinoid Warrior by Song.
 Include Felinoid Companion by Sarokcat.
 Include Feral Pets by Luneth.
 Include Gryphon Companion by Sarokcat.
@@ -5724,7 +5732,7 @@ To startgenderlockshift:
 			now cunt width of player is 4;
 			now breast size of player is 0;
 			now cocks of player is 0;
-			now cock length of player is 0;			
+			now cock length of player is 0;
 		-- 7: [male herm]
 			now cocks of player is 1;
 			now cock length of player is 6;

@@ -94,7 +94,7 @@ to say dormstreetdesc:
 [Room Declaration]
 Second Floor Male Dorms is a room.
 Second Floor Male Dorms is above Tenvale College Male Dorms.
-The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren[']t the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
+The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the Spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren't the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
 
 [Room Declaration]
 East of Dorm Street is Tenvale College Male Dorms.
@@ -121,7 +121,7 @@ Pericles' Room is a room.
 The description of Pericles' Room is "[periclesroomdesc]".
 
 to say periclesroomdesc:
-	say "     The strong male[']s room is the complete opposite of what one would define as a Spartan room. He has posters of various fictional books lining the wall as well as various weapons, both meticulously taken care of. On top of that, there is a large bookshelf filled with various books that match the posters. Beyond that he has a simple bed with red sheets, a computer sitting in the corner for his homework, and a window looking over the entire campus. The Spartan-Helot himself is wandering between throughout the room doing various things from looking at paperwork to looking out upon the campus.";
+	say "     The strong male's room is the complete opposite of what one would define as a Spartan room. He has posters of various fictional books lining the wall as well as various weapons, both meticulously taken care of. On top of that, there is a large bookshelf filled with various books that match the posters. Beyond that he has a simple bed with red sheets, a computer sitting in the corner for his homework, and a window looking over the entire campus. The Spartan-Helot himself is wandering between throughout the room doing various things from looking at paperwork to looking out upon the campus.";
 
 [Room Declaration]
 North of College Campus Entrance is College Fountain.
@@ -169,7 +169,7 @@ Down of The Clouds is College Belltower.
 The description of College Belltower is "[belltowerdesc]".
 
 to say belltowerdesc:
-	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as metioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
+	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as mentioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
 
 [Room Declaration]
 West of College Campus Entrance is College Walkway West.
@@ -187,7 +187,7 @@ The description of Athletic Street is "[athleticstreetdesc]".
 earea of Athletic Street is "Campus".
 
 to say athleticstreetdesc:
-	say "     The street that holds the athletic departments has multiple groups of people excercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
+	say "     The street that holds the athletic departments has multiple groups of people exercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
 
 [Room Declaration]
 Northwest of College Walkway West is Lecture Street.

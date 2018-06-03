@@ -758,21 +758,20 @@ carry out hypnoSession:
 			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase strength of player by level of Doctor Moffatt;
 		-- 2: 
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your dexterity raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase dexterity of player by level of Doctor Moffatt;
 		-- 3:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your stamina raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase stamina of player by level of Doctor Moffatt;
 		-- 4: 
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your perception raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase perception of player by level of Doctor Moffatt;
 		-- 5: 
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your charisma raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase charisma of player by level of Doctor Moffatt;
 		-- 6:
-			say "[bold type]Your strength raises momentarily by [level of Doctor Moffatt]![roman type]";
+			say "[bold type]Your intelligence raises momentarily by [level of Doctor Moffatt]![roman type]";
 			increase intelligence of player by level of Doctor Moffatt;
-													
 
 to say hypnoScene1: [Raising strength]
 	say "     Dr Moffatt has you lying down on the couch. She asks you to lie down and gives you some instructions. 'Now, it is important that, during the session, you focus on my words, but most importantly, you must relax. Don't try to force things, or else it will not work. Put these on.' The doctor gives you a pair of headphones. A relaxing white noise begins to fill your head. 'Breathe slowly. Empty your mind. Let the noise help you,' the skunk asks. After several minutes of relaxation, you hear the doctor again.";

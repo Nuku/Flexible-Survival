@@ -158,6 +158,7 @@ to say beegirlsaved:
 	increase score by 20;
 	now bee girl is tamed;
 	now HP of bee girl is 1;
+	move Honey to Garden;
 	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
@@ -172,7 +173,7 @@ The Dexterity of bee girl is 16.
 The summondesc of bee girl is "[SummonHoney]".
 The dismissdesc of bee girl is "[DismissHoney]".
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
-the fuckscene of bee girl is "[sexwithHoney]".
+the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
 	remove Honey from play;
@@ -195,7 +196,7 @@ instead of sniffing Honey:
 	say "[HoneyScent]";
 
 instead of fucking Honey:
-	say "[sexwithHoney]";
+	say "[SexWithHoney]";
 
 to say HoneyDesc:
 	if debugactive is 1:
@@ -279,7 +280,7 @@ to say HoneyTalk1:
 			-- 1:
 				say "     'I'm so glad we were able to avenge my hive.'";
 			-- 2:
-				say "     'What do you think about the garden? I think it looks just super now!";
+				say "     'What do you think about the garden? I think it looks just super now!'";
 	else:
 		if randomnumber is:
 		-- 1:
@@ -287,7 +288,7 @@ to say HoneyTalk1:
 		-- 2:
 			say "     'I'm gonna work really hard to get this garden sorted, we need more pretty flowers here!'";
 
-to say sexwithHoney:
+to say SexWithHoney:
 	if lastfuck of Honey - turns < 4:
 		say "     You've had some fun with Honey quite recently. Perhaps you should give her a break for a little longer?";
 	else:
@@ -413,7 +414,7 @@ An everyturn rule:
 			if diceroll < libido of player and lastfuck of bee girl - turns >= 4:
 				say "[fuckscene of bee girl]";
 
-the fuckscene of bee girl is "[sexwithHoney]".
+the fuckscene of bee girl is "[SexWithHoney]".
 
 to say sexwithHoney:
 	if lastfuck of bee girl - turns < 4:
