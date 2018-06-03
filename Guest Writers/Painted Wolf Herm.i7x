@@ -41,7 +41,7 @@ to say wolfherm attack:
 to say beatpwh:
 	if equinoidstatus >= 6 and equinoidstatus < 9, increase equinoidstatus by 1;
 	let diceroll be a random number between 33 and 125;
-	if diceroll < libido of player and cocks of player > 0:
+	if diceroll < libido of player:
 		say "     Looking over the wild wolf herm's painted body, you feel a lustful urge to have sex with hir. As your eyes roam over hir sexy body, hir arousing scent makes you eye hir cock and pussy longingly. Shall you give into those urges completely and have sex with the lupine herm or hold back and sate your lusts orally? (Y=sex, N=oral)";
 		if the player consents:
 			if cocks of player > 0:

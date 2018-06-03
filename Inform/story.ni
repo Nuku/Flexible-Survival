@@ -2010,7 +2010,7 @@ To process (X - a grab object):
 					if slot of z is slot of x:
 						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			if slot of x is "waist" and (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
+			if (slot of x is "feet" or slot of x is "waist") and (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]
@@ -5036,6 +5036,7 @@ Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
+Include Feral Events by MGEddie.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -6079,7 +6080,7 @@ to playernaming:
 	now name of player is playerinput;
 
 to say menuwardlist:
-	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or noncon is warded:
+	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or mindcontrol is warded or noncon is warded or vore is warded:
 		say "[bold type]Warded: [bracket] ";
 		if cockvore is warded:
 			say "Cockvore ";
@@ -6105,12 +6106,14 @@ to say menuwardlist:
 			say "Noncon ";
 		if mindcontrol is warded:
 			say "Mindcontrol ";
+		if vore is warded:
+			say "Vore ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or noncon is banned:
+	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or mindcontrol is banned or noncon is banned or vore is banned:
 		say "[bold type]Banned: [bracket] ";
 		if cockvore is banned:
 			say "Cockvore ";
@@ -6136,6 +6139,8 @@ to say menubanlist:
 			say "Noncon ";
 		if mindcontrol is banned:
 			say "Mindcontrol ";
+		if vore is banned:
+			say "Vore ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Banned[roman type]";

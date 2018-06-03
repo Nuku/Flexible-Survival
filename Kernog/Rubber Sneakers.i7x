@@ -17,10 +17,9 @@ rubber sneakers is equipment.
 rubber sneakers is not temporary.
 The plural of rubber sneakers is true.
 The taur-compatible of rubber sneakers is false.
-The size of rubber sneakers is 3.
+The size of rubber sneakers is 0.
 The AC of rubber sneakers is 0.
 The effectiveness of rubber sneakers is 0.
-The placement of jogging shoes is "feet".
 The placement of rubber sneakers is "feet".
 The descmod of rubber sneakers is "You wear dark blue rubbery sport shoes. Each step you take sends a small tingle throughout your body.".
 The slot of rubber sneakers is "feet".
@@ -59,13 +58,21 @@ Instead of using the rubber sneakers:
 		else:
 			say "      You reach down to your shoes and attempt to remove them. An intense burning sensation makes you stop right away, and repeats with every new try. You realize that you are in trouble, and will need help in order to remove these shoes. [bold type]You need to go to a medical doctor, or a person knowledgable in this kind of items, and try to remove these rubber sneakers with them around[roman type].";
 	else:
-		say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
-		say "      ([link]Yes[as]y[end link]) - What's the worst that could happen?";
-		say "      ([link]No[as]n[end link]) - Better listen to your instinct.";
-		if player consents:
-			say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
-			say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
-			now the rubber sneakers are equipped;
+		repeat with z running through equipped equipment:
+			if slot of z is "feet":
+				say "     [bold type]Your [z] is in the way![roman type][line break]";
+				continue the action;
+		if (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
+			say "     [bold type]Sadly, the rubber sneakers are incompatible with your body type![roman type][line break]";
+			continue the action;
+		else:
+			say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
+			say "      ([link]Yes[as]y[end link]) - What's the worst that could happen?";
+			say "      ([link]No[as]n[end link]) - Better listen to your instinct.";
+			if player consents:
+				say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
+				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
+				now the rubber sneakers are equipped;
 
 Section 3 - Everyturn rule
 

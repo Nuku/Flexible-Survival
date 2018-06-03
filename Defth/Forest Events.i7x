@@ -8,7 +8,7 @@ When play begins:
 	add Small Cave to badspots of Feral;
 	add Small Cave to badspots of Furry;
 	add Small Cave to badspots of Cockvore;
-	add Small Cave to badspots of Vore;	
+	add Small Cave to badspots of Vore;
 
 Instead of resolving a Small Cave:
 	if glowing mushroom is owned:
