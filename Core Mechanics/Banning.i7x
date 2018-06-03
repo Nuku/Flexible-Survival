@@ -29,7 +29,7 @@ when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 to new ban menu:
-	let flaglist be {"Cockvore","Furry", "Guy", "Girl", "Humorous", "Hermaphrodite", "Hellspawn", "Feral", "Transgender", "Incest", "Noncon", "Mindcontrol"};
+	let flaglist be {"Cockvore","Furry", "Guy", "Girl", "Humorous", "Hermaphrodite", "Hellspawn", "Feral", "Transgender", "Incest", "Mindcontrol", "Noncon", "Vore"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:

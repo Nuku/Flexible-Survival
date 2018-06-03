@@ -68,6 +68,7 @@ Instead of resolving Injured Felinoid:
 					WaitLineBreak;
 					say "     Thinking on what just happened you attempt to think of a name that might match up with him. Claws... attempting to feel out a name with that in mind lead you to the idea of maybe claus, but that doesnt seem to fit either. Then it hits you, what about Klauz? It has a feral feel to it, while still sounding like an actual name. Asking the felinoid how he feels about the name only leads to another growl and a shrug of his shoulders.";
 					now Felinoid companion is tamed;
+					move Klauz to Back Of The Library;
 					infect "Felinoid";
 					say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 					now Injured Felinoid is resolved;

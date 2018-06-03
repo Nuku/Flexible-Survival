@@ -59,6 +59,7 @@ The sarea of Hungry dog is "Outside".
 When play begins:
 	add Hungry dog to badspots of furry;
 	add Hungry dog to badspots of guy;
+	add Hungry dog to badspots of vore;
 
 Instead of resolving a Hungry dog:
 	if vorelevel > 2:
@@ -135,6 +136,8 @@ When play begins:
 	add Little trouble to badspots of furry;
 	add Little trouble to badspots of guy;
 	add Little trouble to badspots of girl;
+	add Little trouble to badspots of vore;
+	
 
 Instead of resolving Little trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";

@@ -827,7 +827,7 @@ when play begins:
 
 Felinelist is a marker. [list of feline infections]
 when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber Puma","Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
 Caninelist is a marker. [list of canine/lupine infections]
 when play begins:
@@ -867,7 +867,7 @@ when play begins:
 
 Latexlist is a marker. [list of infections w/latex/rubber/plastic skin]
 when play begins:
-	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber tigress" } to infections of Latexlist;
+	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of Latexlist;
 
 Slimelist is a marker. [list of slime infections]
 when play begins:
@@ -904,7 +904,7 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of BarbedCocklist;
+	add { "Anthro Shaft Beast", "Ashen Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
@@ -2010,7 +2010,7 @@ To process (X - a grab object):
 					if slot of z is slot of x:
 						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			if slot of x is "waist" and (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
+			if (slot of x is "feet" or slot of x is "waist") and (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]
@@ -5000,6 +5000,7 @@ Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone For Fs by Hellerhound.
 Include Urban Forest For Fs by Stripes.
+Include Vohr Island by Kernog.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
 
@@ -5035,6 +5036,7 @@ Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
+Include Feral Events by MGEddie.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5092,6 +5094,7 @@ Include Recordings by Wahn.
 Include Red Events by Stripes.
 Include Researcher Studio by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
+Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
@@ -5293,6 +5296,7 @@ Include MothGirl for Fs by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
+Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
@@ -5350,6 +5354,7 @@ Include Sierrasaur by Blue Bishop.
 Include Siren For Fs by Stripes.
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
+Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
 Include Small Feline And Lion For Fs by Damaged.
 Include Snake For Fs by Stripes.
@@ -6075,7 +6080,7 @@ to playernaming:
 	now name of player is playerinput;
 
 to say menuwardlist:
-	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or noncon is warded:
+	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or mindcontrol is warded or noncon is warded or vore is warded:
 		say "[bold type]Warded: [bracket] ";
 		if cockvore is warded:
 			say "Cockvore ";
@@ -6101,12 +6106,14 @@ to say menuwardlist:
 			say "Noncon ";
 		if mindcontrol is warded:
 			say "Mindcontrol ";
+		if vore is warded:
+			say "Vore ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or noncon is banned:
+	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or mindcontrol is banned or noncon is banned or vore is banned:
 		say "[bold type]Banned: [bracket] ";
 		if cockvore is banned:
 			say "Cockvore ";
@@ -6132,6 +6139,8 @@ to say menubanlist:
 			say "Noncon ";
 		if mindcontrol is banned:
 			say "Mindcontrol ";
+		if vore is banned:
+			say "Vore ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Banned[roman type]";

@@ -71,6 +71,7 @@ to say freeing_aurora:
 			say "     She pauses for a moment, looking around the devastated city. 'Look. Things seem really crazy out here and I want to repay you for saving me. Now, I've never really been much of a fighter, but just look at me,' she says, flexing an arm to make her bicep bulge. 'I can come with you and help keep you safe, if you'd like. Besides,' she adds, looking you up and down with an appreciative grin, 'maybe we can think of some other ways I can repay you, too.'";
 			now HP of frost giantess is 2;
 			now frost giantess is tamed;
+			move Aurora to Breakroom;
 			say "     (The frost giantess is now tamed! You can make her your active pet by typing [bold type][link]pet frost giantess[as]pet frost giantess[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet?  Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link].[roman type])[line break]";
 			increase score by 10;
 			now Giant's Frozen Yogurt is resolved;
@@ -78,21 +79,53 @@ to say freeing_aurora:
 
 Section 2 - Pet Data
 
+the linkaction of Aurora is "[auroralinkaction]".
+
+to say auroralinkaction:
+	say "Possible Actions: [link]talk[as]talk Aurora[end link], [link]smell[as]smell Aurora[end link], [link]fuck[as]fuck Aurora[end link][line break]";
+
 frost giantess is a pet. frost giantess is a part of the player.
-The description of frost giantess is "[aurora_desc]".
+understand "Aurora" as frost giantess.
+The description of frost giantess is "[AuroraDesc]".
 The weapon damage of frost giantess is 8.
 The level of frost giantess is 2.
 The Dexterity of frost giantess is 7.
-The summondesc of frost giantess is "Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].".
+The summondesc of frost giantess is "[SummonAurora]".
+The dismissdesc of frost giantess is "[DismissAurora]".
 The assault of frost giantess is "[aurora_attack]".
+the fuckscene of frost giantess is "[SexWithAurora]".
 
-the fuckscene of frost giantess is "[sexwithaurora]".
 
-the scent of frost giantess is "The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.".
+to say SummonAurora:
+	remove Aurora from play;
+	if player is in Breakroom and Aurora is in Breakroom: [summoning while standing next to her]
+		say "     ...";
+	else: [regular summoning]
+		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
 
-understand "Aurora" as frost giantess.
+to say DismissAurora:
+	move Aurora to Breakroom;
+	if player is not in Breakroom: [regular dismiss]
+		say "     ...";
+	else: [dismissing her in the abbey]
+		say "     ...";
 
-to say aurora_desc:
+Aurora is a woman.
+The description of Aurora is "[AuroraDesc]".
+
+instead of sniffing Aurora:
+	say "[AuroraScent]";
+
+instead of fucking Aurora:
+	say "[SexWithAurora]";
+
+instead of sniffing frost giantess:
+	say "[AuroraScent]";
+
+to say AuroraScent:
+	say "     The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.";
+
+to say AuroraDesc:
 	say "     Aurora the frost giantess is about 10 and a half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in colour and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
 
@@ -100,10 +133,68 @@ to say aurora_attack:
 	choose row monster from the table of random critters;
 	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[else]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, Aurora swings them down onto the [name entry][at random]![run paragraph on]";
 
+instead of conversing frost giantess:
+	if frost giantess is not tamed:
+		say "     Who?";
+	else:
+		if player is in Breakroom and Aurora is in Breakroom:
+			say "[AuroraTalkMenu]";
+		else if companion of player is frost giantess:
+			say "[AuroraTalkMenu]";
+		else:
+			say "     Aurora isn't here.";
+
+to say AuroraTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Chit Chat";
+	now sortorder entry is 1;
+	now description entry is "Just have some simple chit chat";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Chit Chat"):
+					say "[AuroraTalk1]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say AuroraTalk1:
+	let randomnumber be a random number from 1 to 2;
+	if randomnumber is:
+		-- 1:
+			say "     'Geez! This is heat is killin me... hopefully we can find a place with a cooler temp eventually!'";
+		-- 2:
+			say "     I have a question? How did I end up as the go to chick for frozen yogurt here?";
+
 
 Section 3 - Sex w/Aurora
 
-to say sexwithaurora:
+to say SexWithAurora:
 	if lastfuck of frost giantess - turns < 8:
 		say "     'Mmm... tempting, very tempting, but how about we wait for a bit first?' she says with a happy smile.";
 	else:
@@ -133,6 +224,6 @@ when play ends:
 		else:
 			say "     When rescue does finally come, Aurora is the subject of some concern due to her massive size. This makes her more difficult for the military to remove from the city. But she is clearly a survivor and sane, despite her transformation, so a military transport truck is requested. She's kept in a holding era that's been equipped for larger evacuees. There's heavier guard here, so you don't get to see much of her during the period at the base.";
 			say "     She is eventually released and, after turning down a recruitment offer, tries to find a new life for herself. Having managed to make a few friends among the larger transformation victims, she stays with them for a while. ";
-			say "     But she finds the heat in the area too uncomfortable and eventually moves further north, taking a position with RSX in Western Canada. The cooler climate there is much more to her liking and she enjoys the snowy winters up in the Rocky Mountains. She's a big hit among the ski resorts, making appearances at several of them over the course of the winter. She remains in contact with your through the intermittent correspondence she's able to send through her employer.";
+			say "     But she finds the heat in the area too uncomfortable and eventually moves further north, taking a position with RSX in Western Canada. The cooler climate there is much more to her liking and she enjoys the snowy winters up in the Rocky Mountains. She's a big hit among the ski resorts, making appearances at several of them over the course of the winter. She remains in contact with you through the intermittent correspondence she's able to send through her employer.";
 
 Aurora ends here.
