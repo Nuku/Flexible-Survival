@@ -1,6 +1,27 @@
 Version 3 of RexxyEvent by AGentlemanCalledB begins here.
-"Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
 [Version 3 - Overhaul of code for saving and future content.]
+
+"Adds a Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
+
+
+[  HP of Rex   ]
+[ 0 = not met        ]
+[ 1 = done event once, received bone]
+[ 2-4 = used bone 1-3 times]
+[ 5 = met Rex, lost bone ]
+[ 6-9 = Training phase, fucked Rex, pet offer at 9]
+[ 10 = Pet game over 1]
+[ 11= Accepted collar]
+[ 49 = Defeated by Rex in escape quest]
+[ 50 = Defeated Rex]
+
+[  HP of Karen  ]
+[ 0 = Default state        ]
+[ 1 = Refused Rex offer @ Rex HP 9 ]
+[ 2 = talked about bakery ]
+[ 3 = Spoke to Francois, got cookies ]
+[ 4 = Trigger Fight against Rex ]
+[ 5 = Defeated Rex, default Pet Karen Value ]
 
 Section 1 - Event
 
@@ -125,7 +146,7 @@ Rex is in Rex's Place.
 Karen is in Rex's Place.
 Treat Jar is in Rex's Place.
 
-The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle. 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
+The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
 the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.".
 
 treatbegging is an action applying to nothing.
@@ -136,7 +157,7 @@ Understand "treat beg" as treatbegging.
 Understand "beg for treat" as treatbegging.
 
 Check Treatbegging:
-	If Treat Jar is not visible, say "eh?" instead;
+	If Treat jar is not visible, say "eh?" instead;
 
 Carry out Treatbegging:
 	say "     Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to sit like a good doggy. As you sit patiently in front of him, Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another, even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you to be.";
@@ -148,6 +169,11 @@ Carry out Treatbegging:
 the scent of Rex's Place is "The air here is thick with the scent of canine heat and sex. You find the powerful musk of the large male lounging on a couch in the back especially arousing, thoughts of pleasing him like a proper pet drifting into your mind as he eyes you intently.".
 
 Section 4 - Rex
+
+the linkaction of Rex is "[rexlinkaction]".
+
+to say rexlinkaction:
+	say "Possible Actions: [link]talk[as]talk Rex[end link], [link]smell[as]smell Rex[end link], [link]fuck[as]fuck Rex[end link], [link]beg for treat[end link][line break]";
 
 Rex is a man.
 The description of Rex is "[Rexdescribing]".
@@ -186,6 +212,7 @@ instead of conversing the Rex:
 				say "     Reaching out to wipe away the tear welling in her eye, you do your best to comfort the poor girl. Leaning into your hand, a smile creeps across Karen's face. 'Thank you,' she says again quietly. 'Do you think... I could come with you? I can't stay here in case Rex comes back, but I don't know if I would fare any better against the other monsters out there. Please?' Wiping the fresh tear from her face, you consider her request for a moment and come to the same conclusion, she's far too vulnerable right now to leave alone, and so you agree to bring her with you.";
 				say "     With an excited squeal, she pulls you in for another quick hug before dashing around the house to collect a small bag of supplies. After gathering your own things and preparing to head out, you pause for a moment, considering finding and bringing that strange bone with you, but when a quick glance around the room doesn't reveal it, you decide it's probably best to leave it behind anyway.'";
 				now Retriever Girl is tamed;
+				move Karen to Breakroom;
 				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
 				now KarenTimer is turns;
@@ -280,7 +307,7 @@ Instead of fucking the Rex:
 				say "     Eventually you find the energy to rise from your rest, but you find the that this time the lust induced fog in your mind never fully clears, the last of your concerns in the city beginning to fade away, lost in this haze. Finally you realize everything you could ever want is here, in your home, with your loving master Rex. Why did you ever want to continue wandering that city to begin with?";
 			else:
 				say "     As you begin to rise, you see Rex has left that damned blue collar laying out on a nearby counter for you to see again, but this time something clicks inside you. His 'training' seeming to finally have taken hold, you reach out and pick up the collar, fastening it around your neck without a second thought.";
-				say "     All your other concerns seem to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for your new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
+				say "     All your other concerns seem to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
 				now HP of Rex is 10;
 			wait for any key;
 			say "[fullRetrieverTF]";
@@ -543,25 +570,5 @@ to say RexPetScene4:
 to say RexPetScene5:
 	say "     You yip in surprise as you suddenly have a cold, wet feeling [if cunts of player > 0]between your thigh[else]at your as[end if]s and you quickly turn around to find Rex on all fours behind you with an almost guilty look in his eyes. 'Sorry, I guess old habits die hard eh?' he says, taking another deep sniff of your groin before getting up leaving. You stand there somewhat shocked for a short while, confused by the conflicting feelings of violation and arousal before you shake your head clear and move on.";
 
-Section 8 - Progression Values
-
-[  HP of Rex   ]
-[ 0 = not met        ]
-[ 1 = done event once, received bone]
-[ 2-4 = used bone 1-3 times]
-[ 5 = met Rex, lost bone ]
-[ 6-9 = Training phase, fucked Rex, pet offer at 9]
-[ 10 = Pet game over 1]
-[ 11= Accepted collar]
-[ 49 = Defeated by Rex in escape quest]
-[ 50 = Defeated Rex]
-
-[  HP of Karen  ]
-[ 0 = Default state        ]
-[ 1 = Refused Rex offer @ Rex HP 9 ]
-[ 2 = talked about bakery ]
-[ 3 = Spoke to Francois, got cookies ]
-[ 4 = Trigger Fight against Rex ]
-[ 5 = Defeated Rex, default Pet Karen Value ]
 
 RexxyEvent ends here.
