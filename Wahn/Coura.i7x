@@ -69,11 +69,21 @@ an everyturn rule:
 [			if player is in Nowhere:
 				say "     X";]
 		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-[			if player is in Nowhere:
-				say "     X";]
+			if player is in Mysterious Shop:
+				say "     Suddenly, the door to the back room swings open and Coura comes out of it, dressed in her usual tank top and short skirt. The mall rat looks fairly exhausted after a long day working for Nermine and seems eager to get out of here. Yet before she can take another step towards the exit, the black jackaless stops Coura by clearing her throat, looking at the young woman with a raised eyebrow. 'Did the rodent finish all of her tasks for the day? Truly?' she asks in a sharp tone, spearing her employee with her gaze. 'Yes mistress! Of course,' Coura replies defensively, after which Nermine pulls a scroll of what seems to be papyrus from beneath her counter. Unrolling a section of it, she glances down at a list of entries, behind which one by one checkmarks appear.";
+				say "     Giving the mall rat an unimpressed nod, Nermine simply says, 'The rat can go,' then starts adding new tasks to the list for Coura to do tomorrow. Not wasting any time, Coura is out of the door within moments, and it swings shut behind her with the ringing of tiny bells.";
+			else if player is in Mall West Wing:
+				let randomnumber be a random number from 1 to 2;
+				if randomnumber is:
+					-- 1:
+						say "     Standing where you are, you see someone step out of the entrance door to Nermine's store. It is Coura the mall rat, dressed in her usual tank top and short skirt. She looks genuinely relieved to be done with her shift for the day and starts out into the crowd, only to stop and make a beeline towards you as she spots you. 'Good afternoon [master],' she says happily, then leans in to give you a kiss on the cheek. '[one of]I'm done working for today.[or]It is great to see you here.[or]It makes me happy to see a friendly face after a hard day working for her.[at random]' The young woman's gaze rests on your face for a few seconds longer, full of worshipfulness and adoration, then she looks down at her wristwatch and adds, 'I gotta go now though, as I'm due to meet some friends of mine. 'See ya, alright?' After you wish her a good afternoon, she goes off towards the Atrium with a skip in her step.";
+					-- 2:
+						say "     Standing where you are, you see someone step out of the entrance door to Nermine's store. It is Coura the mall rat, dressed in her usual tank top and short skirt. She looks genuinely relieved to be done with her shift for the day and starts out into the crowd, soon vanishing in the direction of the Atrium.";
+[
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-[			if player is in Nowhere:
-				say "     X";] [Is nowhere a room? No, it's an area, which only appears right as you search for something.]]
+			if player is in Nowhere:
+				say "     X";
+]
 		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - Cole/Coura goes to bed]
 			if player is in Mall Foodcourt:
 				let randomnumber be a random number from 1 to 4;
