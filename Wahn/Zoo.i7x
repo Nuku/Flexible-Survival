@@ -3,6 +3,7 @@ Version 6 of Zoo by Wahn begins here.
 
 Zoo Entrance is a room. It is fasttravel.
 The description of Zoo Entrance is "[ZooEntranceDesc]".
+The earea of Zoo Entrance is "Outside".
 
 to say ZooEntranceDesc:
 	say "     This area is the grand entrance to the zoo, with wrought iron gates and a fence surrounding the zoo grounds. A number of booths stand ready to accommodate large groups of visitors, although they're of course empty now. A large sign that looks as if it was just put up a short while ago says 'free admission'. You know from experience that the tall fence extends all the way around the whole zoo, so it's very likely that most of the animals (and transformed visitors) are still inside. The zoo's gift shop is west of your position, to the southwest lies a parking area and in the south, you can go back out into the city along the road leading here.";
@@ -37,7 +38,7 @@ instead of drinking the dirty hose:
 
 the scent of Fence Path is "The whole area smells strongly of animal scents, arousal and sex.".
 
-Border Wall is a room. 
+Border Wall is a room.
 The description of Border Wall is "[BorderWallDesc]".
 
 to say BorderWallDesc:
@@ -50,8 +51,8 @@ The description of Cheetah Habitat is "[CheetahHabitatDesc]".
 
 to say CheetahHabitatDesc:
 	say "     This is the home of cheetahs, a relatively large and open area with a few rocks and trees. From the looks of it, there are none out and about right now, though that might change at any moment. After all, there is a large cat flap in the side of the building forming the front of the enclosure. One of the panes of glass meant for dividing animals from visitors has been shattered into pieces, so you can just walk though the hole and exit the habitat and cheetah house through the doors in its south wall.[CheetahLickChance]";
-	
-the scent of Cheetah Habitat is "A very strong scent of aroused cheetah hangs in the air here. Just standing here and breathing it in makes you excited and weak in the knees.". 
+
+the scent of Cheetah Habitat is "A very strong scent of aroused cheetah hangs in the air here. Just standing here and breathing it in makes you excited and weak in the knees.".
 
 to say CheetahLickChance:
 	LineBreak;
@@ -93,8 +94,8 @@ The description of Main Path 1 is "[MainPath1Desc]".
 
 to say MainPath1Desc:
 	say "     You're on the cobbled main path of the zoo, in between many different exhibits. In this section, there's the alligator enclosure in the north and a bird house with an enormous web canopy connected to it in the south. Coming from the entrance in the southwest, the path continues to the east, where it leads deeper into the zoo.";
-		 
-the scent of Main Path 1 is "The whole area smells strongly of animal scents, arousal and sex. The scent of the bird house to the south can faintly be smelled as well.". 
+
+the scent of Main Path 1 is "The whole area smells strongly of animal scents, arousal and sex. The scent of the bird house to the south can faintly be smelled as well.".
 
 Main Path 2 is a room. Main Path 2 is east of Main Path 1.
 The earea of Main Path 2 is "Zoo".
@@ -110,7 +111,7 @@ Zoo Rest Area is east of Main Path 2. The earea of Zoo Rest Area is "Zoo".
 The description of Zoo Rest Area is "[ZooRestAreaDesc]".
 
 to say ZooRestAreaDesc:
-	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back west towards to the entrance.". 
+	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back west towards to the entrance.".
 
 Zoo Paths 1 is a door. Zoo Paths 1 is dangerous. The marea of Zoo Paths 1 is "Zoo". Zoo Paths 1 is undescribed.
 Zoo Paths 2 is a door. Zoo Paths 2 is dangerous. The marea of Zoo Paths 2 is "Zoo". Zoo Paths 2 is undescribed.
@@ -122,7 +123,7 @@ Zoo Paths 1 is east of Zoo Rest Area. Zoo Paths 2 is northeast of Zoo Rest Area.
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"red herring"	"The only plushy that survived the destruction of its compatriots in around the zoo rest area. It is wonderfully soft with bright red fur, green plastic eye-buttons and a goofy grin stitched on. Why would the city zoo have fish toys? It doesn't even have an aquarium... Strange, maybe this means something."	1	red herring
+"red herring"	"The only plushy that survived the destruction of its compatriots in and around the zoo rest area. It is wonderfully soft with bright red fur, green plastic eye-buttons and a goofy grin stitched on. Why would the city zoo have fish toys? It doesn't even have an aquarium... Strange, maybe this means something."	1	red herring
 
 the scent of red herring is "The plushy inexplicably smells of licorice.".
 
@@ -150,7 +151,7 @@ The description of Bird Enclosure is "[BirdEnclosureDesc]".
 to say BirdEnclosureDesc:
 	say "     This bird enclosure isn't so much a cage as it is a small piece of forest under an enormous web-canopy, held up by very long steel struts and quite a few strands of steel cables. There's nothing between the birds and the walkways through the enclosure - which might not be such a good thing these days, now that you think of it. Who knows what creatures now populate this area and how dangerous they are.[BirdExposureChance]";
 
-the scent of Bird Enclosure is "This whole area smells strongly of birds.". 
+the scent of Bird Enclosure is "This whole area smells strongly of birds.".
 
 The Bird Doors is a door. The description of Bird Doors is "     Two doors with a short corridor in between make sure that none of the birds leave their enclosure. Or they did, in the time before there were intelligent bird-creatures in here. They might still pose a problem for some inhabitants of the habitat, but many will no doubt be able to go in and out here.".
 understand "door" or "gate" or "doors" as the Bird doors.
@@ -175,8 +176,8 @@ The description of Snake house is "[SnakeHouseDesc]".
 
 to say SnakeHouseDesc:
 	say "     This house has quite a number of terrariums set into the walls of room after room. They're all empty, which might just be the result of having their glass fronts smashed in. No evidence remains who did this or why, but you can make out where the snakes went from the tracks through all the little glass fragments on the floor. They lead outside, ending at a nearby sewer grate that has been bent and warped, creating an opening big enough to slither through, though not for you to follow. Looks like any snakes are now in the sewers.";
-	
-the scent of Snake House is "The whole area smells strongly of snakes.". 
+
+the scent of Snake House is "The whole area smells strongly of snakes.".
 
 Gator Pit is a room. Gator Pit is north of Main Path 1.
 The earea of Gator Pit is "Mall".
@@ -185,7 +186,7 @@ The description of Gator Pit is "[GatorPitDesc]".
 to say GatorPitDesc:
 	say "     This enclosure held alligators once, but it's empty now. Behind a shattered glass wall, there is a pit formed from artificial rock that clearly held water once. In the middle of that is... a footprint? Almost looks like a giant stepped on it - and broke right through, his weight collapsing a section of the alligators['] water pit into the sewer tunnel not far below. Which might just be where the alligators went. The way into the tunnels is still open, if you want to dare climbing down over the rubble and explore the sewers. Although it looks dangerous down there...";
 
-the scent of Gator Pit is "This enclosure smells strongly of the gators who once lived here. The scents rising from the sewers make you pinch your nose shut.". 
+the scent of Gator Pit is "This enclosure smells strongly of the gators who once lived here. The scents rising from the sewers make you pinch your nose shut.".
 
 Sewer Exploration is a door. Sewer Exploration is dangerous. Sewer Exploration is undescribed.
 Down of Gator Pit is Sewer Exploration.

@@ -71,6 +71,8 @@ carry out tapeing:
 			say "[DressingRoomSpycamVid]";
 		-- "Traffic Drone #006 Footage":
 			say "[TrafficDrone#006Vid]";
+		-- "Urban Explorer Helmet Cam Vid #1": [Source: Wahn/Recordings.i7x]
+			say "[UrbanExplorerVid1]";
 [Template - see below the end of file]
 
 to deletetape (x - text):	[removes 1 tape of a given type from the player's inventory]

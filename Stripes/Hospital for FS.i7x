@@ -11,6 +11,7 @@ hospstairs is a number that varies.
 
 
 City Hospital is a room. It is fasttravel.
+The earea of City Hospital is "Hospital".
 
 The description of City Hospital is "[CityHospitalDesc]";
 

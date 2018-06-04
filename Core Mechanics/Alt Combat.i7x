@@ -642,45 +642,60 @@ Chapter 5 - Flee
 
 This is the flee rule:
 	choose row monster from the table of random critters;
-	let the attack bonus be dexterity of player + intelligence of player + ( level of player * 2 ) + plfleebonus - 20;
-	let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
-	let the combat bonus be attack bonus - defense bonus;
-	if "Gas Cloud" is listed in feats of player and gascloud is 0 and peppereyes is 0:
-		if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur" or tailname of player is "Hyperskunk":
-			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
-			increase gascloud by 5;
-		else if tailname of player is "Squid":
-			say "Turning around, you spray an inky cloud towards your enemy before trying to escape.";
-			increase gascloud by 5;
-		else if bodyname of player is "Corota":
-			say "Rustling your wings, you send a cloud of choking dust at your foe before you attempt your escape.";
-			increase gascloud by 5;
-		else:
-			say "You release your cover cloud and try to escape.";
-			increase gascloud by 3;
-	increase combat bonus by gascloud * 2;
-	if HP of Velos > 2 and scalevalue of player < 3 and velosfleepenalty is false:
-		say "The added weight and discomfort of the heavy serpent inside your [body size of player] body does make it a little harder to get away.";
-		now velosfleepenalty is true;
-	if hardmode is true:
-		if the combat bonus < -25:
-			now combat bonus is -25;
-	else:
-		if the combat bonus < -22:
-			now combat bonus is -22;
-	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus > 20:
-		say "You manage to evade [name entry] and slip back into the city.";
+	if rubber sneakers are equipped:
+		increase libido of player by 30;
+		if libido of player >= 100:
+			say "     You start running away as fast as you can. Unfortunately, your already aroused body cannot sustain the side-effect of the rubber sneakers. You cum hard ,and tumble on the ground in exhaustion. You barely have the time to stand back up before your adversary catches up with you. The cursed item keeps your libido high, and you remain terribly aroused, about to cum at the smallest attempt to sprint. [bold type]It may not be a good idea to attempt fleeing again, unless you find a way to reduce your libido first.[roman type]";
+			now libido of player is 70;
+			decrease humanity of player by 5;
+			choose row monstercom from table of Critter Combat;
+			if playerpoison > 0, follow the playerpoisoned rule;
+			if there is a continuous in row monstercom of the table of Critter Combat:
+				follow the continuous entry;
+			if combat abort is 0, follow the combat entry;
+		say "     You run as fast as you can, leaving your adversary in the dust. Each stride sends pangs of pleasure to your loins. The faster your job, the more powerful the sensations. You eventually manage to put enough distance between you and your enemy. This is a good thing, as a long trail of [if player is herm]sexual fluids[else if player is male]pre[else]vaginal fluid[end if] pools down on the ground, all the way to the battlefield.";
 		now fightoutcome is 30;
 		now combat abort is 1;
 	else:
-		say "You fail to get away.";
-		choose row monstercom from table of Critter Combat;
-		if playerpoison > 0, follow the playerpoisoned rule;
-		if there is a continuous in row monstercom of the table of Critter Combat:
-			follow the continuous entry;
-		if combat abort is 0, follow the combat entry;
+		let the attack bonus be dexterity of player + intelligence of player + ( level of player * 2 ) + plfleebonus - 20;
+		let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
+		let the combat bonus be attack bonus - defense bonus;
+		if "Gas Cloud" is listed in feats of player and gascloud is 0 and peppereyes is 0:
+			if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur" or tailname of player is "Hyperskunk":
+				say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
+				increase gascloud by 5;
+			else if tailname of player is "Squid":
+				say "Turning around, you spray an inky cloud towards your enemy before trying to escape.";
+				increase gascloud by 5;
+			else if bodyname of player is "Corota":
+				say "Rustling your wings, you send a cloud of choking dust at your foe before you attempt your escape.";
+				increase gascloud by 5;
+			else:
+				say "You release your cover cloud and try to escape.";
+				increase gascloud by 3;
+		increase combat bonus by gascloud * 2;
+		if HP of Velos > 2 and scalevalue of player < 3 and velosfleepenalty is false:
+			say "The added weight and discomfort of the heavy serpent inside your [body size of player] body does make it a little harder to get away.";
+			now velosfleepenalty is true;
+		if hardmode is true:
+			if the combat bonus < -25:
+				now combat bonus is -25;
+		else:
+			if the combat bonus < -22:
+				now combat bonus is -22;
+		let the roll be a random number from 1 to 50;
+		say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus > 20:
+			say "You manage to evade [name entry] and slip back into the city.";
+			now fightoutcome is 30;
+			now combat abort is 1;
+		else:
+			say "You fail to get away.";
+			choose row monstercom from table of Critter Combat;
+			if playerpoison > 0, follow the playerpoisoned rule;
+			if there is a continuous in row monstercom of the table of Critter Combat:
+				follow the continuous entry;
+			if combat abort is 0, follow the combat entry;
 	follow the ngraphics_blank rule;
 
 Chapter 6 - Throw the Fight
@@ -1307,6 +1322,7 @@ to win:
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
 				say "[gshep_postfightargue]";
+	follow the ngraphics_blank rule;
 	rule succeeds;
 
 To lose:
@@ -1335,6 +1351,7 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
+	follow the ngraphics_blank rule;
 
 
 Section 5 - Critter Combat

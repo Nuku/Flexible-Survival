@@ -37,6 +37,7 @@ The scent of Krampus is "[KrampusScent]";
 to say KrampusDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Krampus: [HP of Krampus] <- DEBUG[line break]";
+	project the Figure of Krampus_soft_icon;
 	say "     The creature before you is bestial and at least seven feet tall. Large and broad-shouldered, with muscles rippling under the slightly shaggy, black fur covering his form, he appears to be a powerful brute of an anthro goat at first glance, but the longer you look, the more other details can be made out in the flickering light of the fireplace. His eyes seem to be filled with their own fiery glow, flaring up a little brighter as he examines you in turn, and a broad grin spreads over his muzzle. This reveals teeth that are far from the ones of a placid herbivore, complete with a full set of long and vicious fangs. His muscular arms and legs bear manacles of black iron on the wrists and ankles, the ends of broken chains dangling from them and clinking a little as he moves.";
 	say "     'Can't help but feast your eyes upon me, can you?' the goat-demon says in a deep, alluring voice, reaching out and taking hold of your jaw with strong, clawed fingers. He stares into your eyes for a second, grinning broadly, then repositions his hand to clamp around the back of your head, a light pressure urging you to look down to his crotch. The fingers of his other hand are wrapped around the thick, black shaft standing erect below a shaggy bush of pubic fur, slowly stroking it and making you watch as a drop of precum forms at the tip. Wiping the pre off with a finger, he smears it on your cheek, then leans down to lick the other side of your face with a long, pointy tongue before whispering into your ear, 'Be naughty, I dare you. Then you'll get to know me far more closely than simply looking.'";
 
@@ -46,6 +47,7 @@ to say KrampusScent:
 		say "     The broken chain dangling from his manacles rattles a little as the goat-demon reacts to you stepping into his comfort zone, suddenly reaching out to grab the back of your head and pull your face against his firm abs and pecs. You can't help but huff deep breaths of his scent while being man-handled like this, really filling your nose with the essence of this muscled brute. Chuckling, he eventually pulls you back, leaning down to lick your cheek with a long, pointy tongue. 'Did you enjoy that, little pet?' he asks in an amused tone before letting you go.";
 
 instead of conversing the Krampus:
+	project the Figure of Krampus_soft_icon;
 	say "What do you want to talk with Krampus about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -120,6 +122,7 @@ instead of fucking the Krampus:
 		say "[KrampusSexMenu]";
 
 to say KrampusSexMenu:
+	project the Figure of Krampus_hard_icon;
 	LineBreak;
 	say "     What do you ask for Krampus to do to you?";
 	now sextablerun is 0;
@@ -129,13 +132,13 @@ to say KrampusSexMenu:
 	now title entry is "Get face-fucked";
 	now sortorder entry is 1;
 	now description entry is "Have your mouth stuffed by the dominant goat-demon's thick black shaft";
-	[]
+	[
 	if cunts of player > 0: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Krampus's shaft in your pussy";
 		now sortorder entry is 2;
 		now description entry is "Offer sex to the goat-demon";
-	[]
+	]
 	choose a blank row in table of fucking options;
 	now title entry is "Take Krampus's shaft in your ass";
 	now sortorder entry is 3;

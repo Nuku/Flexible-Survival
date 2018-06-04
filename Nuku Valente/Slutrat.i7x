@@ -486,7 +486,7 @@ to say ratstopoolhall:
 
 to say poolhallattack:
 	now inasituation is true;
-	say "     Travelling through the sewers and subways, the you and a band of the strongest rats emerge near the pool hall.  With such a large force, you encounter no trouble along the way, everything fleeing from the rat patrol.  You take a moment to coordinate with the other rats and then charge in en mass, taking the pumas by surprise.  The rats spread out, fights breaking out everywhere as one of the cougars charges to take you down.";
+	say "     Travelling through the sewers and subways, you and a band of the strongest rats emerge near the pool hall.  With such a large force, you encounter no trouble along the way, everything fleeing from the rat patrol.  You take a moment to coordinate with the other rats and then charge in en masse, taking the pumas by surprise.  The rats spread out, fights breaking out everywhere as one of the cougars charges to take you down.";
 	now cougarfight is 3;
 	challenge "Cougar";
 	if cougarfight is 1:

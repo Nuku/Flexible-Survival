@@ -246,7 +246,7 @@ to say CrabSample: [Take sample from crab. Non-sexual.]
 
 to say BubbleSample: [Take sample from Bubble. Sylvia X Latex Vixen]
 	say "     Wondering whether Sylvia would be interested in meeting Bubble, you inform her of the latex vixen living on the upper floors of the library. The collie happily collects her equipment in a bag and follows you through the city. Luckily there are no attacks and you arrive at the library safely. 'I do like the smell of books,' the canine confesses as you walk over to the stairs. Upon reaching the second floor, you are greeted by Bubble, whom is lounging around on a chair, her legs spread and a paw rubbing over her gash. She looks up, but doesn't stop masturbating. 'Oh, hi. I didn't realise we were having any one new here today. Where'd they find you?' The two women look at each other, though Sylvia doing so with more scrutiny as she makes mental notes of interesting features and qualities. 'your friend here,' the collie gestures at you, 'has agreed to help me with my research into the infection of the city. Would you be willing to provide a sample, perhaps some of the lubrication that seems to be pouring from your vagina?'";
-	say "     'Ooh, someone's confident. Perhaps you could earn it. With your tongue, say?' Bubble responds cheekily. Unfazed, Sylvia drops to her knees, collecting a small amount of the secretion before pressing her mouth up against the vixen's leaking vulva. The sound of slurping and moaning fills the library, both participants caring little if anyone else knows what they are doing. A paw strokes over the vixen's rubbery skin, feeling the bulge of her breasts before returning to spread her pussy wide for the finale. With a gasp, Bubble begins squirting her lube across the floor, the collie quickly moving her face out of the way, though keeping her fingers pistoning in and out. 'Mmm, you definitely earnt your sample,' the vixen tiredly mumbles. With all parties satisfied, Sylvia stands up and collects her belongings. Just to make sure of her safety, you escort her back to her room, chatting about how you met Bubble. 'Thank you, I'll be sure to compare Bubble's sample with those of other latex creatures,' the collie says, tossing you a water bottle";
+	say "     'Ooh, someone's confident. Perhaps you could earn it. With your tongue, say?' Bubble responds cheekily. Unfazed, Sylvia drops to her knees, collecting a small amount of the secretion before pressing her mouth up against the vixen's leaking vulva. The sound of slurping and moaning fills the library, both participants caring little if anyone else knows what they are doing. A paw strokes over the vixen's rubbery skin, feeling the bulge of her breasts before returning to spread her pussy wide for the finale. With a gasp, Bubble begins squirting her lube across the floor, the collie quickly moving her face out of the way, though keeping her fingers pistoning in and out. 'Mmm, you definitely earnt your sample,' the vixen tiredly mumbles. With all parties satisfied, Sylvia stands up and collects her belongings. Just to make sure of her safety, you escort her back to her room, chatting about how you met Bubble. 'Thank you, I'll be sure to compare Bubble's sample with those of other latex creatures,' the collie says, tossing you a water bottle.";
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
 
@@ -419,7 +419,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
 
-instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 2):
+instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 1 or hp of Sylvia is 2):
 	move player to Tenvale College Female Dorms;
 	Room059Event;
 
@@ -440,6 +440,7 @@ to Room059Event: [First time to Sylvia's room]
 		say "     You step up next to her and encircle her within your arms. Smiling at how forward you are, she returns the hug, her soft chest pressed against your body. You can feel her heart beat, its percussion sounding at similar interval to your own. Suddenly, you feel the collie's hands squeeze your backside, causing you to jump away from her slightly. You give her an accusatory stare as she doubles over laughing. 'I thought that was what you wanted,' Sylvia says between sniggers. 'To feel my hands upon your body as we embraced. But it seems perhaps you aren't ready judging from that reaction to me only touching your rear.'";
 		say "     Wanting revenge, you close the distance between you, her eyes carefully watching your movement but allowing your response. As you attempt to grab her, she sidesteps you before licking you behind your ear and dancing away as you swing your arm around in a vain attempt to catch her. 'Growing up a girl, I was taught how to avoid the grasps of overly enthusiastic men, with a few lessons from my brother and father,' Sylvia chides, tapping you on the nose as you straighten. 'Come and talk to me again at some point. For now though, I have things to study.' Sylvia dismisses you with a hand gesture. As you leave, you suddenly wonder whether she meant studying a book, herself, ... or others. You dismiss the thought and walk back down the dorm hallway.";
 	now hp of Sylvia is 3; [Met her in her room]
+	now A Wolf's Invitation is unresolved;
 
 instead of going northeast from Tenvale College Female Dorms while (SylviaConv is 5 and hp of Sylvia is 3 and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
@@ -568,6 +569,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 	now Badminton One is not resolved;
 
 Beach Field Research is a situation.
+Beach Field Research is resolved.
 The level of Beach Field Research is 0.
 The sarea of Beach Field Research is "Beach".
 

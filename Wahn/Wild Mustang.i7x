@@ -2,8 +2,6 @@ Version 1 of Wild Mustang by Wahn begins here.
 
 "Adds a feral Mustang to Flexible Survival."
 
-MustangMareConversion is a number that varies.
-
 Section 1 - Monster Responses
 
 when play begins:
@@ -24,7 +22,8 @@ to say WildMustangWins:
 		say "     The feral mustang snorts in frustration as he sniffs you and doesn't find a pussy for him to fill, but nevertheless moves into position atop of you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. Stomping his hooves on the ground around you, the large horse bucks a few times with his hips, making that big piece of horseflesh rub against your body. You can feel the wetness of his pre-cum dribble down on you, showing you what to expect as he continues to grind against you for some time, then eventually comes with a loud and lusty neigh. His glans flares widely and blast after blast of mustang cum splatters onto you, leaving you soaked in his semen. After the last spurt leaks onto you, he snorts again and trots off, frustrated and only a little satisfied.";
 	decrease humanity of player by 10;
 	if humanity of player < 0:
-		now MustangMareConversion is 1;
+		now bodyname of player is "Lucifer's Mare";
+		end the story saying "The black mustang has taken you as his mare!";
 	else:
 		say "     Something inside you calls out for you to just stay, rest on the grass till your stallion comes by again to breed you, become a true mare - but no, you're not that far gone yet. Using the opening Lucifer's overconfidence of not even watching you too closely presents, you quickly snatch up your gear and clothes, then run off to the gate, quickly slipping through and locking back up before the feral mustang can follow.";
 
@@ -414,12 +413,5 @@ instead of fucking Lucifer:
 		say "     As you approach Lucifer with lust on your mind, you find that the large horse doesn't seem all that interested to your advances right now. Maybe you should give him some time to rest before trying to get it on with the mustang again...";
 	else:
 		say "[LuciferSexMenu]";
-
-Section 3 - Endings
-
-when play ends:
-	if MustangMareConversion is 1:
-		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
-		stop the action;
 
 Wild Mustang ends here.

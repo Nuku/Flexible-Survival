@@ -6,6 +6,7 @@ Version 2 of Museum by Sarokcat begins here.
 Section 1- Museum environment
 
 Museum Foyer is a room. It is fasttravel.
+The earea of Museum Foyer is "Museum".
 
 The description of Museum Foyer is "[museumdesc]".
 

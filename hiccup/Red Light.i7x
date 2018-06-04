@@ -7,6 +7,7 @@ Section 1 - Locations
 
 [This is the location you discover while exploring the city.]
 Entrance to the Red Light District is a room. It is fasttravel.
+The earea of Entrance to the Red Light District is "Red".
 The description of Entrance to the Red Light District is "This street leads to the city's Red Light District. You will never find a more wretched hive of perverts and sex addicts. You must be cautious."
 Investigate Red Light is a door. "More of the district waits to be explored to the north and south.". It is dangerous. Investigate Red Light is south of Red Light District and north of Entrance to the Red Light District.
 the marea of Investigate Red Light is "Red".

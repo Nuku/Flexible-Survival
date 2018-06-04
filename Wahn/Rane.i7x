@@ -581,6 +581,7 @@ to say RaneFirstFuck:
 		LineBreak;
 		say "     As you make your way towards the library in the company of Rane, you silently wonder what you've just gotten yourself into. Granted, he's a great fighter, and certainly not a bad lay, if a bit - a strong bit - rough around the edges. He's obviously strong enough to do whatever he wants, but then again, he left the choice of undoing his belt to you. You wonder if he'll behave, given his demonic nature, though he's certainly proven to be very unexpected in most aspects - capable of great violence, but also relatively nice if just talked to. He certainly didn't harm you, maybe startled you a bit a few times, not counting the bruises and scratches from the rough sex and the soreness you're starting to feel. Only time will tell what comes next...";
 		move Rane to Sitting Area;
+		now Rane's Good Deed is not resolved;
 		now battleground is "void";
 		move player to Sitting Area;
 		now HP of Rane is 7;

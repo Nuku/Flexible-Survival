@@ -14,7 +14,7 @@ Version 4 of Nermine by Wahn begins here.
 [  1: the fennec walked off with the ritual supplies                 ]
 [  2: the bet was declared                                           ]
 
-[ libido of Danny (Mall Rat involvement)                             ]
+[ libido of Danny (Mall Rat involvement with Nermine)                ]
 [   0: not had any public scene with them yet                        ]
 [   1: fucked Nermine in front of Danny and watching rats            ]
 [   2: offer for bukkake rat involvement accepted                    ]
@@ -28,9 +28,9 @@ Version 4 of Nermine by Wahn begins here.
 [  12: Cole wants control to be a girl freely                        ]
 [  13: rejected Cole's request for the doll, continue status quo     ]
 [  14: doll destroyed, Cole stuck as a guy                           ]
-[  15: player let Cole have the doll, option A                       ]
-[  16: player let Cole have the doll, option B                       ]
-[  17: player let Cole have the doll, option C                       ]
+[  15: doll destroyed, Cole stuck as a girl                          ]
+[  16: player let Cole have the doll, he must work at the store      ]
+[  17: player let Cole have the doll, ...                            ]
 [  99: refused the revenge offer                                     ]
 [ 100: refused the harness offer                                     ]
 
@@ -74,7 +74,7 @@ The Mysterious Shop is a room. The Mysterious Shop Entrance is a door. It is sou
 
 The description of The Mysterious Shop Entrance is "     People in here keep giving one of the stores on the north side strange looks - and you can see why as you inspect it closer. The [bold type]mysterious shop[roman type] does not seem to... belong there. It is as if someone transplanted it to this location from an old-timey street with brick walls, taking a foot or two of the walls around with it to kind of merge and meld with the normal mall side walls. The wood-framed big glass window allows you a view into a store that looks over-stuffed with all sorts of strange and unusual items.".
 
-The description of The Mysterious Shop is "Bells jingle softly as you enter this rather quiet and eccentric shop, seeming to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order. You can't see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children's toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn't be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...".
+The description of The Mysterious Shop is "     Bells jingle softly as you enter this rather quiet and eccentric shop, seeming to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order. You can't see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children's toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn't be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...".
 
 Nermine is in The Mysterious Shop.
 Bargain Bin is in The Mysterious Shop.
@@ -178,10 +178,16 @@ instead of conversing the Nermine:
 		now sortorder entry is 9;
 		now description entry is "Give your jackal bitch the go-ahead for her spell";
 	[]
-	if (libido of Danny > 5 and libido of Danny < 90):
+	if (libido of Danny > 5 and libido of Danny < 14):
 		choose a blank row in table of fucking options;
 		now title entry is "Let her turn Cole into a girl again";
 		now sortorder entry is 10;
+		now description entry is "Time for Coura to make another appearance";
+	[]
+	if (libido of Danny > 15):
+		choose a blank row in table of fucking options;
+		now title entry is "Let her call Coura from the back room";
+		now sortorder entry is 11;
 		now description entry is "Time for Coura to make another appearance";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -216,7 +222,7 @@ instead of conversing the Nermine:
 					say "[NermineBrennanTalk]";
 				if (nam is "Starting her ritual to transform the mall rat"):
 					say "[NermineRatRitual]";
-				if (nam is "Let her turn Cole into a girl again"):
+				if (nam is "Let her turn Cole into a girl again" or nam is "Let her call Coura from the back room"):
 					say "[NermineCouraSpell]";
 				wait for any key;
 		else if calcnumber is 100:

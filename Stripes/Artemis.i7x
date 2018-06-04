@@ -1,5 +1,33 @@
 Version 4 of Artemis by Stripes begins here.
-[Version 4.2 - Modded: more masturbation add-ons, 3rd engulf variation ]
+[Version 4.2 - Modded: more masturbation add-ons, 3rd engulf variation          ]
+[Version 4.3 - Artemis has become an NPC as well as minor maintenance - Luneth   ]
+
+
+[ HP of rubber tigress                                                          ]
+[ 0 = no encounter                                                              ]
+[ 1 = fed once                                                                  ]
+[ 2 = refused                                                                   ]
+[ 3 = tamed                                                                     ]
+[ 4 = 1 nap                                                                     ]
+[ 5 = 2 naps                                                                    ]
+[ 6 = 3 naps - glomped                                                          ]
+[ 7 = 4+ naps (willing)                                                         ]
+[ 8 = sleep-sex                                                                 ]
+[ 9 = toy shopping                                                              ]
+[10 = toys obtained                                                             ]
+[11 = modded                                                                    ]
+[12 = mod-glomped                                                               ]
+
+[ lust of rubber tigress - vagina                                               ]
+[ 0 = not placed                                                                ]
+[ 1 = pussy                                                                     ]
+[ 2 = mouth-pussy                                                               ]
+
+[ thirst of rubber tigress - penis                                              ]
+[ 0 = not placed                                                                ]
+[ 1 = cock                                                                      ]
+[ 2 = cock-tongue                                                               ]
+[ 3 = tail-cock                                                                 ]
 
 "Adds a neuter rubber tigress pet named Artemis."
 
@@ -41,6 +69,7 @@ Instead of resolving a Poor Kitty:
 			increase carried of cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
+			move Artemis to Courtyard;
 			now HP of rubber tigress is 3;
 			now libido of rubber tigress is 30;
 			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
@@ -58,16 +87,21 @@ Instead of resolving a Poor Kitty:
 
 Section 2 - Artemis
 
+the linkaction of Artemis is "[artemislinkaction]".
+
+to say artemislinkaction:
+	say "Possible Actions: [link]talk[as]talk Artemis[end link], [link]smell[as]smell Artemis[end link], [link]fuck[as]fuck Artemis[end link][line break]";
+
 rubber tigress is a pet. rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
-The description of rubber tigress is "[artemisdesc]".
-the scent of the rubber tigress is "The rubber tigress smells faintly of rubber in a pleasant way."
+The description of rubber tigress is "[ArtemisDesc]".
 The weapon damage of rubber tigress is 5.
 The level of rubber tigress is 3.
 The Dexterity of rubber tigress is 16.
-The summondesc of rubber tigress is "The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over. She purrs happily when you scritch her ears."
-The assault of rubber tigress is "[artemisattack]".
-the fuckscene of rubber tigress is "You are unable to initiate pet sex with Artemis - yet.".
+The summondesc of rubber tigress is "[SummonArtemis]".
+The dismissdesc of rubber tigress is "[DismissArtemis]".
+The assault of rubber tigress is "[ArtemisAttack]".
+the fuckscene of rubber tigress is "[SexWithArtemis]".
 templust is a number that varies.
 tempthirst is a number that varies.
 The rubber tigress has a number called cocks.
@@ -77,9 +111,38 @@ The rubber tigress has a number called Cock Width.
 The rubber tigress has a number called Cunt length.
 The rubber tigress has a number called Cunt width.
 
-to say artemisdesc:
+to say SummonArtemis:
+	remove Artemis from play;
+	if player is in Courtyard and Artemis is in Courtyard: [summoning while standing next to her]
+		say "     With a sharp whistle you call Artemis over to you, rubbing her head gently the two of you begin to make your way back out into the city.";
+	else: [regular summoning]
+		say "     The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over. She purrs happily when you scritch her ears.";
+
+to say DismissArtemis:
+	move Artemis to Courtyard;
+	if player is not in Courtyard: [regular dismiss]
+		say "     Letting Artemis know that she can head home, she ends up rubbing her smooth rubbering skin against you almost like a parting hug. Then with a soft growl begins to run back towards the library.";
+	else: [dismissing her in the abbey]
+		say "     Taking a seat on the rim of the fountain Artemis come to lay down at your feet. You tell her it would prolly be best for her to take a little break and stick around the library, her only response is to shrug her shoulders and lay her head down.";
+
+Artemis is a woman.
+The description of Artemis is "[ArtemisDesc]".
+
+instead of sniffing Artemis:
+	say "[ArtemisScent]";
+
+instead of sniffing rubber tigress:
+	say "[ArtemisScent]";
+
+to say ArtemisScent:
+	say "     The rubber tigress smells faintly of rubber in a pleasant way.";
+
+instead of fucking Artemis:
+	say "[SexWithArtemis]";
+
+to say ArtemisDesc:
 	if HP of rubber tigress < 11:
-		say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if HP of rubber tigress >= 6]. As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if]. Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
+		say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger made of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if HP of rubber tigress >= 6]. As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if]. Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
 	else:
 		if lust of rubber tigress is 0 and thirst of rubber tigress is 1:
 			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves. Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly. Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that. Having now gained a sheath-bound cock at her hindquarters that often pokes free, displaying its sextoy nature, she struts around now with greater confidence. Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly running her tongue across her cock while eyeing your reaction[at random].";
@@ -122,7 +185,7 @@ to say artemisdesc:
 			artemismodding;
 
 
-to say artemisattack:
+to say ArtemisAttack:
 	if lust of rubber tigress is 1 and a random chance of 1 in 4 succeeds:
 		say "[one of]Artemis[or]The rubber tigress[or]Your feline companion[or]Your rubbery companion[as decreasingly likely outcomes] raises her tail and quickly flashes her pussy to your foe. Momentarily distracted, they're left open for a quick hit.";
 	else if thirst of rubber tigress is 1 and a random chance of 1 in 4 succeeds:
@@ -137,6 +200,196 @@ to say artemisattack:
 		say "[one of]The rubber tigress swipes at your foe with her paws, hard, plastic claws unsheathed.[or]Sneaking around behind your foe, Artemis pounces on them with an angry mrowl![or]Artemis bashes herself against your foe, partially deflates and wraps her rubbery hide around them, squeezing down hard and slowing them long enough for you to get in an additional quick strike.[or]Winding her tail around your foe's [if a random chance of 1 in 4 succeeds]arm[else if a random chance of 1 in 3 succeeds]leg[else if a random chance of 1 in 2 succeeds]wrist[else]ankle[end if], the rubber tigress holds them long enough to get in some slashes with sharp claws.[at random]";
 	else:
 		say "[one of]The rubber tigress swipes at your foe with her paws, hard, plastic claws unsheathed.[or]Sneaking around behind your foe, Artemis pounces on them with an angry mrowl![or]The rubber tigress bites at your enemy with hardened plastic teeth.[or]Artemis bashes herself against your foe, partially deflates and wraps her rubbery hide around them, squeezing down hard and slowing them long enough for you to get in an additional quick strike.[or]Winding her tail around your foe's [if a random chance of 1 in 4 succeeds]arm[else if a random chance of 1 in 3 succeeds]leg[else if a random chance of 1 in 2 succeeds]wrist[else]ankle[end if], the rubber tigress holds them long enough to [if a random chance of 1 in 2 succeeds]get in some slashes with sharp claws[else]bite them[end if].[at random]";
+
+instead of conversing the Artemis:
+	if player is in Courtyard and Artemis is in Courtyard:
+		say "[ArtemisTalkMenu]";
+	else if companion of player is rubber tigress:
+		say "[ArtemisTalkMenu]";
+	else:
+		say "     Artemis isn't here.";
+
+instead of conversing rubber tigress:
+	if rubber tigress is not tamed:
+		say "     Who?";
+	else:
+		if player is in Courtyard and Artemis is in Courtyard:
+			say "[ArtemisTalkMenu]";
+		else if companion of player is rubber tigress:
+			say "[ArtemisTalkMenu]";
+		else:
+			say "     Artemis isn't here.";
+
+to say ArtemisTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Play";
+	now sortorder entry is 1;
+	now description entry is "Spend some time playing with Artemis";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Play"):
+					say "[ArtemisPlay]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say ArtemisPlay:
+	if cup stack is owned:
+		say "[one of][artemisplay1][or][artemisplay2][or][artemisplay3][or][artemisplay4][or][artemisplay5][or][artemisplay6][in random order]";
+	else:
+		say "[one of][artemisplay5][or][artemisplay6][cycling]";
+
+to say SexWithArtemis:
+	if lastfuck of Artemis - turns < 4:
+		say "     You've had some fun with Artemis quite recently. Perhaps you should give her a break for a little longer?";
+	else:
+		say "     Checking out your smooth and sultry kitty, you are able to imagine all the ways you could make use of your sweet rubber fuck pet.";
+		say "[ArtemisSexMenu]";
+
+to say ArtemisSexMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anal";
+	now sortorder entry is 1;
+	now description entry is "Make use of Artemis's elastic tailhole.";
+	[]
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Get eaten out by Artemis";
+		now sortorder entry is 2;
+		now description entry is "Have Artemis eat you out";
+	[]
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Get Blown by Artemis";
+		now sortorder entry is 3;
+		now description entry is "Have Artemis suck your cock";
+	[]
+	if lust of rubber tigress is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Play with the tigress's pussy";
+		now sortorder entry is 4;
+		now description entry is "Take some time to enjoy your pets new pussy";
+	[]
+	if lust of rubber tigress is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Make use of Artemis's face pussy";
+		now sortorder entry is 5;
+		now description entry is "Enjoy your pets new mouth pussy";
+	[]
+	if thirst of rubber tigress is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Play with the tigress's cock";
+		now sortorder entry is 6;
+		now description entry is "Take some time to enjoy your pets new cock";
+	[]
+	if thirst of rubber tigress is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Make use of Artemis's tongue cock";
+		now sortorder entry is 7;
+		now description entry is "Enjoy your pets new tongue cock";
+	[]
+	if thirst of rubber tigress is 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Make use of Artemis's tail cock";
+		now sortorder entry is 8;
+		now description entry is "Enjoy your pets new tail cock";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Anal"):
+					say "[ArtemisAnal]";
+				if (nam is "Get eaten out by Artemis"):
+					say "[ArtemisFemOral]";
+				if (nam is "Get blown by Artemis"):
+					say "[ArtemisMaleOral]";
+				if (nam is "Play with the tigress's pussy"):
+					say "[ArtemisVaginal]";
+				if (nam is "Make use of your pets face pussy"):
+					say "[ArtemisFaceVag]";
+				if (nam is "Play with the tigress's cock"):
+					say "[ArtemisCock]";
+				if (nam is "Make use of Artemis's tongue cock"):
+					say "[ArtemisTongueCock]";
+				if (nam is "Make use of Artemis's tail cock"):
+					say "[ArtemisTailCock]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+
+to say ArtemisAnal:
+	say "[artemissex1]";
+
+to say ArtemisFemOral:
+	say "[one of][artemissex5][or][artemissex6][or][artemissex7][at random]";
+
+to say ArtemisMaleOral:
+	say "[one of][artemissex2][or][artemissex3][or][artemissex4][at random]";
+
+to say ArtemisVaginal:
+	say "[artemissex10]"
+
+to say ArtemisFaceVag:
+	say "[artemissex12]"
+
+to say ArtemisCock:
+	say "[artemissex11]"
+
+to say ArtemisTongueCock:
+	say "[artemissex13]";
+
+to say ArtemisTailCock:
+	say "[artemissex14]";
 
 
 Section 3 - Sexxxings and Playtime
@@ -1353,33 +1606,6 @@ to say artemisengulf_nap_mod_02:
 to say artemisengulf_nap_mod_03:
 	say "***nap engulf scene - modded version 3";
 
-
-[ HP of rubber tigress ]
-[ 0 = no encounter     ]
-[ 1 = fed once         ]
-[ 2 = refused          ]
-[ 3 = tamed            ]
-[ 4 = 1 nap            ]
-[ 5 = 2 naps           ]
-[ 6 = 3 naps - glomped ]
-[ 7 = 4+ naps (willing)]
-[ 8 = sleep-sex        ]
-[ 9 = toy shopping     ]
-[10 = toys obtained    ]
-[11 = modded           ]
-[12 = mod-glomped      ]
-
-
-[ lust of rubber tigress - vagina  ]
-[ 0 = not placed                   ]
-[ 1 = pussy                        ]
-[ 2 = mouth-pussy                  ]
-
-[ thirst of rubber tigress - penis ]
-[ 0 = not placed                   ]
-[ 1 = cock                         ]
-[ 2 = cock-tongue                  ]
-[ 3 = tail-cock                    ]
 
 Section 10 - Endings
 

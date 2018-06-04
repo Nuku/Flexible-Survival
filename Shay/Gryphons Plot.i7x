@@ -424,6 +424,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 					now sextablerun is 1;
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men you distance yourself from the scene, leaving the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;
+					
 to say GryphonPussy:
 	say "     Lining your cock up with the hermaphrodite gryphon's soaking wet cunt, you hear the newly transformed man let out a wanton moan. Taking the soldier's sound of need as a good of an invitation as any, you proceed to bury yourself balls-deep inside of the newly formed cunt of your temporary fuck toy, to his obvious and verbal enjoyment. Painfully erect inside of the gryphon's softly clenching vaginal walls, your cock lets out copious amounts of precum, lubricating the soldier's snatch for the pounding that is to come. The man, succumbing to the lustful needs of his new form, begins rocking his hips into you in time with your thrusts as you start to earnestly fuck him.";
 	LineBreak;
@@ -470,14 +471,14 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 			decrease carried of water bottle by 2;
 		else:
 			say "     Waking up a few hours later, you are sticky all over with dried cum, but you shrug it off in good spirits. After all, you had a lot of fun in your time with the gryphons...";
-			LineBreak;
-			say "[bold type]Your morale increases by 10![roman type][line break]";
-			increase morale of player by 10;
-			fimpregchance; [4 chances - it was a really long gangbang after all]
-			fimpregchance;
-			mimpregchance;
-			mimpregchance;
-			now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
+		LineBreak;
+		say "[bold type]Your morale increases by 10![roman type][line break]";
+		increase morale of player by 10;
+		fimpregchance; [4 chances - it was a really long gangbang after all]
+		fimpregchance;
+		mimpregchance;
+		mimpregchance;
+		now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
 	else:
 		say "     Deciding not to risk it, you silently get up from your hiding place and start to make your way to a safe distance from the scene. You can still hear the sounds of the gryphons['] orgy, as you continue along your way through the ruins of the infested city...";
 		now GryphPlotTracking is 30; [player watched the gryphons do their thing]

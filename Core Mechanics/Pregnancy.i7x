@@ -163,20 +163,27 @@ to pregprotocol:
 					if z > 4, now z is 4;		[extra chance, still limited to 4]
 					if ubpreg is not "false":
 						now z is 1;
+					if "Chase's Breeder" is listed in feats of player and ChaseOffspring is 0: [override for Chase's first kids]
+						now z is 2;
 					if z is 2:
 						say "Twins![line break]";
+						if pregtype is 2, increase mpregcount by 1;	[more mpreg practice]
 					else if z is 3:
 						say "Triplets![line break]";
-						if pregtype is 2, increase mpregcount by 1;	[more mpreg practice]
+						if pregtype is 2, increase mpregcount by 2;	[more mpreg practice]
 					else if z is 4:
 						say "Quadruplets![line break]";
-						if pregtype is 2, increase mpregcount by 1;	[more mpreg practice]
+						if pregtype is 2, increase mpregcount by 3;	[more mpreg practice]
 					repeat with y running from 1 to z:
 						now child is born;
 						Birth;
 					increase score by 15;		[15 base +5/child]
 					extend game by 4;
 					now pregtype is 0;
+					if "Chris's Breeder Slut" is listed in feats of player:
+						remove "Chris's Breeder Slut" from feats of player;
+					else if "Human Carrier" is listed in feats of player:
+						remove "Human Carrier" from feats of player;
 				else: [routine for various hijacks]
 					repeat with y running from 1 to snakeocc:
 						now child is born;
@@ -264,19 +271,22 @@ To Birth:
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
 	if snakehijack is 0 or "They Have Your Eyes" is listed in feats of player:
-		if "Chris's Breeder Slut" is listed in feats of player:
+		if "Chase's Breeder" is listed in feats of player:
+			now skinname of child is "Tiger";
+			now bodyname of child is "Tiger";
+			now tailname of child is "Tiger";
+			now facename of child is "Tiger";
+		else if "Chris's Breeder Slut" is listed in feats of player:
 			now skinname of child is "Orc Warrior";
 			now bodyname of child is "Orc Warrior";
 			now tailname of child is "Orc Warrior";
 			now facename of child is "Orc Warrior";
 			increase ChrisPlayerOffspring by 1;
-			remove "Chris's Breeder Slut" from feats of player;
 		else if "Human Carrier" is listed in feats of player:
 			now skinname of child is "Human";
 			now bodyname of child is "Human";
 			now tailname of child is "Human";
 			now facename of child is "Human";
-			remove "Human Carrier" from feats of player;
 		else if "Cheerbreeder" is listed in feats of player:
 			now skinname of child is "Football Wolfman";
 			now bodyname of child is "Football Wolfman";
@@ -347,12 +357,21 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. Not only nutrition but personality and knowledge seep through the nipple into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+		if "Chase's Breeder" is listed in feats of player:
+			if ChaseOffspring is 0:
+				say "twin1";
+			if ChaseOffspring is 1:
+				say "twin2";
+			else:
+				say "regulars";
+			increase ChaseOffspring by 1;
 		increase hunger of player by 3;
 		increase thirst of player by 3;
 	if "Wild Womb" is not listed in feats of player:
-		add facename of child to childrenfaces;
-		add bodyname of child to childrenbodies;
-		add skinname of child to childrenskins;
+		if "Chase's Breeder" is not listed in feats of player:
+			add facename of child to childrenfaces;
+			add bodyname of child to childrenbodies;
+			add skinname of child to childrenskins;
 		if perception of player < 24, increase perception of player by 1;
 	else:
 		increase FeralBirths by 1;
@@ -383,6 +402,20 @@ To impregnate with (x - text):
 		now bodyname of child is "Football Wolfman";
 		now tailname of child is "Football Wolfman";
 		now facename of child is "Football Wolfman";
+	else if "Chase's Breeder" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a Tiger child?";
+			if the player consents:
+				increase score by 0;
+			else:
+				say "You choose not to accept the seed.";
+				remove "Chase's Breeder" from feats of player;
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Tiger";
+		now bodyname of child is "Tiger";
+		now tailname of child is "Tiger";
+		now facename of child is "Tiger";
 	else if "Chris's Breeder Slut" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with an Orc Warrior child?";
@@ -390,6 +423,7 @@ To impregnate with (x - text):
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
+				remove "Chris's Breeder Slut" from feats of player;
 				stop the action;
 		now gestation of child is a random number from 24 to 48;
 		now skinname of child is "Orc Warrior";
@@ -403,6 +437,7 @@ To impregnate with (x - text):
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
+				remove "Human Carrier" from feats of player;
 				stop the action;
 			now skinname of child is "Human";
 			now bodyname of child is "Human";

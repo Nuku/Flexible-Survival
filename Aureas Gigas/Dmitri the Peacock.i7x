@@ -42,6 +42,7 @@ Instead of resolving a Captivating Plumage:
 		else: [refuse his offer]
 			say "     Something about this deceptive bird strikes you as very duplicitous. You yell at the bird to stay away and not do anything funny. With a glum look on his face, the avian runs out the back entrance with his bag of loot, muttering about how you were too strong willed. Somehow you get the feeling that this particular peacock will not cross paths with you again.";
 			now Peacocked is 99; [stopped the peacock cold]
+			now Captivating Plumage is resolved;
 	else if Peacocked is 1: [previously had a sexual massage]
 		say "     As you walk through the high-rise district, you pass by the antique store of that intriguing peacock. As if compelled by some outside force, you head close to examine the place. Outside the store is a sign with a Greek trireme with the words [']Argos Antiques[']. The ancient Greek warship has a feather emblazoned upon its unfurled sail, and the eyes painted on the ship's bow seem to follow your movement. The front of the store is barricaded with heavy wooden furniture. Through a small opening in the boarded-up window you see a suit of armor with a large halberd pointed at the opening. Startled, you jolt back from the peep hole, but realize it was probably put there to keep nosy ferals away. The instructions that the green and blue feathered anthro gave to you reverberate through your mind. As if by instinct, you head for the back entrance and knock three times.";
 		say "     A short moment later, the avian opens the door and says with a happy tone, 'I thought you'd never come.' Hurriedly, he waves you inside. The store is filled with a large assortment of items and pieces from various eras. Most of the furniture has been moved to block the entrance, leaving a variety of paintings hanging on the walls, surrounding blank spots where shelves stood not too long ago. There is even one that you recognize as a piece by a famous local artist, advertised in the paper as part of an exhibition worth tens of thousands of dollars. A variety of weapons hang in racks behind the cashier's desk. Various sabers, six-shooters and rifles from the frontier era shine brightly, obviously well-polished. Towering stacks of old books are piled on the floor, hastily removed to lighten up the shelves before they were moved. Some of them have not fared too well due to this treatment, and scattered pieces of old paper lie strewn across the ground.";
@@ -184,11 +185,14 @@ to say DmitriSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the peacock's avian rod";
 	[]
+[
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the captivating bird";
 		now sortorder entry is 3;
 		now description entry is "Take Dmitri's ass for a ride";
+]
+[ The above content is commented out until written to prevent frustrating placeholder text. ]
 	[]
 	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;

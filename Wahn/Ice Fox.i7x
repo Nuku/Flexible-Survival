@@ -17,6 +17,14 @@ Version 1 of Ice Fox by Wahn begins here.
 [   3: blessing ready                                         ]
 [   4: blessing given                                         ]
 
+[ HP of Miyuki - arctic fox quest                             ]
+[   0: not started yet                                        ]
+[   1: player got told to check out the foxes in the zoo      ]
+[   2: player chickened out once                              ]
+[   3: rescued the captives, is Miyuki's mate                 ]
+[  99: player refused to become Miyuki's mate                 ]
+[ 100: player failed                                          ]
+
 MiyukiRelationship is a number that varies.
 lastSnowStarGiven is a number that varies. lastSnowStarGiven is usually 10000.
 
@@ -120,7 +128,26 @@ Frozen Cave Tunnel is a room. Frozen Cave Tunnel is northeast of Forest Cave Ent
 The description of Frozen Cave Tunnel is "     You're in what seems like a natural cave tunnel, leading steadily downwards in a slow curve. Might actually be a spiral, now that you think of it - remembering the part you've already got behind you and what you can see ahead. And you can actually see, despite being underground and in a cave, thanks to the ever-present snow all around you. Each flake has a tiny and dim glow to it, making them whiter than white and creating a beautiful sparkling effect that covers the ground in a smooth layer and has settled into all of the cracks and rough surfaces of the cave walls. Seeing wondrous sights like this makes it hard to remember that you're still in the city sometimes, and that all of this didn't exist just a short while ago.".
 
 Ice Fox's Den is a room. Ice Fox's Den is below Frozen Cave Tunnel.
-The description of Ice Fox's Den is "     You're in a moderately sized cavern, spreading out around you. On the smooth black stone floor (granite, if you'd have to guess), there are some pieces of furniture scattered about, tables and chairs, plus a number shelves - all of them white. Hard to say if that is their natural color or if it's just the thin layer of frost covering them. In the back, there is what can only be called a nest - a circular affair of many blankets on the ground, with countless big and small pillows piled in it. The walls enfolding the place seem fairly natural and cave-like, with sparkling snow having settled on every bump and unevenness, filling the place with a smooth and even light. Finally, the ceiling above you is quite a sight, as what seems to be a snow-storm whirls in the air there, centered on a palm-sized star of a snow flake, with more and more snow constantly being created as steamers of flakes are sent to blow up the tunnel up to the surface.".
+The description of Ice Fox's Den is "[IceFoxDenDesc]";
+
+to say IceFoxDenDesc:
+	say "     You're in a moderately sized cavern, spreading out around you. On the smooth black stone floor (granite, if you'd have to guess), there are some pieces of furniture scattered about, tables and chairs, plus a number shelves - all of them white. Hard to say if that is their natural color or if it's just the thin layer of frost covering them. In the back, there is what can only be called a nest - a circular affair of many blankets on the ground, with countless big and small pillows piled in it. The walls enfolding the place seem fairly natural and cave-like, with sparkling snow having settled on every bump and unevenness, filling the place with a smooth and even light. Finally, the ceiling above you is quite a sight, as what seems to be a snow-storm whirls in the air there, centered on a palm-sized star of a snow flake, with more and more snow constantly being created as steamers of flakes are sent to blow up the tunnel up to the surface.";
+	if HP of Miyuki > 2 and HP of Miyuki < 100:
+		say "     Two openings in the cave walls allow access to adjoining rooms, one in the southeast and another in the northwest.";
+
+Snow Rabbit's Warren is a room.
+The description of Snow Rabbit's Warren is "[SnowRabbitsWarrenDesc]";
+
+to say SnowRabbitsWarrenDesc:
+	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has a colossal mound of snow, almost reaching the rocky ceiling at its highest point. Numerous snow-white rabbits are hopping around in this enclosure, and also digging into the snow, creating tunnels and chambers within. The little animals look basically just like oval fluffs of fur when they sit down, only extending their surprisingly long legs when they move around. On the 'visitor' side of the cave, Russel has made a camp for himself in a little niche, with a sleeping bag rolled out as well as stacks of supplies that he needs to care for his charges.";
+	say "     Sadly, the former zookeeper seems to busy for anything but helping his animal friends settle in right now, so you don't even have a chance to chat with him.";
+
+Snow Fox Enclosure is a room.
+The description of Snow Fox Enclosure is "[SnowFoxEnclosureDesc]";
+
+to say SnowFoxEnclosureDesc:
+	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has what seems to be a miniature cliff molded out of its back wall, with a comfy fox-sized cave dug into it and a sloping path to the top up one side. All of this is covered in a liberal scattering of snow. Numerous snow-white foxes are moving around in this enclosure, yipping and with some chasing each other up to the lookout spot and down again. Aubrey the foxtaur is in their midst, playing with the little vulpines by throwing several rubber balls for her charges to run after and bring back. She seems totally focused on playtime with the foxes, barely registering you other than a friendly smile and wave as you come in. On your side of the ice wall, there is a big nest of warm blankets in one corner of the irregular shaped room. Looks like Aubrey and Barbara share it.";
+	say "     The anthro fox Barbara doesn't seem to be in right now, most likely gathering supplies to feed the gang of refugees.";
 
 Section 5 - Events
 
@@ -196,7 +223,7 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 	say "     Something like a carambola tree can grow in the city, but that would be fairly hard to find in a random garden. [bold type]Maybe it'd be more worthwhile to check out a botanical garden, or the zoo actually.[roman type] You're fairly certain they have a lot of tropical plants of all sorts there...";
 	now lust of Miyuki is 1; [Carambola quest started]
 	now Carambola Tree is not resolved;
-	
+
 Carambola Tree is a situation. Carambola Tree is resolved.
 The sarea of Carambola Tree is "Zoo".
 
@@ -211,6 +238,94 @@ instead of resolving a Carambola Tree:
 		say "     On top of everything else that the tigertaur did to you, she also snatches up the fruit, stuffing them into a satchel carried over her shoulder. As you eventually get back to your feet and leave the tree afterwards, you refrain from picking another carambola - who knows, the tigress might be watching. Maybe you should come back another time when you're better prepared to clash with her.";
 	else if fightoutcome is 30: [fled]
 		say "     Legging it, you run off and shake the angry tigertaur off with some difficulty. Sadly, in the process of the wild chase, you lose all of the carambola you picked. Looks like all of this excitement was for nothing. You'll have to go back to the tree and pick some new ones if you want to help Miyuki out.";
+
+Arctic Enclosure is a situation. Arctic Enclosure is resolved.
+The sarea of Arctic Enclosure is "Zoo".
+
+instead of resolving a Arctic Enclosure:
+	if HP of Miyuki is 1:
+		say "     Remembering Miyuki's request, you roam through the expansive area of the zoo and search for the arctic animal enclosure. Despite there being numerous signs all over the place with maps, it is actually fairly hard to find. Some areas are completely impassable due to being claimed by overgrown plants or dangerous ferals. Following a quite circuitous route and having to go off-trail into what feels like a tropical jungle, you eventually reach a mid-sized building standing in the shadow of the border wall. There are no lights or power anywhere here, meaning that the whole bank of heat exchange units on the side of the building is sitting still and silent. This doesn't look good for the comfort of anyone who might still be living in there.";
+		say "     Stepping out from between the tropical trees, you move along the remains of the path that once led to the building, making sure that you don't stumble over any roots or debris on the ground. Noticing how far off all of the mating calls and other noises of the zoo seem right now, you wonder why this section is so deathly quiet. Then your gaze falls upon what must be the reason: The large wooden display at the entrance of the arctic enclosure is totally scratched up at one end, with large vertical lines that look like someone sharpened their claws there. The same claws most likely carved a message in the rest of the board - 'Fuck off! They're all mine!' Seems like someone or something territorial claimed this place, explaining why you haven't seen anyone else since you stumbled into the forest to get here.";
+		say "     [bold type]Do you want to keep going?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, you're here on a mission after all.";
+		say "     ([link]N[as]n[end link]) - Ehh, maybe some other time.";
+		if player consents:
+			LineBreak;
+			say "[ArcticEnclosureEntry]";
+		else:
+			LineBreak;
+			say "     Glancing at the claw-marks, you come to the decision that right now might not be the best time to challenge whatever moved in here. Quietly turning around and walking back into the jungle, you leave the Arctic Enclosure behind for now.";
+			now HP of Miyuki is 2; [went to the Arctic Enclosure but postponed further exploration]
+	else if HP of Miyuki is 2: [repeat visit after chickening out before]
+		say "     Remembering Miyuki's request, you roam through the expansive area of the zoo and search for the arctic animal enclosure. This time you know more or less where you're going, but territories have shifted, so it still takes quite some time to reach your destination. After following a quite circuitous route and having to go off-trail into what feels like a tropical jungle, you eventually reach a mid-sized building standing in the shadow of the border wall. There are no lights or power anywhere here, meaning that the whole bank of heat exchange units on the side of the building is sitting still and silent. This doesn't look good for the comfort of anyone who might still be living in there.";
+		say "     Stepping out from between the tropical trees, you move along the remains of the path that once led to the building, making sure that you don't stumble over any roots or debris on the ground. Noticing how far off all of the mating calls and other noises of the zoo seem right now, you're reminded of the reason why it's so deathly quiet: The large wooden display at the entrance of the arctic enclosure is totally scratched up at one end, with large vertical lines that look like someone sharpened their claws there. The same claws most likely carved a message in the rest of the board - 'Fuck off! They're all mine!' Seems like someone or something territorial claimed this place.";
+		say "     [bold type]Do you want to keep going?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, you're here on a mission after all.";
+		say "     ([link]N[as]n[end link]) - Ehh, maybe some other time.";
+		if player consents:
+			LineBreak;
+			say "[ArcticEnclosureEntry]";
+		else:
+			LineBreak;
+			say "     Glancing at the claw-marks, you come to the decision that right now might not be the best time to challenge whatever moved in here. Quietly turning around and walking back into the jungle, you leave the Arctic Enclosure behind for now.";
+
+to say ArcticEnclosureEntry:
+	say "     Steeling your nerves, you step forward and pull open one of the swinging doors to the building, biting your lip to avoid cursing when it creaks loudly. Thankfully, there is another door about ten feet ahead, which might just have prevented most of the noise from being heard inside the building. Looks like a kind of airlock system, meant to reduce heating costs by keeping the cold inside of the building. Sadly, with no power, this just means that the place can't even benefit from the breeze of wind that blows through the zoo from the coast, so what awaits you inside is stuffy, warm air. The hallway behind the doors has information sheets on one wall, pointing out all sorts of things about arctic animals, which is barely legible in the dim surroundings of the powerless building. Turning the other way, you see an enclosure, empty of any inhabitants. A sign declares that it is supposed to hold 'Lepus arcticus', or polar rabbits.";
+	say "     Moving on to the next enclosure, you find it empty as well, with the sign 'Vulpes lagopus' telling you that arctic foxes were in there at one point. As for the third enclosure, the crunch of broken glass under your feet tells an unmistakable story. Looks like the 'Panthera uncia' (snow leopards) that were in there shattered the window from the inside out, and some scraps of cum-encrusted clothing scattered on the floor show that they took their time enjoying the guests when they did. Still, none of this is fresh, so you somehow doubt that the predator claiming the building is one of them. A door with the sign 'Staff Only' on the back wall is hanging ajar, leaving another area open for exploration.";
+	WaitLineBreak;
+	say "     Entering the zookeeper's part of the building, you find yourself checking over a ransacked common room, several storerooms in the same untidy state, and then following a narrow corridor that leads to the back end of the enclosures. Before you even get to the end of it, you already hear someone's rhythmic grunting as well as breathless whimpers. Cautiously looking around the corner, you see the behind the scenes parts of the zoo - a food preparation area and a large cage to separate animals from the rest if needed. In the former, you see the source of the noise; there's a large tigertaur there, hands clamped on the shoulder and neck of an arctic foxtaur as he ruts her from behind and pushes the whimpering woman down. Meanwhile, the cage is filled with about a dozen ferals, Arctic foxes and rabbits, and one anthro of each species.";
+	say "     The captives seem to be former zookeepers, judging from their shredded uniforms and the fact that they clearly care for their animal friends. The female arctic fox in there is riding herd on her charges and making sure they don't pounce on the trembling group of rabbits at the other end of the cage, closest to yourself. A male anthro rabbit is standing protectively next to the animals, holding on to one of the cage bars. Looks like he and his compatriot haven't been getting much sleep and are about ready to keel over, what with the need to keep watch on their animal friends all the time. Then the rabbit suddenly becomes aware of your presence and turns his white head towards you, eyes going wide. 'Please, help us,' he whispers weakly, reaching out between the bars to plead to you.";
+	say "     [bold type]Do you want to attack the tigertaur?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Let's do it.";
+	say "     ([link]N[as]n[end link]) - Eeh, you'd rather not.";
+	if player consents:
+		LineBreak;
+		say "     As you slowly sneak forward to get into a good position to attack, the rabbit zookeeper waves his hands to cheer you on - or maybe rather tell you something, as you're not even halfway to the rutting tigertaur before you suddenly hear a predatory chuckle from behind you that makes your blood go cold. 'What have we here? A new toy to play with,' the [italic type]other[roman type] tigertaur living in this building growls out, baring her sharp fangs in a toothy smile. Whirling around, you see that the herm has the white fur color of an arctic fox to go with an otherwise totally tigertaur body. Seems like she's the offspring of the dominant male rutting in this room. And that is about all the chance you get to check her out before the tigress attacks you with an eager growl.";
+	else:
+		LineBreak;
+		say "     You hesitate, glancing at the powerful beast rutting its captive, then slowly move backwards into the corridor that brought you here. The rabbit zookeeper gives you an alarmed look and waves his hand as if to tell you something, but he vanishes from sight as you creep out of the room. Suddenly, a predatory chuckle from behind you makes your blood go cold. 'What have we here? A new toy to play with,' the [italic type]other[roman type] tigertaur living in this building growls out, baring her sharp fangs in a toothy smile. Whirling around, you see that the herm has the white fur color of an arctic fox to go with an otherwise totally tigertaur body. Seems like she's the offspring of the dominant male rutting in the other room. And that is about all the chance you get to check her out before the tigress attacks you with an eager growl.";
+	let GroupFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times (for example) or until the player loses or flees]
+		now inasituation is true; [disables normal scenes]
+		if GroupFightCounter is 1:
+			say "     As the first tigertaur goes down, the other one glances towards you from his position on top of the foxtaur and gives a hostile growl while humping his hips a few times more. He stays in position like that for a short moment, then grumbles, 'I hate being interrupted when breeding a bitch. You'll pay for that!' He shoves his unwilling partner down to the ground, pulling a still throbbing cock out of her pussy and shooting streaks of cum over her black and white striped fur. He then turns your way and attacks with a snarl.";
+		challenge "Tigertaur";
+		increase GroupFightCounter by 1;
+	now inasituation is false;
+	if fightoutcome < 20: [player won]
+		say "     Knocking out both of the tigertaurs, you find yourself cheered on by the two transformed zookeepers, and also the arctic foxtaur after she has had a chance to recover at least a little bit from the rough fuck. 'Where did you come from all of a sudden?' she asks in a relieved tone, immediately adding, 'No matter, we're so glad that you came along and gave this fucker what he deserved.' Going to grab some paper towels, she wipes his cum off her fur and pussy, then throws the crumpled wipes at him before following up with a kick between his legs. Looking at the white tigertaur, she sighs, 'I can't believe this bitch is my daughter. She's exactly like him! No chance to convince her otherwise, believe me I've tried.' Grimacing sadly at the unconscious tigertaur, the foxtaur then steps over her to retrieve the key for the cage and frees her compatriots.";
+		say "     After some quick introductions of Aubrey (the foxtaur), Russel (the anthro rabbit zookeeper) and Barbara (the arctic fox zookeeper), the four of you huddle together to talk. 'We need to get out of here before they come to again, but where can we go? Last we saw, the whole city was affected, and hiding out in this building was less than a good idea,' Russel says in a whispered conversation while glancing over to the knocked out tigers, at which point you are happy to mention that you were actually sent here specifically to find people like them with a need for a place to stay. The three of them look at you with surprised expressions, then at each other to exchange meaningful looks. 'Well, whoever this Miyuki person is, she can't be worse than our current host, can she?' Aubrey, and her anthro friends agree. 'We accept, as long as we can bring the animals too. They need our protection to get through all of this.'";
+		WaitLineBreak;
+		say "     Getting the whole group of them to Miyuki's cave is a truly arduous task, especially since the rabbits are prone to flee in all directions when startled. Only Russell can get them to move in the same direction again, while his college Barbara has a hell of a time keeping the arctic foxes from trying to eat any rabbits. Meanwhile, Aubrey keeps an overwatch position together with you, allowing your group to bypass many dangerous situations. At the end of the ordeal, you're thoroughly exhausted, but manage to deliver your rescueees safely to the snowy forest. As they herd their animal charges down the tunnel into the ice fox's quarters, your three companions are in awe at the winter wonderland you brought them to, and are visibly relieved to find themselves in cooler temperatures.";
+		say "     Miyuki is overjoyed at having guests and happily guides them into an adjoining cave that she created just for them, then returns to talk to you with a large smile on her lips. 'You're amazing, you know that. I never guessed that you'd have to go through so much effort to get them here. Such a depraved dimension,' she says, shaking her head in disbelief. A smirk appears on her muzzle as the ice fox sorceress adds, 'Hmm, such bravery on your part calls for a proper reward. Yes, definitively! You know what, I'll give you the honor of being my new lifemate here! Oh, what fun we'll have together!'";
+		say "     [bold type]What do you reply?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Thank her for the honor.";
+		say "     ([link]N[as]n[end link]) - Err... no thanks?";
+		if player consents:
+			LineBreak;
+			say "     Smiling as you accept, you reach out for Miyuki's hand-paw and gently guide it to your lips to kiss it. This clearly pleases the sorceress, as she sways her many tails left and right and gives your ass a grope with one hand. 'I look forward to enjoying some time with you, my love.'";
+			now HP of Miyuki is 3; [player is her mate]
+		else:
+			LineBreak;
+			say "     'What do you mean, you don't want to be my mate?!' Miyuki calls out in a huff. Crossing her arms, she grumbles and gives you a sour look, then makes a throwing-away gesture. 'Pah! Otherworldly barbarian. You don't know what you're missing.' And with that, she turns away from you, literally giving you a cold shoulder as temperatures seem to suddenly plummet around you.";
+			now HP of Miyuki is 99; [mateship refused]
+		change the northwest exit of Ice Fox's Den to Snow Rabbit's Warren;
+		change the southeast exit of Snow Rabbit's Warren to Ice Fox's Den;
+		change the southeast exit of Ice Fox's Den to Snow Fox Enclosure;
+		change the northwest exit of Snow Fox Enclosure to Ice Fox's Den;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     Brought down by the father-daughter team of tigertaurs, you collapse on the ground from sheer exhaustion and are quickly dragged into the middle of the room. Locking away the freshly bred foxtaur, the two tigertaurs focus on you instead, taking you from both ends, with the male humping you while his offspring fucks your face. You're shared between those two for hours, with them changing positions again and again, until each orifice you have has been filled by both their cum multiple times. At the end of this ordeal, you're added to the cage of their sex toy captives, to be used and bred at the tigertaur's leisure.";
+		now bodyname of player is "Tigertaur Sex Toy";
+		end the story saying "You certainly won't be getting out from that situation!";
+	else if fightoutcome is 30: [fled]
+		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type]";
+		now Arctic Enclosure is resolved;
+		now HP of Miyuki is 100; [failed]
 
 instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship < 100 and lust of Miyuki is 2):
 	if debugactive is 1:
@@ -229,7 +344,7 @@ instead of sniffing Miyuki:
 	say "     Miyuki has an interesting scent - crisp and fresh, reminding you of fallen snow. There are some undertones of a pleasant furry smell, as well as a faint hint at... peppermint?";
 
 to say MiyukiDesc:
-	say "     Miyuki is a truly beautiful anthro fox, with a fairly slim build that incorporates just the right amount of feminine curves. She doesn't seem to like wearing clothes, so you have a full view of the snow-white coat of fur covering most of her body, perfectly accompanied by a head of long and flowing hair that shows a silver shimmer on top of that. The fur darkens to charcoal grey and black towards the ends of her limbs, creating the impression of long 'gloves' and 'socks' - intermixed with some grey-ish scales on the backs of her forearms and along her shins. There are further scales down her front, forming a trail from her neck, between a pair of generous breasts and all the way down to her inner thighs. A fan of nine long fox tails completes the image of an exceptional being, especially since she waves their charcoal grey tips towards you playfully...";
+	say "     Miyuki is a truly beautiful anthro fox, with a fairly slim build that incorporates just the right amount of feminine curves. She doesn't seem to like wearing clothes, so you have a full view of the snow-white coat of fur covering most of her body, perfectly accompanied by a head of long and flowing hair that shows a silver shimmer on top of that. The fur darkens to charcoal gray and black towards the ends of her limbs, creating the impression of long 'gloves' and 'socks' - intermixed with some gray-ish scales on the backs of her forearms and along her shins. There are further scales down her front, forming a trail from her neck, between a pair of generous breasts and all the way down to her inner thighs. A fan of nine long fox tails completes the image of an exceptional being, especially since she waves their charcoal gray tips towards you playfully...";
 
 instead of conversing the Miyuki:
 	LineBreak;
@@ -258,6 +373,12 @@ instead of conversing the Miyuki:
 		now sortorder entry is 4;
 		now description entry is "Request that Miyuki perform a prayer to the All-Mother";
 	[]
+	if lust of Miyuki > 2 and HP of Miyuki < 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer to help her with other things";
+		now sortorder entry is 5;
+		now description entry is "The on the sorceress's good side by giving her some assistance";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -281,7 +402,8 @@ instead of conversing the Miyuki:
 						say "[MiyukiTalk3]";
 					-- "Be blessed by her":
 						say "[MiyukiTalk4]";
-					-- otherwise: say "Talk menu failed!";
+					-- "Offer to help her with other things":
+						say "[MiyukiTalk5]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -311,7 +433,7 @@ to say MiyukiTalk2: [talk about the city]
 to say MiyukiTalk3: [talk about becoming an ice fox]
 	if lastSnowStarGiven - turns > 8: [didn't give the player one in the last day]
 		say "     You step up to Miyuki and compliment her about herself, the fox's beautiful body and her snow-white fur. She seems to eat up the praise, becoming quite pleased and smiling at you, until she eventually asks in a chuckle, 'So - what is it that you want from me? I recognize shameless flattery building up to a request.' Oops - busted! You start to apologize, but she just waves you off and says, 'You can tell me sweet nothings all day every day, sweetie. But aside from that - really, just tell me what you want.' You explain that you absolutely love her looks and would be thrilled to be just like her.";
-		say "     'Hmhm,' the ice fox says in a thoughtful tone, then replies, 'What you're asking is not quite as easy as your people's normal transformations, but... I like you, so let's give it a try.' With a flourish, she stretches out her charcoal-grey paw-hand between you, palm up, and waits for one of the snow-flakes dancing in the air to land on it. With a smile, the sorceress then starts to very gently blow over it, and before your very eyes the tiny speck of ice grows and grows into a thin disc. No, a star actually - a snow star! 'Here, my gift to you!' Miyuki says with a chuckle, handing you the little star for you to keep.";
+		say "     'Hmhm,' the ice fox says in a thoughtful tone, then replies, 'What you're asking is not quite as easy as your people's normal transformations, but... I like you, so let's give it a try.' With a flourish, she stretches out her charcoal-gray paw-hand between you, palm up, and waits for one of the snow-flakes dancing in the air to land on it. With a smile, the sorceress then starts to very gently blow over it, and before your very eyes the tiny speck of ice grows and grows into a thin disc. No, a star actually - a snow star! 'Here, my gift to you!' Miyuki says with a chuckle, handing you the little star for you to keep.";
 		increase carried of snow star by 1;
 		now lastSnowStarGiven is turns;
 	else: [gave the player one already that day]
@@ -327,7 +449,20 @@ to say MiyukiTalk4: [be blessed]
 	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
 	add "All-Mother's Blessing" to feats of the player;
 	now lust of Miyuki is 4; [player blessed]
-	
+
+to say MiyukiTalk5: [helper quest]
+	if HP of Miyuki is 0: [not started yet]
+		say "     Stepping up to Miyuki and asking if she needs any other help, you earn a beaming smile from the ice fox. 'That's so nice of you to ask. I'm liking this dimension more and more. Come for the unclaimed magic, stay for the friendly locals, ha!' A thoughtful expression spreads over her face, and the sorceress lets her gaze sweep over the glistening walls of her ice cave. Then she taps the side of her muzzle and nods to you. 'There is one thing that I could use the help of a local on. As you well know, I've been working hard to make this place a bit more like home - not so terribly warm and sunny. I really don't know how you folks could live here like this before. A few of my guests told of mystic devices called [']aircon['], but from what I understood those stopped working when the [']lectricity['] or something failed. Since this will make living out there more difficult, I would like to extend invitations to those poor folks who are suffering. So please, go out and spread the word, will you?'";
+		say "     Thinking about what Miyuki just said, you vaguely remember that the city zoo had an enclosure with arctic animals. Those seem to be the most likely candidates for whom her invitation might apply. As you tell the ice sorceress, she smiles broadly and strokes your cheek. 'I knew having a helpful local would be useful. Especially one as [if player is MProN]handsome[else]pretty[end if] as yourself.' With a wink, she shoos you to get going, then focuses her attention on the giant snow-star under the ceiling. 'Time to make a bit more room,' she murmurs under her breath, then concentrates deeply. The star grow noticeably thicker before separating into two copies of itself. One of the glistening structures floats through the room to settle against a wall and begins to cut its way into it. The razor-sharp edges shave away rock, starting to excavate an opening.";
+		LineBreak;
+		say "     Time for you to go search for Miyuki's intended guests. Looks like you should be off to find the [bold type]Arctic Enclosure[roman type] in the City Zoo.";
+		now Arctic Enclosure is not resolved;
+		now HP of Miyuki is 1; [ice fox quest started]
+	else if HP of Miyuki < 3: [quest started, nothing done yet]
+		say "     Miyuki smiles as you offer your help again and asks, 'Have you found any of those poor folk suffering from heatstroke yet? I'm sure they'd want to come here too and keep me company. You did mention a place called the [']zoo['] before. Maybe start there?'";
+		LineBreak;
+		say "     Time for you to go search for Miyuki's intended guests. Looks like you should be off to find the [bold type]Arctic Enclosure[roman type] in the City Zoo.";
+
 instead of fucking the Miyuki:
 	if lastfuck of Miyuki - turns < 4:
 		say "     As you step up to Miyuki and give her lewd looks, she smiles but then raises a hand, laying it against your chest to hold you back. 'As much as I'd love to have more fun with you... a woman does need a bit of time to catch her breath. Later, okay sweetie?'";
@@ -420,7 +555,7 @@ to say MiyukiSex2:  [Miyuki fucks player pussy]
 	say "     Miyuki joins you immediately, getting on all fours and bending her head down between your legs, sticking her pointy muzzle right between your thighs. You can feel the soft brush of her nose against your skin as she takes in your scent, followed by a pleased sound from your foxy lover. 'Let's see if you taste as good as you smell,' she says eagerly and stretches her neck a little more, sticking out her tongue to lap your sex. The stroke of her warm, wet tongue over your nether lips and clit sends pleasant shivers up your spine, making you tremble in lust and bury your fingers in the softness of the bedding. 'Mmhmm...' Miyuki hums in satisfaction as she slips her tongue in between your folds, wiggling it around playfully.";
 	say "     For you don't know how long, you just give yourself to her oral service, closing your eyes to concentrate on nothing but the brush of that eager tongue, passing over your sensitive parts again and again. Then eventually, something else - something new - nudges your nethers. It is a little hotter than Miyuki's tongue, and... firmer, it seems. Opening your eyes once more, you see your white-furred partner's face just above your head, the pointy muzzle drawn into a broad smile. She has crawled on top of you, holding herself up on her slender arms and is rubbing her cock against your sex. 'Ready for the time of your life, sweetie?' she asks in impish amusement and wiggles her eyebrows at you.";
 	WaitLineBreak;
-	say "     Your happy nod is the last thing Miyuki was waiting for, moving her hips to sink herself into you right away. Your wet and already aroused nethers part easily around the pointy tip, allowing her to slide the grey shaft deep into the waiting cave and filling you out very well. Finally nudging your opening with the bulge of her pre-knot, she rests for a moment and simply looks into your eyes, purring out the words, 'You feel amazing baby.' Then she bends her muzzle down to make out with you, sharing kiss after kiss before she eventually starts to rock her hips up and down, fucking you in a slow but steady rhythm. You can't help but moan out loud at having her eleven-inch cock sawing in and out of your body, especially when she gives the little extra push to pop her bulge into you, then out again. Seems like she really enjoys something tight wrapped around that part of her cock!";
+	say "     Your happy nod is the last thing Miyuki was waiting for, moving her hips to sink herself into you right away. Your wet and already aroused nethers part easily around the pointy tip, allowing her to slide the gray shaft deep into the waiting cave and filling you out very well. Finally nudging your opening with the bulge of her pre-knot, she rests for a moment and simply looks into your eyes, purring out the words, 'You feel amazing baby.' Then she bends her muzzle down to make out with you, sharing kiss after kiss before she eventually starts to rock her hips up and down, fucking you in a slow but steady rhythm. You can't help but moan out loud at having her eleven-inch cock sawing in and out of your body, especially when she gives the little extra push to pop her bulge into you, then out again. Seems like she really enjoys something tight wrapped around that part of her cock!";
 	say "     Miyuki's slow, gentle start at having sex with you builds quickly to a quite vigorous pounding, as the ice fox humps your eager pussy with seemingly boundless stamina, really pushing all of your buttons as she does so. She doesn't have balls to slap against your crotch, but the bulge at the base of her cock almost serves the same way - as she thrusts up till the little thud of it against your nethers, then follows up by another sharp hump to pop it inside. Quite a sensation to take that thing into your body, making you thankful for her prolonged oral service that relaxed and stretched your hole. Especially now that Miyuki seems to be getting closer and closer to an orgasm and her knot starts to swell up noticeably with every further thrust.";
 	WaitLineBreak;
 	say "     Then suddenly, Miyuki hammers her hips forward forcefully, making you wince a little at the girth of her knot pushing past your nether lips. You can feel why she did it right away, as a hard throb goes through her shaft a second later, making the knot swell even further - past any hope to pass in or out of you and tying you securely to your foxy lover's body. She lets out a satisfied moan - almost a growl - and grinds against you hard, and a heartbeat later, the first heavy spurt of cum paints your insides white. Throb after throb, Miyuki unloads her load of cum deep into your body, soaking you with her seed and making it cascade into your womb as the opening of it can't resist the raising pressure of more and more cum having nowhere else to go.";
@@ -440,10 +575,10 @@ to say MiyukiSex3:  [Miyuki fucks player pussy - doggy-style and ovi]
 	say "     Miyuki joins you immediately, kneeling behind you and placing her paw-hands on the raised buttocks of your behind. She squeezes and gropes your ass playfully, then [if cunts of player > 0]moves on further down, brushing over your nether lips with a finger[else]brushes a finger up and down your crack[end if], dipping in just the tip to wiggle it inside you a little. 'Oh yeah, I'll enjoy egging you,' the white fox says in an eager tone, then leans forward to stick her muzzle between your thighs. Breathing in deeply, she takes in your scent and lets out a satisfied sound, followed by the words, 'Let's see if you taste as good as you smell.' And with that, she sticks out her tongue to lap over your [if cunts of player > 0]sex[else]pucker[end if]. The stroke of her warm, wet tongue over your nether lips and clit sends pleasant shivers up your spine, making you tremble in lust and bury your fingers in the softness of the bedding. 'Mmhmm...' Miyuki hums in satisfaction as she slips her tongue into your hole after a little bit of teasing, wiggling it around playfully.";
 	say "     For you don't know how long, you just give yourself to her oral service, closing your eyes to concentrate on nothing but the brush of that eager tongue, passing over your sensitive parts again and again. Then eventually, something else - something new - nudges your [if cunts of player > 0]nethers[else] pucker. It is a little hotter than Miyuki's tongue, and... firmer, it seems. Opening your eyes once more and glancing over your shoulder, you see your white-furred partner beaming down at you from where she is kneeling right behind you. She raises what is in her hand - the long fleshy tube of her ovipositor, slick and prepared to plunge into your depths. 'Ready for the time of your life, sweetie?' she asks in impish amusement and wiggles her eyebrows at you.";
 	WaitLineBreak;
-	say "     Your happy nod is the last thing Miyuki was waiting for, moving her hips to sink herself into you right away. Your wet [if cunts of player > 0]and already aroused nethers part[else]and relaxed pucker stretches[end if] easily around the pointy tip, allowing her to slide the grey shaft deep into the waiting cave and filling you out very well. Miyuki keeps going until you can feel the slight ridges of her scaly crotch against your buttocks, having buried herself all the way inside you. 'You feel amazing baby,' she purrs, then bends her muzzle down to make out with you, sharing kiss after kiss before she eventually starts to rock her hips back and forth, fucking you in a slow but steady rhythm. You can't help but moan out loud at having her fourteen-inch ovipositor sawing in and out of your body, especially when she changes the angle of thrust every so often, rubbing spots that you never knew you had. Seems like she wants to make this as good as possible for both of you.";
-	say "     Miyuki's slow, gentle start at having sex with you builds quickly to a quite vigorous pounding, as the ice fox humps your [if cunts of player > 0]eager pussy[else]raised ass with seemingly boundless stamina, really pushing all of your buttons as she does so. Her scaly crotch hits your buttocks again and again, creating slapping noises that echo throughout the underground home around you. Quite a sensation to take that long ovipositor of hers into your body, making you thankful for her prolonged oral service that relaxed and stretched your hole. Especially now that Miyuki seems to be getting closer and closer to an orgasm and you can feel something large and bulgy at the base of her appendage.";
+	say "     Your happy nod is the last thing Miyuki was waiting for, moving her hips to sink herself into you right away. Your wet [if cunts of player > 0]and already aroused nethers part[else]and relaxed pucker stretches[end if] easily around the pointy tip, allowing her to slide the gray shaft deep into the waiting cave and filling you out very well. Miyuki keeps going until you can feel the slight ridges of her scaly crotch against your buttocks, having buried herself all the way inside you. 'You feel amazing baby,' she purrs, then bends her muzzle down to make out with you, sharing kiss after kiss before she eventually starts to rock her hips back and forth, fucking you in a slow but steady rhythm. You can't help but moan out loud at having her fourteen-inch ovipositor sawing in and out of your body, especially when she changes the angle of thrust every so often, rubbing spots that you never knew you had. Seems like she wants to make this as good as possible for both of you.";
+	say "     Miyuki's slow, gentle start at having sex with you builds quickly to a quite vigorous pounding, as the ice fox humps your [if cunts of player > 0]eager pussy[else]raised ass[end if] with seemingly boundless stamina, really pushing all of your buttons as she does so. Her scaly crotch hits your buttocks again and again, creating slapping noises that echo throughout the underground home around you. Quite a sensation to take that long ovipositor of hers into your body, making you thankful for her prolonged oral service that relaxed and stretched your hole. Especially now that Miyuki seems to be getting closer and closer to an orgasm and you can feel something large and bulgy at the base of her appendage.";
 	WaitLineBreak;
-	say "     Then suddenly, Miyuki hammers her hips forward forcefully, making you groan at the depth of her sudden penetration - but then, another sensation starts to occupy your senses - pressure against your stretched [if cunts of player > 0]pussy[else]asshole. In what seems like an unstoppable expansion, her shaft grows in diameter, stretched out by an oval shape pushed along inside it. An egg! Miyuki breathes hard and you can hear her strain a bit as she pushes again and again with inner muscles, making the bulge wander down her ovipositor until it is a little more than halfway past your stretched opening. At that point your strained muscles pull tight around her hollow appendage, squeezing the egg along to almost squirt into your depths. 'Fuck yeah, it feels great to egg you. I've been missing this feeling,' Miyuki groans in lust, leaning forward to kiss the side of your neck.";
+	say "     Then suddenly, Miyuki hammers her hips forward forcefully, making you groan at the depth of her sudden penetration - but then, another sensation starts to occupy your senses - pressure against your stretched [if cunts of player > 0]pussy[else]asshole[end if]. In what seems like an unstoppable expansion, her shaft grows in diameter, stretched out by an oval shape pushed along inside it. An egg! Miyuki breathes hard and you can hear her strain a bit as she pushes again and again with inner muscles, making the bulge wander down her ovipositor until it is a little more than halfway past your stretched opening. At that point your strained muscles pull tight around her hollow appendage, squeezing the egg along to almost squirt into your depths. 'Fuck yeah, it feels great to egg you. I've been missing this feeling,' Miyuki groans in lust, leaning forward to kiss the side of your neck.";
 	say "     The ice fox's ovipositor keeps up its rhythmic contractions, working the egg ever further into your body until it eventually starts to peek out of the tube at the end. 'Time to give this little thing another good push,' your sexy partner says with a smile on her muzzle, then pulls back a little bit before giving you another hard and deep thrust. ";
 	if cunts of player > 0:
 		if cunt length of player > 13: [longer than her cock]
@@ -454,7 +589,7 @@ to say MiyukiSex3:  [Miyuki fucks player pussy - doggy-style and ovi]
 		say "As Miyuki reaches her deepest penetration yet, her ovipositor pushes out the slick egg in almost a squirt, sending it sliding ever deeper into the twisting tunnel of your asshole. You don't think you've ever had anything that far up there before. ";
 	say "'Damn - putting an egg in such a nice and tight hole feels great. Too bad I can't tie with you like this though... I like having my knot stuck in someone too. Oh well, maybe next time...' Miyuki says in a well-satisfied tone, then wraps her arms around you from behind, seeking out your crotch. Wound up as getting eaten, fucked and egged has made you, it doesn't take her long in stroking your [if cunts of player > 0]clit[else if cocks of player > 0]cock[else]crotch[end if] till you reach your own orgasm, trembling hard in her grasp as a breathtaking climax rocks your body.";
 	WaitLineBreak;
-	say "     'That - was very very good,' Miyuki tells you in a pleased tone, licking behind your ear playfully. Then she slowly pulls her ovipositor out of you, allowing it to retract fully into her scaled slit. The snow-white fox follows up by laying down next to you, her arms holding and caressing your body and especially your slightly swollen belly. Exhausted from the sex, you stay cuddled up with her for quite a while before eventually getting back up and collecting your clothes and gear from where it lies strewn about on the ground.";
+	say "     'That - was very, very good,' Miyuki tells you in a pleased tone, licking behind your ear playfully. Then she slowly pulls her ovipositor out of you, allowing it to retract fully into her scaled slit. The snow-white fox follows up by laying down next to you, her arms holding and caressing your body and especially your slightly swollen belly. Exhausted from the sex, you stay cuddled up with her for quite a while before eventually getting back up and collecting your clothes and gear from where it lies strewn about on the ground.";
 	ovichance;
 	if MiyukiRelationship < 10:
 		now MiyukiRelationship is 10; [player got fucked]

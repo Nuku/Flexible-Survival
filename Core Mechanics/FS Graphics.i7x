@@ -84,6 +84,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
+Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
@@ -216,6 +217,8 @@ Figure of Korvin_blackcollar_icon is the file "Korvin_blackcollar.jpg".
 Figure of Korvin_blackcollar_face_icon is the file "Korvin_blackcollar_face.jpg".
 Figure of Korvin_pinkcollar_icon is the file "Korvin_pinkcollar.jpg".
 Figure of Korvin_pinkcollar_face_icon is the file "Korvin_pinkcollar_face.jpg".
+Figure of Krampus_hard_icon is the file "Krampus_hard.jpg".
+Figure of Krampus_soft_icon is the file "Krampus_soft.jpg".
 Figure of Jay_elf_outfit_icon is the file "Jay_elf_outfit.jpg".
 Figure of Jay_leggins_icon is the file "Jay_leggins.jpg".
 Figure of Jay_naked_icon is the file "Jay_naked.jpg".
@@ -233,6 +236,7 @@ Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
 Figure of Marc_face_icon is the file "Marc_face.jpg".
 Figure of Marc_fucked_icon is the file "Marc_fucked.jpg".
+Figure of Mason_icon is the file "Mason.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Monty_ass_icon is the file "Monty_ass.jpg".
 Figure of Monty_combat_icon is the file "Monty_combat.jpg".
@@ -240,7 +244,7 @@ Figure of Monty_postcombat_icon is the file "Monty_postcombat.jpg".
 Figure of Monty_face_icon is the file "Monty_face.jpg".
 Figure of Monty_naked_icon is the file "Monty_naked.jpg".
 Figure of Moreau_face_icon is the file "Moreau_face.jpg".
-Figure of Moreau_hard_icon is the file "Moreau_soft.jpg".
+Figure of Moreau_hard_icon is the file "Moreau_hard.jpg".
 Figure of Moreau_soft_icon is the file "Moreau_soft.jpg".
 Figure of Mul_clothed_icon is the file "Mul_clothed.jpg".
 Figure of Mul_face_icon is the file "Mul_face.jpg".
@@ -640,6 +644,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Korvin_blackcollar_face"	Figure of Korvin_blackcollar_face_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar"	Figure of Korvin_pinkcollar_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar_face"	Figure of Korvin_pinkcollar_face_icon	"Lyttathebug"	g-black	"normal"
+"Krampus_hard"	Figure of Krampus_hard_icon	"Lytta"	g-black	"normal"
+"Krampus_soft"	Figure of Krampus_soft_icon	"Lytta"	g-black	"normal"
 "Lamia"	Figure of Lamia_icon	"Anymouse1968"	g-white	"normal"
 "Latex Ermine_Defeat"	Figure of LatexErmine_icon	"Anymouse1968"	g-white	"normal"	[only used in defeat]
 "Latex Ermine_Blue"	Figure of LatexErmineBlue_icon	"Anymouse1968"	g-white	"normal"
@@ -672,6 +678,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "MarcOrwell"	Figure of MarcOrwell_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"	g-black	"normal"
+"Mason"	Figure of Mason_icon	"Abelsword"	g-black	"normal"
 "MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
 "Mental Mouse"	Figure of MentalMice_icon	""	g-white	"normal"
@@ -706,6 +713,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-white	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
+"Pewter Consort"	Figure of Pewter_Consort_icon	"Xilrayne"	g-white	"normal"
 "Pirate Shark"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
@@ -876,6 +884,7 @@ carry out artistcredits:
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
 	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Pewter Consort by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
 	say "     Pirate Shark by Zealot @  https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
@@ -968,6 +977,7 @@ carry out artistcredits:
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Korvin by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Krampus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
@@ -975,6 +985,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
+	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Moreau by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
@@ -1057,7 +1068,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

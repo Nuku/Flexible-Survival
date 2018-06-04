@@ -8,6 +8,7 @@ Section 1 - Pediatrics Office
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and south wall, jagged edges making the going difficult, but passable.".
 Pediatrics Lobby is a room. "The lobby for one of those medical clinics people go to find a doctor. This is the lobby, or was. The cushy seats are shattered, the wood splintered, and the floor cracked and gouged by huge claws. Cum lies everywhere, and you have to pick your way through the room carefully. The doors to the inner area are still shut and locked. Battered, but intact. Maybe there is someone hiding out there?".
 Pediatrics Lobby is fasttravel.
+The earea of Pediatrics Lobby is "Outside".
 Pediatrics door is dangerous.
 North of Pediatrics door is pediatrics Lobby.
 South of Pediatrics door is Wandering the City.

@@ -20,6 +20,7 @@ Instead of resolving a Working Out:
 	if player consents:
 		say "You mark the location of the gym on your map before walking through the entrance into the strange gym.";
 		move player to Campus Gym;
+		now Campus Gym is known;
 	else:
 		say "You mark the location on your map - it might be worth checking out later.";
 	change southwest exit of Athletic Street to Campus Gym;

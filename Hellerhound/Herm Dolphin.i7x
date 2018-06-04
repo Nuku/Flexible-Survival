@@ -63,7 +63,7 @@ To say Dolphin loses:
 		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
-	if cunts of player is not 0: [prefer male action]
+	if cunts of player > 0: [prefer male action]
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of player > 3:
 			say "She eagerly slams her cock into your cunt. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. She continues to ram your eager hole. You can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. Up to her hilt, she can only just barely tickle your cervix. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. 'I should be - unf - enjoying this. It's - urgh - rare for someone - Ah! - to handle me so well...' she trails off. You get the impression that while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
@@ -98,10 +98,21 @@ to say dolphin fuck:
 			say "She shrieks with joy, 'Your pussy is finally big enough for me. I bet that took a lot of doing.' She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now-shrinking cock out of your cunt and into the water.[impregchance]";
 	else if "Male Preferred" is not listed in feats of player:[do female next]
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
-		say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
-		increase cunts of player by 1;
-		increase cunt length of player by 6;
-		increase cunt width of player by 4;
+		if "Microwaved" is listed in feats of player:
+			say "WARNING: Sex shifting nanites detected! Allow?";
+			if the player consents:
+				say "Ok.";
+				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
+				increase cunts of player by 1;
+				increase cunt length of player by 6;
+				increase cunt width of player by 4;
+			else:
+				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+		else:
+			say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
+			increase cunts of player by 1;
+			increase cunt length of player by 6;
+			increase cunt width of player by 4;
 	else:
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of player is 1:

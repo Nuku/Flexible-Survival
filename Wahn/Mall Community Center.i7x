@@ -20,7 +20,7 @@ Version 1 of Mall Community Center by Wahn begins here.
 [   5: player was given quest to find their mother           ]
 [   6+ progression of the mother quest                       ]
 
-Section 1 - Events 
+Section 1 - Events
 
 Free Handouts is a situation.
 The sarea of Free Handouts is "Smith Haven".
@@ -33,14 +33,14 @@ after going to Mall West Wing while (Free Handouts is not resolved):
 
 to FreeHandoutsEvent:
 	say "     Strolling through the mall, you encounter a long line of people, who wait more or less patiently to reach a desk set up in front of what looks like a former travel agency. The line is moving fast, but almost as soon as one person gets to the front and walks off after being handed something, one or more new people queue up at the end. Curious, you casually walk along the line next to everyone and have a look. Guarded by a stoically observing wolverine, the desk holds a series of plastic tubs, bearing signs reading 'Regular', 'Large', and 'Horse Cock'. You immediately recognize the flat, square, and often colorful plastic wrappers: they're condoms! Manning the desk is a trio of anthro antelope women, with petite figures that match the light-boned build of their species. They are dressed in tank tops and shorts, casual wear that keeps them modest and approachable. All three of them look remarkably similar to one another, enough so for you to guess them to be fraternal triplets.";
-	say "      Noticing your interest, one of the three women steps out from behind the desk and approaches you, a friendly smile on her face. 'You're welcome to join the line, too. We're open for anyone to get what they need, even if you don't live in the mall,' she says and looks down the lone line of people waiting, seeming pleased with the turn-out. You introduce yourself [if player is not defaultnamed]as [name of player] [end if]and tell her that you came over to see what all the commotion was about. She puts a hand to her chest and chuckles, then says, 'Oh, sorry. I guess I've gotten used to everyone knowing about us at the mall. My name is Florence, and these are my sisters, Marie and Olivia. We run the Haven Community Center, doing initiatives like this handout right now, as well as several others. Please let me know if you have any more questions.'";
+	say "     Noticing your interest, one of the three women steps out from behind the desk and approaches you, a friendly smile on her face. 'You're welcome to join the line, too. We're open for anyone to get what they need, even if you don't live in the mall,' she says and looks down the lone line of people waiting, seeming pleased with the turn-out. You introduce yourself [if player is not defaultnamed]as [name of player] [end if]and tell her that you came over to see what all the commotion was about. She puts a hand to her chest and chuckles, then says, 'Oh, sorry. I guess I've gotten used to everyone knowing about us at the mall. My name is Florence, and these are my sisters, Marie and Olivia. We run the Haven Community Center, doing initiatives like this handout right now, as well as several others. Please let me know if you have any more questions.'";
 	WaitLineBreak;
 	FlorenceTalkMenu;
 	say "     Getting back to handing out condoms to the people standing in line, Florence and her sisters take care that everyone gets what they need, then eventually call it a day and move back into the former Travel Agency to the west.";
 	if HP of Florence is 0:
 		now HP of Florence is 1;
 	now Free Handouts is resolved;
-	
+
 Section 2 - Locations
 
 West of Mall West Wing is Haven Community Center.
@@ -102,7 +102,7 @@ to FlorenceTalkMenu:
 		now title entry is "Ask to meet the goo people";
 		now sortorder entry is 6;
 		now description entry is "Maybe she can get you past the door guard blocking access to the Goo Refuge";
-	[]	
+	[]
 	if libido of Florence > 0 and cocks of player > 0 and cock width of player > 4 and HP of Florence > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to donate some fluids";
@@ -222,7 +222,7 @@ to say FlorenceTalk_FluidDonation:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to jerk into a condom, [link]2[end link] to ask her to jerk you off into a condom, [link]3[end link] to fuck her with a condom on, or [link]3[end link] to take things directly to the goo people.";
-	if calcnumber is 1: 
+	if calcnumber is 1:
 		LineBreak;
 		say "     As you tell her what you need, Florence gives you an evaluating look, then quickly collects a condom of suitable size from one of the storage tubs. Handing it to you with a smile, she guides you to the 'clinic' set up in one corner of the former travel agency. Drawing the flimsy curtains shut after you step into one of the examination areas, she leaves you to do your thing. Quickly sliding off your clothes, you pull out your [cock of player] shaft and unroll the condom over its length, then concentrate on an especially sexy image in your mind to jerk off to. Chuckling a little about pleasuring yourself for a good cause, you stroke and squeeze your manhood, quickly building up your arousal. It doesn't take all that long before some skillful self-pleasure brings the familiar feeling of tightness settling into your balls. Finishing yourself off with a burst of speed at the end, you let out a satisfied grund as your balls start to unload into the condom.";
 		say "     You watch in satisfaction as the reservoir section of the condom is filled with spurt after spurt of creamy cum, bulging out a little as more sprays into the receptable. Milking your cock to make sure as much cum as possible ends up in the condom, you eventually pull the flexible sheath off your erection and put a knot on it. After getting dressed again, you deliver your packaged load to the cooler that Florence and her sisters have set up. The antelopes smile at you and give their thanks for your donation[if HP of Florence is 0], then turn back to dealing with the people standing in line[end if].";
@@ -241,7 +241,7 @@ to say FlorenceTalk_FluidDonation:
 			say "but I'll have to pass. Sorry about it. You're a good-looking [guygal] and sex sure is fun, but somehow it feels 'cheap' if you just have it with anyone that is horny and walks up to you. Don't you want to have your encounters mean something and be with people you actually know and like?'";
 		else:
 			say "";
-	else: 
+	else:
 		LineBreak;
 		if HP of Florence < 3:
 			say "     As you tell her that you want to give the goo people your fluid donation in person, Florence looks at you with a raised eyebrow. 'I'll have to warn you. They are quite infective, and therefore do their best to keep their distance, ever since... some unfortunate incidents. Please don't go into their refuge if you're not ready to deal with that. They are still people, in their own way, and being stared at like freaks hurts them.' Nodding to Florence, you reply that you know how to behave yourself, after which she [if player is in Haven Community Center]goes have a quiet word with the goo person guarding the entrance to their refuge[else]goes into the community center and has a quiet word with a goo-person guarding a door in the back[end if]. Coming back after a little while, she nods to you and says, 'You can go and talk to them now.'";
@@ -251,7 +251,7 @@ to say FlorenceTalk_FluidDonation:
 
 to say FlorenceTalk_ClinicVolunteer:
 	say "     ...";
-	
+
 instead of fucking the Florence:
 	say "     As you offer to have sex with her, Florence looks at you wide-eyed before quickly collecting herself again and replying, 'I - um, that's certainly an interesting offer, ";
 	if XP of Florence < 6: [player doesn't know her well enough]

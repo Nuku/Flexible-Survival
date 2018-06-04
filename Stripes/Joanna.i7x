@@ -221,8 +221,7 @@ Instead of conversing the Joanna:
 
 to say plantexam:
 	say "     Joanna blushes a little and tucks her paws between her legs as if trying to hide her stirring arousal. 'I... I noticed that you're part plant as well. That wasn't because of the one that got me, was it?  Or because of me?' she adds, fumbling to restrain her stirring tendrils. 'Could you tell me what happened?' You nod and relate to her how you ended up this way and she grows more aroused as you detail your changes and she runs her paws over your altered body. 'Life as a plant is so much better. I think you should relax and enjoy it.'";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+	WaitLineBreak;
 	say "     Joanna's paws slide over you as she takes in your plant-like features";
 	if player is plantbodied or player is plantskinned:
 		say ". Her fingers roam over your altered body, thoroughly enjoying this chance to examine you and you can't help but moan a little in response to her touch";
@@ -334,60 +333,70 @@ to say sexwithJoanna:
 
 to say joannaselection:
 	blank out the whole of table of fucking options;
+	[]
 	if HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Bukkake";
 		now sortorder entry is 1;
 		now description entry is "Lavish attention on her numerous genitalia to get a messy finish.";
 		now toggle entry is joannasexy rule;
+	[]
 	if cocks of player > 0 and HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 2;
 		now description entry is "Have her suck you off.";
 		now toggle entry is joannasexy rule;
+	[]
 	if cunts of player > 0 and HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 3;
 		now description entry is "Get that wondrous tongue in your womanly flower.";
 		now toggle entry is joannasexy rule;
+	[]
 	if cocks of player > 0 and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Joanna";
 		now sortorder entry is 4;
 		now description entry is "Stuff her lovely flowers with your cock(s).";
 		now toggle entry is joannasexy rule;
+	[]
 	if cunts of player > 0 and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy fucked";
 		now sortorder entry is 5;
 		now description entry is "Go for a ride on those tentacle cocks of hers.";
 		now toggle entry is joannasexy rule;
+	[]
 	if cunts of player is 0 and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 6;
 		now description entry is "Try one of those squirming tentacle cocks up your ass.";
 		now toggle entry is joannasexy rule;
+	[]
 	if cocks of player > 0 and HP of Joanna >= 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual Fucking";
 		now sortorder entry is 7;
 		now description entry is "Fuck Joanna while she does you.";
 		now toggle entry is joannasexy rule;
+	[]
 	if cocks of player > 1 and ( cock length of player * cocks of player ) <= 64 and HP of Joanna >= 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Multi-stuff Joanna";
 		now sortorder entry is 8;
 		now description entry is "Put several cocks in one pussy.";
 		now toggle entry is joannasexy rule;
+	[]
 	if HP of Joanna >= 5 and ( cunts of player is 0 or cunt width of player > 4 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Multi-stuff player";
 		now sortorder entry is 9;
 		now description entry is "Take those tendrils all in one hole.";
 		now toggle entry is joannasexy rule;
+	[]
 	sort the table of fucking options in sortorder order;
 	LineBreak;
 	select an option from table of fucking options;
@@ -444,6 +453,15 @@ This is the joannasexy rule:
 			LineBreak;
 			if a random chance of 2 in 3 succeeds:
 				infect "Parasitic Plant";
+			else if "Microwaved" is listed in feats of player:
+				say "WARNING: Sex shifting nanites detected! Allow?";
+				if the player consents:
+					say "Ok.";
+					now skipcockchange is true;
+					follow the sex change rule;
+					now skipcockchange is false;
+				else:
+					say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 			else:
 				now skipcockchange is true;
 				follow the sex change rule;
@@ -451,28 +469,35 @@ This is the joannasexy rule:
 		else:
 			say "     You can feel an oddly pleasant sensation as Joanna's sweet saliva and fluids seep further into your body, warming your groin and exciting you.";
 			LineBreak;
-			now skipcockchange is true;
-			follow the sex change rule;
-			now skipcockchange is false;
+			if "Microwaved" is listed in feats of player:
+				say "WARNING: Sex shifting nanites detected! Allow?";
+				if the player consents:
+					say "Ok.";
+					now skipcockchange is true;
+					follow the sex change rule;
+					now skipcockchange is false;
+				else:
+					say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+			else:
+				now skipcockchange is true;
+				follow the sex change rule;
+				now skipcockchange is false;
 		wait for any key;
 
 
 to say joannasex1:
 	say "     Deciding the please the garden's loveliest flower, you break the deep-throating kiss and lower yourself to your knees. Her numerous genitalia offer plenty of choices for you to play with. You start by running your tongue over one of her cocks while your fingers stroke her thighs, then move to stroke the folds of her wet pussies. Dripping with sweet nectar, you stroke those lovely flowers, dipping a few fingers into each of them, switching from one to the next after a few strokes. Your mouth meanwhile has taken her cock in and the green tendril squirms down your throat, leaking her sweet, arousing juices into you. She runs her paws over your head while her other green shafts move on their own, rubbing against your face, smearing precum over you. After a good long suck on that one, you move to another cock, and then another. As you're switching to the last one, Joanna moans and sends the tendril down your throat moments before she cums hard. Her sweet cum blasts down into your belly and blasts across your face, painting you in her semen. Once the cumming tendrils have released you, you sit back and wipe her sugary semen from your face with one hand and lick it up. The other is firmly between your legs, playing with your aching loins until you cum moments later.";
-	increase libido of player by 15;
-	if libido of player > 100, now libido of player is 100;
+	LibidoBoost 15;
 
 
 to say joannasex2:
 	say "     Reaching down, you stroke your throbbing [cockname of player] [if cocks of player > 1]cocks[else]cock[end if] and slowly break the deep-throating kiss. You stroke her softly furred muzzle and ask her if she's like a taste of it. Grinning, she's on her knees right away. Her long, agile tongue slides over your glans and then wraps completely around your [if player is plantcocked and lust of joanna > 0]green, tentacle [end if]penis, stroking and squeezing as she starts sucking hungrily. You moan in pleasure and run your fingers through her green hair, being careful not to pluck her flowers, then move to scritch her round ears. Rumbling and chirring in pleasure, rubbing your [short ball size] orbs, eager for the thick nectar within[if cunts of player > 1]. Her paws run along your legs and then move to start stroking and teasing your pussies, slipping a few fingers into them to further excite you and get more of your juices[else if cunts of player is 1]. Her paws run along your legs and then move to start stroking and teasing your pussy, slipping a few fingers into your cunt to further excite you and get more of your juices[end if][if cocks of player > 1]. Having several cocks to pick from, she swaps between them from time to time, doing her best to get you worked up for a big blast[end if]. When your climax finally hits, she gulps down your seed hungrily, moaning around her muzzleful of throbbing cock[if cocks of player > 2] while your other cocks spurt your semen onto her face. She swaps quickly from one to the other, [else if cocks of player is 2] while your other cock spurts your semen onto her face. She swaps quickly between them, [else], [end if]trying to get as much as she can to satisfy her body's cravings. Once your balls are drained, she gets up, running her foot long tongue over her face and paws, licking away every drop of your juices.";
-	increase libido of player by 10;
-	if libido of player > 100, now libido of player is 100;
+	LibidoBoost 10;
 
 
 to say joannasex3:
 	say "     Reaching down, you stroke your leaking [cunt size desc of player] [if cunts of player > 1]cunts[else]cunt[end if] and slowly pull away from the deep-throating kiss. You stroke her softly furred muzzle with your damp fingers and ask her if she'd to put that tongue of hers to work getting more. Grinning, she's on her knees right away. Her long, agile tongue slides across your groin, licking at your damp folds before diving into your vagina. The red flesh pumps and wriggles inside you, sending shivers of delight up your spine[if cunts of player > 1]. She swaps back and forth between your cunts, lavishing them with attention[end if][if player is planttailed and lust of joanna > 0]. Her long tongue slides further back to tease your vaginal anus as well, dipping into that leaking plant hole a few times[end if]. Your [if cunts of player > 1]pussies orgasm[else]pussy orgasms[end if] several times, giving your sweet nectar to the lustful and thirsty kinkajou. Her paws don't remain idle either, moving to [if cocks of player > 1]stroke your cocks until they finally cum as well[else if cocks of player is 1]stroke your cock until it finally cums as well[else]knead your ass until finally your body is wracked with one last, powerful orgasm[end if]. Moving back after that, she makes a show of sliding her messy tongue all over her face, licking away all your juices with that flexible and talented organ.";
-	increase libido of player by 10;
-	if libido of player > 100, now libido of player is 100;
+	LibidoBoost 10;
 
 
 to say joannasex4:
