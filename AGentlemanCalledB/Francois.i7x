@@ -1073,11 +1073,11 @@ to say gingerbread Use:
 to gingerbreadinfect:
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "gingerbread":
+		if name entry is "Gingerbread":
 			now monster is y;
 			break;
 	now non-infectious entry is false;
-	infect "gingerbread";
+	infect "Gingerbread";
 	now non-infectious entry is true;
 
 cheesecake is a grab object. It is a part of the player. it is not temporary.
@@ -1116,11 +1116,11 @@ to say cheesecake Use:
 to cheesecakeinfect:
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "cheesecake":
+		if name entry is "Cheesecake":
 			now monster is y;
 			break;
 	now non-infectious entry is false;
-	infect "cheesecake";
+	infect "Cheesecake";
 	now non-infectious entry is true;
 
 [Recipes	]

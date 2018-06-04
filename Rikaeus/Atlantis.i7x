@@ -35,6 +35,10 @@ Version 1 of Atlantis by Rikaeus begins here.
 [   0: Hasnt visited yet                                   ]
 [   1: First Visit                                         ]
 
+[ KurtRelationship                                         ]
+[   0: Hasnt seen yet                                      ]
+[   1: Has heard him perform                               ]
+
 PoseidonRelationship is a number that varies.
 FirstAtlantisVisit is a number that varies.
 TritonRelationship is a number that varies.
@@ -107,6 +111,7 @@ South of Royal Palace Entrance is Atlantis City Center.
 North of Atlantis City Residential is Atlantis City Center.
 Atlantis City Center is a room.
 The description of Atlantis City Center is "[AtlantisCenter]".
+earea of Atlantis City Center is "Atlantis".
 
 to say AtlantisCenter:
 	say "     The beautiful city center is teeming with people of all kinds. You see a shark man talking with what looks to be a greenish-toned catfish like man. Also, you are surrounded by a lot of human-looking males and females. Although if you didn't know this already you'd think they were actual humans rather than the mermen and mermaids they are. What really hits you is the fact that the city appears to be so peaceful in such a hectic world, as if the apocalypse changed nothing for them. It really lives up to the legends of being a utopia. Looking around you notice to your north is the Royal Palace of the city, with stairs leading right up to it. To the south is the residential area of Atlantis, where the various citizens live. To your west is the marketplace where everyone trades goods and services. Lastly, to your east is where you came into the city.";
@@ -114,6 +119,7 @@ to say AtlantisCenter:
 West of Atlantis City Center is Atlantis City Market.
 Atlantis City Market is a room.
 The description of Atlantis City Market is "[AtlantisMarket]".
+earea of Atlantis City Market is "Atlantis".
 
 to say AtlantisMarket:
 	say "     Upon entering the market you are met with sounds of people talking and bartering. At a stall selling weapons you hear a Pirate Shark trying to reduce the price of the sword they're attempting to buy but to no avail. Over towards another one you see what you assume to be a mermaid couple wondering whether or not they should have fish for dinner. You're sure that at some point you can find something to buy here as well. To the east is the city center that you arrived from.";
@@ -121,14 +127,22 @@ to say AtlantisMarket:
 South of Atlantis City Center is Atlantis City Residential.
 Atlantis City Residential is a room.
 The description of Atlantis City Residential is "[AtlantisResidential]".
+earea of Atlantis City Residential is "Atlantis".
 
 to say AtlantisResidential:
 	say "     The living area of the city looks nice, just like the rest of the city. The houses are made out of various colors of coral and have a modern yet rustic look to them. Just like the other places in Atlantis there are people wandering around and some even just lounging out in front of their houses or apartment complexes. You're sure that you could meet some people who live here at a point in the future. To the north is the center of the city.";
+
+Kurt's Abode is a room.
+The description of Kurt's Abode is "[KurtsAbode]".
+
+to say KurtsAbode:
+	say "     The living room of the shark-musician is rather quaint, though from what you know of the man it's to be expected. The area is decorated with simple paintings of the city as well as various types of guitars, which you're sure he can play. To your right is a doorway that leads to his kitchen which from where you're standing you can see it is rather spick and span. Wandering around a bit more you muse that your friend is a very clean person but you guess that's not exactly a bad thing in any situation really. Though you do have a thought to tell the shark-morph that he needs more furniture or something to spruce up the place.";
 
 North of Atlantis City Center is Royal Palace Entrance.
 South of Royal Throne Room is Royal Palace Entrance.
 Royal Palace Entrance is a room.
 The description of Royal Palace Entrance is "[RoyalPalace]".
+earea of Royal Palace Entrance is "Atlantis".
 
 to say RoyalPalace:
 	say "     The entrance to the royal palace of Atlantis is, in your opinion, the most beautiful thing in the world. It's appears to be made of dark blue stone and sapphire gems. The gates to the north are guarded by a couple of mermaid and merman guards, though they appear to be unconcerned about you, as if they were allowing you to go ahead. To the south of the palace is the center of the city.";
@@ -136,12 +150,14 @@ to say RoyalPalace:
 North of Royal Palace Entrance is Royal Throne Room.
 Royal Throne Room is a room.
 The description of Royal Throne Room is "[ThroneRoom]".
+earea of Royal Throne Room is "Atlantis".
 
 to say ThroneRoom:
 	say "     The throne room of the entire palace is as opulent as the rest of the place, although at the back is a simple sapphire throne, as odd as that sounds. [if Poseidon is in Royal Throne Room]The friendly yet powerful god is sitting on said throne, overlooking the entire area. [end if]Behind it is a large golden trident that is hung on the wall Across the walls are various murals of ocean scenery. To your back is the hallway that leads to the outside, and just like the entrance is guarded by a couple guards.[if Poseidon is not in Royal Throne Room and PoseidonRelationship is 2] It appears that Poseidon is not here, perhaps he is in his room?[end if]";
 
 North of Royal Throne Room is Royal Bed Chambers.
 The description of Royal Bed Chambers is "[PoseidonBedroom]".
+earea of Royal Bed Chambers is "Atlantis".
 
 to say PoseidonBedroom:
 	say "     The room around you seems a bit vague and indistinct, as if the forces that are shaping reality are still undecided what it shall look like.";
@@ -178,12 +194,12 @@ instead of going to Royal Palace Entrance while PoseidonRelationship is 2:
 
 instead of going to Atlantis City Center while CenterVisits is 0:
 	say "     Upon entering the center of the utopian-esque city for the first time you notice the bustling crowd of the city. It is not this sight that catches your attention but the group of citizens talking in the corner of the area. When you examine them closer you notice that they are a bunch of mermaid women. Out of curiosity you inch nearer to them and listen in onto the conversation that the three of them are having. 'Jasmine, Tyra, do you think that little Jerry could play with Jemma and Zach?' The mermaid asks the other two. The one to the left you assume to be Jasmine while the one to the right to be Tyra, as the first woman had looked to each of them as she spoke their name.";
-	say "     Jasmine and Tyra both smiled happily at the woman before they both chuckled at her. 'I don't think little Jemma would mind a new friend at all Paula,' she says, mirth in her voice. The other lady nods as well at that too. 'Same here, Zach has been whining about not having any new to play with.' Tyra says, an amused smile to her face. When the two of them let their thoughts known, Paula sighed in relief. 'Thank god, I got a new job at the market and I needed some way to keep Jerry occupied while I work,' the mermaid explained. The other two nod and comfort her, promising that they'll help take care of her son when needed. From there the conversation changes subject and you decide it's time for you to stop eavesdropping.";
+	say "     Jasmine and Tyra both smiled happily at the woman before they both chuckled at her. 'I don't think little Jemma would mind a new friend at all Paula,' she says, mirth in her voice. The other lady nods as well at that too. 'Same here, Zach has been whining about not having any new to play with,' Tyra says, an amused smile to her face. When the two of them let their thoughts known, Paula sighed in relief. 'Thank god, I got a new job at the market and I needed some way to keep Jerry occupied while I work,' the mermaid explained. The other two nod and comfort her, promising that they'll help take care of her son when needed. From there the conversation changes subject and you decide it's time for you to stop eavesdropping.";
 	move player to Atlantis City Center;
 	now CenterVisits is 1;
 
 instead of going to Atlantis City Center while CenterVisits is 1 and (LastAtlantisCenterWalkin - turns < 4): [Has been there in the past 12 hours]
-	say "     When you enter the city center you notice three kids running past you, laughing and joking with each other. Upon closer examination you see that they are playing a game of tag and the boy in the front appears to be trying to avoid the other two. 'Come on Jerry! Just let us tag you!' Shouts one of the kids, who you recognize to be a young girl The little guy identified as Jerry shook his head as he dodged his way through the populated area. 'No, I won't let you make me become it Jemma!' He yells, ducking under and past the arms of a random person. This causes the other kid to groan as he has to slide under the legs of same person. 'You're lucky that acrobatics like this is in our blood,' he mutters, glaring half-heartedly at his friend. 'You know you love me Zach and you say this everytime we play tag,' you manage to hear the kid say before he dashes off to the market district, leaving you alone in the city center.";
+	say "     When you enter the city center you notice three kids running past you, laughing and joking with each other. Upon closer examination you see that they are playing a game of tag and the boy in the front appears to be trying to avoid the other two. 'Come on Jerry! Just let us tag you!' Shouts one of the kids, who you recognize to be a young girl The little guy identified as Jerry shook his head as he dodged his way through the populated area. 'No, I won't let you make me become it Jemma!' He yells, ducking under and past the arms of a random person. This causes the other kid to groan as he has to slide under the legs of same person. 'You're lucky that acrobatics like this is in our blood,' he mutters, glaring half-heartedly at his friend. 'You know you love me Zach and you say this every time we play tag,' you manage to hear the kid say before he dashes off to the market district, leaving you alone in the city center.";
 	move player to Atlantis City Center;
 	now LastAtlantisCenterWalkin is turns;
 
@@ -194,18 +210,19 @@ instead of going to Atlantis City Market while MarketVisits is 0:
 	now MarketVisits is 1;
 
 instead of going to Atlantis City Market while MarketVisits is 1 and (LastMarketWalkin - turns < 4): [Has been there in the past 12 hours]
-	say "     When walking past the entrance to the market you hear the wondrous sounds of an acoustic guitar. It's so good that you instantly are drawn to the location of where it originates from, taking you into the shopping area and to a large crowd of people. At the center of the crowd is a familiar shark man, Kurt, who is playing his instrument for everyone to hear. And boy does he play, the music permeating your body and soothing your emotions. Soon enough you find yourself just standing and listening to the amazing tunes coming from the male playing the guitar. Your worries go away and you can feel your sanity coming back bit by bit, thanks to the peaceful guitar sounds that you are hearing. A few hours later sadly, the song ends and everyone applauds Kurt, who promptly blushes and thanks everyone before the crowd parts, leaving you in the market trying to remember what you were doing before. As a stray thought you wonder if you can run into him playing again.";
+	say "     When walking past the entrance to the market you hear the wondrous sounds of an acoustic guitar. It's so good that you instantly are drawn to the location of where it originates from, taking you into the shopping area and to a large crowd of people. At the center of the crowd is a familiar shark man, Kurt, who is playing his instrument for everyone to hear, singing a soothing tone that accompanies the sound. And boy does he play, the music permeating your body and soothing your emotions. Soon enough you find yourself just standing and listening to the amazing tunes coming from the male playing the guitar. Your worries go away and you can feel your sanity coming back bit by bit, thanks to the peaceful guitar sounds that you are hearing. A few hours later sadly, the song ends and everyone applauds Kurt, who promptly blushes and thanks everyone before the crowd parts, leaving you in the market trying to remember what you were doing before. As a stray thought you wonder if you can run into him playing again.";
+	if KurtRelationship is 0:
+		now KurtRelationship is 1;
 	move player to Atlantis City Market;
 	now LastMarketWalkin is turns;
-	increase humanity of player by 30;
-	if humanity of player > 100:
-		now humanity of player is 100;
+	SanBoost 30;
+
 
 instead of going to Atlantis City Residential while ResidentialVisits is 0:
 	say "     Upon your entrance to the residential area you don't really notice much with your sight but with your smell you do. Following the scent that attacks your senses you soon come upon a large entrance leading to someone's backyard in the neighborhood. At the top of the arc is a sign that reads 'Residential Cookout - All Welcome!' Out of curiosity you wander on in and are set upon by what looks to be a female... humanoid cat-fish morph? Upon closer examination she doesn't appear to have any gills but does have a mix of traits from both feline and fish. Redirecting your attention to her face the woman is smiling at you widely, looking pretty inviting.";
 	say "     'Hey there! You must be new to the city! I'm Namazu, but most people call me Nama!' She says, holding out a hand for you to shake. You accept it, the cheerful nature of the woman contagious. You ask her what this event is and if all are really welcome. Nama returns your question with a nod before speaking up. 'This isn't so much an event, as something that's always on. It's a way to give back to the community and feed those who can't eat due to responsibilities they have or because of... well you know. And of course, everyone is welcome!' The cat-fish woman says happily, though her expression changes a bit as she turns towards the direction of the tables which are empty at the moment. ";
 	WaitLineBreak;
-	say "     'Though if you want to get something now, you'll have to wait. We just fed a large group and it exhausted the food we put out. So we're all making new food.' Nama tells you with a sigh. Out of curiosity and a tiny bit of nosiness you ask her who they fed, which causes her to chuckle. 'Oh, the Royal Guard. Apparently they were having a day of long training so they needed all the food they could get,' Is her response, something that makes you simply nod at the answer. With a shrug at having nothing else to do here for now you thank her for letting you know about the place before leaving to the main area of the residential area. She tells you to come back soon and leaves as well, possibly to help cook.";
+	say "     'Though if you want to get something now, you'll have to wait. We just fed a large group and it exhausted the food we put out. So we're all making new food,' Nama tells you with a sigh. Out of curiosity and a tiny bit of nosiness you ask her who they fed, which causes her to chuckle. 'Oh, the Royal Guard. Apparently they were having a day of long training so they needed all the food they could get,' Is her response, something that makes you simply nod at the answer. With a shrug at having nothing else to do here for now you thank her for letting you know about the place before leaving to the main area of the residential area. She tells you to come back soon and leaves as well, possibly to help cook.";
 	now ResidentialVisits is 1;
 	move player to Atlantis City Residential;
 
@@ -213,12 +230,8 @@ instead of going to Atlantis City Residential while ResidentialVisits is 1 and (
 	say "     When you enter the living area of Atlantis you smell a very familiar scent that you follow to a destination that you've been to. Just as you thought, it brings you to the residential cookout but upon looking into it this time you notice that there are actually people in there and food on the table. Servng at the food tables is Namazu who notices you and waves you on to come in before she goes back to feeding others. Shrugging your shoulders, you walk on in and grab a plate at what you presume to be the beginning of the buffet line. Proceeding through the line you get what food you want, accompanied by a cup of something to drink. Once you have your food you sit at one of the many tables set out and talk and eat with the people. As the time passes by you finish your food and drink, as well as the random conversation with the people at your table. Getting up you go and throw away your trash, heading your way out of the cookout. A last though before you enter the residential area is that perhaps later you could visit once more.";
 	move player to Atlantis City Residential;
 	now LastResidentialWalkin is turns;
-	decrease thirst of player by 20;
-	decrease hunger of player by 20;
-	if hunger of player < 0:
-		now hunger of player is 0;
-	if thirst of player < 0:
-		now thirst of player is 0;
+	PlayerEat 20;
+	PlayerDrink 20;
 
 Section 4 - NPCs
 
@@ -295,8 +308,8 @@ to say TritonTalk1:
 	say "     'Ah, that. Well my father figured that with the human world going down whirlpool, so to speak, that it'd be best to open Atlantis again for an... asylum,' he says. You nod as that makes a bit of sense. Though you wonder out loud as to why he would care about the mortals. 'Well... he's always had a soft spot for you guys,' was his response to you. Shrugging you figure that it's best for you to end the conversation as you don't have anything else to talk about. So instead you turn away from him as the male goes back to guarding the gates to the city.";
 
 to say TritonTalk2:
-	say "     'Ohohoh, you want to know more about the amazing race of mermaids and mermen?' he asks, flexing his muscles. To the right of him you can hear his female guard partner groaning. 'You do that everytime someone asks Triton!' she complains, the sound of her voice making you think she's rolling her eyes. The merman prince ignores her and continues to speak to you. 'Well, simply put, you could say the mermaids and mermen are a creation of my father, if you consider him trying to fix a curse of one of his many siblings. Although, I'm a creation of my father and my mother, may she rest in peace,' he tells you, though the last bit is probably just to let you know his mother has passed.";
-	say "     'Nevertheless, we're both aquatic and land based as a species, mostly for the sake of convenience since my father doesn't like to look like a merman twenty-four seven,' he says, shrugging his shoulders. You nod at that, as if you could change between certain forms you would rather not have a tail instead of legs all day everyday. He then follows up by explaining that because they change on the spot that they have to have a change of clothes so they're not running around nude. 'Despite how cool that'd be, it's frowned upon in public.' He says with a sigh. Suddenly a hand comes and hits him on the head. 'You're such a pervert Triton,' Alana says, rolling her eyes. That just causes the male to wiggle his brows at her. 'You know you like it,' he says suggestively. Once again the mermaid hits him. 'Ow! Abuse! I call abuse!' he shouts loudly at her. Seeing that this won't go away anytime soon, you head on your way.";
+	say "     'Ohohoh, you want to know more about the amazing race of mermaids and mermen?' he asks, flexing his muscles. To the right of him you can hear his female guard partner groaning. 'You do that every time someone asks Triton!' she complains, the sound of her voice making you think she's rolling her eyes. The merman prince ignores her and continues to speak to you. 'Well, simply put, you could say the mermaids and mermen are a creation of my father, if you consider him trying to fix a curse of one of his many siblings. Although, I'm a creation of my father and my mother, may she rest in peace,' he tells you, though the last bit is probably just to let you know his mother has passed.";
+	say "     'Nevertheless, we're both aquatic and land based as a species, mostly for the sake of convenience since my father doesn't like to look like a merman twenty-four seven,' he says, shrugging his shoulders. You nod at that, as if you could change between certain forms you would rather not have a tail instead of legs all day everyday. He then follows up by explaining that because they change on the spot that they have to have a change of clothes so they're not running around nude. 'Despite how cool that'd be, it's frowned upon in public,' he says with a sigh. Suddenly a hand comes and hits him on the head. 'You're such a pervert Triton,' Alana says, rolling her eyes. That just causes the male to wiggle his brows at her. 'You know you like it,' he says suggestively. Once again the mermaid hits him. 'Ow! Abuse! I call abuse!' he shouts loudly at her. Seeing that this won't go away anytime soon, you head on your way.";
 
 to say TritonTalk3:
 	say "     ...";
@@ -365,7 +378,7 @@ to say AlanaTalkMenu:
 	clear the screen and hyperlink list;
 
 to say AlanaTalk1:
-	say "     'The spoiled brat?' she asked, a 'Hey!' coming from the male to your guys' right. She ignores it and continues speaking. 'I guess he's okay? I mean he does his work but he is a pervert,' Alana says, muttering the last part. Upon looking over to the prince you assume that this is a regular argument as he's just sticking his tongue out childishly at her, something that she doesn't respond to. 'Although I guess I wouldn't say he's truly spoiled. King Poseidon did make him work for everything,' she says. Once again you direct your attention to the buff male and see him nodding along. 'Yeah the old man had me prove myself to him that I wouldn't rely on his power or wealth. Was a pain in the ass to do,' he says, agreeing with her. From that you feel like that's all that is going to be told to you for now, so you leave her to her work.";
+	say "     'The spoiled brat?' she asks, a 'Hey!' coming from the male to your guys['] right. She ignores it and continues speaking. 'I guess he's okay? I mean he does his work but he is a pervert,' Alana says, muttering the last part. Upon looking over to the prince you assume that this is a regular argument as he's just sticking his tongue out childishly at her, something that she doesn't respond to. 'Although I guess I wouldn't say he's truly spoiled. King Poseidon did make him work for everything,' she says. Once again you direct your attention to the buff male and see him nodding along. 'Yeah the old man had me prove myself to him that I wouldn't rely on his power or wealth. Was a pain in the ass to do,' he says, agreeing with her. From that you feel like that's all that is going to be told to you for now, so you leave her to her work.";
 
 to say AlanaTalk2:
 	say "     You ask the mermaid what her job at the gate consists of, something that she offers no resistance against on answering. 'Me and the brat over there guard the only entrance to Atlantis, which is this magical gate that King Poseidon made thousands of years ago,' she says, gesturing to the golden thing behind her. You ask her what's so special about it something that she replies to rather quickly. 'It's what generates the bubble you're in right now. Without it certain species or beings wouldn't be able to be in the city,' Alana says. You mention that to get down here requires to be able to breathe underwater in the first place. That prompts a surprising chuckle from her as she answers you. 'Only recently did it. After all, Atlantis wasn't here for that long. It was in other places before. Places that didn't require gills or something else to get to,' is her response to her. You nod, figuring that you understand it.";

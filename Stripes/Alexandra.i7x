@@ -370,8 +370,9 @@ to say badAlexandrasex:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number> ";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
@@ -402,10 +403,18 @@ to say badAlexandrasex:
 					say "[badAlexandrasex10]";
 				else if nam is "Let her tease and vore you":
 					say "[badAlexandrasex11]";
+				now lastfuck of Alexandra is turns;
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the doberwoman bitch, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of Alexandra is turns;
-	wait for any key;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -800,6 +809,7 @@ an everyturn rule:
 Section 6 - Police Station
 
 Police Station is a room. It is fasttravel. It is private. It is sleepsafe.
+The earea of Police Station is "Outside".
 The description of Police Station is "[policestationdesc]".
 the scent of Police Station is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 The Police Station has a number called population.
@@ -923,73 +933,88 @@ to say alexandratalk_gg_menu:
 	say "     There's a few topics you might be able to discuss with Alexandra. Is there anything in particular on your mind or do you just want to chat?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Chit-chat";
 	now sortorder entry is 1;
-	now description entry is "chat with the policewoman about general matters";
+	now description entry is "Chat with the policewoman about general matters";
+	[]
 	if ( HP of Alexandra > 51 and Alexandrastory is false ) or ( HP of Alexandra >= 57 and Alexandrastory2 is false ) and lastAlexandraPast - turns >= 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Her past";
 		now sortorder entry is 2;
-		now description entry is "ask Alexandra about her past";
+		now description entry is "Ask Alexandra about her past";
+	[]
 	if HP of Alexandra < 56 or ( HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned ):
 		choose a blank row in table of fucking options;
 		now title entry is "Supplies";
 		now sortorder entry is 3;
-		now description entry is "talk to Alexandra about her supply needs";
+		now description entry is "Talk to Alexandra about her supply needs";
+	[]
 	if HP of Alexandra > 51 and no_AlexandraTask is not turns:
 		choose a blank row in table of fucking options;
 		now title entry is "Tasks";
 		now sortorder entry is 4;
-		now description entry is "ask Alexandra if she needs any assistance";
+		now description entry is "Ask Alexandra if she needs any assistance";
+	[]
 	if policerepair > 0 and pr_task04 is false and lastpolicerepair is not turns:
 		choose a blank row in table of fucking options;
 		now title entry is "Repairs";
 		now sortorder entry is 5;
-		now description entry is "talk to Alexandra about those repairs";
+		now description entry is "Talk to Alexandra about those repairs";
+	[]
 	if HP of Alexandra > 65 and HP of Buster > 0 and alexandragshep1 is false:
 		choose a blank row in table of fucking options;
 		now title entry is "G-Shep squad";
 		now sortorder entry is 5;
-		now description entry is "tell Alexandra about the other police dogs you met";
+		now description entry is "Tell Alexandra about the other police dogs you met";
+	[]
 	if AT_Patrol is true and lastPolicePatrol - turns >= 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Patrol";
 		now sortorder entry is 6;
-		now description entry is "talk to Alexandra about patrolling the neighbourhood";
+		now description entry is "Talk to Alexandra about patrolling the neighbourhood";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number> ";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
-			now sextablerun is 1;
-			if nam is "Chit-chat":
-				say "[alexandratalk_gg1]";
-			else if nam is "Her past":
-				say "[alexandratalk_gg_past]";
-			else if nam is "Supplies":
-				say "[alexandra_supplies]";
-			else if nam is "Tasks":
-				AlexandraTaskChat;
-			else if nam is "Repairs":
-				say "[alexandra_repairs]";
-			else if nam is "Patrol":
-				say "[alexandra_patrol]";
-			else if nam is "G-Shep squad":
-				say "[alexandra_gshep]";
-			LineBreak;
-		else if calcnumber is 0:
-			say "Alright then.";
-			now sextablerun is 1;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Chit-chat":
+					say "[alexandratalk_gg1]";
+				else if nam is "Her past":
+					say "[alexandratalk_gg_past]";
+				else if nam is "Supplies":
+					say "[alexandra_supplies]";
+				else if nam is "Tasks":
+					AlexandraTaskChat;
+				else if nam is "Repairs":
+					say "[alexandra_repairs]";
+				else if nam is "Patrol":
+					say "[alexandra_patrol]";
+				else if nam is "G-Shep squad":
+					say "[alexandra_gshep]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the doberwoman bitch, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -1237,36 +1262,42 @@ to say goodAlexandrasex:
 	say "     Exchanging a knowing glance towards the office, the two of you share a smile. She nods and wags her tail, heading into the office. You follow right behind her, trying to decide just how you'd like to spend your private time with the Doberman today.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Desk fuck 1";
 	now sortorder entry is 1;
-	now description entry is "rerun of 1st time scene (M/H=fuck, F/N=oral)";
+	now description entry is "Rerun of 1st time scene (M/H=fuck, F/N=oral)";
+	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Desk fuck 2";
 		now sortorder entry is 2;
-		now description entry is "fuck her on the desk";
+		now description entry is "Fuck her on the desk";
+	[]
 	if cocks of player > 0 or cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual oral";
 		now sortorder entry is 5;
-		now description entry is "orally pleasure one another";
+		now description entry is "Orally pleasure one another";
+	[]
 	else:
 		choose a blank row in table of fucking options;
 		now title entry is "Give cunnilingus";
 		now sortorder entry is 5;
-		now description entry is "orally pleasure the doberwoman";
+		now description entry is "Orally pleasure the doberwoman";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number> ";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -1276,10 +1307,17 @@ to say goodAlexandrasex:
 					say "[goodAlexandrasex2]";
 				else if nam is "Mutual oral" or nam is "Give cunnilingus":
 					say "[goodAlexandrasex3]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the doberwoman bitch, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of Alexandra is turns;
-	wait for any key;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
 

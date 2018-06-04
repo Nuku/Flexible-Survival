@@ -8,6 +8,7 @@ Version 1 of Hyena Hideout by Stripes begins here.
 Section 1- Hyena Hideout
 
 Hyena Hideout is a room. It is fasttravel. It is private.
+earea of Hyena Hideout is "Outside".
 
 The description of Hyena Hideout is "This large open building was obviously once a warehouse at one point, though much of whatever was once stored in here has long since been cleared out to make room for the hyena gang to set up shop. There are still several large crates and cargo containers scattered throughout the area, mostly used to divide the large space up into several smaller areas and semi private rooms. The open space hasn't been left empty however, and numerous couches, mattresses, and rough tables scatter the area, most having obviously seen better days and looted to make the area more comfortable. The heady musk of numerous hyenas and sex permeates the area with its own unique perfume, making you feel both excited and strangely comfortable just from breathing it in. Though obviously the large building could hold a large number of hyenas, you only see a moderate number of gang members here, most of the rest obviously wandering the city looking for new converts in their continuing membership drive.".
 

@@ -154,6 +154,8 @@ to say GuardLeave: [lie to get into the camp]
 
 Camp Bravo Entrance is a room. It is a fasttravel. It is private.
 The description of Camp Bravo Entrance is "     You're at the entrance of Camp Bravo, a mid-sized military camp consisting of row after row of olive green tents. Two soldiers are on guard here, using a barricade line of wrecked cars as cover as they vigilantly watch the street. To the north lies the parade ground in the center of the camp.".
+earea of Camp Bravo Entrance is "Outside".
+
 Instead of sniffing Camp Bravo Entrance:
 	say "     A musky scent hangs in the air.";
 

@@ -6,7 +6,13 @@ Version 1 of Branson & Partner by Wahn begins here.
 [   0: starting state                                             ]
 [   1: got Melanie's starting spiel                               ]
 [   2: agreed to listen to Branson's plan                         ]
+[   3: delivered the Data                                         ]
+[   4: player got free reign in the building now                  ]
+[   5: player met the office girls                                ]
 [ 100: refused to join Branson                                    ]
+
+OfficeGirlsDominance is a number that varies.
+OfficeGirlsFriendship is a number that varies.
 
 Section 1 - Melanie
 
@@ -163,8 +169,11 @@ to say MelanieTalk3: [ask to meet Mr. B]
 		else:
 			say "you really should swing by the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] sometime soon. The businessman tells you openly that you're not the only interested party in becoming his business partner, and it'd be a shame if someone else snagged the prize before you.";
 		if HP of Melanie is 3 and findwires is 2 and fixedgens is 2:
-			say "     With everything taken care of for implementing his plans, Branson gives you a companionable smack on the shoulder. 'Well done, my friend. I knew we could count on you. This will be a very lucrative operation. I'll tell Melanie that you have the run of the building now - just don't overdo it, alright?'";
-			say "     <Writer's Note: The office floor has not yet been written. When it is, there will be a safe place to rest and fun to have with lots of sexy office workers>";
+			say "     With everything taken care of for implementing his plans, Branson gives you a companionable smack on the shoulder. 'Well done, my friend. I knew we could count on you. This will be a very lucrative operation. I'll tell Melanie that you have the run of the building now - including the offices in the first floor. Of course, my office girls still have some work to do, so don't overdo it, alright?'";
+[
+			change the north exit of Branson & Partner Reception to B&P Company Offices;
+			change the south exit of B&P Company Offices to Branson & Partner Reception;
+]
 			now HP of Melanie is 4; [player got free reign in the building now]
 	else if HP of Melanie is 4: [post quest visits to the boss]
 		say "     'Of course - please go on up,' the receptionist tells you with a smile and you ride the elevator up to Mr. Branson's office. Strolling along the short corridor decorated with potted plants and modern art, you enter his office shortly after. The large crocodile is amiable enough towards his business partner, chatting a bit and offering you a drink too. After a little while, he throws back the last of his glass of whiskey, then ";
@@ -222,5 +231,18 @@ to say DataStoreUse:
 	LineBreak;
 	say "     There isn't much you can straight out do with the thing. It would make a passable doorstop, but what's really the main point is the data saved on it. Better give it to someone who has an interest in that.";
 
+after going to B&P Company Offices while (HP of Melanie is 4):
+	say "     ";
+	now HP of Melanie is 5;
 
 Branson & Partner ends here.
+[
+
+Initial meeting event with player either being dominant or friendly (just flavour choices)
+
+4 Girls:
+	- tiger girl (Bella)
+	- labrador girl (Elise)
+	- twin white bunnies (one dom - Lola [teasing/denial], one sub - Layla [indulging and into servicing])
+	- Melanie the deer (got to send one of the others to the front desk to get her fuckable for a little while)
+]

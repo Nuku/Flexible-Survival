@@ -12,6 +12,7 @@ Section 1 - Lot Environment
 
 Abandoned Lot is a room.
 Abandoned Lot is fasttravel.
+The earea of Abandoned Lot is "Outside".
 the description of Abandoned Lot is "[LotDesc]".
 
 to say LotDesc:

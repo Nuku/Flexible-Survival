@@ -21,6 +21,7 @@ Section 2 - Rooms
 
 Approaching the Capitol Building is a Room. The description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
 The Approaching the Capitol Building is fasttravel.
+earea of Approaching the Capitol Building is "Outside".
 [  The Approaching the Capitol Building is private.	]
 
 to say app_cap_bldg_desc:
@@ -37,24 +38,28 @@ instead of sniffing Approaching the Capitol Building:
 
 The Charred Streets is a Room. "     The damage to the roads and the buildings grow worse as you approach the Capitol Building. Most of the buildings here are semi-recognizable. You see what once may have been a designer underwear shop now burnt out with the windows smashed. You also spot one of your favourite video game retailers, what used to be a small family business. Now the storefront is totally wrecked. You jump over a ditch in the middle of the street. It is flooded with grey, soot-filled sludge. A water main nearby must have been cracked.".
 North of Approaching the Capitol Building is The Charred Streets.
+The earea of Charred Streets is "Capitol".
 
 instead of sniffing Charred Streets:
 	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
 
-The The Path of Ashes is a Room. "     The air here is thick with stinging smoke and ash. The worst of it seems to be drifting from the hellish capitol building itself. To your west, you see standing buildings in somewhat good repair. Some structures are hung between them over the street. To the east, a few buildings partially stand before the ground seems to give way. Rubble blocks the way to Capitol Building itself.".
-North of The Charred Streets is The Path of Ashes.
+Path of Ashes is a Room. "     The air here is thick with stinging smoke and ash. The worst of it seems to be drifting from the hellish capitol building itself. To your west, you see standing buildings in somewhat good repair. Some structures are hung between them over the street. To the east, a few buildings partially stand before the ground seems to give way. Rubble blocks the way to Capitol Building itself.".
+North of The Charred Streets is Path of Ashes.
+The earea of Path of Ashes is "Capitol".
 
 instead of sniffing Approaching the Capitol Building:
 	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
 
 The A Volcanic Crater is a Room. "     Before you is an enormous, circular pit. It looks almost as if a meteor landed here, yet there is no trace of any debris. Lava and magma ooze into the pit's lower reaches. Close to the crater's lowest point, you see the entrance way to a tunnel system. The heat from the open magma is very intense and your nanites struggle to adapt your perspiration and breathing to better cope with the primordial scene.".
-East of The Path of Ashes is A Volcanic Crater.
+East of Path of Ashes is A Volcanic Crater.
+The earea of A Volcanic Crater is "Capitol".
 
 instead of sniffing A Volcanic Crater:
 	say "The smell of smoke, soot and volcanic gasses is particularly strong here.";
 
 The Rusty Walkways is a Room. "     Rusty, makeshift bridges hang between the tall buildings here. Constructed from scavenged metal and parts, there are scattered little shelters inside the buildings or on the street. As you walk down the road, the bridges cast an ominous web-like shadow over you. Occasionally, you swear you see something or someone darting out of view each time you turn a corner. Whatever feral civilization exists here, it may be based out of the more intact building to the west of here.".
-West of The Path of Ashes is Rusty Walkways.
+West of Path of Ashes is Rusty Walkways.
+The earea of Rusty Walkways is "Capitol".
 
 instead of sniffing Rusty Walkways:
 	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
@@ -62,7 +67,8 @@ instead of sniffing Rusty Walkways:
 Fiery Ruins is a door. "     To the west is a section of buildings that seems somewhat more intact. Some smoulder or are quite smashed, but others seem to have been partially spared from the extensive devastation that took place here. You may be able to find something of interest in that direction.". It is dangerous. Fiery Ruins is west of Rusty Walkways and east of Capitol Ruins.
 the marea of Fiery Ruins is "Capitol";
 
-The Capitol Ruins is a room. "     This area once housed numerous government offices as well as some businesses, but now it lies in partial ruin, devastated by whatever happened here.";
+The Capitol Ruins is a room. "     This area once housed numerous government offices as well as some businesses, but now it lies in partial ruin, devastated by whatever happened here.".
+The earea of Capitol Ruins is "Capitol".
 
 
 Section 3 - Roaming Creatures
@@ -79,27 +85,27 @@ instead of going south from Charred Streets:
 
 instead of going north from Charred Streets:
 	follow the capitol wandering rule;
-	move the player to The Path of Ashes;
+	move the player to Path of Ashes;
 
-instead of going south from The Path of Ashes:
+instead of going south from Path of Ashes:
 	follow the capitol wandering rule;
 	move the player to Charred Streets;
 
-instead of going east from The Path of Ashes:
+instead of going east from Path of Ashes:
 	follow the capitol wandering rule;
 	move the player to A Volcanic Crater;
 
-instead of going west from The Path of Ashes:
+instead of going west from Path of Ashes:
 	follow the capitol wandering rule;
 	move the player to Rusty Walkways;
 
 instead of going west from A Volcanic Crater:
 	follow the capitol wandering rule;
-	move the player to The Path of Ashes;
+	move the player to Path of Ashes;
 
 instead of going east from Rusty Walkways:
 	follow the capitol wandering rule;
-	move the player to The Path of Ashes;
+	move the player to Path of Ashes;
 
 this is the capitol wandering rule:
 	now battleground is "Capitol";

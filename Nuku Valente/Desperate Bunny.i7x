@@ -82,6 +82,7 @@ Instead of Resolving a Needy Rabbit Girl:
 Section 2 - Rabbit Den
 
 Rabbit Den is a room. It is fasttravel. It is private.
+earea of Rabbit Den is "Outside".
 
 The description of Rabbit Den is "     Not a literal rabbit den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 

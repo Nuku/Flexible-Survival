@@ -23,10 +23,21 @@ to say wrestlingwolfattack:
 		say "     With a howl the Wrestler Wolf unloads his load all over your [bodyname of player] body. The wrestler grins in satisfaction as he watches some of his cum seep through your [skinname of player] hide. 'This will make finding you a lot easier,' the wrestler says pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'Next time you're definitely gonna give me a workout. One way or another,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 		if "Male Preferred" is not listed in feats of player:
 			if cunts of player is 0:
-				say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
-				now cunts of player is 1;
-				now cunt width of player is 1;
-				now cunt length of player is 2;
+				if "Microwaved" is listed in feats of player:
+					say "WARNING: Sex shifting nanites detected! Allow?";
+					if the player consents:
+						say "Ok.";
+						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
+						now cunts of player is 1;
+						now cunt width of player is 1;
+						now cunt length of player is 2;
+					else:
+						say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+				else:
+					say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
+					now cunts of player is 1;
+					now cunt width of player is 1;
+					now cunt length of player is 2;
 			else if "Modest Organs" is not listed in feats of player:
 				if cunt width of player < 15, increase cunt width of player by 2;
 				if cunt length of player < 20, increase cunt length of player by 2;
