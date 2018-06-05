@@ -1,5 +1,6 @@
-Version 2 of Chocolate Lab by Stripes begins here.
+Version 2.1 of Chocolate Lab by Stripes begins here.
 [Version 2 - Piggybacking Labs added by GentlemanB]
+[Version 2.1 - Removed forced sex on victory with high libido]
 
 "Adds a Chocolate Lab creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
 
@@ -110,8 +111,8 @@ to say beatthelab:
 		if libido of player > 100:
 			now libido of player is 100;
 	else:
-		let diceroll be a random number from 25 to 125; [lust check vs 125, auto-win for libido of 25 or less]
-		if diceroll < libido of player:
+		say "     Will you accept that offer? ([link]y[as]y[end link]/[link]n[as]n[end link])";
+		if player consents:
 			if cocks of player > 0:		[m/h - fuck the Lab]
 				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each others itch. You take the dog's ever-melting hind legs in your hands and line up your hard cock with its pussy. It releases a wet bark of pleasure as you sink your [cock size desc of player] [cock of player] cock into its malleable body. It reforms its pussy around you, [if cocks of player > 1]forming a deliciously snug vagina for each of your cocks[else]making itself deliciously snug for your cock[end if] and flowing all over [if cocks of player > 1]them[else]it[end if] to continually stimulate you.";
 				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you fuck it. White, chocolate cream leaks from its cock and from its nipples as your thrusts send ripples through its gooey body. As you shoot your hot seed inside it, splatters of thick cream blast from its cock and make a mess of the ground below. Finished, the chocolate Lab sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
