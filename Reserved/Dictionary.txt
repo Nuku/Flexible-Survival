@@ -2190,7 +2190,7 @@
 |Sarokcat|Pirate Shark|nopiratesharksex|value|
 |Nuku Valente|Bear For Fs|20140908213124/2893:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Bear For Fs|honeycomb|Grab Object|
-|Nuku Valente|Bear For Fs|ursinedefeat|value|
+|Nuku Valente|Bear For Fs|UrsineDefeatCount|value|
 |Wahn|Hulking Cheerleader|20140908213124/3983:Mon 8 September 2014 21:31|indexing|
 |Wahn|Hulking Cheerleader|CheerleaderFirstEncounter|value|
 |Stripes|Friendship Pony For Fs|20140908213124/6910:Mon 8 September 2014 21:31|indexing|
