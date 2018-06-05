@@ -4145,8 +4145,8 @@ to say dorrptks:
 			say "[line break]";
 		say "     '...[run paragraph on][one of]Wake up[or]Rise and shine[or]Up, up[at random], [DoranPlayerRegard]! [one of]I hope they found our little adventure satisfactory[or]I hope I didn't wear them out too much[or]I'm certain they enjoyed themselves[at random]!' Taking a moment to look you over after the session had concluded, Doran eventually lets you off once [ghe]'s certain that you appear fine, allowing you to go about your business once more.";
 
-to say DoranRP_DragonsPet:
-	[say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";
+[to say DoranRP_DragonsPet:
+	say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";
 	if ]
 
 

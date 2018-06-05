@@ -728,9 +728,9 @@ to say ShagShackSex9: [Bryce the wolftaur]
 		now BryceFucked is 1; [player gave him a BJ before]
 	PlayerEat 15;
 
-to say ShagShackSex10: [Feral Male Latex Fox]
+[to say ShagShackSex10: [Feral Male Latex Fox]
 	[See Dys/Feral Latex Fox.i7x]
-
+]
 to say ShagShackSex11: [Levi, by Weaveroflight]
 	say "     Near the back of the store, you notice the familiar camouflage fatigues you've seen the army wear around here. What's filling them, however, isn't an average soldier. In place of a human male, you see a broad-shouldered tiger standing at attention, arms folded behind his back. His eyes instantly lock onto yours from across the room. They narrow at you, seemingly issuing a challenge. Steeling your nerves, you walk towards him. His gaze never wavers as you walk over, yellow-slitted eyes following your every move and twitch. When you finally make your way past the other disheveled beds full of moaning and writing creatures, his grin turns predatory. His teeth are sharp and angular, and his gaze is hungry. You avert your eyes, finding it hard to maintain eye contact with him.";
 	say "     You scan over his bed, military-made somehow, even in the throngs of a whore house. No wrinkles, sheets tightened to a crisp, flat surface. If it wasn't for the dubious stains, you would wonder if the bed was untouched, but there is no mistaking the discoloration of the fabric. This bed has seen some use. 'Eyes up front,' he says with a calm, but dangerous, voice. Your head snaps back to look at his face. That grin is still there. 'I have a very particular way of pleasing my lovers. Few leave without a smile on their face,' he says, then pauses to look you up and down, seemingly stripping you of clothes with just his imagination. 'Even less leave able to walk straight. Do you understand what that means?' You dumbly shake your head. He chortles and shakes his head. 'It means that I'm in charge, and you do as I say, soldier.' He pauses again, removing his hat, before tossing it to the side. His ears perk up and swivel slightly, taking in most of the sounds around him with ease, before turning towards you. 'Now Strip.'";

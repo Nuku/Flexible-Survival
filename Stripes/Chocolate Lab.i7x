@@ -1,4 +1,4 @@
-Version 2.1 of Chocolate Lab by Stripes begins here.
+Version 2 of Chocolate Lab by Stripes begins here.
 [Version 2 - Piggybacking Labs added by GentlemanB]
 [Version 2.1 - Removed forced sex on victory with high libido]
 
