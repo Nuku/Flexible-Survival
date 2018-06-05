@@ -3900,7 +3900,7 @@ to say dorrptk: [Doran RP: The Knight Query]
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
 
 to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
-	say "[bold tpye]This scene is not yet implemented! Sorry about that.[regular type]";
+	say "[bold type]This scene is not yet implemented! Sorry about that.[roman type]";
 	[if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
 		say "     You explain your desires for Doran to treat you like his pet and your desires for him to be [italic type]your[roman type] master for a while. He gives a contemplative hum, lost in thought for a moment, before nodding his large head. 'I do believe I can try that for my [DoranPlayerRegard]. However, I will make no assurances to your enjoyment, as I have little experience in such a role.'";
 		say "     'Now,' he says, 'there are some details we should discuss before we begin. Do you wish for me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
@@ -3936,8 +3936,8 @@ to say DoranRoleplayProtocol:
 		say "[dorrpovbs]"; [Doran RP of the Virile Beast Scene]
 	else if DoranRoleplayInSession is 2 or DoranRoleplayInSession is 3:
 		say "[dorrptks]"; [Doran RP The Knight Scene]
-	else if DoranRoleplayInSession is 10:
-		say "[DoranRP_DragonsPet]";
+	[else if DoranRoleplayInSession is 10:
+		say "[DoranRP_DragonsPet]";]
 
 Section 4.4 - Doran Roleplay Sex Pool
 
