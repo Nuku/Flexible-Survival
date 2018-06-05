@@ -1,11 +1,11 @@
-Version 1 of Feral Latex Fox by Dys starts here.
+Version 1 of Feral Latex Fox by Dys begins here.
 
 "Moves the feral latex fox from the shag shack to his own file for expansion and additional content."
 
 Section 0 - Variables
 
-FeralLatexFoxMet is a truth state that varies. It is usually false.
-FeralLatexFoxCorruption is a number that varies. It is usually 0.
+FeralLatexFoxMet is a truth state that varies. FeralLatexFoxMet is usually false.
+FeralLatexFoxCorruption is a number that varies. FeralLatexFoxCorruption is usually 0.
 [ 0: Not corrupted yet                                                      ]
 [ 1: Corruption started. Player finds themselves desiring to be bred by the ]
 [    fox.                                                                   ]
@@ -22,13 +22,13 @@ to say FeralLatexFoxStart: [Feral Male Latex Fox]
 	if FeralLatexFoxMet is false:
 		now FeralLatexFoxMet is true;
 		say "[FeralLatexFoxIntro]";
-	else:
+[	else:
 		if FeralLatexFoxCorruption is:
 			--0: [Not corrupted yet. Just sex with the fox.]
 			--1: [Corruption has started. Will likely progress at this point.]
 			--2: [Corruption grows stronger.]
 			--3: [Even more.]
-			--4: [Final stage.]
+			--4: [Final stage.]]
 
 to say FeralLatexFoxIntro:
 	say "     Looking around the room, your eyes eventually come across a door with a crudely made sign that says 'Latex Fox inside!' Curiosity piqued, you open the door and quickly step through. On the other side, you see a large, feral latex fox, sitting on it's haunches, facing away from you. As you shut the door, the fox whirls around to face you, exposing it's [one of]large[or]foot-long[or]massive[or]huge[at random] [one of]rubber[or]rubbery[or]glossy[or]latex[at random] cock, fully erect and dripping pre. It lets out a growl, crouching down. Giving you no time to react, the beast jumps on you, pinning you to the floor. He makes surprisingly quick work of you clothing despite his claws only being made of rubber, quickly leaving you completely at his mercy.";
@@ -106,3 +106,6 @@ to say LatexFoxAveragePlayerSex: [Sex scenes for an average player]
 				WaitLineBreak;
 				say "     You begin to think he's done before he starts rutting rapidly against you, still releasing his seed. He keeps thrusting into you while his climax continues. This goes on for what feels like hours before the vulpine finally slows down, his torrent of cum beginning to cease it's flow as well. When he's finally done filling you up, your belly is heavily swollen, to the point that you look like you've eaten a whole water melon. He suddenly begins to jerk backwards, trying to pull his knot from your hole. You let out a yelp of pain from the tugging, but also pleasure from the feeling of the rubbery liquid sloshing around inside you. Eventually the vulpine manages to pop his tool out, and it's quickly followed by a rush of his virile seed.[mimpregchance]";
 				say "     After he dismounts you, he gives your drenched backside a few licks before he decides to turn around and return to the position you found him in when you entered the room. His body quietly shrinks back to it's normal size, and you take that as your cue to exit the room.";
+
+
+Feral Latex Fox ends here.
