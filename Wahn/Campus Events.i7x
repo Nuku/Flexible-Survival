@@ -64,45 +64,53 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
 		say "     Travelling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
-	if number of entries in campuswander is 6, say "     You have an uneventual passage across the campus.";
-	let T be a random number between 1 and 6;
+	if number of entries in campuswander > 6, say "     You have an unevenful passage across the campus.";
+	let T be a random number between 1 and 7;
+	let SafetyCounter be 0;
 	while T is listed in campuswander:
 		increase T by 1;
-		if T is 7, now T is 1;
+		increase SafetyCounter by 1;
+		if T is 8:
+			now T is 1;
+		if SafetyCounter > 14: [just to avoid an endless loop in case something goes wrong]
+			say "     You have an unevenful passage across the campus.";
+			now Wandering the Campus is resolved;
+			break;
 	now showlocale is false;
 	if T is 1:			[replaced with Fruit Bat]
 		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
 		challenge "Fruit Bat";
 		add 1 to campuswander;
-	if T is 1:
+	else if T is 2:
 		say "     Your wandering across the campus is interrupted as an athletic puma herm comes rushing out from one of the buildings, plowing into you. After a brief scuffle, you push her away and try to back off, but it's too late; she's already fixed her attention onto you. Licking her muzzle as her cock starts to engorge with growing arousal, whatever she was running to or from completely forgotten in the face of her sexy prey.";
 		challenge "Cougar";
-		add 1 to campuswander;
-	if T is 2:
+		add 2 to campuswander;
+	else if T is 3:
 		now campuswanderfight is 1; [minor description/scene edits]
 		say "     As you travel the campus, you hear the rustle of the hedgerow beside you moments before a large, striped feline comes pouncing out of it at you. You barely manage to avoid this sneak attack, but are now facing this large tigertaur that's found her way to the college. Perhaps she succumbed to her infection after making it here.";
 		challenge "Tigertaur";
 		now campuswanderfight is 0; [minor description/scene edits]
-		add 2 to campuswander;
-	if T is 3:
+		add 3 to campuswander;
+	else if T is 4:
 		say "     Your travel across the college grounds is interrupted as a red kangaroo girl bounds onto a nearby car, then off again, moving to bar your path with a look of lustful excitement in her eyes.";
 		challenge "Red Kangaroo";
-		add 3 to campuswander;
-	if T is 4:
+		add 4 to campuswander;
+	else if T is 5:
 		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholely carnal in nature.";
 		challenge "Painted Wolf Herm";
-		add 4 to campuswander;
-	if T is 5:
+		add 5 to campuswander;
+	else if T is 6:
 		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer?  I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
 		challenge "Snow Leopard";
-		add 5 to campuswander;
-	if T is 6:
+		add 6 to campuswander;
+	else if T is 7:
 		say "     Preparing to cut across a large, open area on the campus, you look around carefully, wary of any hostile creatures which may spot you. Not finding any, you make a dash for it, still scanning from side to side. But your attempt is thwarted when you hear something above you moving in quickly.";
 		challenge "Bald Eagle";
-		add 6 to campuswander;
+		add 7 to campuswander;
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	now showlocale is true;
-	if number of entries in campuswander is 6, now Wandering the Campus is resolved;
+	if number of entries in campuswander > 6:
+		now Wandering the Campus is resolved;
 
 
 Section 6 - Anime Club

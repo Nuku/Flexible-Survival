@@ -502,11 +502,11 @@ to say himher:
 
 Section 6 - Starshard's Rules and Definitions
 
-A person has a text called SubjectPro. SubjectPro is usually "they". [Subject Pronoun, they/he/she]
-A person has a text called ObjectPro. ObjectPro is usually "them". [Object Pronoun, them/him/her]
-A person has a text called PosAdj. PosAdj is usually "their". [Possessive Adjective, their/his/her]
-A person has a text called PosPro. PosPro is usually "theirs". [Possessive Pronoun, theirs/his/hers]
-A person has a text called ReflexPro. ReflexPro is usually "themselves". [Reflexive Pronoun, themselves/himself/herself]
+A person has a text called SubjectPro. SubjectPro is usually "they". [Subject Pronoun, it/he/she]
+A person has a text called ObjectPro. ObjectPro is usually "them". [Object Pronoun, it/him/her]
+A person has a text called PosAdj. PosAdj is usually "their". [Possessive Adjective, its/his/her]
+A person has a text called PosPro. PosPro is usually "theirs". [Possessive Pronoun, its/his/hers]
+A person has a text called ReflexPro. ReflexPro is usually "themselves". [Reflexive Pronoun, itself/himself/herself]
 A person has a text called SubjectProCap. SubjectProCap is usually "They".
 A person has a text called ObjectProCap. ObjectProCap is usually "Them".
 A person has a text called PosAdjCap. PosAdjCap is usually "Their".

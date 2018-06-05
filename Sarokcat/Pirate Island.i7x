@@ -223,7 +223,7 @@ boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle que
 
 Instead of resolving Findingboat:
 	if tmapfound is 2:
-		say "Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn't go too far, they might be able to get you to the island shown on the map[if boatfound is 2]! While your little dingy won't make to the island, one of these might be able to do the job[else if boatfound is 1]. After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[end if]. Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
+		say "Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn't go too far, they might be able to get you to the island shown on the map[if boatfound is 2]! While your little dingy won't make to the island, one of these might be able to do the job[else if boatfound is 1]. After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[else if boatfound is 4]. After you get back, you could probably use this to get to Vohr Island, follwing the tip of the rat twins, though the thoughts of gold are in the foremost of your mind right now[end if]. Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -246,6 +246,9 @@ Instead of resolving Findingboat:
 			say "Sadly, you don't manage to find any useful boats here right now, and sighing you are forced to continue on your way. Maybe you will have better luck another time?";
 	else if boatfound is 1:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to the bouncy castle you found.";
+		now boatfound is 2;
+	else if boatfound is 4:
+		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to Vohr Island.";
 		now boatfound is 2;
 	else:
 		say "Traveling along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn't be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";

@@ -28,7 +28,7 @@ When Play begins:
 	now name entry is "Man-eating Plant"; [Name of your new Monster]
 	now attack entry is "[didnotsubmit][one of]One of the vines slap your thigh, leaving a small bruise.[or]A vine makes a downward motion on your head, clubbering you with surprising strength.[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[ManEatingPlantVoreScene]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[plantwin]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[ManEatingPlantVoreScene]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[ManEatingPlantDesc]";[ Description of the creature when you encounter it.]
 	now face entry is "face entry goes here";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "body entry goes here";[ Body Description, format as the text "Your Body is (your text)"]
@@ -70,7 +70,7 @@ When Play begins:
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "maneatingPlantReel"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Alt Combat
 
@@ -142,7 +142,6 @@ to say ManEatingPlantVoreScene:
 		say "     Vines coil around your knocked-out body and pushes you into the plant's gullet, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
 	if fightoutcome is 22:
 		say "     You let the vines coil around you, and throw you legs-first into the plant's gullet. The vegetal swallows you, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. A small voice in your brain urges you to get out of this dangerous situation.";
-	say "start of scene";
 	if waiterhater is 0, wait for any key;
 	manEatingPlantVore;
 

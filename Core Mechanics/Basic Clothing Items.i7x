@@ -664,6 +664,7 @@ name	desc	weight	object
 "baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
 "knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
 "football helmet"	"A white football helmet with the logo of the Tenvale Gorillas on both sides. Heavy, but protective."	3	football helmet
+"urban explorer helmet"	"A protective helmet with flashy crimson-red finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on."	2	urban explorer helmet
 
 motorcycle helmet is a grab object.
 motorcycle helmet is equipment.
@@ -769,6 +770,19 @@ The descmod of football helmet is "Your head is encased in the thick shell of a 
 The slot of football helmet is "head".
 the scent of football helmet is "The helmet smells of plastic and fabric.".
 
+urban explorer helmet is a grab object.
+urban explorer helmet is equipment.
+It is not temporary.
+The plural of urban explorer helmet is false.
+The taur-compatible of urban explorer helmet is true.
+The size of urban explorer helmet is 3.
+The AC of urban explorer helmet is 30.
+The effectiveness of urban explorer helmet is 80.
+The placement of urban explorer helmet is "head".
+The descmod of urban explorer helmet is "Your head is encased in a protective helmet with crimson-red finish.".
+The slot of urban explorer helmet is "head".
+the scent of urban explorer helmet is "The helmet smells of plastic and fabric.".
+
 [ Section 6 - Helmets ]
 
 When Play begins:
@@ -786,6 +800,7 @@ name	desc	weight	object
 "roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely roadsigns. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate."	30	roadsign breastplate
 "football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Gorillas emblazoned on the left pec."	9	football pads
 "life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light."	2	life jacket
+"shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	1	shoulder pad
 
 leather jacket is a grab object.
 leather jacket is equipment.
@@ -877,5 +892,19 @@ The placement of life jacket is "body".
 The descmod of life jacket is "A bright orange life jacket covers your upper body.".
 The slot of life jacket is "body".
 the scent of life jacket is "The life jacket smells of synthetic fabrics.".
+
+shoulder pad is a grab object.
+shoulder pad is equipment.
+It is not temporary.
+The plural of shoulder pad is false.
+The taur-compatible of shoulder pad is true.
+The size of shoulder pad is 3.
+The AC of shoulder pad is 13.
+The effectiveness of shoulder pad is 13.
+The placement of shoulder pad is "body".
+The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
+The slot of shoulder pad is "body".
+the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
+
 
 Basic Clothing Items ends here.

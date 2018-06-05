@@ -25,6 +25,8 @@ to say FootFieldLockerdesc:
 		add "Gorilla Locker-room Tape 1" to tapes of player;
 	if Roman is in Astroslide Field Locker-room:
 		say "     Roman is also here, tied to one of the benches. From the incrusted cumstains covering his dark fur, you can tell that he has been used aplenty in your absence.";
+	if "rubber sneakers" is listed in the invent of Astroslide Field Locker-room:
+		say "     You notice a pair of odd-looking sneakers, in a corner of the room.";
 
 
 [NPCs]

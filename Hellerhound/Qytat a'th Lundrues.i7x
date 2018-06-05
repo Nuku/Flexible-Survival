@@ -29,6 +29,7 @@ Instead of resolving a Guard Gryphon:
 Section 2 - Entry Points
 
 Red Apartment is a room. "     This tall, red building has a fire escape on this side. This four story apartment building looks much like many others in the city. [redflight]". It is fasttravel.
+The earea of Red Apartment is "Outside".
 Red Apt Exit is a door. Red Apt Exit is dangerous. The marea of Red Apt Exit is "Outside". Red Apt Exit is undescribed. Red Apt Exit is south of Red Apartment. South of Red Apt Exit is Outside Exploration.
 
 to say redflight:
@@ -41,6 +42,7 @@ to say redflight:
 [Green Apartment Building moved to Basic Locations in Core Mechanics]
 
 Bright Alley is a room. "     An alley with a silvery blue glow coming from the deeper reaches. You can faintly see that the back of the alley opens to a small hill. [brightflight]". It is fasttravel.
+The earea of Bright Alley is "Outside".
 Bright Alley Exit is a door. Bright Alley Exit is dangerous. The marea of Bright Alley Exit is "Outside". Bright Alley Exit is undescribed. Bright Alley Exit is west of Bright Alley. West of Bright Alley Exit is Outside Exploration.
 
 to say brightflight:

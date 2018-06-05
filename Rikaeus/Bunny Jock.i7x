@@ -33,13 +33,16 @@ to say losetobunnyjock:
 		say "     Done, he withdraws his cock and gives your ass a final grab. 'Gotta get to practice! See ya later friend!' He shouts before running off towards the athletic buildings.";
 
 to say beatthebunnyjock:
-	say "     Beaten, the big bunny jock stumbles back and falls onto his rump. [if cunts of player > 0]'Hey baby, wanna take your prize?' he asks, wagging his eyebrows at you.[else]'You did great dude! How about we have some more fun?' The rabbit asks, gesturing to his crotch[end if]. ";
+	say "     Beaten, the big bunny jock stumbles back and falls onto his rump. [if cunts of player > 0]'Hey baby, wanna take your prize?' he asks, wagging his eyebrows at you.[else]'You did great dude! How about we have some more fun?' The rabbit asks, gesturing to his crotch[end if].";
 	if bunnyjocknosex > 2:
 		say "     You shake your head as you have with the others, causing him to whine before he starts to masturbate himself. With a shrug of your shoulders you leave the bunny behind.";
 	else if libido of player > 40:
-		say "     As his paws wander to his shorts to fondle his big package, you consider having a little fun with that big boy's cock. ";
+		say "     As his paws wander to his shorts to fondle his big package, you consider having a little fun with that big boy's cock.";
 		if cocks of player > 0:
-			say "     Do you want to [link]fuck him (1)[as]1[end link], [link]suck him off (2)[as]2[end link] or [link]just leave (0)[as]0[end link]?";
+			say "     [bold type]What now?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Fuck him.";
+			say "     [link](2)[as]2[end link] - Suck him off.";
+			say "     [link](3)[as]3[end link] - Just leave.";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>";
