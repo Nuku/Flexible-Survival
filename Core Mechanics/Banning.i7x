@@ -66,7 +66,7 @@ to new ban menu:
 				say "Invalid Entry";
 		if calcnumber is 0:
 			now nbmexit is 1;
-		else if calcnumber is <= number of entires in flaglist:
+		else if calcnumber is <= number of entries in flaglist:
 			banchange entry calcnumber of flaglist;
 		else:
 			banchange entry (calcnumber - number of entries in flaglist) of taglist;
