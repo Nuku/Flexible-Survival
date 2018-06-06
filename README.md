@@ -81,7 +81,7 @@ Move the files in the Github repo:
 ## 10. Make your changes!
 Now whenever you make changes in Atom, you should open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go`. Compiling takes a very long time! Expect to wait 15 minutes!
 
-If you want to share it with others or test it in a different engine, click `Release` to compile. The file will be produced at `Flexible Survival.materials\Release\Flexible Survival.gblorb`. You can move that to `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release` and replace the existing file if you want to test it outside of the Inform editor. Then open the Start Menu and Play Flexible Survival!
+If you want to share it with others or test it in a different engine, click `Release` to compile. The file will be produced at `Inform\Projects\Flexible Survival.inform\Build\output.gblorb`. You can move that to `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb` and replace the existing file if you want to test it outside of the Inform editor. Then open the Start Menu and Play Flexible Survival!
 
 ## 11. Record your changes and submit a Pull Request!
 Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
