@@ -2,14 +2,17 @@
 
 ## 1. Register on Github
 Flexible Survival is hosted on Github, so you'll have to make an account to push changes.
+
 https://github.com/
 
 ## 2. Fork the Flexible-Survival repository
 You have to fork the repository (which will duplicate the entire codebase to make a personal version). Click the `Fork` button on the top right of this page:
+
 https://github.com/Nuku/Flexible-Survival/
 
 ## 3. Download Github Desktop
 This will let you record your changes and send it up to the Github repository for review.
+
 https://desktop.github.com/
 
 ## 4. Clone your fork of the Flexible-Survival repository
@@ -17,6 +20,7 @@ Click `Clone a repository` and it will show you a list of your forked repositori
 
 ## 5. Download Atom
 Atom is a text editor that you can use to edit files. There are a couple of useful packages you can install to make life easier!
+
 https://atom.io/
 
 Install packages by going to: File -> Settings -> Install
@@ -45,9 +49,11 @@ Package Keyboard Shortcuts:
 
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.
+
 http://inform7.com/download/
 
 However, Flexible Survival is too big for Inform! We have a custom 64-bit compiler that you will also have to install or else you will not be able to compile the game:
+
 https://drive.google.com/file/d/0BxUh1iVHP4kiM3JjTF8za2V0TG8/view
 
 Move this file to `C:\Program Files (x86)\Inform 7\Compilers` and replace `ni.exe` with this one.
@@ -57,6 +63,7 @@ Start Inform and set up "Flexible Survival" as a new project with that exact nam
 
 ## 8. Install the Flexible Survival game
 Install the Flexible Survival game so you have an interpreter that can read the game files without a lot of hassle.
+
 http://blog.flexiblesurvival.com/p/links.html
 
 ## 9. Move the Github repository files into your Inform files
@@ -85,4 +92,5 @@ Then just wait for one of the maintainers to accept your pull request! If it get
 
 ## Questions?
 Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!
+
 https://discordapp.com/channels/333559467218173953/362740874683219968
