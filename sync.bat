@@ -5,9 +5,6 @@ copy /Y ".ctags" "%HOMEPATH%\.ctags"
 echo [INFO] Copying story.ni to Inform project folder
 copy /Y "Inform\story.ni" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni"
 
-echo [INFO] Copying Inform folder to Inform project folder
-xcopy /I /Q /Y "Inform" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source"
-
 echo [INFO] Copying Figures folder to Inform project folder
 xcopy /I /Q /Y "Figures" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.materials\Figures"
 
