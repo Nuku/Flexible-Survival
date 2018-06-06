@@ -8,14 +8,14 @@ https://github.com/
 You have to fork the repository (which will duplicate the entire codebase to make a personal version). Click the `Fork` button on the top right of this page:
 https://github.com/Nuku/Flexible-Survival/
 
-## 3. Download Git Desktop
+## 3. Download Github Desktop
 This will let you record your changes and send it up to the Github repository for review.
 https://desktop.github.com/
 
 ## 4. Clone your fork of the Flexible-Survival repository
 Click `Clone a repository` and it will show you a list of your forked repositories--click on Flexible-Survival and click `Clone`.
 
-## 4. Download Atom
+## 5. Download Atom
 Atom is a text editor that you can use to edit files. There are a couple of useful packages you can install to make life easier!
 https://atom.io/
 
@@ -43,7 +43,7 @@ This package will show a list of definitions on the right-hand side. Try opening
 Package Keyboard Shortcuts:
 `CTRL+SHIFT+O`: Toggle whether the panel appears.
 
-## 5. Install Inform 7
+## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.
 http://inform7.com/download/
 
@@ -52,14 +52,14 @@ https://drive.google.com/file/d/0BxUh1iVHP4kiM3JjTF8za2V0TG8/view
 
 Move this file to `C:\Program Files (x86)\Inform 7\Compilers` and replace `ni.exe` with this one.
 
-## 6. Set up the Inform project for the first time
+## 7. Set up the Inform project for the first time
 Start Inform and set up "Flexible Survival" as a new project with that exact name! Then close Inform. You only have to do this once.
 
-## 7. Install the Flexible Survival game
+## 8. Install the Flexible Survival game
 Install the Flexible Survival game so you have an interpreter that can read the game files without a lot of hassle.
 http://blog.flexiblesurvival.com/p/links.html
 
-## 8. Move the Github repository files into your Inform files
+## 9. Move the Github repository files into your Inform files
 You will have to do this step every time you pull new changes from Github!
 
 Move the files in the Github repo:
@@ -71,12 +71,12 @@ Move the files in the Github repo:
 | Copy the folder from the folder `Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials`
 | Copy the folders from the folder `Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions`
 
-## 9. Make your changes!
+## 10. Make your changes!
 Now whenever you make changes in Atom, you should open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go`. Compiling takes a very long time! Expect to wait 15 minutes!
 
 If you want to share it with others or test it in a different engine, click `Release` to compile. The file will be produced at `Flexible Survival.materials\Release\Flexible Survival.gblorb`. You can move that to `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release` and replace the existing file if you want to test it outside of the Inform editor. Then open the Start Menu and Play Flexible Survival!
 
-## 10. Record your changes and submit a Pull Request!
+## 11. Record your changes and submit a Pull Request!
 Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
 
 Click on Branch -> Create pull request. It will open the Github site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the Github site.
