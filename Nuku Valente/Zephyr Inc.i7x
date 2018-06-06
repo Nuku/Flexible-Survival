@@ -19,7 +19,7 @@ This is the zephyrad rule:
 	say "- Panther Taur threat level reassessed to level 4.";
 	say "- Incubus and Succubus threat levels reassessed to level 8.";
 	say "- Wrestling Wolf threat level reassessed to level 15."; ]
-	now zephyr lobby is known;
+	now Zephyr Lobby is known;
 
 Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel. It is private.
 earea of Zephyr Lobby is "High".
