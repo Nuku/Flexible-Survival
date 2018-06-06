@@ -1067,7 +1067,7 @@ Section 3 - The Tell-Tale Icarus
 an everyturn rule:
 	if HP of Icarus is 7 and skipturnblocker is 0:
 		if turns is even and ttIcarus - turns >= 8 and tti_scene is 2:
-			if player is in bunker or player is in grey abbey library or player is in Grey Abbey 2F:
+			if player is in Bunker or player is in grey abbey library or player is in Grey Abbey 2F:
 				say "     Feeling uneasy and nervous, your glance always seems to stray towards the attic and the body you've left there. You wander outside for a short walk, hoping to clear your head of the dark thoughts that cloud your mind. But you find little solace, your guilt returning, making you feel like you're being watched. The rare roaming mutant you spot seems to stare at you, as if they know what you've done. You know that can't be true, but you feel it all the same.";
 				say "     Things get worse as you take a wrong turn and momentarily lose track of where you are. As you're looking around to get your bearings, you hear the flutter of wings. As you turn to face the noise, there is a flash of blue just outside your vision. You turn again, but it is gone. When a crow caws in the distance, you spin around and start to run. Looking around wildly, you stumble out of the alleyway, eventually coming to a street you recognize and quickly make your way back to the library, heart pounding in your chest.";
 			else:
@@ -1076,10 +1076,10 @@ an everyturn rule:
 			decrease morale of player by 5;
 			now tti_scene is 3;
 		else if tti_scene is 4 and a random chance of 2 in 5 succeeds:
-			if player is in grey abbey library or player is in Grey Abbey 2F or player is in bunker:
+			if player is in grey abbey library or player is in Grey Abbey 2F or player is in Bunker:
 				if player is in grey abbey library or player is in Grey Abbey 2F:
 					say "     You pace around the library, trying your best to ignore the attic and the body you left up there. You strongly consider going up there and trying to figure out some means of removing it in secret, but these thoughts are brought to a crashing halt when you see a familiar blue figure outside in the distance. You rush to the doors and around the corner, heading to the intersection. You look around, but there is no sign anyone was there.";
-				else if player is in bunker:
+				else if player is in Bunker:
 					say "     You pace around the bunker, trying your best to ignore the attic and the body you left up there. You strongly consider going up there and trying to figure out some means of removing it in secret. Drawn back again, you step out into the library and turn towards the stairs, but you are brought to a crashing halt when you see a familiar blue figure outside in the distance. You rush to the doors and around the corner, heading to the intersection. You look around, but there is no sign anyone was there.";
 				say "     Sweating heavily, you rush back inside and hurry upstairs. Your pace drops quickly though, reduced to barely ascending a step every few seconds. You slowly make your way back upstairs and across the rafters to the secluded attic. You pause outside the door, screwing up your courage to enter. As the room is revealed, the bloody sheet is still there, but the body is gone. Stumbling into the room on weak knees, you pull aside the sheet, needing to see for yourself, finding only a bloody stain on the floor where you did the killed the poor bird.";
 				attempttowait;
@@ -1101,7 +1101,7 @@ an everyturn rule:
 				say "     [one of]That uneasy feeling of being watched returns. You subconsciously wipe your hands[or]The sight of a blowing blue rag at the edge of your vision startles you[or]For a moment, you think you spot Icarus, but when you chase after the apparition, it is gone[or]You can't help but feel edgy around others, always worried they'll somehow know what you've done, smell the blood on your hands[or]A distant birdsong startles you, setting your heart racing[at random]. The stress of this is really getting to you. You consider heading back to the library to confront your guilt.";
 				decrease morale of player by 2;
 		else if a random chance of 3 in 10 succeeds:
-			if player is in bunker or player is in grey abbey library or player is in Grey Abbey 2F:
+			if player is in Bunker or player is in grey abbey library or player is in Grey Abbey 2F:
 				say "     [one of]You have a nervous, uneasy feeling, as if you're being watched. A shiver runs down your spine.[or]Your mind starts to stray to what happened to Icarus, but you push the thoughts away.[or]You can't help but glance up at the rafters, drawn to the attic where the deed was done.[or]Glancing upstairs, you try to convince yourself that it was the infection, that you're not at fault, but your thoughts don't ring true.[or]For a moment, the shadows on your hands make them look like they're covered in blood. You feel momentarily ill and want to wash them thoroughly.[or]You feel an uneasy chill, as if someone knows what you've done.[in random order]";
 			else:
 				say "     [one of]You have a nervous, uneasy feeling, as if you're being watched. A shiver runs down your spine.[or]Your mind starts to stray to what happened to Icarus, but you push the thoughts away.[or]When a passing songbird reminds you of Icarus, you feel a rush of guilt. You try to convince yourself that it was the infection, that you're not at fault, but your thoughts don't ring true.[or]For a moment, the shadows on your hands make them look like they're covered in blood. You feel momentarily ill and want to wash them thoroughly.[or]You hear the chirping of a bird, not unlike Icarus's musical tune, but scratchy and rough, almost dirge-like. It stops as suddenly as it started, leaving you feeling ill at ease.[or]You feel an uneasy chill, as if someone knows what you've done.[in random order]";
@@ -1112,7 +1112,7 @@ an everyturn rule:
 		if ttIcarus - turns >= 12:
 			move Icarus to Garden View;
 			now HP of Icarus is 10;
-			if ( player is in bunker or player is in grey abbey library or player is in grey abbey 2F ) and skipturnblocker is 0:
+			if ( player is in Bunker or player is in grey abbey library or player is in grey abbey 2F ) and skipturnblocker is 0:
 				say "     You hear the pleasant birdsong of your blue passarine up in the rafters again, signalling that he's recovered and returned to his perch[if player is in grey abbey library]. When you look up at him, he grins and gives his rear a tantalizing shake, eager for more[else if player is in grey abbey 2F]. When you look over at him, he grins and gives his rear a tantalizing shake, eager for more[end if]. Some dark part of you is excited at the prospect of running wild upon him again sometime soon.";
 				increase libido of player by libido of player / 5;
 				if libido of player > 100, now libido of player is 100;

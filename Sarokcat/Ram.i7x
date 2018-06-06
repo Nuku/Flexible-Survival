@@ -168,10 +168,10 @@ to say subramdefeat:
 				say "[subramsex]";
 			else:
 				say "     [line break]";
-				say "     [if player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]Shrugging your shoulders, you tell him that his little display has put you out of the mood. His cheeks redden in shame and embarassment as he turns and shuffles away awkwardly[end if].";
+				say "     [if player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]Shrugging your shoulders, you tell him that his little display has put you out of the mood. His cheeks redden in shame and embarrassment as he turns and shuffles away awkwardly[end if].";
 
 to say subramsex:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

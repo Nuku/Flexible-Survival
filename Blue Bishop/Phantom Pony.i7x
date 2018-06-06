@@ -21,7 +21,7 @@ to say blotlook:
 		say "     You're still not sure why anyone would make such a thing -- assuming it isn't somehow the byproduct of this nanite plague. It's certainly deceptive in how well it can handle weight, but you can't possibly imagine this was ever meant for a proper horse. The tail of the toy is molded to be swept sideways, ensuring easy access and exposing the toy's cartoonish, rounded hips.";
 		say "     'Blot' [one of]is[or]remains[stopping] carved into the wood next to it. You have no idea who named it this, why, and what might've happened to them.";
 		say "     [italic type][if blotintense < 3]The thing looks completely inanimate.[run paragraph on] You're fairly certain there'll be little to no consequence in using it right now[else if blotintense < 5]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach.[run paragraph on] You could probably get away with using it[else if blotintense < 8]The thing seems tinged with a streak of wanton menace.[run paragraph on] You could probably get away with using it, but not for long[else if blotintense < 10]You feel ill at ease near the thing, as though you're being drawn to the tainted object.[run paragraph on] You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need.[run paragraph on] You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
-	say "[line break]";
+	LineBreak;
 
 Northeast of Milking Shed Main Room is Abandoned Storage Room.
 
@@ -198,7 +198,7 @@ to blotbind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < boundsegment:
 					say "You struggle to ";
@@ -208,41 +208,41 @@ to blotbind:
 						say "pry yourself free of the toy's powerful hold, [one of]creaking and groaning against your protests[or]engulfing vinyl trying its best to pull you back within its hold[or]squeaking against your motions as you fight it[at random].";
 					else:
 						say "escape this prison of a toy, [one of]creaking and groaning around you[or]enveloping vinyl trying its best to keep you within its hold[or]squeaking against your motions as you fight it[at random]";
-					say "[line break]";
+					LineBreak;
 					blotsanitypassive;
 					blotlust;
 				else:
 					say "     [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy, [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooling down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
 					say "     You clean yourself off and prepare to go about your business once more. [if blotintense > 5]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object seems relatively harmless, for now at least[end if]...";
-					say "[line break]";
+					LineBreak;
 					cleanboundmemory;
 					WaitLineBreak;
 					now trixieexit is 1;
 				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if 1 is 1: [if obliging is true]
 					say "You continue to [if blotintense < 5]ride the vinyl pony[else]oblige the vinyl pony's influence[end if], ";
 					if blotintense < 8:
 						say "[one of]loudly creaking against your weight[or]squeaking against your body as you rub against it[or]motion slicked by your perspiration[at random].";
 					else:
 						say "[one of]loudly creaking as it continues to milk you[or]squeaking as it uses your own sexual fluids to lubricate its motion[or]body trembling under its now-powerful influence[at random].";
-					say "[line break]";
+					LineBreak;
 					now obliging is true;
 					blotsanitypassive;
 					blotlust;
 					now obliging is false;
 				[else:
 					say "     ABIDE NYI.";
-					say "[line break]";
+					LineBreak;
 					blotsanitypassive;
 					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
 				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
-				say "[line break]";
+				LineBreak;
 				if boundrecover is true:
 					if blotintense < 3:
 						increase humanity of player by 1;
@@ -252,7 +252,7 @@ to blotbind:
 						increase humanity of player by 3;
 					if humanity of player > 100, now humanity of player is 100;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity[if blotintense > 4] within these confines[end if], recovering a small portion of your lost humanity.";
-					say "[line break]";
+					LineBreak;
 					blotlust;
 					now boundrecover is false;
 				else:
@@ -263,7 +263,7 @@ to blotbind:
 						say "[one of]softly creaking as it tries to work against your resistance[or]with what moderate power it has over you[or]squeaking under your weight as it tries nonetheless[at random].";
 					else:
 						say "[one of]barely able to resist the overwhelming power it has over you[or]creaking against you as it makes every effort in spite of you[or]seemingly undaunted by your efforts[at random].";
-					say "[line break]";
+					LineBreak;
 					blotlust;
 					blotsanitypassive;
 				WaitLineBreak;

@@ -83,7 +83,7 @@ When Play begins:
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slim[or]small[or]petite[or]fungal[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]slim[or]small[or]petite[or]fungal[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "mushroom";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -142,7 +142,7 @@ this is the sporecloud rule:      [Spore aura following spore blast attack]
 				say "     [one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random] the lingering spore cloud finally dissipates.";
 			follow the player injury rule;
 			say "You are [descr].";
-			say "[line break]";
+			LineBreak;
 			if HP of player < 1 or libido of player > 109:
 				if HP of player <= 0, now fightoutcome is 20;
 				if libido of player >= 110, now fightoutcome is 21;

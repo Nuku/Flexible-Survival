@@ -149,7 +149,7 @@ to sierrabind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 3:
 					say "     [one of]You start a bit of a ruckus inside[or]You writhe about and push around[or]You quickly and forcibly make known your protest from within[at random] [one of]this fleshy prison[or]these firm confines[at random]. Forcing the beast to groan. [if struggleatt is 1]It seems less annoyed and more confused by your disapproval[else]It becomes increasingly difficult for the beast to keep you down, at this rate it might not see you as worth the trouble[end if].[line break]";
@@ -184,10 +184,10 @@ to sierrabind:
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     You're driven to submit to your current circumstance, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						increase lustatt by 7 + (lustadjust * 2);
 						sierrasex;
@@ -207,7 +207,7 @@ to sierrabind:
 					if a random chance of 2 in 3 succeeds, increase bsextimer by 1;
 				else:
 					say " You choose to remain within these confines for a bit longer, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						sierrasex;
 						if bodyname of player is "Sierrasaur" and player is pure:
@@ -232,9 +232,9 @@ to sierrabind:
 			else:
 				now enduring is true;
 				if boundrecover is true:
-					say "[line break]";
+					LineBreak;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						sierrasex;
 						if bodyname of player is "Sierrasaur" and player is pure:
@@ -256,9 +256,9 @@ to sierrabind:
 						if humanity of player > 100, now humanity of player is 100;
 					now boundrecover is false;
 				else:
-					say "[line break]";
+					LineBreak;
 					say "     You fight to maintain clarity while stuck in these confines, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						sierrasex;
 						if bodyname of player is "Sierrasaur" and player is pure:

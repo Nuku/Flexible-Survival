@@ -791,7 +791,7 @@ Instead of fucking Septus:
 		else:
 			say "     The wolfman gives your [bodydesc of player] body a long look as you walk up to him. A smile crosses his muzzle as he asks 'Hey, [if cunts of player > 0]girl[else]man[end if]. What's up?'";
 		wait for any key;
-		say "[line break]";
+		LineBreak;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]

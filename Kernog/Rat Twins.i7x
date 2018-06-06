@@ -63,7 +63,7 @@ instead of fucking Erin:
 		say "[ErinSexMenu]";
 
 to say ErinSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -131,7 +131,7 @@ to say ErinFuckTop:
 		say "[ErinVoyeurKo]";
 	WaitLineBreak;
 	say "     Erin and you take your time peeling each other clothes, exploring each other's body[if isTwinHere is 1] while Violet, true to her word, sits in a corner, and watches the show eagerly[end if]. He lets you pass your fingers on his soft, grey-white fur while his own limbs run down your [body of player] back. Your two heads slowly lock with each other in a long and passionate french kiss. [if isTwinHere is 1]You can hear Violet's breath accelerate as her sibling and you get lost in your passions. When you take the time to give her a peripheral look, you notice her hands are already cupping her breasts and her crotch in an absent-minded manner. [end if]The feeling of Erin's member brushing against your [if cocks of player is 1]own [cock of player] erection[else]pack of erected penises[end if] fills you with arousal and anticipation. 'Help me get ready?' he asks softly. You nod[if isTwinHere is 1]; Violet nods as well[end if].";
-	say "     Erin gets on his four limbs on the old cot in the middle of the room and lifts his tail for you, revealing his pink rosette.  [if isTwinHere is 1]As you realize that you do not have lube, you hear Violet tell you 'Catch.' and a plastic tube of the stuff lands in your hands. You thank her, which she waves off before putting her hand back in her panties[else]Realizing that you forgot the lubrication, you fumble through the small mess to find one, before finding a tube[end if]. You apply some on your fingers and tell Erin to relax. You push one finger inside. Erin gasps[first time]; you know from the tightness that it is really his first time, and take extra care[only]. 'Cold...' he moans. While his hand goes to stroke his own cock, you begin to pump your finger in his smooth butt. Once the squeeze of his anal ring relents, you slip a second digit. [if isTwinHere is 1]Mirroring your actions, Violet slips her index inside her pussy. [end if]A third one comes quickly and Erin gasps again, this time in pleasure. 'O-okay. I think I'm good, [if player is not defaultnamed][name of player],[end if]' he says.";
+	say "     Erin gets on his four limbs on the old cot in the middle of the room and lifts his tail for you, revealing his pink rosette.  [if isTwinHere is 1]As you realize that you do not have lube, you hear Violet tell you 'Catch.' and a plastic tube of the stuff lands in your hands. You thank her, which she waves off before putting her hand back in her panties[else]Realizing that you forgot the lubrication, you fumble through the small mess to find one, before finding a tube[end if]. You apply some on your fingers and tell Erin to relax. You push one finger inside. Erin gasps[first time]; you know from the tightness that it is really his first time, and take extra care[only]. 'Cold...' he moans. While his hand goes to stroke his own cock, you begin to pump your finger in his smooth butt. Once the squeeze of his anal ring relents, you slip a second digit. [if isTwinHere is 1]Mirroring your actions, Violet slips her index inside her pussy. [end if]A third one comes quickly and Erin gasps again, this time in pleasure. 'O-okay. I think I'm good[if player is not defaultnamed], [name of player][end if],' he says.";
 	WaitLineBreak;
 	say "     You quickly apply the remaining lube on your fingers onto your still hard cock, and stroke your [cockname of player] member[smn] a little. Once you deem yourself ready, you press yourself against Erin's rump for a moment. [if cocks of player > 1]You let your [cocks of player] cocks grind against the plump behind, tainting the clear fur with your pre, before grabbing one and lining it with the rat's hole[else]You let your [cock size desc of player] grind against the plump behind, tainting the clear fur with your pre, before grabbing it and lining it with the rat's hole[end if]. You push, slowly. [first time]Erin whines from having his sphincter stretched for the first time. You go in progressively, pushing in then pulling out, until the male is relaxed enough to let your glans slip past his anal ring without protest. [only]Erin lets out a long moan as you slowly dig in his hole and bottom out.[if isTwinHere is 1] Violet startles you as well, letting out a loud shrill as she came from watching her brother being taken. 'S-Sorry,' she pants. 'It-it was too much. So hot.' 'F-fuck, sis...' her twin groans, visibly excited as well.[end if]";
 	say "     You pump Erin nice and slow, reveling into the calm, peaceful mood of the moment. [if isTwinHere is 1]Even Violet's badly covered moans, as she tries to rile herself for another climax, have eventually become part of the environment, and they do not bother you anymore. They do excite Erin terribly, however. [end if]As the teenager rat is now used to your [cock size desc of player] [cockname of player] cock, you pick up the rhythm, and the slaps of your pelvis against Erin's butt joins the concerto of moans coming from you and [if isTwinHere is 1]both twins[else]your partner[end if].";
@@ -188,7 +188,7 @@ to say ErinVoyeurKo:
 		say "'Sssh, sis, it's okay,' Erin reassures his sibling with an affectionate kiss on the forehead, before inviting you, once again, to enter the small storage room.";
 		say "'Have fun, both of you,' you can hear Violet say just before the door closes.";
 
-[to say ErinThreeSome:
+[to say ErinThreesome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
 	say "[bold type]Do you want to top or to bottom during the threesome?[roman type]";
 	say "[link]Top[as]y[end link] You want to take an active role.";
@@ -216,7 +216,7 @@ the description of Violet is "[VioletDesc]".
 to say VioletDesc:
 	project the figure of Violet_face_icon;
 	say "     Violet is one half of the pair of adventuring rats whom you saved from the pirate sharks. She looks fairly young, maybe eighteen if you had to guess, and shares a lean and energetic build with her brother. Her youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at her brother whenever their eyes meet. Like his false twin, his fur is mostly snow white, like her hair, with dark grey patches here and there. Her hair is made up in unruly dreadlocks, dyed in several neon colors, although the color looks worn out, hair dyes must be rare in these times. Violet wears a black bra and a pair of used denims. She seems also fond of leather accessories: she wears a choker, a spiked wristband, and adorned her tail with bangles made of old leather belts. Noticing that you look at her, Violet grins, then flashes her breasts at you: 'Izzat what you want to see? Ha ha... Perv['].' She winks at you and pulls up her bra.";
-	
+
 instead of sniffing Violet:
 	say "     Violet's fur smells of sea salt, despite visibly taking great care of her fur. 'I smell of salt, right?' she asks, guessing your thoughts. 'Goddammit. And I keep taking showers, though.";
 
@@ -246,7 +246,7 @@ instead of fucking Violet:
 		say "[VioletSexMenu]";
 
 to say VioletSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -384,7 +384,7 @@ to say VioletVoyeurKo:
 		say "     'Digging yourself deepe~r,' the male rat sings, to which Violet replies with childish raspberries before pushing you into the storage room and closing the door.";
 
 	[Ideas to implement: multicock version for both twins bottoming]
-[to say VioletThreeSome:
+[to say VioletThreesome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
 	say "[bold type]Do you want to top or to bottom during the threesome?[roman type]";
 	say "[link]Top[as]y[end if] You want to take an active role.";
@@ -519,7 +519,7 @@ The sarea of Strange Island is "Nowhere".
 to say strangeIsland:
 	move player to Restaurant;
 	if level of Erin is 0:
-		say "    As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. ' Do you know about Vohr Island?'[line break]After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.[line break]'With all the mayhem going on, we totally forgot about the place as well,' Erin said. 'But then, now that we had time to settle a little, we remembered the rumors about this place.'[line break]'You remember them too, right?' Violet asks. 'That place is basically the local Zone 51. And with this infection apocalypse going on, me and Bro wonder if the place had something to do with it.'";
+		say "     As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. ' Do you know about Vohr Island?'[line break]After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.[line break]'With all the mayhem going on, we totally forgot about the place as well,' Erin said. 'But then, now that we had time to settle a little, we remembered the rumors about this place.'[line break]'You remember them too, right?' Violet asks. 'That place is basically the local Zone 51. And with this infection apocalypse going on, me and Bro wonder if the place had something to do with it.'";
 		say "'We won't ask much of you,' Erin said in reassurance. 'We would feel safer with you going forward and scouting the area, but for now, we would simply ask if you had found a boat during your exploring.'";
 	else:
 		say "'What about the island?' the rat replies. 'Did you find us a boat?'";
@@ -535,10 +535,10 @@ to say strangeIsland:
 		move player to Island Pier;
 		now Strange Island is resolved;
 	now level of Erin is 1;
-	
 
 
-		
+
+
 
 [to say VioletVoyeurFun:
 	say "     As you enter the restaurant, every patron looks at the rat twins' corner, where there is some activity going on, mostly hidden by the bar and other patrons looking. You can hear Violet moan loudly. 'You're doing great, sis,' you can hear Erin say. You eavesdrop a patron next to you: '[one of]Lucky rats[or]Lucky otters[or]A drink and a live show, what's more to ask[or]They really have no shame, doing it in public[at random].'";

@@ -54,7 +54,7 @@ Instead of conversing the Diego:
 		say "[DiegoTalkMenu]";
 
 to say DiegoTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Diego about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

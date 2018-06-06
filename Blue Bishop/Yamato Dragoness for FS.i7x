@@ -74,7 +74,7 @@ to say Yamato Dragoness vic:
 			say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you're finally granted the mercy of her comparatively less overbearing womb, only given a few seconds to appreciate the relief before thought fades from you entirely. Outwardly, [if scalevalue of player > 3]the dragoness would no doubt look somewhat pregnant with your impressive form, though perhaps this serpentine creature perceives this as a mere trophy, signifying her[else]your captivity would be imperceivable, further punctuating this dragoness's[end if] complete and utter dominance over you.";
 			infect;
 			if waiterhater is 0, wait for any key;
-			say "[line break]";
+			LineBreak;
 			if (player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
 				say "     You're gradually roused from unconsciousness by the feel of something slick and scaled writhing against your [bodytype of player] form. Quickly realizing you're walled off within the translucent confines of an egg, the immediate and much more apparent issue is quickly brought to your attention. Another, much closer to your size, ";
 				if a random chance of 1 in 2 succeeds and guy is not banned:
@@ -171,7 +171,7 @@ to say Yamato Dragoness vic:
 				say "     Shared fatigue the anchor that pulls you once more to the ground, she finally frees you from her grip, slowly rising once more into the air to depart in silence. Gradually catching your breath, you're left to gradually recover from the creature's powerful influence, [if cock length of player < 24 and FYDM is 0]checking over your exceedingly sore cock[smn] to find that they seem slightly enlarged from the ordeal, though you're not rightly sure if it'll have any lingering effects[else if cock length of player < 24]checking over your exceedingly sore cock[smn] to see that it does indeed appear larger from the ordeal.[run paragraph on].[run paragraph on][else]your oversized cock[smn] feeling extremely sore from the ordeal[end if].";
 				if FYDM is 0, now FYDM is 1;
 				if "Modest Organs" is not listed in feats of player and cock length of player < 24:
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cock length change detected! Allow?";
 						if player consents:
@@ -236,7 +236,7 @@ to say Yamato Dragoness vic:
 				say "     The beast's need finally sated, she eventually stops pinning you down as she pulls free of you. Slowly circling around your exhausted self, the grinning dragoness is doubtlessly amused by you, eventually departing back into the air in silence. Gradually catching your breath, you're left to recover from the creature's powerful influence, [if cock length of player < 24 and FYDM is 0]checking over your exceedingly sore cock[smn] to find that they seem slightly enlarged from the ordeal, though you're not rightly sure if it'll have any lingering effects[else if cock length of player < 24]checking over your exceedingly sore cock[smn] to see that it does indeed appear larger from the ordeal.[run paragraph on].[run paragraph on][else]your oversized cock[smn] feeling extremely sore from the ordeal[end if].";
 				if FYDM is 0, now FYDM is 1;
 				if "Modest Organs" is not listed in feats of player and cock length of player < 24:
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cock length change detected! Allow?";
 						if player consents:
@@ -333,7 +333,7 @@ to yamatfemsexmenu:
 		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Attend her cunt[as]5[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-5)>[run paragraph on]";
@@ -348,7 +348,7 @@ to yamatfemsexmenu:
 			else:
 				say "[YamatF_1]"; [Cunt Pitching]
 				if "Modest Organs" is not listed in feats of player and cock length of player < 24:
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cock length change detected! Allow?";
 						if player consents:
@@ -375,7 +375,7 @@ to yamatfemsexmenu:
 			else:
 				say "[YamatF_2]"; [Anal Pitching]
 				if "Modest Organs" is not listed in feats of player and cock length of player < 24:
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cock length change detected! Allow?";
 						if player consents:
@@ -682,7 +682,7 @@ to YamatFvore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if (boundsegment < 2 and struggleatt < 2) or (boundsegment > 1 and struggleatt < 3):
 					say "     You struggle to escape these twisted confines, writhing and fighting against the flesh that holds you. The dragoness lowly [one of]growls[or]groans[at random] as her body churns in ill-content towards its disruptive occupant.";
@@ -715,7 +715,7 @@ to YamatFvore:
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     You're compelled to submit to you tainted prison, [one of]your captor rumbly lowly in approval of her compliant meal[or]the dragoness idly playing with writhing meal as you feel her talon's caress against you from the outside[or]your captor lounging happily as she drains her meal[at random].";
 					if boundsegment is not 3:
@@ -730,7 +730,7 @@ to YamatFvore:
 				wait for any key;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if a random chance of 1 in 3 succeeds and boundsegment is not 3:
 					increase boundmod by 1;
