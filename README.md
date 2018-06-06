@@ -77,3 +77,6 @@ Now whenever you make changes in Atom, you should open Inform and re-compile the
 If you want to share it with others or test it in a different engine, click `Release` to compile. The file will be produced at `Flexible Survival.materials\Release\Flexible Survival.gblorb`. You can move that to `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release` and replace the existing file if you want to test it outside of the Inform editor. Then open the Start Menu and Play Flexible Survival!
 
 ## 10. Record your changes and submit a Pull Request!
+Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository.
+
+Click on Branch -> Create pull request. It will open the Github site to compare your local changes to the Github repository. Click on the `Create pull request` button on the Github site.
