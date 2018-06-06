@@ -80,3 +80,7 @@ If you want to share it with others or test it in a different engine, click `Rel
 Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository.
 
 Click on Branch -> Create pull request. It will open the Github site to compare your local changes to the Github repository. Click on the `Create pull request` button on the Github site.
+
+## Questions?
+Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!
+https://discordapp.com/channels/333559467218173953/362740874683219968
