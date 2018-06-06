@@ -73,10 +73,10 @@ Move the files in the Github repo:
 
 | Action                      | File/Folder                        | At  |
 | --------------------------- | ---------------------------------- | --- |
-| Copy the file from the folder `Github\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
+| Copy the file from the folder `Documents\Github\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
-| Copy the folder from the folder `Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
-| Copy the folders from the folder `Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
+| Copy the folder from the folder `Documents\Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
+| Copy the folders from the folder `Documents\Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
 
 ## 10. Make your changes!
 Now whenever you make changes in Atom, you should open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go`. Compiling takes a very long time! Expect to wait 15 minutes!
