@@ -25,7 +25,6 @@ Sarah by Wahn begins here.
 [  0: never talked to the player about it                                            ]
 [  1: Sarah thanked the player for the showers                                       ]
 
-test
 
 SarahTalk is a number that varies.
 SarahSlut is a number that varies.
