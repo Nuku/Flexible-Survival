@@ -81,6 +81,8 @@ Open Github Desktop and review your changes. Write a summary (i.e. title, like `
 
 Click on Branch -> Create pull request. It will open the Github site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the Github site.
 
+Then just wait for one of the maintainers to accept your pull request! If it gets accepted, you likely won't have to do anything and you'll see your changes in the next push.
+
 ## Questions?
 Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!
 https://discordapp.com/channels/333559467218173953/362740874683219968
