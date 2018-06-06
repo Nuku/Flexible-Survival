@@ -1,7 +1,11 @@
 @echo off
 echo [INFO] Starting...
+echo [INFO] Backing up .ctags to .ctags_old in user folder
+copy /Y "%HOMEPATH%\.ctags" "%HOMEPATH%\.ctags_old"
 echo [INFO] Copying .ctags to user folder
 copy /Y ".ctags" "%HOMEPATH%\.ctags"
+echo [INFO] Backing up story.ni to story_old.ni in Inform project folder
+copy /Y "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story_old.ni"
 echo [INFO] Copying story.ni to Inform project folder
 copy /Y "Inform\story.ni" "%HOMEPATH%\Documents\Inform\Projects\Flexible Survival.inform\Source\story.ni"
 
