@@ -160,7 +160,7 @@ when play ends:
 		say "NA." [placeholder for bound state loss]
 
 to ebwhelphijackroutine:
-	say "[line break]";
+	LineBreak;
 	if ebwhelphijack is 1 and cunts of player is 0:
 		say "[italic type]Your lack of a vaginal passage causes you to feel as though your insides are shifting in strange and somewhat uncomfortable ways...[roman type][line break]";
 		now preghijack is false;

@@ -777,7 +777,7 @@ instead of trading the pomegranate seed when the current action involves the Eri
 		remove Eric from play;
 		if CarlEricInteraction > 0: [Carl knows Eric]
 			now CarlEricaInteraction is 1; [Carl knew Erica as Eric]
-		if David is in bunker:
+		if David is in Bunker:
 			now lust of Erica is 50;
 
 Section 3 - Fucking Eric

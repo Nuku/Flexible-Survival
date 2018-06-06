@@ -332,7 +332,7 @@ to DescriptionDisplay:
 		if descmod of x is "", next;
 		if placement of x is "end":
 			say " [descmod of x]";
-	say "[line break]";
+	LineBreak;
 	if cocktext is not empty:
 		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";

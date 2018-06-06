@@ -162,7 +162,7 @@ When Play begins:
 Section 3 - Miscellaneous
 
 to ebgatorhijackroutine:
-	say "[line break]";
+	LineBreak;
 	if ebgatorhijack is 1 and cunts of player is 0:
 		say "[italic type]Your lack of a vaginal passage causes you to feel as though your insides are shifting in strange and somewhat uncomfortable ways...[roman type][line break]";
 		now preghijack is false;

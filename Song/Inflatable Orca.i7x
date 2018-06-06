@@ -112,7 +112,7 @@ to orcabind:
 					if the player's command matches "[number]":
 						now keychar is "[number understood]";
 				if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle": [player picked struggle]
-					say "[line break]";
+					LineBreak;
 					increase struggleatt by 1;
 					if struggleatt < boundsegment: [Determines if the cumulative "struggle attribute" < or equal to bound stage. If equal to, the player escapes. Each orgasm will remove a tick of struggleatt.]
 						if orcaintense is 1:
@@ -125,7 +125,7 @@ to orcabind:
 							say "     [one of]The orca's hold growing frighteningly strong now, you give it your all to push the sex-crazed cetacean away[or]The light of the outside world growing dim, you try to push and punch at the orca above you, struggling wildly to escape[or]With your window of escape growing more and more narrow, you give it your all to push up against your insistent lover[at random].";
 						else:
 							say "     [one of]You briefly attempt to struggle, though the constant influx of gas leaves you feeling too aroused and weak to continue[or]Overwhelmed by the heady, arousing kiss, you give a token attempt to wiggle free from the orca above you[if cocks of player > 0]. You're quickly distracted by another squeeze around your length, moaning into her welcoming maw[end if][or]Dazed and confused, you try to fight against the orca's overwhelming influence, head spinning with lustful arousal[or]Trapped against the orca in the bondage bag, you give a feeble attempt to push her away, hoping against hope that you'll successfully pry free[at random].";
-						say "[line break]";
+						LineBreak;
 						orcasanitypassive;
 						orcalust;
 					else: [player escapes the bind]
@@ -141,7 +141,7 @@ to orcabind:
 							say "     By some miraculous fluke, your aimless blows land just right to pop one of the orca's seams. She doesn't seem to notice what happened at first, too busy filling your lungs with arousing, mild-altering gas, but soon she gives a surprised trill at the feeling of her body deflating above you. She pulls her maw back, panicking as she tries to use her stumpy flippers to cover the escaping air.";
 							say "     Mustering what little will you have left, you drive blow after vengeful blow against the orca's hide, many of them glancing off her cum-slick form. Finally, both her and the bag around you deflate enough to position a leg beneath the creature's form and forcibly push her off. She tries in vain to crawl back to you, to complete your encasement, but soon she's reduced to a pile of damp, squirming rubber on the swaying floor of the castle. You count your lucky stars that you didn't become her eternal plaything, although your gas-filled mind can't help but dwell on the arousing idea.";
 						say "     Before you leave, you notice the orca's wounds beginning to mend, rippling rubber melting together as it slowly re-inflates. It might be wise to make your escape before it can recover.";
-						say "[line break]";
+						LineBreak;
 						cleanboundmemory;
 						now trixieexit is 1;
 						now orcaintense is 0;
@@ -149,7 +149,7 @@ to orcabind:
 					WaitLineBreak;
 					next;
 				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2": [player picked oblige/abide]
-					say "[line break]";
+					LineBreak;
 					if obliging is true: [oblige]
 						if orcaintense is 1:
 							say "     [one of]Eager to please[or]Too aroused to resist[at random], you [if cocks of player > 0]take hold of the orca's hips and thrust up into the welcoming warmth of her sex, causing her to till and moan in delight[else]drag your tongue along the smooth, elastic walls of the cetacean's sex[end if].";
@@ -169,7 +169,7 @@ to orcabind:
 								say "lap greedily along the walls of her sex[if cunts of player > 0] while fingering your own soaked cunt[end if], breathing deeply of the strong scent of arousal.";
 						else:
 							say "     [one of]Driven by the sudden influx of mind-numbing gas[or]Lost in a haze of wanton desire[at random], you struggle to [one of]find hold of[or]grip[at random] the orca's [one of]cum-slick[or]slickened[at random] hide in [one of]these almost completely sealed quarters[or]the veil of darkness[at random] as [if cocks of player > 0]you fuck her slavering pussy, reaming that cum-stuffed cunt with every ounce of your being. Her deep, slick chalice forms the perfect vise around you, encouraging you to give in, to accept your place as her plaything and eternal slave to the castle[else if cunts of player > 0]you're made to squirm beneath her, fingering your own sopping wet cunt. The slightest caress of your tender folds sends searing jolts of pleasure through your loins, your sex-addled almost looking forward to your fate as the orca's needy little plaything[else]you tremble beneath her, fingering her slippery cunt to show her your appreciation, feeling more and more like the horny, mindless toy you're soon to become[end if].";
-						say "[line break]";
+						LineBreak;
 						now obliging is true;
 						orcasanitypassive;
 						orcalust;
@@ -193,12 +193,12 @@ to orcabind:
 								say "drawing your tongue in broad sweeps along the smooth, elastic walls of her soaking wet sex, its heady scent filling your lungs and mind[if cunts of player > 0] while you finger your own slick cunt[end if].";
 						else:
 							say "     [one of]Driven by the sudden influx of mind-numbing gas[or]Lost in a haze of wanton desire[at random], you struggle to [one of]find hold of[or]grip[at random] the orca's [one of]cum-slick[or]slickened[at random] hide in [one of]these almost completely sealed quarters[or]the veil of darkness[at random] as [if cocks of player > 0]you fuck her slavering pussy. Her deep, slick chalice forms the perfect vise around you, encouraging you to give in to, to accept your place as her plaything as an eternal slave to the castle[else if cunts of player > 0]you're made to squirm beneath her, jilling yourself in eager anticipation of another powerful, draining climax[else]you tremble beneath her, your fingers brushing along the walls of her slippery cunt by some strange, lustful compulsion[end if].";
-						say "[line break]";
+						LineBreak;
 					WaitLineBreak;
 					next;
 				else: [player picked endure/recover]
 					now enduring is true;
-					say "[line break]";
+					LineBreak;
 					if boundrecover is true: [recover]
 						if orcaintense is 1:
 							increase humanity of player by 1;
@@ -212,7 +212,7 @@ to orcabind:
 							increase humanity of player by 5;
 						if humanity of player > 100, now humanity of player is 100;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity, recovering a small portion of your lost humanity.";
-						say "[line break]";
+						LineBreak;
 						orcalust;
 						now boundrecover is false;
 					else: [endure]
@@ -228,7 +228,7 @@ to orcabind:
 							say "     You try to hold your breath, to refrain from breathing in more of that arousing, mind-numbing gas, but your efforts last only moments before you take another deep inhale of the orca's wonderful gift, lost in your chemical lusts.";
 							if cocks of player > 0:
 								say "All the while, her wonderful pussy continues to squeeze around your achingly hard shaft, urging you to give in, to accept your place beneath her: an eternity of warm, slick, draining release, unbridled by those silly human thoughts and inhibitions. To your eroding mind, the unspoken offer seems more and more appealing.";
-						say "[line break]";
+						LineBreak;
 						orcalust;
 						orcasanitypassive;
 					WaitLineBreak;

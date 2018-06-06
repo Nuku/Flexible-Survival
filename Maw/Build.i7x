@@ -13,7 +13,7 @@ carry out builds:
 	say "Available Designs: [no line break]";
 	repeat with x running through valid construct:
 		if x is complete, next;
-		say "[line break]";
+		LineBreak;
 		say "[x]([progress of x]/[cost of x])[if building of blueprints is x](building construction)[end if][no line break]";
 	say "To begin a new build, type [bold type]build (building) at (direction)[roman type].";
 

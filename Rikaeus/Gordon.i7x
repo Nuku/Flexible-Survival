@@ -37,7 +37,7 @@ instead of conversing the Gordon:
 		say "[GordonTalkMenu]";
 
 to say GordonTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you wish to talk about with the monkey?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -136,7 +136,7 @@ instead of fucking Gordon:
 		say "[GordonSexMenu]";
 
 to say GordonSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[

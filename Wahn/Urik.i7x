@@ -263,7 +263,7 @@ to say UrikTalk4: [talk about Eric]
 
 Section 3 - Events
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

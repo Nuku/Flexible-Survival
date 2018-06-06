@@ -1,5 +1,5 @@
 Version 2 of Dominick by Stripes begins here.
-[ Version 2.1 - Beta+Husky 3some scene ]
+[ Version 2.1 - Beta+Husky Threesome scene ]
 [ Version 3 Forced Beta/Omega Scenes and Forced Breederslut TF by Vervaine]
 
 "Adds an ultra-dominant male Husky NPC to Flexible Survival."
@@ -250,13 +250,13 @@ to say dominick_sexmenu:
 				choose a blank row in table of fucking options;
 				now sortorder entry is 90;
 				if libido of Dominick is 1:			[last capture was Female Husky]
-					now title entry is "Female Husky 3some";
+					now title entry is "Female Husky Threesome";
 					now description entry is "have a threesome with the recently captured husky";
 [				else if libido of Dominick is 2:			[last capture was Pit Bull]
-					now title entry is "Pit Bull 3some";
+					now title entry is "Pit Bull Threesome";
 					now description entry is "have a threesome with the recently captured pit bull";
 				else if libido of Dominick is 3:			[last capture was Pink Poodle]
-					now title entry is "Pink Poodle 3some";
+					now title entry is "Pink Poodle Threesome";
 					now description entry is "have a threesome with the recently captured poodle";]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -284,8 +284,8 @@ to say dominick_sexmenu:
 					say "[sexwithDominick_05]";
 				else if nam is "Beta training":
 					say "[dom_betatraining]";
-				else if nam is "Female Husky 3some" or nam is "Pit Bull 3some" or nam is "Pink Poodle 3some":
-					say "[dom_captured3some_00]";
+				else if nam is "Female Husky Threesome" or nam is "Pit Bull Threesome" or nam is "Pink Poodle Threesome":
+					say "[dom_captured_threesome_00]";
 [				else if nam is "Omega training":
 					say "[dom_omegatraining]";]
 	infect "Breederslut";
@@ -351,7 +351,7 @@ to say ForcedSubtoDomSexMenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[title entry]: [description entry].";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -363,7 +363,7 @@ to say ForcedSubtoDomSexMenu:
 					say "[ForcedSubToDomSex3]";
 				if (nam is "Beta Doggy Training"):
 					say "[ForcedSubToDomSex4]";
-				if (nam is "Omega Doggy Train"):
+				if (nam is "Omega Doggy Training"):
 					say "[ForcedSubToDomSex5]";
 				if (nam is "Doggy Anal"):
 					say "[ForcedSubToDomSex6]";
@@ -539,7 +539,7 @@ to say dom_betatraining:
 	now XP of Dominick is 0;
 	now libido of Dominick is 0;
 
-to say dom_captured3some_00:
+to say dom_captured_threesome_00:
 	say "     Asking Dom if [one of]your most recent gift[or]your most recent recruit[or]his newest pet[at random] arrived, he smiles. 'The [if libido of Dominick is 1]husky girl? Yes, she's quite nice[else if libido of Dominick is 2]pit bull? Yes, she's quite spunky[else if libido of Dominick is 3]pretty poodle? Yes, she's quite beautiful[end if]. I take it you would like to see her?' he says. Not bothering to await your response, he gives a simple motion to one of his display girls, who giggles and heads to the back.";
 	say "     While she's fetching the [if libido of Dominick is 1]husky[else if libido of Dominick is 2]pit bull[else if libido of Dominick is 3]poodle[end if], you get presented with Dom's cock and told to suck him in preparation. You do so eagerly, moaning softly as you take his potent rod into your mouth. You lick and suck on it, doing your best to please the alpha stud. You lavish attention upon his spire, working your tongue up and down his length from thick knot to tapered, drooling tip.";
 	WaitLineBreak;

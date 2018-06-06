@@ -890,7 +890,7 @@ The automap size is a number that varies. The automap size is usually 9. When pl
 
 To say (n - a number) blank lines:
 	while n > 0:
-		say "[line break]";
+		LineBreak;
 		decrease n by 1.
 
 Section 5 - Hyperlink specific stuff (for use with Basic Hyperlinks by Emily Short)

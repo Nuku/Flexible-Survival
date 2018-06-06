@@ -163,7 +163,7 @@ Instead of asking Ammy about "contact/Contact":
 
 Instead of asking Ammy about "help":
 	say "     'Aww, hope I didn't confuse you! Here are some tips I can give you,' Ammy says, handing you a small notecard with a little heart drawn onto it.";
-	say "[line break]";
+	LineBreak;
 	say "     1 - I don't always have something new to say to you lovely! Sometimes you just have to wait a day... or a turn (whatever this is!) until I have something new for you.";
 	say "     2 - If you want to stay in touch with me, just ask me about contact! You might be surprised.";
 	say "     3 - 'Oh, and if you want to reset me just type [']ask Ammy about Debug_Startover[']!'";
