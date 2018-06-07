@@ -45,7 +45,7 @@ Package Keyboard Shortcuts:
 This package will show a list of definitions on the right-hand side. Try opening `Sarah.i7x` as an example! Press `CTRL+SHIFT+O` to toggle whether the panel should appear. Check out the package settings if you want to customize some more.
 
 Package Keyboard Shortcuts:
-`CTRL+SHIFT+O`: Toggle whether the panel appears.
+`CTRL+ALT+O`: Toggle whether the panel appears.
 
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.
