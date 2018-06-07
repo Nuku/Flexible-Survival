@@ -2585,8 +2585,7 @@
 |Anonymous|Messy Pig For Fs|messypigaltorgasm|value|
 |Stripes|Piggy|20140908213124/829:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|20140908213124/3820:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Elf|elfenc|value|
-|Nuku Valente|Elf|Elfdefeat|value|
+|Nuku Valente|Elf|ElfEncounters|value|
 |Stripes|Cougar|20140908213124/2269:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cougar|cougarfight|value|
 |Stripes|Megakitty For Fs|20140908213124/3167:Mon 8 September 2014 21:31|indexing|
