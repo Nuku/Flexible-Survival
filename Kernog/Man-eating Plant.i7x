@@ -190,7 +190,7 @@ to manEatingPlantVore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 3:
 					say "     You push with all your strength against the tight material. Fortunately for you, it is not completely sealed around your body, thanks to the small airhole, and this permits you to use the small leeway to give you more liberty.";
@@ -210,19 +210,19 @@ to manEatingPlantVore:
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     Basking in the pleasurable sensation of the vacuum seal over your skin, you grind your [if player is male]cock[else]pussy[end if] against your prison, while taking big breathes of the pleasure-inducing air circulating inside the plant.";
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
 					say "     Another maddening contraction around your groin has you deem your current efforts to be useless, and you decide to stop struggling.";
 					increase lustatt by 7 + (lustadjust * 2);
-				say "[line break]";
+				LineBreak;
 				wyvhumanityroll;
 				wait for any key;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
@@ -231,7 +231,7 @@ to manEatingPlantVore:
 					if humanity of player > 100, now humanity of player is 100;
 				else:
 					say "     You take a moment to catch your breath, and try your best to ignore the addling effects of the pod's silky surface on your skin and the dizzling smell of the air provided to your prison.";
-				say "[line break]";
+				LineBreak;
 				increase lustatt by 3 + lustadjust;
 				wyvhumanityroll;
 				wait for any key;

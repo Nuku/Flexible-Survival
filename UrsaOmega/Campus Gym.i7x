@@ -1,6 +1,7 @@
 Campus Gym by UrsaOmega begins here.
-[Version 1 - first release]
-[Adds a gym to the campus where you can boost your stats and (of course) have sweaty sex]
+[ Version 1 - First release - UrsaOmega ]
+
+"Adds a gym to the campus where you can boost your stats and (of course) have sweaty sex."
 
 [
 ***HP States of Randy***
@@ -157,12 +158,12 @@ to say strtraining:
 	decrease freecred by workoutprice;
 	if strength of player < 18:
 		say "     You lift for what feels like hours, toiling under Randy's guidance to work your various muscle groups out. By the time you're finished, you feel like your limbs are made of jelly. You know that after you're done wincing, you'll be a bit stronger.";
-		say "[bold type]Your strength has increased by 1![roman type]";
+		say "[bold type]Your strength has increased by 1![roman type][line break]";
 		increase strength of player by 1;
 		increase workoutprice by 35;
 	else:
 		say "     You lift for what feels like hours under Randy's approving observation, relishing the tense-relax rhythm of your muscles as you hoist an increasingly heavy series of weights. You feel victorious as you lift the final, heaviest one, the burn in your limbs only serving to drive you to greater feats of strength. Randy, grinning from your performance, give you a pat on the back, and you feel ready to take on the world!";
-		say "[bold type]Your morale has increased by 5![roman type]";
+		say "[bold type]Your morale has increased by 5![roman type][line break]";
 		increase morale of player by 5;
 	now lastworkout is turns;
 	follow the turnpass rule;
@@ -179,13 +180,13 @@ to say dextraining:
 	decrease freecred by workoutprice;
 	if dexterity of player < 18:
 		say "     After the session, you feel much more flexible than when you started... Not to mention much more relaxed.";
-		say "[bold type]Your dexterity has increased by 1![roman type]";
+		say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 		increase dexterity of player by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
 	else:
 		say "     After the session, you feel proud that you were able to handle the session with ease; you feel centered, both physically and mentally, ready to take on any challenges today throws at you.";
-		say "[bold type]Your morale has increased by 5![roman type]";
+		say "[bold type]Your morale has increased by 5![roman type][line break]";
 		increase morale of player by 5;
 		LineBreak;
 	now lastworkout is turns;

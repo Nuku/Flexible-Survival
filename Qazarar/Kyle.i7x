@@ -330,7 +330,7 @@ instead of fucking the Kyle:
 		say "[KyleSexMenu]";
 
 to say KyleSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

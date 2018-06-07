@@ -320,37 +320,37 @@ Instead of fucking David:
 			now sortorder entry is 5;
 			now description entry is "Fill the young soldier's ass with your cock.";
 		[]
-		if (Dexterity of David is 2 and David is in bunker and Sven is in bunker):
+		if (Dexterity of David is 2 and David is in Bunker and Sven is in Bunker):
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome with Sven";
 			now sortorder entry is 6;
 			now description entry is "Let the young soldier fuck Sven's ass.";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (David gives oral)";
 			now sortorder entry is 7;
 			now description entry is "Give them some time to have fun with each other. (David goes down on Brutus)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (BJ by Brutus)";
 			now sortorder entry is 8;
 			now description entry is "Give them some time to have fun with each other. (Brutus blows David)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (Brutus gets fucked)";
 			now sortorder entry is 9;
 			now description entry is "Give them some time to have fun with each other. (David fucks Brutus)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (David gets fucked)";
 			now sortorder entry is 10;
 			now description entry is "Give them some time to have fun with each other. (Brutus fucks David)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome with Brutus & David (DP Brutus)";
 			now sortorder entry is 11;
@@ -1037,7 +1037,7 @@ after of going to Parade Ground while thirst of David is 5 and HP of David is 3:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.'";
 
-after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in bunker and HP of Sven >= 8 and HP of Sven < 50:
+after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 0) WALKIN[line break]";
 	if HP of Sven < 30: [pet Sven]
@@ -1075,7 +1075,7 @@ after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and 
 			say "     Walking over towards David's bed, you shake your head at Sven as he sits down next to the sleeping man, but the snow leopard doesn't really notice it, being all eyes for the handsome soldier. He has already started to gently tug the blanket off David by the time you get there, revealing part of the man's naked, muscular chest. Then you're up close and in Sven's face, doing your best to keep quiet and not wake David as you give the snow leopard a clear head-shake in negation and make shooing motions away from the soldier.";
 			say "     Sven looks from you to the sleeping man, pointing at the two of you and pantomiming with his hands gripping each other, then shrugs and gives a bit of a disappointed huff. He throws you a somewhat reluctant nod, then leans in and teasingly runs his hand over the curve of David's erection, making the man moan in his sleep. After steeling that little touch, the snow leopard gives David a last hungry look before flouncing away. This leaves you standing next to a still sleeping soldier, leaving the man none the wiser that he almost got a 'happy ending' to his dream from your feline friend.";
 
-after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in bunker and HP of Sven >= 8 and HP of Sven < 50:
+after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 1) WALKIN[line break]";
 	if HP of Sven < 30: [pet Sven]
@@ -1108,7 +1108,7 @@ after of going to Bunker while thirst of David is 5 and HP of David is 4:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
-after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
+after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	project the figure of David_face_icon;
@@ -1146,7 +1146,7 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP 
 	else:
 		say "ERROR-Eric-[HP of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
+after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	project the figure of David_face_icon;
@@ -1158,7 +1158,7 @@ after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";
 	now lust of Erica is 1;
 
-after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
+after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1166,7 +1166,7 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP 
 	say "     [DavidEricTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1:
+	if player is in Bunker and Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricTalk]";
@@ -1176,7 +1176,7 @@ An everyturn rule: [you can just wait for them to talk too]
 		now libido of David is 81; [The urges push through]
 		now BrutusEscalationTimer is 0;
 
-after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
+after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/Erica TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1184,7 +1184,7 @@ after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP
 	say "     [DavidEricaTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1:
+	if player is in Bunker and Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1:
 		say "     As you spend some time in the bunker, you notice David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricaTalk]";

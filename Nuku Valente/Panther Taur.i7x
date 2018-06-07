@@ -251,7 +251,7 @@ When Play begins:
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]feline[or]panthertaur[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

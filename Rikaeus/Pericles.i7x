@@ -171,7 +171,7 @@ instead of conversing the Pericles:
 		say "[PericlesTalkMenu]";
 
 to say PericlesTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you wish to talk about with the Spartan?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -239,7 +239,7 @@ instead of fucking Pericles:
 		say "[PericlesSexMenu]";
 
 to say PericlesSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

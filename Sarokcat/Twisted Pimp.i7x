@@ -121,7 +121,7 @@ the usedesc of estrogen pill is "[estrogen pill use]";
 
 before using a grab object(called x):
 	if x is estrogen pill:
-		say "[line break]";
+		LineBreak;
 		if cocks of player > 0:
 			say "As you move to slip the pill in your mouth, you feel an uneasy twinge run through your cock[smn]. Are you sure to still want to use it?";
 			if the player consents:

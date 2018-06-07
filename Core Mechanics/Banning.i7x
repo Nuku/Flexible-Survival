@@ -64,9 +64,10 @@ to new ban menu:
 				break;
 			else:
 				say "Invalid Entry";
+		let turq be number of entries in flaglist;
 		if calcnumber is 0:
 			now nbmexit is 1;
-		else if calcnumber is <= number of entries in flaglist:
+		else if calcnumber <= turq:
 			banchange entry calcnumber of flaglist;
 		else:
 			banchange entry (calcnumber - number of entries in flaglist) of taglist;

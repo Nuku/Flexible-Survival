@@ -230,7 +230,7 @@ carry out muselisting:
 		sort L;
 		repeat with q running through L:
 			say "[link][Q][as]muse [Q][end link]   ";
-		say "[line break]";
+		LineBreak;
 
 Musing is an action applying to one thing.
 

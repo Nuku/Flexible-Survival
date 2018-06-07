@@ -570,7 +570,7 @@ Carry out dumping automap data:
 	repeat with count running from 1 to (map width * map height):
 		increase scan by 1;
 		if scan > map width:
-			say "[line break]";
+			LineBreak;
 			let scan be 1;
 		if map glyph of count is 32:
 			say "... ";
@@ -591,7 +591,7 @@ Carry out dumping automap links:
 	repeat with count running from 1 to (map width * map height):
 		increase scan by 1;
 		if scan > map width:
-			say "[line break]";
+			LineBreak;
 			let scan be 1;
 		if linked room-ID of count is 0:
 			say ".. ";

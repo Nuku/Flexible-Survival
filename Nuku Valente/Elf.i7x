@@ -8,7 +8,7 @@ Version 3 of Elf by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-elfenc is a number that varies. [Elf Encounter, linear memory value]
+elfenc is a number that varies. [Elf Encounter, linear memory value] 
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Elfdefeat is a number that varies.

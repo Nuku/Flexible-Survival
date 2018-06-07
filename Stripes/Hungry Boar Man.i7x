@@ -45,7 +45,7 @@ The conversation of Philip is { "Oink!" }.
 
 instead of conversing Philip:
 	if piginitiation is 2:
-		if player is in bunker:
+		if player is in Bunker:
 			say "     Deciding to give it a shot, you ask Philip if he knows anything about the Phi Iota Gamma fraternity you encountered. 'Ahhh, the mighty Phi Iota Gamma... *oink* *snort* ...those were the days. I was the frat's mud wrestling champ. How do you think I got to be good? Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 			say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
 			say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.'  He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
