@@ -8,6 +8,7 @@ when play begins:
 	add { "Pink Gel" } to infections of girl;
 	add { "Blue Gel" } to infections of guy;
 	add { "Purple Gel" } to infections of hermaphrodite;
+	add { "Pink Gel", "Blue Gel", "Purple Gel" } to infections of humanoid;
 
 to say losetopinkgel: [Loss to Pink Gel.]
 	if inasituation is true:

@@ -7,6 +7,7 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Goo Girl" } to infections of girl;
+	add { "Goo Girl" } to infections of humanoid;
 
 goocolour is a number that varies;
 

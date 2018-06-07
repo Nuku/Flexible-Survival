@@ -4,6 +4,14 @@ Version 2 of Goblin For FS by Blue Bishop begins here.
 
 "Adds a Goblin creature to Flexible Survival's Wandering Monsters table with impregchance"
 
+Section 0 - Flags and Tags
+
+when play begins:
+	add { "Goblin" } to infections of girl;
+	add { "Goblin" } to infections of guy;
+	add { "Goblin" } to infections of humanoid;
+
+
 Section 1 - Monster Responses
 
 gobgender is a number that varies.
@@ -636,7 +644,6 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
-
 
 when play ends:
 	if bodyname of player is "Goblin":

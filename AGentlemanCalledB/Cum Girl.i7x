@@ -9,6 +9,8 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Cum Girl" } to infections of girl;
 	add { "Cum Girl" } to infections of humorous;
+	add { "Cum Girl" } to infections of humanoid;
+
 
 cumgirlfed is a number that varies. cumgirlfed is usually -1.
 

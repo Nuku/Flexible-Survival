@@ -8,7 +8,7 @@ Section 1 - Monster Responses
 
 to say Blobdesc:
 	setmongender 0; [creature is neuter-X]
-	say "The Blob is a large amorphous mass of green and orange good that has collected together from the slime and organic matter of other creatures it has absorbed. Large and unwieldy the mass seems to be somewhat aware of itself, and you by turn, the gel-like creature prepares to defend itself from the biting cold by lashing at everything around it. Out sizing you by almost six times your length, tough enough to break fiber glass, and floating somewhat because of bioelectrical power of the living beings it assembled into itself, the Blob is ready to fight for its life.";
+	say "The Blob is a large amorphous mass of green and orange goo that has collected together from the slime and organic matter of other creatures it has absorbed. Large and unwieldy the mass seems to be somewhat aware of itself, and you by turn, the gel-like creature prepares to defend itself from the biting cold by lashing at everything around it. Out sizing you by almost six times your length, tough enough to break fiber glass, and floating somewhat because of bioelectrical power of the living beings it assembled into itself, the Blob is ready to fight for its life.";
 
 
 to say Blobattack:

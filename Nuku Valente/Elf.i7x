@@ -8,7 +8,7 @@ Version 3 of Elf by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-elfenc is a number that varies. [Elf Encounter, linear memory value] 
+elfenc is a number that varies. [Elf Encounter, linear memory value]
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Elfdefeat is a number that varies.
@@ -83,6 +83,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	add "Wood Elf" to infections of girl;
+	add "Wood Elf" to infections of humanoid;
 	Choose a blank row from Table of random critters;
 	now name entry is "Wood Elf"; [Name of your new Monster]
 	now attack entry is "[one of]The Elf[or]She[at random] [one of]fires an arrow to pin you to the earth by a bit of your attire, pulling close as you try to free yourself to knock you onto your ass[if scalevalue of player > 3] -- a feat particularly impressive for a lady of her size --[end if] before pulling out of range[or]slings a peculiar arrow and fires it directly into your face, it's apparently cloth end puffing out a gust of strange dust to fill your lungs, leaving you fairly disoriented[or]pulls in close to trip you with the end of her bow, laughing and taunting you as you scramble back to your feet[at random]."; [Text used when the monster makes an Attack]

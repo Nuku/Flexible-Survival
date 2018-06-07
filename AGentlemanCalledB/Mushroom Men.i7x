@@ -10,6 +10,7 @@ SporeCloud is a number that varies. SporeCloud is usually 0.
 when play begins:
 	add { "Mushroom Men" } to infections of guy;
 	add { "Mushroom Men" } to infections of humorous;
+	add { "Mushroom Men" } to infections of humanoid;
 
 to say losetoMushroomMen:
 	now SporeCloud is 0;
