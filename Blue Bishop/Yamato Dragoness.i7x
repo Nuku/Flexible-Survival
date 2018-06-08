@@ -294,11 +294,11 @@ to say yamato dragoness desc:
 	say "     [if showlocale is true]Travelling through the park[else]Suddenly[end if], you find yourself beset by a dragoness of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, her [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages her to pursue you on ground, a lascivious hunger agleam in her eyes.";
 
 to say ydskinchange:
-	let tempnum be ydcolour;
-	now ydcolour is a random number between 0 and 2;
-	if ydcolour is tempnum, increase ydcolour by 1;
-	if ydcolour is 3, now ydcolour is 0;
-	say "you find yourself suddenly forced to abide the growth of large, smooth [if ydcolour is 0]red[else if ydcolour is 1]blue[else if ydcolour is 2]green[end if] scales grow upon your back, smaller, coarser yellow scales quickly adorning your front and underside";
+	let tempnum be ydcolor;
+	now ydcolor is a random number between 0 and 2;
+	if ydcolor is tempnum, increase ydcolor by 1;
+	if ydcolor is 3, now ydcolor is 0;
+	say "you find yourself suddenly forced to abide the growth of large, smooth [if ydcolor is 0]red[else if ydcolor is 1]blue[else if ydcolor is 2]green[end if] scales grow upon your back, smaller, coarser yellow scales quickly adorning your front and underside";
 
 
 to say Yamato Dragoness Loss:
@@ -547,20 +547,20 @@ to say YamatF_4: [oral receiving cunt]
 
 to say YamatF_5: [Oral Giving Cunt]
 	say "     Eyeing the dragoness up lewdly, she seems to know what you want without having to ask, lowering herself to lay on the ground and expose her hindquarters for you.";
-	say "     '[one of]Very well[or]As you wish[or]I understand[at random], [one of]you are free to do as you please[or]then it is yours[or]I will humour you[at random]...' Climbing onto the massive beast, she allows you to fondle across her coarse, yellow underside, the serpent's genital slit freely exposed for you to meddle with. Her unyielding lips, though very firm, gradually part around your prodding digits.";
+	say "     '[one of]Very well[or]As you wish[or]I understand[at random], [one of]you are free to do as you please[or]then it is yours[or]I will humor you[at random]...' Climbing onto the massive beast, she allows you to fondle across her coarse, yellow underside, the serpent's genital slit freely exposed for you to meddle with. Her unyielding lips, though very firm, gradually part around your prodding digits.";
 	say "     Awash in a wave of heat, her feminine scent floods the air, your digits slicked by her tainted honey. Even for what little you force down her portal, she remains incredibly tight, visibly affected by your diminutive touch. Shall you be more affectionate? Else you'll keep your distance.";
 	if player consents:
 		say "     Unable to resist the opportunity, you press your body firmly against her draconic lips, [if scalevalue of player < 3]practically as big as you are[else if scalevalue of player is 3]almost as big as you are[else]impressively large even for someone of your size[end if]. Radiating an intense heat, you plunge your tongue in to caress her supple, hidden inner-flesh.";
-		say "     '[one of]Oh[or]Hmm[or]Yes[at random]... [one of]revel in all I have[or]savour your reward[or]enjoy what I have to offer[at random].' The dragoness rumbles lowly as your tongue caresses along the length of her now fluid-slicked opening, taste awash in her sweet flavour. It's not long before your continued, drawn out affections start making a mess of things. Practically swimming in her juices, you can't help but grind your [if cocks of player > 0][cock size desc of player], blatantly aroused cock[smn][else if cunts of player > 0]blatantly wet cunt[sfn][else]genderless crotch[end if] against her coarse scales.";
+		say "     '[one of]Oh[or]Hmm[or]Yes[at random]... [one of]revel in all I have[or]savor your reward[or]enjoy what I have to offer[at random].' The dragoness rumbles lowly as your tongue caresses along the length of her now fluid-slicked opening, taste awash in her sweet fflavor It's not long before your continued, drawn out affections start making a mess of things. Practically swimming in her juices, you can't help but grind your [if cocks of player > 0][cock size desc of player], blatantly aroused cock[smn][else if cunts of player > 0]blatantly wet cunt[sfn][else]genderless crotch[end if] against her coarse scales.";
 		say "     Completely drenched by the stuff, it's very clear your new friend won't be able to hold back much longer. Shall you take the full brunt of her release? Otherwise, you'll try to avoid making any more of a mess of yourself.";
 		if player consents:
 			say "     Tightening your grip, you wrap your lips around the monster's gushing nethers just before she's no longer able to hold back. [if scalevalue of player < 3]You maybe only last a few seconds before you're completely[else if scalevalue of player is 3]You put up a fair effort before you're eventually[else]It's a struggle to keep up with her, just shy of being[end if] overwhelmed by the flood, senses utterly flooded with the sweet taste of her abundant honey.";
-			say "     Completely overtaken by a primal need, it's not long before your [bodytype of player] body, grinding against the dragoness's, is wracked with bliss, [if cocks of player > 0]staining her your own, [cum load size of player] load[else if cunts of player > 0]staining her with your own sexual fluids[else]writhing in an insatiable need[end if]. Once your fervour dies down, you pull away and survey the carnage, utterly drenched in the monster's substantial sex. She seems amused by you.";
-			say "     '[one of]Hmm[or]Ha[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random]... [one of]I think you're deserving of one last favour[or]You probably deserve a little extra[at random].' Lowering her snout, you're quickly assaulted by her large and powerful tongue, slick organ embracing your sullied form, licking clean the obscene mess you've made of yourself. When she's done, you're uncertain if being drenched in the monster's saliva is all that better than her sexual fluids.";
+			say "     Completely overtaken by a primal need, it's not long before your [bodytype of player] body, grinding against the dragoness's, is wracked with bliss, [if cocks of player > 0]staining her your own, [cum load size of player] load[else if cunts of player > 0]staining her with your own sexual fluids[else]writhing in an insatiable need[end if]. Once your fervor dies down, you pull away and survey the carnage, utterly drenched in the monster's substantial sex. She seems amused by you.";
+			say "     '[one of]Hmm[or]Ha[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random]... [one of]I think you're deserving of one last favor[or]You probably deserve a little extra[at random].' Lowering her snout, you're quickly assaulted by her large and powerful tongue, slick organ embracing your sullied form, licking clean the obscene mess you've made of yourself. When she's done, you're uncertain if being drenched in the monster's saliva is all that better than her sexual fluids.";
 		else:
 			say "     Just as she's no longer able to hold back, you try to put at least a little distance between the monster and her aching geyser. Roaring out loudly, her taut portal aches against the open, the air humid with her intense body heat and the scent of her sweet honey.";
-			say "     Unable to hold yourself back in the wake of this display, you're quickly wracked with your own bliss, [if cocks of player > 0]staining her your own, [cum load size of player] load[else if cunts of player > 0]staining her with your own honey[else]writhing in an insatiable need[end if]. Once your fervour dies down, you pull away and observe the end results of your little adventure. Though you managed to avoid getting completely drenched, you're still a mess of the monster's sticky sex. She seems amused by you.";
-			say "     '[one of]Hmm[or]Ha[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random]... [one of]I think you're deserving of one last favour[or]You probably deserve a little extra[at random].' Lowering her snout, you're quickly assaulted by her large and powerful tongue, slick organ embracing your sullied form, licking clean the mess you've made of yourself. When she's done, you're fairly certain that being drenched in the monsters saliva isn't much of an improvement.";
+			say "     Unable to hold yourself back in the wake of this display, you're quickly wracked with your own bliss, [if cocks of player > 0]staining her your own, [cum load size of player] load[else if cunts of player > 0]staining her with your own honey[else]writhing in an insatiable need[end if]. Once your fervor dies down, you pull away and observe the end results of your little adventure. Though you managed to avoid getting completely drenched, you're still a mess of the monster's sticky sex. She seems amused by you.";
+			say "     '[one of]Hmm[or]Ha[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random]... [one of]I think you're deserving of one last favor[or]You probably deserve a little extra[at random].' Lowering her snout, you're quickly assaulted by her large and powerful tongue, slick organ embracing your sullied form, licking clean the mess you've made of yourself. When she's done, you're fairly certain that being drenched in the monsters saliva isn't much of an improvement.";
 		say "     Laughing at you, the dragoness finally takes to the air and departs, leaving you to dry off and go back from whence you came.";
 	else:
 		say "     Carefully, you work both hands past her draconic lips, [if scalevalue of player < 3]practically as big as you are[else if scalevalue of player is 3]almost as big as you are[else]impressively large even for someone of your size[end if]. Radiating an intense heat, you caress your digits along her supple, hidden inner-flesh.";
@@ -571,7 +571,7 @@ to say YamatF_5: [Oral Giving Cunt]
 			say "     Once it starts to subside, she quickly pulls her head back into the air, practically fuming over what has transpired and desperately trying to clean her face off while still looking at least somewhat dignified.";
 			say "     '[one of]Agh[or]Oh[or]Hmpf[at random], fool! [one of]You think I will tolerate this embarrassment[or]Make a mockery of me, will you[or]You think my patience is endless[at random]? [one of]Pray we never meet again[or]I won't forget this trespass[at random]!' You're able to jump off her before she takes to the air, the dragoness grumbling loudly to herself as she bolts off into the distance. You gather your things and clean yourself off before you head back from whence you came, no doubt amused by the ultimate outcome of that exchange.";
 		else:
-			say "     Just as she's no longer able to hold back, you try to put at least a little distance between the monster and her aching geyser. Roaring out loudly, her taut portal aches against the open, the air humid with her intense body heat and the scent of her sweet honey. Once her fervour dies down, you step off and make an effort to clean yourself before the dragoness takes to the air once more.";
+			say "     Just as she's no longer able to hold back, you try to put at least a little distance between the monster and her aching geyser. Roaring out loudly, her taut portal aches against the open, the air humid with her intense body heat and the scent of her sweet honey. Once her fervor dies down, you step off and make an effort to clean yourself before the dragoness takes to the air once more.";
 			say "     '[one of]Hmm[or]Yes[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random].' Slowly, the creature flies off into the distance, no doubt satisfied by your endeavors. You gather your things and set off to return from whence you came.";
 
 Section 2 - Monster Insertion
@@ -589,7 +589,7 @@ When Play begins:
 	now desc entry is "[yamato dragoness desc]";
 	now face entry is "distinctly draconic; long-snouted, a pair of curious, lengthy whiskers at its tip, and a stout pair of antlers and a golden mane at the crown, flowing down to your neck";
 	now body entry is "elongated, serpentine with stout, taloned fore and hind limbs and a fin-like, golden mane across its length";
-	now skin entry is "smooth, [if ydcolour is 0]red[else if ydcolour is 1]blue[else if ydcolour is 2]green[end if]-scaled with a coarse yellow underside adorning your";
+	now skin entry is "smooth, [if ydcolor is 0]red[else if ydcolor is 1]blue[else if ydcolor is 2]green[end if]-scaled with a coarse yellow underside adorning your";
 	now tail entry is "You wield a very long, reptilian tail with an impressive, fin-like mane of golden hair at the end.";
 	now cock entry is "draconic, pink, and [one of]strange[or]bulbous[at random]ly ribbed";
 	now face change entry is "you suddenly feel overwhelmed by a sudden change, face elongating into a proud, draconic snout, a pair of very lengthy whiskers sprouting from its tip. Two short antlers and a mane of golden hair grow out from the back of your head";
@@ -747,5 +747,4 @@ to YamatFvore:
 				next;
 			say "Invalid action.";
 
-[ Edit this to have the correct name as well]
-Yamato Dragoness For FS ends here.
+Yamato Dragoness ends here.
