@@ -60,7 +60,7 @@ Version 1 of Erica by Wahn begins here.
 
 CarlEricaInteraction is a number that varies.
 
-instead of going down from the Gray Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
+instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
@@ -573,10 +573,10 @@ to say EricaSex8_2_Female: [Erica]
 
 Section 4 - Events
 
-instead of navigating Gray Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FELINOID SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see the large shape of Klauz silently stalk after Erica. Knowing the large cat's libido-driven behavior, you see where this might lead...";
@@ -607,10 +607,10 @@ instead of navigating Gray Abbey Library while (level of Erica is 0 and Felinoid
 		now level of Erica is 1;
 		now lastfuck of Erica is turns;
 
-instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FELINOID SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with Klauz on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
@@ -618,7 +618,7 @@ instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and 
 	say "     The animalistic coupling of the felinoid and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Klauz drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Gray Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-FELINOID-SEX WALKIN [line break]";
@@ -640,10 +640,10 @@ instead of going inside from Gray Abbey Library while (Level of Erica > 0 and Le
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
-instead of navigating Gray Abbey Library while (XP of Erica is 0 and Fang is in Gray Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FANG SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see Fang's furred shape silently stalk after Erica. Knowing that he's a wild and horny beast, you see where this might lead...";
@@ -736,16 +736,16 @@ instead of navigating Gray Abbey Library while (XP of Erica is 0 and Fang is in 
 [   6: Carl fucked Erica                                             ]
 [  50: player told Carl to stop pursuing Erica                       ]
 
-instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricaMeetsCarl]";
 
-instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricaMeetsCarl]";
@@ -755,8 +755,8 @@ to say EricaMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -774,10 +774,10 @@ instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Ab
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -795,10 +795,10 @@ instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is i
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 5: [first time]
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL FUCK - FIRST TIME - CarlEricInteraction: [CarlEricInteraction]";
@@ -1203,10 +1203,10 @@ to say EricaCarlThreesome8: [player rides Carl's cock while Eric straddles his f
 	say "     <This scene is WIP, please have some patience for the next update>";
 
 [
-instead of navigating Gray Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA Fang SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with your Fang companion on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
@@ -1214,7 +1214,7 @@ instead of navigating Gray Abbey Library while (Fang Companion is tamed and XP o
 	say "     The animalistic coupling of Fang and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Fang drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, Fang isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Gray Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-Fang-SEX WALKIN [line break]";

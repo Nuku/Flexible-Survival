@@ -115,7 +115,7 @@ to say AresWalkMenu:
 			if the player consents:
 				now sextablerun is 1;
 				say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
-				move player to Gray Abbey Library;
+				move player to Grey Abbey Library;
 				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";

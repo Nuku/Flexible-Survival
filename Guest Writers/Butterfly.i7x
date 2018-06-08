@@ -731,7 +731,7 @@ to say butterfly grove scene:
 		increase perception of player by 2;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You decide to head back to the library.";
-		move the player to gray abbey library;
+		move the player to Grey Abbey library;
 		follow the turnpass rule;
 		stop the action;
 	else if ButterflyRaped > 1 and ButterflyPregnant is False:
@@ -926,12 +926,12 @@ to say butterfly grove scene:
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
 	say "You decide to head back to the library.";
-	move the player to gray abbey library;
+	move the player to Grey Abbey library;
 	follow the turnpass rule;
 
 After examining butterfly grove:
 	say "You head home.";
-	move the player to Gray Abbey Library;
+	move the player to Grey Abbey Library;
 
 
 Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttravel. It is private.

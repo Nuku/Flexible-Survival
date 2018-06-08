@@ -167,7 +167,7 @@ Section 4 - Everyturn Rule (maturation and departure)
 an everyturn rule:
 	if HP of Gwen >= 3 and HP of Gwen <= 60:
 		increase HP of Gwen by 1;
-		if HP of Gwen is 61 and the player is in the Back Of The Library or the player is in the Gray Abbey Library and skipturnblocker is 0:
+		if HP of Gwen is 61 and the player is in the Back Of The Library or the player is in the Grey Abbey Library and skipturnblocker is 0:
 			say "     You notice Meredith[if Coleen is bunkered], Vanessa and Coleen[else] and Vanessa[end if] hugging Gwen repeatedly. This isn't too out of the ordinary, but Gwen's laden down with a pack of gear and has pulled on the top half of her jumpsuit loosely over top of her bikini. Heading over, you ask them what's up.";
 			say "     'Oh, I was just about to come see you,' Gwen says with a sexy smile. 'Aunt Van- I mean the sarge has a mission for me. So I'll be heading out. There's some... scouting she needs me to take care of. I probably won't be back here, but hopefully I'll still get to see you once this mess is all done,' she says, running her hands down your side before grabbing your ass.";
 			say "     There's another long round of goodbyes and tears are shed, mostly by the [']mother['] and [']daughter['], though there's a promise by Meredith to see her as soon her work's done. You try to get some more info out of Vanessa, but she says it's military secrets and winks coyly. Still, it doesn't sound like it's anything too dangerous for the sexy centaur - well, at least no more dangerous than any trip out into the city can be. You wish her the best of luck and hope to see her again, watching that sexy ass of hers as she leaves.";

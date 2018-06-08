@@ -341,16 +341,16 @@ to say Apartment2bLooting:
 Army Convoy is a situation.
 The sarea of Army Convoy is "Nowhere".
 
-instead of going to Gray Abbey Library while (Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
-	move player to Gray Abbey Library;
+instead of going to Grey Abbey Library while (Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
+	move player to Grey Abbey Library;
 	say "     Moving to the main floor of the library once more, you are distracted from whatever you were intent on doing by something you spot from the corner of your eye. It appears you got a visitor: Through the wood and glass doors at the entrance of the building, you see someone outside, leaning against a side-wall of the front steps. Glancing over there, you are pleased to see it is someone you know - Brennan, the human survivor you've had several encounters with by now. He raises a hand and waves as he sees that you noticed him, apparently wanting to talk. You quickly walk over and step outside.";
 	ArmyConvoyEvent;
 
-instead of navigating Gray Abbey Library while (Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
-	say "     Making your way back to the entrance of the Gray Abbey Library once more, you set a first foot on the stairs leading up to the front doors and are surprised to find someone there, waiting for you. Leaning against the side-wall of the stairs is Brennan, the human survivor you've had several encounters with by now. He raises a hand to wave and calls out a greeting as he recognizes you in turn.";
+	move player to Grey Abbey Library;
+	say "     Making your way back to the entrance of the Grey Abbey Library once more, you set a first foot on the stairs leading up to the front doors and are surprised to find someone there, waiting for you. Leaning against the side-wall of the stairs is Brennan, the human survivor you've had several encounters with by now. He raises a hand to wave and calls out a greeting as he recognizes you in turn.";
 	ArmyConvoyEvent;
 
 Instead of resolving a Army Convoy:
@@ -405,8 +405,8 @@ instead of sniffing signal flag:
 	say "     Doesn't smell like anything really. Just a piece of fabric.";
 
 to say SignalFlagUse:
-	if player is not in Gray Abbey Library:
-		say "     Brennan told you to hang this up to signal him if you want to meet at the Gray Abbey Library. Would be best to just start out at the library itself, hang it up and wait for him...";
+	if player is not in Grey Abbey Library:
+		say "     Brennan told you to hang this up to signal him if you want to meet at the Grey Abbey Library. Would be best to just start out at the library itself, hang it up and wait for him...";
 	else:
 		if BrennanRelationship is 5: [player postponed the convoy trip]
 			say "     Brennan said to signal him when you're ready for your trip to the army convoy...";
@@ -463,16 +463,16 @@ Thanks & Cherries is a situation.
 Thanks & Cherries is resolved.
 The sarea of Thanks & Cherries is "Nowhere".
 
-instead of going to Gray Abbey Library while (Thanks & Cherries is not resolved and BrennanRelationship is 6 and a random chance of 1 in 2 succeeds):
-	move player to Gray Abbey Library;
+instead of going to Grey Abbey Library while (Thanks & Cherries is not resolved and BrennanRelationship is 6 and a random chance of 1 in 2 succeeds):
+	move player to Grey Abbey Library;
 	say "     Moving to the main floor of the library, you see Brennan coming up the stairs to the front door and wander over there to greet him. ";
 	ThanksAndCherriesEvent;
 
-instead of navigating Gray Abbey Library while (Thanks & Cherries is not resolved and BrennanRelationship is 6 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Thanks & Cherries is not resolved and BrennanRelationship is 6 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
-	say "     Making your way back to the entrance of the Gray Abbey Library once more, you set a first foot on the stairs leading up to the front doors and see Brennan already there, waiting for you. ";
+	move player to Grey Abbey Library;
+	say "     Making your way back to the entrance of the Grey Abbey Library once more, you set a first foot on the stairs leading up to the front doors and see Brennan already there, waiting for you. ";
 	ThanksAndCherriesEvent;
 
 Instead of resolving a Thanks & Cherries:

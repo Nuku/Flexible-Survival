@@ -868,7 +868,7 @@ to say VikingDuelEscape:
 			break;
 	now area entry is "Nowhere";
 	now VikingRelationship is 100;     [the Vikings are gone, having sailed further down the coast after their fight with the gangs]
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 
 to say VikingDuelVictory:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]

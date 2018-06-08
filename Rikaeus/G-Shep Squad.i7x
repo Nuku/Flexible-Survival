@@ -76,8 +76,8 @@ The description of K9 Vans is "[k9vansdesc]".
 
 to say k9vansdesc:
 	if gshepsquad < 4:
-		say "ERROR - You shouldn't be able to get here yet. Transporting back to Gray Abbey Library.";
-		move player to Gray Abbey Library;
+		say "ERROR - You shouldn't be able to get here yet. Transporting back to Grey Abbey Library.";
+		move player to Grey Abbey Library;
 		now K9 Vans is unknown;
 	else if gshepsquad is 4:
 		catdogstatecheck;

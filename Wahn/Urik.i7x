@@ -181,7 +181,7 @@ instead of conversing Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Send him to the library";
 		now sortorder entry is 2;
-		now description entry is "Send Urik to stay with you in the Gray Abbey Library";
+		now description entry is "Send Urik to stay with you in the Grey Abbey Library";
 	[]
 	if HP of Urik is 1: [Urik is in the library]
 		choose a blank row in table of fucking options;
@@ -263,10 +263,10 @@ to say UrikTalk4: [talk about Eric]
 
 Section 3 - Events
 
-instead of navigating Gray Abbey Library while (Urik is in Sitting Area and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Urik grabs Candy - CandyUrikInteraction: [CandyUrikInteraction], lastCandyUrikInteraction: [lastCandyUrikInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc slave Urik is striding up towards Candy in a purposeful manner, showing a very respectable bulge in his stretchy stripper-pants.";

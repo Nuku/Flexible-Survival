@@ -646,7 +646,7 @@ Section 6 - Endings
 
 When play ends:
 	if Sandra is in the Bunker:
-		if Fang is in the Gray Abbey Library and HP of Fang is 3 and ColeenAlpha is 0 and humanity of player < 10:
+		if Fang is in the Grey Abbey Library and HP of Fang is 3 and ColeenAlpha is 0 and humanity of player < 10:
 			[succumb: alpha Fang takes uncontested Sandra ]
 			increase score by 0; [do nothing statement]
 		else if HP of player > 0:

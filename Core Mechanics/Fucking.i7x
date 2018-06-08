@@ -62,7 +62,7 @@ The conversation of Testerbot is { "Disgusting!" }.
 lastfuck of Testerbot is normally 555.
 
 to say testerbotdesc:				[Description]
-	say "Testerbot is a boxy robot with a collection of orifices and probes built in, created as part of Dr Matt's continued testing of the infection. There are several buttons, dials and lights on its chest, as well as a pair of handles built onto its sides and another handle of the top of its head. There are several sticky stains on the robot's aluminum chassis. Despite the grin stickered on its face, it is quite aggressively slumped in the corner.";
+	say "Testerbot is a boxy robot with a collection of orifices and probes built in, created as part of Dr Matt's continued testing of the infection. There are several buttons, dials and lights on its chest, as well as a pair of handles built onto its sides and another handle of the top of its head. There are several sticky stains on the robot's aluminium chassis. Despite the grin stickered on its face, it is quite aggressively slumped in the corner.";
 
 instead of conversing the Testerbot:	[Talking]
 	say "[one of]'Why was I programmed to feel pain?'[or]'You organic creatures are disgusting.'[or]'Why do you lifeforms make so many fluids?'[or]'Why must you use me to satisfy your squishy, biological urges?'[or]'I am unfortunately programmed to submit to your repulsive, animal desires,'[at random] the robot complains.";

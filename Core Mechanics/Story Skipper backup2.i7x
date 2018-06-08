@@ -23,18 +23,18 @@ To savetrix:
 			append "[name entry]|[number]}" to the File of invsave;
 
 
-Trixie is a person. Trixie is in Gray Abbey Library.
+Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
+The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
 The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
-	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
-	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word. Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
+	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'.  Hmmm.";
+	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.  Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word. To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 [
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
@@ -43,7 +43,7 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
+	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
 	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]";
 	say "[trixsavetext1][line break]";
@@ -52,7 +52,7 @@ To say magic word:
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
+	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
 	savetrix;
 	if wrcursestatus is 5:
@@ -257,7 +257,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
-						now Snow is in Gray Abbey Library;
+						now Snow is in Grey Abbey Library;
 					else:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
@@ -271,22 +271,22 @@ To reciting2:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenTalk is the number understood;
+					now coleentalk is the number understood;
 			-- 34:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenFound is the number understood;
+					now coleenfound is the number understood;
 			-- 35:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenCollared is the number understood;
+					now coleencollared is the number understood;
 			-- 36:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenAlpha is the number understood;
+					now coleenalpha is the number understood;
 			-- 37:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenSlut is the number understood;
+					now coleenslut is the number understood;
 			-- 38:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenSpray is the number understood;
+					now coleenspray is the number understood;
 			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
 					now HP of doctor mouse is the number understood;
@@ -498,7 +498,7 @@ To reciting2:
 					now HP of Sandra is the number understood;
 					now lust of Sandra is turns;
 					if HP of Sandra > 0:
-						now Sandra is in the Bunker;
+						now Sandra is in the bunker;
 						now needy rabbit girl is resolved;
 						now rabbit den is known;
 					else:
@@ -516,12 +516,12 @@ To reciting2:
 					if HP of Fang is 0 or HP of Fang is 100:
 						now Fang is in the dark basement;
 					if HP of Fang > 0 and HP of Fang < 100:
-						now Fang is in the Gray Abbey Library;
+						now Fang is in the Grey Abbey Library;
 			-- 74:	[Fang + Sandra]
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
 					if libido of Fang is 2 and ( HP of Fang is 1 or HP of Fang is 2 ), now libido of Fang is 1;
-					if Fang is not in the Gray Abbey Library and Sandra is not in the Bunker:
+					if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
 						now libido of Fang is 0;
 			-- 75:	[Philip]
 				if the player's command matches "[number]":
@@ -535,7 +535,7 @@ To reciting2:
 						now Hungry Piggy is resolved;
 						now HBMR is 1;
 					if pigfed is 3:
-						now Philip is in the Bunker;
+						now Philip is in the bunker;
 						now Pig Pen is not fasttravel;
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
@@ -748,7 +748,7 @@ To reciting2:
 					if HP of Solstice is 3 or HP of Solstice is 4:
 						now lastfuck of Solstice is turns;
 					if HP of Solstice > 4:
-						move Solstice to Gray Abbey Library;
+						move Solstice to Grey Abbey Library;
 			-- 92:	[Ronda the Slut Rat]
 				if the player's command matches "[number]":
 					now carried of lizard juice is 0;
@@ -931,7 +931,7 @@ To reciting2:
 						remove Eric from play;
 					else if HP of Eric is 200:
 						remove Eric from play;
-						move Erica to Bunker;
+						move Erica to bunker;
 						now Dexterity of Erica is 5;
 					else if HP of Eric > 0:
 						move Eric to Bunker;
@@ -1084,7 +1084,7 @@ To reciting2:
 							now Police Station is known;
 						else:
 							now Police Station is unknown;
-							move Alexandra to Gray Abbey Library;
+							move Alexandra to Grey Abbey Library;
 						if HP of Alexandra >= 65 and HP of Alexandra <= 100:
 							now Master Mind is in Cell Block A;
 						else:
@@ -1212,7 +1212,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Xerxes is the number understood;
 					if HP of Xerxes is 0, remove Xerxes from play;
-					if HP of Xerxes > 0, move Xerxes to Gray Abbey Library;
+					if HP of Xerxes > 0, move Xerxes to Grey Abbey Library;
 			-- 120:	[Helen]
 				if the player's command matches "[number]":
 					now HP of Helen is the number understood;
@@ -1225,7 +1225,7 @@ To reciting2:
 						now thirst of Helen is 0;
 						now libido of Helen is 0;
 					if HP of Helen > 0:
-						move Helen to Gray Abbey Library;
+						move Helen to Grey Abbey Library;
 						if libido of Helen > 0:
 							now thirst of Helen is 1;
 			-- 122:	[Rex]
@@ -1383,7 +1383,7 @@ To reciting2:
 							setmonster "Blue Chaffinch";
 							choose row monster from the table of random critters;
 							now area entry is "nowhere";
-							now Icarus is in Gray Abbey Library;
+							now Icarus is in Grey Abbey Library;
 					if HP of Icarus is 5 or HP of Icarus is 6:
 						now HP of Icarus is 4;	[dialed back for sex]
 					if HP of Icarus is 7:
@@ -1500,7 +1500,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Amy is the number understood;
 					if HP of Amy > 0 and HP of Amy < 90:
-						move Amy to Gray Abbey Library;
+						move Amy to Grey Abbey Library;
 			-- 152: [libido of Amy - puppy counter]
 				if the player's command matches "[number]":
 					now libido of Amy is the number understood;
@@ -1597,7 +1597,7 @@ To reciting2:
 					if HP of Nadia > 0:
 						now Bird Troubles is resolved;
 					if HP of Nadia > 0 and HP of Nadia < 99:
-						move Nadia to Gray Abbey 2F;
+						move Nadia to Grey Abbey 2F;
 					if HP of Nadia is 5:
 						increase carried of feathered cloak by 1;
 			-- 163: [NadiaFertilityCounter]
@@ -1639,7 +1639,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Hayato is the number understood;
 					if HP of Hayato > 15:
-						move Hayato to Gray Abbey 2F;
+						move Hayato to Grey Abbey 2F;
 					else:
 						move Hayato to Disused Garage;
 					if HP of Hayato > 5:
@@ -1660,7 +1660,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Tehuantl is the number understood;
 					if HP of Tehuantl > 9 and HP of Tehuantl < 255:
-						move Tehuantl to Gray Abbey 2F;
+						move Tehuantl to Grey Abbey 2F;
 						setmonster "Jaguar Warrior";
 						choose row monster from the table of random critters;
 						now area entry is "nowhere";
@@ -1674,7 +1674,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Carl is the number understood;
 					if HP of Carl > 1 and HP of Carl < 50:
-						move Carl to Gray Abbey 2F;
+						move Carl to Grey Abbey 2F;
 						now CarlLibraryEntry is turns + 1;
 					else:
 						remove Carl from play;
@@ -1722,7 +1722,7 @@ To reciting2:
 					else:
 						now Bouncy Castle is unknown;
 					if HP of Bubble > 3 and HP of Bubble < 99:
-						move Bubble to Gray Abbey 2F;
+						move Bubble to Grey Abbey 2F;
 			-- 181:	[HP of Newt]
 				if the player's command matches "[number]":
 					now HP of Newt is the number understood;
@@ -1785,7 +1785,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now XP of Onyx is the number understood;
 					if XP of Onyx >= 6 and XP of Onyx <= 29:
-						move Onyx to Gray Abbey Library;
+						move Onyx to Grey Abbey Library;
 					else if XP of Onyx >= 30 and XP of Onyx <= 49:
 						move Onyx to Palomino;
 					else:
@@ -1827,7 +1827,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
 					if HP of Chris is 1:
-						move Chris to Gray Abbey 2F;
+						move Chris to Grey Abbey 2F;
 					else:
 						remove Chris from play;
 			-- 196: [HP of Vanessa - status]
@@ -1863,7 +1863,7 @@ To reciting2:
 			-- 200: [HP of Gwen - status & Gwen UB]
 				if the player's command matches "[number]":
 					now HP of Gwen is the number understood;
-					if Meredith is not Bunkered, now HP of Gwen is 0;
+					if Meredith is not bunkered, now HP of Gwen is 0;
 					if HP of Gwen > 2 and HP of Gwen <= 60:
 						move Gwen to Bunker;
 						if HP of Gwen <= 20:
@@ -1883,7 +1883,7 @@ To reciting2:
 					else if HP of Rane is 6:
 						move Rane to shrine;
 					else if HP of Rane is 7:
-						move Rane to Gray Abbey 2F;
+						move Rane to Grey Abbey 2F;
 					if HP of Rane is 5:
 						now The blue Oni is unresolved;
 					else:
@@ -1966,7 +1966,7 @@ To reciting2:
 					if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63 ):
 						move Hadiya to Hyena Shack;
 					else:
-						move Hadiya to Gray Abbey 2F;
+						move Hadiya to Grey Abbey 2F;
 					if HP of Hadiya > 0:
 						now Annoyed Hyena is resolved;
 						now Hyena Shack is known;
@@ -1985,7 +1985,7 @@ To reciting2:
 						now HP of Gobby is 0;
 						remove Gobby from play;
 					else:
-						move Gobby to Gray Abbey 2F;
+						move Gobby to Grey Abbey 2F;
 			-- 216:	[HP of Sidney - NPC overall status]
 				if the player's command matches "[number]":
 					now HP of Sidney is the number understood;
@@ -1995,7 +1995,7 @@ To reciting2:
 					now sa_otteress is false;
 					now sa_wusky is false;
 					if HP of Sidney >= 3 and HP of Sidney < 99:
-						move Sidney to Gray Abbey 2F;
+						move Sidney to Grey Abbey 2F;
 					if HP of Sidney >= 3:
 						now Meeting Sidney is resolved;
 			-- 217:	[level of Sidney - forms]
@@ -2062,7 +2062,7 @@ To reciting2:
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, now carried of infection monitor is 1;
-	if HP of doctor matt is 104, move Sally to Bunker;
+	if HP of doctor matt is 104, move Sally to bunker;
 	if HP of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;
 	now Svetlana is in dark basement;
@@ -2089,7 +2089,7 @@ To reciting2:
 	if HP of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
-	if HP of Sven is 8 and Candy is in the Bunker:
+	if HP of Sven is 8 and Candy is in the bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
@@ -2097,7 +2097,7 @@ To reciting2:
 	if sarahtalk is 0 and sarahslut is 0:
 		now Husky Pack is unresolved;
 	else:
-		move Sarah to Bunker;
+		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
@@ -2365,7 +2365,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
-						now Snow is in Gray Abbey Library;
+						now Snow is in Grey Abbey Library;
 					else:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
@@ -2379,22 +2379,22 @@ Carry out reciting:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenTalk is the number understood;
+					now coleentalk is the number understood;
 			-- 34:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenFound is the number understood;
+					now coleenfound is the number understood;
 			-- 35:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenCollared is the number understood;
+					now coleencollared is the number understood;
 			-- 36:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenAlpha is the number understood;
+					now coleenalpha is the number understood;
 			-- 37:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenSlut is the number understood;
+					now coleenslut is the number understood;
 			-- 38:	[Coleen]
 				if the player's command matches "[number]":
-					now ColeenSpray is the number understood;
+					now coleenspray is the number understood;
 			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
 					now HP of doctor mouse is the number understood;
@@ -2593,7 +2593,7 @@ Carry out reciting:
 					now HP of Sandra is the number understood;
 					now lust of Sandra is turns;
 					if HP of Sandra > 0:
-						now Sandra is in the Bunker;
+						now Sandra is in the bunker;
 						now needy rabbit girl is resolved;
 						now rabbit den is known;
 					else:
@@ -2611,12 +2611,12 @@ Carry out reciting:
 					if HP of Fang is 0 or HP of Fang is 100:
 						now Fang is in the dark basement;
 					if HP of Fang > 0 and HP of Fang < 100:
-						now Fang is in the Gray Abbey Library;
+						now Fang is in the Grey Abbey Library;
 			-- 74:	[Fang + Sandra]
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
 					if libido of Fang is 2 and ( HP of Fang is 1 or HP of Fang is 2 ), now libido of Fang is 1;
-					if Fang is not in the Gray Abbey Library and Sandra is not in the Bunker:
+					if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
 						now libido of Fang is 0;
 			-- 75:	[Philip]
 				if the player's command matches "[number]":
@@ -2630,7 +2630,7 @@ Carry out reciting:
 						now Hungry Piggy is resolved;
 						now HBMR is 1;
 					if pigfed is 3:
-						now Philip is in the Bunker;
+						now Philip is in the bunker;
 						now Pig Pen is not fasttravel;
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
@@ -2843,7 +2843,7 @@ Carry out reciting:
 					if HP of Solstice is 3 or HP of Solstice is 4:
 						now lastfuck of Solstice is turns;
 					if HP of Solstice > 4:
-						move Solstice to Gray Abbey Library;
+						move Solstice to Grey Abbey Library;
 			-- 92:	[Ronda the Slut Rat]
 				if the player's command matches "[number]":
 					now carried of lizard juice is 0;
@@ -3175,7 +3175,7 @@ Carry out reciting:
 							now Police Station is known;
 						else:
 							now Police Station is unknown;
-							move Alexandra to Gray Abbey Library;
+							move Alexandra to Grey Abbey Library;
 						if HP of Alexandra >= 65 and HP of Alexandra <= 100:
 							now Master Mind is in Cell Block A;
 						else:
@@ -3303,7 +3303,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Xerxes is the number understood;
 					if HP of Xerxes is 0, remove Xerxes from play;
-					if HP of Xerxes > 0, move Xerxes to Gray Abbey Library;
+					if HP of Xerxes > 0, move Xerxes to Grey Abbey Library;
 			-- 120:	[Helen]
 				if the player's command matches "[number]":
 					now HP of Helen is the number understood;
@@ -3316,7 +3316,7 @@ Carry out reciting:
 						now thirst of Helen is 0;
 						now libido of Helen is 0;
 					if HP of Helen > 0:
-						move Helen to Gray Abbey Library;
+						move Helen to Grey Abbey Library;
 						if libido of Helen > 0:
 							now thirst of Helen is 1;
 			-- 122:	[Rex]
@@ -3473,7 +3473,7 @@ Carry out reciting:
 							setmonster "Blue Chaffinch";
 							choose row monster from the table of random critters;
 							now area entry is "nowhere";
-							now Icarus is in Gray Abbey Library;
+							now Icarus is in Grey Abbey Library;
 					if HP of Icarus is 5 or HP of Icarus is 6:
 						now HP of Icarus is 4;	[dialed back for sex]
 					if HP of Icarus is 7:
@@ -3590,7 +3590,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Amy is the number understood;
 					if HP of Amy > 0 and HP of Amy < 90:
-						move Amy to Gray Abbey Library;
+						move Amy to Grey Abbey Library;
 			-- 152: [libido of Amy - puppy counter]
 				if the player's command matches "[number]":
 					now libido of Amy is the number understood;
@@ -3675,7 +3675,7 @@ Carry out reciting:
 					if HP of Nadia > 0:
 						now Bird Troubles is resolved;
 					if HP of Nadia > 0 and HP of Nadia < 99:
-						move Nadia to Gray Abbey 2F;
+						move Nadia to Grey Abbey 2F;
 					if HP of Nadia is 5:
 						increase carried of feathered cloak by 1;
 			-- 163: [NadiaFertilityCounter]
@@ -3717,7 +3717,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Hayato is the number understood;
 					if HP of Hayato > 15:
-						move Hayato to Gray Abbey 2F;
+						move Hayato to Grey Abbey 2F;
 					else:
 						move Hayato to Disused Garage;
 					if HP of Hayato > 5:
@@ -3738,7 +3738,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Tehuantl is the number understood;
 					if HP of Tehuantl > 9 and HP of Tehuantl < 255:
-						move Tehuantl to Gray Abbey 2F;
+						move Tehuantl to Grey Abbey 2F;
 						setmonster "Jaguar Warrior";
 						choose row monster from the table of random critters;
 						now area entry is "nowhere";
@@ -3752,7 +3752,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Carl is the number understood;
 					if HP of Carl > 1 and HP of Carl < 50:
-						move Carl to Gray Abbey 2F;
+						move Carl to Grey Abbey 2F;
 					else:
 						remove Carl from play;
 			-- 176: [level of Carl]
@@ -3799,7 +3799,7 @@ Carry out reciting:
 					else:
 						now Bouncy Castle is unknown;
 					if HP of Bubble > 3 and HP of Bubble < 99:
-						move Bubble to Gray Abbey 2F;
+						move Bubble to Grey Abbey 2F;
 			-- 181:	[HP of Newt]
 				if the player's command matches "[number]":
 					now HP of Newt is the number understood;
@@ -3862,7 +3862,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now XP of Onyx is the number understood;
 					if XP of Onyx >= 6 and XP of Onyx <= 29:
-						move Onyx to Gray Abbey Library;
+						move Onyx to Grey Abbey Library;
 					else if XP of Onyx >= 30 and XP of Onyx <= 49:
 						move Onyx to Palomino;
 					else:
@@ -3904,14 +3904,14 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
 					if HP of Chris is 1:
-						move Chris to Gray Abbey 2F;
+						move Chris to Grey Abbey 2F;
 					else:
 						remove Chris from play;
 			-- 195: [HP of Chris]
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
 					if HP of Chris is 1:
-						move Chris to Gray Abbey 2F;
+						move Chris to Grey Abbey 2F;
 					else:
 						remove Chris from play;
 			-- 196: [HP of Vanessa - status]
@@ -3947,7 +3947,7 @@ Carry out reciting:
 			-- 200: [HP of Gwen - status & Gwen UB]
 				if the player's command matches "[number]":
 					now HP of Gwen is the number understood;
-					if Meredith is not Bunkered, now HP of Gwen is 0;
+					if Meredith is not bunkered, now HP of Gwen is 0;
 					if HP of Gwen > 2 and HP of Gwen <= 60:
 						move Gwen to Bunker;
 						if HP of Gwen <= 20:
@@ -3967,7 +3967,7 @@ Carry out reciting:
 					else if HP of Rane is 6:
 						move Rane to shrine;
 					else if HP of Rane is 7:
-						move Rane to Gray Abbey 2F;
+						move Rane to Grey Abbey 2F;
 					if HP of Rane is 5:
 						now The blue Oni is unresolved;
 					else:
@@ -4050,7 +4050,7 @@ Carry out reciting:
 					if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63 ):
 						move Hadiya to Hyena Shack;
 					else:
-						move Hadiya to Gray Abbey 2F;
+						move Hadiya to Grey Abbey 2F;
 					if HP of Hadiya > 0:
 						now Annoyed Hyena is resolved;
 						now Hyena Shack is known;
@@ -4069,7 +4069,7 @@ Carry out reciting:
 						now HP of Gobby is 0;
 						remove Gobby from play;
 					else:
-						move Gobby to Gray Abbey 2F;
+						move Gobby to Grey Abbey 2F;
 			-- 216:	[HP of Sidney - NPC overall status]
 				if the player's command matches "[number]":
 					now HP of Sidney is the number understood;
@@ -4079,7 +4079,7 @@ Carry out reciting:
 					now sa_otteress is false;
 					now sa_wusky is false;
 					if HP of Sidney >= 3 and HP of Sidney < 99:
-						move Sidney to Gray Abbey 2F;
+						move Sidney to Grey Abbey 2F;
 					if HP of Sidney >= 3:
 						now Meeting Sidney is resolved;
 			-- 217:	[level of Sidney - forms]
@@ -4148,7 +4148,7 @@ Carry out reciting:
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, now carried of infection monitor is 1;
-	if HP of doctor matt is 104, move Sally to Bunker;
+	if HP of doctor matt is 104, move Sally to bunker;
 	if HP of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;
 	now Svetlana is in dark basement;
@@ -4175,7 +4175,7 @@ Carry out reciting:
 	if HP of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
-	if HP of Sven is 8 and Candy is in the Bunker:
+	if HP of Sven is 8 and Candy is in the bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
@@ -4183,14 +4183,14 @@ Carry out reciting:
 	if sarahtalk is 0 and sarahslut is 0:
 		now Husky Pack is unresolved;
 	else:
-		move Sarah to Bunker;
+		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
 
-restoreletter is a text that varies. restoreletter is normally "0".
+restoreletter is a text that varies.  restoreletter is normally "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;
@@ -4298,7 +4298,7 @@ carry out Trixiecheck1:
 	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
 	say "Weapon: [weapon object of player]   Frank M/F: [franksex]   Frank M/M: [frankmalesex][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[else]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[else]0[end if][line break]";
-	say "Coleen: Location: [location of Coleen]   Talk: [ColeenTalk]   Found: [ColeenFound]   Collared: [ColeenCollared]   Alpha: [ColeenAlpha]   Slut: [ColeenSlut]   Spray: [ColeenSpray][line break]";
+	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
 	say "HP of Dr Mouse: [HP of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
 	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";

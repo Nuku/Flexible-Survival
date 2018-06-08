@@ -178,55 +178,55 @@ Right alignment depth is a number that varies. Right alignment depth is 14.
 Section 2 (for Z-machine only)
 
 To say default letters:
-	(- @set_colour 1 1; -)
+	(- @set_color 1 1; -)
 
 To say red letters:
-	(- @set_colour 3 0; -)
+	(- @set_color 3 0; -)
 
 To say green letters:
-	(- @set_colour 4 0; -)
+	(- @set_color 4 0; -)
 
 To say yellow letters:
-	(- @set_colour 5 0; -)
+	(- @set_color 5 0; -)
 
 To say blue letters:
-	(- @set_colour 6 0; -)
+	(- @set_color 6 0; -)
 
 To say magenta letters:
-	(- @set_colour 7 0; -)
+	(- @set_color 7 0; -)
 
 To say cyan letters:
-	(- @set_colour 8 0; -)
+	(- @set_color 8 0; -)
 
 To say white letters:
-	(- @set_colour 9 0; -)
+	(- @set_color 9 0; -)
 
 To say black letters:
-	(- @set_colour 2 0; -)
+	(- @set_color 2 0; -)
 
 To turn the/-- background black:
-	(- @set_colour 0 2; -);
+	(- @set_color 0 2; -);
 
 To turn the/-- background red:
-	(- @set_colour 0 3; -);
+	(- @set_color 0 3; -);
 
 To turn the/-- background green:
-	(- @set_colour 0 4; -);
+	(- @set_color 0 4; -);
 
 To turn the/-- background yellow:
-	(- @set_colour 0 5; -);
+	(- @set_color 0 5; -);
 
 To turn the/-- background blue:
-	(- @set_colour 0 6; -);
+	(- @set_color 0 6; -);
 
 To turn the/-- background magenta:
-	(- @set_colour 0 7; -);
+	(- @set_color 0 7; -);
 
 To turn the/-- background cyan:
-	(- @set_colour 0 8; -);
+	(- @set_color 0 8; -);
 
 To turn the/-- background white:
-	(- @set_colour 0 9; -);
+	(- @set_color 0 9; -);
 
 Basic Screen Effects ends here.
 

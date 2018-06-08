@@ -51,8 +51,8 @@ Instead of Resolving a Hyper Squirrel Girl:
 					if the distilled milk is owned:
 						decrease carried of distilled milk by 1;
 						say "'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
-						now snow is in Gray Abbey Library;
-						move player to Gray Abbey Library;
+						now snow is in Grey Abbey Library;
+						move player to Grey Abbey Library;
 						increase score by 5;
 						now hyper squirrel girl is resolved;
 					else:
@@ -73,7 +73,7 @@ Squirrel Den is a room. It is private.	[This is just a holding spot and not a re
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
 Snow is a person.
-The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armour. Type [bold type]upgrade (weapon/armour)[roman type] and she'll give it a working over.".
+The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.".
 Snow is in Squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
@@ -100,9 +100,9 @@ Understand "upgrade [owned grab object]" as smithing.
 Check smithing:
 	if the noun is not owned, say "You can't offer what you don't have." instead;
 	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
-	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armour." instead;
+	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armor." instead;
 	if the noun is nanite collector, continue the action;
-	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armour." instead;
+	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armor." instead;
 	If the noun is improved, say "It is as good as it gets." instead;
 	if the noun is wielded, say "Stop wielding it first." instead;
 	if the noun is equipped, say "Stop wearing it first." instead;
@@ -485,7 +485,7 @@ Instead of resolving a wild squirrels:
 
 
 When play ends:
-	if Snow is in Gray Abbey Library:
+	if Snow is in Grey Abbey Library:
 		if HP of the player > 0:
 			if humanity of the player < 10:
 				say "     Snow abandons the idea of being saved when you go feral and she joins you in the city, remaining close at your side and becoming like a pack member to you, adoring and loving. Your life with her as a wild squirrel is one of bestial lust as you spend much of your day fucking one another in the squirrel's den they've set up in a small home near a cluster of acorn trees. From time to time, you and the others will snag a poor, unprepared person and fuck them into submission, adding another squirrel to your numbers. When there gets to be too many for your small home, a group breaks off to find a new home to claim as a nest. But you and Snow always remain there along with your first pair of wild lovers";
