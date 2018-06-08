@@ -466,19 +466,19 @@ to say sexwithcandy_05:
 
 Section 5 - Memory Events [Candy tries to remember his past! And partially succeeds, if the Player lets him.]
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy < 1):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy < 1):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy][line break]";
 	say "     You step into the library, relaxing slightly as you step into the familiar, safe building... until you notice an open door, labelled 'Employees Only', off to the side, and hear the sounds of someone rummaging around in the dark room. Carefully prepping your weapon, you carefully step into the room... and to your relief, discover it's only Candy, rummaging around the desks. He glances over at you, holding a few papers in his paws. 'Oh, hey, you!' he says, grinning. 'Sorry if I spooked you, but... I have a weird feeling about this room, that's all.' He says. 'Like I... used to spend a lot of time in here, when I was little. Probably nothing, but...' He tosses the papers onto a random desk, memos and job applications scattering onto the wooden surface. 'Well, you know where to find me. I don't think any of this is catching my eye.' He says, sashaying out past you [if cocks of player > 0]while running a hand across your thigh.[else]with a smile.[end if]";
 	now HP of Candy is 1;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 2):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 2):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy][line break]";
 	say "     Returning to the relative safety of the Library, you notice that Candy seems to have returned to the small office he'd discovered earlier. You approach him quietly, the coon seated at one of the desks, looking at a framed photo with a contemplative gaze. The nametag on the desk states it belongs to an 'Amanda Taylors', and the photo in Candy's hands depicts an older woman and a younger man, apparently mother and son. The young man is rather toned, dressed in military uniform and smiling with an arm around the woman. Candy seems like he's close to an epiphany, though that's lost as you tap him on the shoulder. 'Oh! Oh. Sorry, I know I shouldn't be messing with things here, but...' he glances back at the photo. 'I think I might be close to a breakthrough,' he admits. '...I didn't like her. Whoever this is, I didn't like her one bit. And you know me, I like everybody,' he says. He frowns, then glances up at your face.";
@@ -496,20 +496,20 @@ instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of
 		say "     Candy nods, though you see a bit of reluctance on his features. '...yeah. Yeah, it's probably better if I just... let this go.' He says, putting the photo down on the desk lightly. 'It doesn't really matter, does it? We're in such a different world, even if they were still around I probably wouldn't recognize them.' He says, though you can tell the raccoon seems more intent on convincing himself than anything. 'Besides, I'm happy now. [if cocks of player > 0]I've got you, for starters,[else]you're the best friend I could ever ask for,[end if] and I'm not going to let some woman who I probably didn't even know in the first place get in the way of that happiness. I'm... [italic type]we're[roman type] happy, now.' He says. You watch him place the picture frame face down as you both leave, the coon closing the door behind him.";
 		now HP of Candy is 100;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and a random chance of 1 in 2 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy][line break]";
 	say "     You're surprised to see Candy waiting for you when you arrive back at the library, the raccoon more excited than you've probably ever seen him. 'I remembered something! Something big!!!' he informs you, holding up the photo from before with one hand and pointing to the young man with another. 'See him? This is my brother! His name was Johnathan, and he joined the military, ages ago!' Candy begins, before his excitement fades a bit as he remembers more. 'He was... always the golden child, if I'm being honest. My parents harped on me a lot, about being like him. But he was great! He loved me, and he was the best friend ever...' and now he just seems upset. 'I, uh, came out to him, and the rest of my family, the day this whole mess started. It got ugly. My parents said some things you should never say to family. So I decided to go do some work at the hospital, even though I wasn't technically supposed to be there...'";
 	say "     He doesn't have to finish the sentence for you to infer that was the last time he saw any of them before the madness began. 'I figure John might've gotten out okay, at least...' he says. 'Maybe he's one of the guys out on that border, right?' he asks, beginning to consider the idea. 'Yeah, that's probably it. And when we're out of here, I'll see him again!' He pauses, glancing down at his rather... unkempt... outfit. 'Oh, my god, he's going to flip out when he sees me, isn't he?' He asks, apparently considering how he may look to someone who hasn't experienced the chaos of the city. 'Do you think the military will let me wash these stains off? I'm not going to talk to my big brother looking like this, I have [italic type]standards[roman type], damnit!' He says, stamping his foot as if to illustrate his point, before realizing he's getting ahead of himself. '...but that's later. Right now, I've just got to keep it together. For him. For us.' He adds, nodding firmly.";
 	now HP of Candy is 3;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy is 3 and Lust of Carl > 0 and Carl is in Gray Abbey 2F and a random chance of 1 in 2 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy is 3 and Lust of Carl > 0 and Carl is in Grey Abbey 2F and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], Lust of Carl: [Lust of Carl][line break]";
 	say "     Candy stops you at the door as you walk in, seeming just as excited as when he remembered his brother. 'Hey! I just had a thought! Carl was in the army, right? Well, I'm gonna ask him if he knew John! You should come with me, I think, since you're the one who told me to keep looking for my memories!' Before you can say anything one way or the other, the raccoon takes you by the hand and drags you up to Carl's usual spot with the sort of eagerness you've come to expect from him. Carl glances over at the two of you as Candy barges into the room. [if Lust of Carl >= 100]'Candy, cmon, I told you we can't just...' [else]'Oh, hey, Candy! I guess it has been a little while...' he says, before seeming to finally notice you. 'Are, uh... are we having an audience this time?' he asks, gesturing to you. [end if]Candy shakes his head vigorously. 'I'm not here to fuck! It's something different!' Carl raises an eyebrow. 'Is he feeling alright?' he asks you. Candy gives an annoyed huff. 'I like things other than sex! Gosh!!! But...' The raccoon takes a deep breath.";
@@ -520,79 +520,79 @@ instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of
 
 Section 6 - Miscellaneous Events [Candy gets up to shenanigans.]
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy >= 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy >= 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Candy Reading walk-in - HP of Candy: [HP of Candy][line break]";
 	say "     As you pace around the library for a bit, making sure nothing's out of place since your last visit, you spot Candy seated in one of the library's reading chairs, curled up with a book. The cover reads [one of]'I Loved An Archangel'[or]'The Trials of Andromeda 17: Part 2'[or]'Wormholes and Adrenaline: A Starman's Tale'[or]'Deeper, Darker Gods'[at random], and he seems to be about halfway through the thick tome. He glances up at you, watching you watching him. '...what?' he asks, after a moment of awkward silence. 'It's a library. Not a lot to do except read,' he says, a bit defensive. You assure him you have no problem with his reading habits, the raccoon visibly relaxing in response. 'Oh. Right then,' he says. 'Everyone seems to think it's weird I like books. You can be pretty and smart at the same time!' he says. You nod, then head off to check on some other things.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and Lust of Carl > 0 and Lust of Carl < 100 and Carl is in Gray Abbey 2F and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and Lust of Carl > 0 and Lust of Carl < 100 and Carl is in Grey Abbey 2F and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], Lust of Carl: [Lust of Carl][line break]";
 	say "     You let out a sigh of relief as you enter the library. A moment of peace, at least for now. You hear Candy's voice upstairs, from the second floor of the building. Figuring you might as well see what they're up to, you head upstairs... to discover Candy, seated on Carl's mattress, reading out loud from a book as the husky keeps watch out the window. They both turn to look at you as you come up the stairway. 'Oh, hey!' Candy says, smiling. 'I was just keeping Carl company. He wasn't really in the mood for anything, but I figured we could still spend time together.' Candy says and smiles at the husky, who's already returned to his vigilant watch. 'Isn't that right, Carl?' he asks, receiving a nod and a 'Hmhm' from the task-minded canine. You give the pair a thumbs up, deciding to leave the both of them to it while you attend to other business.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy >= 0 and Sarah is in the bunker and sarahslut < 4 and daytimer is night and LastCandyWalkin - turns > 8 and a random chance of 1 in 2 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy >= 0 and Sarah is in the bunker and sarahslut < 4 and daytimer is night and LastCandyWalkin - turns > 8 and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], Sarahslut: [Sarahslut][line break]";
 	say "     As you approach the library, you can see a candle flickering through one of the windows. Stepping inside, you see Candy, sitting in a chair, reading a medical textbook the size of his head by candlelight. He looks slightly exhausted, and he glances up at you as you walk in. 'Oh, hey,' he says. 'Don't mind me. I asked Sarah if she could teach me a bit about medicine, and she gave me this to read. So I gotta read up to Chapter 5, and she says she'll quiz me in the morning,' he informs you, rubbing his eyes. 'I kinda figured that I'd stop doing things like this after I dropped out of my musical composition course, but c'est la vie,' the pink raccoon states, before yawning and going back to devouring the medical text. You figure you should leave him be. The sooner he's done reading, the sooner he can get some sleep.";
 	now LastCandyWalkin is turns;
 
-after going to Gray Abbey 2F while (Candy is in the Bunker and CandyUrikInteraction > 0 and CandyUrikInteraction < 100 and lastfuck of Urik - turns > 6 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+after going to Grey Abbey 2F while (Candy is in the Bunker and CandyUrikInteraction > 0 and CandyUrikInteraction < 100 and lastfuck of Urik - turns > 6 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], CandyUrikInteraction: [CandyUrikInteraction][line break]";
 	say "     Coming up the stairs to the second floor of the library, you immediately discover Urik snoozing on his sofa... and Candy, almost fucked senseless and lying on the green brute's broad chest. He breathes like he just ran a marathon, visibly exhausted from the orc's vigorous fucking. 'Let [if HP of Candy > 2 and HP of Candy < 100]John[else]everyone[end if] know I died doing what I love,' the raccoon announces theatrically. You try not to roll your eyes too hard at his dramatics and inform him he's probably going to live, eliciting a huff from your flamboyant friend. 'You're no fun at all. Here I am having a moment and you have to rain on my parade.' You chuckle at the raccoon's behavior and head off to let him catch his breath.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
 	say "     You walk in to see Candy petting Fang vigorously, the raccoon showering some rare non-sexual affection on the canine. 'Who's a good boy? Who's a good, big, stud boy?' he asks in a sickeningly cute tone of voice. 'It's you! It's you, you're such a good stud!' he adds in. Fang seems to be enjoying himself, judging from his kicking leg and canine grin. You guess in a world like this, a wolf acting so dog-like is hardly the weirdest thing you've ever seen happen. You continue to watch this show of affection for a little while before deciding to get back to the things you were doing before.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 2 and HP of Candy < 100 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 2 and HP of Candy < 100 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
 	say "     Candy seems a bit troubled as you arrive at the library, occasionally glancing at Fang as he generally pads around his territory. He approaches you as you enter. '...I wonder what John would say about this...' he says. 'Fang, I mean. I'm not going to pretend I haven't been enjoying every second of this, but... well, I'm me, yknow? Hopped up on nanites and my own flamboyant tendencies.' He says, pausing for a little while before shrugging. 'Well, it's a new world, and a new me. And I'm not going to go denying myself just for somebody else. Even if he doesn't like it, he'll have to live with it, right?' Candy says. He turns back to Fang, a devious grin on his face. 'Besides, he always said dogs were man's best friend. Really, he should've seen this coming.'";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and Gryphoness is tamed and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and Gryphoness is tamed and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy][line break]";
 	say "     You approach the library, and hear the sounds of Denise singing from within. You step inside, curious about what's gotten her in a singing mood, and see the gryphoness holding a few sheets of loose-leaf, covered in hastily scribbled musical notation and lyrics. She seems to be practicing the song written on it, and doing a fine job at it to boot. Seated nearby, watching with a wide grin on his face, is Candy, who waves you over. 'Isn't this great? Denise and I were getting kinda bored, so I'm teaching her a few new songs! I get to put my old composition classes to good use, and she gets to practice her voice! We both win!' he says. '...though, really, these are all just covers. With the way my head is I probably couldn't compose a new song to save my life right now,' the pink raccoon admits, then shrugs and goes on to say, 'But, hey, she's never seen The Stony Horror Picture Spectacle, so she still gets to practice.' You nod, leaving them both to their showtunes.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Entering the library, you discover Candy curled up in a reading chair with what appears to be a several-years-old fashion magazing, flipping through the pages with an irritated expression on his face. For a moment, you think he hasn't noticed you, but then he speaks. 'Could you do me a favor, sweetie, and let Alexandra know that just because she says she's your second in command, we don't have to sit there and take it every time she starts yelling at us?' he asks, not even looking up from an article about cross-stitching. 'Because if she decides to start pushing me around again just 'cause I dress like a girl, someone's getting their eyes clawed out,' he announces. Seems there's a bit of trouble between the two at the moment...";
 	now LastCandyWalkin is turns;
 
-instead of navigating Gray Abbey Library while (Candy is in the Bunker and HP of Candy > 2 and HP of Candy < 100 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Candy > 2 and HP of Candy < 100 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Candy has an odd look on his face when you arrive at the library. 'Hey, uh, you know better than anyone that I'm definitely a bit of a libertine, but...' he frowns. 'You do realize the military might be a bit pissed if they barge in here and see you turned a law enforcement officer into an aggressive, sex-addled bitch, right?' he shakes his head. 'I mean, you do whatever you want with whoever you want, really, but... maybe try to figure out an alibi before the big men with the bigger guns roll into town?' he says. You're not entirely sure how you feel about Candy openly questioning your authority like that, but the raccoon goes off to do something else before you can formulate a response. You scowl a bit and decide you'll ignore it... this time.";

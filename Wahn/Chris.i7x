@@ -431,10 +431,10 @@ to say ChrisSex5: [milk cum out of Chris]
 		say "     'Get a bigger bottle next time,' the orc teen says in an amused tone as he cums on your face, creaming you good with the ebbing-off orgasm. 'Or better yet - don't. I like that look on you,' he adds after a second or two, placing a large hand on your face to rub in the cum. Swiping up some, he playfully lets it stretch goopy lines between his fingers, then pushes the sticky digits into your mouth to be licked clean. 'Yeah, be the cum-slut that you deserve to be,' he grunts in satisfaction, amused about how eagerly you suck on his fingers. Then the teenage orc adds, 'Think of me when you drink this,' patting the bottle in your hands, then walking off to throw himself onto his sofa to rest. You're left behind, somewhat sticky and hungry for more. For a moment, you want to just chug the bottle right now, but manage to push down the instinct and pack it away instead.";
 	increase carried of orc cum by 1;
 
-instead of navigating Gray Abbey Library while (libido of Chris is 2 and Chris is in Sitting Area and Dexterity of Chris is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris is in Sitting Area and Dexterity of Chris is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CHRIS ZEBRA BUTTFUCK WALKIN - DEXTERITY OF CHRIS: [Dexterity of Eric][line break]";
 	say "     Coming back into the library, you hear a commotion somewhere upstairs, on the second floor of the library. Then a panicky sounding male voice shouts, 'No, please! Don't... I - I'll blow you again. Just not... that.' The only reply is a deep-voiced chuckle, followed by a noise that makes you think of a thick, hard cock being slapped against an open palm. Running footsteps are next, the stomp of hooves on the upstairs floor, then the person responsible comes into sight - a panting anthro zebra who half-falls against, half-catches himself on the upper floor railing. He must have stumbled in his rush for the stairs, missing the curve after running out between the bookshelves up there.";
@@ -477,7 +477,7 @@ instead of navigating Gray Abbey Library while (libido of Chris is 2 and Chris i
 		say "     Answering the zebra's pleading look with a shrug, you look away and walk over to the librarian's desk, from where there isn't a line of sight to that section of the upper floor railing. About time you sorted out your backpack a bit anyways, the better to find your stuff if you need it in a hurry. The gasps and sounds of rough fucking from above you just tune out, as you're used to by now from out on the streets.";
 	now Dexterity of Chris is 1;
 
-instead of going up from Gray Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 0 and (lastfuck of Chris - turns) > 12):
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 0 and (lastfuck of Chris - turns) > 12):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
@@ -516,7 +516,7 @@ instead of going up from Gray Abbey Library while (Chris is in Sitting Area and 
 		now WarriorChrisDominance is 50; [player refused Chris]
 		now lastfuck of Chris is turns;
 
-instead of going up from Gray Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 1 and (lastfuck of Chris - turns) > 12):
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 1 and (lastfuck of Chris - turns) > 12):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
@@ -540,7 +540,7 @@ instead of going up from Gray Abbey Library while (Chris is in Sitting Area and 
 	now WarriorChrisDominance is 2; [player got pushed to be Chris's breeder slut - twice]
 	now lastfuck of Chris is turns;
 
-instead of going up from Gray Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 2 and (lastfuck of Chris - turns) > 12):
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 2 and (lastfuck of Chris - turns) > 12):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";
@@ -569,7 +569,7 @@ instead of going up from Gray Abbey Library while (Chris is in Sitting Area and 
 	now WarriorChrisDominance is 3; [player got pushed to be Chris's breeder slut - three times]
 	now lastfuck of Chris is turns;
 
-instead of going up from Gray Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 3 and (lastfuck of Chris - turns) > 8 and a random chance of 1 in 3 succeeds):
+instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 3 and (lastfuck of Chris - turns) > 8 and a random chance of 1 in 3 succeeds):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: Chris dominance scene; libido of Chris: [libido of Chris], WarriorChrisDominance: [WarriorChrisDominance], WarriorChrisPlayerFucked: [WarriorChrisPlayerFucked][line break]";

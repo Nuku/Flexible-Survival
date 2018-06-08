@@ -510,9 +510,9 @@ to say DavidTalk1: [chatting]
 		say "     David says 'As you can see, the sample gathering is still going well. It's unbelievable how much stamina Tiny Tim has. [if CampBravoWomenAllowed is 1]Several of the female soldiers got sent out as well by now, their bellies already swelling with minotaur calves.' [end if][if Adam is in Quartermaster's Tent]The quartermaster had a half-minotaur son too - he's in her tent helping her out.' [end if]";
 	if HP of David is 4: [in the bunker]
 		if Sarahpups > 3:
-			say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Gray Abbey Library]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
+			say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Grey Abbey Library]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
 		else:
-			say "     David says 'Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read[if Fang is in the Gray Abbey Library]. And your wolf kept looking at me all the time like he wanted to mount me[end if].'";
+			say "     David says 'Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read[if Fang is in the Grey Abbey Library]. And your wolf kept looking at me all the time like he wanted to mount me[end if].'";
 
 to say DavidTalk2: [send him to the bunker]
 	say "     David gives you a salute and says [if thirst of David is 20]'See you there, baby.' [else]'As you wish, sir.' [end if]before going to collect his clothes and equipment.";
@@ -1364,10 +1364,10 @@ instead of going to Bunker while HP of David is 4 and companion of player is dem
 		else: [Brutus is rather more obvious]
 			say "     As you walk into the bunker with Brutus in tow, the large demon makes a beeline for David, who was just [one of]reading a book[or]sorting through his supplies[or]cleaning his weapon[or]making his bed[or]folding his clothes[at random]. With a loud 'Hey there, David!' he pulls the young soldier into a tight embrace, the smaller human pressed against his muscled chest. Then he lowers his head and runs his forked tongue along his friend's neck before giving him a lust-filled kiss that is eagerly returned. Watching them make out, you notice the demon's hand cupping David's ass as he holds him, giving it an appreciative squeeze. Putting the man down some short while later, Brutus walks back to you and takes his usual place - behind your shoulder on the right side.";
 
-instead of navigating Gray Abbey Library while (HP of David is 4 and companion of player is demon brute and libido of David > 81 and libido of David < 86 and a random chance of 1 in 5 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (HP of David is 4 and companion of player is demon brute and libido of David > 81 and libido of David < 86 and a random chance of 1 in 5 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG -> DAVID BRUTUS DOMINATION SEX WALKIN <- DEBUG[line break]";
 	if libido of David is 82:
@@ -1723,7 +1723,7 @@ to say DavidSex11: [Brutus & David Threesome (Brutus gets DP'd)]
 	WaitLineBreak;
 	say "     Looking back over his shoulder, Brutus says 'Thank you, master', then he turns back to David ands tarts to lap at his chest and face, slurping up his own cum and playing a long forked tongue over David's muscles. Brutus method of 'cleaning up' soon escalates into a hot make-out session, and after a while the two of them move around a bit so they can stretch out on the bed together, with David half draped over Brutus large form.";
 
-instead of going down from the Gray Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and companion of player is royal tiger):
+instead of going down from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and companion of player is royal tiger):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: David meets Ryousei; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";
@@ -1738,7 +1738,7 @@ instead of going down from the Gray Abbey Library while (David is in Bunker and 
 	now RyouseiDavidInteraction is 1;
 	now lastRyouseiDavidInteraction is turns;
 
-after going down from Gray Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
+after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
 	if RyouseiDavidInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: David & Ryousei Scene; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

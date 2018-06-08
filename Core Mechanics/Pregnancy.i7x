@@ -258,7 +258,7 @@ to detailbirth:
 			decrease morale of player by 10;
 			increase mpregcount by 1;
 		else if mpregcount < 6:		[Next few times, struggle]
-			say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labor, working to nudge the large egg onwards, working to expell it from your anus. It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
+			say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labour, working to nudge the large egg onwards, working to expell it from your anus. It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
 			increase morale of player by 5;
 			increase mpregcount by 1;
 		else:					[After that, easy]

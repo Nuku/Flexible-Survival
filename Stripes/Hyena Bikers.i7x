@@ -145,7 +145,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide you want to head back to the bunker at the Abbey. You [if matriarchowned is 1]tell[else]ask[end if] the biker leader to bring you to a corner nearby, not wanting to divulge its location to the gang quite yet. [line break][postridesex]";
 		else:
 			now ridemessage is "     You decide you want to head back to the bunker at the Abbey. You [if matriarchowned is 1]tell[else]ask[end if] the biker leader to bring you to a corner nearby, not wanting to divulge its location to the gang quite yet. [line break]";
-		Move player to Gray Abbey Library, without printing a room description;
+		Move player to Grey Abbey Library, without printing a room description;
 		now Hyena Bikers is resolved;
 	else if title entry is "Mall":
 		if bikedest is 0:

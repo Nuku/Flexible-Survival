@@ -588,7 +588,7 @@ Instead of resolving a Examination Room:
 		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
 	now Examination Room is resolved;
 
-instead of going down from the Gray Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and player is submissive and lastfuck of Elijah - turns > 6):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and player is submissive and lastfuck of Elijah - turns > 6):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice say 'Ah, there you are' coming from right beside you. Turning, you see Elijah straighten up from where he was leaning against the wall next to the door. The dark angel in his tight black leather pants gives you an evaluating look, then continues with 'Come on, you can help me with something...' and starts up the stairs into the library. A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself following him almost without thinking about it.";
@@ -669,7 +669,7 @@ instead of going down from the Gray Abbey Library while (Elijah is in the Bunker
 		say "     Shaking off the urge to just let the dark angel lead you to whatever he has planned, you plant your feet solidly on the ground and stop walking. It takes a moment until Elijah notices you're no longer behind him, then he turns and looks at you. 'Come on, keep going. I've got something to do for you,' he says, then adds, 'Get moving. NOW.', annoyance clearly in his voice and written all over his handsome face. Holding fast on the decision you made, you steel your will and shake your head. With an angry grunt, the fallen angel whirls around and walks to the exit. You can hear him muttering to himself '...not as subby as I thought, the little bitch. Now I have to catch a husky or someth-', then he's out the door and on the street, the closing door cutting off his further words.";
 		now thirst of Elijah is 100; [declined sub bondage sex with Elijah]
 
-instead of going down from the Gray Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'About time you got back, slut. I've been waiting for you.' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel casually strolls over to you, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. Stepping up to you while you're still checking out his crotch, Elijah lightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master.' Letting a hand wander over your chest, groping and stroking you, he continues, 'And that even though you clearly want to please your betters. You like following my orders, don't you? Tell me!'";
@@ -747,7 +747,7 @@ instead of going down from the Gray Abbey Library while (Elijah is in the Bunker
 	now lastfuck of Elijah is turns;
 	now thirst of Elijah is 2;
 
-instead of going down from the Gray Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'There you are, finally! It time to service me again, you little slut. Come here at once!' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel waits for you impatiently with both hands on his hips, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. As you hurry over to him, all the while still checking out his crotch, Elijah tightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master. Maybe I should just keep you here, naked and ready to take my cock. I'm getting tired of waiting for you to show up - getting blue-balled while you little whore roam the streets for guys who fuck.'";
@@ -888,8 +888,8 @@ An everyturn rule:
 				say "     As you're tending to a few odds and ends, you notice the bee girl, Honey, approach Elijah and ask if he's feeling better. 'I am, thank you,' he replies with a nod and a smile. 'Oh, I am told that a cure was made of milk and honey. Was that honey yours, little one?' She [if honeygiven is true]nods, saying that it[else]replies that she's not sure, but adds that it probably[end if] came from her hive. He takes her hand in his. 'Then my thanks again to you and your hive,' he says. Honey gets a sad look in her eyes and buzzes off to be alone for a while, leaving Elijah confused.";
 				now Char-J of Elijah is "2";
 				now NPCintCounter is turns;
-		else if player is in Gray Abbey Library:
-			if Fang is in Gray Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1"):
+		else if player is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1"):
 				say "     Elijah steps out of the bunker and into the library, passing through the stacks before finally selecting a book. With book in hand, he heads over to Fang and pets him lightly on the head. 'I thank and commend you for your vigilance. Your protection of this safe haven will not go unrewarded,' he states before turning and heading back into the bunker.";
 				now Char-I of Elijah is "2";
 				now NPCintCounter is turns;
@@ -950,8 +950,8 @@ An everyturn rule:
 						increase dexterity of bee girl by 1;
 				now Char-J of Elijah is "3";
 				now NPCintCounter is turns;
-		else if player is in Gray Abbey Library:
-			if Fang is in Gray Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+		else if player is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     Looking around, you notice Fang stretched out on the floor with Elijah beside him, stroking the wolf's fur with one hand while the other is wrapped around the wolf's stiff cock. 'I hope you don't mind. Our guardian here seemed like he needed some attention, so I thought I'd show him how much we appreciate his continued vigilance,' the angelic figure says with a smile as he continues stroking the wolf's erection. Fang pants softly, clearly enjoying the soft touch of the angel's fingers along his rod, soon getting the wolf to cum with a howl of release.";
 				now lastfuck of Fang is turns;
 				now Char-I of Elijah is "3";
@@ -1034,8 +1034,8 @@ An everyturn rule:
 						delete water bottle;
 				now Char-J of Elijah is "4";
 				now NPCintCounter is turns;
-		if player is in Gray Abbey Library:
-			if Fang is in Gray Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+		if player is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     There is some commotion outside the door and you notice the Fang's already slipped outside. Elijah, who had been wandering the stacks looking among the books on Renaissance art for 'nudey pics' as he put it, heads over to see what it is as well. Looking outside, you see that Fang's captured a [if girl is not banned]husky girl that's wandered too close to your safe haven. He's pinned the husky beneath him and mounts the interloper, much to the dark angel's delight. 'Good boy,' he says with excitement. 'Fuck that bitch.' He doesn't limit himself to just cheering, but unzips his pants and gets in front of her, forcing her to suck him off even as Fang pounds her wet pussy. After they've both drained their balls, they drive the nosey creature away[else]latex fox that's wandered too close to your safe haven. The wolf pins the fox beneath him and mounts the interloper, much to the fallen angel's delight. 'Good boy,' he says with excitement. 'Fuck that slut.' He doesn't limit himself to just cheering, but unzips his pants and gets in front of him, forcing the fox to suck him off even as Fang pounds his tight ass. After they've both drained their balls, they drive the nosey creature away[end if].";
 				now lastfuck of Fang is turns;
 				now lastfuck of Elijah is turns;
@@ -1062,7 +1062,7 @@ to say NPCintUpdate:
 		npceintAlter 12 with Char-L of Elijah;
 		npceintAlter 13 with Char-M of Elijah;
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 1 or HP of Elijah is 2 and NPCintCounter - turns > 4):
+after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of Elijah is 2 and NPCintCounter - turns > 4):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 1/2 WALKIN[line break]";
@@ -1105,7 +1105,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 1 or HP of
 	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 3 and NPCintCounter - turns > 4): [virgin-mode]
+after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCintCounter - turns > 4): [virgin-mode]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 3 WALKIN[line break]";
@@ -1148,7 +1148,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 3 and NPCi
 	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 4 and NPCintCounter - turns > 4): [more human-like, nice guy]
+after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCintCounter - turns > 4): [more human-like, nice guy]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 4 WALKIN[line break]";
@@ -1208,7 +1208,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 4 and NPCi
 	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 99 and NPCintCounter - turns > 4): [evil, very direct sex-fiend]
+after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPCintCounter - turns > 4): [evil, very direct sex-fiend]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 99 WALKIN[line break]";

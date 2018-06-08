@@ -214,15 +214,15 @@ instead of navigating Red Light District while (level of player > 10 and HP of E
 	now LastImpMeeting is turns;
 	move player to Red Light District;
 
-instead of navigating Gray Abbey Library while (level of player > 10 and HP of Elijah > 2 and HP of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (level of player > 10 and HP of Elijah > 2 and HP of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	if debugactive is 1:
 		say "     DEBUG: IMP SCOUT [line break]";
 	say "[ImpEncounter]";
 	challenge "Imp";
 	now LastImpMeeting is turns;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 
 instead of navigating Smith Haven Mall Lot South while (level of player > 10 and HP of Elijah > 2 and HP of Elijah < 99 and libido of Skarnoth < 10 and LastImpMeeting - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Smith Haven Mall Lot South]";

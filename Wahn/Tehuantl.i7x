@@ -386,7 +386,7 @@ an everyturn rule:
 		else if TehuantlStatus is 3:
 			decrease TehuantlTimer by 1;
 			if TehuantlTimer is 0:
-				if player is in Gray Abbey Library or bunker or gray Abbey 2f:
+				if player is in Grey Abbey Library or bunker or gray Abbey 2f:
 					say "     You hear Tehuantl moaning and rush to check on her.";
 					say "     Tehuantl gives birth scene!";
 				else:
@@ -396,7 +396,7 @@ an everyturn rule:
 				increment Tehuantl children variables
 ]
 
-after navigating Gray Abbey Library:
+after navigating Grey Abbey Library:
 	if HP of Tehuantl is 10:
 		if TehuantlTimer - turns > 16:
 			now HP of Tehuantl is 11;
@@ -498,8 +498,8 @@ instead of resolving Feline Relief:
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 
-instead of going up from Gray Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Gray Abbey 2F and libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Gray Abbey 2F)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)):
+	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/CARL TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
 	if libido of Tehuantl is 0: [first time]
@@ -548,8 +548,8 @@ instead of going up from Gray Abbey Library while ((LastTehuantlCarlScene - turn
 	now LastTehuantlCarlScene is turns;
 
 
-instead of going up from Gray Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Gray Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
+	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/Korvin TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
 	if libido of Tehuantl is 0: [first time]

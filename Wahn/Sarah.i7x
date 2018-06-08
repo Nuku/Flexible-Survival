@@ -1084,7 +1084,7 @@ An everyturn rule:
 		if "Proud Parent" is listed in feats of player and a random chance of 1 in 3 succeeds and SarahPregnant > 1:
 			decrease SarahPregnant by 1;
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and SarahCured is 7):
+after going down from Grey Abbey Library while (Sarah is in Bunker and SarahCured is 7):
 	if debugactive is 1:
 		say "     DEBUG: SARAH OFFERS ANAL - SaraCured: [SarahCured][line break]";
 	say "     As you enter the bunker, ";
@@ -1098,7 +1098,7 @@ to say SarahOffersAnal:
 
 [ Shower Scenes]
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered):
+after going down from Grey Abbey Library while (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered):
 	if debugactive is 1:
 		say "     DEBUG: Sarah thanks the player for the showers working - SaraCured: [SarahCured][line break]";
 	project the Figure of Sarah_clothed_icon;
@@ -1123,10 +1123,10 @@ instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 
 
 [ Carl Interaction]
 
-instead of navigating Gray Abbey Library while (Sarah is in Bunker and Carl is in Gray Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	project the Figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & CARL MEET - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
@@ -1138,8 +1138,8 @@ instead of navigating Gray Abbey Library while (Sarah is in Bunker and Carl is i
 	now CarlSarahInteraction is 1;
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Gray Abbey Library while (Sarah is in Bunker and Carl is in Gray Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 6)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 6)):
+	move player to Grey Abbey 2F;
 	if CarlSarahInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG -> CARL & SARAH SPEND TIME TOGETHER 1 - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
@@ -1172,8 +1172,8 @@ to say SarahCarlScene2:
 	now CarlSarahInteraction is 3; [played poker]
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Gray Abbey Library while (Sarah is in Bunker and Carl is in Gray Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
+	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH TALKS TO THE PLAYER ABOUT CARL (S/C SCENE 3) - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 	say "     Going up the stairs to the second floor of the library, you do notice Sarah and Carl hanging out on a nearby sofa. They're having a friendly conversation, leaning back relaxedly on the sofa. Then Sarah notices you and jumps to her feet, coming over to give her hero a hug in greeting. 'Hey there, Carl and I were just trading stories about the funniest things from when we were kids,' she tells you with a smile and nods over to Carl. The muscular soldier moves his arm as if to push himself up from the sofa, but then pauses almost imperceptibly, glancing down to the army jacket laying over his crotch. A heartbeat later, he clears his throat and instead of standing up waves at you, calling out in greeting.";
@@ -1215,8 +1215,8 @@ instead of going up from Gray Abbey Library while (Sarah is in Bunker and Carl i
 		now CarlSarahSex is 100; [no sex between Carl and Sarah]
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Gray Abbey Library while (Sarah is in Bunker and Carl is in Gray Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
+	move player to Grey Abbey 2F;
 	say "[SarahCarlOral2F]";
 
 to say SarahCarlOral2F:
@@ -1247,12 +1247,12 @@ to say SarahCarlOral2F:
 		now CarlSarahSex is 2;
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Gray Abbey Library while (Sarah is in Bunker and Carl is in Gray Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex > 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6) and a random chance of 1 in 4 succeeds):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex > 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6) and a random chance of 1 in 4 succeeds):
+	move player to Grey Abbey 2F;
 	if CarlSarahSex is 2:
 		say "[SarahCarlOral2F]";
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if ColeenSarahInteraction is 0:
 		if debugactive is 1:
@@ -1273,7 +1273,7 @@ to say SarahColeenScene2:
 	now ColeenSarahInteraction is 2;
 	now lastColeenSarahInteraction is turns;
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
+after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
@@ -1292,7 +1292,7 @@ after going down from Gray Abbey Library while (Sarah is in Bunker and Alexandra
 	say "     'So - you're Alexandra's... boss?' the young husky woman asks you, still rather disturbed about the confrontation. Clearing your throat, you do explain how you took in Alexandra after she succumbed to her infection (wisely leaving out that you were the one who pushed her that far). She pretty much declared herself the top bitch of your pack after that. Nodding thoughtfully, Sarah says, 'I'll do my best to keep my distance and not to trigger her. Thank god that you helped me before I was as far gone as that!' After giving you a hug, the young woman walks over to her bed and pulls out a notebook, adding more observations to her ongoing report about what the nanite infection can do.";
 	now AlexandraSarahInteraction is 1;
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
 	if EricSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> Eric & SARAH SPEND TIME TOGETHER 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1332,10 +1332,10 @@ to say SarahEricScene3:
 	now EricSarahInteraction is 3;
 	now lastEricSarahInteraction is turns;
 
-instead of navigating Gray Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if cboyEricSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> SARAH & ERIC TALK ABOUT TRANS THINGS 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1356,7 +1356,7 @@ to say SarahCboyEricScene0:
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
 	now lastEricSarahInteraction is turns;
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
 	if cboyEricSarahInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 1 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1412,10 +1412,10 @@ Idea: Interaction with Alexandra and/or Korvin - the bad girl/boy dogs
 One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexandra or being all "What do you want asshole? Can't be anything with sex - in my experience losers with big mouths have the smallest dicks. Or do you need help opening a can of dog food that you're too stupid to get the hang of?"
 ]
 
-instead of navigating Gray Abbey Library while (Sarah is in Bunker and Fang is in Gray Abbey Library and FangSarahInteraction is 0 and SarahCured > 3):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and FangSarahInteraction is 0 and SarahCured > 3):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	project the figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
@@ -1440,7 +1440,7 @@ instead of navigating Gray Abbey Library while (Sarah is in Bunker and Fang is i
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
 
-after going down from Gray Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
 	if DavidSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 1 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";

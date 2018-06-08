@@ -427,10 +427,8 @@ Definition: A person(Called X) is booked:
 	If x is the player, no;
 	If x is Trixie, no;
 	if x is Velos, no;
-	if the location of x is Gray Abbey Library, yes;
-	if the location of x is Gray Abbey 2F, yes;
-	if the location of x is Gray Abbey Library, yes;
-	if the location of x is Gray Abbey 2F, yes;
+	if the location of x is Grey Abbey Library, yes;
+	if the location of x is Grey Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
 	if the location of x is Breakroom, yes;
 	if the location of x is Pantry, yes;
@@ -4542,8 +4540,7 @@ Instead of examining the infection terminal:
 			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
 			if z is 15:
 				[say "Press any key to continue.";] [unneeded with 'more' link]
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+				WaitLineBreak;
 				now z is 0;
 	say "End Infection list.[line break]";
 	wait for any key; [don't apply waiterhater, used to separate monsters from credits]
@@ -5040,6 +5037,7 @@ Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by MGEddie.
+Include Feral Latex Fox by Dys.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5142,7 +5140,7 @@ Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
 Include Bald Eagle by Stripes.
 Include Batcubus by Blaydrex.
-Include Bear for FS by Nuku Valente.
+Include Brown Bear by Nuku Valente.
 Include Beaver by Stripes.
 Include Behemoth by Kaleem mcintyre.
 Include Bird of Paradise by Stripes.
@@ -5279,7 +5277,7 @@ Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
-Include Male Peacock By Guest Writers.
+Include Male Peacock by Guest Writers.
 Include Mall Rat by Stripes.
 Include Mammoth by Stripes.
 Include Man-eating Plant by Kernog.
@@ -5457,7 +5455,6 @@ Include Fancy by Sarokcat n Verath.
 Include Fang by Stripes.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
-Include Feral Latex Fox by Dys.
 Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
@@ -6417,19 +6414,21 @@ to say gsopt_start:
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. Some fought back. You tried to resist, but did not escape unscathed. In the end, you managed to get to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Rescuer Stranded":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. There were growing reports of monsters and freaks spreading across the city, attacking the citizens. You had been part of the military's fast response team sent in just hours after the outbreak. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors. You were sent in with little preparation and no idea at all of what you were truly in for.";
 		say "     Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
+		say "     You awoke in what appears to be a disused bunker. You have no idea how you even got here or how long you've been out of it, but you are uninfected. In your panicked flight, you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack and your watch. Heaven only knows what awaits you outside, but you have to find a way back.";
 	else if scenario is "Forgotten":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able. While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire. Fearing to exit, you remained in the safety of the bunker until it was peaceful again. You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type]. Still... how bad could it be?";
 	else if scenario is "Researcher":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go. Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos. Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor. The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
 		say "     The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go. Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos. Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor. The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		say "     You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+	say "     No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
+	WaitLineBreak;
+	LineBreak;
 	say "Welcome to...";
 	[display the figure of title_graphic;]
 	zephyrad rule in 1 turn from now;
@@ -6439,13 +6438,13 @@ to say silent_start:
 	say "	Please wait while we complete some background work prior to restoring.";
 	WaitLineBreak;
 	now started is 1;
-	if gspg is 1:	[male]
+	if gspg is 1: [male]
 		now cocks of player is 1;
 		now cock length of player is 6;
 		now the cock width of the player is 4;
 		now breasts of player is 2;
 		now breast size of player is 0;
-	else:		[defaults to female]
+	else: [defaults to female]
 		now cunts of player is 1;
 		now cunt length of player is 6;
 		now cunt width of player is 4;
@@ -6466,7 +6465,7 @@ to say silent_start:
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	sort table of random critters in lev order;
-	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
+	if scenario is "Caught Outside": [processes infection data first, then clears so intro text can remain intact]
 		randominfect;
 		randominfect;
 		randominfect;
@@ -6564,10 +6563,7 @@ to say silent_start:
 	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
-	say "	Just a moment. Few more things to prepare...";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	now zephyr lobby is known;
-	say "	Done. Thank you for your patience. Please choose a file to restore now."
+	now Zephyr Lobby is known;
 	WaitLineBreak;
 
 to say set_invcolumns:
@@ -6661,7 +6657,7 @@ When play begins:
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;
 	now the right hand status line is "[list of valid directions]";
-	say "Before the game begins...";[warn the player what to expect next]
+	say "Before the game begins..."; [warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
 	if player consents:
 		now hypernull is hypernull;
@@ -6669,7 +6665,7 @@ When play begins:
 		now hypernull is 1;
 	repeat with x running through featsets:
 		now x is a part of the player;
-	if gsgt is 1:		[sets name of scenario for menu based on preset]
+	if gsgt is 1: [sets name of scenario for menu based on preset]
 		now scenario is "Bunker";
 	else if gsgt is 2:
 		now scenario is "Caught Outside";
@@ -6692,7 +6688,7 @@ When play begins:
 	regularstart; [original start method. easier to move everything then leave here]
 
 When play begins (this is the graphics window construction rule):
-	if NewGraphics is true:[Build window regardless in case player decides to turn it on later]
+	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
 		now the graphics window proportion is NewGraphicsRatio;
 		build graphics window;
 		[now the graphics window pixel count is 1;]

@@ -499,7 +499,7 @@ to say sexwithSidney_04:
 
 Section 6 - Interactions
 
-after navigating Gray Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
+after navigating Grey Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
 	say "     You arrive back to find Sidney's come out of the breakroom. At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that. The wolf goes from nuzzling the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] to sniff along her side and then under her tail. Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[else]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy. She shivers with pleasure and releases a happy moan.";
 	say "     Shall you continue watching?";
 	if the player consents:

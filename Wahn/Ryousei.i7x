@@ -66,7 +66,7 @@ to say RTiger loses:
 					now area entry is "Nowhere";
 					break;
 			now royal tiger is tamed;
-			move Ryousei to Gray Abbey Library;
+			move Ryousei to Grey Abbey Library;
 
 to say RTigerDesc:
 	say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I was been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
@@ -142,14 +142,14 @@ the fuckscene of royal tiger is "[sexwithRyousei]".
 
 to say SummonRyousei:
 	remove Ryousei from play;
-	if player is in Gray Abbey Library and Ryousei is in Gray Abbey Library: [summoning while standing next to him]
+	if player is in Grey Abbey Library and Ryousei is in Grey Abbey Library: [summoning while standing next to him]
 		say "     Walking a few steps over to where your tiger companion currently resides, you tell him that you'd like him to accompany you. The muscular feline stands up and smiles, then puts the palms of his hands together and gives a little bow. 'Of course, my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";
 	else: [regular summoning]
 		say "     Calling out the words, 'Watashi wa anata ni yonde, Ryousei,' you wait expectantly, and in a little swirl of blue energy, the muscled tiger indeed appears before you. He puts the palms of his hands together and gives a little bow to you, then says, '[if daytimer is day]Konnichiwa[else]Konbanwa[end if], my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";
 
 to say DismissRyousei:
-	move Ryousei to Gray Abbey Library;
-	if player is not in Gray Abbey Library: [regular dismiss]
+	move Ryousei to Grey Abbey Library;
+	if player is not in Grey Abbey Library: [regular dismiss]
 		say "     Putting a hand on Ryousei's arm, you give him a companionable squeeze, then go on to say that you have to do without his companionship for a while. He doesn't ask why you are sending him away, just nods and gives a small bow. 'Do what you must, my friend. I will be there if you have a need of me.' With that, he walks off in a calm and unhurried stride, exploring the for him unfamiliar world on his own.";
 	else: [dismissing him in the abbey]
 		say "     Putting a hand on Ryousei's arm, you give him a companionable squeeze, then go on to say that you have to do without his companionship for a while. He doesn't ask why you are sending him away, just nods and gives a small bow. 'Do what you must, my friend. I will be here for a while to rest for a while. But even if I set out for exploration at some later point, you know how to call me and I will be there if you have a need of me.' With that, he strolls over to one of the bookshelves and starts to browse the knowledge of this for him unfamiliar world.";
@@ -169,7 +169,7 @@ to say RyouseiDesc:
 		say "DEBUG -> RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], RyouseiXerxes: [RyouseiXerxes], RyouseiHayato: [RyouseiHayato], RyouseiRane [RyouseiRane] <- DEBUG[line break]";
 	project the figure of Ryousei_face_icon;
 	say "     Ryousei is an anthro tiger - and not just any tiger, but a magnificent example of his species. Standing quite tall and strong, corded muscles ripple under his luscious, well-groomed fur and he has an undeniable air of confidence and power around him. Truly, if there is royalty among tiger-folk, this is it. Something in his proud bearing and in the somewhat out of place mannerisms he often uses tells you that this male really isn't a transformed human, but came here from someplace else. He wears an exceedingly well made blue kimono, consisting of smooth, very durable fabric. A green jade disc hangs on a leather string around his neck, the amulet bearing the sigil of two dragons flanking a radiant pearl.";
-	if player is in Gray Abbey Library:
+	if player is in Grey Abbey Library:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
 	else:
 		say "     Accompanying you on your adventures throughout the city, he is never far away, usually just a step behind and a little to the side - leaving you the lead as his local guide. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
@@ -181,7 +181,7 @@ to say RyouseiScent:
 	say "     There is a hint of sandalwood underlying the scent of Ryousei's clean fur.";
 
 instead of conversing the Ryousei:
-	if player is in Gray Abbey Library and Ryousei is in Gray Abbey Library:
+	if player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 		say "[RyouseiTalkMenu]";
 	else if companion of player is royal tiger:
 		say "[RyouseiTalkMenu]";
@@ -192,7 +192,7 @@ instead of conversing royal tiger:
 	if royal tiger is not tamed:
 		say "     Who?";
 	else:
-		if player is in Gray Abbey Library and Ryousei is in Gray Abbey Library:
+		if player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 			say "[RyouseiTalkMenu]";
 		else if companion of player is royal tiger:
 			say "[RyouseiTalkMenu]";
@@ -294,7 +294,7 @@ to say RyouseiSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Kneel down and get your lips around that shapely dick of his";
 	[]
-	if RyouseiXerxes is 1 and player is in Gray Abbey Library:
+	if RyouseiXerxes is 1 and player is in Grey Abbey Library:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer the anthro tiger a go with Xerxes";
 		now sortorder entry is 6;
@@ -445,22 +445,22 @@ to say RyouseiSex6: [Ryousei, Xerxes & the player have fun]
 
 Section 5 - Events
 
-instead of navigating Gray Abbey Library while (companion of player is royal tiger and Xerxes is in Gray Abbey Library and RyouseiXerxes is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (companion of player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going outside from Gray Abbey Library while (companion of player is royal tiger and Xerxes is in Gray Abbey Library and RyouseiXerxes is 0):
-	move player to Gray Abbey Library;
+instead of going outside from Grey Abbey Library while (companion of player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going down from Gray Abbey 2F while (companion of player is royal tiger and Xerxes is in Gray Abbey Library and RyouseiXerxes is 0):
-	move player to Gray Abbey Library;
+instead of going down from Grey Abbey 2F while (companion of player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
@@ -491,8 +491,8 @@ to say RyouseimeetsXerxes:
 		say "     Now that his untamed libido has been satisfied, the tiger once more proves his underlying compassion and decency as he just holds on to Xerxes, gently stroking the young man's chest and making both of their bodies vibrate with his purring. Ryousei licks Xerxes sweaty skin playfully at his neck and cheek, then stretches to bring his muzzle to Xerxes mouth as the young man turns his head, sharing a long and eager kiss. The two of them spend some pleasant moments just touching and making out, then Ryousei eventually gently pulls the human dog off his softening erection and lowers him to the ground. Coming to kneel before the anthro tiger, Xerxes gives him a hug around the midriff before scampering off to his bedding, curling up to take a post-coital nap. Meanwhile, Ryousei gives you a gracious smile and a little bow as he says, 'Thank you. Xerxes really is an exceptional pet,' then he starts cleaning himself up and gets dressed.";
 	now RyouseiXerxes is 1;
 
-instead of going up from Gray Abbey Library while (companion of player is royal tiger and Hayato is in Gray Abbey 2F and RyouseiHayato is 0):
-	move player to Gray Abbey Library;
+instead of going up from Grey Abbey Library while (companion of player is royal tiger and Hayato is in Grey Abbey 2F and RyouseiHayato is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / HAYATO MEETING[line break]";
 	say "     As you angle your steps towards the stairs to the upper level of the library, your tiger companion suddenly tenses up. Stepping forward, he stretches out a clawed hand to hold you back, the fur on the back of his neck and tail bristling up. 'Wait. I feel a powerful presence quite near us - an Oni! We should challenge and kill it at once, before it starts eating people!' Before you can say anything, he starts sprinting up the stairs with unsheathed claws, leaving deep scratches in the handrail as he takes several steps at once in long jumps, ready for violence. Chasing after him, you reach the crest of the stairway a few seconds after the tiger, who is now standing in a combat-stance and seems to be taking in the tactical situation. The intensity of Ryousei's glare is almost frightening as he observes the little camp Hayato has made for himself - as well as Hayato himself, who is sitting on the ground, facing away from you and bent forward over something.";
@@ -504,8 +504,8 @@ instead of going up from Gray Abbey Library while (companion of player is royal 
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";
 	now RyouseiHayato is 1;
 
-instead of going up from Gray Abbey Library while (companion of player is royal tiger and Rane is in Gray Abbey 2F and RyouseiRane is 0):
-	move player to Gray Abbey Library;
+instead of going up from Grey Abbey Library while (companion of player is royal tiger and Rane is in Grey Abbey 2F and RyouseiRane is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";
 	say "[RyouseimeetsRane]";

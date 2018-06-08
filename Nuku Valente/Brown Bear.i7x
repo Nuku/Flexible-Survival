@@ -1,4 +1,4 @@
-Version 4 of Bear for FS by Nuku Valente begins here.
+Version 4 of Brown Bear by Nuku Valente begins here.
 [ Version 1.0 - Initial mob from Nuku Valente's equine extension - Illpill                                               ]
 [ Version 1.1 - Moved to Nuku Valente's folder, unknown changes - Nuku                                                   ]
 [ Version 1.2 - Bear can no longer expand you if you have microwaved or male preferred - Nuku Valente                    ]
@@ -184,4 +184,4 @@ to say honeycombuse:
 instead of sniffing honeycomb:
 	say "The small piece of honeycomb smells like a sweet smackerel of honey. You don't notice anything unusual or infected about its odor.";
 
-Bear For FS ends here.
+Brown Bear ends here.

@@ -708,14 +708,14 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
-instead of going up from Gray Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
 	move player to Garden View;
 	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cosying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
 	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
 	now Char-H of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Gray Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second story railings and singing to herself.";
 	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
@@ -723,7 +723,7 @@ instead of going up from Gray Abbey Library while (Nadia is in Garden View and G
 	now Char-A of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Gray Abbey Library while (Nadia is in Garden View and Icarus is in Gray Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you walk up to the library's second floor, you're treated to a curious sight. Icarus isn't in his usual place in the rafters - instead, your little bird-slut is in Nadia's nest, a spot of blue amongst red, and he's suckling from her, the sight of a full-grown adult doing just that a little odd even in these times, especially when Nadia usually reserves her generous bounty for her own. Nadia, on the other hand, doesn't seem to mind, mothering the chaffinch and cradling him in her lap as if he were just a big baby. Neither of them seem to notice you as you step closer, and it's not until you're close enough to hear Nadia's soft murmurings that you realize what this is all about.";
 	say "     'Pain is not necessarily bad,' she whispers to Icarus as the chaffinch continues to nurse from her ample breasts. 'Each and every one of my brood was brought into the world with pain... and I love them all. At first, there was pain in the breeding, pain in the birthing, and now...I don't regret a single moment of it. Suffering changes us... sometimes for the better.'";
@@ -731,7 +731,7 @@ instead of going up from Gray Abbey Library while (Nadia is in Garden View and I
 	now Char-B of Nadia is "1";
 	say "[npcNadiaintUpdate]";
 
-instead of going up from Gray Abbey Library while (Nadia is in Garden View and HP of Nadia is 1 and NadiaChickCounter > 9):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and HP of Nadia is 1 and NadiaChickCounter > 9):
 	move player to Garden View;
 	say "     Stepping up to the library's second floor, you're greeted by the familiar sight of Nadia's nest - and the unfamiliar sight of her not in it. Instead, she's leaning against one of the open windows, singing a few notes every now and then into the city, her voice carrying out amongst the buildings. It's as if she's looking for something, but although she hurriedly waves you over the moment she sees you, you're clearly not the source of her agitation.";
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
@@ -739,7 +739,7 @@ instead of going up from Gray Abbey Library while (Nadia is in Garden View and H
 	now Lost Chick is unresolved;[event open now]
 	now HP of Nadia is 2;   [quest given]
 
-instead of going up from Gray Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
 	move player to Garden View;
 	say "     As you climb up the stairs to the library's second floor, Nadia waves you over, and leaves her nest to meet you halfway. Her enormously pregnant state weighs her down considerably and she's huffing and out of breath by the time she standing in front of you, but she still manages a smile and presents you with a soft, colorful bundle, which when unfolded turns out to be a feathered cloak, glimmering faintly with a rainbow sheen of colors as it catches the light of the library.";
 	say "     'I sewed my own feathers into it,' Nadia says shyly. 'I had some spare time and the children brought me something useful, so I didn't want the material to go to waste. Besides, I wanted to thank you for saving Vera. Try it on, won't you?'";
@@ -755,10 +755,10 @@ instead of going up from Gray Abbey Library while (Nadia is in Garden View and N
 	increase carried of feathered cloak by 1;
 	now HP of Nadia is 5;
 
-instead of navigating Gray Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "     Upon your return to the library, you notice that someone's added a couple of potted plants next to the doorway and across from the stairwell - you quickly step back, but relax when you realize that they aren't horrible mutants, but just plain ordinary plants, as far as their outward appearance goes. There are a couple of more common veggies - tomatoes and various peppers on stakes, as well as a few leafy greens, but about a third of the pots are filled with colorful flowers. It's over one of these tropical blossoms that you find Nadia kneeling, humming softly to herself as she tends to its wilted leaves and petals, her chicks watching on interestedly.";
 	say "     'Oh, hello!' she chirps, seeing you arrive. 'I was taking the chicks out for a walk some time ago when I came across some of these in a backyard. They were in pretty bad shape when I took them in, but at least they've perked up some now. A little water, a little mulch and care, and they'll just be as good as new. It's a pity the library doesn't have any planters for them to have a proper home, though. I looked up what some of them were in the library books, and they're apparently called birds of paradise, just like me. I can only hope they turn out even prettier than they are.'";
 	say "     Right now, it would be sensible for Nadia to plant just veggies considering the apocalypse and all, but she seems so happy tending to all the plants... and beside, if she's as good a gardener as she claims to be, then the harvest should be good enough to spare her a few indulgences, right?";
@@ -766,10 +766,10 @@ instead of navigating Gray Abbey Library while (Nadia is in Garden View and Nadi
 	say "[npcNadiaintUpdate]";
 	now	GreenTumbTurn is turns;
 
-instead of navigating Gray Abbey Library while (Char-J of Nadia is "1" and (GreenTumbTurn - turns > 12)):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (GreenTumbTurn - turns > 12)):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "     Stepping into the library, you're greeted by a whiff of fresh air, as opposed to the usual musty old-book smell that pervades the library's atmosphere. The reason for that soon becomes clear after a cursory examination of the second floor: in addition to her nest, Nadia has placed a number of potted plants here and there to give some color to the library's rather droll interior, adding to those which she'd already saved the first time around. She's got a fairly good sense of design, you've to admit. Probably that nesting instinct at work again, and beside, you're not the one sating Nadia's desires for interior redecoration - she's roped her chicks into doing the heavy lifting.";
 	say "     The results of Nadia's care have indeed been quite drastic. Most of the rescued plants have perked up magnificently, saved from the verge of drying out, and although most of them are growing at a far faster rate than they ought to be, that's the only thing off about the otherwise harmless plants. The veggies are green, the flowers are more colorful now, and Nadia's tending to a particularly bright blossom, taking a moment to savor its fragrance.";
 	WaitLineBreak;
@@ -782,10 +782,10 @@ instead of navigating Gray Abbey Library while (Char-J of Nadia is "1" and (Gree
 	now Char-J of Nadia is "2";
 	say "[npcNadiaintUpdate]";
 
-instead of navigating Gray Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "     As you enter the library, you notice birdsong wafting down from the second floor; it seems that Nadia's particularly pleased about something today. Stepping upstairs to investigate, you're greeted by the sight of Nadia snuggled in her nest as she's being pampered. Two of Nadia's daughters are brushing her hair and wings, easing out tangles and ruffled feathers, while she herself preens her colorful plumage in a particularly birdlike manner. Nadia makes happy, contented noises in the back of her throat as her daughters preen and pamper her, and they only grow more so as she opens her eyes and notices you staring at her.";
 	say "     'Oh! Welcome back. Say hello to your father, girls,' she says with a giggle, and shakes bits of fluff from her beak. 'Don't mind us - I'm just trying to look my best for you, after all. I'd ask you to join in, if you'd like, but that would ruin the surprise. Please come back later when we're finished and I'll show you just how prettied up I can be, okay?'";
 	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you're bred her. Thinking about it, it must certainly be quite some effort to get her all cleaned up after each session...";

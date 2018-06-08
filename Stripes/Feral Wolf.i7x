@@ -95,8 +95,8 @@ to say beatferalwolf:
 					say "you rub your fingers over your damp pussy. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
 					say "[feralwolffemalesex]";
 				now HP of Fang is 1;
-				move Fang to the Gray Abbey Library;
-				move player to the Gray Abbey Library;
+				move Fang to the Grey Abbey Library;
+				move player to the Grey Abbey Library;
 				now lastfuck of Fang is turns;
 			else:
 				LineBreak;

@@ -486,16 +486,16 @@ instead of conversing Mike:
 				LineBreak;
 				say "     Mike takes you to the kennel, where you have a look at his 'dogs'. In the end, you choose Xerxes, a black-haired male looking about nineteen years old, with muscled runner's legs and strong arms. He attentively looks to Mike as he explains that you're his new master, then comes over to you to sniff you and lick your hand.";
 				say "     After getting a bottle of lube as additional present from Mike, you bring your new pet to the library. Hopefully he'll make a good guard-dog... although the other possibilities sound enticing too.";
-				move Xerxes to the Gray Abbey Library;
-				move player to the Gray Abbey Library;
+				move Xerxes to the Grey Abbey Library;
+				move player to the Grey Abbey Library;
 				now HP of Xerxes is 1;
 			else:
 				LineBreak;
 				say "     Mike takes you to the kennel, where you have a look at his 'dogs'. In the end, you choose Helen, a black haired female looking about nineteen years old, with a shapely body and nice perky breasts. She attentively looks to Mike as he explains that you're her new master, then comes over to you to sniff you and lick your hand.";
 				say "     Looking down over Helen's naked body, Mike strokes the bulge in his pants, then looks back to you. 'I used condoms when I picked her cherry and trained her, so no worries about that. If you plow that field and bring out some seeds, they're all yours. Might be best to act quick if you got any male pets or want to take her out for walks without all kinds of critters smelling a fertile female...'";
 				say "     You bring your new pet to the library. Hopefully she'll make a good guard-dog... although the other possibilities sound enticing too.";
-				move Helen to the Gray Abbey Library;
-				move player to the Gray Abbey Library;
+				move Helen to the Grey Abbey Library;
+				move player to the Grey Abbey Library;
 				now HP of Helen is 1;
 			now HP of Mike is 6;
 		else:
@@ -636,7 +636,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (cocks of player > 0 and Fang is in the Gray Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
@@ -648,7 +648,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (cunts of player > 0 and Fang is in the Gray Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
@@ -806,7 +806,7 @@ to say XerxesSex6: [male player and felinoid + Xerxes]
 		WaitLineBreak;
 		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and long strings of cum start to shoot from his cock onto the library's floor, he starts a chain reaction. The human dog's twitching asshole drives Klauz over the edge, a deep rumble of satisfaction vibrating in his throat as he fills Xerxes up with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute.";
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Xerxes['] cot. The big cat and human dog separate from each other too, then lie down next to the cot on the floor, with Xerxes cuddling up to the felinoid's soft and warm belly fur. Purring as loud as a idling motor, the big cat starts licking his sweaty human skin. Looks as if he's actively trying to infect him, or at least spread his scent over all of your human pet's body.";
-	if Fang is in the Gray Abbey Library: [rivalry messages]
+	if Fang is in the Grey Abbey Library: [rivalry messages]
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Beta Fang]
 			if HP of Xerxes is 11:
@@ -907,7 +907,7 @@ to say XerxesSex8: [female player and felinoid + Xerxes]
 		WaitLineBreak;
 		say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and Klauz pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives your felinoid companion over the edge, a deep rumble of satisfaction vibrating in his throat as his spined shaft pulses with spurt after spurt of cum he deposits in Xerxes['] asshole.[fimpregchance]";
 		say "     After a moment of just resting his cock inside Xerxes as he finishes shooting, the large feline then throws himself over to lounge on his side, taking the human dog still impaled on his spined cock with him. Looking over, you see them lying together, the human dog spooned against the warm belly fur of the larger cat. Purring as loud as a idling motor, Klauz starts licking his sweaty human skin. Looks as if he's actively trying to infect Xerxes, or at least spread his scent over all of your human pet's body.";
-	if Fang is in the Gray Abbey Library: [rivalry messages]
+	if Fang is in the Grey Abbey Library: [rivalry messages]
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Beta Fang]
 			if HP of Xerxes is 11:
@@ -1001,8 +1001,8 @@ to say XerxesSex10: [69 with Xerxes]
 
 Chapter 4 - Xerxes + Fang/Felinoid
 
-instead of going up from Bunker while (Xerxes is in the Gray Abbey Library and lastfuck of Xerxes - turns > 5 and (HP of Xerxes is 1 or HP of Xerxes is 10) and felinoid companion is tamed ):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (HP of Xerxes is 1 or HP of Xerxes is 10) and felinoid companion is tamed ):
+	move player to Grey Abbey Library;
 	say "     As you emerge from the underground bunker and step back into the library, you hear some rather confused barks and yips from somewhere back between the rows of bookshelves. Sounds like Xerxes. Going to have a look, you find your dog turned teenage human, standing on all fours in the midst of a loose reading group of chairs, his gaze following the movements of Klauz. The large feline weaves his way between the chairs with flowing movements, circling Xerxes and from time to time veering closer to rub the side of his head or furred body against Xerxes['] naked form.";
 	say "     Still looking a bit confused, the human dog becomes more and more aroused with each touch of fur and sniff of the felinoid's enticing scent. Soon any doubts about getting this close to any cat are forgotten and Xerxes rubs up against Klauz, licking its muzzle. Giving a satisfied rumbling purr, the large cat moves to sniff Xerxes['] ass, then licks between the cheeks of his bubble butt with his wide tongue. Several licks later, the felinoid moves further up, licking the muscled human back of your dog and then his neck.";
 	WaitLineBreak;
@@ -1016,8 +1016,8 @@ instead of going up from Bunker while (Xerxes is in the Gray Abbey Library and l
 		now HP of Xerxes is 11;
 	now lastfuck of Xerxes is turns;
 
-instead of going up from Bunker while (Xerxes is in the Gray Abbey Library and lastfuck of Xerxes - turns > 5 and (HP of Xerxes is 1 or HP of Xerxes is 11) and Fang is in the Gray Abbey Library and lastfuck of Fang - turns > 7 ):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (HP of Xerxes is 1 or HP of Xerxes is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 ):
+	move player to Grey Abbey Library;
 	if ( HP of Fang is 1 or HP of Fang is 2 ): [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
 		say "     Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Xerxes, who looks to the ground, then rolls over and bares his muscled chest and genitals. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Xerxes to lick his muzzle. Looks like the question of hierarchy among your pets just got solved. With them establishing their status to each other right now peacefully, you decide not to interfere.";
@@ -1253,7 +1253,7 @@ Instead of fucking Helen:
 			now sortorder entry is 5;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (cocks of player > 0 and Fang is in the Gray Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
 			now sortorder entry is 6;
@@ -1265,7 +1265,7 @@ Instead of fucking Helen:
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (cunts of player > 0 and Fang is in the Gray Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
@@ -1347,7 +1347,7 @@ Instead of fucking Helen:
 		clear the screen and hyperlink list;
 
 An everyturn rule:
-	if Helen is in the Gray Abbey Library and thirst of Helen > 0:
+	if Helen is in the Grey Abbey Library and thirst of Helen > 0:
 		if HelenPregnant is 36:
 			now thirst of Helen is 2;   [visible pregnancy]
 		increase HelenPregnant by 1;
@@ -1416,7 +1416,7 @@ to say HelenSex4: [Player fucks the felinoid as he shafts Helen]
 		WaitLineBreak;
 		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her female juices literally dripping on the library floor and creating a small puddle, that gives the large cat the last nudge over the edge. Klauz gives a deep rumble of satisfaction vibrating in his throat as he fills Helen up with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute.";
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Helen's cot. The big cat and human dog separate from each other too, then lie down next to the cot on the floor, with Helen cuddling up to the felinoid's soft and warm belly fur. Purring as loud as a idling motor, the big cat starts licking her sweaty human skin. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
-	if Fang is in the Gray Abbey Library:
+	if Fang is in the Grey Abbey Library:
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Beta Fang]
 			if HP of Helen is 11:
@@ -1515,7 +1515,7 @@ to say HelenSex6: [female player and felinoid + Helen]
 		WaitLineBreak;
 		say "     Even though the felinoid is a quite virile male, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her twitching vaginal muscles give the large cat fucking her the last nudge towards his climax too. A deep rumble of satisfaction vibrates in Klauz's throat as he pushes his member as deep as it will go and fills Helen insides with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Helen with him. Stretched out comfortably on the floor, the felinoid holds Helen against his warm belly fur with his front paws around her, and starts licking her sweaty back. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
-	if Fang is in the Gray Abbey Library: [rivalry messages]
+	if Fang is in the Grey Abbey Library: [rivalry messages]
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Beta Fang]
 			if HP of Helen is 11:
@@ -1669,8 +1669,8 @@ to say HelenBeachWalk:
 
 Chapter 4 - Helen + Fang/Felinoid
 
-instead of going up from Bunker while (Helen is in the Gray Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 10) and felinoid companion is tamed ):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 10) and felinoid companion is tamed ):
+	move player to Grey Abbey Library;
 	say "     As you emerge from the underground bunker and step back into the library, you hear some rather confused barks and yips from somewhere back between the rows of bookshelves. Sounds like Helen. Going to have a look, you find your dog turned teenage human standing on all fours in the midst of a loose reading group of chairs, her looks following the movements of Klauz. The large feline weaves his way between the chairs with flowing movements, circling Helen and from time to time veering closer to rub the side of his head or furred body against her naked form.";
 	say "     Still looking a bit confused, the human dog becomes more and more aroused with each touch of fur and sniff of the felinoid's enticing scent. Soon any doubts about getting this close to any cat are forgotten and Helen rubs up against Klauz, licking his muzzle. Giving a satisfied rumbling purr, the large cat moves to sniff Helen's pussy, then licks over her female parts with his wide tongue. Several licks later, the felinoid moves further up, running his tongue over the human back of your dog and then her neck.";
 	WaitLineBreak;
@@ -1688,8 +1688,8 @@ instead of going up from Bunker while (Helen is in the Gray Abbey Library and la
 		now libido of Helen is 3;           [...by the Felinoid]
 		now HelenPregnant is 1;             [pregnancy timer]
 
-instead of going up from Bunker while (Helen is in the Gray Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Gray Abbey Library and lastfuck of Fang - turns > 7 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
+	move player to Grey Abbey Library;
 	if (HP of Fang is 1 or HP of Fang is 2): [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
 		say "     Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Helen, who looks to the ground, then rolls over and bares her breasts and moist pussy. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Helen to lick his muzzle. Looks like the question of hierarchy among your pets just got solved. With them establishing their status to each other right now peacefully, you decide not to interfere.";
@@ -1814,7 +1814,7 @@ when play ends:
 		else:
 			say "When the rescue comes, you're carted into a holding facility and poked and prodded for a little while before they give you some shots to make you non-infective and release you into the outside world. As busy as they are with the more hostile infected resisting their efforts, there's not much time spent on you.";
 			say "As you adjust to living among regular people again, your sleek lines attract many. Even though you end up getting a job as forest ranger and spend a lot of time in the wilderness, several amorous encounters with hikers lead to more and more people visiting the area. Soon there's a small party every weekend, with everyone dancing around a bonfire and getting laid by you before they pair up with one another.";
-	if Xerxes is in the Gray Abbey Library:
+	if Xerxes is in the Grey Abbey Library:
 		LineBreak;
 		if humanity of player < 10:
 			say "After succumbing to your infection, you forget all about Xerxes, who faithfully waits for you to come back until he's half-starved. As his hunger finally overwhelms his sense of duty, he moves out into the city and is caught by a pack of female huskies. With them, he's pretty well taken care of from then on, as he gets fed pretty well and is allowed to mount them all the time to satisfy their urges.";
@@ -1822,7 +1822,7 @@ when play ends:
 			say "Since the soldiers most likely wouldn't believe you if you told them that Xerxes is actually a dog - and your dog - you get a bit creative when they come for you. Soon they're convinced he's a regular survivor who had a mental break and whom you took care of. You whisper to him to stay calm and that you'll come get him before he gets carted away to a psych ward. When you're released yourself soon after, you stay close to the holding facility until you manage to acquire a key by getting one of the orderlies dead drunk one night. Sneaking into the facility under cover of darkness, you find and free Xerxes, then make your escape. From then on, your faithful dog never leaves your side for long, always ready to guard your home[if lust of Xerxes > 0] and share your bed[end if].";
 			if lust of Xerxes > 3:
 				say "The human dog continues to grow gradually smarter and more at ease with his human body. He certainly maintains his canine mindset and prefers to live as such, though he can pass for human when needed. And while you are able to teach him how other people act, he has little interest in doing so when unnecessary. Having no sense of modesty or sexual hangups, he only becomes a better and better sexual partner who's open to anything and anyone as long as you, as his master, will allow it.";
-	if Helen is in the Gray Abbey Library:
+	if Helen is in the Grey Abbey Library:
 		LineBreak;
 		if humanity of player < 10:
 			say "After succumbing to your infection, you forget all about Helen, who faithfully waits for you to come back until she's half-starved. As her hunger finally overwhelms her sense of duty, she moves out into the city and is caught by an alpha husky who incorporates her into his pack. With them, she's pretty well taken care of from then on, as she gets fed pretty well and is often mounted by the pack leader. Over time, she bears several human-shaped puppies for him.";

@@ -461,7 +461,7 @@ to say libraryexplore:
 Section 4 - Books
 
 to say libbook1:
-	say "     You come across a book on martial arts with several photos and illustrations of techniques. While reading a book is no replacement for proper training, you should be able to learn a few things to help improve as an unarmed fighter. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You come across a book on martial arts with several photos and illustrations of techniques. While reading a book is no replacement for proper training, you should be able to learn a few things to help improve as an unarmed fighter. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 1 to bookcollection;
 	if "Martial Artist" is listed in feats of player:
 		say "     You have gained [bold type]50 XP[roman type] from reading the book.";
@@ -469,22 +469,22 @@ to say libbook1:
 	else:
 		add "Martial Artist" to feats of player;
 		say "     You have gained the [bold type]Martial Arts[roman type] feat.";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook2:
-	say "     You come across a book on riddles, brainteasers and practical jokes. You flip through it, wondering if this could somehow be helpful. Not all the material seems to be geared towards children and several of the riddles are very clever. Your infected mind starts seeing ways to alter the pranks, replacing water, glue, flour and others with more potent monster fluids[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You come across a book on riddles, brainteasers and practical jokes. You flip through it, wondering if this could somehow be helpful. Not all the material seems to be geared towards children and several of the riddles are very clever. Your infected mind starts seeing ways to alter the pranks, replacing water, glue, flour and others with more potent monster fluids[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 2 to bookcollection;
 	say "     You have gained a [bold type]+2 bonus[roman type] in situations dealing with [bold type]jokes, riddles and pranks[roman type].";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook3:
-	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 3 to bookcollection;
 	say "     You have gained [bold type]50 XP[roman type] from reading the book.";
 	increase XP of player by 25;
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook4:
@@ -496,10 +496,10 @@ to say libbook4:
 
 
 to say libbook5:
-	say "     You find a book on military tactics and reconnaissance. The book seems to have originally been published for internal military use only. Being rather old, perhaps it became outdated and was declassified years ago. Regardless, it has considerable information on the subject, ranging from the means to gather this information, what information is needed, how to relay it and how it can then eventually be used effectively. On the whole, it seems like a very useful book. You find yourself wondering if it might be possible for you to gather intel while in the city and pass this along to others who might use it[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details so you may be able to make use of it later[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You find a book on military tactics and reconnaissance. The book seems to have originally been published for internal military use only. Being rather old, perhaps it became outdated and was declassified years ago. Regardless, it has considerable information on the subject, ranging from the means to gather this information, what information is needed, how to relay it and how it can then eventually be used effectively. On the whole, it seems like a very useful book. You find yourself wondering if it might be possible for you to gather intel while in the city and pass this along to others who might use it[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details so you may be able to make use of it later[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 5 to bookcollection;
 	say "     You can now gain a [bold type]time bonus[roman type] by offering to gather information for certain people on the state of the city and its creatures.";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook6:
@@ -510,7 +510,7 @@ to say libbook6:
 
 
 to say libbook7:
-	say "     You find a book on animal training. The book deals with many of the principles involved and covers a variety of animals, not just dogs. The sections on guard animals are particularly interesting, finding several techniques you might use with any pets you acquire to help in their training. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You find a book on animal training. The book deals with many of the principles involved and covers a variety of animals, not just dogs. The sections on guard animals are particularly interesting, finding several techniques you might use with any pets you acquire to help in their training. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 7 to bookcollection;
 	if "Good Teacher" is listed in feats of player:
 		repeat with z running through pets:
@@ -520,7 +520,7 @@ to say libbook7:
 	else:
 		add "Good Teacher" to feats of player;
 		say "     You have gained the [bold type]Good Teacher[roman type] feat.";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 Table of library books
@@ -538,7 +538,7 @@ deweying is an action applying to one topic.
 understand "dewey [text]" as deweying.
 
 check deweying:
-	if the player is not in the Gray Abbey Library:
+	if the player is not in the Grey Abbey Library:
 		say "You can't do that here." instead;
 
 carry out deweying:

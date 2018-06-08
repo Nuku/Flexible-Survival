@@ -200,7 +200,7 @@ to say gshep_postfightargue:		[Post-fight argument]
 	WaitLineBreak;
 
 to say gshep_sexargue:				[Sex role argument]
-	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it. You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is Bunker or location of player is Gray Abbey Library or location of player is gray abbey 2F]a chair[else]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if cocks of player > 0]fine muzzle[else]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
+	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it. You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is Bunker or location of player is Grey Abbey Library or location of player is Grey Abbey 2F]a chair[else]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if cocks of player > 0]fine muzzle[else]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
 	say "     'Why don't you try and make me, jerkface? I'm not just some silly lapdog to [if cocks of player > 0]suck you off[else]lick your snatch[end if] whenever you want. What am I getting out of it and when do I get my turn? I got plenty of tail out there on my own!' he responds even as he strides towards you.";
 	say "     [bold type]How shall you react to this insubordination from him?[roman type][line break]";
 	LineBreak;
@@ -250,7 +250,7 @@ to say gshep_sexargue:				[Sex role argument]
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
-instead of going down from the Gray Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
+instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
 	move player to bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Korvin scene on bunker entry - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";

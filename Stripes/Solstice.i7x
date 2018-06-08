@@ -143,7 +143,7 @@ an everyturn rule:
 
 
 an everyturn rule:
-	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Makeshift Rec Room and the player is in the Gray Abbey Library:
+	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Makeshift Rec Room and the player is in the Grey Abbey Library:
 		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
 		say "     'Hey there. Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[else]you've[end if] got going here. Not much interest to the critters out there and a reinforced bunker in case things get really bad. Definitely need to get some more supplies for that, though. Things got rather hectic back at my old place, so I figured I could move in here with you, sweety.' She runs a taloned paw along your side.";
 		if HP of Solstice is 3:

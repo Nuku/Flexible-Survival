@@ -193,10 +193,10 @@ to say fangsex5:		[assfuck Fang]
 
 Section 3 - Fang and Sandra
 
-instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Gray Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
+instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( HP of Fang is 1 or HP of Fang is 2 ) ):
 	now lastfuck of Sandra is turns;
 	now lastfuck of Fang is turns;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if libido of Fang is 1] again. Once again, there's[else]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if libido of Fang is 1]. With a few quiet whispers,[else]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
 	say "     'Oh, take me, you big beast! I want to be fucked like an animal!' the usually shy and quiet bunny cries out as the wolf's moving atop her. It seems she's becoming more lustful with her time waiting in the bunker, giving into her hidden lusts more and more. Clearly the rabbit girl is much kinkier than she lets on. You grin as you watch the wolf's cock spreading the bunny's wet, dripping folds before pounding and thrusting into her like a wild, feral wolf. Getting quite aroused by the erotic display before you, you rub your hands over your body.";
 	say "     [bold type]Shall you head over to join them [if libido of Fang is 1]this time [end if]or remain watching quietly?[roman type][line break]";
@@ -656,7 +656,7 @@ Section 6 - The Rivalry
 ffrivalry is a number that varies.
 
 an everyturn rule:
-	if the player is in the Gray Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and felinoid companion is tamed:
+	if the player is in the Grey Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and felinoid companion is tamed:
 		increase ffrivalry by 1;
 		let num be a random number between 5 and 20;
 		if num >= ffrivalry and Felinoid companion is the companion of the player:
@@ -667,7 +667,7 @@ an everyturn rule:
 Section 7 - Endings
 
 when play ends:
-	if Fang is in the Gray Abbey Library and HP of Fang is not 3 and HP of Fang is not 4:			[ Fang the guard wolf ]
+	if Fang is in the Grey Abbey Library and HP of Fang is not 3 and HP of Fang is not 4:			[ Fang the guard wolf ]
 		if humanity of player < 10:
 			say "     Having had his alpha succumb to the infection, Fang leaves behind his rope leash and heads back into the city to find his fortune elsewhere.";
 		else:

@@ -600,10 +600,10 @@ to say ObservationRoomFuck:
 
 Section 4 - Library Sex
 
-instead of navigating Gray Abbey Library while ((MulAnalAcceptance > 8) and (lastfuck of Mul - turns) > 8):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while ((MulAnalAcceptance > 8) and (lastfuck of Mul - turns) > 8):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: MUL SEX WALKIN [line break]";
 	if graphics is true:
@@ -659,7 +659,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 6;
 		now description entry is "Allow Klauz to mount Mul";
 	[]
-	if (Fang is in Gray Abbey Library and HP of Fang > 1 and HP of Fang < 100):
+	if (Fang is in Grey Abbey Library and HP of Fang > 1 and HP of Fang < 100):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Fang fuck Mul";
 		now sortorder entry is 7;
@@ -829,7 +829,7 @@ to say MulLibrarySex5: [Pounding against the wall - with Brutus]
 		increase MulAnalAcceptance by 1;
 
 to say MulLibrarySex6: [Spit-Roasting Mul with the Felinoid]
-	say "     Opening the door to the library and walking inside, you beckon the orc to follow you and he complies, still with his dildo in hand. Now that you have this big brute all tamed and ready to serve, the mood strikes you to see the orc taken in a hard, no nonsense fuck. Grasping him by the shoulder, you push him to stumble forward, over to the big sofa in a reading group right at the front of the big hall that is the Gray Abbey Library. He actually falls onto it, face-planting into the cushioned backrest and grumbles back at you - which you answer with a taunt that he's your bitch and should get used to it. Pulling the loincloth off his hips and giving the newly revealed green buttocks a little slap, you then tell him to raise his ass and get ready for a wild ride.";
+	say "     Opening the door to the library and walking inside, you beckon the orc to follow you and he complies, still with his dildo in hand. Now that you have this big brute all tamed and ready to serve, the mood strikes you to see the orc taken in a hard, no nonsense fuck. Grasping him by the shoulder, you push him to stumble forward, over to the big sofa in a reading group right at the front of the big hall that is the Grey Abbey Library. He actually falls onto it, face-planting into the cushioned backrest and grumbles back at you - which you answer with a taunt that he's your bitch and should get used to it. Pulling the loincloth off his hips and giving the newly revealed green buttocks a little slap, you then tell him to raise his ass and get ready for a wild ride.";
 	WaitLineBreak;
 	say "     Mul obeys, giving a needy grunt and moves into a proper fucking position, chest lying on the sofa while his knees rest on the floor in front of it, raising the orc's muscled behind in open invitation. You're behind the orc an eye-blink later, [if cocks of player > 0]with your erection leading the way, coming to rest between the firm buns of his ass with a meaty thud. Pressing your crotch against those muscled cheeks from behind,[else]sliding a hand between the firm bunts of his ass and rubbing up and down. Pressing a finger in against his pucker, to be easily accepted by the well-trained opening,[end if] you revel for a second in the fact that even though you can feel his mighty muscles tighten and flex, the green brute doesn't really struggle against being man-handled in such a way. No - he's far too hungry for a hard shaft to pound his slutty ass. And you got just the right cock to do so...";
 	if companion of player is felinoid companion:
@@ -855,7 +855,7 @@ to say MulLibrarySex6: [Spit-Roasting Mul with the Felinoid]
 		increase MulAnalAcceptance by 1;
 
 to say MulLibrarySex7: [Spit-Roasting Mul with Fang]
-	say "     Opening the door to the library and walking inside, you beckon the orc to follow you and he complies, still with his dildo in hand. Now that you have this big brute all tamed and ready to serve, the mood strikes you to see the orc taken in a hard, no nonsense fuck. Grasping him by the shoulder, you push him to stumble forward, over to the big sofa in a reading group right at the front of the big hall that is the Gray Abbey Library. He actually falls onto it, face-planting into the cushioned backrest and grumbles back at you - which you answer with a taunt that he's your bitch and should get used to it. Pulling the loincloth off his hips and giving the newly revealed green buttocks a little slap, you then tell him to raise his ass and get ready for a wild ride.";
+	say "     Opening the door to the library and walking inside, you beckon the orc to follow you and he complies, still with his dildo in hand. Now that you have this big brute all tamed and ready to serve, the mood strikes you to see the orc taken in a hard, no nonsense fuck. Grasping him by the shoulder, you push him to stumble forward, over to the big sofa in a reading group right at the front of the big hall that is the Grey Abbey Library. He actually falls onto it, face-planting into the cushioned backrest and grumbles back at you - which you answer with a taunt that he's your bitch and should get used to it. Pulling the loincloth off his hips and giving the newly revealed green buttocks a little slap, you then tell him to raise his ass and get ready for a wild ride.";
 	WaitLineBreak;
 	say "     Mul obeys, giving a needy grunt and moves into a proper fucking position, chest lying on the sofa while his knees rest on the floor in front of it, raising the orc's muscled behind in open invitation. You're behind the orc an eye-blink later, [if cocks of player > 0]with your erection leading the way, coming to rest between the firm buns of his ass with a meaty thud. Pressing your crotch against those muscled cheeks from behind,[else]sliding a hand between the firm bunts of his ass and rubbing up and down. Pressing a finger in against his pucker, to be easily accepted by the well-trained opening,[end if] you revel for a second in the fact that even though you can feel his mighty muscles tighten and flex, the green brute doesn't really struggle against being man-handled in such a way. No - he's far too hungry for a hard shaft to pound his slutty ass. And you got just the right cock to do so...";
 	if HP of Fang is 2: [Beta Fang]

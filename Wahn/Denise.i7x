@@ -231,14 +231,14 @@ to say DeniseSex6:
 		say "     Panting and moaning just as eagerly as you are, it doesn't take long for the gryphon stud behind you to give you what your body so urgently needs, and you cry out in pleasure as Denise fills your heat filled womb with her seed. Eventually she softens and pulls out of your body, leaving you there kneeling on all fours on the ground with your head lowered as you try to recover your wits, something about the situation and your submissive positioning making you feel happy and content like a good little breeding bitch for a proud gryphon should be...";
 		say "     [ovichance]";
 
-instead of going up from Gray Abbey Library while (Denise is in Garden View and lust of gryphoness > 0 and lust of gryphoness < 16 and knowpreg of gryphoness is 0):
+instead of going up from Grey Abbey Library while (Denise is in Garden View and lust of gryphoness > 0 and lust of gryphoness < 16 and knowpreg of gryphoness is 0):
 	move player to Garden View;
 	if debugactive is 1:
 		say "     DEBUG: DENISE PREGNANCY SPOTTING [line break]";
 	say "     As you come up the stairs, you look over at Denise and notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 	now knowpreg of gryphoness is 1;
 
-instead of going up from Gray Abbey Library while (Denise is in Garden View and the remainder after dividing libido of gryphoness by 4 is 3): [Denise is present and had a birth with the player being absent]
+instead of going up from Grey Abbey Library while (Denise is in Garden View and the remainder after dividing libido of gryphoness by 4 is 3): [Denise is present and had a birth with the player being absent]
 	move player to Garden View;
 	if debugactive is 1:
 		say "     DEBUG: DENISE POST-BIRTH WALKIN [line break]";

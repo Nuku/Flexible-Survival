@@ -72,7 +72,7 @@ to say krishideoutscent:
 to say krishideoutdesc:
 	if HP of Kristen < 2:
 		say "ERROR-Kristen-[HP of Kristen]R: You should be able to get here! Get out!";
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 		now Kristen's Hideout is unknown;
 	else if HP of Kristen < 12:
 		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
@@ -80,7 +80,7 @@ to say krishideoutdesc:
 		say "[kristentf_phase1]";
 		attempttowait;
 		now HP of Kristen is 13;
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
 	else if HP of Kristen < 16 and lastfuck of Kristen - turns < 4:
 		if HP of Kristen < 15:
@@ -88,18 +88,18 @@ to say krishideoutdesc:
 		else:
 			say "     Kristen could use some time to rest and take stock of her situation before you return to see how she's dealing with her changes[if libido of Kristen is 2]. [else if libido of Kristen is 3]. After the excitement last time, you decide to give her a little more time before attempting to seal the deal again[else]. As eager as you are to see if the slutty vixen's completed her transformation, you decide to wait a little longer to be sure[end if].";
 		attempttowait;
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 	else if HP of Kristen is 13:
 		say "[kristentf_phase2]";
 		attempttowait;
 		now HP of Kristen is 14;
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
 	else if HP of Kristen is 14:
 		say "[kristentf_phase3]";
 		attempttowait;
 		now HP of Kristen is 15;
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
 	else if HP of Kristen is 15:
 		say "[kristentf_phase4]";

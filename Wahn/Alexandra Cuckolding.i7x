@@ -72,22 +72,22 @@ AlexandraBrutusInteraction is a number that varies.
 AlexandraKorvinInteraction is a number that varies.
 AlexandraCarlInteraction is a number that varies.
 
-instead of navigating Gray Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
 
-instead of going up from Bunker while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
 
-instead of going down from Gray Abbey 2F while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
-	move player to Gray Abbey Library;
+instead of going down from Grey Abbey 2F while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
@@ -157,16 +157,16 @@ to say AlexandraBrutusCuckScene:
 		say "     'Spoilsport,' Alexandra barks, less than amused, then makes a few steps to pick up the jacket you so unceremoniously dumped on the floor. She shrugs into it, then zips up the front (a rare occurrence as she usually loves to present her breasts) and turns back to throw you a dirty look. 'Guess I'll have to look elsewhere to find something long and hard,' she adds in a mocking tease, stroking her fingers up and down the nightstick hanging from her belt. With that, she whirls around with a huff and stalks off.";
 		now AlexandraBrutusInteraction is 100;
 
-instead of navigating Gray Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Korvin - AlexandraKorvinInteraction: [AlexandraKorvinInteraction][line break]";
 	say "[AlexandraKorvinCuckScene1]";
 
 to say AlexandraKorvinCuckScene1:
-	say "     Ready to stop by your home base, you make your way back to the library through the empty streets. Well, empty of people at least - you pass more than a few burned-out cars, countless rags and shreds of ripped clothing strewn about and lots of other refuse. Arriving in front of the Gray Abbey Library, you look around for a moment, checking if anyone followed you. As usual most of the time, all is quiet, so you climb the shallow steps and enter the building. Good that people aren't used to go to libraries anymore these days. Barely anyone knows your hideout... But then, as the entrance door swings shut again, you are momentarily frozen in your tracks as someone speaks the words from close beside you, 'I've been waiting for you to get back here.'";
+	say "     Ready to stop by your home base, you make your way back to the library through the empty streets. Well, empty of people at least - you pass more than a few burned-out cars, countless rags and shreds of ripped clothing strewn about and lots of other refuse. Arriving in front of the Grey Abbey Library, you look around for a moment, checking if anyone followed you. As usual most of the time, all is quiet, so you climb the shallow steps and enter the building. Good that people aren't used to go to libraries anymore these days. Barely anyone knows your hideout... But then, as the entrance door swings shut again, you are momentarily frozen in your tracks as someone speaks the words from close beside you, 'I've been waiting for you to get back here.'";
 	if graphics is true:
 		project the figure of Alexandra_face_icon;
 	say "     Whirling around at the surprise, you see that it is Alexandra who spoke, leaning casually against the nearby wall, wearing her leather jacket. And it is - just - the leather jacket she wears right now, with the rest of the gloriously sexy dobie bitch bare-ass naked. You can't help but let your hungry gaze wander over her fit and shapely form, the pair of well-rounded breasts on her chest, all of it covered in short black and reddish-brown fur. She grins confidently at you, then pushes herself off the wall and walks closer, swaying her hips enticingly.";
@@ -204,16 +204,16 @@ to say AlexandraKorvinCuckScene1:
 		say "     As Korvin grunts deeply and starts to come soon after, spraying quite a few long strings of his cum into your bent palm, you loudly say what a good pet he is. With a snide look at Alexandra, you add a moment later that at least one doggie here knows how to behave himself, then raise your hand to Korvin's muzzle. As the canine starts to eat his own load, you grin at the doberwoman bitch. Nothing more needs to be said, as it becomes clear to her that Korvin is YOURS, and Alexandra walks off with a huff.";
 		now AlexandraKorvinInteraction is 100; [stopped things cold]
 
-instead of navigating Gray Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Korvin bangs Alexandra - AlexandraKorvinInteraction: [AlexandraKorvinInteraction][line break]";
 	say "[AlexandraKorvinCuckScene2]";
 
 to say AlexandraKorvinCuckScene2:
-	say "     Ready to stop by your home base, you make your way back to the library through the empty streets. Well, empty of people at least - you pass more than a few burned-out cars, countless rags and shreds of ripped clothing strewn about and lots of other refuse. Arriving in front of the Gray Abbey Library, you look around for a moment, checking if anyone followed you. As usual most of the time, all is quiet, so you climb the shallow steps and enter the building. As the entrance door swings shut again behind you, the anthro German shepherd by your side stops in his tracks for a second, raising his muzzle to sniff the air. 'Oh yeah,' he says with a grin right after.";
+	say "     Ready to stop by your home base, you make your way back to the library through the empty streets. Well, empty of people at least - you pass more than a few burned-out cars, countless rags and shreds of ripped clothing strewn about and lots of other refuse. Arriving in front of the Grey Abbey Library, you look around for a moment, checking if anyone followed you. As usual most of the time, all is quiet, so you climb the shallow steps and enter the building. As the entrance door swings shut again behind you, the anthro German shepherd by your side stops in his tracks for a second, raising his muzzle to sniff the air. 'Oh yeah,' he says with a grin right after.";
 	if graphics is true:
 		project the figure of Korvin_blackcollar_face_icon;
 	WaitLineBreak;
@@ -251,16 +251,16 @@ to say AlexandraKorvinCuckScene2:
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
 
-instead of navigating Gray Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Korvin bangs Alexandra - AlexandraKorvinInteraction: [AlexandraKorvinInteraction][line break]";
 	say "[AlexandraKorvinCuckScene3]";
 
 to say AlexandraKorvinCuckScene3:
-	say "     Ready to stop by your home base, you make your way back to the library through the empty streets. Well, empty of people at least - you pass more than a few burned-out cars, countless rags and shreds of ripped clothing strewn about and lots of other refuse. Arriving in front of the Gray Abbey Library, you look around for a moment, checking if anyone followed you. The streets are quiet as usual, but there is something going on in the library! You can hear barks and grunts from inside, prompting you to sprint up the shallow steps and wrench open the entrance doors, bursting into the open space before the front desk of the library.";
+	say "     Ready to stop by your home base, you make your way back to the library through the empty streets. Well, empty of people at least - you pass more than a few burned-out cars, countless rags and shreds of ripped clothing strewn about and lots of other refuse. Arriving in front of the Grey Abbey Library, you look around for a moment, checking if anyone followed you. The streets are quiet as usual, but there is something going on in the library! You can hear barks and grunts from inside, prompting you to sprint up the shallow steps and wrench open the entrance doors, bursting into the open space before the front desk of the library.";
 	say "     The scene you find there thankfully isn't the fight between some intruder and your guard dogs that you had half-expected - no, it's Korvin and Alexandra making all the noise, as the German shepherd attack dog has your dobie bitch bent over the desk and is pounding into her pussy from behind! For a moment, you can do nothing but stand there and watch Alexandra's boobs swing back and forth with each new hard thrust against her rump, with the usually so tough bitch yipping in need at being fucked. Then the heavy entrance door swings shut with a thump and both of the anthro canines turn their heads to glance your way.";
 	WaitLineBreak;
 	say "     'Yo there, boss!' Korvin calls out in a jovial tone, never stopping his thrusts, although he slows down a little. The German shepherd has a wide grin on his scarred muzzle as he greets you, not in the least concerned about the fact that he's balls deep in the former cop that you've tamed as your bitch. 'Your stuff is safe and sound, no worries - we've been keeping constant watch of the entrance. Just tiding over the boredom a bit with a little fun, you know... isn't that right, slut?' The last few words were directed at Alexandra, into whom he thrusts extra hard as she tries to reply, reducing that to just another lust-filled bark. 'Yeah, that's right! And anyways, you might get some extra guard dogs out of it too!' Korvin adds with a chuckle. Having acknowledged his master, the German shepherd focuses his attention back on his chosen bitch a moment later, getting back into fucking her with more energetic movements.";
@@ -277,8 +277,8 @@ to say AlexandraKorvinCuckScene3:
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
 
-instead of going up from Gray Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Gray Abbey Library and (lastfuck of Alexandra - turns >= 8) and Carl is in Gray Abbey 2F and HP of Carl > 9 and HP of Carl < 40 and AlexandraCarlInteraction is 0):
-	move player to Gray Abbey Library;
+instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 40 and AlexandraCarlInteraction is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra makes a move on Carl - AlexandraCarlInteraction: [AlexandraCarlInteraction][line break]";
 	say "[AlexandraCarlOralCuckScene]";
