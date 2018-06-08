@@ -80,7 +80,7 @@ to PlayerDrink (N - number):
 	if thirst of player < 0:
 		now thirst of player is 0;
 
-to PlayerHealed (N - number): 
+to PlayerHealed (N - number):
 	LineBreak;
 	say "[bold type]Your hitpoints increase by [N]![roman type][line break]";
 	increase HP of player by N;
@@ -105,7 +105,7 @@ to SanBoost (N - number):
 	increase humanity of player by N;
 	if humanity of player > 100:
 		now humanity of player is 100;
-		
+
 to LibidoLoss (N - number):
 	LineBreak;
 	say "[bold type]Your libido has decreased by [N]![roman type][line break]";
@@ -183,7 +183,7 @@ StatGainAction is an action applying to one topic.
 carry out StatGainAction:
 	say "StatChange 'Strength' using 2[line break]";
 	StatChange "Strength" using 2;
-	
+
 understand "teststatloss" as StatLossAction.
 
 StatLossAction is an action applying to one topic.

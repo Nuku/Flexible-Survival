@@ -1,4 +1,4 @@
-Version 5 of Yamato Dragoness For FS by Blue Bishop begins here.
+Version 5 of Yamato Dragoness by Blue Bishop begins here.
 [ Version 5 - Player victory -- Blue Bishop]
 [- Originally Authored By: Kohryu -]
 
@@ -595,7 +595,7 @@ When Play begins:
 	now face change entry is "you suddenly feel overwhelmed by a sudden change, face elongating into a proud, draconic snout, a pair of very lengthy whiskers sprouting from its tip. Two short antlers and a mane of golden hair grow out from the back of your head";
 	now body change entry is "you soon double over, frame shifting into something now much more elongated, arms and legs shifting in shape to something much more stout and less equipped to walk around. As you recover, you see that you're quite large, too, though you're likely only a little over two-thirds the size from which this strain originates, and you can't fly -- only able to hover with limited efficacy. A golden mane now runs across the entire length of your serpentine torso";
 	now skin change entry is "[ydskinchange]";
-	now ass change entry is "a lengthy tail sprouts forth from it.  It takes some time to adjust to it, limb adorned in a golden, fin-like mane, culminating in a flattened tuft at the tip";
+	now ass change entry is "a lengthy tail sprouts forth from it. It takes some time to adjust to it, limb adorned in a golden, fin-like mane, culminating in a flattened tuft at the tip";
 	now cock change entry is "you're made curious by an odd tingling feeling. Taking a look, you're shocked to find that your junk has disappeared! After some observation, you find that your dick is now housed in some manner of draconic vent, the head-tapered, pinkish thing exposed before you with some coaxing, its shaft a peculiar, bulbious ribbing. After coming to terms with this change, you go back to making your next move";
 	now str entry is 22;
 	now dex entry is 20;
