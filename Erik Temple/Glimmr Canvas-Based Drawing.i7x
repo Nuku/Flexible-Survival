@@ -2477,9 +2477,9 @@ Before we get to the buttons, we need to set up the window and canvas. For an ex
 
 	Hello is a room.
 
-	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-colour is g-White.
+	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-color is g-White.
 
-	The back-colour of the main-window is g-White.
+	The back-color of the main-window is g-White.
 
 	The graphics-canvas is a g-canvas. The canvas-width is 248. The canvas-height is 35.
 	The associated canvas of the graphics-window is the graphics-canvas.
@@ -2566,13 +2566,13 @@ The example starts out in essentially the same way as the previous:
 	Include Glimmr Graphic Hyperlinks by Erik Temple.
 	Include Glimmr Bitmap Font by Erik Temple.
 
-	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-colour is g-White.
+	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-color is g-White.
 
 	The graphics-canvas is a g-canvas. The canvas-width is 248. The canvas-height is 35.
 	The associated canvas of the graphics-window is the graphics-canvas.
 	The associated canvas of a g-element is the graphics-canvas.
 
-	The back-colour of the main-window is g-White.
+	The back-color of the main-window is g-White.
 
 	Hello is a room.
 
@@ -2732,7 +2732,7 @@ Next we define our graphics window and its accompanying canvas. For other exampl
 
 	*: Chapter - Graphics window
 
-	The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. The measurement of the graphics-window is 50. The back-colour of the graphics-window is g-black.
+	The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. The measurement of the graphics-window is 50. The back-color of the graphics-window is g-black.
 
 	The graphics-window canvas is a g-canvas. The canvas-width is 500. The canvas-height is 300. The associated canvas of the graphics-window is graphics-window canvas.
 

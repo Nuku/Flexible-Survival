@@ -91,11 +91,11 @@ to say ebwhelpdesc:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	if birthedwhelp is false:
-		say "     The sound of a low squeal filling the air, [one of]what appears to be a small dragon[or]an Ebonflame whelp[stopping] dives at you. No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meagre wings. More distractingly, [one of]you nearly mistake its disproportionately large, black cock for its tail,[or]it's disproportionately large, black cock[stopping] shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-coloured fluid.";
+		say "     The sound of a low squeal filling the air, [one of]what appears to be a small dragon[or]an Ebonflame whelp[stopping] dives at you. No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meagre wings. More distractingly, [one of]you nearly mistake its disproportionately large, black cock for its tail,[or]it's disproportionately large, black cock[stopping] shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-colored fluid.";
 		say "     The tiny thing is a noise of growls and chirps as it claws at you, forcing you to bat it away. Reeling back a few feet, the relentless little whelp only charges at you again!";
 	else:
 		say "     Still lowly squealing, the Ebonflame Whelp wheels around to face its [']mother['] before it immediately dives at you!";
-		say "     No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meagre wings. More distractingly, it's disproportionately large, black cock shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-coloured fluid.";
+		say "     No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meagre wings. More distractingly, it's disproportionately large, black cock shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-colored fluid.";
 		say "     The tiny, noisy thing clearly doesn't behave like normal offspring, attacking its parent with the clear intent of repeating the cycle, and forcing you to bat it away. Reeling back a few feet, the relentless little whelp only charges at you again!";
 
 Section 2 - Monster Insertion
@@ -182,7 +182,7 @@ to ebwhelphijackroutine:
 			say "     [if scalevalue of player > 3 or player is twistcapped]You're thankfully stretchy enough for the monster to pull itself free of your[else]Tears strained from your eyes, the monster stretches you to your limits to pull itself free of your tight[end if] ring";
 		else:
 			say "     [if cunt length of player > 14]You're thankfully stretchy enough for the monster to pull itself free of your[else]Tears strained from your eyes, the monster stretches you to your limits to pull itself free of your tight[end if] cunt";
-		say ", a flood of molten-coloured fluid following in its wake as it lands on the ground with an audible splat. The loud, messy little dragon only needing a few second to acclimate to its exposure before getting airborne...";
+		say ", a flood of molten-colored fluid following in its wake as it lands on the ground with an audible splat. The loud, messy little dragon only needing a few second to acclimate to its exposure before getting airborne...";
 		if ebwhelphijack is 1:
 			now preghijack is false;
 		else:

@@ -30,7 +30,7 @@ Bevtalk is a number that varies.
 Bevkitty is a number that varies.
 
 Beverly is a woman.
-The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in colour, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
+The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
 The conversation of Beverly is { "Squeak!" }.
 
 the scent of Beverly is "She smells like the books surrounding her mixed with a hint of hay.".

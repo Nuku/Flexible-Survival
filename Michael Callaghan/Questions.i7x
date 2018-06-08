@@ -607,7 +607,7 @@ Section: Setting items for menu questions
 
 Before we ask a question that requires an answer from a menu of options, we need to set the menu items to be displayed.  We do this by setting the variable "current question menu" to the list of options that we require.
 
-	now current question is "What is your favourite colour? >";
+	now current question is "What is your favourite color? >";
 	now current question menu is {"Red", "Blue", "Green", "Yellow"};
 	ask a closed question, in menu mode.
 

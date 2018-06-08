@@ -87,7 +87,7 @@ When Play begins:
 	now body change entry is "your back feels odd as two moth wings come out from behind you. Your body also feels like it is shrinking and exhibiting more of a female looking body"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your skin feels warm as it changes to a grayish tone. You feel majestic as your skin seems to reflect the light slightly"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your rump changes from what it was to a softer and a better feeling ass where you can sit on anything and not feel discomfort"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your maleness throbs and pulses as it turns an ashen, gray colour"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "your maleness throbs and pulses as it turns an ashen, gray color"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 11;
 	now dex entry is 14;
 	now sta entry is 13;
@@ -129,7 +129,7 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"cock pill"	"This small pea like object is blue in colour and seems to have a phallic symbol of a penis on it"	1	cock pill
+"cock pill"	"This small pea like object is blue in color and seems to have a phallic symbol of a penis on it"	1	cock pill
 
 cock pill is a grab object. It is temporary. It is a part of the player.
 

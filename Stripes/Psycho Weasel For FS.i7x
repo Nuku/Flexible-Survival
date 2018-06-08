@@ -6,7 +6,7 @@ Version 1 of Psycho Weasel For FS by Stripes begins here.
 Section 1 - Monster Responses
 
 weaselcount is a number that varies.
-weaselcolour is a text that varies. weaselcolour is normally "tan".
+weaselcolor is a text that varies. weaselcolor is normally "tan".
 
 when play begins:
 	add { "Psycho Weasel" } to infections of guy;
@@ -18,12 +18,12 @@ to say psychoweaseldesc:
 	increase weaselcount by 1;
 	let T be a random number between 1 and 3;
 	if T is 1:
-		now weaselcolour is "tan";
+		now weaselcolor is "tan";
 	else if T is 2:
-		now weaselcolour is "brown";
+		now weaselcolor is "brown";
 	else if T is 3:
-		now weaselcolour is "black";
-	say "     Before you is a wild-eyed weasel person in an unsecured straightjacket. Despite his rather cartoonish figure and expression, he is clearly made of flesh and blood, covered in fur and quite real. His fur is a [weaselcolour] colour and he is unclothed save for the loose restraint. He has a crazed expression on his slathering face and pumps at his cock as best he can with the long sleeves overflowing his arms. Their straps jangle as he charges at you, letting you see the swirls in his eyes as he [one of]giggles madly[or]gibbers on about people shooting voodoo into his noodle[or]blathers on about artificial flavours in t-shirts[or]screams incoherently[or]mumbles how you can't trust the garden gnomes[or]mumbles quotes from [']Rain Man['][or]yells that you stole all his blue[or]growls like a beast[in random order].";
+		now weaselcolor is "black";
+	say "     Before you is a wild-eyed weasel person in an unsecured straightjacket. Despite his rather cartoonish figure and expression, he is clearly made of flesh and blood, covered in fur and quite real. His fur is a [weaselcolor] color and he is unclothed save for the loose restraint. He has a crazed expression on his slathering face and pumps at his cock as best he can with the long sleeves overflowing his arms. Their straps jangle as he charges at you, letting you see the swirls in his eyes as he [one of]giggles madly[or]gibbers on about people shooting voodoo into his noodle[or]blathers on about artificial flavours in t-shirts[or]screams incoherently[or]mumbles how you can't trust the garden gnomes[or]mumbles quotes from [']Rain Man['][or]yells that you stole all his blue[or]growls like a beast[in random order].";
 
 to say losetopsychoweasel:
 	say "     Victorious, the crazed weasel moves in to have his way with you. His hard cock dribbles precum as he reaches for you with his covered paws. ";
@@ -109,7 +109,7 @@ When Play begins:
 	now cock entry is "[one of]sheathed[or]weasel[or]mustelid[at random]";
 	now face change entry is "strange noises fill your ears as they change, becoming small and furry. Your face shifts, reforming into a cartoonishly-shaped weasel head. You can hear [one of]voices in your head[or]radio waves picked up by your braces[or]whispers from someone you can't see[at random] as you continue to change, only realizing that you were hearing yourself babbling as the changes subside";
 	now body change entry is "your torso becomes elongated and flexible. Slender and wiry, you twitch with manic energy as the transformation spreads down your arms. Your hands shake nervously and you have to resist the urge to gnaw at them as your bones pop and digits reform into nimble paws. Just as your new paws are settling into place and you're regaining control of them, the same starts to happen to your feet until you're left with a twitchy, mustelid body";
-	now skin change entry is "an itchy sensation spreads over you, making you want to scratch yourself all over, just keep scratching and scratching until it's all gone if you must to make it stop. Scraggly, brown fur starts to spread over your body with a lighter cream colour on your chest. Thankfully, the itch subsides as the fur finishes growing and you sigh in relief";
+	now skin change entry is "an itchy sensation spreads over you, making you want to scratch yourself all over, just keep scratching and scratching until it's all gone if you must to make it stop. Scraggly, brown fur starts to spread over your body with a lighter cream color on your chest. Thankfully, the itch subsides as the fur finishes growing and you sigh in relief";
 	now ass change entry is "you feel a pulling sensation at the base of your spine. With some cracks and pops, it extends out, forming into a long, slender tail covered in fluffy fur";
 	now cock change entry is "it gains a sheath and takes on a shape that's mostly human, but a little more slender and with a smoother glans at the tip as it becomes a little like that of a mustelid as well";
 	now str entry is 13;

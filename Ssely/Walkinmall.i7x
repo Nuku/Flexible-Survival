@@ -11,7 +11,7 @@ instead of resolving Mall Wandering:
 	LineBreak;
 	say "     After a while, it seems that the walls, shops, and residents repeat - passing by barely noticed as your mind is lost in thought. Shaking off your moody trance, you realize that you've done a whole circuit of the place, ending up where you started.";
 	now Mall Wandering is resolved;
-	
+
 Mall Orgy is a situation.
 The sarea of Mall Orgy is "Smith Haven".
 
@@ -63,7 +63,6 @@ instead of resolving Mall Orgy:
 		say "     You decide against staring and just leave with a shrug.";
 		now Mall Orgy is resolved;
 
-	
 OtterBoi Meeting is a situation. OtterBoi Meeting is resolved.
 The sarea of OtterBoi Meeting is "Smith Haven".
 

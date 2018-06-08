@@ -77,7 +77,7 @@ When Play begins:
 	now cock entry is "slick, hidden";
 	now face change entry is "it changes and reshapes itself into that of a barn owl. Your head has a very rounded face, with a lighter fluff of feathers making it soft and cute. Your eyes are sharp, as is your small beak";
 	now body change entry is "your body becomes light and slender, but still strong and muscled. You can feel the muscles on your upper body reshaping and tightening around your shoulders before the changes spread to your arms. As you watch, your arms reshape themselves into wing-like structures covered in soft feathers. Your hands thankfully remain, though they do change form as well, reshaping into bird-like talons, as do your feet";
-	now skin change entry is "you feel goosebumps all over your body which spread to feel like pinpricks all over. From these countless points, small feathers start to grow in, soon covering your body in soft, fluffy feathers. Your downy coat is mainly a mix of browns and cream colours, with lighter fluff on your chest";
+	now skin change entry is "you feel goosebumps all over your body which spread to feel like pinpricks all over. From these countless points, small feathers start to grow in, soon covering your body in soft, fluffy feathers. Your downy coat is mainly a mix of browns and cream colors, with lighter fluff on your chest";
 	now ass change entry is "it reshapes itself into a pert, little bottom covered by a broad tail of long, light brown feathers";
 	now cock change entry is "it slips away inside you, becoming hidden within a cloacal vent which forms to house your genitals";
 	now str entry is 12; [ These are now the creature's stats... ]

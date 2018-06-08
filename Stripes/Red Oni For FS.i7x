@@ -70,7 +70,7 @@ When Play begins:
 	now body change entry is "your body shifts and changes, becoming larger than normal. You gain powerful muscles and a bit of a gut to go with it. Your hands and feet snap and grind as they become slightly misshapen and gain dark, clawed nails";
 	now skin change entry is "a wash of red spreads across it. The red deepens until it's as rich and crimson as blood across your entire body";
 	now ass change entry is "your glutes become firm and meaty";
-	now cock change entry is "it becomes a deep red in colour, darkening to near black at the glans. From your skin around your waist grows a tigerskin loincloth, somehow already dirty and frayed";
+	now cock change entry is "it becomes a deep red in color, darkening to near black at the glans. From your skin around your waist grows a tigerskin loincloth, somehow already dirty and frayed";
 	now str entry is 22; [ These are now the creature's stats... ]
 	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]

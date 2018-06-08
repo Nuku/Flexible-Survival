@@ -1117,7 +1117,7 @@ Part - Routines for color specification
 
 Chapter - Get color from lookup table (by name)
 
-To decide which number is color/colour (hue - a glulx color value):
+To decide which number is color/color (hue - a glulx color value):
 	(- ColVal({hue}) -)
 
 
@@ -1434,7 +1434,7 @@ Glimmr Drawing Commands ends here.
 
 Glimmr Drawing Commands (GDC) is the most basic of the Glimmr extensions, and is required by (nearly) all others. It exposes the three basic Glulx drawing commands at the I7 level, enabling authors to write their own drawing rules without using any I6 code. Glimmr Drawing Commands also adds a number of "derived" commands--commands that use the basic commands to do new things. These include everything from drawing a line to connect any two points on the screen, to "painting" text to the screen, to drawing a grid of images.
 
-Glimmr Drawing Commands requires Jon Ingold's Flexible Windows as well as Michael Callaghan's Fixed Point Maths. For those familiar with I6, the three infglk functions that GDC implements are glk_image_draw, glk_image_draw_scaled, and glk_window_fill_rect. It does not implement the glk_window_erase_rect command, since this is easily imitated by drawing a rectangle in the background color of the window (Flexible Windows's "back-colour" g-window property).
+Glimmr Drawing Commands requires Jon Ingold's Flexible Windows as well as Michael Callaghan's Fixed Point Maths. For those familiar with I6, the three infglk functions that GDC implements are glk_image_draw, glk_image_draw_scaled, and glk_window_fill_rect. It does not implement the glk_window_erase_rect command, since this is easily imitated by drawing a rectangle in the background color of the window (Flexible Windows's "back-color" g-window property).
 
 A note on what GDC will *not* do: It does not:
 

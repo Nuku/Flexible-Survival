@@ -6,7 +6,7 @@ Version 1 of Cat Ninjas by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Ninja Cat" } to infections of furry;
@@ -108,7 +108,7 @@ When Play begins:
    now cock entry is "softly barbed cock"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts into a feline muzzle. Your ears become pointed and cat-like and your eyes become green with slit pupils for seeing in the dark"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes flexible and feline in form. Your arms end in dexterous paws with sharp, retractable claws and your feet are silent cat paws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it grows a coat of tabby cat fur. This fur is orange in colour, with lighter areas at your chest and muzzle with brown stripes all over"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+   now skin change entry is "it grows a coat of tabby cat fur. This fur is orange in color, with lighter areas at your chest and muzzle with brown stripes all over"; [ skin change text. format as "Your skin feels funny as (your text)." ]
    now ass change entry is "a slender, feline tail with orange tabby markings extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
    now cock change entry is "it gains small, soft spines, but is otherwise quite human in form"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 14;
@@ -181,8 +181,8 @@ when play ends:
 				else:
 					project the figure of NinjaCat_M_icon;
 			say "     Corrupted by the infection, your mind falters and fails, losing itself in dreams of feudal Japan. You are drawn back to the museum, cloaking yourself in some dark fabric you find along the way. There you silently wander the halls until a feline ninja drops from the ceiling right in front of you. Several others leap from the shadows and surround you.";
-			say "     You and the other ninja begin to spar, trading blows and tricks while the others watch. Eventually the battle becomes less of a fight and more of a practised routine of blows, blocks, gropes and grinds. The blows become fewer and the gropes become fondles until finally, without any signal, it ends. The group backs off and disappears into the shadows and you join them, following them back to their hidden lair.";
-			say "     There, you join their ranks in a night of lustful passion with several of the agile felines in your new clan. You partake in the enjoyment of [if cocks of player > 0 and cunts of player > 0]several of the males and a few of the rare females[else if cocks of player > 0]several of the rare females[else]several of the males[end if] in their midst. After rest and the food, the whole of the next day is spent in the company of the kachira, the ninja chief. She is a tan-coloured female with green, passionate eyes and long, black hair. Her face is stern, but her paws are soft and able to bring so much pleasure. With her talent outstripping her many subordinates, your day is filled with such pleasures that you would follow her orders and face death for her without hesitation at any moment. For that is what it means to be ninja.";
+			say "     You and the other ninja begin to spar, trading blows and tricks while the others watch. Eventually the battle becomes less of a fight and more of a practized routine of blows, blocks, gropes and grinds. The blows become fewer and the gropes become fondles until finally, without any signal, it ends. The group backs off and disappears into the shadows and you join them, following them back to their hidden lair.";
+			say "     There, you join their ranks in a night of lustful passion with several of the agile felines in your new clan. You partake in the enjoyment of [if cocks of player > 0 and cunts of player > 0]several of the males and a few of the rare females[else if cocks of player > 0]several of the rare females[else]several of the males[end if] in their midst. After rest and the food, the whole of the next day is spent in the company of the kachira, the ninja chief. She is a tan-colored female with green, passionate eyes and long, black hair. Her face is stern, but her paws are soft and able to bring so much pleasure. With her talent outstripping her many subordinates, your day is filled with such pleasures that you would follow her orders and face death for her without hesitation at any moment. For that is what it means to be ninja.";
 			if cunts of player > 0 and "Sterile" is not listed in feats of player:
 				say "     In time, you grow round with kittens and bear your young into the clan. They are raised to be ninja, protecting the museum from the shadows from any who would strike at it.";
 		else:

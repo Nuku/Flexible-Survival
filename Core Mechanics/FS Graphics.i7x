@@ -59,7 +59,7 @@ Figure of Incubus_naked_icon is the file "Incubus_naked.jpg".
 Figure of Kangaroo_icon is the file "Red Kangaroo.jpg".
 Figure of Lamia_icon is the file "FSTF_Lamia.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".	[creature loss variant]
-Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg".	[colour variants]
+Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg".	[color variants]
 Figure of LatexErmineGreen_icon is the file "FSTF_LatexErmineGreen_ig.jpg".
 Figure of LatexErmineIndigo_icon is the file "FSTF_LatexErmineIndigo_ig.jpg".
 Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
@@ -868,7 +868,7 @@ carry out artistcredits:
 	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Kangaroo by Anonymous[line break]";
 	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Latex Ermine (colour variants) by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Latex Ermine (color variants) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mammoth by Boo3 @ furaffinity.net[line break]";
@@ -922,7 +922,7 @@ carry out artistcredits:
 	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Athanasia by SandySchreiber @ furaffinity.net[line break]";
-	say "     Blanche (colour) by The_Negative @ furaffinity.net[line break]";
+	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Boghrim by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -945,7 +945,7 @@ carry out artistcredits:
 	say "     Diego by Anonymous/Damdidoo[line break]";
 	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Medea by Candy @ furaffinity.net[line break]";
-	say "     Dr. Moffatt (colour) by The_Negative @ furaffinity.net[line break]";
+	say "     Dr. Moffatt (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
 	say "     Doran by Anymouse1968 @ furaffinity.net[line break]";
@@ -963,7 +963,7 @@ carry out artistcredits:
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
 	say "     Gobby by lionsilverwolf @ furaffinity.net[line break]";
 	say "     Grant by uniformvixen @ furaffinity.net[line break]";
-	say "     Grant (colour) by Familliar @ furaffinity.net[line break]";
+	say "     Grant (color) by Familliar @ furaffinity.net[line break]";
 	say "     Hadiya (solo) by lionsilverwolf @ furaffinity.net[line break]";
 	say "     Hadiya w/Gobby by SandySchreiber @ furaffinity.net[line break]";
 	say "     Hayato by Darian821 @ y-gallery.net[line break]";

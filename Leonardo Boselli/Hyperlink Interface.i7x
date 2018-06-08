@@ -549,7 +549,7 @@ For showing the hyperlink introduction text (this is the Hyperlink Interface sho
 
 To say emphasiz: if the American dialect option is active, say "emphasiz"; else say "emphasis". To say Emphasiz: if the American dialect option is active, say "Emphasiz"; else say "Emphasis".
 
-To say color: if the American dialect option is active, say "color"; else say "colour". To say Color: if the American dialect option is active, say "Color"; else say "Colour".
+To say color: if the American dialect option is active, say "color"; else say "color". To say Color: if the American dialect option is active, say "Color"; else say "Colour".
 
 To say recogniz: if the American dialect option is active, say "recogniz"; else say "recognis". To say Recogniz: if the American dialect option is active, say "Recogniz"; else say "Recognis".
 

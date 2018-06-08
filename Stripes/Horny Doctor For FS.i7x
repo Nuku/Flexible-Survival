@@ -240,7 +240,7 @@ When Play begins:
 	now skin entry is "floofy white fur covering your";
 	now tail entry is "You've got a poofy white tail that naturally curls upwards.";
 	now cock entry is "[one of]canine[or]doggy[or]knotted[at random]";
-	now face change entry is "your skull bones crackle and snap as they stretch and shift. Your colour vision fades somewhat, but smells become much more vibrant. You just want to bury your new doggy muzzle in someone's crotch or sniff their ass";
+	now face change entry is "your skull bones crackle and snap as they stretch and shift. Your color vision fades somewhat, but smells become much more vibrant. You just want to bury your new doggy muzzle in someone's crotch or sniff their ass";
 	now body change entry is "your joints all tighten up in advance of your body reshaping itself. You become rather dog-like, with paws for hands and feet. You feel a growing eagerness to [']play doctor['] with someone and perform a rather naughty exam of their privates";
 	now skin change entry is "you gain a fluffy coat of white fur";
 	now ass change entry is "a floofy white tail forms, curling upwards and wagging happily";

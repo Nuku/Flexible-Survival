@@ -235,14 +235,14 @@ to say bobcatheatsex1:		[blow job]
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
-	let colourpick be ""; [See Stripes/Andrew.i7x for randomcolourlist]
+	let colorpick be ""; [See Stripes/Andrew.i7x for randomcolorlist]
 	if a random chance of 1 in 5 succeeds:
-		now colourpick is entry 1 of randomcolourlist;
-		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
+		now colorpick is entry 1 of randomcolorlist;
+		rotate randomcolorlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender is 7]maleherm[end if] [bodyselector]. ";
-	if colourpick is not "":
-		say " with a [colourpick] coat";
+	if colorpick is not "":
+		say " with a [colorpick] coat";
 	say "     [gche] decides to have a go at your mouth, sliding his cock past your lips. You moan softly and start sucking on it happily. You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums. You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now. The sated [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[end if] thanks you for the blow job and continues on [ghis] way.";
 
 to say bobcatheatsex2:		[give vaginal]
@@ -255,14 +255,14 @@ to say bobcatheatsex2:		[give vaginal]
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
 		if a random chance of 1 in 10 succeeds, setmongender 8; [cuntboy]
-	let colourpick be ""; [see Stripes/Andrew.i7x]
+	let colorpick be ""; [see Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colourpick is entry 1 of randomcolourlist;
-		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
+		now colorpick is entry 1 of randomcolorlist;
+		rotate randomcolorlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector]. ";
-	if colourpick is not "":
-		say " with a [colourpick] coat";
+	if colorpick is not "":
+		say " with a [colorpick] coat";
 	say "     Looking you over, [ghe] decides to enjoy your dildo-like cock. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] cunt squeezes and quivers around your [cock size desc of player] rod as the [bodyselector] works [ghis] hips up and down. You're ridden until [ghe] has a long and satisfying orgasm [if currentmonster is cocked]that soaks your crotch and splatters your body with [ghis] semen[else]that leaves your crotch soaked with [ghis] juices[end if]. You cum as well, feeding your hot load to [ghis] hungry cunt as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
 
 to say bobcatheatsex3:		[give anal]
@@ -275,14 +275,14 @@ to say bobcatheatsex3:		[give anal]
 		if a random chance of 1 in 12 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 12 succeeds, setmongender 7; [maleherm]
 		if a random chance of 1 in 12 succeeds, setmongender 8; [cuntboy]
-	let colourpick be ""; [See Stripes/Andrew.i7x]
+	let colorpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colourpick is entry 1 of randomcolourlist;
-		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
+		now colorpick is entry 1 of randomcolorlist;
+		rotate randomcolorlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector]. ";
-	if colourpick is not "":
-		say " with a [colourpick] coat";
+	if colorpick is not "":
+		say " with a [colorpick] coat";
 	say "     Looking you over, [ghe] decides to enjoy your dildo-like cock[if currentmonster is cunted], but opts to take it in the butt rather than in [ghis] cunt[end if]. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] hot, tight asshole clenches and squeezes upon your [cock size desc of player] rod as the [bodyselector] relishes the anal fucking [ghe][']s getting. You're ridden until [ghe] has a powerful orgasm that has [ghis] back passage clamp down tightly around you while [ghe] [if currentmonster is cocked]splatters your chest with [ghis] semen[else]soaks your crotch with [ghis] hot vaginal juices as they run down [ghis] crotch onto yours[end if]. You cum as well, pumping your hot load into [ghis] well-fucked hole as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
 
 to say bobcatheatsex4:		[receive vag]
@@ -292,16 +292,16 @@ to say bobcatheatsex4:		[receive vag]
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
-	let colourpick be ""; [See Stripes/Andrew.i7x]
+	let colorpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colourpick is entry 1 of randomcolourlist;
-		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
+		now colorpick is entry 1 of randomcolorlist;
+		rotate randomcolorlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector]. ";
-	if colourpick is not "":
-		say " with a [colourpick] coat";
+	if colorpick is not "":
+		say " with a [colorpick] coat";
 	say "     Intent on your slick cunt, you're moved onto all fours and mounted.";
 	if bodyname of player is "Bobcat":
 		say "     It feels good to gripped by you back handles and pounded by a horny stud. ";
@@ -318,16 +318,16 @@ to say bobcatheatsex5:		[receive anal]
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
-	let colourpick be ""; [See Stripes/Andrew.i7x]
+	let colorpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colourpick is entry 1 of randomcolourlist;
-		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
+		now colorpick is entry 1 of randomcolorlist;
+		rotate randomcolorlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector]. ";
-	if colourpick is not "":
-		say " with a [colourpick] coat";
+	if colorpick is not "":
+		say " with a [colorpick] coat";
 	say "     Intent on your sexy ass[if cunts of player > 0] over your heat-stricken cunt[end if], you're moved onto all fours and mounted. ";
 	if bodyname of player is "Bobcat":
 		say "     It feels good to gripped by you back handles and pounded by a horny stud. ";

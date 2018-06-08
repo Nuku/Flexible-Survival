@@ -116,7 +116,7 @@ to say mrevent02:
 		else:
 			say "     You and Valerie are given a wide berth by the drunken revelers.";
 	else if mre02 is 4:
-		say "     You and Valerie wander the halls of the museum, passing through a variety of exhibits as she tells you about them. As you're approaching the historical wing dealing with the Middle Ages, there comes the clanging of metal on metal and the sounds of fighting. The sphinx seems unsurprised by this and casually heads towards it. Inside, you find a pair of living knights with armoured skin and bulging codpieces swordfighting with one another. Seeing her, they pause in their battle and rush over to kneel at her feet.";
+		say "     You and Valerie wander the halls of the museum, passing through a variety of exhibits as she tells you about them. As you're approaching the historical wing dealing with the Middle Ages, there comes the clanging of metal on metal and the sounds of fighting. The sphinx seems unsurprised by this and casually heads towards it. Inside, you find a pair of living knights with armored skin and bulging codpieces swordfighting with one another. Seeing her, they pause in their battle and rush over to kneel at her feet.";
 		say "     'Ah, Lady Valerie. It bringeth me grand joy to see thee again. I was just doing battle with this knave to win thy hand.'";
 		say "     'Nay, fool! For tis I who shall defeat thee and earn the maiden's love.'";
 		say "     'Never, varlet! Have at thee!' the first cries, rising to his feet and drawing raising his sword again. Soon they're back at it again.";

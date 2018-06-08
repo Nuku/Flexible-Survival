@@ -902,7 +902,7 @@ The size of shoulder pad is 3.
 The AC of shoulder pad is 13.
 The effectiveness of shoulder pad is 13.
 The placement of shoulder pad is "body".
-The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
+The descmod of shoulder pad is "A single, armored pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
 the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 

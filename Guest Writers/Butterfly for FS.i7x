@@ -420,7 +420,7 @@ When Play begins:
 	add { "Butterfly" } to infections of girl;
 	Choose a blank row from Table of random critters;
 	now name entry is "Butterfly"; [Name of your new Monster]
-	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colourful opponent emits a high pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[butterfly defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
@@ -733,7 +733,7 @@ to say butterfly grove scene:
 		increase perception of player by 2;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You decide to head back to the library.";
-		move the player to gray abbey library;
+		move the player to Grey Abbey library;
 		follow the turnpass rule;
 		stop the action;
 	else if ButterflyRaped > 1 and ButterflyPregnant is False:
@@ -928,7 +928,7 @@ to say butterfly grove scene:
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
 	say "You decide to head back to the library.";
-	move the player to gray abbey library;
+	move the player to Grey Abbey library;
 	follow the turnpass rule;
 
 After examining butterfly grove:

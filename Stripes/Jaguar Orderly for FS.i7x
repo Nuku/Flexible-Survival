@@ -131,7 +131,7 @@ When Play begins:
    now body change entry is "it tightens with strong muscles. Your body becomes short and stocky, but powerful. Your hands are now paw-like fists"; [ body change text. format as "Your body feels funny as (your text)." ]
    now skin change entry is "it is covered by golden fur decorated with black rosettes"; [ skin change text. format as "Your skin feels funny as (your text)." ]
    now ass change entry is "you grow a long, slender tail. As it lashes behind you angrily, fur coats it, a golden yellow and covered in black spots"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "turns a deep red in colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+   now cock change entry is "turns a deep red in color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 16;
    now dex entry is 18;
    now sta entry is 16;

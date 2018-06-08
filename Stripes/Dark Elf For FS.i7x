@@ -103,7 +103,7 @@ When Play begins:
 	now cock entry is "[one of]ebon[or]midnight black[or]charcoal[or]inky dark[at random]";
 	now face change entry is "the world around you takes on greater clarity as bones in your face ache. You becomes something close to human, but not quite. You can feel your eyes shift, your lips grow plump and your ears extend up into points";
 	now body change entry is "you feel a pinch, as your waist narrows. Your body becoming thin and curvy, and your instincts shift your posture, flaunting a very female sensuality. Your arms thin and you watch as your fingers grow longer with a long, pointed nail sprouting out of the end of each. Your feel light on your feet as your legs smooth and strengthen";
-	now skin change entry is "it darkens and charcoal coloured smoothness spreads to cover your body. Strength and energy floods into you as youthful vitality floods your system";
+	now skin change entry is "it darkens and charcoal colored smoothness spreads to cover your body. Strength and energy floods into you as youthful vitality floods your system";
 	now ass change entry is "it becomes a plump and very grabbable booty";
 	now cock change entry is "becomes smooth and uncircumcised flesh. It takes on a very dark skin tone, but it looks quite human in shape";
 	now str entry is 12; [ These are now the creature's stats... ]

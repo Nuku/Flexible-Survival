@@ -9,7 +9,7 @@ Version 2 of Squid for FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
-squidcolour is a number that varies.
+squidcolor is a number that varies.
 
 when play begins:
 	add { "Squid" } to infections of girl;
@@ -18,7 +18,7 @@ when play begins:
 to say squiddesc:
 	setmongender 4; [creature is female]
 	if a random chance of 1 in 2 succeeds:
-		say "     Rising from the waters is a female squid creature. Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh. Her head is almost human, except for having an elongated crown and large, dark eyes. The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts. Her arms are long tentacles lined with rows of suckers and ending in pad-like hands. Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around. Her ass is small and compact, barely disturbing the silhouette of her body. Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
+		say "     Rising from the waters is a female squid creature. Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh. Her head is almost human, except for having an elongated crown and large, dark eyes. The squid girl's chest is a slightly lighter color than the rest of her body and has a pair of small, flat breasts. Her arms are long tentacles lined with rows of suckers and ending in pad-like hands. Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around. Her ass is small and compact, barely disturbing the silhouette of her body. Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
 	else:
 		say "     You are suddenly accosted by what looks to be a strange squid-girl. Sleek and smooth in form, her streamlined build gives an almost fey appearance. Seemingly gliding towards you, she exposes her glistening yellow flesh. Head human-like, it is exaggerated by an elongated crown and large, dark eyes. Further informing you of her lithe body, the creature's chest is a slightly paler facet, adorned with a pair of small, flat breasts. Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands. Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
 	if bodyname of player is "Anime Babe":
@@ -58,11 +58,11 @@ to say beatthesquid:
 
 
 to say squidskinchange:
-	let tempnum be squidcolour;
-	now squidcolour is a random number between 0 and 3;
-	if squidcolour is tempnum, increase squidcolour by 1;
-	if squidcolour is 4, now squidcolour is 0;
-	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below. As you admire your new skin with wonder, it suddenly shifts to blue. Your surprise brings on a yellow hue. With a bit of practice, you settle on a colour that suits you";
+	let tempnum be squidcolor;
+	now squidcolor is a random number between 0 and 3;
+	if squidcolor is tempnum, increase squidcolor by 1;
+	if squidcolor is 4, now squidcolor is 0;
+	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below. As you admire your new skin with wonder, it suddenly shifts to blue. Your surprise brings on a yellow hue. With a bit of practice, you settle on a color that suits you";
 
 
 Section 2 - Monster Insertion
@@ -79,8 +79,8 @@ When Play begins:
 	now victory entry is "[losetosquid]";
 	now desc entry is "[squiddesc]";
 	now face entry is "almost human-like, except for the soft-fleshed, elongated crown and large dark eyes";
-	now body entry is "sleek and smooth, made for gliding through the water with ease. Your chest is a slightly lighter colour than the rest of your body. Your arms are long tentacles, lined with rows of suckers and ending in pad-like hands. Your legs are a collection of tentacles, eight in number, that twist and roll as you move around";
-	now skin entry is "wet-looking [if squidcolour is 1]red[else if squidcolour is 2]blue[else if squidcolour is 3]yellow[else if squidcolour is 0]purple[end if]";
+	now body entry is "sleek and smooth, made for gliding through the water with ease. Your chest is a slightly lighter color than the rest of your body. Your arms are long tentacles, lined with rows of suckers and ending in pad-like hands. Your legs are a collection of tentacles, eight in number, that twist and roll as you move around";
+	now skin entry is "wet-looking [if squidcolor is 1]red[else if squidcolor is 2]blue[else if squidcolor is 3]yellow[else if squidcolor is 0]purple[end if]";
 	now tail entry is "Your ass is small and compact, barely disturbing the silhouette of your body.";
 	now cock entry is "bulb-headed tentacle";
 	now face change entry is "your previous features seem to melt away as your face returns to your normal, human shape. Your elation (or disappointment) is soon interrupted as you feel a strange pull at the top of your head. Your skull lengthens and tapers to a gentle point of soft flesh. The world shimmers, like you're looking through a pool of water, as your eyes swell and grow. You look around and see the world in a new clarity";

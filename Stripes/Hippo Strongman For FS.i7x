@@ -58,9 +58,9 @@ When Play begins:
 	now cock entry is "[one of]gray[or]purplish-gray[at random]";
 	now face change entry is "your head distorts and a giant maw forms. Your jaw aches from this transition as it progresses, spreading up over the rest of your head until you have a big hippo head on your shoulders";
 	now body change entry is "becomes large and hugely muscled, swelling with strength. Your hands change as your fingers become short and thick, giving you strong, but clumsy fists";
-	now skin change entry is "it turns rough and gray in colour";
+	now skin change entry is "it turns rough and gray in color";
 	now ass change entry is "a small tail forms behind you. It is short and thick, with a clump of ragged hair at its tip";
-	now cock change entry is "becomes a dark, purplish-gray in colour but is mostly human in shape";
+	now cock change entry is "becomes a dark, purplish-gray in color but is mostly human in shape";
 	now str entry is 24; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]

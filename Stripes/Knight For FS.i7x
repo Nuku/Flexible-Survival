@@ -36,7 +36,7 @@ to say knightdesc:
 		if knightcrestnum is 10, now knightcrestnum is 1;
 	if debugactive is 1:
 		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus].";
-	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face with [one of]a short beard[or]long, flowing hair[or]a small scar that makes him look rugged without disfiguring him[or]a square jaw and noble features[or]wavy brown hair[in random order]. He is a tall and fit man, his body strong from training and combat. Equipped in a chainmail coat, this is covered by a loose tunic of bright colours. The emblem on his chest is one of a crest depicting [stateknightcrest]. He wears rather plain breeches with leather boots below the waist, the former showing a prominent package beneath the [one of]brown[or]gray[or]tan[or]dusty[at random] fabric.";
+	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face with [one of]a short beard[or]long, flowing hair[or]a small scar that makes him look rugged without disfiguring him[or]a square jaw and noble features[or]wavy brown hair[in random order]. He is a tall and fit man, his body strong from training and combat. Equipped in a chainmail coat, this is covered by a loose tunic of bright colors. The emblem on his chest is one of a crest depicting [stateknightcrest]. He wears rather plain breeches with leather boots below the waist, the former showing a prominent package beneath the [one of]brown[or]gray[or]tan[or]dusty[at random] fabric.";
 	say "     Sizing you up, he reaches for the sword at his side. ";
 	if kpstatus is 1:				[player is Knight]
 		if cocks of player > 0 and cunts of player > 0:
@@ -46,7 +46,7 @@ to say knightdesc:
 		else:
 			say "     'Greetings, sir knight. It does my heart good to see another noble knight in these strange times. Let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 	else if kpstatus is 2:		[player is Squire]
-		say "     '[if cunts of player > 0 and cocks of player is 0]Lass[else]Lad[end if]. You have taken the colours of another. Come, let me prove myself the better knight and you may follow me. O, the adventures we shall have. Let the training begin,' he says, fondling the bulging crotch of his breeches.";
+		say "     '[if cunts of player > 0 and cocks of player is 0]Lass[else]Lad[end if]. You have taken the colors of another. Come, let me prove myself the better knight and you may follow me. O, the adventures we shall have. Let the training begin,' he says, fondling the bulging crotch of his breeches.";
 	else if kpstatus is 3:		[player is human-like]
 		say " as he sees you looking at him. 'I saw your expression, peasant. A noble knight such as I cannot abide such insolence from a lowly churl such as you. I shall teach you a lesson you won't soon forget,' he says, fondling the bulging crotch of his breeches.";
 	else:						[player is somehow non-human = monster!]
@@ -131,7 +131,7 @@ to say losetoknight:
 		choose row monster from the table of random critters;
 	else if kpstatus is 3:
 		if HP of player > 0:
-			say "     Rather than resist the armoured knight, you lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and give up. He smiles as you relent, giving you a final swat with the flat of his blade before sheathing his sword. 'It is right that you yield to me, peasant. I am a noble hero and I have great deeds to perform. Come [if cunts of player > 0]damsel[else]peasant[end if], tend to me and you may tell the other commoners of how you worked in service of a brave knight,' he says, pushing you down to the ground beneath him.";
+			say "     Rather than resist the armored knight, you lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and give up. He smiles as you relent, giving you a final swat with the flat of his blade before sheathing his sword. 'It is right that you yield to me, peasant. I am a noble hero and I have great deeds to perform. Come [if cunts of player > 0]damsel[else]peasant[end if], tend to me and you may tell the other commoners of how you worked in service of a brave knight,' he says, pushing you down to the ground beneath him.";
 		else:
 			say "     The knight's final blow, turned at the last moment to the flat of the blade, knocks you to your knees. He then pushes you down the rest of the way with his booted foot. You groan and [if weapon object of player is journal]fall to the ground[else]drop your weapon[end if], unable to keep fighting. 'You are an upstart peasant and nothing more, remember that,' he says as he sheathes his sword while keeping his boot on you. 'I hope I have taught you your place. I am a noble knight with great deeds to perform and I should not be wasting my time dealing with [if cunts of player > 0]common maids[else]commoners[end if]. Though I do think one final lesson to properly teach you your place is in order,' he adds as he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
 		if cunts of player > 0:
@@ -146,7 +146,7 @@ to say losetoknight:
 		say "     You sense a strange warmth inside you as the knight's semen affects you somehow. You feel an unusual attraction to the departing knight, beyond his physical, sexual appeal. It is as if there is now some intangible connection to the bold warrior who just fucked you.";
 	else:
 		if HP of player > 0:
-			say "     Rather than fight further, you submit to the armoured knight. Flourishing his sword, he strikes a pose with a smile. 'It seems even monsters such as you have heard of my great deeds. And so you must also have heard of my other greatness,' he adds, lowering his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
+			say "     Rather than fight further, you submit to the armored knight. Flourishing his sword, he strikes a pose with a smile. 'It seems even monsters such as you have heard of my great deeds. And so you must also have heard of my other greatness,' he adds, lowering his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
 		else:
 			say "     His last blow strikes you hard, knocking you to the ground with a pained groan. And while the hardworking nanites quickly seal the wounds, you're still quite hurt and unable to keep fighting. '[one of]I have slain the monster[or]And again I have proven my heroism against yon monstrous foe[or]Another act of heroism against a monstrous beast[or]Another evil beast defeated in the name of honour[at random],' the knight declares with a flourish of his sword. Looking down at you, he sees you still alive and breathing. 'Ah, the beast still lives?  An opportunity to celebrate my noble victory,' he declares, pulling down his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
 		if cunts of player > 0:
@@ -207,7 +207,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Knight"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The knight[or]Your armoured foe[or]The noble knight[or]The brave warrior[at random] [one of]slashes you with his sword[or]thrusts his sword at you[or]swings his heavy sword in a measured strike[or]bashes you with the hilt of his sword[or]makes a jab with his blade[at random]!";
+	now attack entry is "[one of]The knight[or]Your armored foe[or]The noble knight[or]The brave warrior[at random] [one of]slashes you with his sword[or]thrusts his sword at you[or]swings his heavy sword in a measured strike[or]bashes you with the hilt of his sword[or]makes a jab with his blade[at random]!";
 	now defeated entry is "[beattheknight]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetoknight]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[knightdesc]"; [ Description of the creature when you encounter it. ]

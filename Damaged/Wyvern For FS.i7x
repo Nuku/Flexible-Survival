@@ -1894,7 +1894,7 @@ when play ends:
 		else:
 			say "     The military is a little reluctant to release such a brutish-looking creature from custody when you're inevitably brought in, but when it's made clear that you're not going to cause trouble you're let off back into the world.";
 			say "     You could never quite get the whole 'flying' thing down pat, so you generally keep yourself to the ground, as difficult as this sometimes makes maneuvering the world, though that people are so often inclined to give you space is a slight balm to this particular sting.";
-			say "     You often find employment working in medieval fairs as the main attraction, a beast to be slain by some knight in shining armour. This isn't a particularly dignified job, but you fit in the roll quite well, and the audience seems to enjoy it.";
+			say "     You often find employment working in medieval fairs as the main attraction, a beast to be slain by some knight in shining armor. This isn't a particularly dignified job, but you fit in the roll quite well, and the audience seems to enjoy it.";
 			say "     During your free time, you do occasionally find companionship in suitors brave enough to request the sort of affection only you can provide, which more than alleviates your still slightly pervasive libido.";
 
 to wyvernbiasrequest:

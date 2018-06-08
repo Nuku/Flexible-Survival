@@ -427,8 +427,8 @@ Definition: A person(Called X) is booked:
 	If x is the player, no;
 	If x is Trixie, no;
 	if x is Velos, no;
-	if the location of x is Gray Abbey Library, yes;
-	if the location of x is Gray Abbey 2F, yes;
+	if the location of x is Grey Abbey Library, yes;
+	if the location of x is Grey Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
 	if the location of x is Breakroom, yes;
 	if the location of x is Pantry, yes;

@@ -244,7 +244,7 @@ this is the mentalmouse rule:
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
 			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny. You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]! You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";
-			decrease HP of the player by dam; [No armour protection from the mental whammy]
+			decrease HP of the player by dam; [No armor protection from the mental whammy]
 			if mousecurse is 1:
 				let libdam be 2;
 				increase libdam by a random number between 0 and ( lev entry / 2 );

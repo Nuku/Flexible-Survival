@@ -112,7 +112,7 @@ instead of linkactioning Velos:
 
 to say velosdesc:
 	say "     Inspecting the serpent, he would appear to look much like your standard fare snake. His facial features are subtly more humanized, making his appearance slightly less alienating, possibly even a necessity in order for him to more easily communicate. As well, he has a striking set of green eyes, decidedly not slitted as his kin would have.";
-	say "     A pure, pearl white in colour, his form seems scaled, though you're not sure if the scales are false, as you've never seen him shed them, to say nothing of the difficulty in determining its proper texture, given his perpetually slick frame. Thankfully, the odourless lubricant is not overly abundant, and only becomes a slight mess around where it accumulates--particularly, your anal ring.";
+	say "     A pure, pearl white in color, his form seems scaled, though you're not sure if the scales are false, as you've never seen him shed them, to say nothing of the difficulty in determining its proper texture, given his perpetually slick frame. Thankfully, the odourless lubricant is not overly abundant, and only becomes a slight mess around where it accumulates--particularly, your anal ring.";
 	say "     He generally doesn't like being touched all that much, but your occasional prodding does seem to offer a reciprocal sensation onto you, inferring that your senses are tied--at least at the base level. This would also infer that any harm done to him would be received in kind, and it's unclear if it works both ways; that he feels what you feel.";
 	if level of velos is 1:
 		say "[italic type]Demeanour-wise, he doesn't seem to regard you all that well, and is otherwise a little belligerent towards you.[roman type]";

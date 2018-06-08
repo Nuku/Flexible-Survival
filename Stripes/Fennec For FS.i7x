@@ -20,7 +20,7 @@ to say fennecdesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	say "     [one of]The grass near you rustles and[or]You spot a pair of large, pointed nears moments before[or]You hear an excited yip as[at random] a vulpine creature pops out from cover and moves towards you. He is a short, slender male, roughly five and a half feet tall before you add on several more inches for his very large ears. His ears are nearly as big as his small head and narrow muzzle. His fur is a light tan colour to blend into the dry grasses out here. He moves with agility as he yips and comes at you, the tip of his growing erection poking free of his furry sheath. Given the size of it, you'd guess he's hung about as well as any normal man would be.";
+	say "     [one of]The grass near you rustles and[or]You spot a pair of large, pointed nears moments before[or]You hear an excited yip as[at random] a vulpine creature pops out from cover and moves towards you. He is a short, slender male, roughly five and a half feet tall before you add on several more inches for his very large ears. His ears are nearly as big as his small head and narrow muzzle. His fur is a light tan color to blend into the dry grasses out here. He moves with agility as he yips and comes at you, the tip of his growing erection poking free of his furry sheath. Given the size of it, you'd guess he's hung about as well as any normal man would be.";
 
 
 to say losetofennec:

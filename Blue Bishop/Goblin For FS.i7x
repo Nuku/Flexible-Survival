@@ -586,7 +586,7 @@ to say goblindesc:
 		say "!' The creature's deviously grin exposing its sharp teeth, it's clear he has something else entirely in store for you.";
 
 [ original desc:
-	say "     Before you is a small goblin of a person.  His body has been reduced to barely four feet tall and has misshapen proportions.  His face has a long, pointed nose and chin, and large, pointy ears.  His skin is a leathery green and brown colour.  His limbs are thin and spindly and his fingers are long and nimble.  He wears a crude loincloth and has [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a satchel of small tools[at random].  He cackles as his yellow eyes lock on you, baring his mouthful of sharp teeth.";
+	say "     Before you is a small goblin of a person.  His body has been reduced to barely four feet tall and has misshapen proportions.  His face has a long, pointed nose and chin, and large, pointy ears.  His skin is a leathery green and brown color.  His limbs are thin and spindly and his fingers are long and nimble.  He wears a crude loincloth and has [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a satchel of small tools[at random].  He cackles as his yellow eyes lock on you, baring his mouthful of sharp teeth.";
 ]
 
 Section 2 - Monster Insertion
@@ -610,9 +610,9 @@ When Play begins:
 	now cock entry is "[one of]green[or]goblin[at random]";
 	now face change entry is "your head shifts and changes.  For a moment, you wonder if it will return to normal as your face starts to form.  But then it starts to warp and change.  Your nose grows and elongates into a point and your chin does the same moments later.  You can taste blood in your mouth as new, sharp teeth grow in and you gain a vicious grin.  Your ears feel as if they're being pulled on, stretching and growing until they become large and pointed";
 	now body change entry is "you shrink, losing height and becoming a small and spindly creature";
-	now skin change entry is "green flows across your skin like spilled paint until your covered in leathery, green skin.  Your shoulders, feet and the tips of your ears are a brownish-green colour";
+	now skin change entry is "green flows across your skin like spilled paint until your covered in leathery, green skin.  Your shoulders, feet and the tips of your ears are a brownish-green color";
 	now ass change entry is "your ass becomes small and bony";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "becomes green in colour and has a slightly more pointed shape";
+	now cock change entry is "becomes green in color and has a slightly more pointed shape";
 	now str entry is 8;			[ These are now the creature's stats... ]
 	now dex entry is 14;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10;			[ These values may be used as part of alternate combat.]

@@ -8,7 +8,7 @@ Book 1 - CEO1 (Kaleem and hiccup)
 Consolidated Events Outside CEO1 is a situation.
 The sarea of Consolidated Events Outside CEO1 is "Outside".
 
-ceoutside1list is a list of numbers that varies.  ceoutside1list is usually {1, 2, 3, 5, 6, 7, 8, 9}.
+ceoutside1list is a list of numbers that varies. ceoutside1list is usually {1, 2, 3, 5, 6, 7, 8, 9}.
 [ #4 removed due to placement issues and general story violations ]
 
 Instead of resolving Consolidated Events Outside CEO1:
@@ -192,7 +192,7 @@ Book 1 - CEO2 (Sarokcat, Hellerhound and Stripes)
 Consolidated Events Outside CEO2 is a situation.
 The sarea of Consolidated Events Outside CEO2 is "Outside".
 
-ceoutside2list is a list of numbers that varies.  ceoutside2list is usually {10, 11, 12, 13, 14, 15}.
+ceoutside2list is a list of numbers that varies. ceoutside2list is usually {10, 11, 12, 13, 14, 15}.
 
 Instead of resolving Consolidated Events Outside CEO2:
 	if furry is banned or hermaphrodite is banned, remove 10 from ceoutside2list, if present;
@@ -227,9 +227,9 @@ Instead of resolving Consolidated Events Outside CEO2:
 Section 10 - Cream truck (by Sarokcat)
 
 to say ceoutside10:
-	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left.  Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream...  You might be able to find something useful here, but it would be messy, do you try?";
+	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left. Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream... You might be able to find something useful here, but it would be messy, do you try?";
 	If player consents:
-		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well.  Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
+		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
 		increase carried of gryphon milk by 2;
 		gryphonify;
 	else:
@@ -241,7 +241,7 @@ to say ceoutside10:
 Section 11 - Wyvern Flight (by Sarokcat)
 
 to say ceoutside11:
-	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby.  You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
+	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby. You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
 	mallrecall;
 	remove 11 from ceoutside2list;
 
@@ -249,7 +249,7 @@ to say ceoutside11:
 Section 12 - Strange preacher (by Sarokcat)
 
 to say ceoutside12:
-	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach.  Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
+	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street. Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment. With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock. Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach. Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch of the ground. It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute. Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother. She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
 	mallrecall;
 	remove 12 from ceoutside2list;
 
@@ -305,7 +305,7 @@ to say ceoutside14:
 Section 15 - CatsandDogs (by Stripes)
 
 to say ceoutside15:
-	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
+	say "     As you travel through the city, you come across a pair of old apartment buildings side by side. The windows are open and the tenants are yelling at one another. One building appears to be populated entirely by cats and the other by dogs. They are growling, yowling and making rude gestures at one another. They jeer at one another and toss trash across the alley dividing their buildings. Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them. You make note of the location and remind yourself to keep away, finding another path around this neighborhood.";
 	mallrecall;
 	remove 15 from ceoutside2list;
 

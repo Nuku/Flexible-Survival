@@ -10,7 +10,7 @@ Section 1 - Nullo Wafers
 [
 Table of Game Objects(continued)
 name	desc	weight	object
-"nullo wafers"	"A box of bland, dry cookies. It's packaging proclaims [']Now with less flavour![']"	1	nullo wafers
+"nullo wafers"	"A box of bland, dry cookies. It's packaging proclaims [']Now with less flavor![']"	1	nullo wafers
 
 nullo wafers is a grab object. It is temporary. It is a part of the player.
 

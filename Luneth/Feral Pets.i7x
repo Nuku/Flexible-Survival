@@ -395,7 +395,7 @@ to say ChirpyScent:
 	say "     It smells like an exotic bird with a faint, tropical scent to it.";
 
 to say ChirpyDesc:
-	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird Chirpy is, but she has brilliantly coloured feathers and lovely plumage on the back of her head. The bird is only slightly larger than a parrot, but she seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time she is flying nearby.";
+	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird Chirpy is, but she has brilliantly colored feathers and lovely plumage on the back of her head. The bird is only slightly larger than a parrot, but she seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time she is flying nearby.";
 
 instead of sniffing Exotic Bird:
 	say "     It smells like an exotic bird with a faint, tropical scent to it.";

@@ -72,16 +72,16 @@ To set the background of the status window to be/-- reversed-out:
 To set the background of the status window to be/-- colored:
 	now status window background reversed is false;
 
-To set the background color/colour of the/-- status window to (color - a glulx color value):
+To set the background color/color of the/-- status window to (color - a glulx color value):
 	(- StatusColor({color}); -)
 
-To set the background color/colour of the/-- status window to (color - a number):
+To set the background color/color of the/-- status window to (color - a number):
 	(- NStatusColor({color}); -)
 
-To set the text color/colour of the/-- status window to (color - a glulx color value):
+To set the text color/color of the/-- status window to (color - a glulx color value):
 	(- StatusTextColor({color}); -)
 
-To set the text color/colour of the/-- status window to (color - a number):
+To set the text color/color of the/-- status window to (color - a number):
 	(- NStatusTextColor({color}); -)
 
 Include (-
@@ -152,13 +152,13 @@ Include (-
 
 Include (-
 
-Constant glulx_colour_table = (+Table of Common color Values+);
+Constant glulx_color_table = (+Table of Common color Values+);
 
 [ ColVal c i max;
-	max=TableRows(glulx_colour_table);
+	max=TableRows(glulx_color_table);
 	for ( i=1:i<=max:i++ ) {
-		if (TableLookUpEntry(glulx_colour_table, 1, i) ==  c)
-			return TableLookUpEntry(glulx_colour_table, 2, i);
+		if (TableLookUpEntry(glulx_color_table, 1, i) ==  c)
+			return TableLookUpEntry(glulx_color_table, 2, i);
 	}
 ];
 
@@ -396,7 +396,7 @@ Include (-
 ];
 
 [ VM_RestoreWindowColours; ! used after UNDO: compare I6 patch L61007
-    if (clr_on) { ! check colour has been used
+    if (clr_on) { ! check color has been used
         VM_SetWindowColours(clr_fg, clr_bg, 2); ! make sure both sets of variables are restored
         VM_SetWindowColours(clr_fgstatus, clr_bgstatus, 1, true);
         VM_ClearScreen();

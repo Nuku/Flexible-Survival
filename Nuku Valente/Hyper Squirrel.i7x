@@ -73,7 +73,7 @@ Squirrel Den is a room. It is private.	[This is just a holding spot and not a re
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
 Snow is a person.
-The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armour. Type [bold type]upgrade (weapon/armour)[roman type] and she'll give it a working over.".
+The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.".
 Snow is in Squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
@@ -100,9 +100,9 @@ Understand "upgrade [owned grab object]" as smithing.
 Check smithing:
 	if the noun is not owned, say "You can't offer what you don't have." instead;
 	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
-	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armour." instead;
+	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armor." instead;
 	if the noun is nanite collector, continue the action;
-	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armour." instead;
+	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armor." instead;
 	If the noun is improved, say "It is as good as it gets." instead;
 	if the noun is wielded, say "Stop wielding it first." instead;
 	if the noun is equipped, say "Stop wearing it first." instead;

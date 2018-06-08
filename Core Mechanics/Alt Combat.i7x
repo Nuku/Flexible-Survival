@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Core Mechanics begins here.
-[Version 2.10 - armour and shield tweaks]
+[Version 2.10 - armor and shield tweaks]
 [- Originally Authored By: Stripes -]
 
 "Oh my God!  Who gave them super-powers?!"
@@ -24,7 +24,7 @@ monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
 bonusattack is a number that varies.	[ Used to track how many bonus attacks a player's earned in a round. ]
 chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
 fightoutcome is a number that varies.	[ Used to track the different outcomes of a fight. ]
-absorb is a number that varies.           [ Used to track the damage absorbed by armour/shield/feats. ]
+absorb is a number that varies.           [ Used to track the damage absorbed by armor/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
 duckyactive is a truth state that varies.	[ Used to mark if the ducky's last-minute save has been used this turn. ]
@@ -35,8 +35,8 @@ pldodgebonus is a number that varies.	[ Used to total the player's special dodge
 pldamagebonus is a number that varies.	[ Used to total the player's special damage bonuses. ]
 plfleebonus is a number that varies.	[ Used to total the player's special flee bonuses. ]
 plmindbonus is a number that varies.	[ Used to total the player's special mental/will bonuses. ]
-plnatarmour is a number that varies.	[ Used to hold the player's natural armour value. ]
-plweaknatarmour is a number that varies.	[ Used to hold the player's weakened natural armour value. ]
+plnatarmor is a number that varies.	[ Used to hold the player's natural armor value. ]
+plweaknatarmor is a number that varies.	[ Used to hold the player's weakened natural armor value. ]
 pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
 petchance is a number that varies.		[ Used to hold the player pet's/kids' chance to attack. ]
 monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
@@ -91,8 +91,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now pldamagebonus is 0;
 	now plfleebonus is 0;
 	now plmindbonus is 0;
-	now plnatarmour is 100;
-	now plweaknatarmour is 50;
+	now plnatarmor is 100;
+	now plweaknatarmor is 50;
 	now pethitbonus is 0;
 	now monhitbonus is 0;
 	now mondodgebonus is 0;
@@ -156,22 +156,22 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase petchance by square root of ( 30 * charisma of player );
 		if petchance > 650, now petchance is 650;
 	if "Toughened" is listed in feats of player:		[boosting natural protection]
-		now plnatarmour is 625;							[25^2]
-		now plweaknatarmour is 156;						[ (25/2)^2 ]
+		now plnatarmor is 625;							[25^2]
+		now plweaknatarmor is 156;						[ (25/2)^2 ]
 	if hospquest >= 19:
 		if bodyname of player is "Enhanced Chimera":
 			if player is pure:
 				increase plhitbonus by 1;
 				increase pldamagebonus by 1;
-				increase plnatarmour by 300;
-				increase plweaknatarmour by 75;
+				increase plnatarmor by 300;
+				increase plweaknatarmor by 75;
 			else:
 				increase plhitbonus by 1;
-				increase plnatarmour by 200;
-				increase plweaknatarmour by 50;
+				increase plnatarmor by 200;
+				increase plweaknatarmor by 50;
 		else:
-			increase plnatarmour by 100;
-			increase plweaknatarmour by 25;
+			increase plnatarmor by 100;
+			increase plweaknatarmor by 25;
 	now fightoutcome is 100;
 	let nam be name entry;
 [	let typ be type entry;	]
@@ -912,21 +912,21 @@ to say normalabsorbancy:		[normal absorbancy]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -938,21 +938,21 @@ to say highabsorbancy:			[increased chance to block better]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 90 succeeds:
 				now absorb is ( damagein * ac of x ) / 300;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 90 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 90;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -964,18 +964,18 @@ to say weakabsorbancy:			[only partial absorbancy]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plweaknatarmour;		[natural protection dropped]
+	let totalarmor be plweaknatarmor;		[natural protection dropped]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 200 succeeds:		[half as likely to block]
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			let factor be a random number between 1 and effectiveness of x;
 			let effectiveac be ( ac of x * factor ) / 200;			[1/2 effectiveac]
-			increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+			increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -986,21 +986,21 @@ to say headabsorbancy:			[targets head]
 	now absorb is 0;
 	let targetlocation be "head";
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1011,21 +1011,21 @@ to say bodyabsorbancy:			[targets body]
 	now absorb is 0;
 	let targetlocation be "body";
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1035,31 +1035,31 @@ to say bodyabsorbancy:			[targets body]
 to say areaabsorbancy:			[area of affect attack]
 	now absorb is 0;
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			now absorb is ( damagein * ac of x * effectiveness of x) / 30000;	[shields help deflect more of these blows]
 			if absorb is 0, now absorb is 1;
-			now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+			now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is "body":
-			increase totalarmour by ( ac of x * ac of x * effectiveness of x * 3 ) / 400;			[75% from body]
+			increase totalarmor by ( ac of x * ac of x * effectiveness of x * 3 ) / 400;			[75% from body]
 		if ac of x > 0 and placement of x is "head":
-			increase totalarmour by ( ac of x * ac of x * effectiveness of x ) / 400;	[25% from head]
-	let denominator be 100 + square root of totalarmour;
+			increase totalarmor by ( ac of x * ac of x * effectiveness of x ) / 400;	[25% from head]
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
 	now absorb is damagein - damageout;
 
 
-to say noarmourabsorbancy:			[normalized natural defence only]
+to say noarmorabsorbancy:			[normalized natural defence only]
 	now absorb is 0;
 	now damageout is damagein;
-	let totalarmour be 0;
+	let totalarmor be 0;
 	if "Toughened" is listed in feats of player:
-		increase totalarmour by 400;				[20^2]
-	if totalarmour > 0:
-		let denominator be 100 + square root of totalarmour;
+		increase totalarmor by 400;				[20^2]
+	if totalarmor > 0:
+		let denominator be 100 + square root of totalarmor;
 		let numerator be ( 1000 * damagein );
 		let midcalc be numerator / denominator;
 		now damageout is ( midcalc + 5 ) / 10;		[rounds to the nearest integer]
@@ -1071,16 +1071,16 @@ to say noshieldabsorbancy:		[no shield protection]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1092,23 +1092,23 @@ to say nofeatabsorbancy:
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be 0;		[no natural protection]
+	let totalarmor be 0;		[no natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of (effectiveness of x) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 	repeat with x running through equipped equipment:
 		if ac of x > 0:
 			if placement of x is targetlocation:
 				if a random chance of (effectiveness of x) in 100 succeeds:
-					increase totalarmour by ac of x * ac of x;
+					increase totalarmor by ac of x * ac of x;
 				else:
 					let factor be a random number between 1 and effectiveness of x;
 					let effectiveac be ( ac of x * factor ) / 100;
-					increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+					increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1367,7 +1367,7 @@ postattack:		This rule is followed at the very end of the 'to retaliate' feature
 			meant for effects that take place after a normal attack.  This could be as simple as bragging, to poisoning a player (to be managed
 			by the playerpoisoned rule) and so on.
 altattack1:		This is an alternate, dexterity-based attack the creature will sometimes use.  These can be attacks w/effects, different damage,
-			armour piercing, etc...
+			armor piercing, etc...
 alt1chance:		The likelihood the first alternate attack will be chosen.
 altattack2:		This is another alternate, dexterity-based attack the creature will sometimes use.
 alt2chance:		The likelihood the second alternate attack will be chosen (if the first is not).  If neither alternate occurs, it defaults to normal
@@ -1434,7 +1434,7 @@ this is the bearhug rule:
 	while HP of player > 0 and freedom is 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg / round]
 		now damagein is dam;
-		say "[noarmourabsorbancy]";		[ignores armour]
+		say "[noarmorabsorbancy]";		[ignores armor]
 		decrease HP of player by ( dam - absorb );
 		if absorb is 0:
 			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip!  ([HP of player]/[maxHP of player] HP)[line break]";

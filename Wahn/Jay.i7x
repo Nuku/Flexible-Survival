@@ -66,7 +66,7 @@ an everyturn rule:
 			move Jay to Mall East Wing;
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning, reading]
 			if player is in Mall East Wing and Jay is in Mall East Wing:
-				say "     Having made his rounds to talk to most of his 'neighbours', Jay eventually drifts over to the [']Brookstone Books['] store and goes inside.";
+				say "     Having made his rounds to talk to most of his 'neighbors', Jay eventually drifts over to the [']Brookstone Books['] store and goes inside.";
 			if player is in Brookstone Books:
 				say "     Jay the Christmas Elf walks into the store and wishes Beverly a good morning, then picks up a paperback novel from a shelf and climbs onto a comfortable sofa in the seating area. Sitting down cross-legged, he starts to page through the book with interest.";
 			move Jay to Brookstone Books;
@@ -96,7 +96,7 @@ instead of conversing the Jay:
 	if XP of Jay is 0:
 		say "     ERROR: Jay shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bug-fixing: [XP of Jay]";
 	else:
-		say "[JayTalkMenu]"
+		say "[JayTalkMenu]";
 
 to say JayTalkMenu:
 	LineBreak;
@@ -321,8 +321,6 @@ to say JaySex1: [oral on the player]
 to say JaySex2: [oral on Jay]
 	say "     A";
 
-Jay ends here.
-
 [ Collected Comments and ideas ]
 
 [ Song: Between the boyish figure and brazen desires of the bottoming elf, there's ample room for some content involving the player sharing the horny male with his far larger lover, spit-roasting him on all fours while giving sawing, asynchronous thrusts back and forth into his well-stretched jaw and jealously gripping asshole. Letting out all those pesky inhibitions with every firm thrust as he moans and drools around throbbing dick, all too happy to wrap his arms around the waist of the one screwing his pretty face while his seizing rear massages the pole splitting it wide open. ]
@@ -330,3 +328,5 @@ Jay ends here.
 [ Once everything is said and done, the two could even give an extended show of Mark pulling his still-trembling partner against his broad, snowy muzzle, tongue extending to draw several slow, firm licks through the valley of his buns before its tip presses sinuously against that circle-pet star, gliding into that cum-soaked passage with unwavering resolve. Knowing his lover inside and out, Mark's able to draw a cornucopia of pleasured sounds from his submissive mate, from gurgling moans to breathy cries as his tongue sweeps across every sensitive nerve of his clenching anal lining, only to dip below to grind roughly against his prostate, forcibly milking long strands of thick, stringy pre from the flaring tip of Jay's dick. ]
 
 [ Oh, what a show that would be. Something the player could paw off to in their post-sex haze, riling themselves up on the myriad sounds and expressions the horny elf makes as he's orally ravaged into blissful oblivion. ]
+
+Jay ends here.

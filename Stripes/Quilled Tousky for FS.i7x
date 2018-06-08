@@ -15,7 +15,7 @@ when play begins:
 
 to say quilledtouskydesc:
 	setmongender 3; [creature is male]
-	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colourful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
+	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
 	say "     He looks at you and tilts his head to the side. 'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
 
 
@@ -45,15 +45,15 @@ When Play begins:
 	now defeated entry is "[beatthequilledtousky]";
 	now victory entry is "[losetoquilledtousky]";
 	now desc entry is "[quilledtouskydesc]";
-	now face entry is "large, mostly resembling that of a husky, with a long, broad, colourful beak instead of a muzzle, big enough to take up most of your face";
+	now face entry is "large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of your face";
 	now body entry is "[qtbodydesc]";
 	now skin entry is "feathery-quilled-fur";
 	now tail entry is "You have what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur.";
 	now cock entry is "[one of]perky[or]canine[at random]";
-	now face change entry is "your head changes shape rapidly, as if your nanites are rummaging through a bin of spare mutations. Once things mostly settle down, you find yourself with a happy husky head, a long, broad toucan beak, and an array of vividly-coloured hedgehog quills spanning from your forehead to the back of your neck. You feel good about this change! You announce this fact to the world with an odd noise that sounds like 'Marp!'";
+	now face change entry is "your head changes shape rapidly, as if your nanites are rummaging through a bin of spare mutations. Once things mostly settle down, you find yourself with a happy husky head, a long, broad toucan beak, and an array of vividly-colored hedgehog quills spanning from your forehead to the back of your neck. You feel good about this change! You announce this fact to the world with an odd noise that sounds like 'Marp!'";
 	now body change entry is "your torso changes, becoming a bit fuller and more dense with just a bit of puppy-pudge. An exuberant, gleeful energy wells up within you. Let's go do something! Dunno what. Something! It'll be fun! Your arms cycle through a few different shapes and textures, eventually settling on something mostly dog-like. You scratch yourself behind the ears. Good [if cocks of player > 0 and cunts of player > 0]boygirl[else if cocks of player > 0]boy[else if cunts of player > 0]girl[else]... thing[end if]! Your legs do something weird, and you lose your balance. Hrmm, the ground's not great. You'd rather find something to perch on. Maybe a stick. Ooh, a stick! Is someone going to throw it for you?";
-	now skin change entry is "a strange, frantic tingle ripples over your body as sharp quills, colourful feathers, and soft fur all vie for control of your hide. Eventually, you settle into a bizarre equilibrium between the three.";
-	now ass change entry is "there is a sudden 'Poof!' A fluffy husky tail sprouts from your rear, wagging happily. Another poof, as colourful feathers pop out over its surface! Poof, ow! Long, sharp porcupine quills the size of knitting needles sprout from your tail! Better be careful where you wag that thing...";
+	now skin change entry is "a strange, frantic tingle ripples over your body as sharp quills, colorful feathers, and soft fur all vie for control of your hide. Eventually, you settle into a bizarre equilibrium between the three.";
+	now ass change entry is "there is a sudden 'Poof!' A fluffy husky tail sprouts from your rear, wagging happily. Another poof, as colorful feathers pop out over its surface! Poof, ow! Long, sharp porcupine quills the size of knitting needles sprout from your tail! Better be careful where you wag that thing...";
 	now cock change entry is "your cock throbs and pulses. You curl yourself down and lick at it a bit. Happy little doggy cock. Nope, looks and tastes just fine. What were you doing again?";
 	now str entry is 14;
 	now dex entry is 14;
@@ -105,7 +105,7 @@ to say usetouskyquill:
 	say "     You fiddle briefly with the large tousky quill and end up pricking yourself with it. Ouch! Dropping it, you suck on your poked finger. Your mind becomes clouded, making you muddle-headed and giddy about everything.";
 	increase morale of player by 1;
 
-the scent of tousky quill is "The colourful quill's scent muddles your mind, making you feel stupid and giddy.".
+the scent of tousky quill is "The colorful quill's scent muddles your mind, making you feel stupid and giddy.".
 
 [
 when play ends:
