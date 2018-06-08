@@ -52,7 +52,7 @@ instead of sniffing the Cute Crab:
 	say "[SnipsScent]";
 
 instead of sniffing Snips:
-	say "[SnipsScent]"
+	say "[SnipsScent]";
 
 to say SnipsScent:
 	say "     The crab's smell is faintly reminiscent of the beach.";
@@ -536,7 +536,7 @@ instead of sniffing the Helper Dog:
 	say "[HoboScent]";
 
 instead of sniffing Hobo:
-	say "[HoboScent]"
+	say "[HoboScent]";
 
 to say HoboScent:
 	say "     Your Hobo smells like a normal dog, surprisingly given the circumstances.";

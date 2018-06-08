@@ -486,11 +486,7 @@ to say aidKenaz11:
 Section 5 - Fucking Kenaz
 
 Instead of fucking Kenaz:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Dalmatian":
-			now monster is y;
-			break;
+	setmonster "Dalmatian";
 	if player is neuter:
 		say "     Lacking a gender of your own, you doubt you'd be able to entice him into some fun until that's resolved.";
 	else if KTO is 0:
@@ -797,7 +793,7 @@ Instead of resolving a Pertho:
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
-			say "     Successfully sneaking up behind the Dalmatian you use your full body weight to pin the other down onto the ground. The Dalmatian yelps and squirms and fights to get away from you, but currently you are too focused to allow the feral mutt to get any kind of leverage as you snap the collar around his neck and then hook the leash onto the metal tether.  Getting up off of Pertho you wrap the end of the leash around your [bodyname of player] hand and then tug on it to get the Dalmatian moving.";
+			say "     Successfully sneaking up behind the Dalmatian you use your full body weight to pin the other down onto the ground. The Dalmatian yelps and squirms and fights to get away from you, but currently you are too focused to allow the feral mutt to get any kind of leverage as you snap the collar around his neck and then hook the leash onto the metal tether. Getting up off of Pertho you wrap the end of the leash around your [bodyname of player] hand and then tug on it to get the Dalmatian moving.";
 			say "     Of course, as with almost everything in your life, the Dalmatian doesn't want to cooperate so you end up forcibly dragging the other back to the firehouse.";
 			now HelpKenazOut is 3;
 			Move player to the Fire Station;

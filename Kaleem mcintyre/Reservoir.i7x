@@ -5,7 +5,7 @@ Reservoir by Kaleem mcintyre begins here.
 Section 1 - Reservoir facility
 
 Resevquest is a number that varies.
-bloblost is a truth state that varies.  bloblost is usually false.
+bloblost is a truth state that varies. bloblost is usually false.
 waterworks is a number that varies.
 
 [ *** Content removed due to size issues and need for repairs ]
@@ -207,7 +207,7 @@ doorsearch is a number that varies.
 Instead of Resolving ThreeDoors:
 	If resevquest is 4:
 		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room... then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is.";
-		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way.  It's not like you can you really go back and ask one of the creatures here for help.  Well, not and expect to get a useful answer anyway.  You have something of a dilemma on your hands.";
+		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way. It's not like you can you really go back and ask one of the creatures here for help. Well, not and expect to get a useful answer anyway. You have something of a dilemma on your hands.";
 		say "[doorcheck]";
 
 descriptionmessage is a text that varies.

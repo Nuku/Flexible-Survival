@@ -428,17 +428,17 @@ Section - Gargoyle Workaround
 
 [Workaround provided by Ben Cressey, with this explanation:
 
-"Gargoyle has a bit of an issue with multiple text buffers.  The
+"Gargoyle has a bit of an issue with multiple text buffers. The
 background color for the most recently created text buffer is used as
 the color of the padding between the application borders and the
-boundaries of the Glk window model.  This padding is not part of Glk's
-model and at best its behavior is undefined.  At worst, the very
+boundaries of the Glk window model. This padding is not part of Glk's
+model and at best its behavior is undefined. At worst, the very
 existence of such padding is disallowed by the spec. (I don't
 actually know for sure.)
 
 Gargoyle uses these hints to "guess" the appropriate color of the
-padding.  The above example would set it back to white, once you're
-done opening all of your text buffers.  Per the Glk spec, this will
+padding. The above example would set it back to white, once you're
+done opening all of your text buffers. Per the Glk spec, this will
 have no effect on any Glk windows until the next time you open a text
 buffer, so as a practical matter it should do nothing in other Glk
 implementations."
@@ -1124,7 +1124,7 @@ This may or may not be helpful!
 
 Note: these don't render well across the spectrum of Glulx interpreters.
 
-	Section: Background Colour
+	Section: Background color
 
 Windows can have a back-color, specified as one from the (reasonably large) Table of Common Color Values (based on but extended from Glulx Text Effects, by Emily Short). The possible colors are:
 
@@ -1187,7 +1187,7 @@ Hyperlink replacement commands are defined by the Table of Glulx Hyperlink Repla
 
 If a link ID number has no corresponding text command in the table of replacement commands, nothing will happen when the link is clicked.
 
-To define custom behaviour for a particular link, we write a new rule for the hyperlink processing rulebook. For example, to have a hyperlink simply clear the screen immediately, without pasting any text to the command line:
+To define custom behavior for a particular link, we write a new rule for the hyperlink processing rulebook. For example, to have a hyperlink simply clear the screen immediately, without pasting any text to the command line:
 
 	Hyperlink processing rule when the current hyperlink ID is 1:
 		clear the main-window;

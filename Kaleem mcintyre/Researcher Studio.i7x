@@ -55,7 +55,7 @@ instead of conversing the Omio:
 		say "     ([link]N[as]n[end link]) - No.";
 		If player consents:
 			LineBreak;
-			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research.  It is important.'  You nod and politely say you'll think about it.";
+			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research. It is important.' You nod and politely say you'll think about it.";
 			now Omiotalk is 1;
 		else:
 			LineBreak;
@@ -184,7 +184,7 @@ Section 6 - Nightstand
 The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old... very old. Maybe you could try and [bold type]open[roman type] it?".
 
 instead of sniffing Nightstand:
-	say "The nightstand smells old and somewhat musky."
+	say "The nightstand smells old and somewhat musky.";
 
 unlocknightstand is an action applying to nothing.
 

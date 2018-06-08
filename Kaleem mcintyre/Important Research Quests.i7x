@@ -58,7 +58,7 @@ Instead of resolving Important Treasure:
 	else if opcl is 3:
 		say "Walking through the seedier portion of town you find yourself bumping into someone who suddenly comes flying out of an opened doorway. Grunting from the impact of your two bodies colliding you stagger for a moment before catching yourself. Once you are settled you look to find the face of the four armed iguana from before gazing up at you with a slightly punch-drunk look plastered onto his scaly face. 'Hey! I know you!' The bleary eyed reptile slurs while blinking owlishly up at you. 'You're that suspect I'm supposed to question!' The uniformed iguana chuckles playfully before grabbing you into a strong bear hug and then nuzzling the underside of your [face of player] neck.";
 		WaitLineBreak;
-		say "The smell of something rancid coming off from the other man makes you want to retch. Just how much did the officer have to drink? 'I'm so happy I found you, now I can tell Greg that I did a good job and get a pat on the head from him.'  At this point you're about totally lost, but seeing how inebriated the other is you start to open your mouth to ask the cop a question. However, before you can several rugged looking mutants come out of the building the iguana had just flown from with angry looks plastered onto their muzzles.";
+		say "The smell of something rancid coming off from the other man makes you want to retch. Just how much did the officer have to drink? 'I'm so happy I found you, now I can tell Greg that I did a good job and get a pat on the head from him.' At this point you're about totally lost, but seeing how inebriated the other is you start to open your mouth to ask the cop a question. However, before you can several rugged looking mutants come out of the building the iguana had just flown from with angry looks plastered onto their muzzles.";
 		WaitLineBreak;
 		say "The group of five quickly surround you and your drunken companion and then go to growling and hissing like mad which makes you narrow your eyes. 'H-hey, back off you guys. I-I'ma police officer!' the iguana says, but that only makes the rowdy looking group of mutants start to chuckle as some of them begin to leer at the vulnerable reptile. 'We know, we've been looking to do our civic duty for a while now, haven't we guys?' The rest of the mutants all nod together while rubbing their growing hard ons. 'Why don't you leave the lizard here, friend? We'll take [italic type]real[roman type] good care of this lightweight.'";
 		WaitLineBreak;
@@ -382,7 +382,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "medallion"	"An unusual bronze artifact that bears a serpent biting at its own tail."	1	medallion
 
-medallion is a grab object. It is part of the player.  It is not temporary.
+medallion is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing medallion:
 	say "A strong scent of ancient times and alchemical mixtures covers the medallion.";
@@ -444,7 +444,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "undisclosed case"	"A case Omio hastily shoved into your hands."	1	undisclosed case
 
-undisclosed case is a grab object. It is part of the player.  It is not temporary.
+undisclosed case is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing undisclosed case:
 	say "The case smells of something fruity as well as spicy. Liquor, maybe?";

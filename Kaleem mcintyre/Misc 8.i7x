@@ -177,7 +177,7 @@ Instead of resolving a Dr Feel Good:
 				Increase score by 10;
 				Now Dr Feel Good is resolved;
 		if fightoutcome >= 20:		[lose/run]
-			Say "Getting your tail beaten by the two vixens you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out.  You are uncertain how much time passes while you're unconscious.";
+			Say "Getting your tail beaten by the two vixens you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out. You are uncertain how much time passes while you're unconscious.";
 			now heat enabled is false; [temporarily turning off heat effects]
 			now skipturnblocker is 1; [temporarily turns off several other visible end of turn effects]
 			if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
@@ -186,7 +186,7 @@ Instead of resolving a Dr Feel Good:
 			follow the turnpass rule;
 			now heat enabled is true; [heat effects turned back on]
 			now skipturnblocker is 0; [restores normal end of turn functions for the final turn skip after the scene]
-			say "When next you wake up you find yourself lying on the bed the fennec boy had been on, the other being nowhere in sight, with some confusion as to what's going on.  Slowly the memories return to you and you grunt in vexation before trying rising up off of the stiff mattress underneath your [bodyname of player] back. When you find that all of your motor function are a little out of whack a slight bit of panic crosses your mind, but soon your body's natural healing factor is kicking into gear to get everything back into order.";
+			say "When next you wake up you find yourself lying on the bed the fennec boy had been on, the other being nowhere in sight, with some confusion as to what's going on. Slowly the memories return to you and you grunt in vexation before trying rising up off of the stiff mattress underneath your [bodyname of player] back. When you find that all of your motor function are a little out of whack a slight bit of panic crosses your mind, but soon your body's natural healing factor is kicking into gear to get everything back into order.";
 			WaitLineBreak;
 			Say "Once you are up and about you look over yourself to see if everything is as it should be before giving yourself a few test pats. Seeing that both your arms and legs are just as they had been before your little clash with the vixen you find yourself calling everything to an immediate halt when you rub your palm over your groin. Blinking as you feel that something is not as it should be you undo your pants and then have a look down. What you see makes your mouth slowly drop open as you look to find that [if cocks of player is 0]you now have a cock dangling between your legs[else]your cock has gotten a little bigger[end if].";
 			WaitLineBreak;

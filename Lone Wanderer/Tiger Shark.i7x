@@ -8,7 +8,7 @@ Version 1 of Tiger Shark by Lone Wanderer begins here.
 [  50 = Submitted as FSD to him                                   ]
 [  51 = Threw fight/lost to him as FSD                            ]
 [  52 = Beat him as FSD                                           ]
-[  53-55 = Beat him as FSD up to 4 times in a row.                ]
+[  53-55 = Beat him as FSD up to 4 times in a row                 ]
 [  60 = Stole his necklace                                        ]
 [  61 = Submitted as FSD to his vengeful form                     ]
 [  62 = Threw fight/lost as FSD to his vengeful form              ]
@@ -316,9 +316,9 @@ When Play begins:
 	now victory entry is "[Tiger Shark wins]";
 	now desc entry is "[TigerSharkDesc]";
 	now face entry is "triangular, streamlined face. You still breathe normally in and out of your nostrils that happen to be at the end of your snout. When you open your mouth you show several rows of razor sharp teeth, fit to bite off anything.";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "bulky, but still flexible enough to manoeuvre well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if breast size of player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
+	now body entry is "bulky, but still flexible enough to maneuver well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if breast size of player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
 	now skin entry is "[one of]striped[or]ochre[or]smooth[or]tough[or]slippery[at random]"; [ format as the text "You have (your text) skin"]
-	now tail entry is "From behind a large and finned tail is dragging along. It feels a little unnatural to not be using the tail to manoeuvre around.";[ write a whole Sentence or leave blank. ]
+	now tail entry is "From behind a large and finned tail is dragging along. It feels a little unnatural to not be using the tail to maneuver around.";[ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapering[or]slick[or]pointed[or]shark[at random]";[ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shifts, pushing out into a triangular shape. Your mouth enlarges along with your head. Painfully, lots of sharp, pointy teeth push out of your jaw to occupy the extra space that has been created. Your tongue also becomes larger and pointed"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "you are subjected to the effects of your infection. The nanites burn away any fat you might have had. The void is quickly replaced by your muscles bulging out. At the same time, the nanites work to fit your body more into an aquatic lifestyle. Fins sprout on your body - a large one between your shoulder blades and two smaller ones surrounding your crotch. Toes fuse together until you are left with three. They are tipped with claws similar to your fingers now, which thankfully did not reduce in numbers. The final changes lie in reforming the proportions of your feet and legs to assume a permanent digitigrade stance"; [  format as "Your body feels funny as (your text)" ]

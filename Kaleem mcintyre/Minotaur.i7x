@@ -3,7 +3,7 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 
 [Adaptation for Flexible Survival by Kaleem M]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
-[This monster was updated and converted to a more readable format by Kaleem M.  All sexual encounters from MP MUCK have been rewritten to fit the game better, all credit to creature idea goes to original author!]
+[This monster was updated and converted to a more readable format by Kaleem M. All sexual encounters from MP MUCK have been rewritten to fit the game better, all credit to creature idea goes to original author!]
 
 "Adds Minotaur to Flexible Survival."
 
@@ -110,7 +110,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 8;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 95; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now HP entry is 95; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
@@ -127,7 +127,7 @@ When Play begins:
 	now loot entry is "food";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
 [ These represent the new additions to the table of random critters ]
-	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]bull-like[or]ultra muscular[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "bovine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
@@ -143,7 +143,7 @@ when play ends:
 		if humanity of player < 10:
 			say "As your mind slowly begins to fill with much simpler thoughts of fucking and fighting and protecting your territory, which becomes a certain spot in the plains after you kick out the previous residents, you find yourself caring very little about anything else other than satisfying your basic needs. Grunting one day when you catch the scent of a few horses to close to your patch you quickly charge over to where the scent of the centaurs is emanating most heavily from only to find a small herd congregating together as if planning something. Not sure what's going on, and not really being interested any way, you bellow out a loud moo and then charge over to the assembled herd. Being startled by your outcry has both the stallions and mares scrambling around in confusion which works to your favor as you quickly crush the males beneath your hooves and force the females down to service you one by one. Having beaten the herd and clearly shown your power over them the stallions and mares are quick to pick themselves up to leave you be. However, days to weeks later find many of the females coming back to submit themselves underneath your powerful body once again.";
 			WaitLineBreak;
-			say "This soon begins a longtime play of things with the wild centaur as the males, put off by your strength, return to challenge you again and again, only to be defeated time after time. Eventually you find your animal instincts getting the better of you and you end up hammering your [if cunts of player > 0 and cocks of player is 0]fist[else]cock[end if] into one of the stallions that managed to actually wound you in one particular fight[if cocks of player > 0]. Both the mares and the stallions find themselves quickly humbling to your physical prowess as you blast a load of cum into the defeated stallion and then drop the overly filled equine at your feet. Placing a hoof onto the other's bloated gut you bellow out a boisterous moo to let everyone know who the champion of the plains is[else if cunts of player > 0 and cocks of player is 0]. Defeating the stallions with your fists and then pounding an arm into the defeated male you end up washing the stallion's face in your cunt juices to show your victory over the other[end if].  Very few challenges pass your way after that point.";
+			say "This soon begins a longtime play of things with the wild centaur as the males, put off by your strength, return to challenge you again and again, only to be defeated time after time. Eventually you find your animal instincts getting the better of you and you end up hammering your [if cunts of player > 0 and cocks of player is 0]fist[else]cock[end if] into one of the stallions that managed to actually wound you in one particular fight[if cocks of player > 0]. Both the mares and the stallions find themselves quickly humbling to your physical prowess as you blast a load of cum into the defeated stallion and then drop the overly filled equine at your feet. Placing a hoof onto the other's bloated gut you bellow out a boisterous moo to let everyone know who the champion of the plains is[else if cunts of player > 0 and cocks of player is 0]. Defeating the stallions with your fists and then pounding an arm into the defeated male you end up washing the stallion's face in your cunt juices to show your victory over the other[end if]. Very few challenges pass your way after that point.";
 			WaitLineBreak;
 			if hellHoundLevel > 0:[Hellhound while swarmed into conversion]
 				say "One day while you are busy going about your way the hellhound that you made a pact with snatches you from the mortal world out of the blue and then drags you down into the abyss. Finding yourself in the darkness of the netherworld, and somewhat confused as to why you are down here, the hellhound you made a contract with is quick to remind you of the full extent of the bargain you struck with it. When you bellow and charge at the beast as part of your counterargument you end being surrounded by a throng of hellhounds that begin to swarm over you like locusts.";

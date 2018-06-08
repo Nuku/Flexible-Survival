@@ -1,5 +1,5 @@
 Version 1 of Dryad by Hellerhound begins here.
-[ Version 1.2 - Minor revision to player victory.  Now offers player choice. ]
+[ Version 1.2 - Minor revision to player victory. Now offers player choice. ]
 [renamed from Tree Nymph]
 
 "Adds a Dryad to Flexible Survival's Wandering Monsters table"
@@ -10,7 +10,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dryad cum"	"A bottle of dryad cum? Man, you will scavenge anything."	3	dryad cum
 
-dryad cum is a grab object. It is a part of the player. dryad cum is infectious. The strain of dryad cum is "Dryad".  The purified of dryad cum is "distilled cum". dryad cum is cum.
+dryad cum is a grab object. It is a part of the player. dryad cum is infectious. The strain of dryad cum is "Dryad". The purified of dryad cum is "distilled cum". dryad cum is cum.
 
 the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
 
@@ -26,13 +26,13 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 To say dryad defeat:
 	if libido of player > 25 and cocks of player > 0:
-		say "     The dryad staggers back and stumbles into a tree. Trapped between you and it, she moans weakly.  With her nude form on display, you can't help but run your eyes over her slender body, going from her lovely bosom and down to her syrupy pussy.  You find her quite tantalizing to look at, and you're tempted to do much more than look. [bold type]Shall you try to have your way with her?[roman type][line break]";
+		say "     The dryad staggers back and stumbles into a tree. Trapped between you and it, she moans weakly. With her nude form on display, you can't help but run your eyes over her slender body, going from her lovely bosom and down to her syrupy pussy. You find her quite tantalizing to look at, and you're tempted to do much more than look. [bold type]Shall you try to have your way with her?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the dryad.";
 		say "     ([link]N[as]n[end link]) - No, not right now.";
 		if the player consents:
 			LineBreak;
-			say "     You move closer to the dryad and thrust your [cock of player] cock into her.  To your surprise, you are able to push yourself balls deep inside of the dryad without any effort, and you begin to suspect something is wrong when you start to feel vines creeping along her inner walls.  You try to pull out, but they grab hold and draw you all the way in.  The dryad murmurs, 'Silly mortal, thinking you could rape me.  Well, let me teach you a thing or two.' She leans into you, the vines along her internal walls stroking and milking at your cock insistently.";
+			say "     You move closer to the dryad and thrust your [cock of player] cock into her. To your surprise, you are able to push yourself balls deep inside of the dryad without any effort, and you begin to suspect something is wrong when you start to feel vines creeping along her inner walls. You try to pull out, but they grab hold and draw you all the way in. The dryad murmurs, 'Silly mortal, thinking you could rape me. Well, let me teach you a thing or two.' She leans into you, the vines along her internal walls stroking and milking at your cock insistently.";
 			let bonus be (( Strength of player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
@@ -46,21 +46,21 @@ To say dryad defeat:
 					increase carried of dryad cum by 1;
 					infect "Dryad";
 				else:
-					say "     Deciding to give the dryad the dominance over you she so obviously wants to exercise, you relax your previously tense muscles, falling limp within her grasp. Feeling confident you can regain control of the situation, if anything bad were to occur, you eagerly look forward to taking whatever she has in store for you. The dryad, just as eager as you, sees to it that every inch of your [cock of player] cock is played with, and it doesn't take long before you are spraying your load inside of her.  When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
+					say "     Deciding to give the dryad the dominance over you she so obviously wants to exercise, you relax your previously tense muscles, falling limp within her grasp. Feeling confident you can regain control of the situation, if anything bad were to occur, you eagerly look forward to taking whatever she has in store for you. The dryad, just as eager as you, sees to it that every inch of your [cock of player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
 					say "     The warm milk soothes some of the pain from the rough session, and you are almost disappointed when the dryad pushes you away. As you collapse onto the ground, the dryad walks away, the tree disguise forming once more. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
 					increase carried of dryad cum by 1;
 					infect "Dryad";
 			else:
-				say "     The dryad's vines rendering you unmovable in their grasp, you are forced to sit and helplessly take whatever she has in store for you. The dryad, eagerly making use of her recently caught 'Prize', sees to it, that every inch of your [cock of player] cock is played with, and it doesn't take long before you are spraying your load inside of her.  When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
+				say "     The dryad's vines rendering you unmovable in their grasp, you are forced to sit and helplessly take whatever she has in store for you. The dryad, eagerly making use of her recently caught 'Prize', sees to it, that every inch of your [cock of player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
 				say "     The warm milk soothes some of the pain from the rough session, and you are almost disappointed when the dryad pushes you away. As you collapse onto the ground, the dryad walks away, the tree disguise forming once more. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
 				increase carried of dryad cum by 1;
 				infect "Dryad";
 		else:
-			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side.  She gives an angry hiss like cracking bark and slips away into the trees.";
+			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side. She gives an angry hiss like cracking bark and slips away into the trees.";
 	else if libido of player < 25:
-		say "     The dryad stumbles back from the fight, and rather than give her a chance to recover, you throw a final blow.  This manages to break off [one of]an arm[or]a leg[or]a limb[at random] with a sharp snap, like a tree limb with ragged splinters of wood.  The skin around it goes rough and turns brown as it morphs into bark.  She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
+		say "     The dryad stumbles back from the fight, and rather than give her a chance to recover, you throw a final blow. This manages to break off [one of]an arm[or]a leg[or]a limb[at random] with a sharp snap, like a tree limb with ragged splinters of wood. The skin around it goes rough and turns brown as it morphs into bark. She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
 	else:
-		say "     The dryad screams in rage and her skin turns bark-like.  In an instant, she becomes a true tree, unmoving and covered in vines.";
+		say "     The dryad screams in rage and her skin turns bark-like. In an instant, she becomes a true tree, unmoving and covered in vines.";
 
 
 To say dryad attack:
@@ -92,7 +92,7 @@ When Play begins:
 	now defeated entry is "[dryad defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
-	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normal enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees. You can see the signs of many having had sex nearby. One tree seems normal enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches and the pinkish tinge to its bark. As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"]

@@ -56,7 +56,7 @@ Check kitfoodrequest:
 	if Kitsune is not visible:
 		say "From whom?" instead;
 	else if Kitsunefood is 5:
-		say "'Forgive me, little one, but I'm afraid that I've been able to find in the area for you.  You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
+		say "'Forgive me, little one, but I'm afraid that I've been able to find in the area for you. You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
 	else if lastfoodrun - turns < 8:
 		say "'I'm afraid you'll have to be patient. I need to make a run to see if there is any more food left in this city.'" instead;
 
@@ -70,7 +70,7 @@ Check kitwaterrequest:
 	if Kitsune is not visible:
 		say "From whom?" instead;
 	else if Kitsunewater is 5:
-		say "'Forgive me, little one, but I'm afraid that's all I've been able to find in the area for you.  You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
+		say "'Forgive me, little one, but I'm afraid that's all I've been able to find in the area for you. You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
 	else if lastwaterrun - turns < 8:
 		say "Water, water everywhere, but not a drop to drink.' Kitsune chuckles at this before waving a hand in front of you. 'Forgive me, but I have always liked that verse more than I should. I have no water for you at this moment, little one.'" instead;
 
@@ -249,7 +249,7 @@ When Play begins:
 	now cunt length entry is 10;
 	now cunt width entry is 5;
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
-	now loot entry is ""; [ Dropped item.  Key will be used later ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
