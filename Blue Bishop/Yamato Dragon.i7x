@@ -370,7 +370,7 @@ to say yamato dragon desc:
 	now firebreathready is false;
 	psycheeval;
 	libidoeval;
-	say "     [if showlocale is true]traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
+	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
 
 to say ydskinchange:
 	let tempnum be ydcolor;
@@ -1206,5 +1206,5 @@ when play ends:
 			if "Horny Bastard" is listed in feats of player:
 				say ". During the night, you sate your intense lust by offering rides of a different sort";
 			say ". Overall, you're pretty well off...";
-
+      
 Yamato Dragon ends here.

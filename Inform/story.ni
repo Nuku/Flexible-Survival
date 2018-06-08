@@ -470,7 +470,7 @@ The player is wearing a backpack. The description of the backpack is "A backpack
 instead of examining a grab object(called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
 	if "Weaponsmaster" is listed in feats of player and x is an armament:
-		say "  Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 
 Does the player mean examining a situation: it is very unlikely.
 
