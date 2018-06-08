@@ -1206,5 +1206,5 @@ when play ends:
 			if "Horny Bastard" is listed in feats of player:
 				say ". During the night, you sate your intense lust by offering rides of a different sort";
 			say ". Overall, you're pretty well off...";
-      
+
 Yamato Dragon ends here.
