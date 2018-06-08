@@ -60,7 +60,7 @@ to say DashScent:
 to say DashDesc:
 	if debugactive is 1:
 		say "     DEBUG -> FangDash: [FangDashRel] <- DEBUG[line break]";
-	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and grey than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
+	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
 
 instead of conversing the Dash:
 	if player is in Computer Lab and Dash is in Computer Lab:

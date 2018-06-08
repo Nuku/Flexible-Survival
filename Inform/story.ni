@@ -427,8 +427,8 @@ Definition: A person(Called X) is booked:
 	If x is the player, no;
 	If x is Trixie, no;
 	if x is Velos, no;
-	if the location of x is Grey Abbey Library, yes;
-	if the location of x is Grey Abbey 2F, yes;
+	if the location of x is Gray Abbey Library, yes;
+	if the location of x is Gray Abbey 2F, yes;
 	if the location of x is Gray Abbey Library, yes;
 	if the location of x is Gray Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
@@ -791,7 +791,7 @@ Book 6 - Rules, Obey them!
 
 Part 1 - Flags
 
-flag is a kind of thing.
+[flag is a kind of thing.
 A flag has a list of text called infections.
 A flag has a list of situations called badspots.
 A flag can be banned. A flag is usually not banned.
@@ -819,6 +819,7 @@ when play begins:
 	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of feral;
 	add { "Demon Brute" } to infections of hellspawn;
 	add { "Mothgirl", "Shemale Smooth Collie" } to infections of transgender;
+]
 
 [corollary]
 marker is a kind of thing.
@@ -3717,7 +3718,6 @@ This is the turnpass rule:
 	now ishunting is false;
 	now showlocale is true;
 	if HP of Velos > 2:
-		if Velos is not in the location of the player:		[travelling w/player]
 		if Velos is not in the location of the player:		[traveling w/player]
 			Now Velos is in the location of the player;
 	if breast size of player > 26, now breast size of player is 26;
@@ -4126,11 +4126,11 @@ to say cum load size of ( x - a person ):
 		else if cock width of x < 12:	[6 - 11]
 			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
 		else if cock width of x < 16:	[12 - 15]
-			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
+			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
 		else if cock width of x < 20:	[16 - 19]
-			say "[one of]one-litre[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
+			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
 		else if cock width of x < 25:	[20 - 24]
-			say "[one of]two-litre[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
+			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
 		else if cock width of x < 32:	[25 - 31]
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 		else:								[32+]
@@ -5457,6 +5457,7 @@ Include Fancy by Sarokcat n Verath.
 Include Fang by Stripes.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
+Include Feral Latex Fox by Dys.
 Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
@@ -6065,15 +6066,16 @@ To regularstart: [normal start method]
 			-- 19:
 				say "[set_invcolumns]";
 			-- 99:
-				now trixieexit is 1;
 				say "Confirm restore?";
 				if player consents:
 					now RestoreMode is true;
 					say "[silent_start]";
 					now trixieexit is 1;
+					if RestoreMode is true:
 						now RestoreMode is false;
 						try restoring the game;
 						if maxHP of player is 0:
+							try restarting the game;
 			-- 0:
 				say "Confirm game start?";
 				if player consents:

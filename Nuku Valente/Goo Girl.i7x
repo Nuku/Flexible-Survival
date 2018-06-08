@@ -9,7 +9,7 @@ when play begins:
 	add { "Goo Girl" } to infections of girl;
 	add { "Goo Girl" } to infections of humanoid;
 
-goocolour is a number that varies;
+goocolor is a number that varies;
 
 to say goovictory:
 	if inasituation is true:
@@ -56,7 +56,7 @@ To say goodefeat:
 					say ". She squirms on your great pole before she melts free of it, becoming a limp pool on the ground before you, worn out from the session.";
 				else:
 					say "     You expose your eager, [cock size desc of player] cock[smn] before the girl as you move over her. Your mouth finds a translucent nipple and you find a [one of]strawberry[or]grape[or]cherry[at random] flavor dancing across your tongue as you suckle firmly. She awakens with a soft moan that raises in pitch as you start to ease[if cocks of player > 1] one of[end if] your firm [cock of player] tool[smn] into her quivering passage.";
-					say "     She rocks up against you, her hands grabbing at your sides, pulling you closer as you thrust faster, harder, her body able to take you with scarcely any effort at all. She trembles as hot honey runs down your length, climaxing powerfully against you. The taste in your mouth seems to grow more intense and the passage holding your cock firmly ripples delightfully. You can feel yourself tensing, then exploding into the jellied female, staining her pristine flesh with blasts of milky grey.";
+					say "     She rocks up against you, her hands grabbing at your sides, pulling you closer as you thrust faster, harder, her body able to take you with scarcely any effort at all. She trembles as hot honey runs down your length, climaxing powerfully against you. The taste in your mouth seems to grow more intense and the passage holding your cock firmly ripples delightfully. You can feel yourself tensing, then exploding into the jellied female, staining her pristine flesh with blasts of milky gray.";
 					say "     As you come down from your high, she kisses you on either cheek, then melts into the ground, gone.";
 			else if cunts of player > 0:
 				say "     Approaching the girl, you reach for her form and grab a hand, rubbing it between your own before pressing it between your thighs. The contact seems to rouse the girl, who blinks open her largely featureless eyes. As if understanding your intent, she smiles all the more and presses up into you. Her warm, thick, hand surges up, spreading you and exploring into your welcoming [cunt size desc of player] hole[sfn].";
@@ -105,7 +105,7 @@ When Play begins:
 	now desc entry is "[goodesc]";
 	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text, format as "Your face feels funny as (your text)." ]
@@ -153,11 +153,11 @@ to say googirlbodychange:
 		say ". Looking over yourself, afterwards, it seems that you're human! Something feels off about it, however..[run paragraph on]";
 
 to say googirlskinchange:
-	let tempnum be goocolour;
-	now goocolour is a random number between 0 and 3;
-	if goocolour is tempnum, increase goocolour by 1;
-	if goocolour is 4, now goocolour is 0;
-	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if] in colour";
+	let tempnum be goocolor;
+	now goocolor is a random number between 0 and 3;
+	if goocolor is tempnum, increase goocolor by 1;
+	if goocolor is 4, now goocolor is 0;
+	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if] in colour";
 	if bodyname of player is "Goo Girl":
 		say ". Moreover, your lower legs are drawn together, flowing into one another and creating a base of flesh that goes up to your lower thigh";
 

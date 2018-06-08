@@ -488,7 +488,7 @@ By default, Inform's status line appears "reversed out", with white letters on a
 
 We then specify a background color:
 
-	set the background color of the status window to g-light-grey
+	set the background color of the status window to g-light-gray
 
 If we like, we can also specify a text color:
 
@@ -514,7 +514,7 @@ Because this extension disables the status line until we explicitly open it, car
 
 	When play begins (this is the status window construction rule):
 		set the background of the status window to colored;
-		set the background color of the status window to g-light-grey;
+		set the background color of the status window to g-light-gray;
 		open the status window.
 
 	The status window construction rule is listed before the graphics window construction rule in the when play begins rules.

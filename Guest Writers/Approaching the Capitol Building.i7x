@@ -36,7 +36,7 @@ to say app_cap_bldg_desc:
 instead of sniffing Approaching the Capitol Building:
 	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
 
-The Charred Streets is a Room. "     The damage to the roads and the buildings grow worse as you approach the Capitol Building. Most of the buildings here are semi-recognizable. You see what once may have been a designer underwear shop now burnt out with the windows smashed. You also spot one of your favorite video game retailers, what used to be a small family business. Now the storefront is totally wrecked. You jump over a ditch in the middle of the street. It is flooded with grey, soot-filled sludge. A water main nearby must have been cracked.".
+The Charred Streets is a Room. "     The damage to the roads and the buildings grow worse as you approach the Capitol Building. Most of the buildings here are semi-recognizable. You see what once may have been a designer underwear shop now burnt out with the windows smashed. You also spot one of your favorite video game retailers, what used to be a small family business. Now the storefront is totally wrecked. You jump over a ditch in the middle of the street. It is flooded with gray, soot-filled sludge. A water main nearby must have been cracked.".
 North of Approaching the Capitol Building is The Charred Streets.
 The earea of Charred Streets is "Capitol".
 

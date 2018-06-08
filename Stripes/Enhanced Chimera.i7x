@@ -116,7 +116,7 @@ to say randombaseform:
 	if TT is 4:
 		now furdata is "dark brown";
 	if TT is 5:
-		now furdata is "deep grey";
+		now furdata is "deep gray";
 	let TTT be a random number between 1 and 4; [horns]
 	if TTT is 1:
 		now horndata is "triceratops";

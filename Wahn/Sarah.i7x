@@ -331,7 +331,7 @@ to say SarahDesc:
 		project the figure of Sarah_clothed_icon;
 	else:
 		project the figure of Sarah_naked_icon;
-	say "     Sarah is a lithe and thin woman with grey-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupState]";
+	say "     Sarah is a lithe and thin woman with gray-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupState]";
 
 The conversation of Sarah is { "Woof!" }.
 

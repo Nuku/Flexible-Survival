@@ -221,7 +221,7 @@ When Play begins:
    now defeated entry is "[BeatTheVixenNurse]";
    now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "a vulpine head with a long muzzle and teeth. You have steely-grey eyes and silver fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
+   now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as the text "Your body is (your text)."]
    now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as the text "You have (your text) skin"]
    now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]

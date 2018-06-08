@@ -23,7 +23,7 @@ to RandomizeFeralMutt:
 	let randomnumber be a random number from 1 to 6; [adjust the latter number for the number of options]
 	if randomnumber is:
 	-- 1:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]grey[end if]";
+		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]gray[end if]";
 		now FeralMuttCurrentBreed is "Malamute";
 		now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 	-- 2:

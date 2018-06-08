@@ -51,7 +51,7 @@ zigorhadiyaquest is a truth state that varies. zigorhadiyaquest is usually false
 the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 
 to say zigordesc:
-	say "     Zigor the leather wolf has the build of an average, fit human being, but altered to have lupine features, most prominently his head, hands, feet and tail. Given that he's wearing/bonded to a leather outfit that covers most of him, you can only see portions of his pelt. His fur contains a mix of grey, black, brown and rust colors that make him stand out from the other wolves you've seen. The leather portions of his hide cover his chest, legs and forearms. It is made of black leather with even some metal rings and straps built into it as well as a separate leather patch that partially covers his plump, pierced sheath. The wolf has a rich, sensual voice and speaks with a distinctly Spanish accent that turns you on every time you hear it.";
+	say "     Zigor the leather wolf has the build of an average, fit human being, but altered to have lupine features, most prominently his head, hands, feet and tail. Given that he's wearing/bonded to a leather outfit that covers most of him, you can only see portions of his pelt. His fur contains a mix of gray, black, brown and rust colors that make him stand out from the other wolves you've seen. The leather portions of his hide cover his chest, legs and forearms. It is made of black leather with even some metal rings and straps built into it as well as a separate leather patch that partially covers his plump, pierced sheath. The wolf has a rich, sensual voice and speaks with a distinctly Spanish accent that turns you on every time you hear it.";
 
 
 Instead of conversing the Zigor:

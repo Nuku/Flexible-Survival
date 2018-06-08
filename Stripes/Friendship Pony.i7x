@@ -23,7 +23,7 @@ pfpbmlist is a list of numbers that varies.
 
 [  -- simplified to decrease strain on memory --
 [ color list 1: body ]
-rfpclist1 is a list of text that varies. rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "grey", "cream" }.
+rfpclist1 is a list of text that varies. rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "gray", "cream" }.
 
 [ color list 2: hair ]
 rfpclist2 is a list of text that varies. rfpclist2 is usually { "blue", "cobalt blue", "cyan", "azure", "turquoise", "black", "golden yellow", "neon yellow", "sunglow", "maroon", "pink", "hot pink", "carnation", "cerise", "green", "emerald green", "neon green", "light orange", "apricot", "peach", "royal purple", "deep purple", "indigo", "carmine", "flame red", "candy apple red" }.
@@ -133,7 +133,7 @@ to setrfpdesc:
 		-- 29:
 			now rfponycolor1 is "white";
 		-- 30:
-			now rfponycolor1 is "grey";
+			now rfponycolor1 is "gray";
 		-- 31:
 			now rfponycolor1 is "cream";
 	if rfpc2 is:

@@ -56,9 +56,9 @@ Section 3 - Tables
 Table of Common Color Values
 glulx color value	assigned number
 g-black	0		[== $000000]
-g-dark-grey	4473924	[== $444444]
-g-medium-grey	8947848	[== $888888]
-g-light-grey	14540253	[== $DDDDDD]
+g-dark-gray	4473924	[== $444444]
+g-medium-gray	8947848	[== $888888]
+g-light-gray	14540253	[== $DDDDDD]
 g-white	16777215		[== $FFFFFF]
 g-yellow-orange	39423		[== $0099FF]
 g-ice-blue	15645627		[== $EEBBBB]

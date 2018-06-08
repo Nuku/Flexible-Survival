@@ -76,7 +76,7 @@ When Play begins:
 	now desc entry is "[Goat Janitor desc]";
 	now face entry is "that of an anthropomorphic goat, covered in fur and with your nose and mouth drew out into a short muzzle. A pair of curved horns grow from your forehead, and you have a long goatee hanging from your chin";
 	now body entry is "humanoid, with a scraggly build and a slightly pudgy belly. Despite that, you feel pretty confident with your climbing skills due to your two digitigrade goat legs, complete with hooves";
-	now skin entry is "grey-furred";
+	now skin entry is "gray-furred";
 	now tail entry is "A short tail hangs limply over your ass, giving an occasional twitch.";
 	now cock entry is "[one of]furry sheathed[or]goat-like[or]caprid[at random]";
 	now face change entry is "you feel a horrible headache coming on. The pain gets worse until it feels like your head is going to split, and in a way it does as a pair of horns sprout from your brow and curl slightly back. Shortly after, your ears shift upwards a bit and a short muzzle forms out of your mouth and nose, soon giving you a very goat-like appearance complete with gray fur and a rather long goatee";

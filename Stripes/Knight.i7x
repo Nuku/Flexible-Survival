@@ -36,7 +36,7 @@ to say knightdesc:
 		if knightcrestnum is 10, now knightcrestnum is 1;
 	if debugactive is 1:
 		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus].";
-	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face with [one of]a short beard[or]long, flowing hair[or]a small scar that makes him look rugged without disfiguring him[or]a square jaw and noble features[or]wavy brown hair[in random order]. He is a tall and fit man, his body strong from training and combat. Equipped in a chainmail coat, this is covered by a loose tunic of bright colors. The emblem on his chest is one of a crest depicting [stateknightcrest]. He wears rather plain breeches with leather boots below the waist, the former showing a prominent package beneath the [one of]brown[or]grey[or]tan[or]dusty[at random] fabric.";
+	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face with [one of]a short beard[or]long, flowing hair[or]a small scar that makes him look rugged without disfiguring him[or]a square jaw and noble features[or]wavy brown hair[in random order]. He is a tall and fit man, his body strong from training and combat. Equipped in a chainmail coat, this is covered by a loose tunic of bright colors. The emblem on his chest is one of a crest depicting [stateknightcrest]. He wears rather plain breeches with leather boots below the waist, the former showing a prominent package beneath the [one of]brown[or]gray[or]tan[or]dusty[at random] fabric.";
 	say "     Sizing you up, he reaches for the sword at his side. ";
 	if kpstatus is 1:				[player is Knight]
 		if cocks of player > 0 and cunts of player > 0:

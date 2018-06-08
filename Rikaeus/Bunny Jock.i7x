@@ -98,7 +98,7 @@ When Play begins:
 	now desc entry is "[bunnyjockdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a rabbit, with long, fluffy ears and a short muzzle with whiskers and buck teeth";
 	now body entry is "decently muscled, looking nice and powerful. Whenever someone stares at them you feel the urge to pose and show off. Your hands are paw-like with blunted claws and soft, pink pads on them. Your feet are much the same, but elongated and rabbit-like";
-	now skin entry is "grey, furred";
+	now skin entry is "gray, furred";
 	now tail entry is "You have a cute, fluffy bunny tail above your strong, toned glutes.";
 	now cock entry is "[one of]sheathed[or]bunny[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it reshapes itself, gaining a short muzzle with whiskers. Your teeth shift and change as well as you grow a pair of large incisors at the front. Your ears are tugged up hard, almost painfully so, as they stretch upwards into long, bunny ears to complete the transition";

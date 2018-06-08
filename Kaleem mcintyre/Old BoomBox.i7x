@@ -167,7 +167,7 @@ To say jazzfriends:
 			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[If Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 			if sarahpups > 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
-	If Fang is in the Grey Abbey Library:
+	If Fang is in the Gray Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang seems quite interested in the music as he comes over to lay by your leg while listening to it. Grumbling softly into the back of his throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards his duty to protect his new home.";
 		else:

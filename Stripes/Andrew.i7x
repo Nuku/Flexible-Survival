@@ -131,7 +131,7 @@ to say sexwithAndrew:
 		while bodyselector is male1type or bodyselector is male2type or bodyselector is male3type:
 			say "[randombodypart]";
 		let male4type be bodyselector;
-		let randomcolorchoice be "grey ";
+		let randomcolorchoice be "gray ";
 		let male1c be "";
 		let male2c be "";
 		let male3c be "";
@@ -217,7 +217,7 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 		while bodyselector is slutname:
 			say "[randombodypart]";
 		let male2type be bodyselector;
-		let randomcolorchoice be "grey ";
+		let randomcolorchoice be "gray ";
 		let male1c be "";
 		let male2c be "";
 		sort randomcolorlist in random order; [fresh randomized set]
@@ -266,7 +266,7 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 	while bodyselector is slutname:
 		say "[randombodypart]";
 	let male2type be bodyselector;
-	let randomcolorchoice be "grey ";
+	let randomcolorchoice be "gray ";
 	let male1c be "";
 	let male2c be "";
 	sort randomcolorlist in random order; [fresh randomized set]
@@ -309,7 +309,7 @@ to andrewinfect:
 	infect "Black Wolf";
 
 
-randomcolorlist is a list of text that varies. randomcolorlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "grey ", "maroon ", "golden ", "cyan ", "peach " }.
+randomcolorlist is a list of text that varies. randomcolorlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "gray ", "maroon ", "golden ", "cyan ", "peach " }.
 
 Section x - Not for release
 
@@ -333,7 +333,7 @@ carry out andrewtesting:
 		while bodyselector is male1type or bodyselector is male2type or bodyselector is male3type:
 			say "[randombodypart]";
 		let male4type be bodyselector;
-		let randomcolorchoice be "grey ";
+		let randomcolorchoice be "gray ";
 		let male1c be "";
 		let male2c be "";
 		let male3c be "";

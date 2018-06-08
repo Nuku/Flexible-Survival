@@ -178,7 +178,7 @@ When Play begins:
 	now defeated entry is "[beatthemouse]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetomouse]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[mousedesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "now mouse-like, with large, rounded ears, a cute little nose and twitching whiskers. Your hair has grown back in, but is long, flowing and grey. Your ears, you find, are quite sensitive and seem to resonate slightly with the calls from distant mice";
+	now face entry is "now mouse-like, with large, rounded ears, a cute little nose and twitching whiskers. Your hair has grown back in, but is long, flowing and gray. Your ears, you find, are quite sensitive and seem to resonate slightly with the calls from distant mice";
 	now body entry is "quite small, barely three feet tall. Your body has clear, womanly curves to it, with a slender, feminine waist and hips. Your hands are cute, mouse-like paws with nimble digits";
 	now skin entry is "soft, gray fur over your";
 	now tail entry is "You have a long, thin tail like that of a mouse.";

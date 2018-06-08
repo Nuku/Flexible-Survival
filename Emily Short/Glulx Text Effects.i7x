@@ -7,9 +7,9 @@ Glulx color value is a kind of value. Some glulx color values are defined by the
 [Table of Common Color Values
 glulx color value	assigned number
 g-black	0
-g-dark-grey	4473924
-g-medium-grey	8947848
-g-light-grey	14540253
+g-dark-gray	4473924
+g-medium-gray	8947848
+g-light-gray	14540253
 g-white	16777215]
 [New color mode for windows]
 
@@ -187,9 +187,9 @@ Color is the most complicated thing to affect: color can be set to any value of 
 	Table of Common Color Values
 	glulx color value	assigned number
 	g-black	0		[== $000000]
-	g-dark-grey	4473924	[== $444444]
-	g-medium-grey	8947848	[== $888888]
-	g-light-grey	14540253	[== $DDDDDD]
+	g-dark-gray	4473924	[== $444444]
+	g-medium-gray	8947848	[== $888888]
+	g-light-gray	14540253	[== $DDDDDD]
 	g-white	16777215		[== $FFFFFF]
 
 where the assigned number of each value is the decimal representation of a hex color code. It is likely that we'll want to use other colors besides those provided by this extension. We may do this by continuing the table thus:
@@ -199,7 +199,7 @@ where the assigned number of each value is the decimal representation of a hex c
 	g-yellow-orange	39423		[== $0099FF]
 	g-ice-blue	15645627		[== $EEBBBB]
 
-These numbers are conversions of hex color numbers. The principle is that the hex number represents the amount of red in the first two digits (from 00 to FF); the amount of green in the next two digits; and the amount of blue in the last two digits. Thus $0000FF has no red or green in it, but the maximum possible amount of red. Where each pair of digits is equal (as in $444444 or $A0A0A0), we will have equal components of each color and the result will be some shade of grey. The number for g-ice-blue was selected by formulating a hex color number with a large amount of blue and a moderate amount of red and green ($EEBBBB). Similarly, the number for g-yellow-orange is the conversion of ($0099FF), with the maximum amount of red, a fair amount of green, and no blue.
+These numbers are conversions of hex color numbers. The principle is that the hex number represents the amount of red in the first two digits (from 00 to FF); the amount of green in the next two digits; and the amount of blue in the last two digits. Thus $0000FF has no red or green in it, but the maximum possible amount of red. Where each pair of digits is equal (as in $444444 or $A0A0A0), we will have equal components of each color and the result will be some shade of gray. The number for g-ice-blue was selected by formulating a hex color number with a large amount of blue and a moderate amount of red and green ($EEBBBB). Similarly, the number for g-yellow-orange is the conversion of ($0099FF), with the maximum amount of red, a fair amount of green, and no blue.
 
 Converting a hex number to a decimal one can be performed with a scientific calculator or with a hexadecimal conversion application found online; if we're at a loss, googling "hexadecimal conversion calculator" will likely turn up an appropriate application.
 
@@ -232,7 +232,7 @@ Example: * The Gallic War - An excuse to print a large, fancily-formatted bit of
 
 	Table of User Styles (continued)
 	style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
-	special-style-2	left-right-justified	italic-obliquity	15	-4	light-weight	proportional-font	0	g-medium-grey
+	special-style-2	left-right-justified	italic-obliquity	15	-4	light-weight	proportional-font	0	g-medium-gray
 
 	When play begins:
 		change left hand status line to ""; change right hand status line to "";

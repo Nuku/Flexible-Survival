@@ -258,7 +258,7 @@ Instead of sniffing Quartermaster's Tent:
 
 
 Major Padgett is a man. Major Padgett is in Major's Tent.
-The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of greying hair. He's sitting at a field desk and looks busy with scouting reports and other paperwork.".
+The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of graying hair. He's sitting at a field desk and looks busy with scouting reports and other paperwork.".
 The conversation of Major Padgett is { "Attention!" }.
 thirst of Major Padgett usually is 555. [ The thirst value is used for the turn-number the player last tried to talk the Major into allowing women with the minotaur ]
 CampBravoWomenAllowed is a number that varies. CampBravoWomenAllowed is normally 0.

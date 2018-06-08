@@ -10,13 +10,13 @@ when play begins:
 	add { "Gray Squirrel" } to infections of furry;
 	add { "Gray Squirrel" } to infections of Rodentlist;
 
-to say losetogreysquirrel:
+to say losetograysquirrel:
 	say "non-combative.";
 
-to say beatthegreysquirrel:
+to say beatthegraysquirrel:
 	say "non-combative.";
 
-to say greysquirreldesc:
+to say graysquirreldesc:
 	say "non-combative.";
 
 
@@ -30,12 +30,12 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Gray Squirrel"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "non-combative."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthegreysquirrel]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetogreysquirrel]"; [ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[greysquirreldesc]"; [ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthegraysquirrel]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetograysquirrel]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[graysquirreldesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "at once adorable and sexy as a squirrel. You have cute whiskers, a short muzzle and rounded ears. You have a long mane of flowing hair that always seems permed";
 	now body entry is "[if cunts of player > 0]very sexy, always moving to show off its shapely form. You possess wide hips, a slender waist and overall feminine lines[else]very sleek and agile, with great flexibility[end if]. Your hands end in dainty little paws with claws made for climbing";
-	now skin entry is "grey fur";
+	now skin entry is "gray fur";
 	now tail entry is "You have a big, bushy squirrel's tail.";
 	now cock entry is "pink";
 	now face change entry is "your head reshapes itself, jaw and cheekbones reforming into a small muzzle. Your ears change, growing rounded as long locks of well-styled hair flows out from the back of your head. Soon you have a cute and sexy squirrel's head atop your shoulders";

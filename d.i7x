@@ -31,7 +31,7 @@ Author: David Silver <dms.silver@gmail.com>
     Merge pull request #2 from Batroo/patch-1
 
 [33mcommit 588f3d74983d670df96dc58802066419b9511475[m
-Author: Batroo <greyfox922777@gmail.com>
+Author: Batroo <grayfox922777@gmail.com>
 
     Edited Batroo/Kangaroo.i7x via GitHub
 

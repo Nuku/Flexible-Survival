@@ -82,7 +82,7 @@ When Play begins:
 		now cock entry is "[one of]gargoyle[or]demonic[or]unyielding[at random]";
 		now face change entry is "a slight feeling of pain goes through your skull as your face reforms itself to become harder and more rigid like that of a gargoyle while turning sharp and angular in all the right places. Your eyesight seems to dim a little as coal black orbs frame your former irises";
 		now body change entry is "your insides twist subtly as your inner organs reform themselves, your muscles become more dense while your bones thicken as your body hardens into a mirror image of that of a gargoyle";
-		now skin change entry is "grey ashen skin covers you from head down to toe as your color seems to almost bleach itself out of your body while at the same time becoming thicker and more dense in turn";
+		now skin change entry is "gray ashen skin covers you from head down to toe as your color seems to almost bleach itself out of your body while at the same time becoming thicker and more dense in turn";
 		now ass change entry is "a long and serpentine tail snakes itself free from your rump, curling and then straightening only to lash sharply out at the world";
 		now cock change entry is "your shaft lengthens with a slow a tedious pressure, growing full and ready to be used hammer anyone foolish enough to try and tackle you in the mating area. The flesh soon becomes smooth in texture while at the same time gaining the force of a battering ram as it stretches down closer to your knees";
 		now str entry is 20;
