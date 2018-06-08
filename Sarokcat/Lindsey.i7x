@@ -17,7 +17,7 @@ lindseyws is a truth state that varies. lindseyws is usually false.
 Section 1
 
 Lindsey is a man.
-The description of Lindsey is "There is a large wolftaur examining itself in the mirror. Its large, canine lower body stretches behind it, and its tail is wagging slightly as it obviously approves of what it sees. The upper body of the beast is covered in soft grey fur, and the face is definitely more lupine than human. The sharp claws on its human hands look capable of doing a great deal of damage. As the wolftaur shifts its body around and turns its yellow canine gaze to you, you are given a good look between its legs, the large canine organ hanging half-erect there leaving no doubt as to the beast's maleness.".
+The description of Lindsey is "There is a large wolftaur examining itself in the mirror. Its large, canine lower body stretches behind it, and its tail is wagging slightly as it obviously approves of what it sees. The upper body of the beast is covered in soft gray fur, and the face is definitely more lupine than human. The sharp claws on its human hands look capable of doing a great deal of damage. As the wolftaur shifts its body around and turns its yellow canine gaze to you, you are given a good look between its legs, the large canine organ hanging half-erect there leaving no doubt as to the beast's maleness.".
 The conversation of Lindsey is { "Suck it!" }.
 Lindsey is in Zoo Restrooms.
 
@@ -35,12 +35,7 @@ instead of conversing the Lindsey:
 the fuckscene of Lindsey is "[sexwithLindsey]".
 
 to say sexwithLindsey:
-	[puts Wolftaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Wolftaur":
-			now monster is y;
-			break;
+	setmonster "Wolftaur";
 	if lastfuck of Lindsey - turns < 6:
 		say "     'Sorry there my horny little bitch,' Lindsey says with a soft chuckle, 'but I have to check on my other bitch and make sure she is properly taken care of too, so I need to save a bit of energy for that. Why don't you come back in a little bit and I can make you even more into a proper little bitch, just like you want,' the masculine wolftaur says with lupine grin, the mingled musk of male wolftaur and your recent sex filling the air.";
 	else if player is neuter:

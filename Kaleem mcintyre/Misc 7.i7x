@@ -8,15 +8,15 @@ when play begins:
 	add Horse Sense to badspots of hermaphrodite;
 
 Instead of Resolving a Horse Sense:
-	say "     Finding your way through the area of the plains you let the cool wind blowing across the open grass fields brush over chest and torso turning your lips up into a smile.  With your [bodyname of player] body relishing in the pure [']feel['] of all that the plains have to offer you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head.  A crack of thunder disturbs you from your mental reprieve though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
+	say "     Finding your way through the area of the plains you let the cool wind blowing across the open grass fields brush over chest and torso turning your lips up into a smile. With your [bodyname of player] body relishing in the pure [']feel['] of all that the plains have to offer you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
 	let bonus be ( intelligence of player + perception of player - 20 ) / 2;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 10:
-		say "     As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building.  Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out.  Thankfully it is very brief.  And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted.  At least you get to enjoy the beautiful lightning across the sky.  After the rain passes, the water is quickly soaked up by the parched soil.";
+		say "     As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building. Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out. Thankfully it is very brief. And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted. At least you get to enjoy the beautiful lightning across the sky. After the rain passes, the water is quickly soaked up by the parched soil.";
 	else:
-		say "     Basking in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave.  Holding your mouth open wide, you try to catch what you can for your [if thirst of player > 30]parched [end if]throat.  As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
-		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst.  Throwing your head back and shaking the watery drops of rain off from your face you let out an unconscious whinny just in time for a crack of thunder to snap above your head.  The bolt of lightning that follows darkens the land for a moment, but despite this you find yourself continuing to run with no particular destination in mind.  There's no fear of the dancing electricity above you as you run, momentarily lost in the moment.  The rain passes as quickly as it came, but the lingering changes that it brought continue.";
+		say "     Basking in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave. Holding your mouth open wide, you try to catch what you can for your [if thirst of player > 30]parched [end if]throat. As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
+		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst. Throwing your head back and shaking the watery drops of rain off from your face you let out an unconscious whinny just in time for a crack of thunder to snap above your head. The bolt of lightning that follows darkens the land for a moment, but despite this you find yourself continuing to run with no particular destination in mind. There's no fear of the dancing electricity above you as you run, momentarily lost in the moment. The rain passes as quickly as it came, but the lingering changes that it brought continue.";
 		infect "Black Equinoid";
 		infect "Black Equinoid";
 		decrease humanity of player by 10;
@@ -24,7 +24,7 @@ Instead of Resolving a Horse Sense:
 	now Horse Sense is resolved;
 
 
-Victim is a situation.  The level of Victim is 8.
+Victim is a situation. The level of Victim is 8.
 The sarea of Victim is "Red".
 when play begins:
 	add Victim to badspots of furry;
@@ -83,7 +83,7 @@ Instead of Resolving a Runaway:
 	now Runaway is resolved;
 
 
-Portrait is a situation.  The level of Portrait is 9.
+Portrait is a situation. The level of Portrait is 9.
 The sarea of Portrait is "Outside".
 when play begins:
 	add Portrait to badspots of furry;
@@ -149,7 +149,7 @@ Instead of Resolving a Hurting:
 
 Conchien is a situation.
 The sarea of Conchien is "Outside".
-beauceronmet is a truth state that varies.  beauceronmet is normally false.
+beauceronmet is a truth state that varies. beauceronmet is normally false.
 
 when play begins:
 	add Conchien to badspots of furry;
@@ -175,12 +175,7 @@ when play begins:
 	add Chocolate Treat to badspots of hermaphrodite;
 
 Instead of Resolving a Chocolate Treat:
-	[puts Chocolate Lab as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Chocolate Lab":
-			now monster is y;
-			break;
+	setmonster "Chocolate Lab";
 	say "     Wandering through the high rise district, you find yourself smelling a sweet scent wafting throughout the slightly musky air of the city, the likes of which cause your stomach to grumble. Feeling yourself growing hungry all of a sudden, you end up following the smell all the way until you notice several Chocolate Labs congregating around each other in a small puppy pile behind the back of a dilapidated building. There are numerous chocolate bar wrappers strewn about, the confectionary dogs clearly full and sated for the moment. The unusual dogs lie together, slightly flowing into one another as their liquid bodies seem to have no clear division between themselves and their neighbors. Not wanting to disturb the pack, but feeling slightly ravenous all the same from their scent, you don't notice when one of the flowing, chocolate canines comes up behind you until you feel something brushing up one side of your leg. Flipping your head around, you watch as the other pants happily up at you before lifting its leg slightly, as if knowing what you want. Understanding rushes through you as you find yourself slurping your lips while greedily eying the bobbing cock of the obviously horny Lab as it dribbles some white chocolate goo.";
 	say "     [bold type]Should you try and sate you appetite with a small taste?[roman type][line break]";
 	LineBreak;
@@ -188,11 +183,11 @@ Instead of Resolving a Chocolate Treat:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		LineBreak;
-		say "     Deciding what the heck, you get down onto your knees and then unhurriedly take the chocolate canine's prick into your warm mouth. The taste of warm chocolate makes you almost purr as you bob your head up and down while trying to milk the sweet tasting canine of the contents in its gooey balls. The Chocolate Lab grunts and whines as it begins to thrust into your face casually and consequently the sounds the stud dog is making draws over the small pack over as they wonder what the noise is all about. Upon finding you sucking off one of their own the rest of the chocolate canines are quick to try and get in on the action as they bark and yap and tear at your clothing to get you naked. Once done, you can't really fight them as two of the Labs have you pinned down against the one you're still sucking off.  The group soon takes their turn at licking over your entire body and down further across your spine until they eventually start to tongue your [if cunts of player > 0]wet pussy and [end if]puckered hole all at once.";
+		say "     Deciding what the heck, you get down onto your knees and then unhurriedly take the chocolate canine's prick into your warm mouth. The taste of warm chocolate makes you almost purr as you bob your head up and down while trying to milk the sweet tasting canine of the contents in its gooey balls. The Chocolate Lab grunts and whines as it begins to thrust into your face casually and consequently the sounds the stud dog is making draws over the small pack over as they wonder what the noise is all about. Upon finding you sucking off one of their own the rest of the chocolate canines are quick to try and get in on the action as they bark and yap and tear at your clothing to get you naked. Once done, you can't really fight them as two of the Labs have you pinned down against the one you're still sucking off. The group soon takes their turn at licking over your entire body and down further across your spine until they eventually start to tongue your [if cunts of player > 0]wet pussy and [end if]puckered hole all at once.";
 		WaitLineBreak;
 		say "     It isn't long before the one in your mouth explodes and, without missing a beat, you suck down the Lab's creamy treat while rolling your hand over the canine's pulsing balls to get every delicious drop. Once the other is done though, another Lab is quick to come over and then stuff himself deep inside of you slightly still full mouth to give you an extra added helping of the white chocolate delight you just had. This wouldn't have been so bad except in the next moment one of the Labradors behind you takes it upon himself to mount you. By the time you come think that maybe you've made a bad decision, the entire pack is circling around with many of the other Chocolate Labs humping at your sides and leaking milk chocolate precum onto your [bodyname of player] body while waiting for their chance to get at you as the one atop you slowly begins to slide its gooey, flowing hips against across backside while its flowing cock pulses inside you.";
 		WaitLineBreak;
-		say "     The fucking and sucking and creaming over and into your body lasts for almost an hour and before you know it you find that your own body has taken on the form of the Chocolate Labs around you.  It almost seems as if part of you flowed and mingled with their molten chocolate bodies such that you lost part of yourself even as their confectionary canine instincts spread into you. By the time the orgy is done with you are no longer hungry for a taste of Chocolate as your belly is literally sloshing with milky cocoa goodness. Burping slightly when the last two Labradors flow away from both your face and ass, you pant gratefully as you watch the pack come over to lick you across the face and then slowly begin to move away from you one by one by one. Finding yourself alone soon after you chuckle slightly as you think about how your desires have finally gotten the best of you on this day.";
+		say "     The fucking and sucking and creaming over and into your body lasts for almost an hour and before you know it you find that your own body has taken on the form of the Chocolate Labs around you. It almost seems as if part of you flowed and mingled with their molten chocolate bodies such that you lost part of yourself even as their confectionary canine instincts spread into you. By the time the orgy is done with you are no longer hungry for a taste of Chocolate as your belly is literally sloshing with milky cocoa goodness. Burping slightly when the last two Labradors flow away from both your face and ass, you pant gratefully as you watch the pack come over to lick you across the face and then slowly begin to move away from you one by one by one. Finding yourself alone soon after you chuckle slightly as you think about how your desires have finally gotten the best of you on this day.";
 		PlayerEat 20;
 		PlayerDrink 10;
 		if bodyname of player is "Chocolate Lab" or facename of player is "Chocolate Lab":
@@ -204,6 +199,11 @@ Instead of Resolving a Chocolate Treat:
 			increase hunger of player by 12;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Chocolate Lab":
+				now monster is y;
+				break;
 		now tailname of player is "Chocolate Lab";
 		now facename of player is "Chocolate Lab";
 		now skinname of player is "Chocolate Lab";
@@ -221,7 +221,7 @@ Instead of Resolving a Chocolate Treat:
 		WaitLineBreak;
 		if libido of player < 70, now libido of player is 70;
 		if humanity of player < 10:
-			say "     As you watch them flow away, you find your old thoughts flowing away as well.  Your body further loses cohesion, going from a semi-solid state into one of flowing, liquid chocolate with a dog-like shape.  As your new instincts for chocolate doggy hunger and lust take over, you pad quickly after your new pack, trailing cocoa brown pawprints.";
+			say "     As you watch them flow away, you find your old thoughts flowing away as well. Your body further loses cohesion, going from a semi-solid state into one of flowing, liquid chocolate with a dog-like shape. As your new instincts for chocolate doggy hunger and lust take over, you pad quickly after your new pack, trailing cocoa brown pawprints.";
 			wait for any key;
 			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			now battleground is "void";
@@ -229,7 +229,7 @@ Instead of Resolving a Chocolate Treat:
 			follow the turnpass rule;
 			stop the action;
 		else:
-			say "     You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
+			say "     You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form. Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival. You do feel a strong longing for more sex or more chocolate. Or best of all, more chocolate sex. You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
 			say "[impregchance][impregchance]";
 	else:
 		LineBreak;

@@ -1,4 +1,4 @@
-tigertaur by Sarokcat begins here.
+Tigertaur by Sarokcat begins here.
 [ Version 1.2 - Player loss anal scene ]
 
 "Adds a tigertaur to Flexible Survival's Wandering Monsters table, With Impreg chance"
@@ -32,7 +32,7 @@ to say Tigertaur Wins:
 to say Tigertaur Loses:
 	if inasituation is true:
 		say ""; [dealt with in the situation]
-	else:	
+	else:
 		If thirst of player > 30:
 			Say "     Defeated, the tigertaur growls in disbelief before turning tail to flee. Feeling your thirst start to overcome you, you think about how the tigertaur's rich and thick milk would satisfy you and you wonder if maybe you could try and stop the creature from leaving so you can get a quick drink. Is it worth the chance of infection though?";
 			If player consents:
@@ -54,7 +54,7 @@ to say TigertaurDesc:
 	if inasituation is true:
 		say ""; [dealt with in the situation]
 	else:
-		say "     [if campuswanderfight is 1]Travelling through the zoo, you soon[else]You[end if] find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tigers face, sits atop the lower body of a strong four-legged tiger. You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";
+		say "     [if campuswanderfight is 1]Traveling through the zoo, you soon[else]You[end if] find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tigers face, sits atop the lower body of a strong four-legged tiger. You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";
 
 Section 2 - Monster Insertion
 

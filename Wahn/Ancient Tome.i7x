@@ -27,10 +27,10 @@ An everyturn rule: [item cleanup]
 		say "     You feel movement in your backpack and pull it off, checking over what might have happened. Strange, didn't you have more than one ancient tome? Oh well, one is plenty anyways...";
 		now carried of ancient tome is 1;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 0 and a random chance of 1 in 2 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 0 and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric finds a book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, you find Eric sitting cross-legged on one of the sofas close to the entrance. A dusty box sits on the low sofa table he has dragged close and is apparently in the progress of unpacking. Small stacks of old, sometimes damaged-looking books are spread out next to him as he takes stock. Looking up from the box, Eric smiles at you and calls out, 'Hey there - look what I found back in one of the storerooms! I got bored just sitting around and since it is so dangerous to go outside, I looked around a bit in here...' Leaning forward, the college athlete pulls another item out of his mystery box - an old crucifix made from blackened wood this time.";
@@ -56,7 +56,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric
 		now TomeFound is 1; [Eric got the book]
 		now lastTomeInteraction is turns;
 
-after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
+after going down from Gray Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric reads the book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying stretched out on his bed and reading - but not just any book but that old tome he found not long ago. Elbows braced on the mattress, his head is bent over the book and he seems to be studying with an intent gaze. Curious, you wander over to the college student and glance over his shoulder. The page he is looking at is filled with strange curving squiggles, following no script you can really recognize. Clearing your throat, you manage to draw Eric's attention away from the book after a few seconds and he looks up at you with a curious expression.";
@@ -82,7 +82,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 		now TomeFound is 2; [Eric is reading the book]
 		now lastTomeInteraction is turns;
 
-after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
+after going down from Gray Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric gets tentacled - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it, it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";

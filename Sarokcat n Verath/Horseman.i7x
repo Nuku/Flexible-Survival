@@ -15,7 +15,7 @@ to say HorsemanDesc:
 		say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if this men were chosen more for their body mass than brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
 	else if horsefight is 1:		[fight on Dry Plains]
 		say "     The muscular horseman steps up to you with balled fists. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso, his right bicep bears an intricate interlocking horseshoe tattoo. An impressive equine package bulges his ripped khaki shorts and behind him, a short tail flicks in annoyance. He grumbles. 'By the time I'm done with you, you're gonna be a proper horsey fucktoy.'";
-	else if horsefight is 2:   [fight in the farm worker barracks]
+	else if horsefight is 2: [fight in the farm worker barracks]
 		say "     'Fuck off' the farmhand growls and swings a punch at you.";
 
 to say Horseman wins:
@@ -41,7 +41,7 @@ to say Horseman wins:
 		else:
 			say "     The powerful horseman scoffs as you collapse in front of him helplessly, 'Wasting my time on a puny little male runt like you? Why, you don't even have a proper cunt to fuck,' the horseman says with a crude chuckle as he strokes his thick equine meat speculatively. 'Still maybe with a bit of help you can become sexy little stud like me - though obviously not as handsome,' he says with a neighing chuckle then begins to jerk off and soon groans in pleasure. Looking up at the masturbating horseman, you are hit full in the face with the first blast of his sticky white equine seed as he brings himself to orgasm and shoots all over you. You gasp in surprise and the taste of his equine cum fills your mouth - much to the horseman's amusement. He continues to stroke himself, coaxing more and more seed out of his rod onto you, even as your body begins to shudder and feel strange in response. Your thoughts seem slower and more filled with lust with every second, and you lie there with a silly grin on your face while he finishes coating you with his cum. 'There now, maybe that will help you fit in here better,' he says with an equine grin and starts walking down the passage away from you. 'Or even better yet, maybe you'll soon have a nice slutty little mare cunt for me to fuck instead! Can't wait till I see you next time!' he calls back over his shoulder, leaving you lying there covered in his equine seed.";
 			infect "Horseman";
-	else if horsefight is 2:   [fight in the farm worker barracks]
+	else if horsefight is 2: [fight in the farm worker barracks]
 		say "     The muscled equine farmhand knocks you to the ground with a punch to the stomach, looking down on you in disdain as you cough and try to catch your breath. 'Just stay out of things that don't concern you,' he growls, then turns away from you and joins the crowd around Corbin.";
 
 To say Horseman loses:
@@ -49,7 +49,7 @@ To say Horseman loses:
 		say "     The powerful horseman shakes his head slightly to clear it, before charging right at you again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have recently been giving him, and it is easy enough to sidestep and guide him right into a wall. The powerful beast groans and collapses up against the wall, a slightly stupefied look on his face as he stares off into space, obviously stunned. Shaking your head slightly, you continue along your way before he can try to stop you again.";
 	else if horsefight is 1:		[fight on Dry Plains]
 		say "     The powerful horseman shakes his head slightly to clear it, before charging right at you again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have been giving him, and it is easy enough to sidestep and send him crashing to the ground. The powerful beast groans and collapses, a slightly stupefied look on his face as he stares off into space, obviously stunned as he lays flopped out on the grass.";
-	else if horsefight is 2:   [fight in the farm worker barracks]
+	else if horsefight is 2: [fight in the farm worker barracks]
 		say "     The muscled equine farmhand shakes his head slightly to clear it, before trying to punch you once again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have been giving him, and it is easy enough to sidestep and send him crashing to the ground. Groaning and holding his head as he is, you don't think he'll get up anytime soon.";
 
 Section 2 - Monster Insertion

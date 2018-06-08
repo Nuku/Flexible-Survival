@@ -206,7 +206,7 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 
 Section 4 - Events
 
-instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
+instead of going northwest from Gray Abbey Library while (HP of Skarnoth > 1):
 	move player to Half-Renovated Room;
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";

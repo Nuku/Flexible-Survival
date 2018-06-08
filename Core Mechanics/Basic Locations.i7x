@@ -1,15 +1,15 @@
 Version 1 of Basic Locations by Core Mechanics begins here.
 [Version 1.5 - Library Expansion - Luneth]
 
-Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.  Grey Abbey Library is sleepsafe.
-The description of Grey Abbey Library is "[abbey desc]".
-The earea of Grey Abbey Library is "Outside".
-Bunker is a room.  The description of Bunker is "[bunker desc]".
+Gray Abbey Library is a room. Gray Abbey Library is fasttravel. Gray Abbey Library is sleepsafe.
+The description of Gray Abbey Library is "[abbey desc]".
+The earea of Gray Abbey Library is "Outside".
+Bunker is a room. The description of Bunker is "[bunker desc]".
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
-East of library door is Grey Abbey Library.
-Bunker is below Grey Abbey Library.
+East of library door is Gray Abbey Library.
+Bunker is below Gray Abbey Library.
 The player is in Bunker.
 The marea of library door is "Outside".
 
@@ -17,7 +17,7 @@ to say bunker desc:
 	project the figure of Bunker_icon;
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about 60 feet in length and 30 feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. A two long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
-		say ".  One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like";
+		say ". One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like";
 	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type]. Your own personal room is to the south. It's technically just a large maintenance closet, but at least it's private.";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner, where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. Regardless of the source of its power, the boombox provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials results in different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
@@ -56,10 +56,10 @@ to say abbey desc:
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
 		if HP of Fang < 3:
-			say ".  The wolf is tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
+			say ". The wolf is tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
 		else:
-			say ".  The powerful male wolf watches in stoic silence";
-		say ".  The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
+			say ". The powerful male wolf watches in stoic silence";
+		say ". The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	else if Fang is booked:
 		if HP of Fang < 3:
 			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
@@ -72,7 +72,7 @@ West of Half-Renovated Room is Breakroom.
 Breakroom is a room. The description of Breakroom is "[gbreakroom desc]".
 The invent of Breakroom is { "food" }.
 Library Microwave is an object. It is in Breakroom. It is fixed in place. Understand "microwave" as Library Microwave.
-The description of Library Microwave is "A black, mid-sized microwave stands on one of the countertops in the breakroom. Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!".
+The description of Library Microwave is "A black, mid-sized microwave stands on one of the countertops in the breakroom. [if findwires is 2 and fixedgens is 2]Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want![else]Sadly, it doesn't have power right now.[end if]".
 
 to say gbreakroom desc:
 	project the figure of Library1stfloor_icon;
@@ -84,7 +84,7 @@ to say gbreakroom desc:
 
 
 Half-Renovated Room is a room.
-North of Grey Abbey Library is Half-Renovated Room.
+North of Gray Abbey Library is Half-Renovated Room.
 Half-Renovated Room is sleepsafe.
 The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 
@@ -102,7 +102,7 @@ to say gpantry desc:
 	project the figure of Library1stfloor_icon;
 	say "     The pantry is about the size of a walk-in closet. Inspecting the shelves on all three walls, hoping to find some extra food perhaps, you sadly only find a few leftover folders. After the building became a library, this pantry apparently ended up being turned into a simple storage room. Heading east from here will lead you back into the breakroom.";
 
-South of Grey Abbey Library is Computer Lab.
+South of Gray Abbey Library is Computer Lab.
 Computer Lab is a room. The description of Computer Lab is "[gcomputerlab desc]".
 The invent of Computer Lab is { "soda" }.
 
@@ -110,7 +110,7 @@ to say gcomputerlab desc:
 	project the figure of Library1stfloor_icon;
 	say "     Stepping into the old computer lab, it appears that someone had some anger management issues judging by all of the smashed monitors and towers. Every computer used to have its own cubicle, each one about four feet wide by three feet long. While not a room you would particularly enjoy staying in, you're sure you can find some use for it. To the west is a locked door. Heading north will take you back to the library entrance.";
 
-East of Grey Abbey Library is Back Of The Library.
+East of Gray Abbey Library is Back Of The Library.
 Back Of The Library is a room. The description of Back Of The Library is "[gbackofthelibrary desc]".
 
 to say gbackofthelibrary desc:
@@ -122,7 +122,7 @@ Makeshift Rec Room is a room. The description of Makeshift Rec Room is "[grecroo
 
 to say grecroom desc:
 	project the figure of Library1stfloor_icon;
-	say "     The Kidz Zone was at one point the place where parents would dump their kids when they needed a break. Most of the brightly colored decorations have been torn down, leaving the area with a twisted, festive feel to it. A single table is set up in the back corner of the room, while the bookshelves have all been destroyed. [if Korvin is booked or Alexandra is booked]Recently, someone found an old pool table and dragged it all the way into the rec-room, and a deck of cards has been placed on a side table. While some may prefer reading to pass the time, others apparently find that far too dull for their tastes. The idea of hustling someone at pool or poker does have its appeal. [end if][if Nala is booked]Having set up a balcony-like seat out of a broken air vent, Nala can now watch and heckle to her heart's content. [end if]Heading south leads back to the library."
+	say "     The Kidz Zone was at one point the place where parents would dump their kids when they needed a break. Most of the brightly colored decorations have been torn down, leaving the area with a twisted, festive feel to it. A single table is set up in the back corner of the room, while the bookshelves have all been destroyed. [if Korvin is booked or Alexandra is booked]Recently, someone found an old pool table and dragged it all the way into the rec-room, and a deck of cards has been placed on a side table. While some may prefer reading to pass the time, others apparently find that far too dull for their tastes. The idea of hustling someone at pool or poker does have its appeal. [end if][if Nala is booked]Having set up a balcony-like seat out of a broken air vent, Nala can now watch and heckle to her heart's content. [end if]Heading south leads back to the library.";
 
 East of Back Of The Library is Courtyard.
 Courtyard is a room. The description of Courtyard is "[gcourtyard desc]".
@@ -146,15 +146,15 @@ to say ggarden desc:
 	project the figure of Library1stfloor_icon;
 	say "     Walking into the garden [if Honey is booked]shocks you at first. While most of the plant life around this part of the city is dead, the library's garden is thriving. Flowers of many different colors have begun to sprout up quickly, their speed of growth most likely linked to the nanites. Honey is buzzing back and forth between her plants, humming a cheery little melody as she works. She seems totally in her element, which shouldn't be all that surprising seeing that she is a bee now. The loving way the tiny insect girl cares for each individual plant shows that this is about more than instinct; she truly loves working with the flowers, and the small garden has grown into a sea of colors under her careful watch. You can't help but notice that the most prominent color is yellow, making honey almost appear to fade away at times[else]is slightly disheartening. Any flowers or vegetables that once grew here are long dead. When this was just an abbey the garden must have served as the place where they would grow their food. Looking up, you are able to see the huge open window on the second floor. Who knows maybe if it had someone to take care of it, perhaps the garden could return to its past glory. Going to the north will take you back to the courtyard[end if].";
 
-Grey Abbey Library is below Grey Abbey 2F.
-Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]".
-the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odor is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
+Gray Abbey Library is below Gray Abbey 2F.
+Gray Abbey 2F is a room. The description of Gray Abbey 2F is "[abbey 2F desc]".
+the scent of Gray Abbey 2F is "The smell of books permeates the air in the library, the musty odor is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
 to say abbey 2F desc:
 	project the figure of Library2ndfloor_icon;
 	say "     The spacious second story of the library opens up in the middle, with the floor of about a third of the width of the building missing and surrounded by well-crafted wooden railings. They clearly are a part of the old abbey's features that were kept in the renovation, giving the place quite a nice atmosphere. From what therefore is basically a huge balcony, you can overlook the main stacks below. As in the rest of the building, rows of bookshelves take up most of the space, though small seating groups with sofas and cushioned chairs promise comfortable places to rest, too. There are a few secluded desks here and there, serving as quiet study places. To the northeast is a shabby sitting area, while to the southeast you can make out a darker spot that does not receive much light.";
 
-Northeast of Grey Abbey 2F is Sitting Area.
+Northeast of Gray Abbey 2F is Sitting Area.
 Sitting Area is a room. The description of Sitting Area is "[usittingarea desc]".
 The invent of Sitting Area is { "chips" }.
 
@@ -170,7 +170,7 @@ to say ugardenview desc:
 	say "     The huge windows at the back of the second floor allow sunlight to flood the area. Unfortunately, one of the large windows has been completely shattered. On the bright, this allows a light breeze to flow through the rest of the library, airing out its musty scent. Looking out the window, you can see the garden and courtyard below. The sprawling city beyond it would make for a fantastic view if wasn't in a state of ruin. There's a sitting area to the northwest, whereas going southwest will lead you towards a dark alcove.";
 
 Southwest of Garden View is Darkened Alcove.
-Southeast of Grey Abbey 2F is Darkened Alcove.
+Southeast of Gray Abbey 2F is Darkened Alcove.
 Darkened Alcove is a room. The description of Darkened Alcove is "[udarkenedalcove desc]".
 
 to say udarkenedalcove desc:
@@ -246,12 +246,12 @@ to say GreenLobbyDesc:
 
 understand "plains" as Dry Plains.
 
-Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoof prints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake leveled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
+Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Their lines are probably further back. Some hoof prints you spot in a sandy patch nearby furthers this assumption. As for the open grasslands, it looks like the some kind of storm or quake leveled all the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
 The earea of Dry Plains is "Plains".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
 Plains door is west of wandering the plains.
 Wandering the plains is a room.
 
-the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
 Basic Locations ends here.

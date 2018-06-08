@@ -508,7 +508,7 @@ Section 5 - Items
 [T-Shirt Outfit]
 Table of Game Objects (continued)
 name	desc	weight	object
-"t-shirt & blue jeans"	"A set of new blue jeans, paired with a grey T-shirt. Boring, but practical."	2	t-shirt & blue jeans
+"t-shirt & blue jeans"	"A set of new blue jeans, paired with a gray T-shirt. Boring, but practical."	2	t-shirt & blue jeans
 
 t-shirt & blue jeans is equipment.
 It is not temporary.
@@ -612,4 +612,4 @@ Section 6 - Comments and Variables
 [thirst of Andromeda -- Used for store description]
 
 
-The Pretty Kitty ends here.
+Pretty Kitty ends here.

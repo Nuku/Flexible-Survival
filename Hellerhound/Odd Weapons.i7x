@@ -16,7 +16,7 @@ The slot of garbage can shield is "shield".
 
 the scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".
 
-Fallen Survivor is a scavevent.  The sarea of Fallen Survivor is "Allzones".
+Fallen Survivor is a scavevent. The sarea of Fallen Survivor is "Allzones".
 
 instead of resolving a Fallen Survivor:
 	say "     You come across a succumbed survivor slumped on the pavement with their back to a crumbling building. The motionless yet still breathing body fails to react to anything you do to try and snap them back to consciousness. Dragging the man under a nearby piece of intact roof, you place him in a way that he at least won't be quite as exposed or get rained upon. Still, his eyes do not even focus on you as you open them, just staring off into empty space. Your inability to help this person or even get any answers of what happened to him causes you to feel intensely uncomfortable, and just being close to the body seems to sap your drive and go on and struggle to survive. Maybe you should just... lay down with him. All of this is pointless, isn't it? You're never going to get out of - *CRASH, YOWL*[line break]";
@@ -45,7 +45,7 @@ name	desc	weight	object
 
 infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing". the objsize of infected sword is 4.
 
-the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.".
+the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
 
 instead of purifying an infected sword:
 	say "The sword sets the sides of the microwave on fire, and Matt rushes over and sprays it with the fire extinguisher. 'What are you doing?' he exclaims, 'Don't you know what happens when you put metal in the microwave?";

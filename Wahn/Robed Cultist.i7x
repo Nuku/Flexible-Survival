@@ -104,7 +104,7 @@ When Play begins:
 	now desc entry is "[Deep One Desc]";
 	now face entry is "that of a human-fish hybrid, with a very wide maw filled with countless sharp teeth. Now having lidless eyes to take in the world, you never blink anymore. Instead of hair, a series of fins held up by bony spikes start on top of your head, running halfway down your back";
 	now body entry is "shaped like a swimmers, with a long and flexible build that is tailor-made for swimming, darting and gliding through the water. The webbing between the fingers and toes of your claw-armed extremities also contributes to being well-adjusted to life in the ocean";
-	now skin entry is "[one of]grey-blue and scaly[or]grey-blue[or]scaly[at random]";
+	now skin entry is "[one of]gray-blue and scaly[or]gray-blue[or]scaly[at random]";
 	now tail entry is "Your buttocks are firm and tight, optimizing the hydrodynamics of your body.";
 	now cock entry is "[one of]nonhuman[or]flared[or]upwards-curving[at random]";
 	now face change entry is "it reshapes itself, giving you a very wide maw in which you can feel many sharp teeth with your tongue. Then your whole outlook on the world changes as your eyes grow into fairly large and lidless lenses that put your surroundings into a sharp, put somehow distant light";

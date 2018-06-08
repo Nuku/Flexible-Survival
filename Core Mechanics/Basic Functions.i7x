@@ -8,7 +8,7 @@ To change the current menu to (X - table name):
 to clear the screen and hyperlink list:
 	clear the screen;
 	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
-	now hyperlink list is {}.
+	now hyperlink list is {};
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
 To say row of (N - number) spaces: (- spaces {N}; -).
@@ -64,7 +64,7 @@ to WaitLineBreak: [little bit of often used code]
 		LineBreak; [people who don't want to wait at least get a break]
 
 to LineBreak:
-	say "[line break]";
+	LineBreak;
 
 to PlayerEat (N - number):
 	LineBreak;

@@ -370,7 +370,7 @@ to say yamato dragon desc:
 	now firebreathready is false;
 	psycheeval;
 	libidoeval;
-	say "     [if showlocale is true]Travelling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
+	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
 
 to say ydskinchange:
 	let tempnum be ydcolor;
@@ -667,7 +667,7 @@ to say YamatM_4: [Cunt Catching]
 			say "     '[one of]S-such skill[or]S-Still you persist?[run paragraph on][or]I-I will outlast you[at random]!' He tries to force your bliss before his, but eventually he's succumbs to his overwhelming need, bathed in the hot, panting breath of the serpent until the air is filled with his loud roar.";
 			say "     Harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of player > 4] almost[end if] immediately before it begins to gush out from your hole, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to finally set you off[if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else]cunt firmly squeezing against the dragon's overwhelming intrusion[end if].";
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
-			say "     '[one of]I am impressed[or]Very impressive[or]Exceptional[at random], [one of]you must have a lot of practice[or]I think few could match your skill[or]you are full of surprises[at random]!' Musing over your display, he catches his breath before returning, once more, to the sky, and leaving you to your own devices.[impregchance]";
+			say "     '[one of]I am impressed[or]Very impressive[or]Exceptional[at random], [one of]you must have a lot of practize[or]I think few could match your skill[or]you are full of surprises[at random]!' Musing over your display, he catches his breath before returning, once more, to the sky, and leaving you to your own devices.[impregchance]";
 		else:
 			say "     Ever the tenacious, you make the[if scalevalue of player < 5] slow[end if] endeavor of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice sends pleasure down your spine, your tainted revels a little surprising to the dragon as you begin to build a motion. Occasional gouts of precum sputtering from your hole, you easily manage the whole ordeal. Shall you go rough and fast? Otherwise, you'll keep things slow.";
@@ -786,7 +786,7 @@ to say YamatM_5: [Anal Catching]
 			say "     '[one of]S-such skill[or]H-how is this possible?[run paragraph on][or]T-this is impossible[at random]!' He tries to force your bliss before his, but eventually he's succumbs to his overwhelming need, bathed in the hot, panting breath of the serpent until the air is filled with his loud roar.";
 			say "     Harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of player > 4] almost[end if] immediately before it begins to gush out from your ass, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to finally set you off [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else if cunts of player > 0]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if].";
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
-			say "     '[one of]I am impressed[or]Very impressive[or]Exceptional[at random], [one of]you must have a lot of practice[or]I think few could match your skill[or]you are full of surprises[at random]!' Musing over your display, he catches his breath before returning, once more, to the sky, and leaving you to your own devices.[mimpregchance]";
+			say "     '[one of]I am impressed[or]Very impressive[or]Exceptional[at random], [one of]you must have a lot of practize[or]I think few could match your skill[or]you are full of surprises[at random]!' Musing over your display, he catches his breath before returning, once more, to the sky, and leaving you to your own devices.[mimpregchance]";
 		else:
 			say "     Ever the tenacious, you make the[if scalevalue of player < 5] slow[end if] endeavor of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice sends pleasure down your spine, your tainted revels a little surprising to the dragon as you begin to build a motion. Occasional gouts of precum sputtering from your hole, you easily manage the whole ordeal. Shall you go rough and fast? Otherwise, you'll keep things slow.";
@@ -1206,6 +1206,5 @@ when play ends:
 			if "Horny Bastard" is listed in feats of player:
 				say ". During the night, you sate your intense lust by offering rides of a different sort";
 			say ". Overall, you're pretty well off...";
-
 
 Yamato Dragon ends here.
