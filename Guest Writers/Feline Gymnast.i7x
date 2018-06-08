@@ -1,6 +1,6 @@
 Version 1 of Feline Gymnast by Guest Writers begins here.
 [A kinky, flexible anthro feline herm]
-[- Originally Authored By:  SomeFur -]
+[- Originally Authored By: SomeFur -]
 
 [Potential ideas list]
 [Loss scenes]
@@ -98,7 +98,7 @@ to say felinelosenormalanal:
 		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. With amazing flexibility, she bends forward and starts licking it clean. Obviously extremely aroused, she begins moving up and down your [cock of player] penis. As she rises, she keeps her head in the same position, thrusting into her mouth. The sight of her sucking herself off, and the slow, tight pumps on your dick make you moan in pleasure, already getting close to an orgasm. The hermaphrodite riding you must be close as well, because she picks up the pace, slamming her ass down onto your thighs and then swallowing her barbed shaft as she thrust upwards. She suddenly straightens back up, crying in pleasure as cum bursts out of her pink penis, splattering all over your [breast size desc of player] [if breast size of player > 1]breasts[else]chest[end if] and face. With her tight ass wringing your [cock size desc of player] cock, you can't hold back much longer either, and pump your [cum load size of player] load into her bowels.";
 	else:
 		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. She starts to stroke it slowly with one of her furry hands, moaning as a large drop of pre makes its way out. With her other hand, she lifts her tiny balls out of the way and pushes a finger into her leaking folds. Turned on by the show above you, you find yourself quite close to your limit. Your partner stops masturbating, placing her hands on the ground next to you, giving her more leverage to ride you wildly. Unable to keep up with herself, you hear a cry of pleasure, followed by warm wads of her cum splattering your face. Startled by her yelling, and further stimulated by her now squeezing ass, you quickly follow, spurting your [cum load size of player] load into her.";
-	say "     Both of you groan as she lifts herself off of your sensitive tool. 'Have you ever had an orgasm without touching yourself? It's quite an experience. Maybe I'll let you try it some other time,' she promises, walking away from you[if cock length of player > 20] with a little less grace than usual[end if]."
+	say "     Both of you groan as she lifts herself off of your sensitive tool. 'Have you ever had an orgasm without touching yourself? It's quite an experience. Maybe I'll let you try it some other time,' she promises, walking away from you[if cock length of player > 20] with a little less grace than usual[end if].";
 
 [Oral scene
 Summary: random vaginal/penis oral, will give oral to men/herms]

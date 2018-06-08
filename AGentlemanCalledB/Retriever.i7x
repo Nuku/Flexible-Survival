@@ -14,16 +14,14 @@ to say losetoRetriever:
 	else:
 		say "As you collapse, unable to resist the retriever girl's assault any longer she approaches you with an expression somewhere between hunger and lust";
 		if cocks of player > 0:
-			say ".  You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of player] [cock of player] cock with her large canine tongue, quickly bringing it to full erection.";
+			say ". You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of player] [cock of player] cock with her large canine tongue, quickly bringing it to full erection.";
 			say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with your seed.";
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			WaitLineBreak;
 			say "Afterwards, she collapses atop you, almost as exhausted as you are, the two of you lay there for some time lost in the afterglow of your lovemaking, before she raises herself off your, running her belly contently as she pads away leaving you to recover on your own.";
 		else:
-			say ".  As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
+			say ". As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
 			say "As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			WaitLineBreak;
 			say "Before getting up to leave you canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone, you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
 
 to say beattheRetriever:
@@ -37,19 +35,17 @@ to say beattheRetriever:
 				if cocks of player > 0:
 					say "Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of player] [cock of player] cock she begins to whimper needfully, already begins to buck against you, trying to force you inside her. You begin thrusting into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
 					say "As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
-					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+					WaitLineBreak;
 					say "You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
 				else:
 					say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
 					say "Before long her expert ministrations have you approaching climax and, eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
 					say "Without warning she suddenly drives muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
-					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+					WaitLineBreak;
 					say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
 					say "As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
 			else:
-				say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes.  She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
+				say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
 		else:
 			say "After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be an continue on your way.";
 
@@ -108,7 +104,7 @@ When Play begins:
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
-	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9].  Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small silver bone shaped tag with you name engraved on it[end if]";
+	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9]. Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small silver bone shaped tag with you name engraved on it[end if]";
 	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";

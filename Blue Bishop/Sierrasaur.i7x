@@ -396,7 +396,7 @@ to sierrasex:
 	PlayerDrink 6;
 
 to say beathesierra:
-	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanour is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
+	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanor is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
 
 
 Section 2 - Monster Insertion

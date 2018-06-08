@@ -188,8 +188,7 @@ carry out graphicsdebugreport:
 	else:
 		say "NewGraphicsInteger = STATE_ERROR";
 
-
-Graphics Director ends here.
+[
 
 ---- DOCUMENTATION ----
 
@@ -214,3 +213,7 @@ The roomview-canvas is a g-canvas. The associated canvas of the graphics-window 
 	try looking;]
 
 Legacy code -
+
+]
+
+Graphics Director ends here.

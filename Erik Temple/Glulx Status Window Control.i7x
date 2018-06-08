@@ -353,12 +353,12 @@ Section - Replacement of the library's Window Color routines
 
 Include (-
 
-[ VM_SetWindowColours f b window doclear i fwd bwd swin;
+[ VM_SetWindowcolors f b window doclear i fwd bwd swin;
     if (clr_on && f && b) {
         if (window) swin = 5-window; ! 4 for TextGrid, 3 for TextBuffer
 
-        fwd = MakeColourWord(f);
-        bwd = MakeColourWord(b);
+        fwd = MakecolorWord(f);
+        bwd = MakecolorWord(b);
         for (i=0 : i<style_NUMSTYLES: i++) {
             if (f == CLR_DEFAULT || b == CLR_DEFAULT) {  ! remove style hints
                 glk_stylehint_clear(swin, i, stylehint_TextColor);
@@ -395,21 +395,21 @@ Include (-
     }
 ];
 
-[ VM_RestoreWindowColours; ! used after UNDO: compare I6 patch L61007
+[ VM_RestoreWindowcolors; ! used after UNDO: compare I6 patch L61007
     if (clr_on) { ! check color has been used
-        VM_SetWindowColours(clr_fg, clr_bg, 2); ! make sure both sets of variables are restored
-        VM_SetWindowColours(clr_fgstatus, clr_bgstatus, 1, true);
+        VM_SetWindowcolors(clr_fg, clr_bg, 2); ! make sure both sets of variables are restored
+        VM_SetWindowcolors(clr_fgstatus, clr_bgstatus, 1, true);
         VM_ClearScreen();
     }
 ];
 
-[ MakeColourWord c;
+[ MakecolorWord c;
     if (c > 9) return c;
     c = c-2;
     return $ff0000*(c&1) + $ff00*(c&2 ~= 0) + $ff*(c&4 ~= 0);
 ];
 
--) instead of "Window Colours" in "Glulx.i6t".
+-) instead of "Window colors" in "Glulx.i6t".
 
 
 Section - Replacement of library's Glulx status line routines
