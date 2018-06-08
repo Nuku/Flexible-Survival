@@ -11,7 +11,7 @@ Version 1 of Carl by Wahn begins here.
 [   2: player helped him escape and brought him into the library                       ]
 [   3: talked with Carl in the library                                                 ]
 [  10: Carl got a grip of himself, making him his own person, just in a canine body    ]
-[  30: Carl got pushed into subby Beta behaviour by the player fucking him very soon   ]
+[  30: Carl got pushed into subby Beta behavior by the player fucking him very soon   ]
 [  50: player helped him escape, then sent him off alone                               ]
 [  90: he got caught by Allen and was broken in by him                                 ]
 [ 100: removed from the game (lost somewhere)                                          ]
@@ -65,7 +65,7 @@ to say CarlDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Carl], LEVEL: [level of Carl], LIBRARY ENTRY TURN: [CarlLibraryEntry], Libido: [libido of Carl], Dexterity: [dexterity of Carl], Thirst: [thirst of Carl], Lust: [lust of Carl] <- DEBUG[line break]";
 	if HP of Carl is 2 or HP of Carl is 3:
-		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behaviour shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all.[else]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity.[end if]";
+		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behavior shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all.[else]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity.[end if]";
 	else if HP of Carl > 9 and HP of Carl < 30:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity. As he sees you looking at him, he gives you a broad smile, followed by a salacious wink.";
 	else if HP of Carl > 29 and HP of Carl < 50:
@@ -480,7 +480,7 @@ to say CarlSex4: [player pussy fucked]
 	else: [sub Carl]
 		say "     Opening your pants and letting them drop, you start rubbing your sex demonstratively in front of the submissive husky. Carl looks to you, then down to your crotch, panting openly at the thought of pleasing his Alpha. Commanding him to strip, you watch him hurriedly taking off his clothes and come to stand before you, where you touch and stroke his naked body appreciatively. Giving his canine shaft a slow stroke, you tell him that you want him to mount and fuck you. Then you get on all fours on his mattress, followed by a very eager transformed soldier, his tail wagging excitedly as he gets into position behind you.";
 		say "     Rubbing his hot, hard shaft against your crack for a moment, Carl lines up its tip with your pussy and presses forward, giving a gasped 'Oooh, Alpha!' nudges apart your pussy lips and slides into your tight hole. The two of you moan in unison as more and more of Carl's member pushes into you, your inner folds rubbing against his cock. Then there is a small pause as the slight bulge of his not yet swollen knot presses against you, to be popped in with a lusty grunt from Carl after a bit more pressure. Groaning 'Soo warm, tight...' the transformed soldier grinds his hips against yours, his whole cock now inside you and his furry balls rubbing your crotch.";
-		say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually much more submissive behaviour and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your womb. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your pussy gets really wet around his cock and femcum starts to drip out of it down onto the sheets[if cocks of player > 0] and your cock sprays a heavy load onto the mattress too[end if].[fimpregchance]";
+		say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually much more submissive behavior and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your womb. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your pussy gets really wet around his cock and femcum starts to drip out of it down onto the sheets[if cocks of player > 0] and your cock sprays a heavy load onto the mattress too[end if].[fimpregchance]";
 		WaitLineBreak;
 		say "     After a while of just holding you from behind and slowly stroking your body while waiting for his knot to go down, Carl says 'Thank you for letting me fuck you, Alpha. You're the best.'";
 
@@ -517,19 +517,19 @@ to say CarlSex5: [player ass fucked]
 		if cocks of player > 0: [male+herm]
 			say "     Opening your pants and letting them drop, you pull out your [cock of player] shaft and demonstratively jerk it in front of the submissive husky. Carl looks to you, then down to your crotch, panting openly at the thought of pleasing his Alpha. Commanding him to strip, you watch him hurriedly taking off his clothes and come to stand before you, where you touch and stroke his naked body appreciatively. Giving his canine shaft a slow stroke, you tell him that you want him to mount and fuck you. Then you get on all fours on his mattress, followed by a very eager transformed soldier, his tail wagging excitedly as he gets into position behind you.";
 			say "     Rubbing his hot, hard shaft against your crack for a moment, Carl lines up its tip with your pucker and presses forward, giving a gasped 'Oooh, Alpha!' as he slides into your tight hole. The two of you moan in unison as more and more of Carl's member pushes into you, your inner walls rubbing against his cock. Then there is a small pause as the slight bulge of his not yet swollen knot presses against you, to be popped in with a lusty grunt from Carl after a bit more pressure. Groaning 'Soo warm, tight...' the transformed soldier grinds his hips against yours, his whole cock now inside you and his furry balls rubbing against your ass.";
-			say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually more submissive behaviour and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your own cock twitches as you come, spraying the sheets of the mattress below with your seed.[mimpregchance]";
+			say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually more submissive behavior and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your own cock twitches as you come, spraying the sheets of the mattress below with your seed.[mimpregchance]";
 			WaitLineBreak;
 			say "     After a while of just holding you from behind and slowly stroking your body while waiting for his knot to go down, Carl says 'Thank you for letting me fuck you, Alpha. You're the best.'";
 		else if cunts of player > 0: [female]
 			say "     Opening your pants and letting them drop, you start rubbing your sex demonstratively in front of the submissive husky. Carl looks to you, then down to your crotch, panting openly at the thought of pleasing his Alpha. Commanding him to strip, you watch him hurriedly taking off his clothes and come to stand before you, where you touch and stroke his naked body appreciatively. Giving his canine shaft a slow stroke, you tell him that you want him to mount and fuck you. Then you get on all fours on his mattress, followed by a very eager transformed soldier, his tail wagging excitedly as he gets into position behind you.";
 			say "     Rubbing his hot, hard shaft against your crack for a moment, Carl lines up its tip with your pucker and presses forward, giving a gasped 'Oooh, Alpha!' as he slides into your tight hole. The two of you moan in unison as more and more of Carl's member pushes into you, your inner walls rubbing against his cock. Then there is a small pause as the slight bulge of his not yet swollen knot presses against you, to be popped in with a lusty grunt from Carl after a bit more pressure. Groaning 'Soo warm, tight...' the transformed soldier grinds his hips against yours, his whole cock now inside you and his furry balls rubbing against your ass.";
-			say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually more submissive behaviour and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your pussy twitches as you come, spraying femcum over his sheets below.[mimpregchance]";
+			say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually more submissive behavior and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your pussy twitches as you come, spraying femcum over his sheets below.[mimpregchance]";
 			WaitLineBreak;
 			say "     After a while of just holding you from behind and slowly stroking your body while waiting for his knot to go down, Carl says 'Thank you for letting me fuck you, Alpha. You're the best.'";
 		else:
 			say "     Opening your pants and letting them drop, you start rubbing your smooth (but nevertheless quite sensitive) crotch demonstratively in front of the submissive husky. Carl looks to you, then down to your crotch, panting openly at the thought of pleasing his Alpha. Commanding him to strip, you watch him hurriedly taking off his clothes and come to stand before you, where you touch and stroke his naked body appreciatively. Giving his canine shaft a slow stroke, you tell him that you want him to mount and fuck you. Then you get on all fours on his mattress, followed by a very eager transformed soldier, his tail wagging excitedly as he gets into position behind you.";
 			say "     Rubbing his hot, hard shaft against your crack for a moment, Carl lines up its tip with your pucker and presses forward, giving a gasped 'Oooh, Alpha!' as he slides into your tight hole. The two of you moan in unison as more and more of Carl's member pushes into you, your inner walls rubbing against his cock. Then there is a small pause as the slight bulge of his not yet swollen knot presses against you, to be popped in with a lusty grunt from Carl after a bit more pressure. Groaning 'Soo warm, tight...' the transformed soldier grinds his hips against yours, his whole cock now inside you and his furry balls rubbing against your ass.";
-			say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually more submissive behaviour and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your whole body shudders and twitches as you come and a warm feeling of satisfaction spreads through it.[mimpregchance]";
+			say "     Carl starts to pull back and plunge back in, really getting into fucking you this way very quickly, as doggy-style is literally the natural position for his canine body. In fact, he even seems to forget his usually more submissive behavior and soon starts to really pound into you, taking out all the stops and mounting you with truly animal-like intensity that just takes your breath away with all the sensations it creates. With the wild time he's having, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your whole body shudders and twitches as you come and a warm feeling of satisfaction spreads through it.[mimpregchance]";
 			WaitLineBreak;
 			say "     After a while of just holding you from behind and slowly stroking your body while waiting for his knot to go down, Carl says 'Thank you for letting me fuck you, Alpha. You're the best.'";
 
@@ -562,10 +562,10 @@ to say CarlSex7: [threesome with Eric]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang > 1 and (lastfuck of Fang - turns) > 12):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 0 and Carl is in Gray Abbey 2F and Fang is in Gray Abbey Library and HP of Fang > 1 and (lastfuck of Fang - turns) > 12):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FANG ATTACKS CARL - SEX WALK-IN - HP OF FANG: [HP of Fang], HP OF CARL: [HP of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	if HP of Carl > 9 and HP of Carl < 30: [normal Carl]
@@ -633,10 +633,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		now lastfuck of Carl is turns;
 		now lastfuck of Fang is turns;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Gray Abbey 2F and Fang is in Gray Abbey Library and HP of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: NORM CARL FUCKS BETA FANG - SEX WALK-IN - HP OF FANG: [HP of Fang], HP OF CARL: [HP of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	if level of Carl is 1:
@@ -652,10 +652,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		now lastfuck of Carl is turns;
 		now lastfuck of Fang is turns;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Gray Abbey 2F and Fang is in Gray Abbey Library and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FANG FUCKS SUB CARL - SEX WALK-IN - HP OF FANG: [HP of Fang], HP OF CARL: [HP of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	if level of Carl is 1:
@@ -670,10 +670,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		now lastfuck of Carl is turns;
 		now lastfuck of Fang is turns;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang > 2 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 50 and Carl is in Gray Abbey 2F and Fang is in Gray Abbey Library and HP of Fang > 2 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ALPHA FANG MOUNTS NORM CARL - SEX WALK-IN - HP OF FANG: [HP of Fang], HP OF CARL: [HP of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	say "     Coming into the library, you notice Carl crouched down beside one of the large bookshelves, browsing and pulling this or that book to check it out. Unseen by the husky soldier, your Alpha wolf Fang is just trotting up to him from behind, the erect canine cock dangling between his legs making clear what he has in mind. Taking up position in a proudly dominant stance close to the Carl, Fang chuffs at him, attracting the man's attention. As he looks back and sees the wolf expectantly stand there, Carl groans 'Oh, not again. Stay away from me, you stupid mutt!' Then he tries to get up - but Fang isn't having any of that. He pounces on the husky with a growl, bowling him right over and sending the books Carl was holding flying. Finding the alpha wolf standing over him a second later, teeth bared and a low growl in his throat, the husky soldier can't help but give in and starts showing the right signs of canine submission. As Fang gives a satisfied huff, Carl grunts 'Okay okay - you win, feral furball. Let's get this over with already.'";
@@ -691,10 +691,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 	now lastfuck of Carl is turns;
 	now lastfuck of Fang is turns;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and libido of Carl is 0 and Carl is in Gray Abbey 2F and Helen is in Gray Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & HELEN - SEX WALK-IN - HP OF CARL: [HP of Carl], LIBIDO OF CARL: [libido of Carl][line break]";
 	if HP of Carl > 9 and HP of Carl < 30: [normal Carl]
@@ -769,10 +769,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now libido of Carl is 100;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and Dexterity of Carl is 0 and Carl is in Gray Abbey 2F and Xerxes is in Gray Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & XERXES - SEX WALK-IN - HP OF CARL: [HP of Carl], DEXTERITY OF CARL: [dexterity of Carl][line break]";
 	if HP of Carl > 9 and HP of Carl < 30: [normal Carl]
@@ -838,19 +838,19 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now Dexterity of Carl is 100;
 
-instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and ((libido of Carl > 0 and libido of Carl < 100) or (dexterity of Carl > 0 and dexterity of Carl < 100)) and a random chance of 1 in 4 succeeds):
-	move player to Grey Abbey 2F;
+instead of going up from Gray Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Gray Abbey 2F and (lastfuck of Carl - turns) > 12 and ((libido of Carl > 0 and libido of Carl < 100) or (dexterity of Carl > 0 and dexterity of Carl < 100)) and a random chance of 1 in 4 succeeds):
+	move player to Gray Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: CARL/HUMAN DOG SEX WALKIN [line break]";
 	now lastfuck of Carl is turns + 4;
-	if Helen is in Grey Abbey Library and libido of Carl > 0 and libido of Carl < 100:
+	if Helen is in Gray Abbey Library and libido of Carl > 0 and libido of Carl < 100:
 		say "     Coming up the library stairs, you walk in on Carl having sex with Helen. The husky soldier has her on his mattress near the windows on all fours and is mounting her from behind, arms wrapped around her chest while he grinds his hips against hers. Your pet human moans and gives loud yips of pleasure as he does so, her pussy stretched tight around Carl's canine shaft as he fucks her like a dog. The soldier plays with her breasts and fingers her clit while fucking Helen, whispering in her ear what a good girl she is. As he continues thrusting into her in a position that just feels 'right' to him in his canine form, the strong husky soon really takes out all the stops and starts to pound her pussy hard, mounting the young woman with truly animal-like intensity that has her panting nonstop.";
 		say "     With the wild ride he's giving Helen, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against her naked body. The knot at the base of his shaft swells up to lock their bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into Helen's womb. Feeling the warm pulse of his cum into her body, filling her up, seems to have been the last straw for Helen herself, as she orgasms just moments later, panting loudly and yipping in lust as she squirts femcum all over the floor under her.";
 		if HP of Carl is 10:
 			say "     After a while of just holding Helen from behind and slowly stroking her body while waiting for his knot to go down, Carl says 'You're an amazing, sexy bitch, Helen. I hope you're ready to be fucked all the time, because I'm certainly gonna use every chance I get to do you...'";
 		else if HP of Carl is 30:
 			say "     After a while of just holding Helen from behind and slowly stroking her body while waiting for his knot to go down, Carl says 'You're an amazing, sexy bitch, Helen. As long as the alpha allows it, I'm gonna use every chance I get to do you...'";
-	else if Xerxes is in Grey Abbey Library and dexterity of Carl > 0 and dexterity of Carl < 100:
+	else if Xerxes is in Gray Abbey Library and dexterity of Carl > 0 and dexterity of Carl < 100:
 		say "     Coming up the library stairs, you walk in on Carl having sex with Xerxes. The husky soldier has him on his mattress near the windows on all fours and is mounting the human dog from behind, arms wrapped around his chest while he grinds his hips against Xerxes['] ass. Your pet human moans and gives loud yips of pleasure as he does so, his hole stretched tight around Carl's canine shaft as he fucks him like a dog. The soldier plays with his nipples and gives Xerxes a reacharound while fucking him, whispering in his ear what a good boy he is. As he continues thrusting into Xerxes in a position that just feels 'right' to him in his canine form, the strong husky soon really takes out all the stops and starts to pound his ass hard, mounting the young man with truly animal-like intensity that has him panting nonstop.";
 		say "     With the wild ride he's giving Xerxes, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against the human's naked body. The knot at the base of his shaft swells up to lock their bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into Xerxes['] insides. Feeling the warm pulse of his cum into his body, filling his up, seems to have been the last straw for Xerxes herself, as he orgasms just moments later, panting loudly and yipping in lust as he blows a big load all over the sheets on Carl's mattress.";
 		if HP of Carl is 10:
@@ -858,13 +858,13 @@ instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl
 		else if HP of Carl is 30:
 			say "     After a while of just holding Xerxes from behind and slowly stroking his body while waiting for his knot to go down, Carl says 'You're an amazing, sexy guy, Xerxes. As long as the alpha allows it, I'm gonna use every chance I get to do you...'";
 
-instead of navigating Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl is 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Gray Abbey 2F and lust of Carl is 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL/CANDY INITIAL SEX WALKIN [line break][line break]";
-	say "     Coming into the library, you see a grey and pink striped tail swish through the air as its owner vanishes up the stairs to the upper library level. What is Candy doing up there, you wonder, so your curiosity drives you to hurriedly follow the coon upstairs. Soon, you catch sight of the effeminate male in his candy striper uniform, just walking up to where Carl is holding watch at one of the windows. 'Hello there soldier. I'm Candy,' the raccoon says in his sweet voice, swishing his hips a bit as the husky turns to watch him come closer. 'Oh hey, I'm Carl. Nice to meet you,' Carl replies and shakes the raccoon's hand, then continues 'What can I do for you?'";
+	say "     Coming into the library, you see a gray and pink striped tail swish through the air as its owner vanishes up the stairs to the upper library level. What is Candy doing up there, you wonder, so your curiosity drives you to hurriedly follow the coon upstairs. Soon, you catch sight of the effeminate male in his candy striper uniform, just walking up to where Carl is holding watch at one of the windows. 'Hello there soldier. I'm Candy,' the raccoon says in his sweet voice, swishing his hips a bit as the husky turns to watch him come closer. 'Oh hey, I'm Carl. Nice to meet you,' Carl replies and shakes the raccoon's hand, then continues 'What can I do for you?'";
 	say "     Moving his long tail to lightly rub against Carl's leg, Candy giggles 'Oh, nonono - it's what I can do for YOU, honey. Since you're such a brave and strong man, helping to keep us all safe here, I thought I'd show my full... appreciation for our military. At your service, sir!' Giving a playful salute, the cute coon then pushes right into Carl's personal space, rubbing his body against the larger male's form. Momentarily surprised at the pretty forward move of the effeminate candy striper, Carl gets over it quickly as Candy awakens his libido by rubbing and stroking his crotch. The transformed soldier gives a lusty rumble from his throat and puts his arms around Candy, slipping them under the pink raccoon's skirt and groping his butt.";
 	LineBreak;
 	say "     This is going fast in the direction Candy undoubtedly planned for it.";
@@ -887,21 +887,21 @@ instead of navigating Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 
 	now lastfuck of Candy is turns;
 	now lastfuck of Carl is turns;
 
-instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl > 0 and lust of Carl < 100 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker and a random chance of 1 in 5 succeeds):
-	move player to Grey Abbey 2F;
+instead of going up from Gray Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Gray Abbey 2F and lust of Carl > 0 and lust of Carl < 100 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker and a random chance of 1 in 5 succeeds):
+	move player to Gray Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: CARL/CANDY REPEAT SEX WALKIN [line break][line break]";
-	say "     Going up the stairs to the upper level of the library, you hear gasps and moans as you go along. Arriving on the second floor, you see that it's Carl and Candy, having fun with each other on Carl's mattress. The pink and grey raccoon is on all fours and is getting fucked, still in his candy striper uniform though with the skirt pushed up and his panties pulled down to his knees. Carl kneels behind him, both his paw-hands tightly gripping Candy's hips as he pounds into the effeminate male under him with intense thrusts.";
+	say "     Going up the stairs to the upper level of the library, you hear gasps and moans as you go along. Arriving on the second floor, you see that it's Carl and Candy, having fun with each other on Carl's mattress. The pink and gray raccoon is on all fours and is getting fucked, still in his candy striper uniform though with the skirt pushed up and his panties pulled down to his knees. Carl kneels behind him, both his paw-hands tightly gripping Candy's hips as he pounds into the effeminate male under him with intense thrusts.";
 	say "     While being mounted from behind and squeezing his inner muscles to make Carl wild, the girly raccoon reaches down to wrap his paw around his own hot-pink cock. He strokes himself as Carl pounds away at his ass, driving his knotted cock into the coon's tight asshole again and again. Eventually, the feel of Candy's warm, gripping bottom around his cock and the sight of such a sexy girly boytoy beneath him, moaning cute little sounds, becomes too much for Carl to hold in any longer. Squeezing Candy's fuzzy rump with both hands, he drives his shaft deep inside him, unleashing his hot load of canine seed and knotting the candy striper's ass as his knot expands to full size. Getting creamed with a fresh load of cum and feeling Carl's knot grow inside him is enough to set off Candy himself, spraying his pink cum onto the sheets of the mattress below and filling the air with the scent of cotton candy.";
 	WaitLineBreak;
 	say "     'Wow - that was great!' Candy pants after catching his breath, then continues with, 'You're a sexy beast with that knotted cock of yours.' In reply, Carl barks out 'Yeah, what can I say - your tight little hole brings out my wild side! Can't wait to sink my bone into this shapely bun the next time.' At that, he moves his hips a little bit, lightly pulling against the inside of Candy's pucker with the still fully hard knot inside him and making the coon gasp in lust from the sensation. Then he relents and pushes forward again, grinding his loins against the candy striper's butt while waiting for his knot to go down. You leave the two of them like that and go back down into the library.";
 	now lastfuck of Candy is turns;
 	now lastfuck of Carl is turns;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 0 and Carl is in Gray Abbey 2F and David is in Bunker):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - WALK-IN - HP OF CARL: [HP of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you walk in on David just finishing a conversation with Carl, then saluting him and starting back towards the stairs down into the bunker. The husky soldier watches his human compatriot walk off, eyes lingering on David's shapely butt for a moment before he notices your presence. Turning to face you, Carl says, 'Hello, my friend. Had a little talk with David and he told me about everything you did for him. Thank you for that. The demon sounded like a nasty customer...' He looks over to watch David walk through the cellar door, then puts a hand-paw on your arm and continues in a low tone. 'I have to admit that - well - some of my canine urges kicked in hard when I met David. He's a damned handsome guy - and just a private, while I'm a corporal, you know. Under me in the pack - err, the military. Half my mind was busy imagining bending him over and pounding his ass while we were talking.'";
@@ -919,10 +919,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		say "     Carl's ears droop a bit in disappointment as you tell him to hold back, but he accepts your advice nonetheless. With a sigh, he rubs the bulge in his pants and says 'Guess I'll have to masturbate in the future before going to see him if I don't want to give myself away. Thanks anyways.'";
 		now thirst of Carl is 99;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 4 and David is in Bunker):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 1 and Carl is in Gray Abbey 2F and (lastfuck of Carl - turns) > 4 and David is in Bunker):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [HP of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you see Carl and David stroll along the long rows of bookshelves in the back of the building, talking to one another. From the gestures the husky soldier is making, you suspect their topic is past girlfriends and conquests, something that's confirmed as you walk a bit closer and overhear '...really, she had the most massive tits you can imagine. This big - and all natural, no implants.' David is visibly astounded by the size Carl indicates at that, and it's clear their talk has gotten him quite a bit excited. When the men reach the end of the room and turn to walk on between the bookshelves, you can see a distinct bulge in the front of his pants...";
@@ -960,10 +960,10 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 	now lastfuck of Carl is turns;
 	now lastfuck of David is turns;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 6 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Gray Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 6 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [HP of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you see Carl and David at the back of the main room, quietly talking to each other. You can't help but notice how close Carl is leaning to the human soldier as he whispers something, awakening your curiosity about what's going on, so you inconspicuously wander a bit closer. Then, before you've taken more than a few steps, it becomes obvious - as Carl sets his paw-hand on David's crotch and starts to rub it through his pants. The anthro husky leans in and brings his muzzle against his friend's skin just a moment later, then gives David's neck a long and sensuous lick. Quietly observing and getting closer and closer, you're in position to hear their next exchange:[line break]";
@@ -990,7 +990,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 	now lastfuck of Carl is turns;
 	now lastfuck of David is turns;
 
-instead of going to Bunker while (HP of David is 4 and HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds):
+instead of going to Bunker while (HP of David is 4 and HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Gray Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [HP of Carl], THIRST OF CARL: [thirst of Carl][line break]";

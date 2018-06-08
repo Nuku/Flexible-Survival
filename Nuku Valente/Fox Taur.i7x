@@ -5,7 +5,7 @@ Section Table
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat colour could be that of a grey fox, a red fox, or arctic fox.
+Coat colour could be that of a gray fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
@@ -39,7 +39,7 @@ male sex of Fox Taur is usually "[if player is butch]You guide your cock to his 
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat colour could be that of a grey fox, a red fox, or arctic fox.
+Coat colour could be that of a gray fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
@@ -71,7 +71,7 @@ Instead of using a milking machine:
 
 to say foxtaur ending:
 	say "Detecting incoming danger, you immediately flee the city on your swift fox paws. Avoiding all contact until you're more than a state away. You stumble across a farm and find it to be inhabited only by an old married couple that look years from death. They are quite surprised to find you one morning, attached to the milking machine and relieving the pressure that was building down there. Feigning harmlessness, they accept you as one of their animals, if the strangest one they ever saw. This works out well enough until the husband falls over while feeding the chickens. You easily leap over the stall wall and scurry over for a look. It appears that age had claimed him and he was dying. Thinking of no better way to assist, you gather him up and let your hungry womb consume him.";
-	say "The wife is quite distraught when she can't find her husband and spends days fretting until she comes to you, tearful and sobbing. She tells you about her life with him and how she can't even think about life without him. You can't hold your silence any longer. You reach for her and gently pet her greyed hair and offer her a chance to join him. She is quite startled to have her exotic animal talking back to her instead of placidly listening to her bawling. After some hesitation, she agrees, if it means she can be with her husband. Your womb becomes full shortly after. You remained on the farm ever since, with your two 'younger' children, taking care of the animals and living fondly with one another. Your family does grow over the years, as your rejuvenated children suggest neighbors that could benefit from a life as a fox taur.";
+	say "The wife is quite distraught when she can't find her husband and spends days fretting until she comes to you, tearful and sobbing. She tells you about her life with him and how she can't even think about life without him. You can't hold your silence any longer. You reach for her and gently pet her grayed hair and offer her a chance to join him. She is quite startled to have her exotic animal talking back to her instead of placidly listening to her bawling. After some hesitation, she agrees, if it means she can be with her husband. Your womb becomes full shortly after. You remained on the farm ever since, with your two 'younger' children, taking care of the animals and living fondly with one another. Your family does grow over the years, as your rejuvenated children suggest neighbors that could benefit from a life as a fox taur.";
 
 
 Fox Taur ends here.

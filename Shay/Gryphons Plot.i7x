@@ -199,7 +199,7 @@ instead of resolving a Gryphon's Plot:
 					now inasituation is false; [reset]
 					increase GroupFightCounter by 1;
 				if fightoutcome < 20: [player won]
-					say "     The third gryphon, wary of the defeat of the first two, draws back from you. Whimpering with a sexual need and looking ashamed, he addresses you, 'I'm sorry, I don't what came over me. I guess the infection has taken home more rapidly than I can control or I had realized.' The gryphon then drops two MREs at your feet, turning to you with a look of regret. 'Please, take these as an apology. I'm sorry that I don't have more to offer...'  He then spreads his wings and disappears into the distance. His two companions use the moment in which you pounce on the food to make their own escapes.";
+					say "     The third gryphon, wary of the defeat of the first two, draws back from you. Whimpering with a sexual need and looking ashamed, he addresses you, 'I'm sorry, I don't what came over me. I guess the infection has taken home more rapidly than I can control or I had realized.' The gryphon then drops two MREs at your feet, turning to you with a look of regret. 'Please, take these as an apology. I'm sorry that I don't have more to offer...' He then spreads his wings and disappears into the distance. His two companions use the moment in which you pounce on the food to make their own escapes.";
 					LineBreak;
 					say "[bold type]You gain 2 units of food![roman type][line break]";
 					increase carried of food by 2;
@@ -424,7 +424,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 					now sextablerun is 1;
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men you distance yourself from the scene, leaving the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;
-					
+
 to say GryphonPussy:
 	say "     Lining your cock up with the hermaphrodite gryphon's soaking wet cunt, you hear the newly transformed man let out a wanton moan. Taking the soldier's sound of need as a good of an invitation as any, you proceed to bury yourself balls-deep inside of the newly formed cunt of your temporary fuck toy, to his obvious and verbal enjoyment. Painfully erect inside of the gryphon's softly clenching vaginal walls, your cock lets out copious amounts of precum, lubricating the soldier's snatch for the pounding that is to come. The man, succumbing to the lustful needs of his new form, begins rocking his hips into you in time with your thrusts as you start to earnestly fuck him.";
 	LineBreak;

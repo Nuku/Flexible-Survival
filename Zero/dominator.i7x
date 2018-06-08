@@ -8,7 +8,7 @@ slutmaster is a number that varies. slutmaster is usually 0.
 to say domdesc:
 	say "[randomdesc]";
 	say "[masterofslutsdom]";
-	say "Walking down the street, you are suddenly attacked by a male, furry, muscular[one of]black[or]brown[or]multi-coloured[or]white[or]red[or]orange[or]yellow[or]light blue[or]blue[at random][slutname] wearing only a metal chain around his neck.[line break]";
+	say "Walking down the street, you are suddenly attacked by a male, furry, muscular[one of]black[or]brown[or]multi-colored[or]white[or]red[or]orange[or]yellow[or]light blue[or]blue[at random][slutname] wearing only a metal chain around his neck.[line break]";
 	say "[sluttybodycheck]";
 
 

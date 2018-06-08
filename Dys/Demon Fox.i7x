@@ -2,17 +2,17 @@ Version 1 of Demon Fox by Dys begins here.
 
 "Adds a Demon Fox enemy and infection."
 
-[ DemonFoxStatus determines what path you've taken with the fox.          ]
-[   0 = no encounter yet                                                  ]
-[   10 = encountered and lost                                             ]
-[   20 = encountered and submitted                                        ]
-[   30 = encountered and fled                                             ]
-[   40 = encountered and won, but refused sex                             ]
-[   41 = encountered and won, let him fuck you                            ]
+[ DemonFoxStatus determines what path you've taken with the fox             ]
+[   0 = no encounter yet                                                    ]
+[   10 = encountered and lost                                               ]
+[   20 = encountered and submitted                                          ]
+[   30 = encountered and fled                                               ]
+[   40 = encountered and won, but refused sex                               ]
+[   41 = encountered and won, let him fuck you                              ]
 [ DemonFoxInteractions tracks the number of times the player interacted     ]
-[ with the demon fox.                                                       ]
+[ with the demon fox                                                        ]
 [ DemonFoxRead indicates whether or not the player has read about the       ]
-[ demon fox.                                                                ]
+[ demon fox                                                                ]
 
 
 DemonFoxStatus is a number that varies. DemonFoxStatus is usually 0.

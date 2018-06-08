@@ -27,7 +27,7 @@ Instead of resolving Chance Meeting:
 				challenge "female husky";
 	else:
 		LineBreak;
-		say "     Favouring caution, you quietly slip away and continue your patrol.";
+		say "     Favoring caution, you quietly slip away and continue your patrol.";
 
 Section 2 - Non-repeatable sub-events
 
@@ -55,4 +55,4 @@ to say Generation Conflict:
 	increase carried of soda by 1;
 	now generationConflictFlag is 1;
 
-Chance Meetings end here.
+Chance Meetings ends here.

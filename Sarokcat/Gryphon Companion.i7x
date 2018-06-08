@@ -1,4 +1,4 @@
-Version 3 of Gryphon companion by Sarokcat begins here.
+Version 3 of Gryphon Companion by Sarokcat begins here.
 [Version 2.2 - Player initiated pet sex]
 [Version 3   - NPC/Pet double character]
 [Version 3.1 - Character relocation - Luneth]
@@ -189,9 +189,9 @@ to say deniseimpreg:
 an everyturn rule:
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
 	let T be ( libido of gryphoness / 4 );
-	if tempnum is 1 or tempnum is 2:          [early pregnancy or visible pregnancy]
+	if tempnum is 1 or tempnum is 2: [early pregnancy or visible pregnancy]
 		decrease lust of gryphoness by 1;       [pregnancy countdown]
-		if lust of gryphoness is 0:             [time for the birth]
+		if lust of gryphoness is 0: [time for the birth]
 			increase libido of gryphoness by 1;   [increase to tempnum 3 -> birth message for next summon primed]
 			if companion of player is gryphoness: [Denise is along as a pet]
 				say "     Looking around, you notice that Denise had slipped away while you were distracted with something. You wait for a little while and she returns, but ";
@@ -232,7 +232,7 @@ an everyturn rule:
 			else: [player isn't present for her egg-birth -> tempnum stays 3 -> primed for birth message on next summon]
 				say "You find your mind wandering to Denise, thinking about her and [if knowpreg is 1]her pregnancy[else]missing her for some reason[end if]. Perhaps you should check on her.";
 			increase score by 5;
-		else if lust of gryphoness is 16:  [belly shows after 1 day]
+		else if lust of gryphoness is 16: [belly shows after 1 day]
 			if companion of player is gryphoness and knowpreg of gryphoness is 0:
 				say "     Looking over at Denise, you notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 				now knowpreg of gryphoness is 1;

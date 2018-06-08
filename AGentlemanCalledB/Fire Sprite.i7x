@@ -11,6 +11,13 @@ Version 1 of Fire Sprite by AGentlemanCalledB begins here.
 
 "Adds a Fire Sprite creature to Flexible Survival's Wandering Monsters table"
 
+Section 0 - Flags and Tags
+
+when play begins:
+	add { "Fire Sprite" } to infections of guy;
+	add { "Fire Sprite" } to infections of girl;
+	add { "Fire Sprite" } to infections of humanoid;
+
 Section 1 - Monster Responses
 
 FireSpritemode is a number that varies. FireSpritemode is usually 0.
@@ -297,6 +304,7 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "FireSprite";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
 
 Section 3 - Alt Combat
 

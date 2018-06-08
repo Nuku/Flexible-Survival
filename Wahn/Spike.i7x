@@ -23,14 +23,14 @@ Version 1 of Spike by Wahn begins here.
 
 Section 1 - Introduction
 
-instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Alexandra is in Gray Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Meeting Spike[line break]";
 	say "     Arriving back at the library, you are greeted by the sight of a male anthro doberman, leaning against the building's exterior wall close to the front entrance. He is casually smoking a cigarette, blowing out smoke as he watches you come closer. The doberman is a young adult, eighteen or nineteen from the looks of it, not that it means much anymore these days. He is dressed in a pair of ripped jeans, a skin-tight mesh shirt showing off his toned chest, as well as a loose-fitting collar around his neck, studded with spikes. With half of his head hair shaved off and the other half dyed neon-green, he certainly has a memorable look. 'Hey there, I'm Spike,' the canine says to you in a firm tone, clearly taking care not to sound too eager. 'I was told that you're the boss hereabouts,' he adds and takes a pull from his cigarette, blowing a puff of smoke into the air after a short moment.";
-	say "     'So... I've had enough of being just one of the pack, and I was thinking that you need a right-hand man. I'm plenty tough and wanna see some action out there in the city, not just a few blocks around the lair. Come on, if you agree, the queen bitch in the library can't tell me off no more.' His last comment, combined with the young man's physical appearance finally makes something click in your mind, and you realize with a start who and what he is. You are talking with one of Alexandra's offspring, who clearly had a bit of a growth spurt recently, turning into this young man. From the looks of it, he's inherited a lot of the 'bad dog' attitude of his mother, and has decided to make a name for himself in a typical 'young tough guy' fashion - by becoming a hanger-on for the biggest, baddest person he knows: you. After all, you did make Alexandra your bitch.":
+	say "     'So... I've had enough of being just one of the pack, and I was thinking that you need a right-hand man. I'm plenty tough and wanna see some action out there in the city, not just a few blocks around the lair. Come on, if you agree, the queen bitch in the library can't tell me off no more.' His last comment, combined with the young man's physical appearance finally makes something click in your mind, and you realize with a start who and what he is. You are talking with one of Alexandra's offspring, who clearly had a bit of a growth spurt recently, turning into this young man. From the looks of it, he's inherited a lot of the 'bad dog' attitude of his mother, and has decided to make a name for himself in a typical 'young tough guy' fashion - by becoming a hanger-on for the biggest, baddest person he knows: you. After all, you did make Alexandra your bitch.";
 	WaitLineBreak;
 	say "     With this new realization in mind, you take another look at Spike: this young canine looks about 18 years old and clearly has been working out a bit, giving him a toned but not too bulky physique that should serve him well in a fight. He shows a stoic and tough expression that you think must have been practiced and perfected in front of a mirror, yet he can't quite hide the excitement betrayed by his slowly wagging tail. When he realizes what you are looking at, Spike concentrates to stop the movement behind his back. The tension in his whole being is palpable, with the young dog waiting for you to reply to his offer.";
 	LineBreak;
@@ -87,14 +87,14 @@ the fuckscene of doberman companion is "[SexWithSpike]".
 
 to say SummonSpike:
 	remove Spike from play;
-	if player is in Grey Abbey 2F and Spike is in Grey Abbey 2F: [summoning while standing next to him]
+	if player is in Gray Abbey 2F and Spike is in Gray Abbey 2F: [summoning while standing next to him]
 		say "     ...";
 	else: [regular summoning]
 		say "     ...";
 
 to say DismissSpike:
-	move Spike to Grey Abbey Library;
-	if player is in Grey Abbey 2F: [regular dismiss]
+	move Spike to Gray Abbey Library;
+	if player is in Gray Abbey 2F: [regular dismiss]
 		say "     ...";
 	else: [dismissing him in the abbey]
 		say "     ...";
@@ -110,7 +110,7 @@ to say SpikeDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Spike] <- DEBUG[line break]";
 	say "     Spike is young doberman that looks to be about eighteen years old. He clearly has been working out a bit, giving him a toned but not too bulky physique that should serve him well in a fight. The young man is dressed in a pair of ripped jeans, a skin-tight mesh shirt showing off his toned chest, as well as a loose-fitting collar around his neck, studded with spikes. With half of his head hair shaved off and the other half dyed neon green and hanging down one side of his face as a middling long strand, he certainly has a memorable look.";
-	if player is in Grey Abbey 2F:
+	if player is in Gray Abbey 2F:
 		say "     Having claimed a corner of the upper library floor as his, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting the desk that had occupied the corner as a little reading nook on its side, to block a passage between two bookshelves. Posters of scantily dressed human women, as well as one or two with anthro furry erotic art have been pinned to the back wall so that he can look at them when lying down. Which Spikes does quite a bit, day-dreaming about things while stroking himself.";
 	else:
 		say "     Accompanying you on your travel throughout the city, he is never far away, usually just a step behind and a little to the side, serving as muscle and glowering at anyone who might dream of crossing you. As he notices your attention on himself, the doberman strokes a hand through his green-dyed hair and gives you a [if libido of Spike > 40]slightly frightened[else]respectful[end if] nod.";
@@ -118,7 +118,7 @@ to say SpikeDesc:
 Section 3 - Conversation
 
 instead of conversing the Spike:
-	if player is in Grey Abbey 2F and Spike is in Grey Abbey 2F:
+	if player is in Gray Abbey 2F and Spike is in Gray Abbey 2F:
 		say "[SpikeTalkMenu]";
 	else if companion of player is doberman companion:
 		say "[SpikeTalkMenu]";
@@ -129,7 +129,7 @@ instead of conversing doberman companion:
 	if doberman companion is not tamed:
 		say "     Who?";
 	else:
-		if player is in Grey Abbey 2F and Spike is in Grey Abbey 2F:
+		if player is in Gray Abbey 2F and Spike is in Gray Abbey 2F:
 			say "[SpikeTalkMenu]";
 		else if companion of player is doberman companion:
 			say "[SpikeTalkMenu]";

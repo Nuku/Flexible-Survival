@@ -427,8 +427,10 @@ Definition: A person(Called X) is booked:
 	If x is the player, no;
 	If x is Trixie, no;
 	if x is Velos, no;
-	if the location of x is Grey Abbey Library, yes;
-	if the location of x is Grey Abbey 2F, yes;
+	if the location of x is Gray Abbey Library, yes;
+	if the location of x is Gray Abbey 2F, yes;
+	if the location of x is Gray Abbey Library, yes;
+	if the location of x is Gray Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
 	if the location of x is Breakroom, yes;
 	if the location of x is Pantry, yes;
@@ -468,7 +470,7 @@ The player is wearing a backpack. The description of the backpack is "A backpack
 instead of examining a grab object(called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
 	if "Weaponsmaster" is listed in feats of player and x is an armament:
-		say "  Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 
 Does the player mean examining a situation: it is very unlikely.
 
@@ -3716,7 +3718,7 @@ This is the turnpass rule:
 	now ishunting is false;
 	now showlocale is true;
 	if HP of Velos > 2:
-		if Velos is not in the location of the player:		[travelling w/player]
+		if Velos is not in the location of the player:		[traveling w/player]
 			Now Velos is in the location of the player;
 	if breast size of player > 26, now breast size of player is 26;
 	let oldlib be libido of player;
@@ -4124,11 +4126,11 @@ to say cum load size of ( x - a person ):
 		else if cock width of x < 12:	[6 - 11]
 			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
 		else if cock width of x < 16:	[12 - 15]
-			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
+			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
 		else if cock width of x < 20:	[16 - 19]
-			say "[one of]one-litre[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
+			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
 		else if cock width of x < 25:	[20 - 24]
-			say "[one of]two-litre[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
+			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
 		else if cock width of x < 32:	[25 - 31]
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 		else:								[32+]
@@ -4540,7 +4542,8 @@ Instead of examining the infection terminal:
 			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
 			if z is 15:
 				[say "Press any key to continue.";] [unneeded with 'more' link]
-				WaitLineBreak;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				now z is 0;
 	say "End Infection list.[line break]";
 	wait for any key; [don't apply waiterhater, used to separate monsters from credits]
@@ -4947,7 +4950,7 @@ Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Milking by Core Mechanics.
 Include Navigation by Core Mechanics.
-Include Needy Heat for FS by Core Mechanics.
+Include Needy Heat by Core Mechanics.
 Include Patron Credits by Nuku Valente.
 Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
@@ -4958,7 +4961,7 @@ Include Text Capture by Eric Eve.
 
 [Locations]
 Include Apocalypse Store by DrGryphon.
-Include Approaching the Capitol Building for FS by Guest Writers.
+Include Approaching the Capitol Building by Guest Writers.
 Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
@@ -4969,7 +4972,7 @@ Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
 Include Tenvale College Campus by Rikaeus.
-[Include Church Of The Maternal Beast For Fs by Guest Writers.]
+[Include Church Of The Maternal Beast by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
@@ -4977,7 +4980,7 @@ Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
-Include Hospital For Fs by Stripes.
+Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hide Away by Kaleem mcintyre.
@@ -4998,8 +5001,8 @@ Include State Fair by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
-Include Underwater Zone For Fs by Hellerhound.
-Include Urban Forest For Fs by Stripes.
+Include Underwater Zone by Hellerhound.
+Include Urban Forest by Stripes.
 Include Vohr Island by Kernog.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
@@ -5037,7 +5040,6 @@ Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by MGEddie.
-Include Feral Latex Fox by Dys.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5052,9 +5054,9 @@ Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
-Include Infected Pool for FS by Hellerhound.
+Include Infected Pool by Hellerhound.
 Include Inner Mall Events by Wahn.
-Include Inventory Management Enhancements for FS by Core Mechanics.
+Include Inventory Management Enhancements by Core Mechanics.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
 Include Latex Quad Husky by Stripes.
@@ -5076,7 +5078,7 @@ Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
-Include Museum Rounds for FS by Stripes.
+Include Museum Rounds by Stripes.
 Include New Events by Sarokcat.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
@@ -5099,7 +5101,7 @@ Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
-Include Sea Lion and Orca for FS by Stripes.
+Include Sea Lion and Orca by Stripes.
 Include Sex Ed by Prometheus.
 Include Settings Menus by Core Mechanics.
 Include Shifting by Hellerhound.
@@ -5109,7 +5111,7 @@ Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
-Include Storage Locker for FS by Core Mechanics.
+Include Storage Locker by Core Mechanics.
 Include Story Skipper by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include Tidepool Event by FwuffyMouse.
@@ -5118,7 +5120,7 @@ Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
-Include Wereraptor for FS by Stripes.
+Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
@@ -5129,60 +5131,60 @@ Include Albino Mouse by Stripes.
 Include Alien Felinoid by Damaged.
 Include Alpha Husky by Sarokcat.
 Include Alpha Wolf by Sarokcat.
-Include Amazonian for FS by Stripes.
+Include Amazonian by Stripes.
 Include Ancient Tentacles by Dys.
-Include Anime Babe for FS by Stripes.
-Include Anthro Shaft Beast for FS by Guest Writers.
+Include Anime Babe by Stripes.
+Include Anthro Shaft Beast by Guest Writers.
 Include Arctic Fox by Sarokcat.
-Include Ashen Breeder For Fs by Stripes.
-Include Automaton for FS by Stripes.
-Include Awesome Tree For Fs by Damaged.
+Include Ashen Breeder by Stripes.
+Include Automaton by Stripes.
+Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
-Include Bald Eagle For Fs by Stripes.
-Include Batcubus for FS by Blaydrex.
-Include Bear For Fs by Nuku Valente.
-Include Beaver for FS by Stripes.
+Include Bald Eagle by Stripes.
+Include Batcubus by Blaydrex.
+Include Bear for FS by Nuku Valente.
+Include Beaver by Stripes.
 Include Behemoth by Kaleem mcintyre.
-Include Bird of Paradise for FS by Stripes.
+Include Bird of Paradise by Stripes.
 Include Black Equinoid by Song.
-Include Black Wolf For Fs by Stripes.
+Include Black Wolf by Stripes.
 Include Blob by Kaleem Mcintyre.
-Include Blue Chaffinch for FS by Stripes.
-Include Bobcat for FS by Stripes.
-Include Bottlenose Toy For Fs by Stripes.
-Include Bovine For Fs by Damaged.
+Include Blue Chaffinch by Stripes.
+Include Bobcat by Stripes.
+Include Bottlenose Toy by Stripes.
+Include Bovine by Damaged.
 Include Breederslut by Stripes.
 Include Bunny Jock by Rikaeus.
-Include Butterfly for FS by Guest Writers.
+Include Butterfly by Guest Writers.
 Include Candy Striper by Stripes.
 Include Cannon by Hiccup.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by TheRecipe.
 Include Centaur by Hellerhound.
-Include Centaur Mare For Fs by Stripes.
-Include Centaur Stallion For Fs by Stripes.
-Include Cerberus For Fs by Stripes.
+Include Centaur Mare by Stripes.
+Include Centaur Stallion by Stripes.
+Include Cerberus by Stripes.
 Include Cheetah by Sarokcat.
 Include Chocolate Lab by Stripes.
-Include Clockwork Fox For Fs by Stripes.
-Include Corota for FS by Stripes.
-Include Corrupted Spawner for FS by Stripes.
+Include Clockwork Fox by Stripes.
+Include Corota by Stripes.
+Include Corrupted Spawner by Stripes.
 Include Cougar by Stripes.
 Include Cowboy Cuntboy by Wahn.
 Include Coyote by Darthan.
 Include Cum Girl by AGentlemanCalledB.
-Include Cute Chinchilla Girl For FS by Guest Writers.
+Include Cute Chinchilla Girl by Guest Writers.
 Include Dalmatian by Kaleem mcintyre.
-Include Dark Elf for FS by Stripes.
+Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Stripes.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
-Include Dracovixentaur for FS by Stripes.
-Include Dragontaur for FS by Stripes.
+Include Dracovixentaur by Stripes.
+Include Dragontaur by Stripes.
 Include Drone Wasp by Nuku Valente.
 Include Dryad by Hellerhound.
 Include Easter Bunny by Stripes.
@@ -5190,110 +5192,110 @@ Include Ebonflame Dragator by Blue Bishop.
 Include Ebonflame Draken by Blue Bishop.
 Include Ebonflame Whelp by Blue Bishop.
 Include Elf by Nuku Valente.
-Include Elk for FS by Stripes.
+Include Elk by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
 Include Erica by Wahn.
 Include Ewe by Sarokcat.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
-Include Fennec For Fs by Stripes.
-Include Feral Cheetah for FS by Hellerhound.
+Include Fennec by Stripes.
+Include Feral Cheetah by Hellerhound.
 Include Feral Gryphon by UrsaOmega.
 Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-Include Feral Shaft Beast for FS by Guest Writers.
-Include Feral Wolf for FS by Stripes.
-Include Fire Elemental for FS by Stripes.
+Include Feral Shaft Beast by Guest Writers.
+Include Feral Wolf by Stripes.
+Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
-Include Flaming Lynx for FS by Stripes.
-Include Flesh Blob for FS by Stripes.
-Include Fluffy Owl For Fs by Stripes.
+Include Flaming Lynx by Stripes.
+Include Flesh Blob by Stripes.
+Include Fluffy Owl by Stripes.
 Include Foul Scuttler by Xenophiliac.
 Include Francois Infections by AGentlemanCalledB.
-Include Friendship Pony for FS by Stripes.
+Include Friendship Pony by Stripes.
 Include Frost Drake by CrimsonAsh.
-Include Fruit Bat for FS by Stripes.
+Include Fruit Bat by Stripes.
 Include Furling by Wahn.
 Include Gargoyle by Kaleem mcintyre.
 Include Gator by Nuku Valente.
 Include Gazelle by Sarokcat.
 Include Gels by Darthan.
-Include German Shepherd for FS by Stripes.[replaces 'Random German Shepherd for Fs']
-Include Giant for FS by Stripes.
-Include Giraffe for FS by Stripes.
+Include German Shepherd by Stripes.[replaces 'Random German Shepherd']
+Include Giant by Stripes.
+Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
-Include Goblin For FS by Blue Bishop.
+Include Goblin by Blue Bishop.
 Include Goo Girl by Nuku Valente.
 Include Gorilla by Wahn.
 Include Great Dane Rouge by Kaleem Mcintyre.
 Include Greek Nymph by Sarokcat.
-Include Grey Squirrel for FS by Stripes.
+Include Gray Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Shay.
-Include Gunbunny for FS by Stripes.
+Include Gunbunny by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Helot by Wahn.
-Include Hentai Fan for FS by Stripes.
+Include Hentai Fan by Stripes.
 Include Herm Dolphin by Hellerhound.
-Include Herm Hyena for FS by Guest Writers.
+Include Herm Hyena by Guest Writers.
 Include Hermaid by Xenophiliac.
 Include Hermaphrodite Gryphon by Nuku Valente.
-Include Hermaphrodite Latex Vixen for FS by Guest Writers.
-Include Hippo Strongman For Fs by Stripes.
+Include Hermaphrodite Latex Vixen by Guest Writers.
+Include Hippo Strongman by Stripes.
 Include Homo Sapiens by Wahn.
-Include Horny Doctor for FS by Stripes.
+Include Horny Doctor by Stripes.
 Include Horse-Hung Nerd by Wahn.
 Include Horseman by Sarokcat n Verath.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
-Include Hydra Beast for FS by Stripes.
+Include Hydra Beast by Stripes.
 Include Hyena Matriarch by Stripes.
-Include Hyperskunk for FS by Stripes.
+Include Hyperskunk by Stripes.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
-Include Incubus For Fs by Stripes.
-Include Inflatable Vulpine for FS by Stripes.
+Include Incubus by Stripes.
+Include Inflatable Vulpine by Stripes.
 Include Jackal Guard by Xenophiliac.
 Include Jackalboy by Sarokcat.
 Include Jackalman by Sarokcat.
-Include Jaguar Orderly For Fs by Stripes.
+Include Jaguar Orderly by Stripes.
 Include Jaguar Warrior by AGentlemanCalledB.
-Include Junkman For FS by Stripes.
+Include Junkman by Stripes.
 Include Kangaroo by Guest Writers.
-Include Killer Whale For Fs by Stripes.
-Include Knight for FS by Stripes.
+Include Killer Whale by Stripes.
+Include Knight by Stripes.
 Include Koballoon by Song.
 Include Kobold Gang by Closerhenry.
-Include Komodo Dragon for FS by Stripes.
-Include Latex Ermine for FS by Stripes.
+Include Komodo Dragon by Stripes.
+Include Latex Ermine by Stripes.
 Include Latex Fox by Nuku Valente.
-Include Latex Mistress For Fs by Stripes.
-Include Latex Wolf for FS by Stripes.
+Include Latex Mistress by Stripes.
+Include Latex Wolf by Stripes.
 Include Leopardman by Sarokcat.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
-Include Male Peacock for FS By Guest Writers.
-Include Mall Rat For Fs by Stripes.
-Include Mammoth For Fs by Stripes.
+Include Male Peacock By Guest Writers.
+Include Mall Rat by Stripes.
+Include Mammoth by Stripes.
 Include Man-eating Plant by Kernog.
 Include Mannequin by Wahn.
 Include Manticore by Kaleem mcintyre.
 Include Mareslut by Sarokcat.
-Include Margay For Fs by Stripes.
+Include Margay by Stripes.
 Include Maternity Lamia By Blue Bishop.
-Include Math Teacher For Fs by Stripes.
-Include Megakitty For Fs by Stripes.
-Include Mental Mouse For Fs by Stripes.
-Include Messy Pig for Fs by Guest Writers.
+Include Math Teacher by Stripes.
+Include Megakitty by Stripes.
+Include Mental Mouse by Stripes.
+Include Messy Pig by Guest Writers.
 Include Minotaur by Kaleem mcintyre.
-Include Mismatched Chimera For Fs by Stripes.
+Include Mismatched Chimera by Stripes.
 Include Monkey King by Kernog.
-Include MothGirl for Fs by Guest Writers.
+Include MothGirl by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
@@ -5303,7 +5305,7 @@ Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
 Include Nerdy Mouse by McRabid.
 Include Nightmare by Sarokcat.
-Include Ocelot for FS by Stripes.
+Include Ocelot by Stripes.
 Include Ogres by Lyall.
 Include Opossum Sailor by StripeGuy.
 Include Orc Infections by Wahn.
@@ -5313,32 +5315,32 @@ Include Panda by Sarokcat.
 Include Panther Herm by Sarokcat.
 Include Panther Taur by Nuku Valente.
 Include Parasite by Stripes.
-Include Parasitic Plant For Fs by Guest Writers.
+Include Parasitic Plant by Guest Writers.
 Include Pegasus by Kaleem mcintyre.
 Include Pewter Consort By Blue Bishop.
 Include Piggy by Stripes.
 Include Pink Poodle by AGentlemanCalledB.
 Include Pirate Shark by Sarokcat.
-Include Pit Bull For FS by Guest Writers.
+Include Pit Bull by Guest Writers.
 Include Placeholder Infections by Wahn.
 Include Plush Lion by Sarokcat.
-Include Prairie Dog For Fs by Stripes.
-Include Psycho Weasel For Fs by Stripes.
-Include Queen Bee for FS by Stripes.
-Include Quilled Tousky for FS by Stripes.
-Include Rabbit Pack for FS by Guest Writers.
+Include Prairie Dog by Stripes.
+Include Psycho Weasel by Stripes.
+Include Queen Bee by Stripes.
+Include Quilled Tousky by Stripes.
+Include Rabbit Pack by Guest Writers.
 Include Ram by Sarokcat.
-Include Random Shemale Smooth Collie For Fs by Guest Writers.
-Include Random Tentacle Horror For Fs by Guest Writers.
+Include Random Shemale Smooth Collie by Guest Writers.
+Include Random Tentacle Horror by Guest Writers.
 Include Rat Twins by Kernog.
 Include Razorback Boar by Wahn.
-Include Red Oni for FS by Stripes.
+Include Red Oni by Stripes.
 Include Reindeer by Stripes.
 Include Reptaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
-Include Rhino For Fs by Stripes.
+Include Rhino by Stripes.
 Include Robed Cultist by Wahn.
-Include Rodeo Clown For Fs by Stripes.
+Include Rodeo Clown by Stripes.
 Include Rubber Drake by Song.
 Include Rubber Tigress by Sarokcat.
 Include Saber Kitty by Blaydrex.
@@ -5352,54 +5354,54 @@ Include Seraphim by Wahn.
 Include Shadow Beast by UrsaOmega.
 Include Siamese Cats by Stripes.
 Include Sierrasaur by Blue Bishop.
-Include Siren For Fs by Stripes.
-Include Skunk For Fs by Damaged.
+Include Siren by Stripes.
+Include Skunk by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
-Include Small Feline And Lion For Fs by Damaged.
-Include Snake For Fs by Stripes.
-Include Snow Bat For Fs by Stripes.
-Include Snow Leopard for FS by Stripes.
+Include Small Feline And Lion by Damaged.
+Include Snake by Stripes.
+Include Snow Bat by Stripes.
+Include Snow Leopard by Stripes.
 Include Spartan by Wahn.
 Include Sphinx by Sarokcat.
-Include Spidergirl For Fs by Guest Writers.
+Include Spidergirl by Guest Writers.
 Include Spidertaur Male by Wahn.
 Include sprite by Nuku Valente.
-Include Squid For Fs by Stripes.
-Include Squire for FS by Stripes.
+Include Squid by Stripes.
+Include Squire by Stripes.
 Include Stallionboi by Sarokcat n Verath.
 Include Succubus by Sarokcat.
-Include Sugar Ferret for FS by Stripes.
+Include Sugar Ferret by Stripes.
 Include Sugar Glider by AGentlemanCalledB.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
-Include Tiger Cop for FS by Stripes.
+Include Tiger Cop by Stripes.
 Include Tiger Shark by Lone Wanderer.
 Include Tigertaur by Sarokcat.
-Include Tigress Hooker for FS by Stripes.
-Include Trash Coon For FS by Stripes.
-Include Triceratops For Fs by Stripes.
+Include Tigress Hooker by Stripes.
+Include Trash Coon by Stripes.
+Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
 Include Unicorn by Sarokcat.
 Include Viking by Wahn.
-Include Vixentaur for FS by Stripes.
-Include Voodoo Gecko for FS by Stripes.
-Include Vulpogryph For Fs by Stripes.
-Include Werewolf Costume For Fs by Stripes.
+Include Vixentaur by Stripes.
+Include Voodoo Gecko by Stripes.
+Include Vulpogryph by Stripes.
+Include Werewolf Costume by Stripes.
 Include Whiptail by Vervaine.
-Include Wildcat For Fs by Stripes.
+Include Wildcat by Stripes.
 Include Wolfman by Wahn.
 Include Wolftaur by Sarokcat.
 Include Wolverine Guard by Stripes.
-Include Wrestling Wolf For Fs by Guest Writers.
-Include Wyvern For Fs by Damaged.
-Include Xeno for FS by Stripes.
-Include Yamato Dragon For FS by Blue Bishop.
-Include Yamato Dragoness For FS by Blue Bishop.
+Include Wrestling Wolf by Guest Writers.
+Include Wyvern by Damaged.
+Include Xeno by Stripes.
+Include Yamato Dragon by Blue Bishop.
+Include Yamato Dragoness by Blue Bishop.
 Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
@@ -5422,7 +5424,7 @@ Include Blanche by Stripes.
 Include Blue by Wahn.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
-Include Brennan by Wahn. [WIP]
+Include Brennan by Wahn.
 Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
@@ -5455,6 +5457,7 @@ Include Fancy by Sarokcat n Verath.
 Include Fang by Stripes.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
+Include Feral Latex Fox by Dys.
 Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
@@ -5492,12 +5495,12 @@ Include Kurt by Rikaeus.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
-Include Larissa for FS by Stripes.
+Include Larissa by Stripes.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
 Include Lucy by Stripes.
-Include Mack for FS by Stripes.
+Include Mack by Stripes.
 Include Mark by Wahn.
 Include Master Mind by Stripes.
 Include Matriarch NPC by Stripes.
@@ -5531,7 +5534,7 @@ Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
 Include Sally by Stripes.
-Include Sam for FS by Stripes.
+Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Serenity by Kurainyx.
@@ -6414,21 +6417,19 @@ to say gsopt_start:
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. Some fought back. You tried to resist, but did not escape unscathed. In the end, you managed to get to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Rescuer Stranded":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. There were growing reports of monsters and freaks spreading across the city, attacking the citizens. You had been part of the military's fast response team sent in just hours after the outbreak. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors. You were sent in with little preparation and no idea at all of what you were truly in for.";
 		say "     Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
-		say "     You awoke in what appears to be a disused bunker. You have no idea how you even got here or how long you've been out of it, but you are uninfected. In your panicked flight, you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack and your watch. Heaven only knows what awaits you outside, but you have to find a way back.";
 	else if scenario is "Forgotten":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able. While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire. Fearing to exit, you remained in the safety of the bunker until it was peaceful again. You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type]. Still... how bad could it be?";
 	else if scenario is "Researcher":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go. Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos. Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor. The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
 		say "     The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		say "     You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
-	say "     No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
-	WaitLineBreak;
-	LineBreak;
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go. Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos. Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor. The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "Welcome to...";
 	[display the figure of title_graphic;]
 	zephyrad rule in 1 turn from now;
@@ -6438,13 +6439,13 @@ to say silent_start:
 	say "	Please wait while we complete some background work prior to restoring.";
 	WaitLineBreak;
 	now started is 1;
-	if gspg is 1: [male]
+	if gspg is 1:	[male]
 		now cocks of player is 1;
 		now cock length of player is 6;
 		now the cock width of the player is 4;
 		now breasts of player is 2;
 		now breast size of player is 0;
-	else: [defaults to female]
+	else:		[defaults to female]
 		now cunts of player is 1;
 		now cunt length of player is 6;
 		now cunt width of player is 4;
@@ -6465,7 +6466,7 @@ to say silent_start:
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	sort table of random critters in lev order;
-	if scenario is "Caught Outside": [processes infection data first, then clears so intro text can remain intact]
+	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
 		randominfect;
 		randominfect;
 		randominfect;
@@ -6563,7 +6564,10 @@ to say silent_start:
 	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
-	now Zephyr Lobby is known;
+	say "	Just a moment. Few more things to prepare...";
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	now zephyr lobby is known;
+	say "	Done. Thank you for your patience. Please choose a file to restore now."
 	WaitLineBreak;
 
 to say set_invcolumns:
@@ -6657,7 +6661,7 @@ When play begins:
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;
 	now the right hand status line is "[list of valid directions]";
-	say "Before the game begins..."; [warn the player what to expect next]
+	say "Before the game begins...";[warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
 	if player consents:
 		now hypernull is hypernull;
@@ -6665,7 +6669,7 @@ When play begins:
 		now hypernull is 1;
 	repeat with x running through featsets:
 		now x is a part of the player;
-	if gsgt is 1: [sets name of scenario for menu based on preset]
+	if gsgt is 1:		[sets name of scenario for menu based on preset]
 		now scenario is "Bunker";
 	else if gsgt is 2:
 		now scenario is "Caught Outside";
@@ -6688,7 +6692,7 @@ When play begins:
 	regularstart; [original start method. easier to move everything then leave here]
 
 When play begins (this is the graphics window construction rule):
-	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
+	if NewGraphics is true:[Build window regardless in case player decides to turn it on later]
 		now the graphics window proportion is NewGraphicsRatio;
 		build graphics window;
 		[now the graphics window pixel count is 1;]

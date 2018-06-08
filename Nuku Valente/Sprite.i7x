@@ -3,6 +3,12 @@ Version 2 of Sprite by Nuku Valente begins here.
 
 "Adds a Sprite to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
+Section 0 - Flags and Tags
+
+when play begins:
+	add { "City Sprite" } to infections of girl;
+	add { "City Sprite" } to infections of humanoid;
+
 Section 1 - Monster Responses
 
 Spritedefeat is a number that varies.

@@ -4,34 +4,34 @@ Version 1 of Feral Latex Fox by Dys begins here.
 
 Section 0 - Variables
 
-FeralLatexFoxMet is a truth state that varies. FeralLatexFoxMet is usually false.
-FeralLatexFoxCorruption is a number that varies. FeralLatexFoxCorruption is usually 0.
+FeralLatexFox_Met is a truth state that varies. FeralLatexFox_Met is usually false.
+FeralLatexFox_Corruption is a number that varies. FeralLatexFox_Corruption is usually 0.
 [ 0: Not corrupted yet                                                      ]
 [ 1: Corruption started. Player finds themselves desiring to be bred by the ]
-[    fox.                                                                   ]
-[ 2: Corruption Stage 1. Player has lucid dreams of the fox.                ]
+[    fox                                                                    ]
+[ 2: Corruption Stage 1. Player has lucid dreams of the fox                 ]
 [ 3: Corruption Stage 2. Player finds a growing distaste for other mutants. ]
-[    More vivid dreams.                                                     ]
+[    More vivid dreams                                                      ]
 [ 4: Final stage. Player submits, becoming the fox's permanent breeding     ]
-[    slave. Forced to return at least once a day to be bred.                ]
+[    slave. Forced to return at least once a day to be bred                 ]
 
 
-to say FeralLatexFoxStart: [Feral Male Latex Fox]
+to say FeralLatexFox_Start: [Feral Male Latex Fox]
 	setmonster "Latex Fox";
 	choose row monster from the table of random critters;
-	if FeralLatexFoxMet is false:
-		now FeralLatexFoxMet is true;
-		say "[FeralLatexFoxIntro]";
+	if FeralLatexFox_Met is false:
+		now FeralLatexFox_Met is true;
+		say "[FeralLatexFox_Intro]";
 [	else:
-		if FeralLatexFoxCorruption is:
+		if FeralLatexFox_Corruption is:
 			--0: [Not corrupted yet. Just sex with the fox.]
 			--1: [Corruption has started. Will likely progress at this point.]
 			--2: [Corruption grows stronger.]
 			--3: [Even more.]
 			--4: [Final stage.]]
 
-to say FeralLatexFoxIntro:
-	say "     Looking around the room, your eyes eventually come across a door with a crudely made sign that says 'Latex Fox inside!' Curiosity piqued, you open the door and quickly step through. On the other side, you see a large, feral latex fox, sitting on it's haunches, facing away from you. As you shut the door, the fox whirls around to face you, exposing it's [one of]large[or]foot-long[or]massive[or]huge[at random] [one of]rubber[or]rubbery[or]glossy[or]latex[at random] cock, fully erect and dripping pre. It lets out a growl, crouching down. Giving you no time to react, the beast jumps on you, pinning you to the floor. He makes surprisingly quick work of you clothing despite his claws only being made of rubber, quickly leaving you completely at his mercy.";
+to say FeralLatexFox_Intro:
+	say "     ";
 	say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes";
@@ -40,22 +40,22 @@ to say FeralLatexFoxIntro:
 	if player consents:
 		LineBreak;
 		if scalevalue of player < 3:
-			say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [LatexFoxSmallPlayerSex]";
+			say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [FeralLatexFox_Sex_SmallPlayer]";
 		else if scalevalue of player is 3:
-			say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. [LatexFoxAveragePlayerSex]";
+			say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. [FeralLatexFox_Sex_AveragePlayer]";
 		else if scalevalue of player > 3:
 			say "     Using your [if scalevalue of player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
 			say "     Making your way out of the Shack, you pass Jerome, who simple raises a brow at your sudden departure and says, 'No refunds'.";
 	else:
 		LineBreak;
 		if scalevalue of player < 3:
-			say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [LatexFoxSmallPlayerSex]";
+			say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [FeralLatexFox_Sex_SmallPlayer]";
 		else if scalevalue of player is 3:
-			say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [LatexFoxAveragePlayerSex]";
+			say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [FeralLatexFox_Sex_AveragePlayer]";
 		else if scalevalue of player > 3:
 			say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
 
-to say LatexFoxSmallPlayerSex: [Sex scenes for a small player with the fox]
+to say FeralLatexFox_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
 	if player is kinky:
 		say "Eager to use you, the sex-crazed feral grabs your arm in his [one of]rubbery[or]latex[or]squeaky[at random] teeth, yanking you to the side and forcing you to roll over. This seems to be all the invitation he needs, as he quickly begins prodding at your ass with his large rubber cock. The pre dripping from his tip is enough for it to slip between your butt cheeks, and a few rough thrusts later, the tip finds it's way into your hole.";
 		say "     With his shaft now inside you, the feral beings to make his body grow, increasing in size until he's larger than a lion, [if scalevalue of player < 2]completely dwarfing your minuscule body[else]more than large enough to cover your smaller body completely[end if]. After his body finishes growing, his [one of]latex[or]rubber[or]rubbery[at random] cock begins to expand as well, [if scalevalue of player < 2]the added inch of girth stretching your hole even more, much to your own agony[else]the added girth stretching you out rather painfully[end if]. You're pretty sure it also got a handful of inches longer, too...";
@@ -77,7 +77,7 @@ to say LatexFoxSmallPlayerSex: [Sex scenes for a small player with the fox]
 		WaitLineBreak;
 		say "     Eventually, the flow of cum slows, and your left feeling decently bloated. The feral, being done with you, begins to tug your hole with his knot, trying to free his shaft. Of course, this is rather painful for you, until he eventually manages to yank it out with a wet pop, a rush of his own seed following it out.[mimpregchance]";
 
-to say LatexFoxAveragePlayerSex: [Sex scenes for an average player]
+to say FeralLatexFox_Sex_AveragePlayer: [Sex scenes for an average player]
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:[No growth / light cum inflation scene]
