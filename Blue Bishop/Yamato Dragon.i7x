@@ -905,7 +905,7 @@ When Play begins:
 	now face change entry is "you suddenly feel overwhelmed by a sudden change, face elongating into a proud, draconic snout, a pair of fairly lengthy whiskers sprouting from its tip. Two long antlers and a mane of silver hair growing from the back of your head";
 	now body change entry is "you soon double over, frame shifting into something now much more elongated, arms and legs shifting in shape to something much more stout and less equipped to walk around. As you recover, you see that you're quite large, too, though you're likely only a little over two-thirds the size from which this strain originates, and you can't fly -- only able to hover with limited efficacy. A silver mane now runs across the entire length of your serpentine torso";
 	now skin change entry is "[ydskinchange]";
-	now ass change entry is "a lengthy tail sprouts forth from it.  It takes some time to adjust to it, limb adorned in a silver, fin-like mane, culminating in a flattened tuft at the tip";
+	now ass change entry is "a lengthy tail sprouts forth from it. It takes some time to adjust to it, limb adorned in a silver, fin-like mane, culminating in a flattened tuft at the tip";
 	now cock change entry is "you're made curious by an odd tingling feeling. Taking a look, you're shocked to find that your junk has disappeared! After some observation, you find that your dick is now housed in some manner of draconic vent, the head-tapered, deep reddish thing exposed before you with some coaxing, its shaft a peculiar, bulbious ribbing. After coming to terms with this change, you go back to making your next move";
 	now str entry is 26;
 	now dex entry is 18;
@@ -967,7 +967,7 @@ to say usedragonscale:		[only alters sizes, not gender]
 		now sex entry is "Female";
 	else:
 		now sex entry is "nochange";
-	say "     Following the strange urge you have, press the large scale to your chest.  As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
+	say "     Following the strange urge you have, press the large scale to your chest. As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
 dragon hair is a grab object. It is a part of the player. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
 the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
@@ -990,7 +990,7 @@ to say usedragonhair:
 		now sex entry is "Female";
 	else:
 		now sex entry is "nochange";
-	say "     Following the strange urge you have, brush the hairs to your face, enjoying the feel of them against your cheek.  As you continue brushing, the hairs grow gradually shorter, sinking into your face and hand before disappearing entirely.";
+	say "     Following the strange urge you have, brush the hairs to your face, enjoying the feel of them against your cheek. As you continue brushing, the hairs grow gradually shorter, sinking into your face and hand before disappearing entirely.";
 
 Section 4 - Vore Bound State
 
