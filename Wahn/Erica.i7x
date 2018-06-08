@@ -60,7 +60,7 @@ Version 1 of Erica by Wahn begins here.
 
 CarlEricaInteraction is a number that varies.
 
-instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
+instead of going down from the Gray Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
@@ -134,7 +134,7 @@ Instead of resolving a Biker Hangout:
 			say "     Running off as quickly as you can, you leave the biker behind. It doesn't seem like he wants to follow you too much and instead gets busy fucking his 'pet' in short order. With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
 			move player to bunker;
-		else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Punching out the only lightly infected human, you bend down to pick up the key ring that he dropped during your fight and step forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
 			say "[JoelSaved]";
 	else if calcnumber is 2: [wait and hit]
@@ -567,24 +567,24 @@ to say EricaSex8_2_Female: [Erica]
 		say "     Stepping up to stand against the head end of the bed, you give Klauz's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 		say "			[WaitLineBreak]";
 		say "     While you're getting oral attention from the large beast, Erica rides his spined cock with unabated vigor, moaning and gasping loudly at the sensations it gives her. With how much she enjoys riding the big cat, it doesn't take too much longer until Erica's arousal peaks. Panting unintelligible sounds in her lust, the female athlete rises up and slams herself down on the hard erection under her, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
-		say "     With Klauz busy savouring her own orgasm, you put your fingers to work on your own pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting the felinoid's muzzle and more of it dripping down on the fur on his neck. The big cat gives a pleased rumble, licking it off her muzzle and lapping at your crotch a few times to get a bit more of a taste.";
+		say "     With Klauz busy savoring her own orgasm, you put your fingers to work on your own pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting the felinoid's muzzle and more of it dripping down on the fur on his neck. The big cat gives a pleased rumble, licking it off her muzzle and lapping at your crotch a few times to get a bit more of a taste.";
 		say "			[WaitLineBreak]";
 		say "     Erica keeps her position for a while longer, straddling Klauz's hips with the beast's softening shaft inside her, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There she rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FELINOID SEX WALKIN [line break]";
-	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see the large shape of Klauz silently stalk after Erica. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
+	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see the large shape of Klauz silently stalk after Erica. Knowing the large cat's libido-driven behavior, you see where this might lead...";
 	LineBreak;
 	say "     Do you want to go after them to see what happens and maybe do something about it ([link]Y[as]y[end link]), or do you just leave them to it and turn your attention to other things ([link]N[as]n[end link])?";
 	if player consents: [follow]
 		LineBreak;
-		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Erica some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking her. Then the large cat catches up with her, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Erica is easily taken in by Klauz's affectionate demeanour, petting the large creature as he circles her, rubbing up against Erica's body and flirting his long tail in front of the human's face.";
+		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Erica some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking her. Then the large cat catches up with her, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Erica is easily taken in by Klauz's affectionate demeanor, petting the large creature as he circles her, rubbing up against Erica's body and flirting his long tail in front of the human's face.";
 		say "     Soon Erica crouches down, her hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. She brushes her cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from Klauz, almost a feline chuckle, and he spends a moment nuzzling against the twin mounds of Erica's perky breasts before he bumps her with his shoulder, making the young woman fall forward on all fours.";
 		LineBreak;
 		say "     Do you want to watch Klauz mount Erica ([link]Y[as]y[end link]) or will you step in and snap her out of the trance ([link]N[as]n[end link])?";
@@ -607,10 +607,10 @@ instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid
 		now level of Erica is 1;
 		now lastfuck of Erica is turns;
 
-instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FELINOID SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with Klauz on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
@@ -618,7 +618,7 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 	say "     The animalistic coupling of the felinoid and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Klauz drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going inside from Gray Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-FELINOID-SEX WALKIN [line break]";
@@ -640,10 +640,10 @@ instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Le
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
-instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (XP of Erica is 0 and Fang is in Gray Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FANG SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see Fang's furred shape silently stalk after Erica. Knowing that he's a wild and horny beast, you see where this might lead...";
@@ -680,7 +680,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 						say "     Finding yourself confronted with such a very enticing display of Erica's naked body, you almost rip your clothes and gear off, just flinging it to the ground as you step towards the sofa. With your raging libido in control now, you quickly climb on it behind the young woman, grunting in lust as your rock-hard cock brushes against her soft skin an eye-blink later. Erica gives a needy, almost pleading sigh and rocks back a little bit - which makes her drippingly wet nether lips engulf the tip of your shaft. As you feel the warm and tight grip of her inner passage around your manhood, you can't help but thrust into her deeply, only stopping when your crotch is flush against her behind and your cock balls-deep inside the beautiful college athlete.";
 						WaitLineBreak;
 						say "     'Yes. Please fuck me!' comes Erica's high-pitched moan as she starts up rocking her body back and forth to fuck herself on your shaft, quickly drawing you out of the trance of simply enjoying being inside her. You don't think you could have refused anything at all that she might have asked from you right now - and you're more than happy to take hold of the young woman's hips to really thrust deep and keep going after that, pounding into her pussy with audible slaps each time your hips meet. The sounds of sex fill the aisles of the library - moans, grunts and loud panting echoing between the bookshelves as the two of you fuck each other eagerly. A smile creeps over your lips as you think about how this situation would have played out before the nanite apocalypse... yourself and a breathtaking woman like Erica, totally naked and humping like bunnies - right here in a public library.";
-						say "     The image of a grey-haired librarian coming to investigate and shockedly looking over the rim of her glasses at the fucking couple she'd have found draws a chuckle from you - and gives you a naughty little idea. After your next deep thrust, you lean forward on top of Erica's back and wrap your arms around her chest, then whisper into her ear, 'Sssh. Quiet, this is a library.' It's funny to hear her give a shocked gasp and try to stifle her moans - unsuccessfully, as you cup her shapely breasts with both hands and start playing with her nipples - until she eventually pants out, 'Wait - what? The library is closed. There's no one here but -' The rest of her protest is replaced by a deep moan as you choose that very moment to pull out almost all the way and hammer your cock back into Erica's wet pussy, then continue to fuck her with unabated intensity.";
+						say "     The image of a gray-haired librarian coming to investigate and shockedly looking over the rim of her glasses at the fucking couple she'd have found draws a chuckle from you - and gives you a naughty little idea. After your next deep thrust, you lean forward on top of Erica's back and wrap your arms around her chest, then whisper into her ear, 'Sssh. Quiet, this is a library.' It's funny to hear her give a shocked gasp and try to stifle her moans - unsuccessfully, as you cup her shapely breasts with both hands and start playing with her nipples - until she eventually pants out, 'Wait - what? The library is closed. There's no one here but -' The rest of her protest is replaced by a deep moan as you choose that very moment to pull out almost all the way and hammer your cock back into Erica's wet pussy, then continue to fuck her with unabated intensity.";
 						WaitLineBreak;
 						say "     You and your sexy friend go at it for some more time, until the relentless rubbing of your hard shaft against all the right spots inside her drive Erica to a very vocal orgasm. Hands digging into the fabric of the sofa, the young woman almost screams in lust while her pussy starts to squirt and drip femcum, as well as giving you quite nice sensations yourself with the trembling and twitching of its inner muscles. It only takes a few more deep thrusts before you reach your own climax and your manhood starts to pulse as it delivers spurt after spurt of your fertile load deep into Erica's pussy.";
 						say "     Breathing heavily, you eventually pull your cock out of the college athlete's trained body, then move to lie on the sofa with her, holding each other in post-coital bliss. Exhausted as she is from the scare with Fang and you wearing her out afterwards, Erica gives you a soft kiss on the lips, murmuring, 'I love you,' and then dozes off. You kiss her forehead and wish you could stay like this forever, your arms around her as you rest in peace on the sofa. With a last thought you imagine your cum exploring her womb for an egg to create life with, then fall asleep yourself.";
@@ -688,7 +688,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 						say "     Finding yourself confronted with such a very enticing display of Erica's naked body, you almost rip your clothes and gear off, just flinging it to the ground as you step towards the sofa. With your raging libido in control now, you quickly sink to your knees beside it, sighing softly as you see the beautiful flower-like shape of her sex. Then you lean forward and give the little nub of her clit a teasing lick - which makes Erica give a needy, almost pleading sigh, then rock back a little bit to prolong your contact as you pull away again. Such a nice little pair of nether lips she presents to you - swollen and spread, with a glittering sheen of femcum. Your hands move almost on their own to touch them, rubbing over her folds before dipping inside, entering the warm cave of her sex and feeling to find the right spots to draw ever louder moans and pants from Erica. Meanwhile, your other hand brushes down your own body and starts to fondle your pussy in sync with Erica's, driving both your libidos higher and higher.";
 						WaitLineBreak;
 						say "     'Yes. Stroke me! Faster!' come Erica's high-pitched moans as she starts rocking her body back and forth to fuck herself on your fingers. You don't think you could have refused anything at all that she might have asked from you right now - and you're more than happy to intensify your manual stimulation of the young woman's pussy. The sounds of sex fill the aisles of the library - moans, grunts and loud panting echoing between the bookshelves. A smile creeps over your lips as you think about how this situation would have played out before the nanite apocalypse... yourself and a breathtaking woman like Erica, totally naked and oh so wet and aroused - right here in a public library.";
-						say "     The image of a grey-haired librarian coming to investigate and shockedly looking over the rim of her glasses at the fucking couple she'd have found draws a chuckle from you - and gives you a naughty little idea. Gently pulling your hand away from her crotch, you stand up and then lean over Erica's back, wrapping your arms around her chest and then whispering, 'Sssh. Quiet, this is a library.' It's funny to hear her give a shocked gasp and try to stifle her moans - unsuccessfully, as you cup her shapely breasts with both hands and start playing with her nipples - until she eventually pants out, 'Wait - what? The library is closed. There's no one here but -' The rest of her protest is replaced by a deep moan as you choose that very moment to brush over her clit again, rubbing the little nub while sticking the fingers of your other hand between her pussy lips.";
+						say "     The image of a gray-haired librarian coming to investigate and shockedly looking over the rim of her glasses at the fucking couple she'd have found draws a chuckle from you - and gives you a naughty little idea. Gently pulling your hand away from her crotch, you stand up and then lean over Erica's back, wrapping your arms around her chest and then whispering, 'Sssh. Quiet, this is a library.' It's funny to hear her give a shocked gasp and try to stifle her moans - unsuccessfully, as you cup her shapely breasts with both hands and start playing with her nipples - until she eventually pants out, 'Wait - what? The library is closed. There's no one here but -' The rest of her protest is replaced by a deep moan as you choose that very moment to brush over her clit again, rubbing the little nub while sticking the fingers of your other hand between her pussy lips.";
 						WaitLineBreak;
 						say "     You and your sexy friend go at it for some more time, until the relentless rubbing of your talented fingers against all the right spots inside her drive Erica to a very vocal orgasm. Hands digging into the fabric of the sofa, the young woman almost screams in lust while her pussy starts to squirt and drip femcum, soon trickling down over your hand and arm. It only takes a few more moments of frantic rubbing before you reach your own climax and start to squirt your female juices all over the carpet next to the sofa.";
 						say "     Breathing heavily, you eventually get up from where you were leaning against the sofa and Erica's right leg, then move to lie on the sofa with her, holding each other in post-coital bliss. Exhausted as she is from the scare with Fang and you wearing her out afterwards, Erica gives you a soft kiss on the lips, murmuring, 'I love you,' and then dozes off. You kiss her forehead and wish you could stay like this forever, your arms around her as you rest in peace on the sofa. With a last thought you imagine sharing a 69 in which you both lick each other, then fall asleep yourself.";
@@ -696,7 +696,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 						say "     Finding yourself confronted with such a very enticing display of Erica's naked body, you almost rip your clothes and gear off, just flinging it to the ground as you step towards the sofa. With your raging libido in control now, you quickly sink to your knees beside it, sighing softly as you see the beautiful flower-like shape of her sex. Then you lean forward and give the little nub of her clit a teasing lick - which makes Erica give a needy, almost pleading sigh, then rock back a little bit to prolong your contact as you pull away again. Such a nice little pair of nether lips she presents to you - swollen and spread, with a glittering sheen of femcum. Your hands move almost on their own to touch them, rubbing over her folds before dipping inside, entering the warm cave of her sex and feeling to find the right spots to draw ever louder moans and pants from Erica. Meanwhile, your other hand brushes down your own body and starts to fondle the smooth and sexless, but nevertheless quite sensitive area of your crotch in sync with Erica's pussy, driving both your libidos higher and higher.";
 						WaitLineBreak;
 						say "     'Yes. Stroke me! Faster!' come Erica's high-pitched moans as she starts rocking her body back and forth to fuck herself on your fingers. You don't think you could have refused anything at all that she might have asked from you right now - and you're more than happy to intensify your manual stimulation of the young woman's pussy. The sounds of sex fill the aisles of the library - moans, grunts and loud panting echoing between the bookshelves. A smile creeps over your lips as you think about how this situation would have played out before the nanite apocalypse... yourself and a breathtaking woman like Erica, totally naked and oh so wet and aroused - right here in a public library.";
-						say "     The image of a grey-haired librarian coming to investigate and shockedly looking over the rim of her glasses at the fucking couple she'd have found draws a chuckle from you - and gives you a naughty little idea. Gently pulling your hand away from her crotch, you stand up and then lean over Erica's back, wrapping your arms around her chest and then whispering, 'Sssh. Quiet, this is a library.' It's funny to hear her give a shocked gasp and try to stifle her moans - unsuccessfully, as you cup her shapely breasts with both hands and start playing with her nipples - until she eventually pants out, 'Wait - what? The library is closed. There's no one here but -' The rest of her protest is replaced by a deep moan as you choose that very moment to brush over her clit again, rubbing the little nub while sticking the fingers of your other hand between her pussy lips.";
+						say "     The image of a gray-haired librarian coming to investigate and shockedly looking over the rim of her glasses at the fucking couple she'd have found draws a chuckle from you - and gives you a naughty little idea. Gently pulling your hand away from her crotch, you stand up and then lean over Erica's back, wrapping your arms around her chest and then whispering, 'Sssh. Quiet, this is a library.' It's funny to hear her give a shocked gasp and try to stifle her moans - unsuccessfully, as you cup her shapely breasts with both hands and start playing with her nipples - until she eventually pants out, 'Wait - what? The library is closed. There's no one here but -' The rest of her protest is replaced by a deep moan as you choose that very moment to brush over her clit again, rubbing the little nub while sticking the fingers of your other hand between her pussy lips.";
 						WaitLineBreak;
 						say "     You and your sexy friend go at it for some more time, until the relentless rubbing of your talented fingers against all the right spots inside her drive Erica to a very vocal orgasm. Hands digging into the fabric of the sofa, the young woman almost screams in lust while her pussy starts to squirt and drip femcum, soon trickling down over your hand and arm. It only takes a few more moments of frantic rubbing before you reach your own climax tremble all over as an amazing orgasm rocks your body.";
 						say "     Breathing heavily, you eventually get up from where you were leaning against the sofa and Erica's right leg, then move to lie on the sofa with her, holding each other in post-coital bliss. Exhausted as she is from the scare with Fang and you wearing her out afterwards, Erica gives you a soft kiss on the lips, murmuring, 'I love you,' and then dozes off. You kiss her forehead and wish you could stay like this forever, your arms around her as you rest in peace on the sofa. With a last thought you imagine sharing a 69 in which you both lick each other, then fall asleep yourself.";
@@ -736,16 +736,16 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 [   6: Carl fucked Erica                                             ]
 [  50: player told Carl to stop pursuing Erica                       ]
 
-instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
-	move player to Grey Abbey Library;
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricaMeetsCarl]";
 
-instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricaMeetsCarl]";
@@ -755,8 +755,8 @@ to say EricaMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
-	move player to Grey Abbey Library;
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+	move player to Gray Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -774,10 +774,10 @@ instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Ab
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -795,10 +795,10 @@ instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is i
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if CarlEricInteraction is 5: [first time]
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL FUCK - FIRST TIME - CarlEricInteraction: [CarlEricInteraction]";
@@ -1203,10 +1203,10 @@ to say EricaCarlThreesome8: [player rides Carl's cock while Eric straddles his f
 	say "     <This scene is WIP, please have some patience for the next update>";
 
 [
-instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
+instead of navigating Gray Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Gray Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+	move player to Gray Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA Fang SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with your Fang companion on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
@@ -1214,7 +1214,7 @@ instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP o
 	say "     The animalistic coupling of Fang and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Fang drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, Fang isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going inside from Gray Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-Fang-SEX WALKIN [line break]";

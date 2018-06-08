@@ -185,7 +185,7 @@ to say RichardSex3:
 	now lastfuck of Richard is turns;
 
 to say RichardSex4:
-	say "     insert scene of vaginal sex with Richard";
+	say "     Insert scene of vaginal sex with Richard";
 	now lastfuck of Richard is turns;
 
 to say RichardSex5:

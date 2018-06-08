@@ -92,73 +92,73 @@ Section 3 - Plurals
 
 [short singular/plural statements - these add an s, es, y/ies as needed to a noun or a verb based on one or the other sexual characteristic]
 
-to say smn:   [stick an s on if multiple male - noun]
+to say smn: [stick an s on if multiple male - noun]
 	if cocks of player > 1:
 		say "s";
 	else:
 		say "";
 
-to say sfn:    [stick an s on if multiple female - noun]
+to say sfn: [stick an s on if multiple female - noun]
 	if cunts of player > 1:
 		say "s";
 	else:
 		say "";
 
-to say esmn:   [stick an es on if multiple male - noun]
+to say esmn: [stick an es on if multiple male - noun]
 	if cocks of player > 1:
 		say "es";
 	else:
 		say "";
 
-to say esfn:    [stick an es on if multiple female - noun]
+to say esfn: [stick an es on if multiple female - noun]
 	if cunts of player > 1:
 		say "es";
 	else:
 		say "";
 
-to say ymn:   [sticks y/ies on if multiple male - noun]
+to say ymn: [sticks y/ies on if multiple male - noun]
 	if cocks of player > 1:
 		say "ies";
 	else:
 		say "y";
 
-to say yfn:    [sticks y/ies on if multiple female - noun]
+to say yfn: [sticks y/ies on if multiple female - noun]
 	if cunts of player > 1:
 		say "ies";
 	else:
 		say "y";
 
-to say smv:    [stick an s on if single male - verb]
+to say smv: [stick an s on if single male - verb]
 	if cocks of player > 1:
 		say "";
 	else:
 		say "s";
 
-to say sfv:    [stick an s on if single female - verb]
+to say sfv: [stick an s on if single female - verb]
 	if cunts of player > 1:
 		say "";
 	else:
 		say "s";
 
-to say esmv:    [stick an es on if single male - verb]
+to say esmv: [stick an es on if single male - verb]
 	if cocks of player > 1:
 		say "";
 	else:
 		say "es";
 
-to say esfv:    [stick an es on if single female - verb]
+to say esfv: [stick an es on if single female - verb]
 	if cunts of player > 1:
 		say "";
 	else:
 		say "es";
 
-to say ymv:    [stick an y/ies on if single male - verb]
+to say ymv: [stick an y/ies on if single male - verb]
 	if cocks of player > 1:
 		say "y";
 	else:
 		say "ies";
 
-to say yfv:    [sticks y/ies on if single female - verb]
+to say yfv: [sticks y/ies on if single female - verb]
 	if cunts of player > 1:
 		say "y";
 	else:
@@ -166,7 +166,7 @@ to say yfv:    [sticks y/ies on if single female - verb]
 
 [
 Example:
-say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
+say "Your cock[smn] smash[esmv] into the goblin's face. Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
 1 cock: Your cock smashes into the goblin's face...
 2+ cocks: Your cocks slam into the goblin's face...
 1 cunt: ...Your juicy pussy then grinds against his pointy nose.
@@ -175,97 +175,97 @@ say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] th
 
 [short singular/plural pronoun statements - these pick between the two relevant pronouns based on plurality of either male of female sex organs]
 
-to say ittheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
+to say ittheym: [subject pronoun male - picks 'it' or 'they' based on multiple male]
 	if cocks of player > 1:
 		say "they";
 	else:
 		say "it";
 
-to say ittheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
+to say ittheyf: [subject pronoun female - picks 'it' or 'they' based on multiple female]
 	if cunts of player > 1:
 		say "they";
 	else:
 		say "it";
 
-to say itthemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
+to say itthemm: [object pronoun male - picks 'it' or 'them' based on multiple male]
 	if cocks of player > 1:
 		say "them";
 	else:
 		say "it";
 
-to say itthemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
+to say itthemf: [object pronoun female - picks 'it' or 'them' based on multiple female]
 	if cunts of player > 1:
 		say "them";
 	else:
 		say "it";
 
-to say itstheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
+to say itstheirm: [possessive adjective male - picks 'its' or 'their' based on multiple male]
 	if cocks of player > 1:
 		say "their";
 	else:
 		say "its";
 
-to say itstheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
+to say itstheirf: [possessive adjective female - picks 'its' or 'their' based on multiple female]
 	if cunts of player > 1:
 		say "their";
 	else:
 		say "its";
 
-to say itstheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
+to say itstheirsm: [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
 	if cocks of player > 1:
 		say "theirs";
 	else:
 		say "its";
 
-to say itstheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
+to say itstheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
 	if cunts of player > 1:
 		say "theirs";
 	else:
 		say "its";
 
-to say ItTheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
+to say ItTheym: [subject pronoun male - picks 'it' or 'they' based on multiple male]
 	if cocks of player > 1:
 		say "They";
 	else:
 		say "It";
 
-to say ItTheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
+to say ItTheyf: [subject pronoun female - picks 'it' or 'they' based on multiple female]
 	if cunts of player > 1:
 		say "They";
 	else:
 		say "It";
 
-to say ItThemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
+to say ItThemm: [object pronoun male - picks 'it' or 'them' based on multiple male]
 	if cocks of player > 1:
 		say "Them";
 	else:
 		say "It";
 
-to say ItThemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
+to say ItThemf: [object pronoun female - picks 'it' or 'them' based on multiple female]
 	if cunts of player > 1:
 		say "Them";
 	else:
 		say "It";
 
-to say ItsTheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
+to say ItsTheirm: [possessive adjective male - picks 'its' or 'their' based on multiple male]
 	if cocks of player > 1:
 		say "Their";
 	else:
 		say "Its";
 
-to say ItsTheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
+to say ItsTheirf: [possessive adjective female - picks 'its' or 'their' based on multiple female]
 	if cunts of player > 1:
 		say "Their";
 	else:
 		say "Its";
 
-to say ItsTheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
+to say ItsTheirsm: [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
 	if cocks of player > 1:
 		say "Theirs";
 	else:
 		say "Its";
 
-to say ItsTheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
+to say ItsTheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
 	if cunts of player > 1:
 		say "Theirs";
 	else:

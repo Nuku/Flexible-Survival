@@ -161,7 +161,7 @@ to say RomanTalk1:
 	say "     [first time]'Oh, a new head. Welcome to the Astroslide Football Field. The name's Roman,' the team captain greets you. [only]You make small talk with Roman, while the large gorilla keeps an eye on the football field. The discussion seems to switch back and forth between girls -and men-, and the best ways to fuck them, and many sportive anecdotes about him and the other players, both before and after the infection. He seems like an amicable, if slightly obnoxious, man.";
 
 to say RomanTalk2:
-	say "     'Hey, if it isn't [if player is not defaultnamed][name of player], [end if]my favourite [if GorillasMember is 3]laundry boy[else if GorillasMember is 4]water-boy[else]player[end if]!' Roman welcomes you, before giving you a warm and breath-cutting hug. The large-and-in-charge primate makes small talk with you, giving news of every other member of team. 'Did you know that [one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[or]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random] [one of]got himself a cheetah girl when he visited the zoo, the other day?[or]almost got molested by that goat janitor when he went to the hospital[or]scored himself one of these husky gals roaming the street?[or]got gangbanged by a gang of hyenas[or]found that neat bar; the Palomino, it was called.[or]tried to score one of these rats who hang around in the mall, but got rejected[or]almost ended up zipped up in a pooltoy, at the beach?[at random]";
+	say "     'Hey, if it isn't [if player is not defaultnamed][name of player], [end if]my favorite [if GorillasMember is 3]laundry boy[else if GorillasMember is 4]water-boy[else]player[end if]!' Roman welcomes you, before giving you a warm and breath-cutting hug. The large-and-in-charge primate makes small talk with you, giving news of every other member of team. 'Did you know that [one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[or]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random] [one of]got himself a cheetah girl when he visited the zoo, the other day?[or]almost got molested by that goat janitor when he went to the hospital[or]scored himself one of these husky gals roaming the street?[or]got gangbanged by a gang of hyenas[or]found that neat bar; the Palomino, it was called.[or]tried to score one of these rats who hang around in the mall, but got rejected[or]almost ended up zipped up in a pooltoy, at the beach?[at random]";
 
 to say RomanTalk3:
 	say "     You sadistically ask Roman how he is doing. Roman recognizes your voice, and tilts his head to look at you. His broken stare slowly turns into hate. 'Whm? Whm... Mhm hhmm muuuh!' It seems Roman does not appreciate his current treatment. Then again, he should not have been so careless about his secret, didn't he?";
@@ -252,6 +252,7 @@ to say RomanEncourage:
 [SEX SCENES]
 
 instead of fucking Team Captain Roman:
+	setmonster "Football Gorilla";
 	if HP of Roman is 4:
 		if (lastFuck of Roman - turns > 4):
 			say "[RomanFuck1]";
@@ -271,7 +272,7 @@ instead of fucking Team Captain Roman:
 
 [1 - Roman bad ending]
 to say RomanFuck1:
-	say "     You approach the helpless Roman, a glint of lust in your eyes. [bold type]How are you going to ruin your favourite ape today?[roman type][line break]";
+	say "     You approach the helpless Roman, a glint of lust in your eyes. [bold type]How are you going to ruin your favorite ape today?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -361,7 +362,7 @@ to say RomanFuck1Blow:
 	say "     You walk near Roman's head, and pull out the sock which is muffling his sounds. 'You... You trait-umg!' You are not here to hear the pussy-boy whine, and silence him by plugging his mouth with your cock. Roman gives you a weak glare, but the fear of punishment prevents him from biting your bits off. You grin, grab the ape's big head, and start fucking his face.";
 	WaitLineBreak;
 	if cock length of player < 8:
-		say "     You enjoy the gorilla's warm mouth. You cram your entire length inside, and feel Roman instantly suckling on it. He barely gags on your meat, too. How many times did he do this already? The marker scribbles on his forehead have stopped counting at fifteen, but it must be more. You savour the long leisurly blowjob, occasionally pumping your hips to make things faster. Eventually, you feel the need to cum.";
+		say "     You enjoy the gorilla's warm mouth. You cram your entire length inside, and feel Roman instantly suckling on it. He barely gags on your meat, too. How many times did he do this already? The marker scribbles on his forehead have stopped counting at fifteen, but it must be more. You savor the long leisurly blowjob, occasionally pumping your hips to make things faster. Eventually, you feel the need to cum.";
 	else if cock length of player < 18:
 		say "     You enjoy the gorilla's struggles to take your entire length inside his mouth; not that he has a choice in the matter. You feel the tip of your cock leave the confines of Roman's muzzle, and dive into his throat. You eventually reach as far as your [cock length of player] inches cock allows you. With Roman's head tilted upwards like this, the sensations are very nice. When the ape's gag reflex starts to make him retch, and pull on his bindings, you pull out, only to push back again right after he takes a breath, turning this quickly into a proper face-fuck, until you feel the need to cum.";
 	else:
@@ -501,7 +502,7 @@ to say RomanFuck2Cunt:
 			say "     You share kisses and caresses, which become more and more erratic as the both of you get close to orgasm. Roman comes first. He almost crushes your hand as his body tenses up and his breath accelerates. You try to accompany him in his climax, but you reach your limit shortly after him, and you two squirt your pussy juice onto the smiling male's face.";
 		-- 2:
 			say "     'Okay,' Roman replies. 'I mean, you look... Hot'";
-			say "     'You too, big guy,' the wolfman compliments. 'And a nice change from all these big-dicked apes from the football field.' The bunny jock sits on the ground, and pulls you gently on his lap. While your pair french-kisses, and fondle each other's privates, Roman's lupine partner leans over him, letting the big ape grab his muscular body with his arms and legs, while he grinds his knotted cock against Roman's entrance. 'Ready?' the wolf asks. 'Y-yes, do it,' Roman replies. The wolfman spreads Roman's folds apart, as he plunges into his pussy.  The gorilla squeezes his partner tight with his arms and legs. 'Yeah, push it deep, big guy,' the wolf encourages him.";
+			say "     'You too, big guy,' the wolfman compliments. 'And a nice change from all these big-dicked apes from the football field.' The bunny jock sits on the ground, and pulls you gently on his lap. While your pair french-kisses, and fondle each other's privates, Roman's lupine partner leans over him, letting the big ape grab his muscular body with his arms and legs, while he grinds his knotted cock against Roman's entrance. 'Ready?' the wolf asks. 'Y-yes, do it,' Roman replies. The wolfman spreads Roman's folds apart, as he plunges into his pussy. The gorilla squeezes his partner tight with his arms and legs. 'Yeah, push it deep, big guy,' the wolf encourages him.";
 			WaitLineBreak;
 			say "     Roman is given a slow, deep fuck. The bunny jock claims your own pussy, and lets your body sink on his large cock. With the sight of Roman being mated by the wolfman, [if daytimer is day]under the soft rays of the sun[else]under the pale moonlight[end if], you slide up and down the jock's maleness with wild abandon. The both of you cum quickly, and as you ride your orgasm, savoring the feeling of lapine cum flooding your womb, you enjoy Roman pair's finish. 'I-I'm gonna cum', the wolf say. 'Fuck... My knot. Take it!'";
 			say "     'Yes! Yes! Ah! Yes!' Roman howls.";

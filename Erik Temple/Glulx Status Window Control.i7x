@@ -72,16 +72,16 @@ To set the background of the status window to be/-- reversed-out:
 To set the background of the status window to be/-- colored:
 	now status window background reversed is false;
 
-To set the background color/colour of the/-- status window to (color - a glulx color value):
+To set the background color/color of the/-- status window to (color - a glulx color value):
 	(- StatusColor({color}); -)
 
-To set the background color/colour of the/-- status window to (color - a number):
+To set the background color/color of the/-- status window to (color - a number):
 	(- NStatusColor({color}); -)
 
-To set the text color/colour of the/-- status window to (color - a glulx color value):
+To set the text color/color of the/-- status window to (color - a glulx color value):
 	(- StatusTextColor({color}); -)
 
-To set the text color/colour of the/-- status window to (color - a number):
+To set the text color/color of the/-- status window to (color - a number):
 	(- NStatusTextColor({color}); -)
 
 Include (-
@@ -152,13 +152,13 @@ Include (-
 
 Include (-
 
-Constant glulx_colour_table = (+Table of Common color Values+);
+Constant glulx_color_table = (+Table of Common color Values+);
 
 [ ColVal c i max;
-	max=TableRows(glulx_colour_table);
+	max=TableRows(glulx_color_table);
 	for ( i=1:i<=max:i++ ) {
-		if (TableLookUpEntry(glulx_colour_table, 1, i) ==  c)
-			return TableLookUpEntry(glulx_colour_table, 2, i);
+		if (TableLookUpEntry(glulx_color_table, 1, i) ==  c)
+			return TableLookUpEntry(glulx_color_table, 2, i);
 	}
 ];
 
@@ -353,12 +353,12 @@ Section - Replacement of the library's Window Color routines
 
 Include (-
 
-[ VM_SetWindowColours f b window doclear i fwd bwd swin;
+[ VM_SetWindowcolors f b window doclear i fwd bwd swin;
     if (clr_on && f && b) {
         if (window) swin = 5-window; ! 4 for TextGrid, 3 for TextBuffer
 
-        fwd = MakeColourWord(f);
-        bwd = MakeColourWord(b);
+        fwd = MakecolorWord(f);
+        bwd = MakecolorWord(b);
         for (i=0 : i<style_NUMSTYLES: i++) {
             if (f == CLR_DEFAULT || b == CLR_DEFAULT) {  ! remove style hints
                 glk_stylehint_clear(swin, i, stylehint_TextColor);
@@ -395,21 +395,21 @@ Include (-
     }
 ];
 
-[ VM_RestoreWindowColours; ! used after UNDO: compare I6 patch L61007
-    if (clr_on) { ! check colour has been used
-        VM_SetWindowColours(clr_fg, clr_bg, 2); ! make sure both sets of variables are restored
-        VM_SetWindowColours(clr_fgstatus, clr_bgstatus, 1, true);
+[ VM_RestoreWindowcolors; ! used after UNDO: compare I6 patch L61007
+    if (clr_on) { ! check color has been used
+        VM_SetWindowcolors(clr_fg, clr_bg, 2); ! make sure both sets of variables are restored
+        VM_SetWindowcolors(clr_fgstatus, clr_bgstatus, 1, true);
         VM_ClearScreen();
     }
 ];
 
-[ MakeColourWord c;
+[ MakecolorWord c;
     if (c > 9) return c;
     c = c-2;
     return $ff0000*(c&1) + $ff00*(c&2 ~= 0) + $ff*(c&4 ~= 0);
 ];
 
--) instead of "Window Colours" in "Glulx.i6t".
+-) instead of "Window colors" in "Glulx.i6t".
 
 
 Section - Replacement of library's Glulx status line routines
@@ -488,7 +488,7 @@ By default, Inform's status line appears "reversed out", with white letters on a
 
 We then specify a background color:
 
-	set the background color of the status window to g-light-grey
+	set the background color of the status window to g-light-gray
 
 If we like, we can also specify a text color:
 
@@ -514,7 +514,7 @@ Because this extension disables the status line until we explicitly open it, car
 
 	When play begins (this is the status window construction rule):
 		set the background of the status window to colored;
-		set the background color of the status window to g-light-grey;
+		set the background color of the status window to g-light-gray;
 		open the status window.
 
 	The status window construction rule is listed before the graphics window construction rule in the when play begins rules.

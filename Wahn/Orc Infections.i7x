@@ -13,26 +13,26 @@ when play begins:
 
 to say OrcVictorious:
 	if inasituation is false:
-		if HP of player > 0:    [player submits]
+		if HP of player > 0: [player submits]
 			if bodyname of player is "Orc Breeder" and facename of player is "Orc Breeder" and skinname of player is "Orc Breeder":
 				say "     'Can't wait to be fucked, little breeder?' the orc warrior says in his gruff voice as you surrender, then he roughly pushes on your shoulders, forcing you to your knees. Looking down on you, he says 'I'll give you what you need!' ";
 			else if bodyname of player is "Orc Warrior" and facename of player is "Orc Warrior" and skinname of player is "Orc Warrior":
 				say "     As you collapse to your knees, the orc warrior gives a snarl and says 'Weakling! You're no real orc, you overgrown breeder! I'll show you your place.' ";
 			else:
 				say "     'Weakling,' the orc warrior says in his gruff voice as you surrender, then he roughly pushes on your shoulders, forcing you to your knees. Looking down on you, he says 'Leave the fighting to real men, little piggy. I'll show you your place.' ";
-		else:  [player beaten]
+		else: [player beaten]
 			if bodyname of player is "Orc Breeder" and facename of player is "Orc Breeder" and skinname of player is "Orc Breeder":
 				say "     As you collapse to your knees, the orc warrior gives a snarl and says 'Wanted to try out being a warrior, little breeder? You can forget about that! Come on, I'll give you what you really need.' ";
 			else if bodyname of player is "Orc Warrior" and facename of player is "Orc Warrior" and skinname of player is "Orc Warrior":
 				say "     As you collapse to your knees, the orc warrior gives a snarl and says 'Weakling! You're no real orc, you overgrown breeder! I'll show you your place.' ";
 			else:
 				say "     As you collapse to your knees, the orc warrior gives a gruff chuckle and says 'Leave the fighting to real men, little piggy.' I'll show you your place.' ";
-		if player is submissive:   [sub players]
+		if player is submissive: [sub players]
 			say "With that, he steps up to you and pulls his loincloth aside, revealing the thick green shaft of his manmeat. Jerking it a few times, he softly whacks it against your forehead, then grabs you tightly by the hair and pulls you right against his balls. Following the barked order of 'Lick them!', you obediently lap away at his hairy globes, your pulse racing as the rough treatment plays right into your submissive nature. Doing your best to please him, you take as much as you can of one, then the other ball into your mouth your tongue, playing over them and seeking out sensitive spots - which earns you a satisfied grunt from your orc master as well as him slightly lessening the painful grip of your hair.";
 			say "     After a few minutes of being forced to lick the orc warrior's balls, he pulls your head back and presents you with his thick and hard shaft. 'Better be good and use lots of spit - that's the only lube you gonna get!' he grumbles, making it clear what will come after this. Eagerly, you slide your lips over the tip of his erect dick and suckle on it for a moment, then hold his manhood up so you can lick up and down the long shaft, teasingly following the veins on it with your tongue. Interestingly, the trickle of precum that soon starts oozing out of his cockhead is amazingly tasty, giving you even more of a rush at taking care of this big brute. As you go on switching up between licking him and sucking his prick, the orc soon just lets go of your head, moaning 'An eager little slut I see, my lucky day for catching you.' He lets you continue for quite a bit, then grunts and pulls you off his cock.";
 			WaitLineBreak;
 			say "     Chuckling, he shakes his head and says 'Can't have you get me off like this. There's still your ass to fuck!' Then he manhandles you to a wrecked car standing not too far away and bends you over its hood. Trembling in anticipation of him just using you for his enjoyment, you reach back and spread your cheeks while trying to relax your sphincter. Your orc master whacks his erection against your ass with a meaty thud, then slides the hot rod up and down your crack before finally lining up its tip with your hole. Gripping your hips with two large hands, he presses forward, giving a satisfied grunt as he pushes through your back door, stretching it tight around his invading member.";
-		else:   [normal players]
+		else: [normal players]
 			say "With that, he steps up to you and pulls his loincloth aside, revealing the thick green shaft of his manmeat. Jerking it a few times, he softly whacks it against your forehead, then grabs you tightly by the hair and pulls you right against his balls. Following the barked order of 'Lick them!', you reluctantly give his hairy globes a lick or two, then wince as he gives your hair a jerk and growls 'Faster'. Not wanting a repeat of the beating you got earlier, you swallow your pride and start lapping away at his nuts in earnest.";
 			say "After a few minutes of being forced to lick the orc warrior's balls, he pulls your head back and presents you with his thick and hard shaft. 'Better be good and use lots of spit - that's the only lube you gonna get!' he grumbles, making it clear what will come after this. Not having much choice else if you don't want him to rip up your ass something terrible later, you start going down on him, switching up between sucking on the tip of his manhood and licking its shaft. Interestingly, the trickle of precum that soon starts oozing out of his cockhead is amazingly tasty, giving you kind of a rush that makes being forced to do this not seem so bad. The orc lets you continue for a bit, then grunts and pulls you off his cock.";
 			WaitLineBreak;
@@ -54,10 +54,10 @@ to say OrcVictorious:
 			now battleground is "void";
 			move player to Slave Cell 2;
 		decrease humanity of player by 5;
-	else:  [in an event]
+	else: [in an event]
 		if debugactive is 1:
 			say "     DEBUG: LOST AGAINST THE ORC, EVENT SCENE[line break]";
-		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room]
+		if OrcSpecialFightNumber is 1: [fighting Mul in the hallway in front of the Observation room]
 			if MulAnalAcceptance > 4:
 				say "[MulBottomAnalRide]";
 			else if MulAnalAcceptance > 1 and cocks of player > 0 and a random chance of 1 in 2 succeeds:
@@ -84,15 +84,15 @@ to say OrcBeaten:
 		else:
 			LineBreak;
 			say "     You walk away after checking him over for loot.";
-	else:  [in an event]
-		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room - or out in the garage]
+	else: [in an event]
+		if OrcSpecialFightNumber is 1: [fighting Mul in the hallway in front of the Observation room - or out in the garage]
 			if debugactive is 1:
 				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber])[line break]";
 			if MulAnalAcceptance > 4:
 				say "     After your last hit, the orc warrior staggers backwards, his eyes unfocused - bumping into the body of the motor-less car in the garage with you. Wiping a spot of green blood from his split lip, Mul says in a groggy murmur, 'Hey, that's not how it's supposed to go...' As you step closer with a grin on your face, he tries to stand straight - only to lose his balance and fall back against the car once more. 'I'll get you - just... need... to... catch... my... breath,' he growls, still a little defiant even though he's clearly out for the count.";
 				LineBreak;
 				say "     What now?";
-				say "     ([link]Y[as]y[end link]) - Savour your victory - bend the orc over the car hood and make him spread those cheeks.";
+				say "     ([link]Y[as]y[end link]) - savor your victory - bend the orc over the car hood and make him spread those cheeks.";
 				say "     ([link]N[as]n[end link]) - Leave him there, trying to shore up his pride at having lost yet another fight.";
 				if player consents:
 					say "     Hah, let him talk. Actions are what counts - like your own just now, as you grab the orc by his thick arm and pull him around to stand with his ass towards you. Before he can do anything more than start to grunt, 'You bastar-,' you've shoved his chest forwards, making him slump forward on the car hood - bumping his head with a *thunk*. Not that should have any negative effects, orcs are tough after all. Busying your hands, you quickly undo the knots holding Mul's loincloth, pulling it away and letting the skimpy piece of fabric drop to the ground - revealing the orc's firm and muscled buttocks, the sweet crack between them and his cock and balls, dangling between the orc's strong legs.";
@@ -212,7 +212,7 @@ to say BeatenOrcSex1:
 
 to say BeatenOrcSex2:
 	say "     Kneeling down beside the downed orc, you take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority organ. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as he gives aroused grunts at your touch. Leaning forward, you lick up the glistening bead of precum forming at the tip of his hard cock, and finding it amazingly tasty, you immediately slide your lips over his cockhead and start blowing him off.";
-	say "     With both your hands on his thick pole while you bob your head up and down and tease him with your tongue, you push your orc to higher and higher arousal. Before that much longer, his grunts and moans betray a growing urgency as they rise in volume, and you can feel him getting pretty close. Eager to taste what he has to offer, you proceed to go down on him with even greater relish and just moments later, a shudder runs through the muscular brute's supine body and he orgasms. Accompanied by loud lust-filled grunts, blast after blast of his creamy orc cum fills your mouth, flooding your taste-buds with a delightfully good flavour and giving you a giddy rush and pleasant buzz as you swallow it all down. By the time you pull off his cock with a slurp, you even feel pretty full and even a bit drunk. Giving the orc an affectionate pat on the hip, you stand up and walk away, leaving the panting brute to pick himself up later.";
+	say "     With both your hands on his thick pole while you bob your head up and down and tease him with your tongue, you push your orc to higher and higher arousal. Before that much longer, his grunts and moans betray a growing urgency as they rise in volume, and you can feel him getting pretty close. Eager to taste what he has to offer, you proceed to go down on him with even greater relish and just moments later, a shudder runs through the muscular brute's supine body and he orgasms. Accompanied by loud lust-filled grunts, blast after blast of his creamy orc cum fills your mouth, flooding your taste-buds with a delightfully good flavor and giving you a giddy rush and pleasant buzz as you swallow it all down. By the time you pull off his cock with a slurp, you even feel pretty full and even a bit drunk. Giving the orc an affectionate pat on the hip, you stand up and walk away, leaving the panting brute to pick himself up later.";
 	decrease humanity of player by 10;
 	increase morale of player by 5;
 	if morale of player > 100:
@@ -232,12 +232,12 @@ to say BeatenOrcSex3:
 	decrease humanity of player by 5;
 	increase morale of player by 5;
 
-to say BeatenOrcSex4:  [fuck him]
+to say BeatenOrcSex4: [fuck him]
 	say "     Kneeling down beside the downed orc, you take hold of his meaty shaft and stroke it a few times, then let your hand wander to his balls. You weigh the hairy globes in your hand and give them an appreciative fondle before you move even lower, sliding your hand between his legs and brushing over his asshole with an exploring finger. As you gently rub the skin around his opening, the orc starts panting softly from the pleasurable touch, and you can see his manhood grow moment by moment. When you soon do push a finger in against his pucker and probe his hole, the defeated orc warrior doesn't quite realize what you're doing at first - other than that it makes him feel quite interesting.";
 	say "     Though that doesn't last long - shaking off the somewhat dazed state and the lustful haze you've put him in, the orc raises his upper body and grunts, 'Wait - no. Stop that! I'm not a breeder!', then tries to get up and brush you off. It's an easy task to stop him from doing so, given that you've just kicked his ass and have a quite powerful orcish physique yourself. With one of your big hands on his chest to hold him down, you lean over the orc and growl at him with bared tusks. That show of strength - plus putting your other hand on his balls and giving them a tight warning squeeze - makes the orc surrender to your pleasure. 'Okay, you win you bastard,' he growls, then lets his head fall back to lie on the ground. Your captive's face scrunches up sullenly as you spread his legs with your hands, though he doesn't resist as you do so.";
 	WaitLineBreak;
 	say "     After getting two fingers nice and wet with spit, you push them against his hole, penetrating his now tense muscle with a bit of effort. Your vanquished orc doesn't seem to want to bottom for you, though as you probe his depths and rub his inner walls, he can't hide that he does get aroused by your touch - after all, his thick cock filling out more and more till it stands proudly erect is a pretty obvious sign. To distract him a bit from his futile resistance, you do put your other hand on his towering pole, jerking up and down on it. Given this new focus to his attention, the green brute loses some of his inhibitions, moaning openly at your touch and leaking precum from the tip of his shaft. Even his pucker relaxes a bit, now that he's no longer consciously clenching it, and you can now push much easier into him and reach his prostate with a teasing touch.";
-	say "     You keep going like this for a few minutes, finger-fucking your orcish captive's ass while jerking him off, then quietly pull our your probing digits and line up your manhood with his hole. All the preparation does pay off nicely, as you can penetrate him in a smooth glide in and hit his prostrate with your first thrust, making the previously oh so reluctant orc howl in lust and pleasure. And given the awesome feeling of his tight (most likely virgin) hole stretching around your shaft, you're no less vocal, grunting loudly as you bottom out deep inside him. Panting, you close your eyes and savour the sensations of being balls-deep in this powerful male, fully concentrating on the feeling of his tight hole, his firm cheeks against your balls and the muscles of his legs under your hands.";
+	say "     You keep going like this for a few minutes, finger-fucking your orcish captive's ass while jerking him off, then quietly pull our your probing digits and line up your manhood with his hole. All the preparation does pay off nicely, as you can penetrate him in a smooth glide in and hit his prostrate with your first thrust, making the previously oh so reluctant orc howl in lust and pleasure. And given the awesome feeling of his tight (most likely virgin) hole stretching around your shaft, you're no less vocal, grunting loudly as you bottom out deep inside him. Panting, you close your eyes and savor the sensations of being balls-deep in this powerful male, fully concentrating on the feeling of his tight hole, his firm cheeks against your balls and the muscles of his legs under your hands.";
 	WaitLineBreak;
 	say "     Then suddenly, you hear the words 'Fuck me' in almost a whisper. Opening your eyes, you do look down on the supine orc, taking in the needful expression on his face. He gives a groan and you feel his anal muscles flex around your shaft, then he says a bit louder 'You - it... it feels so good. I want it, need it - now!' For a moment, the thought of maybe letting him beg a bit more goes through your mind, though your own arousal gets the better of you and your hips start moving almost of their own. Gripping the orc warrior's legs tightly you pull back and back, till only the very tip of your shaft is still inside him, then thrust back in all the way, filling the air with a lustful shout of two voices as you do. With that, the floodgates break completely and you start giving your orc a hard and deep fuck, really pounding into him.";
 	say "     You don't know for how long the wild coupling between you lasts, and you don't really care, in the lust-filled haze you find yourself in while fucking your orcish partner. At some point in the unrestrained copulation between the two of you, your bottom-boy orc's moans start getting deeper and louder, then turn into lust-filled roars as he bucks against you and cum starts gushing out of his thick shaft. He shoots a truly impressive amount of creamy orc cum in high arcs, to splat down audibly all over his chest, neck and face. While the green brute does so, his anal muscles twitch around your own cock with each burst of his seed, making your arousal mount quickly and soon reach its maximum. After just a few more thrusts, you join your orc partner in orgasm. With a deep grunt, you slam into him one last time, your shaft buried as deeply as possible inside his tightly gripping depths as it starts unloading spurt after spurt of your cum. Holding on to the orc's legs, you fill his insides with your seed, then rest with your manhood still inside him and you catch your breath.";
@@ -252,7 +252,7 @@ to say OrcDesc:
 			say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is,' he says in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
 		else:
 			say "     A large, muscular creature crosses your path. It's an orc, no doubt about it - sporting the powerful build, green skin and brutish facial features that are described in any number of fantasy stories, this one is nevertheless quite real. As is the thick shaft between his legs, barely covered by a ragged loincloth, which grows and twitches a bit as the orc looks at you. He gives you a possessive grin around his protruding tusks, then adds 'Hello little piggy.' in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
-	else:  [in an event]
+	else: [in an event]
 		if OrcSpecialFightNumber is 1: [fighting Mul]
 			if graphics is true:
 				project the figure of Mul_clothed_icon;
@@ -306,7 +306,7 @@ When Play begins:
 	now body change entry is "it shifts and changes, becoming larger than normal. You gain bulging muscles on a broad and powerful frame. As the transformation works its way down your limbs, making them ticker and stronger, it leaves you with somewhat larger than normal hand and feet";
 	now skin change entry is "a wash of green spreads across it, at first pretty dark, then lightening to an even, light green tone all over";
 	now ass change entry is "your glutes become firm and meaty";
-	now cock change entry is "it becomes a light green in colour, with a bush of black, slightly bristly hair at its base. A moment later, a cloud of dust-like nanites whirls around your waist, fading away as a ragged loincloth forms to cover your new manhood";
+	now cock change entry is "it becomes a light green in color, with a bush of black, slightly bristly hair at its base. A moment later, a cloud of dust-like nanites whirls around your waist, fading away as a ragged loincloth forms to cover your new manhood";
 	now str entry is 20;
 	now dex entry is 14;
 	now sta entry is 18;
@@ -384,7 +384,7 @@ When Play begins:
 	now body change entry is "it shifts and changes, becoming that of a relatively tall man. You gain nicely defined muscles, while at the same time your hips widen noticeably, into what one might call 'child-bearing' on a woman. As the transformation works its way down your limbs, it leaves you with slightly larger than normal hand and feet.";
 	now skin change entry is "a wash of green spreads across it, at first pretty dark, then lightening to an even, light green tone all over";
 	now ass change entry is "your glutes become firm and meaty";
-	now cock change entry is "it becomes a light green in colour, with a bush of black, silky hair at its base. A moment later, a cloud of dust-like nanites whirls around your waist, fading away as a ragged loincloth forms to cover your new manhood";
+	now cock change entry is "it becomes a light green in color, with a bush of black, silky hair at its base. A moment later, a cloud of dust-like nanites whirls around your waist, fading away as a ragged loincloth forms to cover your new manhood";
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 12;
@@ -419,7 +419,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"orc cum"	"A plastic water bottle you've filled with orc cum. Its contents are milky white, thick and creamy. If you didn't know where it's from, you'd almost think it might be some sort of flavoured buttermilk. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	orc cum
+"orc cum"	"A plastic water bottle you've filled with orc cum. Its contents are milky white, thick and creamy. If you didn't know where it's from, you'd almost think it might be some sort of flavored buttermilk. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	orc cum
 
 instead of sniffing orc cum:
 say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";

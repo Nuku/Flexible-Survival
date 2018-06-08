@@ -1,25 +1,25 @@
 Story Skipper backup by Nuku Valente begins here.
 
-Trixie is a person. Trixie is in Grey Abbey Library.
+Trixie is a person. Trixie is in Gray Abbey Library.
 
 instead of sniffing Trixie:
-	say "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
+	say "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.";
 
 The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let's skip to the good stuff!'.";
-	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it.  Hmmm.";
+	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it. Hmmm.";
 
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
 
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
 	say "continuedchant}[orthasstart]}[fancyquest]}[HP of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[franksex]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[if bee girl is tamed]1[else]0[end if]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]";
-	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.'";
+	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.'";
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
 		wrcursesave;	[puts player back to complete wereraptor form]
@@ -197,7 +197,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
-						now Snow is in Grey Abbey Library;
+						now Snow is in Gray Abbey Library;
 					else:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
@@ -211,22 +211,22 @@ Carry out reciting:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":
-					now coleentalk is the number understood;
+					now ColeenTalk is the number understood;
 			-- 34:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenfound is the number understood;
+					now ColeenFound is the number understood;
 			-- 35:	[Coleen]
 				if the player's command matches "[number]":
-					now coleencollared is the number understood;
+					now ColeenCollared is the number understood;
 			-- 36:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenalpha is the number understood;
+					now ColeenAlpha is the number understood;
 			-- 37:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenslut is the number understood;
+					now ColeenSlut is the number understood;
 			-- 38:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenspray is the number understood;
+					now ColeenSpray is the number understood;
 			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
 					now HP of doctor mouse is the number understood;
@@ -418,7 +418,7 @@ Carry out reciting:
 					now HP of Sandra is the number understood;
 					now lust of Sandra is turns;
 					if HP of Sandra > 0:
-						now Sandra is in the bunker;
+						now Sandra is in the Bunker;
 						now needy rabbit girl is resolved;
 						now rabbit den is known;
 					else:
@@ -434,12 +434,12 @@ Carry out reciting:
 					if HP of Fang is 0 or HP of Fang is 100:
 						now Fang is in the dark basement;
 					if HP of Fang > 0 and HP of Fang < 100:
-						now Fang is in the Grey Abbey Library;
+						now Fang is in the Gray Abbey Library;
 			-- 74:	[Fang + Sandra]
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
 					if libido of Fang is 2 and ( HP of Fang is 1 or HP of Fang is 2 ), now libido of Fang is 1;
-					if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
+					if Fang is not in the Gray Abbey Library and Sandra is not in the Bunker:
 						now libido of Fang is 0;
 			-- 75:	[Philip]
 				if the player's command matches "[number]":
@@ -453,7 +453,7 @@ Carry out reciting:
 						now Hungry Piggy is resolved;
 						now HBMR is 1;
 					if pigfed is 3:
-						now Philip is in the bunker;
+						now Philip is in the Bunker;
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
 					now pigfucked is the number understood;
@@ -644,7 +644,7 @@ Carry out reciting:
 					if HP of Solstice is 3 or HP of Solstice is 4:
 						now lastfuck of Solstice is turns;
 					if HP of Solstice > 4:
-						move Solstice to Grey Abbey Library;
+						move Solstice to Gray Abbey Library;
 			-- 92:	[Ronda the Slut Rat]
 				if the player's command matches "[number]":
 					now carried of lizard juice is 0;
@@ -949,7 +949,7 @@ Carry out reciting:
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
 					if HP of Alexandra > 0:
-						move Alexandra to Grey Abbey Library;
+						move Alexandra to Gray Abbey Library;
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -1073,7 +1073,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Xerxes is the number understood;
 					if HP of Xerxes is 0, remove Xerxes from play;
-					if HP of Xerxes > 0, move Xerxes to Grey Abbey Library;
+					if HP of Xerxes > 0, move Xerxes to Gray Abbey Library;
 			-- 120:	[Helen]
 				if the player's command matches "[number]":
 					now HP of Helen is the number understood;
@@ -1086,7 +1086,7 @@ Carry out reciting:
 						now thirst of Helen is 0;
 						now libido of Helen is 0;
 					if HP of Helen > 0:
-						move Helen to Grey Abbey Library;
+						move Helen to Gray Abbey Library;
 						if libido of Helen > 0:
 							now thirst of Helen is 1;
 			-- 122:	[Rex]
@@ -1133,7 +1133,7 @@ Carry out reciting:
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, now carried of infection monitor is 1;
-	if HP of doctor matt is 104, move Sally to bunker;
+	if HP of doctor matt is 104, move Sally to Bunker;
 	if HP of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;
 	now Svetlana is in dark basement;
@@ -1160,7 +1160,7 @@ Carry out reciting:
 	if HP of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
-	if HP of Sven is 8 and Candy is in the bunker:
+	if HP of Sven is 8 and Candy is in the Bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
@@ -1168,7 +1168,7 @@ Carry out reciting:
 	if sarahtalk is 0 and sarahslut is 0:
 		now Husky Pack is unresolved;
 	else:
-		move Sarah to bunker;
+		move Sarah to Bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
 	if franksex is 0:
@@ -1181,7 +1181,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies.  restoreletter is normally "0".
+restoreletter is a text that varies. restoreletter is normally "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;
@@ -1225,11 +1225,11 @@ to npcEint-Read (c - a number):	[converts the indexed text back to regular text]
 	if character number c in npcEint is "9", now restoreletter is "9";
 
 [
-trixienotice is a truth state that varies.  trixienotice is normally false.
+trixienotice is a truth state that varies. trixienotice is normally false.
 
-after going outside from the bunker while trixienotice is false:
+after going outside from the Bunker while trixienotice is false:
 	now trixienotice is true;
-	say "     Trixie pipes up from somewhere at the edge of existence.  'Psst!  You might've noticed that 'Automatic Survival' has disappeared from the feat list.  I'm taking care of that and a few other cheats for you.  Just tell me '[link]iwannacheat[end link]' to access them... if you want to just cheat, that is.";
+	say "     Trixie pipes up from somewhere at the edge of existence. 'Psst! You might've noticed that 'Automatic Survival' has disappeared from the feat list. I'm taking care of that and a few other cheats for you. Just tell me '[link]iwannacheat[end link]' to access them... if you want to just cheat, that is.";
 ]
 
 trixiecheating is an action applying to nothing.
@@ -1245,8 +1245,8 @@ carry out trixiecheating:
 	let Automatic Survival be "Automatic Survival";
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
-	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that.  It don't come for free though.  You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
-	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Play On[roman type] removes the time limit to the game.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
+	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that. It don't come for free though. You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
+	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area. [bold type]Automatic Survival[roman type] removes your need for food and water. [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC). [bold type]Lil Better[roman type] gives +1 to all stats. [bold type]Play On[roman type] removes the time limit to the game. You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Cheats:[roman type][line break]";
@@ -1267,7 +1267,7 @@ carry out trixiecheating:
 			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			else:
-				say "Invalid choice.  Pick from 0 to 8.";
+				say "Invalid choice. Pick from 0 to 8.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
@@ -1331,20 +1331,20 @@ carry out trixiecheating:
 		else if calcnumber is 5:
 			if playon is 1:
 				now playon is 0;
-				say "Play On has been deactivated[if score > 0] and your score halved[end if].  The end is nigh.";
+				say "Play On has been deactivated[if score > 0] and your score halved[end if]. The end is nigh.";
 				if turns <= targetturns + 8:
 					now targetturns is turns - 8;
 					say "You have been granted one final day.";
 				if score > 0, now score is score / 2;
 			else:
 				now playon is 1;
-				say "Play On has been activated.  You are now in extended play mode.  The rescue will never come.";
+				say "Play On has been activated. You are now in extended play mode. The rescue will never come.";
 		else if calcnumber is 6:
 			say "Set your humanity (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
 				now humanity of player is calcnumber;
-				say "Humanity adjusted.  Score penalized by 50.";
+				say "Humanity adjusted. Score penalized by 50.";
 				decrease score by 50;
 			else:
 				say "Invalid choice - returning to menu.";
@@ -1353,7 +1353,7 @@ carry out trixiecheating:
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
 				now libido of player is calcnumber;
-				say "Libido adjusted.  Score penalized by 50.";
+				say "Libido adjusted. Score penalized by 50.";
 				decrease score by 50;
 			else:
 				say "Invalid choice - returning to menu.";
@@ -1367,7 +1367,7 @@ carry out trixiecheating:
 
 [-----]
 
-anallevel is a number that varies.  anallevel is usually 2.		[normal]
+anallevel is a number that varies. anallevel is usually 2.		[normal]
 
 analadjusting is an action applying to nothing.
 
@@ -1377,13 +1377,13 @@ understand "anal adjust" as analadjusting.
 understand "analadjust" as analadjusting.
 
 carry out analadjusting:
-	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will have little to no effect during most of game play.  Expect to see it come into use gradually and predominantly in newer content.";
-	say "     This option will allow you to adjust your desired level for anal play in the game.  This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases.  It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it.  Please no complaints/whining/requests about these mechanics not being added to any given scene/creature/NPC.  The game comprises about [special-style-1]24 MB[roman type] (and growing) of existing text and code, so we state that you simply have to accept the adjustments when and where they come.  As a note, [bold type]paid requests[roman type] to make these adjustments can be taken on through the [bold type]Writer for Hire[roman type] project, though some restrictions may apply in certain cases.";
+	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will have little to no effect during most of game play. Expect to see it come into use gradually and predominantly in newer content.";
+	say "     This option will allow you to adjust your desired level for anal play in the game. This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases. It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it. Please no complaints/whining/requests about these mechanics not being added to any given scene/creature/NPC. The game comprises about [special-style-1]24 MB[roman type] (and growing) of existing text and code, so we state that you simply have to accept the adjustments when and where they come. As a note, [bold type]paid requests[roman type] to make these adjustments can be taken on through the [bold type]Writer for Hire[roman type] project, though some restrictions may apply in certain cases.";
 	say "     With that said, choosing:[line break]";
-	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible sex scene (such as oral), a non-sexual scene or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
-	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's standard level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
-	say "- [link](3) More Anal[as]3[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene.  You may even encounter the rare instance of anal sex with a female occurring.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
-	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Normal[else]More Anal[end if][roman type].";
+	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game. In some cases, it may alternate to another possible sex scene (such as oral), a non-sexual scene or simply have you driven off. This change may be automatic or be induced randomly. Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
+	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's standard level of anal sex. Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
+	say "- [link](3) More Anal[as]3[end link] will indicate that you're open to view anal sex more frequently. Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene. You may even encounter the rare instance of anal sex with a female occurring. Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
+	say "- [link](4) Exit[as]4[end link]: Leave this menu. You are currently set as [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Normal[else]More Anal[end if][roman type].";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choice? (1-4)>[run paragraph on]";
@@ -1454,7 +1454,7 @@ carry out Trixiecheck1:
 	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
 	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[else]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[else]0[end if][line break]";
-	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
+	say "Coleen: Location: [location of Coleen]   Talk: [ColeenTalk]   Found: [ColeenFound]   Collared: [ColeenCollared]   Alpha: [ColeenAlpha]   Slut: [ColeenSlut]   Spray: [ColeenSpray][line break]";
 	say "HP of Dr Mouse: [HP of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
 	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";

@@ -8,7 +8,7 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	say "     As you stand there, movement on the far side of the car catches your eye. An anthro doberman dressed in jeans and an open vest, as well as black leather gloves, steps into view from the other side of the truck, holding the leashes for two other dobermans, one male one female. They are anthro canines, just like him, but in sharp contrast, they are naked and on all fours with collars and muzzles on them. The leashed bitch looks back at you and gives a whine, trying to move back behind the truck, but her owner(?) is having none of it, looking impatiently at the other dobie and keeping her on a tight leash. 'What is it now?' the standing man barks out, then follows her gaze to you and scoffs at her. 'Oh? Being watched by [ObjectPro of player] has your panties in a twist? Let me remind you - animals don't wear any of those. You're a pet, bitch, and not an obedient one right now. I told you to do your business [italic type]now[roman type]!'";
 	WaitLineBreak;
 	say "     Cowering before the sharp and commanding tone of her master, the female canine pushes past her hesitation and pushes her hips down with spread legs, releasing a small trickle of urine onto the asphalt. 'Wasn't so hard after all, eh?' the standing doberman comments in a biting tone, then gives both of the leashes a short dug. 'Now that that's done for, let's go meet our new acquaintance,' he says next, then guides his pets around the car to come to stand before you. The male collared dobie sits on his haunches after a second, looking up with interest, while the female hangs her head in obvious shame and remains standing. Ignoring the reactions of his submissive companions, the clothed doberman steps forward and offers you a hand in greeting.";
-	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behaviour towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
+	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behavior towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
 	WaitLineBreak;
 	say "[TobiasTalkMenu]";
 	now hp of Tobias is 1; [initial event done]
@@ -58,7 +58,7 @@ to say TobiasTalkMenu:
 	now title entry is "Ask if he couldn't instead train his pets to be strong and confident in their own right";
 	now sortorder entry is 13;
 	now description entry is "Suggest a different path to take with Cara and Dane.";
-	[]	
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Demand that he free his pets";
 	now sortorder entry is 14;
@@ -78,7 +78,7 @@ to say TobiasTalkMenu:
 	now title entry is "Ask if you can fuck his dogs";
 	now sortorder entry is 17;
 	now description entry is "Express the desire to have sex with the dobies";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -134,7 +134,7 @@ to say TobiasTalkMenu:
 
 
 to say TobiasTalk1: [Ask him about himself]
-	say "     'Oh, I've been a dog trainer for close to ten years now. Started my business after coming back from the war. Which one, you ask? One of the shitty ones that no one even remembers, in the Kosovo. Stopping one group of asshole Europeans from stringing up their neighbours, and vice versa, at times.' He shrugs and brushes the topic aside, then says, 'Started with just two kennels and a bitch. Really good one, though. Purebred puppies go for quite a bit, and the ones I didn't sell got trained. Ever seen 'The Revivicator II', 'Mall Pig' or 'Inspector Gumbo'? All my dogs in those movies.' Reaching out to pat Dane on the head, the man adds, 'This current crisis hit out of the blue, but I was prepared for [italic type]something[roman type] to go down, so my place is well stocked. And apparently my skills are quite useful these days too.'";
+	say "     'Oh, I've been a dog trainer for close to ten years now. Started my business after coming back from the war. Which one, you ask? One of the shitty ones that no one even remembers, in the Kosovo. Stopping one group of asshole Europeans from stringing up their neighbors, and vice versa, at times.' He shrugs and brushes the topic aside, then says, 'Started with just two kennels and a bitch. Really good one, though. Purebred puppies go for quite a bit, and the ones I didn't sell got trained. Ever seen 'The Revivicator II', 'Mall Pig' or 'Inspector Gumbo'? All my dogs in those movies.' Reaching out to pat Dane on the head, the man adds, 'This current crisis hit out of the blue, but I was prepared for [italic type]something[roman type] to go down, so my place is well stocked. And apparently my skills are quite useful these days too.'";
 
 to say TobiasTalk2: [Ask what he is doing at the mall]
 	say "     'Oh, I'm just stopping by for some supplies and a good warm meal. This is one of the few places that one can relax and let your guard down. Also, at some point it is important to socialize newly trained pets with large groups of people. That can bring some previously hidden issues to the forefront so they can be dealt with - like Cara's little hangup [if HP of Tobias is 0]just now[else]when we met[end if].";
@@ -172,7 +172,7 @@ to say TobiasTalk17: [Ask if you can fuck his dogs]
 
 Section 2 - NPC
 
-Tobias is a man. 
+Tobias is a man.
 The description of Tobias is "[TobiasDesc]".
 The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".
@@ -187,7 +187,7 @@ instead of conversing the Tobias:
 
 instead of fucking the Tobias:
 	say "     A smile spreads over Tobias's face as he checks you out, followed by him giving a pleased nod. 'Definitively an interesting offer you're making. Not quite the time or place for it, right here and now, but I'll keep your interest in mind. There should be some opportunities for a hookup sometime, if you're still game then. But you better be prepared for a workout - I'm a fairly demanding partner in bed, just so you know.";
-	
+
 to say TobiasSexMenu:
 	LineBreak;
 	now sextablerun is 0;
