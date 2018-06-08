@@ -73,7 +73,7 @@ instead of conversing the Oliver:
 		say "[OliverTalkMenu]";
 
 to say OliverTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Oliver about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

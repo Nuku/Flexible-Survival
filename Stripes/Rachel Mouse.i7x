@@ -150,7 +150,7 @@ to say DismissRachel:
 	if player is not in Pantry: [regular dismiss]
 		say "     Before you can say a word Rachel come up behind you. 'Alright, I'll head back to the library then, seeya soon.' With that she makes her way back.";
 	else: [dismissing her in the abbey]
-		say "      Rachel goes back to her meditating claiming she will continue to commune with the rest of the collective.";
+		say "     Rachel goes back to her meditating claiming she will continue to commune with the rest of the collective.";
 
 Rachel is a woman.
 The description of Rachel is "[RachelDesc]".

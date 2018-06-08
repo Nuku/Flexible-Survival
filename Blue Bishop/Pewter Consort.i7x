@@ -77,7 +77,7 @@ to say losetopewter:
 			else:
 				say ". No doubt a little exhausted, it goes limp against your cum-sullied body, loudly panting as it nonetheless impishly revels in grinding its sweat and now ejaculate-slicked torso against yours.";
 				if waiterhater is 0, WaitLineBreak;
-				say "[line break]";
+				LineBreak;
 				say "     However, the creature doesn't seem quite satisfied with you yet, as once he catches his breath he goes right back to pounding your now fairly loose hole. No doubt he's already quite spent and satisfied, but that doesn't stop him from repeating the same ritual once more, this overly prolonged sex quickly becoming exhausting. Nonetheless, eventually all the stimulation is enough to set you off, [if cocks of player > 0]cock[smn] wasting your [cum load size of player] against the ground[else]cunt[sfn] throbbing against the open air, staining the ground with your sexual fluids[end if].";
 				say "     The creature hisses and licks at you, trembling and utterly overtaken in the wake of your bliss. Eventually, this[if HP of player < 1] thankfully[end if] seems to be what he was interested in and he finally departs, leaving you a sweat and seed-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 		else:
@@ -92,7 +92,7 @@ to say losetopewter:
 		else:
 			say ". No doubt a little exhausted, it goes limp against your cum-sullied body, loudly panting as it nonetheless impishly revels in grinding its sweat and now ejaculate-slicked torso against yours.";
 			if waiterhater is 0, WaitLineBreak;
-			say "[line break]";
+			LineBreak;
 			say "     However, the creature doesn't seem quite satisfied with you yet, as once he catches his breath he goes [if cunts of player > 2]on to pound one of your previously unused pussies[else if cunts of player is 2]on to pound you previously unused pussy[else]right back to pounding your now fairly loose pussy[end if]. No doubt he's already quite spent and satisfied, but that doesn't stop him from repeating the same ritual once more, this overly prolonged sex quickly becoming exhausting. Nonetheless, eventually all the stimulation is enough to set you off, [if cocks of player > 0]cock[smn] wasting your [cum load size of player] against the ground[else]cunt squeezing greedily around the spent cock[end if].";
 			say "     The creature hisses and licks at you, trembling and utterly overtaken in the wake of your bliss. Eventually, this[if HP of player < 1] thankfully[end if] seems to be what he was interested in and he finally departs, leaving you a sweat and seed-soaked mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Taking a moment to catch your breath, you recover enough to gather your things, clean yourself off to the best of your ability, and move forward[end if].";
 	else:
@@ -193,7 +193,7 @@ to pewterbind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 3:
 					say "     You deliberately endeavor to free yourself of their hold, [if struggleatt is 1]barely making any progress, as you're quickly pulled back within their slick depths[else]managing to make some headway before being pulled back, just a little bit more..[run paragraph on][end if].";
@@ -212,10 +212,10 @@ to pewterbind:
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     You choose to submit to their hold, [one of]hissing and caressing you in approval[or]their continued affection arousing and influencing you further[or]absorbed in the frenzy of flesh and motion[at random].";
-					say "[line break]";
+					LineBreak;
 					pewteroccupyroll;
 					if a random chance of 2 in 3 succeeds, pewteroccupyroll;
 					if bodyname of player is "Pewter Consort" and player is pure:
@@ -226,7 +226,7 @@ to pewterbind:
 					increase lustatt by 6 + (lustadjust * 2);
 				else:
 					say "     You choose to abide their hold, [one of]hissing and caressing you in approval[or]their continued affection arousing and influencing you further[or]absorbed in the frenzy of flesh and motion[at random].";
-					say "[line break]";
+					LineBreak;
 					pewteroccupyroll;
 					if bodyname of player is "Pewter Consort" and player is pure:
 						if a random chance of 1 in 8 succeeds:
@@ -236,11 +236,11 @@ to pewterbind:
 				WaitLineBreak;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					say "[line break]";
+					LineBreak;
 					if a random chance of 4 in 5 succeeds, pewteroccupyroll;
 					if bodyname of player is "Pewter Consort" and player is pure:
 						if a random chance of 1 in 9 succeeds:
@@ -252,7 +252,7 @@ to pewterbind:
 					now boundrecover is false;
 				else:
 					say "     You fight to maintain clarity against their influence, [one of]hissing and caressing you nonetheless[or]their continued affection briefly less effective at arousing you further[or]absorbed in the frenzy of flesh and motion regardless[at random].";
-					say "[line break]";
+					LineBreak;
 					if a random chance of 4 in 5 succeeds, pewteroccupyroll;
 					if bodyname of player is "Pewter Consort" and player is pure:
 						if a random chance of 1 in 9 succeeds:

@@ -15,7 +15,7 @@ Version 1 of Joey by Qazarar begins here.
 [	2: slut Joey, sexable                                      ]
 
 Section 1 - Basic Setup
-	
+
 Joey is a man. The hp of Joey is usually 3.
 The libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".
@@ -24,7 +24,7 @@ The scent of Joey is "     Joey has a nice, furry scent.".
 
 to say JoeyDesc:
 	say "     The catboy is of average height, with a thin frame. He has effeminate facial features, that nicely match his feline appearance, with fine orange fur covering the visible parts of his body, along with ears and a tail to match. The only piece of clothing he is wearing is a pair of tight shorts with a noticeable bulge.";
-	
+
 Section 2 - Talk
 
 instead of conversing the Joey:
@@ -36,11 +36,11 @@ instead of conversing the Joey:
 		say "     As you walk up to Joey, he gives a seductive smile. 'Hey coach, is it time for more training?'";
 	WaitLineBreak;
 	say "[JoeyTalkMenu]";
-	
+
 	[set up different talks for naive Joey, slut Joey, and warrior Joey]
 to say JoeyTalkMenu:
-	say "[line break]";
-	say "What do you want to talk with Joey about?";	
+	LineBreak;
+	say "What do you want to talk with Joey about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -85,7 +85,7 @@ to say JoeyTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say JoeyTalk1: [talk about him]
 	if libido of Joey is 0:
 		say "     After you ask, it doesn't take long before Joey gives you an answer. 'The day of the incident, I was attacked by one of those feral catgirls on my way home, and I barely got away. After seeing what happened to me, and what else was out there, I was terrified of everything outside, and stayed cooped up where it would be safe. Eventually though, I got tired of hiding, and decided to stop being scared anymore. But it's hard to explore and leave safety when I can barely handle even the weakest things out there. And now I've got you to train me!' He smiles at you. 'Looking forward to it, coach!'";
@@ -96,7 +96,7 @@ to say JoeyTalk1: [talk about him]
 
 to say JoeyTalk2: [training]
 	say "[JoeyTraining]";
-	
+
 Section 3 - Sex
 
 instead of fucking the Joey:
@@ -112,7 +112,7 @@ instead of fucking the Joey:
 	]
 
 to say JoeySexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -214,7 +214,7 @@ instead of resolving a Stray Catboy:
 		say "     The cat seems about to say something, perhaps an object, but instead lets out a gasp of shock as the canine cock enters him in a single swift stroke, stopping only when his ass meets the knot. For a few moments, he is impaled on the knotted shaft, breathlessly waiting for something else to happen. The wolf then breaks that silence by starting to move, thrusting in and out, the knot repeatedly slapping against the feline's flesh as the dick spreads him open. The expression on his face has become one of almost unwilling bliss as he is continually hammered by the feral beast above him. Eventually it comes to an end, and the wolf slams fully into the catboy, locking the knot into him, and finishing. He lets out a mewling moan as he is filled by the canine seed. The two remain in that position, enjoying the sensations, and you decide it's time for you to go.";
 		now Stray Catboy is resolved;
 	now inasituation is false;
-	
+
 to say JoeyTraining: [Training Joey] [{]
 	if hp of Joey is 3:
 		say "     The first thing you do is explain to Joey exactly how the training is going to work. You'll definitely teach him some things the normal way, but that isn't enough to really learn how to fight. For that, he needs practical experience. Because of that, the main thing you'll be doing is taking him to fight creatures out in the city, and telling him how to improve, to let him put his skills to use. Once the catboy understands the purpose of the combat, you move on and explain the other major thing. If the fight doesn't feel real, if there are no consequences, he won't be able to learn anywhere near as well. Because of that, you won't step in for any of his fights or what may follow, unless his life is in serious danger. Joey is a bit more nervous about that, but you eventually convince him, and are ready to take him for his first day of training.";
@@ -233,7 +233,7 @@ to say JoeyTraining: [Training Joey] [{]
 	now title entry is "A Centaur";
 	now sortorder entry is 2;
 	now description entry is "Test him against a more challenging creature.";
-	[]	
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A Feral Wolf";
 	now sortorder entry is 2;
@@ -279,7 +279,7 @@ to say JoeyTraining: [Training Joey] [{]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say FoxTraining:
 	say "     Your choice made, you take Joey out into the city in search of a monster you know he can defeat. Slipping through the streets until you find the signs of your target, Joey eagerly following behind[if libido of Joey is 1]. As you go, you give him as much advice as you can about combat, and the basics. When you think he has the basics down, you focus fully on finding your target[end if]. Once you manage to track down a latex fox, it's time for your student to take the lead. You tell him what to do, and he nods, approaching the fox.";
 	WaitLineBreak;
@@ -293,7 +293,7 @@ to say FoxTraining:
 		say "     Joey springs into action, rushing at the fox for a surprise attack, and sending it reeling when it connects. Following what he's learned from you, he doesn't give the fox a chance to recover, as he keeps attacking it. Soon enough the fox whimpers, and Joey lets up, allowing it to run away[if hp of Joey is 3]. Joey seems pleased at his first victory, and the fact that he was able to win that fight on his own[end if]. Joey returns to where you stood, watching the fight, ready to listen to what you have to say about it. You tell him he did well[if libido is 0], but point out what you noticed that could maybe help him improve[end if], and then bring him back to the library, training concluded for the moment[if hp of Joey is 4]. Next time, you think he'll be ready to face something harder[end if].";
 		if hp of Joey < 4:
 			increase hp of Joey by 1;
-	
+
 to say CentaurTraining:
 	say "     For this bout of training, you decide to take Joey to the edge of the city, nearer the plains, to challenge a different creature from what is in the heart of the city. It doesn't take long before you spot a lone equine shape galloping across the plains, and you know you've found your target. You give Joey a few last minute words of advice for the fight before moving to stand in a more shaded spot, leaving Joey to his own devices. After that, it's almost no time at all before the shape gets close enough that you can tell it is a centaur that stands before the catboy.";
 	WaitLineBreak;
@@ -310,7 +310,7 @@ to say CentaurTraining:
 		say "     He unleashes several more blows at the centaur, wearing the larger creature down. Before Joey can completely knock him out, however, the centaur manages to trip the feline, and uses the brief moment to stand back up fully. Rather than press that momentary advantage, the centaur rears up, turns around, and flees. The catboy may not have completely beaten the centaur, but you can tell he has improved a great deal. He walks back over to where you were watching the fight, beaming widely, clearly satisfied with himself. Before he can get too full of himself, you give him all the feedback you can about his fight, making sure that he'll win the next time. As you teach him, you also escort him back to the library, musing about how you'll train him next.";
 		if hp of Joey < 6:
 			increase hp of Joey by 1;
-	
+
 to say WolfTraining:
 	say "     This time, you think it will be best to bring Joey to face off against a Feral Wolf, giving him a chance to beat the creature he lost to when you first met him - or perhaps to see what it would have done to him if you didn't interfere. You lead your student out of the central part of the city, nearer to where those wolves make their homes. It doesn't take very long before you spot one sniffing around on a street, otherwise deserted. You nod to Joey, and he returns the gesture, before walking confidently towards the waiting wolf.";
 	WaitLineBreak;
@@ -323,7 +323,7 @@ to say WolfTraining:
 		say "     The wolf doesn't hesitate to leap at Joey, a quick attack meant to catch prey off guard. However, the feline is prepared, and sidesteps the surprise attack. He takes advantage of the opportunity that leaves to attack the canine's open flank, causing it to scramble around to face him once more. For several moments, the two combatants simply circle each other, watching carefully. This time Joey makes the first move, darting forwards to attack the wolf, surprising it. The battle continues as such, with the catboy's speed and mindfulness allowing him to outmaneuver the wolf, until finally he defeats it. Victorious, he returns to you, ready to celebrate his victory. You let him enjoy it for now, knowing you'll help him correct the errors he made on the way back to the library.";
 		if hp of Joey < 9:
 			increase hp of Joey by 1;
-	
+
 to say MinotaurTraining:
 	say "     You decide that it's time to really put Joey's skills to the test. You lead him out of the main city, giving him as much advice as you can along the way. Once you reach the right area, you spend some time with the catboy searching the area, looking for the perfect opponent. After some time, you spot it: a hulking minotaur, striding along the plains. Defeating something like that is enough to prove anyone a true warrior, something Joey is looking forward to. But losing to something like that carries serious risks - something he might also end up looking forward to. Slightly nervous, but not overwhelmed, Joey leaves you standing where you are, and goes to meet the beast face to face.";
 	WaitLineBreak;

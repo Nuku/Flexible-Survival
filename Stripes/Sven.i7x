@@ -300,7 +300,7 @@ An everyturn rule:
 		say "You briefly remember Sven and have a sinking feeling that something's happened to him.";
 	if HP of Sven is 8 and Candy is in Bunker and lastSvendrink - turns > 11:
 		now HP of Sven is 9;
-		if player is in bunker:
+		if player is in Bunker:
 			say "     While taking your break before heading back into the city, you spot Candy prance on over to Sven's bunk. He sits quite close to the snow leopard and starts chatting with him, as you've seen him do several times before. But there's something subtly different in his approach this time. It seems he's going to make his move now and you'll get to watch the show.";
 			WaitLineBreak;
 			say "     Candy runs his paw through your pet's fur as he talks softly to him. Those nimble fingers glide through the thick pelt, stroking and scritching the kitty as they drift around in it. He snuggles a little closer, nuzzling the snowmeow, who gets a little shy and blushes behind his tail, but doesn't pull away. Next comes a nibble to his ear, something whispered and a paw on the kitty's sheath and emerging cock. Those playful fingers brush teasingly over it, then cup those heavy balls.";
@@ -400,7 +400,7 @@ to say SexWithSven:
 	else if HP of Sven is 7:
 		now HP of Sven is 8;
 		now lastfuck of Sven is turns;
-		if Candy is in bunker, now lastSvendrink is turns;
+		if Candy is in Bunker, now lastSvendrink is turns;
 		say "     As you approach Sven this time, he seems to notice something in how you approach him and mewls softly, stretching out on his cot like a lounging feline. Sitting beside him, you rub his tummy and smile as he purrs happily. 'I have something special for you, kitty,' you say softly as you pull out the collar. His eyes lock onto the baby blue strap and he releases a soft mew, almost unheard. He nibbles at his lip a little as you lean in to stroke along the soft fur of his neck.";
 		if cocks of player > 0 and cunts of player > 0:
 			say "     As you prepare to give the sexy snowmeow his new collar, you try to decide if you'd prefer to top him or ride him in celebration.";

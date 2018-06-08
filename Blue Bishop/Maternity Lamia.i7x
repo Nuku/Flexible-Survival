@@ -194,7 +194,7 @@ When Play begins:
 	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]flexible[or]elongated[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]flexible[or]elongated[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]reptilian[or]serpentine[or]lamia[or]snake-like[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -303,9 +303,9 @@ this is the lamiaboob rule:	[***]
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		say "Not realizing the danger, you suckle from the lamia's milky nipple.  You drink down her creamy milk while she cuddles you in her tender embrace.  The nurse coos softly and caresses your head, encouraging you to keep going[if cocks of player > 0 or cunts of player > 0].  The heat in your loins grows and you grind eagerly against the wet touch of her leaking pussies[else].  You grind eagerly against the wet touch of her leaking pussies[end if] as you suckle.  Your thoughts are further muddled and your arousal climbs higher as the infected milk seeks to corrupt you[if matlamiacaught is not 2].  You suffer [special-style-2][dam][roman type] damage as your resistance wanes further and your arousal climbs[end if].";
-		say "[line break]";
+		LineBreak;
 		infect;
-		say "[line break]";
+		LineBreak;
 		say "After this taste of her bounty, she releases you with a happy sigh.  '[one of]There.  Feeling better now[or]Are you ready to snuggle up for a proper meal now[or]Are you ready for some real fun[or]Has that gotten you ready for feeding time[at random][if scalevalue of player < 4], little one[end if]?' she coos, slithering around you with a sensual sway.";
 		if HP of player <= 0 or libido of player >= 110:
 			say "The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";

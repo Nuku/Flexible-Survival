@@ -495,7 +495,7 @@ When play ends:
 					say "     You get a small home together in the suburbs of a new city, picking one with a large acorn tree out front. Your neighbours are a little shy and nervous around you at first, though squirrels are cute and safe enough that they soon get used to you. And when you start making acorn butter and other nut treats for them come fall, they're even friendlier still. Though it certainly doesn't hurt that the acorn butter is made with some squirrel cum. While not able to infect them, it gets them quite aroused and soon you and Snow are often having sex with many of your neighbours, both men and women";
 				else:
 					say "     Snow settles down after being rescued. She turns to you for affection more consistently, and eventually asks to be your girl(boy?) friend. She is a wonderfully friendly and helpful companion, always willing to help you out on a project or making repairs to your home";
-				if sandra is in bunker:
+				if Sandra is in Bunker:
 					say ". Snow approaches Sandra one day when you are out. When you come back, Sandra has a silly expression on her face and Snow looks pleased. After that day, the two are very close friends and begin to act openly affectionate with one another, often dragging you into their play";
 			if cocks of player > 0:
 				say ". Snow eagerly bears children for you over time, enjoying the expansive effect each kit has on her already huge bustline.";
