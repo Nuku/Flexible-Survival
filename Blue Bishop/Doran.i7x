@@ -2775,7 +2775,7 @@ to say DoranModTitsMenu: [Modify Tits]
 		say "     'Oh, [if DoranTitModStatus > 1][DoranPlayerRegard], their [gdragon] is better-equipped to care for their little plaything[else]my plaything certainly gives me all sorts of fun new toys[end if]";
 		if DoranTitModStatus > 1:
 			say "!' Briefly fussing over you as a parent might, [ghe] moves you back, only to thrust your lips on one of [ghis] slightly more yielding nipples, absolutely insistent on having you drink from [ghim]. It doesn't take much effort on your part for your taste to be flooded the [gdragon]'s warm, sweet milk, as [ghe] coos softly in gentle approval.";
-			say "     It seems that, this early on, it doesn't take long before you suck [ghim] dry, leaving you to return to the [gdragon]'s full embrace once's [ghe]'s satisfied. [gche] continues to fuss over you for a bit longer before [ghe] finally lets you free from [ghis] grasp.";
+			say "     It seems that, this early on, it doesn't take long before you suck [ghim] dry, leaving you to return to the [gdragon]'s full embrace once [ghe]'s satisfied. [gche] continues to fuss over you for a bit longer before [ghe] finally lets you free from [ghis] grasp.";
 		else:
 			say "!' [gche] eagerly insists that you continue fondling [ghis] firm curves, [ghis] tongue's soft caress reciprocating your persistent attendance. [gche] continues [ghis] affection for a while long before [ghe] finally lets you free from [ghis] grasp.";
 		say "     'These'll take a bit of getting used to...' [gche] fondles the ample pair with a devious expression, ";
