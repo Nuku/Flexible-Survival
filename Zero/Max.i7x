@@ -27,7 +27,7 @@ Instead of resolving Meeting the corgi:
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 	else:
-		say "Looking around, you spot the remains of some recent activity in the form of sticky messes littered about. Their scent is strong, making you think of those strong dominators you've seen around. It seems a few of them found and made more of those strange sluts out of their victims. There is something strange about their behavior. Perhaps you should have a couple of encounters with them to investigate further. Some 'domincounters' as it were.";
+		say "Looking around, you spot the remains of some recent activity in the form of sticky messes littered about. Their scent is strong, making you think of those strong dominators you've seen around. It seems a few of them found and made more of those strange sluts out of their victims. There is something strange about their behaviour. Perhaps you should have a couple of encounters with them to investigate further. Some 'domincounters' as it were.";
 
 pendant hunting is a situation.
 The sarea of pendant hunting is "Outside".
@@ -82,7 +82,7 @@ instead of conversing the Max:
 			else:
 				say "'Just give me a shout when you're ready to go.'";
 			stop the action;
-	else if location of player is Mall Atrium: [start of normal conversation]
+	else if location of player is Mall Atrium: [start of normal converce]
 		say "'Hey, glad we got out of there[if Mistresswon is 1] and got rid of that demented creature too[end if]!'";
 		if Mistresswon is 0:
 			say "'If you want, we can go back and try to attack those sluts and dominatrices again?'";
@@ -113,7 +113,7 @@ instead of conversing the Max:
 			else if maxq is 1:
 				say "'Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?'";
 	else if location of player is Rec room:
-		say "'You want to trade some stuff? Miles and I have got some goody bags for you if you want them. If you have a bit of water and food to spare, you may find yourself surprised.' Maybe you want to GIVE MAX some of your supplies?'";
+		say "'You want to trade some stuff? Miles and I have got some goody bags for you if you want them. If you have a bit of water and food to spare, you may find yourself surprised.'  Maybe you want to GIVE MAX some of your supplies?'";
 
 
 Section 3- corgitrading
@@ -185,7 +185,7 @@ carry out corgigiving:
 			Say "a pack of chips";
 			Add "chips" to invent of player;
 	else:
-		say "Sorting through your pack, you realize you don't actually have the food and water to trade";
+		say "Sorting through your pack, you realise you don't actually have the food and water to trade";
 
 Section 4-Miles
 
@@ -194,7 +194,7 @@ lastkitsufucked is a number that varies. lastkitsufucked is usually 130.
 understand "kitsune" as Miles.
 understand "miles" as Miles.
 
-The description of Miles is "     Miles is a kitsune. He looks like a fox but with two tails. His fur is normally red, but it seems like he can control its color. He is wearing a plain t-shirt and black joggers. He also has a blue diamond pendant hanging from his neck.".
+The description of Miles is "     Miles is a kitsune. He looks like a fox but with two tails. His fur is normally red, but it seems like he can control its colour. He is wearing a plain t-shirt and black joggers. He also has a blue diamond pendant hanging from his neck.".
 
 The conversation of Miles is { "Stuff!" }.
 
@@ -215,7 +215,7 @@ instead of conversing the Miles:
 				now maxq is 4;
 				stop the action;
 		else if maxq is 4:
-			say "'This city's got exciting, hasn't it? And crazy... definitely crazy.'";
+			say "'This city's got exciting, hasn't it? And crazy... definitely crazy.'"
 
 
 

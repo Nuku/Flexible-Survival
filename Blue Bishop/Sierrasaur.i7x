@@ -49,7 +49,7 @@ to say sierradesc:
 			add { "Sierrasaur" } to infections of hermaphrodite;
 			setmongender 7;		[creature is mherm]
 		if sierramem is 0:
-			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[else if scalevalue of player is 4]only slightly larger[else]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
+			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[else if scalevalue of player is 4]only slightly larger[else]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-coloured, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
 			now sierramem is 1;
 		else:
 			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence[or]Your presence disrupting its rest, it's none too pleased by this[or]This one seems to be hunting for prey, perhaps gauging that you might suffice[at random], the craggy beast ponderously attempting to approach and subdue you, forcing you to keep your distance and deal with them.";
@@ -396,7 +396,7 @@ to sierrasex:
 	PlayerDrink 6;
 
 to say beathesierra:
-	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanor is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
+	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanour is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
 
 
 Section 2 - Monster Insertion

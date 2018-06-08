@@ -30,7 +30,7 @@ Instead of resolving a Central Library:
 		project the figure of James_icon;
 		attempttowait;
 		say "     Spotting you, the wolverine does not immediately attack, but seems to be struggling with himself. He seems not to have fully succumbed to the viciousness that the others like him possess. 'Just... just stay back,' he calls over, warning you off. 'This place is sealed. Just go away and I won't have to hurt you.'";
-		say "     Keeping your distance, you manage to talk to him. It seems he's done a good job keeping the area clear, so you're able to talk to him from across the street without worry about attracting attention. 'My name is... James. It's James, dammit,' he growls, struggling to hang onto it. 'I live nearby and walked over to come on duty early in the morning. I guess I didn't notice what was happening in the city since it was so early and the sun hadn't come up yet. Or maybe I was already changing and was too focused on getting to work. I remember being really gung-ho about guarding the library from the moment I put on my coat and went out the door. Didn't matter that it wasn't even 5 a.m. that morning.' He paces up and down the steps, looking down both sides of the deserted street and takes a deep breath to relax and refocus, letting you cross the street to join him on the steps.";
+		say "     Keeping your distance, you manage to talk to him. It seems he's done a good job keeping the area clear, so you're able to talk to him from across the street without worry about attracting attention. 'My name is... James. It's James, dammit,' he growls, struggling to hang onto it. 'I live nearby and walked over to come on duty early in the morning. I guess I didn't notice what was happening in the city since it was so early and the sun hadn't come up yet. Or maybe I was already changing and was too focused on getting to work. I remember being really gung-ho about guarding the library from the moment I put on my coat and went out the door. Didn't matter that it wasn't even 5 a.m. that morning.'  He paces up and down the steps, looking down both sides of the deserted street and takes a deep breath to relax and refocus, letting you cross the street to join him on the steps.";
 		say "     'Well, I started changing once I got here, slowly turning into the burly creature I am now. I... it probably should have upset me, but I help feeling that it would only help me guard the library better. And now I'm so young and strong. Only problem's been that I can't leave my post because my replacement hasn't come to take his shift. Can't leave it unguarded. So many crazy creatures around now,' he says, growling a little in his throat. 'Gotta keep watch. There's been no chance to sleep and only what little food the librarians might give me while I'm patrolling inside the library. It's been getting harder and harder to keep it together. Haven't slept since that morning. Can't. Gotta protect the library. Gotta...' he trails off.";
 		say "     It seems that the library's gone undisturbed thanks to his unending vigil. You find yourself wondering what you could find within to help you. You consider some options on how to get past the guard.";
 	else:
@@ -174,12 +174,12 @@ to say libguard1:						[Bluff]
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus].";
 		if bonus + dice >= 14:
-			say "     You manage to convince James that you're here as special relief. 'But only for a few hours,' you emphasize again. Glancing at your watch, you add that it's almost time for you to start. 'Thanks, pal,' he says, getting up and heading to the doors. 'I think I'll head off to the staff lounge and catch forty-winks on the couch in there. I don't want to leave the library entirely if you're just going to swap out for a while, but I could really use the nap. If you've got to patrol inside, be sure to keep it quiet. The librarians don't like to be disturbed and they're not quite right now. Probably spent too much time in the mythology section or something.' With that cryptic comment, he passes you the keys and slips inside, watching you lock up before heading further in. You give him a little bit to make sure he's bedded down and then unlock the door and slip inside[if humanity of player < 30]. There is a slight twinge from your wolverine instincts for leaving your post, but you manage to fight it down[end if].";
+			say "     You manage to convince James that you're here as special relief. 'But only for a few hours,' you emphasize again. Glancing at your watch, you add that it's almost time for you to start. 'Thanks, pal,' he says, getting up and heading to the doors. 'I think I'll head off to the staff lounge and catch forty-winks on the couch in there. I don't want to leave the library entirely if you're just going to swap out for a while, but I could really use the nap. If you've got to patrol inside, be sure to keep it quiet. The librarians don't like to be disturbed and they're not quite right now. Probably spent too much time in the mythology section or something.'  With that cryptic comment, he passes you the keys and slips inside, watching you lock up before heading further in. You give him a little bit to make sure he's bedded down and then unlock the door and slip inside[if humanity of player < 30]. There is a slight twinge from your wolverine instincts for leaving your post, but you manage to fight it down[end if].";
 			now centrallib is 4;
 			WaitLineBreak;
 			say "[libraryexplore]";
 		else:
-			say "     He just doesn't seem convinced that you're his replacement, as you're not the regular guy. 'I would really need to get confirmation from HQ about something like this and I haven't been able to reach them since I went on duty. I could really use a break, but we gotta follow procedure, especially during a situation. Especially you, you could get fired easily since you just started.' Well, that plan went bust. You'll have to consider other options.";
+			say "     He just doesn't seem convinced that you're his replacement, as you're not the regular guy. 'I would really need to get confirmation from HQ about something like this and I haven't been able to reach them since I went on duty. I could really use a break, but we gotta follow procedure, especially during a situation. Especially you, you could get fired easily since you just started.'  Well, that plan went bust. You'll have to consider other options.";
 			now centrallib is 3;
 			WaitLineBreak;
 			say "[libraryentrance]"; [Back to menu]
@@ -192,7 +192,7 @@ to say libguard1:						[Bluff]
 
 to say libguard2:						[Bribe]
 	if jamesfed is 0:
-		say "     Recalling what James said about his poor diet because he can't leave, you offer to help him out with that. 'That would be right neighborly of you,' he replies. 'I could certainly use a meal or two and a couple of drinks.' Do you want to try giving him two meals worth of food and two bottles of water?";
+		say "     Recalling what James said about his poor diet because he can't leave, you offer to help him out with that. 'That would be right neighbourly of you,' he replies. 'I could certainly use a meal or two and a couple of drinks.'  Do you want to try giving him two meals worth of food and two bottles of water?";
 		if the player consents:
 			now jamesfed is 1;
 			delete food;
@@ -284,9 +284,14 @@ to say libguard3:
 	now wolvfightresult is 0;
 
 to say libguard4:
-	setmonster "Wolverine Guard";
+	[puts Wolverine Guard as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Wolverine Guard":
+			now monster is y;
+			break;
 	if cunts of player is 0:
-		say "     James seems a little flustered by your offer. 'Uh... well, not that I'm not flattered, but despite this big, young body, I'm an old-fashioned man with old-fashioned values. Ain't nothing wrong with it, mind you. It's just not for me.' He wrings his big paws and looks around a little, then seems to realize he should be on duty and snaps back to attention. 'Umm... you should maybe be moving along. You can stop by again. Having someone to chat with helps me keep my head on straight - Ah! Didn't mean nothing by that! - I mean, against this crazy animal thing.' It seems you've startled the poor wolverine back into guard mode and you'd best be moving along for now. Perhaps the fairer sex would have more luck with him.";
+		say "     James seems a little flustered by your offer. 'Uh... well, not that I'm not flattered, but despite this big, young body, I'm an old-fashioned man with old-fashioned values. Ain't nothing wrong with it, mind you. It's just not for me.'  He wrings his big paws and looks around a little, then seems to realize he should be on duty and snaps back to attention. 'Umm... you should maybe be moving along. You can stop by again. Having someone to chat with helps me keep my head on straight - Ah! Didn't mean nothing by that! - I mean, against this crazy animal thing.'  It seems you've startled the poor wolverine back into guard mode and you'd best be moving along for now. Perhaps the fairer sex would have more luck with him.";
 		now jamessex is 1;
 		WaitLineBreak;
 	else if bodyname of player is not "Wolverine Guard" or facename of player is not "Wolverine Guard":
@@ -309,11 +314,6 @@ to say libguard4:
 			now bodyname of player is "Wolverine Guard";
 			now cockname of player is "Wolverine Guard";
 			attributeinfect "Wolverine Guard";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Wolverine Guard":
-					now monster is y;
-					break;
 			now tail of player is tail entry;
 			now face of player is face entry;
 			now skin of player is skin entry;
@@ -321,6 +321,7 @@ to say libguard4:
 			now cock of player is cock entry;
 			say "     Losing yourself in the lustful mating, you and James descend further into your wild, wolverine instincts until you both lose yourselves completely.";
 			end the story saying "You have become another wolverine guard watching over the Central Library.";
+			now battleground is "void";
 			WaitLineBreak;
 			follow the turnpass rule;
 			stop the action;
@@ -418,7 +419,7 @@ to say libraryexplore:
 				WaitLineBreak;
 				now Central Library is resolved;
 	if harpyfight is 2:
-		say "     The harpies swoop in around you and grab you, carrying you aloft in their talons. With each of your limbs gripped in their strong talons, you cannot struggle, especially as they fly up several stories in the large, central area. James, drawn by the commotion, comes running in and spots you being carried off[if centrallib is 4 or jamesfed is 2 or jamessex is 3]. He shakes his fist at the harpies and growls. 'I told you not to upset them. I'm sorry, but they won't let me up there.' With no hope of rescue from him, you[else]. He growls and shakes his fist. 'Serves you right! I told you this library is closed!' You[end if] are carried up to the top floor and dropped onto a large nest made of books. Looking to the stairwell for an exit, you see that this is where the fire occurred and that several bookshelves have been knocked over to bury the only way down. You are trapped with them and at their mercy.";
+		say "     The harpies swoop in around you and grab you, carrying you aloft in their talons. With each of your limbs gripped in their strong talons, you cannot struggle, especially as they fly up several stories in the large, central area. James, drawn by the commotion, comes running in and spots you being carried off[if centrallib is 4 or jamesfed is 2 or jamessex is 3]. He shakes his fist at the harpies and growls. 'I told you not to upset them. I'm sorry, but they won't let me up there.'  With no hope of rescue from him, you[else]. He growls and shakes his fist. 'Serves you right! I told you this library is closed!'  You[end if] are carried up to the top floor and dropped onto a large nest made of books. Looking to the stairwell for an exit, you see that this is where the fire occurred and that several bookshelves have been knocked over to bury the only way down. You are trapped with them and at their mercy.";
 		say "     The librarian harpies lick, kiss, claw and fondle you incessantly, playing with your body with quiet whispers of pleasure. You are made to nurse from the breasts of those heavy with eggs while a young and sultry librarian plays with you, [if cocks of player > 0]licking and sucking at your cock[else]licking at your pussy while fingering you with her taloned hand[end if]. Trapped as you are in there nest, there is no escape from it and they make use of your body as they please until you are fully transformed and lose yourself to become one of them.";
 		[puts harpy as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
@@ -461,7 +462,7 @@ to say libraryexplore:
 Section 4 - Books
 
 to say libbook1:
-	say "     You come across a book on martial arts with several photos and illustrations of techniques. While reading a book is no replacement for proper training, you should be able to learn a few things to help improve as an unarmed fighter. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You come across a book on martial arts with several photos and illustrations of techniques. While reading a book is no replacement for proper training, you should be able to learn a few things to help improve as an unarmed fighter. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 1 to bookcollection;
 	if "Martial Artist" is listed in feats of player:
 		say "     You have gained [bold type]50 XP[roman type] from reading the book.";
@@ -469,26 +470,26 @@ to say libbook1:
 	else:
 		add "Martial Artist" to feats of player;
 		say "     You have gained the [bold type]Martial Arts[roman type] feat.";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook2:
-	say "     You come across a book on riddles, brainteasers and practical jokes. You flip through it, wondering if this could somehow be helpful. Not all the material seems to be geared towards children and several of the riddles are very clever. Your infected mind starts seeing ways to alter the pranks, replacing water, glue, flour and others with more potent monster fluids[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You come across a book on riddles, brainteasers and practical jokes. You flip through it, wondering if this could somehow be helpful. Not all the material seems to be geared towards children and several of the riddles are very clever. Your infected mind starts seeing ways to alter the pranks, replacing water, glue, flour and others with more potent monster fluids[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 2 to bookcollection;
 	say "     You have gained a [bold type]+2 bonus[roman type] in situations dealing with [bold type]jokes, riddles and pranks[roman type].";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook3:
-	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 3 to bookcollection;
 	say "     You have gained [bold type]50 XP[roman type] from reading the book.";
 	increase XP of player by 25;
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook4:
-	say "     You come across a book on animals and their mating habits, colorfully titled [']Wild Animals[']. The book has many details and covers a wide gamut of creatures and even has numerous photos of their genitalia or of them in coitus. With a quick perusal, you are able to pick up a better understanding of some of the creatures out there, slightly improving your ability to deal with them. You decide to take the book with you, only partially for the information. While the information in the book may be a little dry and analytical, you also find it strangely arousing. You hang onto it for some [']personal['] reading later.";
+	say "     You come across a book on animals and their mating habits, colourfully titled [']Wild Animals[']. The book has many details and covers a wide gamut of creatures and even has numerous photos of their genitalia or of them in coitus. With a quick perusal, you are able to pick up a better understanding of some of the creatures out there, slightly improving your ability to deal with them. You decide to take the book with you, only partially for the information. While the information in the book may be a little dry and analytical, you also find it strangely arousing. You hang onto it for some [']personal['] reading later.";
 	add 4 to bookcollection;
 	increase carried of Wild Animals by 1;
 	say "     You have gained [bold type]25 XP[roman type] from reading the book.";
@@ -496,10 +497,10 @@ to say libbook4:
 
 
 to say libbook5:
-	say "     You find a book on military tactics and reconnaissance. The book seems to have originally been published for internal military use only. Being rather old, perhaps it became outdated and was declassified years ago. Regardless, it has considerable information on the subject, ranging from the means to gather this information, what information is needed, how to relay it and how it can then eventually be used effectively. On the whole, it seems like a very useful book. You find yourself wondering if it might be possible for you to gather intel while in the city and pass this along to others who might use it[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details so you may be able to make use of it later[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You find a book on military tactics and reconnaissance. The book seems to have originally been published for internal military use only. Being rather old, perhaps it became outdated and was declassified years ago. Regardless, it has considerable information on the subject, ranging from the means to gather this information, what information is needed, how to relay it and how it can then eventually be used effectively. On the whole, it seems like a very useful book. You find yourself wondering if it might be possible for you to gather intel while in the city and pass this along to others who might use it[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details so you may be able to make use of it later[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 5 to bookcollection;
 	say "     You can now gain a [bold type]time bonus[roman type] by offering to gather information for certain people on the state of the city and its creatures.";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 to say libbook6:
@@ -510,7 +511,7 @@ to say libbook6:
 
 
 to say libbook7:
-	say "     You find a book on animal training. The book deals with many of the principles involved and covers a variety of animals, not just dogs. The sections on guard animals are particularly interesting, finding several techniques you might use with any pets you acquire to help in their training. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Gray Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	say "     You find a book on animal training. The book deals with many of the principles involved and covers a variety of animals, not just dogs. The sections on guard animals are particularly interesting, finding several techniques you might use with any pets you acquire to help in their training. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 7 to bookcollection;
 	if "Good Teacher" is listed in feats of player:
 		repeat with z running through pets:
@@ -520,7 +521,7 @@ to say libbook7:
 	else:
 		add "Good Teacher" to feats of player;
 		say "     You have gained the [bold type]Good Teacher[roman type] feat.";
-	if player is in Gray Abbey Library, follow the turnpass rule;
+	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
 Table of library books
@@ -538,7 +539,7 @@ deweying is an action applying to one topic.
 understand "dewey [text]" as deweying.
 
 check deweying:
-	if the player is not in the Gray Abbey Library:
+	if the player is not in the Grey Abbey Library:
 		say "You can't do that here." instead;
 
 carry out deweying:
@@ -619,7 +620,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		say "     Showing Dr. Mouse the book, you suggest to him that you can act as reconnaissance for him. You tell him that since you're been facing the creatures and finding where they're located, it may help his gathering of samples. The mouse's eyes flash and he grins widely at this offer. 'Oh yes! That would be a great boon indeed. Thank you very much for the offer. Please write up any information you can provide on the creatures. Be sure to include any details about the military as well. We don't want to run into trouble with them. Accidentally bump into them and have a problem.' You nod and provide the information to the delighted mouse, filling a stack of papers with notes, maps and more.";
+		say "     Showing Dr. Mouse the book, you suggest to him that you can act as reconnaissance for him. You tell him that since you're been facing the creatures and finding where they're located, it may help his gathering of samples. The mouse's eyes flash and he grins widely at this offer. 'Oh yes! That would be a great boon indeed. Thank you very much for the offer. Please write up any information you can provide on the creatures. Be sure to include any details about the military as well. We don't want to run into trouble with them. Accidentally bump into them and have a problem.'  You nod and provide the information to the delighted mouse, filling a stack of papers with notes, maps and more.";
 		extend game by 24;
 		increase score by 30;
 		now mouseintel is 1;

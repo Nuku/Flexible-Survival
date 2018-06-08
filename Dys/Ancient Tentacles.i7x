@@ -3,9 +3,9 @@ Version 1 of Ancient Tentacles by Dys begins here.
 "Moves the Ancient Tentacle Monster from the Tome to its own file."
 
 [ TentacleInteractions tracks the number of times the player interacted     ]
-[ with the tentacles                                                        ]
+[ with the tentacles.                                                       ]
 [ TentacleRead indicates whether or not the player has read about the       ]
-[ tentacles                                                                 ]
+[ tentacles.                                                                ]
 [ TentacleStatus stores the state of the player and the tentacles           ]
 [   0  = Never encountered                                                  ]
 [   10 = Encountered and fled                                               ]

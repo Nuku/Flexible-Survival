@@ -56,7 +56,7 @@ Check kitfoodrequest:
 	if Kitsune is not visible:
 		say "From whom?" instead;
 	else if Kitsunefood is 5:
-		say "'Forgive me, little one, but I'm afraid that I've been able to find in the area for you. You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
+		say "'Forgive me, little one, but I'm afraid that I've been able to find in the area for you.  You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
 	else if lastfoodrun - turns < 8:
 		say "'I'm afraid you'll have to be patient. I need to make a run to see if there is any more food left in this city.'" instead;
 
@@ -70,7 +70,7 @@ Check kitwaterrequest:
 	if Kitsune is not visible:
 		say "From whom?" instead;
 	else if Kitsunewater is 5:
-		say "'Forgive me, little one, but I'm afraid that's all I've been able to find in the area for you. You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
+		say "'Forgive me, little one, but I'm afraid that's all I've been able to find in the area for you.  You'll have to look elsewhere for more,' Kitsune bows low at this." instead;
 	else if lastwaterrun - turns < 8:
 		say "Water, water everywhere, but not a drop to drink.' Kitsune chuckles at this before waving a hand in front of you. 'Forgive me, but I have always liked that verse more than I should. I have no water for you at this moment, little one.'" instead;
 
@@ -223,7 +223,7 @@ When Play begins:
 	now skin entry is "[one of]silver fur[or]heavy pelted[or]kitsune coat[or]supremely fluffy fox fur[at random] over your"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A single fox tail sways behind you, swaying almost as if lonesome in want of others to be alongside of it. Thick and luxurious in texture, your tail does possess a sort of superior quality about itself that others would find themselves in awe of were they to look at you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]vulpine[or]canid[or]tapered[or]sheathed[or]thickly knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your eyes blink as you notice that your face has pushed out to form a narrow fox muzzle colored with moonlight silver fur. Cocking your head to the side you notice that you can hear the wind blowing around you and gape when you realize that your ears have pushed up on top of your head. Long and furry, the twitching folds flip up and down as you move them out of instinct, not to mention curiosity. Looking between your face you notice that you have a black dotted nose, a few whiskers on each side of your snout and finally that your tongue is now long and thick as you pop the organ out from your muzzle"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your eyes blink as you notice that your face has pushed out to form a narrow fox muzzle coloured with moonlight silver fur. Cocking your head to the side you notice that you can hear the wind blowing around you and gape when you realize that your ears have pushed up on top of your head. Long and furry, the twitching folds flip up and down as you move them out of instinct, not to mention curiosity. Looking between your face you notice that you have a black dotted nose, a few whiskers on each side of your snout and finally that your tongue is now long and thick as you pop the organ out from your muzzle"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you notice that the form you now support is one that is covered from neck down to toe in silver fur. Slightly confused as to what has happened to you, you find that your body now has taken on the form of a silver kitsune, the same as Kitsune himself. Tall and imposingly powerful, you feel as the your heart is beating somewhat slower as your senses seem to come alive in a newfound way as you can literally [italic type]feel[roman type] things that you never had before"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "scratch at yourself lightly while trying very, very hard not to. What you come to find by looking down at yourself is that you now have a silver pelt of fur gracing your body. The itching was from the fur pushing out from beneath your skin"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "you wiggle your rump around as though trying to get something from off of your backside. Grunting and finally reaching back to take a scratch you find that you now have a single silver vulpine tail wagging behind you somewhat happily as you stare at it intensely"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
@@ -249,7 +249,7 @@ When Play begins:
 	now cunt length entry is 10;
 	now cunt width entry is 5;
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
-	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now loot entry is ""; [ Dropped item.  Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]

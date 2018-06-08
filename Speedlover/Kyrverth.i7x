@@ -52,13 +52,13 @@ to say OvergrownStreetDesc:
 
 to say DragonsDenDesc:
 	if KyrverthStage is 0 or KyrverthStage is 1:
-		say "     In the depths of an old bank, Kyrverth has made the vault his home. The door broken from its hinges and laying off to one side, and thick walls around, the room feels cold but safe. In the center of the room he has made a large wide nest from hay and twigs.";
+		say "     In the depths of an old bank, Kyrverth has made the vault his home. The door broken from its hinges and laying off to one side, and thick walls around, the room feels cold but safe. In the centre of the room he has made a large wide nest from hay and twigs.";
 	else if KyrverthStage is 2 or KyrverthStage is 3:
 		say "     In the depths of an old bank, Kyrverth has made the vault his home. The door broken from its hinges and laying off to one side, and thick walls around, the room feels safe. What was a cold room is now heated by the dragon residing within.";
 		if KyrverthStage is 2:
-			say "     In the center of the room he has made a large wide nest from hay and twigs. Bits of chainmail are woven into the bits of wood, and glint in the light shining through the vault door. Occasionally you hear the sounds of the infected in the distance, bangs, crashes, sometimes even moans carry over ruined streets, but it is hard to pay them heed when you are in what feels like such a safe place.";
+			say "     In the centre of the room he has made a large wide nest from hay and twigs. Bits of chainmail are woven into the bits of wood, and glint in the light shining through the vault door. Occasionally you hear the sounds of the infected in the distance, bangs, crashes, sometimes even moans carry over ruined streets, but it is hard to pay them heed when you are in what feels like such a safe place.";
 		else if KyrverthStage is 3:
-			say "     In the center of the room the large nest he made has been broken and remade. Now it is a heap of chainmail, and dragon scales that he curls around at night, safe in the knowledge it cannot be taken without waking him. Bits of chainmail and dragon scales are revealed when Kyrverth wakes, and glint in the light shining through the vault door, making patterns on the walls.";
+			say "     In the centre of the room the large nest he made has been broken and remade. Now it is a heap of chainmail, and dragon scales that he curls around at night, safe in the knowledge it cannot be taken without waking him. Bits of chainmail and dragon scales are revealed when Kyrverth wakes, and glint in the light shining through the vault door, making patterns on the walls.";
 
 to say KyrverthDesc:
 	if KyrverthStage is 0:
@@ -104,7 +104,7 @@ to say KyrverthTalk: [Quest turnin check]
 			increase carried of food by 5;
 			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward.' He goes to a box and grabs 5 packets of food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
 			LineBreak;
-			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap - Apparently worn out by his growth.";
+			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap - Apparently worn out by his growth."
 			LineBreak;
 			say "     [bold type]You gain 5 food![roman type][line break]";
 			WaitLineBreak;
@@ -134,7 +134,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
 			now Jewel Heist is not resolved;
 		else if KyrverthStage is 1:
-			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armor, but they won't come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I can't go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
+			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armour, but they won't come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I can't go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
 		else if KyrverthStage is 2:
 			say "     'I heard there were some eastern [bold type]dragons[roman type] in the [bold type]park[roman type] ruining our reputation. They are saying that THEY are the best dragons! Pffft, they wish! I would deal with them myself but someone needs to guard this hoard. Would you be willing to give them a telling off? Teach them a lesson, and bring me back [bold type]5 scales[roman type] as a trophy.'";
 		else:
@@ -149,7 +149,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 		else if randomnumber >= 11 and randomnumber <= 15:
 			say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'";
 		else if randomnumber >= 16 and randomnumber <= 20:
-			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mound of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armor around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books.";
+			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mound of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armour around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books.";
 		else if randomnumber >= 21 and randomnumber <= 25:
 			say "     'Have you seen anything interesting in the city? Anything valuable?'";
 		else if randomnumber >= 26 and randomnumber <= 30:
@@ -193,7 +193,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			else if KyrverthStage is 3:
 				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please don't forget that I owe you one.'";
 		else:
-			say "BUG - [randomnumber]";
+			say "BUG - [randomnumber]"
 
 Section 3 - Sex [Bear in mind Kyrverth has a massive cock in his final form - 26 inches.]
 
@@ -360,8 +360,8 @@ Instead of resolving a Strange Sighting:
 	say "     ([link]N[as]n[end link]) - Leave, it's none of your business.";
 	if player consents:
 		LineBreak;
-		say "     You push the door open with one hand and creep in. Through the haze of dust you see what used to be a bar. It looks like people left in a hurry, glasses still on the bar, tables and chairs have been knocked over, and the windows are broken. Mounted above the counter, a carved wooden dragons head with the maw stuck in a roaring snarl grabs your eye, but you realize there is nothing here of use. As you turn to leave you spot the red again. A tiny bit of tail poking out from behind an overturned table. Creeping up on it, you place your feet well, and might as well be silent. Suddenly the floor creaks under your foot. The red tail twitches and you know what is going to happen next. You dive and grab it as a red blur bursts from behind and heads toward the exit.";
-		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab its owner's body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realizing he won't be getting away, he goes limp. A few seconds go by, then he says, 'Well, that's not the best of introductions, is it? Shall we start again? I'm Kyrverth.' The diminutive dragon leads you to his hideout, a large vault in the next door bank. It's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off its hinges...";
+		say "     You push the door open with one hand and creep in. Through the haze of dust you see what used to be a bar. It looks like people left in a hurry, glasses still on the bar, tables and chairs have been knocked over, and the windows are broken.  Mounted above the counter, a carved wooden dragons head with the maw stuck in a roaring snarl grabs your eye, but you realise there is nothing here of use. As you turn to leave you spot the red again. A tiny bit of tail poking out from behind an overturned table. Creeping up on it, you place your feet well, and might as well be silent. Suddenly the floor creaks under your foot. The red tail twitches and you know what is going to happen next. You dive and grab it as a red blur bursts from behind and heads toward the exit.";
+		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab its owner's body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realising he won't be getting away, he goes limp. A few seconds go by, then he says, 'Well, that's not the best of introductions, is it? Shall we start again? I'm Kyrverth.' The diminutive dragon leads you to his hideout, a large vault in the next door bank. It's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off its hinges...";
 		LineBreak;
 		say "     As he arrives he hands you a soda, saying, 'Sorry about that. I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'";
 		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later, when he's calmed down a bit.[roman type][line break]";
@@ -440,7 +440,7 @@ to say JewelHeistSneak:
 			now SilverToken is 1;
 	else:
 		LineBreak;
-		say "     You didnt want to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";
+		say "     [bold type]Do you want to fight the wolverine or leave?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";
@@ -477,7 +477,7 @@ to say JewelHeistFight:
 Section 5 - Endings
 
 [when play ends:
-	if (HP of Kyrverth > 0): [player met him and got as far as seeing him as an npc]
+	if (HP of Kyrverth > 0):  [player met him and got as far as seeing him as an npc]
 		if humanity of player < 10: [player went feral]
 			if HP of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]

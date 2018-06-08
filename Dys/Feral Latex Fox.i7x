@@ -8,12 +8,12 @@ FeralLatexFox_Met is a truth state that varies. FeralLatexFox_Met is usually fal
 FeralLatexFox_Corruption is a number that varies. FeralLatexFox_Corruption is usually 0.
 [ 0: Not corrupted yet                                                      ]
 [ 1: Corruption started. Player finds themselves desiring to be bred by the ]
-[    fox                                                                    ]
-[ 2: Corruption Stage 1. Player has lucid dreams of the fox                 ]
+[    fox.                                                                   ]
+[ 2: Corruption Stage 1. Player has lucid dreams of the fox.                ]
 [ 3: Corruption Stage 2. Player finds a growing distaste for other mutants. ]
-[    More vivid dreams                                                      ]
+[    More vivid dreams.                                                     ]
 [ 4: Final stage. Player submits, becoming the fox's permanent breeding     ]
-[    slave. Forced to return at least once a day to be bred                 ]
+[    slave. Forced to return at least once a day to be bred.                ]
 
 
 to say FeralLatexFox_Start: [Feral Male Latex Fox]

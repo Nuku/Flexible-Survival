@@ -145,7 +145,7 @@ instead of going north from Golden Doors while EgyptianRiddle is 0: [add cycling
 	LineBreak;
 	say "     Am always changing place;";
 	LineBreak;
-	say "     No food I eat, but by my power,";
+	say "  No food I eat, but by my power,";
 	LineBreak;
 	say " Procure what millions do devour.";
 	LineBreak;
@@ -202,7 +202,7 @@ instead of going north from Golden Doors while EgyptianRiddle is 1:
 	LineBreak;
 	say "     Am always changing place;";
 	LineBreak;
-	say "     No food I eat, but by my power,";
+	say "  No food I eat, but by my power,";
 	LineBreak;
 	say " Procure what millions do devour.";
 	LineBreak;

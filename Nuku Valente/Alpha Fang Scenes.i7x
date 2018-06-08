@@ -4,7 +4,7 @@ Alpha Fang Scenes by Nuku Valente begins here.
 
 "Adds additional scenes to Fang."
 
-Every turn when the player is in Gray Abbey Library and Fang is visible:
+Every turn when the player is in Grey Abbey Library and Fang is visible:
 	if HP of Fang is 3 or HP of Fang is 4: [alpha Fang]
 		increase score by 0;
 	else:

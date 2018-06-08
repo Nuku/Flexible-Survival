@@ -129,7 +129,6 @@ instead of fucking Liliana:
 Section 2 - Sex scene mechanics
 
 to say LilianaSexRandomizer:
-	setmonster "Black Equinoid";
 	[ Meeting the subsequent conditionals appends values to the end of the qq list. Afterwards, the list shuffled and a random number is selected. Values and meanings:
 		1 = player giving oral
 		2 = player receiving oral

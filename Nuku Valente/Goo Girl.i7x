@@ -9,7 +9,7 @@ when play begins:
 	add { "Goo Girl" } to infections of girl;
 	add { "Goo Girl" } to infections of humanoid;
 
-goocolor is a number that varies;
+goocolour is a number that varies;
 
 to say goovictory:
 	if inasituation is true:
@@ -105,7 +105,7 @@ When Play begins:
 	now desc entry is "[goodesc]";
 	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text, format as "Your face feels funny as (your text)." ]
@@ -153,11 +153,11 @@ to say googirlbodychange:
 		say ". Looking over yourself, afterwards, it seems that you're human! Something feels off about it, however..[run paragraph on]";
 
 to say googirlskinchange:
-	let tempnum be goocolor;
-	now goocolor is a random number between 0 and 3;
-	if goocolor is tempnum, increase goocolor by 1;
-	if goocolor is 4, now goocolor is 0;
-	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if] in colour";
+	let tempnum be goocolour;
+	now goocolour is a random number between 0 and 3;
+	if goocolour is tempnum, increase goocolour by 1;
+	if goocolour is 4, now goocolour is 0;
+	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if] in colour";
 	if bodyname of player is "Goo Girl":
 		say ". Moreover, your lower legs are drawn together, flowing into one another and creating a base of flesh that goes up to your lower thigh";
 

@@ -21,12 +21,12 @@ Instead of resolving a Pack Bang:
 		wait for any key;
 		now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
 		challenge "Feral Wolf";
-		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+		if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
 			say "     You are thrown to the ground by the pack-leader, defeated. Your only chance of escaping is now gone. You can hear the others closing in on you two. Looks like they will have a nice prey.";
 			say "[FeralWolfGangBang]"; [pack gangbang scene]
-		else if fightoutcome >= 30: [fled]
+		else if fightoutcome >= 30:     [fled]
 			say "You manage to make your escape from the wolf, leaving him and the rest of his pack behind.";
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 			say "     As you beat the wolf that attacked you, and he collapses with a loud pitiful whine, you hear the rustling in the underbrush behind you suddenly stop. Glancing into the woods, you spot one of the pack wolves, looking at you with a hostile stare but not daring to come forward alone. Seems like you frightened the beast by defeating his pack's alpha... which is something you make use of a second later. Running at him, you shout and wave your arms, which sends the wolf fleeing out of sight. You wait a moment to see if others are coming, but it looks like you're rid of them for now. This leaves you behind, alone with the dazed wolf.";
 			say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 		now Pack bang is resolved;
@@ -35,36 +35,36 @@ Instead of resolving a Pack Bang:
 		say "     You turn around, facing the pack of wolves that were hunting you. There are probably five feral wolves in different stages of the infection, with some looking almost like true wolves, while the smallest one still has some ripped clothes attached to his body as well as what looks like a normal teenager hairstyle. But they all look hungry, with their red cocks pointing out of their sheaths and right at you, almost as if saying they are going to use you for release, if you want it or not.";
 		wait for any key;
 		challenge "Feral Wolf";
-		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+		if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
 			say "[FeralWolfGangBang]";
-		else if fightoutcome >= 30: [fled]
+		else if fightoutcome >= 30:     [fled]
 			say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 			challenge "Feral Wolf";
-			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+			if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
 				say "[FeralWolfGangBang]";
-			else if fightoutcome >= 30: [fled]
+			else if fightoutcome >= 30:     [fled]
 				say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+			else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 				challenge "Feral Wolf";
-				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+				if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
 					say "[FeralWolfGangBang]";
-				else if fightoutcome >= 30: [fled]
+				else if fightoutcome >= 30:     [fled]
 					say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+				else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 					challenge "Feral Wolf";
-					if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+					if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
 						say "[FeralWolfGangBang]";
-					else if fightoutcome >= 30: [fled]
+					else if fightoutcome >= 30:     [fled]
 						say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+					else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 						now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
 						challenge "Feral Wolf";
-						if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+						if fightoutcome >= 20 and fightoutcome <= 29:    [lost]
 							say "[FeralWolfGangBang]";
-						else if fightoutcome >= 30: [fled]
+						else if fightoutcome >= 30:     [fled]
 							say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-						else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+						else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 							say "     As you beat the pack leader, the rest of the bedraggled pack breaks, fleeing into the forest. A moment later, you are left behind, standing over the dazed wolf.";
 							say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 		now Pack bang is resolved;

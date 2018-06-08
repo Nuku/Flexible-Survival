@@ -58,7 +58,7 @@ to say Catgirl_Loses:
 		if CatgirlFucked < 3:
 			increase CatgirlFucked by 1;
 	else:
-		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behavior of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
+		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behaviour of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
 
 to say Catgirl_Desc:
 	setmongender 4; [female]
@@ -121,30 +121,30 @@ When Play begins:
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
-instead of navigating Gray Abbey Library while (CatgirlFucked is 3):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (CatgirlFucked is 3):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FIRST WALKIN [line break]";
 	say "[FionaFirstMeeting]";
 
-instead of navigating Gray Abbey Library while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA REPEAT WALKIN [line break]";
 	say "[FionaRepeatMeeting]";
 
 instead of going up from Bunker while (CatgirlFucked is 3):
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FIRST WALKIN [line break]";
 	say "[FionaFirstMeeting]";
 
 instead of going up from Bunker while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA REPEAT WALKIN [line break]";
 	say "[FionaRepeatMeeting]";
@@ -210,16 +210,16 @@ to say FionaRepeatMeeting:
 	if CatgirlFucked is 4:
 		now CatgirlFucked is 5;
 
-instead of going up from Bunker while (CatgirlFucked > 3 and Fang is in Gray Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (CatgirlFucked > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
 	say "[FionaFangSex]";
 
-instead of navigating Gray Abbey Library while (CatgirlFucked > 3 and Fang is in Gray Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
 	say "[FionaFangSex]";
@@ -249,16 +249,16 @@ to say FionaFangSex:
 			say "     Keeping your distance from the area the sounds are coming from, you see Fiona streak out from between the bookshelves a moment later, tail all bushy and thick. She dashes down between two other rows of shelves, closely followed by Fang. A moment later, you fan hear the chase come to a sudden end, followed by a low growl and then a lust-filled mrowl. You do your best to filter out the sounds of their animalistic mating after that...";
 		now LastCatgirlFuck is turns;
 
-instead of going up from Bunker while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Gray Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
 	say "[FionaCarlMeet]";
 
-instead of navigating Gray Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Gray Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
 	say "[FionaCarlMeet]";
@@ -298,16 +298,16 @@ to say FionaCarlMeet:
 				now FionaCarlStatus is 1; [they fucked, player didn't watch]
 		now LastCatgirlFuck is turns;
 
-instead of going up from Bunker while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Gray Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";
 
-instead of navigating Gray Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Gray Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";

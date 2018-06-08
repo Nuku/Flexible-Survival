@@ -1,6 +1,6 @@
 Version 3 of Scavevents by Stripes begins here.
 [version 3 - Scavevents 13 to 15 added ]
-[version 3.1 - altered Free Milk and Gryphon Milkman event to add some flavor text for Dairy. Added new Abandoned Milk event - by cmacleod42]
+[version 3.1 - altered Free Milk and Gryphon Milkman event to add some flavour text for Dairy. Added new Abandoned Milk event - by cmacleod42]
 [version 3.2 - special content for Satyr-shape player in the free drink event - by Wahn]
 [version 3.3 - Gryphon Milkman, Free Milk and Abandoned Milk moved to Garrett.i7x file - Stripes ]
 
@@ -206,7 +206,7 @@ the sarea of Dropped Handbag is "Allzones".
 
 Instead of resolving a Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	say "     [bold type] Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
+	say "     [bold type] Do you want to search it?  It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -525,24 +525,24 @@ Instead of resolving a Garden Veggies:
 		if a random chance of 1 in 3 succeeds, mallrecall;
 		now Garden Veggies is resolved;
 	else if lastgardenveg - turns < 8:
-		say "     Finding yourself back in the neighborhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet. They seem to be growing rather quickly, but you'll have to wait a little longer.";
+		say "     Finding yourself back in the neighbourhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet. They seem to be growing rather quickly, but you'll have to wait a little longer.";
 	else if gardenveg is 0:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home. It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather. And even better than that, they're fruiting. Only a little of the produce is ripe, but you snag what's ready to be picked. You try to remember to return here again once the rest of the veggies have had time to mature. Between the tomatoes, beans and peas, you should have enough for a meal. It'll certainly be more nutritious than some of your meals lately.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
 		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 1:
-		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
+		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
 		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 2:
-		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
+		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
 		increase carried of food by 2;
 		now lastgardenveg is turns;
 		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 3:
-		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
+		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
 		if guy is banned:
 			challenge "Ewe";
@@ -593,7 +593,7 @@ Instead of resolving a Free Drink:
 				LineBreak;
 				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
 		else:
-			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
+			say "     Taking the drink, you swallow down the rich, flavourful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
 			LineBreak;
 			say "     Looking at the jolly satyrs moving on, something inside makes you want to join them, find out what party they're aiming for. Do you go after them and try to score an invitation for the fun?";
 			if player consents:

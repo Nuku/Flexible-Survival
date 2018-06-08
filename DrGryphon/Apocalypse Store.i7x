@@ -3,7 +3,7 @@ Version 1 of Apocalypse Store by DrGryphon begins here.
 
 "Adds new equipment for the player."
 
-Clothing Store is a scavevent. The sarea of Clothing Store is "Outside".
+Clothing Store is a scavevent.  The sarea of Clothing Store is "Outside".
 
 instead of resolving Clothing Store:
 	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, with windows and doors that are blown out, along with a torn apart interior and debris littered around the floor.";

@@ -30,7 +30,7 @@ Bevtalk is a number that varies.
 Bevkitty is a number that varies.
 
 Beverly is a woman.
-The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
+The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in colour, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
 The conversation of Beverly is { "Squeak!" }.
 
 the scent of Beverly is "She smells like the books surrounding her mixed with a hint of hay.".
@@ -135,7 +135,7 @@ carry out browsebooks:
 			If huntfeat is 1:
 				say "     As you peruse the table where you found [bold type]The Hunter's Almanac[roman type], you find the book and look back through the table of contents to see if there is any other info that catches your eye. Not seeing anything of interest, save for the chapter on setting up a deer stand, you close it and move to another table, making a mental note to come back and read that chapter later if you find nothing else.";
 			else:
-				say "     While looking through a stack of books on a table, you come across a book titled [bold type]The Hunter's Almanac[roman type] by authors Dewey, Ketchum, and Howe. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of hunting with humor sprinkled about. But finding it's not telling you anything you don't already know, you close it and continue your search.";
+				say "     While looking through a stack of books on a table, you come across a book titled [bold type]The Hunter's Almanac[roman type] by authors Dewey, Ketchum, and Howe. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of hunting with humour sprinkled about. But finding it's not telling you anything you don't already know, you close it and continue your search.";
 		else:
 			say "[thab]";
 	else if X is 5:

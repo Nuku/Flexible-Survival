@@ -108,7 +108,6 @@ Instead of fucking Amaryllis:
 		say "     Amaryllis looks away at your offer. 'I'd love to, but...' she trails off, going quiet for a moment before locking her gaze with yours again. 'Look, the elders told me not to have fun with non-equinoids anymore - their ruling, not my choice. If you want to be my playmate, why not let the herd help you become more like us again?' she offers helpfully. 'Or you could just boink Liliana instead,' she adds, glancing jealously at your companion.";
 
 to say AmaryllisSexMenu:
-	setmonster "Black Equinoid";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

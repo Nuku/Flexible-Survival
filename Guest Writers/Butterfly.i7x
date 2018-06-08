@@ -931,7 +931,7 @@ to say butterfly grove scene:
 
 After examining butterfly grove:
 	say "You head home.";
-	move the player to Gray Abbey Library;
+	move the player to Grey Abbey Library;
 
 
 Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttravel. It is private.

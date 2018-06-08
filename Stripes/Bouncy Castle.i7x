@@ -24,7 +24,7 @@ when play begins:
 	add Snared Vixen to badspots of furry;
 
 Instead of resolving a Snared Vixen:
-	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
+	say "     As you're travelling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
 	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch.";
@@ -54,7 +54,7 @@ Instead of resolving a Snared Vixen:
 	now Snared Vixen is resolved;
 
 
-Section 2 - traveling to the Bouncy Castle
+Section 2 - Travelling to the Bouncy Castle
 
 rowing is a truth state that varies. rowing is usually false.
 
@@ -87,7 +87,7 @@ instead of navigating Bouncy Castle:
 			say "     Erring on the side of caution, you reign in your curiosity - for now.";
 			stop the action;
 	else:
-		say "[bcnavigate]";
+		say "[bcnavigate]"
 
 to say bcnavigate:
 	if location of player is not Beach Plaza and location of player is not Public Beach: [Skips this if the player is already in Beach Plaza or Public Beach]
@@ -802,9 +802,9 @@ Chapter 9 - Knight's Chambers
 floatertaken is a truth state that varies. floatertaken is usually false.
 
 to say bcknightschambers:
-	say "     This room is designed to be a knight's chambers. The wall designs have a knight donning his armor, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this. There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here. There's a window on the north wall and another two on the west. There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
+	say "     This room is designed to be a knight's chambers. The wall designs have a knight donning his armour, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this. There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here. There's a window on the north wall and another two on the west. There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
 	if floatertaken is false:
-		say "     Also in this room is an inflatable floater shaped like a cute, white ducky. The swim ring looks like one meant to be worn around a kid's waist to help them float, but large enough to [if scalevalue of player > 2]even [end if]fit you. It has a cute duck head on a short neck at the front, a tuft of a tail at its back and a tiny pair of wings at its sides. These latter are the main reason you noticed it, as it's waving them around frantically, making the floater shift around a bit on the floor. As you cautiously move closer, it looks up at your with a strangely plaintive look in its eyes as it wobbles around. Odd behavior when compared to that of the other creatures you've seen here.";
+		say "     Also in this room is an inflatable floater shaped like a cute, white ducky. The swim ring looks like one meant to be worn around a kid's waist to help them float, but large enough to [if scalevalue of player > 2]even [end if]fit you. It has a cute duck head on a short neck at the front, a tuft of a tail at its back and a tiny pair of wings at its sides. These latter are the main reason you noticed it, as it's waving them around frantically, making the floater shift around a bit on the floor. As you cautiously move closer, it looks up at your with a strangely plaintive look in its eyes as it wobbles around. Odd behaviour when compared to that of the other creatures you've seen here.";
 		say "     [bold type]Shall you pick it up?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";

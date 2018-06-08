@@ -188,7 +188,7 @@ to say ErinVoyeurKo:
 		say "'Sssh, sis, it's okay,' Erin reassures his sibling with an affectionate kiss on the forehead, before inviting you, once again, to enter the small storage room.";
 		say "'Have fun, both of you,' you can hear Violet say just before the door closes.";
 
-[to say ErinThreeSome:
+[to say ErinThreesome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
 	say "[bold type]Do you want to top or to bottom during the threesome?[roman type]";
 	say "[link]Top[as]y[end link] You want to take an active role.";
@@ -331,7 +331,7 @@ to say VioletFuck:
 		say "     Several times, you feel her inner muscles contract, and you could swear that she had cummed each of these times, but your own explosive climax would only come after several minutes of intense sex. Your vision flashes white, and you press Violet against the wall so hard that, in a corner of your brain, you worry that you are not squishing her. The spasms of your cocks reverberate throughout your entire body, as every single drop of your semen is dutifully taken in by the female rat's womb and ass.";
 	  if cocks of player >= 4:
 		say "     A twisted idea crosses your mind. You take the opportunity of a pull to line an additional cock against each entrance, then slam in again. Violet's eyes open wide as her two holes are forced to stretch even more to accommodate the second entry. 'Oh my gawd! Oh fuck! [if player is not defaultnamed]S-Stop, [name of player], this is... [end if]Too much! My ass! So big! Aaaah!' Her shouts only serve to fuel the sexual beast inside of you, as you give Violet a pounding for the ages[if isTwinHere is 1] with her sibling's vocal approval[end if].";
-		say "     Several times, you feel her inner muscles contract, and you could swear that she had cummed each of these times, but your own explosive climax would only come after several minutes of intense sex. Your vision flashes white, and you press Violet against the wall so hard that, in a corner of your brain, you worry that you are not squishing her. The spasms of your cocks reverberate throughout your entire body, as every single drop of your semen is dutifully taken in by the female rat's womb and ass.";
+		say "     Several times, you feel her inner muscles contract, and you could swear that she had cummed each of these times, but your own explosive climax would only come after several minutes of intense sex. Your vision flashes white, and you press Violet against the wall so hard that, in a corner of your brain, you worry that you are not squishing her. The spasms of your cocks reverberate throughout your entire body, as every single drop of your semen is dutifully taken in by the female rat's womb and ass."
 	WaitLineBreak;
 	say "     You let Violet get off from you. Your arms are trembling a little from the effort, her legs are shaking like crazy from the pleasure. 'B-Best. Sex. Ever,' is all she has to say. [if isTwinHere is 1]Erin gives out a faint yes. He came hard too, judging by the ropes of cum which paint the floor all the way to you[end if]. Violet grabs a roll of kitchen paper, and give a couple for you to clean up. Putting a finger to her crotch, she pulls up a strand of mixed cum and vaginal fluid.[first time] 'A good thing I looted that stash of birth control pills at the drugstore' she notes.[only] 'I think I'll need some rest[if isTwinHere is 1]. Erin too, mind ya[end if]. My legs are still shaking from this one. Take care, [if player is not defaultnamed][name of player][else]tiger[end if].'";
 	now isTwinHere is 0;
@@ -384,7 +384,7 @@ to say VioletVoyeurKo:
 		say "     'Digging yourself deepe~r,' the male rat sings, to which Violet replies with childish raspberries before pushing you into the storage room and closing the door.";
 
 	[Ideas to implement: multicock version for both twins bottoming]
-[to say VioletThreeSome:
+[to say VioletThreesome:
 	say "     Erin and Violet's rat ears twitch with perfect synchronicity as you make your proposition.";
 	say "[bold type]Do you want to top or to bottom during the threesome?[roman type]";
 	say "[link]Top[as]y[end if] You want to take an active role.";
@@ -577,7 +577,7 @@ instead of resolving Tied Rat Twins:
 	if player consents:
 		LineBreak;
 		say "     You walk inside the shop, if only to check what is the source of all this buzzing. It is even louder when in the shop, as if several toys had been set off at once. And, more worryingly, you hear several persons scream through a gag. You head towards the source of the noise, behind the counter. You stumble upon Eric and Violet. The twins seem to have been caught in the middle of their own patrol, and they have been bound together sturdily with leather cuffs and ropes. They have been forced face-to-face, a vibrating wand stuck against their conjoined crotches. As a 'bonus', Violet got her holes spread apart by dildos, while you recognize the shape of a prostate massager stuck into Erin's ass. For added humiliation, their rodent muzzles have been taped to each other, having them share an embarrassing kiss.";
-		say "     Just as you are coming around, the twins squirm ineffectively against each other, they climax together, probably another of a long series. You hurriedly help them get out of their bounds, and toys. 'Thanks, [if player is not defaultnamed][name of player][else]pal[end if],' Erin says weakly. 'It was one hell of an hour. I think I came enough for... Like... A whole week,' Violet comments. 'We were attacked by looters and they caught up with us as we ran away inside,' Erin says. 'Bad idea,' Violet agrees. 'Thankfully, we had stashed our loot before these fuckers get to us. Let us share something with you.'";
+		say "     Just as you are coming around, the twins squirm ineffectively against each other, they climax together, probably another of a long series. You hurriedly help them get out of their bounds, and toys. 'Thanks, [if player is not defaultnamed][name of player][else]pal[end if],' Erin says weakly.  'It was one hell of an hour. I think I came enough for... Like... A whole week,' Violet comments. 'We were attacked by looters and they caught up with us as we ran away inside,' Erin says. 'Bad idea,' Violet agrees. 'Thankfully, we had stashed our loot before these fuckers get to us. Let us share something with you.'";
 		say "     True to her word, Violet and Erin guide you to a bin just outside the shop, and pull out a bag of chips and an already used bottle of water. 'Watch out on the streets,' Erin says before parting with you.";
 		say "[bold type]You gain 1 bag of chips.[roman type]";
 		say "[bold type]You gain 1 bottle of dirty water.[roman type]";

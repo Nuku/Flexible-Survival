@@ -1,4 +1,4 @@
-Version 1 of MPreg Platypus by Sapphire begins here.
+Version 1 of Mpreg Platypus by Sapphire begins here.
 [Version 1 - Initial Creature Setup]
 
 "Adds a Template creature to Flexible Survival's Wandering Monsters table"
@@ -11,7 +11,7 @@ when play begins:
 
 to say platypusdesc:
 	setmongender 3; [creature is male]
-	say "     You hear the sound of something wet shifting through the sand. At first, you pass it off as the waves of the ocean against the beach, but after a few moments, it sounds more and more like footsteps getting closer. Concerned, you look around to find the source. Down the beach you find a gravid figure holding their belly and waddling towards you. As it gets closer you see that the figure is a male with a duck's bill on the body of a heavily pregnant otter sporting wide hips and a broad tail like a beaver.";
+	say "     You hear the sound of something wet shifting through the sand. At first, you pass it off as the waves of the ocean against the beach, but after a few moments, it sounds more and more like footsteps getting closer.  Concerned, you look around to find the source. Down the beach you find a gravid figure holding their belly and waddling towards you. As it gets closer you see that the figure is a male with a duck's bill on the body of a heavily pregnant otter sporting wide hips and a broad tail like a beaver.";
 	if bodyname of player is "Platypus":
 		if gestation of child > 0 and gestation of child < 20:
 			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. I see you're working on another clutch. Congratulations!' Reaching forward, he rubs at your belly lovingly, feeling your belly fur move under his webbed fingers. You recoil from his touch with mild concern. 'Hey now... No need to be like that,' the platypus whines, getting a bit more aggressive with his advances.";
@@ -120,7 +120,7 @@ When Play begins:
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]curvy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]platypus[or]monotreme[as decreasingly likely outcomes]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
@@ -139,7 +139,7 @@ when play ends:
 			say "     You and your mate swim out into deeper waters, avoiding the boats of the soldiers moving in to cleanse the city of the infection. A few days of travel gives you plenty of time to talk with your mate, have some food, and engage in plenty of sex. Eventually you find yourself up on a strange beach. After a bit of discussion, and your mate rubbing his belly full of eggs ready to be laid, you decide that this is the place where you will set up your nest and live out the rest of your days.";
 		else:
 			say "     The soldiers arrive in the city, and for a moment you panic, wondering if they're going to believe that you're not one of the sex-crazed beasts around you. As you try to decide whether to run or give yourself up, you hear a call go out over a loudspeaker for any willing victims to present themselves to the medical tent for examination. You eagerly come out of hiding, and hand yourself in for the doctors to pass you as clean and give you a shot to make you non-infectious.";
-			if cocks of player > 0:      [MALE/HERM]
+			if cocks of player > 0:                     [MALE/HERM]
 				say "     The doctors give you all the usual exams: they take some blood for testing, they get the cheek swab for your DNA, and they give your [if player is mpreg_able]male womb[else]prostate[end if] a quick examination. A few hours later, they come back with the results of your test. At first, the doctor doesn't say much of anything, he just reads the papers on his clipboard, when you ask what's wrong, he laughs and shakes his head. 'Nothing my dear boy. I just thought it would be funny to keep you waiting.'";
 				if player is mpreg_able and cunts of player is 0:
 					say "     He wraps an arm around your shoulders and smiles. 'The only news I have is that we can't do anything about your womb without some serious surgery, and we can't promise that any surgery we do would stay, with those nanites in your system. There is a pill we are going to give you to make you non-infectious, but there's nothing we can do about the changes that you've already had.'";
@@ -148,9 +148,9 @@ when play ends:
 					say "     He wraps an arm around your shoulders and smiles. 'The good news is that you've managed to avoid the same nanite strain that many others of like you have had. They all seem to be males, yet they can become pregnant. I'm sure you've seen a few in order to get like you are. But congratulations on making it as far as you did!'";
 					say "     The doctor continues, 'Many of the people in that city gave into the infection and wound up sex-crazed beasts. It's been one hell of a day trying to pick out the ones that are still sane.' You both laugh over a few of the stories from some of the other survivors and the doctors. After a few minutes he gets back to business. 'There's one thing you need to do before we let you out.' He offers you a small capsule and a plastic cup full of water. 'This pill will make you non-infectious. After that, you're free to go.'";
 					say "     After you take the pill and swallow it down, you say goodbye to the doctor and get put on a relocation bus, headed into your new life.";
-			else:            [FEMALE]
+			else:                           [FEMALE]
 				say "     The doctors give you all the usual exams: they take some blood for testing, they get the cheek swab for your DNA, and they give your pussy a quick examination. A few hours later, they come back with the results of your test. At first, the doctor doesn't say much of anything, he just reads the papers on his cllipboard. When you ask what's wrong, he laughs and shakes his head. 'Nothing, my fine lady. I just thought it would be funny to keep you waiting.'";
 				say "     He puts a hand on your shoulder and smiles. 'The good news is that it's all over. We've managed to contain the infection, and those who are still sane are allowed to leave, provided that they take this pill.' You praise an eyebrow questioningly. Before you can ask, he offers you a small capsule and a little plastic cup full of water. 'It's nothing bad, it just nullifies the infectiveness of the nanites in your system.' After another look over the medicine, you swallow it with a swig of water.";
 				say "     After you take the pill and swallow it down, you say goodbye to the doctor and get put on a relocation bus, headed into your new life.";
 
-MPreg Platypus ends here.
+Mpreg Platypus ends here.

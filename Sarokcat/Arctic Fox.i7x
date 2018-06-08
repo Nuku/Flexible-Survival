@@ -1,4 +1,4 @@
-Arctic Fox by Sarokcat begins here.
+Arctic fox by Sarokcat begins here.
 
 "Adds a Arctic fox to Flexible Survival's Wandering Monsters table"
 
@@ -93,4 +93,4 @@ when play ends:
 				say "Listening to her plan, you find yourself grinning with amusement as you nod eagerly, and soon, the two of you are carefully recruiting a-not-so small group of women who are interested in foxes, fur, and modeling. Soon, your den is full of recently changed foxy women, all of them happy and enthusiastic about their new condition, and you and Janice begin spending some time in training them in how to move and act properly, and even more time having fun with your new denmates. When you are finally ready, Janice contacts several of her old friends again, and you take the fashion world by storm as you model several of the hottest outfits and strut your stuff both on the catwalk and off. The money rolls in, though you find the cheers and adoration of the crowds and their rapt attention to your new sexy body to be almost more of a reward than any amount of money could be. Soon, however, the movie offers and advertising contracts start rolling in for you and your fellow foxes, though from the mischievous look in Janice's eye again, you can tell that she is planning something. When you notice her watching the handsome male star of your first movie with that look, you find yourself grinning with anticipation as well. It will be nice to have a sexy male fox around the den after all, and you just can't wait to see how he turns out...";
 
 
-Arctic Fox ends here.
+Arctic fox ends here.

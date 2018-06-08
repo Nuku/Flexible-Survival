@@ -126,7 +126,7 @@ Instead of conversing the doctor matt:
 			now area entry is "Park";
 		now HP of doctor matt is 8;
 	if HP of doctor matt is 9 and hospquest < 8:
-		say "'Please continue to assist Dr Mouse. And let me know what you find out.' Dr Matt then turns back to his work, intent on continuing his research.";
+		say "'Please continue to assist Dr Mouse. And let me know what you find out.'  Dr Matt then turns back to his work, intent on continuing his research.";
 	if HP of doctor matt is 8 and hospquest is 8:
 		say "     You decide to tell Dr Matt about what you've been doing for Dr Mouse. You leave out what really happened to the scientific device he gave you and he doesn't seem to notice, instead focusing on the fact that he has a competitor. And one that you've been helping.";
 		say "     'I had been wondering what you'd been up to for the last few days in the city while I had nothing for you to do. Idle hands, as they say. This is quite unexpected. You have found another person in the city searching into the mysteries of the nanite infection, but through a different avenue of research. And using the infected as test subjected is...' he coughs as he notices the stern look you [if susan is visible]and Susan [end if]give him. 'That is, possibly using them as unwilling test subjects in such surgical experiments. Most disturbing and unethical, even in such a crisis.'";
@@ -160,7 +160,7 @@ Instead of conversing the doctor matt:
 				if the player consents:
 					delete Chipped tooth;
 					increase score by 10;
-					say "     'It is good to see that you appreciate the importance of my work.' He picks up the large fang in his gloves and places it in a sample dish.";
+					say "     'It is good to see that you appreciate the importance of my work.'  He picks up the large fang in his gloves and places it in a sample dish.";
 					now sabtoothedmatt is 1;
 				else:
 					say "     'I am disappointed that you don't appreciate the importance of my work. I hope you will at least continue to keep me appraised of Dr Mouse's activities.";
@@ -183,7 +183,7 @@ Instead of conversing the doctor matt:
 			if nermpack is 1:
 				say "     You pull out the dusty package and set it on one of tables. Dr Matt opens it carefully, using tongs to pull the strings to untie them. When they drop away, he lifts the flaps with his tongs. Peeking inside, you both see a large piece of golden fur. The doctor, relaxing a little, pulls it out and holds it up.";
 				say "     'It seems to be a very old animal hide. Lion, I should guess. I'm not sure why he is interested in this ratty, old thing. But I should take a sample just in case. Dr Matt takes a scalpel to cut a small corner from the old lionskin. But after several tries, he's only made a small notch in it. He grunts and pulls out a larger knife and tries again, eventually managing to slice a small corner from it.";
-				say "     He looks down at the small cutting he's placed in the sample tray. 'That was most perplexing. From all appearances, the hide is very old and should be quite fragile.' He turns the box around, finding the Greek writing on it. 'Nemea? What does that... the Nemean Lion!' Dr Matt stiffly folds up the pelt and puts it back in the box, very slowly tying it back up. 'It... makes no sense. But what else could it be?' The poor doctor seems quite out of sorts and it appears that no further explanation will be forthcoming.";
+				say "     He looks down at the small cutting he's placed in the sample tray. 'That was most perplexing. From all appearances, the hide is very old and should be quite fragile.'  He turns the box around, finding the Greek writing on it. 'Nemea? What does that... the Nemean Lion!'  Dr Matt stiffly folds up the pelt and puts it back in the box, very slowly tying it back up. 'It... makes no sense. But what else could it be?'  The poor doctor seems quite out of sorts and it appears that no further explanation will be forthcoming.";
 				increase score by 10;
 				now nerminepackagematt is 1;
 		if nerminepackage is 5 and nerminepackagematt is 0:
@@ -279,12 +279,12 @@ Instead of conversing the doctor matt:
 			if foodneed is 0:
 				say "     'Good job! This is sufficient food to build up our supplies. Nothing like a good meal to keep the brain running at its best,' the doctor says, looking over the fare hungrily as he takes the supplies from you. You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 			else:
-				say "     'I'll add that food to our supplies to raise our stocks,' the doctor says, taking the food from you. 'We still need [foodneed] more meals though.' You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+				say "     'I'll add that food to our supplies to raise our stocks,' the doctor says, taking the food from you. 'We still need [foodneed] more meals though.'  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if tempnum2 > waterneed:
 			if waterneed is 0:
 				say "     'Good job! This is sufficient water to increase our supplies. Nothing like a good drink to grease the wheels of science,' the doctor says, looking over the collected water thirstily as he takes the supplies from you. You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 			else:
-				say "     'I'll add that water to our supplies to raise our stocks,' the doctor says, taking the water from you. 'We still need [waterneed] more liters though.' You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+				say "     'I'll add that water to our supplies to raise our stocks,' the doctor says, taking the water from you. 'We still need [waterneed] more liters though.'  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if foodneed is 0 and waterneed is 0:
 			say "     Having safely stored away the supplies, Dr Matt turns back to you as if wondering why you're still here when there's work to be done[if susan is present]. Susan politely coughs and nods towards the nanite enhancement device while tapping her hoofed foot on the floor[else]. You glare at the doctor for a few seconds before finally pointing to the nanite enhancement device[end if], at which point Dr Matt brushes his gloved hands together and nods, heading over to it as if that was his intention all along.";
 			wait for any key;
@@ -314,10 +314,10 @@ Instead of conversing the doctor matt:
 			increase score by (number of known fasttravel rooms) * 2;
 			say "     You have gained [special-style-1][tempnum][roman type] freecred and now have [freecred] freecred.";
 			WaitLineBreak;
-			say "     You'll notice that I was able to provide you with a sum of 'free credits.' These are a form of currency alternative that the Zephyr conglomorate has implemented. While my contacts with the military assure me that at least portions of the nation are still functioning, it is clear that the federal government is in disarray at the moment. And while Zephyr seems intent on exploiting this to position themselves as the new driving force in the nation, if not the world, there is no question that they are prepared and in possession of considerable knowledge about the infection and the nanites. So much so that I have to wonder about their role in all of this.'";
+			say "     You'll notice that I was able to provide you with a sum of 'free credits.'  These are a form of currency alternative that the Zephyr conglomorate has implemented. While my contacts with the military assure me that at least portions of the nation are still functioning, it is clear that the federal government is in disarray at the moment. And while Zephyr seems intent on exploiting this to position themselves as the new driving force in the nation, if not the world, there is no question that they are prepared and in possession of considerable knowledge about the infection and the nanites. So much so that I have to wonder about their role in all of this.'";
 			say "     'I want you to make contact with their representatives in the city and give them this package,' Dr Matt says as he passes you a manila envelope. 'It contains a request for certain items and data they have in their possession which would be very useful to my research into the nanites. I'm quite certain they know a lot more than they're letting on, but they should be willing to share this information at least. Now, as they are the representatives of a company, they will most certainly not just hand over this data.'";
 			WaitLineBreak;
-			say "     The doctor shuffles a few items around on his desk. 'The military command should have contacted the corporate office as well to negotiate this exchange of information. As payment, I've included selected portions of my research on a storage device you may give them if they agree to the terms. The reason I am sending you as a courier on this is that they may make some demands of you, claiming the offer may be insufficient. Given your experience in dealing with the city, you should be able to handle such a request from them.' It seems that doing Dr. Matt's dirty work isn't enough; now he's renting you out to others to do their dirty work too. Oh well.";
+			say "     The doctor shuffles a few items around on his desk. 'The military command should have contacted the corporate office as well to negotiate this exchange of information. As payment, I've included selected portions of my research on a storage device you may give them if they agree to the terms. The reason I am sending you as a courier on this is that they may make some demands of you, claiming the offer may be insufficient. Given your experience in dealing with the city, you should be able to handle such a request from them.'  It seems that doing Dr. Matt's dirty work isn't enough; now he's renting you out to others to do their dirty work too. Oh well.";
 			if mattcollection is not 1:
 				WaitLineBreak;
 				say "     'I have a prototype here of something I've been working on. While I no longer need it, I do realize that it may prove useful to you even as such. I am working on an improved model to eventually be used when the military comes in to rescue the infected survivors.'";
@@ -333,8 +333,8 @@ Instead of conversing the doctor matt:
 	else if HP of doctor matt is 17:
 		say "     'Please continue to work on that task for Zephyr.'";
 	else if HP of doctor matt is 18:
-		say "     Dr. Matt takes the data disk from you, putting it into a computer. He starts clacking away at the keyboard, rapidly getting engrossed in the data on the screen. You clear your throat a couple of times before he notices you standing there. 'You're still here? I don't really have further need of you at the moment. I have much to work on now.' He seems about ready to turn back to his work when he stops himself.";
-		say "     'Ahhh. You're curious what new advances I have made in your absence... and if any of them are for you. Well, I've had little direct progress, but I did receive a little something from the military while you were gallivanting around that you might be interested in. It seems the military have some inoculations they're providing to some of their men. They're purchasing them from Zephyr and RSX at rather steep prices, so they have only been able to provide me with one sample of this.' He holds up a small spray can[if ColeenTalk > 0] like the one Coleen'd shown you[end if]. 'It is a restorative spray, able to revert the recipient back to human form and help clear their mind.'";
+		say "     Dr. Matt takes the data disk from you, putting it into a computer. He starts clacking away at the keyboard, rapidly getting engrossed in the data on the screen. You clear your throat a couple of times before he notices you standing there. 'You're still here? I don't really have further need of you at the moment. I have much to work on now.'  He seems about ready to turn back to his work when he stops himself.";
+		say "     'Ahhh. You're curious what new advances I have made in your absence... and if any of them are for you. Well, I've had little direct progress, but I did receive a little something from the military while you were gallivanting around that you might be interested in. It seems the military have some inoculations they're providing to some of their men. They're purchasing them from Zephyr and RSX at rather steep prices, so they have only been able to provide me with one sample of this.'  He holds up a small spray can[if coleentalk > 0] like the one Coleen'd shown you[end if]. 'It is a restorative spray, able to revert the recipient back to human form and help clear their mind.'";
 		WaitLineBreak;
 		say "     You reach for the can, but he pulls it away. 'Not so fast. Like I've explained, I have only one sample of this and most likely will not be able to obtain another. Now, I am willing to use it on you, but I need to be observe the results throughout the process. [if Susan is visible]Both Orthas and Susan have refused to accept the treatment, so you're the candidate for whom I have the next-most amount of data. They also seem rather firmly locked in their forms... I'm unsure how effective it'd be on them at this point[else]Orthas has refused to accept the treatment, so you're the candidate for whom I have the next-most amount of data. She also seems rather firmly locked in her form... I'm unsure how effective it'd be on her at this point[end if]. As your form is still in flux, monitoring its effects on you should be quite informative... if you're willing to change back, that is.'";
 		say "     [bold type]Shall you accept the doctor's offer and receive the restoration treatment?[roman type][line break]";
@@ -365,11 +365,11 @@ Instead of conversing the doctor matt:
 			now cock of player is cock entry;
 			increase humanity of player by 20;
 		else:
-			say "     'That is your choice to make,' he says. He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science. 'There are a few others who other survivors who have been coming by from time to time. I expect one of them will be eager for the opportunity.' He stores the can away.";
-			say "     'Well, there is something else that was left when the restorative spray was delivered for testing. As I have Orthas here to protect me, I have little need for it. It's not much, but you can take it as thanks for your continued assistance. It should help keep you safe out in the city.' He tosses you a can of pepperspray.";
+			say "     'That is your choice to make,' he says. He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science. 'There are a few others who other survivors who have been coming by from time to time. I expect one of them will be eager for the opportunity.'  He stores the can away.";
+			say "     'Well, there is something else that was left when the restorative spray was delivered for testing. As I have Orthas here to protect me, I have little need for it. It's not much, but you can take it as thanks for your continued assistance. It should help keep you safe out in the city.'  He tosses you a can of pepperspray.";
 			increase carried of pepperspray by 1;
 		WaitLineBreak;
-		say "     'Orthas has also received some news from travelers about the state of the city hospital after the incidents there. Some new chimeric creatures have been observed. It seems these are different from the other ones you've earlier observed. They are likely [if HP of Doctor Mouse is 1]released[else]escaped[end if] test subjects that have been left to roam the halls. They have either subsumed or displaced the earlier chimeras. The accounts state that they are more powerful, so I thought it best to advise you of the occurrence. Exercise caution should you go there.'";
+		say "     'Orthas has also received some news from travellers about the state of the city hospital after the incidents there. Some new chimeric creatures have been observed. It seems these are different from the other ones you've earlier observed. They are likely [if HP of Doctor Mouse is 1]released[else]escaped[end if] test subjects that have been left to roam the halls. They have either subsumed or displaced the earlier chimeras. The accounts state that they are more powerful, so I thought it best to advise you of the occurrence. Exercise caution should you go there.'";
 		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received. 'I have little else for you to do at the moment. Please check back in a day or so. Until then, go keep yourself occupied elsewhere for now,' he says dismissively.";
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;
@@ -382,7 +382,7 @@ Instead of conversing the doctor matt:
 		now level of Doctor Matt is turns;
 	else if HP of Doctor Matt is 19 and level of Doctor Matt - turns >= 8:
 		say "     'I'm still working through the data from Zephyr. Though it does have some obvious gaps, the data from Zephyr is quite promising. It is clear that they know much more about this event than they're disclosing - at least publicly. That being said, my research is advancing quickly. I still need more time to unravel this puzzle, but certain avenues of research are no longer roadblocked.";
-		say "     'That being said, I do have a quick errand for you to run. Nothing difficult.' He grabs a paper pad and flips through it, trying to find something. 'Ah, yes. Here it is. Something Orthas had mentioned hearing about[if HP of Orthas >= 4] while making enquiries following the egg incident[end if]. There's a [bold type]pediatrics[roman type] office in the area that apparently still has an active doctor working there.'";
+		say "     'That being said, I do have a quick errand for you to run. Nothing difficult.'  He grabs a paper pad and flips through it, trying to find something. 'Ah, yes. Here it is. Something Orthas had mentioned hearing about[if HP of Orthas >= 4] while making enquiries following the egg incident[end if]. There's a [bold type]pediatrics[roman type] office in the area that apparently still has an active doctor working there.'";
 		if HP of doctor medea < 2 and medeaget is 0:	[have not been there]
 			say "     Your expression must have changed, since the scientist crosses his arms and glares at you through the mask of his containment suit. 'Oh now, don't make that face. She is not like that mouse of yours. She's apparently been giving what prenatal care she can to those who visit her. As reproduction has been enhanced and accelerated in the infected, I expect she's learnt much more than I have on that particular aspect of the nanites['] activities. Now while this has minimal impact on my main research, the data will be of some use. Please render her whatever assistance she may need to coax her into providing her data files, charts or whatever you can obtain.";
 		else:
@@ -394,7 +394,7 @@ Instead of conversing the doctor matt:
 		say "     'Please visit the doctor working at the nearby [bold type]Pediatrics Office[roman type]. Assist her if need be in return for their findings.'";
 	else if HP of Doctor Matt is 22:
 		say "     You turn over Dr. Medea's collected data to Dr. Matt. And while he seems quite caught up in reviewing the material from Zephyr, a quick review soon has him going through the notes in detail. 'These case files and medical charts are excellent. The notes are a little heavy on the medical jargon and the handwriting is suitably atrocious as befits a physician, but they are very rich in detail. Even explicit detail in many cases. I shall have to review it more thoroughly in private later.'";
-		say "     He makes a show of straightening the papers and looking professional. 'Ahem. I've been preparing an update to your PISM. If you'll hook it up over there,' he says, pointing to the infection monitor, 'I should be able to determine the necessary values and statuses from these notes while the terminal downloads the logs.' While he alternates between the stack of files, a calculator and his computer, he asks you to report on the functionality of the device and your experiences with using it. You answer his questions as best you can, trying to relay any bugs and quirks you can remember.";
+		say "     He makes a show of straightening the papers and looking professional. 'Ahem. I've been preparing an update to your PISM. If you'll hook it up over there,' he says, pointing to the infection monitor, 'I should be able to determine the necessary values and statuses from these notes while the terminal downloads the logs.'  While he alternates between the stack of files, a calculator and his computer, he asks you to report on the functionality of the device and your experiences with using it. You answer his questions as best you can, trying to relay any bugs and quirks you can remember.";
 		say "     Eventually he falls silent and you're left waiting again as he clacks away. Thankfully, it's not nearly as long nor are you interrupted before he's finished. As the upgrade is being sent to the device, he looks over the cobbled-together piece of tech. 'This is about as much as this version of the device will be able to handle. Unfortunately, it is the best I could do with what I have available. If all goes well with my research, we will have to send you elsewhere to get a better version built. For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if player is not female]. And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if]. As before, please continue to test this device. The better we can make it, the better the final product I need to create for the military will be.'";
 		say "     With that, Dr. Matt gets back to reviewing the material from Zephyr. Soon he's caught up in this, waving you off for now. It seems like he's got nothing more for you to do at the moment.";
 		say "[bracket]PISM upgraded to display pregnancy/heat status and approximate duration.[close bracket][line break]";
@@ -404,7 +404,7 @@ Instead of conversing the doctor matt:
 	say "He looks kind of busy right now.";
 
 [
-		say "     Returning to check in with Doctor Matt, you find him talking on a phone you'd not seen in here before. It's an old, rotary-style phone, but it is attached atop a metal box with blinking LEDs, a UHF antenna and standing on mechanical spider legs.";
+		say "     Returning to check in with Doctor Matt, you find him talking on a phone you'd not seen in here before. It's an old, rotary-style phone, but it is attached atop a metal box with blinking LEDs, a UHF antenna and standing on mechanical spider legs.
 ]
 
 Section 2 - PISM
@@ -433,15 +433,15 @@ check monitoring:
 
 to monitor:
 	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
-	say "Head status: [facename of player]     Body status: [bodyname of player][line break]";
-	say "Skin status: [skinname of player]     Tail status: [tailname of player][line break]";
+	say "Head status:  [facename of player]     Body status:  [bodyname of player][line break]";
+	say "Skin status:  [skinname of player]     Tail status:  [tailname of player][line break]";
 	if cocks of player > 0:
 		if cunts of player > 0:
-			say "Cock status: [cockname of player]     Gender: Herm[line break]";
+			say "Cock status:  [cockname of player]     Gender: Herm[line break]";
 		else:
-			say "Cock status: [cockname of player]     Gender: Male[line break]";
+			say "Cock status:  [cockname of player]     Gender: Male[line break]";
 	else if cunts of player > 0:
-		say "Groin status: [cockname of player]     Gender: Female[line break]";
+		say "Groin status:  [cockname of player]     Gender: Female[line break]";
 	else:
 		say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	if ( HP of Doctor Matt >= 23 and HP of Doctor Matt < 100 ) or hospquest >= 23:

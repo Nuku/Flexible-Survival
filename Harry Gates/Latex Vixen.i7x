@@ -6,10 +6,10 @@ Section 1 - Latex Vixen Infection
 
 Table of Latex Vixen Shifts
 Segment	Shift Text															Desc Text	Third Person Text	Male Shift Text	Male Third Person Text
-"head"		"Red rubber pours across YOUR head as it extends into a fox-like muzzle and two black pointed ears grow from its top. Long tresses of red hair grow down your back. Something about the shape of your new green, slitted eyes shows /you/ /are/ not just a fox, /you/ /are/ a vixen."		"You /have/ a rubbery vixen's head with stunning green slitted eyes, black ears poking through long red tresses."
-"chest"		"White latex moves over YOUR chest as rubber with a more reddish hue pours over your back. Your chest reforms as two D cup mounds push outwards, chest slimming and thinning to match."	"You /have/ the D-cup chest and back of a latex vixen."
+"head"		"Red rubber pours across YOUR head as it extends into a fox-like muzzle and two black pointed ears grow from its top.  Long tresses of red hair grow down your back.  Something about the shape of your new green, slitted eyes shows /you/ /are/ not just a fox, /you/ /are/ a vixen."		"You /have/ a rubbery vixen's head with stunning green slitted eyes, black ears poking through long red tresses."
+"chest"		"White latex moves over YOUR chest as rubber with a more reddish hue pours over your back.  Your chest reforms as two D cup mounds push outwards, chest slimming and thinning to match."	"You /have/ the D-cup chest and back of a latex vixen."
 "gut"		"Your gut is coated in white rubber, with thinly defined abs becoming visible through it as your waist slims to feminine proprotions."		"You /have/ a girlishly slim fox-like gut."
-"pelvis"		"The rubber flows over YOUR genitals as they become more fox-like, covering them in white latex. You feel/s/ an odd sensation as latex suddenly flows deeply inside, your female sex now defined for all to see. Your hips round out to a delightful womanly shape as they are accentuated by red latex."	"You /have/ a white latex vixen's groin, with only a slit dividing your slight mound of femininity. Your womanly hips are covered in red latex."
+"pelvis"		"The rubber flows over YOUR genitals as they become more fox-like, covering them in white latex.  You feel/s/ an odd sensation as latex suddenly flows deeply inside, your female sex now defined for all to see.  Your hips round out to a delightful womanly shape as they are accentuated by red latex."	"You /have/ a white latex vixen's groin, with only a slit dividing your slight mound of femininity.  Your womanly hips are covered in red latex."
 "left upper arm"	"A river of red runs up and down YOUR upper left arm as it slims into girly shape."							"Your slim upper left arm is completely covered in red rubber."
 "left forearm"	"The substance moves along YOUR left forearm, leaving a sea of red in its wake, slimming down as it goes."				"Your slim left forearm is coated with red latex."
 "left hand"	"As red latex flows along the fingers and palm of YOUR left hand, black pads grow from the front and claws from your fingertips."	"Your left hand is a cross between a human's and a fox's."
@@ -24,7 +24,7 @@ Segment	Shift Text															Desc Text	Third Person Text	Male Shift Text	Mal
 "right foot"	"The red latex runs down YOUR right foot, leaving a paw in its place."								"You /have/ a paw for a right foot."
 "rear"		"Your rear quickly turns red from the rubber moving over it, rounding out into a deliciously feminine form."				"Your sexy round feminine rear end is coated in red rubber."
 
-Latex_Vixen_gene is an infection gene. The tf table of Latex_Vixen_gene is Table of Latex Vixen Shifts.
+Latex_Vixen_gene is an infection gene.  The tf table of Latex_Vixen_gene is Table of Latex Vixen Shifts.
 
 Gene_attack of Latex_Vixen_gene is {claw,bite}.
 
@@ -44,9 +44,9 @@ The phitdesc of Latex_Vixen_gene is "scratch YOU in the bodypart, leaving a red 
 
 The pmissdesc of Latex_Vixen_gene is "just barely fail to strike YOU!".
 
-The genitaldesc of Latex_Vixen_gene is "smooth, latex". The skindesc of Latex_Vixen_gene is "smooth latex".
+The genitaldesc of Latex_Vixen_gene is "smooth, latex".  The skindesc of Latex_Vixen_gene is "smooth latex".
 
-The result of Latex_Vixen_gene is "latex vixen". The plural result of Latex_Vixen_gene is "latex vixens".
+The result of Latex_Vixen_gene is "latex vixen".  The plural result of Latex_Vixen_gene is "latex vixens".
 
 The resistance of Latex_Vixen_gene is 8.
 
@@ -66,7 +66,7 @@ When play begins, add Latex_Vixen_gene to Genetic list.
 
 Section 2 - Latex Vixen Definition
 
-A latex vixen is a kind of monster. The body of a latex vixen is usually {Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene}. A latex vixen is monstrous. A latex vixen is fully infected. A latex vixen is usually unsuited. A latex vixen is female. A latex vixen is tailed. The monster gene of a latex vixen is Latex_Vixen_gene.
+A latex vixen is a kind of monster.  The body of a latex vixen is usually {Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene}.  A latex vixen is monstrous.  A latex vixen is fully infected.  A latex vixen is usually unsuited.  A latex vixen is female.  A latex vixen is tailed.  The monster gene of a latex vixen is Latex_Vixen_gene.
 
 The description of latex vixen is "This beast looks like a cross between a sexy woman, a fox and a pool-toy, her rubber skin catching reflections of light almost as well as her bared teeth.".
 
@@ -99,10 +99,10 @@ Latex Vixen ends here.
 
 Latex Vixen infection tables and monster based on Infection V011 by Shrimpy, for inclusion in Infection based games.
 
-Example: * Tails-ko the Latex Vixen - Adds Tails to Your Apartment.
+Example:  * Tails-ko the Latex Vixen - Adds Tails to Your Apartment.
 
 	*: "Tails-ko the Latex Vixen"
 
 	Include Latex Vixen by Harry Gates.
 
-	Tails-ko is a latex vixen. Tails-ko is in Your Apartment.
+	Tails-ko is a latex vixen.  Tails-ko is in Your Apartment.

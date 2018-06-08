@@ -7,7 +7,7 @@ Section 1 - Monster Responses
 
 cclosscount is a number that varies.
 
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 to say cannon desc:
 	setmongender 3; [creature is male]
 	now cclosttarget is false;
@@ -47,12 +47,12 @@ to say cannon attack:
 		say "ERROR - The Cock Cannon should not fight a player with the Female Preferred feat.";
 	else:
 		if cclosscount < 3 or cclosscount is even or scalevalue of player > 4 or vorelevel is 1:
-			say "     You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks your [bodytype of player] body from head to foot. The blast is so large it knocks you to the ground, leaving you dazed and soaked in semen. Its job completed, the Cock Cannon leaves.";
+			say "     You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks your [bodytype of player] body from head to foot.  The blast is so large it knocks you to the ground, leaving you dazed and soaked in semen.  Its job completed, the Cock Cannon leaves.";
 		else:
-			say "     Tilting itself forward, the penile creature aims the crown of its head at you and unloads with a powerful blast. The torrent of sticky white cum soaks your [bodytype of player] body from head to foot. The blast is so large it even as it knocks you to the ground, leaving you dazed and soaked in semen. The over-excited creature continues to ejaculate on you, firing several more blasts that batter you, dousing you in its load. It only stops once fully drained, wobbling unsteadily now that its ballast-filled balls are empty.";
-			say "     Staggering up to you, it grabs you with its hands and leans forward. As the yawning cumslit is aimed at you once again, you can do little to resist, only half aware of what's going on and too stunned by the repeated shelling. But rather than fire again, it instead pulls your head into its, stuffing you into its wide cum slit. You squirm and struggle feebly, but this seems to only encourage the strange beast as it pushes first your head and then your shoulders down into its cock-like body. It is a slow process[if scalevalue of player > 2], especially at first,[end if] but the slick load clinging to you all over helps lubricate your passage. Once your shoulders are going down, it has an easier time of it, standing back up and sliding your [bodydesc of player] form down into itself.";
-			say "     The way its cum tunnel squeezes around you and the pervasive scent and taste of semen become increasingly enjoyable for you and soon you're swallowing down as much of it as you can get even as you're consumed by the walking penis monster[if cocks of player > 0 or cunts of player > 0]. Wriggling now with pleasure as you're pulled in, you cum hard, overcome by the oddly arousing experience[end if]. Sliding further in has you deposited in its warm, heavy ballsack where you are bundled up in a gooey chamber filled with its seed. The thick, musky air makes you woozy even as you continue shovelling handfuls of its load into your mouth until you finally pass out in its testicle.";
-			say "     Awareness only starts to return in the form of a throbbing around you and the heavy squeezing of the sac enclosing you. Just as you're realizing your current situation, the pressure around you builds up quickly and you are ejected along with a gooey wad of the mutant's semen, launched as a cum-soaked missile at its next victim. You crash into some [one of]canine[or]feline[or]reptile[or]equine[or]bunny[or]rodent[or]humanoid[as decreasingly likely outcomes] creature, bowling it over. By the time you recover from the crash, your target has already started to change, becoming increasingly phallic and making it hard to identify who or what he or she once was. You get up quickly and make your messy escape before you have to deal with another of those penile cannons.";
+			say "     Tilting itself forward, the penile creature aims the crown of its head at you and unloads with a powerful blast.  The torrent of sticky white cum soaks your [bodytype of player] body from head to foot.  The blast is so large it even as it knocks you to the ground, leaving you dazed and soaked in semen.  The over-excited creature continues to ejaculate on you, firing several more blasts that batter you, dousing you in its load.  It only stops once fully drained, wobbling unsteadily now that its ballast-filled balls are empty.";
+			say "     Staggering up to you, it grabs you with its hands and leans forward.  As the yawning cumslit is aimed at you once again, you can do little to resist, only half aware of what's going on and too stunned by the repeated shelling.  But rather than fire again, it instead pulls your head into its, stuffing you into its wide cum slit.  You squirm and struggle feebly, but this seems to only encourage the strange beast as it pushes first your head and then your shoulders down into its cock-like body.  It is a slow process[if scalevalue of player > 2], especially at first,[end if] but the slick load clinging to you all over helps lubricate your passage.  Once your shoulders are going down, it has an easier time of it, standing back up and sliding your [bodydesc of player] form down into itself.";
+			say "     The way its cum tunnel squeezes around you and the pervasive scent and taste of semen become increasingly enjoyable for you and soon you're swallowing down as much of it as you can get even as you're consumed by the walking penis monster[if cocks of player > 0 or cunts of player > 0].  Wriggling now with pleasure as you're pulled in, you cum hard, overcome by the oddly arousing experience[end if].  Sliding further in has you deposited in its warm, heavy ballsack where you are bundled up in a gooey chamber filled with its seed.  The thick, musky air makes you woozy even as you continue shovelling handfuls of its load into your mouth until you finally pass out in its testicle.";
+			say "     Awareness only starts to return in the form of a throbbing around you and the heavy squeezing of the sac enclosing you.  Just as you're realizing your current situation, the pressure around you builds up quickly and you are ejected along with a gooey wad of the mutant's semen, launched as a cum-soaked missile at its next victim.  You crash into some [one of]canine[or]feline[or]reptile[or]equine[or]bunny[or]rodent[or]humanoid[as decreasingly likely outcomes] creature, bowling it over.  By the time you recover from the crash, your target has already started to change, becoming increasingly phallic and making it hard to identify who or what he or she once was.  You get up quickly and make your messy escape before you have to deal with another of those penile cannons.";
 			infect;
 			infect;
 
@@ -62,9 +62,9 @@ to say beatthecockcannon:
 		LineBreak;
 		if bradfordbounty > 0:
 			decrease bradfordbounty by 1;
-			say "You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denothing the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut[end if] of the reward.";
+			say "You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack.  Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you.  Looking at it, you can see that the printed value denothing the number remaining has gone down to [bold type][bradfordbounty][roman type].  You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0].  Seeing how that's completed it, you should be able to see him about getting your cut[end if] of the reward.";
 		else:
-			say "This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+			say "This encounter reminds you of your deal with bounty hunter, Bradford.  You should go see him about getting your share of the reward.";
 
 Section 2 - Monster Insertion
 
@@ -131,7 +131,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 cannonprep is a number that varies. cannonprep is usually 0.
 ccmiss is a number that varies.
-cclosttarget is a truth state that varies. cclosttarget is usually false.
+cclosttarget is a truth state that varies.  cclosttarget is usually false.
 
 this is the cockcannon rule:
 	choose row monster from table of Random Critters;
@@ -189,7 +189,7 @@ this is the cockcannon rule:
 	else if cannonprep is 2:
 		if monsterhit is true:
 			now cannonprep is 3;
-			say "[special-style-2]Hit[roman type]: The Cock Cannon's arms start to stroke its penis-shaped body, increasing its visible size and arousal. Precum starts to flow steadily from the top of its phallic head.";
+			say "[special-style-2]Hit[roman type]: The Cock Cannon's arms start to stroke its penis-shaped body, increasing its visible size and arousal.  Precum starts to flow steadily from the top of its phallic head.";
 		else:
 			say "[special-style-1]Miss[roman type]: The Cock Cannon attempts to pleasure itself, running its hands over its body, but with little success for now.";
 			increase ccmiss by 1;

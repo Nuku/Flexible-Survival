@@ -51,8 +51,8 @@ Instead of Resolving a Hyper Squirrel Girl:
 					if the distilled milk is owned:
 						decrease carried of distilled milk by 1;
 						say "'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
-						now snow is in Gray Abbey Library;
-						move player to Gray Abbey Library;
+						now snow is in Grey Abbey Library;
+						move player to Grey Abbey Library;
 						increase score by 5;
 						now hyper squirrel girl is resolved;
 					else:
@@ -485,7 +485,7 @@ Instead of resolving a wild squirrels:
 
 
 When play ends:
-	if Snow is in Gray Abbey Library:
+	if Snow is in Grey Abbey Library:
 		if HP of the player > 0:
 			if humanity of the player < 10:
 				say "     Snow abandons the idea of being saved when you go feral and she joins you in the city, remaining close at your side and becoming like a pack member to you, adoring and loving. Your life with her as a wild squirrel is one of bestial lust as you spend much of your day fucking one another in the squirrel's den they've set up in a small home near a cluster of acorn trees. From time to time, you and the others will snag a poor, unprepared person and fuck them into submission, adding another squirrel to your numbers. When there gets to be too many for your small home, a group breaks off to find a new home to claim as a nest. But you and Snow always remain there along with your first pair of wild lovers";

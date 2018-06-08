@@ -1,4 +1,4 @@
-Mall Events by Sarokcat begins here.
+Mall events by Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival located in the mall area."
 
@@ -163,4 +163,4 @@ Instead of resolving a Old rail system:
 	Now Old rail system is resolved;
 
 
-Mall Events ends here.
+Mall events ends here.

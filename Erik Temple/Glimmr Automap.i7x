@@ -1053,7 +1053,7 @@ The Automap extension can dynamically change the maximum size of its map array, 
 
 It is therefore important that we set the automap reserved area to a number that is high enough for our map to display as we want it to. GLAM calculates the dimensions by determining the number of tiles that would in the graphics window at the current zoom level. If GLAM calculates that the window would hold 45 horizontally and 24 tiles vertically, then the total number of tiles would be 45 x 24 = 1080. The default value set by Glimmr Automap is rather arbitrary (3200), but probably adequate to most purposes. We can in any case set the value higher if we like:
 
-	*: Use automap reserved area of at least 3400.
+	*:  Use automap reserved area of at least 3400.
 
 If for some reason we need to make the automap reserved area less than 3200, we need to replace the section titled "Section - Maximum map size use option". If we want to make it less than 400, we need to edit the Automap extension directly. (We can make the *map*--as opposed to the memory reserved for it--smaller by setting maximum dimensions; see below.)
 

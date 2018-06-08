@@ -7,8 +7,8 @@ understand "nav" as destinationcheck.
 
 carry out destinationcheck:
 	[ Note: The city areas and locations within are sorted alphabetically, please put new rooms in the right spots as you add them ]
-	[ Start of primary rooms - Gray Abbey Library and Trevor Labs ]
-	say "[bold type]Primary Rooms[roman type]: [link][bracket]Gray Abbey Library[close bracket][as]nav Gray Abbey Library[end link]";
+	[ Start of primary rooms - Grey Abbey Library and Trevor Labs ]
+	say "[bold type]Primary Rooms[roman type]: [link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link]";
 	if Outside Trevor Labs is known:
 		say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
 	LineBreak;

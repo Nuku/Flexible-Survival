@@ -198,8 +198,8 @@ instead of resolving a Stray Catboy:
 			if player consents: [Agreeing to train Joey]
 				say "     You nod, and tell the catboy that you will help train him. He claps his hands together, and looks at you expectantly. 'Fantastic! I can't wait to learn from someone as awesome as you.' He darts forward and hugs you, his head against your shoulder. 'If you have space for me, I'll come with you, so that you can train with me as often as possible. The best would be somewhere higher up, if there's a spot like that.' After several minutes of Joey expressing thanks and clinging to you, you finally get on your way, taking him to the library.";
 				now hp of Joey is 1;
-				move Joey to Gray Abbey 2F;
-				move Player to Gray Abbey Library;
+				move Joey to Grey Abbey 2F;
+				move Player to Grey Abbey Library;
 				now Stray Catboy is resolved;
 			else: [Denying training]
 				say "     You shake your head and tell the catboy that you're too busy handling other things right now, and won't be able to train him. He looks crestfallen, and you think you see a glimmer of tears in the corners of his eyes, but he turns away before you can be sure. After that, he goes running off into the city. You doubt you'll be seeing him again soon.";

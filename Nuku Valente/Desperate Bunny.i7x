@@ -197,7 +197,7 @@ to say sandrasexmenu:
 		if lastfuck of Coleen - turns < 4:
 			say ". The husky girl rolls onto her back and slides a paw between her legs, seemingly content to watch what she hopes will be a nice show.";
 		else:
-			say ". The husky girl whines softly and wags her tail, turning to flash her wet pussy at you. It seems like [if ColeenCollared > 0]your slutty pet[else]the stray bitch[end if] would enjoy some time with you as well.";
+			say ". The husky girl whines softly and wags her tail, turning to flash her wet pussy at you. It seems like [if coleencollared > 0]your slutty pet[else]the stray bitch[end if] would enjoy some time with you as well.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if player is male:
@@ -251,7 +251,7 @@ to say sandrasexmenu:
 					say "[sandrasex_leadin]";
 					say "[sandrasex1]";
 				else if nam is "Threesome w/Coleen":
-					say "[sandraColeentrio]";
+					say "[sandracoleentrio]";
 				else if nam is "Threesome w/Philip":
 					say "[sandraphiliptrio]";
 				else if nam is "Cunnilingus":
@@ -356,7 +356,7 @@ to say sandrasex1: [fuck the bunny]
 						move Sandra to Bunker;
 						move player to bunker;
 						now HP of Sandra is 1;
-						if ColeenAlpha > 0 or ColeenCollared > 0 or ColeenSlut > 0, now lust of Sandra is turns;
+						if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 						now lust of Philip is turns; [starts availability counter on Philip + Sandra]
 						say "     'Thank you!' she cries, pressing her abundant front into your side, clinging warmly as she follows you back to the bunker, tail wagging the entire way. When you arrive, you see that she somehow trailed a suitcase of belongings, and she makes herself at home quickly. She even adds two bottles of water to your bunker supplies and a small package of dried meat.";
 						increase score by 5;
@@ -483,7 +483,7 @@ to say sandrasex2: [become bunny siblings]
 			move Sandra to Bunker;
 			move player to bunker;
 			now HP of Sandra is 1;
-			if ColeenAlpha > 0 or ColeenCollared > 0 or ColeenSlut > 0, now lust of Sandra is turns;
+			if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 			now lust of philip is turns; [starts availability counter on Philip + Sandra]
 			now Rabbit Den is not known;
 			follow turnpass rule;
@@ -502,7 +502,7 @@ to say sandrasex2: [become bunny siblings]
 			move Sandra to Bunker;
 			move player to bunker;
 			now HP of Sandra is 1;
-			if ColeenAlpha > 0 or ColeenCollared > 0 or ColeenSlut > 0, now lust of Sandra is turns;
+			if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 			now lust of philip is turns; [starts availability counter on Philip + Sandra]
 			now Rabbit Den is not known;
 			follow turnpass rule;
@@ -575,7 +575,7 @@ to say sandrasex5: [Post-transformation toy sex]
 Section 4 - Sandra and Coleen Interplay
 
 An everyturn rule:
-	if lust of Sandra - turns > 15 and HP of Sandra is 1 and ( ColeenAlpha > 0 or ColeenCollared > 0 or ColeenSlut > 0 ):
+	if lust of Sandra - turns > 15 and HP of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ):
 		now HP of Sandra is 2;
 		now lastfuck of Coleen is turns;
 		now lastfuck of Sandra is turns;
@@ -593,17 +593,17 @@ after going to Bunker while HP of Sandra is 2:
 	now lastfuck of Coleen is turns;
 	now lastfuck of Sandra is turns;
 
-to say sandraColeentrio:
+to say sandracoleentrio:
 	say "     You grin and motion for Coleen to join you, the husky girl padding over quickly on all fours. She dashes ahead of you and pounces into Sandra's lap, licking and lapping at her face before it turns into a kiss with that doggy tongue diving into the bunny girl's muzzle. You move up behind Sandra and put your arms around her, nibbling her ear and whispering that it's you. You run your paws over the bunny's body, sliding off her clothes. As you bare her soft fur, Coleen is there to nuzzle, lick or nip at her, getting her friend to moan in delight. Once she's naked, Coleen buries her muzzle between Sandra's legs and laps at her large pussy, giving you a moment to take off the last of your clothes as well.";
 	say "     The bunny girl pushes Coleen's muzzle away and she turns to look at you, smiling and quite happy to spend a special moment with her two friends.";
 	if rabbitsibling > 0 and ( facename of player is "Female Husky" or facename of player is "Alpha Husky" ):
-		say "     She looks at your husky face and smiles, grinning to Coleen. 'Oh, I guess a husky face is pretty cute, too. Don't you think, sweetie?' she asks [if ColeenCollared > 0]your slutty pet[else]the horny stray[end if] as she scritches the doggy's ears.";
+		say "     She looks at your husky face and smiles, grinning to Coleen. 'Oh, I guess a husky face is pretty cute, too. Don't you think, sweetie?' she asks [if coleencollared > 0]your slutty pet[else]the horny stray[end if] as she scritches the doggy's ears.";
 	else if rabbitsibling > 0 and ( facename of player is not "Rabbit Girl" ):
 		say "     'Oh your ears!' she exclaims, approaching and cooing at you. She snuggles firmly, then leans in to kiss, pressing lips tightly for a moment before you feel her sharp teeth sinking into your lip. Brief pain flares before her infection spreads to you rapidly, regaining your rabbit ears.";
 		now face of player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
 		now facename of player is "Rabbit Girl";
 	if rabbitsibling > 1 and ( tailname of player is "Female Husky" or tailname of player is "Alpha Husky" ):
-		say "     Sandra runs a paw over your fluffy, husky tail. 'And a cute husky tail is nice and soft as well. I'll let you hang onto it for now,' she says, winking to Coleen[if ColeenCollared > 0]. Your husky pet[else]. The stray husky slut[end if] barks in agreement, winking back.";
+		say "     Sandra runs a paw over your fluffy, husky tail. 'And a cute husky tail is nice and soft as well. I'll let you hang onto it for now,' she says, winking to Coleen[if coleencollared > 0]. Your husky pet[else]. The stray husky slut[end if] barks in agreement, winking back.";
 	else if rabbitsibling > 1 and ( tailname of player is not "Rabbit Girl" ):
 		say "     Sandra frowns as she notices your lack of rabbit tail. She grabs you suddenly and hauls you across your lap. Without word or warning, she slaps your bottom firmly and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost rabbit tail. When it is completely restored, she waves a finger at you. 'And don't you go losing it again.'";
 		now tailname of player is "Rabbit Girl";
@@ -646,16 +646,16 @@ Section 6 - Endings
 
 When play ends:
 	if Sandra is in the Bunker:
-		if Fang is in the Gray Abbey Library and HP of Fang is 3 and ColeenAlpha is 0 and humanity of player < 10:
+		if Fang is in the Grey Abbey Library and HP of Fang is 3 and coleenalpha is 0 and humanity of player < 10:
 			[succumb: alpha Fang takes uncontested Sandra ]
 			increase score by 0; [do nothing statement]
 		else if HP of player > 0:
-			if humanity of player < 10 and ColeenAlpha > 0:
+			if humanity of player < 10 and coleenalpha > 0:
 				say "     Sandra ends up going off with Coleen, the dominant husky taking her to be the pack's bunny slut and to be bred full of adorable husky-bunny hybrid pups. On the rare occasions that her alpha allows her to spend time with you, the bunny tells you how much she is enjoying her new life, falling into her role as a plaything for the horny canines.";
 			else if humanity of player < 10:
 				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side despite your loss of humanity. She remains with you, tending to your needs, all of them, as best she is able. She does not permit you to predate on unchanged humans, tackling you to the ground when the urge becomes too strong and fucking you into a cooperative stupor. Could anyone ask for a better friend?";
 			else:
-				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city[if HP of Sandra is 3]. Sandra visits with Coleen often as well, always looking forward to playing with the horny puppy[end if][if ColeenCollared > 0]. She even ends up adopting one of Coleen's many pups, raising him to be an obedient and loyal sex pet[end if].";
+				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city[if HP of Sandra is 3]. Sandra visits with Coleen often as well, always looking forward to playing with the horny puppy[end if][if coleencollared > 0]. She even ends up adopting one of Coleen's many pups, raising him to be an obedient and loyal sex pet[end if].";
 			if player is male and bodyname of player is "Siren":
 				say "     The lovely bunny girl is particularly excited by your ability to deposit eggs into her and readily has you stuff her full of them on several occasions. She is particularly eager to do this around springtime, painting the eggs after she pushes them out and handing them out to others on Easter. Many young sirens join new families to further spread your infection thanks to Sandra's lustful efforts.";
 				increase score by 25;

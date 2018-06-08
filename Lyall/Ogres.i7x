@@ -16,6 +16,7 @@ OgreMeetings is a number that varies. OgreMeetings is usually 1.
 when play begins: [flags for blocking this event]
 	add Ogre Encounter to badspots of guy;
 	add Ogre Encounter to badspots of furry;
+	add Ogre Encounter to badspots of humanoid;
 
 Instead of resolving a Ogre Encounter:
 	setmonster "Ogre";

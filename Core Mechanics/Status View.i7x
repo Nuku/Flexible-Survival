@@ -16,5 +16,5 @@ carry out StatusSay:
 Location: Bunker			Time: Pre dawn					HP: 29/29
 Freecred: 0					Hunger: 0 Thirst: 0				Score: 10/2500
 Sanity: 100/100				Evac: 30 days					XP: 0/10]
-
+	
 Status View ends here.

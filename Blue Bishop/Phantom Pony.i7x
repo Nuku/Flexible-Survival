@@ -25,7 +25,7 @@ to say blotlook:
 
 Northeast of Milking Shed Main Room is Abandoned Storage Room.
 
-The description of Abandoned Storage Room is "     Cordoned off from the rest of the milking shed, not too far from the generator, appears to be somewhat dilapidated and disregarded storage room. Dimly lit, there's a few old, obsolete tools stacked up against the walls, but is otherwise sparsely filled save for a rather jarring, brightly colored fixture at the far end.".
+The description of Abandoned Storage Room is "     Cordoned off from the rest of the milking shed, not too far from the generator, appears to be somewhat dilapidated and disregarded storage room. Dimly lit, there's a few old, obsolete tools stacked up against the walls, but is otherwise sparsely filled save for a rather jarring, brightly coloured fixture at the far end.".
 
 blotintense is a number that varies. blotintense is usually -1;
 [

@@ -5,7 +5,7 @@ Island by Kernog begins here.
 Section 1 - Rooms
 
 Island Pier is a room. It is fasttravel. It is private.
-Island Forest is north of Island Pier. The earea of Island Forest is "Island".
+Island Forest is north of Island Pier.  The earea of Island Forest is "Island".
 
 The description of Island Pier is "A pier".
 

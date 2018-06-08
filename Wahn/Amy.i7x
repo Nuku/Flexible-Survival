@@ -119,7 +119,7 @@ The scent of Amy is "     Amy smells a bit of husky - and a ready and fertile on
 An everyturn rule:
 	if Lust of Amy is 1:
 		now AmyNewPuppies is a random number between 1 and 3;
-		if player is in the Gray Abbey Library:
+		if player is in the Grey Abbey Library:
 			say "     Suddenly, Amy calls 'It's time!' and can be heard panting loudly. You rush over to the mattress serving as her bedding and see her lying on it, holding her bulging belly. There's a large patch of wetness under her spread legs, amniotic fluid from her womb showing that this isn't a false alarm. With nothing else you can do to help, you just sit beside Amy, holding her hand-paw and stroking her fur.";
 			if AmyNewPuppies is 1:
 				say "     Soon, her contractions come quicker and quicker, and then a single puppy slides out of her stretched vagina. It's rather large for a dog, but then - Amy isn't a normal husky either. You quickly grab a towel and wipe the newborn down, then put it up against the husky woman's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
@@ -143,7 +143,7 @@ An everyturn rule:
 		decrease AmyMaturityCounter by 1;
 
 instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns > 3):
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
 	now lastAmySpotted is turns;
@@ -154,10 +154,10 @@ instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns
 	else if AmyMaturityCounter > 1:
 		say "     As you come out of the bunker, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
-instead of navigating Gray Abbey Library while (HP of Amy is 1 and lastAmySpotted - turns > 3):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (HP of Amy is 1 and lastAmySpotted - turns > 3):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
 	now lastAmySpotted is turns;
@@ -169,7 +169,7 @@ instead of navigating Gray Abbey Library while (HP of Amy is 1 and lastAmySpotte
 		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
 instead of going up from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY LUST WALKIN [line break]";
 	now lastfuck of Amy is turns + 4;
@@ -182,31 +182,31 @@ instead of going up from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (l
 	else:
 		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
-instead of navigating Gray Abbey Library while (lastAmySpotted - turns > 24 and libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	now lastAmySpotted is turns;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA TEACHING WALKIN [line break]";
 	if Char-C of Nadia is "0":
 		now Char-C of Nadia is "1";
 		say "[npcNadiaintUpdate]";
-	move player to Gray Abbey Library;
-	say "     Entering the library, you're treated to the sight of Nadia having descended to the library's first floor, the colorful avian woman having left the familiar comforts of her nest. The reason for that soon becomes clear: massed in front of her in what used to be an old reading area are a number of both Amy and Nadia's younger children, and the latter is putting her education to good use, holding an impromptu class of sorts. She reads to the youngsters from an array of books, teaching them some basic mathematics while Amy acts as her teaching assistant, nipping rowdy canine and avian kids alike into line and supplying her with class materials from the stacks. The husky herself watches the class between such activities, clearly intent on learning as much as she can, too.";
+	move player to Grey Abbey Library;
+	say "     Entering the library, you're treated to the sight of Nadia having descended to the library's first floor, the colourful avian woman having left the familiar comforts of her nest. The reason for that soon becomes clear: massed in front of her in what used to be an old reading area are a number of both Amy and Nadia's younger children, and the latter is putting her education to good use, holding an impromptu class of sorts. She reads to the youngsters from an array of books, teaching them some basic mathematics while Amy acts as her teaching assistant, nipping rowdy canine and avian kids alike into line and supplying her with class materials from the stacks. The husky herself watches the class between such activities, clearly intent on learning as much as she can, too.";
 	say "     The sight of the odd impromptu class, carried out by the two mothers, is quite encouraging. Compared to the numerous feral mutants in the city, it's nice to know that at least some of the next generation are having what humanity they were born with reinforced as opposed to the other way around.";
 
-instead of navigating Gray Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	now lastNadiaSpotted is turns;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA PREG WALKIN [line break]";
 	say "     Nadia's left her nest and come to the library's second floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
-	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realize what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
+	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realise what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
 	WaitLineBreak;
-	say "     'I'm sure mine's bigger than yours!' Amy says, before taking the tape from Nadia and returning the favor.";
+	say "     'I'm sure mine's bigger than yours!' Amy says, before taking the tape from Nadia and returning the favour.";
 	LineBreak;
 	say "     'No, I'm sure mine's bigger than yours!' Nadia retorts, but practically preens in pleasure when Amy tells her how much her pregnancy's grown.";
 	LineBreak;
@@ -226,7 +226,7 @@ instead of navigating Gray Abbey Library while (lastNadiaSpotted - turns > 12 an
 			LineBreak;
 			say "     Nadia pats her pregnancy happily. 'What can I say? I suppose I don't waste anything when I go about turning tasty treats into children.'";
 		-- 3:
-			say "     'Recently, I've had a strange desire to have ice-cream,' Amy tells Nadia. 'But I'm not sure if I could even recognize it if I saw some. I mean, I've only seen pictures and read about it in the library's books. It's supposed to be delicious.'";
+			say "     'Recently, I've had a strange desire to have ice-cream,' Amy tells Nadia. 'But I'm not sure if I could even recognise it if I saw some. I mean, I've only seen pictures and read about it in the library's books. It's supposed to be delicious.'";
 			LineBreak;
 			say "     'It is, and it's quite a pity. It's likely that any ice-cream still out there in the city will have melted by now. Maybe we can have some after we're rescued.'";
 			LineBreak;
@@ -250,10 +250,10 @@ instead of navigating Gray Abbey Library while (lastNadiaSpotted - turns > 12 an
 			LineBreak;
 			say "     'All right then, I'll give it a try.' Amy sounds pretty unsure, though.";
 
-instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY/OTHER SEX WALKIN [line break]";
 	now lastfuck of Amy is turns + 4;
@@ -263,7 +263,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		now HP of Amy is 10;
 	else if HP of Amy is 10:[mature virgin, told the player she's horny]
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
-	else if HP of Amy > 10 and Xerxes is in Gray Abbey Library and thirst of Amy is 0:[first interest of Xerxes in her]
+	else if HP of Amy > 10 and Xerxes is in Grey Abbey Library and thirst of Amy is 0:[first interest of Xerxes in her]
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... you can see Xerxes standing on all fours not too far from the young husky, his eyes riveted on her naked form. The erection visible under his toned body shows that he's very interested indeed. Nevertheless, your well-behaved and trained dog doesn't act on his desires, just watching her intently.";
 		say "     As you walk up beside him, the human dog gives you an exuberant greeting and licks your hand, then gives a little pleading whine[if lust of Xerxes > 2] followed by the question 'Master's Friend - Sex?'[end if] and another hungry look over at Amy. It seems pretty obvious that he'd love to be the one to fulfill Amy's current need.";
 		LineBreak;
@@ -315,7 +315,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			LineBreak;
 			say "     Quickly walking over there, you take Amy softly by the arm, pulling her up and walking some distance away from the felinoid with her. As she stands there, no longer in the immediate influence of your feline companion, she starts to wind down again, though she is still breathing rather heavily and stroking over her breasts with her fingers as you go pick up her book. Klauz purrs and rubs his shoulder against you as you do so, and knowing him, you just give him a quick pat on the head, holding your breath until you stand back up. 'Not her,' you tell your companion, who gives a disappointed mew, then stalks off. As you're sure that he'll try again no matter what, you warn Amy not to get too close to him in the future when you give her the book back.";
 			now level of Amy is 99;
-	else if HP of Amy > 10 and Fang is in Gray Abbey Library and XP of Amy is 0:[first interest of Fang in her]
+	else if HP of Amy > 10 and Fang is in Grey Abbey Library and XP of Amy is 0:[first interest of Fang in her]
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Her head is leaned back, eyes closed, and she moans silently to herself. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... close to her, slowly stalking forward is Fang, his canine shaft hanging erect under his black-furred body. Then suddenly, he pounces the young husky, making her give a surprised yip that leads over to a lust-filled gasp as the wolf sinks his cock deep into her pussy with the first thrust. As deep in the grip of her own libido as she is, Amy just accepts the virile male on top of her, moaning as he starts rutting her with urgent movements.";
 		if HP of Fang < 3: [Beta Fang can be stopped]
 			LineBreak;
@@ -431,7 +431,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 	else if HP of Amy > 10 and Sven is bunkered and HP of Sven > 5 and HP of Sven < 30 and SvenAmySex is 0:[first interest of Sven in her]
 		say "     Entering the library, you see Amy, sitting at one of the reading tables that have the library entrance in view with a book in her hands. When she notices you, she puts it down and gets up, walking towards you with something clearly on her mind. Judging from the cover of the book she was reading - a steamy romance novel with a pirate and a woman on the front - and the pronounced sway of her hips, you'd say she's in one of her frequent heat periods and pretty wound up with arousal. Coming to a stop before you that bounces her four breasts enticingly, the husky girl says 'Welcome back. I wanted to ask you what's up with the snow-leopard guy who seems to be living in the cellar. I've seen him a few times from a distance, browsing books and cleaning up, but he always runs away when I go to talk to him.' Then she adds with a sigh 'Too bad, because he's really cute. I've tried to catch him on the way back to the stairs today, but he's escaped and now is hiding somewhere back there.'";
 		WaitLineBreak;
-		say "     Telling Amy that the snowmeow is your pet kitty Sven, you explain that he's rather shy, but that his behavior to her still is a bit strange and you'll go talk to him. The young husky nods to you, then goes to pick up her book, taking it to her mattress to indulge in some more romantic fantasies. Meanwhile, you make your way along the long rows of bookshelves, looking around until you find the hiding Sven eventually, peeking around the other end of a bookshelf. Coming up behind him silently, you give him quite a fright as you say his name. As the transformed exchange student whirls around quickly, you see a look of embarrassment on his face - and from the way he holds his bushed-out tail in front of himself, wringing the end with his hands, you can guess why...";
+		say "     Telling Amy that the snowmeow is your pet kitty Sven, you explain that he's rather shy, but that his behaviour to her still is a bit strange and you'll go talk to him. The young husky nods to you, then goes to pick up her book, taking it to her mattress to indulge in some more romantic fantasies. Meanwhile, you make your way along the long rows of bookshelves, looking around until you find the hiding Sven eventually, peeking around the other end of a bookshelf. Coming up behind him silently, you give him quite a fright as you say his name. As the transformed exchange student whirls around quickly, you see a look of embarrassment on his face - and from the way he holds his bushed-out tail in front of himself, wringing the end with his hands, you can guess why...";
 		say "     After patting his head and scritching behind Sven's ears a bit to calm him down, you then order your pet to explain himself. He says 'The husky woman up here is... very pretty. And every time I get close to her and smell her, I...' and then he moves his tail a bit to the side, revealing his almost painfully hard cock. Giving him some more time to mumble his explanations, you see the whole problem - the smell of Amy's heat arouses Sven to no end and he's far too embarrassed at having his boner sticking out at her to even talk to the husky. That's why he's been trying to avoid her at all costs.";
 		LineBreak;
 		say "Well, you see two possibilities how you might resolve this situation.";
@@ -510,7 +510,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				LineBreak;
 				say "     Hm, perhaps better not. Brutus might just be a bit much to handle even for your horny husky friend...";
 				now BrutusAmySex is 99;
-	else if (HP of Amy > 10 and Snow is in the Gray Abbey Library and SnowAmySex is 0):[first interest of Snow in her]
+	else if (HP of Amy > 10 and Snow is in the Grey Abbey Library and SnowAmySex is 0):[first interest of Snow in her]
 		say "     Entering the library, you see Amy on her bedding, sitting beside Snow and listening intently to the squirrel girl. Curious what Amy starts giggling about a moment later, you step a bit closer and overhear '...really, he was this long and...' followed by a detailed and intimate description of Snow's last encounter with a minotaur out in the city. As she continues with the raunchy tale, you see Amy spread her legs a bit, revealing an already a bit moist pussy that shows her obvious arousal.";
 		LineBreak;
 		say "";
@@ -565,7 +565,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		else if HP of Icarus > 0 and HP of Icarus < 50: [sub Icarus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The submissive blue chaffinch lands right next to you and gives Amy an appreciative look. 'She's really hot. I'd love to take that doggie for a ride,' he chirps, and you notice his avian cock quickly hardening. As you're looking at him, Icarus suddenly remembers that he's now just supposed to be your slutty pet bird and gets a bit flustered, chirping nervously as he adds 'I - I mean...'";
 			LineBreak;
-			say "     [bold type]Do you want to allow Icarus to indulge in some of his old behavior, or do you send him off to await your pleasure when you want to make use of him?[roman type][line break]";
+			say "     [bold type]Do you want to allow Icarus to indulge in some of his old behaviour, or do you send him off to await your pleasure when you want to make use of him?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Let him indulge.";
 			say "     ([link]N[as]n[end link]) - Send him off.";
@@ -584,7 +584,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 						LineBreak;
 						say "     Quickly dropping your gear and clothes on the ground as you go along, you're completely naked before you're more than halfway to the fucking couple. Pounding into the increasingly aroused and noisy Amy under him, Icarus doesn't notice you coming up behind him, erect cock leading the way. As you suddenly push up his tail-feathers and expose his white-feathered bottom, he lets out a surprised chirp, then moans as you rub your hard shaft against his crack and get your cock lined up with his pucker. Gripping him tightly around the hips, you push forward, forcing his tight hole to spread open for your [cock size desc of player] [cock of player] phallus.";
 						say "     As you start humping away, you push Icarus own cock deeper into Amy's pussy, making the passerine chirp in pure lust from the double sensations of fucking while being fucked. With the husky under him panting loudly and Icarus begging for more, you go faster and faster, pounding his ass hard and deep. Teasing him for being such a puny, little slut, - even while fucking a woman - you grin as he moans and nods in agreement, loving being a horny cock slut now.";
-						say "     You keep it up, something in the weak bird's behavior egging you on to be rough with him. And certainly, he loves it as well. The gasps and chirps from him rising in pitch and the way his asshole tightens around you suddenly is all the warning you get before the stuffed bird cums hard, pumping his hot seed into Amy's cunt to flow into her womb. You cum a few moments later, claiming his ass once again[if cock width of player > 35]. Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak. His body is left rounded like a feathery balloon from it all. He can only give a weak chirp as you pull out and your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 25]. Your [cum load size of player] load leaves the poor songbird rounded like a feathery balloon. When you pull out, he gives a weak chirp as your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 15]. Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed. When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[else]. He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if]. While taking a moment to check that your birdie pet's still fine, you wipe your cock clean on his blue tail-feathers before heading off, leaving him and Amy there to eventually recover.";
+						say "     You keep it up, something in the weak bird's behaviour egging you on to be rough with him. And certainly, he loves it as well. The gasps and chirps from him rising in pitch and the way his asshole tightens around you suddenly is all the warning you get before the stuffed bird cums hard, pumping his hot seed into Amy's cunt to flow into her womb. You cum a few moments later, claiming his ass once again[if cock width of player > 35]. Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak. His body is left rounded like a feathery balloon from it all. He can only give a weak chirp as you pull out and your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 25]. Your [cum load size of player] load leaves the poor songbird rounded like a feathery balloon. When you pull out, he gives a weak chirp as your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 15]. Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed. When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[else]. He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if]. While taking a moment to check that your birdie pet's still fine, you wipe your cock clean on his blue tail-feathers before heading off, leaving him and Amy there to eventually recover.";
 					else:
 						LineBreak;
 						say "     Nah, you decide to let him have his fun for now and just watch them go at it.";
@@ -604,7 +604,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				LineBreak;
 				say "     Gripping Icarus by the feathers on his head, you give him a strict look and tell him that he's yours and that you decide what he does or doesn't do. Then you tell him that he may - no he must - watch Amy play with herself and get fucked... and that he's forbidden from joining her or even masturbating. There, that should wind the little slut up some, making him especially needy for your touch. With a grin, you give his feathered butt a squeeze, then grab a chair from a nearby table and watch him a while, standing there to observe Amy and sometimes twitching a bit as he has to hold himself back from touching his increasingly aroused body.";
 				now IcarusAmySex is 99; [Icarus/Amy sex forbidden]
-	else if (HP of Amy > 10 and Alexandra is in the Gray Abbey Library and AlexandraAmySex is 0):[first interest of Alexandra in her]
+	else if (HP of Amy > 10 and Alexandra is in the Grey Abbey Library and AlexandraAmySex is 0):[first interest of Alexandra in her]
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, Alexandra walks into your line of sight - seems like the former policewoman is interested in Amy too. Being the tough dobie bitch that she is, the anthro woman walks up to the young husky with confident steps, then comes to stand just a few feet before her, appraisingly gazing down at the silently moaning female. After ogling Amy for a moment, the doberwoman says 'Quite a horny bitch, aren't you? I can see why the boss brought you in...'";
 		if AmyShyness is 1:
 			say "     Pulled out of her fantasy by Alexandra's comment, Amy opens her eyes and gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' At that point, Amy notices the intensity of Alexandra's hungry looks wandering over her naked body and visible, wet pussy. With a shy little yip, she raises an arm to cover her breasts and closes her legs, much to the annoyance of the doberwoman standing before her. Giving the young husky a teasing stare, Alexandra barks 'Don't act like a pup now, girl. It's not like I haven't already seen all of you. And hiding a body like that would be a crime... especially if it's from your pack-mates.'";
@@ -638,7 +638,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			LineBreak;
 			say "     Giving a sharp whistle that attracts the two women's attention, you order Alexandra to stop. The doberwoman replies with, 'Sure thing, boss,' then tells Amy with a grin 'Sounds like [if cunts of player > 0 and cocks of player is 0]she[else]he[end if] has some other plans for you. That'll definitively be something worth watching. See ya, little slut.' After that, Alexandra lets a hand wander down Amy's body, caressing her curves and even dipping in a finger to rub her clit, drawing a breathless moan from the young husky. Then she stands up and walks up to you, rubbing her breasts against your side as she says 'Very nice little bitch you got there. Wish you'd let me train her to be an even better pet, but you're the boss...'";
 			now AlexandraAmySex is 99; [denied, no repeats - though enabling the 'watching' scenes]
-	else if (HP of Amy > 10 and Carl is in the Gray Abbey 2F and CarlAmySex is 0):[first interest of Carl in her]
+	else if (HP of Amy > 10 and Carl is in the Grey Abbey 2F and CarlAmySex is 0):[first interest of Carl in her]
 		say "     Entering the library, you see Amy walk along the bookshelves, an open book that has to be a romance novel in hand, judging from the dreamy look on her face. As the young husky woman strolls along, another anthro canine suddenly comes out between the shelves - it's Carl, with a head-high stack of books in his hands - which leads to the two of them walking right into each other, sending books tumbling all over the floor. 'Oh, I'm sorry - are you alright? Didn't mean to almost bowl you over,' the husky soldier says after both of them catch their balance again, then he crouches down to pick up the fallen books.";
 		say "     As he grabs Amy's novel a moment later, Carl set his own book pile aside and stands up to hand it to her, saying. 'Here you go. I'm Carl, by the way.' Accepting the book, the female husky replies, 'Amy... thanks for being so nice about this. It's always good to meet friendly people. And especially other huskies. That said, she leans in to lick his muzzle in an affectionate gesture akin to a kiss on the cheek - though as she does so, you hear the young woman give several deep sniffs, hovering with her nose close to his for more than just a short moment. 'You smell really nice,' she eventually says in a shy voice, continuing with, 'So strong and... safe,' as she moves her foot-paws just a little bit closer, bringing their bodies into contact.";
 		WaitLineBreak;
@@ -682,7 +682,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			now lastfuck of Amy is turns;
 			now lastfuck of Carl is turns;
 			now CarlAmySex is 51; [player arranged for Carl to fuck Amy]
-	else if Alexandra is in Gray Abbey Library and (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0: [having sex in front of Alexandra]
+	else if Alexandra is in Grey Abbey Library and (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0: [having sex in front of Alexandra]
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Not too far from her, Alexandra is casually leaning against a bookshelf, arms crossed as she keeps an eye on the naked husky. Seems like she's still quite interested in Amy, even though she does follow your orders not to touch her. A wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun to go over there and fuck Amy right now, giving your dobie bitch a bit of a show.";
 		say "     [bold type]Do you want to fuck Amy while Alexandra watches?[roman type][line break]";
 		LineBreak;
@@ -732,7 +732,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 						now Lust of Amy is 24;
 		else:
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
-	else if Carl is in Gray Abbey 2F and (lastfuck of Carl - turns) > 12 and CarlAmySex is 51 and a random chance of 1 in 5 succeeds:
+	else if Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and CarlAmySex is 51 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Carl humping into the young woman hard. The mating of the two huskies is a wild and untamed affair, with the canine soldier thrusting into her wet folds with animalistic vigor and him even using his muzzle to get a loose grip on the fur over her neck, holding Amy down. Not that he needed to, really - as the young bitch revels in a strong male soothing the fires of her unending heat, fucking her like she was meant to be taken.";
 		say "     Soon, Carl's movements build up to a frantic climax, and with a very satisfied howl, the husky drives himself fully inside Amy, shuddering all over as his knot swells up in her pussy, locking the two of them together. Crouching a bit, you can see the soldier's furry orbs twitch and pulse as their seed spurts deep into the young woman that you're quite sure is his daughter, no matter what excuses the man accepted from you. The knowledge what you just witnessed makes a hot and cold shiver run down your spine, and you can't help but feel a grin spreading over your lips. [if Lust of Amy is 0]You wonder how the puppies will turn out...[end if]";
 		if Lust of Amy is 0:
@@ -741,7 +741,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Carl is turns;
-	else if Xerxes is in Gray Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
+	else if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4]. Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
 		if Lust of Amy is 0:
@@ -750,7 +750,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Xerxes is turns;
-	else if Xerxes is in Gray Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0: [having sex in front of Xerxes]
+	else if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0: [having sex in front of Xerxes]
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Xerxes is crouched on his cot, watching her from a distance. Obedient as ever, the human dog does follow your orders to stay away from Amy to the letter, though that doesn't mean his interest in her isn't still burning bright. All on its own, a wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun, to go over there and take Amy for a ride, just now. A bit naughty towards the dutiful human dog, savoring something denied to him right before his eyes, but... that's half the thrill of it, isn't it?";
 		say "     [bold type]Do you want to fuck Amy while Xerxes watches?[roman type][line break]";
 		LineBreak;
@@ -783,7 +783,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 						now Lust of Amy is 24;
 		else:
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
-	else if Fang is in Gray Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0:
+	else if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Fang is padding into her direction on silent paws. He's moving a bit hesitantly, likely remembering your commands not to bother Amy again, but the fact that his canine shaft is dangling erect between his legs shows that he really is on the way to mount her. Looks like your pet wolf needs a reminder to follow his master's orders. As you walk towards the two of them, a wicked little idea suddenly comes to the forefront of your mind - maybe you should just show the wolf that Amy is his alpha's bitch and fuck her right before his eyes, just now. The sting of impotently watching as someone else takes what he desires will remind him of his place as a lowly pack-member.";
 		say "     [bold type]Do you want to fuck Amy while ordering Fang to watch?[roman type][line break]";
 		LineBreak;
@@ -862,7 +862,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of felinoid companion is turns;
-	else if Fang is in Gray Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 5 succeeds:
+	else if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 5 succeeds:
 		if HP of Fang < 3: [Beta Fang]
 			say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again and he was only too happy to fuck the horny husky. The black wolf pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your wolf's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
 		else: [Alpha Fang]
@@ -918,7 +918,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					WaitLineBreak;
 					say "     Immensely satisfied, you pull your softening cock out with a little gush of cum, then pick up Amy and carry her back to her mattress. Putting her down on it, you move over to lie behind her. Spooning the beautiful husky, you run a hand through her soft belly fur, feeling the rounded curve of her body that bulges with the new life growing inside her.";
 				else:
-					say "     At that point, one of your deep thrusts shakes the bookshelf so much that one book, standing alone and without any neighbors that hold it in place, gets rocked towards the edge. You see it from the corner of your eye and look over, hips stopping in their tracks and heart beating incredibly fast as you watch it move as if in slow motion. Jostled forward from the impact of your hips against Amy's behind, transmitted through the bookshelf since she's pressed against it, the book starts to tip - slowly, slowly - tipping a bit more... and then it rocks back to stand solidly upright again, its back and binding hanging almost an inch over the edge. That was close. Really close. Just a little bit further and it would have fallen almost exactly on Elijah's head.";
+					say "     At that point, one of your deep thrusts shakes the bookshelf so much that one book, standing alone and without any neighbours that hold it in place, gets rocked towards the edge. You see it from the corner of your eye and look over, hips stopping in their tracks and heart beating incredibly fast as you watch it move as if in slow motion. Jostled forward from the impact of your hips against Amy's behind, transmitted through the bookshelf since she's pressed against it, the book starts to tip - slowly, slowly - tipping a bit more... and then it rocks back to stand solidly upright again, its back and binding hanging almost an inch over the edge. That was close. Really close. Just a little bit further and it would have fallen almost exactly on Elijah's head.";
 					say "     It is in that moment that you realize that you don't want to get caught after all. No, it'd be far more exciting to fuck your sexy little husky Amy just on the other side of this bookshelf and a few steps away from Elijah - and get away with it. As entranced as the angel is in that book, not having heard you mating with Amy even if you are so close, you've still got a chance. And you actually want to use it, now. Leaning forward, you put both arms around Amy from behind, cupping her shapely breasts as you whisper in her pointed ear to hold fast and keep as silent as possible. Giving you a happy little smile over her shoulder, the young woman takes a deep breath, then presses her lips together and nods for you to continue.";
 					WaitLineBreak;
 					say "     Pulling back out of her, you take hold of your wet and slick erection and rub it over the husky's open and swollen nether lips, then start fucking her again - slower, this time, and making sure that you hold back at the end of each thrust as not to jostle the bookshelf too much. It's... quite a change of pace to fuck her like this now, different but also very nice, with you having the time to do some tricks like rotating your hips, creating all kinds of good sensations for both of you. Sliding in and out and relishing each moment, grinding your crotch against her furry behind, you build up arousal almost as quickly as if you were pounding into her with full force, until you soon feel the need to come rise from deep inside. Leaning forward to nibble on Amy's ear, you pull her hips down harder against your crotch, the two of you moaning together as your balls hit her ass when you bottom out.";
@@ -935,7 +935,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					WaitLineBreak;
 					say "     Immensely satisfied, you carry Amy back to her mattress, holding her tight against your chest, then lie down together. Pulling your softening cock out with a little gush of cum, you move over to lie behind her. Spooning the beautiful husky, you run a hand through her soft belly fur, circling her nipples with your finger, then just hold her.";
 				else:
-					say "     At that point, one of your deep thrusts shakes the bookshelf so much that one book, standing alone and without any neighbors that hold it in place, gets rocked towards the edge. You see it from the corner of your eye and look over, hips stopping in their tracks and heart beating incredibly fast as you watch it move as if in slow motion. Jostled forward from the impact of your hips against Amy's crotch, transmitted through the bookshelf since her back is pressed against it, the book starts to tip - slowly, slowly - tipping a bit more... and then it rocks back to stand solidly upright again, its back and binding hanging almost an inch over the edge. That was close. Really close. Just a little bit further and it would have fallen almost exactly on Elijah's head.";
+					say "     At that point, one of your deep thrusts shakes the bookshelf so much that one book, standing alone and without any neighbours that hold it in place, gets rocked towards the edge. You see it from the corner of your eye and look over, hips stopping in their tracks and heart beating incredibly fast as you watch it move as if in slow motion. Jostled forward from the impact of your hips against Amy's crotch, transmitted through the bookshelf since her back is pressed against it, the book starts to tip - slowly, slowly - tipping a bit more... and then it rocks back to stand solidly upright again, its back and binding hanging almost an inch over the edge. That was close. Really close. Just a little bit further and it would have fallen almost exactly on Elijah's head.";
 					say "     It is in that moment that you realize that you don't want to get caught after all. No, it'd be far more exciting to fuck your sexy little husky Amy just on the other side of this bookshelf and a few steps away from Elijah - and get away with it. As entranced as the angel is in that book, not having heard you mating with Amy even if you are so close, you've still got a chance. And you actually want to use it, now. Leaning forward, you bring your lips to Amy's muzzle and kiss her, then whisper in her pointed ear to hold fast and keep as silent as possible. Giving you a happy little smile, the young woman takes a deep breath, then presses her lips together and nods for you to continue.";
 					WaitLineBreak;
 					say "     Pulling back out of her, you take hold of your wet and slick erection and rub it over the husky's open and swollen nether lips, then start fucking her again - slower, this time, and making sure that you hold back at the end of each thrust as not to jostle the bookshelf too much. It's... quite a change of pace to fuck her like this now, different but also very nice, with you having the time to do some tricks like rotating your hips, creating all kinds of good sensations for both of you. Sliding in and out and relishing each moment, grinding your crotch against her soft-furred hips, you build up arousal almost as quickly as if you were pounding into her with full force, until you soon feel the need to come rise from deep inside. Leaning forward to make out with her, you pull her hips down harder against yourself, the two of you moaning together as your balls hit her crotch when you bottom out.";
@@ -960,7 +960,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		now lastfuck of Sven is turns;
 [	else if Sven is bunkered and HP of Sven > 5 and HP of Sven < 50 and SvenAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between confident Sven and Amy]
 		say "***Repeat scene between Amy and confident Sven.";]
-	else if Snow is in the Gray Abbey Library and SnowAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between Snow and Amy]
+	else if Snow is in the Grey Abbey Library and SnowAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between Snow and Amy]
 		say "     Entering the library, you see Amy - gripping the sheets on her mattress tightly and moaning as Snow pounds away at her needy pussy. The squirrel herm's thick veiny member thrusts in and out of your husky friend, with Snow's heavy, grapefruit sized balls audibly smacking against Amy's hips each time. Snow pants '[one of]I cannot remember if I was a girl or a boy to start - but I sure love this[or]You feel amazing, baby[or]Will you bear my child? You would make an awesome mom, I bet[at random].'";
 		say "     The big squirrel's breasts as absolutely huge, swaying in the air as she grinds against Amy and even rubbing the husky's smaller but more numerous breasts when Snow leans forward a bit more. Gasps of pleasure from Amy fill the library, combined with Snow's own moaning as her heavy balls slap against Amy's thighs with every rapid pierce into her anthro canine body. Then, with a sudden lurch, she seals herself against Amy, holding her tight against herself as pulsing waves of rich squirrel seed erupt into the husky girl's body.";
 		say "     As she rides out her orgasm and with her member still pulsing with spurt after spurt of cum painting Amy's womb white, Snow rolls the two of them over to lie on their sides on the mattress. The squirrel and husky start making out and keep going for quite a while, their hands stroking and caressing each other while they kiss.";
@@ -991,7 +991,7 @@ instead of navigating Gray Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					now Lust of Amy is 24;
 			now lastfuck of Amy is turns;
 			now lastfuck of Icarus is turns;
-	else if Alexandra is in the Gray Abbey Library and AlexandraAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between Alexandra and Amy]
+	else if Alexandra is in the Grey Abbey Library and AlexandraAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between Alexandra and Amy]
 		say "     Entering the library, you see Amy - gripping the sheets on her mattress tightly and moaning as Alexandra laps away at her needy pussy. The doberwoman is on all fours on top of her in the classical 69 position. A moment later, she raises her head to look back at the husky, barking 'Keep licking, girl,' after which Amy hurriedly gets back to pleasing the former cop. Quite a hot sight, to find your two canine bitches entwined on the ground like that, having oral sex, so you walk up to them to have a closer look. They're mostly using their long canine tongues to lap and lick each other's pussies, though fingers also come into play to rub and stroke, especially the inside of their legs and outer nether lips.";
 		say "     With them clearly having been at it a while, it doesn't take all that long before the two women climax together, accompanied by yips and moans. After allowing Amy to lap up her femcum, Alexandra then moves to lie next to the young husky, arm around her and gently stroking her fur. In that position, you've got a perfect view of all of their female charms, clearly intended by the tough bitch, as she calls out 'Hope you liked the show, boss.' a moment later.";
 		now lastfuck of Amy is turns;
@@ -1082,7 +1082,7 @@ to say AmySexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the husky bitch's ass with your cock.";
 	[]
-	if (cocks of player > 0 and thirst of Amy is 1 and Xerxes is in the Gray Abbey Library):
+	if (cocks of player > 0 and thirst of Amy is 1 and Xerxes is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Xerxes";
 		now sortorder entry is 6;
@@ -1094,7 +1094,7 @@ to say AmySexMenu:
 		now sortorder entry is 7;
 		now description entry is "Have sex with both your felinoid companion and horny husky.";
 	[]
-	if (cocks of player > 0 and XP of Amy is 1 and Fang is in the Gray Abbey Library):
+	if (cocks of player > 0 and XP of Amy is 1 and Fang is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Fang";
 		now sortorder entry is 8;
@@ -1276,7 +1276,7 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Amy suddenly gives a pleased yip and orgasms, her female juices dripping down to soak into her bedding, that gives the large cat the last nudge too. A deep rumble of satisfaction vibrates in Klauz's throat as he pushes his member as deep as it will go and fills Amy's womb with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute.";
 		WaitLineBreak;
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Amy's mattress. The big cat and husky girl separate from each other too, then lie down next to you, with Amy cuddling up to the felinoid's soft and warm belly fur. Purring as loud as a idling motor, the big cat starts licking her fur. Looks as if he wants to spread his scent over all of the husky's body.";
-	if Fang is in the Gray Abbey Library:
+	if Fang is in the Grey Abbey Library:
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Beta Fang]
 			if XP of Amy is 0:

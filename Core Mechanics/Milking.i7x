@@ -5,7 +5,7 @@ Milking is an action applying to nothing.
 understand "milkme" as milking.
 understand "milk me" as milking.
 understand "milk myself" as milking.
-lastmilking is a number that varies. lastmilking is usually 500.
+lastmilking is a number that varies.  lastmilking is usually 500.
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -25,7 +25,7 @@ check milking:
 	if cunts of player < 1 and player is not mpreg_ok:
 		say "Your breasts don't seem ready to lactate." instead;
 	if lastmilking - turns < 8:
-		say "Your breasts have been drained recently. You'll need to wait before another worthwhile milking." instead;
+		say "Your breasts have been drained recently.  You'll need to wait before another worthwhile milking." instead;
 
 Carry out milking:
 	if the bodyname of the player is "Hermaphrodite Gryphon":
@@ -63,7 +63,7 @@ Carry out milking:
 			increase carried of cheetah milk by 1;
 		now lastmilking is turns;
 	else if the bodyname of the player is "Chocolate Lab":
-		say "Moving your hands to caress the soft curves of your [if breasts of player is 2]two[else][breasts of player][end if] [breast size desc of player] breasts, you revel in the sensations that wakes in you. Soon they start leaking white chocolate syrup, revealing to anyone watching that your chocolate body has a creamy filling. It takes little effort to draw some white chocolate flavored milk from your breasts, carefully squirting it into an empty water bottle before packing the now milk-filled container away.";
+		say "Moving your hands to caress the soft curves of your [if breasts of player is 2]two[else][breasts of player][end if] [breast size desc of player] breasts, you revel in the sensations that wakes in you. Soon they start leaking white chocolate syrup, revealing to anyone watching that your chocolate body has a creamy filling. It takes little effort to draw some white chocolate flavoured milk from your breasts, carefully squirting it into an empty water bottle before packing the now milk-filled container away.";
 		repeat with T running from one to breasts of player:
 			increase carried of chocolate milk by 1;
 		if breast size of player > 8:
@@ -111,7 +111,7 @@ Carry out milking:
 			increase carried of margay milk by 1;
 		now lastmilking is turns;
 	else if bodyname of player is "Xeno":
-		say "Bringing your clawed hands to your [if player is xenoskinned]black, [end if]green-veined breasts, you pinch and squeeze your nipples, drawing out green, acidic milk that sizzles where it falls. You manage to contain some in a jar that it doesn't seem to be able to eat through right away";
+		say "Bringing your clawed hands to your [if player is xenoskinned]black, [end if]green-veined breasts, you pinch and squeeze your nipples, drawing out green, acidic milk that sizzles where it falls.  You manage to contain some in a jar that it doesn't seem to be able to eat through right away";
 		let z be the square root of ( breasts of player * breast size of player );
 		let z be z / 2;
 		increase carried of acid milk by z;

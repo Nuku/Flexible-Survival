@@ -54,7 +54,7 @@ When Play begins:
 	now body change entry is "[CheesecakeBodyTF]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it becomes soft and blemish free, shifting to a creamy white with rosy red highlights[if breast size of player > 0 and breasts of player > 0 and player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes [if cheesecakemode is 1]tight and firm[else]plump and luscious[end if]";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "shifts to a mostly human form, except for the strawberry red color";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "shifts to a mostly human form, except for the strawberry red colour";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;			[ These are now the creature's stats... ]
 	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12;			[ These values may be used as part of alternate combat.]

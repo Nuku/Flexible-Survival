@@ -59,7 +59,7 @@ instead of fucking Ares:
 
 Chapter 2 - Walkies
 
-instead of going east from Mike's Office while (HP of Ares is 0): [initial event]
+instead of going east from Mike's Office while (HP of Ares is 0):  [initial event]
 	move Ares to Dog Kennels;
 	move player to Dog Kennels;
 	say "     As you walk into the long hallway between the dog kennels, one of the transformed dogs, a magnificently built male with short-cropped red hair jumps up from his air mattress. He pads up and down in front of the cage door almost demonstratively, then gives you a hopeful look and pleading whine. As you step closer to check out what's up with him, the human dog starts barking loudly in excitement and comes to stand right at the door, running his hand over the mesh at its edge. Attracted by the noise, Mike comes from his office to join you in front of the barking dog's cage. 'Ah, of course... who else would it be,' he says, opening the door and crouching down to stroke the young man's head.";
@@ -115,7 +115,7 @@ to say AresWalkMenu:
 			if the player consents:
 				now sextablerun is 1;
 				say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
-				move player to Gray Abbey Library;
+				move player to Grey Abbey Library;
 				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -124,10 +124,10 @@ to say AresWalkMenu:
 	clear the screen and hyperlink list;
 
 to say AresWalk_Park:
-	if a random chance of 1 in 3 succeeds: [no fight]
+	if a random chance of 1 in 3 succeeds:  [no fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Ares is just a bundle of untamed energy, most of the time dashing ahead and sniffing this or that, often pulling on his leash if you're not quite fast enough to keep up. Not long afterwards, you get to the park Mike mentioned, which is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 		say "     [AresParkMounting]";
-	else: [fight]
+	else:  [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
 		now companion of player is human dog;
@@ -139,14 +139,14 @@ to say AresWalk_Park:
 		else if fightoutcome >= 30:[fled]
 			say "     When you ran, Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 			say "     [AresParkMounting]";
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 			say "     Having beaten off the threat with the help of your human dog, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 			say "     [AresParkMounting]";
 
 to say AresParkMounting:
 	setmonster "human";
 	choose row monster from the table of random critters;
-	if HP of Ares < 3: [no sex before]
+	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, though obviously the concept of clothing being in the way did escape Ares.";
 		LineBreak;
 		if player is submissive:
@@ -167,7 +167,7 @@ to say AresParkMounting:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shove Ares off and grab the leash again before scolding him for what he tried to do. He accepts that with a hanging head, though you guess that's more from being sad that he didn't succeed than from understanding you at all.";
 			now HP of Ares is 2;
-	else if HP of Ares is 3 or HP of Ares is 5: [he fucked the player before]
+	else if HP of Ares is 3 or HP of Ares is 5:  [he fucked the player before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
@@ -183,7 +183,7 @@ to say AresParkMounting:
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if HP of Ares is 4: [he only fucked Helen/Xerxes before]
+	else if HP of Ares is 4:  [he only fucked Helen/Xerxes before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked [if HP of Helen > 0]Helen[else]Xerxes[end if] right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants to repeat his performance with [if HP of Helen > 0]Helen[else]Xerxes[end if] and make you his bitch too... Do you let him?[roman type][line break]";
@@ -207,10 +207,10 @@ to say AresHelenWalk:
 	say "     'Oh, hello - and hello Helen,' he says, patting her head, then allowing her to trot inside and go see Lea. While the two young women happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Helen, I hope?' Assuring him that you're very happy with having her as your pet, you tell him that you just wanted to take her and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if HP of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if HP of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Helen and Lea, who were getting a bit wild in their reunion.";
 	WaitLineBreak;
 	say "     Entering the room with the dog's cages, you walk over to where the collars and leashes hang on the wall and grab a pair of them, then go to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and after a quick whistle to Helen that brings her to your side, you're out the door with your two 'dogs'.";
-	if a random chance of 1 in 3 succeeds: [no fight]
-		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dogs. Ares is just a bundle of untamed energy, most of the time dashing ahead and sniffing this or that, often pulling on his leash if you're not quite fast enough to keep up. Even the usually so obedient Helen is somewhat infected by his demeanor, often running along with Ares as he rushes about before circling back to you and taking her position at your side again. Not long afterwards, you get to the park Mike mentioned, which is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
+	if a random chance of 1 in 3 succeeds:  [no fight]
+		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dogs. Ares is just a bundle of untamed energy, most of the time dashing ahead and sniffing this or that, often pulling on his leash if you're not quite fast enough to keep up. Even the usually so obedient Helen is somewhat infected by his demeanour, often running along with Ares as he rushes about before circling back to you and taking her position at your side again. Not long afterwards, you get to the park Mike mentioned, which is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 		say "     [AresHelenParkMounting]";
-	else: [fight]
+	else:  [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
 		now companion of player is human dog;
@@ -222,30 +222,30 @@ to say AresHelenWalk:
 		else if fightoutcome >= 30:[fled]
 			say "     When you ran, Helen and Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 			say "     [AresHelenParkMounting]";
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 			say "     Having beaten off the threat with the help of Ares, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 			say "     [AresHelenParkMounting]";
 
 to say AresHelenParkMounting:
 	setmonster "human";
 	choose row monster from the table of random critters;
-	if HP of Ares < 3: [no sex before]
+	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
 		LineBreak;
 		say "     [bold type]If he still was a normal dog, he'd likely have knotted her by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue, or pull him off Helen?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let him continue.";
 		say "     ([link]N[as]n[end link]) - Pull him off.";
-		if player consents: [let Ares fuck her]
+		if player consents:   [let Ares fuck her]
 			LineBreak;
 			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Helen with an untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresHelenParkFuck]";
 			now HP of Ares is 4;  [only had sex with Helen]
-		else: [pull Ares off]
+		else:  [pull Ares off]
 			LineBreak;
 			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Helen, with him giving a surprised (for not being safely locked with her by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if HP of Ares is 3: [he fucked only the player before]
+	else if HP of Ares is 3:  [he fucked only the player before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants to make Helen his bitch too - just like he did with you. Do you let him?[roman type][line break]";
@@ -261,7 +261,7 @@ to say AresHelenParkMounting:
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if HP of Ares is 4 or HP of Ares is 5: [he fucked Helen before]
+	else if HP of Ares is 4 or HP of Ares is 5:  [he fucked Helen before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Helen right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
@@ -311,7 +311,7 @@ to say AresHelenParkFuck:
 				WaitLineBreak;
 				say "     Satisfied and content from just having gotten off, you lean back on your elbows and watch as Ares continues to fuck Helen with rapid thrusts. He seems to have realized at some point that his hands are good for more than just holding on to her, as he's got them cupping her breasts and feeling them up. With Ares wandering hands now stroking and groping her chest while he pounds into her, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
 				say "     While his cock and balls twitch with the last spurts of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Some time later, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";
-				if thirst of Helen is 0: [not pregnant]
+				if thirst of Helen is 0:              [not pregnant]
 					now thirst of Helen is 1;           [pregnant]
 					now libido of Helen is 5;           [...by Ares]
 					now HelenPregnant is 1;             [pregnancy timer]
@@ -327,7 +327,7 @@ to say AresHelenParkFuck:
 						say "     After running your hands over her sexy body, you pause in your thrusting to get her to lay on her back. She giggles a little at what seems an unnatural position to her, but welcomes you into her arms as you get your cock lined up again and push into her wanton hole again. She lavishes you with licks and kisses while running her hands across your back[if lust of Helen < 7] almost as if she were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. Between the kisses you share, you whisper to her what a good girl she is.";
 				WaitLineBreak;
 				say "     Helen's moans build up into a crescendo, sounding through the whole park as she orgasms. You yourself are not far behind and soon give a deep moan as your balls start twitching and send spurt after spurt of cum to fill Helen's womb and mingle with Ares earlier deposit. With your cock delivering your seed into her, you pull Helen's upper body against your chest, and give her a deep kiss. Then, after your last shot, you just hold her for some time as you come down from your respective orgasms[if lust of Helen >= 4]. 'Mmm... Master fuck Helen good,' she mumbles softly, snuggling up to you lovingly[end if][if lust of Helen >= 7] as you kiss along the tattooed collar ringing her neck[end if]. A pleasant while later, you go pick up your clothes again and dress, taking Ares leash and having Helen come to your side when you finish.";
-				if thirst of Helen is 0: [not pregnant]
+				if thirst of Helen is 0:              [not pregnant]
 					now thirst of Helen is 1;           [pregnant]
 					if a random chance of 2 in 3 succeeds:
 						now libido of Helen is 5;           [...by Ares]
@@ -339,7 +339,7 @@ to say AresHelenParkFuck:
 				say "     After you don't know how long of an amazing time for the three of you, you can hear the pitch of Helen's moans rise up into a crescendo, sounding through the whole park as she orgasms. That creates a bit of a chain reaction, as the feeling of her pussy getting all wet with femcum and the trembling of Helen's muscles pushes Ares over the edge right with her. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed. And with each blast of cum into Helen, Ares anal muscles clench and tighten around your own thrusting manhood, a bit as if he was jerking you off inside his ass. The pleasant feelings that gives you can't be denied for very long, and after just a few more deep penetrations, you come, grunting almost incoherently from the force of your orgasm. Spurt after spurt of your load blasts deep into Ares, leaving you panting breathlessly while leaning against his back.";
 				WaitLineBreak;
 				say "     While his cock and balls twitch with the last spurts of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Some time later, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";
-				if thirst of Helen is 0: [not pregnant]
+				if thirst of Helen is 0:              [not pregnant]
 					now thirst of Helen is 1;           [pregnant]
 					now libido of Helen is 5;           [...by Ares]
 					now HelenPregnant is 1;             [pregnancy timer]
@@ -357,7 +357,7 @@ to say AresHelenParkFuck:
 			WaitLineBreak;
 			say "     Satisfied and content from just having gotten off, you lean back on your elbows and watch as Ares continues to fuck Helen with rapid thrusts. He seems to have realized at some point that his hands are good for more than just holding on to her, as he's got them cupping her breasts and feeling them up. With Ares wandering hands now stroking and groping her chest while he pounds into her, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
 			say "     As his cock and balls keep twitching with blast after blast of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Finally, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";
-			if thirst of Helen is 0: [not pregnant]
+			if thirst of Helen is 0:              [not pregnant]
 				now thirst of Helen is 1;           [pregnant]
 				now libido of Helen is 5;           [...by Ares]
 				now HelenPregnant is 1;             [pregnancy timer]
@@ -375,13 +375,13 @@ to say AresHelenParkFuck:
 			WaitLineBreak;
 			say "     Satisfied and content from just having gotten off, you lean back on your elbows and watch as Ares continues to fuck Helen with rapid thrusts. He seems to have realized at some point that his hands are good for more than just holding on to her, as he's got them cupping her breasts and feeling them up. With Ares wandering hands now stroking and groping her chest while he pounds into her, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
 			say "     As his cock and balls keep twitching with blast after blast of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Finally, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";
-			if thirst of Helen is 0: [not pregnant]
+			if thirst of Helen is 0:              [not pregnant]
 				now thirst of Helen is 1;           [pregnant]
 				now libido of Helen is 5;           [...by Ares]
 				now HelenPregnant is 1;             [pregnancy timer]
 	else:
 		say "     Happy to just watch them go at it, you simply stand back and [if cocks of player > 0]jerk off a bit while you do. [else if cunts of player > 0]finger your pussy while you do so. [else]stroke your sensitive crotch while you do so. [end if]The coupling of the human dogs continues for a while, with Ares really pounding into Helen with rapid thrusts, only slowing down a bit in the middle as he realizes he can do more than just hold on to her with his hands and starts to fondle the young woman's breasts. With Ares wandering hands now stroking and groping her chest and him getting back into his fucking rhythm soon after while still keeping that up, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed. Used to having a knot, Ares stays on top of Helen for a while even after he finishes coming, then finally dismounts when his cock goes soft.";
-		if thirst of Helen is 0: [not pregnant]
+		if thirst of Helen is 0:              [not pregnant]
 			now thirst of Helen is 1;           [pregnant]
 			now libido of Helen is 5;           [...by Ares]
 			now HelenPregnant is 1;             [pregnancy timer]
@@ -391,10 +391,10 @@ to say AresXerxesWalk:
 	say "     'Oh, hello - and hello Xerxes,' he says, patting his head, then allowing him to trot inside and go see Lea. While the two human dogs happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Xerxes, I hope?' Assuring him that you're very happy with having Xerxes as your pet, you tell him that you just wanted to take him and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if HP of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if HP of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Xerxes and Lea, who were getting a bit wild in their reunion.";
 	WaitLineBreak;
 	say "     Entering the room with the dog's cages, you walk over to where the collars and leashes hang on the wall and grab a pair of them, then go to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and after a quick whistle to Xerxes that brings him to your side, you're out the door with your two 'dogs'.";
-	if a random chance of 1 in 3 succeeds: [no fight]
-		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dogs. Ares is just a bundle of untamed energy, most of the time dashing ahead and sniffing this or that, often pulling on his leash if you're not quite fast enough to keep up. Even the usually so obedient Xerxes is somewhat infected by his demeanor, often running along with Ares as he rushes about before circling back to you and taking him position at your side again. Not long afterwards, you get to the park Mike mentioned, which is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniff all around for quite a bit before marking it, one after another.";
+	if a random chance of 1 in 3 succeeds:  [no fight]
+		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dogs. Ares is just a bundle of untamed energy, most of the time dashing ahead and sniffing this or that, often pulling on his leash if you're not quite fast enough to keep up. Even the usually so obedient Xerxes is somewhat infected by his demeanour, often running along with Ares as he rushes about before circling back to you and taking him position at your side again. Not long afterwards, you get to the park Mike mentioned, which is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniff all around for quite a bit before marking it, one after another.";
 		say "     [AresXerxesParkMounting]";
-	else: [fight]
+	else:  [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
 		now companion of player is human dog;
@@ -406,30 +406,30 @@ to say AresXerxesWalk:
 		else if fightoutcome >= 30:[fled]
 			say "     When you ran, Xerxes and Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniff all around for quite a bit before marking it, one after another.";
 			say "     [AresXerxesParkMounting]";
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 			say "     Having beaten off the threat with the help of Ares, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniff all around for quite a bit before marking it, one after another.";
 			say "     [AresXerxesParkMounting]";
 
 to say AresXerxesParkMounting:
 	setmonster "human";
 	choose row monster from the table of random critters;
-	if HP of Ares < 3: [no sex before]
+	if HP of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		LineBreak;
 		say "     [bold type]If he still was a normal dog, he'd likely have knotted Xerxes by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue, or pull him off Xerxes?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let him continue.";
 		say "     ([link]N[as]n[end link]) - Pull him off.";
-		if player consents: [let Ares fuck him]
+		if player consents:   [let Ares fuck him]
 			LineBreak;
 			say "     You think a moment about it, then decide to just let them go on. After all, Xerxes clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Xerxes with an untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside your pet. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresXerxesParkFuck]";
 			now HP of Ares is 4;  [only had sex with Xerxes]
-		else: [pull Ares off]
+		else:  [pull Ares off]
 			LineBreak;
 			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Xerxes, with him giving a surprised (for not being safely locked with him by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if HP of Ares is 3: [he fucked only the player before]
+	else if HP of Ares is 3:  [he fucked only the player before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Xerxes, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants to make Xerxes his bitch too - just like he did with you. Do you let him?[roman type][line break]";
@@ -445,7 +445,7 @@ to say AresXerxesParkMounting:
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
-	else if HP of Ares is 4 or HP of Ares is 5: [he fucked Xerxes before]
+	else if HP of Ares is 4 or HP of Ares is 5:  [he fucked Xerxes before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Xerxes right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Xerxes, cock dangling erect under his muscular body.";
 		LineBreak;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";

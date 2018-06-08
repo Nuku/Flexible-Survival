@@ -1,8 +1,8 @@
 Pronouns by Harry Gates begins here.
 
-Parse_debug is a text that varies. Parse_debug is "false".
+Parse_debug is a text that varies.  Parse_debug is "false".
 
-A person is either herm or noherm. A person is usually noherm.
+A person is either herm or noherm.  A person is usually noherm.
 
 P_target is a person that varies.
 

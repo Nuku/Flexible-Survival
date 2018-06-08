@@ -75,7 +75,7 @@ Global MAP_HEIGHT = 0;
 				if ( (+ current zoom +) == (+ map absent +) )
 					return;
 				if (~~Printed_nomalloc_message) {
-					print "[Your interpreter does not support dynamic memory allocation. Automap features will not function.]^";
+					print "[Your interpreter does not support dynamic memory allocation.  Automap features will not function.]^";
 					Printed_nomalloc_message = true;
 				}
 				(+ current zoom +) = (+ map absent +);
@@ -122,9 +122,9 @@ Global MAP_HEIGHT = 0;
 To decide whether there is no dynamic allocation conflict:
 	(- Check_for_malloc() -).
 
-To reserve automap memory of (rows - a number) rows by (cols - a number) cols/columns : (- Reserve_Map_Memory ({rows}, {cols}) ;-).
-To reserve automap memory of (cols - a number) cols/columns by (rows - a number) rows: (- Reserve_Map_Memory ({rows}, {cols}) ;-).
-To reserve automap memory of (rows - a number) by (cols - a number): (- Reserve_Map_Memory ({rows}, {cols}) ;-).
+To reserve automap memory of (rows - a number) rows by (cols - a number) cols/columns :  (- Reserve_Map_Memory ({rows}, {cols}) ;-).
+To reserve automap memory of (cols - a number) cols/columns by (rows - a number) rows:  (- Reserve_Map_Memory ({rows}, {cols}) ;-).
+To reserve automap memory of (rows - a number) by (cols - a number):  (- Reserve_Map_Memory ({rows}, {cols}) ;-).
 To reserve automap memory of (rows - a number) rows: (- Reserve_Map_Memory ({rows}, VM_ScreenWidth()-2); -).
 
 Include Basic Screen Effects by Emily Short.
@@ -133,35 +133,35 @@ Include Basic Screen Effects by Emily Short.
 A mappable room has a number called map_x.
 A mappable room has a number called map_y.
 
-A mappable room can be currently_mapped. A mappable room is usually not currently_mapped.]
+A mappable room can be currently_mapped.  A mappable room is usually not currently_mapped.]
 
-A room can be mappable or unmappable. A room is usually mappable.
-A room has a number called map_x. A room has a number called map_y.
-A room can be currently_mapped. A room is usually not currently_mapped.
+A room can be mappable or unmappable.  A room is usually mappable.
+A room has a number called map_x.  A room has a number called map_y.
+A room can be currently_mapped.  A room is usually not currently_mapped.
 
 To decide what number is the distance (d - a direction) from (r - a room): decide on 1.
 
-[Coregionality relates mappable rooms to each other in groups. The verb to be coregional with implies the coregionality relation.]
-Coregionality relates rooms to each other in groups. The verb to be coregional with implies the coregionality relation.
+[Coregionality relates mappable rooms to each other in groups.  The verb to be coregional with implies the coregionality relation.]
+Coregionality relates rooms to each other in groups.  The verb to be coregional with implies the coregionality relation.
 
-Map zoomedness is a kind of value. The Map zoomednesses are map zoomed out, map zoomed in, and map absent.
+Map zoomedness is a kind of value.  The Map zoomednesses are map zoomed out, map zoomed in, and map absent.
 
-Current zoom is a map zoomedness that varies. [The current zoom is map zoomed in.] [The current zoom is map absent.]
+Current zoom is a map zoomedness that varies.  [The current zoom is map zoomed in.] [The current zoom is map absent.]
 
 To report dynamic allocation conflict:
 	say "[bracket]Your interpreter does not support dynamic allocation, so the automap will not function.[close bracket][line break]";
 	now current zoom is map absent;
 
-Zooming in is an action out of world applying to nothing. Understand "zoom in" as zooming in.
+Zooming in is an action out of world applying to nothing.  Understand "zoom in" as zooming in.
 Carry out zooming in: if there is no dynamic allocation conflict begin; say "Zooming in!"; now current zoom is map zoomed in; else; report dynamic allocation conflict; end if.
 
-Zooming out is an action out of world applying to nothing. Understand "zoom out" as zooming out.
+Zooming out is an action out of world applying to nothing.  Understand "zoom out" as zooming out.
 Carry out zooming out:
 	if there is no dynamic allocation conflict begin; say "Zooming out!"; now current zoom is map zoomed out; else; report dynamic allocation conflict; end if.
 
-Zooming away is an action out of world applying to nothing. Understand "zoom away" as zooming away. Carry out zooming away: say "Removing map."; now current zoom is map absent.
+Zooming away is an action out of world applying to nothing.  Understand "zoom away" as zooming away.  Carry out zooming away: say "Removing map."; now current zoom is map absent.
 
-ZoomingMisc is an action out of world applying to nothing. Understand "zoom" as zoomingmisc.
+ZoomingMisc is an action out of world applying to nothing.  Understand "zoom" as zoomingmisc.
 Carry out zoomingmisc:
 	if there is no dynamic allocation conflict begin;
 		if current zoom is map zoomed in begin;
@@ -176,27 +176,27 @@ Carry out zoomingmisc:
 	end if.
 
 
-Map displayness is a kind of value. The map displaynesses are map display ascii, map display automatic, map display fancy, map display unicode. Current displayness is a map displayness that varies.
+Map displayness is a kind of value.  The map displaynesses are map display ascii, map display automatic, map display fancy, map display unicode. Current displayness is a map displayness that varies.
 
-Map displaying unicode is an action out of world applying to nothing. Understand "map unicode" as map displaying unicode. Carry out map displaying unicode: now current displayness is map display unicode; say "Displaying map with unicode character set.".
+Map displaying unicode is an action out of world applying to nothing.  Understand "map unicode" as map displaying unicode.  Carry out map displaying unicode: now current displayness is map display unicode; say "Displaying map with unicode character set.".
 
-Map displaying fancy is an action out of world applying to nothing. Understand "map fancy" as map displaying fancy. Understand "map font 3" as map displaying fancy. Understand "map beyond zork" as map displaying fancy. Carry out map displaying fancy: now current displayness is map display fancy; say "Displaying map with fancy character set.".
+Map displaying fancy is an action out of world applying to nothing.  Understand "map fancy" as map displaying fancy.  Understand "map font 3" as map displaying fancy.  Understand "map beyond zork" as map displaying fancy.  Carry out map displaying fancy: now current displayness is map display fancy; say "Displaying map with fancy character set.".
 
-Map displaying ascii is an action out of world applying to nothing. Understand "map simple/ascii/plain" as map displaying ascii. Carry out map displaying ascii: now current displayness is map display ascii; say "Displaying map with simple character set.".
-Gargoyle workaround is an action out of world applying to nothing. Understand "gargoyle bug workaround" as gargoyle workaround. Carry out gargoyle workaround: now current displayness is map display ascii; say "Activating workaround for buggy interpreter.".
+Map displaying ascii is an action out of world applying to nothing.  Understand "map simple/ascii/plain" as map displaying ascii.  Carry out map displaying ascii: now current displayness is map display ascii; say "Displaying map with simple character set.".
+Gargoyle workaround is an action out of world applying to nothing.  Understand "gargoyle bug workaround" as gargoyle workaround.  Carry out gargoyle workaround: now current displayness is map display ascii; say "Activating workaround for buggy interpreter.".
 
-Map displaying automatic is an action out of world applying to nothing. Understand "map auto" as map displaying automatic. Carry out map displaying automatic: now current displayness is map display automatic; say "Displaying map with automatic character set."
+Map displaying automatic is an action out of world applying to nothing.  Understand "map auto" as map displaying automatic.  Carry out map displaying automatic: now current displayness is map display automatic; say "Displaying map with automatic character set."
 
-Automap work is an activity. ["Catchall activity in case the author wants to do something different while doing automap related activity."]
+Automap work is an activity.  ["Catchall activity in case the author wants to do something different while doing automap related activity."]
 
-Automap exploring is an activity. ["Check a room, and join all adjacent rooms which are currently_mapped to its automap region."]
+Automap exploring is an activity.  ["Check a room, and join all adjacent rooms which are currently_mapped to its automap region."]
 
 Automap drawing is an activity. ["writing the array that shows the automap."]
 
 To decide whether (dir - a direction) is region preserving:
    if dir is north or dir is east or dir is west or dir is south or dir is northeast or dir is southeast or dir is northwest or dir is southwest, decide yes;
    if dir is up or dir is down or dir is inside or dir is outside, decide no;
-   say "Error: Bad direction [dir]!"; decide no;
+   say "Error: Bad direction [dir]!"; decide no.
 
 To decide what number is the delta x of (dir - a direction):
    if dir is west or dir is northwest or dir is southwest, decide on -1;
@@ -284,7 +284,7 @@ Section 2 - Exploration - determining how rooms should be placed relative to eac
 [ Unmap Room ]
 To unmap (r - a room):
 	now r is not coregional with r;
-	now r is not currently_mapped;
+	now r is not currently_mapped.
 
 To remap/explore (r - a room):
 	unless r is explored, say "Error exploring [r] - BUG.";
@@ -392,8 +392,8 @@ To decide what number is the character at (sq - a number):
 
 To decide what number is room size: if current zoom is map zoomed in, decide on 4; decide on 2.
 
-[Map drawn room is a mappable room that varies. Map drawn direction is a direction that varies.]
-Map drawn room is a room that varies. Map drawn direction is a direction that varies.
+[Map drawn room is a mappable room that varies.  Map drawn direction is a direction that varies.]
+Map drawn room is a room that varies.  Map drawn direction is a direction that varies.
 
 [ Draw Path ]
 To draw a path from (room x - a number) and (room y - a number) to (dir - a direction) for (dist - a number) with (ch - a number):
@@ -752,7 +752,7 @@ Array Automap_Unicode_Conv -->
       0 $2500 $2502 63 63 63 63 63 63 63 63 11 12 13 14 15 ! 0 -  15
      16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 ! 16 -  31
      32 $2190 $2192 47 92 32 $2500 $2500 $2502 $2502 $2534 $252c $251c $2524 $2301 $2308 ! 32 -  47
-!    32 $2190 $2192 $2571 $2572 32 $2500 $2500 $2502 $2502 $2534 $252c $251c $2524 $2301 $2308 ! 32 -  47
+!     32 $2190 $2192 $2571 $2572 32 $2500 $2500 $2502 $2502 $2534 $252c $251c $2524 $2301 $2308 ! 32 -  47
      $2309 $230b $2534 $252c $251c $2524 $2588 $2580 $2584 $258c $2590 $2584 $2580 $258c $2590 $259d ! 48 -  63
      $2597 $2596 $2598 $259d $2597 $2596 $2598 43 43 43 43 $2594 95 $23b9 $2595 32 ! 64 -  79
      $258f $258e $258d $258c $258b $258a $2589 $2588 $2595 $258f $2573 $253c $2191 $2193 $2195 $25a2 ! 80 -  95
@@ -896,7 +896,7 @@ To say (n - a number) blank lines:
 Section 5 - Hyperlink specific stuff (for use with Basic Hyperlinks by Emily Short)
 
 [To set linked room to (x - a number):
-	say "[set link x]";
+	say "[set link x]".
 
 To end linked room:
 	say "[end link]".]
@@ -935,7 +935,7 @@ When play begins:
 	if using the automap hyperlinks option,
 		Check hyperlink availability.
 ]
-Map viewing is an action out of world applying to nothing. Understand "map view" as map viewing.
+Map viewing is an action out of world applying to nothing.  Understand "map view" as map viewing.
 
 Carry out map viewing:
 	say "Viewing rooms coregional with [location].";
@@ -947,8 +947,8 @@ Carry out map viewing:
 		say "[viewed room] [if viewed room is not currently_mapped](currently unmapped) [end if]is at [map_x of viewed room], [map_y of viewed room].";
 	end repeat;
 
-Map dumping is an action out of world applying to nothing. Understand "map dump" as map dumping.
-Map link dumping is an action out of world applying to nothing. Understand "map link dump" as map link dumping.
+Map dumping is an action out of world applying to nothing.  Understand "map dump" as map dumping.
+Map link dumping is an action out of world applying to nothing.  Understand "map link dump" as map link dumping.
 
 Include (-
 [ Automap_dump i;
@@ -978,10 +978,10 @@ To say automap link dump:
 	(- Automap_link_dump(); -).
 
 Carry out map dumping:
-	say "MAP DUMP:[line break][automap dump].";
+	say "MAP DUMP:[line break][automap dump].".
 
 Carry out map link dumping:
-	say "MAP LINK DUMP:[line break][automap link dump].";
+	say "MAP LINK DUMP:[line break][automap link dump].".
 
 Automap ends here.
 
@@ -989,29 +989,29 @@ Automap ends here.
 
 Automap will watch what rooms the player has visited and create a Beyond Zork style automap.
 
-Kinds: Mappable Room. All rooms which are to show on the map must be of this kind.
+Kinds:  Mappable Room.  All rooms which are to show on the map must be of this kind.
 
-By default, rooms will be placed one unit away in the appropriate direction. If the path should be longer, you can manually set the distance.
+By default, rooms will be placed one unit away in the appropriate direction.  If the path should be longer, you can manually set the distance.
 
 It is the responsibility of the author to make the map has a consistent geography and that no two rooms overlap.
 
 Activities:
 
-- The "Automap work" is activity is being handled while the program is attempting to explore a room or draw the map (that is, the times when it might perform the "which room is (direction) from (room)" decision). It is provided if you need to have anything work differently during such a test.
+- The "Automap work" is activity is being handled while the program is attempting to explore a room or draw the map (that is, the times when it might perform the "which room is (direction) from (room)" decision).  It is provided if you need to have anything work differently during such a test.
 
 Use options:
 
-- Use automap manual display: The program will not display the map to the status line on its own.
+- Use automap manual display:  The program will not display the map to the status line on its own.
 
-- Use automap manual exploration: The program will not add rooms to the map unless you explicitly run the "(room) is explored" decision.
+- Use automap manual exploration:  The program will not add rooms to the map unless you explicitly run the "(room) is explored" decision.
 
-- Use automap hide paths through closed doors: The program will not add paths that go through closed doors.
+- Use automap hide paths through closed doors:  The program will not add paths that go through closed doors.
 
-- Use automap static allocation: Causes a glulx game to allocate memory for the automap at compile time. Reduces flexibility, but allows the game to run on more interpreters. (Automatically set when compiling to zcode.)
+- Use automap static allocation:  Causes a glulx game to allocate memory for the automap at compile time.  Reduces flexibility, but allows the game to run on more interpreters. (Automatically set when compiling to zcode.)
 
-- Use automap reserved area of at least N: Sets the amount of memory the game will use for drawing the map. Must be at least (map rows)*(map columns). This option is ignored when compiling to glulx, unless the "use static allocation" option is set.
+- Use automap reserved area of at least N:  Sets the amount of memory the game will use for drawing the map.  Must be at least (map rows)*(map columns).  This option is ignored when compiling to glulx, unless the "use static allocation" option is set.
 
-- Use automap visible background: Spaces that would ordinarily be blank will be shown as periods. Meant for experimenting with the size of the map while testing and is not meant for release.
+- Use automap visible background:  Spaces that would ordinarily be blank will be shown as periods.  Meant for experimenting with the size of the map while testing and is not meant for release.
 
 
 New source code syntax:
@@ -1022,23 +1022,23 @@ Returns yes unless doing so creates an inconsistency.
 It will not be necessary to use this decision in your own code unless you want to have rooms that would not ordinarily be on the same map region together. (For example, if a closet is connected to the main room by in / out, this would put it on the map with the rest of the rooms.)
 
 	decision: "(room) is explored":
-Attempts to connect (room) with any adjacent rooms. It probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.
+Attempts to connect (room) with any adjacent rooms.  It probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.
 Returns no if doing so creates any inconsistencies, and yes otherwise.
 
 	phrase: "explore (room)" / "remap (room)":
-Attempt to add the room to the automap. Prints an error if there are any problems. Again, it probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.
+Attempt to add the room to the automap.  Prints an error if there are any problems.  Again, it probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.
 
 	phrase: "unmap (mappable room)":
-Removes the room from the automap. Will be needed if you want to change its position relative to other rooms.
+Removes the room from the automap.  Will be needed if you want to change its position relative to other rooms.
 
 	phrase: "fill status bar with (selected table - a table-name) and map":
-Will print the calculated automap. Should only be necessary if you are using the manual display option.
+Will print the calculated automap.  Should only be necessary if you are using the manual display option.
 
 	phrase: "reserve automap memory of (number) rows by (number) cols":
-Sets the size of the displayed map. Must be called for any map to display. May be changed at any time. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
+Sets the size of the displayed map.  Must be called for any map to display.  May be changed at any time. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
 
 	phrase: "reserve automap memory of (number) rows":
-Sets the size of displayed map. Width is the current width of the status line. If using static allocation, and this would require more memory than is allocated, width is trimmed to what will fit. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
+Sets the size of displayed map.  Width is the current width of the status line.  If using static allocation, and this would require more memory than is allocated, width is trimmed to what will fit. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17, ...)
 
 
 New in-game commands:
@@ -1054,11 +1054,11 @@ New in-game commands:
 To set the zoom manually, change the current zoom variable to map zoomed in, map zoomed out, or map absent.
 
 
-- "map automatic": Try to use the font 3 characters. If the interpreter does not support them, convert down to ASCII characters.
+- "map automatic": Try to use the font 3 characters.  If the interpreter does not support them, convert down to ASCII characters.
 
 - "map fancy": Force using the font 3 characters, whether the interpreter supports them or not.
 
-- "map plain": Convert down to ASCII characters. Don't even try to use font 3. (the default)
+- "map plain": Convert down to ASCII characters.  Don't even try to use font 3. (the default)
 
 If the game is run on a buggy interpreter, using the command "gargoyle bug workaround" should prevent problems.
 
@@ -1078,7 +1078,7 @@ Example: * "The Test" by Aaron Reed - A minimal test.
 
 	Include Automap by Mark Tilford.
 
-	Stage is west of Wings and north of Dressing Room. Booth is northwest of Wings. Closet is east of Wings. It is unmappable.
+	Stage is west of Wings and north of Dressing Room. Booth is northwest of Wings. Closet is east of Wings.  It is unmappable.
 
 Example: ** The Demonstration - A simple demonstration.
 
@@ -1090,45 +1090,45 @@ Example: ** The Demonstration - A simple demonstration.
 	Include Basic Hyperlinks by Emily Short;
 	Use automap hyperlinks;
 
-	When play begins: now current zoom is map zoomed in.
+	When play begins:  now current zoom is map zoomed in.
 
 	[The western hall is a mappable room.
-	The eastern hall is a mappable room. It is east of western hall.
-	The southern hall is a mappable room. It is southeast of western hall. It is southwest of eastern hall.]
+	The eastern hall is a mappable room.  It is east of western hall.
+	The southern hall is a mappable room.  It is southeast of western hall.  It is southwest of eastern hall.]
 	The heavy door is south of the western hall and north of the office. It is a door.
 	[The office is a mappable room.]
-	The southern hall is southeast of western hall and southwest of eastern hall. The eastern hall is east of western hall.
-	The heavy door is a door. It is south of the western hall and north of the office.
+	The southern hall is southeast of western hall and southwest of eastern hall.  The eastern hall is east of western hall.
+	The heavy door is a door.  It is south of the western hall and north of the office.
 
-	Fooing is an action applying to nothing. Understand "foo" as fooing.
+	Fooing is an action applying to nothing.  Understand "foo" as fooing.
 
 	Before fooing when the player is in eastern hall or the player is in western hall:
-		say "To make a longer path, the distance must be declared both ways.";
+		say "To make a longer path, the distance must be declared both ways."
 	To decide what number is the distance (d - east) from (r - western hall): decide on 2.
 	To decide what number is the distance (d - west) from (r - eastern hall): decide on 2.
 
-	[The western balcony is a mappable room. It is up from western hall.
-	The central balcony is a mappable room. It is east from western balcony.
-	The eastern balcony is a mappable room. It is east from central balcony. It is up from eastern hall.]
+	[The western balcony is a mappable room.  It is up from western hall.
+	The central balcony is a mappable room.  It is east from western balcony.
+	The eastern balcony is a mappable room.  It is east from central balcony.  It is up from eastern hall.]
 	The western balcony is up from western hall and west from central balcony.
 	The eastern balcony is east from central balcony and up from eastern hall.
 
-	Outside Building is a mappable room. It is west from western balcony.
+	Outside Building is a mappable room.  It is west from western balcony.
 
 	Before fooing when the player is in western balcony or the player is in eastern balcony:
-		say "By default, rooms connected with up / down / in / out are not placed on the same map. If you want to put them on the same map, you can position them manually.";
+		say "By default, rooms connected with up / down / in / out are not placed on the same map.  If you want to put them on the same map, you can position them manually."
 
 	Before constructing the status line:
 		unless western balcony is placed 0 and -1 from western hall, say "*** Error placing west balcony ***";
 		unless eastern balcony is placed 0 and -1 from eastern hall, say "*** Error placing east balcony ***";
 		unless upstairs closet is placed -1 and 0 from upstairs office, say "*** Error placing upstairs closet ***".
 
-	[Upstairs office is a mappable room. It is north of western balcony.
-	Upstairs closet is a mappable room. It is inside from upstairs office.]
+	[Upstairs office is a mappable room.  It is north of western balcony.
+	Upstairs closet is a mappable room.  It is inside from upstairs office.]
 	Upstairs office is north of western balcony.
 	Upstairs closet is inside from upstairs office.
 
-	Stupid room is a mappable room. It is east from upstairs office.
+	Stupid room is a mappable room.  It is east from upstairs office.
 
 	Alpha room is east of stupid room.
 	Beta room is north of alpha room and northeast of stupid room.
@@ -1143,11 +1143,11 @@ Example: ** The Demonstration - A simple demonstration.
 
 
 	Before fooing in elevator:
-		say "If you want to move a room on the map, you'll have to unmap it first.";
+		say "If you want to move a room on the map, you'll have to unmap it first."
 
-	The elevator is a mappable room. The elevator can be high or low. It is low.
+	The elevator is a mappable room.  The elevator can be high or low.  It is low.
 	The elevator is east of eastern hall.
-	The button is in the elevator. It is fixed in place.
+	The button is in the elevator.  It is fixed in place.
 	Instead of pushing the button:
 		say "The doors shut; the elevator shakes briefly, then the doors open again.";
 		unmap the elevator;
@@ -1164,9 +1164,9 @@ Example: ** The Demonstration - A simple demonstration.
 		end if.
 
 	before fooing when the player is in western balcony or the player is in outside building:
-		say "If you want to split rooms into separate map regions despite them being reachable from each other by compass points, you can override the decision so that it has a different value while working with the automap than when making ordinary movement.";
+		say "If you want to split rooms into separate map regions despite them being reachable from each other by compass points, you can override the decision so that it has a different value while working with the automap than when making ordinary movement."
 
-	Phony Room is an unmappable room. It is west of office and southwest of western hall.
+	Phony Room is an unmappable room.  It is west of office and southwest of western hall.
 
 	To decide what room is the room (dir - west) from (room - western balcony):
 		if handling the automap work activity, decide on Phony Room.
@@ -1177,13 +1177,13 @@ Example: ** The Demonstration - A simple demonstration.
 	To decide what number is the distance (dir - west) from (room - western balcony): decide on 3.
 
 	before fooing when the player is in western balcony or the player is in eastern balcony:
-		say "(Current versions of Inform do not go through the decision mechanism when responding to the player's compass movements, so the 'if handling the automap work activity' check may not be necessary. Something like 'decide on nothing / nowhere' end should theoretically allow hiding a passage completely, but all I got were syntax errors.)[line break]";
+		say "(Current versions of Inform do not go through the decision mechanism when responding to the player's compass movements, so the 'if handling the automap work activity' check may not be necessary.  Something like 'decide on nothing / nowhere' end should theoretically allow hiding a passage completely, but all I got were syntax errors.)[line break]"
 
 	before fooing the first time:
-		say "You must set the displayed size of the map before it is displayed. This can be changed at any time not during automap work.[line break]
+		say "You must set the displayed size of the map before it is displayed.  This can be changed at any time not during automap work.[line break]
 			To fix the size at the start, use something like 'When play begins: Reserve automap memory of 13 rows by 17 cols;'.[line break]
 			Omitting the columns will have it allocate memory to fill the width of the screen, but you must readjust each time the status line is rebuilt.[line break]
-			In Glulx games, it will automatically allocate memory as needed. In Zcode games, you must reserve that memory in advance:
+			In Glulx games, it will automatically allocate memory as needed.  In Zcode games, you must reserve that memory in advance:
 			Use automap reserved area of at least 400. (It's okay to put such a line in a Glulx game; it will be ignored.)[line break]
 			In ZCode mode, you must print at least as many blank lines as your map is high so that the text will start out below the automap.[line break]
 			Map sizes are in characters; a room is 1 character square in zoomed out mode, 3 characters square in zoomed in mode."
@@ -1207,9 +1207,9 @@ Example: ** The Demonstration - A simple demonstration.
 
 	Section 98 (for use with Basic Hyperlinks by Emily Short)
 
-	Current autowalk destination is a room that varies. Autowalk destination set is a truth state that varies.
+	Current autowalk destination is a room that varies.  Autowalk destination set is a truth state that varies.
 
-	autowalking is an action applying to one topic. Understand "autowalk to [text]" as autowalking.
+	autowalking is an action applying to one topic.  Understand "autowalk to [text]" as autowalking.
 
 	Carry out autowalking:
 		if autowalk destination set is true begin;

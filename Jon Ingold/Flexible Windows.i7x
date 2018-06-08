@@ -428,17 +428,17 @@ Section - Gargoyle Workaround
 
 [Workaround provided by Ben Cressey, with this explanation:
 
-"Gargoyle has a bit of an issue with multiple text buffers. The
+"Gargoyle has a bit of an issue with multiple text buffers.  The
 background color for the most recently created text buffer is used as
 the color of the padding between the application borders and the
-boundaries of the Glk window model. This padding is not part of Glk's
-model and at best its behavior is undefined. At worst, the very
+boundaries of the Glk window model.  This padding is not part of Glk's
+model and at best its behavior is undefined.  At worst, the very
 existence of such padding is disallowed by the spec. (I don't
 actually know for sure.)
 
 Gargoyle uses these hints to "guess" the appropriate color of the
-padding. The above example would set it back to white, once you're
-done opening all of your text buffers. Per the Glk spec, this will
+padding.  The above example would set it back to white, once you're
+done opening all of your text buffers.  Per the Glk spec, this will
 have no effect on any Glk windows until the next time you open a text
 buffer, so as a practical matter it should do nothing in other Glk
 implementations."
@@ -456,10 +456,10 @@ The phrase used to accomplish this could also be used to set the Gargoyle border
 ]
 
 After constructing a g-window when the type of the pending g-window is g-text-buffer (this is the Gargoyle text-buffer workaround rule):
-	if the back-color of the main-window is g-placenullcol:
+	if the back-colour of the main-window is g-placenullcol:
 		set the text-buffer background color to g-white;
 	else:
-		reset the text-buffer background color to the back-color of the main-window.
+		reset the text-buffer background color to the back-colour of the main-window.
 
 To set/reset the/-- Gargoyle/-- text/text-buffer/-- window/-- background color/-- to the/-- color/-- (color_value - a glulx color value):
 	(- HintGargoyleBorder ({color_value});-)
@@ -509,7 +509,7 @@ To graphics-clear the/-- (g - a g-window):
 Include (-
 
 [ FWBlankWindowToColor g result graph_width graph_height col;
-    col = ColVal(g.back_color);
+    col = ColVal(g.back_colour);
     result = glk_window_get_size(g.ref_number, gg_arguments, gg_arguments+WORDSIZE);
                  graph_width = gg_arguments-->0;
                  graph_height = gg_arguments-->1;
@@ -540,7 +540,7 @@ Include (-
 
 -).
 
-Section - Background colors
+Section - Background colours
 
 Include Glulx Text Effects by Emily Short.
 
@@ -574,39 +574,39 @@ g-lavender	16773365
 g-yellow		16776960
 g-pink		16761035
 
-A g-window has a glulx color value called back-color. The back-color of a g-window is usually g-placenullcol. The back-color property translates into I6 as "back_color".
+A g-window has a glulx color value called back-colour. The back-colour of a g-window is usually g-placenullcol. The back-colour property translates into I6 as "back_colour".
 
-Before constructing when the type of the pending g-window is g-text-buffer (this is the set text-colors rule):
-	set the background text-color of the pending g-window;
+Before constructing when the type of the pending g-window is g-text-buffer (this is the set text-colours rule):
+	set the background text-colour of the pending g-window;
 
-After constructing when the type of the pending g-window is g-text-buffer (this is the reset text-colors rule):
-	reset the background text-color of the pending g-window;
+After constructing when the type of the pending g-window is g-text-buffer (this is the reset text-colours rule):
+	reset the background text-colour of the pending g-window;
 
-After constructing when the type of the pending g-window is g-graphics (this is the color-graphics rule):
-	set the background color of the pending g-window;
+After constructing when the type of the pending g-window is g-graphics (this is the colour-graphics rule):
+	set the background colour of the pending g-window;
 
-To set the background text-color of (g - a g-window):
+To set the background text-colour of (g - a g-window):
 (-	SetBTcol({g});	-).
 
-To reset the background text-color of (g - a g-window):
+To reset the background text-colour of (g - a g-window):
 (-	if ({g} has g_present) glk_window_clear({g}.ref_number);
 	ResetBTCol();
 -)
 
-To set the background color of (g - a g-window):
-(-	if ({g} has g_present) SetBCol({g}.ref_number, {g}.back_color);
+To set the background colour of (g - a g-window):
+(-	if ({g} has g_present) SetBCol({g}.ref_number, {g}.back_colour);
 -).
 
 Include
 (-
 
-Constant glulx_color_table = (+Table of Common color Values+);
+Constant glulx_colour_table = (+Table of Common color Values+);
 
 [ ColVal c i max;
-	max=TableRows(glulx_color_table);
+	max=TableRows(glulx_colour_table);
 	for ( i=1:i<=max:i++ ) {
-		if (TableLookUpEntry(glulx_color_table, 1, i) ==  c)
-			return TableLookUpEntry(glulx_color_table, 2, i);
+		if (TableLookUpEntry(glulx_colour_table, 1, i) ==  c)
+			return TableLookUpEntry(glulx_colour_table, 2, i);
 	}
 ];
 
@@ -617,7 +617,7 @@ Constant glulx_color_table = (+Table of Common color Values+);
 
 
 [ SetBTCol gwin col i;
-  col = gwin.back_color;
+  col = gwin.back_colour;
   if (col == (+g-placenullcol+)) rfalse;
   col = ColVal(col);
   for (i = 0: i < style_NUMSTYLES : i++)
@@ -637,8 +637,8 @@ Include
 	[ InitGlkWindow winrock i col;
 		switch(winrock){
 			GG_MAINWIN_ROCK:
-				if ((+main-window+).back_color ~=  (+g-placenullcol+))
-				{ 	col = ColVal((+main-window+).back_color);
+				if ((+main-window+).back_colour ~=  (+g-placenullcol+))
+				{ 	col = ColVal((+main-window+).back_colour);
 					for (i = 0: i < style_NUMSTYLES : i++)
 					glk_stylehint_set(wintype_TextBuffer, i, stylehint_BackColor, col);
 					glk_window_clear((+main-window+).ref_number);
@@ -658,7 +658,7 @@ Include
 -) after "Definitions.i6t".
 
 
-Section - Reverse-coloring windows
+Section - Reverse-colouring windows
 
 To set-reverse: 	(-	SetReverse(1);	-);
 To unset-reverse: 	(-	SetReverse(0);	-);
@@ -679,7 +679,7 @@ Include (-
 
 Section - Bordered g-windows
 
-A bordered g-window is a kind of g-window. A bordered g-window has a glulx color value called border-color.
+A bordered g-window is a kind of g-window. A bordered g-window has a glulx color value called border-colour.
 A bordered g-window has a number called border-measure. The border-measure of a bordered g-window is usually 3.
 
 A g-border is a kind of g-window.
@@ -694,7 +694,7 @@ To apply borders to (main-panel - a g-window):
 	let border piece be g-placeleft;
 	repeat with item running through g-borders spawned by the main-panel
 	begin;
-		now the back-color of the item is the border-color of the main-panel;
+		now the back-colour of the item is the border-colour of the main-panel;
 		now the measurement of the item is the border-measure of the main-panel;
 		now the position of the item is border piece;
 		let the border piece be the g-window-position after border piece;
@@ -992,9 +992,9 @@ Window type can be changed during the game, however, it will only take effect wh
 
 	Section: Defaults and Corrections
 
-Opening a new window is an activity that gets called for the pending window. This activity is the "constructing something" activity, and it's used to set background colors, neatly arranged unpositioned new windows, and apply the minimum width rules. New rules can be written before and after this activity. These rules may refer to "the pending g-window"; note that before, this window will not yet be in existence on the screen but its properties can be changed, and after it should be present on the screen.
+Opening a new window is an activity that gets called for the pending window. This activity is the "constructing something" activity, and it's used to set background colours, neatly arranged unpositioned new windows, and apply the minimum width rules. New rules can be written before and after this activity. These rules may refer to "the pending g-window"; note that before, this window will not yet be in existence on the screen but its properties can be changed, and after it should be present on the screen.
 
-Should you want to make changes to the styles for the windows, this is also the place to do it (see the Glk spec for more information on this). During the before phase, set the stylehint you want. During the after phase, remove it again, so that it doesn't affect other newly created windows. (See background color rules for an example of this).
+Should you want to make changes to the styles for the windows, this is also the place to do it (see the Glk spec for more information on this). During the before phase, set the stylehint you want. During the after phase, remove it again, so that it doesn't affect other newly created windows. (See background colour rules for an example of this).
 
 
 	Section: Rock values
@@ -1016,7 +1016,7 @@ If we set numbers ending in 5 for our manual rocks, we will never conflict with 
 
 	Section: Overview
 
-This extension provides little in the way of support for graphics windows or text-grid windows, both of which can display images and draw shapes in a full range of colors. Text-grids can also locate the cursor (so, say, could be used to make a pac-man game). A few useful phrases for text-buffer windows are supplied.
+This extension provides little in the way of support for graphics windows or text-grid windows, both of which can display images and draw shapes in a full range of colours. Text-grids can also locate the cursor (so, say, could be used to make a pac-man game). A few useful phrases for text-buffer windows are supplied.
 
 	Section: Opening Windows
 
@@ -1124,24 +1124,24 @@ This may or may not be helpful!
 
 Note: these don't render well across the spectrum of Glulx interpreters.
 
-	Section: Background color
+	Section: Background Colour
 
-Windows can have a back-color, specified as one from the (reasonably large) Table of Common Color Values (based on but extended from Glulx Text Effects, by Emily Short). The possible colors are:
+Windows can have a back-colour, specified as one from the (reasonably large) Table of Common Color Values (based on but extended from Glulx Text Effects, by Emily Short). The possible colours are:
 
 	g-darkgreen, g-green, g-lime, g-midnightblue, g-steelblue, g-terracotta, g-navy, g-mediumblue, g-blue, g-indigo, g-cornflowerblue, g-mediumslateblue, g-maroon, g-red, g-deeppink, g-brown, g-darkviolet, g-khaki, g-silver, g-crimson, g-orangered, g-gold, g-darkorange,g-lavender, g-yellow, g-pink.
 
 and they are assigned by including a line like so:
 
-	The side-window has back-color g-red.
-	The main-window has back-color g-darkgreen.
+	The side-window has back-colour g-red.
+	The main-window has back-colour g-darkgreen.
 
-At present, colors in graphics windows are reasonably well-supported (and if not, are unlikely to do any harm). Background colors in text windows can cause a series of ugly effects; such as the color only appearing behind printed characters, or the background color copying itself into all other text windows.
+At present, colours in graphics windows are reasonably well-supported (and if not, are unlikely to do any harm). Background colours in text windows can cause a series of ugly effects; such as the colour only appearing behind printed characters, or the background colour copying itself into all other text windows.
 
-The main-window can be supplied a background color in the same way.
+The main-window can be supplied a background colour in the same way.
 
 	Section: Borders
 
-A window can be defined as a "bordered g-window", and it will then be produced with a border of "border-measure" thickness and "border-color" color. (This is wastefully done; it actually places four thin windows around the window constructed, but harmlessly so).
+A window can be defined as a "bordered g-window", and it will then be produced with a border of "border-measure" thickness and "border-colour" colour. (This is wastefully done; it actually places four thin windows around the window constructed, but harmlessly so).
 
 The main-window can be bordered too, by declaring that "the main-window is a bordered g-window".
 
@@ -1187,7 +1187,7 @@ Hyperlink replacement commands are defined by the Table of Glulx Hyperlink Repla
 
 If a link ID number has no corresponding text command in the table of replacement commands, nothing will happen when the link is clicked.
 
-To define custom behavior for a particular link, we write a new rule for the hyperlink processing rulebook. For example, to have a hyperlink simply clear the screen immediately, without pasting any text to the command line:
+To define custom behaviour for a particular link, we write a new rule for the hyperlink processing rulebook. For example, to have a hyperlink simply clear the screen immediately, without pasting any text to the command line:
 
 	Hyperlink processing rule when the current hyperlink ID is 1:
 		clear the main-window;
@@ -1265,7 +1265,7 @@ Version 9 - 27/5/10
 
 Version 8 - 26/6/09
 
-	Changed code for clearing graphics windows to make it faster under Zoom for Mac (thanks to Erik Temple for this.) Note this clears the window by repainting it in its background color, so this will have to be set for this to work correctly.
+	Changed code for clearing graphics windows to make it faster under Zoom for Mac (thanks to Erik Temple for this.) Note this clears the window by repainting it in its background colour, so this will have to be set for this to work correctly.
 
 	Added use option for no status line (thanks to Aaron Reed for this.)
 

@@ -20,7 +20,7 @@ special-style is a kind of value. The special-styles are special-style-1 and spe
 
 boldness is a kind of value. The boldnesses are light-weight, regular-weight, and bold-weight.
 
-obliquity is a kind of value. The obliquities are no-obliquity and italic-obliquity.
+obliquity is a kind of value.  The obliquities are no-obliquity and italic-obliquity.
 
 fixity is a kind of value. The fixities are fixed-width-font and proportional-font.
 

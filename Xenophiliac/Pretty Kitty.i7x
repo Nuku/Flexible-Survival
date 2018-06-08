@@ -612,4 +612,4 @@ Section 6 - Comments and Variables
 [thirst of Andromeda -- Used for store description]
 
 
-Pretty Kitty ends here.
+The Pretty Kitty ends here.

@@ -75,7 +75,7 @@ To say beatthePinkPoodle:
 	else if HP of Dominick >= 60 and HP of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
 		if cocks of player > 0:
-			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to [link]fuck her (2)[as]2[end link] yourself or [link]have her suck you off (3)[as]3[end link] instead. You could also control your urges and [link]leave her be (0)[as]0[end link]?";
+			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to [link]fuck her (2)[as]2[end link] yourself or [link]have her suck you off (3)[as]3[end link] instead.  You could also control your urges and [link]leave her be (0)[as]0[end link]?";
 			now calcnumber is -1;
 			if calcnumber is 1:
 				say "[pinkpoodle_dom]";
@@ -87,7 +87,7 @@ To say beatthePinkPoodle:
 				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
 				increase nopoodlesex by 1;
 		else:
-			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to have her [link]eat you out (2)[as]2[end link] instead. You could also control your urges and [link]leave her be (0)[as]0[end link]?";
+			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to have her [link]eat you out (2)[as]2[end link] instead.  You could also control your urges and [link]leave her be (0)[as]0[end link]?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>[run paragraph on]";
@@ -126,12 +126,12 @@ To say beatthePinkPoodle:
 	now poodleapproved is 0;
 
 to say pinkpoodlesex:
-	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them. You can't help but grin as you watch the large pink pompon swaying back and forth before you as you align your [cock size desc of player] [cock of player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
+	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them.  You can't help but grin as you watch the large pink pompon swaying back and forth before you as you align your [cock size desc of player] [cock of player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
 	say "     As [if cockname of player is listed in infections of Knotlist]your knot begins rubbing against the pink girl's outer folds[else]you hilt your entire length in the pink girl's needy cunt[end if] she moans in pleasure beneath you, pressing her bottom back against you, nearly knocking you over as you lean forwards onto her back. Locking your arms around her torso and resting your head on the thick pink fur covering her shoulders, you begin humping the canine in earnest, quickly building to an energetic rhythm as you fuck her like an animal.";
-	say "     The pink poodle barks and yips beneath you, pressing her body back against you[if cockname of player is listed in infections of Knotlist], trying to force your knot into her body with each thrust[else] and squeezing her cunt tightly around your shaft[end if]. As your combined arousal begin to peak, you make one final powerful thrust, driving your [if cockname of player is listed in infections of Knotlist]knot[else]shaft[end if] into the pretty poodle as you both howl in climax. Her cunt spasms and convulses around your shaft, milking your twitching member for all it can as you fill her with your [cum load size of player] load[if cockname of player is listed in infections of Knotlist], none of which escapes thanks to her tight grip around your knot[else] even as her own juices leak out around your shaft[end if].";
+	say "     The pink poodle barks and yips beneath you, pressing her body back against you[if cockname of player is listed in infections of Knotlist], trying to force your knot into her body with each thrust[else] and squeezing her cunt tightly around your shaft[end if].  As your combined arousal begin to peak, you make one final powerful thrust, driving your [if cockname of player is listed in infections of Knotlist]knot[else]shaft[end if] into the pretty poodle as you both howl in climax. Her cunt spasms and convulses around your shaft, milking your twitching member for all it can as you fill her with your [cum load size of player] load[if cockname of player is listed in infections of Knotlist], none of which escapes thanks to her tight grip around your knot[else] even as her own juices leak out around your shaft[end if].";
 	say "     [run paragraph on]";
 	if cockname of player is listed in infections of Knotlist:
-		say "As you lay atop her, the well-fucked poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down. [run paragraph on]";
+		say "As you lay atop her, the well-fucked poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down.  [run paragraph on]";
 	say "When you finally pull out the pink poodle falls to her side, rubbing her belly contentedly as she rests on the ground, leaving you free to gather your things and continue on your way.";
 
 to say pinkpoodleoral:
@@ -140,11 +140,11 @@ to say pinkpoodleoral:
 	say "     Eventually it all becomes too much and you climax powerfully, [if cocks of player > 0]blasting your [cum load size of player] load into her muzzle[else]soaking her muzzle in your feminine juices[end if] as orgasm wracks your body. Steadying yourself with a hand on the panting canine's shoulder, you gently stroke her softly furred head with your free hand while you bask in the afterglow of the poodle's expert handiwork. When you've finally recovered enough to gather your things and continue on your way, the pink poodle rises to her feet, giving you a quick [if poodleapproved is 1]kiss on the cheek[else]scowl[end if] before heading in the opposite direction.";
 
 to say pinkpoodle_dom:
-	say "     Knowing the pretty poodle would make a lovely addition to Dom's harem, you pin her from behind and set your [if player is breederslutbodied]paws[else]fingers[end if] to tantalizing her. You start by simply teasing her breasts and folds while complimenting her beauty. The [one of]permed[or]primped[or]overly groomed[or]alluring[at random] canine responds easily to your flattery and to your touch. Your canine master's scent, still clinging to you, seeps into her nose to arouse her further.";
-	say "     Over time, you intensify your fingerwork with sensual touches to her shapely body, bosom and increasingly wet folds. You continue to praise the vain femme's beauty, adding how she should have a [one of]mate[or]lover[at random] as handsome as she is lovely. You weave these words in discretely at first, but have little need for subtlety after a few quick orgasms have her really worked up. Reaching the point you've got a pair of digits pumping into her hot, pink tunnel, you tell her of the perfect stud who'll pound her far better than your fingers can provide.";
+	say "     Knowing the pretty poodle would make a lovely addition to Dom's harem, you pin her from behind and set your [if player is breederslutbodied]paws[else]fingers[end if] to tantalizing her.  You start by simply teasing her breasts and folds while complimenting her beauty.  The [one of]permed[or]primped[or]overly groomed[or]alluring[at random] canine responds easily to your flattery and to your touch.  Your canine master's scent, still clinging to you, seeps into her nose to arouse her further.";
+	say "     Over time, you intensify your fingerwork with sensual touches to her shapely body, bosom and increasingly wet folds.  You continue to praise the vain femme's beauty, adding how she should have a [one of]mate[or]lover[at random] as handsome as she is lovely.  You weave these words in discretely at first, but have little need for subtlety after a few quick orgasms have her really worked up.  Reaching the point you've got a pair of digits pumping into her hot, pink tunnel, you tell her of the perfect stud who'll pound her far better than your fingers can provide.";
 	attempttowait;
-	say "     From that point, your words shift to focusing on Dominick as the ideal stud - handsome, virile and deliciously well-hung. You pepper this with comments on how he'd be the perfect lover for one as beautiful and well-bred as she. With a nibble on her fuzzy ear, you add how he'd give her perfect puppies while caressing a [if player is breederslutbodied]paw[else]hand[end if] rubs her slender waist while the other continues to fingerfuck her as she grinds her hips hard into it. He is a top-ranked breeder, after all.";
-	say "     By this point, she's panting on the edge of a powerful release, she practically begs you to tell her where to find this perfect stud. As you drive her to a yipping orgasm, you give her directions to Dom's kennel home and tell her to go to him. You reiterate one last time how a beauty such as she deserves the perfect breeding stud and that Dominick is that handsome hunk for her. By the time her extended climax has finally waned, she's lost in an afterglow daze filled with only thoughts of seeking out this ideal lover. Releasing her, you feel quite pleased with yourself in knowing you've provided your master with another lovely breeder pet.";
+	say "     From that point, your words shift to focusing on Dominick as the ideal stud - handsome, virile and deliciously well-hung.  You pepper this with comments on how he'd be the perfect lover for one as beautiful and well-bred as she.  With a nibble on her fuzzy ear, you add how he'd give her perfect puppies while caressing a [if player is breederslutbodied]paw[else]hand[end if] rubs her slender waist while the other continues to fingerfuck her as she grinds her hips hard into it.  He is a top-ranked breeder, after all.";
+	say "     By this point, she's panting on the edge of a powerful release, she practically begs you to tell her where to find this perfect stud.  As you drive her to a yipping orgasm, you give her directions to Dom's kennel home and tell her to go to him.  You reiterate one last time how a beauty such as she deserves the perfect breeding stud and that Dominick is that handsome hunk for her.  By the time her extended climax has finally waned, she's lost in an afterglow daze filled with only thoughts of seeking out this ideal lover.  Releasing her, you feel quite pleased with yourself in knowing you've provided your master with another lovely breeder pet.";
 	now libido of Dominick is 3;
 	increase XP of Dominick by 1
 
@@ -216,14 +216,14 @@ When Play begins:
 	now infect name entry is "Pink Poodle";
 	now heat cycle entry is 15;
 	now heat duration entry is 10;
-	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs. Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
+	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs.  Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
 	now description text entry is "";
 	now heat start entry is "[pinkpoodleheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[pinkpoodleheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[pinkpoodleheat]";		[This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "     A subtle warmth fills your body as you get an empty feeling in the rear. Your anus quivers and puffs out pinkly as the scent of heated pheromones drift from it. You feel a growing want for canine companionship to fill that void inside you.";
+	now mpregtrigger entry is "     A subtle warmth fills your body as you get an empty feeling in the rear.  Your anus quivers and puffs out pinkly as the scent of heated pheromones drift from it.  You feel a growing want for canine companionship to fill that void inside you.";
 
 to say ppheatreset:
 	now HeatedPoodle is 0;
