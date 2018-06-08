@@ -440,7 +440,7 @@ to say JewelHeistSneak:
 			now SilverToken is 1;
 	else:
 		LineBreak;
-		say "     You didnt want to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";
+		say "     [bold type]Do you want to fight the wolverine or leave?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";

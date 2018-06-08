@@ -269,7 +269,7 @@ to fsdfvicmenu:
 		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Eat her out[as]5[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-5)>[run paragraph on]";
@@ -636,7 +636,7 @@ to fsdfvore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				if boundsegment is 1, increase boundmod by 1;
 				if boundmod > 2 and boundsegment is 1:
 					say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[else]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through her tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragoness's stomach. Your surroundings slowly draining you, you imagine you won't last long in here...";
@@ -706,7 +706,7 @@ to fsdfvore:
 								follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					if boundsegment is 1, increase boundmod by 4;
 					if boundsegment is 2:
@@ -753,12 +753,12 @@ to fsdfvore:
 						say "     You abide your current confines, [one of]the beast rumbling softly in approval of your compliance[or]your captor contently swimming as she enjoys her meal[or]the beast offering a soft, approving chirp towards your submission[at random].";
 						increase lustatt by 7 + (lustadjust * 2);
 						wyvhumanityroll;
-				say "[line break]";
+				LineBreak;
 				wait for any key;
 				next;
 			else:
 				now enduring is true;
-				say "[line break]";
+				LineBreak;
 				if boundsegment is 1 and a random chance of 2 in 3 succeeds, increase boundmod by 1;
 				if boundrecover is true:
 					increase humanity of player by 3;
@@ -812,7 +812,7 @@ to fsdfvore:
 						say "     You endure your current confines, [one of]the beast rumbling softly in approval of your compliance[or]your captor contently swimming as she enjoys her meal[or]the beast offering a soft, approving chirp towards your submission[at random].";
 						increase lustatt by 4 + lustadjust;
 						wyvhumanityroll;
-				say "[line break]";
+				LineBreak;
 				wait for any key;
 				next;
 			say "Invalid action.";

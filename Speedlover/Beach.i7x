@@ -25,7 +25,7 @@ The conversation of Bronze Crab is { "<This is nothing but a placeholder!>" }.
 The scent of Bronze Crab is "     The giant statue smells... kinda like hot metal. Not surprising, since it bakes in the sun all day.".
 
 to say BronzeCrabDesc:
-	say "     The bronze crab is a true giant, effortlessly straddling the street on eight legs that hold it far enough up to comfortably walk underneath - or drive a car through. Studying the shining statue, you are surprised at just how elaborate it is, the metal formed into countless little details on every surface. Small bumps and ridges, and all that. As you are studying it, the colossal crustacean actually moves in turn, slightly shifting its legs and swivveling eye-stalks to focus on you. After a few seconds of what seems to be intent studying, it turns its attention back towards the city approach.";
+	say "     The bronze crab is a true giant, effortlessly straddling the street on eight legs that hold it far enough up to comfortably walk underneath - or drive a car through. Studying the shining statue, you are surprised at just how elaborate it is, the metal formed into countless little details on every surface. Small bumps and ridges, and all that. As you are studying it, the colossal crustacean actually moves in turn, slightly shifting its legs and swiveling eye-stalks to focus on you. After a few seconds of what seems to be intent studying, it turns its attention back towards the city approach.";
 
 instead of conversing the Bronze Crab:
 	say "     You try to strike up a conversation with the giant crustacean, drawing the gaze of its eye-stalks. After listening to what you say for a few moments, its mandibles unfold from their normally relaxed position and you hear a series of clicks that have a metallic ring to them. After a few seconds of that, it finishes up with a sharper click and taps the street next to you with one front leg before turning its attention back towards the city approach. Feels like you just were lectured and then dismissed.";
@@ -54,7 +54,7 @@ Restaurant is a Room.
 The description of Restaurant is "[RestaurantDesc]".
 
 to say RestaurantDesc:
-	say "     The restaraunt is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
+	say "     The restaurant is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
 
 instead of sniffing the Restaurant:
 	say "     The restaurant smells of hamburgers, french fries, and many other kinds of foods, something that makes your stomach rumble.";
@@ -110,7 +110,7 @@ The description of Wild Fringe is "[WildFringeDesc]".
 earea of Wild Fringe is "Beach".
 
 to say WildFringeDesc:
-	say "     The southeastern fringe of the public beach gets more and more rocky as one goes along. Seems a bit more exposed too, so you assume that the highes tides in a given month might actually soak the area and send waves slapping against the cliff just behind the strip of sand. Scattered pieces of driftwood and a little plastic trash does support the theory too. Overall, this section of the beach looks a bit dishelved, explaining why many beachgoers tend to avoid coming this way. Further towards the southeast, the coastline gets a little bit nicer again, with the cliff getting lower and actual dunes visible between it and the ocean, but that also brings more exposure to wind, explaining why all of the development of the beach is to the northwest.";
+	say "     The southeastern fringe of the public beach gets more and more rocky as one goes along. Seems a bit more exposed too, so you assume that the highest tides in a given month might actually soak the area and send waves slapping against the cliff just behind the strip of sand. Scattered pieces of driftwood and a little plastic trash does support the theory too. Overall, this section of the beach looks a bit disheveled, explaining why many beachgoers tend to avoid coming this way. Further towards the southeast, the coastline gets a little bit nicer again, with the cliff getting lower and actual dunes visible between it and the ocean, but that also brings more exposure to wind, explaining why all of the development of the beach is to the northwest.";
 	say "     You feel that if you go any further, you will probably leave the zone of peaceful beach relaxation, encountering what you've come to expect from the dangerous streets of the inner city.";
 
 instead of sniffing the Wild Fringe:
@@ -224,7 +224,7 @@ to say CityEntrance:
 [CHURCH HALL]
 [--------------------------------------------------------------------------------------------------------------------]
 
-Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognise. There are no crosses or other recognisable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
+Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognize. There are no crosses or other recognizable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylized beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
 
 North of Beach Plaza is Church Hall.
 There is a Church Notice Board in the Church Hall. It is rooted in place.

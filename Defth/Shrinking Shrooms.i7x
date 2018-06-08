@@ -137,7 +137,7 @@ When play begins:
 	add Little trouble to badspots of guy;
 	add Little trouble to badspots of girl;
 	add Little trouble to badspots of vore;
-	
+
 
 Instead of resolving Little trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";
@@ -331,7 +331,7 @@ to say ChineseTrouble:
 	if a random chance of 1 in 4 succeeds:
 		say "     You hold the hard shaft with all of your might as it starts to throb and pulse, spurting out thick streams of cum from so close to your own head. The sucking husky gags again, and for a moment, you feel like you're swimming in a sea of cum and saliva before the girl finally swallows it all down. You're about to sigh in relief that you survived the experience when the male pulls his dick out of her mouth, then peels you off with a grin. 'You make a great sex toy,' the menacing male says with a laugh. 'But how good are you as a post-coital snack?' Holding you by your loosely tied-together wrists, he opens his mouth wide and drops you into it.";
 		say "     His muscles are strong and merciless, moving you along quickly down the slippery path into his gullet. The descent hurts as you're being forced along by a rhythmic contraction, your body being squished and tumbled head over heels. There is nothing you can do except to try and protect yourself at least a little bit by taking on the fetal position. Your body is still wet with the voracious dog's seed, and with the new sensation of his own saliva, you soon drop into the huge beast's stomach. Oh fuck, there must be some way out of this?!";
-		say "[line break]";
+		LineBreak;
 		say "How do you want to escape?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
@@ -394,7 +394,7 @@ to say ChineseTrouble:
 	else:
 		say "     Without any strength left to hold on any longer, you slide off of his cock as the male husky pulls back suddenly. With nothing at all to hold onto, as well as being tied up, the next thing you see is her gullet as you slide down at a breakneck speed. Meanwhile, the alpha feels the difference and takes his dick from his slut's mouth. You can hear his far-off growl of, 'Hey, where is that little fucker?' When he realizes that his partner swallowed you, he huffs. 'Shame, that felt pretty nice.'";
 		say "     Going down her gullet with a flood of cum and saliva, her muscles keep contracting in a wave, always pushing you further down. Given the circumstances, the voyage isn't actually that unpleasant, which might have something to do with all of the slippery fluids smoothing out your ride. It almost feels pleasurable to have your naked body slide over her warm, soft flesh, like a giant water slide. But that doesn't last forever as you finally fall into her stomach with all the jizz. The aroma of the place rapidly puts your head back where it should be - thinking about escape. If you don't, digestion awaits you. Hastily, you look around for options on how you can still save yourself.";
-		say "[line break]";
+		LineBreak;
 		say "How will you escape this predicament?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;

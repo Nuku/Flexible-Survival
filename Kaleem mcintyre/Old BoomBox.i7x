@@ -301,9 +301,9 @@ to say Oceanfriends:
 		say "     The small crustacean seems to utterly adore this music as he scurries itself back and forth around while [']smiling['] merrily.";
 	if felinoid is tamed:
 		say "     Klauz is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as its whiskers tickle you softly.";
-	if Candy is in bunker:
+	if Candy is in Bunker:
 		say "     Candy seems to be somewhat offset by this kind of soothing music as the other seems to slink away out of the room. Maybe he doesn't feel like taking a nap?";
-	if Sven is in bunker:
+	if Sven is in Bunker:
 		if HP of Sven < 30:
 			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves Klauz over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
 [		else:

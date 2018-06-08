@@ -170,7 +170,7 @@ Instead of fucking the Dmitri:
 		say "[DmitriSexMenu]";
 
 to say DmitriSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -8,6 +8,7 @@ when play begins:
 	add { "Pink Gel" } to infections of girl;
 	add { "Blue Gel" } to infections of guy;
 	add { "Purple Gel" } to infections of hermaphrodite;
+	add { "Pink Gel", "Blue Gel", "Purple Gel" } to infections of humanoid;
 
 to say losetopinkgel: [Loss to Pink Gel.]
 	if inasituation is true:
@@ -278,7 +279,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slender[or]feminine[or]curvy[or][if player is gelskinned]gelatinous[else]slender[end if][or][if player is gelskinned]jelly[else]feminine[end if][or][if player is gelskinned]transparent[else]curvy[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]feminine[or]curvy[or][if player is gelskinned]gelatinous[else]slender[end if][or][if player is gelskinned]jelly[else]feminine[end if][or][if player is gelskinned]transparent[else]curvy[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "gelatin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -333,7 +334,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscled[or]masculine[or]well-toned[or][if player is gelskinned]gelatinous[else]muscled[end if][or][if player is gelskinned]jelly[else]masculine[end if][or][if player is gelskinned]transparent[else]well-toned[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]muscled[or]masculine[or]well-toned[or][if player is gelskinned]gelatinous[else]muscled[end if][or][if player is gelskinned]jelly[else]masculine[end if][or][if player is gelskinned]transparent[else]well-toned[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "gelatin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -388,7 +389,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slender[or]feminine[or]curvy[or][if player is gelskinned]gelatinous[else]slender[end if][or][if player is gelskinned]jelly[else]feminine[end if][or][if player is gelskinned]transparent[else]curvy[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]feminine[or]curvy[or][if player is gelskinned]gelatinous[else]slender[end if][or][if player is gelskinned]jelly[else]feminine[end if][or][if player is gelskinned]transparent[else]curvy[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "gelatin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]

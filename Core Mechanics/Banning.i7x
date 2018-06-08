@@ -1,22 +1,31 @@
 Version 1 of Banning by Core Mechanics begins here.
 [Banning/Warding - Written by Speedlover]
+[Updates to have Tags for content and Flags for creatures / situations - Dys]
 
 flag is a kind of thing.
 A flag has a list of text called infections.
 A flag has a list of situations called badspots.
 A flag can be banned. A flag is usually not banned.
 A flag can be warded. A flag is usually not warded.
+tag is a kind of thing.
+A tag has a list of text called infections.
+A tag has a list of situations called badspots.
+A tag can be warded. A tag is usually not warded.
+A tag can be banned. A tag is usually not banned.
 Furry is a flag.
 Guy is a flag.
 Girl is a flag.
-Humorous is a flag.
+Transgender is a flag.
 Hermaphrodite is a flag.
+Humorous is a flag.
+Humanoid is a flag.
 Hellspawn is a flag.
 Feral is a flag.
-Transgender is a flag.
-Incest is a flag.
-Noncon is a flag.
-Mindcontrol is a flag.
+Incest is a tag.
+Noncon is a tag.
+Mindcontrol is a tag.
+Vore is a tag.
+Cockvore is a tag.
 The player has a list of text called WardList.
 The player has a list of text called BanList.
 
@@ -29,16 +38,22 @@ when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 to new ban menu:
-	let flaglist be {"Cockvore","Furry", "Guy", "Girl", "Humorous", "Hermaphrodite", "Hellspawn", "Feral", "Transgender", "Incest", "Mindcontrol", "Noncon", "Vore"};
+	let flaglist be {"Furry", "Guy", "Girl", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
+	let taglist be {"Noncon", "Incest", "Vore", "Cockvore", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
 		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely. (Banning is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
-		say "[line break]";
+		say "[line break][bold type]FLAGS[roman type][line break]";
 		while countnumber <= number of entries in flaglist:
 			say "[link][countnumber] - [entry countnumber of flaglist][as][countnumber][end link]: [run paragraph on]";
 			bancheck entry countnumber of flaglist;
+			increase countnumber by 1;
+		say "[line break][bold type]TAGS[roman type][line break]";
+		while countnumber <= (number of entries in flaglist + number of entries in taglist):
+			say "[link][countnumber] - [entry (countnumber - number of entries in flaglist) of taglist][as][countnumber][end link]: [run paragraph on]";
+			bancheck entry (countnumber - number of entries in flaglist) of taglist;
 			increase countnumber by 1;
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
@@ -49,12 +64,15 @@ to new ban menu:
 				break;
 			else:
 				say "Invalid Entry";
+		let turq be number of entries in flaglist;
 		if calcnumber is 0:
 			now nbmexit is 1;
-		else:
+		else if calcnumber <= turq:
 			banchange entry calcnumber of flaglist;
+		else:
+			banchange entry (calcnumber - number of entries in flaglist) of taglist;
 		now countnumber is 1; [Must reset to 1 or it wont print the list again]
-			
+
 to bancheck (name - text):
 	if name is listed in BanList of player:
 		say "[bold type]BANNED[roman type]";
@@ -63,7 +81,7 @@ to bancheck (name - text):
 	else:
 		say "[bold type]Normal[roman type]";
 	say "[line break]";
-	
+
 to banchange (name - text):
 	if name is listed in BanList of player:
 		remove name from BanList of player;
@@ -83,7 +101,7 @@ to banchange (name - text):
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now warded[roman type]";
 	WaitLineBreak;
-	
+
 to oldflagban (flagname - text):
 	if flagname is:
 		-- "Cockvore":

@@ -232,7 +232,7 @@ To reciting2:
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
 						now Coleen is in Y;
-					if coleen is in bunker:
+					if Coleen is in Bunker:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":
@@ -1165,7 +1165,7 @@ Carry out reciting:
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
 						now Coleen is in Y;
-					if coleen is in bunker:
+					if Coleen is in Bunker:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":

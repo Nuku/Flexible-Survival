@@ -65,7 +65,7 @@ instead of conversing the Sonny:
 		say "[SonnyTalkMenu]";
 
 to say SonnyTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Sonny about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -173,7 +173,7 @@ instead of fucking the Sonny:
 		say "[SonnySexMenu]";
 
 to say SonnySexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

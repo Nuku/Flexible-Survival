@@ -168,7 +168,7 @@ carry out trixiecheating:
 		else if calcnumber is 13:
 			try Oviadjusting;
 		else if calcnumber is 14:
-			try Flagadjusting;
+			new ban menu;
 		else if calcnumber is 0:
 			say "Exiting menu.";
 			now trixieexit is 1;
@@ -367,7 +367,7 @@ carry out oviadjusting:
 	say "     This option will allow you to adjust whether some of the creatures out there are able to impregnate your player with eggs instead of live young.  If you don't desire to have your player lay eggs, here's the place to adjust that.  Please keep in mind that this applies only to female births, as male birth will be via eggs regardless of this setting.";
 	say "     With that said, choosing:[line break]";
 	say "- [link](1) No Ovi[as]1[end link] will indicate that you're looking to not have your player possibly bearing eggs.  All female pregnancies will be live young and MPreg to FPreg swaps will be treated as live births as well.";
-	say "- [link](2) Standard[as]2[end link] will indicate that you're okay with being impregnanted with eggs, if that's the creature's normal result.";
+	say "- [link](2) Standard[as]2[end link] will indicate that you're okay with being impregnated with eggs, if that's the creature's normal result.";
 	say "- [if ovipregalways is true][link](3) Always Ovi[as]3[end link] will indicate that you want all births to be eggs, regardless of their sire's normal result[else](3) Always Ovi is not yet accessible to your character.  You'll need to find a way in the game to change yourself to always bear eggs before being able to choose this option[end if].";
 	say "- [link](0) Exit[as]0[end link]: Leave this menu.  You are currently set as [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard (Some Ovi)[else]Always Ovi[end if][roman type].";
 	now calcnumber is -1;

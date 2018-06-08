@@ -65,7 +65,7 @@ instead of conversing the Sylvia:
 	say "[SylviaTalkMenu]";
 
 to say SylviaTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you wish to discuss with Sylvia?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

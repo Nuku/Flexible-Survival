@@ -6,8 +6,8 @@ Version 2 of Black Equinoid by Song begins here.
 
 Section 1 - Monster Responses
 
-equinoiddefeat is a number that varies.
-equinoidstatus is a number that varies.
+equinoiddefeat is a number that varies. equinoiddefeat is usually 0.
+equinoidstatus is a number that varies. equinoidstatus is usually 0.
 
 to say equine attack:
 	if equinoiddefeat is 0: [First time losing to a horse]

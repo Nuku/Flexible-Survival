@@ -270,7 +270,7 @@ To say inbox of (chosen email - an email program):
 		say "The following messages are available for you to read or reply to:[line break]";
 		repeat through the message table of the chosen email:
 			if there is an arrival time entry:
-				say "[line break]";
+				LineBreak;
 				if the read entry is false:
 					say "[bold type]";
 				say "[arrival time entry]:";

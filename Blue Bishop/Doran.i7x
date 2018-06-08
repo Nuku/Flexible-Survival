@@ -3775,7 +3775,7 @@ to say DoranRP_Misc: [Doran RP: Miscellaneous Scenes]
 			else:
 				say "'I'm sorry, could [DoranPlayerRegard] repeat that?'";
 		if calcnumber is 1:
-			say "[DoranRP_DragonsPetMenu]"; [Doran RP: The Virile Beast Query]
+			say "[DoranRP_DragonsPetMenu]"; [Doran RP: Dragon's Toy Query]
 		else:
 			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
 			now trixieexit is 1;
@@ -3900,20 +3900,34 @@ to say dorrptk: [Doran RP: The Knight Query]
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
 
 to say DoranRP_DragonsPetMenu: [Doran RP: A Dragon's Pet Menu]
-	if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
-		say "     You explain your desires for Doran to treat you like his pet, and your desires for him to be [italic type]your[roman type] master for a bit. He gives a hum of thought before nodding his large head. 'I do believe I can do that for my [DoranPlayerRegard].'";
-		say "     'Now,' he says, 'There are some details we should get out of the way before hand. Do you want me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
+	say "[bold type]This scene is not yet implemented! Sorry about that.[roman type]";
+	[if DoranRole is -1 and (DoranPlayerRegard is not "Master" or DoranPlayerRegard is not "Mistress"):
+		say "     You explain your desires for Doran to treat you like his pet and your desires for him to be [italic type]your[roman type] master for a while. He gives a contemplative hum, lost in thought for a moment, before nodding his large head. 'I do believe I can try that for my [DoranPlayerRegard]. However, I will make no assurances to your enjoyment, as I have little experience in such a role.'";
+		say "     'Now,' he says, 'there are some details we should discuss before we begin. Do you wish for me to ravage your behind, or would you rather service your Master's [']equipment[']? Yes for ravaging, no for servicing.'";
 		say "([link]y[as]y[end link]/[link]n[as]n[end link])>";
 		if player consents: [Anal / Vaginal Sex]
 			now DoranRP_var1 is 0;
-			say "     'Very well then! I hope you're ready for a good fucking, [DoranPlayerRegard]!' Doran exclaims cheerfully. 'With that sorted, I'll be ready to start as soon as you are!'";
+			say "     'Very well then! I hope you're ready for a good fucking, [DoranPlayerRegard]!' Doran exclaims cheerfully. [run paragraph on]";
+			if cunts of player > 0:
+				say "'There remains one matter to be discussed, however. Should I take your rear, or claim your proper entrance? Yes for rear, no for vagina.'";
+				if player consents: [Anal]
+					say "     Doran nods as you clarify, an eager, predatory grin creasing his muzzle. 'So it shall be!'";
+					now DoranRP_var2 is 0; [Sets RP to anal]
+				else: [Vaginal]
+					say "     Doran nods as you clarify, an eager, predatory grin creasing his muzzle. 'So it shall be!'";
+					now DoranRP_var2 is 1; [Sets RP to vaginal]
+			else:
+				say "'With that sorted, I'll be ready to start as soon as you are!'";
+				now DoranRP_var2 is 0; [anal by default]
 			now DoranRoleplayInSession is 10;
 		else: [Oral Sex]
 			now DoranRP_var1 is 1;
 			say "     'Very well then! I hope you're ready for a mouthful, [DoranPlayerRegard]!' Doran exclaims cheerfully. 'With that sorted, I'll be ready to start as soon as you are!'";
 			now DoranRoleplayInSession is 10;
+	else if DoranRole is -1: [Player is dom-locked, but Doran doesn't call them any subby names.]
+		say "     'Ah, though I would enjoy that, [DoranPlayerRegard],' the [gdragon] begins, 'I do believe I should be calling you something other than [DoranPlayerRegard] first, no?' Perhaps you should change what he calls you?";
 	else:
-		say "     'I'm not too sure I'm comfortable with that, [DoranPlayerRegard],' the [gdragon] admits sheepishly. Perhaps you need to get him in a more dominant role?";
+		say "     'I'm not too sure I'm comfortable with that, [DoranPlayerRegard],' the [gdragon] admits sheepishly. Perhaps you need to get him in a more dominant role?";]
 
 Section 4.3 - Doran Roleplay Sex Protocol
 
@@ -3922,6 +3936,8 @@ to say DoranRoleplayProtocol:
 		say "[dorrpovbs]"; [Doran RP of the Virile Beast Scene]
 	else if DoranRoleplayInSession is 2 or DoranRoleplayInSession is 3:
 		say "[dorrptks]"; [Doran RP The Knight Scene]
+	[else if DoranRoleplayInSession is 10:
+		say "[DoranRP_DragonsPet]";]
 
 Section 4.4 - Doran Roleplay Sex Pool
 
@@ -4128,6 +4144,10 @@ to say dorrptks:
 			wait for any key;
 			say "[line break]";
 		say "     '...[run paragraph on][one of]Wake up[or]Rise and shine[or]Up, up[at random], [DoranPlayerRegard]! [one of]I hope they found our little adventure satisfactory[or]I hope I didn't wear them out too much[or]I'm certain they enjoyed themselves[at random]!' Taking a moment to look you over after the session had concluded, Doran eventually lets you off once [ghe]'s certain that you appear fine, allowing you to go about your business once more.";
+
+[to say DoranRP_DragonsPet:
+	say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";
+	if ]
 
 
 Chapter 5 - Miscellaneous

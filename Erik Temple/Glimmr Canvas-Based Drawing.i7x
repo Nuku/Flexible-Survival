@@ -1559,7 +1559,7 @@ Carry out dumping imap:
 	let image-map-width be a number;
 	let image-map-height be a number;
 	let total-length be a number;
-	say "[line break]";
+	LineBreak;
 	if intensive rules tracing is active:[we disable RULES ALL temporarily to avoid the enumeration of each iteration through the loops that build the data dump.]
 		now rules-altered is true;
 		suspend rules tracing;
@@ -1598,10 +1598,10 @@ Carry out dumping imap:
 			say "[row-count]: ";
 			repeat with item running through current-row:
 				say "[item], ";
-			say "[line break]";
+			LineBreak;
 			increment row-count;
 	say "[variable letter spacing]";
-	say "[line break]";
+	LineBreak;
 	if the noun is tile-graphlinked:
 		let row-count be 1;
 		repeat with current-row running through the linked command array of the noun:
@@ -1609,7 +1609,7 @@ Carry out dumping imap:
 				unless entry (column-count) of current-row is "":
 					say "[one of][line break][The noun] has individual graphlinks defined for the following tiles (given in the image-map's internal tile coordinates):[line break][or][stopping]([column-count], [row-count]) [quotation mark][entry column-count of current-row][quotation mark][line break]";
 			increment row-count;
-		say "[line break]";
+		LineBreak;
 	if rules-altered is true:
 		activate intensive rules tracing.
 

@@ -16,9 +16,9 @@ when play begins:
 	add { "Feral Mutt" } to infections of feral;
 
 to RandomizeFeralMutt:
-	if a random chance of 1 in 2 succeeds: 
+	if a random chance of 1 in 2 succeeds:
 		now FeralMuttFurColorNumber is 1;
-	else: 
+	else:
 		now FeralMuttFurColorNumber is 2;
 	let randomnumber be a random number from 1 to 6; [adjust the latter number for the number of options]
 	if randomnumber is:
@@ -92,7 +92,7 @@ to say LoseToFeralDog:
 		now Mutt Pack Attack is resolved; [inactive when they're not dominant enough]
 	if FeralMuttDominance > -3:
 		now Mutt Pack Submission is resolved; [inactive when they're not subby enough]
-		
+
 
 to say BeatTheFeralMutt:
 	say "     After your assault, the dog collapses and whines sadly. As he struggles to stand, he wavers and falls over. You then notice his still hard cock poking out of his sheath, the tip drooling a bit of pre.";
@@ -128,7 +128,7 @@ to say FeralDogSexMenu:
 		now title entry is "Fuck his ass";
 		now sortorder entry is 3;
 		now description entry is "Thrust your dick into the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s ass";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -326,7 +326,7 @@ when play begins:
 
 Instead of resolving a Mutt Pack Submission:
 	say "     As you walk the junk yard grounds you hear an unmistakable canine bark behind you. Spinning around to face the noise you spot the feral mutt you had dominated before. And behind that dog is another canine, a large, slightly mangy pit bull. And to the side of him a golden furred shepherd pads a few feet forward. Looking around you see a total of five feral mutts, all males, and all extremely aroused if they're hard red rockets are anything to go off of. They look to you expectantly and you think to ready yourself for a fight until the lead mutt lets out a whine of need and lowers his head before you. Accepting your dominance in their territory and apparently, asking to mate with you.";
-	say "     [bold type]Do you want to have sex with the pack?[roman type][line break]";	
+	say "     [bold type]Do you want to have sex with the pack?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Accept their submission.";
 	say "     ([link]N[as]n[end link]) - Decline for now.";
@@ -388,7 +388,7 @@ when play begins:
 
 Instead of resolving a Mutt Pack Attack:
 	say "     As you walk the junk yard grounds you hear an unmistakable canine bark behind you. Spinning around to face the noise you spot the feral mutt that had bred you earlier. And behind that dog is another canine, a large, slightly mangy pit bull. And to the side of him a golden furred shepherd pads a few feet forward. Looking around you see a total of five feral mutts, all males, and all extremely aroused if they're hard red rockets are anything to go off of. The one that had fucked you before strides closer, growling and standing tall, his veiny cock swaying as he moves. It doesn't take a genius to know what he wants, you, and now.";
-	say "     [bold type]Are you gonna submit like a good bitch or fight back?[roman type][line break]";	
+	say "     [bold type]Are you gonna submit like a good bitch or fight back?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Submit.";
 	say "     ([link]N[as]n[end link]) - Fight them!";
@@ -407,7 +407,7 @@ Instead of resolving a Mutt Pack Attack:
 		say "[PackDominanceScenes]";
 	else:
 		LineBreak;
-		say "     Hell no, your not laying down like a bitch! You ready yourself for a fight.";
+		say "     Hell no, you're not laying down like a bitch! You ready yourself for a fight.";
 		challenge "Mutt Pack";
 
 to say PackDominanceScenes:
@@ -447,7 +447,7 @@ to say LoseToMuttPack:
 		say "     Not slowing his humping he hammers at your asshole, his squirting canine pre-cum lubing you up and sending stings of pleasure through you as he goes. You moan loudly in forced pleasure and shut your eyes only to have a shadow go over your head and a musky head brush over your ass. Opening your eyes you see the golden shepherd has walked over your head and parked himself there. His nearly foot long canine cock waiting and throbbing expectantly for service. Not having much choice considering your position you open your move and move your tongue down the length of his musky meat. You then lean in and take the tip of the knotted cock in your mouth.";
 	WaitLineBreak;
 	say "[PackDominanceScenes]";
-	
+
 to say BeatTheMuttPack:
 	say "     You beat back the feral rapists and leave them bruised and whimpering on the grimy ground below. Dusting yourself off, you take your leave of the junkyard dogs.";
 
