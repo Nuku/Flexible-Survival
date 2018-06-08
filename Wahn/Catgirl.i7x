@@ -58,7 +58,7 @@ to say Catgirl_Loses:
 		if CatgirlFucked < 3:
 			increase CatgirlFucked by 1;
 	else:
-		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behavior of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
+		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behaviour of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
 
 to say Catgirl_Desc:
 	setmongender 4; [female]

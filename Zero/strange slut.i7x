@@ -13,13 +13,13 @@ to say slutdesc:
 	now slutty is 0;
 	say "[randomdesc]";
 	say "[masterofsluts]";
-	say "Walking down the street, you find yourself staring at a naked male [one of]black[or]brown[or]multi-colored[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]black studded white[at random] collar. Unfortunately, it's staring back at you!";
+	say "Walking down the street, you find yourself staring at a naked male [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]black studded white[at random] collar. Unfortunately, it's staring back at you!";
 
 to say sluttydesc:
 	now slutty is 0;
 	say "[randomdesc2]";
 	say "[masterofslutsfe]";
-	say "Walking down the street, you find yourself staring at a naked female [one of]black[or]brown[or]multi-colored[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]white, black studded[at random] collar. Unfortunately, it's staring back at you!";
+	say "Walking down the street, you find yourself staring at a naked female [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]white, black studded[at random] collar. Unfortunately, it's staring back at you!";
 
 to say masterofsluts:
 	if slutmaster > 0:
@@ -208,7 +208,7 @@ to say slutdef:
 	if slutmaster > 0:
 		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further";
 	else:
-		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut. Too bad they already infected you.' With that, the [slutname] laughs and falls unconscious.";
+		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut. Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Male Slut";
 
 to say sluttydef:
@@ -217,7 +217,7 @@ to say sluttydef:
 	if slutmaster > 0:
 		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further";
 	else:
-		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut. Too bad they already infected you.' With that, the [slutname] laughs and falls unconscious.";
+		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut. Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Female Slut";
 
 

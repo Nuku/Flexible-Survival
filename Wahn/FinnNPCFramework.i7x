@@ -1,4 +1,4 @@
-Version 1 of FinnNPCFramework by Wahn begins here.
+Version 1 of Finn by Wahn begins here.
 [Version 1 - Put into its own file]
 
 [ FinnTrackingProgress                                   ]
@@ -145,4 +145,4 @@ to say FinnSex6: [Finn fucks player ass]
 	say "     A";
 
 
-FinnNPCFramework ends here.
+Finn ends here.

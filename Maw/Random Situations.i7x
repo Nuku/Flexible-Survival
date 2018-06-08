@@ -66,7 +66,7 @@ Instead of resolving Bloated Hunter:
 		else:
 			if "Hermaphrodite" is listed in the gender of the tribe of player:
 				say "One of your huntresses returns looking rather... round around the middle. Her stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular girl wasn't at all overweight, nor pregnant the morning you saw her last. Her distended stomach could tell numerous stories, and the most likely one was likely the truth. Her hands/paws holding the lip of her bulging stomach up, hoisting and carrying it as she waddled down the road. Mumbling incoherently to herself. Thankfully it didn't look as if she was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently--at the female as she wanders on by. That sickly sloshing stomach most certainly causing your own stomach to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement[else]Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of hers[end if].[line break][line break]";
-	now Bloated Hunter is resolved;
+	now Bloated Hunter is resolved.
 
 Part 3 - Hidden Cache + Nerd's Opinion (Inter-linked)
 
@@ -98,7 +98,7 @@ Instead of resolving Nerd's Opinion:
 		else:
 			say " ";
 		increase (creds of tribe of player) by x;
-	now Nerd's Opinion is resolved;
+	now Nerd's Opinion is resolved.
 
 Part 4 - Beast's Den
 

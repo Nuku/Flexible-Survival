@@ -8,7 +8,7 @@ Version 1 of Tiger Shark by Lone Wanderer begins here.
 [  50 = Submitted as FSD to him                                   ]
 [  51 = Threw fight/lost to him as FSD                            ]
 [  52 = Beat him as FSD                                           ]
-[  53-55 = Beat him as FSD up to 4 times in a row                 ]
+[  53-55 = Beat him as FSD up to 4 times in a row.                ]
 [  60 = Stole his necklace                                        ]
 [  61 = Submitted as FSD to his vengeful form                     ]
 [  62 = Threw fight/lost as FSD to his vengeful form              ]
@@ -316,15 +316,15 @@ When Play begins:
 	now victory entry is "[Tiger Shark wins]";
 	now desc entry is "[TigerSharkDesc]";
 	now face entry is "triangular, streamlined face. You still breathe normally in and out of your nostrils that happen to be at the end of your snout. When you open your mouth you show several rows of razor sharp teeth, fit to bite off anything.";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "bulky, but still flexible enough to maneuver well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if breast size of player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
+	now body entry is "bulky, but still flexible enough to manoeuvre well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if breast size of player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
 	now skin entry is "[one of]striped[or]ochre[or]smooth[or]tough[or]slippery[at random]"; [ format as the text "You have (your text) skin"]
-	now tail entry is "From behind a large and finned tail is dragging along. It feels a little unnatural to not be using the tail to maneuver around.";[ write a whole Sentence or leave blank. ]
+	now tail entry is "From behind a large and finned tail is dragging along. It feels a little unnatural to not be using the tail to manoeuvre around.";[ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapering[or]slick[or]pointed[or]shark[at random]";[ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shifts, pushing out into a triangular shape. Your mouth enlarges along with your head. Painfully, lots of sharp, pointy teeth push out of your jaw to occupy the extra space that has been created. Your tongue also becomes larger and pointed"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "you are subjected to the effects of your infection. The nanites burn away any fat you might have had. The void is quickly replaced by your muscles bulging out. At the same time, the nanites work to fit your body more into an aquatic lifestyle. Fins sprout on your body - a large one between your shoulder blades and two smaller ones surrounding your crotch. Toes fuse together until you are left with three. They are tipped with claws similar to your fingers now, which thankfully did not reduce in numbers. The final changes lie in reforming the proportions of your feet and legs to assume a permanent digitigrade stance"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "making you compulsively scratch the itchy spots. With shock you realize that the top layer is coming off. To your relief a new layer of smooth looking skin has grown underneath. You don't even need to peel it all away, as your nanites eat the rest of it away. Your new hide is ochre in color and adorned with brown stripes, while the your front is a shade of creamy white. When you stroke along your new skin, you realize that your body feels like sandpaper, if you stroke away from your tail-end but smooth if you go towards it. That's going to need some getting used-to"; [ format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "making you compulsively scratch the itchy spots. With shock you realize that the top layer is coming off. To your relief a new layer of smooth looking skin has grown underneath. You don't even need to peel it all away, as your nanites eat the rest of it away. Your new hide is ochre in colour and adorned with brown stripes, while the your front is a shade of creamy white. When you stroke along your new skin, you realize that your body feels like sandpaper, if you stroke away from your tail-end but smooth if you go towards it. That's going to need some getting used-to"; [ format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a tail snakes its way through your pants. You tumble over and take off your pants to make this process less painful. When your tail is done forming, you are left with a large shark-like tail. It has a pair of smaller fins along its underside, while your tip is equipped with a large tailfin"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it tapers towards its end and its skin becomes more flesh colored. Your new tapering dick feels slippery on touch"; [ format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it tapers towards its end and its skin becomes more flesh coloured. Your new tapering dick feels slippery on touch"; [ format as "Your cock feels funny as (your text)" ]
 	now str entry is 35;
 	now dex entry is 19;
 	now sta entry is 30;
@@ -349,7 +349,7 @@ When Play begins:
 	now loot entry is "Devil's Purse";    [ Loot monster drops, ]
 	now lootchance entry is 0;           [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscled[or]firm[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]muscled[or]firm[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]shark-like[or]aquatic[at random]";
 	now magic entry is false;
 	now resbypass entry is false;

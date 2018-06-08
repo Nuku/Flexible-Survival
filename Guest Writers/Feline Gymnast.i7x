@@ -1,6 +1,6 @@
 Version 1 of Feline Gymnast by Guest Writers begins here.
 [A kinky, flexible anthro feline herm]
-[- Originally Authored By: SomeFur -]
+[- Originally Authored By:  SomeFur -]
 
 [Potential ideas list]
 [Loss scenes]
@@ -98,7 +98,7 @@ to say felinelosenormalanal:
 		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. With amazing flexibility, she bends forward and starts licking it clean. Obviously extremely aroused, she begins moving up and down your [cock of player] penis. As she rises, she keeps her head in the same position, thrusting into her mouth. The sight of her sucking herself off, and the slow, tight pumps on your dick make you moan in pleasure, already getting close to an orgasm. The hermaphrodite riding you must be close as well, because she picks up the pace, slamming her ass down onto your thighs and then swallowing her barbed shaft as she thrust upwards. She suddenly straightens back up, crying in pleasure as cum bursts out of her pink penis, splattering all over your [breast size desc of player] [if breast size of player > 1]breasts[else]chest[end if] and face. With her tight ass wringing your [cock size desc of player] cock, you can't hold back much longer either, and pump your [cum load size of player] load into her bowels.";
 	else:
 		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. She starts to stroke it slowly with one of her furry hands, moaning as a large drop of pre makes its way out. With her other hand, she lifts her tiny balls out of the way and pushes a finger into her leaking folds. Turned on by the show above you, you find yourself quite close to your limit. Your partner stops masturbating, placing her hands on the ground next to you, giving her more leverage to ride you wildly. Unable to keep up with herself, you hear a cry of pleasure, followed by warm wads of her cum splattering your face. Startled by her yelling, and further stimulated by her now squeezing ass, you quickly follow, spurting your [cum load size of player] load into her.";
-	say "     Both of you groan as she lifts herself off of your sensitive tool. 'Have you ever had an orgasm without touching yourself? It's quite an experience. Maybe I'll let you try it some other time,' she promises, walking away from you[if cock length of player > 20] with a little less grace than usual[end if].";
+	say "     Both of you groan as she lifts herself off of your sensitive tool. 'Have you ever had an orgasm without touching yourself? It's quite an experience. Maybe I'll let you try it some other time,' she promises, walking away from you[if cock length of player > 20] with a little less grace than usual[end if]."
 
 [Oral scene
 Summary: random vaginal/penis oral, will give oral to men/herms]
@@ -239,7 +239,7 @@ When Play begins:
 	now body change entry is "a sudden weight is lifted from your shoulders. Looking down, you notice you have become much thinner, and your muscles have a much smoother tone to them"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "luxurious blue fur begins growing over your body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its color shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its colour shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
@@ -264,7 +264,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]thin[or]svelte[or]lithe[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]thin[or]svelte[or]lithe[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

@@ -1,4 +1,4 @@
-Hyena Matriarch by Stripes begins here.
+Hyena matriarch by Stripes begins here.
 [- Originally Authored By: Sarokcat -]
 [Version 2 - Adds Vore Scenes and Ending]
 
@@ -7,7 +7,7 @@ Hyena Matriarch by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 matriarchdefeated is a number that varies.
 matriarchowned is a number that varies.
 
@@ -171,4 +171,4 @@ when play ends:
 to matriarchify:
 	Infect "Hyena Matriarch";
 
-Hyena Matriarch ends here.
+Hyena matriarch ends here.

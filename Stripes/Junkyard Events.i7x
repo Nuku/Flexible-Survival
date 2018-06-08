@@ -13,7 +13,7 @@ when play begins:
 	add Goblin Trap to badspots of guy;
 
 Instead of resolving a Goblin Trap:
-	say "     As you are traveling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
+	say "     As you are travelling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
 	decrease HP of player by 12;
 	now goblinfight is 3;
 	challenge "Goblin";

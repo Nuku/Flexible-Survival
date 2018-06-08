@@ -33,7 +33,7 @@ Instead of resolving a Refugee Mare:
 		say "     ([link]N[as]n[end link]) - Not your problem.";
 		if player consents:
 			LineBreak;
-			say "     You approach the young woman and try to talk to her, but she clearly isn't in the right headspace to register even the most gently stated words. Instead, the part-equine woman immediately shies away, standing up and running off. Within moments, she is lost in the crowd and out of sight. You can't help but wonder what will become of her. Maybe you should search for her to have a chance to talk once she's calmed down at least a little.";
+			say "     You approach the young woman and try to talk to her, but she clearly isn't in the right headspace to register even the most gently stated words. Instead, the part-equine woman immediately shies away, standing up and running off.  Within moments, she is lost in the crowd and out of sight. You can't help but wonder what will become of her. Maybe you should search for her to have a chance to talk once she's calmed down at least a little.";
 			now GloryFate is 1;
 		else:
 			LineBreak;

@@ -35,7 +35,7 @@ instead of conversing the Zeke:
 		say "[ZekeTalkMenu]";
 
 to say ZekeTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Zeke about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -151,7 +151,7 @@ instead of fucking the Zeke:
 			say "[ZekeSexMenu1]";
 
 to say ZekeSexMenu1: [Cooperative]
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -207,7 +207,7 @@ to say ZekeSexMenu1: [Cooperative]
 	clear the screen and hyperlink list;
 
 to say ZekeSexMenu2: [Domming Zeke]
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -263,7 +263,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 	clear the screen and hyperlink list;
 
 to say ZekeSexMenu3: [Dommed by Zeke]
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -215,7 +215,7 @@ When Play begins:
 	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";
 	now defeated entry is "[defeated_panthertaur]";
 	now victory entry is "[panthertaur rape]";
-	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
+	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
 	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if breasts of player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -250,8 +250,8 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]feline[or]panthertaur[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

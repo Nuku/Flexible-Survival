@@ -1,7 +1,7 @@
 Version 2 of Vent Fox by Dys begins here.
 [VERSION 2:                                                          ]
 [v2.0 Adds Dominant Vent scenes                                      ]
-[v2.1 He's an actual NPC now. No need to the quotes in the desc      ]
+[v2.1 He's an actual NPC now. No need to the quotes in the desc.     ]
 
 "Adds a random encounter in the mall, and an NPC that can be interacted with."
 
@@ -13,7 +13,7 @@ Version 2 of Vent Fox by Dys begins here.
 [ 100 = didn't help                                                  ]
 [ 101 = let Vent get raped by Logan                                  ]
 
-[ VentFluidAmount - The amount of bodily fluids Vent produces        ]
+[ VentFluidAmount - The amount of bodily fluids Vent produces.       ]
 [  0 = average                                                       ]
 [  1 = more than average                                             ]
 [  2 = way more than average                                         ]
@@ -23,7 +23,7 @@ Version 2 of Vent Fox by Dys begins here.
 [  0 = never interacted                                              ]
 [  1 = one interaction. Unlocks scenes where the fox dominates       ]
 [  2 = two interactions. Unlocks kinkier scenes with the fox         ]
-[  3 = three+ interactions. Unlocks extreme content with fox         ]
+[  3 = three+ interactions. Unlocks extreme content with fox.        ]
 
 [ VentOviAmount - amount of oviposition to occur in supported scenes ]
 [  0 = none                                                          ]
@@ -38,7 +38,7 @@ Version 2 of Vent Fox by Dys begins here.
 [  3 = marking at any time, especially during penetration            ]
 
 [ VentFoxLastFed tracks how many turns have passed since Vent        ]
-[ was last fed                                                       ]
+[ was last fed.                                                      ]
 
 [ VentDomSize is the body size for Vent to take during dominant sex. ]
 [   3 = Average Latex Fox sized                                      ]

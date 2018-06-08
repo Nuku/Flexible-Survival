@@ -30,7 +30,7 @@ Version 4 of Nermine by Wahn begins here.
 [  14: doll destroyed, Cole stuck as a guy                           ]
 [  15: doll destroyed, Cole stuck as a girl                          ]
 [  16: player let Cole have the doll, he must work at the store      ]
-[  17: player let Cole have the doll, etc                            ]
+[  17: player let Cole have the doll, ...                            ]
 [  99: refused the revenge offer                                     ]
 [ 100: refused the harness offer                                     ]
 
@@ -51,7 +51,7 @@ Version 4 of Nermine by Wahn begins here.
 [  2: Jackalboy Skin                     ]
 [  3: Jackalboy Head                     ]
 [  4: Jackalboy Body                     ]
-[  5:                         ]
+[  5:                                    ]
 
 RomanceBooksFound is a number that varies.
 NermineTalk is a number that varies.
@@ -272,7 +272,7 @@ to say NermineTalk2:
 		now wrcurseNermine is 1;
 		now wrlastNermine is turns;
 	else if wrcurseNermine is 1 and wrcursestatus >= 3 and wrcursestatus < 100 and wrlastNermine - turns >= 8:
-		say "     Nermine sets aside the book she was leafing through and smiles at you. 'Nermine is having good news. While this is not Nermine's normal area of expertise, she is having books on many such subjects and is finding something which may helping with your raptor problem.' She shows you the open book. The text in it appears to be hand written, but you don't recognize the language or even the alphabet. She points out a drawing of some flowers on the opposite page. 'Nermine is first needing roots of this plant. It is monkshood and the flowers are being a purple color like this,' she adds, indicating a lilac purple section of one of the hanging carpets on the wall. 'They are usually growing closer to the mountains, but there is a greenhouse at the college campus that is having many plants. Perhaps you can be finding it there?'";
+		say "     Nermine sets aside the book she was leafing through and smiles at you. 'Nermine is having good news. While this is not Nermine's normal area of expertise, she is having books on many such subjects and is finding something which may helping with your raptor problem.' She shows you the open book. The text in it appears to be hand written, but you don't recognize the language or even the alphabet. She points out a drawing of some flowers on the opposite page. 'Nermine is first needing roots of this plant. It is monkshood and the flowers are being a purple colour like this,' she adds, indicating a lilac purple section of one of the hanging carpets on the wall. 'They are usually growing closer to the mountains, but there is a greenhouse at the college campus that is having many plants. Perhaps you can be finding it there?'";
 		now wrcurseNermine is 2;
 		now Greenhouse is unresolved;
 	else if wrcurseNermine is 2 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
@@ -803,7 +803,7 @@ to say NermineStoreFuck:
 	else:
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
-			-- 1: [mall rats watch]
+			-- 1:     [mall rats watch]
 				say "[NermineStoreFuck_Mallrats]";
 			-- 2:
 				say "[NermineStoreFuck_Jaguar]";
@@ -973,8 +973,8 @@ to say NermineStoreFuck_Solo:
 
 after going to Mysterious Shop while (libido of Danny is 1): [bukkake offer the next time the player goes to visit Nermine after fucking her in front of Danny once]
 	project the figure of Danny_clothed_icon;
-	say "     As you are about to enter Nermine's store, you hear someone call out [if player is not defaultnamed]'[name of player]!' [else]to you. [end if]Turning around, you see Danny the mall rat approaching you with a hopeful, yet somehow nervous, expression on his face. 'Hey there. I, um, the guys asked me to talk to you. Since we already had that little photo session with her. You know. Your jackal bitch.' Slightly amused by his cautious approach, the edges of your canine muzzle show a little smile as you nod for the mall rat to go on. 'We have got an offer for you. Since you tamed the sorceress and all, maybe you'd like a suitable outfit to put her in too?' Danny says, then pulls out a folded piece of paper from his pocket, handing it to you. Looks like a page ripped out of a catalog or something - an adult one, as the image that unfolds is of a busty woman dressed in a leather bondage harness.";
-	say "     Having a closer look at the kinky outfit, you see that it consists of a series of black leather straps, held together by shiny, silver rings at the cross-points, as well as a number of buckles to adjust it. The straps criss-cross the catalog model's upper body diagonally, just above and below her breasts, as well as going down to her hips and leading between her legs. The designer took great care to not cover its wearer's pussy, leaving the woman open for sex without having to take the harness off. A tight leather collar with a large silver ring at the front, most likely to hook a leash to, completes a very well-crafted outfit. You can't help but imagine Nermine in it, those shiny straps crossing her black fur, and the silver rings and buckles gleaming against the dark backdrop.";
+	say "     As you are about to enter Nermine's store, you hear someone call out [if player is not defaultnamed]'[name of player]!' [else]to you. [end if]Turning around, you see Danny the mall rat approaching you with a hopeful, yet somehow nervous, expression on his face. 'Hey there. I, um, the guys asked me to talk to you. Since we already had that little photo session with her. You know. Your jackal bitch.' Slightly amused by his cautious approach, the edges of your canine muzzle show a little smile as you nod for the mall rat to go on. 'We have got an offer for you. Since you tamed the sorceress and all, maybe you'd like a suitable outfit to put her in too?' Danny says, then pulls out a folded piece of paper from his pocket, handing it to you. Looks like a page ripped out of a catalogue or something - an adult one, as the image that unfolds is of a busty woman dressed in a leather bondage harness.";
+	say "     Having a closer look at the kinky outfit, you see that it consists of a series of black leather straps, held together by shiny, silver rings at the cross-points, as well as a number of buckles to adjust it. The straps criss-cross the catalogue model's upper body diagonally, just above and below her breasts, as well as going down to her hips and leading between her legs. The designer took great care to not cover its wearer's pussy, leaving the woman open for sex without having to take the harness off. A tight leather collar with a large silver ring at the front, most likely to hook a leash to, completes a very well-crafted outfit. You can't help but imagine Nermine in it, those shiny straps crossing her black fur, and the silver rings and buckles gleaming against the dark backdrop.";
 	WaitLineBreak;
 	say "     Danny waits for you to check the harness out in detail, until you eventually fold the paper up again and hold it in your hand. 'So, what do you think? In case you're interested, we've got that outfit and would be willing to give it to you... for a price,' the mall rat says, rather hastily. It is clear that he is nervous about negotiating with the person that bested Nermine, so you simply wait and look at him in silence. 'Everyone wants to have a turn fucking her, but since she's yours and all, I assume that's off the table. How about a bukkake cum shower instead? We'd not go near her pussy of course, just... everyone can still be excited about actually cumming on the sorceress. And maybe touching her body? A blowjob or two once in a while?' With that, he stops himself from further babbling, instead looking at you with large, hopeful eyes and waiting for a reply.";
 	say "     [bold type]How do you reply to his offer?[roman type][line break]";
@@ -983,11 +983,11 @@ after going to Mysterious Shop while (libido of Danny is 1): [bukkake offer the 
 	say "     ([link]N[as]n[end link]) - Just shake your head. Nermine is all yours!";
 	if player consents:
 		LineBreak;
-		say "     'What?! Really?' Danny says in a delighted tone, then begins to grin broadly as you shake his slender paw and tuck the catalog page into your pocket. 'I-I'll tell the guys to get it out of storage immediately. Just, when you're ready for us, give a little sign at the window, alright? One or another of the guys will be hanging out near the store and watch for it. Oh boy, my friends will be thrilled!' With that said, the eager mall rat gives you a thumbs-up and dashes off. You can see a small crowd of other mall rats cheering as he reaches them a little distance away with the good news.";
+		say "     'What?! Really?' Danny says in a delighted tone, then begins to grin broadly as you shake his slender paw and tuck the catalogue page into your pocket. 'I-I'll tell the guys to get it out of storage immediately. Just, when you're ready for us, give a little sign at the window, alright? One or another of the guys will be hanging out near the store and watch for it. Oh boy, my friends will be thrilled!' With that said, the eager mall rat gives you a thumbs-up and dashes off. You can see a small crowd of other mall rats cheering as he reaches them a little distance away with the good news.";
 		now libido of Danny is 2; [harness offer accepted]
 	else:
 		LineBreak;
-		say "     'Oh. Okay then,' Danny says in a quite disappointed tone of voice, gently tugging the catalog page out of your grasp again. 'I'll just go, then... thanks for your time.' With that said, he wanders off, shaking his head to the group of mall rat guys that had been waiting a little distance away, leading to more long faces and slightly sulky rats.";
+		say "     'Oh. Okay then,' Danny says in a quite disappointed tone of voice, gently tugging the catalogue page out of your grasp again. 'I'll just go, then... thanks for your time.' With that said, he wanders off, shaking his head to the group of mall rat guys that had been waiting a little distance away, leading to more long faces and slightly sulky rats.";
 		now libido of Danny is 100; [harness offer rejected]
 		now NermineBukkakeTurn is turns; [turn of rejection]
 
@@ -1104,7 +1104,7 @@ after going to Mysterious Shop while ((libido of Danny is 3 or libido of Danny i
 [ Coura / Cole moved to Wahn/Coura.i7x ]
 
 [ to say NermineRatRitual: ... ]
-[ to say NermineCouraSpell: ... ]
+[ to say NermineCouraSpell:  ... ]
 
 Section 3- Magic Bargain Bin
 
@@ -1156,7 +1156,7 @@ To say jackaltotemmagic:
 		now JackalBoyTF is 3;
 	else if JackalBoyTF is 3:
 		say "     Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this figurine will be the last one you will need. Rubbing the little statue eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but melding with your body to become part of you. You don't have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lift slightly off the ground as your rear legs crack and shift to a more stable stance and your feet seem to spread apart on new jackal paws.";
-		say "     Looking down over yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter. Your new body is obviously more built for grace and speed than combat or hard labor. The sight of your new form makes you smile happily - it is just what you needed for serving your mistress, with its silky soft skin and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal-woman. Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackal-toy she wanted you to be.";
+		say "     Looking down over yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter. Your new body is obviously more built for grace and speed than combat or hard labour. The sight of your new form makes you smile happily - it is just what you needed for serving your mistress, with its silky soft skin and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal-woman. Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackal-toy she wanted you to be.";
 		LineBreak;
 		say " Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head. Maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.";
 		now bodyname of player is "Jackalboy";

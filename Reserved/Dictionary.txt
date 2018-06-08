@@ -72,8 +72,8 @@
 |Jon Ingold|Flexible Windows|direct parent|property|
 |Jon Ingold|Flexible Windows|rock-value|property|
 |Jon Ingold|Flexible Windows|ref-number|property|
-|Jon Ingold|Flexible Windows|back-color|property|
-|Jon Ingold|Flexible Windows|border-color|property|
+|Jon Ingold|Flexible Windows|back-colour|property|
+|Jon Ingold|Flexible Windows|border-colour|property|
 |Jon Ingold|Flexible Windows|border-measure|property|
 |Jon Ingold|Flexible Windows|g-present|property|
 |Jon Ingold|Flexible Windows|g-unpresent|property|
@@ -161,7 +161,7 @@
 |Graham Nelson|Standard Rules|can only use multiple objects error|value|
 |Graham Nelson|Standard Rules|not sure what it refers to error|value|
 |Graham Nelson|Standard Rules|excepted something not included error|value|
-|Graham Nelson|Standard Rules|not a verb I recognize error|value|
+|Graham Nelson|Standard Rules|not a verb I recognise error|value|
 |Graham Nelson|Standard Rules|not something you need to refer to error|value|
 |Graham Nelson|Standard Rules|can't see it at the moment error|value|
 |Graham Nelson|Standard Rules|didn't understand the way that finished error|value|
@@ -619,65 +619,65 @@
 |Nuku Valente|Fucking|Fucking|action|
 |Nuku Valente|Fucking|lastfuck|property|
 |Nuku Valente|Fucking|fuckscene|property|
-|Telanda Softpaw|Needy Heat|20140908213124/1815:Mon 8 September 2014 21:31|indexing|
-|Telanda Softpaw|Needy Heat|heat enabled|value|
-|Telanda Softpaw|Needy Heat|animal heat|value|
-|Telanda Softpaw|Needy Heat|turns in heat|value|
-|Telanda Softpaw|Needy Heat|inheat|value|
-|Telanda Softpaw|Needy Heat|slutfucked|value|
-|Telanda Softpaw|Needy Heat|lastturn|value|
-|Telanda Softpaw|Needy Heat|heatform|value|
-|Telanda Softpaw|Needy Heat|heatlevel|value|
-|Telanda Softpaw|Church Of The Maternal Beast|20140908213124/11340:Mon 8 September 2014 21:31|indexing|
-|Telanda Softpaw|Church Of The Maternal Beast|Beach Plaza|room|
-|Telanda Softpaw|Church Of The Maternal Beast|Beach Exit|door|
-|Telanda Softpaw|Church Of The Maternal Beast|Public Beach|room|
-|Telanda Softpaw|Church Of The Maternal Beast|Unsupervised Beach|door|
-|Telanda Softpaw|Church Of The Maternal Beast|UnsupBeach|room|
-|Telanda Softpaw|Church Of The Maternal Beast|Church Hall|room|
-|Telanda Softpaw|Church Of The Maternal Beast|Notice Board|thing|
-|Telanda Softpaw|Church Of The Maternal Beast|Confession Booth|thing|
-|Telanda Softpaw|Church Of The Maternal Beast|Dirty Sheds|room|
-|Telanda Softpaw|Church Of The Maternal Beast|Overgrown Block|room|
-|Telanda Softpaw|Church Of The Maternal Beast|beachrape|value|
-|Telanda Softpaw|Church Of The Maternal Beast|houndfromhell|value|
-|Telanda Softpaw|Church Of The Maternal Beast|lastconfession|value|
-|Telanda Softpaw|Church Of The Maternal Beast|isHellhound|value|
-|Telanda Softpaw|Church Of The Maternal Beast|maleHound|value|
-|Telanda Softpaw|Church Of The Maternal Beast|hellHoundLevel|value|
-|Telanda Softpaw|Church Of The Maternal Beast|churchenter|value|
-|Telanda Softpaw|Church Of The Maternal Beast|lastchurchattempt|value|
-|Stripes|Wereraptor|20140908213124/15336:Mon 8 September 2014 21:31|indexing|
-|Stripes|Wereraptor|Paleontology Professor|situation|
-|Stripes|Wereraptor|Greenhouse|situation|
-|Stripes|Wereraptor|wolfsbane|Grab Object|
-|Stripes|Wereraptor|Getting the Knife|situation|
-|Stripes|Wereraptor|silver knife|armament|
-|Stripes|Wereraptor|chainmail vest|Equipment|
-|Stripes|Wereraptor|Dinosaur Skeleton|situation|
-|Stripes|Wereraptor|utahmet|value|
-|Stripes|Wereraptor|wrmode|value|
-|Stripes|Wereraptor|wrcursestatus|value|
-|Stripes|Wereraptor|wrcursestart|value|
-|Stripes|Wereraptor|wrcurseactivity|value|
-|Stripes|Wereraptor|wrbodyname|value|
-|Stripes|Wereraptor|wrbody|value|
-|Stripes|Wereraptor|wrscalevalue|value|
-|Stripes|Wereraptor|wrbodydesc|value|
-|Stripes|Wereraptor|wrbodytype|value|
-|Stripes|Wereraptor|wrdaycycle|value|
-|Stripes|Wereraptor|wrfacename|value|
-|Stripes|Wereraptor|wrface|value|
-|Stripes|Wereraptor|wrskinname|value|
-|Stripes|Wereraptor|wrskin|value|
-|Stripes|Wereraptor|wrtailname|value|
-|Stripes|Wereraptor|wrtail|value|
-|Stripes|Wereraptor|wrcockname|value|
-|Stripes|Wereraptor|wrcock|value|
-|Stripes|Wereraptor|wrcurseholdback|value|
-|Stripes|Wereraptor|grhouse|value|
-|Stripes|Wereraptor|wrknifefight|value|
-|Stripes|Wereraptor|wrdinoskel|value|
+|Telanda Softpaw|Needy Heat For Fs|20140908213124/1815:Mon 8 September 2014 21:31|indexing|
+|Telanda Softpaw|Needy Heat For Fs|heat enabled|value|
+|Telanda Softpaw|Needy Heat For Fs|animal heat|value|
+|Telanda Softpaw|Needy Heat For Fs|turns in heat|value|
+|Telanda Softpaw|Needy Heat For Fs|inheat|value|
+|Telanda Softpaw|Needy Heat For Fs|slutfucked|value|
+|Telanda Softpaw|Needy Heat For Fs|lastturn|value|
+|Telanda Softpaw|Needy Heat For Fs|heatform|value|
+|Telanda Softpaw|Needy Heat For Fs|heatlevel|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|20140908213124/11340:Mon 8 September 2014 21:31|indexing|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Beach Plaza|room|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Beach Exit|door|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Public Beach|room|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Unsupervised Beach|door|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|UnsupBeach|room|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Church Hall|room|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Notice Board|thing|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Confession Booth|thing|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Dirty Sheds|room|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|Overgrown Block|room|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|beachrape|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|houndfromhell|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|lastconfession|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|isHellhound|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|maleHound|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|hellHoundLevel|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|churchenter|value|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|lastchurchattempt|value|
+|Stripes|Wereraptor For Fs|20140908213124/15336:Mon 8 September 2014 21:31|indexing|
+|Stripes|Wereraptor For Fs|Paleontology Professor|situation|
+|Stripes|Wereraptor For Fs|Greenhouse|situation|
+|Stripes|Wereraptor For Fs|wolfsbane|Grab Object|
+|Stripes|Wereraptor For Fs|Getting the Knife|situation|
+|Stripes|Wereraptor For Fs|silver knife|armament|
+|Stripes|Wereraptor For Fs|chainmail vest|Equipment|
+|Stripes|Wereraptor For Fs|Dinosaur Skeleton|situation|
+|Stripes|Wereraptor For Fs|utahmet|value|
+|Stripes|Wereraptor For Fs|wrmode|value|
+|Stripes|Wereraptor For Fs|wrcursestatus|value|
+|Stripes|Wereraptor For Fs|wrcursestart|value|
+|Stripes|Wereraptor For Fs|wrcurseactivity|value|
+|Stripes|Wereraptor For Fs|wrbodyname|value|
+|Stripes|Wereraptor For Fs|wrbody|value|
+|Stripes|Wereraptor For Fs|wrscalevalue|value|
+|Stripes|Wereraptor For Fs|wrbodydesc|value|
+|Stripes|Wereraptor For Fs|wrbodytype|value|
+|Stripes|Wereraptor For Fs|wrdaycycle|value|
+|Stripes|Wereraptor For Fs|wrfacename|value|
+|Stripes|Wereraptor For Fs|wrface|value|
+|Stripes|Wereraptor For Fs|wrskinname|value|
+|Stripes|Wereraptor For Fs|wrskin|value|
+|Stripes|Wereraptor For Fs|wrtailname|value|
+|Stripes|Wereraptor For Fs|wrtail|value|
+|Stripes|Wereraptor For Fs|wrcockname|value|
+|Stripes|Wereraptor For Fs|wrcock|value|
+|Stripes|Wereraptor For Fs|wrcurseholdback|value|
+|Stripes|Wereraptor For Fs|grhouse|value|
+|Stripes|Wereraptor For Fs|wrknifefight|value|
+|Stripes|Wereraptor For Fs|wrdinoskel|value|
 |Nuku Valente|Pets|20140908213124/756:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Pets|Pet|kind|
 |Nuku Valente|Pets|Nullpet|Pet|
@@ -883,24 +883,24 @@
 |Sarokcat|Stablemasters|lastSlutslavelearned|value|
 |Sarokcat|Stablemasters|Slutslavelearned|value|
 |Sarokcat|Stablemasters|Slavelearning|action|
-|Sweraptor|Approaching The Capitol Building|20140908213124/1580:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Approaching The Capitol Building|Government Assistance|situation|
-|Sweraptor|Approaching The Capitol Building|Approaching the Capitol Building|room|
-|Sweraptor|Approaching The Capitol Building|Charred Streets|room|
-|Sweraptor|Approaching The Capitol Building|The Path of Ashes|room|
-|Sweraptor|Approaching The Capitol Building|A Volcanic Crater|room|
-|Sweraptor|Approaching The Capitol Building|Rusty Walkways|room|
-|Sweraptor|Approaching The Capitol Building|Fiery Ruins|door|
-|Sweraptor|Approaching The Capitol Building|Capitol Ruins|room|
-|Hellerhound|Underwater Zone|20140908213124/1427:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Underwater Zone|Gill Fruits Tree|situation|
-|Hellerhound|Underwater Zone|gill fruit|Grab Object|
-|Hellerhound|Underwater Zone|Sloping Sand|room|
-|Hellerhound|Underwater Zone|Coral Ring|room|
-|Hellerhound|Underwater Zone|Sunken Ship|room|
-|Hellerhound|Underwater Zone|sea dragon cum|Grab Object|
-|Hellerhound|Underwater Zone|hasgills|value|
-|Hellerhound|Underwater Zone|swimtoing|action|
+|Sweraptor|Approaching The Capitol Building For Fs|20140908213124/1580:Mon 8 September 2014 21:31|indexing|
+|Sweraptor|Approaching The Capitol Building For Fs|Government Assistance|situation|
+|Sweraptor|Approaching The Capitol Building For Fs|Approaching the Capitol Building|room|
+|Sweraptor|Approaching The Capitol Building For Fs|Charred Streets|room|
+|Sweraptor|Approaching The Capitol Building For Fs|The Path of Ashes|room|
+|Sweraptor|Approaching The Capitol Building For Fs|A Volcanic Crater|room|
+|Sweraptor|Approaching The Capitol Building For Fs|Rusty Walkways|room|
+|Sweraptor|Approaching The Capitol Building For Fs|Fiery Ruins|door|
+|Sweraptor|Approaching The Capitol Building For Fs|Capitol Ruins|room|
+|Hellerhound|Underwater Zone For Fs|20140908213124/1427:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Underwater Zone For Fs|Gill Fruits Tree|situation|
+|Hellerhound|Underwater Zone For Fs|gill fruit|Grab Object|
+|Hellerhound|Underwater Zone For Fs|Sloping Sand|room|
+|Hellerhound|Underwater Zone For Fs|Coral Ring|room|
+|Hellerhound|Underwater Zone For Fs|Sunken Ship|room|
+|Hellerhound|Underwater Zone For Fs|sea dragon cum|Grab Object|
+|Hellerhound|Underwater Zone For Fs|hasgills|value|
+|Hellerhound|Underwater Zone For Fs|swimtoing|action|
 |Hellerhound|Power Plant|20140908213124/2380:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Power Plant|Ravaged power plant|situation|
 |Hellerhound|Power Plant|Generator Parts|situation|
@@ -973,74 +973,74 @@
 |Hellerhound|Qytat A'th Lundrues|findablestairs|value|
 |Hellerhound|Qytat A'th Lundrues|staircaselocation|value|
 |Hellerhound|Qytat A'th Lundrues|shadowy|value|
-|Stripes|Campus|20140908213124/1107:Mon 8 September 2014 21:31|indexing|
-|Stripes|Campus|Reaching the College|situation|
-|Stripes|Campus|College Campus|room|
-|Stripes|Campus|Campus Grounds|door|
-|Stripes|Campus|Exploring the Campus|room|
-|Stripes|Urban Forest|20140908213124/264:Mon 8 September 2014 21:31|indexing|
-|Stripes|Urban Forest|Urban Forest|room|
-|Stripes|Urban Forest|Forested Path|door|
-|Stripes|Urban Forest|Murky Forest|room|
-|Stripes|Hospital|20140908213124/28278:Mon 8 September 2014 21:31|indexing|
-|Stripes|Hospital|City Hospital|room|
-|Stripes|Hospital|Hospital Halls|door|
-|Stripes|Hospital|Hospital interior|room|
-|Stripes|Hospital|Hung Like A|situation|
-|Stripes|Hospital|Pharmaceutical Storage|situation|
-|Stripes|Hospital|Ambulance Dock|situation|
-|Stripes|Hospital|Operating Room|situation|
-|Stripes|Hospital|bonesaw|armament|
-|Stripes|Hospital|Staff Lounge|situation|
-|Stripes|Hospital|Interruption|situation|
-|Stripes|Hospital|Maternity Ward|situation|
-|Stripes|Hospital|Radiology|situation|
-|Stripes|Hospital|Pathology|situation|
-|Stripes|Hospital|Cafeteria|situation|
-|Stripes|Hospital|Chaplaincy|situation|
-|Stripes|Hospital|Records Room|situation|
-|Stripes|Hospital|Surrounding Area|situation|
-|Stripes|Hospital|Stairwell|situation|
-|Stripes|Hospital|Locked stairwell|door|
-|Stripes|Hospital|Hidden Lab|room|
-|Stripes|Hospital|Finding a Way in|situation|
-|Stripes|Hospital|Doctor Mouse|person|
-|Stripes|Hospital|scientific device|Grab Object|
-|Stripes|Hospital|Loading Dock|room|
-|Stripes|Hospital|undergroundlab|door|
-|Stripes|Hospital|darkbasement2|room|
-|Stripes|Hospital|aroundthehill|door|
-|Stripes|Hospital|Dinosaur Nest|situation|
-|Stripes|Hospital|lava lamp|Grab Object|
-|Stripes|Hospital|Viking Longboat|situation|
-|Stripes|Hospital|spear|armament|
-|Stripes|Hospital|package|Grab Object|
-|Stripes|Hospital|hospnav|value|
-|Stripes|Hospital|hospstairs|value|
-|Stripes|Hospital|lastDrMousefucked|value|
-|Stripes|Hospital|hospquest|value|
-|Stripes|Hospital|hospcountdown|value|
-|Stripes|Hospital|nerminepackage|value|
-|Stripes|Hospital|sabtoothed|value|
-|Stripes|Hospital|triclamped|value|
-|Stripes|Hospital|nerminepackagematt|value|
-|Stripes|Hospital|sabtoothedmatt|value|
-|Stripes|Hospital|triclampedmatt|value|
-|Stripes|Hospital|mattcollection|value|
-|Stripes|Hospital|hospbattlelost|value|
-|Stripes|Hospital|hospfight|value|
-|Stripes|Hospital|fightstatus|value|
-|Stripes|Hospital|altsealedentrance|value|
-|Stripes|Hospital|nesteddino|value|
-|Stripes|Hospital|dinonest|value|
-|Stripes|Hospital|dnfightresult|value|
-|Stripes|Hospital|valhosp|value|
-|Stripes|Hospital|lavalamplick|value|
-|Stripes|Hospital|lbfight|value|
-|Stripes|Hospital|longboatfind|value|
-|Stripes|Hospital|rondahosp|value|
-|Stripes|Hospital|rodhosp|value|
-|Stripes|Hospital|progress|property|
+|Stripes|Campus For Fs|20140908213124/1107:Mon 8 September 2014 21:31|indexing|
+|Stripes|Campus For Fs|Reaching the College|situation|
+|Stripes|Campus For Fs|College Campus|room|
+|Stripes|Campus For Fs|Campus Grounds|door|
+|Stripes|Campus For Fs|Exploring the Campus|room|
+|Stripes|Urban Forest For Fs|20140908213124/264:Mon 8 September 2014 21:31|indexing|
+|Stripes|Urban Forest For Fs|Urban Forest|room|
+|Stripes|Urban Forest For Fs|Forested Path|door|
+|Stripes|Urban Forest For Fs|Murky Forest|room|
+|Stripes|Hospital For Fs|20140908213124/28278:Mon 8 September 2014 21:31|indexing|
+|Stripes|Hospital For Fs|City Hospital|room|
+|Stripes|Hospital For Fs|Hospital Halls|door|
+|Stripes|Hospital For Fs|Hospital interior|room|
+|Stripes|Hospital For Fs|Hung Like A|situation|
+|Stripes|Hospital For Fs|Pharmaceutical Storage|situation|
+|Stripes|Hospital For Fs|Ambulance Dock|situation|
+|Stripes|Hospital For Fs|Operating Room|situation|
+|Stripes|Hospital For Fs|bonesaw|armament|
+|Stripes|Hospital For Fs|Staff Lounge|situation|
+|Stripes|Hospital For Fs|Interruption|situation|
+|Stripes|Hospital For Fs|Maternity Ward|situation|
+|Stripes|Hospital For Fs|Radiology|situation|
+|Stripes|Hospital For Fs|Pathology|situation|
+|Stripes|Hospital For Fs|Cafeteria|situation|
+|Stripes|Hospital For Fs|Chaplaincy|situation|
+|Stripes|Hospital For Fs|Records Room|situation|
+|Stripes|Hospital For Fs|Surrounding Area|situation|
+|Stripes|Hospital For Fs|Stairwell|situation|
+|Stripes|Hospital For Fs|Locked stairwell|door|
+|Stripes|Hospital For Fs|Hidden Lab|room|
+|Stripes|Hospital For Fs|Finding a Way in|situation|
+|Stripes|Hospital For Fs|Doctor Mouse|person|
+|Stripes|Hospital For Fs|scientific device|Grab Object|
+|Stripes|Hospital For Fs|Loading Dock|room|
+|Stripes|Hospital For Fs|undergroundlab|door|
+|Stripes|Hospital For Fs|darkbasement2|room|
+|Stripes|Hospital For Fs|aroundthehill|door|
+|Stripes|Hospital For Fs|Dinosaur Nest|situation|
+|Stripes|Hospital For Fs|lava lamp|Grab Object|
+|Stripes|Hospital For Fs|Viking Longboat|situation|
+|Stripes|Hospital For Fs|spear|armament|
+|Stripes|Hospital For Fs|package|Grab Object|
+|Stripes|Hospital For Fs|hospnav|value|
+|Stripes|Hospital For Fs|hospstairs|value|
+|Stripes|Hospital For Fs|lastDrMousefucked|value|
+|Stripes|Hospital For Fs|hospquest|value|
+|Stripes|Hospital For Fs|hospcountdown|value|
+|Stripes|Hospital For Fs|nerminepackage|value|
+|Stripes|Hospital For Fs|sabtoothed|value|
+|Stripes|Hospital For Fs|triclamped|value|
+|Stripes|Hospital For Fs|nerminepackagematt|value|
+|Stripes|Hospital For Fs|sabtoothedmatt|value|
+|Stripes|Hospital For Fs|triclampedmatt|value|
+|Stripes|Hospital For Fs|mattcollection|value|
+|Stripes|Hospital For Fs|hospbattlelost|value|
+|Stripes|Hospital For Fs|hospfight|value|
+|Stripes|Hospital For Fs|fightstatus|value|
+|Stripes|Hospital For Fs|altsealedentrance|value|
+|Stripes|Hospital For Fs|nesteddino|value|
+|Stripes|Hospital For Fs|dinonest|value|
+|Stripes|Hospital For Fs|dnfightresult|value|
+|Stripes|Hospital For Fs|valhosp|value|
+|Stripes|Hospital For Fs|lavalamplick|value|
+|Stripes|Hospital For Fs|lbfight|value|
+|Stripes|Hospital For Fs|longboatfind|value|
+|Stripes|Hospital For Fs|rondahosp|value|
+|Stripes|Hospital For Fs|rodhosp|value|
+|Stripes|Hospital For Fs|progress|property|
 |Stripes|Equinoid Camp|20140908213124/4492:Mon 8 September 2014 21:31|indexing|
 |Stripes|Equinoid Camp|Equinoid Camp|room|
 |Stripes|Equinoid Camp|Nakoma's Tent|room|
@@ -1406,7 +1406,7 @@
 |Stripes|Bouncy Castle|bcsliding|action|
 |Stripes|Bouncy Castle|dolchecklisting|action|
 |Stripes|Bouncy Castle|dolchecking|action|
-|Stripes|Sea Lion And Orca|20140908213124/1196:Mon 8 September 2014 21:31|indexing|
+|Stripes|Sea Lion And Orca For Fs|20140908213124/1196:Mon 8 September 2014 21:31|indexing|
 |Hiccup|Random Events|20140908213124/716:Mon 8 September 2014 21:31|indexing|
 |Hiccup|Random Events|Film|situation|
 |Hiccup|Random Events|Wet Clothes|situation|
@@ -1595,12 +1595,12 @@
 |Sarokcat|Museum Events|Missing lamp|situation|
 |Sarokcat|Museum Events|Night Watchmen Uniform|situation|
 |Sarokcat|Museum Events|Art appreciation|situation|
-|Stripes|Museum Rounds|20140908213124/10243:Mon 8 September 2014 21:31|indexing|
-|Stripes|Museum Rounds|mrevents|value|
-|Stripes|Museum Rounds|mre01|value|
-|Stripes|Museum Rounds|mre02|value|
-|Stripes|Museum Rounds|mre04|value|
-|Stripes|Museum Rounds|museumrounding|action|
+|Stripes|Museum Rounds For Fs|20140908213124/10243:Mon 8 September 2014 21:31|indexing|
+|Stripes|Museum Rounds For Fs|mrevents|value|
+|Stripes|Museum Rounds For Fs|mre01|value|
+|Stripes|Museum Rounds For Fs|mre02|value|
+|Stripes|Museum Rounds For Fs|mre04|value|
+|Stripes|Museum Rounds For Fs|museumrounding|action|
 |Sarokcat|Zoo Events|20140908213124/5399:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Zoo Events|Hyena cages|situation|
 |Sarokcat|Zoo Events|Pachyderm predicament|situation|
@@ -1651,10 +1651,10 @@
 |Stripeguy|Warehouse Events|union break|situation|
 |Stripeguy|Warehouse Events|hot stepping|situation|
 |Stripeguy|Warehouse Events|crate shuffle|situation|
-|Hellerhound|Infected Pool|20140908213124/751:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Infected Pool|Pure pool|situation|
-|Hellerhound|Infected Pool|purpol|value|
-|Hellerhound|Infected Pool|purpolu|value|
+|Hellerhound|Infected Pool For Fs|20140908213124/751:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Infected Pool For Fs|Pure pool|situation|
+|Hellerhound|Infected Pool For Fs|purpol|value|
+|Hellerhound|Infected Pool For Fs|purpolu|value|
 |Hellerhound|Hyena Situations|20140908213124/568:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Hyena Situations|Intact Fountain|situation|
 |Hellerhound|Catapult Encounter|20140908213124/626:Mon 8 September 2014 21:31|indexing|
@@ -1723,19 +1723,19 @@
 |Nuku Valente|Combat Helmet|combat helmet|Equipment|
 |Nuku Valente|Combat Helmet|lost gear|situation|
 |Nuku Valente|Combat Helmet|lgnumber|value|
-|Hellerhound|Odd Weapons|20140908213124/1873:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Odd Weapons|dirty whip|armament|
-|Hellerhound|Odd Weapons|horse whip|armament|
-|Hellerhound|Odd Weapons|infected sword|armament|
-|Hellerhound|Odd Weapons|garbage can lid|Equipment|
-|Hellerhound|Odd Weapons|Smelly garbage|scavevent|
-|Hellerhound|Odd Weapons|Sword Nest|situation|
-|Hellerhound|Odd Weapons|Destroyed Bushes|situation|
-|Hellerhound|Odd Weapons|gotsword|value|
-|Hellerhound|Odd Weapons|washerenest|value|
-|Hellerhound|Odd Weapons|fellforward|value|
-|Hellerhound|Odd Weapons|numwater|value|
-|Hellerhound|Odd Weapons|gotwhip|value|
+|Hellerhound|Odd Weapons For Fs|20140908213124/1873:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Odd Weapons For Fs|dirty whip|armament|
+|Hellerhound|Odd Weapons For Fs|horse whip|armament|
+|Hellerhound|Odd Weapons For Fs|infected sword|armament|
+|Hellerhound|Odd Weapons For Fs|garbage can lid|Equipment|
+|Hellerhound|Odd Weapons For Fs|Smelly garbage|scavevent|
+|Hellerhound|Odd Weapons For Fs|Sword Nest|situation|
+|Hellerhound|Odd Weapons For Fs|Destroyed Bushes|situation|
+|Hellerhound|Odd Weapons For Fs|gotsword|value|
+|Hellerhound|Odd Weapons For Fs|washerenest|value|
+|Hellerhound|Odd Weapons For Fs|fellforward|value|
+|Hellerhound|Odd Weapons For Fs|numwater|value|
+|Hellerhound|Odd Weapons For Fs|gotwhip|value|
 |Hellerhound|Control Pills|20140908213124/628:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Control Pills|birth control pill|Grab Object|
 |Hellerhound|Control Pills|fertile pill|Grab Object|
@@ -1754,9 +1754,9 @@
 |Hellerhound|Smell|dirty bottle|thing|
 |Hellerhound|Smell|sniffing|action|
 |Hellerhound|Smell|heresniffing|action|
-|Mirumu|Inventory Management Enhancements|20140908213124/325:Mon 8 September 2014 21:31|indexing|
-|Mirumu|Inventory Management Enhancements|masslittering|action|
-|Mirumu|Inventory Management Enhancements|criminallittering|action|
+|Mirumu|Inventory Management Enhancements For Fs|20140908213124/325:Mon 8 September 2014 21:31|indexing|
+|Mirumu|Inventory Management Enhancements For Fs|masslittering|action|
+|Mirumu|Inventory Management Enhancements For Fs|criminallittering|action|
 |Nuku Valente|Story Skipper|20140908213124/24486:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Story Skipper|Trixie|person|
 |Nuku Valente|Story Skipper|trixsavetext1|value|
@@ -1936,36 +1936,36 @@
 |Wahn|Satyr Frat|Let's Party|situation|
 |Wahn|Satyr Frat|SatyrFratPartyStage|value|
 |Wahn|Satyr Frat|SatyrFratRichardRelationship|value|
-|Damaged|Wyvern|20140908213124/26093:Mon 8 September 2014 21:31|indexing|
-|Damaged|Wyvern|WYVGEN|value|
-|Damaged|Wyvern|WYVLEV|value|
-|Damaged|Wyvern|WYVSF|value|
-|Damaged|Wyvern|ghis|value|
-|Damaged|Wyvern|ghe|value|
-|Damaged|Wyvern|ghim|value|
-|Damaged|Wyvern|wyvorgyroll|value|
-|Damaged|Wyvern|wyvernbias|value|
-|Damaged|Wyvern|boundsegment|value|
-|Damaged|Wyvern|boundmod|value|
-|Damaged|Wyvern|boundcounter|value|
-|Damaged|Wyvern|wyvkin1gen|value|
-|Damaged|Wyvern|wyvkin2gen|value|
-|Damaged|Wyvern|wyvkin3gen|value|
-|Damaged|Wyvern|wyvkin4gen|value|
-|Damaged|Wyvern|wyvkinocc|value|
-|Damaged|Wyvern|wyvkin1att|value|
-|Damaged|Wyvern|wyvkin2att|value|
-|Damaged|Wyvern|wyvkin3att|value|
-|Damaged|Wyvern|wyvkin4att|value|
-|Damaged|Wyvern|wyvkinatt|value|
-|Damaged|Wyvern|wyvkin1lib|value|
-|Damaged|Wyvern|wyvkin2lib|value|
-|Damaged|Wyvern|wyvkin3lib|value|
-|Damaged|Wyvern|wyvkin4lib|value|
-|Damaged|Wyvern|wyvkinassign|value|
-|Damaged|Wyvern|pewterheadvar3|value|
-|Damaged|Wyvern|tempnum2|value|
-|Damaged|Wyvern|callwyvernbias|action|
+|Damaged|Wyvern For Fs|20140908213124/26093:Mon 8 September 2014 21:31|indexing|
+|Damaged|Wyvern For Fs|WYVGEN|value|
+|Damaged|Wyvern For Fs|WYVLEV|value|
+|Damaged|Wyvern For Fs|WYVSF|value|
+|Damaged|Wyvern For Fs|ghis|value|
+|Damaged|Wyvern For Fs|ghe|value|
+|Damaged|Wyvern For Fs|ghim|value|
+|Damaged|Wyvern For Fs|wyvorgyroll|value|
+|Damaged|Wyvern For Fs|wyvernbias|value|
+|Damaged|Wyvern For Fs|boundsegment|value|
+|Damaged|Wyvern For Fs|boundmod|value|
+|Damaged|Wyvern For Fs|boundcounter|value|
+|Damaged|Wyvern For Fs|wyvkin1gen|value|
+|Damaged|Wyvern For Fs|wyvkin2gen|value|
+|Damaged|Wyvern For Fs|wyvkin3gen|value|
+|Damaged|Wyvern For Fs|wyvkin4gen|value|
+|Damaged|Wyvern For Fs|wyvkinocc|value|
+|Damaged|Wyvern For Fs|wyvkin1att|value|
+|Damaged|Wyvern For Fs|wyvkin2att|value|
+|Damaged|Wyvern For Fs|wyvkin3att|value|
+|Damaged|Wyvern For Fs|wyvkin4att|value|
+|Damaged|Wyvern For Fs|wyvkinatt|value|
+|Damaged|Wyvern For Fs|wyvkin1lib|value|
+|Damaged|Wyvern For Fs|wyvkin2lib|value|
+|Damaged|Wyvern For Fs|wyvkin3lib|value|
+|Damaged|Wyvern For Fs|wyvkin4lib|value|
+|Damaged|Wyvern For Fs|wyvkinassign|value|
+|Damaged|Wyvern For Fs|pewterheadvar3|value|
+|Damaged|Wyvern For Fs|tempnum2|value|
+|Damaged|Wyvern For Fs|callwyvernbias|action|
 |Stripes|Candy Striper|20140908213124/15673:Mon 8 September 2014 21:31|indexing|
 |Stripes|Candy Striper|pink raccoon|Pet|
 |Stripes|Candy Striper|Candy|man|
@@ -1978,22 +1978,22 @@
 |Song|Black Equinoid|lucky horseshoe|Grab Object|
 |Song|Black Equinoid|equinoiddefeat|value|
 |Song|Black Equinoid|equinoidstatus|value|
-|Leo X|Demon Brute|20140908213124/45725:Mon 8 September 2014 21:31|indexing|
-|Leo X|Demon Brute|demon tooth|Grab Object|
-|Leo X|Demon Brute|demon brute|Pet|
-|Leo X|Demon Brute|demon seed|Grab Object|
-|Leo X|Demon Brute|DBCaptureQuestVar|value|
-|Leo X|Demon Brute|DemonBruteStatus|value|
-|Damaged|Awesome Tree|20140908213124/2125:Mon 8 September 2014 21:31|indexing|
-|Damaged|Awesome Tree|awesome fruit|Grab Object|
-|Damaged|Awesome Tree|awesomer fruit|Grab Object|
-|Damaged|Awesome Tree|awesomest fruit|Grab Object|
-|Damaged|Awesome Tree|awesome bat|armament|
-|Damaged|Awesome Tree|Awesome_sex|value|
-|Damaged|Awesome Tree|Awesome_boredom|value|
-|Damaged|Awesome Tree|Awesome_counter|value|
-|Damaged|Awesome Tree|Awesome_forcesex|value|
-|Damaged|Awesome Tree|Awesome_noreward|value|
+|Leo X|Demon Brute For Fs|20140908213124/45725:Mon 8 September 2014 21:31|indexing|
+|Leo X|Demon Brute For Fs|demon tooth|Grab Object|
+|Leo X|Demon Brute For Fs|demon brute|Pet|
+|Leo X|Demon Brute For Fs|demon seed|Grab Object|
+|Leo X|Demon Brute For Fs|DBCaptureQuestVar|value|
+|Leo X|Demon Brute For Fs|DemonBruteStatus|value|
+|Damaged|Awesome Tree For Fs|20140908213124/2125:Mon 8 September 2014 21:31|indexing|
+|Damaged|Awesome Tree For Fs|awesome fruit|Grab Object|
+|Damaged|Awesome Tree For Fs|awesomer fruit|Grab Object|
+|Damaged|Awesome Tree For Fs|awesomest fruit|Grab Object|
+|Damaged|Awesome Tree For Fs|awesome bat|armament|
+|Damaged|Awesome Tree For Fs|Awesome_sex|value|
+|Damaged|Awesome Tree For Fs|Awesome_boredom|value|
+|Damaged|Awesome Tree For Fs|Awesome_counter|value|
+|Damaged|Awesome Tree For Fs|Awesome_forcesex|value|
+|Damaged|Awesome Tree For Fs|Awesome_noreward|value|
 |Hellerhound|Centaur|20140908213124/4935:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Centaur|Dry Plains|room|
 |Hellerhound|Centaur|Plains Door|door|
@@ -2002,19 +2002,19 @@
 |Hellerhound|Centaur|fresh apple|Grab Object|
 |Hellerhound|Centaur|centaurmate|value|
 |Hellerhound|Centaur|compressedcock|value|
-|Damaged|Skunk|20140908213124/3751:Mon 8 September 2014 21:31|indexing|
-|Damaged|Skunk|Skunk Goo|Grab Object|
-|Damaged|Skunk|skunkready|value|
-|Damaged|Skunk|Skunk_type|value|
-|Damaged|Skunk|skunkfight|value|
+|Damaged|Skunk For Fs|20140908213124/3751:Mon 8 September 2014 21:31|indexing|
+|Damaged|Skunk For Fs|Skunk Goo|Grab Object|
+|Damaged|Skunk For Fs|skunkready|value|
+|Damaged|Skunk For Fs|Skunk_type|value|
+|Damaged|Skunk For Fs|skunkfight|value|
 |Stripes|Skunkbeast Lord|20140908213124/14395:Mon 8 September 2014 21:31|indexing|
 |Stripes|Skunkbeast Lord|Skunkbeast Battle|situation|
 |Stripes|Skunkbeast Lord|skunkbeaststatus|value|
-|Stripes|Mental Mouse|20140908213124/6267:Mon 8 September 2014 21:31|indexing|
-|Stripes|Mental Mouse|cheese|Grab Object|
-|Stripes|Mental Mouse|mousecurse|value|
-|Stripes|Mental Mouse|mousevic|value|
-|Stripes|Mental Mouse|mousecounter|value|
+|Stripes|Mental Mouse For Fs|20140908213124/6267:Mon 8 September 2014 21:31|indexing|
+|Stripes|Mental Mouse For Fs|cheese|Grab Object|
+|Stripes|Mental Mouse For Fs|mousecurse|value|
+|Stripes|Mental Mouse For Fs|mousevic|value|
+|Stripes|Mental Mouse For Fs|mousecounter|value|
 |Blue Bishop|Sierrasaur|20140908213124/8319:Mon 8 September 2014 21:31|indexing|
 |Blue Bishop|Sierrasaur|Earthen Seed|Grab Object|
 |Blue Bishop|Sierrasaur|sierrapure|value|
@@ -2040,47 +2040,47 @@
 |Nuku Valente|Lusty Skunk|skunksister|value|
 |Nuku Valente|Lusty Skunk|skunkspot|value|
 |Nuku Valente|Lusty Skunk|Skunkform|action|
-|Stripes|Tigress Hooker|20140908213124/16514:Mon 8 September 2014 21:31|indexing|
-|Stripes|Tigress Hooker|motel key|Grab Object|
-|Stripes|Tigress Hooker|tempnum|value|
-|Stripes|Tigress Hooker|tigresswinner|value|
-|Stripes|Tigress Hooker|tigressfucked|value|
-|Stripes|Tigress Hooker|tigressclient|value|
-|Stripes|Tigress Hooker|stiffedpayment|value|
-|Stripes|Tigress Hooker|mqfightresult|value|
-|Xeylef|Parasitic Plant|20140908213124/10223:Mon 8 September 2014 21:31|indexing|
-|Xeylef|Parasitic Plant|Musky Cock Flower|Grab Object|
-|Xeylef|Parasitic Plant|didsubmit|value|
-|Xeylef|Parasitic Plant|plantdefeat|value|
-|Xeylef|Parasitic Plant|plantwin|value|
-|Xeylef|Parasitic Plant|ppatt|value|
-|Xeylef|Parasitic Plant|timetillrampage|value|
-|Xeylef|Parasitic Plant|addedlibido|value|
-|Xeylef|Parasitic Plant|keepskin|value|
-|Xeylef|Parasitic Plant|keepface|value|
-|Xeylef|Parasitic Plant|keeptail|value|
-|Xeylef|Parasitic Plant|keepbody|value|
-|Xeylef|Parasitic Plant|keepcock|value|
+|Stripes|Tigress Hooker For Fs|20140908213124/16514:Mon 8 September 2014 21:31|indexing|
+|Stripes|Tigress Hooker For Fs|motel key|Grab Object|
+|Stripes|Tigress Hooker For Fs|tempnum|value|
+|Stripes|Tigress Hooker For Fs|tigresswinner|value|
+|Stripes|Tigress Hooker For Fs|tigressfucked|value|
+|Stripes|Tigress Hooker For Fs|tigressclient|value|
+|Stripes|Tigress Hooker For Fs|stiffedpayment|value|
+|Stripes|Tigress Hooker For Fs|mqfightresult|value|
+|Xeylef|Parasitic Plant For Fs|20140908213124/10223:Mon 8 September 2014 21:31|indexing|
+|Xeylef|Parasitic Plant For Fs|Musky Cock Flower|Grab Object|
+|Xeylef|Parasitic Plant For Fs|didsubmit|value|
+|Xeylef|Parasitic Plant For Fs|plantdefeat|value|
+|Xeylef|Parasitic Plant For Fs|plantwin|value|
+|Xeylef|Parasitic Plant For Fs|ppatt|value|
+|Xeylef|Parasitic Plant For Fs|timetillrampage|value|
+|Xeylef|Parasitic Plant For Fs|addedlibido|value|
+|Xeylef|Parasitic Plant For Fs|keepskin|value|
+|Xeylef|Parasitic Plant For Fs|keepface|value|
+|Xeylef|Parasitic Plant For Fs|keeptail|value|
+|Xeylef|Parasitic Plant For Fs|keepbody|value|
+|Xeylef|Parasitic Plant For Fs|keepcock|value|
 |Sarokcat|Alpha Husky|20140908213124/7722:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Alpha Husky|husky gathering|situation|
 |Sarokcat|Alpha Husky|Alphahuskypet|value|
 |Sarokcat|Alpha Husky|losttoalphahusky|value|
-|Sweraptor|Ash Dragator|20140908213124/2687:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Dragator|ash dragon heart|Grab Object|
-|Sweraptor|Ash Dragator|dragatordefeat|value|
+|Sweraptor|Ash Dragator For Fs|20140908213124/2687:Mon 8 September 2014 21:31|indexing|
+|Sweraptor|Ash Dragator For Fs|ash dragon heart|Grab Object|
+|Sweraptor|Ash Dragator For Fs|dragatordefeat|value|
 |Sarokcat|Hyena Matriarch|20140908213124/6690:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Hyena Matriarch|matriarchdefeated|value|
 |Sarokcat|Hyena Matriarch|matriarchowned|value|
-|Stripes|Bald Eagle|20140908213124/2624:Mon 8 September 2014 21:31|indexing|
-|Stripes|Bald Eagle|eagle feather|Grab Object|
-|Stripes|Bald Eagle|eagledefeatnum|value|
-|Stripes|Bald Eagle|noeaglesex|value|
-|Stripes|Jaguar Orderly|20140908213124/5316:Mon 8 September 2014 21:31|indexing|
-|Stripes|Jaguar Orderly|libido suppressant|Grab Object|
-|Stripes|Jaguar Orderly|libsuppcount|value|
-|Stripes|Wolverine Guard|20140908213124/3720:Mon 8 September 2014 21:31|indexing|
-|Stripes|Wolverine Guard|wolvloc|value|
-|Stripes|Wolverine Guard|wolvfightresult|value|
+|Stripes|Bald Eagle For Fs|20140908213124/2624:Mon 8 September 2014 21:31|indexing|
+|Stripes|Bald Eagle For Fs|eagle feather|Grab Object|
+|Stripes|Bald Eagle For Fs|eagledefeatnum|value|
+|Stripes|Bald Eagle For Fs|noeaglesex|value|
+|Stripes|Jaguar Orderly For Fs|20140908213124/5316:Mon 8 September 2014 21:31|indexing|
+|Stripes|Jaguar Orderly For Fs|libido suppressant|Grab Object|
+|Stripes|Jaguar Orderly For Fs|libsuppcount|value|
+|Stripes|Wolverine Guard For Fs|20140908213124/3720:Mon 8 September 2014 21:31|indexing|
+|Stripes|Wolverine Guard For Fs|wolvloc|value|
+|Stripes|Wolverine Guard For Fs|wolvfightresult|value|
 |Batroo|Kangaroo|20140908213124/2328:Mon 8 September 2014 21:31|indexing|
 |Batroo|Kangaroo|kangaroodefeat|value|
 |Batroo|Kangaroo|rkrcheck|value|
@@ -2094,21 +2094,21 @@
 |Stripes|Naughty Nurse|vixgender|value|
 |Sarokcat|Sabretooth|20140908213124/6033:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Sabretooth|Chipped tooth|Grab Object|
-|Stripes|Anime Babe|20140908213124/9930:Mon 8 September 2014 21:31|indexing|
-|Stripes|Anime Babe|sticky sushi|Grab Object|
-|Stripes|Anime Babe|noanimebabesex|value|
-|Stripes|Anime Babe|animebabebodied|adjective|
-|Damaged|Small Feline And Lion|20140908213124/9976:Mon 8 September 2014 21:31|indexing|
-|Damaged|Small Feline And Lion|Feline_type|value|
-|Damaged|Small Feline And Lion|Feline_meow|value|
-|Damaged|Small Feline And Lion|Feline_attached|value|
-|Damaged|Small Feline And Lion|Feline_encountered|value|
-|Tentacle Specialist|Spidergirl|20140908213124/3182:Mon 8 September 2014 21:31|indexing|
-|Tentacle Specialist|Spidergirl|spider webbing|Grab Object|
-|Stripes|Bottlenose Toy|20140908213124/12139:Mon 8 September 2014 21:31|indexing|
-|Stripes|Bottlenose Toy|dolphinmode|value|
-|Stripes|Bottlenose Toy|dolphinflatablefight|value|
-|Stripes|Bottlenose Toy|dolinfloss|value|
+|Stripes|Anime Babe For Fs|20140908213124/9930:Mon 8 September 2014 21:31|indexing|
+|Stripes|Anime Babe For Fs|sticky sushi|Grab Object|
+|Stripes|Anime Babe For Fs|noanimebabesex|value|
+|Stripes|Anime Babe For Fs|animebabebodied|adjective|
+|Damaged|Small Feline And Lion For Fs|20140908213124/9976:Mon 8 September 2014 21:31|indexing|
+|Damaged|Small Feline And Lion For Fs|Feline_type|value|
+|Damaged|Small Feline And Lion For Fs|Feline_meow|value|
+|Damaged|Small Feline And Lion For Fs|Feline_attached|value|
+|Damaged|Small Feline And Lion For Fs|Feline_encountered|value|
+|Tentacle Specialist|Spidergirl For Fs|20140908213124/3182:Mon 8 September 2014 21:31|indexing|
+|Tentacle Specialist|Spidergirl For Fs|spider webbing|Grab Object|
+|Stripes|Bottlenose Toy For Fs|20140908213124/12139:Mon 8 September 2014 21:31|indexing|
+|Stripes|Bottlenose Toy For Fs|dolphinmode|value|
+|Stripes|Bottlenose Toy For Fs|dolphinflatablefight|value|
+|Stripes|Bottlenose Toy For Fs|dolinfloss|value|
 |Nuku Valente|Otter|20140908213124/4232:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Otter|Fish|Grab Object|
 |Nuku Valente|Otter|Otterdefeat|value|
@@ -2136,46 +2136,46 @@
 |Nuku Valente|Slutrat|ratdarts|action|
 |Nuku Valente|Slutrat|visittimes|property|
 |Nuku Valente|Slutrat|pooltable|property|
-|Stripes|Mall Rat|20140908213124/1872:Mon 8 September 2014 21:31|indexing|
-|Stripes|Mall Rat|mallratfaced|adjective|
-|Stripes|Mall Rat|mallratskinned|adjective|
-|Stripes|Mall Rat|mallratbodied|adjective|
-|Stripes|Mall Rat|mallratcocked|adjective|
-|Stripes|Mall Rat|mallrattailed|adjective|
-|Kazard|Random Tentacle Horror|20140908213124/9727:Mon 8 September 2014 21:31|indexing|
-|Kazard|Random Tentacle Horror|basement portal|door|
-|Kazard|Random Tentacle Horror|dark basement|room|
-|Kazard|Random Tentacle Horror|tentsubmit|value|
-|Kazard|Random Tentacle Horror|tentaclerape|value|
-|Kazard|Random Tentacle Horror|lasttentaclebattleoutcome|value|
-|Kazard|Random Tentacle Horror|eggplanted|value|
-|Kazard|Random Tentacle Horror|cuntsmall|value|
-|Kazard|Random Tentacle Horror|hascunt|value|
-|Kazard|Random Tentacle Horror|multicunt|value|
-|Kazard|Random Tentacle Horror|thmpregdetect|value|
-|Stripes|Mismatched Chimera|20140908213124/3122:Mon 8 September 2014 21:31|indexing|
-|Stripes|Mismatched Chimera|bodyselector|value|
-|Stripes|Mismatched Chimera|headdata|value|
-|Stripes|Mismatched Chimera|larmdata|value|
-|Stripes|Mismatched Chimera|rarmdata|value|
-|Stripes|Mismatched Chimera|torsodata|value|
-|Stripes|Mismatched Chimera|cockdata|value|
-|Stripes|Mismatched Chimera|llegdata|value|
-|Stripes|Mismatched Chimera|rlegdata|value|
-|Stripes|Mismatched Chimera|breastdata|value|
+|Stripes|Mall Rat For Fs|20140908213124/1872:Mon 8 September 2014 21:31|indexing|
+|Stripes|Mall Rat For Fs|mallratfaced|adjective|
+|Stripes|Mall Rat For Fs|mallratskinned|adjective|
+|Stripes|Mall Rat For Fs|mallratbodied|adjective|
+|Stripes|Mall Rat For Fs|mallratcocked|adjective|
+|Stripes|Mall Rat For Fs|mallrattailed|adjective|
+|Kazard|Random Tentacle Horror For Fs|20140908213124/9727:Mon 8 September 2014 21:31|indexing|
+|Kazard|Random Tentacle Horror For Fs|basement portal|door|
+|Kazard|Random Tentacle Horror For Fs|dark basement|room|
+|Kazard|Random Tentacle Horror For Fs|tentsubmit|value|
+|Kazard|Random Tentacle Horror For Fs|tentaclerape|value|
+|Kazard|Random Tentacle Horror For Fs|lasttentaclebattleoutcome|value|
+|Kazard|Random Tentacle Horror For Fs|eggplanted|value|
+|Kazard|Random Tentacle Horror For Fs|cuntsmall|value|
+|Kazard|Random Tentacle Horror For Fs|hascunt|value|
+|Kazard|Random Tentacle Horror For Fs|multicunt|value|
+|Kazard|Random Tentacle Horror For Fs|thmpregdetect|value|
+|Stripes|Mismatched Chimera For Fs|20140908213124/3122:Mon 8 September 2014 21:31|indexing|
+|Stripes|Mismatched Chimera For Fs|bodyselector|value|
+|Stripes|Mismatched Chimera For Fs|headdata|value|
+|Stripes|Mismatched Chimera For Fs|larmdata|value|
+|Stripes|Mismatched Chimera For Fs|rarmdata|value|
+|Stripes|Mismatched Chimera For Fs|torsodata|value|
+|Stripes|Mismatched Chimera For Fs|cockdata|value|
+|Stripes|Mismatched Chimera For Fs|llegdata|value|
+|Stripes|Mismatched Chimera For Fs|rlegdata|value|
+|Stripes|Mismatched Chimera For Fs|breastdata|value|
 |Sarokcat|Rubber Tigress|20140908213124/4260:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Rubber Tigress|Tiger patch|Grab Object|
 |Sweraptor|Ash Drakenoid|20140908213124/3042:Mon 8 September 2014 21:31|indexing|
 |Sweraptor|Ash Drakenoid|blanchefight|value|
-|Stripes|Vulpogryph|20140908213124/899:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cerberus|20140908213124/7809:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cerberus|cerbfight|value|
-|Stripes|Cerberus|cerberusarousal|value|
-|Stripes|Cerberus|cerbmaulcount|value|
+|Stripes|Vulpogryph For Fs|20140908213124/899:Mon 8 September 2014 21:31|indexing|
+|Stripes|Cerberus For Fs|20140908213124/7809:Mon 8 September 2014 21:31|indexing|
+|Stripes|Cerberus For Fs|cerbfight|value|
+|Stripes|Cerberus For Fs|cerberusarousal|value|
+|Stripes|Cerberus For Fs|cerbmaulcount|value|
 |Sarokcat|Cheetah|20140908213124/6013:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Cheetah|cheetah milk|Grab Object|
-|Stripes|Rhino|20140908213124/1795:Mon 8 September 2014 21:31|indexing|
-|Stripes|Rhino|rhino cum|Grab Object|
+|Stripes|Rhino For Fs|20140908213124/1795:Mon 8 September 2014 21:31|indexing|
+|Stripes|Rhino For Fs|rhino cum|Grab Object|
 |Darthan|Gels|20140908213124/8299:Mon 8 September 2014 21:31|indexing|
 |Darthan|Gels|pink gel|Grab Object|
 |Darthan|Gels|blue gel|Grab Object|
@@ -2188,86 +2188,86 @@
 |Sarokcat|Pirate Shark|20140908213124/4905:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Pirate Shark|pirate bandana|Grab Object|
 |Sarokcat|Pirate Shark|nopiratesharksex|value|
-|Nuku Valente|Bear|20140908213124/2893:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Bear|honeycomb|Grab Object|
-|Nuku Valente|Bear|ursinedefeat|value|
+|Nuku Valente|Bear For Fs|20140908213124/2893:Mon 8 September 2014 21:31|indexing|
+|Nuku Valente|Bear For Fs|honeycomb|Grab Object|
+|Nuku Valente|Bear For Fs|UrsineDefeatCount|value|
 |Wahn|Hulking Cheerleader|20140908213124/3983:Mon 8 September 2014 21:31|indexing|
 |Wahn|Hulking Cheerleader|CheerleaderFirstEncounter|value|
-|Stripes|Friendship Pony|20140908213124/6910:Mon 8 September 2014 21:31|indexing|
-|Stripes|Friendship Pony|pony cider|Grab Object|
-|Stripes|Friendship Pony|rfponytype|value|
-|Stripes|Friendship Pony|rfponycolor1|value|
-|Stripes|Friendship Pony|rfponycolor2|value|
-|Stripes|Friendship Pony|rfponybm|value|
-|Stripes|Friendship Pony|nofponysex|value|
-|Stripes|Friendship Pony|rfpc1|value|
-|Stripes|Friendship Pony|rfpc2|value|
-|Stripes|Friendship Pony|rfpbm|value|
-|Stripes|Friendship Pony|pfpbmlist|value|
-|Stripes|Friendship Pony|pfpclist|value|
-|Stripes|Friendship Pony|pfptype|value|
-|Stripes|Friendship Pony|pfpskin|value|
-|Stripes|Friendship Pony|pfpcock|value|
-|Stripes|Friendship Pony|pfphair|value|
-|Stripes|Friendship Pony|pfpbootymark|value|
-|Stripes|Friendship Pony|unpony|adjective|
-|Stripes|Friendship Pony|fponyfaced|adjective|
-|Stripes|Friendship Pony|fponyskinned|adjective|
-|Stripes|Friendship Pony|fponybodied|adjective|
-|Stripes|Friendship Pony|fponycocked|adjective|
-|Stripes|Friendship Pony|fponytailed|adjective|
+|Stripes|Friendship Pony For Fs|20140908213124/6910:Mon 8 September 2014 21:31|indexing|
+|Stripes|Friendship Pony For Fs|pony cider|Grab Object|
+|Stripes|Friendship Pony For Fs|rfponytype|value|
+|Stripes|Friendship Pony For Fs|rfponycolour1|value|
+|Stripes|Friendship Pony For Fs|rfponycolour2|value|
+|Stripes|Friendship Pony For Fs|rfponybm|value|
+|Stripes|Friendship Pony For Fs|nofponysex|value|
+|Stripes|Friendship Pony For Fs|rfpc1|value|
+|Stripes|Friendship Pony For Fs|rfpc2|value|
+|Stripes|Friendship Pony For Fs|rfpbm|value|
+|Stripes|Friendship Pony For Fs|pfpbmlist|value|
+|Stripes|Friendship Pony For Fs|pfpclist|value|
+|Stripes|Friendship Pony For Fs|pfptype|value|
+|Stripes|Friendship Pony For Fs|pfpskin|value|
+|Stripes|Friendship Pony For Fs|pfpcock|value|
+|Stripes|Friendship Pony For Fs|pfphair|value|
+|Stripes|Friendship Pony For Fs|pfpbootymark|value|
+|Stripes|Friendship Pony For Fs|unpony|adjective|
+|Stripes|Friendship Pony For Fs|fponyfaced|adjective|
+|Stripes|Friendship Pony For Fs|fponyskinned|adjective|
+|Stripes|Friendship Pony For Fs|fponybodied|adjective|
+|Stripes|Friendship Pony For Fs|fponycocked|adjective|
+|Stripes|Friendship Pony For Fs|fponytailed|adjective|
 |Sarokcat|Satyr|20140908213124/4978:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Satyr|Satyr Wine|Grab Object|
 |Sarokcat|Satyr|beatsatyr|value|
-|Stripes|Centaur Stallion|20140908213124/3355:Mon 8 September 2014 21:31|indexing|
-|Stripes|Centaur Stallion|centaur cum|Grab Object|
-|Stripes|Centaur Stallion|centaur hair|Grab Object|
+|Stripes|Centaur Stallion For Fs|20140908213124/3355:Mon 8 September 2014 21:31|indexing|
+|Stripes|Centaur Stallion For Fs|centaur cum|Grab Object|
+|Stripes|Centaur Stallion For Fs|centaur hair|Grab Object|
 |Wahn|Orc Infections|20140908213124/7866:Mon 8 September 2014 21:31|indexing|
 |Wahn|Orc Infections|orc brew|Grab Object|
 |Wahn|Orc Infections|orc cum|Grab Object|
 |Wahn|Orc Infections|OrcSpecialFightNumber|value|
 |Wahn|Orc Infections|OrcCocked|adjective|
-|Stripes|Tiger Cop|20140908213124/14702:Mon 8 September 2014 21:31|indexing|
-|Stripes|Tiger Cop|Policeman|situation|
-|Stripes|Tiger Cop|Police Car|room|
-|Stripes|Tiger Cop|Sgt Marks|man|
-|Stripes|Tiger Cop|nightstick|armament|
-|Stripes|Tiger Cop|keycollection|value|
-|Stripes|Tiger Cop|mqstatus|value|
-|Stripes|Tiger Cop|mqcountdown|value|
-|Stripes|Tiger Cop|nsgained|value|
-|Stripes|Tiger Cop|mqpickup|value|
-|Stripes|Tiger Cop|sgtmarkstalk|value|
+|Stripes|Tiger Cop For Fs|20140908213124/14702:Mon 8 September 2014 21:31|indexing|
+|Stripes|Tiger Cop For Fs|Policeman|situation|
+|Stripes|Tiger Cop For Fs|Police Car|room|
+|Stripes|Tiger Cop For Fs|Sgt Marks|man|
+|Stripes|Tiger Cop For Fs|nightstick|armament|
+|Stripes|Tiger Cop For Fs|keycollection|value|
+|Stripes|Tiger Cop For Fs|mqstatus|value|
+|Stripes|Tiger Cop For Fs|mqcountdown|value|
+|Stripes|Tiger Cop For Fs|nsgained|value|
+|Stripes|Tiger Cop For Fs|mqpickup|value|
+|Stripes|Tiger Cop For Fs|sgtmarkstalk|value|
 |Wahn|Spidertaur Male|20140908213124/18993:Mon 8 September 2014 21:31|indexing|
 |Wahn|Spidertaur Male|spidertaur hair|Grab Object|
 |Wahn|Spidertaur Male|silk hammock|Grab Object|
 |Wahn|Spidertaur Male|Spider's Web|room|
 |Wahn|Spidertaur Male|Aelias|man|
 |Wahn|Spidertaur Male|SpidertaurRelationship|value|
-|Mirumu|Butterfly|20140908213124/20322:Mon 8 September 2014 21:31|indexing|
-|Mirumu|Butterfly|ButterflyBaby|person|
-|Mirumu|Butterfly|testosterone pill|Grab Object|
-|Mirumu|Butterfly|pristine negligee|Grab Object|
-|Mirumu|Butterfly|damaged negligee|Grab Object|
-|Mirumu|Butterfly|cute panties|Grab Object|
-|Mirumu|Butterfly|Butterfly Grove|room|
-|Mirumu|Butterfly|Lingerie Store|room|
-|Mirumu|Butterfly|ButterflyForeplay|value|
-|Mirumu|Butterfly|ButterflyRaped|value|
-|Mirumu|Butterfly|ButterflyPregnant|value|
-|Mirumu|Butterfly|ButterflyBreastDesc|value|
-|Mirumu|Butterfly|ButterflyNegligeeTorn|value|
-|Mirumu|Butterfly|ButterflyLikesYou|value|
-|Mirumu|Butterfly|ButterflyLove|value|
-|Mirumu|Butterfly|ButterflyRevenge|value|
-|Mirumu|Butterfly|ButterflyProcreated|value|
-|Mirumu|Butterfly|ButterflyPantiesFound|value|
-|Mirumu|Butterfly|ButterflyTummy|value|
-|Mirumu|Butterfly|ButterflyEncounters|value|
-|Mirumu|Butterfly|ButterflyHasNegligee|value|
-|Mirumu|Butterfly|ButterflyAttire|value|
-|Mirumu|Butterfly|bmagic|value|
-|Mirumu|Butterfly|bcupsize|value|
+|Mirumu|Butterfly For Fs|20140908213124/20322:Mon 8 September 2014 21:31|indexing|
+|Mirumu|Butterfly For Fs|ButterflyBaby|person|
+|Mirumu|Butterfly For Fs|testosterone pill|Grab Object|
+|Mirumu|Butterfly For Fs|pristine negligee|Grab Object|
+|Mirumu|Butterfly For Fs|damaged negligee|Grab Object|
+|Mirumu|Butterfly For Fs|cute panties|Grab Object|
+|Mirumu|Butterfly For Fs|Butterfly Grove|room|
+|Mirumu|Butterfly For Fs|Lingerie Store|room|
+|Mirumu|Butterfly For Fs|ButterflyForeplay|value|
+|Mirumu|Butterfly For Fs|ButterflyRaped|value|
+|Mirumu|Butterfly For Fs|ButterflyPregnant|value|
+|Mirumu|Butterfly For Fs|ButterflyBreastDesc|value|
+|Mirumu|Butterfly For Fs|ButterflyNegligeeTorn|value|
+|Mirumu|Butterfly For Fs|ButterflyLikesYou|value|
+|Mirumu|Butterfly For Fs|ButterflyLove|value|
+|Mirumu|Butterfly For Fs|ButterflyRevenge|value|
+|Mirumu|Butterfly For Fs|ButterflyProcreated|value|
+|Mirumu|Butterfly For Fs|ButterflyPantiesFound|value|
+|Mirumu|Butterfly For Fs|ButterflyTummy|value|
+|Mirumu|Butterfly For Fs|ButterflyEncounters|value|
+|Mirumu|Butterfly For Fs|ButterflyHasNegligee|value|
+|Mirumu|Butterfly For Fs|ButterflyAttire|value|
+|Mirumu|Butterfly For Fs|bmagic|value|
+|Mirumu|Butterfly For Fs|bcupsize|value|
 |Wahn|Viking|20140908213124/28238:Mon 8 September 2014 21:31|indexing|
 |Wahn|Viking|Chieftain's Challenge|situation|
 |Wahn|Viking|Viking Ship|room|
@@ -2297,21 +2297,21 @@
 |Nuku Valente|Gator|Gator Den|room|
 |Nuku Valente|Gator|gatordefeat|value|
 |Nuku Valente|Gator|gatorconsent|value|
-|Stripes|Margay|20140908213124/5916:Mon 8 September 2014 21:31|indexing|
-|Stripes|Margay|margay milk|Grab Object|
-|Stripes|Margay|margaydancecount|value|
-|Stripes|Margay|margayubed|value|
-|Stripes|Margay|margaymet|value|
-|Stripes|Xeno|20140908213124/4271:Mon 8 September 2014 21:31|indexing|
-|Stripes|Xeno|acid milk|Grab Object|
-|Stripes|Xeno|xenofaced|adjective|
-|Stripes|Xeno|xenoskinned|adjective|
-|Stripes|Xeno|xenobodied|adjective|
-|Stripes|Xeno|xenococked|adjective|
-|Stripes|Xeno|xenotailed|adjective|
-|Damaged|Alien Felinoid|20140908213124/4469:Mon 8 September 2014 21:31|indexing|
-|Damaged|Alien Felinoid|catnum|value|
-|Damaged|Alien Felinoid|mateable|value|
+|Stripes|Margay For Fs|20140908213124/5916:Mon 8 September 2014 21:31|indexing|
+|Stripes|Margay For Fs|margay milk|Grab Object|
+|Stripes|Margay For Fs|margaydancecount|value|
+|Stripes|Margay For Fs|margayubed|value|
+|Stripes|Margay For Fs|margaymet|value|
+|Stripes|Xeno For Fs|20140908213124/4271:Mon 8 September 2014 21:31|indexing|
+|Stripes|Xeno For Fs|acid milk|Grab Object|
+|Stripes|Xeno For Fs|xenofaced|adjective|
+|Stripes|Xeno For Fs|xenoskinned|adjective|
+|Stripes|Xeno For Fs|xenobodied|adjective|
+|Stripes|Xeno For Fs|xenococked|adjective|
+|Stripes|Xeno For Fs|xenotailed|adjective|
+|Damaged|Alien Felinoid For Fs|20140908213124/4469:Mon 8 September 2014 21:31|indexing|
+|Damaged|Alien Felinoid For Fs|catnum|value|
+|Damaged|Alien Felinoid For Fs|mateable|value|
 |Agentlemancalledb|Jaguar Warrior|20140908213124/15322:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Jaguar Warrior|Jaguar Headdress|Equipment|
 |Agentlemancalledb|Jaguar Warrior|Tehuantl|person|
@@ -2325,12 +2325,12 @@
 |Wahn|Catgirl|LastCatgirlFuck|value|
 |Wahn|Catgirl|FionaFangStatus|value|
 |Wahn|Catgirl|FionaCarlStatus|value|
-|Lago Moro|Male Peacock|20140908213124/2500:Mon 8 September 2014 21:31|indexing|
-|Lago Moro|Male Peacock|peacock feather|Grab Object|
-|Lago Moro|Male Peacock|peacockcontrol|value|
-|Trav|Cute Chinchilla Girl|20140908213124/2562:Mon 8 September 2014 21:31|indexing|
-|Trav|Cute Chinchilla Girl|tuft of chin fur|Grab Object|
-|Trav|Cute Chinchilla Girl|chindem|value|
+|Lago Moro|Male Peacock For Fs|20140908213124/2500:Mon 8 September 2014 21:31|indexing|
+|Lago Moro|Male Peacock For Fs|peacock feather|Grab Object|
+|Lago Moro|Male Peacock For Fs|peacockcontrol|value|
+|Trav|Cute Chinchilla Girl For Fs|20140908213124/2562:Mon 8 September 2014 21:31|indexing|
+|Trav|Cute Chinchilla Girl For Fs|tuft of chin fur|Grab Object|
+|Trav|Cute Chinchilla Girl For Fs|chindem|value|
 |Agentlemancalledb|Fire Sprite|20140908213124/5026:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Fire Sprite|glowing ember|Grab Object|
 |Agentlemancalledb|Fire Sprite|FireSpritemode|value|
@@ -2341,19 +2341,19 @@
 |Stripes|Reindeer|20140908213124/4588:Mon 8 September 2014 21:31|indexing|
 |Stripes|Reindeer|egg nog|Grab Object|
 |Stripes|Reindeer|heatturnskipper|value|
-|Stripes|Snake|20140908213124/5757:Mon 8 September 2014 21:31|indexing|
-|Stripes|Snake|snakedomm|value|
-|Stripes|Snake|snakesubm|value|
-|Stripes|Snake|snakehijack|value|
-|Stripes|Snake|snakecap|value|
-|Stripes|Snake|snakeocc|value|
-|Stripes|Snake|snakehijacktimer|value|
-|Stripes|Snake|fsnakevalid|value|
-|Stripes|Snake|msnakevalid|value|
-|Shadowwolf94|Feral Wolf|20140908213124/7441:Mon 8 September 2014 21:31|indexing|
-|Shadowwolf94|Feral Wolf|wolf cum|Grab Object|
-|Shadowwolf94|Feral Wolf|fangcount|value|
-|Shadowwolf94|Feral Wolf|FeralWolfdefeat|value|
+|Stripes|Snake For Fs|20140908213124/5757:Mon 8 September 2014 21:31|indexing|
+|Stripes|Snake For Fs|snakedomm|value|
+|Stripes|Snake For Fs|snakesubm|value|
+|Stripes|Snake For Fs|snakehijack|value|
+|Stripes|Snake For Fs|snakecap|value|
+|Stripes|Snake For Fs|snakeocc|value|
+|Stripes|Snake For Fs|snakehijacktimer|value|
+|Stripes|Snake For Fs|fsnakevalid|value|
+|Stripes|Snake For Fs|msnakevalid|value|
+|Shadowwolf94|Feral Wolf For Fs|20140908213124/7441:Mon 8 September 2014 21:31|indexing|
+|Shadowwolf94|Feral Wolf For Fs|wolf cum|Grab Object|
+|Shadowwolf94|Feral Wolf For Fs|fangcount|value|
+|Shadowwolf94|Feral Wolf For Fs|FeralWolfdefeat|value|
 |Nuku Valente|Panther Taur|20140908213124/2551:Mon 8 September 2014 21:31|indexing|
 |Stripes|Chocolate Lab|20140908213124/9004:Mon 8 September 2014 21:31|indexing|
 |Stripes|Chocolate Lab|labhost|value|
@@ -2366,9 +2366,9 @@
 |Sarokcat|Twisted Pimp|estrogen pill|Grab Object|
 |Sarokcat|Twisted Pimp|twpimpbeaten|value|
 |Sarokcat|Twisted Pimp|twpimploss|value|
-|Stripes|Amazonian|20140908213124/3788:Mon 8 September 2014 21:31|indexing|
-|Stripes|Amazonian|estosterogen pill|Grab Object|
-|Stripes|Amazonian|noamazoniansex|value|
+|Stripes|Amazonian For Fs|20140908213124/3788:Mon 8 September 2014 21:31|indexing|
+|Stripes|Amazonian For Fs|estosterogen pill|Grab Object|
+|Stripes|Amazonian For Fs|noamazoniansex|value|
 |Blue Bishop|Pewter Consort|20140908213124/9657:Mon 8 September 2014 21:31|indexing|
 |Blue Bishop|Pewter Consort|consortinsight|value|
 |Blue Bishop|Pewter Consort|facecheck|value|
@@ -2390,14 +2390,14 @@
 |Blue Bishop|Pewter Consort|pewterassvar2|value|
 |Blue Bishop|Pewter Consort|scaledr|value|
 |Blue Bishop|Pewter Consort|pewtertorsosuppress|value|
-|Stripes|Queen Bee|20140908213124/1544:Mon 8 September 2014 21:31|indexing|
-|Stripes|Queen Bee|queenbeecocked|adjective|
+|Stripes|Queen Bee For Fs|20140908213124/1544:Mon 8 September 2014 21:31|indexing|
+|Stripes|Queen Bee For Fs|queenbeecocked|adjective|
 |Blaydrex|Saber Kitty|20140908213124/2300:Mon 8 September 2014 21:31|indexing|
 |Blaydrex|Saber Kitty|smilodon cum|Grab Object|
 |Nuku Valente|Naga|20140908213124/6026:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Naga|nagawarning|value|
 |Nuku Valente|Goo Girl|20140908213124/3922:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Goo Girl|goocolor|value|
+|Nuku Valente|Goo Girl|goocolour|value|
 |Nuku Valente|Latex Fox|20140908213124/3556:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Hermaphrodite Gryphon|20140908213124/4567:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Drone Wasp|20140908213124/1817:Mon 8 September 2014 21:31|indexing|
@@ -2405,49 +2405,49 @@
 |Kaleem Mcintyre|Blob|20140908213124/1095:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Great Dane Rouge|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Great Dane Rouge|bandage|Grab Object|
-|Stripes|Hyperskunk|20140908213124/2671:Mon 8 September 2014 21:31|indexing|
+|Stripes|Hyperskunk For Fs|20140908213124/2671:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Female Husky|20140908213124/2755:Mon 8 September 2014 21:31|indexing|
-|Kohryu|Yamato Dragon|20140908213124/15740:Mon 8 September 2014 21:31|indexing|
-|Kohryu|Yamato Dragon|dragon scale|Grab Object|
-|Kohryu|Yamato Dragon|dragon hair|Grab Object|
-|Kohryu|Yamato Dragon|MYDTBMM|value|
-|Kohryu|Yamato Dragon|MYDAM|value|
-|Kohryu|Yamato Dragon|MYDGM|value|
-|Kohryu|Yamato Dragon|ydcolor|value|
-|Kohryu|Yamato Dragoness|20140908213124/10018:Mon 8 September 2014 21:31|indexing|
-|Kohryu|Yamato Dragoness|YDSF|value|
-|Kohryu|Yamato Dragoness|FYDTBMM|value|
-|Kohryu|Yamato Dragoness|FYDM|value|
-|Stripes|Ashen Breeder|20140908213124/5241:Mon 8 September 2014 21:31|indexing|
-|Damaged|Lizard Girl|20140908213124/3598:Mon 8 September 2014 21:31|indexing|
-|Damaged|Lizard Girl|lizgirlmarked|value|
-|Damaged|Lizard Girl|lizgirlimpreg|value|
-|Damaged|Lizard Girl|lizgirlinheat|value|
-|Damaged|Lizard Girl|lizgirlangry|value|
-|Voldine|Random Shemale Smooth Collie|20140908213124/9671:Mon 8 September 2014 21:31|indexing|
-|Voldine|Random Shemale Smooth Collie|colliedefeat|value|
-|Damaged|Bovine|20140908213124/5671:Mon 8 September 2014 21:31|indexing|
-|Damaged|Bovine|cow milk|Grab Object|
-|Damaged|Bovine|Mooing|value|
-|Damaged|Bovine|CowKiller|value|
-|Damaged|Bovine|Mooed|value|
-|Damaged|Bovine|Bovine_type|value|
-|Damaged|Bovine|Bull_run|value|
-|Anony Mouse|Herm Hyena|20140908213124/3567:Mon 8 September 2014 21:31|indexing|
+|Kohryu|Yamato Dragon For Fs|20140908213124/15740:Mon 8 September 2014 21:31|indexing|
+|Kohryu|Yamato Dragon For Fs|dragon scale|Grab Object|
+|Kohryu|Yamato Dragon For Fs|dragon hair|Grab Object|
+|Kohryu|Yamato Dragon For Fs|MYDTBMM|value|
+|Kohryu|Yamato Dragon For Fs|MYDAM|value|
+|Kohryu|Yamato Dragon For Fs|MYDGM|value|
+|Kohryu|Yamato Dragon For Fs|ydcolour|value|
+|Kohryu|Yamato Dragoness For Fs|20140908213124/10018:Mon 8 September 2014 21:31|indexing|
+|Kohryu|Yamato Dragoness For Fs|YDSF|value|
+|Kohryu|Yamato Dragoness For Fs|FYDTBMM|value|
+|Kohryu|Yamato Dragoness For Fs|FYDM|value|
+|Stripes|Ashen Breeder For Fs|20140908213124/5241:Mon 8 September 2014 21:31|indexing|
+|Damaged|Lizard Girl For Fs|20140908213124/3598:Mon 8 September 2014 21:31|indexing|
+|Damaged|Lizard Girl For Fs|lizgirlmarked|value|
+|Damaged|Lizard Girl For Fs|lizgirlimpreg|value|
+|Damaged|Lizard Girl For Fs|lizgirlinheat|value|
+|Damaged|Lizard Girl For Fs|lizgirlangry|value|
+|Voldine|Random Shemale Smooth Collie For Fs|20140908213124/9671:Mon 8 September 2014 21:31|indexing|
+|Voldine|Random Shemale Smooth Collie For Fs|colliedefeat|value|
+|Damaged|Bovine For Fs|20140908213124/5671:Mon 8 September 2014 21:31|indexing|
+|Damaged|Bovine For Fs|cow milk|Grab Object|
+|Damaged|Bovine For Fs|Mooing|value|
+|Damaged|Bovine For Fs|CowKiller|value|
+|Damaged|Bovine For Fs|Mooed|value|
+|Damaged|Bovine For Fs|Bovine_type|value|
+|Damaged|Bovine For Fs|Bull_run|value|
+|Anony Mouse|Herm Hyena For Fs|20140908213124/3567:Mon 8 September 2014 21:31|indexing|
 |Hiccup|Cannon|20140908213124/2445:Mon 8 September 2014 21:31|indexing|
 |Hiccup|Cannon|cclosscount|value|
 |Hiccup|Cannon|cannonprep|value|
 |Hiccup|Cannon|ccmiss|value|
 |Hiccup|Cannon|cclosttarget|value|
-|Ilovecock|Pit Bull|20140908213124/9602:Mon 8 September 2014 21:31|indexing|
-|Ilovecock|Pit Bull|pitbullgender|value|
+|Ilovecock|Pit Bull For Fs|20140908213124/9602:Mon 8 September 2014 21:31|indexing|
+|Ilovecock|Pit Bull For Fs|pitbullgender|value|
 |Kyvi Stormbreaker|Painted Wolf Herm|20140908213124/4675:Mon 8 September 2014 21:31|indexing|
 |Kyvi Stormbreaker|Painted Wolf Herm|wolfhermvictory|value|
 |Kyvi Stormbreaker|Painted Wolf Herm|wolfhermdefeat|value|
-|Soren|Mothgirl|20140908213124/3672:Mon 8 September 2014 21:31|indexing|
-|Soren|Mothgirl|cock pill|Grab Object|
-|Soren|Mothgirl|mothgirlnosex|value|
-|Soren|Mothgirl|Mothdefeat|value|
+|Soren|Mothgirl For Fs|20140908213124/3672:Mon 8 September 2014 21:31|indexing|
+|Soren|Mothgirl For Fs|cock pill|Grab Object|
+|Soren|Mothgirl For Fs|mothgirlnosex|value|
+|Soren|Mothgirl For Fs|Mothdefeat|value|
 |Tunalord Sefont|Feral Sea Dragon|20140908213124/23141:Mon 8 September 2014 21:31|indexing|
 |Tunalord Sefont|Feral Sea Dragon|twistfsdfeedmemory|value|
 |Tunalord Sefont|Feral Sea Dragon|MFSDUBM|value|
@@ -2460,16 +2460,16 @@
 |Tunalord Sefont|Feral Sea Dragoness|fsdfeedmemory|value|
 |Tunalord Sefont|Feral Sea Dragoness|FFSDUBM|value|
 |Tunalord Sefont|Feral Sea Dragoness|FSDOPEN|value|
-|Dragonflayer|Anthro Shaft Beast|20140908213124/4997:Mon 8 September 2014 21:31|indexing|
-|Dragonflayer|Anthro Shaft Beast|Psionic Egg|Grab Object|
-|Dragonflayer|Feral Shaft Beast|20140908213124/3928:Mon 8 September 2014 21:31|indexing|
-|Dragonflayer|Feral Shaft Beast|Psionic Larva|Grab Object|
-|Volcblaze|Wrestling Wolf|20140908213124/6403:Mon 8 September 2014 21:31|indexing|
-|Volcblaze|Wrestling Wolf|wrestlingwolfdefeat|value|
-|Volcblaze|Wrestling Wolf|wwheal|value|
-|Volcblaze|Wrestling Wolf|wrwolfanal|value|
-|Volcblaze|Wrestling Wolf|wrwolfbeaten|value|
-|Volcblaze|Wrestling Wolf|wrwolfseen|value|
+|Dragonflayer|Anthro Shaft Beast For Fs|20140908213124/4997:Mon 8 September 2014 21:31|indexing|
+|Dragonflayer|Anthro Shaft Beast For Fs|Psionic Egg|Grab Object|
+|Dragonflayer|Feral Shaft Beast For Fs|20140908213124/3928:Mon 8 September 2014 21:31|indexing|
+|Dragonflayer|Feral Shaft Beast For Fs|Psionic Larva|Grab Object|
+|Volcblaze|Wrestling Wolf For Fs|20140908213124/6403:Mon 8 September 2014 21:31|indexing|
+|Volcblaze|Wrestling Wolf For Fs|wrestlingwolfdefeat|value|
+|Volcblaze|Wrestling Wolf For Fs|wwheal|value|
+|Volcblaze|Wrestling Wolf For Fs|wrwolfanal|value|
+|Volcblaze|Wrestling Wolf For Fs|wrwolfbeaten|value|
+|Volcblaze|Wrestling Wolf For Fs|wrwolfseen|value|
 |Sarokcat N Verath|Donkeywoman|20140908213124/2952:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Mareslut|20140908213124/4351:Mon 8 September 2014 21:31|indexing|
 |Sarokcat N Verath|Stallionboi|20140908213124/3755:Mon 8 September 2014 21:31|indexing|
@@ -2525,28 +2525,28 @@
 |Wahn|Spartan|pita bread|Grab Object|
 |Wahn|Helot|20140908213124/9512:Mon 8 September 2014 21:31|indexing|
 |Wahn|Helot|FuckedBySpartan|value|
-|Sweraptor|Ash Whelp|20140908213124/2452:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Whelp|whelpdefeat|value|
-|Hellerhound|Gryphons Plot|20140908213124/1552:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Gryphons Plot|Gryphons plot|situation|
-|Hellerhound|Gryphons Plot|milsave|value|
-|Hellerhound|Dolphin|20140908213124/3706:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Dolphin|dolphin milk|Grab Object|
-|Hellerhound|Dolphin|dolphindefeat|value|
-|Hellerhound|Dolphin|dolphinconsent|value|
-|Hellerhound|Dolphin|dolphinwantmate|value|
-|Hellerhound|Dolphin|dolphintricked|value|
-|Hellerhound|Dryad|20140908213124/1675:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Dryad|dryad cum|Grab Object|
-|Hellerhound|Latex Wolf|20140908213124/4582:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Latex Wolf|lwcounter|value|
-|Tentabear|Hermaphrodite Latex Vixen|20140908213124/5353:Mon 8 September 2014 21:31|indexing|
-|Tentabear|Hermaphrodite Latex Vixen|hermlvmeet|value|
-|Tentabear|Hermaphrodite Latex Vixen|hermlvconsent|value|
-|Lago Moro|Rabbit Pack|20140908213124/1977:Mon 8 September 2014 21:31|indexing|
-|Stripes|Fennec|20140908213124/4529:Mon 8 September 2014 21:31|indexing|
-|Stripes|Fennec|fennec semen|Grab Object|
-|Stripes|Triceratops|20140908213124/2553:Mon 8 September 2014 21:31|indexing|
+|Sweraptor|Ash Whelp For Fs|20140908213124/2452:Mon 8 September 2014 21:31|indexing|
+|Sweraptor|Ash Whelp For Fs|whelpdefeat|value|
+|Hellerhound|Gryphons Plot For Fs|20140908213124/1552:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Gryphons Plot For Fs|Gryphons plot|situation|
+|Hellerhound|Gryphons Plot For Fs|milsave|value|
+|Hellerhound|Dolphin For Fs|20140908213124/3706:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Dolphin For Fs|dolphin milk|Grab Object|
+|Hellerhound|Dolphin For Fs|dolphindefeat|value|
+|Hellerhound|Dolphin For Fs|dolphinconsent|value|
+|Hellerhound|Dolphin For Fs|dolphinwantmate|value|
+|Hellerhound|Dolphin For Fs|dolphintricked|value|
+|Hellerhound|Dryad For Fs|20140908213124/1675:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Dryad For Fs|dryad cum|Grab Object|
+|Hellerhound|Latex Wolf For Fs|20140908213124/4582:Mon 8 September 2014 21:31|indexing|
+|Hellerhound|Latex Wolf For Fs|lwcounter|value|
+|Tentabear|Hermaphrodite Latex Vixen For Fs|20140908213124/5353:Mon 8 September 2014 21:31|indexing|
+|Tentabear|Hermaphrodite Latex Vixen For Fs|hermlvmeet|value|
+|Tentabear|Hermaphrodite Latex Vixen For Fs|hermlvconsent|value|
+|Lago Moro|Rabbit Pack For Fs|20140908213124/1977:Mon 8 September 2014 21:31|indexing|
+|Stripes|Fennec For Fs|20140908213124/4529:Mon 8 September 2014 21:31|indexing|
+|Stripes|Fennec For Fs|fennec semen|Grab Object|
+|Stripes|Triceratops For Fs|20140908213124/2553:Mon 8 September 2014 21:31|indexing|
 |Stripes|Siamese Cats|20140908213124/7420:Mon 8 September 2014 21:31|indexing|
 |Stripes|Siamese Cats|Siamgender|thing|
 |Stripes|Siamese Cats|siamesegender|value|
@@ -2554,163 +2554,163 @@
 |Stripes|Siamese Cats|femalecatHP|value|
 |Stripes|Albino Mouse|20140908213124/1342:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cat Ninjas|20140908213124/3791:Mon 8 September 2014 21:31|indexing|
-|Stripes|Flaming Lynx|20140908213124/4824:Mon 8 September 2014 21:31|indexing|
-|Stripes|Komodo Dragon|20140908213124/5708:Mon 8 September 2014 21:31|indexing|
-|Stripes|Beaver|20140908213124/7996:Mon 8 September 2014 21:31|indexing|
-|Stripes|Beaver|nobeaversex|value|
-|Stripes|Giant|20140908213124/4405:Mon 8 September 2014 21:31|indexing|
-|Stripes|Giant|giantheight|value|
-|Stripes|Snow Leopard|20140908213124/7250:Mon 8 September 2014 21:31|indexing|
-|Stripes|Snow Leopard|nosnowmeowsex|value|
-|Stripes|Grey Squirrel|20140908213124/1724:Mon 8 September 2014 21:31|indexing|
-|Stripes|Dragontaur|20140908213124/5120:Mon 8 September 2014 21:31|indexing|
-|Stripes|Dragontaur|dragontaurcatch|value|
-|Stripes|Vixentaur|20140908213124/5360:Mon 8 September 2014 21:31|indexing|
-|Stripes|Vixentaur|vixentaurcatch|value|
-|Stripes|Dracovixentaur|20140908213124/6258:Mon 8 September 2014 21:31|indexing|
-|Stripes|Dracovixentaur|DVtaurcatch|value|
-|Stripes|Flesh Blob|20140908213124/3265:Mon 8 September 2014 21:31|indexing|
-|Stripes|Corrupted Spawner|20140908213124/2196:Mon 8 September 2014 21:31|indexing|
-|Stripes|Corrupted Spawner|corrvicchange1|value|
-|Stripes|Corrupted Spawner|corrvicchange2|value|
+|Stripes|Flaming Lynx For Fs|20140908213124/4824:Mon 8 September 2014 21:31|indexing|
+|Stripes|Komodo Dragon For Fs|20140908213124/5708:Mon 8 September 2014 21:31|indexing|
+|Stripes|Beaver For Fs|20140908213124/7996:Mon 8 September 2014 21:31|indexing|
+|Stripes|Beaver For Fs|nobeaversex|value|
+|Stripes|Giant For Fs|20140908213124/4405:Mon 8 September 2014 21:31|indexing|
+|Stripes|Giant For Fs|giantheight|value|
+|Stripes|Snow Leopard For Fs|20140908213124/7250:Mon 8 September 2014 21:31|indexing|
+|Stripes|Snow Leopard For Fs|nosnowmeowsex|value|
+|Stripes|Grey Squirrel For Fs|20140908213124/1724:Mon 8 September 2014 21:31|indexing|
+|Stripes|Dragontaur For Fs|20140908213124/5120:Mon 8 September 2014 21:31|indexing|
+|Stripes|Dragontaur For Fs|dragontaurcatch|value|
+|Stripes|Vixentaur For Fs|20140908213124/5360:Mon 8 September 2014 21:31|indexing|
+|Stripes|Vixentaur For Fs|vixentaurcatch|value|
+|Stripes|Dracovixentaur For Fs|20140908213124/6258:Mon 8 September 2014 21:31|indexing|
+|Stripes|Dracovixentaur For Fs|DVtaurcatch|value|
+|Stripes|Flesh Blob For Fs|20140908213124/3265:Mon 8 September 2014 21:31|indexing|
+|Stripes|Corrupted Spawner For Fs|20140908213124/2196:Mon 8 September 2014 21:31|indexing|
+|Stripes|Corrupted Spawner For Fs|corrvicchange1|value|
+|Stripes|Corrupted Spawner For Fs|corrvicchange2|value|
 |Stripes|Salamander|20140908213124/1523:Mon 8 September 2014 21:31|indexing|
-|Stripes|Inflatable Vulpine|20140908213124/1578:Mon 8 September 2014 21:31|indexing|
-|Stripes|Inflatable Vulpine|last_infvulp_airhead|value|
-|Stripes|Inflatable Vulpine|infvulpstate|value|
-|Telanda Softpaw|Random German Shepherd|20140908213124/7111:Mon 8 September 2014 21:31|indexing|
-|Telanda Softpaw|Random German Shepherd|fuckable|value|
-|Telanda Softpaw|Random German Shepherd|gsd attack|value|
-|Telanda Softpaw|Random German Shepherd|Shepherdslut|value|
-|Anonymous|Messy Pig|20140908213124/3179:Mon 8 September 2014 21:31|indexing|
-|Anonymous|Messy Pig|messypigaltorgasm|value|
+|Stripes|Inflatable Vulpine For Fs|20140908213124/1578:Mon 8 September 2014 21:31|indexing|
+|Stripes|Inflatable Vulpine For Fs|last_infvulp_airhead|value|
+|Stripes|Inflatable Vulpine For Fs|infvulpstate|value|
+|Telanda Softpaw|Random German Shepherd For Fs|20140908213124/7111:Mon 8 September 2014 21:31|indexing|
+|Telanda Softpaw|Random German Shepherd For Fs|fuckable|value|
+|Telanda Softpaw|Random German Shepherd For Fs|gsd attack|value|
+|Telanda Softpaw|Random German Shepherd For Fs|Shepherdslut|value|
+|Anonymous|Messy Pig For Fs|20140908213124/3179:Mon 8 September 2014 21:31|indexing|
+|Anonymous|Messy Pig For Fs|messypigaltorgasm|value|
 |Stripes|Piggy|20140908213124/829:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|20140908213124/3820:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|elfenc|value|
 |Nuku Valente|Elf|Elfdefeat|value|
 |Stripes|Cougar|20140908213124/2269:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cougar|cougarfight|value|
-|Stripes|Megakitty|20140908213124/3167:Mon 8 September 2014 21:31|indexing|
-|Stripes|Megakitty|MKunleashed|value|
-|Stripes|Megakitty|MKmet|value|
-|Stripes|Megakitty|MKloss|value|
-|Stripes|Megakitty|MKwin|value|
-|Stripes|Megakitty|lastMKoutcome|value|
-|Stripes|Clockwork Fox|20140908213124/4369:Mon 8 September 2014 21:31|indexing|
-|Stripes|Clockwork Fox|cfgmode|value|
-|Stripes|Killer Whale|20140908213124/4049:Mon 8 September 2014 21:31|indexing|
-|Stripes|Killer Whale|orcadom|value|
-|Stripes|Killer Whale|orcafdom|value|
-|Stripes|Rodeo Clown|20140908213124/4189:Mon 8 September 2014 21:31|indexing|
-|Stripes|Fluffy Owl|20140908213124/2972:Mon 8 September 2014 21:31|indexing|
-|Stripes|Siren|20140908213124/4567:Mon 8 September 2014 21:31|indexing|
-|Stripes|Siren|charcounter|value|
-|Stripes|Siren|sirenfight|value|
-|Stripes|Werewolf Costume|20140908213124/3622:Mon 8 September 2014 21:31|indexing|
-|Stripes|Werewolf Costume|werewolfcostumenosex|value|
-|Stripes|Hippo Strongman|20140908213124/1687:Mon 8 September 2014 21:31|indexing|
-|Stripes|Squid|20140908213124/2770:Mon 8 September 2014 21:31|indexing|
-|Stripes|Squid|squidcolor|value|
-|Stripes|Centaur Mare|20140908213124/1794:Mon 8 September 2014 21:31|indexing|
-|Stripes|Prairie Dog|20140908213124/1958:Mon 8 September 2014 21:31|indexing|
-|Stripes|Wildcat|20140908213124/4155:Mon 8 September 2014 21:31|indexing|
-|Blue Bishop|Goblin|20140908213124/15498:Mon 8 September 2014 21:31|indexing|
-|Blue Bishop|Goblin|gobgender|value|
-|Blue Bishop|Goblin|gobdem|value|
-|Stripes|Junkman|20140908213124/2360:Mon 8 September 2014 21:31|indexing|
-|Stripes|Trash Coon|20140908213124/2742:Mon 8 September 2014 21:31|indexing|
-|Stripes|Trash Coon|notrashcoonsex|value|
-|Stripes|Snow Bat|20140908213124/5907:Mon 8 September 2014 21:31|indexing|
-|Stripes|Snow Bat|nightcheck|value|
-|Stripes|Snow Bat|snowbatfight|value|
-|Stripes|Psycho Weasel|20140908213124/4353:Mon 8 September 2014 21:31|indexing|
-|Stripes|Psycho Weasel|weaselcount|value|
-|Stripes|Psycho Weasel|weaselcolor|value|
-|Stripes|Incubus|20140908213124/8466:Mon 8 September 2014 21:31|indexing|
-|Stripes|Incubus|incubusnosex|value|
-|Stripes|Bunny Jock|20140908213124/3564:Mon 8 September 2014 21:31|indexing|
-|Stripes|Bunny Jock|bunnyjocknosex|value|
-|Stripes|Mammoth|20140908213124/3013:Mon 8 September 2014 21:31|indexing|
-|Stripes|Black Wolf|20140908213124/824:Mon 8 September 2014 21:31|indexing|
-|Stripes|Latex Mistress|20140908213124/3069:Mon 8 September 2014 21:31|indexing|
-|Stripes|Latex Mistress|ltxmfaced|adjective|
-|Stripes|Latex Mistress|ltxmskinned|adjective|
-|Stripes|Latex Mistress|ltxmbodied|adjective|
-|Stripes|Latex Mistress|ltxmcocked|adjective|
-|Stripes|Latex Mistress|ltxmtailed|adjective|
-|Stripes|Math Teacher|20140908213124/3146:Mon 8 September 2014 21:31|indexing|
-|Stripes|Dark Elf|20140908213124/3352:Mon 8 September 2014 21:31|indexing|
-|Stripes|Automaton|20140908213124/2494:Mon 8 September 2014 21:31|indexing|
-|Stripes|Automaton|silver semen|Grab Object|
-|Stripes|Automaton|autogender|value|
-|Stripes|Automaton|metalskin|value|
-|Stripes|Automaton|playermetalskin|value|
-|Stripes|Automaton|automatonending|value|
-|Stripes|Hentai Fan|20140908213124/783:Mon 8 September 2014 21:31|indexing|
-|Stripes|Quilled Tousky|20140908213124/1966:Mon 8 September 2014 21:31|indexing|
-|Stripes|Quilled Tousky|tousky quill|Grab Object|
-|Stripes|Giraffe|20140908213124/2893:Mon 8 September 2014 21:31|indexing|
-|Stripes|Giraffe|nogiraffesex|value|
-|Stripes|Bird Of Paradise|20140908213124/3404:Mon 8 September 2014 21:31|indexing|
-|Stripes|Bird Of Paradise|nobirdofparadisesex|value|
-|Stripes|Bird Of Paradise|bopseen|value|
-|Stripes|Bird Of Paradise|bopdefeated|value|
-|Stripes|Bird Of Paradise|bopsongcount|value|
-|Stripes|Bird Of Paradise|bopfaced|adjective|
-|Stripes|Bird Of Paradise|bopskinned|adjective|
-|Stripes|Bird Of Paradise|bopbodied|adjective|
-|Stripes|Bird Of Paradise|bopcocked|adjective|
-|Stripes|Bird Of Paradise|boptailed|adjective|
-|Stripes|Fire Elemental|20140908213124/4712:Mon 8 September 2014 21:31|indexing|
-|Stripes|Fire Elemental|fireskinned|adjective|
-|Stripes|Corota|20140908213124/2973:Mon 8 September 2014 21:31|indexing|
-|Stripes|Corota|corota venom|Grab Object|
-|Stripes|Ocelot|20140908213124/12282:Mon 8 September 2014 21:31|indexing|
-|Stripes|Ocelot|ocelotchoice|value|
-|Stripes|Ocelot|ocelotsize|value|
-|Stripes|Ocelot|noocelotbtsex|value|
-|Stripes|Ocelot|noocelotldsex|value|
-|Stripes|Ocelot|ocelotbodied|adjective|
-|Stripes|Blue Chaffinch|20140908213124/4721:Mon 8 September 2014 21:31|indexing|
-|Stripes|Blue Chaffinch|nobluechaffinchsex|value|
-|Stripes|Blue Chaffinch|bluechaffrape|value|
-|Stripes|Latex Ermine|20140908213124/3997:Mon 8 September 2014 21:31|indexing|
-|Stripes|Latex Ermine|erminecolor|value|
-|Stripes|Latex Ermine|nolatexerminesex|value|
-|Stripes|Hydra Beast|20140908213124/13720:Mon 8 September 2014 21:31|indexing|
-|Stripes|Hydra Beast|hydraheadcount|value|
-|Stripes|Hydra Beast|hydraheadcheck1|value|
-|Stripes|Hydra Beast|hydraheadcheck2|value|
-|Stripes|Hydra Beast|hydraheadcheck3|value|
-|Stripes|Hydra Beast|hydraheadregrowth|value|
-|Stripes|Hydra Beast|hydramaulcount|value|
-|Stripes|Hydra Beast|hydrafaced|adjective|
-|Stripes|Red Oni|20140908213124/2385:Mon 8 September 2014 21:31|indexing|
-|Stripes|Red Oni|redonicocked|adjective|
-|Stripes|Red Oni|redonibodied|adjective|
-|Stripes|Elk|20140908213124/4056:Mon 8 September 2014 21:31|indexing|
-|Stripes|Elk|elk antler|Grab Object|
-|Stripes|Elk|noelksex|value|
-|Stripes|Elk|elkfaced|adjective|
-|Stripes|Voodoo Gecko|20140908213124/10339:Mon 8 September 2014 21:31|indexing|
-|Stripes|Voodoo Gecko|gecko cum|Grab Object|
-|Stripes|Voodoo Gecko|vgeckoanal|value|
-|Stripes|Voodoo Gecko|vgeckoloss|value|
-|Stripes|Voodoo Gecko|vgeckobeaten|value|
-|Stripes|Voodoo Gecko|vgeckoboost|value|
+|Stripes|Megakitty For Fs|20140908213124/3167:Mon 8 September 2014 21:31|indexing|
+|Stripes|Megakitty For Fs|MKunleashed|value|
+|Stripes|Megakitty For Fs|MKmet|value|
+|Stripes|Megakitty For Fs|MKloss|value|
+|Stripes|Megakitty For Fs|MKwin|value|
+|Stripes|Megakitty For Fs|lastMKoutcome|value|
+|Stripes|Clockwork Fox For Fs|20140908213124/4369:Mon 8 September 2014 21:31|indexing|
+|Stripes|Clockwork Fox For Fs|cfgmode|value|
+|Stripes|Killer Whale For Fs|20140908213124/4049:Mon 8 September 2014 21:31|indexing|
+|Stripes|Killer Whale For Fs|orcadom|value|
+|Stripes|Killer Whale For Fs|orcafdom|value|
+|Stripes|Rodeo Clown For Fs|20140908213124/4189:Mon 8 September 2014 21:31|indexing|
+|Stripes|Fluffy Owl For Fs|20140908213124/2972:Mon 8 September 2014 21:31|indexing|
+|Stripes|Siren For Fs|20140908213124/4567:Mon 8 September 2014 21:31|indexing|
+|Stripes|Siren For Fs|charcounter|value|
+|Stripes|Siren For Fs|sirenfight|value|
+|Stripes|Werewolf Costume For Fs|20140908213124/3622:Mon 8 September 2014 21:31|indexing|
+|Stripes|Werewolf Costume For Fs|werewolfcostumenosex|value|
+|Stripes|Hippo Strongman For Fs|20140908213124/1687:Mon 8 September 2014 21:31|indexing|
+|Stripes|Squid For Fs|20140908213124/2770:Mon 8 September 2014 21:31|indexing|
+|Stripes|Squid For Fs|squidcolour|value|
+|Stripes|Centaur Mare For Fs|20140908213124/1794:Mon 8 September 2014 21:31|indexing|
+|Stripes|Prairie Dog For Fs|20140908213124/1958:Mon 8 September 2014 21:31|indexing|
+|Stripes|Wildcat For Fs|20140908213124/4155:Mon 8 September 2014 21:31|indexing|
+|Blue Bishop|Goblin For Fs|20140908213124/15498:Mon 8 September 2014 21:31|indexing|
+|Blue Bishop|Goblin For Fs|gobgender|value|
+|Blue Bishop|Goblin For Fs|gobdem|value|
+|Stripes|Junkman For Fs|20140908213124/2360:Mon 8 September 2014 21:31|indexing|
+|Stripes|Trash Coon For Fs|20140908213124/2742:Mon 8 September 2014 21:31|indexing|
+|Stripes|Trash Coon For Fs|notrashcoonsex|value|
+|Stripes|Snow Bat For Fs|20140908213124/5907:Mon 8 September 2014 21:31|indexing|
+|Stripes|Snow Bat For Fs|nightcheck|value|
+|Stripes|Snow Bat For Fs|snowbatfight|value|
+|Stripes|Psycho Weasel For Fs|20140908213124/4353:Mon 8 September 2014 21:31|indexing|
+|Stripes|Psycho Weasel For Fs|weaselcount|value|
+|Stripes|Psycho Weasel For Fs|weaselcolour|value|
+|Stripes|Incubus For Fs|20140908213124/8466:Mon 8 September 2014 21:31|indexing|
+|Stripes|Incubus For Fs|incubusnosex|value|
+|Stripes|Bunny Jock For Fs|20140908213124/3564:Mon 8 September 2014 21:31|indexing|
+|Stripes|Bunny Jock For Fs|bunnyjocknosex|value|
+|Stripes|Mammoth For Fs|20140908213124/3013:Mon 8 September 2014 21:31|indexing|
+|Stripes|Black Wolf For Fs|20140908213124/824:Mon 8 September 2014 21:31|indexing|
+|Stripes|Latex Mistress For Fs|20140908213124/3069:Mon 8 September 2014 21:31|indexing|
+|Stripes|Latex Mistress For Fs|ltxmfaced|adjective|
+|Stripes|Latex Mistress For Fs|ltxmskinned|adjective|
+|Stripes|Latex Mistress For Fs|ltxmbodied|adjective|
+|Stripes|Latex Mistress For Fs|ltxmcocked|adjective|
+|Stripes|Latex Mistress For Fs|ltxmtailed|adjective|
+|Stripes|Math Teacher For Fs|20140908213124/3146:Mon 8 September 2014 21:31|indexing|
+|Stripes|Dark Elf For Fs|20140908213124/3352:Mon 8 September 2014 21:31|indexing|
+|Stripes|Automaton For Fs|20140908213124/2494:Mon 8 September 2014 21:31|indexing|
+|Stripes|Automaton For Fs|silver semen|Grab Object|
+|Stripes|Automaton For Fs|autogender|value|
+|Stripes|Automaton For Fs|metalskin|value|
+|Stripes|Automaton For Fs|playermetalskin|value|
+|Stripes|Automaton For Fs|automatonending|value|
+|Stripes|Hentai Fan For Fs|20140908213124/783:Mon 8 September 2014 21:31|indexing|
+|Stripes|Quilled Tousky For Fs|20140908213124/1966:Mon 8 September 2014 21:31|indexing|
+|Stripes|Quilled Tousky For Fs|tousky quill|Grab Object|
+|Stripes|Giraffe For Fs|20140908213124/2893:Mon 8 September 2014 21:31|indexing|
+|Stripes|Giraffe For Fs|nogiraffesex|value|
+|Stripes|Bird Of Paradise For Fs|20140908213124/3404:Mon 8 September 2014 21:31|indexing|
+|Stripes|Bird Of Paradise For Fs|nobirdofparadisesex|value|
+|Stripes|Bird Of Paradise For Fs|bopseen|value|
+|Stripes|Bird Of Paradise For Fs|bopdefeated|value|
+|Stripes|Bird Of Paradise For Fs|bopsongcount|value|
+|Stripes|Bird Of Paradise For Fs|bopfaced|adjective|
+|Stripes|Bird Of Paradise For Fs|bopskinned|adjective|
+|Stripes|Bird Of Paradise For Fs|bopbodied|adjective|
+|Stripes|Bird Of Paradise For Fs|bopcocked|adjective|
+|Stripes|Bird Of Paradise For Fs|boptailed|adjective|
+|Stripes|Fire Elemental For Fs|20140908213124/4712:Mon 8 September 2014 21:31|indexing|
+|Stripes|Fire Elemental For Fs|fireskinned|adjective|
+|Stripes|Corota For Fs|20140908213124/2973:Mon 8 September 2014 21:31|indexing|
+|Stripes|Corota For Fs|corota venom|Grab Object|
+|Stripes|Ocelot For Fs|20140908213124/12282:Mon 8 September 2014 21:31|indexing|
+|Stripes|Ocelot For Fs|ocelotchoice|value|
+|Stripes|Ocelot For Fs|ocelotsize|value|
+|Stripes|Ocelot For Fs|noocelotbtsex|value|
+|Stripes|Ocelot For Fs|noocelotldsex|value|
+|Stripes|Ocelot For Fs|ocelotbodied|adjective|
+|Stripes|Blue Chaffinch For Fs|20140908213124/4721:Mon 8 September 2014 21:31|indexing|
+|Stripes|Blue Chaffinch For Fs|nobluechaffinchsex|value|
+|Stripes|Blue Chaffinch For Fs|bluechaffrape|value|
+|Stripes|Latex Ermine For Fs|20140908213124/3997:Mon 8 September 2014 21:31|indexing|
+|Stripes|Latex Ermine For Fs|erminecolour|value|
+|Stripes|Latex Ermine For Fs|nolatexerminesex|value|
+|Stripes|Hydra Beast For Fs|20140908213124/13720:Mon 8 September 2014 21:31|indexing|
+|Stripes|Hydra Beast For Fs|hydraheadcount|value|
+|Stripes|Hydra Beast For Fs|hydraheadcheck1|value|
+|Stripes|Hydra Beast For Fs|hydraheadcheck2|value|
+|Stripes|Hydra Beast For Fs|hydraheadcheck3|value|
+|Stripes|Hydra Beast For Fs|hydraheadregrowth|value|
+|Stripes|Hydra Beast For Fs|hydramaulcount|value|
+|Stripes|Hydra Beast For Fs|hydrafaced|adjective|
+|Stripes|Red Oni For Fs|20140908213124/2385:Mon 8 September 2014 21:31|indexing|
+|Stripes|Red Oni For Fs|redonicocked|adjective|
+|Stripes|Red Oni For Fs|redonibodied|adjective|
+|Stripes|Elk For Fs|20140908213124/4056:Mon 8 September 2014 21:31|indexing|
+|Stripes|Elk For Fs|elk antler|Grab Object|
+|Stripes|Elk For Fs|noelksex|value|
+|Stripes|Elk For Fs|elkfaced|adjective|
+|Stripes|Voodoo Gecko For Fs|20140908213124/10339:Mon 8 September 2014 21:31|indexing|
+|Stripes|Voodoo Gecko For Fs|gecko cum|Grab Object|
+|Stripes|Voodoo Gecko For Fs|vgeckoanal|value|
+|Stripes|Voodoo Gecko For Fs|vgeckoloss|value|
+|Stripes|Voodoo Gecko For Fs|vgeckobeaten|value|
+|Stripes|Voodoo Gecko For Fs|vgeckoboost|value|
 |Stripes|Magic Drake|20140908213124/10283:Mon 8 September 2014 21:31|indexing|
 |Stripes|Magic Drake|mdasslevel|value|
 |Stripes|Magic Drake|mdrakeloss|value|
 |Stripes|Magic Drake|mdrakebeaten|value|
 |Stripes|Magic Drake|mdrakeanal|value|
 |Stripes|Magic Drake|mdstaffface|value|
-|Stripes|Horny Doctor|20140908213124/11359:Mon 8 September 2014 21:31|indexing|
-|Stripes|Horny Doctor|hdmode|value|
-|Stripes|Horny Doctor|hdform|value|
-|Stripes|Horny Doctor|hdformname|value|
-|Stripes|Fruit Bat|20140908213124/4338:Mon 8 September 2014 21:31|indexing|
-|Stripes|Fruit Bat|frbatbeaten|value|
-|Wahn|Elven Hunter|20140908213124/5545:Mon 8 September 2014 21:31|indexing|
-|Wahn|Elven Hunter|lembas bread|Grab Object|
+|Stripes|Horny Doctor For Fs|20140908213124/11359:Mon 8 September 2014 21:31|indexing|
+|Stripes|Horny Doctor For Fs|hdmode|value|
+|Stripes|Horny Doctor For Fs|hdform|value|
+|Stripes|Horny Doctor For Fs|hdformname|value|
+|Stripes|Fruit Bat For Fs|20140908213124/4338:Mon 8 September 2014 21:31|indexing|
+|Stripes|Fruit Bat For Fs|frbatbeaten|value|
+|Wahn|Elven Hunter For Fs|20140908213124/5545:Mon 8 September 2014 21:31|indexing|
+|Wahn|Elven Hunter For Fs|lembas bread|Grab Object|
 |Wahn|Human Infections|20140908213124/1529:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Reptaur|20140908213124/10548:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Pegasus|20140908213124/7930:Mon 8 September 2014 21:31|indexing|
@@ -2745,11 +2745,11 @@
 |Agentlemancalledb|Pink Poodle|HeatedPoodle|value|
 |Agentlemancalledb|Pink Poodle|nopoodlesex|value|
 |Agentlemancalledb|Pink Poodle|poodleapproved|value|
-|Stripes|Doberman|20140908213124/16640:Mon 8 September 2014 21:31|indexing|
-|Stripes|Doberman|dobieresist|value|
-|Stripes|Doberman|dobielibido|value|
-|Stripes|Sugar Ferret|20140908213124/3176:Mon 8 September 2014 21:31|indexing|
-|Stripes|Sugar Ferret|sugferretjoke|value|
+|Stripes|Doberman For Fs|20140908213124/16640:Mon 8 September 2014 21:31|indexing|
+|Stripes|Doberman For Fs|dobieresist|value|
+|Stripes|Doberman For Fs|dobielibido|value|
+|Stripes|Sugar Ferret For Fs|20140908213124/3176:Mon 8 September 2014 21:31|indexing|
+|Stripes|Sugar Ferret For Fs|sugferretjoke|value|
 |Stripeguy|Badger|20140908213124/3082:Mon 8 September 2014 21:31|indexing|
 |Stripeguy|Opossum Sailor|20140908213124/2901:Mon 8 September 2014 21:31|indexing|
 |Stripeguy|Tenrec|20140908213124/7314:Mon 8 September 2014 21:31|indexing|
@@ -2761,8 +2761,8 @@
 |Wahn|Cowboy Cuntboy|cowboy milk|Grab Object|
 |Wahn|Thought Eater|20140908213124/8367:Mon 8 September 2014 21:31|indexing|
 |Wahn|Thought Eater|tentacle tip|Grab Object|
-|Blaydrex|Batcubus|20140908213124/2766:Mon 8 September 2014 21:31|indexing|
-|Blaydrex|Batcubus|batcubus milk|Grab Object|
+|Blaydrex|Batcubus For Fs|20140908213124/2766:Mon 8 September 2014 21:31|indexing|
+|Blaydrex|Batcubus For Fs|batcubus milk|Grab Object|
 |Wahn|Horse-Hung Nerd|20140908213124/5512:Mon 8 September 2014 21:31|indexing|
 |Wahn|Horse-Hung Nerd|NerdMeetings|value|
 |Ursaomega|Grizzly Bear|20140908213124/4340:Mon 8 September 2014 21:31|indexing|
@@ -2903,36 +2903,36 @@
 |Stripes|Lucy|20140908213124/7827:Mon 8 September 2014 21:31|indexing|
 |Stripes|Lucy|Lucy|woman|
 |Stripes|Lucy|Memories of the Mall|situation|
-|Stripes|Larissa|20140908213124/21192:Mon 8 September 2014 21:31|indexing|
-|Stripes|Larissa|Larissa|woman|
-|Stripes|Larissa|zephyrtask|value|
-|Stripes|Larissa|zephyrpests|value|
-|Stripes|Larissa|lar_tfcost|value|
-|Stripes|Larissa|Larissatfing|action|
-|Stripes|Larissa|tailed|property|
-|Stripes|Larissa|winged|property|
-|Stripes|Larissa|infname|property|
-|Stripes|Larissa|form|property|
-|Stripes|Larissa|handform|property|
-|Stripes|Larissa|footform|property|
-|Stripes|Larissa|mouth|property|
-|Stripes|Larissa|tftext|property|
-|Stripes|Larissa|generallook|property|
-|Stripes|Larissa|subjpro_cap|property|
-|Stripes|Larissa|subjpro|property|
-|Stripes|Larissa|possadj_cap|property|
-|Stripes|Larissa|possadj|property|
-|Stripes|Larissa|objpro|property|
-|Stripes|Larissa|bodycat|property|
-|Stripes|Larissa|lasttf|property|
-|Stripes|Larissa|oldgender|property|
-|Stripes|Larissa|possible_forms|property|
-|Stripes|Larissa|possible_forms_furry|property|
-|Stripes|Larissa|possible_forms_guy|property|
-|Stripes|Larissa|possible_forms_girl|property|
-|Stripes|Larissa|possible_forms_herm|property|
-|Stripes|Larissa|possible_forms_hellspawn|property|
-|Stripes|Larissa|possible_forms_humorous|property|
+|Stripes|Larissa For Fs|20140908213124/21192:Mon 8 September 2014 21:31|indexing|
+|Stripes|Larissa For Fs|Larissa|woman|
+|Stripes|Larissa For Fs|zephyrtask|value|
+|Stripes|Larissa For Fs|zephyrpests|value|
+|Stripes|Larissa For Fs|lar_tfcost|value|
+|Stripes|Larissa For Fs|Larissatfing|action|
+|Stripes|Larissa For Fs|tailed|property|
+|Stripes|Larissa For Fs|winged|property|
+|Stripes|Larissa For Fs|infname|property|
+|Stripes|Larissa For Fs|form|property|
+|Stripes|Larissa For Fs|handform|property|
+|Stripes|Larissa For Fs|footform|property|
+|Stripes|Larissa For Fs|mouth|property|
+|Stripes|Larissa For Fs|tftext|property|
+|Stripes|Larissa For Fs|generallook|property|
+|Stripes|Larissa For Fs|subjpro_cap|property|
+|Stripes|Larissa For Fs|subjpro|property|
+|Stripes|Larissa For Fs|possadj_cap|property|
+|Stripes|Larissa For Fs|possadj|property|
+|Stripes|Larissa For Fs|objpro|property|
+|Stripes|Larissa For Fs|bodycat|property|
+|Stripes|Larissa For Fs|lasttf|property|
+|Stripes|Larissa For Fs|oldgender|property|
+|Stripes|Larissa For Fs|possible_forms|property|
+|Stripes|Larissa For Fs|possible_forms_furry|property|
+|Stripes|Larissa For Fs|possible_forms_guy|property|
+|Stripes|Larissa For Fs|possible_forms_girl|property|
+|Stripes|Larissa For Fs|possible_forms_herm|property|
+|Stripes|Larissa For Fs|possible_forms_hellspawn|property|
+|Stripes|Larissa For Fs|possible_forms_humorous|property|
 |Stripes|Matriarch Npc|20140908213124/5809:Mon 8 September 2014 21:31|indexing|
 |Stripes|Matriarch Npc|Matriarch|person|
 |Nuku Valente|Tanuki|20140908213124/2084:Mon 8 September 2014 21:31|indexing|
@@ -3388,23 +3388,23 @@
 |Stripes|Andrew|20140908213124/9517:Mon 8 September 2014 21:31|indexing|
 |Stripes|Andrew|Private Booths|room|
 |Stripes|Andrew|Andrew|man|
-|Stripes|Andrew|randomcolorlist|value|
+|Stripes|Andrew|randomcolourlist|value|
 |Stripes|Brooke|20140908213124/5292:Mon 8 September 2014 21:31|indexing|
 |Stripes|Brooke|Brooke|man|
 |Stripes|Brooke|brookeandrewtalk|value|
-|Stripes|Sam|20140908213124/32861:Mon 8 September 2014 21:31|indexing|
-|Stripes|Sam|Another Researcher|situation|
-|Stripes|Sam|Mini-Lab|room|
-|Stripes|Sam|Sam|man|
-|Stripes|Sam|samformtalk|value|
-|Stripes|Sam|minilabfight|value|
-|Stripes|Sam|featherready|value|
-|Stripes|Sam|monstermemory|value|
-|Stripes|Mack|20140908213124/8222:Mon 8 September 2014 21:31|indexing|
-|Stripes|Mack|Finding Mack|situation|
-|Stripes|Mack|Nutso Factory|room|
-|Stripes|Mack|Macadamia|man|
-|Stripes|Mack|roasted nuts|Grab Object|
+|Stripes|Sam For Fs|20140908213124/32861:Mon 8 September 2014 21:31|indexing|
+|Stripes|Sam For Fs|Another Researcher|situation|
+|Stripes|Sam For Fs|Mini-Lab|room|
+|Stripes|Sam For Fs|Sam|man|
+|Stripes|Sam For Fs|samformtalk|value|
+|Stripes|Sam For Fs|minilabfight|value|
+|Stripes|Sam For Fs|featherready|value|
+|Stripes|Sam For Fs|monstermemory|value|
+|Stripes|Mack For Fs|20140908213124/8222:Mon 8 September 2014 21:31|indexing|
+|Stripes|Mack For Fs|Finding Mack|situation|
+|Stripes|Mack For Fs|Nutso Factory|room|
+|Stripes|Mack For Fs|Macadamia|man|
+|Stripes|Mack For Fs|roasted nuts|Grab Object|
 |Stripes|Meredith|20140908213124/22011:Mon 8 September 2014 21:31|indexing|
 |Stripes|Meredith|Meredith|woman|
 |Stripes|Meredith|meredith_coleen_fun1|value|

@@ -37,7 +37,7 @@ Setting action variables for an actor inserting a data storage device into a com
 Instead of an actor inserting something which is not a data storage device into an extension port (this is the restrict extension port usage rule):
 	if the actor is not the player:
 		rule fails;
-	say "[The noun] [is-are] not a suitable device for reading with [the second noun].";
+	say "[The noun] [is-are] not a suitable device for reading with [the second noun]."
 
 Section 2 - Startup Behavior
 
@@ -83,7 +83,7 @@ A laptop is a kind of computer. A laptop can be open or closed. A laptop can be 
 A trackpad is a kind of selection device. A trackpad is part of every laptop.
 
 Instead of touching a trackpad (this is the correct insufficient trackpad information rule):
-	say "Try CLICK ON (some option) WITH [the noun], or just CLICK ON (option), to make a selection.";
+	say "Try CLICK ON (some option) WITH [the noun], or just CLICK ON (option), to make a selection."
 
 Definition: a thing is a concealed component:
 	if it is a keyboard and it is part of a closed laptop:
@@ -412,7 +412,7 @@ Section 2 - Selection with a Selection Device
 
 Understand "click on [text] with [a selection device]" or "select [text] with [a selection device]" or "pick [text] with [a selection device]" or "click [text] with [a selection device]" as selecting it with.
 
-Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with. Selecting it with is an action applying to a topic and one thing.
+Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with.  Selecting it with is an action applying to a topic and one thing.
 
 Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text]" as selecting it with.
 

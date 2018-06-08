@@ -64,14 +64,14 @@ Instead of resolving a potential resources:
 			say "extremely difficult";
 		say " to climb.";
 		if companion of player is bee girl:
-			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
+			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back.  'Don't risk it.  I can get it for you, honeybunch.'  And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
 			add y to invent of player;
 		else if companion of player is Exotic Bird:
-			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in. Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
+			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in.  Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
 			add y to invent of player;
 		else if companion of player is Gryphoness:
 			let gryphlets be libido of gryphoness / 4;
-			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness's wings lift her up alongside the [y], letting her take it with ease. She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2]from you and your gryphlet children[end if].";
+			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease.  She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2]from you and your gryphlet children[end if].";
 			add y to invent of player;
 		else:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
@@ -113,7 +113,7 @@ Instead of resolving a potential resources:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
 			add y to invent of the player;
 	else if x is 4:
-		say "It is in the hands of a sentient! Though mutant, perhaps you could convince them to give it up. It looks like they have enough for themselves. They appear ";
+		say "It is in the hands of a sentient!  Though mutant, perhaps you could convince them to give it up.  It looks like they have enough for themselves. They appear ";
 		if difficulty < 8:
 			say "easy";
 		else if difficulty < 10:
@@ -146,18 +146,18 @@ Instead of resolving a potential resources:
 				let bb be a random number from 1 to bb;
 				if aa >= bb:
 					add y to invent of player;
-					say ". You even manage to haggle a second one from the mutant";
+					say ".  You even manage to haggle a second one from the mutant";
 			if petbonus is true:
-				say ". Though having an intimidating guard by your side may have helped a little";
+				say ".  Though having an intimidating guard by your side may have helped a little";
 			say ".";
 	else if x is 5:
 		if guy is banned or a random chance of 1 in 2 succeeds:	[female mutant]
-			say "It is in the hands of a sentient! Seeming peaceful enough, you try to convince her to part with it since she and her nearby friends seem to have enough. You try to negotiate a trade, but she has no interest in anything you have to offer, instead suggesting you might earn your reward";
+			say "It is in the hands of a sentient!  Seeming peaceful enough, you try to convince her to part with it since she and her nearby friends seem to have enough.  You try to negotiate a trade, but she has no interest in anything you have to offer, instead suggesting you might earn your reward";
 			[breakdown of requests/player options here]
-			say " with your tongue. Spreading her legs and lifting the scraps of her clothes, the transformed person bares her pussy to you and tells you to start licking. Shall you whore yourself out for a [y]?";
+			say " with your tongue.  Spreading her legs and lifting the scraps of her clothes, the transformed person bares her pussy to you and tells you to start licking.  Shall you whore yourself out for a [y]?";
 			if the player consents:
 				say "[scavsex_f01]";
-				say ". You're tossed the [y] by one of her friends";
+				say ".  You're tossed the [y] by one of her friends";
 				add y to the invent of the player;
 				if "Haggler" is listed in feats of player:
 					let aa be a random number from 1 to charisma of player;
@@ -172,19 +172,19 @@ Instead of resolving a potential resources:
 					increase libido of player by 10;
 					increase morale of player by 1;
 				else:
-					say "     Feeling somewhat dirty for what you've done, you wonder to what depths you'll sink before this is all done. And despite this, you can't help but feel a little turned on as well.";
+					say "     Feeling somewhat dirty for what you've done, you wonder to what depths you'll sink before this is all done.  And despite this, you can't help but feel a little turned on as well.";
 					increase libido of player by 5;
 					decrease morale of player by 1;
 				weakrandominfect;
 			else:
-				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";
+				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y].  You decide to look elsewhere for the supplies you need.";
 		else:		[male mutant]
-			say "It is in the hands of a sentient! Seeming peaceful enough, you try to convince him to part with it since he and his nearby friends seem to have enough. You try to negotiate a trade, but he has no interest in anything you have to offer, instead suggesting you might earn your reward";
+			say "It is in the hands of a sentient!  Seeming peaceful enough, you try to convince him to part with it since he and his nearby friends seem to have enough.  You try to negotiate a trade, but he has no interest in anything you have to offer, instead suggesting you might earn your reward";
 			[breakdown of requests/player options here]
-			say " with your mouth. Pushing aside the scraps of his clothes and grabbing his junk, the transformed person strokes his cock to erection and tells you to start sucking. Shall you whore yourself out for a [y]?";
+			say " with your mouth.  Pushing aside the scraps of his clothes and grabbing his junk, the transformed person strokes his cock to erection and tells you to start sucking.  Shall you whore yourself out for a [y]?";
 			if the player consents:
 				say "[scavsex_m01]";
-				say ". You're tossed the [y] by one of his friends";
+				say ".  You're tossed the [y] by one of his friends";
 				add y to the invent of the player;
 				if "Haggler" is listed in feats of player:
 					let aa be a random number from 1 to charisma of player;
@@ -199,23 +199,23 @@ Instead of resolving a potential resources:
 					increase libido of player by 10;
 					increase morale of player by 1;
 				else:
-					say "     Feeling somewhat dirty for what you've done, you wonder to what depths you'll sink before this is all done. And despite this, you can't help but feel a little turned on as well.";
+					say "     Feeling somewhat dirty for what you've done, you wonder to what depths you'll sink before this is all done.  And despite this, you can't help but feel a little turned on as well.";
 					increase libido of player by 5;
 					decrease morale of player by 1;
 				weakrandominfect;
 			else:
-				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";
+				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y].  You decide to look elsewhere for the supplies you need.";
 	LineBreak;
 	if battleground is "Outside" and a random chance of 1 in 6 succeeds, mallrecall;
 
 
 to say scavsex_f01:
-	say "     Deciding that there's worse ways to get by, you drop to your knees and bury your face between her legs. She moans and giggles as you lick her pussy. Her friends, watching nearby, giggle as well and move in closer to enjoy the show. Knowing your reward is on the line, you work to make it speedy but pleasurable. You stuff a pair of fingers into her [one of]dripping[or]quivering[or]furry[or]scaly[or]super-wide[or]tentacle-rimmed[as decreasingly likely outcomes] vagina while your tongue sets to lashing across her clit. In a few minutes, you've got her pressing your face to her groin while she cums with a loud cry of ecstasy.";
-	say "     When released, you gasp to catch your breath after being smothered against her crotch. Her excess juices run down your chin and neck";
+	say "     Deciding that there's worse ways to get by, you drop to your knees and bury your face between her legs.  She moans and giggles as you lick her pussy.  Her friends, watching nearby, giggle as well and move in closer to enjoy the show.  Knowing your reward is on the line, you work to make it speedy but pleasurable.  You stuff a pair of fingers into her [one of]dripping[or]quivering[or]furry[or]scaly[or]super-wide[or]tentacle-rimmed[as decreasingly likely outcomes] vagina while your tongue sets to lashing across her clit.  In a few minutes, you've got her pressing your face to her groin while she cums with a loud cry of ecstasy.";
+	say "     When released, you gasp to catch your breath after being smothered against her crotch.  Her excess juices run down your chin and neck";
 
 to say scavsex_m01:
-	say "     Deciding that there's worse ways to get by, you drop to your knees and take hold of his cock. He moans softly and laughs as you stuff his shaft into your mouth. His friends, watching nearby, chuckle as well and move in closer to enjoy the show. Knowing your reward is on the line, you work to make it speedy but pleasurable. You bob your head over his [one of]thick[or]dribbling[or]knotted[or]ridged[or]oversized[or]tentacle[as decreasingly likely outcomes] penis while stroking his [one of][or]plump [or]pulsating [or]fist-sized [as decreasingly likely outcomes]balls in your hand. Your tongue slides along his shaft and teases his glans, working him to a fast climax that has him groan in much-needed release.";
-	say "     By the time he's let you go, it feels like you've swallowed [one of]a cup's worth[or]a pint's worth[or]a quart's worth[as decreasingly likely outcomes] of his [one of]runny[or]creamy[or]thick[or]gooey[or]sludgy[at random] semen. You have to gasp and cough to clear your throat so you can catch your breath after being stuffed full of his cumming cock. His unswallowed load runs down your chin and neck";
+	say "     Deciding that there's worse ways to get by, you drop to your knees and take hold of his cock.  He moans softly and laughs as you stuff his shaft into your mouth.  His friends, watching nearby, chuckle as well and move in closer to enjoy the show.  Knowing your reward is on the line, you work to make it speedy but pleasurable.  You bob your head over his [one of]thick[or]dribbling[or]knotted[or]ridged[or]oversized[or]tentacle[as decreasingly likely outcomes] penis while stroking his [one of][or]plump [or]pulsating [or]fist-sized [as decreasingly likely outcomes]balls in your hand.  Your tongue slides along his shaft and teases his glans, working him to a fast climax that has him groan in much-needed release.";
+	say "     By the time he's let you go, it feels like you've swallowed [one of]a cup's worth[or]a pint's worth[or]a quart's worth[as decreasingly likely outcomes] of his [one of]runny[or]creamy[or]thick[or]gooey[or]sludgy[at random] semen.  You have to gasp and cough to clear your throat so you can catch your breath after being stuffed full of his cumming cock.  His unswallowed load runs down your chin and neck";
 
 
 

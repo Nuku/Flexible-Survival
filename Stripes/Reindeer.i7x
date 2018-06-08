@@ -42,7 +42,7 @@ to say reindeerattack:
 	if T is 4:
 		say "tries to push you to the ground with a loud tinkling of bells!";
 	if T is 5:
-		say "banks sharply, getting behind you. He grinds firmly against your rear while his hoofed paws grope your chest. You can feel his precum leaking out as he tries to cum on you, but you shake him off. The scent of his egg-nog flavored precum hangs in the air, arousing you further!";
+		say "banks sharply, getting behind you. He grinds firmly against your rear while his hoofed paws grope your chest. You can feel his precum leaking out as he tries to cum on you, but you shake him off. The scent of his egg-nog flavoured precum hangs in the air, arousing you further!";
 		increase libido of player by a random number from 2 to 5;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;

@@ -1,13 +1,13 @@
 Training center by Zero begins here.
 
-Section 1- Training center
+Section 1- Training centre
 
-Training center is a room. It is fasttravel. It is private.
+Training centre is a room. It is fasttravel. It is private.
 Old Hall is a room.
 Old Lounge is a room.
 Masters Room is a room.
 
-North of Training center is Old Hall.
+North of Training centre is Old Hall.
 North of Old Hall is Masters Room.
 East of Old Hall is Old Lounge.
 
@@ -16,7 +16,7 @@ The description of Masters Room is "[meetthemaster]".
 
 The description of Old Lounge is "[corgilounge]".
 
-The description of Training center is "A makeshift prison cell, its bars have been torn apart by the enraged corgi.".
+The description of Training centre is "A makeshift prison cell, its bars have been torn apart by the enraged corgi.".
 
 corgihelp is a number that varies. corgihelp is usually 0.
 mistresswon is a number that varies. mistresswon is usually 0.
@@ -49,7 +49,7 @@ to say corgilounge:
 		now corgitalk is 2;
 
 
-Section 2-finding the Training center
+Section 2-finding the Training centre
 
 Domincounter is a situation.
 The sarea of Domincounter is "Outside".
@@ -114,10 +114,10 @@ to say massdomfightloses:
 	say "[slutden]";
 
 to say slutden:
-	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[else]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk > 1]'Well it looks like they finally caught me, at least I have some company.' He flashes you a smile before frowning at the guards. 'Though seriously we need to get out of here, I've head some rumors about their master and it's not pretty, first things first we ha...'[else]'This is all your fault, I normally handle them no sweat but you just had to get involved, yes it's a nice trying to help, but I didn't expect a body thrown on me,' he growls at you. You back away from the angry corgi and try to appease him. 'Whatever, let's get out of here first then we can ta...'[end if] [if corgitalk > 1]Max[else]The corgi[end if] suddenly cuts himself off and stares at his wrist. 'They took it... they fucking took it, I'M GOING TO FUCKING KILL THEM!' You watch in shock as an enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building's inhabitants.";
+	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[else]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk > 1]'Well it looks like they finally caught me, at least I have some company.' He flashes you a smile before frowning at the guards. 'Though seriously we need to get out of here, I've head some rumours about their master and it's not pretty, first things first we ha...'[else]'This is all your fault, I normally handle them no sweat but you just had to get involved, yes it's a nice trying to help, but I didn't expect a body thrown on me,' he growls at you. You back away from the angry corgi and try to appease him. 'Whatever, let's get out of here first then we can ta...'[end if] [if corgitalk > 1]Max[else]The corgi[end if] suddenly cuts himself off and stares at his wrist. 'They took it... they fucking took it, I'M GOING TO FUCKING KILL THEM!' You watch in shock as an enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building's inhabitants.";
 	Now Domincounter is resolved;
 	move Max to Old Lounge;
-	move player to Training center;
+	move player to Training centre;
 
 
 

@@ -10,7 +10,7 @@ Sealed wing is a situation.
 The sarea of Sealed wing is "Museum".
 
 Instead of Resolving a Sealed wing:
-	say "     Traveling through the empty museum corridors, you come across some large, closed double doors. Looking closer, you can see that someone has wrapped chains around the door handles; and from the looks of things, tried to push a bench in front of the doors as well. Wondering what could be so dangerous, you note someone has scribbled a small note underneath a sign telling you about the wing. The note reads: 'Do NOT open! Really, I mean it. Seriously, you don't want to go in there; it's not fun, it's not pretty, so just turn around and leave now, while you can! Signed- Val.' Deciding to take the sign's advice, you turn around to leave; though you do you find yourself wondering what could be so dangerous about a 'Modern Art' exhibit?";
+	say "     Traveling through the empty museum corridors, you come across some large, closed double doors. Looking closer, you can see that someone has wrapped chains around the door handles; and from the looks of things, tried to push a bench in front of the doors as well. Wondering what could be so dangerous, you note someone has scribbled a small note underneath a sign telling you about the wing. The note reads:  'Do NOT open! Really, I mean it. Seriously, you don't want to go in there; it's not fun, it's not pretty, so just turn around and leave now, while you can! Signed- Val.' Deciding to take the sign's advice, you turn around to leave; though you do you find yourself wondering what could be so dangerous about a 'Modern Art' exhibit?";
 	Now Sealed wing is resolved;
 
 
@@ -30,7 +30,7 @@ Updating artwork is a situation.
 The sarea of Updating artwork is "Museum".
 
 Instead of Resolving a Updating artwork:
-	say "     Wandering along the peaceful museum hallways, you take time to glance at some of the paintings hanging along the wall, only to stop and stare at them in shock. It appears someone has gone around with some paint and markers and 'updated' several of these valuable antiques, putting in glasses, mustaches, and funny hats on the characters within. Perhaps worst of all, you can see that all of the male subjects now have rather large genitalia painted on in lewd colors, and to add insult to injury, a closer inspection reveals that many of the cocks the unknown artist added are more suitable to animals then humans! Sighing at the absolute waste of art, you continue on your way down the hall; after a while though, you are forced to admit, that in the case of some of the artists, the new 'updates' are actually an improvement.";
+	say "     Wandering along the peaceful museum hallways, you take time to glance at some of the paintings hanging along the wall, only to stop and stare at them in shock. It appears someone has gone around with some paint and markers and 'updated' several of these valuable antiques, putting in glasses, mustaches, and funny hats on the characters within. Perhaps worst of all, you can see that all of the male subjects now have rather large genitalia painted on in lewd colours, and to add insult to injury, a closer inspection reveals that many of the cocks the unknown artist added are more suitable to animals then humans! Sighing at the absolute waste of art, you continue on your way down the hall; after a while though, you are forced to admit, that in the case of some of the artists, the new 'updates' are actually an improvement.";
 	Now Updating artwork is resolved;
 
 

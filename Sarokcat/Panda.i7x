@@ -14,7 +14,7 @@ when play begins:
 to say panda appears:
 	setmongender 4;  [creature is female]
 	if medeapanda is true:
-		say "     You find yourself facing off against a very pregnant female panda. She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom. You can see the shadow of her black nipples through the thinned fabric. Her pussy and thighs are wet with what might be femcum or amniotic fluid, or quite possibly both. It seems you'll have to subdue her[if HP of doctor matt is 20 or HP of doctor matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
+		say "     You find yourself facing off against a very pregnant female panda. She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom. You can see the shadow of her black nipples through the thinned fabric. Her pussy and thighs are wet with what might be femmecum or amniotic fluid, or quite possibly both. It seems you'll have to subdue her[if HP of doctor matt is 20 or HP of doctor matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
 		decrease pldamagebonus by weapon damage of player / 2;
 	else:
 		say "Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";
@@ -26,7 +26,7 @@ to say panda appears:
 to say panda attack:
 	choose row monster from the table of random critters;
 	if medeapanda is true:
-		say "     [if HP of player > 0]Rather than fight a pregnant woman about to go into labor, you decide to just give up and let her have her way[else]You end up getting beaten rather than giving you all to fight a pregnant woman about to go into labor[end if].";
+		say "     [if HP of player > 0]Rather than fight a pregnant woman about to go into labour, you decide to just give up and let her have her way[else]You end up getting beaten rather than giving you all to fight a pregnant woman about to go into labour[end if].";
 		now non-infectious entry is true;
 	else if cocks of player > 0:
 		say "'Finally!' she says as she sends you crashing to the ground exhausted! 'Now we can have some fun!' the pandalike woman says with a happy grin as she flops onto the ground next to you, her arms quickly reaching out and pulling you close. Her heat scent fills your nostrils as she slowly strokes one of her panda-like claws along the underside of your cock. 'Oh thank god, I need this so bad,' she says with a shudder, her smell and her attentions exciting you as well as she clutches you even closer, pressing your chest up against her modest breasts as she rubs her crotch against yours. Unable to resist her desperate need, and the arousal she is stirring in you, you move your cock into position up against her heat swollen lips.";

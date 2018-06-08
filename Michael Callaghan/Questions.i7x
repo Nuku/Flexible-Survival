@@ -14,20 +14,20 @@ Current answer is indexed text that varies.
 
 Section 2 - Default command line prompts for asking questions
 
-Closed number prompt is text that varies. Closed number prompt is "Please enter a number >".
-Open number prompt is text that varies. Open number prompt is ">".
+Closed number prompt is text that varies.  Closed number prompt is "Please enter a number >".
+Open number prompt is text that varies.  Open number prompt is ">".
 
-Closed menu prompt is text that varies. Closed menu prompt is "Please select a number between 1 and [number of entries in current question menu] >".
-Open menu prompt is text that varies. Open menu prompt is ">".
+Closed menu prompt is text that varies.  Closed menu prompt is "Please select a number between 1 and [number of entries in current question menu] >".
+Open menu prompt is text that varies.  Open menu prompt is ">".
 
-Closed yes/no prompt is text that varies. Closed yes/no prompt is "Please enter Y or N (Yes or No) >".
-Open yes/no prompt is text that varies. Open yes/no prompt is ">".
+Closed yes/no prompt is text that varies.  Closed yes/no prompt is "Please enter Y or N (Yes or No) >".
+Open yes/no prompt is text that varies.  Open yes/no prompt is ">".
 
-Closed gender prompt is text that varies. Closed gender prompt is "Please enter M, F or N (Male or Female or Neuter) >".
-Open gender prompt is text that varies. Open gender prompt is ">".
+Closed gender prompt is text that varies.  Closed gender prompt is "Please enter M, F or N (Male or Female or Neuter) >".
+Open gender prompt is text that varies.  Open gender prompt is ">".
 
-Closed text prompt is text that varies. Closed text prompt is "Please enter your answer >".
-Open text prompt is text that varies. Open text prompt is ">".
+Closed text prompt is text that varies.  Closed text prompt is "Please enter your answer >".
+Open text prompt is text that varies.  Open text prompt is ">".
 
 Section 3 - Flag to determine if the question is open or closed
 
@@ -72,7 +72,7 @@ To ask a closed question, in number mode, in menu mode, in yes/no mode, in gende
 		say "[current question][line break]";
 	if in menu mode:
 		repeat with counter running from 1 to the number of entries in the current question menu:
-			say "[counter] - [entry counter of the current question menu][line break]";
+			say "[counter] - [entry counter of the current question menu][line break]".
 
 Section 5 - Phrase used to ask questions in open mode
 
@@ -113,7 +113,7 @@ To ask an open question, in number mode, in menu mode, in yes/no mode, in gender
 		say "[current question][line break]";
 	if in menu mode:
 		repeat with counter running from 1 to the number of entries in the current question menu:
-			say "[counter] - [entry counter of the current question menu][line break]";
+			say "[counter] - [entry counter of the current question menu][line break]".
 
 Chapter 2 - Questions that require a number answer
 
@@ -163,7 +163,7 @@ Section 5 - To deactivate number question mode
 To deactivate number question mode:
 	now the Command Prompt is the saved prompt;
 	now the Current Prompt is "";
-	now number question mode is false;
+	now number question mode is false.
 
 Chapter 3 - Questions that require an answer from a menu
 
@@ -217,7 +217,7 @@ Section 5 - To deactivate menu question mode
 To deactivate menu question mode:
 	now the Command Prompt is the saved prompt;
 	now the Current Prompt is "";
-	now menu question mode is false;
+	now menu question mode is false.
 
 Chapter 4 - Questions that require a yes/no answer
 
@@ -227,7 +227,7 @@ Yes/no question mode is a truth state that varies.
 
 Section 2 - Value for use with yes/no questions
 
-Decision is a kind of value. The decisions are Yes and No.
+Decision is a kind of value.  The decisions are Yes and No.
 
 Understand "Y" as Yes when yes/no question mode is true.
 Understand "N" as No when yes/no question mode is true.
@@ -273,7 +273,7 @@ Section 6 - To deactivate yes/no question mode
 
 To deactivate yes-no question mode:
 	now the Command Prompt is the saved prompt;
-	now yes/no question mode is false;
+	now yes/no question mode is false.
 
 Chapter 5 - Questions that require a gender answer
 
@@ -283,7 +283,7 @@ Gender question mode is a truth state that varies.
 
 Section 2 - Value for use with gender questions
 
-Gender is a kind of value. The genders are Masculine, Feminine and Neutral.
+Gender is a kind of value.  The genders are Masculine, Feminine and Neutral.
 
 Understand "M" as Masculine when gender question mode is true.
 Understand "F" as Feminine when gender question mode is true.
@@ -331,7 +331,7 @@ Section 6 - To deactivate gender question mode
 To deactivate gender question mode:
 	now the Command Prompt is the saved prompt;
 	now the Current Prompt is "";
-	now gender question mode is false;
+	now gender question mode is false.
 
 Chapter 6 - Questions that require a text answer
 
@@ -384,14 +384,14 @@ Section 5 - To deactivate text question mode
 To deactivate text question mode:
 	now the Command Prompt is the saved prompt;
 	now the Current Prompt is "";
-	now text question mode is false;
+	now text question mode is false.
 
 Chapter 7 - Real number question mode (for use with Fixed Point Maths by Michael Callaghan)
 
 Section 1 - Default command line prompts for real numbers
 
-Closed real number prompt is text that varies. Closed real number prompt is "Please enter a number >".
-Open real number prompt is text that varies. Open real number prompt is ">".
+Closed real number prompt is text that varies.  Closed real number prompt is "Please enter a number >".
+Open real number prompt is text that varies.  Open real number prompt is ">".
 
 Section 2 - Phrase to ask a real number question in closed mode
 
@@ -404,7 +404,7 @@ To ask a closed question in real number mode:
 		now the command prompt is the current prompt;
 	now real number question mode is true;
 	if current question is not "":
-		say "[current question][line break]";
+		say "[current question][line break]".
 
 Section 3 - Phrase to ask a real number question in open mode
 
@@ -417,7 +417,7 @@ To ask an open question in real number mode:
 		now the command prompt is the current prompt;
 	now real number question mode is true;
 	if current question is not "":
-		say "[current question][line break]";
+		say "[current question][line break]".
 
 Section 4 - Flag for real number question mode
 
@@ -473,7 +473,7 @@ Section 8 - To deactivate real number question mode
 To deactivate real number question mode:
 	now the Command Prompt is the saved prompt;
 	now the Current Prompt is "";
-	now real number question mode is false;
+	now real number question mode is false.
 
 Chapter 8 - To decide if we are in question mode
 
@@ -519,11 +519,11 @@ Chapter: About questions
 
 Section: Introduction
 
-During the normal course of a game, the parser responds to commands given by the player. If we type look, the parser interprets the command and displays a description of the current room; if we type N, the player heads North (if that exit is available, and so on.
+During the normal course of a game, the parser responds to commands given by the player.  If we type look, the parser interprets the command and displays a description of the current room; if we type N, the player heads North (if that exit is available, and so on.
 
-Occasionally, we may want to ask specific questions and process the answers. Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice. Answers to these types of questions fall outside the range of the normal parser functions. Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
+Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.  Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
 
-This extension provides a framework that can be used to ask different types of questions. The mechanics are hidden behind the scenes to allow us to concentrate on asking and responding to a question without having to implement the framework ourselves.
+This extension provides a framework that can be used to ask different types of questions.  The mechanics are hidden behind the scenes to allow us to concentrate on asking and responding to a question without having to implement the framework ourselves.
 
 Section: What's new?
 
@@ -553,7 +553,7 @@ Chapter: Types of questions
 
 Section: Overview
 
-The extension allow us to ask questions that require different types of answers. The following questions types are allowed:
+The extension allow us to ask questions that require different types of answers.  The following questions types are allowed:
 
 - Questions that require a number as an answer.
 
@@ -565,7 +565,7 @@ The extension allow us to ask questions that require different types of answers.
 
 - Questions that require a text answer.
 
-- Questions that require a real number answer. For use in conjunction with the Fixed Point Maths extension by Michael Callaghan.
+- Questions that require a real number answer.  For use in conjunction with the Fixed Point Maths extension by Michael Callaghan.
 
 Section: Using this extension with fixed point maths
 
@@ -573,17 +573,17 @@ In order to use this extension with the fixed point maths extension, the fixed p
 
 Section: Open and closed questions
 
-The extension makes a distinction between "open" and "closed" questions. The difference between the two is that closed questions will not allow the game to proceed unless and until we specify that a correct answer has been given to a question. With open questions, if an 'incorrect 'reply is given, the game proceeds and tries to parse the player's command using the normal parser rules. For example, if we ask the question "How old are you?" expecting a number answer, the extension will deal with replies differently depending on whether we ask an open or a closed question.
+The extension makes a distinction between "open" and "closed" questions.  The difference between the two is that closed questions will not allow the game to proceed unless and until we specify that a correct answer has been given to a question.  With open questions, if an 'incorrect 'reply is given, the game proceeds and tries to parse the player's command using the normal parser rules.  For example, if we ask the question "How old are you?" expecting a number answer, the extension will deal with replies differently depending on whether we ask an open or a closed question.
 
 Open questions:
 
-If player answered "inv" to a number question, the extension will exit question mode and proceed to parse the answer normally. In this case, the player's inventory will be displayed.
-If the player answered 12, we determine whether this is an acceptable answer. If the answer is acceptable, the extension exits question mode and the play resumes. If the answer is unacceptable, for example the player enters 234 when asked his or her age, we can specify whether the question needs to asked again or whether play should proceed without an answer.
+If player answered "inv" to a number question, the extension will exit question mode and proceed to parse the answer normally.  In this case, the player's inventory will be displayed.
+If the player answered 12, we determine whether this is an acceptable answer.  If the answer is acceptable, the extension exits question mode and the play resumes.  If the answer is unacceptable, for example the player enters 234 when asked his or her age, we can specify whether the question needs to asked again or whether play should proceed without an answer.
 
 Closed questions:
 
 If the player answered "inv", the answer will be rejected and the player will need to answer the question again.
-If the player answered 12, we determine whether this is an acceptable answer. If the answer is acceptable, the game exits question mode and proceeds as normal. If the answer is unacceptable, for example the player enters 234, the player will need to answer the question again.
+If the player answered 12, we determine whether this is an acceptable answer.  If the answer is acceptable, the game exits question mode and proceeds as normal.  If the answer is unacceptable, for example the player enters 234, the player will need to answer the question again.
 
 Section: Flag for open or closed questions
 
@@ -599,15 +599,15 @@ Chapter: Asking questions
 
 Section: Setting the current question
 
-To ask a question, we first set the text for the question. The form is:
+To ask a question, we first set the text for the question.  The form is:
 
-	now the current question is "How old are you?";
+	now the current question is "How old are you?"
 
 Section: Setting items for menu questions
 
-Before we ask a question that requires an answer from a menu of options, we need to set the menu items to be displayed. We do this by setting the variable "current question menu" to the list of options that we require.
+Before we ask a question that requires an answer from a menu of options, we need to set the menu items to be displayed.  We do this by setting the variable "current question menu" to the list of options that we require.
 
-	now current question is "What is your favorite color? >";
+	now current question is "What is your favourite colour? >";
 	now current question menu is {"Red", "Blue", "Green", "Yellow"};
 	ask a closed question, in menu mode.
 
@@ -651,11 +651,11 @@ Chapter: Setting the command prompt for questions
 
 Section: Overview
 
-When a question is asked, we can change the command prompt to indicate to the player that a question is being asked. By default, the extension sets a series of default prompts. These are specific to the type of question being asked; they are:
+When a question is asked, we can change the command prompt to indicate to the player that a question is being asked.  By default, the extension sets a series of default prompts.  These are specific to the type of question being asked; they are:
 
 	Closed number prompt: "Please enter a number >".
 
-	Open number prompt: ">".
+	Open number prompt:  ">".
 
 	Closed menu prompt: "Please select a number between 1 and [number of entries in current question menu] >".
 
@@ -675,7 +675,7 @@ When a question is asked, we can change the command prompt to indicate to the pl
 
 	Closed real number prompt: "Please enter a number >".
 
-	Open real number prompt: ">".
+	Open real number prompt:  ">".
 
 
 Section: Changing the question prompt
@@ -690,7 +690,7 @@ If we set the current prompt to "", the relevant default prompt outlined above w
 
 Section: Combining the question and prompt
 
-We can combine the question and the prompt. To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
+We can combine the question and the prompt.  To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
 
 	now current question is "";
 	now current prompt is "What is your name? >";
@@ -705,9 +705,9 @@ The player can also answer a question by using the form 'say X' where X is the a
 
 Section: Rulebooks
 
-When we answer a question, the answer is processed by a rulebook. By adding our own rules in the game, we can tailor the Questions extension to provide the functionality that we require.
+When we answer a question, the answer is processed by a rulebook.  By adding our own rules in the game, we can tailor the Questions extension to provide the functionality that we require.
 
-Each type of question has its own rulebook. These are:
+Each type of question has its own rulebook.  These are:
 
 Number questions: The number question rules.
 
@@ -723,21 +723,21 @@ Real number questions: The real number question rules.
 
 Section: Rulebook outcomes
 
-Each rulebook has three named outcomes that we can use to control how the game proceeds. The outcomes are:
+Each rulebook has three named outcomes that we can use to control how the game proceeds.  The outcomes are:
 
-Exit: The answer to the question is discarded and the game proceeds as normal. Usually, we will have used the answer to set other conditions in the game before we use exit. The exit outcome automatically advances the game by one turn.
+Exit: The answer to the question is discarded and the game proceeds as normal.  Usually, we will have used the answer to set other conditions in the game before we use exit.  The exit outcome automatically advances the game by one turn.
 
-Retry: The answer to the question is discarded but we remain in question mode awaiting another answer. Usually, this will be because the answer to the question is not a valid answer.
+Retry: The answer to the question is discarded but we remain in question mode awaiting another answer.  Usually, this will be because the answer to the question is not a valid answer.
 
-Parse: The answer to the question is not disregarded and the question mode ends leaving the answer to be parsed as normal. Usually, we use this where there is an open question.
+Parse: The answer to the question is not disregarded and the question mode ends leaving the answer to be parsed as normal.  Usually, we use this where there is an open question.
 
 Section: Default rules
 
-Each rulebook has default rules. If we do not create our own rules, the default rules control how answers are processed. The default rules are set out below.
+Each rulebook has default rules.  If we do not create our own rules, the default rules control how answers are processed.  The default rules are set out below.
 
 Section: Adding our own rules
 
-We can add our own rules in the game. For example:
+We can add our own rules in the game.  For example:
 
 	A number question rule (this is the set age rating rule):
 		if the current question is "How old are you?":
@@ -745,7 +745,7 @@ We can add our own rules in the game. For example:
 				say "It seems unlikely that a person of such tender years would be playing this game.";
 				retry;
 			if the number understood > 111:
-				say "I find it hard to believe that this is your real age. Please be more realistic.";
+				say "I find it hard to believe that this is your real age.  Please be more realistic.";
 				retry;
 			if the number understood < 21:
 				say "Setting the game mode to mild!";
@@ -773,52 +773,52 @@ We test the answer to a number question using the phrase 'the number understood'
 
 There are two default rules for processing answers to number questions.
 
-The first rule, called 'the invalid number reply rule', operates where the player enters an answer to a number question that is not a number. If the question is a closed number question, the outcome is retry. If the question is an open question, the outcome is parse.
+The first rule, called 'the invalid number reply rule', operates where the player enters an answer to a number question that is not a number.  If the question is a closed number question, the outcome is retry.  If the question is an open question, the outcome is parse.
 
 The last rule, called 'the default number question rule', has the outcome exit.
 
 Section: Rules for menu questions
 
-We test the answer to menu questions using the phrase 'the number understood'. The value should be between 1 and the number of items in the menu.
+We test the answer to menu questions using the phrase 'the number understood'.  The value should be between 1 and the number of items in the menu.
 
 There are two default rules for processing answers to menu questions.
 
-The first rule, called the 'invalid menu reply rule' first tests whether the player has entered a number. If the player has entered an answer that is not a number, the outcome is retry if the question was a closed menu question or parse if the question was an open menu question. If a numbered was entered that falls outside the range 1 to the number of items in the menu, the outcome is retry for both open and closed menu questions.
+The first rule, called the 'invalid menu reply rule' first tests whether the player has entered a number.  If the player has entered an answer that is not a number, the outcome is retry if the question was a closed menu question or parse if the question was an open menu question.  If a numbered was entered that falls outside the range 1 to the number of items in the menu, the outcome is retry for both open and closed menu questions.
 
 The last rule, called the 'default menu rule', has the outcome exit.
 
 Section: Rules for Yes/No questions
 
-We test the answer to yes/no questions using the phrase 'the decision understood'. The decision understood takes one of two values, 'Yes' or 'No'. 'Y' and 'N' are understood as Yes and No when the player types their response.
+We test the answer to yes/no questions using the phrase 'the decision understood'.  The decision understood takes one of two values, 'Yes' or 'No'.  'Y' and 'N' are understood as Yes and No when the player types their response.
 
 There are two default rules for processing the answers to yes/no questions.
 
-The first rule, called the 'invalid yes/no reply rule' tests whether the player has entered Yes or No. If the player has not so responded, the outcome is retry if the question is a closed yes/no question or parse if the question is a closed menu question.
+The first rule, called the 'invalid yes/no reply rule' tests whether the player has entered Yes or No.  If the player has not so responded, the outcome is retry if the question is a closed yes/no question or parse if the question is a closed menu question.
 
 The last rule, called the 'default yes/no rule', has the outcome exit.
 
 Section: Rules for gender questions
 
-The test the answer to gender questions using the phrase 'the gender understood'. The gender understood takes one of three values, 'Masculine', 'Feminine' or 'Neutral'. 'M', 'F' and 'N' are understood as Masculine, Feminine and Neutral when the player types their response. Neutral is used instead of Neuter as Neuter is defined as an adjective in I7.
+The test the answer to gender questions using the phrase 'the gender understood'.  The gender understood takes one of three values, 'Masculine', 'Feminine' or 'Neutral'.  'M', 'F' and 'N' are understood as Masculine, Feminine and Neutral when the player types their response.  Neutral is used instead of Neuter as Neuter is defined as an adjective in I7.
 
 There are two default rules for processing the answers to gender questions.
 
-The first rule, called the 'invalid gender reply rule' tests whether the player has entered a valid gender. If the player has not entered a valid gender, the outcome is retry if the question is a closed gender question or parse if the question is an open gender question.
+The first rule, called the 'invalid gender reply rule' tests whether the player has entered a valid gender.  If the player has not entered a valid gender, the outcome is retry if the question is a closed gender question or parse if the question is an open gender question.
 
 The last rule, called the 'default gender rule', has the outcome exit.
 
 Section: Rules for text questions
 
-We test the answer to text questions using the variable "current answer". The current answer is set to the player's answer. If the answer was given in the form "say answer", the word "say" and the following space is also removed.
+We test the answer to text questions using the variable "current answer".  The current answer is set to the player's answer.  If the answer was given in the form "say answer", the word "say" and the following space is also removed.
 
 There are two default rules for text questions.
 
-The first rule, called the 'remove punctuation from text questions rule' determines whether or not punctuation is removed from the player's answer before it is processed. We can control punctuation removal by setting the truth state 'punctuation removal'.
+The first rule, called the 'remove punctuation from text questions rule' determines whether or not punctuation is removed from the player's answer before it is processed.  We can control punctuation removal by setting the truth state 'punctuation removal'.
 
 	now punctuation removal is true;
 	now punctuation removal is false;
 
-The last rule is called the 'default text rule'. If the question was a closed text question, the outcome is retry. If the question was an open text question, the outcome is parse.
+The last rule is called the 'default text rule'.  If the question was a closed text question, the outcome is retry.  If the question was an open text question, the outcome is parse.
 
 Section: Rules for real number questions
 
@@ -826,13 +826,13 @@ We test the answer to a real number question using the variable "current number"
 
 There are two default rules for processing answers to real number questions.
 
-The first rule, called 'the invalid real number reply rule', operates where the player enters an answer to a real number question that is not a real number. If the question is a closed real number question, the outcome is retry. If the question is an open real number question, the outcome is parse.
+The first rule, called 'the invalid real number reply rule', operates where the player enters an answer to a real number question that is not a real number.  If the question is a closed real number question, the outcome is retry.  If the question is an open real number question, the outcome is parse.
 
 The last rule, called 'the default real number question rule', has the outcome exit.
 
 Chapter: Determining whether or not we are asking a question
 
-If we need to determine whether or not we are currently asking a question, for example as a test in another rulebook, we can do so by using the phrase 'If we are asking a question'. This will decide Yes if an open or closed question is being asked.
+If we need to determine whether or not we are currently asking a question, for example as a test in another rulebook, we can do so by using the phrase 'If we are asking a question'.  This will decide Yes if an open or closed question is being asked.
 
 Example: * Open Sesame - A short example to show the question rules with an initial open text question followed by an interview section to gather information about the player.
 
@@ -840,16 +840,16 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	Include questions by Michael Callaghan.
 
-	Canyon is a room. "You are at the far end of a canyon. A recent rock fall behind you prevents all further hopes of escape. A large boulder to the east emits a faint green light."
+	Canyon is a room.  "You are at the far end of a canyon.  A recent rock fall behind you prevents all further hopes of escape.  A large boulder to the east emits a faint green light."
 
-	A large boulder is a door. The large boulder is locked and closed.
+	A large boulder is a door.  The large boulder is locked and closed.
 
-	The large boulder is scenery. The description is "Inscribed in runic letters on the face of the boulder are the words 'Solve Oriel's Myth to find your way forward.'"
+	The large boulder is scenery.  The description is "Inscribed in runic letters on the face of the boulder are the words 'Solve Oriel's Myth to find your way forward.'"
 
 	Instead of doing anything other than examining the large boulder:
-		say "There is an aura of magic about the large boulder that prevents you doing this.";
+		say "There is an aura of magic about the large boulder that prevents you doing this."
 
-	Small cave is a room. "A flight of steps leads down into the darkness."
+	Small cave is a room.  "A flight of steps leads down into the darkness."
 
 	The large boulder is east of the canyon and west of the small cave.
 
@@ -876,19 +876,19 @@ Example: * Open Sesame - A short example to show the question rules with an init
 			else:
 				parse.
 
-	Room of requirements is a room. Room of requirements is down from the small cave. The description is "The room smells musty.[If unvisited]  An alien presence invades your mind and deep in your bones you hear a voice echo 'Welcome brave soul. You have passed the first hurdle. Before you proceed, you must answer the following questions.'"
+	Room of requirements is a room.  Room of requirements is down from the small cave.  The description is "The room smells musty.[If unvisited]  An alien presence invades your mind and deep in your bones you hear a voice echo 'Welcome brave soul.  You have passed the first hurdle.  Before you proceed, you must answer the following questions.'"
 
 	Instead of doing anything in the room of requirements when gathering is happening:
-		say "You are under a strange compulsion and unable to move.";
+		say "You are under a strange compulsion and unable to move."
 
-	Data is a kind of value. The data are name, age, sex, character, finalise and complete.
+	Data is a kind of value.  The data are name, age, sex, character, finalise and complete.
 
-	Gathering is a scene. Gathering begins when the location is the room of requirements.
+	Gathering is a scene.  Gathering begins when the location is the room of requirements.
 	Gathering ends when stage is complete.
 	Stage is data that varies.
 
 	When Gathering begins:
-		now stage is name;
+		now stage is name.
 
 	Every turn during Gathering:
 		if stage is name:
@@ -907,7 +907,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 			now current question menu is {"Wizard", "Warrior", "Sage", "Healer"};
 			ask a closed question, in menu mode;
 		if stage is finalise:
-			say "You have chosen:[line break]Name: [player's name][line break]Age: [Player's age][line break]Sex: [Player's sex][line break]Character: [Player's character][paragraph break]";
+			say "You have chosen:[line break]Name: [player's name][line break]Age: [Player's age][line break]Sex: [Player's sex][line break]Character:  [Player's character][paragraph break]";
 			now current question is "Are you happy with your responses?";
 			ask a closed question, in yes/no mode.
 
@@ -936,14 +936,14 @@ Example: * Open Sesame - A short example to show the question rules with an init
 				say "Let's try to be realistic about this.";
 				retry;
 			now the player's age is the number understood;
-			say "Thank you: You are [the player's age] for the remainder of your venture into the unknown[line break]";
+			say "Thank you:  You are [the player's age] for the remainder of your venture into the unknown[line break]";
 			now stage is sex;
 			exit.
 
 	A gender question rule (this is the gather gender rule):
 		if gathering is happening and stage is sex:
 			now the player's sex is the gender understood;
-			say "Thank you. You are [the player's sex] gender[line break]";
+			say "Thank you.  You are [the player's sex] gender[line break]";
 			now stage is character;
 			exit.
 
@@ -958,11 +958,11 @@ Example: * Open Sesame - A short example to show the question rules with an init
 	A yes/no question rule (this is the confirm answers rule):
 		if gathering is happening and stage is finalise:
 			if the decision understood is Yes:
-				say "Thank you. Venture into the unknown brave [the player's character][line break]";
+				say "Thank you.  Venture into the unknown brave [the player's character][line break]";
 				now stage is complete;
 				exit;
 			else:
-				say "OK. Let's start again, shall we[line break]";
+				say "OK.  Let's start again, shall we[line break]";
 				now stage is name;
 				exit.
 
@@ -974,7 +974,7 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 
 	Include questions by Michael Callaghan.
 
-	The pub is a room. "The pub is crowded for the weekly quiz night. The barman is ready to call out the questions. Get one wrong and you will be barred from the pub for life."
+	The pub is a room.  "The pub is crowded for the weekly quiz night.  The barman is ready to call out the questions.  Get one wrong and you will be barred from the pub for life."
 
 	After looking for the first time:
 		follow the pub rule.
@@ -1000,8 +1000,8 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 	A menu question rule (this is the pub answer rule):
 		if the number understood is the expected answer:
 			if the table of quiz questions is not empty:
-				say "Well done. You have survived to the next round.";
+				say "Well done.  You have survived to the next round.";
 			else:
 				end the story finally saying "Congratulations you have won!";
 		else:
-			end the story finally saying "You have been barred from the pub for getting a question wrong.";
+			end the story finally saying "You have been barred from the pub for getting a question wrong.".

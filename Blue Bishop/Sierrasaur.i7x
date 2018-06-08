@@ -49,7 +49,7 @@ to say sierradesc:
 			add { "Sierrasaur" } to infections of hermaphrodite;
 			setmongender 7;		[creature is mherm]
 		if sierramem is 0:
-			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[else if scalevalue of player is 4]only slightly larger[else]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
+			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[else if scalevalue of player is 4]only slightly larger[else]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-coloured, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
 			now sierramem is 1;
 		else:
 			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence[or]Your presence disrupting its rest, it's none too pleased by this[or]This one seems to be hunting for prey, perhaps gauging that you might suffice[at random], the craggy beast ponderously attempting to approach and subdue you, forcing you to keep your distance and deal with them.";
@@ -149,7 +149,7 @@ to sierrabind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 3:
 					say "     [one of]You start a bit of a ruckus inside[or]You writhe about and push around[or]You quickly and forcibly make known your protest from within[at random] [one of]this fleshy prison[or]these firm confines[at random]. Forcing the beast to groan. [if struggleatt is 1]It seems less annoyed and more confused by your disapproval[else]It becomes increasingly difficult for the beast to keep you down, at this rate it might not see you as worth the trouble[end if].[line break]";
@@ -184,10 +184,10 @@ to sierrabind:
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     You're driven to submit to your current circumstance, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						increase lustatt by 7 + (lustadjust * 2);
 						sierrasex;
@@ -207,7 +207,7 @@ to sierrabind:
 					if a random chance of 2 in 3 succeeds, increase bsextimer by 1;
 				else:
 					say " You choose to remain within these confines for a bit longer, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						sierrasex;
 						if bodyname of player is "Sierrasaur" and player is pure:
@@ -232,9 +232,9 @@ to sierrabind:
 			else:
 				now enduring is true;
 				if boundrecover is true:
-					say "[line break]";
+					LineBreak;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						sierrasex;
 						if bodyname of player is "Sierrasaur" and player is pure:
@@ -256,9 +256,9 @@ to sierrabind:
 						if humanity of player > 100, now humanity of player is 100;
 					now boundrecover is false;
 				else:
-					say "[line break]";
+					LineBreak;
 					say "     You fight to maintain clarity while stuck in these confines, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					say "[line break]";
+					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
 						sierrasex;
 						if bodyname of player is "Sierrasaur" and player is pure:
@@ -396,7 +396,7 @@ to sierrasex:
 	PlayerDrink 6;
 
 to say beathesierra:
-	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanor is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
+	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanour is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
 
 
 Section 2 - Monster Insertion

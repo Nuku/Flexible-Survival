@@ -35,7 +35,12 @@ instead of conversing the Lindsey:
 the fuckscene of Lindsey is "[sexwithLindsey]".
 
 to say sexwithLindsey:
-	setmonster "Wolftaur";
+	[puts Wolftaur as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Wolftaur":
+			now monster is y;
+			break;
 	if lastfuck of Lindsey - turns < 6:
 		say "     'Sorry there my horny little bitch,' Lindsey says with a soft chuckle, 'but I have to check on my other bitch and make sure she is properly taken care of too, so I need to save a bit of energy for that. Why don't you come back in a little bit and I can make you even more into a proper little bitch, just like you want,' the masculine wolftaur says with lupine grin, the mingled musk of male wolftaur and your recent sex filling the air.";
 	else if player is neuter:

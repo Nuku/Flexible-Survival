@@ -30,7 +30,7 @@ An everyturn rule(this is the entertainer rule):
 	let x be a random number from 80 to 120;
 	if Novelstudies is 2:
 		increase x by 20;
-	if "theater" is listed in perks of tribe of player:
+	if "Theatre" is listed in perks of tribe of player:
 		increase x by 20; [Not yet implemented]
 	now x is foragers * 20 * x;
 	now x is x divided by (population of tribe of player); [Keeps it at a fraction of a whole number, so 1-20 would be max. If 5% of population is entertainment, +1 moral.]

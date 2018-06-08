@@ -28,7 +28,7 @@ to say MonkeyKingdesc:
 			if bodyname of player is "Monkey":
 				say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting. The prideful monkey-man startles you as he jumps down from the roof of a plaster pagoda and lands right in front of you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and prepare yourself. I need an outlet,' he says, grinning.";
 			else:
-				say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: '[italic type]Halt, peasant![roman type]'. A golden-furred monkey dressed in an martial arts vest and pants jumps in front of you. He wields a wooden staff, and twirls it a few times around his body to show off his skills.";
+				say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room:  '[italic type]Halt, peasant![roman type]'. A golden-furred monkey dressed in an martial arts vest and pants jumps in front of you. He wields a wooden staff, and twirls it a few times around his body to show off his skills.";
 				say "     With an arrogant grin on his face, the kung-fu artist challenges you: 'Low life! You are now graced by the presence of the illustrious, mighty Monkey King! Obey your betters and service me at once! Of course, you can also do that after I whacked you a little with my staff. Actually, do try to resist; claiming you will feel even more pleasurable.'";
 			if acquaintedWithWukong is 0:
 				now acquaintedWithWukong is 1;
@@ -176,7 +176,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "simian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -286,7 +286,7 @@ instead of resolving Crashing the Satyr Party:
 		challenge "Satyr";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     You wait until the satyr gets back on his feet, and explain what Wukong had asked you to do. 'Really?' he asks. 'That's low, even for an insufferable prick like him. Tell you what: go get him, and tell him that you spiked the wine. Once he gets here, my boss and him are going to have an explanation.";
-			say "     You do as you are asked, this time, and promptly lies to Wukong that his plan is ready. 'Very good,' the monkey says, and he wastes no time following you. 'Time to party, servant!'";
+			say "     You do as you are asked, this time, and promptly lies to Wukong that his plan is ready.  'Very good,' the monkey says, and he wastes no time following you. 'Time to party, servant!'";
 			WaitLineBreak;
 			say "     'Time to party, brothers!' the satyr chief calls around, as he keeps the defeated monkey on the ground with a hooved foot.";
 			say "     It had been an impressively quick affair. You accompanied the monkey to the party, where you found all the satyrs in an even more engaged state than before. 'I had you spike their wine with some aphrodisiac,' Wukong explained to you, while you made your way through the painfully rock-hard satyrs and gushing wet nymphs. The both of you singled out the leader, a big, black-haired male with impressive chest hair, who was doing a bad job of acting drugged and under the effects of the aphrodisiac. 'D-Damn monkey. That's one of your dirty tricks, isn't it?' he says. Wukong does not notice the wooden delivery of the line and rushes to assault. He was quickly dominated, as the satyr suddenly acted alert and promptly knocked the simian out, then tied his hands together and called for the rest of the assembly to join him.";

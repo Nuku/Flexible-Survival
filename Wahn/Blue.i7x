@@ -455,9 +455,9 @@ When Play begins:
 	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]";
 	now face change entry is "it is reshaped into human proportions";
 	now body change entry is "it changes to flow into a humanoid shape. Strangely, the feeling of being 'squishy' inside never really goes away even after your current form stabilizes";
-	now skin change entry is "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, aquamarine-blue in color";
+	now skin change entry is "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, aquamarine-blue in colour";
 	now ass change entry is "you get an odd feeling, and it takes on normal human shape";
-	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done";
+	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former colour drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done";
 	now str entry is 8;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -482,7 +482,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "flowing"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "flowing"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "gelatinous"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

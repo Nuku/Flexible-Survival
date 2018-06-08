@@ -31,7 +31,7 @@ to say FeralFoxVictory:
 			else:
 				say "     The player must be male, so sex goes like this for him.";
 		else:
-			say "     Awww! The player refused the sex. Party pooper.";
+			say "     Awww!  The player refused the sex. Party pooper.";
 
 to say FeralFoxDesc:
 	say "     Monster description paragraph 1.";

@@ -467,7 +467,7 @@ When Play begins:
 	now body change entry is "its chest thickens and stretches into a more zebra-like barrel. Legs thickening and shifting into a digitigrade stance, your feet round out into rough hooves underneath you. Your arms thicken with new muscle while your fingers seem to flow and merge, leaving you with only three fingers and a thumb on each hand. The tips of your reformed digits are covered in thick, black nails, giving your hands a strong hoof-like appearance"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft, black-and-white-striped fur slowly covers your body, your skin twitching and shuddering as it settles into place"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it firms up, and you feel a sharp stretching sensation as a thin whip-like zebra tail pushes its way out from above your ass. With a sharp, short shock of pain, strands of thick zebra hair explode out of the tip of the appendage and form a tuft of fur"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it darkens to a deep-black color, and its tip blunts into an equine tip. A zebra's sheath forms at its base, and it pulls up into it, ready to emerge when you get aroused"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it darkens to a deep-black colour, and its tip blunts into an equine tip. A zebra's sheath forms at its base, and it pulls up into it, ready to emerge when you get aroused"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 19;
 	now dex entry is 19;
 	now sta entry is 16;

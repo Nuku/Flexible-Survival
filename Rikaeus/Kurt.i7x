@@ -81,7 +81,7 @@ instead of conversing the Kurt:
 		say "[KurtTalkMenu]";
 
 to say KurtTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you wish to talk about with the shark-morph?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -146,7 +146,7 @@ instead of fucking Kurt:
 		say "[KurtSexMenu]";
 
 to say KurtSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -38,7 +38,7 @@ instead of conversing the Gerty:
 	say "[GertyTalkMenu]";
 
 to say GertyTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Gerty about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -133,7 +133,7 @@ instead of fucking the Gerty:
 		say "[GertySexMenu]";
 
 to say GertySexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

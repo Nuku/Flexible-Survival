@@ -1,5 +1,6 @@
-Version 1 of Drone Wasp by Nuku Valente begins here.
-[Version 1 -- Taken from Story.ni file and given dedicated file. Written by Asani.]
+Version 2 of Drone Wasp by Nuku Valente begins here.
+[ Version 1.0 - Initial content - Asani                                       ]
+[ Version 2.0 - Moved from story.ni file to Nuku Valente folder - Blue Bishop ]
 
 "Adds a Drone Wasp creature to Flexible Survival's Wandering Monsters table"
 
@@ -76,7 +77,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]altered[or]exotic[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]altered[or]exotic[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]insectoid[or]wasp[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

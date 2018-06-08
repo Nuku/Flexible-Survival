@@ -99,4 +99,4 @@
 <p class="hangingin2"><b>Story.ni by Flexible Infection</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Story.ni by Flexible Society Main File</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Story.ni by Inform</b> - title contains a full stop</p>
-<p class="hangingin2"><b>Template.i7x</b> - non-folder found where author folders should be</p>
+<p class="hangingin2"><b>Template For FS.i7x</b> - non-folder found where author folders should be</p>

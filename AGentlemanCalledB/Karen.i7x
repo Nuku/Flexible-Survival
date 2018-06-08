@@ -70,7 +70,7 @@ to say KarenDesc:
 	if Karen is in Rex's Place:
 		say "     Looking over Karen, you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart-shaped tag that has her name engraved on it.";
 	else:
-		say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her.";
+		say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her."
 
 instead of sniffing Retriever Girl:
 	say "[KarenScent]";
@@ -79,7 +79,7 @@ to say KarenScent:
 	if Karen is in Rex's Place:
 		say "     Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.";
 	else:
-		say "     Karen has a light scent of an aroused female canine.";
+		say "     Karen has a light scent of an aroused female canine."
 
 instead of conversing the Karen:
 	if Karen is visible:

@@ -4,7 +4,7 @@ Version 1 of Farm by Wahn begins here.
 [ Events: Cow Hunting, Missing Cow                          ]
 [ NPCs: Anthony the anteater, Corbin the cowboy cuntboy     ]
 [                                                           ]
-[ Further Plans:                               ]
+[ Further Plans:                                            ]
 [ Mustang NPC+Infection + Quest                             ]
 [ Wendy the cow npc + her offspring with the gryphon        ]
 

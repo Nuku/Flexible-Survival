@@ -69,15 +69,15 @@ to say FinnTracked:
 		say "     The horseman leader looks at you and is clearly less than impressed. His equine shaft twitches a little as he arrogantly laughs out loud. Clearly looking as much for a fight as for sex, he calls out, 'I'm calling dibs on this one!' With that said, he charges at you.";
 		now horsefight is 1;
 		challenge "Horseman";
-		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+		if fightoutcome >= 20 and fightoutcome <= 29:      [lost]
 			say "     Having lost the fight, there's little left but to slink back to the farm in defeat. With the eager way he was pounding that centauress, Finn will no doubt shortly be indoctrinated as another one of their raiding party. Nothing left but to tell Anthony that he's not coming back.";
 			now FinnTrackingProgress is 100; [Finn joined the stables]
 			move player to McDermott Farm Entrance;
-		else if fightoutcome >= 30: [fled]
+		else if fightoutcome >= 30:     [fled]
 			say "     Having run away from the fight, there's little left but to slink back to the farm in defeat. With the eager way he was pounding that centauress, Finn will no doubt shortly be indoctrinated as another one of their raiding party. Nothing left but to tell Anthony that he's not coming back.";
 			now FinnTrackingProgress is 100; [Finn joined the stables]
 			move player to McDermott Farm Entrance;
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 			say "     While you were busy overwhelming the leader of the horsemen, it seems the male centaur took advantage of the other two being distracted! He is currently fighting them with surprisingly large success despite the imbalance in numbers. In fact, with a kick of a strong leg, one of the horsemen goes down while you're still thinking about if you should come to his help. Then his shout of, 'You'll pay for violating my sister! I'll kill you all!' the centaur shouts directly at Finn, who never stopped pounding into the young woman's pussy despite the fighting going on around him.";
 			say "     Focusing your attention on getting Anthony's missing worker out of here without (getting/being) hoof-stomped out of existence, you tell Finn to stop fucking around, but he doesn't even register a word of what you're saying. Only when you grab him by the shoulder and give a heavy pull does his long shaft slip from the centauress's nether lips, smacking the horseman's inner thigh with a wet slap. 'Hey, I was -' Finn starts to get out, then an incoming punch from the by now victorious centaur sends him to the ground, dazed and clearly helpless.";
 			WaitLineBreak;
@@ -127,15 +127,15 @@ to say FinnTracked:
 				LineBreak;
 				now inasituation is true;
 				challenge "Centaur Stallion";
-				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+				if fightoutcome >= 20 and fightoutcome <= 29:      [lost]
 					say "     Having lost the fight, there's little left but to get the hell away from the homicidal centaur and slink back to the farm in defeat. You don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon. Nothing left but to tell Anthony that he's not coming back... ever.";
 					now FinnTrackingProgress is 99; [Finn is dead]
 					move player to McDermott Farm Entrance;
-				else if fightoutcome >= 30: [fled]
+				else if fightoutcome >= 30:     [fled]
 					say "     Having run away from the fight, leaving Finn to the mercy of a homicidal centaur, there's little left but to slink back to the farm in defeat. You don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon. Nothing left but to tell Anthony that he's not coming back... ever.";
 					now FinnTrackingProgress is 99; [Finn is dead]
 					move player to McDermott Farm Entrance;
-				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+				else if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 					say "     Beating back the centaur in his homicidal rage, you use a moment in which he has to catch his breath to get an arm around Finn, then hastily half-drag half-guide the horseman away. A clatter of hooves indicates that the centaur stallion starts to follow, then gets distracted by the groan of another horseman of the raiding party. Despite being out of sight of the grisly action that follows, you don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon.";
 					say "     Guiding the rescued horseman through the open plain, you're sure to check over your shoulder if anyone follows more than a few times before arriving back at the farm. Handing off the still somewhat bruised and dizzy Finn to his farmhand buddies, there's little left but tell Anthony that you've got his worker back safe and sound.";
 					now FinnTrackingProgress is 3; [Finn rescued, no sex]
@@ -154,7 +154,7 @@ to say FinnCentauressCaring:
 			say "     [bold type]Fuck her ([link]Y[as]y[end link]), or do you just want to lick and stroke her pussy ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents:
 				LineBreak;
-				say "     Shooing the instinct-driven centaur a few steps in the right direction, you reach a nice and solid remnant of one building or another, providing you with just the right thing to stand on and be able to fuck the relatively long-legged centauress. Filled with desperate heat as she is, the young woman readily presents her equine rear end to you, her nether lips trembling and gushing in arousal. Stroking your own cock at the inviting sight, you move forward a little, then rub its tip up and down over the young woman's pussy. It is just too bad you don't have time to really savor the experience - but the shouts and harsh slaps of heavy balls against muscled buttocks remind you constantly that her easily angered brother is near.";
+				say "     Shooing the instinct-driven centaur a few steps in the right direction, you reach a nice and solid remnant of one building or another, providing you with just the right thing to stand on and be able to fuck the relatively long-legged centauress. Filled with desperate heat as she is, the young woman readily presents her equine rear end to you, her nether lips trembling and gushing in arousal. Stroking your own cock at the inviting sight, you move forward a little, then rub its tip up and down over the young woman's pussy. It is just too bad you don't have time to really savour the experience - but the shouts and harsh slaps of heavy balls against muscled buttocks remind you constantly that her easily angered brother is near.";
 				if cock length of player < 20:
 					say "     Not wasting any further second, you bring your rock hard [cock of player] cock to her wet, winking pussy and thrust deep in one go. Her pussy is very large, taking everything you've got easily. Though clearly equipped for bigger cocks, the centauress is nevertheless pleasantly tight, her virgin pussy only having had one other man inside for a few short moments. With lots of still novel sensations rocking her body, the centauress's vaginal muscles twitch and flex around your invading member, allowing the two of you enjoy this rushed coupling more than a little bit. Fucking the blond woman with abandon, you soon feel a familiar tingle in your balls and plunge in deep one last time before you start cumming. Spurt after spurt of your fertile seed jet out of your hard shaft and vanish in the depths of her vagina.";
 				else:

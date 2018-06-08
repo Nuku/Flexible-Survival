@@ -62,7 +62,7 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 6 is not listed in campuswander, add 6 to campuswander;
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
-		say "     Traveling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
+		say "     Travelling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
 	if number of entries in campuswander is 6, say "     You have an uneventual passage across the campus.";
 	let T be a random number between 1 and 6;
 	while T is listed in campuswander:
@@ -92,7 +92,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Painted Wolf Herm";
 		add 4 to campuswander;
 	if T is 5:
-		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer? I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
+		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer?  I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
 		challenge "Snow Leopard";
 		add 5 to campuswander;
 	if T is 6:

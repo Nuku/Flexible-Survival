@@ -8,7 +8,7 @@ Section 1 - Monster Responses
 
 to say Blobdesc:
 	setmongender 0; [creature is neuter-X]
-	say "The Blob is a large amorphous mass of green and orange good that has collected together from the slime and organic matter of other creatures it has absorbed. Large and unwieldy the mass seems to be somewhat aware of itself, and you by turn, the gel-like creature prepares to defend itself from the biting cold by lashing at everything around it. Out sizing you by almost six times your length, tough enough to break fiber glass, and floating somewhat because of bioelectrical power of the living beings it assembled into itself, the Blob is ready to fight for its life.";
+	say "The Blob is a large amorphous mass of green and orange goo that has collected together from the slime and organic matter of other creatures it has absorbed. Large and unwieldy the mass seems to be somewhat aware of itself, and you by turn, the gel-like creature prepares to defend itself from the biting cold by lashing at everything around it. Out sizing you by almost six times your length, tough enough to break fiber glass, and floating somewhat because of bioelectrical power of the living beings it assembled into itself, the Blob is ready to fight for its life.";
 
 
 to say Blobattack:
@@ -16,7 +16,7 @@ to say Blobattack:
 
 
 to say losetoBlob:
-	say "The wiggling and amorphous mass is quick to grab you with one of its tentacles and then bring you bodily into itself. Struggling as vainly as you can with your limited strength there is not much for you to do as you are engulfed into the giant blob-like mass. However, your suffering has only begun. Because of its inherent nature to disassemble living organizms into itself the blob is able to slowly break you down into itself pieces by pieces. The feeling of your senses slowly dulling and then shutting completely down is followed after the loss of other pieces of your form. First legs and arms and tail, followed by sight, scent, and then sensation as everything just starts to fade to black. If this was the worst part then that might be ok, however, because of the beast having a consciousness made up of other mutants you can still [']feel['] even though you cannot control yourself.";
+	say "The wiggling and amorphous mass is quick to grab you with one of its tentacles and then bring you bodily into itself. Struggling as vainly as you can with your limited strength there is not much for you to do as you are engulfed into the giant blob-like mass. However, your suffering has only begun. Because of its inherent nature to disassemble living organisms into itself the blob is able to slowly break you down into itself pieces by pieces. The feeling of your senses slowly dulling and then shutting completely down is followed after the loss of other pieces of your form. First legs and arms and tail, followed by sight, scent, and then sensation as everything just starts to fade to black. If this was the worst part then that might be ok, however, because of the beast having a consciousness made up of other mutants you can still [']feel['] even though you cannot control yourself.";
 	say "The knowledge of the other mutants inside of the creature filters into your mind just as your own flows into theirs and then subsequently into the gelatinous mass of slime. Understanding that the controls for the flash freeze are still in the main terminal room one of your/the blob's tentacles reaches out to destroy the fiber glass protecting the room and then the machinery, instantly stopping the creature's/your own destruction. With that taken care of the room soon starts to reheat, much to the blob's/your own pleasure and soon the blob is sinking back down into the cool water below. Idle and quiet no one will figure out what has happened, not until soldier's come later to try and restore the city's water...but by then there will be no more you/blob, there will just be the blob. Ready to amass more organic matter into itself to grow larger...and more self-aware.";
 
 
@@ -70,7 +70,7 @@ When Play begins:
 	now libido entry is 0; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "gooey";
 	now type entry is "blob";
 	now magic entry is false;

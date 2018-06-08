@@ -62,7 +62,7 @@ ColeenSlut is a number that varies.
 ColeenSpray is a number that varies.
 
 Coleen is a woman.
-The description of Coleen is "[Collenstatus]".
+The description of Coleen is "[coleenstatus]".
 The conversation of Coleen is { "Woof!" }.
 the linkaction of Coleen is "[coleenlinkaction]".
 
@@ -88,7 +88,7 @@ to say coleenscent:
 	else:
 		say "Coleen smells like a human female.";
 
-to say Collenstatus:
+to say coleenstatus:
 	if ColeenAlpha > 0:
 		say "     The nervous military woman you rescued from the tree is completely gone now, and in her place is a happy little husky bitch. The new bitch doesn't seem to mind the changes a bit however, reveling in the lovely feel of her new hypersexualized body, her damp slit still showing signs of her latest mating as she prances happily around the bunker in just her bare fur. She seems to have acquired a small pile of trophies and toys stacked up in her corner of the bunker, evidence of her many trips outside to hunt and fuck, although you never can actually manage to catch her outside of the bunker when you come back. Still she seems to be the happiest husky bitch you have ever come across, and her teasing glances and the way she wiggles her ass at you with abandon makes you wonder what it would be like to just give in and become a happy little bitch yourself...";
 	else if ColeenSlut is 1:
@@ -131,7 +131,7 @@ instead of conversing the coleen:
 	if Coleentalk is 0:
 		if Sarah is in the bunker:
 			if SarahSlut > 2:
-				say "     'Thanks again for all your help out there,' Coleen says, as she gestures to her already healed ankle, where a very light dusting of white fuzz can be seen. 'I am really glad you came by to help, instead of some other creature out there. The guy briefing us didn't even hint at what was going on in the city.' Colleen sighs and mutters, 'Need-to-know asshole.' Trying to hide her slip, she looks around the bunker and smiles, her eyes lingering for a moment on your pet husky. 'Seems you found a nice place to hole up here at least, it even seems kind of cozy and warm in here. And I'm not sure what that nice relaxing smell is in here, but I really like it too,' she says as she sniffs the air lightly.";
+				say "     'Thanks again for all your help out there,' Coleen says, as she gestures to her already healed ankle, where a very light dusting of white fuzz can be seen. 'I am really glad you came by to help, instead of some other creature out there. The guy briefing us didn't even hint at what was going on in the city.' Coleen sighs and mutters, 'Need-to-know asshole.' Trying to hide her slip, she looks around the bunker and smiles, her eyes lingering for a moment on your pet husky. 'Seems you found a nice place to hole up here at least, it even seems kind of cozy and warm in here. And I'm not sure what that nice relaxing smell is in here, but I really like it too,' she says as she sniffs the air lightly.";
 				say "     'Actually it kind of makes me a little too warm, and very comfortable, I almost want to just take my clothes off and relax...' she says, her voice trailing off slightly much to your amusement. 'Oh sorry,' she says as she blushes again, 'I don't know what's coming over me here, it seems kind of nice though...' she says softly, her eyes scanning the bunker again looking for a change in topic, before settling on Sarah. 'I like your pet though! She makes the place feel more comfortable, and I always have loved dogs! I even used to have one once, a nice... big... handsome... stud of a dog named Roscoe,' she mutters as her voice trails off again for a second, and you grin as you note she seems to be looking a bit canine herself at this point. 'Oh one last thing, I found a medkit in the library, but I obviously don't need it now. Your pet got pretty interested in my leg and almost seemed to lick it better, so I figure you might be able to use it,' she says as she hands you a medkit.";
 				WaitLineBreak;
 				increase carried of medkit by 1;
@@ -140,7 +140,7 @@ instead of conversing the coleen:
 				say "     'You won't have to worry about leaving me here either, I have enough MREs left they should hold me until the rescue. Sadly I don't have enough to really share, but I won't have to leave the bunker at least and will keep the door shut tight until you return. Besides, I'm sure your pet will help keep me company in here...' the woman says as she gives you a small smile. You might be imagining things, but her mouth seems slightly longer than normal as she turns to look at your little husky pet, giving you a good view of a swiftly forming tail as it pushes out of the back of her uniform.";
 				increase Coleentalk by 1;
 			else:
-				say "     'Thanks again for all your help,' Coleen says as she gestures to her freshly bound ankle before glancing over at Sarah. 'Your friend helped me out in getting patched up and told me a little bit about what's going on in the city. I don't want to think about what might have happened to me if you hadn't shown up to help out. We soldiers were given no real clue what we were up against - they just sent us in to gather information,' Colleen says with a sigh, then looks around in the bunker and smiles. 'Seems you found a nice place to hole up in though, and I'm not the only stray you have been picking up, eh? At least there is plenty of room here, even if it is a bit sparse.'";
+				say "     'Thanks again for all your help,' Coleen says as she gestures to her freshly bound ankle before glancing over at Sarah. 'Your friend helped me out in getting patched up and told me a little bit about what's going on in the city. I don't want to think about what might have happened to me if you hadn't shown up to help out. We soldiers were given no real clue what we were up against - they just sent us in to gather information,' Coleen says with a sigh, then looks around in the bunker and smiles. 'Seems you found a nice place to hole up in though, and I'm not the only stray you have been picking up, eh? At least there is plenty of room here, even if it is a bit sparse.'";
 				say "     Lowering her voice a bit, Coleen continues, 'I am just a little bit worried about sharing a room with someone that heavily infected. I mean - she seems to be holding out ok, but you never know.' She eyes Sarah with a bit of worry, though you think you might notice hint of interest there as well. 'At least she is something relatively safe like a dog. I don't mind dogs at all really, I even used to have one when I was little,' Coleen says with a fond smile, before turning back to look at you. 'I'm seriously grateful to you for all you've done, for both of us, she told me how you helped her too. Although I know it isn't much, I found a medkit in the library, and I want you to have it,' she says as she hands you a medkit.";
 				WaitLineBreak;
 				increase carried of medkit by 1;
@@ -149,7 +149,7 @@ instead of conversing the coleen:
 				say "     'You won't have to worry about leaving me here either, I have enough MREs left they should hold me until the rescue. Sadly I don't have enough to really share, but at least it should be enough that neither I nor Sarah will need to leave the bunker,' the woman says as she gives you a bright smile, then goes to settle herself down on a bed in one corner of the main bunker room.";
 				increase Coleentalk by 1;
 		else:
-			say "     'Thanks again for all your help,' Coleen says, as she gestures to her freshly bound ankle, 'I don't want to think about what might have happened to me if you hadn't shown up to help out. Just seeing all that happened as we passed through the city was a real eye opener. My troop had no real clue what was going on in here when they sent us to gather information.' Colleen shudders slightly at that, before looking around the nice secure bunker and smiling. 'Seems you found a nice place to hole up though, it seems kind of sparse but its downright cozy compared to sleeping out in the city. Thanks again for bringing me here. I know it isn't much, but I found a medkit in the library, and there are still plenty of supplies left in it even after taking care of my ankle, so I figure you might be able to use it,' she says as she hands you a medkit.[line break]";
+			say "     'Thanks again for all your help,' Coleen says, as she gestures to her freshly bound ankle, 'I don't want to think about what might have happened to me if you hadn't shown up to help out. Just seeing all that happened as we passed through the city was a real eye opener. My troop had no real clue what was going on in here when they sent us to gather information.' Coleen shudders slightly at that, before looking around the nice secure bunker and smiling. 'Seems you found a nice place to hole up though, it seems kind of sparse but its downright cozy compared to sleeping out in the city. Thanks again for bringing me here. I know it isn't much, but I found a medkit in the library, and there are still plenty of supplies left in it even after taking care of my ankle, so I figure you might be able to use it,' she says as she hands you a medkit.[line break]";
 			increase carried of medkit by 1;
 			say "You received a medkit![line break]";
 			say "     'Other than that, there is something else I might be able to do to help out. They gave me this experimental spray that they said should help me out in the city. From what I can tell now, I think it might be able to help you fight off the infection somewhat,' Coleen says as she brandishes a small spray can. 'Fortunately it seems to have survived my accident with the tree intact, and while I could probably use it myself, it just doesn't seem like the right thing to do... I can use it on you if you want me to. Just come and ask me to [bold type]spray[roman type] you with it if you want to try it out, be careful though, there are only a couple doses in a can this size, and I don't have any more,' she says as she tucks the can back away safely.";
@@ -340,7 +340,7 @@ carry out ColeenSpraying:
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
-					say "     'Okay, I'll hold on to it some more then,' Colleen tells you and tugs the small spray bottle away.";
+					say "     'Okay, I'll hold on to it some more then,' Coleen tells you and tugs the small spray bottle away.";
 		else:
 			say "     'Well ok, here goes nothing,' Coleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
 			now face of player is "human";
@@ -380,7 +380,7 @@ carry out ColeenSpraying:
 
 Section 5 - Sex with Coleen
 
-the fuckscene of coleen is "[sexwithcoleen]".
+the fuckscene of Coleen is "[sexwithcoleen]".
 
 to say sexwithcoleen:
 	if player is neuter:
@@ -488,7 +488,7 @@ to say sexwithcoleen:
 					WaitLineBreak;
 					say "     Panting from the exertion, you slowly release the new husky slut as you pull yourself out of her, and she twists around to lick at her well used passage with her long canine tongue. You sit down to rest for a minute while she cleans herself up, before she turns to you and wags her tail happily. 'Thanks so much! I hope we can do this again lots!' she says with a happy look on her lust filled canine face. 'Now I'm going to go see what other kinds of fun I can find in the city! Don't worry though! I won't be far from here and your wonderful cock for long!' she says as she wanders out the bunker door, her tail wagging happily as she goes to explore, although you know that she will always end up back here whenever you return to the bunker, her needy cunt leading her right back to where your cock filled her up for the first time...'";
 					now ColeenSlut is 1; [stray Coleen, fucked by the player]
-					if Sandra is in bunker, now lust of Sandra is turns - 4;
+					if Sandra is in Bunker, now lust of Sandra is turns - 4;
 					now ColeenFound is 2; [husky Coleen fucked]
 					now lastfuck of Coleen is turns;
 				else:
@@ -501,7 +501,7 @@ to say sexwithcoleen:
 						say "     Unable to resist the images the strong husky bitch in front of you is evoking, you find yourself nodding eagerly even as you hold Coleen tight. 'See that wasn't so hard to admit now was it?' the sexy husky whispers into your ear, making you smile even as you nod in agreement, the heat filled scent of two other husky bitches making it seem so very easy to admit how much you want to be happy and slutty like them. 'I knew you would see it my way,' Coleen says with a grin. 'And helping you admit what you really wanted is the least I can do for you after you brought me here and helped me realize how much I really wanted to be a slutty little bitch deep down inside,' the new bitch says as she runs her paws over her own new body. 'Now I think I need to go try this new body out some more in the city,' she says as she turns to the bunker entrance eagerly. 'But don't worry! I'll be here to help you out as much as you helped me out whenever you are ready!' she calls back as she heads outside, her tail wagging eagerly giving you a good view of her wet husky slit as she vanishes into the streets.";
 						infect "Female Husky";
 						increase ColeenAlpha by 1;
-						if Sandra is in bunker, now lust of Sandra is turns + 4;
+						if Sandra is in Bunker, now lust of Sandra is turns + 4;
 						now SarahSlut is 5;
 						now lastfuck of Coleen is turns;
 					else:
@@ -510,7 +510,7 @@ to say sexwithcoleen:
 						infect "Female Husky";
 						now lastfuck of Coleen is turns;
 						increase ColeenSlut by 1;
-						if Sandra is in bunker, now lust of Sandra is turns - 4;
+						if Sandra is in Bunker, now lust of Sandra is turns - 4;
 						now ColeenFound is 2; [husky Coleen fucked]
 		else if SarahSlut is 3:
 			if ColeenSpray is 99:
@@ -655,7 +655,7 @@ When play ends:
 			say "     The general is surprised to discover after a very long night filled with amazing sex, that the husky pet you lent him actually used to be the soldier he knew as Coleen, and moreover that she was happy and excited to be a little husky slutpet. You spend some time explaining to him how she thought of him when she realized that it was kind of hard on you to maintain a house with so many needy pets, and that she was wondering if he would like to be her new owner. While surprised at the situation and the offer, he soon agrees to take her in as his pet, persuaded by her expertly trained tongue and needy slit, the situation making you smile even as he leads his new pet off with a leash. You just know he will be back to visit again soon, and if you ever need anything from him, his pet will certainly help you convince him to agree, and she will certainly enjoy her time back underneath a military man, you think with amusement as you turn back to enjoy your own husky pet.";
 	else if bodyname of player is "Alpha Husky":
 		if humanity of player < 10:
-			say "     Having lost yourself to the infection, your canine instincts take over and you head into the city to form a new pack of your own. You dominate several of the canines around, turning them into a pack of loyal huskies and eke out a small territory for yourselves. Your pack captures wandering travelers from time to time, gaining a few members this way. You lose others from time to time as your weaker packmates at lost in fights. It is a tough existence at times, but one fueled by an eagerness and a canine lust that keeps you going.";
+			say "     Having lost yourself to the infection, your canine instincts take over and you head into the city to form a new pack of your own. You dominate several of the canines around, turning them into a pack of loyal huskies and eke out a small territory for yourselves. Your pack captures wandering travellers from time to time, gaining a few members this way. You lose others from time to time as your weaker packmates at lost in fights. It is a tough existence at times, but one fueled by an eagerness and a canine lust that keeps you going.";
 		else:
 			say "     Somehow having endured your time in the city, you are rescued by the military's forces. You only receive a cursory examination and testing, your canine body mistaken for that of the much more common husky girls. While your alpha pride is hurt, you choose not to correct them of this misconception";
 			if cocks of player > 0:

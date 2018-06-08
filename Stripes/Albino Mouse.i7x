@@ -6,7 +6,7 @@ Version 1 of Albino Mouse by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Albino Mouse" } to infections of furry;
@@ -86,7 +86,7 @@ When Play begins:
 	now body change entry is "it becomes that of an anthropomorphic mouse. At only about four feet tall, your stature matches your species. Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft, white fur covers you"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "long, thin tail forms. It is rodent-like and has pale white fur covering it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it turns a soft pink in color. It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it turns a soft pink in colour. It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 12;
 	now sta entry is 12;

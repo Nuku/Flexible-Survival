@@ -17,9 +17,9 @@ to say ElkBullVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0: [player submits]
+		if HP of player > 0:    [player submits]
 			say "     ...";
-		else: [player beaten]
+		else:  [player beaten]
 			say "     ...";
 
 to say ElkBullBeaten:
@@ -138,7 +138,7 @@ to say ElkBullDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
@@ -208,17 +208,17 @@ the usedesc of elk bull fur is "[elk bull fur use]";
 to say elk bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Bull";
-
-
+	
+	
 Section 2 - Elk Tribe Cow
 
 to say ElkCowVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0: [player submits]
+		if HP of player > 0:    [player submits]
 			say "     ...";
-		else: [player beaten]
+		else:  [player beaten]
 			say "     ...";
 
 to say ElkCowBeaten:
@@ -336,7 +336,7 @@ to say ElkCowDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
@@ -406,17 +406,17 @@ the usedesc of elk cow fur is "[elk cow fur use]";
 to say elk cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Cow";
-
-
+	
+	
 Section 3 - Elk Tribe Herm
 
 to say ElkHermVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0: [player submits]
+		if HP of player > 0:    [player submits]
 			say "     ...";
-		else: [player beaten]
+		else:  [player beaten]
 			say "     ...";
 
 to say ElkHermBeaten:
@@ -534,7 +534,7 @@ to say ElkHermDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk herm looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
@@ -612,9 +612,9 @@ to say ElkTransBullVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0: [player submits]
+		if HP of player > 0:    [player submits]
 			say "     ...";
-		else: [player beaten]
+		else:  [player beaten]
 			say "     ...";
 
 to say ElkTransBullBeaten:
@@ -733,7 +733,7 @@ to say ElkTransBullDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk trans bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
@@ -803,17 +803,17 @@ the usedesc of elk trans bull fur is "[elk trans bull fur use]";
 to say elk trans bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Trans Bull";
-
-
+	
+	
 Section 5 - Elk Tribe Trans Cow
 
 to say ElkTransCowVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0: [player submits]
+		if HP of player > 0:    [player submits]
 			say "     ...";
-		else: [player beaten]
+		else:  [player beaten]
 			say "     ...";
 
 to say ElkTransCowBeaten:
@@ -931,7 +931,7 @@ to say ElkTransCowDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
@@ -1001,7 +1001,7 @@ the usedesc of elk trans cow fur is "[elk trans cow fur use]";
 to say elk trans cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Trans Cow";
-
+		
 
 Section 4 - Endings
 

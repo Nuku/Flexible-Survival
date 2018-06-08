@@ -21,7 +21,7 @@ The description of Melanie is "[MelanieDesc]".
 The conversation of Melanie is { "Hello" }.
 Melanie is in Branson & Partner Reception.
 
-the scent of Melanie is "The young woman smells pretty nice - a fresh furry scent overlain a hint of a pleasant perfume. She never wavers in her friendly demeanor, even as you lean forward to sniff at her.".
+the scent of Melanie is "The young woman smells pretty nice - a fresh furry scent overlain a hint of a pleasant perfume. She never wavers in her friendly demeanour, even as you lean forward to sniff at her.".
 
 To say MelanieDesc:
 	if debugactive is 1:
@@ -114,9 +114,9 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			say "     Stepping up to the office doors, you knock and hear a deep voice say the words, 'Come in.' Beyond lies a spacious office, as well-appointed as the rest of the place you've seen so far - granite-tiled floor and light grey walls framing a glass and steel desk in front of an all-glass back wall, a giant window overlooking the city. Behind the desk is a quite large executive chair - clearly custom-made to fit its occupant, as Mr. Branson is both an anthro crocodile and at least 8 feet tall, with a muscle-packed physique to match his size. What makes him stand out from being 'merely' as physically imposing as any number of sex-hungry infected out on the streets is the fact that he is calmly having a look at you while wearing a dark blue shirt tailored to his broad frame, as well as a blood-red tie.";
 			WaitLineBreak;
 			say "     The croc indicates one of the two chairs set up in front of his desk and says in a quite dominant tone, 'Sit.' You can feel his gaze rest upon you, yellow slitted eyes full of cunning evaluating every movement as you ";
-			if player is submissive: [sub players]
+			if player is submissive:   [sub players]
 				say "scurry forward quickly, planting your ass on one of the visitor's chairs. A grin spreads along the tooth-filled maw of the businessman. ";
-			else if "Dominant" is listed in feats of player: [dom players]
+			else if "Dominant" is listed in feats of player:   [dom players]
 				say "calmly walk towards him, then come to stand in front of his desk, implicitly ignoring the offered chairs. The businessman raises one eyebrow a little at this, and you can see the end of his tail twitching slightly. ";
 			else: [regular players]
 				say "walk towards him in a fast yet unhurried pace, then sit down in one of the offered chairs. A small up-tick of the corners of his tooth-filled maw is visible as you study him in turn. ";
@@ -187,7 +187,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			say "     ([link]N[as]n[end link]) - Thanks, but no.";
 			if player consents:
 				LineBreak;
-				say "     With an aroused grunt, the large and muscular crocodile stands up from his executive chair, revealing that it actually has a hole in the back for his long tail. He walks around his desk in a few steps and sweeps you up in his arms to sit you down on the edge of his desk. Pulling your clothes and gear off one by one, the strong amphibian gropes and touches your body in eager appreciation. Then he loosens the tie around his neck and undoes the top two buttons of his shirt before leaning forward to lick you - his broad tongue traveling from the base of your pussy over your belly and chest all the way to your neck. His breath is hot against your skin as he big man says, 'I'll show you a really good time.'";
+				say "     With an aroused grunt, the large and muscular crocodile stands up from his executive chair, revealing that it actually has a hole in the back for his long tail. He walks around his desk in a few steps and sweeps you up in his arms to sit you down on the edge of his desk. Pulling your clothes and gear off one by one, the strong amphibian gropes and touches your body in eager appreciation. Then he loosens the tie around his neck and undoes the top two buttons of his shirt before leaning forward to lick you - his broad tongue travelling from the base of your pussy over your belly and chest all the way to your neck. His breath is hot against your skin as he big man says, 'I'll show you a really good time.'";
 				say "     Then Branson steps back a little and stretches up to his full nine feet in height, putting a hand on his crotch and wrapping it around the thick shaft of his erection - darker green than the scales on the rest of his body. He pumps the big piece of man-meat a few times with his hand wrapped around it, then guides it to your pussy. Brushing over the slit of your sex and making it go wetter by the second as your arousal builds in leaps and bounds, the crocodile grins down at you, then slowly pushes forward. You can't help but gasp as the girth of his manhood stretches your opening around his cock, followed by inch after inch of it sliding into your body.";
 				WaitLineBreak;
 				say "     Panting loudly, you grip the edge of his desk hard as the man pushes ever deeper, then let out a lust-filled gurgle as he bottoms out, his cock-head nudging hard against the inner barrier of your womb. 'Told ya you'd love it babe,' he adds in a very satisfied tone, then pulls back a little to ram his prick home with increased force this time. You writhe under the big male as his dickhead pops past your cervix - a strange sensation, but also... very, very good somehow. This can't be natural - but then, who can tell these days with nanites everywhere. No matter which, you feel almost delirious in pleasure from being impaled - all the way - on this muscular crocodile's shaft!";
@@ -209,7 +209,7 @@ The sarea of City Hall Offices is "High".
 
 Instead of resolving a City Hall Offices:
 	now battleground is "Void";[avoids random fights after]
-	say "     Roaming through the streets of the high rise district, you eventually come to an unassuming office-building, far less glamorous than the more ornate actual city hall of the city. This is where bureaucrats and statisticians have their offices, doing their important yet often overlooked work. It seems like that latter fact works in your favor right now - as the building seems to have been completely ignored in the time since the nanite outbreak. No signs of looting or habitation at all. Just an abandoned office building, waiting for you to gain entrance.";
+	say "     Roaming through the streets of the high rise district, you eventually come to an unassuming office-building, far less glamorous than the more ornate actual city hall of the city. This is where bureaucrats and statisticians have their offices, doing their important yet often overlooked work. It seems like that latter fact works in your favour right now - as the building seems to have been completely ignored in the time since the nanite outbreak. No signs of looting or habitation at all. Just an abandoned office building, waiting for you to gain entrance.";
 	say "     It is fairly easy to smash one of the windows on the back side, climbing into the open office filled with cubicles. Standing between the little box-shaped pens for human workers is somewhat eerie, making you feel like you don't belong here. Shaking off the sensation, you quickly move on and check doors left and right in an adjoining hallway - restrooms, office supply cupboard, a few one person offices, then - AHA - the server room! The place does turn out to be locked though, with a powerless key-card reader so you don't even waste the time to search for the card but instead go and grab a fire extinguisher from a nearby wall...";
 	WaitLineBreak;
 	say "     With the heavy metal tank as an improvised smashing weapon, the server room door doesn't have much chance of stopping you. It splinters after the first few hits, breaking just beside the lock and allowing you to kick it open. Beyond lies a small stuffy room filled with tall racks of computers and what feels like miles of network and power cables bundled into thick strands all over the place. Further back is a smallish cube of softly humming technology, connected to several long-lasting battery systems. That seems like the thing that Branson described - the city hall datastore. Seems they set it up so the thing wouldn't be damaged in a sudden power loss.";
@@ -235,9 +235,10 @@ after going to B&P Company Offices while (HP of Melanie is 4):
 	say "     ";
 	now HP of Melanie is 5;
 
+Branson & Partner ends here.
 [
 
-Initial meeting event with player either being dominant or friendly (just flavor choices)
+Initial meeting event with player either being dominant or friendly (just flavour choices)
 
 4 Girls:
 	- tiger girl (Bella)
@@ -245,5 +246,3 @@ Initial meeting event with player either being dominant or friendly (just flavor
 	- twin white bunnies (one dom - Lola [teasing/denial], one sub - Layla [indulging and into servicing])
 	- Melanie the deer (got to send one of the others to the front desk to get her fuckable for a little while)
 ]
-
-Branson & Partner ends here.

@@ -111,7 +111,7 @@ Zoo Rest Area is east of Main Path 2. The earea of Zoo Rest Area is "Zoo".
 The description of Zoo Rest Area is "[ZooRestAreaDesc]".
 
 to say ZooRestAreaDesc:
-	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back west towards to the entrance.";
+	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back west towards to the entrance.".
 
 Zoo Paths 1 is a door. Zoo Paths 1 is dangerous. The marea of Zoo Paths 1 is "Zoo". Zoo Paths 1 is undescribed.
 Zoo Paths 2 is a door. Zoo Paths 2 is dangerous. The marea of Zoo Paths 2 is "Zoo". Zoo Paths 2 is undescribed.
@@ -195,6 +195,6 @@ The marea of Sewer Exploration is "Mall". The Sewer Exploration is open. The des
 
 [Angie and the Zoo Giftshop have been moved to the Angie file in Sarokcat's folder.]
 
-[The Feral Cheetah creature has been moved to the Feral Cheetah.i7x file.]
+[The Feral Cheetah creature has been moved to the Feral Cheetah for FS.i7x file.]
 
-Zoo ends here.
+The Zoo ends here.

@@ -39,7 +39,7 @@ instead of conversing the Joey:
 
 	[set up different talks for naive Joey, slut Joey, and warrior Joey]
 to say JoeyTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Joey about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -112,7 +112,7 @@ instead of fucking the Joey:
 	]
 
 to say JoeySexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

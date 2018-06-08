@@ -48,7 +48,7 @@ Version 1 of David by Wahn begins here.
 [  66: Ritual by Lilith is ready (sharing Brutus with David)            ]
 [  67: refused both Lilith and Nermine                                  ]
 [  68: refused both Lilith and Nermine                                  ]
-[  69: Did the Ritual, Brutus and David are 'married'                  ]
+[  69: Did the Ritual, Brutus and David are 'married'                   ]
 [  81: Brutus is ready to snap and dom-fuck David                       ]
 [  82: Brutus got dommy and fucked David                                ]
 [  83: Brutus is locked into the enslavement path with David            ]
@@ -320,37 +320,37 @@ Instead of fucking David:
 			now sortorder entry is 5;
 			now description entry is "Fill the young soldier's ass with your cock.";
 		[]
-		if (Dexterity of David is 2 and David is in bunker and Sven is in bunker):
+		if (Dexterity of David is 2 and David is in Bunker and Sven is in Bunker):
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome with Sven";
 			now sortorder entry is 6;
 			now description entry is "Let the young soldier fuck Sven's ass.";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (David gives oral)";
 			now sortorder entry is 7;
 			now description entry is "Give them some time to have fun with each other. (David goes down on Brutus)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (BJ by Brutus)";
 			now sortorder entry is 8;
 			now description entry is "Give them some time to have fun with each other. (Brutus blows David)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (Brutus gets fucked)";
 			now sortorder entry is 9;
 			now description entry is "Give them some time to have fun with each other. (David fucks Brutus)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
 			choose a blank row in table of fucking options;
 			now title entry is "Brutus & David Scene (David gets fucked)";
 			now sortorder entry is 10;
 			now description entry is "Give them some time to have fun with each other. (Brutus fucks David)";
 		[]
-		if (libido of David > 56 and libido of David < 89 and David is in bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
+		if (libido of David > 56 and libido of David < 89 and David is in Bunker and DBCaptureQuestVar is 7 and DemonBruteStatus < 2):
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome with Brutus & David (DP Brutus)";
 			now sortorder entry is 11;
@@ -1037,7 +1037,7 @@ after of going to Parade Ground while thirst of David is 5 and HP of David is 3:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.'";
 
-after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in bunker and HP of Sven >= 8 and HP of Sven < 50:
+after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 0) WALKIN[line break]";
 	if HP of Sven < 30: [pet Sven]
@@ -1075,15 +1075,15 @@ after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and 
 			say "     Walking over towards David's bed, you shake your head at Sven as he sits down next to the sleeping man, but the snow leopard doesn't really notice it, being all eyes for the handsome soldier. He has already started to gently tug the blanket off David by the time you get there, revealing part of the man's naked, muscular chest. Then you're up close and in Sven's face, doing your best to keep quiet and not wake David as you give the snow leopard a clear head-shake in negation and make shooing motions away from the soldier.";
 			say "     Sven looks from you to the sleeping man, pointing at the two of you and pantomiming with his hands gripping each other, then shrugs and gives a bit of a disappointed huff. He throws you a somewhat reluctant nod, then leans in and teasingly runs his hand over the curve of David's erection, making the man moan in his sleep. After steeling that little touch, the snow leopard gives David a last hungry look before flouncing away. This leaves you standing next to a still sleeping soldier, leaving the man none the wiser that he almost got a 'happy ending' to his dream from your feline friend.";
 
-after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in bunker and HP of Sven >= 8 and HP of Sven < 50:
+after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 1) WALKIN[line break]";
 	if HP of Sven < 30: [pet Sven]
 		if cunts of player > 0 and cocks of player is 0: [female player]
-			say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'Her pet, yes. She saved me and brought me here, takes care of me - the best and strongest and bravest mistress one can have. She even gave me this nice collar. I love her and am hers.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behavior, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
+			say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'Her pet, yes. She saved me and brought me here, takes care of me - the best and strongest and bravest mistress one can have. She even gave me this nice collar. I love her and am hers.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behaviour, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
 			say "     Sven blushes at the hesitant compliment and ducks momentarily behind his fluffy tail. 'Anything for my mistress's friends,' he says softly. Releasing his furry appendage, he lets it wind around David's waist as he slips up beside him, nuzzling against the young man's shoulder. 'And... and I like you too - you are very nice and very attractive,' he adds quietly as he snuggles all the closer. Confronted with such a soft-spoken and cuddly snowmeow, David can't help himself but stroke Sven's fur too, accepting this strange bunker-mate for what he is.";
 		else: [male/herm/neuter player]
-			say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'His pet, yes. He saved me and brought me here, takes care of me - the best and strongest and bravest master one can have. He even gave me this nice collar. I love him and am his.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behavior, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
+			say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'His pet, yes. He saved me and brought me here, takes care of me - the best and strongest and bravest master one can have. He even gave me this nice collar. I love him and am his.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behaviour, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
 			say "     Sven blushes at the hesitant compliment and ducks momentarily behind his fluffy tail. 'Anything for my master's friends,' he says softly. Releasing his furry appendage, he lets it wind around David's waist as he slips up beside him, nuzzling against the young man's shoulder. 'And... and I like you too - you are very nice and very attractive,' he adds quietly as he snuggles all the closer. Confronted with such a soft-spoken and cuddly snowmeow, David can't help himself but stroke Sven's fur too, accepting this strange bunker-mate for what he is.";
 	else: [confident Sven]
 		say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're an exchange student?' Sven replies, 'Yes I am, from Norway. I was hiding out in my basement apartment after things went crazy and I had a run-in with a horny snow leopard. After he... forced me to do things, I did not dare go out anymore, I was too afraid. So I was really glad when our shared friend found me and helped out with some much needed water. But after a few days - that leopard bastard sniffed my place out - or maybe he just stumbled upon it. No matter what, he tried to break in, but we fought him off together and I saw that he wasn't so tough after all...' After Sven falls silent, David in turn recounts your meeting with him, telling Sven about your heroics with the demon brute and getting him out of the 'safety' of Camp Bravo and being fucked by a minotaur.";
@@ -1108,7 +1108,7 @@ after of going to Bunker while thirst of David is 5 and HP of David is 4:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
-after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
+after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	project the figure of David_face_icon;
@@ -1146,7 +1146,7 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP 
 	else:
 		say "ERROR-Eric-[HP of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
+after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	project the figure of David_face_icon;
@@ -1158,7 +1158,7 @@ after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";
 	now lust of Erica is 1;
 
-after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
+after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1166,7 +1166,7 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and HP 
 	say "     [DavidEricTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and Eric is in bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1:
+	if player is in Bunker and Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricTalk]";
@@ -1176,7 +1176,7 @@ An everyturn rule: [you can just wait for them to talk too]
 		now libido of David is 81; [The urges push through]
 		now BrutusEscalationTimer is 0;
 
-after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
+after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/Erica TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1184,7 +1184,7 @@ after of going to Bunker while Erica is in bunker and thirst of David > 5 and HP
 	say "     [DavidEricaTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and Erica is in bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1:
+	if player is in Bunker and Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1:
 		say "     As you spend some time in the bunker, you notice David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricaTalk]";
@@ -1313,13 +1313,13 @@ instead of going to Bunker while HP of David is 4 and (libido of David is 0 or l
 			say "     'As you wish, my love,' the purple demon grunts in satisfaction, albeit with a weird undertone to the last two words, then snatches David up in his arms. Holding the man tight against his broad, muscled chest, he quickly removes his clothes, uncaring if he rips them or not. Carrying David under one arm, Brutus moves over to the nearest bed next, dropping the man to stand on shaky legs before he lays down. Stretched out over the end of the human-sized bed with his lower leg, the demon gives his human play-toy a leering look, then wags his proudly standing erection left and right with a twitch of his hips. 'Climb on, slut.'";
 			WaitLineBreak;
 			say "     David hesitates a moment, but can't help but give Brutus shaft a needy look... then he takes a deep breath and steps up on the bed. He moves to straddle Brutus chest, only to be held back by the demon's hands, followed by a grunted, 'Turn around. Show me that tight ass of yours!' So David obediently follows the instructions, coming to stand with his feet left and right of Brutus hips and sticking out his shapely buttocks. There is a satisfied groan from the purple giant and you can see his shaft throb as a large drop of precum forms at the tip. Then he reaches up, slapping David's cheeks and saying, 'Go on, show me how ready you are to please!'";
-			say "     With an aroused whimper at being man-handled like this, the human soldier starts to sink down, soon feeling Brutus infernal shaft hotly against his crack. He gives a deep breath, then aligns himself just right and pushes his pucker down against the wide cockhead - until the muscle yields and it pops into him with a sudden jerk. 'UuunnggghhHH! So big and warm!' David groans in arousal, panting rapidly as he tries to get himself under control again, then eventually starts to sink lower down on the thick pole. Brutus chuckles as he watches the young man fuck himself on his manhood, enjoying the submission and obedient behavior just as much as the actual penetration. 'That's it! Work for it, my lovely little slut!'";
+			say "     With an aroused whimper at being man-handled like this, the human soldier starts to sink down, soon feeling Brutus infernal shaft hotly against his crack. He gives a deep breath, then aligns himself just right and pushes his pucker down against the wide cockhead - until the muscle yields and it pops into him with a sudden jerk. 'UuunnggghhHH! So big and warm!' David groans in arousal, panting rapidly as he tries to get himself under control again, then eventually starts to sink lower down on the thick pole. Brutus chuckles as he watches the young man fuck himself on his manhood, enjoying the submission and obedient behaviour just as much as the actual penetration. 'That's it! Work for it, my lovely little slut!'";
 			WaitLineBreak;
 			say "     David rides Brutus massive cock with eager dedication, slowly sliding his stretched ass-lips over the thick shaft and making both of them moan and groan in lust - but eventually, that isn't enough anymore for the demon. 'More!' he grunts to himself, then says, 'I'll show you how to really fuck!' With that said, Brutus hands grip David's hips tightly and he impales the human on his shaft fully in one rough pull, making him yelp with yet another forceful invasion of his insides. But Brutus doesn't stop there - he just keeps going, sliding his helplessly moaning partner up again and hammering him down against his hips - repeatedly and in a merciless tempo.";
 			say "     There is something completely untamed and bestial in the way Brutus mates with David, without stop or pause until his cock erupts deep inside the young soldier's ass, pumping blast after blast of cum into him. Meanwhile, David fulfills his new role as needy fuckhole to perfection, orgasming from the feeling of having his partner breed his ass. He groans loudly and sprays several spurts of cum over the sheets, even hitting the inside of Brutus lower legs with a few of them.";
 			WaitLineBreak;
 			say "     Eventually, as the two of them cool down from their orgasms a little bit, David pulls his sore ass gingerly off Brutus still half-hard shaft, only to be pulled close against the demon's chest right away. Grinning at his freshly bred human boyfriend, Brutus tells him, 'I love you, David. You're just the perfect little love slut for me. The feeling of your tight ass clenching on my shaft, milking the cum out of it - priceless.' Then he plants a long kiss on the human's mouth, leaving both of them breathless for a second when they pull apart a short while later.";
-			say "     A slightly conflicted look crosses David's face and he opens his mouth, then stops with his words unsaid as Brutus shifts his hand to cup his ass. 'You liked it, didn't you my love?' Brutus asks a moment later, in a tone that seems just a tad insecure in another of his strange behavior swings, to which David eventually answers, 'Yeah, it was... good. Unexpected, but good. I'm sure I'll get used to it.'";
+			say "     A slightly conflicted look crosses David's face and he opens his mouth, then stops with his words unsaid as Brutus shifts his hand to cup his ass. 'You liked it, didn't you my love?' Brutus asks a moment later, in a tone that seems just a tad insecure in another of his strange behaviour swings, to which David eventually answers, 'Yeah, it was... good. Unexpected, but good. I'm sure I'll get used to it.'";
 			now libido of David is 82;
 		else if calcnumber is 2: [don't watch]
 			say "     Turning your back at their wild coupling, you concentrate on other matters, although you can't help but hear the loud moans and whimpers, the bark of Brutus commands or the submissive replies David gives. Sounds like they slid right into their roles with a click, even after the somewhat hesitant start on David's part. You can likely expect more of this from them in the future.";
@@ -1329,7 +1329,7 @@ instead of going to Bunker while HP of David is 4 and (libido of David is 0 or l
 			say "     'Stop,' you say in a commanding voice, the demontooth amulet in your hand. Instantly freezing in his tracks Brutus turns his head up to look at you, bearing an unthinking expression full of lust for several long moments. Then the inner glow of his eyes weakens a bit and confusion spreads over his face. 'Master?' he asks, concern starting to rise in his voice. He impotently strains against the magic that compels him, wanting to look down at David, until you allow him to move again.";
 			say "     Brutus pales visibly as he realizes what he was about to do, wrenching his large hand away from where it was gripping the seat of David's pants. He flinches back from the young man, giving an anguished howl, then wails, 'I'm sorry! I love you David, but the urges were too strong after I kept them in check for so long! I - lost control.' He stares down at his still painfully hard cock and gives a determined grunt, visibly fighting with himself. The demon's muscles tremble as he clenches is fists and you see beads of sweat appear on his brow.";
 			WaitLineBreak;
-			say "     As the first droplet of dark violet blood starts to drip from where Brutus claws are digging into his palms, David is broken out of the shocked paralyzis he was in until now. With a shout of, 'No! Don't hurt yourself,' he lunges forward, pulling on Brutus hands to open them. Letting the smaller human pry open his clenched fingers without any resistance, the demon asks in a baffled tone, 'You don't hate me now? I wanted to -' 'No, you big lug! I love you!' David shouts back, instantly quieting Brutus, who falls to his knees at all the terrified tension leaves his body.";
+			say "     As the first droplet of dark violet blood starts to drip from where Brutus claws are digging into his palms, David is broken out of the shocked paralysis he was in until now. With a shout of, 'No! Don't hurt yourself,' he lunges forward, pulling on Brutus hands to open them. Letting the smaller human pry open his clenched fingers without any resistance, the demon asks in a baffled tone, 'You don't hate me now? I wanted to -' 'No, you big lug! I love you!' David shouts back, instantly quieting Brutus, who falls to his knees at all the terrified tension leaves his body.";
 			say "     You walk towards the two of them, stepping up beside David as he holds his otherworldly boyfriend's head against his chest, gently stroking his purple skin. 'We will get through this. Somehow,' David sighs, then notices and gives you a helpless look. Realizing you are close, Brutus turns to look at you himself, then says, 'Master... please lock the beast inside me away. I - I tried to be strong, as not to shame you or frighten David, but I cannot... the urges are just too strong. I can't bear the thought of hurting him - so please. Please!'";
 			WaitLineBreak;
 			say "     You have little choice but do as asked, expressly forbidding him from acting on those impulses. As you do so, the amulet glows briefly in purple light and gets noticeably warm for a second. You can feel a tingle run down your spine as the controlling magic snaps tight around Brutus mind, straining to enforce your ruling. Something tells you the constant resistance of his deep-seated urges will put greater wear on it than all the random outbursts and flare-ups to escape by the original, evil Brutus.";
@@ -1674,13 +1674,13 @@ to say DavidSex9: [Brutus & David Scene (Brutus gets fucked)]
 	say "     With David still held tight against his broad chest, Brutus walks over to the soldier's bed and sits down on it, then proceeds to make out passionately with the young man. For now, you just watch your two friends kiss and touch each other, staying far enough away to give them at least some privacy. The demon and human whisper a bit back and forth in between kisses, then after a while, David stands up from his position on Brutus lap and starts to undress. His boots are quickly pulled off and thrown aside, followed by socks and his pants. Then the young man pulls his shirt up over his head, revealing a fit chest and nicely sculpted abs. With a wide smile on his face, he finishes up by turning around, then bending over to push down his underwear, giving Brutus a very nice and close view of his firm butt.";
 	WaitLineBreak;
 	if DemonBruteStatus is 2 or DemonBruteStatus is 1: [female+herm Brutus]
-		say "     Not being able to keep his hands to himself during such an enticing show, Brutus reaches out and caresses the young man's cheeks, then takes hold of his erect manhood. The demon slowly jerks his friend off for a moment, then his deep voice rumbles 'I want to feel you inside me...' Leaning back on the bed Brutus pulls up his legs, holding them with both hands in a spread position that bares his wet pussy for David. Spinning to face his demon lover, the soldier eagerly steps forward and rubs his cock over Brutus's swollen nether lips, then nudges them apart with the tip of his shaft. Both of them moan in arousal as David's invading member sinks deeper into his infernal partner's warm depths. When he finally bottoms out inside him, David's balls resting against Brutus crotch, he takes a moment to savor the feeling, taking deep breaths and stroking Brutus legs.";
+		say "     Not being able to keep his hands to himself during such an enticing show, Brutus reaches out and caresses the young man's cheeks, then takes hold of his erect manhood. The demon slowly jerks his friend off for a moment, then his deep voice rumbles 'I want to feel you inside me...' Leaning back on the bed Brutus pulls up his legs, holding them with both hands in a spread position that bares his wet pussy for David. Spinning to face his demon lover, the soldier eagerly steps forward and rubs his cock over Brutus's swollen nether lips, then nudges them apart with the tip of his shaft. Both of them moan in arousal as David's invading member sinks deeper into his infernal partner's warm depths. When he finally bottoms out inside him, David's balls resting against Brutus crotch, he takes a moment to savour the feeling, taking deep breaths and stroking Brutus legs.";
 		say "     After a short while of having his human partner just stay still with his cock buried in his vagina, Brutus gets a bit impatient and starts to flex his inner muscles around David's shaft. In a tone that betrays his deep-seated need, he groans 'Fuck me. Now!' - prompting David to immediately pull back till only the head of his cock is left inside him, then start thrusting in and out. The demon moans loudly each time his human partner bottoms out inside him and quickly starts to pant 'Harder! Faster!' Speeding up more and more oblige Brutus, soon David is really pounding the demon, his hips slapping against Brutus muscular buttcheeks with each thrust. While he's getting fucked hard and deep, Brutus long tail rubs up against David, sometimes wrapping around his chest or leg.";
 		WaitLineBreak;
 		say "     The demon brute is the first one to cum from their coupling, his moans first getting deeper and louder, then turning into lust-filled roars as he bucks against David [if DemonBruteStatus is 1]and starts spraying long ropes of cum all over himself while gushing gushing femcum out of his vagina[else]and his pussy gets wet with femcum gushing out of it[end if]. With Brutus inner muscles twitching around his cock, David isn't far behind, his arousal quickly mounting to a breathtaking orgasm after just a few more thrusts. Bringing out a loud gasp, he slams into Brutus one last time, his shaft buried deeply as it starts unloading spurt after spurt of cum. Holding on to the demon's legs as his own knees get a bit weak, the young man fills Brutus womb with his human seed.";
 		say "     As he finishes coming, David gently pulls his softening cock out, then climbs on the bed to give Brutus a kiss. After a bit of moving around, the two of them end up stretched out on the bed together, with David half draped over Brutus large form. They continue to silently talk and whisper to each other for some time, then eventually doze off.";
 	else if DemonBruteStatus is 0: [male Brutus]
-		say "     Not being able to keep his hands to himself during such an enticing show, Brutus reaches out and caresses the young man's cheeks, then takes hold of his erect manhood. The demon slowly jerks his friend off for a moment, then his deep voice rumbles 'I want to feel you inside me...' Leaning back on the bed Brutus pulls up his legs, holding them with both hands in a spread position that bares his asshole for David. Spinning to face his demon lover, the soldier eagerly steps forward and rubs his cock over Brutus's pucker, then slowly pushes forward until his shaft pops inside. Both of them moan in arousal as David's invading member sinks deeper into his infernal partner's warm depths. When he finally bottoms out inside him, David's balls resting against Brutus muscled cheeks, he takes a moment to savor the feeling, taking deep breaths and stroking Brutus legs.";
+		say "     Not being able to keep his hands to himself during such an enticing show, Brutus reaches out and caresses the young man's cheeks, then takes hold of his erect manhood. The demon slowly jerks his friend off for a moment, then his deep voice rumbles 'I want to feel you inside me...' Leaning back on the bed Brutus pulls up his legs, holding them with both hands in a spread position that bares his asshole for David. Spinning to face his demon lover, the soldier eagerly steps forward and rubs his cock over Brutus's pucker, then slowly pushes forward until his shaft pops inside. Both of them moan in arousal as David's invading member sinks deeper into his infernal partner's warm depths. When he finally bottoms out inside him, David's balls resting against Brutus muscled cheeks, he takes a moment to savour the feeling, taking deep breaths and stroking Brutus legs.";
 		say "     After a short while of having his human partner just stay still with his cock buried in his ass, Brutus gets a bit impatient and starts to flex his inner muscles around David's shaft. In a tone that betrays his deep-seated need, he groans 'Fuck me. Now!' - prompting David to immediately pull back till only the head of his cock is left inside him, then start thrusting in and out. The demon moans loudly each time his human partner bottoms out inside him and quickly starts to pant 'Harder! Faster!' Speeding up more and more oblige Brutus, soon David is really pounding the demon's ass, his hips slapping against Brutus muscular buttcheeks with each thrust. While he's getting fucked hard and deep, Brutus long tail rubs up against David, sometimes wrapping around his chest or leg.";
 		WaitLineBreak;
 		say "     The demon brute is the first one to cum from their coupling, his moans first getting deeper and louder, then turning into lust-filled roars as he bucks against David and cum starts gushing out of his thick shaft. Spurt after massive spurt jets up into the air, most landing on his chest and a few even hitting Brutus in the face, to be quickly licked up by his long forked tongue. With Brutus anal muscles twitching around his cock with each burst of the demon's cum, David isn't far behind, his arousal quickly mounting to a breathtaking orgasm after just a few more thrusts. Bringing out a loud gasp, he slams into Brutus one last time, his shaft buried deeply as it starts unloading spurt after spurt of cum. Holding on to the demon's legs as his own knees get a bit weak, the young man fills Brutus insides with his human seed.";

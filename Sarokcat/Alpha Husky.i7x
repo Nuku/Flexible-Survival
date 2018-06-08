@@ -18,7 +18,7 @@ to say Alpha Husky Desc:
 to say Alpha Husky attack:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
-	else:
+	else:	
 		increase losttoalphahusky by 1;
 		if cunts of player > 0:
 			if bodyname of player is "Female Husky":
@@ -261,7 +261,7 @@ to say alphahuskyfucked:
 	say "     Deciding that this alpha male could use a taste of his own medicine, you roll him over and grab that fluffy tail of his. He gives a mix of growling threats and whimpers, trying to bark and bluster out of his punishment, but this only spurs you on further, wanting to teach the dog a good hard lesson of his own. As you push your cock into his tight tailhole, his hips push back into your thrust despite his attempts at resistance. And after a few thrusts, he's moaning and panting beneath you, his own cock dribbling precum onto the ground. When you finally cum hard inside him, he cums as well, before slinking off after you release him. His fluffy tail low to cover his creamy hole, he heads back into the city to find someplace to lick his wounds and salvage his injured pride.";
 
 to say alphahuskyridden:
-	say "     Deciding to show this alpha male who's in charge, you decide to take what you want from him instead of letting him force it upon you. Slamming his shoulders down firmly, you straddle him and start grinding your hips down onto his crotch. As his sheath starts to fill and his doggy cock emerges, he starts to pant. He struggles a little, still wanting to be dominant and on top, but you growl at him until his ears dip. Only then do you press that throbbing dog cock into your [if cunts of player > 0]juicy pussy[else]tight anus[end if]. You ride him slowly, which makes the normally rough dog whimper for more, but you take your time, savoring both his pleas for you to go faster and the fulfilling ride that you're getting. Once you can't hold back any longer and need release, you pound yourself down onto him hard and fast until you both cum loudly as the canine seed floods your [if cunts of player > 0]womb[else]belly[end if][if cocks of player > 0]. You shoot your own load across the husky's chest as his semen fills you[end if]. Finished with him, you push yourself off and send the cowed dog on his way. He slinks off, his tail low at having been beaten and used for a change, looking for someplace to lick his wounds and salve his pride.[impregchance]";
+	say "     Deciding to show this alpha male who's in charge, you decide to take what you want from him instead of letting him force it upon you. Slamming his shoulders down firmly, you straddle him and start grinding your hips down onto his crotch. As his sheath starts to fill and his doggy cock emerges, he starts to pant. He struggles a little, still wanting to be dominant and on top, but you growl at him until his ears dip. Only then do you press that throbbing dog cock into your [if cunts of player > 0]juicy pussy[else]tight anus[end if]. You ride him slowly, which makes the normally rough dog whimper for more, but you take your time, savouring both his pleas for you to go faster and the fulfilling ride that you're getting. Once you can't hold back any longer and need release, you pound yourself down onto him hard and fast until you both cum loudly as the canine seed floods your [if cunts of player > 0]womb[else]belly[end if][if cocks of player > 0]. You shoot your own load across the husky's chest as his semen fills you[end if]. Finished with him, you push yourself off and send the cowed dog on his way. He slinks off, his tail low at having been beaten and used for a change, looking for someplace to lick his wounds and salve his pride.[impregchance]";
 
 to say alphahuskybeatenup:
 	say "     Deciding this aggressive dog could use a bit of harsh discipline, you give him a few more smacks. 'Bad dog! Bad dog!' You rain blows down upon him, kicking and punching him until he's cowering in a corner. You give his rear a final hard boot and send him running. He slinks off with his tail between his legs to find someplace to lick his wounds and salve his pride.";
@@ -319,7 +319,7 @@ When Play begins:
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else][one of]altered[or]animalistic[at random][end if]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else][one of]altered[or]animalistic[at random][end if]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
 	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]

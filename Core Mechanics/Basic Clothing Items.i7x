@@ -138,7 +138,7 @@ The size of jogging pants is 3.
 The AC of jogging pants is 0.
 The effectiveness of jogging pants is 0.
 The placement of jogging pants is "waist".
-The descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
+The descmod of jogging pants is "A pair of jogging pants cover your hips and legs.  They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
 The slot of jogging pants is "waist".
 the scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
 
@@ -316,7 +316,7 @@ When Play begins:
 	now plural of stiletto heels is true;
 	now plural of jogging shoes is true;
 	now plural of cowboy boots is true;
-
+	
 Table of Game Objects(continued)
 name	desc	weight	object
 "combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them."	3	combat boots
@@ -429,7 +429,7 @@ When Play begins:
 	now plural of white briefs is true;
 	now plural of mesh undies is true;
 	now plural of pink panties is true;
-
+	
 Table of Game Objects(continued)
 name	desc	weight	object
 "ragged loincloth"	"A ragged piece of brown fabric that one can tie around their hips to cover the bare essentials."	0	ragged loincloth
@@ -544,7 +544,7 @@ When Play begins:
 	now plural of lab goggles is true;
 	now plural of prop glasses is true;
 	now plural of rose-tinted glasses is true;
-
+	
 Table of Game Objects(continued)
 name	desc	weight	object
 "stylish sunglasses"	"A set of Lu-Beam sunglasses with a very stylish shape. Those are sure to make anyone look like a star."	0	stylish sunglasses
@@ -653,7 +653,7 @@ When Play begins:
 
 	add { "" } to invent of Grey Abbey Library;
 ]
-
+	
 Table of Game Objects(continued)
 name	desc	weight	object
 "motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective."	3	motorcycle helmet
@@ -790,7 +790,7 @@ When Play begins:
 	add { "" } to invent of Grey Abbey Library;
 	]
 	now plural of football pads is true;
-
+	
 Table of Game Objects(continued)
 name	desc	weight	object
 "leather jacket"	"A black leather jacket some shiny silver buttons and zippers. Stylish and protective."	4	leather jacket
@@ -902,7 +902,7 @@ The size of shoulder pad is 3.
 The AC of shoulder pad is 13.
 The effectiveness of shoulder pad is 13.
 The placement of shoulder pad is "body".
-The descmod of shoulder pad is "A single, armored pad is strapped to your shoulder.".
+The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
 the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 

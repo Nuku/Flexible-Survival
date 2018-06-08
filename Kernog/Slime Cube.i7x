@@ -10,7 +10,7 @@ when play begins:
 [ Slime falls upon you while you explore the island. Big cube of transluscent material, which reminds you of the goo girl]
 to say slimeCubeDesc:
 	if inasituation is false:
-		say "     A big and gooey transluscent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
+		say "     A big and gooey translucent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
 	else:
 		say ""; [dealt with in the event]
 
@@ -35,14 +35,14 @@ When Play begins:
 	now desc entry is "[slimeCubeDesc]";
 	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "[googirlbodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "[googirlskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you get an odd feeling, but see no change"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former colour drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -67,7 +67,7 @@ When Play begins:
 	now loot entry is "glob of goo"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 40; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]mutated[or]flowing[or]altered[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]mutated[or]flowing[or]altered[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "gelatinous"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -84,7 +84,7 @@ to say slimeCubeVoreScene:
 		say "     Like a giant die, the slime rolls on the ground until it reaches your knocked-out force, and slams down on you. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
 	if fightoutcome is 22:
 		say "     You welcome the slime as he rolls in a die-like fashion upon you, and slams down on your waiting body. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
-	say "     The slime washes around your body, as he attempts to keep you stimulated and placated.[if player is female and cunts of player > 1] It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick slimy limbs relentlessly pounding each of your wombs.[else if player is female] It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick slimy limb relentlessly pounding your womb.[end if][if the player is male and cocks of player > 1] An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimently focusing their efforts on your [cocks of player] glans.[else if player is male] An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimently focusing their efforts on your glans.[end if]. The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel is not 1], and flowing into your ass[end if].";
+	say "     The slime washes around your body, as he attempts to keep you stimulated and placated.[if player is female and cunts of player > 1] It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick slimy limbs relentlessly pounding each of your wombs.[else if player is female] It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick slimy limb relentlessly pounding your womb.[end if][if the player is male and cocks of player > 1] An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimentally focusing their efforts on your [cocks of player] glans.[else if player is male] An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimentally focusing their efforts on your glans.[end if].  The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel is not 1], and flowing into your ass[end if].";
 	say "     Time is on the essence. If you do not struggle out in time, these intense sensations may be the last you will ever experience.";
 	if waiterhater is 0, wait for any key;
 	manEatingPlantVore;
@@ -113,7 +113,7 @@ to manEatingPlantVore:
 			increase thirst of player by 2;
 		else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
 			increase thirst of player by 1;
-		say "     You float in the middle of a transluscent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
+		say "     You float in the middle of a translucent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out.  You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
@@ -134,10 +134,10 @@ to manEatingPlantVore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 3:
-					say "     You desperately wiggle your limbs, and eventally make some progress towards the slime's surface.";
+					say "     You desperately wiggle your limbs, and eventually make some progress towards the slime's surface.";
 					increase lustatt by 7 + (lustadjust * 2);
 					wyvhumanityroll; [aka humanity loss]
 					wait for any key;
@@ -153,19 +153,19 @@ to manEatingPlantVore:
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     Lost in the sensations procured by the slime, you contort your body inside your living prison, a smile on your face.";
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
 					say "     As the slime amped up its ministrations, you greet your teeth and decide to ride the wave of pleasure which wrecks your body.";
 					increase lustatt by 7 + (lustadjust * 2);
-				say "[line break]";
+				LineBreak;
 				wyvhumanityroll;
 				wait for any key;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
@@ -174,7 +174,7 @@ to manEatingPlantVore:
 					if humanity of player > 100, now humanity of player is 100;
 				else:
 					say "     You take a moment to get your bearings and focus on deciding in which direction you should keep digging your way.";
-				say "[line break]";
+				LineBreak;
 				increase lustatt by 3 + lustadjust;
 				wyvhumanityroll;
 				wait for any key;

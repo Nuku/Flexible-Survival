@@ -78,7 +78,7 @@ to say fsdf attack:
 						say "     Driven by your submissive inclinations, you comply with such gusto that it takes the dragoness aback, your thick tongue teasing the portal's soft entrance. Cooing softly, she seems to rather enjoy having her need be attended to in such an eager manner, moreso than you imagine she thought she would...";
 						say "     She presses her hole more firmly against you, coaxing your explore her depths with your slick organ, its soft folds parting to accommodate your writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, [if cunts of player > 0]aching cunt[sfn] left unattended[else]body aching with insatiable need[end if]. All the while the beast grows more and more aggressive in asserting her need, occasionally nipping you into working harder, until the rate of your slippery affections rise to a feverish pace, singing as you're driven by an overwhelming desire to pleasure this aquatic mistress.";
 						say "     Much to your blind fervor's joy, you're rewarded with your endeavors when you feel her sexual fluids flood your maw, her passage tightening around your tongue as she cries out in orgasm, leaving you to simply writhe in unattended need.";
-						say "     Eventually, she crawls off you, satisfied with your offering, she gives you a cheeky nip before she turns to dive back into the waters. As you recover before setting off, you contemplate the dragoness's strange change in demeanor, and the long-term implications of forcing such a normally submissive creature into a more dominant role...";
+						say "     Eventually, she crawls off you, satisfied with your offering, she gives you a cheeky nip before she turns to dive back into the waters. As you recover before setting off, you contemplate the dragoness's strange change in demeanour, and the long-term implications of forcing such a normally submissive creature into a more dominant role...";
 						increase libido of player by 1;
 				  fsdfdomshift;
 			else: [Non-Submissive Conventional]
@@ -166,7 +166,7 @@ to say fsdf attack:
 				say "     You are pushed onto your back, exposing your [if cocks of player > 2]numerous, [cock size desc of player] cock[else if cocks of player is 2]dual, [cock size desc of player] cocks[else][cock size desc of player] cock[end if] to the beast. [if scalevalue of player < 4]She chirps at you, the tone of which would infer that your oddly disproportionate anatomy amuses her, though not in a manner to suggest it's not to her liking, indicated when her tongue meets to caress along the length of your impressive rod[smn], her strangely arousing saliva almost immediately drawing you to attention[else]She draws out her tongue to caress along the length of your partially aroused rod[smn], its strangely arousing saliva almost immediately rendering you hard.[run paragraph on] She seems happy to encounter a creature even remotely close to her physical size, and if her infectious state didn't so readily betray her you'd say she prefer the variety, given her eagerness to make use of you[end if].";
 				say "     Satisfied, her tongue retreats from your dick[smn]. Illustrating a clear intent to mount you, she carefully moves to crawl over your [bodytype of player] form. [if scalevalue of player < 4]Soft underbelly caressed along your diminutive frame, she at least shows enough care to not put a significant amount of weight on you, lest you find yourself crushed under her immense mass[else]Soft underbelly grinding across your form as she positions herself, you find that -- even with your size remotely in her league -- she's extremely heavy.[run paragraph on] Your immediate discomfort quickly made apparent to the dragoness, she makes some effort to shift some weight off you.[run paragraph on] In any case, at least the sand softens the pressure, if only by a bit[end if].";
 				say "     Your vision is obviously obscured by the beast's expansive girth, though your sense of touch is more that sufficient a guide as you feel her cunt descend upon [if cocks of player > 1]one of your [cock size desc of player], throbbing tools[else]your [cock size desc of player], throbbing tool[end if], an act that barely seems to phase her as she manages to envelope the impressive thing with little to no effort. Cooing softly in a show of approval [if scalevalue of player < 4]down to[else]towards[end if] you, she relents only briefly before her massive form slowly begins to bob against its length.";
-				say "     Eager to show off her tainted talent, the dragoness's bestial vent squeezes and massages along your cock's length with twisted determination, each descent of her body pounding you deeper into the sand. Driven by her wanton fervor she breaks out into song, the strange, auditory assault seemingly having the effect of intensifying your arousal, until you quickly cry out in bliss, your [cum load size of player] load flooding her hole[if cocks of player > 2] while your brothers spill theirs impotently against her side[else if cocks of player is 2] while its brother spills theirs impotently against her side[end if].";
+				say "     Eager to show off her tainted talent, the dragoness's bestial vent squeezes and massages along your cock's length with twisted determination, each descent of her body pounding you deeper into the sand. Driven by her wanton fervour she breaks out into song, the strange, auditory assault seemingly having the effect of intensifying your arousal, until you quickly cry out in bliss, your [cum load size of player] load flooding her hole[if cocks of player > 2] while your brothers spill theirs impotently against her side[else if cocks of player is 2] while its brother spills theirs impotently against her side[end if].";
 				say "     She's not done with you yet, however; as she milks you dry -- driven by her own, still-persisting need -- you feel her underside strike your beleaguered form with greater zeal, after every descent. The light of your lust reignited in the midst of this feral wildfire, and you are forced to climax again and again until the dragoness finally finds ecstasy, her song's pitch peaking along with her, [if scalevalue of player < 4], the intensity enough to knock you out[else]the intensity of which nearly knocking you out[end if].";
 				say "     [if scalevalue of player < 4]When you come to, you find the sea dragoness long gone and yourself half-buried in the epicenter of an embarrassing crater of sand.[run paragraph on] It[else]Eventually, she relinquishes her body's hold on you.[run paragraph on] She chirps happily at you, not really regarding the fact that you're partially buried in the sand from her weight, before she dives back into the water.[run paragraph on] You're still disoriented from the whole thing so it[end if] takes you awhile to pry yourself from the ground, find your things, and limp off back from whence you came.";
 			else if a random chance of 2 in 3 succeeds or lastfsdfeeding - turns < 8:
@@ -174,7 +174,7 @@ to say fsdf attack:
 					say "     With a soft chirp, you watch as her thick tongue moves to caress your exposed, [cock size desc of player] dick[smn]. The slick, writing appendage finding little difficulty in coaxing you into arousal, she promptly engulfs [if cocks of player > 1]one of them[else]it[end if] within the depths of her eager maw [if cock length of player < 14]immediately, your member wholly consumed lost in her depths[else]with only marginal difficulty, her elongated neck illustrating a lewd practicality by hilting your impressive member inside her voracious hole[end if].";
 					say "     You can't help but be overwhelmed by the sensation of her intense attendance, saliva[one of] strangely[or][stopping] potent in its ability to arouse you. [if cock length of player < 10]No doubt as a result of this, combined with the fact that her maw is simply too large to articulately pleasure someone of your diminutive size, she often disengaged from her oral fixation to drag her slippery appendage across your torso and face before it returns back to your member[else]Her slippery appendage firmly wrapped around your sizeable tool, she bobs against the organ with fervent determination, her muffled songs of approval beckoned from her massive form strangely adept at eliciting further pleasure[end if]. [if scalevalue of player < 4]Compelled by feral greed, her maw remains agape around your lower torso, which by now is absolutely drenched by her drool, her heated breath shielding you from the cold of the open, ocean air[else]The force of her avaricious maw often pushes your similarly sizeable form along the sand, clearly not intent on relinquishing your cock until it sates her tainted hunger[end if].";
 					if cock width of player > 20:
-						say "     Driven by an ecstatic haze, your [cock size desc of player] cock explodes into the dragoness. You would think she'd yield to such a torrential flow, but [if scalevalue of player < 4]instead her sexual greed gets the better of her more gentle demeanor as she throws your smaller form up into the air -- maw and tongue gripped firmly on you and your hose -- to swallow down your copious fluids with a fervent efficiency, forcing you cling to her head with dear life[else]her impressive girth shows little difficulty in handling your expansive release, snout pinning your firmly to the sand as she relentlessly consumes every last drop[end if][if cocks of player > 2], your numerous free members spilling their seed along her elongated neck[else if cocks of player is 2], your free member spilling its seed along her elongated neck[end if].";
+						say "     Driven by an ecstatic haze, your [cock size desc of player] cock explodes into the dragoness. You would think she'd yield to such a torrential flow, but [if scalevalue of player < 4]instead her sexual greed gets the better of her more gentle demeanour as she throws your smaller form up into the air -- maw and tongue gripped firmly on you and your hose -- to swallow down your copious fluids with a fervent efficiency, forcing you cling to her head with dear life[else]her impressive girth shows little difficulty in handling your expansive release, snout pinning your firmly to the sand as she relentlessly consumes every last drop[end if][if cocks of player > 2], your numerous free members spilling their seed along her elongated neck[else if cocks of player is 2], your free member spilling its seed along her elongated neck[end if].";
 					else:
 						say "     The effect of both her carnal affections and infectious influence drive you into a blinding lust frenzy, until you're lost in a furious haze of blissful release, the greedy dragoness eager to drain you of every last drop of your [cum load size of player] load[if cocks of player > 2], her tongue occasionally moving to lick up what seed might emerge from your neglected members[else if cocks of player is 2], her tongue occasionally moving to lick up what seed might emerge from your neglected member[end if].";
 					say "     Satisfied with milking her victim dry. She sets you off before retreating back into the waters. After all that, you might have figured yourself as coming out on top if it were not at the expense being a saliva-smeared, fish-smelling, and lust-addled mess afterwards.";
@@ -229,7 +229,7 @@ To say fsdf loss:
 	else:
 		say "     Before you can land the final blow, the dragoness suddenly backs away and concedes to you. Having asserting your dominance, it's clear she intends to offer herself to you";
 		if libido of player < 40 and "Dominant" is not listed in feats of player:
-			say ". In no mood to humor her need, you send her off, slowly retreating back into the water's depths. You go about your business once more, now that the matter has been attended to.";
+			say ". In no mood to humour her need, you send her off, slowly retreating back into the water's depths. You go about your business once more, now that the matter has been attended to.";
 		else:
 			say ". Shall you oblige her desire? Else you'll shoo her off.";
 			if player consents:
@@ -269,7 +269,7 @@ to fsdfvicmenu:
 		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Eat her out[as]5[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-5)>[run paragraph on]";
@@ -489,7 +489,7 @@ to say FSDF_5: [Oral Giving Cunt]
 			now tempnum is 0;
 	else:
 		now tempnum is 0;
-	say "     Your continued attention quickly picks up in pace, fueled by your own[if player is neuter], insatiable[end if] lust";
+	say "     Your continued attention quickly picks up in pace, fuelled by your own[if player is neuter], insatiable[end if] lust";
 	if cocks of player > 0 or cunts of player > 0:
 		say ". Driven by her submissive instinct, the beast moves her head down to meet your crotch, intent on attending you in turn. Shall you oblige her offering?";
 		if player consents:
@@ -636,7 +636,7 @@ to fsdfvore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				if boundsegment is 1, increase boundmod by 1;
 				if boundmod > 2 and boundsegment is 1:
 					say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[else]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through her tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragoness's stomach. Your surroundings slowly draining you, you imagine you won't last long in here...";
@@ -706,7 +706,7 @@ to fsdfvore:
 								follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					if boundsegment is 1, increase boundmod by 4;
 					if boundsegment is 2:
@@ -753,12 +753,12 @@ to fsdfvore:
 						say "     You abide your current confines, [one of]the beast rumbling softly in approval of your compliance[or]your captor contently swimming as she enjoys her meal[or]the beast offering a soft, approving chirp towards your submission[at random].";
 						increase lustatt by 7 + (lustadjust * 2);
 						wyvhumanityroll;
-				say "[line break]";
+				LineBreak;
 				wait for any key;
 				next;
 			else:
 				now enduring is true;
-				say "[line break]";
+				LineBreak;
 				if boundsegment is 1 and a random chance of 2 in 3 succeeds, increase boundmod by 1;
 				if boundrecover is true:
 					increase humanity of player by 3;
@@ -812,7 +812,7 @@ to fsdfvore:
 						say "     You endure your current confines, [one of]the beast rumbling softly in approval of your compliance[or]your captor contently swimming as she enjoys her meal[or]the beast offering a soft, approving chirp towards your submission[at random].";
 						increase lustatt by 4 + lustadjust;
 						wyvhumanityroll;
-				say "[line break]";
+				LineBreak;
 				wait for any key;
 				next;
 			say "Invalid action.";

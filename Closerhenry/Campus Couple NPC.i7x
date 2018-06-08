@@ -6,7 +6,7 @@ Version 1 of Campus Couple NPC by Closerhenry begins here.
 [ CampusCoupleRelationship                                              ]
 [   0: Have not met Jadako and Coach Weber                              ]
 [   1: Have learned where the couple's room                             ]
-[   100: Permanantly locked out of the two                              ]
+[   100: Permanantly locked out of the two.                             ]
 
 CampusCoupleRelationship is a number that varies.
 

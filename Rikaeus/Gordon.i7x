@@ -24,7 +24,7 @@ The conversation of Gordon is { "<this is a placeholder!>" }.
 The scent of Gordon is "The monkey smells like cologne, bananas and musk. An odd combination of scents but you guess it works for him."
 
 to say GordonDesc:
-	say "     The monkey has pitch black fur and hazel eyes. Personally you think the black is really weird because you don't recall ever hearing about monkeys having that color of fur, at least completely covering their body. But after a while you guess that you've probably haven't seen every type of monkey. Besides the fur and his eyes, he's wearing what amounts to a chef outfit, minus the hat. You figure that's his uniform for the Doggy Bowl, which makes complete and total sense, since he's the head chef. The monkey winks at you suggestively when he notices that you're staring at him, which causes you to quickly look away.";
+	say "     The monkey has pitch black fur and hazel eyes. Personally you think the black is really weird because you don't recall ever hearing about monkeys having that color of fur, at least completely covering their body. But after a while you guess that you've probably haven't seen every type of monkey. Besides the fur and his eyes, he's wearing what amounts to a chef outfit, minus the hat. You figure that's his uniform for the Doggy Bowl, which makes complete and total sense, since he's the head chef. The monkey winks at you suggestively when he notices that you're staring at him, which causes you to quickly look away."
 
 instead of conversing the Gordon:
 	if HP of Gordon is 0: [should be not yet available]
@@ -37,7 +37,7 @@ instead of conversing the Gordon:
 		say "[GordonTalkMenu]";
 
 to say GordonTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you wish to talk about with the monkey?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -136,7 +136,7 @@ instead of fucking Gordon:
 		say "[GordonSexMenu]";
 
 to say GordonSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[
