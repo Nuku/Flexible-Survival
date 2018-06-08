@@ -4,7 +4,7 @@ Exotic Bird by Sarokcat begins here.
 
 Section 1-Exotic Bird
 
-Exotic Bird is a pet. The description of the exotic bird is "This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird your new friend is, but it has brilliantly coloured feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.". Exotic Bird is a part of the player.
+Exotic Bird is a pet. The description of the exotic bird is "This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird your new friend is, but it has brilliantly colored feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.". Exotic Bird is a part of the player.
 The weapon damage of Exotic Bird is 2.
 The level of Exotic Bird is 1.
 The Dexterity of Exotic Bird is 15.

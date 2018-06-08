@@ -216,7 +216,7 @@ to say gator den scene:
 			if the player consents:
 				now sextablerun is 1;
 				say "     You decide that you don't really want to spend time with her, and head back to the Library.";
-				move the player to Grey Abbey Library;
+				move the player to Gray Abbey Library;
 				follow the turnpass rule;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -302,7 +302,7 @@ Gator Den is a room. "[gator den scene]". It is unknown. It is fasttravel. It is
 
 After navigating gator den:
 	if humanity of player > 9:
-		move the player to Grey Abbey Library;
+		move the player to Gray Abbey Library;
 		follow the turnpass rule;
 
 [ Edit this to have the correct name as well]

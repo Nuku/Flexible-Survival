@@ -95,7 +95,7 @@ to say minilabdesc:
 		else:
 			say ". Near the work area, there is a sleeping bag and some supplies.";
 	else:
-		say "     Tucked into the corner of basement in the long-abandoned home are the broken remains of his mini-lab. In the chaos of the fight, the equipment was destroyed and the nanite vials broken. With the their contents spilled onto the ground and walls in that area, something strange has started to occur. The concrete walls in this corner have become flesh-like and shifting, with vague impressions of faces, muzzles and sexual organs. These do not last long or ever fully form, but it seems the over-abundance of nanites are still at work. Realizing that Sam could have very well ended up fused with that mess or been turned into an ambulatory monstrosity like that, you don't feel so bad about how things did turn out. You back away from the pulsating wall-flesh as it reaches out with a grey pseudopod. You decide not to risk coming here again once your business is through.";
+		say "     Tucked into the corner of basement in the long-abandoned home are the broken remains of his mini-lab. In the chaos of the fight, the equipment was destroyed and the nanite vials broken. With the their contents spilled onto the ground and walls in that area, something strange has started to occur. The concrete walls in this corner have become flesh-like and shifting, with vague impressions of faces, muzzles and sexual organs. These do not last long or ever fully form, but it seems the over-abundance of nanites are still at work. Realizing that Sam could have very well ended up fused with that mess or been turned into an ambulatory monstrosity like that, you don't feel so bad about how things did turn out. You back away from the pulsating wall-flesh as it reaches out with a gray pseudopod. You decide not to risk coming here again once your business is through.";
 		now Mini-Lab is unknown;
 
 
@@ -412,14 +412,14 @@ to assaultonminilab:
 			now HP of Sam is 100;
 			remove Sam from play;
 			now Mini-Lab is unknown;
-			move player to Grey Abbey Library;
+			move player to Gray Abbey Library;
 		else:
 			say "     Rather than continue to risk yourself in a losing fight, you make a break for the basement hatch and run away. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 			WaitLineBreak;
 			now HP of Sam is 100;
 			remove Sam from play;
 			now Mini-Lab is unknown;
-			move player to Grey Abbey Library;
+			move player to Gray Abbey Library;
 	else if calcnumber is 2:
 		say "     Not wanting to get involved, but certainly curious to watch the show, you take a few steps back, giving the two plenty of space to get reacquainted. The tigertaur keeps Sam pinned down over the table as she starts looking over its contents. 'Ahh, here they are,' she purrs, grabbing a selection of the vials before tossing Sam down onto the floor. He crawls backwards, begging alternatively for Rick not to do it and for you to help him, but neither of you heed his pleas, too aroused by what's to come.";
 		say "     With a few twitches of her hindquarters, she pounces atop of her human prey, pinning him face down to the ground. She grinds her hard cock against his body, leaking precum over his smooth skin. With a strong paw at his jaw, she tilts his head back and forces his mouth open. 'Oh, stop your fussing, you'll make such a pretty kitty breedslut,' Rick rumbles, pouring the contents of one vial after the other down her ex-partner's throat.";
@@ -481,7 +481,7 @@ to assaultonminilab:
 			now HP of Sam is 100;
 			remove Sam from play;
 			now Mini-Lab is unknown;
-			move player to Grey Abbey Library;
+			move player to Gray Abbey Library;
 	else if calcnumber is 3:
 		say "     Deciding it's every [if cunts of player > 0]woman for herself[else]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it. As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		WaitLineBreak;
@@ -493,7 +493,7 @@ to assaultonminilab:
 		now HP of Sam is 100;
 		remove Sam from play;
 		now Mini-Lab is unknown;
-		move player to Grey Abbey Library;
+		move player to Gray Abbey Library;
 	else if calcnumber is 4:
 		say "     You decide to leave the two of them alone so they can get reacquainted. You quickly back away and rush up the stairs. As you're leaving, you can hear Sam calling out with a mix of pleas for help and curses at you for leaving him, but you turn a deaf ear and make your way out. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		WaitLineBreak;
@@ -503,7 +503,7 @@ to assaultonminilab:
 		now HP of Sam is 100;
 		remove Sam from play;
 		now Mini-Lab is unknown;
-		move player to Grey Abbey Library;
+		move player to Gray Abbey Library;
 
 to minilabvictory:
 	say "     As your last blow drives back the large feline, she staggers sideways a few steps. Growling in frustration, she makes a final lunge at Sam and tosses the young man across the work table and into the shelves beyond. 'If I can't have you, no one can,' she yowls as Sam starts to scream, the contents of the broken vials flowing down overtop of him. He writhes on the floor, mindless of the broken glass as the samples from dozens of creatures enter his system at once. You are momentarily stunned at this sight, giving the tigertaur the opportunity to flee past you and exit the cramped basement.";

@@ -94,7 +94,7 @@ to say SantaTalkMenu:
 		now title entry is "A Suit for Jay";
 		now sortorder entry is 7;
 		now description entry is "Talk about getting Jay a business suit";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -229,7 +229,7 @@ to say SantaTalk4: [talking about Krampus]
 to say SantaTalk5: [talking about Mark]
 	say "     As you bring up the other polar bear, Santa smiles and nods to you, then says, 'Mark is a good and dependable man who loves his husband with all of his heart. I am proud to call him a friend and can honestly say that there are few people I'd prefer to have by my side if a truly dire situation came up.' Letting his gaze wander over the happy and carefree Christmas Elves living in his domain, the big white bear puts on a more serious expression for a second, then lets out a deep breath. Sometimes I wish that I too could just forget, like most of them did. But no, it is my responsibility, my duty, to protect them. Being aware of what grim realities the outside world entails is definitely part of that. When Jay and Mark came here, I recognized in him one of the worst examples of PTSD that I'd seen since... ah, no. Don't let me get you down with a tale like that, I shouldn't be gossiping about their private matters anyways. One thing I can say is that I am glad that their transformations went relatively well, and Mark is better for it now.'";
 	say "     Falling quiet after the last words, the large, white bear leans back in his throne and gives a welcoming smile to a newcomer who cautiously steps through the curtain of snow flakes demarcating the Christmas Village from the rest of the Mall. He waves the person closer and wishes them a friendly welcome, then starts to chat a bit. Apparently, your talk about the current topic is over, and as you walk away, you can't help but wonder if that is because you almost got a snippet of Santa's past, or to protect the privacy of Mark and Jay. Maybe a bit of both...";
-	
+
 to say SantaTalk6: [talking about Jay]
 	say "     Stroking his furry white chin, Santa raises an eyebrow and glances to the small, fairly carefree inhabitants of the Christmas Village. 'Jay is actually a special case among the elves. Most of those who come and choose to stay as part of my domain are lost and just want to forget. He wasn't, and he didn't, with his transformation mostly an accident, caused by the aftermath of the events that he and his partner Mark witnessed before fleeing to the Mall. In the end, the two of them do not actually live in the Christmas Village and still have a life outside of its boundaries. They visit often though, and have become good friends of mine, which makes me glad that things worked out alright in the way that they did.'";
 	if thirst of Jay is 0:
@@ -249,8 +249,7 @@ to say SantaTalk7: [Suit Quest info]
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'Do not worry about the suit. Work is progressing on it, and my elves will have it ready by the time it is needed.'";
 	else:
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'My elves finished it and it already has been delivered to Mark. He said something about wanting to talk to you again. I'd advise searching him out at the north entrance of the mall, in the mornings or afternoons.'";
-	
-		
+
 Section 3 - Sex
 
 Instead of fucking the Santa Claws:

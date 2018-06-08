@@ -352,7 +352,7 @@ to wyvmalevic:
 		say "(4) [if cunts of player > 0][link]Ride his dick[as]4[end link][else][italic type]Female-specific interaction[roman type][end if] [if cunts of player > 0 and cunt length of player < 16][italic type]- Too small![roman type][end if][line break]";
 		say "(5) [link]Ride his dick anally[as]5[end link] [if scalevalue of player < 4 and player is not twistcapped][italic type]- Too small![roman type][else if scalevalue of player < 3][italic type]- Too small![roman type][end if][line break]";
 		say "(6) [link]Suck him off[as]6[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-6)>[run paragraph on]";
@@ -409,7 +409,7 @@ to wyvfemvic:
 		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Attend her cunt[as]5[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-5)>[run paragraph on]";
@@ -773,7 +773,7 @@ to wyvore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if boundcounter > 0, decrease boundcounter by 1;
 				if boundsegment is 1:
@@ -810,7 +810,7 @@ to wyvore:
 							follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					if boundsegment is 1:
 						say "     You find yourself actively submitting to the wyvern's will. In mere seconds, the beast intent on exploiting this, you're plunged[if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
@@ -827,12 +827,12 @@ to wyvore:
 					else:
 						say "     You abide your fate as a meal for the wyvern for a little longer. Your captor [one of]choosing to mull around for a bit as [ghe] drains you[or]taunting you with [ghis] talon's caress over [ghis] slightly bulging belly[or]half-heartedly pursuing other potential victims who have the proper sense to run and hide[at random].";
 					increase lustatt by 7 + (lustadjust * 2);
-				say "[line break]";
+				LineBreak;
 				wyvhumanityroll;
 				wait for any key;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if boundrecover is true:
 					if boundsegment is 1:
@@ -864,7 +864,7 @@ to wyvore:
 							say ". Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
 					else:
 						say "     You oblige your fate as a meal for the wyvern for a little longer. Your captor [one of]choosing to mull around for a bit as [ghe] drains you[or]taunting you with [ghis] talon's caress over [ghis] slightly bulging belly[or]half-heartedly pursuing other potential victims who have the proper sense to run and hide[at random].";
-				say "[line break]";
+				LineBreak;
 				increase lustatt by 3 + lustadjust;
 				wyvhumanityroll;
 				wait for any key;
@@ -1110,7 +1110,7 @@ to wyvorgy:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 4:
 					say "     You struggle to free yourself of the wyvern kin atop you, [if struggleatt is 1]getting pretty much nowhere with the endeavor[else if struggleatt is 2]getting slight leverage, though not enough to free yourself just yet,[else]almost completely free of their hold[end if] and causing the wyverns to screech and nip at you, not quite intent on letting you go.";
@@ -1127,35 +1127,35 @@ to wyvorgy:
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     You choose to submit to the wyvern kin's continued abuse, [one of]much to their screeching, biting approval[or]though they're certainly not easier on you for it[or]of which they happily exploit[at random].";
-					say "[line break]";
+					LineBreak;
 					wyvernlustapply;
 					if a random chance of 1 in 2 succeeds, increase tempnum2 by 1;
 					wyvernmatron;
 					wyvernsanityroll;
 				else:
 					say "     You choose to abide the wyvern kin's continued abuse, [one of]much to their screeching, biting approval[or]though they're certainly not easier on you for it[or]of which they happily exploit[at random].";
-					say "[line break]";
+					LineBreak;
 					wyvernmatron;
 					wyvernsanityroll;
 				wait for any key;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					increase humanity of player by 3;
 					if humanity of player > 100, now humanity of player is 100;
-					say "[line break]";
+					LineBreak;
 					wyvernmatron;
 					wyvernsanityroll;
 					now boundrecover is false;
 				else:
 					say "     You fight to retain clarity in spite of the wyvern kin's continued abuse, [one of]nonetheless continuing to screech and nip at you[or]though they're certainly not easy for you[or]of which they hardly seem to regard[at random].";
-					say "[line break]";
+					LineBreak;
 					wyvernmatron;
 					wyvernsanityroll;
 				wait for any key;

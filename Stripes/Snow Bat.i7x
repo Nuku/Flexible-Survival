@@ -27,7 +27,7 @@ to say snowbatdesc:
 	now wdam entry is 10 + ( ( 4 * debit / 11 ) ); [strong dmg growth rate for hard mode]
 	now HP entry is 70 + ( debit * 5 ); [strong HP growth rate for hard mode]
 	now monsterHP is HP entry;
-	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even grey fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day]. With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[else]. In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
+	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even gray fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day]. With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[else]. In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
 
 
 to say daynightcheck:
@@ -118,14 +118,14 @@ When Play begins:
 	now desc entry is "[snowbatdesc]";
 	now face entry is "a mix of bat and feline, with a bat-like muzzle and large, sensitive ears, but a snow leopard appearance overall. Bright light is somewhat painful for you and you have a dark thirst that you do your best to satisfy with other liquids";
 	now body entry is "tall and slender, with a broad chest and strong shoulders. Your shoulder muscles support the large bat wings at your back. Your hands are paw-like and your fingers end in sharp claws. Your feet end in talon-like toes for perching or grabbing prey";
-	now skin entry is "soft fur that is snowy white and ash grey in color with a leopard-like pattern across your";
+	now skin entry is "soft fur that is snowy white and ash gray in color with a leopard-like pattern across your";
 	now tail entry is "You have the thickly furred, luxuriously beautiful tail of a snow leopard.";
 	now cock entry is "[one of]grey feline[or]barbed[or]grey[or]feline[at random]";
 	now face change entry is "your face pushes out to form a pointed muzzle with an upturned nose. Large fangs grow in at the front of your muzzle to sink into your prey and... No! You shake your head, pushing back those thoughts even as your changes continue and your ear grow very large and bat-like, able to hear minute sounds. A pattern of spots forms on your face as it becomes a hybrid of a bat's and a snow leopard's";
 	now body change entry is "your body is wracked with painful snaps. Your body becomes slender, but with a strong chest and shoulders, where the pain is now centering. Large growths at your back swell up under your shoulder as it feels like some pressure inside them building, fighting to get out. As a pair of big bat wings burst from your back, you scream in a mix of pain and pleasure as they are freed. Your hands warp and reform into feline paws with clawed digits while your feet become more bat-like with grasping toes";
 	now skin change entry is "you gain a lovely coat of snow leopard fur, soft and light";
 	now ass change entry is "a fluffy, feline tail forms. It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard";
-	now cock change entry is "takes on an even, grey hue and becomes feline with stimulating barbs to please even unwilling partners";
+	now cock change entry is "takes on an even, gray hue and becomes feline with stimulating barbs to please even unwilling partners";
 	now str entry is 14;
 	now dex entry is 20;
 	now sta entry is 12;

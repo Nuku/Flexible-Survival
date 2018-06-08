@@ -1,14 +1,14 @@
-Version 1 of Grey Squirrel For FS by Stripes begins here.
+Version 1 of Gray Squirrel by Stripes begins here.
 [Version 1.1 - Endings added]
 
-"Adds a Grey Squirrel infection for use with Macadamia."
+"Adds a Gray Squirrel infection for use with Macadamia."
 
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Grey Squirrel" } to infections of guy;
-	add { "Grey Squirrel" } to infections of furry;
-	add { "Grey Squirrel" } to infections of Rodentlist;
+	add { "Gray Squirrel" } to infections of guy;
+	add { "Gray Squirrel" } to infections of furry;
+	add { "Gray Squirrel" } to infections of Rodentlist;
 
 to say losetogreysquirrel:
 	say "non-combative.";
@@ -28,7 +28,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Grey Squirrel"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Gray Squirrel"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "non-combative."; [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beatthegreysquirrel]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetogreysquirrel]"; [ Text when monster wins. Change 'template' as above. ]
@@ -40,8 +40,8 @@ When Play begins:
 	now cock entry is "pink";
 	now face change entry is "your head reshapes itself, jaw and cheekbones reforming into a small muzzle. Your ears change, growing rounded as long locks of well-styled hair flows out from the back of your head. Soon you have a cute and sexy squirrel's head atop your shoulders";
 	now body change entry is "your spine starts to bend and flex as you become a cute and sexy squirrel with dainty, nimble paws with hard claws for climbing at your fingertips";
-	now skin change entry is "smooth, fluffy grey fur spreads over you. It has a lighter tone across the chest and loins, drawing the eyes there";
-	now ass change entry is "a long tail forms, rapidly filling out with a large, fluffy coat of grey fur and forming into a big squirrel tail with a noticeable curl at the end";
+	now skin change entry is "smooth, fluffy gray fur spreads over you. It has a lighter tone across the chest and loins, drawing the eyes there";
+	now ass change entry is "a long tail forms, rapidly filling out with a large, fluffy coat of gray fur and forming into a big squirrel tail with a noticeable curl at the end";
 	now cock change entry is "it shifts and takes on a largely human form with a natural flesh tone to it"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 20;
@@ -79,7 +79,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Grey Squirrel":
+	if bodyname of player is "Gray Squirrel":
 		if humanity of player < 10:
 			if HP of Macadamia >= 13:
 				say "     As your humanity slips away and your squirrel nature takes over, you are drawn to rejoin Mack at the bunker and hole up with him there, turning it into a fortified squirrel den for the both of you. His plans come together as he brings in more and more of his nuts for safe storage, as well as a few other luxury items, including a large jacuzzi, which gets filled with nuts. Either there was much more than he'd let on at the factory or he's stored a lot more from elsewhere in the city. Either way, you're pleased with your mate's impressive nuts and are more than happy to show him just how you are by letting him fill you again and again with his hot nut butter. In this special love nest, you and he snuggle and fuck merrily, the squirrel topping you repeatedly on his mounds of nuts, in the nut jacuzzi and anywhere else he'd like to take you.";
@@ -94,8 +94,8 @@ when play ends:
 		else:
 			if HP of Macadamia >= 13:
 				say "     As the time for rescue draws near, you try your best to convince Mack to come with you. Finally, your sexy body wins out over the squirrel's hoard of nuts. He's very disappointed to have to leave most of it behind, only able to take a few jars of his specially prepared nuts with him in his pack. He gives you a grin and a wink, munching on some of them while the soldiers work to evacuate you before offering some to the soldiers. Thinking nothing of it, they snack on a few as well, finding them very tasty. Later, at the base, you spot signs of them starting to get a little squirrelly and grin. And soon enough, Mack's working on turning them into sexy does eager for another taste of the squirrel's nut butter.";
-				say "     Having nothing more than a common squirrel infection, you are processed fairly quickly and eventually you and Mack are released, now with a pack of ex-soldier does in tow. You all take over a large peanut plantation, setting up a small roasting operation using Mack's special nut butter as their seasoning and distributing them. He breeds his harem of does, siring many more sexy, horny squirrels, who spread out and take over other plantations, adding to your mate's growing business empire[if cunts of player > 0]. You, as his first and favourite mate, are his special doe and bred often. The squirrel still loves to call you Hazel affectionately[else if cocks of player > 0]. You, as his first and favourite mate, are his special male doe and mounted often. The squirrel still loves to call you Hazelnut affectionately[else]. You, as his first and favourite mate, are his special doe and mounted often. Despite your own lack of gender, you are always eager to let Macadamia fuck you and fill you with his nut butter, and he still loves to call you Hazelnut affectionately[end if][if cocks of player > 0]. Mack is also not a jealous lover, more than willing to share his does with you and let you mount and breed them, often while he watches or fucks you or another of the girls himself[end if].";
+				say "     Having nothing more than a common squirrel infection, you are processed fairly quickly and eventually you and Mack are released, now with a pack of ex-soldier does in tow. You all take over a large peanut plantation, setting up a small roasting operation using Mack's special nut butter as their seasoning and distributing them. He breeds his harem of does, siring many more sexy, horny squirrels, who spread out and take over other plantations, adding to your mate's growing business empire[if cunts of player > 0]. You, as his first and favorite mate, are his special doe and bred often. The squirrel still loves to call you Hazel affectionately[else if cocks of player > 0]. You, as his first and favorite mate, are his special male doe and mounted often. The squirrel still loves to call you Hazelnut affectionately[else]. You, as his first and favorite mate, are his special doe and mounted often. Despite your own lack of gender, you are always eager to let Macadamia fuck you and fill you with his nut butter, and he still loves to call you Hazelnut affectionately[end if][if cocks of player > 0]. Mack is also not a jealous lover, more than willing to share his does with you and let you mount and breed them, often while he watches or fucks you or another of the girls himself[end if].";
 			else:
 				say "     After being rescued by the soldiers, you're processed fairly quickly because of your common squirrel infection. Upon your eventual release, you find some work at a nut processing plant. Your affinity for nuts makes you a good employee, having a knack for spotting bad nuts and helping to improve the seasoning mixes[if cocks of player > 0 or cunts of player > 0]. Not that you tell anyone about that last part, instead slipping your own sexual fluids into the mix to add a little something special to them[else] by coming up with new combinations and improvements the company can make[end if]. The popularity of the company's product goes up and those people who start to show signs of going squirrelly from the product are simply put down to having picked up the infection from somewhere.";
 
-Grey Squirrel For FS ends here.
+Gray Squirrel ends here.

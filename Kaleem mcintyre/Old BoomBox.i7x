@@ -53,7 +53,7 @@ Instead of Resolving a Old Record Store:
 			say "     The whispers, which you can still hear, despite them being somewhat muffled by the closed door, slowly grow louder as you place your fingers over and across the casings of many of the cassettes. Not really sure why you do it, you find your fingers tracing over two cassettes out of the hundreds present. Both tapes bear the vocals of a particular male and female artist, respectively, that you remembered being enamored with a long time ago.";
 			WaitLineBreak;
 			say "     Taking the tapes and then flipping them around onto the back to read the songs, just to see if you remember them all correctly, your eyes jump when you hear a radio come on all of a sudden. It is putting out what you can tell should be the local news, but you know there's been no radio broadcasts since this whole madness started. The weather and time seem accurate, making you scan around the room to again search for whoever is behind all this. Casting your sights around to see where the voice is coming from, you find your gaze narrowing down to a small table hidden from view off into the left corner of the room.";
-			say "     Again, you find yourself confused as you wonder what the hell is going on here. First the spooky shop with the self opening door, the whispers, the music and now the news. Had you not known any better you could almost swear that someone is trying to get your attention. Laughter bubbles up out of your throat as you find the hilarity of the situation too much to stand. The slight crackle of fear and insanity colouring your hilarity must be in your head, you reason, as you are NOT afraid right now. Nope. No sir. Calming your laughs down into giggles and then into quiet chuckles, you pull yourself over the table to have a look-see at what's making all the ruckus.";
+			say "     Again, you find yourself confused as you wonder what the hell is going on here. First the spooky shop with the self opening door, the whispers, the music and now the news. Had you not known any better you could almost swear that someone is trying to get your attention. Laughter bubbles up out of your throat as you find the hilarity of the situation too much to stand. The slight crackle of fear and insanity coloring your hilarity must be in your head, you reason, as you are NOT afraid right now. Nope. No sir. Calming your laughs down into giggles and then into quiet chuckles, you pull yourself over the table to have a look-see at what's making all the ruckus.";
 			WaitLineBreak;
 			say "     What you find is an old boombox staring up at you, almost as if in longing for your presence. The old fashioned machine is big and clunky, though nothing compared to your bedroll, with switches and knobs and the likes which signal its age. However, you do happen to note that the thing has a CD player attached to the top of it, so the machine can't be all that old. You shake your head as you turn away from the music maker, but soon you have to look back as you could have just sworn that you heard your name coming from the thing.";
 			say "     Listening very hard, you almost have to strain to hear anything as the volume on the old boombox quickly silences itself. Pulling back to tilt your head in befuddlement, a scowl soon covers your [facename of player] face as you promise that you're going to make whoever is pulling this joke off on you pay when you find them. Whirling away from the jam machine, you head back over to the other side of the room to replace the cassettes that you have in hand. Just as you are about to set the twin tapes back, the boombox suddenly pumps up the volume loud enough that you nearly jump up onto the ceiling.";
@@ -210,7 +210,7 @@ to say tangofriends:
 	if libido of player > 100, now libido of player is 100;
 
 to say R&Bfriends:
-	If Fang is in the Grey Abbey Library:
+	If Fang is in the Gray Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang pads over to you and then lays his head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in his eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke him across his rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
 		else:
@@ -255,7 +255,7 @@ to say RockandRollfriends:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
 	If Coleen is in the bunker:
 		say "     At hearing the music playing on the boombox, Coleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
-	If Fang is in the Grey Abbey Library:
+	If Fang is in the Gray Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds, you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
 		else:
@@ -286,7 +286,7 @@ to say Oceanfriends:
 			say "     At hearing this kind of slow and melodious music, Sarah is quick to come up over to where you are lying down to snuggle up with you. Her furry body warms you up quickly and you find your arm wrapping around her without you thinking about it. The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
 			if sarahpups > 0:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
-	If Fang is in the Grey Abbey Library:
+	If Fang is in the Gray Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang slowly comes over to where you are and then curls himself up at your head. Panting softly, the big male has no problem whimpering at the sounds of the music and then drifting off to sleep as he listens to the music with you.";
 		else:
@@ -309,7 +309,7 @@ to say Oceanfriends:
 [		else:
 			say "     ***confident Sven.";]
 	if little fox is tamed:
-		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library]. Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
+		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Gray Abbey Library]. Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
 	if skunk kit is tamed:
 		say "     Peppy goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
 	if helper dog is tamed:

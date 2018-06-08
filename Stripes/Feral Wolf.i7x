@@ -95,8 +95,8 @@ to say beatferalwolf:
 					say "you rub your fingers over your damp pussy. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
 					say "[feralwolffemalesex]";
 				now HP of Fang is 1;
-				move Fang to the Grey Abbey Library;
-				move player to the Grey Abbey Library;
+				move Fang to the Gray Abbey Library;
+				move player to the Gray Abbey Library;
 				now lastfuck of Fang is turns;
 			else:
 				LineBreak;
@@ -230,7 +230,7 @@ When Play begins:
 	now loot entry is "wolf cum";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
@@ -242,7 +242,7 @@ when play ends:
 	if bodyname of player is "Feral Wolf":
 		if HP of Fang is 3 or HP of Fang is 4:				[alpha Fang]
 			if humanity of player < 10:
-				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases. After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if cunts of player > 0]alpha bitch[else]slutty beta[end if][if coleenalpha is 0 and HP of Fang is 3]. Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases. After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if cunts of player > 0]alpha bitch[else]slutty beta[end if][if ColeenAlpha is 0 and HP of Fang is 3]. Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
 			else if Felinoid companion is tamed:
 				say "     When the military comes, you worry about how they'll react to you and Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. But you are surprised as they move towards him and he slowly stretches and stands upright, resembling the larger alpha wolves you've seen in the city than the feral wolf he once was. Despite a little unsteadiness on his reformed legs, he speaks confidently, telling a tale about how you rescued him from a fate of being an omega in a wolf pack and brought him here to safety. He alludes in passing that your current form is a result of the rescue, but doesn't elaborate. Having heard many tales from those barely able to escape after being transformed, the soldiers don't question this rather loosely accurate story. You pad over to your alpha and lean against him while he scritches your ears.";
 				say "     When they turn their attention to your felinoid companion, they are easily enough swayed to feel similar sympathy for him when you tell them about how you both got away from those plant vines in the park, his injury and eventual recovery. You add that he's been a loyal bodyguard since then. There are some concerns, but they are inclined to trust your word. It certainly helps that the big feline is on his best behavior and makes no trouble for the soldiers.";
@@ -261,7 +261,7 @@ when play ends:
 				else:
 					say "Giving in to your feral nature, you prowl the city street, looking for a worthy male to mount and breed you. Your mind is gone and now only the most primal of instincts remain.";
 			else:
-				say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a grey muzzle.";
+				say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
 
 Table of Game Objects(continued)
 name	desc	weight	object

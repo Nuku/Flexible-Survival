@@ -515,7 +515,7 @@ When Play begins:
    now loot entry is "motel key"; [ Dropped item. Key will be used later ]
    now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
    now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceaous[or]flexible[at random]";
+   now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
    now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
    now magic entry is false;
    now resbypass entry is false;

@@ -410,7 +410,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[ocelotbd]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[ocelotbd]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
@@ -439,9 +439,9 @@ to say ocelotbd:
 to say ocelotbodychange:
 	say "parts of you start going numb, followed by the pops and snaps of changing bone. As your body changes shape, you becomes increasingly ";
 	if ocelotchoice is 2:	[big kitty]
-		say "     fat, gaining excess pudginess all over even as your muscles and bones are altered to help deal with this. Your hands become paws with pudgy fingers and your body has a subtle, feline shape to it that you can still make out. ";
+		say "fat, gaining excess pudginess all over even as your muscles and bones are altered to help deal with this. Your hands become paws with pudgy fingers and your body has a subtle, feline shape to it that you can still make out. ";
 	else:
-		say "     slender, shrinking down to become quite thin and lithe. Your hands become dainty paws with nimble fingers and your body has a subtle, feline shape to it. ";
+		say "slender, shrinking down to become quite thin and lithe. Your hands become dainty paws with nimble fingers and your body has a subtle, feline shape to it. ";
 	if skinname of player is "Ocelot":
 		say "     As the changes are wrapping up, some leather gear forms over your body as well to complete the look";
 

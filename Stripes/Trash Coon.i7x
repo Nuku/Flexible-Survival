@@ -20,7 +20,7 @@ to say trashcoondesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath. Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask. This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body. Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs. She has a strong odour about her, a mix of arousal and trash from her recent dumpster diving.";
+	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath. Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask. This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body. Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs. She has a strong odor about her, a mix of arousal and trash from her recent dumpster diving.";
 
 to say losetotrashcoon:
 	now notrashcoonsex is 0;
@@ -78,7 +78,7 @@ When Play begins:
 	now desc entry is "[trashcoondesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a scruffy looking raccoon. You have a raccoon's dark mask around your eyes and a perpetually dirty face. Your cute ears move and flick around, twitching at every sound";
 	now body entry is "bulky and well-padded. Your hands have darker, nimble fingers ending in little, black claws";
-	now skin entry is "scruffy grey fur which is darker across your back";
+	now skin entry is "scruffy gray fur which is darker across your back";
 	now tail entry is "You have a fluffy raccoon tail growing from atop your wide hips. It is always a little dirty and the fur poorly groomed.";
 	now cock entry is "[one of]raccoon[or]coon[at random]";
 	now face change entry is "your mouth and nose elongate into a narrow, whiskered muzzle with a black nose at the end. A raccoon's dark mask forms around your eyes as your ears move up and reform into cute little cups";

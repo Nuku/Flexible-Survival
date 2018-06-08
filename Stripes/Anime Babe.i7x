@@ -6,6 +6,7 @@ Version 1 of Anime Babe by Stripes begins here.
 
 when play begins:
 	add { "Anime Babe" } to infections of girl;
+	add { "Anime Babe" } to infections of humanoid;
 
 noanimebabesex is a number that varies.
 

@@ -342,7 +342,7 @@ to say DomChaseChitChat:
 			-- 2:
 				say "     'The tigresses in the den have been giving me some looks lately. Two of the sluts even came up to me and asked if I was interested in fucking them! Before they knew what was happening, I grabbed one and screwed her brains out, then the other, who just so happened to be her sister haha! They were decent fucks, but I've had better, and who knows, maybe I knocked both of 'em up!'";
 			-- 3:
-				say "      'Gotta tell ya, I hate when you're not knocked up! It makes me look like I'm not the virile stud that we both know I am. But when you do get pregnant... haha, fuck, you smell so good like that! I can't even bring myself to pay attention to any of the other sluts in the den when you're preggers haha!'";
+				say "     'Gotta tell ya, I hate when you're not knocked up! It makes me look like I'm not the virile stud that we both know I am. But when you do get pregnant... haha, fuck, you smell so good like that! I can't even bring myself to pay attention to any of the other sluts in the den when you're preggers haha!'";
 
 to say DomChaseMarking:
 	if dexterity of Chase is 1: [monogamous dom Chase]
@@ -406,12 +406,7 @@ to say SubChaseTalkMenu:
 Section 3 - Fucking Chase
 
 instead of fucking the Chase:
-	[puts Tiger as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Tiger":
-			now monster is y;
-			break;
+	setmonster "Tiger";
 	if (lastfuck of Chase - turns < 6 and Dexterity of Chase is 0): [he got fucked in the last 15 hours = 5 turns]
 		if (Dexterity of Chase is 0): [Regular Chase]
 			say "     'Sorry, I would love to spend some more time with you, but it looks like neither of us really are ready for that,' Chase says apologetically, 'Maybe we should take it slow and you should come back and visit me again later.'";
@@ -833,7 +828,7 @@ to say TigertaurQuestBattle: [conversation to begin tigertaur battle mission]
 			say "     Watching the second of the tigertaurs crumble to the ground, you feel a quick burst of wind behind you. Spinning quickly you are able to see the last huge feline being bum rushed by Chase, as it apparently made a grab for you. With lightning speed your tiger's claws slash away at the taur, forcing it to stay on the defensive. Seeing an opening you kick at one of the beasts hind legs, making it buckle under the double onslaught. The tigertaur knowing when it has lost a fight jumps back, calling out to its wounded allies the three of them make a break for it while they can. Leaning forward to catch your breath, only to be quickly tackled again by a very happy kitty.";
 			say "     'HA! Can you believe it?! We totally beat those oversized kittens down!' Before you know it, the two of you are rolling all over the grass of the tiger exhibit. Eventually getting into the spirit of things you join in on the impromptu playtime, chasing each other and laughing. With agile precision your feline lover knocks your legs out from under you, gaining an advantage as you are pinned beneath the tigers solid form. Still laughing together over his antics, Chase leans forward sealing his lips over yours. Feeling the tension of the previous fight melt away, you wrap both arms around the felines neck pulling him closer.";
 			WaitLineBreak;
-			say "     After a few minutes of leisurely making out your friend and lover pulls away. 'Hold on a minute there is something I wanted to ask you! You know that I have feelings for you right?' A giant grin spreading across your face, you inform the tiger that yes you had managed to figure that out. 'Smartass, haha well there is something I wanted to get your feedback on. After everything that happened between us and you doing this for me... I'm now positive that your the one!' Raising an eyebrow in question you ask what he means by [italic type]the one[roman type]? 'Well... I want you to be my mate! I mean if your ok with that? I just know all I need to, everything that would make someone a perfect mate you have in spades!' While Chase looks excited you can also make out some insecurities within the tigers eyes. 'So will you do it? Will you be mine?"
+			say "     After a few minutes of leisurely making out your friend and lover pulls away. 'Hold on a minute there is something I wanted to ask you! You know that I have feelings for you right?' A giant grin spreading across your face, you inform the tiger that yes you had managed to figure that out. 'Smartass, haha well there is something I wanted to get your feedback on. After everything that happened between us and you doing this for me... I'm now positive that your the one!' Raising an eyebrow in question you ask what he means by [italic type]the one[roman type]? 'Well... I want you to be my mate! I mean if your ok with that? I just know all I need to, everything that would make someone a perfect mate you have in spades!' While Chase looks excited you can also make out some insecurities within the tigers eyes. 'So will you do it? Will you be mine?";
 			LineBreak;
 			say "     [bold type]Do you want to become Chase's mate?[roman type][line break]";
 			LineBreak;

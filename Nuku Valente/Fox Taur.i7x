@@ -5,7 +5,7 @@ Section Table
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat colour could be that of a grey fox, a red fox, or arctic fox.
+Coat colour could be that of a gray fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
@@ -39,7 +39,7 @@ male sex of Fox Taur is usually "[if player is butch]You guide your cock to his 
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat colour could be that of a grey fox, a red fox, or arctic fox.
+Coat colour could be that of a gray fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 

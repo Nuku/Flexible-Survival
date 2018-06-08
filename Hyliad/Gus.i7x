@@ -1,13 +1,13 @@
 Version 1 of Gus by Hyliad begins here.
 [Version 1 - Put into its own file]
- 
+
 [ GusTalkProgress                                     ]
 [   0: starting value                                 ]
-[   1: ...                                            ]
-[   2: ...                                            ]
-[   3: ...                                            ]
-[   4: ...                                            ]
-[   5: ...                                            ]
+[   1:                                                ]
+[   2:                                                ]
+[   3:                                                ]
+[   4:                                                ]
+[   5:                                                ]
 
 GusTalkProgress is a number that varies.
 HadGusBackgroundTalk is a truth state that varies. HadGusBackgroundTalk is usually false.

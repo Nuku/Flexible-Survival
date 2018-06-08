@@ -84,7 +84,7 @@ to say SonnyTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him to the library";
 		now sortorder entry is 3;
-		now description entry is "Take Sonny to stay with you in the Grey Abbey Library";
+		now description entry is "Take Sonny to stay with you in the Gray Abbey Library";
 	[]
 	if HP of Sonny is 2: [Sonny is in the half renovated room of the library]
 		choose a blank row in table of fucking options;
@@ -336,7 +336,7 @@ instead of going to Half-Renovated Room while (SonnyRelationship is 7 and SonnyQ
 Section 5 - Endings
 
 when play ends:
-	if (HP of Sonny > 0):  [player met him and got as far as seeing him as an npc]
+	if (HP of Sonny > 0): [player met him and got as far as seeing him as an npc]
 		if humanity of player < 10: [player went feral]
 			if HP of Sonny is 1: [Sonny is at the mall when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]

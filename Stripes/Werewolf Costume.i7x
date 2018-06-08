@@ -78,7 +78,7 @@ When Play begins:
 	now cock entry is "[one of]red, knotted[or]red, lupine[or]lupine[or]canine[at random]";
 	now face change entry is "you grow a long, beastly muzzle with sharp fangs. Despite having a bit of an artificial look to it when you examine it closely, it does move and change expression somewhat as if alive";
 	now body change entry is "the sensation of change sinks deep inside your body. You can feel your bones fading away and your inner organs shifting and pressing outwards as a large cavity grows inside you. As this empty feeling spreads, your body becomes less solid and sags as you try to move. Your hands become gnarled, clawed gloves and your feet form into empty paws. With some effort and concentration you soon gain control of your altered body, allowing you to move";
-	now skin change entry is "a coating of black and grey fur spreads across your body. The coarse fur seems a little artificial under closer examination, but feels real enough";
+	now skin change entry is "a coating of black and gray fur spreads across your body. The coarse fur seems a little artificial under closer examination, but feels real enough";
 	now ass change entry is "grow a furry wolf's tail. The dark fur looks a little artificial despite feeling quite real as it grows in over your changing tail";
 	now cock change entry is "it shifts and becomes a red, knotted organ with a definite lupine shape to it";
 	now str entry is 10;

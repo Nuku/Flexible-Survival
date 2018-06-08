@@ -58,16 +58,16 @@ to say Yamato Dragon attack:
 				say "     In due time, the serpent's continued diligence eventually causes him to roar out, almost immediately hit with the intense sensation of his massive load forcing its way into you. So intense is the sensation that it causes you to fire off as well, though this only ends up working against you as each successive pulse now sends a mix of your own seed and that of the beast's right back at you, [if player is internal]belly rapidly bloating to abide this overwhelming flood[else if cock width of player > 24]Already-[ball size] gradually swelling to abide this overwhelming flood[else][ball size] quickly swelling to unmanageable sizes[end if], each following gout by the dragon inflating your further.";
 			say "     It goes on for what seems like forever, [if cocks of player > 2]exposed cocks unable to offer reprieve against the dragon's grip until[else if cocks of player is 2]exposed cock unable to offer reprieve against the dragon's grip until[else]too dazed by this circumstance to fully appreciate when[end if] his flow finally dies down. His dick remains hard against you, however, as to ensure that you retain his load; often you orgasm, the attempt rebuked and having your load sent back to you, [if player is internal]pinned downed by the weight of your bloated frame[else]weighed down by your painfully overstuffed sack[end if].";
 			if waiterhater is 0, wait for any key;
-			say "[line break]";
+			LineBreak;
 			if "Horny Bastard" is listed in feats of player:
 				say "     [one of]You assume his bit of fun is over, but in only a brief moment you find the dragon picking up his pace again[or]You're given barely any time to recover before the dragon begins to pick up the pace for his second bout[stopping], stricken by another otherworldly influence. He pushes you to the ground, prior exhaustion dissipating in the wake of a renewed, manic need.";
 				say "     '[one of]I-it's not enough[or]More, more[or]No[at random]! [one of]I'm not done with you yet[or]You need more[or]You thought we were done?[run paragraph on] Ha[at random]!' he retorts, mad with lust, his thrusting motion quickly returns to its original fervor. So sensitive from the first go, you orgasm almost immediately, but it proves to be of little good for you, as your confines have grown tight once more -- so much so that little escapes the monster's dickhole.";
 				say "     It's too much! Your head spins, afraid you might pass out from the ordeal, before your mind is snapped back to the fore once your demented captor finds bliss once more, second load bloating your beleaguered [if player is internal]form[else]package[end if] further. Your sole balm the fact that the volume isn't quite as impressive the second time around, you nonetheless feel his hot, thick slime churning inside you at such an excess. The prior ritual repeats as his fervor descends once more, thankfully for good this time.";
 				if waiterhater is 0, wait for any key;
-				say "[line break]";
+				LineBreak;
 			say "     Finally satisfied, he pulls your dick free of his own, a trail of seed strung across your bloated [if player is internal]form[else]package[end if]. Too exhausted to comment further, the serpent departs once more into the air. You're already exhausted yourself, but that doesn't stop you from furiously jerking yourself off in a desperate attempt to find reprieve from your immensely sore state, seemingly endless flood of jizz erupting from your poor cock[smn]. [if cock width of player > 32 and player is internal]You're so over-endowed by this point that what endeavor you might make to alleviate the strain does little to help[else if cock width of player > 19 and player is internal]You do manage to get the swelling down a little bit, but you feel that this circumstance might have permanently swelled them further[else if player is internal]Thankfully, the swelling does go down a lot, though you imagine that this circumstance might have some more permanent implications[else]Thankfully, you do appear to return to normal, though what influence this might of had on you internally is beyond your current reckoning[end if]. Eventually you manage to recover, gathering your things and departing once more.[line break]";
 			if "Modest Organs" is not listed in feats of player and cock width of player < 33:
-				say "[line break]";
+				LineBreak;
 				if "Microwaved" is listed in feats of player:
 					say "WARNING: Ball size change detected! Allow?";
 					if player consents:
@@ -131,7 +131,7 @@ to say Yamato Dragon attack:
 				if MYDAM is 0:
 					now MYDAM is 1;
 				else if MYDAM < 3 and player is not twistcapped and "Microwaved" is listed in feats of player:
-					say "[line break]";
+					LineBreak;
 					say "WARNING: Anal elasticity change detected! Allow?";
 					if player consents:
 						increase MYDAM by 1;
@@ -141,7 +141,7 @@ to say Yamato Dragon attack:
 				else if MYDAM < 3:
 					increase MYDAM by 1;
 				if MYDAM is 3 and player is not twistcapped:
-					say "[line break]";
+					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
 					if player is not twistcapped, add "Twisted Capacity" to feats of player;
 			else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
@@ -165,7 +165,7 @@ to say Yamato Dragon attack:
 				say "     Lost in a dizzying, spent haze, you barely notice as the dragon descends back to the ground, firmly pulling you free of his now-softening dick before allowing you to fall off him, its audibly wet departure leaving a trail of his cum from your wrecked hole.";
 				say "     '[one of]That you squirm like that[or]To sleeve me so well, as you do[at random], [if HP of player < 1 and player is not submissive][one of]your protests amuse me[or]your struggle is in vain[or]you are mine regardless[at random][else][one of]you may be suitable as one of my consorts[or]I might reward your further obedience[or]you will return to me[at random][end if].' Leaving you with his parting remark, he retreats back into the air. It takes a fair amount of time recovering from your overfilled state before finding your things and heading back out.[impregchance]";
 				if "Modest Organs" is not listed in feats of player and (cunt length of player < 24 or cunt width of player < 15):
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cunt size change detected! Allow?";
 						if player consents:
@@ -244,7 +244,7 @@ to say Yamato Dragon attack:
 				if MYDAM is 0:
 					now MYDAM is 1;
 				else if MYDAM < 3 and player is not twistcapped and "Microwaved" is listed in feats of player:
-					say "[line break]";
+					LineBreak;
 					say "WARNING: Anal elasticity change detected! Allow?";
 					if player consents:
 						increase MYDAM by 1;
@@ -254,7 +254,7 @@ to say Yamato Dragon attack:
 				else if MYDAM < 3:
 					increase MYDAM by 1;
 				if MYDAM is 3 and player is not twistcapped:
-					say "[line break]";
+					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
 					if player is not twistcapped, add "Twisted Capacity" to feats of player;
 			else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
@@ -278,7 +278,7 @@ to say Yamato Dragon attack:
 				say "     Forced to endure some of the monster's weight as he recovers for a moment along with you, you're finally spared as he wrenches his now-softening dick free from you, an audible, wet sound of its departure as it leaves a trail of his white fluid in its wake.";
 				say "     '[if scalevalue of player < 4][one of]Such a little thing[or]So tiny you are[at random][else][one of]That you squirm like that[or]To barely abide me, as you do[at random][end if], [if HP of player < 1 and player is not submissive][one of]your protests amuse me[or]your struggles are in vain[or]you are mine regardless[at random][else][one of]you're suitable as my toy[or]I might reward your further obedience[or]you will return to me[at random][end if].' Having offered up his parting remark he retreats back into the air, leaving you to take a fair amount of time recovering from your utterly stuffed state before finding your things and heading back out.[impregchance]";
 				if "Modest Organs" is not listed in feats of player and (cunt length of player < 20 or cunt width of player < 10):
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cunt size change detected! Allow?";
 						if player consents:
@@ -412,7 +412,7 @@ to yamatmalesexmenu:
 		say "(4) [if cunts of player > 0][link]Ride his dick[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Ride his dick anally[as]5[end link] [if scalevalue of player < 3][italic type]- Too small![roman type][end if][line break]";
 		say "(6) [link]Suck him off[as]6[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-6)>[run paragraph on]";
@@ -427,7 +427,7 @@ to yamatmalesexmenu:
 			else:
 				say "[YamatM_1]"; [Anal Pitching]
 				if "Modest Organs" is not listed in feats of player and cock length of player < 24:
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cock length change detected! Allow?";
 						if player consents:
@@ -475,7 +475,7 @@ to yamatmalesexmenu:
 			else:
 				say "[YamatM_4]"; [Cunt Catching]
 				if "Modest Organs" is not listed in feats of player and (cunt length of player < 24 or cunt width of player < 15):
-					say "[line break]";
+					LineBreak;
 					if "Microwaved" is listed in feats of player:
 						say "WARNING: Cunt size change detected! Allow?";
 						if player consents:
@@ -762,7 +762,7 @@ to say YamatM_5: [Anal Catching]
 				say "     Once the flow subsides and you're able to pull yourself free of the serpent's softening organ, you manage to climb off him and take a moment to catch your breath.";
 				say "     '[one of]Not bad[or]I am impressed[at random], [one of]few can handle my fury[or]you show promise[or]I look forward to testing your mettle again[at random]...' It takes him a second to recover, casually cleaning himself off before taking to the sky once more. It takes you a little longer to fully recover yourself, and a bit more to stop walking funny...[mimpregchance]";
 		if player is not twistcapped and "Microwaved" is listed in feats of player:
-			say "[line break]";
+			LineBreak;
 			say "WARNING: Anal elasticity change detected! Allow?";
 			if player consents:
 				now MYDAM is 3;
@@ -771,7 +771,7 @@ to say YamatM_5: [Anal Catching]
 		else:
 			now MYDAM is 3;
 		if MYDAM is 3 and player is not twistcapped:
-			say "[line break]";
+			LineBreak;
 			say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
 			if player is not twistcapped, add "Twisted Capacity" to feats of player;
 	else: [Has Twistcap]
@@ -1045,7 +1045,7 @@ to YamatMvore:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if (boundsegment < 2 and struggleatt < 2) or (boundsegment > 1 and struggleatt < 3):
 					say "     You struggle to escape these twisted confines, writhing and fighting against the flesh that holds you. The dragon lowly [one of]growls[or]groans[at random] as his body churns in ill-content towards its disruptive occupant.";
@@ -1078,7 +1078,7 @@ to YamatMvore:
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if obliging is true:
 					say "     You're compelled to submit to you tainted prison, [one of]your captor rumbly lowly in approval of his compliant meal[or]the dragon idly playing with writhing meal as you feel his talon's caress against you from the outside[or]your captor lounging happily as he drains his meal[at random].";
 					if boundsegment is not 3:
@@ -1093,7 +1093,7 @@ to YamatMvore:
 				wait for any key;
 				next;
 			else:
-				say "[line break]";
+				LineBreak;
 				now enduring is true;
 				if a random chance of 1 in 3 succeeds and boundsegment is not 3:
 					increase boundmod by 1;
@@ -1139,7 +1139,7 @@ to yamatbowelmovement:
 				say ". At this point you're in so deep that the only way out is through the back door...";
 			else:
 				say ".";
-			say "[line break]";
+			LineBreak;
 
 
 Section 5 - Endings

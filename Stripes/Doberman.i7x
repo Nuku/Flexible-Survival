@@ -475,8 +475,8 @@ to say beatthedobie3:			[high-lust cop player victory]
 		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you help her up and lead her back to the library.";
 		now HP of Alexandra is 1;
 		now battleground is "void";
-		move Alexandra to Grey Abbey Library;
-		move player to Grey Abbey Library;
+		move Alexandra to Gray Abbey Library;
+		move player to Gray Abbey Library;
 	else:
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. 'Why would anyone want to keep a bad bitch like you? Get out of here, you slut. I don't want to see you again.' She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash. You doubt she'll be troubling you any more.";
 		now HP of Alexandra is 100;

@@ -43,7 +43,7 @@ Instead of resolving a WomanFruitTree:
 				say "     Knowing they'll be discussing military matters and remembering their lost squadmates, you decide to give them some privacy for a little while[if HP of Vanessa > 3]. As you're walking away, you do catch Vanessa saying 'And you need to hear all about my encounter with that centaur stud - literally hung like a horse,' she giggles excitedly[end if].";
 			else if Vanessa is bunkered:
 				say "     As Coleen comes in, she stops short and stares at Vanessa for several breaths before rushing over to her. 'Sarge, is it really you?' She comes briefly to attention before relaxing. 'Cpl Coleen Varna reporting, sarge,' she says with a big grin. 'It looks like you had [if HP of Vanessa < 3]a bit of a[else]quite the[end if] run-in with something out there[if HP of Vanessa is 3], her eyes drawn to her very pregnant belly[else if HP of Vanessa > 3], her eyes drawn to her centaur lower body[end if]. 'Look, do you know what's going on? My radio was destroyed when I hit the trees, so I don't know what happened to the rest of the squad once we were blown off course.'";
-				say "     'Yeah, a centaur stallion out on the plains got a little too amorous with me[if HP of vanessa > 3] and started me down this path[end if]. Quite a ride he was and left me with a little something extra as well,' she says, patting her [if HP of Vanessa is 3 or HP of Vanessa is 4]pregnant [end if]belly. 'At least you still seem to be clean. As for my radio, it ran out of juice a while ago. Come over here and I'll fill you in on what I know until that point,' she says, glancing at you. 'After that, you'd best keep a little distance so you don't get infected.'";
+				say "     'Yeah, a centaur stallion out on the plains got a little too amorous with me[if HP of Vanessa > 3] and started me down this path[end if]. Quite a ride he was and left me with a little something extra as well,' she says, patting her [if HP of Vanessa is 3 or HP of Vanessa is 4]pregnant [end if]belly. 'At least you still seem to be clean. As for my radio, it ran out of juice a while ago. Come over here and I'll fill you in on what I know until that point,' she says, glancing at you. 'After that, you'd best keep a little distance so you don't get infected.'";
 				say "     Knowing they'll be discussing military matters and remembering their lost squadmates, you decide to give them some privacy for a little while[if HP of Vanessa > 3]. As you're walking away, you do catch Vanessa saying 'And you need to hear all about my encounter with that centaur stud - literally hung like a horse,' she giggles excitedly[end if].";
 		else:
 			say "     You decide not to interfere with the dangling woman. After all, the military is obviously not doing much for you right now - so why should you climb a tree for one of them. You could fall down, or some sort of critter could arrive while you're up in the branches. Turning your back on the woman and tuning her calls for help out, you keep walking. As you wander through the woods, you do find yourself rather curious as to just what creature will eventually manage to reach that woman up in the tree and just what she will look like afterwards. Maybe you should come back and see later...";
@@ -54,7 +54,7 @@ Instead of resolving a WomanFruitTree:
 
 Section 2 - Coleen the Husky Paratrooper
 
-Coleentalk is a number that varies.
+ColeenTalk is a number that varies.
 ColeenFound is a number that varies.
 ColeenCollared is a number that varies.
 ColeenAlpha is a number that varies.
@@ -62,19 +62,19 @@ ColeenSlut is a number that varies.
 ColeenSpray is a number that varies.
 
 Coleen is a woman.
-The description of Coleen is "[coleenstatus]".
+The description of Coleen is "[Collenstatus]".
 The conversation of Coleen is { "Woof!" }.
-the linkaction of Coleen is "[coleenlinkaction]".
+the linkaction of Coleen is "[Coleenlinkaction]".
 
-to say coleenlinkaction:
-	if coleentalk > 0:
+to say Coleenlinkaction:
+	if ColeenTalk > 0:
 		say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link], [link]spray[as]spray Coleen[end link][line break]";
 	else:
 		say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link][line break]";
 
-the scent of Coleen is "[coleenscent]".
+the scent of Coleen is "[Coleenscent]".
 
-to say coleenscent:
+to say Coleenscent:
 	if ColeenAlpha > 0:
 		say "Coleen smells of aroused female husky. The scents of her roaming the city for sex linger on her. Something in her scent makes you consider submitting to the lustful husky.";
 	else if ColeenSlut is 1:
@@ -88,7 +88,7 @@ to say coleenscent:
 	else:
 		say "Coleen smells like a human female.";
 
-to say coleenstatus:
+to say Collenstatus:
 	if ColeenAlpha > 0:
 		say "     The nervous military woman you rescued from the tree is completely gone now, and in her place is a happy little husky bitch. The new bitch doesn't seem to mind the changes a bit however, reveling in the lovely feel of her new hypersexualized body, her damp slit still showing signs of her latest mating as she prances happily around the bunker in just her bare fur. She seems to have acquired a small pile of trophies and toys stacked up in her corner of the bunker, evidence of her many trips outside to hunt and fuck, although you never can actually manage to catch her outside of the bunker when you come back. Still she seems to be the happiest husky bitch you have ever come across, and her teasing glances and the way she wiggles her ass at you with abandon makes you wonder what it would be like to just give in and become a happy little bitch yourself...";
 	else if ColeenSlut is 1:
@@ -127,8 +127,8 @@ to say coleenstatus:
 
 Section 3 - Conversation
 
-instead of conversing the coleen:
-	if Coleentalk is 0:
+instead of conversing the Coleen:
+	if ColeenTalk is 0:
 		if Sarah is in the bunker:
 			if SarahSlut > 2:
 				say "     'Thanks again for all your help out there,' Coleen says, as she gestures to her already healed ankle, where a very light dusting of white fuzz can be seen. 'I am really glad you came by to help, instead of some other creature out there. The guy briefing us didn't even hint at what was going on in the city.' Coleen sighs and mutters, 'Need-to-know asshole.' Trying to hide her slip, she looks around the bunker and smiles, her eyes lingering for a moment on your pet husky. 'Seems you found a nice place to hole up here at least, it even seems kind of cozy and warm in here. And I'm not sure what that nice relaxing smell is in here, but I really like it too,' she says as she sniffs the air lightly.";
@@ -138,7 +138,7 @@ instead of conversing the coleen:
 				say "You received a medkit![line break]";
 				say "     'Other than that, there is something else I might be able to do to help out. They gave me this experimental spray that they said should help me out in the city. From what I can tell now, I think it might be able to help you fight off the infection somewhat,' Coleen says as she brandishes a small spray can. 'Fortunately it seems to have survived my accident with the tree intact, and while I could probably use it myself, it just doesn't seem like the right thing to do... I can use it on you if you want me to. Just come and ask me to [bold type]spray[roman type] you with it if you want to try it out, be careful though, there are only a couple doses in a can this size, and I don't have any more,' she says as she tucks the can back away safely.";
 				say "     'You won't have to worry about leaving me here either, I have enough MREs left they should hold me until the rescue. Sadly I don't have enough to really share, but I won't have to leave the bunker at least and will keep the door shut tight until you return. Besides, I'm sure your pet will help keep me company in here...' the woman says as she gives you a small smile. You might be imagining things, but her mouth seems slightly longer than normal as she turns to look at your little husky pet, giving you a good view of a swiftly forming tail as it pushes out of the back of her uniform.";
-				increase Coleentalk by 1;
+				increase ColeenTalk by 1;
 			else:
 				say "     'Thanks again for all your help,' Coleen says as she gestures to her freshly bound ankle before glancing over at Sarah. 'Your friend helped me out in getting patched up and told me a little bit about what's going on in the city. I don't want to think about what might have happened to me if you hadn't shown up to help out. We soldiers were given no real clue what we were up against - they just sent us in to gather information,' Coleen says with a sigh, then looks around in the bunker and smiles. 'Seems you found a nice place to hole up in though, and I'm not the only stray you have been picking up, eh? At least there is plenty of room here, even if it is a bit sparse.'";
 				say "     Lowering her voice a bit, Coleen continues, 'I am just a little bit worried about sharing a room with someone that heavily infected. I mean - she seems to be holding out ok, but you never know.' She eyes Sarah with a bit of worry, though you think you might notice hint of interest there as well. 'At least she is something relatively safe like a dog. I don't mind dogs at all really, I even used to have one when I was little,' Coleen says with a fond smile, before turning back to look at you. 'I'm seriously grateful to you for all you've done, for both of us, she told me how you helped her too. Although I know it isn't much, I found a medkit in the library, and I want you to have it,' she says as she hands you a medkit.";
@@ -147,21 +147,21 @@ instead of conversing the coleen:
 				say "You received a medkit![line break]";
 				say "     'Other than that, there is something else I might be able to do to help out. They gave me this experimental spray that they said should help me out in the city. From what I can tell now, I think it might be able to help you fight off the infection somewhat,' Coleen says as she brandishes a small spray can. 'Fortunately it seems to have survived my accident with the tree intact, and while I could probably use it myself, it just doesn't seem like the right thing to do... I can use it on you if you want me to. Just come and ask me to [bold type]spray[roman type] you with it if you want to try it out, be careful though, there are only a couple doses in a can this size, and I don't have any more,' she says as she tucks the can back away safely.";
 				say "     'You won't have to worry about leaving me here either, I have enough MREs left they should hold me until the rescue. Sadly I don't have enough to really share, but at least it should be enough that neither I nor Sarah will need to leave the bunker,' the woman says as she gives you a bright smile, then goes to settle herself down on a bed in one corner of the main bunker room.";
-				increase Coleentalk by 1;
+				increase ColeenTalk by 1;
 		else:
 			say "     'Thanks again for all your help,' Coleen says, as she gestures to her freshly bound ankle, 'I don't want to think about what might have happened to me if you hadn't shown up to help out. Just seeing all that happened as we passed through the city was a real eye opener. My troop had no real clue what was going on in here when they sent us to gather information.' Coleen shudders slightly at that, before looking around the nice secure bunker and smiling. 'Seems you found a nice place to hole up though, it seems kind of sparse but its downright cozy compared to sleeping out in the city. Thanks again for bringing me here. I know it isn't much, but I found a medkit in the library, and there are still plenty of supplies left in it even after taking care of my ankle, so I figure you might be able to use it,' she says as she hands you a medkit.[line break]";
 			increase carried of medkit by 1;
 			say "You received a medkit![line break]";
 			say "     'Other than that, there is something else I might be able to do to help out. They gave me this experimental spray that they said should help me out in the city. From what I can tell now, I think it might be able to help you fight off the infection somewhat,' Coleen says as she brandishes a small spray can. 'Fortunately it seems to have survived my accident with the tree intact, and while I could probably use it myself, it just doesn't seem like the right thing to do... I can use it on you if you want me to. Just come and ask me to [bold type]spray[roman type] you with it if you want to try it out, be careful though, there are only a couple doses in a can this size, and I don't have any more,' she says as she tucks the can back away safely.";
 			say "     'You won't have to worry about leaving me here either, I have enough MREs left they should hold me until the rescue. Sadly I don't have enough to really share, but I won't have to leave the bunker at least and I will keep the door shut tight until you return,' the woman says as she gives you a bright smile, then goes to settle herself down on a bed in one corner of the main bunker room.";
-			increase Coleentalk by 1;
+			increase ColeenTalk by 1;
 	else if a random chance of 1 in 4 succeeds:
-		say "[coleen_vanessa_msg]";
-	else if meredith is bunkered and a random chance of 1 in 4 succeeds:
-		say "[coleen_meredith_msg]";
+		say "[Coleen_Vanessa_msg]";
+	else if Meredith is bunkered and a random chance of 1 in 4 succeeds:
+		say "[Coleen_Meredith_msg]";
 	else if HP of Gwen > 0 and a random chance of 1 in 5 succeeds:
-		say "[coleen_meredith_msg]";
-	else if Coleentalk is 1:
+		say "[Coleen_Meredith_msg]";
+	else if ColeenTalk is 1:
 		if Sarah is in the bunker:
 			if ColeenAlpha > 0:
 				say "     [one of]'Thanks for showing me what life as a husky is like!'[or]'I'm sure you will make a lovely little bitch!'[or]The husky bitch just grins at you, before pulling you down into a deep dirty kiss.[or]'You must have enjoyed training such a nice submissive pet!'[or]'I love being a bitch...'[or]'Mmmm when we get out of here I want to get a bunch of dogs to keep me company...' Coleen says with a sly glance at you and your pet. 'Would you two like to volunteer?'[or]'I am so glad the military sent me into the city, I would never have been able to find myself otherwise...'[or]'I have been looking around for the rest of my squad out there... I hope I can find them before they become something else... it would be nice to have some more husky company...'[or]'I am seeing a lot of strange stuff out there in the city, but not enough canine studs...'[or]'Are you ready to become a husky bitch yet?'[or]'Won't it be fun to all be bitches together?'[or]'I just love running through the city on all fours hunting! You should try it soon too!'[Or]She is too busy to respond to you as she appears to be playing with a large canine shaped dildo she acquired somewhere... the sight is somewhat arousing.[or]'Do you think I would make a good alpha?' she asks you with a wink as she strokes your body with her paws.[or]'We should find a way to share this with the rest of the military, I can think of several people I would love to see down on all fours...'[or]'I can't wait to find more members for our pack!'[or]'I threw away that dirty old human spray. Who would ever want to go back to being a boring old human anyways?'[at random]";
@@ -187,7 +187,7 @@ instead of conversing the coleen:
 			say "     '[one of]Thanks for all the help![or]Glad to see you back again[or]Be careful out there, it would be pretty lonely here without you.[or]Damn, I found some fun books here to read![or]Let me know if you find any other members of my squad out there[or]Try to be careful out there, this place is much more dangerous than they warned us.[or]It surprised me a lot how much fun many of the infected seemed to be having.[or]Sometimes I find myself wondering what it would be like to just wander outside and find one of infected to fuck...[at random]'";
 
 
-to say coleen_vanessa_msg:
+to say Coleen_Vanessa_msg:
 	if ColeenAlpha > 0 or ColeenSlut > 0 or ColeenCollared > 0:
 		say "     [if Vanessa is bunkered and a random chance of 1 in 4 succeeds]'Thanks for finding the sarge out there. Those centaurs probably would have added her to their herd if you'd not helped her out.'[else if Vanessa is bunkered and HP of Vanessa >= 4 and a random chance of 1 in 3 succeeds]'It's nice that the sarge and I can hang out together. We both seem pretty firmly set in our forms, so it's safe for us to enjoy one another's company again,' she says with an excited wag of her tail. From the scent of arousal, it's clear just what kind of company they're sharing together.[else if Vanessa is bunkered and a random chance of 1 in 3 succeeds]'Once the sarge is fully transformed, then we think it should be safe enough for the two of us to get close again. I'm really looking forward to that,' she says with an excited wag of her tail. From the scent of arousal, it's quite clear exactly what she's looking forward to.[else if Vanessa is bunkered and HP of Vanessa < 4]'The sarge's pregnancy might be a problem if she's not transformed enough to deal with birthing a foal.'[else if Vanessa is bunkered and HP of Vanessa >= 4]'The sarge looks quite nice now that she's fully transformed, don't you think? She seems to be having nearly as much fun being a breeding mare as I am with being a slutty husky,' she says with a grin and a wag of her fluffy tail.[else if HP of Vanessa is 51]'I feel bad that Vanessa didn't make it back. I guess you kind of expected that things wouldn't go well.'[else]'I wonder what happened to the rest of my squad mates. We'd gotten pretty scattered when the drop went bad. I hope they're having as much fun as I am with whatever's probably infected them.'[end if]";
 	else if SarahSlut >= 4:
@@ -197,15 +197,15 @@ to say coleen_vanessa_msg:
 	else:
 		say "     [if Vanessa is bunkered and a random chance of 1 in 4 succeeds]'Thanks for finding the sarge out there. Those centaurs probably would have added her to their herd if you'd not helped her out.'[else if Vanessa is bunkered and a random chance of 1 in 3 succeeds]'It's too bad the sarge has gotten infected. It'd be nice to talk to her more, but it just wouldn't be safe.'[else if Vanessa is bunkered and HP of Vanessa < 4]'The sarge's pregnancy might be a problem if she's not transformed enough to deal with birthing a foal.'[else if Vanessa is bunkered and HP of Vanessa >= 4]'The sarge seems pretty happy with being transformed. I'm not really into horses, but maybe something else wouldn't be so bad. I mean, if it happens, you know...' she trails off, blushing a little.[else if HP of Vanessa is 51]'I feel bad that Vanessa didn't make it back. I guess you kind of expected that things wouldn't go well.'[else]'I wonder what happened to the rest of my squad mates. We'd gotten pretty scattered when the drop went bad. I think I saw one of the paratroopers heading down in the direction of the dry plains at the outskirts of the city.'[end if]";
 
-to say coleen_meredith_msg:
-	if HP of meredith is 0 or HP of Meredith is 100:
+to say Coleen_Meredith_msg:
+	if HP of Meredith is 0 or HP of Meredith is 100:
 		say "ERROR-Coleen-[HP of Meredith]M: We should not be able to discuss Meredith!";
 		remove Meredith from play;
 	if ColeenAlpha > 0 or ColeenSlut > 0 or ColeenCollared > 0:
 		if a random chance of 4 in 6 succeeds:
 			say "     [one of]'Thanks for helping to rescue [if HP of Meredith < 6]Mere[else]Mare[end if]. I feel much better knowing our mission wasn't a complete failure.'[or]'I'm glad Meredith's somewhere safe. Her research is apparently important, not that a slutty husky like me can make heads or tails of any of it.'[or][if HP of Meredith < 4]'It'd be fun to play around a bit with Mere, but she's trying to avoid infection. She's been treated to be resistant so it should be safe for her to get some husky lovin['],' Coleen says, pouting a bit.[else if HP of Meredith is 4]'I couldn't help noticing that Mere's become a bit horsey, but she's still refusing to play around. She's been treated to be resistant so it should be safe for her to get some husky lovin['],' Coleen says, pouting a bit. 'Say, maybe you could get her to relax and have some fun. You've got a bit of a knack for it, hot stuff,' she says, running a paw down your chest before reaching around to grope your ass.[else if HP of Meredith is 5]'I've noticed that Mere's gotten transformed some more. I'd like to play around with her, but she's still refusing the husky lovin['] I know she wants,' Coleen says, pouting a bit. 'You should see if you can get in the sack with her again to help her along.'[else if HP of Meredith >= 6]'Mare's so cute as a sexy centaur. You did a good job helping her out of her shell. It's so nice to be able to give her the husky lovin['] she needs. Vanessa and I are going to take good care of our playful Mare,' she says with a happy grin on her doggy face.[end if][cycling]";
 		else:
-			say "     [one of][if HP of Meredith < 4]'Mere's been running some tests on me and examining my sexy new body. I've tried to tempt her into some fun, but I haven't been able to get her to play with the horny husky quite yet.'[else if HP of Meredith is 4]'Mere's been running some tests on me and examining my sexy new body. I can tell she wants to play with the horny husky, but I haven't been able to tempt her into some fun quite yet.'[else if HP of Meredith is 5]'Mere's examinations of my body have been getting hotter and more fun though I haven't been able to quite tempt her into playing with the horny husky quite yet.'[else if HP of Meredith >= 6 and meredith_coleen_fun1 is false]'Mare's been running some tests on me and examining my sexy new body. We're making a game out of her playing with the horny husky while she does. You should really watch some time,' she says with a wink.[else if HP of Meredith >= 6 and meredith_coleen_fun1 is true]'As you've seen, Mare's been running some tests on me and examining my sexy new body and they can get pretty intense as she plays with the horny husky while she does,' she says, fingering her pussy as she remembers the last time.[end if][or][if HP of Meredith < 4]'I think Meredith's a little too focused on her notes and research and should get some hands-on experience. I mean, at her age and she hasn't even been fucked yet? How does she even survive?'[else if HP of Meredith is 4]'I think Meredith's a little too focused on her notes and research and should get some hands-on experience. Maybe now that she's been transformed a bit she'll go for it. I mean, at her age and she hasn't even been fucked yet? How does she even survive?'[else if libido of Meredith is 2]'I'm glad Meredith's getting some hands-on experience instead of just being focused on her notes and research. I can tell that getting fucked's done a world of good to loosen her up. Good job.'[else if libido of Meredith is 1]'I'm glad Meredith's getting some hands-on experience instead of just being focused on her notes and research. I can tell that getting fucked's done a world of good to loosen her up.'[else]'I'm glad Meredith's getting some hands-on experience instead of just being focused on her notes and research, but I think she needs to get a proper fucking and her cherry popped. I mean, at her age and she hasn't even been fucked yet? How does she even survive?'[end if][cycling]";
+			say "     [one of][if HP of Meredith < 4]'Mere's been running some tests on me and examining my sexy new body. I've tried to tempt her into some fun, but I haven't been able to get her to play with the horny husky quite yet.'[else if HP of Meredith is 4]'Mere's been running some tests on me and examining my sexy new body. I can tell she wants to play with the horny husky, but I haven't been able to tempt her into some fun quite yet.'[else if HP of Meredith is 5]'Mere's examinations of my body have been getting hotter and more fun though I haven't been able to quite tempt her into playing with the horny husky quite yet.'[else if HP of Meredith >= 6 and Meredith_Coleen_fun1 is false]'Mare's been running some tests on me and examining my sexy new body. We're making a game out of her playing with the horny husky while she does. You should really watch some time,' she says with a wink.[else if HP of Meredith >= 6 and Meredith_Coleen_fun1 is true]'As you've seen, Mare's been running some tests on me and examining my sexy new body and they can get pretty intense as she plays with the horny husky while she does,' she says, fingering her pussy as she remembers the last time.[end if][or][if HP of Meredith < 4]'I think Meredith's a little too focused on her notes and research and should get some hands-on experience. I mean, at her age and she hasn't even been fucked yet? How does she even survive?'[else if HP of Meredith is 4]'I think Meredith's a little too focused on her notes and research and should get some hands-on experience. Maybe now that she's been transformed a bit she'll go for it. I mean, at her age and she hasn't even been fucked yet? How does she even survive?'[else if libido of Meredith is 2]'I'm glad Meredith's getting some hands-on experience instead of just being focused on her notes and research. I can tell that getting fucked's done a world of good to loosen her up. Good job.'[else if libido of Meredith is 1]'I'm glad Meredith's getting some hands-on experience instead of just being focused on her notes and research. I can tell that getting fucked's done a world of good to loosen her up.'[else]'I'm glad Meredith's getting some hands-on experience instead of just being focused on her notes and research, but I think she needs to get a proper fucking and her cherry popped. I mean, at her age and she hasn't even been fucked yet? How does she even survive?'[end if][cycling]";
 	else if SarahSlut >= 4:
 		if a random chance of 4 in 6 succeeds:
 			say "     [one of]'Thanks for helping to rescue [if HP of Meredith < 6]Mere[else]Mare[end if]. I feel much better knowing our mission wasn't a complete failure.'[or]'I'm glad Meredith's somewhere safe. Her research is apparently important, not that a silly husky like me can make heads or tails of any of it.'[or][if HP of Meredith < 4]'I'm looking forward to trying to coax Mere into some husky lovin[']. But I should probably wait until I've got a master like Sarah before that,' she says with a grin and a wink at you.[else if HP of Meredith is 4 or HP of Meredith is 5]'I'm looking forward to trying to coax Mere into some husky lovin[']. She's turning into one cute horsey. But I should probably wait until I've got a master like Sarah before that,' she says with a grin and a wink at you.[else if HP of Meredith >= 6]'I'm looking forward to trying to coax Mare into some husky lovin[']. She's become quite the cute centaur. But I should probably wait until I've got a master like Sarah before that,' she says with a grin and a wink at you.[end if][cycling]";
@@ -238,7 +238,7 @@ to say coleen_meredith_msg:
 ]
 
 
-to say coleen_gwen_msg:
+to say Coleen_gwen_msg:
 	if ColeenAlpha > 0 or ColeenSlut > 0 or ColeenCollared > 0:
 		say "     [if HP of Gwen is 2]'That thing Mare did with Gwen seems pretty kinky. I wonder what it must be like.'[else if HP of Gwen <= 35]'Gwen makes for such a cute centaur. I can hardly wait until she's all grown up so we can celebrate her joining the herd.'[else if HP of Gwen <= 60]'Gwen is so hot now. We're going to have lots of fun together.'[else if HP of Gwen is 1 or HP of Gwen > 60]'I'm going to miss all the sex I could be having with Gwen, but Vanessa's right that she needs to go out and scout for us. We can play once the rescue comes.'[end if]";
 	else if SarahSlut >= 4:
@@ -380,9 +380,9 @@ carry out ColeenSpraying:
 
 Section 5 - Sex with Coleen
 
-the fuckscene of Coleen is "[sexwithcoleen]".
+the fuckscene of Coleen is "[sexwithColeen]".
 
-to say sexwithcoleen:
+to say sexwithColeen:
 	if player is neuter:
 		say "     Now's not a good time to go looking for sex from Coleen, seeing how you're genderless at the moment.";
 	else if lastfuck of Coleen - turns < 4:
@@ -554,17 +554,17 @@ to say FirstColeenSpraySex:
 		say "     Clearly tempted by the prospect of sex, the idea gives her pause. Moving in closer, you run your hands lightly along her sides and back, caressing her tantalizingly while continuing to reassure her. Before she realizes it, you're slipping off her jacket and moving a hand under her shirt to caress her bare back. Her unchanged skin is soft and smooth, a pleasant change from the scales and fur of many of the beasts of the city. Guiding her forward, you pull her into a kiss with one hand and start to remove her pants with the other. Soon you have her quite nude and laying upon her cot, ready to be made love to. Caught up in the excitement and with the spray to allay any concerns, she welcomes you into her arms.";
 		attempttowait;
 		if cocks of player > 0:
-			say "[coleen_pretfsex01]";
+			say "[Coleen_pretfsex01]";
 		else:
-			say "[coleen_pretfsex02]";
+			say "[Coleen_pretfsex02]";
 		now lastfuck of Coleen is turns;
 
 to say ColeenSpraySex:
 	say "     Wanting another go at the human soldier, you approach her with an offer for sex. She seems a little cautious as first, so you remind her that she can use the anything unwanted should start to come up. What little reluctance she has fades as you run a hand along her side and whisper that it'll all turn out fine as you nibble her ear. Soon you've got her naked again and on her cot in preparation of some fun.";
 	if cocks of player > 0:
-		say "[coleen_pretfsex01]";
+		say "[Coleen_pretfsex01]";
 	else:
-		say "[coleen_pretfsex02]";
+		say "[Coleen_pretfsex02]";
 	if player is purehuman:
 		if ( cocks of player + cunts of player > 1 ) or breasts of player > 2 or breast size of player > 6 or cock length of player > 9 or cock width of player > 9 or cunt length of player > 11 or cunt width of player > 9:
 			say "     'I know you still look human, but you've clearly been sexually altered. [one of]Best not to take any chances[or]Better safe than sorry[or]Can't be too careful[at random],' she adds.";
@@ -572,11 +572,11 @@ to say ColeenSpraySex:
 			say "     'I know you still look human, but [one of]it's best not to take any chances[or]better safe than sorry[or]one can't be too careful[at random],' she says.";
 	now lastfuck of Coleen is turns;
 
-to say coleen_pretfsex01:
+to say Coleen_pretfsex01:
 	say "     Atop her now, you guide your [cock size desc of player] cock into position. Lining up your [cock of player] meat with her pussy, you [if cock length of player < 10]thrust into her, inciting a moan of delight from the soldier[else if cock length of player < 20]push into her, inciting a whimpering moan of pleasure from the soldier[else]push into her slowly, inciting a gasp as your oversized manhood stretches the soldier unnaturally open[end if][if cock length of player >= 10]. Despite the increased size of your shaft, her cunt is made to stretch around it, showing she's not wholly unaffected despite still being purely human[end if][if player is purehuman]. Her hands run across your still-human body, clearly pleased to have found a lover who still seems fairly normal[else]. Her human hands run across your [bodydesc of player] body, intrigued by your altered features and doesn't shy away from touching them now that she's allowing herself to indulge herself[end if].";
 	say "     You keep your pace steady as you fuck you human lover, enjoying the soft cries of pleasure she gives. But Coleen is no passive lover, soon ending up with her legs wrapped around your waist, her arms around your shoulders and her lips locked to yours. The sex is raw, straightforward and strong, much like the soldier you're fucking. With such a passionate lover, it is no surprise when it comes to an end with mutual cries of orgasmic release. You blast your [cum load size of player] load into her pussy, flooding her womb with your semen[if cock width of player > 30] to the point the woman's belly is stretched and bloated[else if cock width of player > 20] to the point the woman's belly has a visible bulge from it[end if]. Sated, the female soldier releases you and flops back onto her bunk with a loud sigh of satisfaction. She reaches over to her nearby pack, slips out her spray and uses a bit on herself as a preventative measure.";
 
-to say coleen_pretfsex02:
+to say Coleen_pretfsex02:
 	say "     Atop her now, you move a hand between her thighs to caress across her mons and then to delve into her pussy. This incites a moan of pleasure from the soldier and she grabs your ass firmly with one hand and places the other on your [if breast size of player > 0][breast size desc of player] tit[else]side[end if][if player is purehuman]. Her hands run across your still-human body, clearly pleased to have found a lover who still seems fairly normal[else]. Her human hands run across your [bodydesc of player] body, intrigued by your altered features and doesn't shy away from touching them now that she's allowing herself to indulge herself[end if].";
 	say "     In time, her hand slips to your cunny and she starts caressing your pussy and clit in return. For a while, you both play with one another's pussies and alternate between kissing one another and [if breast size of player > 0]sucking on each other's nipples[else]you sucking on her nipples while she moans for more[end if]. The soldier's touch is surprisingly soft and delicate, working to bring pleasure to your sensitive, needy pussy and aching clit. Your hips quiver and your juices flow freely as she excites you more and more with her sensual fingering.";
 	say "     After several minutes of this, Coleen gets a hungry look in her eye and rolls you over onto her back with a grin. Turning around atop you, she buries her face between your legs and presses her juicy, dripping cunt to your lips. She dives right in to licking your cunny. She shows considerable skill at this, using her tongue artfully and eagerly to eat you out, the soldier clearly having done this before. You lick her in return, working a finger into her cunt while you suck at her clit. With all your earlier foreplay, it's not long before you're both crying out in orgasm even as you try to lap up the other's feminine juices. You lap up the human woman's juices, loving the taste of them across your tongue. Eventually, when both sated, Coleen releases you by rolling over onto her back once again with a loud sigh of satisfaction. She reaches over to her nearby pack, slips out her spray and uses a bit on herself as a preventative measure.";
@@ -655,7 +655,7 @@ When play ends:
 			say "     The general is surprised to discover after a very long night filled with amazing sex, that the husky pet you lent him actually used to be the soldier he knew as Coleen, and moreover that she was happy and excited to be a little husky slutpet. You spend some time explaining to him how she thought of him when she realized that it was kind of hard on you to maintain a house with so many needy pets, and that she was wondering if he would like to be her new owner. While surprised at the situation and the offer, he soon agrees to take her in as his pet, persuaded by her expertly trained tongue and needy slit, the situation making you smile even as he leads his new pet off with a leash. You just know he will be back to visit again soon, and if you ever need anything from him, his pet will certainly help you convince him to agree, and she will certainly enjoy her time back underneath a military man, you think with amusement as you turn back to enjoy your own husky pet.";
 	else if bodyname of player is "Alpha Husky":
 		if humanity of player < 10:
-			say "     Having lost yourself to the infection, your canine instincts take over and you head into the city to form a new pack of your own. You dominate several of the canines around, turning them into a pack of loyal huskies and eke out a small territory for yourselves. Your pack captures wandering travellers from time to time, gaining a few members this way. You lose others from time to time as your weaker packmates at lost in fights. It is a tough existence at times, but one fueled by an eagerness and a canine lust that keeps you going.";
+			say "     Having lost yourself to the infection, your canine instincts take over and you head into the city to form a new pack of your own. You dominate several of the canines around, turning them into a pack of loyal huskies and eke out a small territory for yourselves. Your pack captures wandering travelers from time to time, gaining a few members this way. You lose others from time to time as your weaker packmates at lost in fights. It is a tough existence at times, but one fueled by an eagerness and a canine lust that keeps you going.";
 		else:
 			say "     Somehow having endured your time in the city, you are rescued by the military's forces. You only receive a cursory examination and testing, your canine body mistaken for that of the much more common husky girls. While your alpha pride is hurt, you choose not to correct them of this misconception";
 			if cocks of player > 0:

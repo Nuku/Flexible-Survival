@@ -39,7 +39,7 @@ maleHound is a truth state that Varies. maleHound is usually false.
 hellHoundLevel is a number that varies. hellHoundLevel is usually 0.
 
 to say meetHellhound:
-	say "     Movement in some bushes catches your attention. A sickly green-yellow light seems to emanate from them and some kind of large hound stalks out from amongst them. Bathed in an eerie, sourceless yellow light, the beasts fur is a dirty mix of browns, tufted and mussed all over as if uncared about. It is as big as a Great Dane, but there is no recognisable breed that you can use to name it.";
+	say "     Movement in some bushes catches your attention. A sickly green-yellow light seems to emanate from them and some kind of large hound stalks out from amongst them. Bathed in an eerie, sourceless yellow light, the beasts fur is a dirty mix of browns, tufted and mussed all over as if uncared about. It is as big as a Great Dane, but there is no recognizable breed that you can use to name it.";
 	say "     The beast cocks its leg and sends a strong stream of luminescent, yellow urine splashing into the grass before it seems to notice you. The stream falters then stops as it licks its muzzle and then begins to approach. There is something about the strange monster that tells you it isn't the same as the other infected creatures. A whiff of sulfur hits you as it stalks closer.";
 	say "     If you're going to escape you'd best do so now. Shall you escape back south?";
 	if player consents:
@@ -91,7 +91,7 @@ to say meetHellhound:
 			else:	[ You poor neuter]
 				say "     *snorts* 'You're of no use to me, mortal.";
 		else:
-			say "     The hellhound's tongue lolls out of its muzzle, yellow slime dripping from it as it gives a derisive snort. 'Such self deception... oh well. I will return when you realise it is what you truly want!' With that, the green flames flicker at its paws then suddenly shoot up in a column of fel fire before vanishing. Nothing remains but an ashen circle.";
+			say "     The hellhound's tongue lolls out of its muzzle, yellow slime dripping from it as it gives a derisive snort. 'Such self deception... oh well. I will return when you realize it is what you truly want!' With that, the green flames flicker at its paws then suddenly shoot up in a column of fel fire before vanishing. Nothing remains but an ashen circle.";
 
 to Hellhound infect female:
 	say "     As you weakly nod your head, agreeing to the offer made by the foul beast, it lets out an unholy howl. The sound sends shivers throughout your body and echoes through your mind causing disgust and fear, making it impossible to stand. The hound lick his lips and paces around you, it doesn't take him long to make good on his offer however, letting out an eager growl and rearing onto its hind legs to push you back onto the ground with its huge paws.";

@@ -10,7 +10,7 @@ when play begins:
 
 to say rhinodesc:
 	setmongender 3; [creature is male]
-	say "     The large, grey rhinoman spots you and charges. You only have a moment to take stock of him before he's upon you to fight. He's seems rather strongly built, a very tough hide of grey skin and a large horn rising from his pointed face. A second, even larger horn is equally hard between his legs.";
+	say "     The large, gray rhinoman spots you and charges. You only have a moment to take stock of him before he's upon you to fight. He's seems rather strongly built, a very tough hide of gray skin and a large horn rising from his pointed face. A second, even larger horn is equally hard between his legs.";
 
 to say losetorhino:
 	say "     The rhino man bowls you over and snorts angrily at you. Pinning you down, he tears at your clothes and pack, tossing them aside. His strong arms pin you down and he climbs atop you without any foreplay and grinds his throbbing horn against your ass. Precum flows down from his cock and gets smeared between your cheeks. ";
@@ -43,9 +43,9 @@ When Play begins:
 	now cock entry is "[one of]rhino[or]dark grey[or]rock hard[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it stretches and warps, growing and pulling forward into a large muzzle. A stabbing pain at the end of your face gets stronger and stronger until your large horn grows in and a smaller second one soon follows it. By the time the changes are complete, you have the large, hard head of a rhino"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "becomes big and powerfully built. You broad shoulders and strong muscles to carry your heavy, dense body. This muscles spread down your arms and legs. Your hands become big and meaty, with thick fingers and hard fists. Your feet become large and flat, with small, broad hoof-toes to support your weight"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin gets thicker and tougher, in a tough grey hide"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it becomes large and firmly muscled. You feel a funny tingle at the end of your spine as a short, slender tail grows it. It is grey and leathery with a clump of dark grey hair at the end"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "takes on a dark grey tone and reshapes itself. It becomes a thick tube of meat, ending in a flared glans similar to an equine cock, but much harder"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now skin change entry is "your skin gets thicker and tougher, in a tough gray hide"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it becomes large and firmly muscled. You feel a funny tingle at the end of your spine as a short, slender tail grows it. It is gray and leathery with a clump of dark gray hair at the end"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "takes on a dark gray tone and reshapes itself. It becomes a thick tube of meat, ending in a flared glans similar to an equine cock, but much harder"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 17;
 	now dex entry is 12;
 	now sta entry is 22;

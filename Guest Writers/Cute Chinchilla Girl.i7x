@@ -99,16 +99,16 @@ When Play begins:
 	now defeated entry is "[chinloss].";
 	now victory entry is "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on it";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "short chinchilla muzzle, small gray mouse-like ears, and cute, little whiskers adorned on it";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]grey fur[or]downy soft fur[at random] in place of";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You fairly long tail which fluffs out quite a bit.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws. While your hands and arms shrink, as very small claws sprout from your new paw tips."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "grey fur spreads rapidly over your form, a lighter grey stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch."; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "grey fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "A long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft grey sheath, the tool itself looking pinkish and tapered before your prying eyes."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 10;
 	now dex entry is 20;
 	now sta entry is 10;
@@ -133,7 +133,7 @@ When Play begins:
 	now loot entry is "tuft of chin fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]curvy[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]curvy[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "rodent"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

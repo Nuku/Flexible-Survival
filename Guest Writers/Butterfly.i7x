@@ -614,7 +614,7 @@ damaged negligee is a grab object. It is not temporary. It is a part of the play
 cute panties is a grab object. It is not temporary. It is a part of the player.
 sexy nightie is a grab object. It is part of the player. It is not temporary.
 
-the scent of testosterone pill is "The testosterone pill is largely odourless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.".
+the scent of testosterone pill is "The testosterone pill is largely odorless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.".
 the scent of pristine negligee is "The pristine negligee smells fresh airy just like the day it was made.".
 the scent of damaged negligee is "The damaged negligee smells of sex. You take a whiff and almost collapse as a wave of the butterfly's scent, pheromones and sexual fluids fills you.".
 the scent of cute panties is "The cute panties smell like freshly aired linen with a slight hint of perfume.".
@@ -731,7 +731,7 @@ to say butterfly grove scene:
 		increase perception of player by 2;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You decide to head back to the library.";
-		move the player to grey abbey library;
+		move the player to gray abbey library;
 		follow the turnpass rule;
 		stop the action;
 	else if ButterflyRaped > 1 and ButterflyPregnant is False:
@@ -926,12 +926,12 @@ to say butterfly grove scene:
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
 	say "You decide to head back to the library.";
-	move the player to grey abbey library;
+	move the player to gray abbey library;
 	follow the turnpass rule;
 
 After examining butterfly grove:
 	say "You head home.";
-	move the player to Grey Abbey Library;
+	move the player to Gray Abbey Library;
 
 
 Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttravel. It is private.

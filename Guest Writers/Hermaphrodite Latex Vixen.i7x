@@ -142,7 +142,7 @@ to say hermaphrodite latex vixen victory:
 	else:
 		say "     [if HP of player > 0]'So she wants to play with Mama? Good girl...' the red vixen purrs[else]You slump to the ground, too tired and sore to keep fighting. The fox bends over, bringing her mouth right up to your ear and whispering, 'Perhaps next time we can do this without all that unnecessary violence'[end if].";
 		say "     'Now,' she says, softly rolling you on to your stomach, 'as I am not a sore winner, I will give you a choice.' She hefts one of her apple-sized balls and squeezes it slightly. 'These boys are damn good at making babies, so if you don't want to get knocked up say so now.'";
-		say "     Her eyes seem to stare into your soul, a pleasant cinnamon odour hits your nostrils as she gets closer. 'Willing to take the risk?";
+		say "     Her eyes seem to stare into your soul, a pleasant cinnamon odor hits your nostrils as she gets closer. 'Willing to take the risk?";
 		if the player consents:
 			say "     'Alright honey, whatever you want,' she purrs. Positioning the tip of her eighteen inch shaft at mouth of your moistening pussy she slowly enters you, until her knot is pressing against your opening. The latex shaft seems to adjust to fill you perfectly, stretching you to a point just before discomfort. You moan with pleasure as your assailant starts to thrust, slowly at first but speeding up as she goes.";
 			say "     As the Latex Vixen's fucking reaches a steady rhythm, you feel her watermelon sized breasts squishing against your back with every thrust. Every time she rams home, the pressure on her four sloshing jugs causes some of the cinnamon smelling oil to squirt out of her nipples, in only moments your entire back is slick with lube. Her thrusting starts to become more forceful, you can tell she is trying to get that grapefruit sized knot in you. Your mind clouded with lust you start meeting her thrusts with thrusts of your own, trying desperately to tie with your kind and loving mistress.[line break]You feel a sudden pop and feel her balls slap your thighs, you try to pull forwards but you can't move. You are now firmly tied with your latex lover. She lets out a loud grunt as the pressure on her knot causes her to climax, sending hot sperm flooding into your uterus.[impregchance]";
@@ -210,7 +210,7 @@ When Play begins:
 	now loot entry is "cock pill";
 	now lootchance entry is 10;
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]curvy[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]curvy[or]feminine[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]

@@ -33,7 +33,7 @@ Instead of resolving a Loving Bond:
 
 Section 4 - Challenge of the Alphas
 
-Challenge of the Alphas is a situation.  The level of Challenge of the Alphas is 8.
+Challenge of the Alphas is a situation. The level of Challenge of the Alphas is 8.
 
 when play begins:
 	add Challenge of the Alphas to badspots of furry;

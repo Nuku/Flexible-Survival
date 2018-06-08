@@ -6,6 +6,7 @@ Version 1 of Amazonian by Stripes begins here.
 
 when play begins:
 	add { "Amazonian" } to infections of hermaphrodite;
+	add { "Amazonian" } to infections of humanoid;
 
 noamazoniansex is a number that varies.
 
