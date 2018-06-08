@@ -23,15 +23,15 @@ Atom is a text editor that you can use to edit files. There are a couple of usef
 
 https://atom.io/
 
-Install packages by going to: File -> Settings -> Install
-
 ### a. add Flexible-Survival as a Project Folder
 File -> Add Project Folder -> Select `Documents\Github\Flexible-Survival` (You want to select the folder itself and click `Select Folder`!)
 
-### b. install language-inform7
+### b. install the Atom package `language-inform7`
 This will give you syntax highlighting, so you can tell which parts are text that the player can read or commands to make the game move along.
 
-### c. install symbol-gen
+Install packages by going to: File -> Settings -> Install
+
+### c. install the Atom package `symbol-gen`
 This package lets you index the Flexible Survival definitions to make searching easier. Ever wonder what `player is male` is actually defined as? `CTRL+SHIFT+R` and type `male` to find out!
 
 You will have to copy the `.ctags` file in the Flexible-Survival folder into your `Users` folder for this package to work. How do you get to that? Press `WIN+R` (WIN is the windows key) and type `%HOMEPATH%`. Then copy the Flexible-Survival file called `.ctags` into that folder. In Atom, press `CTRL+ALT+G` and the bottom right corner should say `Generating symbols`.
@@ -41,11 +41,11 @@ Package Keyboard Shortcuts:
 `CTRL+R`: Search definitions within the currently opened file
 `CTRL+SHIFT+R`: Search definitions within the entire Flexible Survival repository
 
-### d. install symbols-tree-view
+### d. install the Atom package `symbols-tree-view`
 This package will show a list of definitions on the right-hand side. Try opening `Sarah.i7x` as an example! Press `CTRL+SHIFT+O` to toggle whether the panel should appear. Check out the package settings if you want to customize some more.
 
 Package Keyboard Shortcuts:
-`CTRL+SHIFT+O`: Toggle whether the panel appears.
+`CTRL+ALT+O`: Toggle whether the panel appears.
 
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.
@@ -79,7 +79,7 @@ Move the files in the Github repo:
 | Copy the folders from the folder `Documents\Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
 
 ## 10. Make your changes!
-Now whenever you make changes in Atom, you should open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go`. Compiling takes a very long time! Expect to wait 15 minutes!
+Now whenever you make changes in Atom, you should run the `overwrite_inform_project.bat` script to synchronize your Github repository to your Inform project folders. Then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go`. Compiling takes a very long time! Expect to wait 5-20 minutes!
 
 If you want to share it with others or test it in a different engine, click `Release` to compile. The file will be produced at `Inform\Projects\Flexible Survival.inform\Build\output.gblorb`. You can move that to `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb` and replace the existing file if you want to test it outside of the Inform editor. Then open the Start Menu and Play Flexible Survival!
 
