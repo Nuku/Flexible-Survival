@@ -1,4 +1,4 @@
-Version 5 of Yamato Dragoness For FS by Blue Bishop begins here.
+Version 5 of Yamato Dragoness by Blue Bishop begins here.
 [ Version 5 - Player victory -- Blue Bishop]
 [- Originally Authored By: Kohryu -]
 
