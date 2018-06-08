@@ -2,7 +2,7 @@ Shifting by Hellerhound begins here.
 
 Section 1 - Secure Area Situation
 
-Secure Area is a situation.  The level of Secure Area is 12.
+Secure Area is a situation. The level of Secure Area is 12.
 halodestroyed is a number that varies.
 
 instead of resolving a Secure Area:
@@ -45,7 +45,7 @@ instead of resolving a Secure Area:
 						say "     You shove your hands into the opening, cracking the stone while pulling the door with as much strength as your tired body can muster after all that.";
 						if a random number between 5 and 30 < the strength of the player:
 							say "     The door creaks open, and you walk into the dimly lit area.";
-							say "     There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote that the nanites can be controlled, but it doesn't show how.  You will have to search elsewhere for more information.";
+							say "     There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote that the nanites can be controlled, but it doesn't show how. You will have to search elsewhere for more information.";
 							increase the score by 500;
 							now shiftable is 1;
 							now Secure Area is resolved;

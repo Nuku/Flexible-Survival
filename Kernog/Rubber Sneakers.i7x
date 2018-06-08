@@ -50,13 +50,13 @@ Instead of using the rubber sneakers:
 		else if Doctor Moffatt is visible:
 			say "     'As much as I would like to help you remove these disgracious things from your feet, I am a [italic type]psychologist[roman type], not a physician,' Moffatt replies. 'Sorry.'";
 		else if Doctor Utah is visible:
-			say "      'What do you think I am? A shoemaker?' Doctor Utah hisses when you ask him for help. 'You should go find a medical doctor. If there's still one in this city, that is.'";
+			say "     'What do you think I am? A shoemaker?' Doctor Utah hisses when you ask him for help. 'You should go find a medical doctor. If there's still one in this city, that is.'";
 		else if Nermine is visible:
-			say "      'Oh my, you brought me quite the item,' Nermine says, when you show her your rubber sneakers. 'I could remove them, yes. Yes... Just go sit on that chair and stay still. Good. Now, stretch your legs in front of you. Like that. Yes.' Nermine kneels in front of you, giving you a straight view into her cleavage. The jackal begins to rub your legs. She starts at your knees, then slowly goes down towards your feet. Several times, you cannot help but let a moan escape from your lips, as the massage is more than pleasurable in your state.";
-			say "      Nermine's hands reach your feet. She massages your feet through the rubber, tracing forms between your toes and on your soles. You close your mind in content, when... 'Done.' You open your eyes in surprise. Nermine was indeed done, holding your sneakers in her hands with a soft smile. Your eyes go from the shoes to your now naked feet, in amazement. 'They simply needed some encouragement,' was her only answer, as she gives you back the shoes.";
+			say "     'Oh my, you brought me quite the item,' Nermine says, when you show her your rubber sneakers. 'I could remove them, yes. Yes... Just go sit on that chair and stay still. Good. Now, stretch your legs in front of you. Like that. Yes.' Nermine kneels in front of you, giving you a straight view into her cleavage. The jackal begins to rub your legs. She starts at your knees, then slowly goes down towards your feet. Several times, you cannot help but let a moan escape from your lips, as the massage is more than pleasurable in your state.";
+			say "     Nermine's hands reach your feet. She massages your feet through the rubber, tracing forms between your toes and on your soles. You close your mind in content, when... 'Done.' You open your eyes in surprise. Nermine was indeed done, holding your sneakers in her hands with a soft smile. Your eyes go from the shoes to your now naked feet, in amazement. 'They simply needed some encouragement,' was her only answer, as she gives you back the shoes.";
 			now the rubber sneakers are not equipped;
 		else:
-			say "      You reach down to your shoes and attempt to remove them. An intense burning sensation makes you stop right away, and repeats with every new try. You realize that you are in trouble, and will need help in order to remove these shoes. [bold type]You need to go to a medical doctor, or a person knowledgable in this kind of items, and try to remove these rubber sneakers with them around[roman type].";
+			say "     You reach down to your shoes and attempt to remove them. An intense burning sensation makes you stop right away, and repeats with every new try. You realize that you are in trouble, and will need help in order to remove these shoes. [bold type]You need to go to a medical doctor, or a person knowledgable in this kind of items, and try to remove these rubber sneakers with them around[roman type].";
 	else:
 		repeat with z running through equipped equipment:
 			if slot of z is "feet":
@@ -67,8 +67,8 @@ Instead of using the rubber sneakers:
 			continue the action;
 		else:
 			say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
-			say "      ([link]Yes[as]y[end link]) - What's the worst that could happen?";
-			say "      ([link]No[as]n[end link]) - Better listen to your instinct.";
+			say "     ([link]Yes[as]y[end link]) - What's the worst that could happen?";
+			say "     ([link]No[as]n[end link]) - Better listen to your instinct.";
 			if player consents:
 				say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
 				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
@@ -98,7 +98,7 @@ an everyturn rule:
 		else if facename of player is not "Rubber Puma":
 			say "     The rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind.";
 			now bodyname of player is "Rubber Puma";
-		say "    The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
+		say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
 		if player is pure:
 			increase libido of player by 20;
 		else:

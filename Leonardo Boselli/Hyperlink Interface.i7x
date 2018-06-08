@@ -265,7 +265,7 @@ A hyperlink type has a hyperlink emphasis called style.
 
 The active style is a hyperlink emphasis that varies. 
 
-we-are-parser-speaking is initially false.  [It's possible to have, say, an emphasized object hyperlink within a parser error message; this variable keeps track of whether we need to return to the parser style after switching off another hyperlink style.]
+we-are-parser-speaking is initially false. [It's possible to have, say, an emphasized object hyperlink within a parser error message; this variable keeps track of whether we need to return to the parser style after switching off another hyperlink style.]
 
 Capturing-depth is a number that varies. Capturing-depth is initially 0.
 
@@ -524,16 +524,16 @@ When play begins (this is the Hyperlink Interface setup trigger rule):
 			now mychar is 0;
 	clear the screen;
 	say "[line break][line break][line break]";
-	now pre-game hyperlink setting is false.    
+	now pre-game hyperlink setting is false.   
  
 To restore the game: (- RESTORE_THE_GAME_R(); -).
 
 
 Chapter - Error Reporting
 
-Section - Not a verb I recognise
+Section - Not a verb I recognize
 
-Rule for printing a parser error when the latest parser error is the not a verb I recognise error (this is the Hyperlink Interface not a verb I recognise rule) : say "[as the parser]That's neither a verb I [recogniz]e nor a hyperlink you can use right now[as normal]." (A). [Acknowledge that the player may be trying to type a hyperlink, not just a verb.]
+Rule for printing a parser error when the latest parser error is the not a verb I recognize error (this is the Hyperlink Interface not a verb I recognize rule) : say "[as the parser]That's neither a verb I [recogniz]e nor a hyperlink you can use right now[as normal]." (A). [Acknowledge that the player may be trying to type a hyperlink, not just a verb.]
 
 
 Chapter - Messages
@@ -549,9 +549,9 @@ For showing the hyperlink introduction text (this is the Hyperlink Interface sho
 
 To say emphasiz: if the American dialect option is active, say "emphasiz"; else say "emphasis". To say Emphasiz: if the American dialect option is active, say "Emphasiz"; else say "Emphasis".
 
-To say color: if the American dialect option is active, say "color"; else say "colour". To say Color: if the American dialect option is active, say "Color"; else say "Colour".
+To say color: if the American dialect option is active, say "color"; else say "color". To say Color: if the American dialect option is active, say "Color"; else say "color".
 
-To say recogniz: if the American dialect option is active, say "recogniz"; else say "recognis". To say Recogniz: if the American dialect option is active, say "Recogniz"; else say "Recognis".
+To say recogniz: if the American dialect option is active, say "recogniz"; else say "recogniz". To say Recogniz: if the American dialect option is active, say "Recogniz"; else say "recogniz".
 
 To decide what number is the number of active hyperlink systems:
 	let ctr be 0;
@@ -605,7 +605,7 @@ This produces output like the following (where emphasis is marked with asterisks
 
 In this situation, the text between the [o] and the [x] is automatically executed, so it is possible to write item discriptions like so:
 
-	Apple is a thing in The Office. The Description is "It's an apple. [Paragraph Break]Actions: '[o]look apple[x ]', '[o]take apple[x]', or '[o]eat apple[x]'".   Apple is edible. 
+	Apple is a thing in The Office. The Description is "It's an apple. [Paragraph Break]Actions: '[o]look apple[x ]', '[o]take apple[x]', or '[o]eat apple[x]'".  Apple is edible. 
 
 If you want scenery items to be automatically emphasized, you can manually set them as hyperlinked, or include a line like the following (which would add emphasis to "desk" in the final line above):
 
@@ -702,7 +702,7 @@ The flexibility of Hyperlink Interface means it can be used for multiple purpose
 
 	Object hyperlink highlighting is false. The style of direction-word is hyperlink-bold-style.
 
-	Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns.   
+	Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns.  
 
 	After looking: try listing exits.
 
@@ -716,7 +716,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	Include Hyperlink Interface by Leonardo Boselli. Use American dialect.
 
-	Topic hyperlink highlighting is true. Parser highlighting is true. Hyperlinks required is true.  
+	Topic hyperlink highlighting is true. Parser highlighting is true. Hyperlinks required is true. 
 
 	After printing the banner text: say "First time players type ABOUT for more instructions.".
 
@@ -728,7 +728,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 		let subject be a random other person in the location;
 		say "[message of noun][paragraph break]".	
  
-	A speakable is a kind of thing. A speakable has some text called the message. Instead of doing anything other than hyperlink-asking to a speakable: say "That's merely a topic of conversation.". Does the player mean doing something other than hyperlink-asking to a speakable: it is very unlikely.  
+	A speakable is a kind of thing. A speakable has some text called the message. Instead of doing anything other than hyperlink-asking to a speakable: say "That's merely a topic of conversation.". Does the player mean doing something other than hyperlink-asking to a speakable: it is very unlikely. 
 
 	Section - Exits
 
@@ -776,7 +776,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	The weather topic is a speakable with message "'Looks like another day of beautiful sunshine again,' he grumbles.".
 
-	The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic.  
+	The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic. 
 
 	The description of Cozy Shack is "Strewn with bric-a-brac; your eyes are drawn immediately to the prominent [lever] on the riverward wall.". The exits text of Cozy Shack is "The only place to go is back [outside].". Instead of going outside in Cozy Shack, try going south. Instead of exiting in Cozy Shack, try going south.
 

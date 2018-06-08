@@ -54,7 +54,7 @@ to new ban menu:
 		else:
 			banchange entry calcnumber of flaglist;
 		now countnumber is 1; [Must reset to 1 or it wont print the list again]
-			
+
 to bancheck (name - text):
 	if name is listed in BanList of player:
 		say "[bold type]BANNED[roman type]";
@@ -63,7 +63,7 @@ to bancheck (name - text):
 	else:
 		say "[bold type]Normal[roman type]";
 	say "[line break]";
-	
+
 to banchange (name - text):
 	if name is listed in BanList of player:
 		remove name from BanList of player;
@@ -83,7 +83,7 @@ to banchange (name - text):
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now warded[roman type]";
 	WaitLineBreak;
-	
+
 to oldflagban (flagname - text):
 	if flagname is:
 		-- "Cockvore":

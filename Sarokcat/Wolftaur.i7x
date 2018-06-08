@@ -41,7 +41,7 @@ To say Wolftaur loss:
 			say "     [line break]";
 			say "     Still loosely holding his tail, you use your other hand to stroke the wolftaur's back, running it through his fur lower and lower at his side. The large creature looks over his shoulders and says 'What are you doing now, are youu-oh-oooh' Whatever he wanted to say, you arriving at his crotch and cupping his sheathed cock totally made him lose focus and switch over to aroused panting. Having a suddenly much more cooperative taur on your hands - or rather in your hands, with one of them massaging his balls - you have him lie down for you and roll over on his back.";
 			say "     [line break]";
-			if cocks of player > 0:  [male + herm]
+			if cocks of player > 0: [male + herm]
 				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or alternatively take his tight hole yourself (N)? ";
 				if player consents:
 					say "     [line break]";
@@ -64,7 +64,7 @@ To say Wolftaur loss:
 					say "     Confronted with all kinds of new sensations, it doesn't take all that long until you fucking him drives the wolftaur over the edge and he starts to cum, squirting long strings of cum from his knotted cock to land all over his furred underside and some even up to his chest. The twitches and convulsions of each shot run through his whole body, including the muscles in his ass, making an already quite tight hole grip and squeeze your shaft until you join him in orgasm, with a full load of your seed being blasted into this sexy furball's butt.";
 					WaitLineBreak;
 					say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually you pull out of his hole and watch it flex closed before too much of your cum can run out of it, then stand up on shaky legs. While you're collecting your stuff, the wolftaur says, 'That was... something else. Can't remember when I last came that much. But... no, I didn't like it. You made me. It's not me. I'm a real man, not a gay sissy! You made me...' looking up at you with a somewhat sullen expression. Giving him a meaningful grin and a wink, you walk off, leaving him to think up excuses for himself why he came from getting fucked in the butt.";
-			else if cunts of player > 0:   [female]
+			else if cunts of player > 0: [female]
 				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or make him lick your pussy (N)? ";
 				if player consents:
 					say "     [line break]";
@@ -73,7 +73,7 @@ To say Wolftaur loss:
 					say "     [line break]";
 					say "     Quickly getting rid of your gear and clothing, you move into position to sit on the wolftaur's furred underside, then stretch forward to run your hands lengthwise through his luxuriously soft belly fur. The canine beast gives a sensual moan as you touch and stroke him and you can feel his throbbing shaft poke against your tailbone as he stretches a bit. But this isn't actually about him or his pleasure, so you give his cock just a few quick jerks with your hand, then move up to his upper body and kneel over him, your knees to both sides of his chest. Running both hands over his furred cheeks, then scratching him behind his ears, you take hold of the wolftaur's head and pull it up, making his wet nose bump against your pussy lips. You can feel his breath hotly against your crotch as he takes in a deep sniff of your female scent, then eagerly starts lapping at your clit. He's surprisingly good at oral sex with that wide and long tongue of his, making you pant and moan loudly as he licks away at you. It doesn't take all that long until this drives you over the edge and you come, your gushing femcum eagerly lapped up by your canine partner.";
 					say "     After a moment to regain your composure, you stand up on somewhat shaky legs. While you're collecting your stuff, the wolftaur says, 'You've got a sweet pussy on you, my horny bitch.' He looks up at you with a lupine grin. 'How about if next time, you just submit and I show you a good time I can give you with this?' he continues, stretching down to suggestively wiggle his hard cock at you. You just give him a meaningful grin, then walk off, leaving him furiously jerking off to take care of his own arousal.";
-			else:  [neuter]
+			else: [neuter]
 				say "     [line break]";
 				say "     [WolftaurRidingAss]";
 		else:

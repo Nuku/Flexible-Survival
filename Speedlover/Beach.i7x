@@ -10,7 +10,7 @@ earea of Beach Plaza is "Outside".
 
 to say BeachplazaDesc:
 	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff that way, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
-	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
+	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.";
 
 Beach Exit is a door. Beach Exit is dangerous.
 The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza.
@@ -170,7 +170,7 @@ to say BeachEndDesc:
 instead of sniffing the BeachEnd:
 	say "     All you can smell out here is the strong scent of the ocean.";
 
-[Rock Arch - *****Swimming is defined in Hellerhounds file - Underwater zone for FS*****]
+[Rock Arch - *****Swimming is defined in Hellerhounds file - Underwater zone*****]
 Southwest of BeachEnd is Rock Arch.
 Rock Arch is a Room.
 The description of Rock Arch is "[RockArchDesc]".
@@ -224,7 +224,7 @@ to say CityEntrance:
 [CHURCH HALL]
 [--------------------------------------------------------------------------------------------------------------------]
 
-Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognise. There are no crosses or other recognisable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
+Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognize. There are no crosses or other recognizable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
 
 North of Beach Plaza is Church Hall.
 There is a Church Notice Board in the Church Hall. It is rooted in place.

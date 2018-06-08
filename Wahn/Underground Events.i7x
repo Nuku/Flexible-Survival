@@ -11,7 +11,7 @@ when play begins:
 CaptiveBreederEncounter is a number that varies.
 
 Instead of resolving a Captive Breeding:
-	if a random chance of 1 in 2 succeeds:   [impregnated woman]
+	if a random chance of 1 in 2 succeeds: [impregnated woman]
 		say "     Walking through the dark passages of the expansive underground warren that is the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [else]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with rows of shelves, you find a woman, lying on the ground. Spread-eagled, her forearms and lower legs are stuck to the ground by some kind of substance, looking like solidified slimy goo. She's naked, and her belly bulges massively upwards in obvious pregnancy.";
 		say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
 		LineBreak;
@@ -42,7 +42,7 @@ Instead of resolving a Captive Breeding:
 			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
 		else:[leave]
 			say "     This is getting way too creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive woman's unnatural birth.";
-	else:   [mpregged man]
+	else: [mpregged man]
 		say "     Walking through the dark passages of the expansive underground warren that is in the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [else]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with stacks of large crates, you find a man, slouched on his back on one of the crates against the back wall. His hands and forearms are stuck to the wall above his head in some kind of substance, looking like solidified slimy goo, and his legs are similarly glued to the side crate under him in a lewd stretched position that leaves his crotch and ass freely accessible. He's naked, his cock fully erect, twitching and oozing precum, and his belly bulges massively upwards in what looks to be pregnancy.";
 		say "     Moving closer, you try talking to the man, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around his mouth, you'd guess something's been... feeding him, to keep him alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused his eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human man. Looking down, you see a puddle of slime on the ground and more of it running down the side of the crate as well as dripping out of the man's asshole. The skin of his belly ripples with movement under it.";
 		LineBreak;
@@ -123,7 +123,7 @@ to say cuckold choice male:
 				say "     [mimpregchance][mimpregchance][mimpregchance]";
 		else:
 			LineBreak;
-			say "     [bold type]Do you at least jerk him off?[roman type][line break]";	
+			say "     [bold type]Do you at least jerk him off?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Give the guy a wank.";
 			say "     ([link]N[as]n[end link]) - Step away.";
@@ -302,7 +302,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 		if carried of mindshield helmet is 0:
 			say "     That warning doesn't sound too good - and you do not have such a protective helmet. Before you can think any more about what to do, a groaning noise and a thump come from inside...";
 			LineBreak;
-			say "     [bold type]What do you want to do?[roman type][line break]";	
+			say "     [bold type]What do you want to do?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Rush into the cell and see what is going on.";
 			say "     ([link]N[as]n[end link]) - Retreat back to the surface.";
@@ -313,7 +313,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 				say "     [AlphaBirth]";
 				increase CellFourVisits by 1;
 			else:
-				LineBreak;				
+				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
 		else:
 			say "     Following the warning, you ensure that you have your protective helmet on - patting its shape covering on your head. Then suddenly, a groaning noise and a thump come from inside...";
@@ -331,7 +331,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 			else:
 				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
-	else if CellFourVisits is 3:  [the thought eater checks out who's been visiting his slave]
+	else if CellFourVisits is 3: [the thought eater checks out who's been visiting his slave]
 		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
 		LineBreak;
 		setmonster "Thought Eater";
@@ -501,7 +501,7 @@ To say CellFour5:
 To say CellFour6:
 	say "     Clearing your throat, you tell him that you're a friend of his master, and that he said you could have some fun together. Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, you remark how well trained he is and that he can show on you how he would please his master. The brainwashed man moans as you stroke him, his pussy getting wet under your fingers. 'Of... *gasp* course, anything for *moan* the master and his friends. Where do you want me?' comes his answer to your request.";
 	LineBreak;
-	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";	
+	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take him on the bed.";
 	say "     ([link]N[as]n[end link]) - Fuck him against a wall from behind.";
@@ -523,7 +523,7 @@ To say CellFour6:
 To say CellFour7:
 	say "     Clearing your throat, you tell him that you're a friend of his master, and that he said you could have some fun together. Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, you remark how well trained he is and that he can show on you how he would please his master. The brainwashed man moans as you stroke him, his pussy getting wet under your fingers. 'Of... *gasp* course, anything for *moan* the master and his friends. Where do you want me?' comes his answer to your request.";
 	LineBreak;
-	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";	
+	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take him on the bed.";
 	say "     ([link]N[as]n[end link]) - Fuck him against a wall from behind.";
@@ -572,6 +572,6 @@ to say AlphaBirth:
 		if player consents: [watch]
 			say "     ";
 		else: [run off]
-			say "     Pulling your gaze away from the spectacle, you try not to listen to the panting and laboured breathing, then slip out of the cell. As soon as you are out in the hallway again, you start running and only stop when you reach the surface, leaving the weirdness of the underground lab complex far behind you.";
+			say "     Pulling your gaze away from the spectacle, you try not to listen to the panting and labored breathing, then slip out of the cell. As soon as you are out in the hallway again, you start running and only stop when you reach the surface, leaving the weirdness of the underground lab complex far behind you.";
 
 Underground Events ends here.

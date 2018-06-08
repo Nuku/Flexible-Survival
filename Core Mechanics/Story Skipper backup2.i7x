@@ -25,16 +25,16 @@ To savetrix:
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.".
+The scent of trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
 The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
-	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'.  Hmmm.";
-	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.  Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
+	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
+	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word. Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word. To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 [
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
@@ -52,7 +52,7 @@ To say magic word:
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
+	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
 	savetrix;
 	if wrcursestatus is 5:
@@ -4190,7 +4190,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies.  restoreletter is normally "0".
+restoreletter is a text that varies. restoreletter is normally "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;

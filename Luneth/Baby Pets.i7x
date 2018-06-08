@@ -52,7 +52,7 @@ instead of sniffing the little fox:
 	say "[DashScent]";
 
 instead of sniffing Dash:
-	say "[DashScent]"
+	say "[DashScent]";
 
 to say DashScent:
 	say "     The fox's smell reminds you of the woods, full of nature and pine. Although there is also has another scent you cant quite place, the only thing that pops into your mind is a... well [italic type]baby[roman type] smell.";
@@ -237,7 +237,7 @@ instead of sniffing the skunk kit:
 	say "[PeppyScent]";
 
 instead of sniffing Peppy:
-	say "[PeppyScent]"
+	say "[PeppyScent]";
 
 to say PeppyScent:
 	say "     The little guy smells of skunk, but that doesn't seem to bother you much at all.";
@@ -424,4 +424,4 @@ Section 2.4 - Skunk Kit Ending
 
 [For endings, see the 'Skunkbeast Lord' file by Stripes.]
 
-Baby Pets end here.
+Baby Pets ends here.

@@ -11,6 +11,13 @@ Version 1 of Debugging Tools by Core Mechanics begins here.
 debugactive is a number that varies. debugactive is 0.
 RandomGenNumber is a number that varies.
 
+screenclearing is an action applying to nothing.
+understand "clearscreen" as screenclearing.
+
+carry out npcdebugmode:
+	clear the screen;
+	try looking;
+
 npcdebugmode is an action applying to nothing.
 understand "npcdebug" as npcdebugmode.
 understand "npc debug" as npcdebugmode.

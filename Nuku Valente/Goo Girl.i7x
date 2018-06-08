@@ -8,7 +8,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Goo Girl" } to infections of girl;
 
-goocolour is a number that varies;
+goocolor is a number that varies;
 
 to say goovictory:
 	if inasituation is true:
@@ -47,7 +47,7 @@ To say goodefeat:
 			if cocks of player > 0 and (cunts of player is 0 or a random chance of 1 in 2 succeeds):
 				if cock length of player > 20:
 					say "     Slowly approaching the prone, jelly lady, you lower your [cock size desc of player] dick[smn] to her exposed lips. Some resistance is felt, but you press more firmly, and she begins to spread out around [if cocks of player > 1]one of your tools[else]the tool[end if]. You push further, deeper, marveling at the deliciously tight, snug, fit her body offers to your sensitive body. Rearing back, she cries out, lifted entirely from the ground, impaled on your [cock size desc of player] pole.";
-					say "     Your throbbing tool has stretched her round, making her look like a coloured condom more than a girl, though her assets do jiggle quite nicely against your raging cock. You grab for them and start to caress, jerking off yourself while teasing the goo girl, you can feel yourself rising rapidly toward release. As cum billows up your spear, flooding her with your [cum load size of player] load as you see ";
+					say "     Your throbbing tool has stretched her round, making her look like a colored condom more than a girl, though her assets do jiggle quite nicely against your raging cock. You grab for them and start to caress, jerking off yourself while teasing the goo girl, you can feel yourself rising rapidly toward release. As cum billows up your spear, flooding her with your [cum load size of player] load as you see ";
 					if cock width of player > 20:
 						say "the huge gobs of it running along before exploding into her, making her mouth bulge, then spew out of her, running down her front in a messy drizzle of your fertile seed. Her entire form goes murky with the volume of seed you inject into her";
 					else:
@@ -86,7 +86,7 @@ to say goodesc:
 	now tempnum2 is a random number between 1 and 3;
 	if inasituation is true:
 		stop the action;
-	say "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] colour appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.";
+	say "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] color appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.";
 
 
 Section 2 - Monster Insertion
@@ -104,14 +104,14 @@ When Play begins:
 	now desc entry is "[goodesc]";
 	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you can feel your face reshaping into rather pretty, human proportions. An urge overtakes you and you smile, and never stop"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "[googirlbodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "[googirlskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you get an odd feeling, but see no change"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former colour drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -152,11 +152,11 @@ to say googirlbodychange:
 		say ". Looking over yourself, afterwards, it seems that you're human! Something feels off about it, however..[run paragraph on]";
 
 to say googirlskinchange:
-	let tempnum be goocolour;
-	now goocolour is a random number between 0 and 3;
-	if goocolour is tempnum, increase goocolour by 1;
-	if goocolour is 4, now goocolour is 0;
-	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolour is 1]blue[else if goocolour is 2]purple[else]green[end if] in colour";
+	let tempnum be goocolor;
+	now goocolor is a random number between 0 and 3;
+	if goocolor is tempnum, increase goocolor by 1;
+	if goocolor is 4, now goocolor is 0;
+	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if] in color";
 	if bodyname of player is "Goo Girl":
 		say ". Moreover, your lower legs are drawn together, flowing into one another and creating a base of flesh that goes up to your lower thigh";
 

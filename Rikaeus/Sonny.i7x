@@ -336,7 +336,7 @@ instead of going to Half-Renovated Room while (SonnyRelationship is 7 and SonnyQ
 Section 5 - Endings
 
 when play ends:
-	if (HP of Sonny > 0):  [player met him and got as far as seeing him as an npc]
+	if (HP of Sonny > 0): [player met him and got as far as seeing him as an npc]
 		if humanity of player < 10: [player went feral]
 			if HP of Sonny is 1: [Sonny is at the mall when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]

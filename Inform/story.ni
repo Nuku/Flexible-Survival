@@ -3715,7 +3715,7 @@ This is the turnpass rule:
 	now ishunting is false;
 	now showlocale is true;
 	if HP of Velos > 2:
-		if Velos is not in the location of the player:		[travelling w/player]
+		if Velos is not in the location of the player:		[traveling w/player]
 			Now Velos is in the location of the player;
 	if breast size of player > 26, now breast size of player is 26;
 	let oldlib be libido of player;
@@ -4947,7 +4947,7 @@ Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Milking by Core Mechanics.
 Include Navigation by Core Mechanics.
-Include Needy Heat for FS by Core Mechanics.
+Include Needy Heat by Core Mechanics.
 Include Patron Credits by Nuku Valente.
 Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
@@ -4958,7 +4958,7 @@ Include Text Capture by Eric Eve.
 
 [Locations]
 Include Apocalypse Store by DrGryphon.
-Include Approaching the Capitol Building for FS by Guest Writers.
+Include Approaching the Capitol Building by Guest Writers.
 Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
@@ -4969,7 +4969,7 @@ Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
 Include Tenvale College Campus by Rikaeus.
-[Include Church Of The Maternal Beast For Fs by Guest Writers.]
+[Include Church Of The Maternal Beast by Guest Writers.]
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
@@ -4977,7 +4977,7 @@ Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
-Include Hospital For Fs by Stripes.
+Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hide Away by Kaleem mcintyre.
@@ -4998,8 +4998,8 @@ Include State Fair by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Sarokcat.
 Include Tyr's Club by Kaleem mcintyre.
-Include Underwater Zone For Fs by Hellerhound.
-Include Urban Forest For Fs by Stripes.
+Include Underwater Zone by Hellerhound.
+Include Urban Forest by Stripes.
 Include Vohr Island by Kernog.
 Include Zephyr Inc by Nuku Valente.
 Include Zoo by Wahn.
@@ -5051,9 +5051,9 @@ Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
-Include Infected Pool for FS by Hellerhound.
+Include Infected Pool by Hellerhound.
 Include Inner Mall Events by Wahn.
-Include Inventory Management Enhancements for FS by Core Mechanics.
+Include Inventory Management Enhancements by Core Mechanics.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
 Include Latex Quad Husky by Stripes.
@@ -5075,7 +5075,7 @@ Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
-Include Museum Rounds for FS by Stripes.
+Include Museum Rounds by Stripes.
 Include New Events by Sarokcat.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
@@ -5098,7 +5098,7 @@ Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
-Include Sea Lion and Orca for FS by Stripes.
+Include Sea Lion and Orca by Stripes.
 Include Sex Ed by Prometheus.
 Include Settings Menus by Core Mechanics.
 Include Shifting by Hellerhound.
@@ -5108,7 +5108,7 @@ Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
-Include Storage Locker for FS by Core Mechanics.
+Include Storage Locker by Core Mechanics.
 Include Story Skipper by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include Tidepool Event by FwuffyMouse.
@@ -5117,7 +5117,7 @@ Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
-Include Wereraptor for FS by Stripes.
+Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
@@ -5128,60 +5128,60 @@ Include Albino Mouse by Stripes.
 Include Alien Felinoid by Damaged.
 Include Alpha Husky by Sarokcat.
 Include Alpha Wolf by Sarokcat.
-Include Amazonian for FS by Stripes.
+Include Amazonian by Stripes.
 Include Ancient Tentacles by Dys.
-Include Anime Babe for FS by Stripes.
-Include Anthro Shaft Beast for FS by Guest Writers.
+Include Anime Babe by Stripes.
+Include Anthro Shaft Beast by Guest Writers.
 Include Arctic Fox by Sarokcat.
-Include Ashen Breeder For Fs by Stripes.
-Include Automaton for FS by Stripes.
-Include Awesome Tree For Fs by Damaged.
+Include Ashen Breeder by Stripes.
+Include Automaton by Stripes.
+Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
-Include Bald Eagle For Fs by Stripes.
-Include Batcubus for FS by Blaydrex.
-Include Bear For Fs by Nuku Valente.
-Include Beaver for FS by Stripes.
+Include Bald Eagle by Stripes.
+Include Batcubus by Blaydrex.
+Include Bear for FS by Nuku Valente.
+Include Beaver by Stripes.
 Include Behemoth by Kaleem mcintyre.
-Include Bird of Paradise for FS by Stripes.
+Include Bird of Paradise by Stripes.
 Include Black Equinoid by Song.
-Include Black Wolf For Fs by Stripes.
+Include Black Wolf by Stripes.
 Include Blob by Kaleem Mcintyre.
-Include Blue Chaffinch for FS by Stripes.
-Include Bobcat for FS by Stripes.
-Include Bottlenose Toy For Fs by Stripes.
-Include Bovine For Fs by Damaged.
+Include Blue Chaffinch by Stripes.
+Include Bobcat by Stripes.
+Include Bottlenose Toy by Stripes.
+Include Bovine by Damaged.
 Include Breederslut by Stripes.
 Include Bunny Jock by Rikaeus.
-Include Butterfly for FS by Guest Writers.
+Include Butterfly by Guest Writers.
 Include Candy Striper by Stripes.
 Include Cannon by Hiccup.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by TheRecipe.
 Include Centaur by Hellerhound.
-Include Centaur Mare For Fs by Stripes.
-Include Centaur Stallion For Fs by Stripes.
-Include Cerberus For Fs by Stripes.
+Include Centaur Mare by Stripes.
+Include Centaur Stallion by Stripes.
+Include Cerberus by Stripes.
 Include Cheetah by Sarokcat.
 Include Chocolate Lab by Stripes.
-Include Clockwork Fox For Fs by Stripes.
-Include Corota for FS by Stripes.
-Include Corrupted Spawner for FS by Stripes.
+Include Clockwork Fox by Stripes.
+Include Corota by Stripes.
+Include Corrupted Spawner by Stripes.
 Include Cougar by Stripes.
 Include Cowboy Cuntboy by Wahn.
 Include Coyote by Darthan.
 Include Cum Girl by AGentlemanCalledB.
-Include Cute Chinchilla Girl For FS by Guest Writers.
+Include Cute Chinchilla Girl by Guest Writers.
 Include Dalmatian by Kaleem mcintyre.
-Include Dark Elf for FS by Stripes.
+Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Stripes.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
-Include Dracovixentaur for FS by Stripes.
-Include Dragontaur for FS by Stripes.
+Include Dracovixentaur by Stripes.
+Include Dragontaur by Stripes.
 Include Drone Wasp by Nuku Valente.
 Include Dryad by Hellerhound.
 Include Easter Bunny by Stripes.
@@ -5189,110 +5189,110 @@ Include Ebonflame Dragator by Blue Bishop.
 Include Ebonflame Draken by Blue Bishop.
 Include Ebonflame Whelp by Blue Bishop.
 Include Elf by Nuku Valente.
-Include Elk for FS by Stripes.
+Include Elk by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
 Include Erica by Wahn.
 Include Ewe by Sarokcat.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
-Include Fennec For Fs by Stripes.
-Include Feral Cheetah for FS by Hellerhound.
+Include Fennec by Stripes.
+Include Feral Cheetah by Hellerhound.
 Include Feral Gryphon by UrsaOmega.
 Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-Include Feral Shaft Beast for FS by Guest Writers.
-Include Feral Wolf for FS by Stripes.
-Include Fire Elemental for FS by Stripes.
+Include Feral Shaft Beast by Guest Writers.
+Include Feral Wolf by Stripes.
+Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
-Include Flaming Lynx for FS by Stripes.
-Include Flesh Blob for FS by Stripes.
-Include Fluffy Owl For Fs by Stripes.
+Include Flaming Lynx by Stripes.
+Include Flesh Blob by Stripes.
+Include Fluffy Owl by Stripes.
 Include Foul Scuttler by Xenophiliac.
 Include Francois Infections by AGentlemanCalledB.
-Include Friendship Pony for FS by Stripes.
+Include Friendship Pony by Stripes.
 Include Frost Drake by CrimsonAsh.
-Include Fruit Bat for FS by Stripes.
+Include Fruit Bat by Stripes.
 Include Furling by Wahn.
 Include Gargoyle by Kaleem mcintyre.
 Include Gator by Nuku Valente.
 Include Gazelle by Sarokcat.
 Include Gels by Darthan.
-Include German Shepherd for FS by Stripes.[replaces 'Random German Shepherd for Fs']
-Include Giant for FS by Stripes.
-Include Giraffe for FS by Stripes.
+Include German Shepherd by Stripes.[replaces 'Random German Shepherd']
+Include Giant by Stripes.
+Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
-Include Goblin For FS by Blue Bishop.
+Include Goblin by Blue Bishop.
 Include Goo Girl by Nuku Valente.
 Include Gorilla by Wahn.
 Include Great Dane Rouge by Kaleem Mcintyre.
 Include Greek Nymph by Sarokcat.
-Include Grey Squirrel for FS by Stripes.
+Include Grey Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Shay.
-Include Gunbunny for FS by Stripes.
+Include Gunbunny by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Helot by Wahn.
-Include Hentai Fan for FS by Stripes.
+Include Hentai Fan by Stripes.
 Include Herm Dolphin by Hellerhound.
-Include Herm Hyena for FS by Guest Writers.
+Include Herm Hyena by Guest Writers.
 Include Hermaid by Xenophiliac.
 Include Hermaphrodite Gryphon by Nuku Valente.
-Include Hermaphrodite Latex Vixen for FS by Guest Writers.
-Include Hippo Strongman For Fs by Stripes.
+Include Hermaphrodite Latex Vixen by Guest Writers.
+Include Hippo Strongman by Stripes.
 Include Homo Sapiens by Wahn.
-Include Horny Doctor for FS by Stripes.
+Include Horny Doctor by Stripes.
 Include Horse-Hung Nerd by Wahn.
 Include Horseman by Sarokcat n Verath.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
-Include Hydra Beast for FS by Stripes.
+Include Hydra Beast by Stripes.
 Include Hyena Matriarch by Stripes.
-Include Hyperskunk for FS by Stripes.
+Include Hyperskunk by Stripes.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
-Include Incubus For Fs by Stripes.
-Include Inflatable Vulpine for FS by Stripes.
+Include Incubus by Stripes.
+Include Inflatable Vulpine by Stripes.
 Include Jackal Guard by Xenophiliac.
 Include Jackalboy by Sarokcat.
 Include Jackalman by Sarokcat.
-Include Jaguar Orderly For Fs by Stripes.
+Include Jaguar Orderly by Stripes.
 Include Jaguar Warrior by AGentlemanCalledB.
-Include Junkman For FS by Stripes.
+Include Junkman by Stripes.
 Include Kangaroo by Guest Writers.
-Include Killer Whale For Fs by Stripes.
-Include Knight for FS by Stripes.
+Include Killer Whale by Stripes.
+Include Knight by Stripes.
 Include Koballoon by Song.
 Include Kobold Gang by Closerhenry.
-Include Komodo Dragon for FS by Stripes.
-Include Latex Ermine for FS by Stripes.
+Include Komodo Dragon by Stripes.
+Include Latex Ermine by Stripes.
 Include Latex Fox by Nuku Valente.
-Include Latex Mistress For Fs by Stripes.
-Include Latex Wolf for FS by Stripes.
+Include Latex Mistress by Stripes.
+Include Latex Wolf by Stripes.
 Include Leopardman by Sarokcat.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
-Include Male Peacock for FS By Guest Writers.
-Include Mall Rat For Fs by Stripes.
-Include Mammoth For Fs by Stripes.
+Include Male Peacock By Guest Writers.
+Include Mall Rat by Stripes.
+Include Mammoth by Stripes.
 Include Man-eating Plant by Kernog.
 Include Mannequin by Wahn.
 Include Manticore by Kaleem mcintyre.
 Include Mareslut by Sarokcat.
-Include Margay For Fs by Stripes.
+Include Margay by Stripes.
 Include Maternity Lamia By Blue Bishop.
-Include Math Teacher For Fs by Stripes.
-Include Megakitty For Fs by Stripes.
-Include Mental Mouse For Fs by Stripes.
-Include Messy Pig for Fs by Guest Writers.
+Include Math Teacher by Stripes.
+Include Megakitty by Stripes.
+Include Mental Mouse by Stripes.
+Include Messy Pig by Guest Writers.
 Include Minotaur by Kaleem mcintyre.
-Include Mismatched Chimera For Fs by Stripes.
+Include Mismatched Chimera by Stripes.
 Include Monkey King by Kernog.
-Include MothGirl for Fs by Guest Writers.
+Include MothGirl by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
@@ -5302,7 +5302,7 @@ Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
 Include Nerdy Mouse by McRabid.
 Include Nightmare by Sarokcat.
-Include Ocelot for FS by Stripes.
+Include Ocelot by Stripes.
 Include Ogres by Lyall.
 Include Opossum Sailor by StripeGuy.
 Include Orc Infections by Wahn.
@@ -5312,32 +5312,32 @@ Include Panda by Sarokcat.
 Include Panther Herm by Sarokcat.
 Include Panther Taur by Nuku Valente.
 Include Parasite by Stripes.
-Include Parasitic Plant For Fs by Guest Writers.
+Include Parasitic Plant by Guest Writers.
 Include Pegasus by Kaleem mcintyre.
 Include Pewter Consort By Blue Bishop.
 Include Piggy by Stripes.
 Include Pink Poodle by AGentlemanCalledB.
 Include Pirate Shark by Sarokcat.
-Include Pit Bull For FS by Guest Writers.
+Include Pit Bull by Guest Writers.
 Include Placeholder Infections by Wahn.
 Include Plush Lion by Sarokcat.
-Include Prairie Dog For Fs by Stripes.
-Include Psycho Weasel For Fs by Stripes.
-Include Queen Bee for FS by Stripes.
-Include Quilled Tousky for FS by Stripes.
-Include Rabbit Pack for FS by Guest Writers.
+Include Prairie Dog by Stripes.
+Include Psycho Weasel by Stripes.
+Include Queen Bee by Stripes.
+Include Quilled Tousky by Stripes.
+Include Rabbit Pack by Guest Writers.
 Include Ram by Sarokcat.
-Include Random Shemale Smooth Collie For Fs by Guest Writers.
-Include Random Tentacle Horror For Fs by Guest Writers.
+Include Random Shemale Smooth Collie by Guest Writers.
+Include Random Tentacle Horror by Guest Writers.
 Include Rat Twins by Kernog.
 Include Razorback Boar by Wahn.
-Include Red Oni for FS by Stripes.
+Include Red Oni by Stripes.
 Include Reindeer by Stripes.
 Include Reptaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
-Include Rhino For Fs by Stripes.
+Include Rhino by Stripes.
 Include Robed Cultist by Wahn.
-Include Rodeo Clown For Fs by Stripes.
+Include Rodeo Clown by Stripes.
 Include Rubber Drake by Song.
 Include Rubber Tigress by Sarokcat.
 Include Saber Kitty by Blaydrex.
@@ -5351,54 +5351,54 @@ Include Seraphim by Wahn.
 Include Shadow Beast by UrsaOmega.
 Include Siamese Cats by Stripes.
 Include Sierrasaur by Blue Bishop.
-Include Siren For Fs by Stripes.
-Include Skunk For Fs by Damaged.
+Include Siren by Stripes.
+Include Skunk by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
-Include Small Feline And Lion For Fs by Damaged.
-Include Snake For Fs by Stripes.
-Include Snow Bat For Fs by Stripes.
-Include Snow Leopard for FS by Stripes.
+Include Small Feline And Lion by Damaged.
+Include Snake by Stripes.
+Include Snow Bat by Stripes.
+Include Snow Leopard by Stripes.
 Include Spartan by Wahn.
 Include Sphinx by Sarokcat.
-Include Spidergirl For Fs by Guest Writers.
+Include Spidergirl by Guest Writers.
 Include Spidertaur Male by Wahn.
 Include sprite by Nuku Valente.
-Include Squid For Fs by Stripes.
-Include Squire for FS by Stripes.
+Include Squid by Stripes.
+Include Squire by Stripes.
 Include Stallionboi by Sarokcat n Verath.
 Include Succubus by Sarokcat.
-Include Sugar Ferret for FS by Stripes.
+Include Sugar Ferret by Stripes.
 Include Sugar Glider by AGentlemanCalledB.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
-Include Tiger Cop for FS by Stripes.
+Include Tiger Cop by Stripes.
 Include Tiger Shark by Lone Wanderer.
 Include Tigertaur by Sarokcat.
-Include Tigress Hooker for FS by Stripes.
-Include Trash Coon For FS by Stripes.
-Include Triceratops For Fs by Stripes.
+Include Tigress Hooker by Stripes.
+Include Trash Coon by Stripes.
+Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
 Include Unicorn by Sarokcat.
 Include Viking by Wahn.
-Include Vixentaur for FS by Stripes.
-Include Voodoo Gecko for FS by Stripes.
-Include Vulpogryph For Fs by Stripes.
-Include Werewolf Costume For Fs by Stripes.
+Include Vixentaur by Stripes.
+Include Voodoo Gecko by Stripes.
+Include Vulpogryph by Stripes.
+Include Werewolf Costume by Stripes.
 Include Whiptail by Vervaine.
-Include Wildcat For Fs by Stripes.
+Include Wildcat by Stripes.
 Include Wolfman by Wahn.
 Include Wolftaur by Sarokcat.
 Include Wolverine Guard by Stripes.
-Include Wrestling Wolf For Fs by Guest Writers.
-Include Wyvern For Fs by Damaged.
-Include Xeno for FS by Stripes.
-Include Yamato Dragon For FS by Blue Bishop.
-Include Yamato Dragoness For FS by Blue Bishop.
+Include Wrestling Wolf by Guest Writers.
+Include Wyvern by Damaged.
+Include Xeno by Stripes.
+Include Yamato Dragon by Blue Bishop.
+Include Yamato Dragoness by Blue Bishop.
 Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
@@ -5491,12 +5491,12 @@ Include Kurt by Rikaeus.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
-Include Larissa for FS by Stripes.
+Include Larissa by Stripes.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
 Include Lucy by Stripes.
-Include Mack for FS by Stripes.
+Include Mack by Stripes.
 Include Mark by Wahn.
 Include Master Mind by Stripes.
 Include Matriarch NPC by Stripes.
@@ -5530,7 +5530,7 @@ Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
 Include Sally by Stripes.
-Include Sam for FS by Stripes.
+Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Serenity by Kurainyx.

@@ -7,7 +7,7 @@ Gator by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 gatordefeat is a number that varies.
 gatorconsent is a number that varies.
 
@@ -119,7 +119,7 @@ When Play begins:
 	now HP entry is 45;
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
@@ -132,7 +132,7 @@ When Play begins:
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]muscular[at random]";
 	now type entry is "[one of]reptilian[or]gator[at random]";
 	now magic entry is false;

@@ -25,7 +25,7 @@ instead of resolving Loaded Catapult:
 	else if Bait of Diego is food:
 		say "some food ";
 	say "placed near the firing mechanism. It is connected to the trigger by means of an almost invisible piece of fishing line, creating an effective trap for anyone out to grab it. That makes it very easy to fire off this infernal device by simple accident...";
-	say "     [bold type]Will you try to obtain the supplies?[roman type][line break]";	
+	say "     [bold type]Will you try to obtain the supplies?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, it'll be useful for you!";
 	say "     ([link]N[as]n[end link]) - Better not - who knows what this thing is aimed at!";
@@ -40,7 +40,7 @@ instead of resolving Loaded Catapult:
 			say "[bold type]You gain 1 [Bait of Diego]![roman type][line break]";
 			increase carried of Bait of Diego by 1;
 			say "     Hm, despite having 'won', you can't quite help wondering what would happen if this device was actually fired. Then a little voice at the back of your mind whispers that you should simply try it - just for the fun of it.";
-			say "     [bold type]Fire the catapult?[roman type][line break]";	
+			say "     [bold type]Fire the catapult?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - All cum-cannons to full blast!";
 			say "     ([link]N[as]n[end link]) - Hell no!";
@@ -58,11 +58,10 @@ instead of resolving Loaded Catapult:
 	else:
 		LineBreak;
 		say "     <...>";
-	
-	
+
 
 [
-Old Event: 
+Old Event:
 
 Section 1 - Catapult Encounter
 catafire is a number that varies.

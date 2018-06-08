@@ -1,5 +1,5 @@
 Version 3 of Pursuit of Science by Kaleem mcintyre begins here.
-[ Version 3 - Corrections made.  Quests functional (?) ]
+[ Version 3 - Corrections made. Quests functional (?) ]
 
 Section 1 - Questing Chain
 
@@ -64,14 +64,14 @@ carry out omioquesting:
 	else if omq is 15:
 		say "'Thank you so much for helping me, but I don't have any more quests you can take on,' Omio says quietly. 'I hope you'll come by for tea later on when you have some time though.' Omio goes back to what she was doing at that point, leaving you with your thoughts.";
 	else if omq is 100:
-		say "You unfortunately won't be able to assist me further with my research.  The creatures don't seem to be around anymore.";
+		say "You unfortunately won't be able to assist me further with my research. The creatures don't seem to be around anymore.";
 
 
 Section 1 - Demon, Wolf, Dog
 
 to say omioquest1:
 	if guy is banned or hellspawn is banned or furry is banned:
-		say "Omio closes her eyes and rubs her temples of a minute, as if thinking very hard about something.  This goes on for more than a minute, making you wonder if something is wrong with the red head.  Just as you're about the touch her shoulder to make sure she's alright, her eyes pop open, startling you.  'This is most unfortunate.  It seems the creatures we are looking for are no longer around.  It's almost as if someone banished them.  I'm sorry, but you won't be able to assist me further.'";
+		say "Omio closes her eyes and rubs her temples of a minute, as if thinking very hard about something. This goes on for more than a minute, making you wonder if something is wrong with the red head. Just as you're about the touch her shoulder to make sure she's alright, her eyes pop open, startling you. 'This is most unfortunate. It seems the creatures we are looking for are no longer around. It's almost as if someone banished them. I'm sorry, but you won't be able to assist me further.'";
 		now omq is 100;
 	else:
 		say "Omio lowers her head, mumbles something to herself and then nods somewhat cautiously before returning her gaze back up to yours. 'If you will, then please bring me five samples of wolf cum, four samples of demon seed, and three samples of dog milk,' Omio asks somewhat indecisively. 'If you can manage that then I can move forward with my research and perhaps give you a reward that you may be able to use on your own journey throughout the city.' You tightly nod at Omio and then prepare yourself mentally for what's to come next.";
@@ -125,19 +125,19 @@ to say omioquest2:
 		increase score by 50;
 		now omq is 3;
 	else:
-		say "'Now remember, I need you to locate several samples for my work.  To start my work, I am in need of five samples of wolf cum, four samples of demon seed and three samples of dog milk.  You should be able to find those back in the city if you look around for them.  As for the reward, we can talk about that after we're finished.";
+		say "'Now remember, I need you to locate several samples for my work. To start my work, I am in need of five samples of wolf cum, four samples of demon seed and three samples of dog milk. You should be able to find those back in the city if you look around for them. As for the reward, we can talk about that after we're finished.";
 		if gatherwolfcum is 0:
 			if wolf cum is not owned:
 				say "'Please remember that I need those samples as quickly as humanly, or else in this case, possible. I know you have other things to accomplish, but time is really working against us and all,' Omio says with a calm, but commanding tone while watching you with her golden eyes shining pointedly into your face.";
 			else:
-				say "'You don't have quite enough wolf cum at the moment, but I do commend you ability to gather what I need in spite of everything that's going on here in the city.' Omio smiles at you and then gives you a playful wink. 'I need five samples in total.  Good luck on your quest, [if cunts of player > 0]gorgeous[else if cocks of player > 0]handsome[else]my friend[end if].";
+				say "'You don't have quite enough wolf cum at the moment, but I do commend you ability to gather what I need in spite of everything that's going on here in the city.' Omio smiles at you and then gives you a playful wink. 'I need five samples in total. Good luck on your quest, [if cunts of player > 0]gorgeous[else if cocks of player > 0]handsome[else]my friend[end if].";
 		else:
 			say "Now, you've already taken care of the wolf cum, so you can focus on the other stuff on the list.";
 		if gatherdemonseed is 0:
 			if demon seed is not owned:
 				say "'I know that it might be a little dangerous to ask you to face off against demons and the likes, but I really do need the full number of those samples, ASAP. If I remember correctly then there were reports of demons infesting the sewers of that big mall within the city. What was its name again?' Omio pauses for effect and then actually puts a finger underneath her chin to think about it. 'You know what... I don't think I actually remember. Was it south-something? Or was it Smithhaven? Or maybe Sicily?";
 			else:
-				say "'I need you to gather even more of their demonic seed for my work.  I will need a total of four samples from those creatures.  I know facing off against them is asking quite a bit, but as you've seen, they're not quite as tough as they look.  They are beings created partially of fear and lies, and so those with enough bravery and strength of will are able to beat their physically imposing forms.  Remain confident and you will continue to prevail against them.";
+				say "'I need you to gather even more of their demonic seed for my work. I will need a total of four samples from those creatures. I know facing off against them is asking quite a bit, but as you've seen, they're not quite as tough as they look. They are beings created partially of fear and lies, and so those with enough bravery and strength of will are able to beat their physically imposing forms. Remain confident and you will continue to prevail against them.";
 		else:
 			say "With the demon seed taken care of, you can check that off the list of items.";
 		if gatherdogmilk is 0:
@@ -289,7 +289,7 @@ to say omioquest8:
 		else:
 			say "'Omio nods to you in a calculated manner as she takes the materials off of your hand and then moves over to the cauldron she always has boiling inside of her fireplace. 'Thank you so much for this, because of you I can now create the thing that I was trying to craft earlier.' Asking her what she is planning to do with the fur and wool your eyes widen in some confusion as the redhead nonchalantly dumps the fur and wool into the steaming broth of pinkish-purple liquid that is bubbling inside of her cauldron. 'It might not be very scientific, but watch this.";
 			WaitLineBreak;
-			say "You remain silently transfixed by the vision you are seeing as Omio takes a wooden ladle and then plunks it into the pot to start stirring the contents around. From what you can see the tainted wool and spotted fur seem to be mixing together like spices being put into a soup, but that couldn't be possible, right? When a vial filled with crimson fluid suddenly floats over to the redhead your mouth is about ready to drop.  Watching Omio as she looks over the liquid and then uncorks the vial before dumping the crimson solution into the cauldron you smile with almost child-like glee as the pinkish-purple pool the redhead poured the liquid into immediately transforms the mixture to a sickly green colour.";
+			say "You remain silently transfixed by the vision you are seeing as Omio takes a wooden ladle and then plunks it into the pot to start stirring the contents around. From what you can see the tainted wool and spotted fur seem to be mixing together like spices being put into a soup, but that couldn't be possible, right? When a vial filled with crimson fluid suddenly floats over to the redhead your mouth is about ready to drop. Watching Omio as she looks over the liquid and then uncorks the vial before dumping the crimson solution into the cauldron you smile with almost child-like glee as the pinkish-purple pool the redhead poured the liquid into immediately transforms the mixture to a sickly green color.";
 			WaitLineBreak;
 			say "When a strange smell begins to billow up from the strange green concoction you find yourself sneezing as the musky and sharp scent of feline suddenly brushes across your nose. It's not long after that that white smoke fills up the area around Omio. Within minutes of stirring the mixture you find yourself chuckling as Omio lets out a beautifully annoying chirp as she looks over the fur and wool flowing together to become one large mass. Returning your gaze to the brew you find your jaw almost hitting the floor when you see Omio pull out a large mass of...[']spotted cotton[']!";
 			WaitLineBreak;
@@ -364,7 +364,7 @@ to say omioquest10:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "'Alright.' The air grows heavy between you both as Omio walks over to her sofa and then pats the cushions for you to join her. Following after the redhead you listen as the redhead begins to talk without a hint of her normally bubbly attitude colouring her words. 'As I've already said once or twice before, the people I work for are in the midst of making a place where mutants who feel that they can't live in the ordinary world any longer can go and be who and what they are with intolerable restraint. This might not seem much to you right now, but consider this point somewhat carefully: with the way the humanity is now do you think that you'll be happy living as somewhat of an outcast to [']normal['] people?'";
+			say "'Alright.' The air grows heavy between you both as Omio walks over to her sofa and then pats the cushions for you to join her. Following after the redhead you listen as the redhead begins to talk without a hint of her normally bubbly attitude coloring her words. 'As I've already said once or twice before, the people I work for are in the midst of making a place where mutants who feel that they can't live in the ordinary world any longer can go and be who and what they are with intolerable restraint. This might not seem much to you right now, but consider this point somewhat carefully: with the way the humanity is now do you think that you'll be happy living as somewhat of an outcast to [']normal['] people?'";
 			if humanity of player > 45:
 				say "The scathing look you give the redhead doesn't seem to faze Omio as she shrugs at you somewhat uninterestedly. 'Think what you will, but you're a mutant now. Whether you like it or not, you will no longer be seen as a regular [']person['] anytime to soon by either the military or the new administration formulating where the old government has fallen in the wake of this changing world. That being the case of things me, you and everyone else not considered a human will have to try to reintegrate back into normal society. However, what if we can't? What then?'";
 				WaitLineBreak;
@@ -490,7 +490,7 @@ Instead of resolving a Dream of a Unicorn:
 		WaitLineBreak;
 		say "Asking the other what she needs you get a slightly shocking surprise out of the other. 'Well I need to examine a unicorn, but at the moment I don't want to be bothered with the only one in town because of [']circumstances['] beyond my control.' Omio scowls slightly and covers her chest with both of her arms and you get the feeling that something big must be up to make the normally bubbly redhead so upset. 'Any who, because of this I would like for you to become a unicorn and then come back here so I can examine you.' At this you blink at Omio - the redhead is smiling at you sincerely - and then ask her if she's lost her mind. When the other begins to giggle at you, you realize that she has indeed lost her marbles.";
 		WaitLineBreak;
-		say "'Nope. I need to draw both blood and other samples from someone with the body of a unicorn so that I collect and catalogue data on certain rare and mythical creatures. Don't worry I know where you can find one to borrow some [']genetic material['] from.' Omio wags her eyes at you lewdly and then tells you about the Palomino where a unicorn barkeeper works. 'I'm sure he'd be very happy to help you out with becoming a unicorn, especially if you were to help him with a problem or two.' The red smiles again and you can only suck on your teeth as you wonder what you've gotten yourself into with this gold eyed harlot. 'Oh, and make sure you come back here after you are done!'";
+		say "'Nope. I need to draw both blood and other samples from someone with the body of a unicorn so that I collect and catalog data on certain rare and mythical creatures. Don't worry I know where you can find one to borrow some [']genetic material['] from.' Omio wags her eyes at you lewdly and then tells you about the Palomino where a unicorn barkeeper works. 'I'm sure he'd be very happy to help you out with becoming a unicorn, especially if you were to help him with a problem or two.' The red smiles again and you can only suck on your teeth as you wonder what you've gotten yourself into with this gold eyed harlot. 'Oh, and make sure you come back here after you are done!'";
 		now dre is 2;
 		increase score by 1;
 		now PALOMINO is known;
@@ -527,7 +527,7 @@ Instead of resolving a Dream of a Unicorn:
 				WaitLineBreak;
 				say "Seeing you in such an intriguing position, Omio snickers and then brings the rest of her fingers together to bury all five of her digits into your oozing pussy. Feeling those sinful fingers pressing down deeper into you, you can't help but to throw back your head and then shout out a strong cry of bliss when your fleshy lips flutter and then lock up vice tight around Omio's roving fingers. Holding the redhead's hand down tight you buck and then groan as gouts of blue nectar dribble out of you and onto Omio's gloved hand as you climax powerfully.";
 				WaitLineBreak;
-				say "When you come down from off of your high you drop back onto the table and then begin to pant like an overworked freight train. Mind whirling as though you've gone through an unbelievable experience, which technically you have, you blink your eyes open and then look down just in time to see Omio collecting your colourful nectar into a large jar. When the redhead speaks next you can only twitch an eye as Omio's words sink deep into your brain. 'Thanks a lot for this sample! I never would have gotten old Harold to give me anything unless I raised my ass for him. But thankfully I didn't have to do that because you did instead!' The redhead holds up the now capped jar and then pulls out a sharpie to label it. 'With this we can test some new theories to see if unicorn cum actually does extend one's life! Maybe if you feel like it you can work we me and my company later on to see if this is true or not?'";
+				say "When you come down from off of your high you drop back onto the table and then begin to pant like an overworked freight train. Mind whirling as though you've gone through an unbelievable experience, which technically you have, you blink your eyes open and then look down just in time to see Omio collecting your colorful nectar into a large jar. When the redhead speaks next you can only twitch an eye as Omio's words sink deep into your brain. 'Thanks a lot for this sample! I never would have gotten old Harold to give me anything unless I raised my ass for him. But thankfully I didn't have to do that because you did instead!' The redhead holds up the now capped jar and then pulls out a sharpie to label it. 'With this we can test some new theories to see if unicorn cum actually does extend one's life! Maybe if you feel like it you can work we me and my company later on to see if this is true or not?'";
 				WaitLineBreak;
 				say "You pass out from exhaustion before you can comment on that one and when you wake up you have a hard time remembering what exactly happened, that is, until you find your clothes still in a puddle around you on the floor and your lap sticky with your spilled honey. Blushing slightly as the memories return to you, you quickly get up and then go about your way before any trouble can find you. In your backpack are several extra supplies that had been given over by Omio.";
 		else:
@@ -544,7 +544,7 @@ Instead of resolving a Dream of a Unicorn:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"leopard suit"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly wacky researcher made for you. The material is very flexible and adjusts well onto your body.  It seems unusually strong, imparting some protection to you."	5	leopard suit
+"leopard suit"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly wacky researcher made for you. The material is very flexible and adjusts well onto your body. It seems unusually strong, imparting some protection to you."	5	leopard suit
 
 leopard suit is equipment.
 leopard suit is not temporary.
@@ -576,7 +576,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "medallion"	"An unusual bronze artifact that bears a serpent biting at its own tail."	1	medallion
 
-medallion is a grab object. It is part of the player.  It is not temporary.
+medallion is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing medallion:
 	say "A strong scent of ancient times and alchemical mixtures covers the medallion.";
@@ -587,7 +587,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "undisclosed case"	"A case Omio hastily shoved into your hands."	1	undisclosed case
 
-undisclosed case is a grab object. It is part of the player.  It is not temporary.
+undisclosed case is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing undisclosed case:
 	say "The case smells of something fruity as well as spicy. Liquor, maybe?";

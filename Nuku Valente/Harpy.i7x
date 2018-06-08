@@ -7,7 +7,7 @@ Version 2 of Harpy by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Harpydefeat is a number that varies.
 Harpyconsent is a number that varies.
 
@@ -25,10 +25,10 @@ to say Harpy wins:
 			say "     As you give in, the harpy swoops down and grabs you, pressing your lips to hers in another kiss. You moan in pleasure as happiness fills you, reunited with this wonderful creature in a fierce kiss. Having found you again, she carries you up to the roof of a nearby building so you two can have a more intimate reunion.";
 			if cocks of player > 0:
 				say "     The harpy woman pushes you down onto the roof and chirps happily a few times as she fondles your cock to full erection. Moving over your legs, she starts licking and kissing at your shaft, then presses her bosom around your [cock size desc of player] [cock of player] penis. The soft flesh of her breasts slide against your shaft as she gives you a tittyfuck. Her tongue and lips move in from time to time to work at your glans. The whole time you are lost in a wave of adoration for this beautiful creature, eventually crying out in joy as you cum messily across her tits and face. She grins at you and licks her lips while spreading your seed across your bosom in a wanton display that would make you rock hard again had you not cum so hard for this most lovely of beings. She grabs you again with her foot talons and carries you back to the ground.";
-				say "     'Mmm... that was wonderful, my dear lover. I hope we shall meet again soon.'  With that said, she flaps off, leaving you confused and dazed for some time.";
+				say "     'Mmm... that was wonderful, my dear lover. I hope we shall meet again soon.' With that said, she flaps off, leaving you confused and dazed for some time.";
 			else if cunts of player > 0:
 				say "     The harpy woman pushes you down onto the roof and chirps happily a few times as she gropes your pussy with her taloned hands. Spreading your legs and moving overtop of you, she presses her wet pussy over your lips. Needing no more invitation, you press your lips to her juicy folds and start licking and lapping lustfully, hoping so hard to please this beautiful creature. She does the same for you, working her tongue and lips with a lustful hunger. The whole time you are lost in a wave of adoration for this beautiful creature, eventually crying out in joy as you cum messily and her hot juices soak your face. She grins at you and licks her lips as she spreads the juices that are running down her chin over her hard nipples in slow circles. Your pussy quivers, almost cumming again from this wanton display from this most lovely of beings. She grabs you again with her foot talons and carries you back to the ground.";
-				say "     'Mmm... that was wonderful, my dear sister. I hope we shall meet again soon.'  With that said, she flaps off, leaving you confused and dazed for some time.";
+				say "     'Mmm... that was wonderful, my dear sister. I hope we shall meet again soon.' With that said, she flaps off, leaving you confused and dazed for some time.";
 			else:
 				say "     The harpy woman pushes you down onto the roof and chirps sadly as she notices your lack of sexual organs. Clearly disappointed, she starts to turn way, but you grab her hand, pausing her departure. Not wanting to lose this lovely creature's affection, you bury your face in her groin and start licking and kissing at her cunt, promising over and over that you can prove yourself to her. She moans and chirps in increasing pleasure as your eager tongue pleasures her, eventually driving her to a powerful climax that leaves her hot juices running down your face and her feathered legs. She grins at you and rubs her talon-hands over her wet cunt, then rubs her own juices over her nipples and then at your bare groin. 'Mmm... maybe there's hope for you yet. Let's see if this will help you along,' she says softly before grabbing you in her foot talons and carrying to back to the ground and flying off.";
 				follow the sex change rule;
@@ -47,7 +47,7 @@ to say Harpy wins:
 				decrease humanity of player by 10;
 				infect "Harpy";
 			else:
-				say "     Once she gets you up on the roof, she presses you down on your back, but is disappointed to see your lack of genitalia. She shrieks in frustration and slashes at you with her claws. 'Ugh!  Why am I wasting my time with you?'  You cry out to her needfully, but she has decided you are no longer worth the bother and flies off, leaving you on the roof to nurse your wounds before climbing down the fire escape, feeling dejected and heartbroken to have been rejected by her.";
+				say "     Once she gets you up on the roof, she presses you down on your back, but is disappointed to see your lack of genitalia. She shrieks in frustration and slashes at you with her claws. 'Ugh! Why am I wasting my time with you?' You cry out to her needfully, but she has decided you are no longer worth the bother and flies off, leaving you on the roof to nurse your wounds before climbing down the fire escape, feeling dejected and heartbroken to have been rejected by her.";
 				decrease morale of player by 10;
 				decrease HP of player by wdam entry;
 				now harpyconsent is 0;
@@ -66,7 +66,7 @@ To say Harpy loses:
 		if the player consents:
 			say "     You jump atop the harpy, pinning her down before she can take to the air again. She shrieks, but is too weak to fight you off as you get your cock lined up and thrust into her. Despite her resistance, she moans in pleasure as you start pounding into her wet pussy. As her lust builds, you relax your grip so you can fondle her breasts as well. After an enjoyable ride, you drive deep into her and release your hot seed, making her shriek in delight. You pump your hot load into her before letting her get up and leave.";
 			if harpyconsent > 0:
-				say "     When you release her, she slashes at your face angrily with your claws. 'You terrible wretch!  It would have been so wonderful, but you had to turn out to be so horrible,' she shrieks angrily. You realize that it was the same harpy who made your heart all a flutter before, but she's left you now. There is a strange sadness in your heart even as the strange spell she had over you fades away.";
+				say "     When you release her, she slashes at your face angrily with your claws. 'You terrible wretch! It would have been so wonderful, but you had to turn out to be so horrible,' she shrieks angrily. You realize that it was the same harpy who made your heart all a flutter before, but she's left you now. There is a strange sadness in your heart even as the strange spell she had over you fades away.";
 				decrease morale of player by 5;
 				now harpyconsent is 0;
 	else:
@@ -95,7 +95,7 @@ When Play begins:
 	now victory entry is "[Harpy wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[HarpyDesc]";[ Description of the creature when you encounter it.]
 	now face entry is "young woman with large, elfin ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in colour. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready.";[ Body Description, format as the text "Your Body is (your text)"]
+	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in color. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "Above your pert ass is a fan of brown feathers that curve upwards.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock]

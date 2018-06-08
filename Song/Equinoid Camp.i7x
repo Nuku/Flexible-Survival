@@ -35,12 +35,7 @@ Section 2 - Initiation
 [Camp details defined in Section 3]
 
 instead of navigating Equinoid Camp while equinoidstatus is 10:
-	[puts Black Equinoid as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Black Equinoid":
-			now monster is y;
-			break;
+	setmonster "Black Equinoid";
 	say "     Following the path you were shown, you head towards the equinoid camp, but are stopped at the outer barricade. Bryony is there again and she glares at you angrily and readies her spear. You stand your ground and tell her that you want to speak with their leader, as you've passed her test. Others have begun to approach, drawn by the noise.";
 	say "     Amaryllis is among them and she runs into your arms, clearly elated at your success, but many of the others still seem skeptical of you. Before she and Amaryllis have a chance to start arguing again, their leader appears and separates the pair. She then turns to you.";
 	if player is perminfected:
@@ -74,6 +69,11 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon she's cumming hard with a loud neigh of delight, pumping her hot seed into you. You can feel the equinoid seed soaking into you [if player is mpreg_ok]even as you're being bred by the lovely one you're riding[else]and give a hazy sigh, your sexless body left to stew in pent-up pleasure[end if].[mimpregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			decrease humanity of player by 20;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Black Equinoid":
+					now monster is y;
+					break;
 			now tailname of player is "Black Equinoid";
 			now facename of player is "Black Equinoid";
 			now skinname of player is "Black Equinoid";

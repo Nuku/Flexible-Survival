@@ -94,7 +94,7 @@ Instead of Resolving a Hardware Fort:
 	now showlocale is false;
 	if fancyquest is 4:
 		if Recoveredhardware is 0:
-			say "     Wandering down the streets of the city, you come across a sign for a major hardware store; and, mindful of Fancy's request, you decide to see if this one has been looted and destroyed like so many of the other ones, or if it is still intact enough to be worth looting. Turning the corner into the sheltered lot, you find yourself blinking with surprise at the scene laid out in front of you, as the lot in front of you is covered in cars and other bits of junk and salvage piled up in some kind of semblance to a small fortress. Looking at the construction carefully, you can immediately see several items that you figure would be quite useful for the Stables to have, and more importantly what appears to be several small sturdy forklifts which were obviously used to manoeuvre things into shape, and are probably still working even now. Figuring that if anyplace has the construction materials and tools that the Stables needs, it would be this place, you begin to look for a way in so you can clear this place out of whatever has taken up residence so you can signal the horsemen to come loot the place.";
+			say "     Wandering down the streets of the city, you come across a sign for a major hardware store; and, mindful of Fancy's request, you decide to see if this one has been looted and destroyed like so many of the other ones, or if it is still intact enough to be worth looting. Turning the corner into the sheltered lot, you find yourself blinking with surprise at the scene laid out in front of you, as the lot in front of you is covered in cars and other bits of junk and salvage piled up in some kind of semblance to a small fortress. Looking at the construction carefully, you can immediately see several items that you figure would be quite useful for the Stables to have, and more importantly what appears to be several small sturdy forklifts which were obviously used to maneuver things into shape, and are probably still working even now. Figuring that if anyplace has the construction materials and tools that the Stables needs, it would be this place, you begin to look for a way in so you can clear this place out of whatever has taken up residence so you can signal the horsemen to come loot the place.";
 			say "     Moving cautiously into the makeshift fortress, you note that it has been inexpertly propped up with beams and items from within the store, and tools are strewn around the area haphazardly as well, which while good in that it indicates there is plenty here to loot, is bad for you in that it is nearly impossible to navigate the twisty maze silently, or safely. And even as you think that, you can see one of the cars nearby start to slide towards you as you bump one of the beams supporting it!";
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -327,7 +327,7 @@ to hardwarefortphase5:
 	if diceroll > 16:
 		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city. You finally manage to lose the last of them near the library itself. Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";
 	else:
-		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmanoeuvred in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
+		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmaneuverd in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
 		let xyzlost be 0;
 		let xyzfled be 0;
 		fight;
@@ -394,7 +394,7 @@ Instead of Resolving a horsepowering:
 				now generatorfixing is 4;
 				now horsepowering is resolved;
 			else:
-				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colours for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
+				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colors for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
 				decrease HP of player by 25;
 				increase thirst of player by 10;
 				stop the action;
@@ -558,8 +558,4 @@ instead of resolving a goldenfocushunt:
 	else:
 		say "Wandering through the halls of the deserted museum, a glint of something shiny catches your eye, and you pause for a minute to look in one of the many alcoves lining the halls of the museum. The sight of several rather stunning pieces of historical golden jewellery takes your breath away for a bit, as you admire the craftsmanship and the carvings in the sides of the pieces. Considering the circumstances, you are almost tempted to try to take some of the item with you, if it weren't for the rather strong looking glass surrounding the jewellery, that and the fact that you are pretty sure Valerie out in the foyer would probably object rather strongly and violently to any theft of museum property...";
 
-
-
-
-
-Stable Related quests ends here.
+Stable Related Quests ends here.
