@@ -401,7 +401,7 @@ to say ShagShackSexMenu:
 					-- "Give Bryce the wolftaur a blowjob":
 						say "[ShagShackSex9]"; [by Qazarar]
 					-- "Spend time with the caged feral fox":
-						say "[FeralLatexFoxStart]"; [by Dys]
+						say "[FeralLatexFox_Start]"; [by Dys]
 					-- "Stand at attention for Levi, the tiger soldier":
 						say "[ShagShackSex11]"; [by Weaveroflight]
 					-- "Spend time with Ryan, a cute fennec fox":

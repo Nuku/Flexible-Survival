@@ -468,7 +468,7 @@ The player is wearing a backpack. The description of the backpack is "A backpack
 instead of examining a grab object(called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
 	if "Weaponsmaster" is listed in feats of player and x is an armament:
-		say "  Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 
 Does the player mean examining a situation: it is very unlikely.
 
@@ -3716,7 +3716,7 @@ This is the turnpass rule:
 	now ishunting is false;
 	now showlocale is true;
 	if HP of Velos > 2:
-		if Velos is not in the location of the player:		[travelling w/player]
+		if Velos is not in the location of the player:		[traveling w/player]
 			Now Velos is in the location of the player;
 	if breast size of player > 26, now breast size of player is 26;
 	let oldlib be libido of player;
@@ -4124,11 +4124,11 @@ to say cum load size of ( x - a person ):
 		else if cock width of x < 12:	[6 - 11]
 			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
 		else if cock width of x < 16:	[12 - 15]
-			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
+			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
 		else if cock width of x < 20:	[16 - 19]
-			say "[one of]one-litre[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
+			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
 		else if cock width of x < 25:	[20 - 24]
-			say "[one of]two-litre[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
+			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
 		else if cock width of x < 32:	[25 - 31]
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 		else:								[32+]
@@ -5398,8 +5398,8 @@ Include Wolverine Guard by Stripes.
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Wyvern For Fs by Damaged.
 Include Xeno for FS by Stripes.
-Include Yamato Dragon For FS by Blue Bishop.
-Include Yamato Dragoness For FS by Blue Bishop.
+Include Yamato Dragon by Blue Bishop.
+Include Yamato Dragoness by Blue Bishop.
 Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
