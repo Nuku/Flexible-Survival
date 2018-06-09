@@ -60,7 +60,7 @@ to say DireWolfVictorySex:
 to say DireWolfDesc:
 	setmongender 3;
 	if inasituation is false: [regular text]
-		say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]over-sized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
+		say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]oversized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
 	else:
 		say ""; [dealt with at the source]
 

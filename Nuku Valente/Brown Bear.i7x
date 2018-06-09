@@ -1,4 +1,5 @@
 Version 4 of Brown Bear by Nuku Valente begins here.
+
 [ Version 1.0 - Initial mob from Nuku Valente's equine extension - Illpill                                               ]
 [ Version 1.1 - Moved to Nuku Valente's folder, unknown changes - Nuku                                                   ]
 [ Version 1.2 - Bear can no longer expand you if you have microwaved or male preferred - Nuku Valente                    ]

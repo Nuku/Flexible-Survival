@@ -295,13 +295,13 @@ to say alexsexytimes2:
 		say "     ([link]Y[as]y[end link]) - Mount him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
 		if the player consents:					[HERM - MALE OPTION]
-			say "     You answer by flipping the smaller male onto his chest and grinding your cock against his rear. He wiggles his tight ass against your shaft and presents his tight tail-hole to you while passing you a bottle of lube he's pulled from the nightstand. 'Take me, you big, sexy hob,' he moans with another hard push back against you.";
+			say "     You answer by flipping the smaller male onto his chest and grinding your cock against his rear. He wiggles his tight ass against your shaft and presents his tight tailhole to you while passing you a bottle of lube he's pulled from the nightstand. 'Take me, you big, sexy hob,' he moans with another hard push back against you.";
 			say "[alexmalesexy2]";
 		else:							[HERM - FEMALE OPTION]
 			say "     You answer by flipping the smaller male onto his back and pouncing atop him. You grind your wet pussy down over his hard cock, making him moan. You look down at his animalistic cock and it makes your ferret pussy wet. You want this sexy hob to mate you all the more. His paws move up to your breasts, stroking and caressing them. 'You make such a sexy jill, my dear,' he says, grinding his cock up against you. 'And I want to make you a dam.'";
 			say "[alexfemalesexy2]";
 	else if cocks of player > 0:				[MALE]
-		say "     Eventually, the smaller male ends up beneath you and moans as your hard cock grinds against his rear. He wiggles his tight ass against your shaft and presents his tight tail-hole to you while passing you a bottle of lube he's pulled from the nightstand. 'Take me, you big, sexy hob,' he moans with another hard push back against you.";
+		say "     Eventually, the smaller male ends up beneath you and moans as your hard cock grinds against his rear. He wiggles his tight ass against your shaft and presents his tight tailhole to you while passing you a bottle of lube he's pulled from the nightstand. 'Take me, you big, sexy hob,' he moans with another hard push back against you.";
 		say "[alexmalesexy2]";
 	else:								[FEMALE]
 		say "     Eventually, you've had enough playing around and pounce atop the cute ferret the next time he's on his back. You grind your wet pussy down over his hard cock, making him moan. You look down at his animalistic cock and it makes your ferret pussy wet. You want this sexy hob to mate you all the more. His paws move up to your breasts, stroking and caressing them. 'You make such a sexy jill, my dear,' he says, grinding his cock up against you. 'And I want to make you a dam.'";

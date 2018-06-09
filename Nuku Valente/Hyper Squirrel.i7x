@@ -288,11 +288,12 @@ to say sexwithsnow02:	[Anal on Snow]
 		now wild squirrels is not resolved;
 	else:
 		say "     Snow frowns a little. 'Well, fine, be that way then. It's too bad you don't know a good thing when you see it, but I guess not everyone's into that kind of thing. I'm still up for some fun, hon. Let's see what other trouble we can get into,' she adds with a grin.";
-		attempttowait;
+		WaitLineBreak;
 		now nosquirrelanal is true;
 		say "[snowsexmenu]";
 
 to say sexwithsnow03:	[Vaginal on player]
+	setmonster "Hyper Squirrel";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [bodyname of player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge, pink, member to pop free, bulging with thick veins along its human shaped but inhumanly pink and massive, length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit sized, balls. At least she's not as big as those panther taurs.";
@@ -308,6 +309,7 @@ to say sexwithsnow04:	[Anal on player]
 	say "***";
 
 to say sexwithsnow05:	[Dommed and fucked]
+	setmonster "Hyper Squirrel";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Snow grins and moves in on you, grabbing your wrists and pressing you back against one of the stone wooden columns. 'Mmm... now, I can tell you're the kind that likes to let someone else take charge, so I think I'll do just that,' she says with a husky rumble of arousal in her voice. She grinds her throbbing manhood against your hip and looks you over with lustful intent";
@@ -382,7 +384,7 @@ to say snowsquirrelgivein:
 	now daycycle of player is 0;
 	now humanity of player is 0;
 	end the story saying "You and Snow have lost your minds to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take a turn with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
-	attempttowait;
+	WaitLineBreak;
 	follow the turnpass rule;
 	stop the action;
 
@@ -462,7 +464,8 @@ Instead of resolving a wild squirrels:
 		wait for any key;
 		end the story saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	else:
-		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
+		setmonster "Hyper Squirrel";
+		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Hyper Squirrel";
 			now bodyname of child is "Hyper Squirrel";

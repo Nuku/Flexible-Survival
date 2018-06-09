@@ -386,7 +386,7 @@ an everyturn rule:
 		else if TehuantlStatus is 3:
 			decrease TehuantlTimer by 1;
 			if TehuantlTimer is 0:
-				if player is in Grey Abbey Library or bunker or gray Abbey 2f:
+				if player is in Bunker or Grey Abbey Library or Grey Abbey 2F
 					say "     You hear Tehuantl moaning and rush to check on her.";
 					say "     Tehuantl gives birth scene!";
 				else:

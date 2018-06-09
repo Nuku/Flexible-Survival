@@ -576,7 +576,7 @@ to say yummypeach:
 	if libido of player > 100, now libido of player is 100;
 
 instead of sniffing tasty peach:
-	say "The over-sized peach smells delicious and tempting.";
+	say "The oversized peach smells delicious and tempting.";
 
 
 Section 5 - State Fair Events

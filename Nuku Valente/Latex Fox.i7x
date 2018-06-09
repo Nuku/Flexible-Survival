@@ -33,7 +33,7 @@ to say latexfoxvictory:
 		if libido of player > 20 and (cocks of player > 0 or cunts of player > 0):
 			say ". More than enough to set you off as well, you [if cocks of player > 0]waste your [cum load size of player] load impotently against the ground[else if cunts of player > 1]stain the ground with your neglected pussies' honey[else]stain the ground with your neglected pussy's honey[end if].";
 		else:
-			say ". Writhing in a lust-fuelled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
+			say ". Writhing in a lust-fueled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
 		say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.[mimpregchance]";
 	else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
 		say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through[if cunts of player > 1] one of[end if] your cunt[sfn], causing you to squirm and writhe under his[if scalevalue of player > 3] diminutive[end if] weight.";

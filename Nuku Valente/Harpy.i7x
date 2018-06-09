@@ -2,7 +2,7 @@ Version 2 of Harpy by Nuku Valente begins here.
 [Version 2 - Central Library content by Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Harpy to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Harpy to Flexible Survival's Wandering Monsters table, with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses

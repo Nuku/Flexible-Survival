@@ -85,7 +85,7 @@ check leafing:
 
 carry out leafing:
 	say "Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
-	repeat with y running from 1 to number of rows in table of random critters:
+	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Tanuki":
 			now monster is y;

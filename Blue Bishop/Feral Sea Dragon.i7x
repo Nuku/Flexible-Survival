@@ -100,7 +100,7 @@ to say fsdm attack:
 				infect;
 			else if "Touched by Madness" is listed in feats of player and player is mpreg_ok and ((player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of player < 4 and inasituation is false:
 				If MFSDUBM is false:
-					say "     He pauses as if stopped by some unseen force, the power of which compelling him to move off of you. Baffled for a moment, the dragon is somehow affected by your presence. Before you might do anything with this new-found freedom, though, his perception of the situation returns. Looking at him now, his demeanor has radically shifted; harsh once was his regard; assertive, domineering, his expression now soft and abiding, almost matronly.";
+					say "     He pauses as if stopped by some unseen force, the power of which compelling him to move off of you. Baffled for a moment, the dragon is somehow affected by your presence. Before you might do anything with this newfound freedom, though, his perception of the situation returns. Looking at him now, his demeanor has radically shifted; harsh once was his regard; assertive, domineering, his expression now soft and abiding, almost matronly.";
 					say "     Bearing down upon you once more, his slick, dripping tongue slathering your smaller frame in an odd show of affection, until you are drenched in his saliva, blatantly arousing you. He doesn't even remotely seem interested in this; rather, he suddenly drags himself over you, soft underbelly and clearly erect cock grinding against your lubricated frame before he stops, showing no desire to spare you of his massive weight. Instinctively, you push against his pressure, but this only abides his tainted intent, and your endeavors backfire when you push yourself past his anal ring.";
 					say "     Unable to contest this new, severely twisted desire, he begins to grind himself against the sand, his hole tightening against your frame as your lower torso soon follows, pulling you deeper into his slick depths. This overwhelming heat; this hungry, supple abyss, it [if cocks of player > 0 or cunts of player > 0]is more than enough to set you off, almost immediately, fate sealed when this is all that the dragon needs to reach his own climax[else]torments you to no end, your fate soon sealed as the dragon reaches climax[end if], and though your fate may seem grim, you find yourself pulled to a destination alien even to this perverse domain before your vision fades. The dragon would no doubt recover and move on, even after soaking his underbelly with his own cum, the occupancy of his new captive not outwardly apparent to those who might see his large form...";
 					now MFSDUBM is true;
@@ -204,7 +204,7 @@ to say fsdm attack:
 To say fsdm loss:
 	if a random chance of fsdsub in 9 succeeds:
 		now boundmod is 1;
-		say "     Before you can land the final blow, the dragon suddenly backs away and concedes to you. His demeanor rather peculiar, you can summize that you've defeated this one before, and has succumbed to new-found, submissive inclinations";
+		say "     Before you can land the final blow, the dragon suddenly backs away and concedes to you. His demeanor rather peculiar, you can summize that you've defeated this one before, and has succumbed to newfound, submissive inclinations";
 		if libido of player < 40 and "Dominant" is not listed in feats of player:
 			say ". In no mood to humor his need, you send him off, slowly retreating back into the water's depths. You go about your business once more, now that the matter has been attended to.";
 		else:
@@ -349,28 +349,28 @@ to fsdbiasshift:
 		if fsdbias is 0:
 			now fsdbias is 1;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Surely you fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Surely you fate is tied to him, should you succumb[roman type].";
 		else if fsdbias is 4:
 			now fsdbias is 3;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if fsdbias is 3 or fsdbias is 2:
 			now fsdbias is 1;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Surely your fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Surely your fate is tied to him, should you succumb[roman type].";
 	else: [Female]
 		if fsdbias is 0:
 			now fsdbias is 4;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely you fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely you fate is tied to her, should you succumb[roman type].";
 		else if fsdbias is 1:
 			now fsdbias is 2;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if fsdbias is 3 or fsdbias is 2:
 			now fsdbias is 4;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
 
 
 [to fsdpostureshift:
@@ -378,7 +378,7 @@ to fsdbiasshift:
 		if fsdmposture is 0:
 			now fsdmposture is 1;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your submission to the beast[if player is dominant], even against your dominant inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your submission to the beast[if player is dominant], even against your dominant inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
 		else if fsdmposture is 4:
 			decrease fsdmposture by 1;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
@@ -386,12 +386,12 @@ to fsdbiasshift:
 		else if fsdmposture is 2 or fsdmposture is 3:
 			now fsdmposture is 1;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your submission to the beast[if player is dominant], even against your dominant inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your submission to the beast[if player is dominant], even against your dominant inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
 	else if tempnum2 is 2:
 		if fsdmposture is 0:
 			now fsdmposture is 4;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your victory, revelling in your dominance of the beast[if player is submissive], even against your submissive inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your victory, reveling in your dominance of the beast[if player is submissive], even against your submissive inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
 		else if fsdmposture is 1:
 			increase fsdmposture by 1;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
@@ -399,7 +399,7 @@ to fsdbiasshift:
 		else if fsdmposture is 2 or fsdmposture is 3:
 			now fsdmposture is 4;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
-				say "     [italic type]Your tainted mind echoes with your victory, revelling in your dominance of the beast[if player is submissive], even against your submissive inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your victory, reveling in your dominance of the beast[if player is submissive], even against your submissive inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
 	now tempnum2 is 0;]
 
 to say FSDM_1: [Anal Pitching]
@@ -484,7 +484,7 @@ to say FSDM_2: [Oral Receiving Cock]
 			if boundmod is 1:
 				say "[if scalevalue of player < 4]his size no doubt somewhat overwhelming, though he shows some restraint,[else]you're able to keep up the eager beast with little issue as[end if]";
 			else:
-				say "[if scalevalue of player < 4]its size easily overwhelms you, the beast no doubt revelling in his superior stance within this ritual as[else]you're able to keep up the impressive beast with little issue,[end if]";
+				say "[if scalevalue of player < 4]its size easily overwhelms you, the beast no doubt reveling in his superior stance within this ritual as[else]you're able to keep up the impressive beast with little issue,[end if]";
 			say " your taste is overwhelmed by his overpowering saliva. Eventually, [if boundmod is 1 or scalevalue of player > 3]you find yourself satisfied with your bit of fun and you[else]the foreplay becomes too much for you and you have to[end if] get back on track.";
 	else:
 		now tempnum is 0;
@@ -517,7 +517,7 @@ to say FSDM_3: [Oral Receiving Cunt]
 			if boundmod is 1:
 				say "[if scalevalue of player < 4]his size no doubt somewhat overwhelming, though he shows some restraint,[else]you're able to keep up the eager beast with little issue as[end if]";
 			else:
-				say "[if scalevalue of player < 4]its size easily overwhelms you, the beast no doubt revelling in his superior stance within this ritual as[else]you're able to keep up the impressive beast with little issue,[end if]";
+				say "[if scalevalue of player < 4]its size easily overwhelms you, the beast no doubt reveling in his superior stance within this ritual as[else]you're able to keep up the impressive beast with little issue,[end if]";
 			say " your taste is overwhelmed by his overpowering saliva. Eventually, [if boundmod is 1 or scalevalue of player > 3]you find yourself satisfied with your bit of fun and you[else]the foreplay becomes too much for you and you have to[end if] get back on track.";
 	else:
 		now tempnum is 0;
@@ -658,7 +658,7 @@ to say FSDM_6: [Oral Giving Cock]
 		now tempnum is 0;
 	say "     Your continued attention quickly picks up in pace, fueled by your own[if player is neuter], insatiable[end if] lust";
 	if boundmod is 1 and (cocks of player > 0 or cunts of player > 0):
-		say ". Driven by his new-found submissive instinct, the beast moves his head down to meet your crotch, intent on attending you in turn. Shall you oblige his offering?";
+		say ". Driven by his newfound submissive instinct, the beast moves his head down to meet your crotch, intent on attending you in turn. Shall you oblige his offering?";
 		if player consents:
 			say "     Eagerly, the sea dragon's thick tongue [if cocks of player > 1]wraps around one of your dicks, throbbing[else if cocks of player is 1]wraps around your dick, throbbing[else if cunts of player > 1]caresses one of your cunts, aching[else]caresses your cunt, aching[end if] needily against the slick, writhing organ's touch";
 			now tempnum2 is 1;
@@ -689,7 +689,7 @@ to say FSDM_6: [Oral Giving Cock]
 		if boundsegment is 1:
 			say ". [if scalevalue of player < 4][one of]At first, you assume he might overtake you again, but instead his submissive influence seems to diminish and elongate his release, slowing the pace enough for you to keep up[or]Submissive influence diminishing and elongating his release, you're allowed to feast on every last drop of his heady seed[stopping][else]Not that someone of your size needs it, but his submissive influence has diminished and elongated his release, prolonging your persistent milking of his heady seed[end if]";
 		else:
-			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, revelling in being made an embarrassing mess of himself[else]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as it's spent across the sand[end if]";
+			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, reveling in being made an embarrassing mess of himself[else]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as it's spent across the sand[end if]";
 		if tempnum2 is 1:
 			say ". The whole [if boundsegment is 1]ordeal[else]sight[end if], combined with the sea dragon's own attendance, is more that enough to set you off, your [if cocks of player > 0]own, [cum load size of player] load flooding his maw as it encircles your tool[else] cunt aching against his tongue's slathering affection[end if].";
 		else:

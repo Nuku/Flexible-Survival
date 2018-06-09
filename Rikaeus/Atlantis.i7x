@@ -73,7 +73,7 @@ Instead of resolving a Lost Trident:
 		Say "     Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure rising up out of the sea to take the trident into one of his meaty bronze hands.";
 	else:
 		LineBreak;
-		Say "     Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your new-found weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
+		Say "     Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
 		Challenge "Feral Sea Dragon";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			Challenge "Feral Sea Dragon";
@@ -90,7 +90,7 @@ Instead of resolving a Lost Trident:
 						change east exit of Atlantis City Entrance to Sunken Ship;
 						now Lost Trident is resolved;
 		if fightoutcome >= 20:
-			say "     Having lost to one of the feral sea dragons you find yourself being stripped of your new-found weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
+			say "     Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
 
 Section 1a - Trident (Weapon)
 

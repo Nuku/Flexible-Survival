@@ -18,7 +18,7 @@ After resolving a Mouse Taur, try looking;
 Instead of Resolving a Mouse Taur:
 	if mtrp is 0:
 		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.'";
-		attempttowait;
+		WaitLineBreak;
 		if cunts of player > 0 and cocks of player > 0:
 			say "     'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression. 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
 		else if cocks of player > 0:
@@ -27,7 +27,7 @@ Instead of Resolving a Mouse Taur:
 			say "     She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment. 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		else:
 			say "     She sniffs the air lightly and looks at you with some confusion. 'You must have had such a hard time of it,' she says with some sympathy. 'I am Lisa, nice to meet you.'";
-		attempttowait;
+		WaitLineBreak;
 		say "     You give your name and begin idly chatting about time before everything went bad. You settle with her and she pulls out some snacks, sharing with you as you talk with her. She was a recently graduated major in education, 'I planned to be a teacher,' she explained, 'Grade school, but then this happened.' It seems that some mice that lived in her house became infected.";
 		say "     'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'";
 		say "     Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
@@ -92,13 +92,13 @@ to say pornstoredesc:
 		say "     Sven, or Svetlana as she is now, mews softly at the pleasant touch and watches you nervously to see your reaction to her change. You smile politely and she relaxes a little, purring as the mouse's paws move over her body. Her swimsuit, being quite tight over her large rack, has a perceptible camel toe showing between her legs, which is where Lisa has let one of her paws wander. She brushes over the snowmeow's covered pussy, rubbing and teasing her until there's a growing wet patch in her swimwear. 'She's so much more fun now that my pet kitty's got a nice, wet pussy. You should give her a try sometime.' She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
 		now HP of Sven is 53;
 	if HP of rubber tigress is 8 and companion of player is rubber tigress:
-		if T is 1, attempttowait;
+		if T is 1, WaitLineBreak;
 		say "[line break]     [if T is 1]While you're distracted by Svetlana[else if Sven is in Porn Store]As you're greeting Lisa and Sven[else if Svetlana is in Porn Store]As you're greeting Lisa and Svetlana[else]As you're greeting Lisa[end if], Artemis pads around the store in idle feline curiosity. That is, until her attention is caught by the glass display case under the counter. Looking inside it, she mewls plaintively, leaning in closer and closer for a better look until the front of her rubbery face is mooshed up against it and flattened out. Drawn by her unusual behavior, you nudge her aside and look into the cabinet.";
 		say "     Behind the glass, among the selection of DVDs and magazines stored there are a pair of sex toys. The first is an exotically shapely dildo, having a definite feline shape and 'rubbery pleasure barbs' as the box calls them. The second is a clear, flexible sleeve and purports itself to be a 'realistic vagina toy' according to its packaging. Artemis nuzzles your face and gives another plaintive mewl before flattening her muzzle against the glass again. Given her proclivity for eating plastics, perhaps she wants to eat them as well.";
-		attempttowait;
+		WaitLineBreak;
 		say "     Given the feline's interest in the toys, you ask Lisa about them. 'Well, I'd set them aside for a potential customer who wanted them, but the kitty's not been back for quite some time. At this point, I suspect he got caught by some critter out there and has gone feral. Poor guy.' She scritches her chin, pondering for a moment.";
 		say "     'How does this sound? Since they're probably not coming back, I could sell them off to you and your kitty.' Artemis mrowls eagerly and nuzzles against your hip, purring loudly, clearly seeking to endear herself to you to get her desired treats. 'But since money's no good and I won't take those silly freecred, I guess you can maybe do me a favor instead to pay for it. Not that kind of favor,' she adds quickly.";
-		attempttowait;
+		WaitLineBreak;
 		if hellspawn is not banned:
 			say "     'There's been some succubi in the area who have been harassing my store. And it's too bad, too. They look like they'd be a lot of fun if they'd just be more neighborly,' adds wistfully, licking her lips at the thought of those sexy females. 'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it. If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.' Artemis ignores the final comment, mewling again and purring happily. You pet her head and agree to Lisa's deal.";
 			now lisaartemiscount1 is 1;
@@ -117,8 +117,8 @@ instead of conversing the Lisa:
 		now lisaartemiscount2 is 0;
 	else if rabbitsibling is 3: [Sandra Quest]
 		say "     Figuring this is the best place to look for something that might interest Sandra, you ask Lisa if she has any rabbit-themed toys.";
-		say "     'Oh? I see you've found some interesting company!' She gestures at your distinctive rabbit ears. 'Hmm... I think I might have something...' She goes into the back room, the sound of tussled containes softly filling the air until she finally returns.";
-		say "     'This what you looking for?' She displays a distinctly carrot-shaped dildo, and a rather over-sized one at that. 'This was clearly meant as a novelty toy, not really intended for use, but these days there's really no such thing.' As you reach for it, she pulls it back. 'Tsk, now then, I can't just give this away on a whim! How about this, for a bottle of clean water, I'll give it to you, deal?'";
+		say "     'Oh? I see you've found some interesting company!' She gestures at your distinctive rabbit ears. 'Hmm... I think I might have something...' She goes into the back room, the sound of tussled containers softly filling the air until she finally returns.";
+		say "     'This what you looking for?' She displays a distinctly carrot-shaped dildo, and a rather oversized one at that. 'This was clearly meant as a novelty toy, not really intended for use, but these days there's really no such thing.' As you reach for it, she pulls it back. 'Tsk, now then, I can't just give this away on a whim! How about this, for a bottle of clean water, I'll give it to you, deal?'";
 		if player consents:
 			if water bottle is owned:
 				delete water bottle;
@@ -128,7 +128,7 @@ instead of conversing the Lisa:
 			else:
 				say "     Sadly, you don't have one to spare, you'll need to return with one to obtain the item.";
 		else:
-			say "     Shrugging at you, she stows the item in the back room once more. You imagine your only course of action right now is to deliver the buttled water.";
+			say "     Shrugging at you, she stows the item in the back room once more. You imagine your only course of action right now is to deliver the bottled water.";
 	else if HP of Sven is 50:
 		say "     [one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by. He's very sweet. And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs. He tries to hide his blushing face behind his tail.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[at random]";
 	else if HP of Sven is 51:
@@ -155,17 +155,13 @@ Carry out mousefucking:
 	mousefuck;
 
 To mousefuck:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Female Husky":
-			now monster is y;
-			break;
+	setmonster "Female Husky";
 	if lastfuck of Lisa - turns < 12:
 		say "She points over to a pile of porn mags, 'Help yourself.'";
 		stop the action;
 	now lastfuck of Lisa is turns;
 	let lust be 0;
-	let over-sized be 0;
+	let oversized be 0;
 	let response1 be "";
 	say "Lisa looks you over a moment before lifting her shoulders. 'I live in a porn shop. A little play isn't new, right?' She moves up to you and runs soft hands across your front and sides, 'Come with me into the back, and be naked when you do it.' She saunters off into her private backroom, through a curtain of hanging beads that softly clack with the sound of jostled wood behind her. ";
 	if a random number from 1 to 2 is 1: [ Aggressive]
