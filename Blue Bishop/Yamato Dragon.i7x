@@ -326,28 +326,28 @@ to yamatbiasshift:
 		if YDSF is 0:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male dragon. Surely you fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male dragon. Surely you fate is tied to him, should you succumb[roman type].";
 		else if YDSF is 4:
 			now YDSF is 3;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male dragon. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male dragon. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male dragon. Surely your fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male dragon. Surely your fate is tied to him, should you succumb[roman type].";
 	else: [Female]
 		if YDSF is 0:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Surely you fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely you fate is tied to her, should you succumb[roman type].";
 		else if YDSF is 1:
 			now YDSF is 2;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
 	setmongender 3;		[creature is male]
@@ -860,28 +860,28 @@ to yamatbiasshift:
 		if YDSF is 0:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Surely you fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Surely you fate is tied to him, should you succumb[roman type].";
 		else if YDSF is 4:
 			now YDSF is 3;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Surely your fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Surely your fate is tied to him, should you succumb[roman type].";
 	else: [Female]
 		if YDSF is 0:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely you fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely you fate is tied to her, should you succumb[roman type].";
 		else if YDSF is 1:
 			now YDSF is 2;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
 
 
 Section 2 - Monster Insertion

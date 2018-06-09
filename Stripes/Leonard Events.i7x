@@ -13,7 +13,7 @@ leosupplies is a number that varies.
 leodenlist is a list of numbers that varies. leodenlist is usually { 1, 2, 3 }.
 leodinner is a truth state that varies. leodinner is usually false.
 leoshadowmet is a truth state that varies. leoshadowmet is usually false.
-leonardcaraway is a truth state that varies. leonardcaraway is usually false.
+Leonardcaraway is a truth state that varies. Leonardcaraway is usually false.
 lastleomidcoitus is a number that varies.
 leopocketwatch is a truth state that varies. leopocketwatch is usually false.
 
@@ -119,7 +119,7 @@ to say leodenscene2:
 Part 3 - Kitty Rescue
 
 to say leodenscene3:
-	say "     You arrive to find Leonard not in the den, with there being a large number of the feline girls hiding in the cave instead. The maids are doing their best to tend to the anxious crowd[if leonardcaraway is true] while Caraway attempts to distract them with her supply of baked treats[end if], but everyone is relieved to see you arrive. There's a lot of chaotic mewling and so many voices you can't make out what's going on. Thankfully, Raven is there to help fill you in while the others from the work group herd the lionesses back into the cave.";
+	say "     You arrive to find Leonard not in the den, with there being a large number of the feline girls hiding in the cave instead. The maids are doing their best to tend to the anxious crowd[if Leonardcaraway is true] while Caraway attempts to distract them with her supply of baked treats[end if], but everyone is relieved to see you arrive. There's a lot of chaotic mewling and so many voices you can't make out what's going on. Thankfully, Raven is there to help fill you in while the others from the work group herd the lionesses back into the cave.";
 	say "     'Leonard's gone off to deal with some of those feral Felinoids. We caught them trying to round up several of the pride girls for themselves,' Raven explains quickly. 'Our team can cope with one of them, maybe two, but that's it. We tried, we really did, but we had to break it off before we were captured as well. We wanted to go with him, but he ordered us to protect the others. You have to go help him, matron,' she mewls, clutching your hand tightly. You nod with determination, give her a reassuring hug and rush off.";
 	WaitLineBreak;
 	say "     You head in the direction of Felinoid territory, Raven having given you a rough idea of where they'd encountered the rustling felinoids. Aside from passing another lioness girl on the way, who you order back to the cave as you run past her, you're unharried by the other denizens of the park. Perhaps they can tell something is going down or simply don't dare deal with someone with an angry, determined look such as yours. Regardless, your run through the park is uninterrupted.";
@@ -240,9 +240,9 @@ to say leodenspecial1:
 	else:
 		felinebodyshift;
 	WaitLineBreak;
-	say "     Arriving at the den, you are greeted by the delicious scent of cooking food even before you step inside. At the tunnel mouth sits Leonard at a wooden table set for two and [if leonardcaraway is true]an array[else]several[end if] steaming dishes set out. The maids are waiting behind him, smiling politely as they stand at the ready. Seeing you, the gentlemanly lion rises. 'Welcome, my dearest mate. I had heard through the grapevine that you were coming this way and thought you might want to sit and enjoy the sunset with me,' he says with a soft purr in his voice and a smile on his muzzle. 'I do hope those two chatterboxes didn't bore you too badly, but we needed a little extra time to prepare.' He steps around the table to pull out your chair for you, giving you a loving kiss as you sit down.";
-	say "     You and Leonard have a lovely dinner together in the fading light, enjoying the beautiful sunset as your backdrop. You discuss several pride matters as well as your recent adventures in the city. You are served a [if leonardcaraway is true]seven[else]five[end if] course meal by the maids, ending with dessert by candlelight. You can tell as the evening wears on that Leonard's getting aroused by how often he's groping the cute maids and you can't help but give them a few teasing touches yourself[if leonardcaraway is true]. This is especially true when Caraway comes out with the dessert, playing with her pussy to the point she's weak-kneed as she tries to serve you[end if]. By the time you're both finishing up dessert, there is a maid beneath the table at both ends, [if cocks of player > 0]one sucking your cock and another dealing with Leonard's[else if cunts of player > 0]one licking your pussy while another deals with Leonard's cock[else]one licking and rubbing your bare groin while another deals with Leonard's cock[end if].";
-	say "     Once dessert is finished, you are Leonard can wait no longer. Rather than go inside or even wait for the table to be cleared, he pushes you down overtop of it and starts riding you as you moan and mewl lustfully for more. The maid girls smile and watch, clearing the dishes and the remains of dinner out of the way while the studly lion's hard thrusting threatens to tumble everything onto the ground. Mindful of the antique table, you grab a handful of the tablecloth in both hands and dig your claws into that rather than the wood. Your cries of lustful mating carry out into the night air, certainly not the only such cries around, but definitely the loudest tonight. He fucks you and fills you twice on the tabletop before taking you inside onto the bed and mating you again there[if leonardcaraway is true]. After mating you repeatedly, Caraway is called over so Leonard can give his compliments to the chef, fucking her to a loud orgasm while you play with her breasts. After the repeated matings, the three of you[else]. After the repeated matings, you both[end if] pass out for a catnap on the bed.[impregchance]";
+	say "     Arriving at the den, you are greeted by the delicious scent of cooking food even before you step inside. At the tunnel mouth sits Leonard at a wooden table set for two and [if Leonardcaraway is true]an array[else]several[end if] steaming dishes set out. The maids are waiting behind him, smiling politely as they stand at the ready. Seeing you, the gentlemanly lion rises. 'Welcome, my dearest mate. I had heard through the grapevine that you were coming this way and thought you might want to sit and enjoy the sunset with me,' he says with a soft purr in his voice and a smile on his muzzle. 'I do hope those two chatterboxes didn't bore you too badly, but we needed a little extra time to prepare.' He steps around the table to pull out your chair for you, giving you a loving kiss as you sit down.";
+	say "     You and Leonard have a lovely dinner together in the fading light, enjoying the beautiful sunset as your backdrop. You discuss several pride matters as well as your recent adventures in the city. You are served a [if Leonardcaraway is true]seven[else]five[end if] course meal by the maids, ending with dessert by candlelight. You can tell as the evening wears on that Leonard's getting aroused by how often he's groping the cute maids and you can't help but give them a few teasing touches yourself[if Leonardcaraway is true]. This is especially true when Caraway comes out with the dessert, playing with her pussy to the point she's weak-kneed as she tries to serve you[end if]. By the time you're both finishing up dessert, there is a maid beneath the table at both ends, [if cocks of player > 0]one sucking your cock and another dealing with Leonard's[else if cunts of player > 0]one licking your pussy while another deals with Leonard's cock[else]one licking and rubbing your bare groin while another deals with Leonard's cock[end if].";
+	say "     Once dessert is finished, you are Leonard can wait no longer. Rather than go inside or even wait for the table to be cleared, he pushes you down overtop of it and starts riding you as you moan and mewl lustfully for more. The maid girls smile and watch, clearing the dishes and the remains of dinner out of the way while the studly lion's hard thrusting threatens to tumble everything onto the ground. Mindful of the antique table, you grab a handful of the tablecloth in both hands and dig your claws into that rather than the wood. Your cries of lustful mating carry out into the night air, certainly not the only such cries around, but definitely the loudest tonight. He fucks you and fills you twice on the tabletop before taking you inside onto the bed and mating you again there[if Leonardcaraway is true]. After mating you repeatedly, Caraway is called over so Leonard can give his compliments to the chef, fucking her to a loud orgasm while you play with her breasts. After the repeated matings, the three of you[else]. After the repeated matings, you both[end if] pass out for a catnap on the bed.[impregchance]";
 	if player is felinebodied:
 		infect "Feline";
 	else:
@@ -311,7 +311,7 @@ to say leodenspecial3:
 	say "     After another round of mewling thanks to both of you, Mimosa's sent on her way with instructions to meet up with your work group. You and Leonard smile as you watch her go, knowing she'll be in good hands with Raven and the others to help her with the retrieval. Your mate gives you a tight hug and a pat on the ass, followed by a tender nuzzle.";
 	WaitLineBreak;
 	say "     Knowing you're curious about the girl you just met, he explains that she's always been quite timid for a lioness. 'She was such a skittish kitten, taking so much longer than the others to get her to come and accept my affections. But she was all the sweeter for it in the end, longing for it so badly by that point. But she always has such difficulties with my requests. I've even made the simplest of suggestions in the hopes of giving her a confidence boost, but it never seemed to turn out as planned,' he says, rubbing his feline nose with a slight frown.";
-	say "     Giving his new pocket watch a quick look with an appreciative eye, his smile returns. 'But she's actually done quite well this time. I'd've been happy with a winding alarm clock at this point and certainly would not have expected her to carry a grandfather clock on her own. And now with your work girls helping to ensure nothing further goes wrong, Mimosa will hopefully make a few friends and gain a little confidence with her success. I don't expect miracles, but it's a strange new world out there and I want her to know she can face it with her pride.";
+	say "     Giving his new pocket watch a quick look with an appreciative eye, his smile returns. 'But she's actually done quite well this time. I'd have been happy with a winding alarm clock at this point and certainly would not have expected her to carry a grandfather clock on her own. And now with your work girls helping to ensure nothing further goes wrong, Mimosa will hopefully make a few friends and gain a little confidence with her success. I don't expect miracles, but it's a strange new world out there and I want her to know she can face it with her pride.";
 	infect "Feline";
 	now leopocketwatch is true;
 	increase feline_meow by 1;
@@ -324,7 +324,7 @@ Part 10 - Supply Delivery
 to say leosupplyscene:
 	let leosupplies be 0;
 	if leosupplies is 0, let leosupplies be a random number between 1 and 2;
-	say "     After being welcomed by your mate, you [one of]settle in to take a short break before getting into the reason for your visit[or]enjoy a pleasant snuggling with the sexy lion[or]enjoy some relaxing attention from the cute maids[or]enjoy a pleasant chat with Leonard[cycling]. At this time, a heavily-laden lioness in a red cap arrives at the den. One of the maids assists her in removing the heavy pack, full of [if leosupplies is 1]foodstuffs[else]bottled water[end if], and carry it inside. After a cursory examination by a pleased Leonard, he gives some to you before the pack is sent off to the pantry to be stocked[if leonardcaraway is true] by a very pleased Caraway[end if].";
+	say "     After being welcomed by your mate, you [one of]settle in to take a short break before getting into the reason for your visit[or]enjoy a pleasant snuggling with the sexy lion[or]enjoy some relaxing attention from the cute maids[or]enjoy a pleasant chat with Leonard[cycling]. At this time, a heavily-laden lioness in a red cap arrives at the den. One of the maids assists her in removing the heavy pack, full of [if leosupplies is 1]foodstuffs[else]bottled water[end if], and carry it inside. After a cursory examination by a pleased Leonard, he gives some to you before the pack is sent off to the pantry to be stocked[if Leonardcaraway is true] by a very pleased Caraway[end if].";
 	say "     You both thank the kitty for her efforts, the den being in need of more supplies due to the addition of the maids. The little lioness purrs happily at the praise, especially when Leonard's paw drifts down to her rear. With his gentle touch, he guides her ";
 	if leosupplies is 1:	[food]
 		say "towards his bed. You follow them, eager to show your thanks as well.";
@@ -486,8 +486,8 @@ Section 1 - Park
 Part 0 - Core Event
 
 leoparklist is a list of numbers that varies. leoparklist is usually {1, 2, 5, 6, 9}.
-leonardwrdesk is a truth state that varies. leonardwrdesk is normally false.
-leonardcabinet is a truth state that varies. leonardcabinet is normally false.
+Leonardwrdesk is a truth state that varies. Leonardwrdesk is normally false.
+Leonardcabinet is a truth state that varies. Leonardcabinet is normally false.
 
 PridePark is a situation. PridePark is resolved.
 The sarea of PridePark is "Park".
@@ -709,7 +709,7 @@ to say leoparkscene1:
 		felinebodyshift;
 	else:
 		infect "Feline";
-	now lastfuck of leonard is turns + 8;
+	now lastfuck of Leonard is turns + 8;
 	remove 1 from leoparklist;
 [	add 7 to leoparklist; [opens next walk]		]
 	now battleground is "void";
@@ -725,7 +725,7 @@ to say leoparkscene2:
 	WaitLineBreak;
 	say "     By this point, her narrative starts to break down as the tears struggle to return, so you cuddle her in your arms and tell her that you'll help her bring it back to the cave. She smiles up at you and hugs you very tightly, thanking you repeatedly between kisses.";
 	say "     After some more playful snuggling, you head over to the cabinet and look it over. It's an older style with round glass windows built into the upper half and several drawers below that. While it's not as large as others you've seen, it will fit much better into the limited space of Leonard's cave. And while you may not be that knowledgeable of such things, it certainly looks like a well-made and older collector's piece. It is fairly heavy and you're impressed that the smaller girl was able to drag it so far, a testament to her determination to please the handsome lion.";
-	say "     With your help and a few more breaks along the way, the cabinet arrives safely at Leonard's cave. You allow the feline girl to present it to Leonard, who seems quite pleased with her acquisition and quickly has the maids move it into position[if leonardcaraway is true] under the direction of Leonard's chef, Caraway[end if]. As she'd said, it fits nicely into one side of the kitchen area, freeing that bookshelf to join the others in the sitting room area.";
+	say "     With your help and a few more breaks along the way, the cabinet arrives safely at Leonard's cave. You allow the feline girl to present it to Leonard, who seems quite pleased with her acquisition and quickly has the maids move it into position[if Leonardcaraway is true] under the direction of Leonard's chef, Caraway[end if]. As she'd said, it fits nicely into one side of the kitchen area, freeing that bookshelf to join the others in the sitting room area.";
 	WaitLineBreak;
 	say "     You hang back during the installation, letting the kitty take the spotlight for her find, but when Leonard's ushers her off to receive her reward, she insists that you come as well. You join them on the bed just as she's helping Leonard out of his suit coat. Spotting the lion's stiff member, you take it in your paw and stroke it while giving him a kiss.";
 	say "     He cuddles the hard-working girl close and lickgrooms between her legs, running his tongue over her pussy and getting her to moan in delight. His tongue then moves upwards across her breasts. He rumbles and purrrs to her about what a good, obedient girl she is and compliments her on her determination. As he lifts her up into his arms, you hold his cock in position. You watch closely as he lowers her down onto his stiff cock, seeing her wet folds spread for her handsome lover's glans before sliding down onto his maleness. She mrowls in delight and wraps her arms around him, purring and mewling in delight as he bounces her in his lap, fucking her.";
@@ -733,7 +733,7 @@ to say leoparkscene2:
 	infect "Feline";
 	now battleground is "void";
 	remove 2 from leoparklist;
-	now leonardcabinet is true;
+	now Leonardcabinet is true;
 	move player to Lion's Den;
 
 
@@ -809,7 +809,7 @@ to say leoparkscene7:
 		felinebodyshift;
 	else:
 		infect "Feline";
-	now lastfuck of leonard is turns + 8;
+	now lastfuck of Leonard is turns + 8;
 	now battleground is "void";
 	move player to Lion's Den;
 	remove 7 from leoparklist;
@@ -854,10 +854,10 @@ to say leoparkscene9:
 		infect "Feline";
 	else:
 		infect "Feline";
-	now lastfuck of leonard is turns;
+	now lastfuck of Leonard is turns;
 	now battleground is "void";
 	remove 9 from leoparklist;
-	now leonardwrdesk is true;
+	now Leonardwrdesk is true;
 	move player to Lion's Den;
 
 
@@ -910,11 +910,11 @@ to say leoparkscene11:
 		infect "Feline";
 	else:
 		infect "Feline";
-	now lastfuck of leonard is turns + 8;
+	now lastfuck of Leonard is turns + 8;
 	now battleground is "void";
 	PlayerEat 12;
 	remove 11 from leoparklist;
-	now leonardcaraway is true; [***]
+	now Leonardcaraway is true; [***]
 	move player to Lion's Den;
 
 

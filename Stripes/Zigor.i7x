@@ -369,7 +369,7 @@ when play ends:
 
 
 [options:
-doggy-style locking spreader
+doggy style locking spreader
 sex swing
 spreaders
 chains/bracelets/anklets

@@ -165,7 +165,7 @@ to say lroomdesc:
 	else if (HP of Eric is 100): [Eric never came back from Stacy's dorm]
 		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
-after going down from the Gray Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
+after going down from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
@@ -206,7 +206,7 @@ to say EricDesc:
 		say "DEBUG -> HP: [HP of Eric], THIRST: [thirst of Eric], LIBIDO: [libido of Eric], LUST: [lust of Eric], LEVEL: [level of Eric], EricVirginityTaken: [EricVirginityTaken], EricAnalCounter [EricAnalCounter], CarlEricInteraction: [CarlEricInteraction], lastCarlEricInteraction [lastCarlEricInteraction], AlexandraEricInteraction: [AlexandraEricInteraction], UrikEricInteraction: [UrikEricInteraction], lastUrikEricInteraction: [lastUrikEricInteraction], RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], lastRaneEricInteraction: [lastRaneEricInteraction] <- DEBUG[line break]";
 	if (HP of Eric is 0): [starting state]
 		project the figure of Eric_clothed_icon;
-		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a clearly over-sized t-shirt bearing the number 69 and cut-off jeans. While the clothes seem to have been looted from the surrounding lockers and put on in a haste, they certainly show off his runner's build nicely - muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
+		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a clearly oversized t-shirt bearing the number 69 and cut-off jeans. While the clothes seem to have been looted from the surrounding lockers and put on in a haste, they certainly show off his runner's build nicely - muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		LineBreak;
 		say "     At the moment, he's sitting on one of the benches of the lockerroom in the Tenvale campus sports arena, watching you attentively. His gaze moves over to the barricaded door from time to time, just to check it's still secure.";
 	else if ((HP of Eric is 1) or (HP of Eric is 20)): [pussy revealed, in the bunker, virgin]
@@ -294,7 +294,7 @@ instead of conversing the Eric:
 						say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
 						if (cocks of player > 0):
 							say "     Your cock springs to attention as you step closer, then kneel on the bed between Eric's legs. Running your hands over his muscular legs, you arrive at his drippingly wet pussy and push two fingers inside, making him moan as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes your cock twitch in anticipation. You aim your manhood at his moist folds, rubbing its tip against his pussy lips, then push forward, sinking your shaft into his body until you reach his maidenhead and stop for a moment.";
-							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but soon the pleasure able feelings of your hard member rubbing his insides outweigh the pain and he starts moaning again with lust. Holding his legs up with your hands you thrust in and out, revelling in his tight embrace around your shaft as you make a real woman - or rather cuntboy - out of him.";
+							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but soon the pleasure able feelings of your hard member rubbing his insides outweigh the pain and he starts moaning again with lust. Holding his legs up with your hands you thrust in and out, reveling in his tight embrace around your shaft as you make a real woman - or rather cuntboy - out of him.";
 							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around your thrusting cock. You stop for a moment and look down at the writhing cuntboy you're inside of, then start up again, harder and faster than before.";
 							say "     Pacing yourself, you manage to last another half hour, giving Eric another orgasm, before you feel your balls tightening with your impending climax. With one last thrust as deep as you can go inside him, you reach your goal, shooting burst after burst of your seed deep inside his womb.";
 							WaitLineBreak;
@@ -1623,7 +1623,7 @@ to say EricSex13_12_Male: [cuntboy Eric]
 	if calcnumber is 1: [fuck Eric]
 		say "     Getting on the bed between Klauz's legs, you snake your arms around Eric from behind, caressing his smooth chest. As the cuntboy athlete eagerly leans into your touch, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck him in the ass. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over the felinoid's furry belly while raising his ass a bit for you. Who could resist such an alluring display? You're almost twitching with the need and desire to fuck your handsome friend when you take hold of your manhood and line it up with his butt. Moving forward, you press the cock-head against his pucker, first lightly, then a bit harder until it it finally yields to your invading member.";
 		say "			[WaitLineBreak]";
-		say "     Grunting in satisfaction, you thrust deeper into your human friend, revelling in the sensations of his insides gripping your shaft tightly. You keep still a while longer, just resting your cock inside him to give Eric a time to get used to it - then suddenly he starts rocking back and forth, fucking himself on your and Klauz's cocks at the same time. As he moves, you feel movement bump and rub against your cock - that must be the felinoid, his erection pumping in and out of Eric's other hole. So hot, to be able to feel him through the walls of Eric's insides.";
+		say "     Grunting in satisfaction, you thrust deeper into your human friend, reveling in the sensations of his insides gripping your shaft tightly. You keep still a while longer, just resting your cock inside him to give Eric a time to get used to it - then suddenly he starts rocking back and forth, fucking himself on your and Klauz's cocks at the same time. As he moves, you feel movement bump and rub against your cock - that must be the felinoid, his erection pumping in and out of Eric's other hole. So hot, to be able to feel him through the walls of Eric's insides.";
 		say "     With the two of you balls deep inside Eric as he fucks himself on your cocks, the arousal of everyone involved soon mounts higher and higher. Klauz is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the large beast, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to the felinoid's soft belly fur as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Eric's asshole, eager to fill him with another load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting into Eric's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside him. Klauz meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Eric lying on the feline's chest. Eric gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -1631,21 +1631,21 @@ to say EricSex13_12_Male: [cuntboy Eric]
 	else if calcnumber is 2: [fuck felinoid]
 		say "     Getting on the bed between Klauz's legs, you snake your arms around Eric from behind, caressing his smooth chest. As the cuntboy athlete eagerly leans into your touch, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck the felinoid in the ass and he should distract the big kitty a bit. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over Klauz's furry chest while stroking him with his hands and pumping his own hips rapidly up and down on the big cat's hard shaft. At the same time, you take hold of your own cock and line it up with the tight hole under the felinoid's tail. Moving forward, you press the cock-head against his pucker, first lightly, then a bit harder until it finally yields to your erect member.";
 		say "			[WaitLineBreak]";
-		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep inside Klauz's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, revelling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Eric, slamming into his furry butt just as Eric pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
+		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep inside Klauz's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, reveling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Eric, slamming into his furry butt just as Eric pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
 		say "     With you fucking Klauz's ass while Eric fucks fucks himself on his cock, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the large beast, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to Klauz's soft belly-fur as the orgasm makes him writhe in pleasure. Meanwhile, you speed up your own thrusts into the big cat's asshole, eager to fill him with your own load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting deep into the felinoid's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside the big feline under him. Klauz meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Eric lying on the great beast's chest. Eric gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 	else if calcnumber is 3: [BJ from Eric]
 		say "     Stepping up to stand on the bed, your feet left and right of Klauz's body, you smile down at Eric and hold out your hard [cock of player] shaft to him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to grasp your cock and fondle your balls. Your eager cuntboy friend licks his lips, then gets to work sucking you off, taking the tip of your member into his mouth and running his tongue over it. After going down on your shaft all the way a few times, he starts sliding up and down on the felinoid's erection once again, timing it with bobbing his head towards you.";
 		say "			[WaitLineBreak]";
-		say "     Taking Klauz's shaft deep in his pussy while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. With his lips tightly wrapped around your [cock of player] shaft, the cuntboy athlete gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     Taking Klauz's shaft deep in his pussy while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. With his lips tightly wrapped around your [cock of player] shaft, the cuntboy athlete gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Eric's face, neck and chest. The now pretty splattered human gives you a broad smile, then reaches up to pull you down to his level and kiss him, after which you proceed to lick your own cum off him and share its taste while making out.";
 		say "			[WaitLineBreak]";
 		say "     Keeping his position for a while longer, straddling Klauz's hips with the beast's softening shaft inside him, Eric eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 	else if calcnumber is 4: [BJ from felinoid]
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then hold out your hard [cock of player] shaft to him. The large cat looks at you with his golden eyes, then down at Eric riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
 		say "			[WaitLineBreak]";
-		say "     While you're getting head from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy athlete rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down Klauz's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     While you're getting head from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy athlete rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down Klauz's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over the felinoid's furry face, with a few shots landing in his open muzzle. The big cat gives a pleased mrowl at the taste of your seed, using his long tongue to lick up any that landed in the fur around his muzzle. Smiling at that, you help him out by wiping up any that he can't reach with your fingers and holding them out for him to lick your cum off. Then you step closer to Eric, leaning forward to give him a deep kiss.";
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling Klauz's hips with the beast's softening shaft inside him, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -1656,7 +1656,7 @@ to say EricSex13_12_Female: [cuntboy Eric]
 		LineBreak;
 		say "     Stepping up to stand on the bed, your feet left and right of Klauz's body, you smile down at Eric and demonstratively rub over your pussy lips, holding them apart for him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to touch your privates, softly brushing against your clit. Your eager cuntboy friend licks his lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you his full attention, he starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
 		say "			[WaitLineBreak]";
-		say "     Taking Klauz's shaft deep in his pussy while he gives oral to you, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. After another lick that makes you shudder with need, the cuntboy athlete gives a loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     Taking Klauz's shaft deep in his pussy while he gives oral to you, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. After another lick that makes you shudder with need, the cuntboy athlete gives a loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you put your fingers to work on your pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting Eric in the chest to run down over his smooth skin and more of it dripping down on Klauz's belly-fur. Your human friend gives you a broad smile, then reaches up to pull you down to his level and kiss him.";
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He eventually slides off Klauz to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -1664,7 +1664,7 @@ to say EricSex13_12_Female: [cuntboy Eric]
 		LineBreak;
 		say "     Stepping up to stand against the head end of the bed, you give Klauz's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 		say "			[WaitLineBreak]";
-		say "     While you're getting oral attention from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy athlete rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down Klauz's shaft and Eric's inner muscles gripping hiss cock like a vise make sure that it's only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     While you're getting oral attention from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy athlete rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down Klauz's shaft and Eric's inner muscles gripping hiss cock like a vise make sure that it's only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With the felinoid busy savoring his own orgasm, you put your fingers to work on your pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting Klauz's muzzle and more of it dripping down on the fur on his neck. The big cat gives a pleased rumble, licking it off his muzzle and lapping at your crotch a few times to get a bit more of a taste.";
 		say "			[WaitLineBreak]";
 		say "     Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He eventually slides off Klauz to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -1695,7 +1695,7 @@ to say EricSex13_22_32_Male: [male Eric]
 	else if calcnumber is 2: [fuck felinoid]
 		say "     Getting on the bed between Klauz's legs, you snake your arms around Eric from behind, caressing his smooth chest before sliding your hands down to his crotch. As you take hold of his big [if HP of Eric is 22]equine[else if HP of Eric is 32]caprine[end if] cock, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck the felinoid and he should distract the big kitty a bit. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over Klauz's furry chest while stroking him with his hands and pumping his own hips rapidly up and down on the big cat's hard shaft. At the same time, you take hold of your own cock and line it up with the tight hole under Klauz's tail. Moving forward, you press the cock-head against his pucker, first lightly, then a bit harder until it finally yields to your erect member.";
 		say "			[WaitLineBreak]";
-		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in Klauz's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, revelling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Eric, slamming into his furry butt just as Eric pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
+		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in Klauz's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, reveling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Eric, slamming into his furry butt just as Eric pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
 		say "     With you fucking Klauz's ass while Eric fucks fucks himself on his cock, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's asshole. Getting bred by the large beast, his body being filled with feline cum, drives Eric to climax just a moment later. He gasps in lust, gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur. Meanwhile, you speed up your own thrusts into the big cat's asshole, eager to fill him with your own load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting deep into Klauz's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside the big feline under him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr going through Eric and yourself. Your human friend gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off Klauz to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -1770,10 +1770,10 @@ to say EricSex14: [threesome with Carl]
 
 Section 4 - Events
 
-instead of navigating Gray Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 99) and (lastfuck of Eric - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 99) and (lastfuck of Eric - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";
 	if HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32: [had sex with the player or cboy virgin]
@@ -1861,10 +1861,10 @@ instead of navigating Gray Abbey Library while (level of Eric is 0 and Felinoid 
 			now level of Eric is 1;
 			now lastfuck of Eric is turns;
 
-instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and HP of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and HP of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";
 	if HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15: [cuntboy Eric, had sex before]
@@ -1885,7 +1885,7 @@ instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and 
 		say "     The animalistic coupling of Klauz and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, Klauz isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Eric is turns;
 
-instead of going inside from Gray Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and HP of Eric < 99):
+instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and HP of Eric < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";
@@ -1909,7 +1909,7 @@ instead of going inside from Gray Abbey Library while (Level of Eric > 0 and Lev
 		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Eric, but he doesn't need to know that). Telling Eric just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave him to get back to his bunk.";
 		now Level of Eric is 99;
 
-instead of going inside from Gray Abbey Library while (Level of Eric is 4 and Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of going inside from Grey Abbey Library while (Level of Eric is 4 and Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC BUNKER-FELINOID-SEX WALKIN (CBOY ERIC ONLY SO FAR)[line break]";
@@ -1917,7 +1917,7 @@ instead of going inside from Gray Abbey Library while (Level of Eric is 4 and Er
 	say "     The animalistic coupling of the felinoid and his eager and willing partner is quite a show, driving your arousal to new heights as you watch. Mostly content to let Eric ride his cock, Klauz nevertheless sometimes humps his crotch up without warning and shafts Eric deeply, drawing ecstatic howls from the young man. Eventually, the student athlete's moans and pants rise up to a climactic shout, announcing his orgasm far and wide. Purring even louder in obvious satisfaction at having made Eric come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat rolls over on his side to lounge in satisfaction, taking Eric with him, still impaled on his shaft and soon held against soft belly fur with a muscular forelimb.";
 	now lastfuck of Eric is turns;
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and HP of Eric < 99 and Rane is in Sitting Area and Dexterity of Eric is 0):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and Rane is in Sitting Area and Dexterity of Eric is 0):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE TALK EVENT [line break]";
@@ -1927,7 +1927,7 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and H
 	say "     'So - he's an oni. Called Rane,' Eric says toughtfully, then asks, 'And you're sure he's... safe, to be around? Hm, you must have - otherwise you wouldn't have brought him, right? Guess I should learn not to judge people by their looks. It is just... he looks pretty fierce. So tall, and muscle-packed, plus there's the horns too.' The young man gives a little helpless shrug, and you can feel that he can't help but hold some reservation still - not after his previous encounters with some of the bigger and fiercer infected, like the furling that bit him, or his ex-girlfriend now being a cheerleader hulk with a massive dick between her legs. You spend a few more minutes trying to calm Eric further, explaining in a soft voice that Rane just isn't the type to get violent about sexual matters. Eventually, the college athlete gives a relieved sigh, then says, 'Okay, thanks. I'll get some jogging done between the rows of bookshelves in the library then. Gotta stay in shape, and I've hidden down here for long enough.' A moment later, he's gone after giving a friendly smile, leaving you standing in the room on your own.";
 	now Dexterity of Eric is 1;
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 1 and Rane is in Sitting Area and findwires is 2 and fixedgens is 2):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 1 and Rane is in Sitting Area and findwires is 2 and fixedgens is 2):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE SHOWER EVENT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -1989,7 +1989,7 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 		say "     Nah, it'll be alright. Rane isn't a bad guy. And anyways, you can't babysit Eric all the time. With a shrug, you turn your attention to other matters.";
 		now Dexterity of Eric is 2;
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 2):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 2):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE AFTERMATH TALK - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2006,10 +2006,10 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 		say "     Nah, he'll be alright on his own. Eric can get his act together and deal with stuff, no need to involve yourself. No need at all. With a shrug, you turn your attention elsewhere.";
 		now Dexterity of Eric is 4;
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 3 or Dexterity of Eric is 4) and Rane is in Sitting Area):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 3 or Dexterity of Eric is 4) and Rane is in Sitting Area):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE FUCK WALKIN - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	say "     Coming back into the library, you instantly hear that something is up - as moans, grunts and the slapping noises of flesh on flesh echo through the large main chamber. Someone is having sex - and a real pounding too, from the sounds of it. A moment later, the question of who's doing the fucking is answered, as you can hear Rane bellow, 'Yeah! That's one sweet boy-pussy you got here. Take my dick, you little slut!' A loud slap, coupled with a lust-filled groan follows - doubtlessly the blue oni hammered his shaft in again right then.";
@@ -2036,7 +2036,7 @@ instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eri
 	now Dexterity of Eric is 5;
 	now EricFleeingCountdown is turns; [12 turns from now, he'll have run off, leaving a note]
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLEEING FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2045,7 +2045,7 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 	now Dexterity of Eric is 6; [Eric's gone!]
 	remove Eric from play;
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLED FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2053,7 +2053,7 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 	now Dexterity of Eric is 6; [Eric's gone!]
 	remove Eric from play;
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RESCUED AFTERMATH - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2109,7 +2109,7 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 			say "     The college athlete looks at his oni friend, hands on his hips as he remarks, 'You sound mighty sure that there will be a 'next time'. Rane leans down a bit, pulling Eric close and looking him in the eye, then says, 'Look, I am what I am. I love to fuck. I live to fuck. Simple as that. I admit I got carried away with you the first time...' Eric quickly amends that it was twice. 'Yeah, ok, I messed up those times. But with us making up right here and now - on 'our spot', things are fine between us, right? Why stop with a good thing?' Eric gapes for a second at the boundless self-assurance and trust in his ability to charm Antone's clothes off - then gives a smiling sigh and gives in, caressing Rane's muscled side. The oni grins broadly, 'Hah, third time's the charm, right?'";
 			WaitLineBreak;
 			say "     Eric looks lost in thought for a bit, while Rane patiently waits for what he'll say. Finally Eric replies, 'If I'm being honest, then all three times felt great. But it was all so new, I mean, first this...' Eric motions down towards his genitals, 'just happened, and I used to have a penis there, and now it's like a girls and I've not used it much. So it felt weird at first when you... 'took me' the first time and you're really big, so it almost kinda hurt. Then I was just worried that you were going to make me one of those - things - outside where all I'd be doing is being your slave. I don't want to be like that. And well, this last time, it felt real good. It's just been so very confusing, with this...' He motions to his genitals. '...and being stalked by monsters and then you. And now - I mean, what are we?'";
-			say "     Rane holds up a hand to stop him, 'You're rambling too much. Speak plainly and simple. It works for me.' Eric takes a moment to compose himself and starts, 'So what does this make me? Your boyfriend... uh... girlfriend?' Rane laughs hard, then ruffles Eric's hair and points out, 'Don't take this the wrong way, but I'm not the type. That implies going steady, and well, sorry, that's just not my thing. Besides, I got a feeling about you, I don't think you're the steady type yourself. I'm sure there's a few other guys around whom you'd like to take for a ride too, eh? [if HP of David is 4]Like that military stud? [end if][if Carl is in Gray Abbey 2F]Maybe the soldier doggie? [end if][if Hayato is in Darkened Alcove]My oddly shy big red oni counterpart possibly? He just sits and meditates all day and could definitively use some action to take a load off. I've seen you trying to peek in on him. [end if]";
+			say "     Rane holds up a hand to stop him, 'You're rambling too much. Speak plainly and simple. It works for me.' Eric takes a moment to compose himself and starts, 'So what does this make me? Your boyfriend... uh... girlfriend?' Rane laughs hard, then ruffles Eric's hair and points out, 'Don't take this the wrong way, but I'm not the type. That implies going steady, and well, sorry, that's just not my thing. Besides, I got a feeling about you, I don't think you're the steady type yourself. I'm sure there's a few other guys around whom you'd like to take for a ride too, eh? [if HP of David is 4]Like that military stud? [end if][if Carl is in Grey Abbey 2F]Maybe the soldier doggie? [end if][if Hayato is in Darkened Alcove]My oddly shy big red oni counterpart possibly? He just sits and meditates all day and could definitively use some action to take a load off. I've seen you trying to peek in on him. [end if]";
 			WaitLineBreak;
 			say "     Eric blushes asks, 'So... we can - you want to do this again? Just like we today? I mean, you won't force me to right?' Rane nods and says, 'Nope... won't have to.' The blue demon winks at Eric and pats him on the head affectionately. 'Like I said, you can ride me anytime, or if you're in the mood for something a bit more 'aggressive' just say the word. Or touch me, that's as good a sign as any if you're too 'tongue-tied'. As Rane picks up his loincloth and is about the tie it around his body with the metal belt, he notices Eric still looking at him. Smiling playfully Rane asks, 'Guess I shouldn't wrap up yet, eh? Want me to pose a little for you?' Eric blushes again, demurely stating that Rane has a really great looking body. 'You mean cock, little buddy. I see what you're peeking at. Hell, don't be ashamed - it's quite an eyeful and you're free to look - and touch. Eric giggles for a second, then bites his lip and stares at Rane's cock.";
 			say "     He mumbles, 'I can't believe that whole thing was inside me. I mean... it's soft now, but still looks so imposingly big.' Rane beams at the compliment, moving closer to Eric and closing a hand around his 'little' blue devil, demonstratively jerking it. He takes note that Eric subtly licks his lips - might have been just subconscious, but the oni jumps at it and asks, 'Seems you want a taste?' This snaps Eric out of standing there and giving the big cock a deer in the headlights stare. He politely declines, stating, 'I couldn't! There's no way I could open my mouth wide enough.' The young man blushes brightly as Rane remarks, 'Oh? So you've been giving it some thought already?' Before Eric can get too wide-eyed at his non-admission, Rane lets him off the hook by saying, 'Hate to say it, but you really did drain my balls good. Wasn't kidding about that being one of the best cums I've ever had, usually would have to go at least twice if I was wanting to really bust my whole nut.'";
@@ -2121,7 +2121,7 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 		now Dexterity of Eric is 8; [Eric and Rane Talked]
 	now lastRaneEricInteraction is turns;
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST MAKE-UP SEX WITH RANE - CHAT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -2149,10 +2149,10 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and (
 		now Dexterity of Eric is 11;
 	now lastRaneEricInteraction is turns;
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric > 7 and Dexterity of Eric < 40) and Rane is in Sitting Area and lastRaneEricInteraction - turns > 8 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric > 7 and Dexterity of Eric < 40) and Rane is in Sitting Area and lastRaneEricInteraction - turns > 8 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE FUCK WALKIN - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	say "     Coming back into the library, you instantly hear that something is up - as moans, grunts and the slapping noises of flesh on flesh echo through the large main chamber - a bit muffled, but still audible. Someone is having sex - and a real pounding too, from the sounds of it. A moment later, the question of who's doing the fucking is answered, as you can hear Rane bellow, 'Yeah! That's one sweet boy-pussy you got here. Take my dick!' A loud slap, coupled with a lust-filled groan follows - doubtlessly the blue oni hammered his shaft in again right then.";
@@ -2192,16 +2192,16 @@ instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eri
 [   6: Carl fucked Eric                                              ]
 [  50: player told Carl to stop pursuing Eric                        ]
 
-instead of going up from Bunker while (Eric is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricMeetsCarl]";
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricMeetsCarl]";
@@ -2211,8 +2211,8 @@ to say EricMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going up from Bunker while (Eric is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -2230,10 +2230,10 @@ instead of going up from Bunker while (Eric is in Bunker and Carl is in Gray Abb
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricCarlScene4]";
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -2251,10 +2251,10 @@ instead of navigating Gray Abbey Library while (Eric is in Bunker and Carl is in
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricCarlScene4]";
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastfuck of Carl - turns) > 4 and (lastCarlEricInteraction - turns > 6) and HP of Eric > 0 and HP of Eric < 21 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastfuck of Carl - turns) > 4 and (lastCarlEricInteraction - turns > 6) and HP of Eric > 0 and HP of Eric < 21 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 5: [first time]
 		if debugactive is 1:
 			say "     DEBUG: ERIC & CARL FUCK - FIRST TIME - CarlEricInteraction: [CarlEricInteraction]";
@@ -2444,13 +2444,13 @@ to say EricCarlThreesome Sex Menu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Eric's pussy from behind while he sucks Carl";
 		now sortorder entry is 1;
-		now description entry is "Go doggy-style on the college athlete";
+		now description entry is "Go doggy style on the college athlete";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Eric's ass from behind while he sucks Carl";
 		now sortorder entry is 2;
-		now description entry is "Go doggy-style on the college athlete";
+		now description entry is "Go doggy style on the college athlete";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
@@ -2462,7 +2462,7 @@ to say EricCarlThreesome Sex Menu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Carl's ass while he eats Eric's pussy";
 		now sortorder entry is 4;
-		now description entry is "Go doggy-style on the husky";
+		now description entry is "Go doggy style on the husky";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
@@ -2667,22 +2667,22 @@ to say EricCarlThreesome8: [player rides Carl's cock while Eric straddles his fa
 	say "     <This scene is WIP, please have some patience for the next update>";
 
 
-instead of going down from Gray Abbey 2F while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Gray Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
-	move player to Gray Abbey Library;
+instead of going down from Grey Abbey 2F while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	say "[EricMeetsAlexandra]";
 
-instead of going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Gray Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	say "[EricMeetsAlexandra]";
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Gray Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	say "[EricMeetsAlexandra]";
@@ -2731,15 +2731,15 @@ to say EricMeetsAlexandra:
 		now AlexandraEricInteraction is 99; [Eric + Alexandra interaction stopped]
 
 instead of going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and UrikEricInteraction is 0):
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
 	say "[EricMeetsUrik]";
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and UrikEricInteraction is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and UrikEricInteraction is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
 	say "[EricMeetsUrik]";
@@ -2788,7 +2788,7 @@ to say EricMeetsUrik:
 
 [ (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and Urik is in Sitting Area and Urik is in Sitting Area and (UrikEricInteraction is 1 or UrikEricInteraction is 2) and ((lastUrikEricInteraction - turns) > 8)]
 
-instead of going up from Gray Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and Urik is in Sitting Area and (UrikEricInteraction is 1 or UrikEricInteraction is 2) and (lastUrikEricInteraction - turns) > 8):
+instead of going up from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and Urik is in Sitting Area and (UrikEricInteraction is 1 or UrikEricInteraction is 2) and (lastUrikEricInteraction - turns) > 8):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: ERIC WATCHES URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
@@ -2824,7 +2824,7 @@ to say EricWatchesUrik:
 		now UrikEricInteraction is 3; [Eric got fed orc cum by Urik]
 	now lastUrikEricInteraction is turns;
 
-instead of going up from Gray Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 3) and (lastUrikEricInteraction - turns) > 8):
+instead of going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 3) and (lastUrikEricInteraction - turns) > 8):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: ERIC AND URIK 69 - UrikEricInteraction: [UrikEricInteraction][line break]";
@@ -2855,7 +2855,7 @@ to say EricUrik69:
 	now UrikEricInteraction is 4; [Urik and Eric had a 69]
 	now lastUrikEricInteraction is turns;
 
-instead of going up from Gray Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 4) and (lastUrikEricInteraction - turns) > 8):
+instead of going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 4) and (lastUrikEricInteraction - turns) > 8):
 	move player to Sitting Area;
 	if debugactive is 1:
 		say "     DEBUG: ERIC AND URIK BJ - UrikEricInteraction: [UrikEricInteraction][line break]";
@@ -2895,10 +2895,10 @@ to say EricUrikBJ:
 	now UrikEricInteraction is 5; [Urik and Eric talked and Urik got a BJ]
 	now lastUrikEricInteraction is turns;
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 5) and (lastUrikEricInteraction - turns) > 8):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 5) and (lastUrikEricInteraction - turns) > 8):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC + URIK HANG OUT - UrikEricInteraction: [UrikEricInteraction][line break]";
 	say "[EricUrikHangOut]";
@@ -2954,10 +2954,10 @@ to say EricUrikHangOut:
 		now UrikEricInteraction is 50; [Urik stopped from breeding Eric's pussy, but Eric's desire to get fucked is awakened]
 	now lastUrikEricInteraction is turns;
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 6) and (lastUrikEricInteraction - turns) > 8):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 6) and (lastUrikEricInteraction - turns) > 8):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC + URIK FUCK IN THE LIBRARY - UrikEricInteraction: [UrikEricInteraction][line break]";
 	say "[EricUrikLibraryFuck]";
@@ -2984,7 +2984,7 @@ to say EricUrikLibraryFuck:
 		say "     'Yeah, you're ready to be a good little breeder slut!' Urik calls out amusedly and gives Eric's ass a light slap. Then he takes the smaller human down from hanging over his shoulder, pulling him against his chest to make out with. Already in a bit of a sexual haze from all the pre, the only reply from Eric is a drawn-out moan - though he does wrap his arms around Urik's neck and legs around his chest to hold onto his orc daddy. Holding his thick shaft straight up, the green-skinned brute uses his other arm to push Eric down upon it.";
 		WaitLineBreak;
 		say "     A shared gasp of lust, need and satisfaction from both of them echoes through the library as Urik's dickhead pops past Eric's pucker, soon followed by more and more of the mighty shaft. 'Nnnnghh! So full!' Eric shouts as he clings to the orc's chest and you can literally see his flat tummy start to bulge as he takes inch by inch of the shaft. By the time the orc bottoms out, Eric looks about three months pregnant, his belly bulging as if he was carrying the orc's child. 'Great breeder slut,' Urik grunts out between his jutting tusks, the strain in his voice making it clear that he had to hold himself back hard to not just plunge all the way into Eric from the get-go.";
-		say "     You see the orc's balls twitch a little, no doubt sending more throbs of pre to fill the slender human. And then, his restraint finally runs out. With more of a growl than any recognizable words, Urik starts to pump Eric up and down on his erection, really taking out all the stops. Wet slurps fill the library from him pulling out of the teenager's asshole, then plunging in all the way once more, ending in a meaty slap of his balls smacking against Eric's buttocks. The muscular male uses his little friend like a man possessed, grinding Eric against his crotch like an over-sized fleshlight - and the college student clearly enjoys being used this way, letting out aroused shouts with each new thrust.";
+		say "     You see the orc's balls twitch a little, no doubt sending more throbs of pre to fill the slender human. And then, his restraint finally runs out. With more of a growl than any recognizable words, Urik starts to pump Eric up and down on his erection, really taking out all the stops. Wet slurps fill the library from him pulling out of the teenager's asshole, then plunging in all the way once more, ending in a meaty slap of his balls smacking against Eric's buttocks. The muscular male uses his little friend like a man possessed, grinding Eric against his crotch like an oversized fleshlight - and the college student clearly enjoys being used this way, letting out aroused shouts with each new thrust.";
 		WaitLineBreak;
 		say "     'Sweet! Little! Bitch!' Urik grunts out word by word in between his ponderous shoves into Eric's depths, getting quite close to an orgasm now. Then he shouts, 'Oooohhh YEAH! Take my orclings you little slut!' and squeezes Eric tight against his chest as he starts to blast a massive load up into the college student's tight passage. Grunting deeply with each throb of his balls, the orc breeds Eric into delirium, making the teen pant and moan nonstop as his body absorbs the potent load.";
 		say "     Even while his cock keeps spurting more cum into Eric, now that the immediate pressure is taken off Urik pulls back a little from his lust-fueled berserk state and softens his grip on the slender teen in his arms. 'You did good lil'E,' the orc says affectionately and strokes the pale skin of the redhead's back slowly. 'Being so tiny and yet taking my dick like a champ. You've more than earned the title of honorary orc breeder. My little orc breeder.' And with that, the muscular brute lowers his head to give Eric a loving little bite from his sharp tusks, marking the curve between his shoulder and neck with two small pricks of redness.";
@@ -2998,7 +2998,7 @@ to say EricUrikLibraryFuck:
 
 [ Ryousei Interactions                 ]
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and companion of player is royal tiger):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and companion of player is royal tiger):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Ryousei [line break]";
@@ -3010,16 +3010,16 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and H
 	now RyouseiEricInteraction is 1;
 	now lastRyouseiEricInteraction is turns;
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and Ryousei is in Gray Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric & Ryousei talk in the Library - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, you spot your anthro tiger companion Ryousei sitting cross-legged in front of one of the low sofa tables in the back of the room - and next to him Eric, listening to a tale the feline recounts with avid interest. Curious about what they're talking about, you set out towards the two of them. Ryousei's rich, deep voice carries quite well in the quiet library, so even before you reach them, you overhear, [RyouseiTellsEricAStory]";
 
-instead of going down from Gray Abbey 2F while (Eric is in Bunker and Ryousei is in Gray Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
-	move player to Gray Abbey Library;
+instead of going down from Grey Abbey 2F while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric & Ryousei talk in the Library - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	say "     Walking down the stairs to the ground floor of the library, you spot your anthro tiger companion Ryousei sitting cross-legged in front of one of the low sofa tables in the back of the room - and next to him Eric, listening to a tale the feline recounts with avid interest. Curious about what they're talking about, you set out towards the two of them. Ryousei's rich, deep voice carries quite well in the quiet library, so even before you reach them, you overhear, [RyouseiTellsEricAStory]";
@@ -3050,16 +3050,16 @@ to say RyouseiTellsEricAStory:
 	if RyouseiEricInteraction is 1:
 		now RyouseiEricInteraction is 2; [watched em have story time]
 
-instead of navigating Gray Abbey Library while (Eric is in Bunker and Ryousei is in Gray Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric & Ryousei do tai chi - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, [RyouseiAndEricDoTaiChi]";
 
-instead of going down from Gray Abbey 2F while (Eric is in Bunker and Ryousei is in Gray Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
-	move player to Gray Abbey Library;
+instead of going down from Grey Abbey 2F while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric & Ryousei do tai chi - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	say "     Walking down the stairs to the ground floor of the library, [RyouseiAndEricDoTaiChi]";
@@ -3086,7 +3086,7 @@ to say RyouseiAndEricDoTaiChi:
 	if RyouseiEricInteraction is 2:
 		now RyouseiEricInteraction is 3; [watched em do tai chi]
 
-after going to Gray Abbey Library while (Eric is in Bunker and Ryousei is in Gray Abbey Library and HP of Eric > 9 and HP of Eric < 20 and RyouseiEricInteraction > 2 and (lastRyouseiEricInteraction - turns) > 8):
+after going to Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric > 9 and HP of Eric < 20 and RyouseiEricInteraction > 2 and (lastRyouseiEricInteraction - turns) > 8):
 	say "     As you walk into the front section of the library, you see Eric a little distance ahead of you, moving towards a somewhat out of the way corner of the expansive room. You know that this is where Ryousei has made his camp, so your curiosity drives you to follow the red-head college student and see what is going on. Walking along the curved row of bookshelves that divides the otherworldly tiger's domain from the main room, you can see Eric through the gap between the books and shelving. He looks happy and eager, most likely being out to continue his exercises or story time with Ryousei. Yet as the young man reaches a certain spot along his route, he suddenly pauses in his steps, holding his breath for a moment as he looks ahead, then goes on more slowly, as if not to make a sound. As you move into a better position along the bookshelf to see what Eric is looking at, you see that it is Ryousei - sitting on the ground cross-legged, dressed in nothing more than his white fundoshi underwear and meditating with closed eyes.";
 	say "     The anthro tiger really is a sight to behold - regal and cultured even in just his underwear, he sits there with a serene expression on his face and breathes in and out slowly, his muscular chest expanding and contracting with each breath. Eric almost seems spell-bound at the sight, walking closer with soft steps and his gaze wandering over the tiger's almost naked form. Shyly biting his lip, as if nervous about making a sound to disturb the otherworldly being, the young trans-man slowly drifts closer and closer. When only a few steps divide the two of them, you notice a change in Ryousei's breathing, with the tiger's nostrils flaring a little as he draws in a deeper breath, then another. A heartbeat later, he opens his eyes and gives Eric a warm smile, waving him closer. 'Welcome, young one. What brings you to me littler corner of this grand library? Shall we share stories, train, or are there... [italic type]other[roman type] desires you want to fulfill?'";
 	WaitLineBreak;
@@ -3141,7 +3141,7 @@ after going to Gray Abbey Library while (Eric is in Bunker and Ryousei is in Gra
 
 [ Sven Interactions                    ]
 
-instead of going down from the Gray Abbey Library while (Eric is in Bunker and HP of Eric < 99 and HP of Sven >= 30 and HP of Sven < 50 and ConfSvenEricInteraction < 1):
+instead of going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and HP of Sven >= 30 and HP of Sven < 50 and ConfSvenEricInteraction < 1):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Confident Sven [line break]";
@@ -3158,10 +3158,10 @@ instead of going down from the Gray Abbey Library while (Eric is in Bunker and H
 
 [ Fang Interactions                    ]
 
-instead of navigating Gray Abbey Library while (XP of Erica is 0 and Fang is in Gray Abbey Library and (HP of Eric > 9 and HP of Eric < 20) and (lastfuck of Eric - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Eric > 9 and HP of Eric < 20) and (lastfuck of Eric - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric first Fang sex walkin, XP of Erica: [Xp of Erica], HP of Eric: [HP of Eric], lastfuck of Eric: [lastfuck of Eric] [line break]";
 	say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see Fang's furred shape silently stalk after Eric. Knowing that he's a wild and horny beast, you see where this might lead...";

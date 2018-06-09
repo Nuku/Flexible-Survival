@@ -133,12 +133,12 @@ to say movingYolanda:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her. 'Give me back my shinies! My playthings! You feathery thieves! Lice-ridden bandits! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait a while, hoping she'll return, but she never does. Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
 				now HP of Yolanda is 100;
 				remove Yolanda from play;
-				move the player to Gray Abbey Library;
+				move the player to Grey Abbey Library;
 			else:
 				say "     Driven into retreat by the harpies, you quickly search for an avenue of escape from the harpies. With the backpack of baubles you were carrying unprotected, it gets snatched up by another of the bird women. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight to give pursuit. She adds a 'You big coward!' down at you as she struggles into the air with the remaining packs atop her. 'Give me back my shinies! My playthings! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait briefly, but doubt she'd return to you after having abandoned her treasures to be stolen. In the end, you return back to the library, giving up on this ill-fated venture.";
 				now HP of Yolanda is 100;
 				remove Yolanda from play;
-				move the player to Gray Abbey Library;
+				move the player to Grey Abbey Library;
 	else:
 		say "     You fill her in on a few details on how things have been going, leaving out some of the kinkier details so she doesn't scoff at you about them. Not that she's really one to talk, but no point in giving her more material to tease you about.";
 		if HP of Yolanda is 3, now HP of Yolanda is 4;
@@ -188,17 +188,17 @@ to say sexwithYolanda:
 		now title entry is "Bound for oral";
 		now sortorder entry is 6;
 		now description entry is "have some kinky oral fun";
-		if HP of Yolanda >= 9 and ( Icarus is in Gray Abbey Library and HP of Icarus >= 51 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 1";
 			now sortorder entry is 10;
 			now description entry is "have a threesome with light bondage and sex";
-		if HP of Yolanda >= 9 and ( Icarus is in Gray Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 2";
 			now sortorder entry is 11;
 			now description entry is "have a threesome with sex and footplay";
-		if HP of Yolanda >= 9 and ( Icarus is in Gray Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 3";
 			now sortorder entry is 12;
@@ -595,7 +595,7 @@ Instead of resolving a Raven Key Fob:
 
 Section 5 - Yolanda and Icarus
 
-instead of going up from Gray Abbey Library while ( Icarus is in Gray Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
+instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	LineBreak;
@@ -620,7 +620,7 @@ instead of going up from Gray Abbey Library while ( Icarus is in Gray Abbey Libr
 		now HP of Yolanda is 8;
 
 an everyturn rule:
-	if player is in Gray Abbey Library and ( Icarus is in Gray Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
+	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;

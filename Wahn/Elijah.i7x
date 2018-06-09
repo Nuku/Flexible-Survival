@@ -588,7 +588,7 @@ Instead of resolving a Examination Room:
 		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
 	now Examination Room is resolved;
 
-instead of going down from the Gray Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and player is submissive and lastfuck of Elijah - turns > 6):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and player is submissive and lastfuck of Elijah - turns > 6):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice say 'Ah, there you are' coming from right beside you. Turning, you see Elijah straighten up from where he was leaning against the wall next to the door. The dark angel in his tight black leather pants gives you an evaluating look, then continues with 'Come on, you can help me with something...' and starts up the stairs into the library. A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself following him almost without thinking about it.";
@@ -636,7 +636,7 @@ instead of going down from the Gray Abbey Library while (Elijah is in the Bunker
 				say "     'I need to bring you here more often' the dark angel says with a smile, followed by 'Time to clean up.' He then has you clean up the room - naked as you are - licking up the cum from where it leaked onto the sling and dripped on the smooth hardwood floor. Only when you've done this to his satisfaction does he allow you to dress and leads you back to the library.";
 		else: [try to leave, without success]
 			say "     Not so keen on following the dark angel's plans for you anymore, you turn around and brush past him, walking towards the door you came in through. Behind you, the spidertaur gives am evil grin and calmly pulls on one strand of webbing up in the air with one of his long legs. A silken web drops down in front of you from over the door just as you try to walk out, catching you in its sticky embrace. As you helplessly try to free yourself from the soft but amazingly tough web, you hear the click of the spidertaur's legs on the hardwood floor as he scuttles towards you.";
-			say "     'This one has a bit of spirit, very nice Elijah. I like when they struggle a bit.' He steps up close behind you and you can feel Zephias human hands stroke over your wrapped form appreciatively. For a moment, you try to talk the spidertaur into letting you go, but the feelings at being helpless and in his power, with him touching you, get the better of you soon. Your pleading gets weaker and weaker, then is entirely replaced by moans at his caresses. You can feel his breath against your neck, then he whispers in your ear 'You'll be fun, little fly.' He gives your earlobe a little nibble, then pulls your head aside and gives you a somewhat painful hickey on the side of your neck. Cutting down the far ends of the strands keeping you upright in the door-frame, holding you in his arms instead, he proceeds to wrap the now lose silk ropes around you and tightens them. Taking the white silky package you've become up with his two front claws, he carries you over to the sex sling and lowers you into it.";
+			say "     'This one has a bit of spirit, very nice Elijah. I like when they struggle a bit.' He steps up close behind you and you can feel Zephias human hands stroke over your wrapped form appreciatively. For a moment, you try to talk the spidertaur into letting you go, but the feelings at being helpless and in his power, with him touching you, get the better of you soon. Your pleading gets weaker and weaker, then is entirely replaced by moans at his caresses. You can feel his breath against your neck, then he whispers in your ear 'You'll be fun, little fly.' He gives your earlobe a little nibble, then pulls your head aside and gives you a somewhat painful hickey on the side of your neck. Cutting down the far ends of the strands keeping you upright in the doorframe, holding you in his arms instead, he proceeds to wrap the now lose silk ropes around you and tightens them. Taking the white silky package you've become up with his two front claws, he carries you over to the sex sling and lowers you into it.";
 			WaitLineBreak;
 			say "     From your new position, lying on your back, you see the spidertaur in all his terrible glory before you. His muscled, human upper body leans closely over you as he pushes you into a rather comfortable position and his attractive and a bit heady male scent makes you pant in lust for a moment. Then he stretches up on long legs to adjust a web strand there, revealing his lower body to you. Your eyes are drawn to the crossover zone between his human upper body and the giant spider lower half, and you immediately notice that some of the black and green chitin plates at his crotch are pulled apart a bit now, allowing Zephias manhood to emerge in its now fully erect state. And he's... pretty well hung. You've got some interesting time ahead of you.";
 			say "     Next, you feel the webbing around your legs being cut away carefully, followed by the spidertaur's hands removing all the clothing and gear below your belly button. Then he raises your legs and spreads them, sliding them into already-prepared slings hanging from the ceiling. Turning towards Elijah, who stands nearby and observes, now with his leather pants lowered and a hand on his cock, Zephias grins and says 'Now let me show you how to use this properly.'";
@@ -669,7 +669,7 @@ instead of going down from the Gray Abbey Library while (Elijah is in the Bunker
 		say "     Shaking off the urge to just let the dark angel lead you to whatever he has planned, you plant your feet solidly on the ground and stop walking. It takes a moment until Elijah notices you're no longer behind him, then he turns and looks at you. 'Come on, keep going. I've got something to do for you,' he says, then adds, 'Get moving. NOW.', annoyance clearly in his voice and written all over his handsome face. Holding fast on the decision you made, you steel your will and shake your head. With an angry grunt, the fallen angel whirls around and walks to the exit. You can hear him muttering to himself '...not as subby as I thought, the little bitch. Now I have to catch a husky or someth-', then he's out the door and on the street, the closing door cutting off his further words.";
 		now thirst of Elijah is 100; [declined sub bondage sex with Elijah]
 
-instead of going down from the Gray Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'About time you got back, slut. I've been waiting for you.' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel casually strolls over to you, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. Stepping up to you while you're still checking out his crotch, Elijah lightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master.' Letting a hand wander over your chest, groping and stroking you, he continues, 'And that even though you clearly want to please your betters. You like following my orders, don't you? Tell me!'";
@@ -747,7 +747,7 @@ instead of going down from the Gray Abbey Library while (Elijah is in the Bunker
 	now lastfuck of Elijah is turns;
 	now thirst of Elijah is 2;
 
-instead of going down from the Gray Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'There you are, finally! It time to service me again, you little slut. Come here at once!' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel waits for you impatiently with both hands on his hips, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. As you hurry over to him, all the while still checking out his crotch, Elijah tightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master. Maybe I should just keep you here, naked and ready to take my cock. I'm getting tired of waiting for you to show up - getting blue-balled while you little whore roam the streets for guys who fuck.'";
@@ -817,11 +817,11 @@ An everyturn rule:
 				now Char-A of Elijah is "1";
 				now NPCintCounter is turns;
 			else if (Sarah is in Bunker) and Char-B of Elijah is "0":
-				if sarahslut < 3: [mostly human]
+				if SarahSlut < 3: [mostly human]
 					say "     While taking your break before heading back into the city, you spot Sarah leaning over the injured angel's bunk. She wipes sweat from his forehead with a small towel, then tucks him under his blanket again which he had partly struggled off in his sleep.";
-				else if sarahslut is 3: [husky, still loose in the bunker]
+				else if SarahSlut is 3: [husky, still loose in the bunker]
 					say "     While taking your break before heading back into the city, you spot Sarah on all fours beside the injured angel's bunk. She whines in sympathy to him and licks his shoulder, trying to make it all better.";
-				else if sarahslut > 3: [husky with collar and leash]
+				else if SarahSlut > 3: [husky with collar and leash]
 					say "     While taking your break before heading back into the city, you spot Sarah pulling on her leash trying to get to the injured angel's bunk and whining pitifully. As you unclasp it from her collar, she walks over to him on all fours, licking his arm for a moment, then rests her head against his bare chest to keep him company.";
 				now Char-B of Elijah is "1";
 				now NPCintCounter is turns;
@@ -856,7 +856,7 @@ An everyturn rule:
 				now Char-A of Elijah is "2";
 				now NPCintCounter is turns;
 			else if (Sarah is in Bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1"):
-				if sarahslut is 0: [mostly human, untouched by the player character]
+				if SarahSlut is 0: [mostly human, untouched by the player character]
 					say "     While taking a break in the bunker, you see Sarah and Elijah sitting next to each other on one of the bunk beds. Looks like he's praying with her to help her deal with the urges that threaten to overcome her.";
 				now Char-B of Elijah is "2";
 				now NPCintCounter is turns;
@@ -888,8 +888,8 @@ An everyturn rule:
 				say "     As you're tending to a few odds and ends, you notice the bee girl, Honey, approach Elijah and ask if he's feeling better. 'I am, thank you,' he replies with a nod and a smile. 'Oh, I am told that a cure was made of milk and honey. Was that honey yours, little one?' She [if honeygiven is true]nods, saying that it[else]replies that she's not sure, but adds that it probably[end if] came from her hive. He takes her hand in his. 'Then my thanks again to you and your hive,' he says. Honey gets a sad look in her eyes and buzzes off to be alone for a while, leaving Elijah confused.";
 				now Char-J of Elijah is "2";
 				now NPCintCounter is turns;
-		else if player is in Gray Abbey Library:
-			if Fang is in Gray Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1"):
+		else if player is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1"):
 				say "     Elijah steps out of the bunker and into the library, passing through the stacks before finally selecting a book. With book in hand, he heads over to Fang and pets him lightly on the head. 'I thank and commend you for your vigilance. Your protection of this safe haven will not go unrewarded,' he states before turning and heading back into the bunker.";
 				now Char-I of Elijah is "2";
 				now NPCintCounter is turns;
@@ -903,7 +903,7 @@ An everyturn rule:
 				now lastfuck of Elijah is turns;
 				now lastCandyfucked is turns;
 			else if (Sarah is in Bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2"):
-				if sarahslut > 2: [husky, mostly animal mentally]
+				if SarahSlut > 2: [husky, mostly animal mentally]
 					say "     When you step back into the bunker after going out for a bit of fresh air, you're almost bowled over by Sarah rushing after a tennis ball on all fours. Looking where the projectile came from, you see Elijah standing there, looking a bit sheepishly. 'Oh, em - I was just playing a bit with Sarah. Hope you don't mind.'";
 				now Char-B of Elijah is "3";
 				now NPCintCounter is turns;
@@ -950,8 +950,8 @@ An everyturn rule:
 						increase dexterity of bee girl by 1;
 				now Char-J of Elijah is "3";
 				now NPCintCounter is turns;
-		else if player is in Gray Abbey Library:
-			if Fang is in Gray Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+		else if player is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     Looking around, you notice Fang stretched out on the floor with Elijah beside him, stroking the wolf's fur with one hand while the other is wrapped around the wolf's stiff cock. 'I hope you don't mind. Our guardian here seemed like he needed some attention, so I thought I'd show him how much we appreciate his continued vigilance,' the angelic figure says with a smile as he continues stroking the wolf's erection. Fang pants softly, clearly enjoying the soft touch of the angel's fingers along his rod, soon getting the wolf to cum with a howl of release.";
 				now lastfuck of Fang is turns;
 				now Char-I of Elijah is "3";
@@ -968,7 +968,7 @@ An everyturn rule:
 				now lastfuck of Elijah is turns;
 				now lastCandyfucked is turns;
 			else if (Sarah is in Bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2" or Char-B of Elijah is "3") and lastfuck of Elijah - turns >= 12:
-				if sarahslut > 3:
+				if SarahSlut > 3:
 					say "     While taking a break in the bunker, you see Elijah teasing Sarah with a piece of food. He's dangling it in front of her, just at the edge of the reach of her leash, pulling it away each time she tries to grab it. After several failed attempts to get it, Sarah is reduced to whining beggingly at the fallen angel.";
 					say "     'You want this nice little snack, little bitch? Then get working and earn it,' Elijah says, unzipping the bulging front of his pants, revealing his hard manhood as he slides them down his legs. With a last look at the tasty morsel of food Elijah is holding, Sarah starts sucking on his cock, bobbing up and down on his long shaft. Noticing you watching them, Elijah grins devilishly, then grabs on to Sarah's head and pumps his cock deep into her throat. He turns around a bit so you have a better view, brazenly showing off his face-fucking you husky bitch. Before too much longer, he moans loudly, holding Sarah's head tightly and shoots his load directly into her throat. Having gotten what he wanted, Elijah pulls out his saliva-coated cock from Sarah's mouth and throws the food on the ground nearby, smiling as she rushes after it. Without bothering to pick up his clothes, he then walks over to his bunk and drapes himself over it, lounging nakedly for you to watch.";
 					now Char-B of Elijah is "4";
@@ -1034,8 +1034,8 @@ An everyturn rule:
 						delete water bottle;
 				now Char-J of Elijah is "4";
 				now NPCintCounter is turns;
-		if player is in Gray Abbey Library:
-			if Fang is in Gray Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+		if player is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     There is some commotion outside the door and you notice the Fang's already slipped outside. Elijah, who had been wandering the stacks looking among the books on Renaissance art for 'nudey pics' as he put it, heads over to see what it is as well. Looking outside, you see that Fang's captured a [if girl is not banned]husky girl that's wandered too close to your safe haven. He's pinned the husky beneath him and mounts the interloper, much to the dark angel's delight. 'Good boy,' he says with excitement. 'Fuck that bitch.' He doesn't limit himself to just cheering, but unzips his pants and gets in front of her, forcing her to suck him off even as Fang pounds her wet pussy. After they've both drained their balls, they drive the nosey creature away[else]latex fox that's wandered too close to your safe haven. The wolf pins the fox beneath him and mounts the interloper, much to the fallen angel's delight. 'Good boy,' he says with excitement. 'Fuck that slut.' He doesn't limit himself to just cheering, but unzips his pants and gets in front of him, forcing the fox to suck him off even as Fang pounds his tight ass. After they've both drained their balls, they drive the nosey creature away[end if].";
 				now lastfuck of Fang is turns;
 				now lastfuck of Elijah is turns;
@@ -1062,7 +1062,7 @@ to say NPCintUpdate:
 		npceintAlter 12 with Char-L of Elijah;
 		npceintAlter 13 with Char-M of Elijah;
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 1 or HP of Elijah is 2 and NPCintCounter - turns > 4):
+after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of Elijah is 2 and NPCintCounter - turns > 4):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 1/2 WALKIN[line break]";
@@ -1071,11 +1071,11 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 1 or HP of
 		now Char-A of Elijah is "1";
 		now NPCintCounter is turns;
 	else if (Sarah is in Bunker) and Char-B of Elijah is "0":
-		if sarahslut < 3: [mostly human]
+		if SarahSlut < 3: [mostly human]
 			say "     As you come down into the bunker, you spot Sarah leaning over the injured angel's bunk. She wipes sweat from his forehead with a small towel, then tucks him under his blanket again which he had partly struggled off in his sleep.";
-		else if sarahslut is 3: [husky, still loose in the bunker]
+		else if SarahSlut is 3: [husky, still loose in the bunker]
 			say "     As you come down into the bunker, you spot Sarah on all fours beside the injured angel's bunk. She whines in sympathy to him and licks his shoulder, trying to make it all better.";
-		else if sarahslut > 3: [husky with collar and leash]
+		else if SarahSlut > 3: [husky with collar and leash]
 			say "     As you come down into the bunker, you spot Sarah pulling on her leash trying to get to the injured angel's bunk and whining pitifully. As you unclasp it from her collar, she walks over to him on all fours, licking his arm for a moment, then rests her head against his bare chest to keep him company.";
 		now Char-B of Elijah is "1";
 		now NPCintCounter is turns;
@@ -1105,7 +1105,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 1 or HP of
 	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 3 and NPCintCounter - turns > 4): [virgin-mode]
+after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCintCounter - turns > 4): [virgin-mode]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 3 WALKIN[line break]";
@@ -1114,7 +1114,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 3 and NPCi
 		now Char-A of Elijah is "2";
 		now NPCintCounter is turns;
 	else if (Sarah is in Bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1"):
-		if sarahslut is 0: [mostly human, untouched by the player character]
+		if SarahSlut is 0: [mostly human, untouched by the player character]
 			say "     As you come down into the bunker, you see Sarah and Elijah sitting next to each other on one of the bunk beds. Looks like he's praying with her to help her deal with the urges that threaten to overcome her.";
 		now Char-B of Elijah is "2";
 		now NPCintCounter is turns;
@@ -1148,7 +1148,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 3 and NPCi
 	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 4 and NPCintCounter - turns > 4): [more human-like, nice guy]
+after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCintCounter - turns > 4): [more human-like, nice guy]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 4 WALKIN[line break]";
@@ -1160,7 +1160,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 4 and NPCi
 		now lastfuck of Elijah is turns;
 		now lastCandyfucked is turns;
 	else if (Sarah is in Bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2"):
-		if sarahslut > 2: [husky, mostly animal mentally]
+		if SarahSlut > 2: [husky, mostly animal mentally]
 			say "     As you come down into the bunker, you're almost bowled over by Sarah rushing after a tennis ball on all fours. Looking where the projectile came from, you see Elijah standing there, looking a bit sheepishly. 'Oh, em - I was just playing a bit with Sarah. Hope you don't mind.'";
 		now Char-B of Elijah is "3";
 		now NPCintCounter is turns;
@@ -1208,7 +1208,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 4 and NPCi
 	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 
-after going inside from the Gray Abbey Library while (HP of Elijah is 99 and NPCintCounter - turns > 4): [evil, very direct sex-fiend]
+after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPCintCounter - turns > 4): [evil, very direct sex-fiend]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 99 WALKIN[line break]";
@@ -1222,7 +1222,7 @@ after going inside from the Gray Abbey Library while (HP of Elijah is 99 and NPC
 		now lastfuck of Elijah is turns;
 		now lastCandyfucked is turns;
 	else if (Sarah is in Bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2" or Char-B of Elijah is "3") and lastfuck of Elijah - turns >= 12:
-		if sarahslut > 3:
+		if SarahSlut > 3:
 			say "     As you come down into the bunker, you see Elijah teasing Sarah with a piece of food. He's dangling it in front of her, just at the edge of the reach of her leash, pulling it away each time she tries to grab it. After several failed attempts to get it, Sarah is reduced to whining beggingly at the fallen angel.";
 			say "     'You want this nice little snack, little bitch? Then get working and earn it,' Elijah says, unzipping the bulging front of his pants, revealing his hard manhood as he slides them down his legs. With a last look at the tasty morsel of food Elijah is holding, Sarah starts sucking on his cock, bobbing up and down on his long shaft. Noticing you watching them, Elijah grins devilishly, then grabs on to Sarah's head and pumps his cock deep into her throat. He turns around a bit so you have a better view, brazenly showing off his face-fucking you husky bitch. Before too much longer, he moans loudly, holding Sarah's head tightly and shoots his load directly into her throat. Having gotten what he wanted, Elijah pulls out his saliva-coated cock from Sarah's mouth and throws the food on the ground nearby, smiling as she rushes after it. Without bothering to pick up his clothes, he then walks over to his bunk and drapes himself over it, lounging nakedly for you to watch.";
 			now Char-B of Elijah is "4";
@@ -1817,7 +1817,7 @@ to say ElijahSex9: [Fuck Elijah as he's balls deep inside Candy]
 		say "     As you watch Elijah's first few thrusts into Candy, slow at first, then faster and faster, your own almost painfully hard cock throbs in anticipation. You quickly strip out of your clothing, then move over to Candy's bunk. Elijah's perfectly shaped ass rising up and down with your two male friend's coupling have an almost hypnotic quality for you. In a kind of lustful daze, you climb on the bunk behind Elijah, eyes never leaving his alluring manhole as you aim your cock at it. Then, you put the pre-cum dribbling cockhead to his pucker and enter him with half your length in one quick thrust. He gasps at the sudden invasion, then starts to moan even more than before as your cock rubs his inner walls.";
 		WaitLineBreak;
 		say "     Grabbing Candy's softly furred legs raised up beside Elijah's hips to hold on to, you take out all the stops and thrust forcefully forward, burying your cock to the hilt and driving Elijah's own maleness deeper into Candy's ass. You fuck Elijah - and through him Candy - hard and deep, filling the bunk room with loud moans and groans. It's an amazing feeling to have not one but two handsome males on a bunk for your pleasure - you wish it could last forever, but what ever does?";
-		say "     The first to go is Candy, loudly moaning in his girlish voice as he sprays pink jets of cum all over his chestfur, filling the air with the smell of cotton candy. Not far behind, Elijah stiffens below you as his cock starts pulsing, filling Candy's ass with a torrent of his creamy cum. As he orgasms, his anal muscles spasm and contract around your cock, taking you over the edge right with him. With a satisfied groan, you plunge yourself in as deep as possible, then start unloading jet after jet of your seed inside his ass. As the last spurt leaves your body and gets deposited in Elijah, the overpowering urge to rut him vanishes, leaving you exhausted and out of breath. You hug Elijah from behind, running your hands over his chest and kiss his neck. Then you softly pull him to the side until you're lying next to Candy on his bunk. It's a bit of a tight fit, but you don't really care - wrapped around your handsome angel, your softening cock still inside him for now, there's no place where you'd rather be.";
+		say "     The first to go is Candy, loudly moaning in his girlish voice as he sprays pink jets of cum all over his chest-fur, filling the air with the smell of cotton candy. Not far behind, Elijah stiffens below you as his cock starts pulsing, filling Candy's ass with a torrent of his creamy cum. As he orgasms, his anal muscles spasm and contract around your cock, taking you over the edge right with him. With a satisfied groan, you plunge yourself in as deep as possible, then start unloading jet after jet of your seed inside his ass. As the last spurt leaves your body and gets deposited in Elijah, the overpowering urge to rut him vanishes, leaving you exhausted and out of breath. You hug Elijah from behind, running your hands over his chest and kiss his neck. Then you softly pull him to the side until you're lying next to Candy on his bunk. It's a bit of a tight fit, but you don't really care - wrapped around your handsome angel, your softening cock still inside him for now, there's no place where you'd rather be.";
 	else: [evil Elijah]
 		say "     You spot Candy on all fours on his bunk, busy fucking himself with a rubber dildo. With his bottom in the air, one hand pumping the sex toy in and out of his ass, the girly coon surely is a sight to behold. He's moaning loudly and has got his eyes closed as he imagines one of his dream males fucking him - which gives you an idea...";
 		say "     Walking out into the library, where Elijah is busy sorting a pile of porno mags he acquired somewhere, you say 'I've got to show you something.' to him, then grab him by the arm and lead him into the bunker. A lustful sparkle begins to fill the fallen angel's eyes as he sees Candy pleasing himself. With a wide grin on his face, he pulls off his boots and pushes the leather pants down his legs, making sure you have a good view of his naked body. He wiggles his firm buttocks at you as he steps out of his pants, then saunters over to Candy's bunk.";
@@ -1826,7 +1826,7 @@ to say ElijahSex9: [Fuck Elijah as he's balls deep inside Candy]
 		say "     As you watch Elijah's first few thrusts into Candy, slow at first, then faster and faster, your own almost painfully hard cock throbs in anticipation. You quickly strip out of your clothing, then move over to Candy's bunk. Elijah's perfectly shaped ass rising up and down with your two male friend's coupling have an almost hypnotic quality for you. In a kind of lustful daze, you climb on the bunk behind Elijah, eyes never leaving his alluring manhole as you aim your cock at it. Then, you put the pre-cum dribbling cockhead to his pucker and enter him with half your length in one quick thrust. He gasps at the sudden invasion, then starts to moan even more than before as your cock rubs his inner walls.";
 		WaitLineBreak;
 		say "     Grabbing Candy's softly furred legs raised up beside Elijah's hips to hold on to, you take out all the stops and thrust forcefully forward, burying your cock to the hilt and driving Elijah's own maleness deeper into Candy's ass. You fuck Elijah - and through him Candy - hard and deep, filling the bunk room with loud moans and groans. It's an amazing feeling to have not one but two handsome males on a bunk for your pleasure - you wish it could last forever, but what ever does?";
-		say "     The first to go is Candy, loudly moaning in his girlish voice as he sprays pink jets of cum all over his chestfur, filling the air with the smell of cotton candy. Not far behind, Elijah stiffens below you as his cock starts pulsing, filling Candy's ass with a torrent of his creamy cum. As he orgasms, his anal muscles spasm and contract around your cock, taking you over the edge right with him. With a satisfied groan, you plunge yourself in as deep as possible, then start unloading jet after jet of your seed inside his ass. As the last spurt leaves your body and gets deposited in Elijah, the overpowering urge to rut him vanishes, leaving you exhausted and out of breath. The fallen angel pulls his cock out of Candy, then softly pushes you off his back to lie on the bunk and walks off. Too exhausted to go to your own bunk, you just snuggle up to Candy and fall asleep, your face buried in the warm fur of his side.";
+		say "     The first to go is Candy, loudly moaning in his girlish voice as he sprays pink jets of cum all over his chest-fur, filling the air with the smell of cotton candy. Not far behind, Elijah stiffens below you as his cock starts pulsing, filling Candy's ass with a torrent of his creamy cum. As he orgasms, his anal muscles spasm and contract around your cock, taking you over the edge right with him. With a satisfied groan, you plunge yourself in as deep as possible, then start unloading jet after jet of your seed inside his ass. As the last spurt leaves your body and gets deposited in Elijah, the overpowering urge to rut him vanishes, leaving you exhausted and out of breath. The fallen angel pulls his cock out of Candy, then softly pushes you off his back to lie on the bunk and walks off. Too exhausted to go to your own bunk, you just snuggle up to Candy and fall asleep, your face buried in the warm fur of his side.";
 
 to say ElijahSex10: [Let Fuck Elijah you as he's being shafted by Candy]
 	if (HP of Elijah < 99): [good guy]
@@ -2097,7 +2097,7 @@ when play ends:
 			if (humanity of player < 10):
 				say "     When you succumb to your infection, Elijah keeps you with him in the bunker for a while, fucking you and making you suck his cock whenever he fancies. After a while, he gets bored with you and releases you out into the city. You see him a few times after that as he grabs one or two new playtoys for himself, and he even fucks you again as he runs into you out on the streets. He doesn't recognize you though, or he just doesn't care for anything but a mouth or hole to satisfy his lust in.";
 			else:
-				say "     When the soldiers come through the city to rescue you and the others, Elijah decides not to leave. He says he's got a good thing going there, with all of the shifted people out on the streets to fuck as he pleases or grab and keep as more long-term pets and fucktoys in the bunker.[if sarahslut is 4] Just like you did, he remarks with a nod over to Sarah.[end if]";
+				say "     When the soldiers come through the city to rescue you and the others, Elijah decides not to leave. He says he's got a good thing going there, with all of the shifted people out on the streets to fuck as he pleases or grab and keep as more long-term pets and fucktoys in the bunker.[if SarahSlut is 4] Just like you did, he remarks with a nod over to Sarah.[end if]";
 		else if (Elijah is in the bunker) and (HP of Elijah is 1 or HP of Elijah is 2): [still injured]
 			if (humanity of player < 10):
 				say "     When you succumb to your infection, you forget about the injured angel you left behind unconscious on a cot in the bunker. Luckily, divine emissaries are pretty tough, so he's still alive when a team of soldiers checks out the library bunker for sane survivors. You see him again one more time several weeks later, now garbed in military clothing and part of a team trying to pacify the ferals in the city. It is a close thing, but you manage to escape from them in the ruined streets.";
@@ -2120,7 +2120,7 @@ when play ends:
 					say "     When you get released some time after that, Elijah goes with you and you live together as friends and lovers. He takes up a lot of charity work, helping out wherever he can.";
 					if gryphoness is tamed: [Denise pet]
 						say "     Elijah becomes great friends with Denise, happily sharing your house - and bed - with her. They're often soaring through the sky near your home together, doing aerial acrobatics that bring fans and spectators from the surrounding areas. With as much time as they're spending together, it doesn't surprise you much to see Denise lay an[if knowpreg of gryphoness > 0]other[end if] egg pretty soon, from which a beautiful little white gryphlet hatches. The proud couple gives her the name Lailah. Not much time later, Elijah can be seen shepherding [if knowpreg of gryphoness is 2]your own two gryphlets from Denise and [else if knowpreg of gryphoness is 1]your own gryphlet from Denise and [end if]his pretty daughter on flying lessons to show [if knowpreg of gryphoness > 0]them[else]her[end if] some tricks.";
-					if sarahslut is 4: [Sarah pet]
+					if SarahSlut is 4: [Sarah pet]
 						say "     While saddened that Sarah lost her humanity so completely, Elijah accepts that most of the blame lies with the husky who originally infected her. Content that you're at least a master who cares for her and fulfills the needs of her husky form, he settles into a comfortable routine with her, often taking her for long walks and always ready to give her some attention and pet her.";
 					if HP of Sven > 7 and HP of Sven < 30: [Sven pet]
 						say "     Living in the same household, Sven decides to make a sport of getting Elijah aroused whenever he wants. He often hangs around near the angel, stretching his snowmeow body and waving his tail invitingly - especially at inappropriate moments. There are quite a few dinner parties or situations with guests in the house when Elijah has to excuse himself to take care of a growing problem in his pants - mostly by filling a very eager Sven's ass with his angelic cock. You often use the opportunities to join them for a hot threesome when you see first Sven, then Elijah sneak off into the adjoining rooms.";

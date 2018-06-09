@@ -367,7 +367,7 @@ to say DiegoSexMenu:
 	[]
 	if (cocks of player > 0 and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
-		now title entry is "Take Diego's pussy - Doggystyle";
+		now title entry is "Take Diego's pussy - Doggy style";
 		now sortorder entry is 6;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
@@ -385,7 +385,7 @@ to say DiegoSexMenu:
 	[]
 	if (cocks of player > 0 and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
-		now title entry is "Take Diego's ass - Doggystyle";
+		now title entry is "Take Diego's ass - Doggy style";
 		now sortorder entry is 9;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
@@ -420,13 +420,13 @@ to say DiegoSexMenu:
 					say "[DiegoSex4]";
 				else if (nam is "Take Diego's pussy - Fuck against the wall"):
 					say "[DiegoSex5]";
-				else if (nam is "Take Diego's pussy - Doggystyle"):
+				else if (nam is "Take Diego's pussy - Doggy style"):
 					say "[DiegoSex6]";
 				else if (nam is "Take Diego's pussy - From behind, against the wall"):
 					say "[DiegoSex7]";
 				else if (nam is "Take Diego's ass - Fuck against the wall"):
 					say "[DiegoSex8]";
-				else if (nam is "Take Diego's ass - Doggystyle"):
+				else if (nam is "Take Diego's ass - Doggy style"):
 					say "[DiegoSex9]";
 				else if (nam is "Take Diego's ass - From behind, against the wall"):
 					say "[DiegoSex10]";
@@ -543,7 +543,7 @@ to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
 	now lastfuck of Diego is turns;
 	coyotify;
 
-to say DiegoSex6: [Diego's pussy fucked - doggystyle]
+to say DiegoSex6: [Diego's pussy fucked - doggy style]
 	if DiegoChanged is 2: [full FemDiego]
 		say "     'I thought you would never ask!' the coyote female says with a grin on her muzzle, then adds in a teasing tone, 'After all, the best trickster definitely won.' Running her paw-hands over her changed body, she smiles at you and wags her tail. 'And to the winner goes the prize...' Diego pants out eagerly, obviously becoming more and more excited by the second. 'Don't you think I would make a fine prize for such a good trickster?' With that said, she drops down to all fours on the ground before you, her newly changed body makes the stance seem both more natural on her, and very sexy.";
 		say "     As you approach, Diego turns her rear towards you and lifts her tail eagerly to give you a perfect view of her heat-swollen filled pussy. 'Why don't you claim your little coyote like a proper bitch?' she pants out as she glances at you over her shoulder, waving her ass slightly as her tail wags eagerly in anticipation. The sight of the formerly dominant coyote on all fours before you as she gives in to her female instincts makes you smile, and your cock is already hard and ready as you reach out and begin to stroke her soft fur.";
@@ -554,7 +554,7 @@ to say DiegoSex6: [Diego's pussy fucked - doggystyle]
 		say "     Finally your body tenses and you cry out in pleasure as your cock explodes into the new bitch, spilling its seed into her receptive pussy as she lets out a coyote howl of victory at fulfilling her new role in life as a bitch. Gasping from the intense orgasm, you hold Diego close for a few minutes, feeling your cock slowly soften inside her, before eventually pulling out of her eager body and staggering to your feet.";
 		say "     Without you inside her, Diego collapses to the ground, lying on the soft grass for a minute, before rolling over and sitting up still panting from the recent exertion. 'Thanks. God I needed that,' your bitch says with a smile on her muzzle as she rubs her stomach with her paws. 'I never imagined anything could feel this good before...' she says with a dreamy look on her muzzle, before blinking and looking at you. 'I think I'm your bitch now, it just feels... right somehow,' Diego says with a smile on her muzzle as she hauls herself up on her still shaky legs, before reaching out to stroke your cheek with one of her paws lightly.";
 		WaitLineBreak;
-		say "     'Thank you for claiming me properly,' she says as she leans forward and gives you a soft lick on the cheek. 'It just feels right to do it doggystyle - and with such a crafty trickster too,' the coyote bitch says with a soft grin, before staggering back over to the wall and leaning up against it for support. 'Anytime you want to play with your bitch again, you know where I am,' she says with a wink. You gather your stuff together to set out into the city again, grinning at the change a few little tricks managed to bring about in your bitch.";
+		say "     'Thank you for claiming me properly,' she says as she leans forward and gives you a soft lick on the cheek. 'It just feels right to do it doggy style - and with such a crafty trickster too,' the coyote bitch says with a soft grin, before staggering back over to the wall and leaning up against it for support. 'Anytime you want to play with your bitch again, you know where I am,' she says with a wink. You gather your stuff together to set out into the city again, grinning at the change a few little tricks managed to bring about in your bitch.";
 		if DiegoBitched < 2:
 			now DiegoBitched is 2;
 	else:
@@ -623,7 +623,7 @@ to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
 	now lastfuck of Diego is turns;
 	coyotify;
 
-to say DiegoSex9: [Diego's ass fucked - Doggystyle]
+to say DiegoSex9: [Diego's ass fucked - Doggy style]
 	if DiegoButtSlut > 2: [mpreg-able Diego]
 		say "     'I thought you would never ask!' the coyote male says with a grin on his muzzle, then adds in a teasing tone, 'After all, the best trickster definitely won.' Running his paw-hands over his lean and athletic body, he smiles at you and wags his tail. 'And to the winner goes the prize...' Diego pants out eagerly, obviously becoming more and more excited by the second. 'Don't you think I would make a fine prize for such a good trickster?' With that said, he drops down to all fours on the ground before you, his anthro body making the stance seem pretty natural on him, and very sexy.";
 		say "     As you approach, Diego turns his rear towards you and lifts his tail eagerly to give you a perfect view of his trembling tailstar as well as a swinging pair of furry balls and his hard cock. 'Why don't you claim this little coyote like a proper prize?' He pants out as he glances at you over his shoulder, waving his ass slightly as his tail wags eagerly in anticipation. The sight of the formerly dominant coyote on all fours before you as he gives in to his now submissive instincts makes you smile, and your cock is already hard and ready as you reach out and begin to stroke his soft fur.";

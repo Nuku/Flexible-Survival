@@ -166,7 +166,7 @@ Section 5 - Endings
 when play ends:
 	if bodyname of player is "Xeno":
 		if humanity of player < 10:
-			say "     You succumb to your horrific infection, feeling its silent power and revelling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
+			say "     You succumb to your horrific infection, feeling its silent power and reveling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
 			if cunts of player > 0 and cocks of player > 0:
 				say "     Finding others of your kind, you breed with them. But unlike before, you are no longer restrained by your humanity and seek out victims to mount and fill with your eggs, corrupting them even as you turn them into incubators and carriers for your offspring.";
 			else if cocks of player > 0 and player is mpreg_ok:

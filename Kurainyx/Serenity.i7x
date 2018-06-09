@@ -7,7 +7,7 @@ Version 2 of Serenity by Kurainyx begins here.
 [  HP of Serenity                                            ]
 [  0: Never met                                              ]
 [  1: Finished first encounter with Serenity                 ]
-[  2: Moved Serenity to Gray Abbey                           ]
+[  2: Moved Serenity to Grey Abbey                           ]
 [  3: Had first talk with Serenity in bunker. Ready for sex  ]
 [  100: Removed Serenity from game                           ]
 
@@ -72,12 +72,12 @@ Instead of resolving a Naga Hybrid:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Invite Serenity to stay with you.";
 				say "     ([link]N[as]n[end link]) - Let Serenity go.";
-				if the player consents:			[Serenity moves into Gray Abbey]
+				if the player consents:			[Serenity moves into Grey Abbey]
 					LineBreak;
-					say "     Serenity smiles when you tell her about the bunker in The Gray Abbey, pleased that you have a safe place of your own. However, one of her brows rise with intrigue when you invite her to stay with you. 'First you return my prized possession, and now you want to take me to your home?' The naga lets out a mock gasp and smirks. 'One might think that you are trying to seduce me. How scandalous.' The coy snake's smile softens into a genuine one. 'In all seriousness though, that is very generous of you. If you truly will have me, then I will be more than happy to move in with you and keep you company.'";
+					say "     Serenity smiles when you tell her about the bunker in The Grey Abbey, pleased that you have a safe place of your own. However, one of her brows rise with intrigue when you invite her to stay with you. 'First you return my prized possession, and now you want to take me to your home?' The naga lets out a mock gasp and smirks. 'One might think that you are trying to seduce me. How scandalous.' The coy snake's smile softens into a genuine one. 'In all seriousness though, that is very generous of you. If you truly will have me, then I will be more than happy to move in with you and keep you company.'";
 					now HP of Serenity is 2;
-					move Serenity to Gray Abbey 2F;
-					move player to Gray Abbey 2F;
+					move Serenity to Grey Abbey 2F;
+					move player to Grey Abbey 2F;
 				else:			[Serenity leaves the Dry Plains and the game]
 					LineBreak;
 					say "     You wish Serenity good luck on her journey, and to your surprise, she leans toward you, planting a gentle kiss on your cheek, followed by a playful lick with her forked tongue. 'And good luck to you too[if player is not defaultnamed], [name of player][end if],' Serenity bids. As you part ways with your naga friend, likely for the last time, you are glad that, despite all of the chaos in the city, you still have the mindset to brighten someone's life.";
@@ -188,7 +188,7 @@ instead of using Lockbox:
 	say "     You try and pry the lockbox open, but it refuses to open.";
 
 
-Section 4 - Serenity in the Gray Abbey Library
+Section 4 - Serenity in the Grey Abbey Library
 
 SerenityVore is a truth state that varies. SerenityVore is usually false.
 SerenityHunger is a number that varies. SerenityHunger is usually 0.

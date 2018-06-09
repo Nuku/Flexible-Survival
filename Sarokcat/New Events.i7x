@@ -95,7 +95,7 @@ Instead of Resolving a Hyena Gang:
 				hyenaify;
 				Increase hyg by 1;
 			else:
-				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'It ain't no life for a hyena out there all alone,' shi continues as she runs her pawlike hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us hun, just follow your instincts.'";
+				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'It ain't no life for a hyena out there all alone,' shi continues as she runs her paw-like hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us hun, just follow your instincts.'";
 		else:
 			say "'Membership comes with some benefits, though you'll end up with a few changes as well,' the hyena says as shi looks you up and down. 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
 			If player consents:
@@ -104,7 +104,7 @@ Instead of Resolving a Hyena Gang:
 				hyenaify;
 				Increase hyg by 1;
 			else:
-				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what your missing out on,' shi continues as she runs her pawlike hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us hun.'";
+				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what your missing out on,' shi continues as she runs her paw-like hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us hun.'";
 	else if hyg is 3:
 		say "Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar looking hyena coming towards you from down a side street, a large grin on her hyena muzzle. Before you can decide what to do about it, you are quickly enveloped once more in a large and enthusiastic hug.[line break]";
 		say "'I thought I scented you!' the large herm hyena exclaims, still hugging you tightly, 'I knew you'd come back to join us, you said you would after all,' she says as she releases you, causing you to stagger for a minute, before she grabs your hand and starts dragging you down the street, heading deeper into what the graffiti tags proclaim to be hyena territory. 'You must be pretty special to have survived out here this long on your own, but you don't have to worry about that anymore,' the hyena says as you are led through a bewildering maze of side streets and partially wrecked buildings to one of the warehouse districts. 'You have a whole gang on your side now, or pack, whatever you want to call it, you got our back, we got yours. Speaking of which,' she says as she stops in the middle of the street, facing a row of shipment warehouses. 'The names Gina, and I guess I'm your sponsor for now, so let me know if anyone bothers ya or if you need anything,' the newly introduced Gina says with a grin.[line break]";

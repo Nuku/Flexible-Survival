@@ -113,7 +113,4 @@ Instead of resolving Thelonesurvivor:
 	now Survivorhunting is 1;
 	Now Thelonesurvivor is resolved;
 
-
-
-
-Events basic ends here.
+Events Basic ends here.

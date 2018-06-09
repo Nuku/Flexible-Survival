@@ -1,14 +1,14 @@
 Version 1 of NPC Interactions by Wahn begins here.
 [Version 1 - More fun with all kinds of NPCs]
 
-instead of navigating Gray Abbey Library while (Xerxes is in Gray Abbey Library and Snow is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Xerxes is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[XerxesSnowInteraction]";
 
-instead of going up from Bunker while (Xerxes is in Gray Abbey Library and Snow is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Xerxes is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[XerxesSnowInteraction]";
 
 to say XerxesSnowInteraction:
@@ -26,14 +26,14 @@ to say XerxesSnowInteraction:
 				say "     Entering the library, you see Snow coming from between the shelves, carrying a stack of books to the small side room where she set up her workshop. As she does so, Xerxes jumps up from where he was lounging on a nearby sofa and chases after her, playfully trying to catch her long, fluffy tail. Snow gives a sigh as she feels the human dog's face brush up against her fur in his second attempt to take the tail into his mouth, and she raises the appendage higher as she turns to face Xerxes. 'You really were a dog once, weren't you? Can't resist chasing the big squirrel, hm?' she says, giving the naked teenage human a stare that stops him in his tracks.";
 				say "     But then a smile creeps over Snow's face and she chuckles, 'Oh well, it's your nature and I know you only wanna play. Guess there are worse things to be followed around by an Adonis-like hunk who doesn't understand the concept of clothes.' Snow steps forward to pat Xerxes head affectionately, then says, 'Fine, come along doggie - you can sit on my mattress and be pretty for me to look at while I work, as long as you behave.' Your human dog gives an affirmative whine and happily follows Snow into her workshop.";
 
-instead of navigating Gray Abbey Library while (Helen is in Gray Abbey Library and Snow is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Helen is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[HelenSnowInteraction]";
 
-instead of going up from Bunker while (Helen is in Gray Abbey Library and Snow is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Helen is in Grey Abbey Library and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[HelenSnowInteraction]";
 
 to say HelenSnowInteraction:
@@ -51,14 +51,14 @@ to say HelenSnowInteraction:
 				say "     Entering the library, you see Snow coming from between the shelves, carrying a stack of books to the small side room where she set up her workshop. As she does so, Helen jumps up from where she was lounging on a nearby sofa and chases after her, playfully trying to catch her long, fluffy tail. Snow gives a sigh as she feels the human dog's face brush up against her fur in her second attempt to take the tail into her mouth, and she raises the appendage higher as she turns to face Helen. 'You really were a dog once, weren't you? Can't resist chasing the big squirrel, hm?' she says, giving the naked teenage human a stare that stops her in her tracks.";
 				say "     But then a smile creeps over Snow's face and she chuckles, 'Oh well, it's your nature and I know you only wanna play. Guess there are worse things to be around by a beautiful young woman who doesn't understand the concept of clothes.' Snow steps forward to pat Helen's head affectionately, then says, 'Fine, come along doggie - you can sit on my mattress and be pretty for me to look at while I work, as long as you behave.' Your human dog gives an affirmative whine and happily follows Snow into her workshop.";
 
-instead of navigating Gray Abbey Library while (Amy is in Gray Abbey Library and HP of Amy > 1 and Snow is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
-instead of going up from Bunker while (Amy is in Gray Abbey Library and HP of Amy > 1 and Snow is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Snow is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[AmySnowInteraction]";
 
 to say AmySnowInteraction:
@@ -71,14 +71,14 @@ to say AmySnowInteraction:
 		-- 2: [workshop lessons]
 			say "     Entering the library, you hear voices come from the small side room in which Snow has her workshop set up. Curious, you walk over to check out what is going on and find Amy and Snow inside, with the big squirrel just explaining something to the attentively listening husky. While the young woman then starts to loosen a screw of the item on the workbench in front of her, Snow turns her head to look at you and gives a nod in greeting. Then she says, 'Our sexy little doggie here isn't half bad with a wrench and screwdriver. Give her half a year of lectures and she could be up with the best of em - me, for example.' Snow smiles as Amy gives a shy 'Thank you' to answer her praise, then tells you 'Don't let us keep you from doing any other stuff - we're gonna be busy for quite a while, until Amy can take apart and assemble this blindfolded...'";
 
-instead of navigating Gray Abbey Library while (Amy is in Gray Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
-instead of going up from Bunker while (Amy is in Gray Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Amy is in Grey Abbey Library and HP of Amy > 1 and Felinoid companion is tamed and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[AmyFelinoidInteraction]";
 
 to say AmyFelinoidInteraction:
@@ -92,14 +92,14 @@ to say AmyFelinoidInteraction:
 			say "     Entering the library, you spot Amy sitting on one of the numerous sofas, reading a book while Klauz sits beside her and is licking his own fur, including moistening a paw and rubbing behind the ears. Before long, the big cat is done with his task and starts to lick Amy too, making her giggle and rub under his chin. The felinoid keeps going for a while, just slow enough so that Amy won't get distracted from her book completely. You can't really tell if it's just meant as a gesture of affection or if he simply wants to spread his scent all over the husky and frighten off any other contenders for her.";
 
 
-instead of navigating Gray Abbey Library while (Amy is in Gray Abbey Library and Alexandra is in Gray Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
-instead of going up from Bunker while (Amy is in Gray Abbey Library and Alexandra is in Gray Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Amy is in Grey Abbey Library and Alexandra is in Grey Abbey Library and HP of Amy > 1 and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[AmyAlexandraInteraction]";
 
 to say AmyAlexandraInteraction:
@@ -113,14 +113,14 @@ to say AmyAlexandraInteraction:
 		-- 2: [talking about parents]
 			say "     Entering the library, you spot Amy sitting on one of the numerous sofas, with her back against Alexandra, whose arms are curled around the husky's waist while they talk. Curious about what topic, you step up a bit closer and overhear the doberwoman say, 'So your mother is a total whore, you were born after a gangbang and then brought here by the boss? Shit, you've almost had it as bad as me - my parents were crooks and criminals. So here we are, a born slut and a tamed slut, both in training. Guess the apple doesn't fall too far from the tree.' Then she tightens her embrace around Amy and pulls her close, before continuing with 'Bah, screw everyone else - now we have the boss, and each other.' Alexandra rubs her muzzle against Amy's neck and says, 'You hear that, girl? If anyone but the boss gives you even a hint of trouble - I'll kick the shit out of them. Least thing I can do...'";
 
-instead of navigating Gray Abbey Library while (Carl is in Gray Abbey 2F and HP of Carl > 9 and Xerxes is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
-instead of going up from Bunker while (Carl is in Gray Abbey 2F and HP of Carl > 9 and Xerxes is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Xerxes is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[CarlXerxesInteraction]";
 
 to say CarlXerxesInteraction:
@@ -141,14 +141,14 @@ to say CarlXerxesInteraction:
 			else if HP of Carl is 30: [subby Carl]
 				say "     Entering the library, you see Carl crouched down next to Xerxes mattress, filling the human dog's feeding bowl from a sack of kibble. Beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Xerxes is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier lowers his head and says, 'Hello, Alpha. I was just feeding your pet... and myself. I'm gonna get back on watch now.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
 
-instead of navigating Gray Abbey Library while (Carl is in Gray Abbey 2F and HP of Carl > 9 and Helen is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
-instead of going up from Bunker while (Carl is in Gray Abbey 2F and HP of Carl > 9 and Helen is in Gray Abbey Library and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and Helen is in Grey Abbey Library and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[CarlHelenInteraction]";
 
 to say CarlHelenInteraction:
@@ -170,14 +170,14 @@ to say CarlHelenInteraction:
 				say "     Entering the library, you see Carl crouched down next to Helen's mattress, filling the human dog's feeding bowl from a sack of kibble. Beside that, he also fills a big cereal bowl for himself, then sets the sack down on the ground. Helen is well-trained enough to patiently wait for the husky to take his bowl and stand up, only then starting to hungrily eat the dried food. Meanwhile, Carl starts to pick up kibble out of his own bowl, throwing them into his muzzle to crunch them with sharp teeth. As he sees you standing nearby, the soldier lowers his head and says, 'Hello, Alpha. I was just feeding your pet... and myself. I'm gonna get back on watch now.' Still eating out of the bowl, he then walks up the stairs to finish his meal at his watch post.";
 
 
-instead of navigating Gray Abbey Library while (Carl is in Gray Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 
-instead of going up from Bunker while (Carl is in Gray Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl > 9 and David is in Bunker and a random chance of 1 in 8 succeeds):
+	move player to Grey Abbey Library;
 	say "[CarlDavidInteraction]";
 
 to say CarlDavidInteraction:

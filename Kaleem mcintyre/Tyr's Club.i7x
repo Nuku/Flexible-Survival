@@ -19,8 +19,8 @@ Section 2 - Tyr
 Part 1 - Setup and Dialog
 
 Tyrtalk is a number that varies.
-tyrdefeated is a number that varies.
-tyrtraining is a truth state that varies. tyrtraining is usually false.
+TyrDefeated is a number that varies.
+TyrTraining is a truth state that varies. TyrTraining is usually false.
 
 Tyr is a man.
 The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
@@ -58,15 +58,15 @@ Instead of fucking the Tyr:
 		stop the action;
 	else:
 		say "'Alright then, lets head to the pit and do this!' The Doberman seems especially excited as his long, curled tail wags behind him at a breakneck pace as the two of you walk over to the fighting area. 'I hope you're ready!' Tyr growls as his eyes narrow dangerously at you from across his shoulder.'";
-	if tyrdefeated > 2:	[3 player wins in a row]
-		tyrsexmenu;
+	if TyrDefeated > 2:	[3 player wins in a row]
+		TyrSexMenu;
 	else:
 		let bonus be (( the Strength of the player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 18:
-			increase tyrdefeated by 1;
+			increase TyrDefeated by 1;
 			say "Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to revel in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.[line break]";
 			say "'So how would you like to have me pleasure you?'";
 			if cocks of player > 0:
@@ -86,7 +86,7 @@ Instead of fucking the Tyr:
 				else:
 					say "[TyrLost_Neuter]";
 		else:
-			now tyrdefeated is 0;
+			now TyrDefeated is 0;
 			if a random chance of 2 in 6 succeeds and cunts of player > 0:
 				say "[TyrWon_Cunnilingus]";
 			else if a random chance of 1 in 6 succeeds and cunts of player > 0:
@@ -103,7 +103,7 @@ Instead of fucking the Tyr:
 	now non-infectious entry is true;
 	now lastfuck of Tyr is turns;
 
-to tyrsexmenu:
+to TyrSexMenu:
 	say "Having beaten Tyr consistently, you've learned his technique and are able to beat him... if you want. Will you put the Doberman down and take your prize again, or will you ease up and let him pin you down?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -330,7 +330,7 @@ to say TyrLost_GetAnal:	[only available through multiple victory menu]
 		say "     Telling Tyr that you want him in your ass again, he nods and gives a little grin, showing no reluctance as he shucks his shorts. He gives your ass a grab as you move onto all fours. His cock is already fully erect at the prospect of filling your back door again. You can't help but smile at his eagerness and grind your rear back against his pulsing manhood. The feel of it rubbing between your cheeks, knowing it'll soon be stuffed inside you, is very exciting. And from the way it's throbbing and drooling onto your ass, you can tell the Doberman's excited as well.";
 		say "     Tyr takes a few sensual moments to help you prepare before taking his large cock inside you again, [one of]allowing his dribbling cock to lube your asshole. He smears his sexual fluids across your crinkled hole, lightly pressing at it from time to time to further tease and excite you for the main event[or]smearing some lube onto your crinkled hole. As he slides an initial finger into your anus, he spreads a generous amount of lube onto his cock. Eying that glistening pole, you lick your lips and want it inside you all the more. He continues the fingering, adding a second finger and then a third to work you open[or]pressing his muzzle between your ass cheeks and giving your pucker a slow lick[if anallevel is 3]. He continues licking at your crinkled hole, pressing and probing at it and eventually delving his tongue into your rectum and slathering it with his saliva. The feel of that doggy tongue squirming around inside you makes your insides quiver with delight and long for even more[else]. He gives several more long, slow licks, getting you nice and slick[end if][cycling]. Only once he's gotten you to the point of moaning and whimpering with need does he relent and move on to mounting you with that lovely pillar of doghood of his.";
 		WaitLineBreak;
-		say "     The muscular male grabs your ass with both paws and kneads it even as he pushes gently forwards, opening your well-prepared back entrance for him. As he sinks it into you, he pants and grins. '[one of]Oh, that's the stuff[or]Mmmm, baby[or]I'm gonna enjoy this[or]Just like that[in random order],' he moans. You can't help but smile at this, glad to see him enjoying himself, and push yourself back onto his rod, pushing a few more inches into your needy hole. Having partially mounted you, he releases your ass and drops to all fours overtop of you so he can take your doggy-style, like his canine side would prefer as he starts humping you.";
+		say "     The muscular male grabs your ass with both paws and kneads it even as he pushes gently forwards, opening your well-prepared back entrance for him. As he sinks it into you, he pants and grins. '[one of]Oh, that's the stuff[or]Mmmm, baby[or]I'm gonna enjoy this[or]Just like that[in random order],' he moans. You can't help but smile at this, glad to see him enjoying himself, and push yourself back onto his rod, pushing a few more inches into your needy hole. Having partially mounted you, he releases your ass and drops to all fours overtop of you so he can take your doggy style, like his canine side would prefer as he starts humping you.";
 		say "     By the time he's going at you hard and heavy, your [if cocks of player > 0]prostate[else][bodytype of player] body[end if] feels awash in pleasure even as the buff dog's knot returns to knock at your back door once again, seeking entrance into you. He licks and nips at your shoulder and neck as he puts a muscular arm around your [bodydesc of player] body and holds you tightly as he grinds that meaty bulb firmly against your anus, coaxing it to spread even further. A few hard pushes like that and your anus opens enough to accommodate the added thickness long enough for him to tie with you before locking tight around it. The Doberman gives a growling gasp as your rectal walls clamp down hard around his knot, milking his cock all the more. Tied with you once again, he goes into a wild frenzy of humping like a true canine, each shallow thrust accompanied by a burst of near-orgasmic pleasure from your [if cocks of player > 0]prostate and [end if]well-stuffed ass that has you moaning and panting with lust.";
 		WaitLineBreak;
 		say "     As your climax approaches, you squirm and wiggle your rear as best you can while tied to the sexy muscle-dog. This added stimulation [one of]puts you over the edge, crying out in lustful release moments before Tyr's hot load starts to fill you[or]sends Tyr over the edge, pumping his hot load into you moments before your own lustful release[purely at random][if cocks of player > 0]. Your [cum load size of player] load splatters onto the floor beneath you as your [cock of player] penis[esmn] pulse[smv] with every hard push of dog meat against your prostate[else if cunts of player > 0]. Your [cunt size desc of player] cunt[sfn] quiver[sfv] and clench[esfv] as your honeyed juices run down your thighs as your other hole gets stuffed[else]. Your genderless [bodydesc of player] body is overcome with a rush of unfocused physical delight as your ass is stuffed by the virile male[end if]. Having his thick, creamy semen pooling inside you, trapped behind that knot and filling you more and more[if scalevalue of player < 3] until your belly is bulged by it all[end if], has you both panting and moaning loudly.";
@@ -411,7 +411,7 @@ to say TyrWon_GiveAnal:	[only available once acclimatized to anal]
 		say "     Tyr looks you over for a moment, eyes lingering on your crotch before pulling you into a tongue-filled kiss while groping your manhood. Worn out and aroused by the fight, you can only moan into the long kiss. After the kiss, he turns around and dropping to all fours, raising his tail in the air and grinning back at you. 'I think I'll claim my prize right here,' he says, spreading his ass cheeks and putting his crinkled hole on display for you. You smile at the sight and quickly move into position. 'I knew you'd be up for it,' he chuckles, grinding back against your [cock size desc of player] [cock of player] erection.";
 	WaitLineBreak;
 	say "     Tyr gives a soft moan that he tries to muffle as you slip a couple of saliva-slick fingers into his backside to help ready him[if anallevel is 3]. You pump them in and out while stroking his stiff cock. Teasing and pressing at his prostate gets him to dribble more precum, which you then use to lube his asshole even further. Once your teasing's gotten him panting heavily, you move on to the main event[else]. You stroke his stiff cock until he's panting heavily before moving on to the main event[end if] and guiding your [cock of player] cock to his glistening ring. You grip his firm glutes as you push your [cock size desc of player] shaft into him, taking him once again, enjoying his lustful moans as he's penetrated.";
-	say "     As you fuck Tyr doggy-style, you run your hands over his muscular body, teasing his nipples and squeezing those strong muscles of his. Eventually a hand finds its way back to his cock, even harder now and dripping with precum. You stroke along it and rub his hefty balls, adding to your enjoyment and his. With your growing arousal, you start to pound into him faster and harder while panting in his ear, all the while [one of]telling him how sexy he is right now[or]moaning how delightfully tight his ass is[or]moaning about how much more fun it is now that he wants it in the ass too[or]whispering how nice it'll feel when you fill him with your cum[cycling]. He pants and nods in agreement, clenching his ass down and pushing harder into your thrusts.";
+	say "     As you fuck Tyr doggy style, you run your hands over his muscular body, teasing his nipples and squeezing those strong muscles of his. Eventually a hand finds its way back to his cock, even harder now and dripping with precum. You stroke along it and rub his hefty balls, adding to your enjoyment and his. With your growing arousal, you start to pound into him faster and harder while panting in his ear, all the while [one of]telling him how sexy he is right now[or]moaning how delightfully tight his ass is[or]moaning about how much more fun it is now that he wants it in the ass too[or]whispering how nice it'll feel when you fill him with your cum[cycling]. He pants and nods in agreement, clenching his ass down and pushing harder into your thrusts.";
 	WaitLineBreak;
 	say "     As your climax approaches, you focus all your attention on stroking that dribbling cock of his while you thrust firmly into him. The feel of his sexy ass gripping you tightly while you grind your meat against his prostate is wonderful and it's not long before [one of]you groan in orgasmic release. This has Tyr follow shortly after, his anus clenching tightly followed by his shaft pulsing in your hand as splatters of doggy cum spray onto the floor beneath him[or]Tyr howls. As his anus clenches down tightly around you and his shaft pulses in your hand, splatters of his doggy cum spray onto the floor beneath him. His quivering asshole soon sets you off and you cum with a groan of orgasmic release[at random]. You bang away at him through your orgasm, pumping your [cum load size of player] load into him even as his own balls drain their virile load.";
 	say "     You keep going, thrusting and stroking, until you're both left panting and satisfied, at least for the moment. Afterwards, you rest atop his strong body, caressing those hard muscles as he supports you. When you eventually pull out, he gives a soft, needy whimper that makes you smile. You stroke his messy rear and tease a finger at his tailhole, telling him that you'd be happy to fill his needy ass again next time. He smiles at this and gives you a playful poke, warning that next time it might be your turn.";
@@ -429,9 +429,9 @@ to say TyrWon_Training:
 	say "'Believe it or not, but I'm not really that horny right about now.' Tyr seems a little miffed about this and looks up at the sky almost evilly before shaking his head. 'So instead of sex, how about some training?' Looking over the other to see if he's serious you find yourself nodding when Tyr looks pointedly at you. 'Alright,' Walking the two of you over to the center of the pit area you had been fighting in Tyr gets himself into position and then begins to show you some forms that you could stand to learn. The other is rough with his teaching, and given your weakened state you find yourself stumbling more often than not and getting fussed at because of it, however, you have to admit that Tyr is a good trainer and you learn a couple of things you didn't know before.[line break]";
 	say "When the two of you are done you find the Doberman taking you out of the arena and then into one of the rooms here in the club to give you a massage. 'This is to help you muscles relax so they won't be so achy later on.' Is what the Dobie says, but for some reason Tyr seems to find your crotch area the most interesting part of you to massage after he strips you out of your clothes and then begins running his hands over your sweating [bodyname of player] form. However, you don't say anything to the other about this. Instead you simply smile and relax as the Dobie goes over your arms, chest, thighs and legs. When he dips some of his fingers into your cunt to begin rolling them around inside of you, you pass out on the table minutes afterwards as Tyr presses along your g-spot causing you to orgasm.[line break]";
 	say "When next you return to consciousness you find that Tyr is gone, but your [bodyname of player] is charged with a strange kind of energy. Though oddly enough, even though you find yourself dressed, you note that your crotch has a slightly sticky feel to it. Looking down you realize that it's because your pants are half open and something warm is covering over the crux of your thighs. Reaching and hand down and then bringing it up to your nose to take a whiff, you find yourself chuckling in amusement.";
-	if tyrtraining is false:
+	if TyrTraining is false:
 		increase XP of the player by 25;
-		now tyrtraining is true;
+		now TyrTraining is true;
 
 
 to say TyrWon_AnalPlay:
@@ -487,7 +487,7 @@ Receptionist is in FightPit.
 
 Section 4 - Receptionist
 
-Receptionisttalk is a number that varies.
+ReceptionistTalk is a number that varies.
 
 Receptionist is a man.
 The description of Receptionist is "Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With gray fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, a chubby black-furred body you wonder if the Doberman has lost him mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?".
@@ -504,22 +504,22 @@ instead of fucking the Receptionist:
 	say "[one of]'Are you serious?! I'm just a puppy!?'[or]'Try it and I'll call Tyr on you!'[or]'No.'[or]With all the creatures out here you want to try and do [bold type]THAT[roman type] with me???'[or]Kris whimpers a bit and suddenly you feel ashamed of yourself.[or]Kris backs away from you and then starts to sob.[at random]";
 
 Instead of conversing the Receptionist:
-	If Receptionisttalk is 0:
+	If ReceptionistTalk is 0:
 		say "'Oh hey! Nice to meet you! My name's Kris, but most people around here call me the Receptionist.' The pup giggles at you and suddenly you feel as though you want to squeeze him into your chest in an impossibly tight hug. Is anything allowed to be this cute in this world anymore?[line break]";
 		say "Anyway, welcome to the FightPit. Tyr's own little glorified haven for those people looking to battle their hearts away. If you want to participate in any of the fights happening here then just let me know and I'll call someone over to fight against you. Also, if you want to fight one of the Great Dane's you can only fight there here in the Pit as they don't venture away from the Club too often. They're kinda a mean bunch and don't like to take on weak people so be careful if you go up against them.' Kris lowers his ears onto his head as he says this.[line break]";
 		say "'Also, if you're too far along in your pregnancy then you won't be allowed to fight. That's the rule of the FightPit set up by Tyr and I will enforce it as need be.' You wonder if the pup is serious, but looking into his golden eyes shimmering up at you, you find yourself feeling a vague sense of danger coming from off of the young one. But that can't be right. He's only four and a half feet tall![line break]";
 		say "Nevertheless you nod to the other which gets a smile out of him. Dawww! Now you suddenly wish you had some cookies to give him";
-		now Receptionisttalk is 1;
+		now ReceptionistTalk is 1;
 		decrease libido of player by 25;
 		if libido of player < 0, now libido of player is 0;
-	if Receptionisttalk is 1:
+	if ReceptionistTalk is 1:
 		say "[one of]'Hello, are you looking to fight today?'[or]'I hope you find today more joyous than yesterday!' Kris giggles at you.[or]'May your days be bright, young one.' Kris pops a hand over his muzzle after saying this and then giggles shyly.[or]'I wonder how the others are doing?'[or]'I hope Vis is getting alone well 'Va.'[or]'I miss Shimi's songs.'[or]Kris is drawing in a coloring book and barely notices you.[or]Kris is playing with a yo-yo.[or]Kris is watching the fights with rapt attention.[or]Kris looks sleepy.[or]Kris seems to be thinking up something important.[or]Kris is so cute you just want to hug him![or]'If you need to get some problems off of your chest try and talk with Tyr, he's surprisingly good at mediating conflicts.'[or]Kris yawns and then yips cutely.[at random]";
 
 
 
 Section 6 - Fighting Arena
 
-arenabattlecounter is a number that varies.
+ArenaBattleCounter is a number that varies.
 PitBattle is an action applying to nothing.
 
 Understand "battle" as PitBattle.
@@ -530,7 +530,7 @@ Check PitBattle:
 	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on." instead;
 
 Carry out PitBattle:
-	if arenabattlecounter >= 16:
+	if ArenaBattleCounter >= 16:
 		say "     I'm sorry, but you've been fighting in the arena a lot. The other competitors want to use the arena and the crowd's getting tired of seeing you. We've got to keep it exciting for them, too. Give it a break for a while before you come back.";
 	else if gestation of child > 0 or larvaegg is 2:		[preggers or parasite eggs]
 		say "I'm sorry, but I'm afraid that you'll have to withdraw any thoughts of fighting in the arena for now, with you being pregnant and all.' Kris shakes his head sadly at you before blinking bright gold eyes up into your [facename of player] face. 'In consolation, want me to tell you about my day?' At the heart-melting smile the pup shines up at you, you find yourself nodding, though not because you really want to.";
@@ -540,10 +540,10 @@ Carry out PitBattle:
 		follow the turnpass rule;
 	else:
 		say "'Ok, so you want to fight? Well we have several candidates for you,' Kris says while looking over a document on top of his desk. 'Most of them are canines, so I hope that's not a problem!' You shake your head at Kris to let him know that you'll be fine with that. A nod of the pup's head and then he is passing a list over to you. 'Chose one and have fun!'[line break]";
-		say "[arenafightcheck]";
+		say "[ArenaFightCheck]";
 
 
-to say arenafightcheck:
+to say ArenaFightCheck:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if furry is not banned and guy is not banned:
@@ -610,7 +610,7 @@ to say arenafightcheck:
 					challenge "Wildcat";
 				now inasituation is false;
 				say "Your battle over, you need to take a short break to recover.";
-				increase arenabattlecounter by 8;
+				increase ArenaBattleCounter by 8;
 				follow the turnpass rule;
 		else if calcnumber is 100:
 			say "[bold type]Exit the fighting menu?[roman type]";
@@ -627,7 +627,7 @@ to say arenafightcheck:
 	clear the screen and hyperlink list;
 
 an everyturn rule:
-	if arenabattlecounter > 0, decrease arenabattlecounter by 1;
+	if ArenaBattleCounter > 0, decrease ArenaBattleCounter by 1;
 
 
 Section 7 - LockerRoom

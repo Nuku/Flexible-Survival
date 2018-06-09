@@ -291,7 +291,7 @@ Example: * Working Without Sound - Printing a warning at the beginning of the ga
 
 	First when play begins:
 		unless glulx sound is supported:
-			say "This game uses sound effects extensively. The interpreter you're using is unable to play sounds, so you will be missing part of the intended experience.
+			say "This game uses sound effects extensively. The interpreter you're using is unable to play sounds, so you will be missing part of the intended experience.";
 
 Would you like to continue anyway?";
 			unless the player consents:

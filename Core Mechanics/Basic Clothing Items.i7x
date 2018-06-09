@@ -9,8 +9,8 @@ Version 1 of Basic Clothing Items by Core Mechanics begins here.
 When Play begins:
 	[testing drop of all items in the library]
 	[
-	add { "ripped jeans", "black jeans", "sturdy jeans", "skinny jeans", "hot pants", "gray pants", "camo pants", "jogging pants", "bermuda shorts", "black miniskirt", "pencil skirt", "floral skirt" } to invent of Gray Abbey Library;
-	add { "centaur cum", "centaur cum", "centaur cum", "centaur cum", "centaur cum", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn" } to invent of Gray Abbey Library;
+	add { "ripped jeans", "black jeans", "sturdy jeans", "skinny jeans", "hot pants", "gray pants", "camo pants", "jogging pants", "bermuda shorts", "black miniskirt", "pencil skirt", "floral skirt" } to invent of Grey Abbey Library;
+	add { "centaur cum", "centaur cum", "centaur cum", "centaur cum", "centaur cum", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn" } to invent of Grey Abbey Library;
 	]
 	[not sure why setting the plural boolean does not work for the pants, but this should (for now) fix that after the fact, at the same start]
 	now plural of ripped jeans is true;
@@ -199,7 +199,7 @@ the scent of floral skirt is "The skirt has the typical faintly musky scent of c
 
 [
 When Play begins:
-	add { "black t-shirt", "white t-shirt", "maroon pullover", "zephyr shirt", "camo shirt", "sleeveless shirt", "mesh shirt" } to invent of Gray Abbey Library;
+	add { "black t-shirt", "white t-shirt", "maroon pullover", "zephyr shirt", "camo shirt", "sleeveless shirt", "mesh shirt" } to invent of Grey Abbey Library;
 ]
 
 Table of Game Objects(continued)
@@ -307,7 +307,7 @@ the scent of mesh shirt is "The fabric has the typical faintly musky scent cloth
 
 When Play begins:
 	[
-	add { "combat boots", "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Gray Abbey Library;
+	add { "combat boots", "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Grey Abbey Library;
 	]
 	now plural of combat boots is true;
 	now plural of brown loafers is true;
@@ -423,7 +423,7 @@ the scent of cowboy boots is "The boots smell like leather.".
 
 When Play begins:
 	[
-	add { "ragged loincloth", "simple loincloth", "boxer briefs", "white briefs", "orange jockstrap", "mesh undies", "pink panties" } to invent of Gray Abbey Library;
+	add { "ragged loincloth", "simple loincloth", "boxer briefs", "white briefs", "orange jockstrap", "mesh undies", "pink panties" } to invent of Grey Abbey Library;
 	]
 	now plural of boxer briefs is true;
 	now plural of white briefs is true;
@@ -535,7 +535,7 @@ the scent of pink panties is "Smells a little bit musky. Apparently the underwea
 
 When Play begins:
 	[
-	add { "" } to invent of Gray Abbey Library;
+	add { "" } to invent of Grey Abbey Library;
 	]
 	now plural of stylish sunglasses is true;
 	now plural of basic sunglasses is true;
@@ -651,7 +651,7 @@ the scent of rose-tinted glasses is "The glasses don't smell like anything reall
 [
 When Play begins:
 
-	add { "" } to invent of Gray Abbey Library;
+	add { "" } to invent of Grey Abbey Library;
 ]
 
 Table of Game Objects(continued)
@@ -787,7 +787,7 @@ the scent of urban explorer helmet is "The helmet smells of plastic and fabric."
 
 When Play begins:
 	[
-	add { "" } to invent of Gray Abbey Library;
+	add { "" } to invent of Grey Abbey Library;
 	]
 	now plural of football pads is true;
 

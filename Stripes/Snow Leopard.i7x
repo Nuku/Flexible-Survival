@@ -80,7 +80,7 @@ to say beatthesnowmeow:
 		now description entry is "get that cock of his in you";
 		if cunts of player is 0 and player is submissive:
 			choose a blank row in table of fucking options;
-			now title entry is "Anal doggy-style";
+			now title entry is "Anal doggy style";
 			now sortorder entry is 4;
 			now description entry is "let the horny feline mount your ass";
 		sort the table of fucking options in sortorder order;
@@ -108,7 +108,7 @@ to say beatthesnowmeow:
 						say "[snowmeow_vsex02]";
 					else if nam is "Ride him":
 						say "[snowmeow_vsex03]";
-					else if nam is "Anal doggy-style":
+					else if nam is "Anal doggy style":
 						say "[snowmeow_vsex04]";
 					now nosnowmeowsex is 0;
 			else:

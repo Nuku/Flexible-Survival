@@ -9,14 +9,14 @@ when play begins:
 	add { "Behemoth" } to infections of furry;
 	add { "Behemoth" } to infections of tailweapon;
 
-to say Behemothdesc:
+to say BehemothDesc:
 	setmongender 5; [creature is herm]
 	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
 		say "     Charging straight for you on all fours is a beast straight out of legends. With teeth like razors, a forest green and blue hide covering its massive sixteen foot long frame, a mane of pure white trailing around its monstrous head, twin onyx horns jutting from its scalp and four clawed paws scraping at the ground beneath its gigantic form the mutant in front of you is definitely not something you would have ever hoped to come cross. The fact that this behemoth of a creature has a massive nine foot tail covered in spikes and fur that lashes through the air behind it is nothing compared to the four and a half foot long cock and the pair of medicine ball sized testes dangling up under its body.";
 
-to say losetoBehemoth:
+to say LoseToBehemoth:
 	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
@@ -57,7 +57,7 @@ to say losetoBehemoth:
 				say "     Having gone through such a massive ordeal you find yourself collapsing just as the Behemoth in front of you finishes with its orgasm. The beast takes only a few minutes to shiver and then purr in pleasure from the intense orgasm you just helped it out with, but once the beast has gotten control over itself again it pulls its paw-like hands away from its still spurting cock, rolls itself over onto its hands and feet and then gets up to go about its way as if nothing had happened. The Behemoth takes very little interest in you as it pads off about its business, and a good thing to because it takes an hour before your body can solidify itself back together again.";
 				decrease humanity of player by 10;
 
-to say beattheBehemoth:
+to say BeatTheBehemoth:
 	if inasituation is true:
 		say "     "; [dealt with at the event source]
 	else:
@@ -96,9 +96,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Behemoth"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Behemoth attacks with a bellowing roar, all but destroying your eardrums![or]The Behemoth sweeps its massive clawed forepaw into you sending you corkscrewing across the ground![or]The Behemoth batters with a mighty charge, knocking you across the ground![or]The Behemoth spins around to strike at you with its gargantuan tail![or]The Behemoth slams it forepaws into the ground causing and earthquake to upset your balance. It then flies into you to knock you into the ground![or]The Behemoth charges at you, hitting you directly into the chest with its toughened skull![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheBehemoth]"; [ Text when monster loses. Change 'Behemoth' as above. ]
-	now victory entry is "[losetoBehemoth]"; [ Text when monster wins. Change 'Behemoth' as above. ]
-	now desc entry is "[Behemothdesc]"; [ Description of the creature when you encounter it. ]
+	now defeated entry is "[BeatTheBehemoth]"; [ Text when monster loses. Change 'Behemoth' as above. ]
+	now victory entry is "[LoseToBehemoth]"; [ Text when monster wins. Change 'Behemoth' as above. ]
+	now desc entry is "[BehemothDesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is " lightly tinted with a greenish-blue hue with a long and angular muzzle, filled with twin rows of jagged fangs, protruding from the end of your face. With two sixteen inch onyx curved horns jutting out from your scalp, a shaggy white mane extending around your face and down to your back, fierce golden-orange almond shaped irises centered into your pitch black eyes and a pair of furry tri-pointed ears flicking back and forth beside both of your horns you are a fearsome-looking beast indeed"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "stacked on with massive muscles and thickly corded sinew. Because of your body's new physique you have acquired a slightly hunched over posture, symbolizing a better aptitude for you to walk and run on all fours instead of on two feet. Yet because of the density of your newly thickened bones you are able to walk without lumbering...too much. With your bestial eight foot frame there is no denying your ferocity as you now boast sharpened claws at the end of your four fingered hands and at the tips of your three toed feet. To complete your new body you now have two pure white fin-like wings, complete with greenish-blue membranes, fluttering at your backside"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "a toughed hide of light greenish-blue"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
@@ -176,7 +176,7 @@ when play ends:
 				say "     Apparently, this super-soldier project was creating artificial constructs/mutants from gathered genetic material of those who had willingly, or else, been roped into the scheme set into place back there. Having wrecked the megalomaniacal dreams of whoever was behind everything, plus beaten the tar out of the Behemoth that had tricked you into the entire situation, you end up finding a young Behemoth boy and several teenage Behemoth herms locked together inside of a white room on your way out. It was only natural for you to rescue them, but apparently it was even more natural for them to see you as their new [']master['] and follow you out without question. Despite the alarms, chaos, other madness happening as you bulldozed you way out of the hidden facility, you ended up getting out of the place relatively safely with your new brood. Taking the genetically constructed behemoths back to your home you hastily prepare yourself and your roommates to haul tail out of the new metropolis you had currently been residing in after a bad feeling has your teeth set on edge.";
 				say "     Finding a new place to live turns out to be not a problem, considering the very lucrative remuneration you received from the Behemoth who had tried you rope you into the whole debacle in the first place. Yet, dealing with physically, mentally, and sexually enhanced teenagers does turn out to be something of a challenge as you come to realize that the Behemoths you rescued need a lot more [']care['] than what a normal youth might require when going through puberty. Fucking the lot of them turns out to be a moral conundrum that only lasts for about a week after you find each of them rutting each other outside of the large villa you ended up purchasing, hand over fist, from a less than honest landowner. It probably helps things along that many of your roommates have come to adore your [italic type]sons[roman type] and became sexual with them sometime when you weren't watching.";
 				LineBreak;
-				say "     Taking and being taken by the powerful behemoths become something of a workout that you can appreciate as the brawny mutants are able to take your massive girth into their respective holes with little trouble, something previous lovers have complained about in the past. The Behemoth boy you found, who you've come to name Samuel, the only non-herm of the lot, becomes something of a protégé to you as the other soaks up your attention and wisdom while teaching you things and showing you how to deal with problems in ways you hadn't thought of before. How the other bought and setup that gym equipment he had [']bought['] without you giving him any money is something you know better than to ask about.";
+				say "     Taking and being taken by the powerful behemoths become something of a workout that you can appreciate as the brawny mutants are able to take your massive girth into their respective holes with little trouble, something previous lovers have complained about in the past. The Behemoth boy you found, who you've come to name Samuel, the only non-herm of the lot, becomes something of a protegee to you as the other soaks up your attention and wisdom while teaching you things and showing you how to deal with problems in ways you hadn't thought of before. How the other bought and setup that gym equipment he had [']bought['] without you giving him any money is something you know better than to ask about.";
 				say "     Working out, fucking, and just being [italic type]alive[roman type] dominants the rest of your life from them on. Yet, as many creatures do, your herm [']boys['] eventually grow wise enough to leave you to go off and see the world with their own eyes. This leaves you with something of an empty heart, though not for long though since Samuel decides to remain by your side. A fact made even more wonderful since Samuel always proves himself to be an excellent lover for you, despite you having [']raised['] him. However, as you come to find out later on, the rest of your brood doesn't happen to stray too far from home as the rumors of more and more behemoths mutants taking over the countryside you live in does reach your ears months afterwards your troupes departure.";
 				say "     What's that old saying about sons again...";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]

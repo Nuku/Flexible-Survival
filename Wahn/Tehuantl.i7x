@@ -386,7 +386,7 @@ an everyturn rule:
 		else if TehuantlStatus is 3:
 			decrease TehuantlTimer by 1;
 			if TehuantlTimer is 0:
-				if player is in Gray Abbey Library or bunker or gray Abbey 2f:
+				if player is in Bunker or Grey Abbey Library or Grey Abbey 2F
 					say "     You hear Tehuantl moaning and rush to check on her.";
 					say "     Tehuantl gives birth scene!";
 				else:
@@ -396,7 +396,7 @@ an everyturn rule:
 				increment Tehuantl children variables
 ]
 
-after navigating Gray Abbey Library:
+after navigating Grey Abbey Library:
 	if HP of Tehuantl is 10:
 		if TehuantlTimer - turns > 16:
 			now HP of Tehuantl is 11;
@@ -498,8 +498,8 @@ instead of resolving Feline Relief:
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 
-instead of going up from Gray Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Gray Abbey 2F and libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Gray Abbey 2F)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)):
+	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/CARL TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
 	if libido of Tehuantl is 0: [first time]
@@ -548,8 +548,8 @@ instead of going up from Gray Abbey Library while ((LastTehuantlCarlScene - turn
 	now LastTehuantlCarlScene is turns;
 
 
-instead of going up from Gray Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Gray Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
-	move player to Gray Abbey 2F;
+instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
+	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/Korvin TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
 	if libido of Tehuantl is 0: [first time]
@@ -578,7 +578,7 @@ instead of going up from Gray Abbey Library while (LastTehuantlKorvinScene - tur
 				say "     The constant growling of the jaguar warrior gives way to a soothing purr, as soon as he feels the tension leave Korvin's body. Tehuantl relaxes his bite and starts to lick the side of your attack dog's neck and face. 'We are bond brothers to the same [master]. You should only be thinking of how to please [ObjectPro of player], not jockey for position with me. Learn this, or the next time will be much more unpleasant,' Tehuantl explains with determination in his voice. Following this statement, he grinds his crotch forward against the German shepherd's ass, tickling his inner walls with the small feline barbs adorning his shaft. The sensations leave Korvin panting against the floor in pleasure, quickly followed by a startled yelp as Tehuantl begins to pull out again, which has the nubby ends of the barbs scraping along Korvin's tender flesh.";
 				WaitLineBreak;
 				say "     'Fuuuckkk!!' Korvin groans out, taken by surprise by the jaguar warrior's slow withdrawal. Nonetheless, judging by his expression, it is clear that, in the resulting mixture of discomfort and arousal which wrecks his body, the pleasure is winning out. He keeps panting like a bitch in heat, and you notice that his canine cock is erect, and bobbing underneath him. Tehuantl stretches forward to lick the side of your attack dog's muzzle, 'I'm being gentle, to show you we can be true brothers,' he claims, as he thrusts once more into Korvin. The German shepherd adapts to the mixture of pleasure and light pain fairly quickly. This allows Tehuantl to speed up his thrusts little by little. With each new penetration, the opposite sensations seem to blend more and more into each other until Korvin reaches a state of constant arousal, from the continous movements in and out his tight hole.";
-				say "     Before long, the jaguar warrior thrusts into Korvin a final time, and roars triumphantly, as he forces his entire length into the exhausted canine. A visible twitch runs through his entire body, and the first of several heavy throbs of feline seed is unleashed into the mutt's body, marking him as Tehuantl's brother in your stable of sex-pets. The German shepherd wheezes loudly with each additional splash of cum and spasm against his prostate. He eventually humps the ground on his own, and creams the floor and his tummy fur with his cum. The both of them have cum hard, and now, they ride out their respective orgasms together, Tehuantl clutching Korvin's furry body the whole time, and occasionally lapping at his fur. Once their climax began to subside, the jaguarman rolls the two of them over on their sides, and wraps his arms around Korvin from behind. Then, he purrs loudly. You fight as to not laugh at the expression of dismay painting your attack dog's face. His plan of domination have backfired, and led him to be fucked, and lie in his own cum, cuddled possessively by the male jaguar.";
+				say "     Before long, the jaguar warrior thrusts into Korvin a final time, and roars triumphantly, as he forces his entire length into the exhausted canine. A visible twitch runs through his entire body, and the first of several heavy throbs of feline seed is unleashed into the mutt's body, marking him as Tehuantl's brother in your stable of sexpets. The German shepherd wheezes loudly with each additional splash of cum and spasm against his prostate. He eventually humps the ground on his own, and creams the floor and his tummy fur with his cum. The both of them have cum hard, and now, they ride out their respective orgasms together, Tehuantl clutching Korvin's furry body the whole time, and occasionally lapping at his fur. Once their climax began to subside, the jaguarman rolls the two of them over on their sides, and wraps his arms around Korvin from behind. Then, he purrs loudly. You fight as to not laugh at the expression of dismay painting your attack dog's face. His plan of domination have backfired, and led him to be fucked, and lie in his own cum, cuddled possessively by the male jaguar.";
 				LineBreak;
 				say "     [italic type]Oh well, it will do him some good to spend more time with Tehuantl,[roman type] you consider. [italic type]It will temper this unruly dog's unruly edges.[roman type]";
 				now TehuantlKorvinRelationship is 10; [Korvin got Jaguar-fucked]

@@ -187,7 +187,7 @@ When Play begins:
 	now lootchance entry is 20; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[at random]";
-	now type entry is "[one of]batlike[or]chiropteran[at random]";
+	now type entry is "[one of]bat-like[or]chiropteran[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;

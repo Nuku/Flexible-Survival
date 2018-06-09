@@ -49,7 +49,7 @@ When Play begins:
 	now victory entry is "[CheetahWomanWins]";
 	now desc entry is "[CheetahWomanDesc]";
 	now face entry is "Sleek cheetah like face, with a short muzzle, soft whiskers, and small rounded ears resting on top of your new ";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "Slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new pawlike feet, as they grip the ground tightly, you find yourself leaning forward slightly as you walk, as if you were always ready to spring into action.";[ Body Description, format as the text "Your Body is (your text)"]
+	now body entry is "Slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new paw-like feet, as they grip the ground tightly, you find yourself leaning forward slightly as you walk, as if you were always ready to spring into action.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]Cheetah spotted[or]Cheetah furred[or]Black and yellow spotted[or]slick furred[or]short fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long, thin feline tail stretching out behind you, constantly lashing and curling around from side to side as if it is always eager to be moving. It is covered in [skin of player] skin and provides an excellent counterbalance to swift movement.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]cheetah[or]barbed[or]pointed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]

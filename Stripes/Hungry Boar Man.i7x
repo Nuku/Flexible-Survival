@@ -388,13 +388,13 @@ When play ends:
 					if cunts of player > 0:
 						say "     Philip purchases a small pig farm out in the country and invites you to come live with him. You agree. Philip becomes your passionate lover as the two of you adjust to life on the farm. Eventually, your belly grows big and round. You're expecting your first litter of piglets any day now.";
 						if Sandra is in the Bunker:
-							if Snow is in the Gray Abbey Library:
+							if Snow is in the Grey Abbey Library:
 								say "     Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
 							else:
 								say "     Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
-						else if Snow is in the Gray Abbey Library:
+						else if Snow is in the Grey Abbey Library:
 							say "     Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
-						if sarahslut is 4:
+						if SarahSlut is 4:
 							say "     Sarah's numerous pups make fine farm dogs. You set up a nice kennel to breed them on the farm as well. They guard the farm and make for fine playthings when not enjoying messy, piggy sex.";
 					else:
 						say "     Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
@@ -457,14 +457,14 @@ When play ends:
 					say "     One day while working the bulldozer at the far end of the landfill, a friendly coworker calls you over. When you climb out to join the seagull, he presses you down into the trash and mounts you. You try your best to muffle your squeals of delight, not wanting to get into trouble, but loving the nasty feeling of being fucked at work on a messy pile of trash. After filling you, he invites you to join him at his place after work for more. That night is a wild romp that soon becomes more and more nights of the same. You move into his love nest and bear him clutch after clutch of eggs filled with winged piggies, loving your messy, dirty bird.";
 			if ( pigfucked > 0 ) or ( cunts of player > 0 and Philip is in Bunker ):	[Philip farm endings]
 				if Sandra is in the Bunker:
-					if Snow is in the Gray Abbey Library:
+					if Snow is in the Grey Abbey Library:
 						say "     Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
 					else:
 						say "     Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
-				else if Snow is in the Gray Abbey Library:
+				else if Snow is in the Grey Abbey Library:
 					say "     Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
 			if Philip is in Bunker:										[any farm ending]
-				if sarahslut is 4:
+				if SarahSlut is 4:
 					say "     Sarah's numerous pups make fine farm dogs. You set up a nice kennel to breed them on the farm as well. They guard the farm and make for fine playthings when you're not enjoying messy, piggy sex.";
 
 

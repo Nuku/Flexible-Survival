@@ -1,4 +1,5 @@
-Version 4 of Bear for FS by Nuku Valente begins here.
+Version 4 of Brown Bear by Nuku Valente begins here.
+
 [ Version 1.0 - Initial mob from Nuku Valente's equine extension - Illpill                                               ]
 [ Version 1.1 - Moved to Nuku Valente's folder, unknown changes - Nuku                                                   ]
 [ Version 1.2 - Bear can no longer expand you if you have microwaved or male preferred - Nuku Valente                    ]
@@ -134,7 +135,7 @@ When Play begins:
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 14; [because you wouldn't want to argue]
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 60; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now HP entry is 60; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
@@ -184,4 +185,4 @@ to say honeycombuse:
 instead of sniffing honeycomb:
 	say "The small piece of honeycomb smells like a sweet smackerel of honey. You don't notice anything unusual or infected about its odor.";
 
-Bear For FS ends here.
+Brown Bear ends here.

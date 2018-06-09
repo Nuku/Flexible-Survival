@@ -103,7 +103,7 @@ to say sidneyconvinced:
 	say "     It doesn't seem particularly special. The top half is a tennis-ball-sized device with a small needle tip and a few buttons. Below that is a clear cannister full of dull gray goo placed like a handle behind the trigger.";
 	say "     'We were given this for our mission. It's some sort of fancy nanite transfer unit - a one-time sample collection device. An expensive little gizmo, they said. The nanites here,' he says while tapping the glass capsule, 'collect a complete data sample of the target. That way they can then be analyzed... or transfered into someone else to make an identical physical copy.'";
 	attempttowait;
-	say "     Looking at the soldier's bent nose, jutting chin and unibrow, you think you have an idea of where this is going, but are surprised by what he says next. 'I've always wanted to be a woman - soft, beautiful, loving, fertile. I know I don't look the type, and that's kinda the problem. No way I'd've ever been able save up enough for an operation and it wouldn't make me pretty.";
+	say "     Looking at the soldier's bent nose, jutting chin and unibrow, you think you have an idea of where this is going, but are surprised by what he says next. 'I've always wanted to be a woman - soft, beautiful, loving, fertile. I know I don't look the type, and that's kinda the problem. No way I'd have ever been able save up enough for an operation and it wouldn't make me pretty.";
 	say "     'Now this whole mess, it's a dream come true - but it's full of risks. I saw the guys I was sent in with get turned into mindless breeding sluts and crazy multi-gender monsters[if cocks of player > 0 and cunts of player > 0] (no offence)[end if], and I don't want that. I want to still be me, but finally better. I've been putting it off for a while - trying to psych myself up into doing it, I guess - and even found a few possible candidates to copy around here. But getting a sample's too risky, especially since I'm long out of ammo and have no backup. Unless you're willing to maybe help me out?' he asks. 'I've got a few possible donors in mind.'";
 	now HP of Sidney is 2;
 	say "[sidneyoptions]";
@@ -387,7 +387,7 @@ to say sexwithSidney:
 		say "     Sidney's undergone a major change. You should talk to her and see how she's taking it before trying to jump in the sack with her.";
 	else if HP of Sidney is 4 or HP of Sidney is 5:
 		if cocks of player > 0:
-			say "[sexwithSidney_01]"; [doggy-style over desk for first M/F]
+			say "[sexwithSidney_01]"; [doggy style over desk for first M/F]
 			now HP of Sidney is 6;
 		else:
 			say "[sexwithSidney_04]"; [cunnilingus for F/F]
@@ -401,9 +401,9 @@ to say sidney_sexmenu:
 	blank out the whole of table of fucking options;
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Doggy-style";
+		now title entry is "Doggy style";
 		now sortorder entry is 1;
-		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] doggy-style";
+		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] doggy style";
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 2;
@@ -430,7 +430,7 @@ to say sidney_sexmenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Doggy-style":
+				if nam is "Doggy style":
 					say "[sexwithSidney_01]";
 				else if nam is "Missionary":
 					say "[sexwithSidney_02]";
@@ -499,7 +499,7 @@ to say sexwithSidney_04:
 
 Section 6 - Interactions
 
-after navigating Gray Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
+after navigating Grey Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
 	say "     You arrive back to find Sidney's come out of the breakroom. At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that. The wolf goes from nuzzling the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] to sniff along her side and then under her tail. Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[else]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy. She shivers with pleasure and releases a happy moan.";
 	say "     Shall you continue watching?";
 	if the player consents:

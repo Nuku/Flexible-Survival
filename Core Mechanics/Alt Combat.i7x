@@ -11,7 +11,7 @@ altattackmade is a number that varies.	[ This tracks whether an alternate attack
 combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
 ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 ktcockmatch is a truth state that varies.
-ktcockmatch is usually false. [ Checks for matching player cock while using the 'Know Thyself' feat. ]
+ktcockmatch is usually false.          [ Checks for matching player cock while using the 'Know Thyself' feat. ]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
 skipretaliate is a truth state that varies. [Used to detect if monster will be denied a chance to retaliate.]
@@ -24,7 +24,7 @@ monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
 bonusattack is a number that varies.	[ Used to track how many bonus attacks a player's earned in a round. ]
 chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
 fightoutcome is a number that varies.	[ Used to track the different outcomes of a fight. ]
-absorb is a number that varies. [ Used to track the damage absorbed by armor/shield/feats. ]
+absorb is a number that varies.          [ Used to track the damage absorbed by armor/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
 duckyactive is a truth state that varies.	[ Used to mark if the ducky's last-minute save has been used this turn. ]
@@ -46,28 +46,27 @@ playerpoison is a number that varies.	[ Used to track how poisoned the player ma
 monsterpoison is a number that varies.	[ Used to track how poisoned the monster may be (not currently in use). ]
 lastfightround is a number that varies.	[ Used to track the last round during which a fight occurred. ]
 
-[		fightoutcome			]
-[ 100 *	starting value			]
-[							]
-[ 	10 - 19 Plaver Victory			]
-[ 10 *	victory				]
-[ 11		v. (submit to player master)	]
-[ 13		v. (player vores foe)			]
-[ 14		v. (player ub's foe)			]
-[ 18		v. (monster flee)			]
-[ 19		neutral peace			]
-[							]
-[	20 - 29 Player Loss			]
-[ 20 *	loss (dmg)				]
-[ 21 *	loss (libido)			]
-[ 22 *	loss (submit)			]
-[ 23		loss (vored)			]
-[ 24		loss (ub'd)			]
-[							]
-[	30+ Player Flees				]
-[ 30 *	player flee				]
-[ NOTES: Alt-Combat will only award the basic values marked with an asterisk.						]
-[ Most events should only concern themselves with those results, often lumping all losses into one group.	]
+[ fightoutcome                         ]
+[ 100*  - starting value               ]
+[                                      ]
+[ 10-19 - player victory               ]
+[ 10*   - victory                      ]
+[ 11    - v. (submit to player master) ]
+[ 13    - v. (player vores foe)        ]
+[ 14    - v. (player ub's foe)         ]
+[ 18    - v. (monster flee)            ]
+[ 19    - neutral peace                ]
+[                                      ]
+[ 20-29 - player loss                  ]
+[ 20*   - loss (dmg)                   ]
+[ 21*   - loss (libido)                ]
+[ 22*   - loss (submit)                ]
+[ 23    - loss (vored)                 ]
+[ 24    - loss (ub'd)                  ]
+[                                      ]
+[ 30+   - player flees                 ]
+[ 30*   - player flee                  ]
+[ NOTES: Alt-Combat will only award the basic values marked with an asterisk. Most events should only concern themselves with those results, often lumping all losses into one group. ]
 
 
 Section 1 - Prepping for Combat
@@ -222,7 +221,8 @@ To Combat Menu:
 		if weakwilled is true and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
 			[chance to submit in combat if you have the Weak-Willed flaw, feel free to adjust odds]
 			say "[line break]Your [one of]weak-willed[or]submissive[or]easily-influenced[as decreasingly likely outcomes] nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
-			WaitLineBreak;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
 			follow the submit rule;
 			next;
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
@@ -425,7 +425,7 @@ This is the player attack rule:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defenses[at random], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defences[at random], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else:
@@ -1052,7 +1052,7 @@ to say areaabsorbancy:			[area of affect attack]
 	now absorb is damagein - damageout;
 
 
-to say noarmorabsorbancy:			[normalized natural defense only]
+to say noarmorabsorbancy:			[normalized natural defence only]
 	now absorb is 0;
 	now damageout is damagein;
 	let totalarmor be 0;
@@ -1441,7 +1441,8 @@ this is the bearhug rule:
 		else:
 			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip! ([HP of player]/[maxHP of player] HP)[line break]";
 		if HP of player > 0:
-			WaitLineBreak;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
 			let num1 be a random number between 0 and ( Strength of player + level of player );
 			let num2 be a random number between 1 and ( str entry + lev entry );
 			if name entry is "Snake" or name entry is "Naga":

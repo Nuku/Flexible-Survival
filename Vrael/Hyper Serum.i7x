@@ -14,15 +14,15 @@ instead of resolving Mysterious Briefcase:
 	say "     ([link]N[as]n[end link]) - Leave it. Bad things can happen if one messes around with experimental chemicals.";
 	if player consents:
 		LineBreak;
-		say "     Stuffing everything back in the briefcase, you grab your new acqusition and make a beeline for the Gray Abbey Library since it would be a bit much to lug around during further exploration. (...more scene...)";
-		move player to Gray Abbey Library;
+		say "     Stuffing everything back in the briefcase, you grab your new acqusition and make a beeline for the Grey Abbey Library since it would be a bit much to lug around during further exploration. (...more scene...)";
+		move player to Grey Abbey Library;
 		now HyperSerumTracker is 1;
 	else:
 		LineBreak;
 		say "     With a shrug, you drop the papers and briefcase, then go to check over the car itself. Sadly, there isn't anything worthwhile inside, so you continue on your way.";
 	now Mysterious Briefcase is resolved;
 
-instead of navigating Gray Abbey Library while (Fang is in Gray Abbey Library and HP of Fang > 2 and HyperSerumTracker is 1): [alpha Fang present, Serum Found]
+instead of navigating Grey Abbey Library while (Fang is in Grey Abbey Library and HP of Fang > 2 and HyperSerumTracker is 1): [alpha Fang present, Serum Found]
 	say "     As you return to the library, you hear a loud crash fallowed by a faint slurping sound. You rush towards the commotion, only to find your alpha with his snout buried in that briefcase you found! Your worried about what effects it could have on the already large wolf as he looks to have already slurped up three vials worth of the stuff... Before you can ponder on this anymore, the feral male starts to give out a low rumble as he seems to have his fill of the blue fluid. Those rumbles soon turn into growls as the dominant wolf's muscles visibly flex under his fur. Soon your attention to the male's body is brought underneath the feral as his canid shaft was quickly emerging to it's full length!";
 	say "     Your alpha seemed to be enjoying himself despite his constant growling as his fuzzy sack soon began to tense and swell, audibly gurgling with newly produced cum. The feral stud began to hump at the air, thick jets of pre cum splattering over the tiled floor as that fat doggy dick swelled right along with those balls. The wolf's cock twitches and pulses with thick powerful veins as inch after inch is added to it, soon becoming over two feet in length. Those heated orbs had nearly doubled in size as well! Suddenly that very dominant musk hit you in full force, making your knees wobble and mind cloud with lust. Your were suddenly brought back into focus as Fang's body soon began to grow as well, catching up to match his massive endowments. That leaky cock had utterly covered the floor in pre cum as it finally stopped swelling out over 3 feet. His gargatuan balls swinging heavily between his hindlegs";
 	WaitLineBeak;

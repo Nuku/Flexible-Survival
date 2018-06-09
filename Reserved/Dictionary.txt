@@ -1140,10 +1140,10 @@
 |Kaleem Mcintyre|Tyr's Club|LockerRoom|room|
 |Kaleem Mcintyre|Tyr's Club|Receptionist|man|
 |Kaleem Mcintyre|Tyr's Club|Tyrtalk|value|
-|Kaleem Mcintyre|Tyr's Club|tyrdefeated|value|
-|Kaleem Mcintyre|Tyr's Club|tyrtraining|value|
-|Kaleem Mcintyre|Tyr's Club|Receptionisttalk|value|
-|Kaleem Mcintyre|Tyr's Club|arenabattlecounter|value|
+|Kaleem Mcintyre|Tyr's Club|TyrDefeated|value|
+|Kaleem Mcintyre|Tyr's Club|TyrTraining|value|
+|Kaleem Mcintyre|Tyr's Club|ReceptionistTalk|value|
+|Kaleem Mcintyre|Tyr's Club|ArenaBattleCounter|value|
 |Kaleem Mcintyre|Tyr's Club|PitBattle|action|
 |Wahn|Farm|20140908213124/29935:Mon 8 September 2014 21:31|indexing|
 |Wahn|Farm|Cow Hunting|situation|
@@ -1501,12 +1501,12 @@
 |Stripes|Leonard Events|leodenlist|value|
 |Stripes|Leonard Events|leodinner|value|
 |Stripes|Leonard Events|leoshadowmet|value|
-|Stripes|Leonard Events|leonardcaraway|value|
+|Stripes|Leonard Events|Leonardcaraway|value|
 |Stripes|Leonard Events|lastleomidcoitus|value|
 |Stripes|Leonard Events|leopocketwatch|value|
 |Stripes|Leonard Events|leoparklist|value|
-|Stripes|Leonard Events|leonardwrdesk|value|
-|Stripes|Leonard Events|leonardcabinet|value|
+|Stripes|Leonard Events|Leonardwrdesk|value|
+|Stripes|Leonard Events|Leonardcabinet|value|
 |Stripes|Latex Quad Husky|20140908213124/1554:Mon 8 September 2014 21:31|indexing|
 |Stripes|Latex Quad Husky|Shipping Container|situation|
 |Stripes|Latex Quad Husky|latexhuskymode|value|
@@ -3032,11 +3032,11 @@
 |Sarokcat&hellerhound|Sarah|Sarah|woman|
 |Sarokcat&hellerhound|Sarah|hasparts|value|
 |Sarokcat&hellerhound|Sarah|sarahtalk|value|
-|Sarokcat&hellerhound|Sarah|sarahslut|value|
+|Sarokcat&hellerhound|Sarah|SarahSlut|value|
 |Sarokcat&hellerhound|Sarah|shortonparts|value|
 |Sarokcat&hellerhound|Sarah|lastsarahfucked|value|
-|Sarokcat&hellerhound|Sarah|sarahpregnant|value|
-|Sarokcat&hellerhound|Sarah|Sarahpups|value|
+|Sarokcat&hellerhound|Sarah|SarahPregnant|value|
+|Sarokcat&hellerhound|Sarah|SarahPups|value|
 |Sarokcat|Nermine|20140908213124/62089:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Nermine|Mysterious Shop|room|
 |Sarokcat|Nermine|Mysterious Shop entrance|door|
@@ -3368,7 +3368,7 @@
 |Stripes|Leonard|Hunting Prides|situation|
 |Stripes|Leonard|feline_status|value|
 |Stripes|Leonard|violinfound|value|
-|Stripes|Leonard|leonardtimer|value|
+|Stripes|Leonard|Leonardtimer|value|
 |Stripes|Leonard|feline_pride_defeat|value|
 |Stripes|Leonard|violinspritefight|value|
 |Stripes|Leonard|felinefaced|adjective|

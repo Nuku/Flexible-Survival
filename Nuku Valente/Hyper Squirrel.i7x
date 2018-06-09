@@ -51,8 +51,8 @@ Instead of Resolving a Hyper Squirrel Girl:
 					if the distilled milk is owned:
 						decrease carried of distilled milk by 1;
 						say "'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
-						now snow is in Gray Abbey Library;
-						move player to Gray Abbey Library;
+						now snow is in Grey Abbey Library;
+						move player to Grey Abbey Library;
 						increase score by 5;
 						now hyper squirrel girl is resolved;
 					else:
@@ -73,7 +73,7 @@ Squirrel Den is a room. It is private.	[This is just a holding spot and not a re
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
 Snow is a person.
-The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armour. Type [bold type]upgrade (weapon/armour)[roman type] and she'll give it a working over.".
+The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.".
 Snow is in Squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
@@ -100,9 +100,9 @@ Understand "upgrade [owned grab object]" as smithing.
 Check smithing:
 	if the noun is not owned, say "You can't offer what you don't have." instead;
 	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
-	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armour." instead;
+	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armor." instead;
 	if the noun is nanite collector, continue the action;
-	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armour." instead;
+	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armor." instead;
 	If the noun is improved, say "It is as good as it gets." instead;
 	if the noun is wielded, say "Stop wielding it first." instead;
 	if the noun is equipped, say "Stop wearing it first." instead;
@@ -288,11 +288,12 @@ to say sexwithsnow02:	[Anal on Snow]
 		now wild squirrels is not resolved;
 	else:
 		say "     Snow frowns a little. 'Well, fine, be that way then. It's too bad you don't know a good thing when you see it, but I guess not everyone's into that kind of thing. I'm still up for some fun, hon. Let's see what other trouble we can get into,' she adds with a grin.";
-		attempttowait;
+		WaitLineBreak;
 		now nosquirrelanal is true;
 		say "[snowsexmenu]";
 
 to say sexwithsnow03:	[Vaginal on player]
+	setmonster "Hyper Squirrel";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [bodyname of player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge, pink, member to pop free, bulging with thick veins along its human shaped but inhumanly pink and massive, length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit sized, balls. At least she's not as big as those panther taurs.";
@@ -308,6 +309,7 @@ to say sexwithsnow04:	[Anal on player]
 	say "***";
 
 to say sexwithsnow05:	[Dommed and fucked]
+	setmonster "Hyper Squirrel";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Snow grins and moves in on you, grabbing your wrists and pressing you back against one of the stone wooden columns. 'Mmm... now, I can tell you're the kind that likes to let someone else take charge, so I think I'll do just that,' she says with a husky rumble of arousal in her voice. She grinds her throbbing manhood against your hip and looks you over with lustful intent";
@@ -382,7 +384,7 @@ to say snowsquirrelgivein:
 	now daycycle of player is 0;
 	now humanity of player is 0;
 	end the story saying "You and Snow have lost your minds to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take a turn with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
-	attempttowait;
+	WaitLineBreak;
 	follow the turnpass rule;
 	stop the action;
 
@@ -462,7 +464,8 @@ Instead of resolving a wild squirrels:
 		wait for any key;
 		end the story saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	else:
-		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
+		setmonster "Hyper Squirrel";
+		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Hyper Squirrel";
 			now bodyname of child is "Hyper Squirrel";
@@ -485,14 +488,14 @@ Instead of resolving a wild squirrels:
 
 
 When play ends:
-	if Snow is in Gray Abbey Library:
+	if Snow is in Grey Abbey Library:
 		if HP of the player > 0:
 			if humanity of the player < 10:
 				say "     Snow abandons the idea of being saved when you go feral and she joins you in the city, remaining close at your side and becoming like a pack member to you, adoring and loving. Your life with her as a wild squirrel is one of bestial lust as you spend much of your day fucking one another in the squirrel's den they've set up in a small home near a cluster of acorn trees. From time to time, you and the others will snag a poor, unprepared person and fuck them into submission, adding another squirrel to your numbers. When there gets to be too many for your small home, a group breaks off to find a new home to claim as a nest. But you and Snow always remain there along with your first pair of wild lovers";
 			else:
 				if bodyname of player is "Hyper Squirrel":
 					say "     Your squirrel body arouses little interest, being a rather mundane creature, if one they've only seen in you and Snow to date. You don't mention the arousing power of the wild squirrels you and Snow encountered for fear they'd think you capable of the same. After your eventual release, you and Snow settle down together, becoming lovers and mates.";
-					say "     You get a small home together in the suburbs of a new city, picking one with a large acorn tree out front. Your neighbours are a little shy and nervous around you at first, though squirrels are cute and safe enough that they soon get used to you. And when you start making acorn butter and other nut treats for them come fall, they're even friendlier still. Though it certainly doesn't hurt that the acorn butter is made with some squirrel cum. While not able to infect them, it gets them quite aroused and soon you and Snow are often having sex with many of your neighbours, both men and women";
+					say "     You get a small home together in the suburbs of a new city, picking one with a large acorn tree out front. Your neighbors are a little shy and nervous around you at first, though squirrels are cute and safe enough that they soon get used to you. And when you start making acorn butter and other nut treats for them come fall, they're even friendlier still. Though it certainly doesn't hurt that the acorn butter is made with some squirrel cum. While not able to infect them, it gets them quite aroused and soon you and Snow are often having sex with many of your neighbors, both men and women";
 				else:
 					say "     Snow settles down after being rescued. She turns to you for affection more consistently, and eventually asks to be your girl(boy?) friend. She is a wonderfully friendly and helpful companion, always willing to help you out on a project or making repairs to your home";
 				if Sandra is in Bunker:

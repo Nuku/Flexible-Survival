@@ -225,7 +225,7 @@ Figure of Jay_naked_icon is the file "Jay_naked.jpg".
 Figure of Jay_suit_icon is the file "Jay_suit.jpg".
 Figure of Jay_suit_quest_icon is the file "Jay_suit_quest.jpg".
 Figure of Jay_undies_icon is the file "Jay_undies.jpg".
-Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
+Figure of LeonardViolin_icon is the file "Leonardv_ig.jpg".
 Figure of Lilith_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
 Figure of Lilith_face_icon is the file "Succubus_face.jpg".
@@ -309,10 +309,10 @@ Figure of Zigor_icon is the file "Zigor_ig.jpg".
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
 Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg".	[Encased by Bottlenose Toy]
 Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attraction' ending only.]
-Figure of Corbin_Felinoid_icon is the file "Corbin_Felinoid.jpg". [riding the cat]
+Figure of Corbin_Felinoid_icon is the file "Corbin_Felinoid.jpg".  [riding the cat]
 Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
-Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg". [make-up sex]
+Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg".  [make-up sex]
 Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
 Figure of Boy_To_Fox_Shampoo1_icon is the file "Boy_To_Fox_Shampoo1.jpg".
 Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
@@ -329,11 +329,11 @@ Figure of Parasol_Nap_icon is the file "Parasol_Nap.jpg". [female canine lying o
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of Shy_Vixen_icon is the file "Shy_Vixen.jpg".
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
-Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg". [mid-sex scene graphic.]
-Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg". [satyrs with barrel]
-Figure of Talov_Kerr_Party_icon is the file "Talov_Kerr_Party.jpg". [satyrs in the frat party]
-Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg". [Hellhound fight]
-Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg". [after the Hellhound fight]
+Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".  [mid-sex scene graphic.]
+Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg".  [satyrs with barrel]
+Figure of Talov_Kerr_Party_icon is the file "Talov_Kerr_Party.jpg".  [satyrs in the frat party]
+Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg".  [Hellhound fight]
+Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".  [after the Hellhound fight]
 
 [maps]
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".

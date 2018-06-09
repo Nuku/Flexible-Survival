@@ -85,7 +85,7 @@ check leafing:
 
 carry out leafing:
 	say "Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
-	repeat with y running from 1 to number of rows in table of random critters:
+	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Tanuki":
 			now monster is y;
@@ -126,7 +126,7 @@ check ballshrinking:
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
 	if cock width of player < 1:
-		say "You have no more balls!  Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
+		say "You have no more balls! Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now cocks of player is 0;
 		now cock length of player is 0;
 		now cock width of player is 0;
@@ -215,7 +215,7 @@ When Play begins:
 	now desc entry is "";[ Description of the creature when you encounter it.]
 	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]tanuki coloured[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]
@@ -273,7 +273,7 @@ to say tancoindesc:
 
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
-tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".
+tanuki coin is a grab object. It is part of the player. It is fast. It is not temporary. The usedesc of tanuki coin is "[usetancoin]".
 
 to say usetancoin:
 	say "[line break]     You flip the coin";

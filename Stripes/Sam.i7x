@@ -394,9 +394,9 @@ to assaultonminilab:
 			WaitLineBreak;
 			project the figure of SamBadEnd_icon;
 			if cocks of player > 0 or cunts of player > 0:
-				say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library feeling very sexually satisfied and with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
+				say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library feeling very sexually satisfied and with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
 			else:
-				say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
+				say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
 			if player is kinky:
 				say "quite pleased and aroused at having indulged your kinky urges";
 				increase morale of player by 3;
@@ -412,14 +412,14 @@ to assaultonminilab:
 			now HP of Sam is 100;
 			remove Sam from play;
 			now Mini-Lab is unknown;
-			move player to Gray Abbey Library;
+			move player to Grey Abbey Library;
 		else:
 			say "     Rather than continue to risk yourself in a losing fight, you make a break for the basement hatch and run away. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 			WaitLineBreak;
 			now HP of Sam is 100;
 			remove Sam from play;
 			now Mini-Lab is unknown;
-			move player to Gray Abbey Library;
+			move player to Grey Abbey Library;
 	else if calcnumber is 2:
 		say "     Not wanting to get involved, but certainly curious to watch the show, you take a few steps back, giving the two plenty of space to get reacquainted. The tigertaur keeps Sam pinned down over the table as she starts looking over its contents. 'Ahh, here they are,' she purrs, grabbing a selection of the vials before tossing Sam down onto the floor. He crawls backwards, begging alternatively for Rick not to do it and for you to help him, but neither of you heed his pleas, too aroused by what's to come.";
 		say "     With a few twitches of her hindquarters, she pounces atop of her human prey, pinning him face down to the ground. She grinds her hard cock against his body, leaking precum over his smooth skin. With a strong paw at his jaw, she tilts his head back and forces his mouth open. 'Oh, stop your fussing, you'll make such a pretty kitty breedslut,' Rick rumbles, pouring the contents of one vial after the other down her ex-partner's throat.";
@@ -432,9 +432,9 @@ to assaultonminilab:
 		WaitLineBreak;
 		project the figure of SamBadEnd_icon;
 		if cocks of player > 0 or cunts of player > 0:
-			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
+			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
 		else:
-			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
+			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
 		let surrender be 0;
 		if humanity of player < 50 or libido of player > 50 or player is kinky or player is submissive:
 			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress. ";
@@ -481,7 +481,7 @@ to assaultonminilab:
 			now HP of Sam is 100;
 			remove Sam from play;
 			now Mini-Lab is unknown;
-			move player to Gray Abbey Library;
+			move player to Grey Abbey Library;
 	else if calcnumber is 3:
 		say "     Deciding it's every [if cunts of player > 0]woman for herself[else]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it. As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		WaitLineBreak;
@@ -493,7 +493,7 @@ to assaultonminilab:
 		now HP of Sam is 100;
 		remove Sam from play;
 		now Mini-Lab is unknown;
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 	else if calcnumber is 4:
 		say "     You decide to leave the two of them alone so they can get reacquainted. You quickly back away and rush up the stairs. As you're leaving, you can hear Sam calling out with a mix of pleas for help and curses at you for leaving him, but you turn a deaf ear and make your way out. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		WaitLineBreak;
@@ -503,7 +503,7 @@ to assaultonminilab:
 		now HP of Sam is 100;
 		remove Sam from play;
 		now Mini-Lab is unknown;
-		move player to Gray Abbey Library;
+		move player to Grey Abbey Library;
 
 to minilabvictory:
 	say "     As your last blow drives back the large feline, she staggers sideways a few steps. Growling in frustration, she makes a final lunge at Sam and tosses the young man across the work table and into the shelves beyond. 'If I can't have you, no one can,' she yowls as Sam starts to scream, the contents of the broken vials flowing down overtop of him. He writhes on the floor, mindless of the broken glass as the samples from dozens of creatures enter his system at once. You are momentarily stunned at this sight, giving the tigertaur the opportunity to flee past you and exit the cramped basement.";

@@ -33,7 +33,7 @@ Instead of resolving a Missing Farm Hand:
 			say "     [bold type]Do you want to keep tracking the raiders? There'll likely be a few of them, so you'd better be ready for a fight.[roman type]";
 			if player consents: [keep going]
 				LineBreak;
-				say "     Best to keep at it before this trail goes any colder than it is! Determined to see things through, you set out to track whoever took one of Anthony's men. An hour or two go by as you follow the hoofprints, and you're starting to doubt that this will go anywhere when you stumble upon a very lucky break! There is a fresh trail of what looks like the same group of people crossing the original one! If you had to guess, they seem to be roaming the whole area in a search for targets.";
+				say "     Best to keep at it before this trail goes any colder than it is! Determined to see things through, you set out to track whoever took one of Anthony's men. An hour or two go by as you follow the hoof-prints, and you're starting to doubt that this will go anywhere when you stumble upon a very lucky break! There is a fresh trail of what looks like the same group of people crossing the original one! If you had to guess, they seem to be roaming the whole area in a search for targets.";
 				say "[FinnTracked]";
 			else: [stop for now]
 				say "     You move back to the patrol path and follow it to the farm entrance. If you want to save Finn, you better get ready quick. The trail is only going to get colder over time...";

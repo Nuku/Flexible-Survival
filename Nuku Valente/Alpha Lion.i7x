@@ -6,7 +6,7 @@ Table 20 - Lion Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"New senses and aromas assault you as your face pulls forward into a snout and is covered with tawny fur. Round responsive ears flicker above as you look at the world with new eyes."	"You have the head of a lion."	"You are momentarily blinded as your lion's head changes."
 "chest"	"Tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front."	"You have the chest and back of a lion."	"You can feel your muscles shift in your lion's chest."
-"gut"	"Your stomach becomes well defined and powerful before itching reveals a thick carpet of fur that spreads out over it, soft and tan in colour."	"You have a powerful lion belly, covered in light tan fur."	"Your stomach loses much of it's definition as it shifts."
+"gut"	"Your stomach becomes well defined and powerful before itching reveals a thick carpet of fur that spreads out over it, soft and tan in color."	"You have a powerful lion belly, covered in light tan fur."	"Your stomach loses much of it's definition as it shifts."
 "pelvis"	"Fur creeps over your groin, engulfing your cock in a surge of pleasure as a large furry sheath wraps around it. Thoughts of breeding with one of the cat girls becomes stronger as your shaft projects strongly from your groin, your new leonine balls hanging heavily."	"You have a large, pink, leonine shaft that twitches eagerly to mate with the cat girls, or anything else really."	"Your large leonine shaft gives a final spurt of precum as it changes."
 "left upper arm"	"Fur spreads along your upper left arm as your muscles swell with power."	"Your upper left arm is stronger and covered with tan fur."	"You feel weaker as your left upper arm changes."
 "left forearm"	"Your left forearm tingles as it becomes stronger and tan fur spreads out over it."	"Your left forearm is coated with tan fur and feels stronger."	"Fur falls from your feline forearm as it flexes."
@@ -22,7 +22,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right foot" 	"The brown fur flows down over your right foot, leaving a paw in its place."	"You have a lion's paw for a right foot."	"Your large lion's right paw changes."
 "rear" 	"Fur flows smoothly over your now well built ass."	"Your rear end is coated in tan fur."	"Your rear softens and sheds it's fur as it changes."
 
-Alpha_Lion_gene is an infection gene.  The tf table of Alpha_Lion_gene is Table of Lion Shifts.
+Alpha_Lion_gene is an infection gene. The tf table of Alpha_Lion_gene is Table of Lion Shifts.
 
 Gene_attack of Alpha_Lion_gene is {claw,bite};
 
@@ -42,7 +42,7 @@ The phitdesc of Alpha_Lion_gene is "scratch YOU in the bodypart, spreading felin
 
 The pmissdesc of Alpha_Lion_gene is "just barely miss YOU!".
 
-The genitaldesc of Alpha_Lion_gene is "huge, hard, and furry".  The skindesc of Alpha_Lion_gene is "smooth fur covered".
+The genitaldesc of Alpha_Lion_gene is "huge, hard, and furry". The skindesc of Alpha_Lion_gene is "smooth fur covered".
 
 The result of Alpha_Lion_gene is "alpha lion". The plural result of Alpha_Lion_gene is "alpha lions".
 
@@ -56,7 +56,7 @@ The attack rate of Alpha_Lion_gene is 1.
 
 Alpha_Lion_gene is tailed.
 
-The tailgrowth of Alpha_Lion_gene is "A long, tan, fur covered rope of a tail grows from YOUR backside.  It is tipped with a tuft of dark brown fur".
+The tailgrowth of Alpha_Lion_gene is "A long, tan, fur covered rope of a tail grows from YOUR backside. It is tipped with a tuft of dark brown fur".
 
 The taildesc of Alpha_Lion_gene is "A long tan lion's tail with a dark brown tuft of fur at the end follows along behind YOU.".
 
@@ -64,7 +64,7 @@ When play begins, add Alpha_Lion_gene to Genetic list.
 
 Section 2 - Alpha Lion Definition
 
-A Alpha Lion is a kind of monster.  The body of a Alpha Lion is usually {Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene}.  A Alpha Lion is monstrous.  A Alpha Lion is fully infected.  A Alpha Lion is usually unsuited.  A Alpha Lion is male.  A Alpha Lion is tailed.  The monster gene of a Alpha Lion is Alpha_Lion_gene.
+A Alpha Lion is a kind of monster. The body of a Alpha Lion is usually {Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene}. A Alpha Lion is monstrous. A Alpha Lion is fully infected. A Alpha Lion is usually unsuited. A Alpha Lion is male. A Alpha Lion is tailed. The monster gene of a Alpha Lion is Alpha_Lion_gene.
 
 The description of Alpha Lion is "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate."
 
@@ -80,13 +80,13 @@ The move rate of Alpha Lion is 3.
 
 The attack rate of Alpha Lion is 1.
 
-The pricolour of Alpha Lion is "tan".
+The pricolor of Alpha Lion is "tan".
 
-The seccolour of Alpha Lion is "dark brown".
+The seccolor of Alpha Lion is "dark brown".
 
-The bootcolour of Alpha Lion is "black".
+The bootcolor of Alpha Lion is "black".
 
-The haircolour of Alpha Lion is "dark brown".
+The haircolor of Alpha Lion is "dark brown".
 
 The hairstyle of Alpha Lion is "wild untamed".
 
@@ -103,4 +103,4 @@ Example:  * Simba the Alpha Lion - Adds Simba to Your Apartment.
 
 	Include Alpha Lion by Nuku Valente.
 
-	Simba is a Alpha Lion.  Simba is in Your Apartment.
+	Simba is a Alpha Lion. Simba is in Your Apartment.

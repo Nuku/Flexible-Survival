@@ -60,7 +60,7 @@ Version 1 of Erica by Wahn begins here.
 
 CarlEricaInteraction is a number that varies.
 
-instead of going down from the Gray Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
+instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0 and (HP of Eric > 9 and HP of Eric < 16)):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
@@ -525,7 +525,7 @@ to say EricaSex8_1_Male: [male player]
 	if calcnumber is 1: [fuck Erica]
 		say "     Getting on the bed between Klauz's legs, you snake your arms around Erica from behind, caressing the firm pair of breasts she teased you so much with earlier. As the red-headed beauty eagerly leans into your touch, you plant a line of little kisses from her neck up to her right earlobe, playfully nibbling at it before you whisper that you want to fuck her in the ass. The young woman looks back and gives you a smile over her shoulder, then leans forward, stretching her upper body out over the felinoid's furry belly while raising her ass a bit. Who could resist such an alluring display? You're almost twitching with the need and desire to fuck your handsome friend when you take hold of your manhood and line it up with her butt. Moving forward, you press the cockhead against her pucker, first lightly, then a bit harder until it finally yields to your invading member.";
 		say "			[WaitLineBreak]";
-		say "     Grunting in satisfaction, you thrust deeper into your human friend, revelling in the sensations of her insides gripping your shaft tightly. You keep still a while longer, just resting your cock inside her to give Erica a time to get used to it - then suddenly she starts rocking back and forth, fucking herself on your and Klauz's cocks at the same time. Looks like she had enough of waiting. As she moves, you feel movement bump and rub against your cock - that must be the felinoid, his erection pumping in and out of Erica's other hole. So hot, to be able to feel him through the walls of Erica's insides.";
+		say "     Grunting in satisfaction, you thrust deeper into your human friend, reveling in the sensations of her insides gripping your shaft tightly. You keep still a while longer, just resting your cock inside her to give Erica a time to get used to it - then suddenly she starts rocking back and forth, fucking herself on your and Klauz's cocks at the same time. Looks like she had enough of waiting. As she moves, you feel movement bump and rub against your cock - that must be the felinoid, his erection pumping in and out of Erica's other hole. So hot, to be able to feel him through the walls of Erica's insides.";
 		say "     With the two of you balls deep inside Erica as she fucks herself on your cocks, the arousal of everyone involved soon mounts higher and higher. Klauz is the first one to pass the point of no return, suddenly stiffening under Erica and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Erica's pussy. Getting bred by the large beast, her body being filled with fertile cum, drives Erica to climax just a moment later. She gasps in lust, holding on to the felinoid's soft belly fur as the orgasm makes her writhe in pleasure. You speed up your own thrusts into Erica's asshole, eager to fill her with another load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting into Erica's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Erica's back, your slowly softening shaft still inside her. Klauz meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Erica lying on the feline's chest. Erica gives a satisfied sigh, then says 'Man, you two are quite something,' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Erica sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -533,21 +533,21 @@ to say EricaSex8_1_Male: [male player]
 	else if calcnumber is 2: [fuck felinoid]
 		say "     Getting on the bed between Klauz's legs, you snake your arms around Erica from behind, caressing the firm pair of breasts she teased you so much with earlier. As the red-headed beauty eagerly leans into your touch, you plant a line of little kisses from her neck up to her right earlobe, playfully nibbling at it before you whisper that you want to fuck the felinoid in the ass and she should distract the big kitty a bit. The young woman looks back and gives you a knowing smile over her shoulder, then leans forward, stretching her upper body out over Klauz's furry chest while stroking him with her hands and pumping her own hips rapidly up and down on the big cat's hard shaft. At the same time, you take hold of your own cock and line it up with the tight hole under the felinoid's tail. Moving forward, you press the cockhead against his pucker, first lightly, then a bit harder until it finally yields to your erect member.";
 		say "			[WaitLineBreak]";
-		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in Klauz's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, revelling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Erica, slamming into his furry butt just as Erica pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
+		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in Klauz's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, reveling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Erica, slamming into his furry butt just as Erica pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
 		say "     With you fucking Klauz's ass while Erica fucks fucks herself on his cock, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Erica and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Erica's pussy. Getting bred by the large beast, her body being filled with fertile cum, drives Erica to climax just a moment later. She gasps in lust, holding on to Klauz's soft belly-fur as the orgasm makes her writhe in pleasure. Meanwhile, you speed up your own thrusts into the big cat's asshole, eager to fill him with your own load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting deep into the felinoid's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Erica's back, your slowly softening shaft still inside the big feline under her. Klauz meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Erica lying on the great beast's chest. Erica gives a satisfied sigh, then says 'Man, you two are quite something,' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Erica sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 	else if calcnumber is 3: [BJ from Erica]
 		say "     Stepping up to stand on the bed, your feet left and right of Klauz's body, you smile down at Erica and hold out your hard [cock of player] shaft to her. She stops her movements on top of the large cat for a moment, sitting still with the large spined shaft deep in her pussy while she reaches out to grasp your cock and fondle your balls. Your eager friend licks her lips, then gets to work sucking you off, taking the tip of your member into her mouth and running her tongue over it. After going down on your shaft all the way a few times, she starts sliding up and down on the felinoid's erection once again, timing it with bobbing her head towards you.";
 		say "			[WaitLineBreak]";
-		say "     Taking Klauz's shaft deep in her pussy while she sucks you off, with its small spines rubbing her inner walls and causing incredible sensations, it doesn't take too much longer until Erica's arousal peaks. With her lips tightly wrapped around your [cock of player] shaft, the female athlete gives a somewhat muffled but still loud moan from her throat, a shudder running through her whole body as she comes. Femcum trickling down the felinoid's shaft and Erica's inner muscles gripping her cock like a vise make sure that only moments later, the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     Taking Klauz's shaft deep in her pussy while she sucks you off, with its small spines rubbing her inner walls and causing incredible sensations, it doesn't take too much longer until Erica's arousal peaks. With her lips tightly wrapped around your [cock of player] shaft, the female athlete gives a somewhat muffled but still loud moan from her throat, a shudder running through her whole body as she comes. Femcum trickling down the felinoid's shaft and Erica's inner muscles gripping her cock like a vise make sure that only moments later, the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With her breathing deeply and still in the grip of her own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Erica's face, neck and chest. The now pretty splattered human gives you a broad smile, then reaches up to pull you down to her level and kiss her, after which you proceed to gently rub your load all over her chest, cupping those shapely breasts and sucking on their nipples as you do so.";
 		say "			[WaitLineBreak]";
 		say "     Keeping her position for a while longer, straddling Klauz's hips with the beast's softening shaft inside her, Erica eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There she rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 	else if calcnumber is 4: [BJ from felinoid]
 		say "     Stepping up to stand against the head end of the bed, you give Klauz's chin an affectionate scratch, then hold out your hard [cock of player] shaft to him. The large cat looks at you with his golden eyes, then down at Erica riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
 		say "			[WaitLineBreak]";
-		say "     While you're getting head from the large beast, Erica rides his spined cock with unabated vigor, moaning and gasping loudly at the sensations it gives her. With how much she enjoys riding the big cat, it doesn't take too much longer until Erica's arousal peaks. Panting unintelligible sounds in her lust, the female athlete rises up and slams herself down on the hard erection under her, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     While you're getting head from the large beast, Erica rides his spined cock with unabated vigor, moaning and gasping loudly at the sensations it gives her. With how much she enjoys riding the big cat, it doesn't take too much longer until Erica's arousal peaks. Panting unintelligible sounds in her lust, the female athlete rises up and slams herself down on the hard erection under her, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With her breathing deeply and still in the grip of her own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Klauz's furry face, with a few shots landing in his open muzzle. The big cat gives a pleased mrowl at the taste of your seed, using his long tongue to lick up any that landed in the fur around his muzzle. Smiling at that, you help out by wiping up any that he can't reach with your fingers and holding them out for him to lick your cum off. Then you step closer to Erica, leaning forward to give her a deep kiss.";
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Erica keeps her position for a while longer as you make out, straddling the felinoid's hips with the beast's softening shaft inside her, before eventually sliding off Klauz to the side, coming to rest against the large cat's flank. There she rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -558,7 +558,7 @@ to say EricaSex8_2_Female: [Erica]
 		LineBreak;
 		say "     Stepping up to stand on the bed, your feet left and right of Klauz's body, you smile down at Erica and demonstratively rub over your pussy lips, holding them apart for her. She stops her movements on top of the large cat for a moment, sitting still with the large spined shaft deep in her pussy while she reaches out to touch your privates, softly brushing against your clit. Your eager friend licks her lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you her full attention, she starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
 		say "			[WaitLineBreak]";
-		say "     Taking Klauz's shaft deep in her pussy while she gives oral to you, with its small spines rubbing her inner walls and causing incredible sensations, it doesn't take too much longer until Erica's arousal peaks. After another lick that makes you shudder with need, the female athlete gives a loud moan from her throat, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     Taking Klauz's shaft deep in her pussy while she gives oral to you, with its small spines rubbing her inner walls and causing incredible sensations, it doesn't take too much longer until Erica's arousal peaks. After another lick that makes you shudder with need, the female athlete gives a loud moan from her throat, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With her breathing deeply and still in the grip of her own orgasm, you put your fingers to work on your own pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting Erica in the chest to run down over her smooth skin and more of it dripping down on Klauz's belly-fur. Your human friend gives you a broad smile, then reaches up to pull you down to her level and kiss her.";
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Erica keeps her position for a while longer as you make out, straddling the felinoid's hips with the beast's softening shaft inside her, before eventually sliding off Klauz to the side, coming to rest against the large cat's flank. There she rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
@@ -566,17 +566,17 @@ to say EricaSex8_2_Female: [Erica]
 		LineBreak;
 		say "     Stepping up to stand against the head end of the bed, you give Klauz's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 		say "			[WaitLineBreak]";
-		say "     While you're getting oral attention from the large beast, Erica rides his spined cock with unabated vigor, moaning and gasping loudly at the sensations it gives her. With how much she enjoys riding the big cat, it doesn't take too much longer until Erica's arousal peaks. Panting unintelligible sounds in her lust, the female athlete rises up and slams herself down on the hard erection under her, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
+		say "     While you're getting oral attention from the large beast, Erica rides his spined cock with unabated vigor, moaning and gasping loudly at the sensations it gives her. With how much she enjoys riding the big cat, it doesn't take too much longer until Erica's arousal peaks. Panting unintelligible sounds in her lust, the female athlete rises up and slams herself down on the hard erection under her, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With Klauz busy savoring her own orgasm, you put your fingers to work on your own pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting the felinoid's muzzle and more of it dripping down on the fur on his neck. The big cat gives a pleased rumble, licking it off her muzzle and lapping at your crotch a few times to get a bit more of a taste.";
 		say "			[WaitLineBreak]";
 		say "     Erica keeps her position for a while longer, straddling Klauz's hips with the beast's softening shaft inside her, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There she rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of Klauz and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
 Section 4 - Events
 
-instead of navigating Gray Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid Companion is tamed and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FELINOID SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see the large shape of Klauz silently stalk after Erica. Knowing the large cat's libido-driven behavior, you see where this might lead...";
@@ -607,10 +607,10 @@ instead of navigating Gray Abbey Library while (level of Erica is 0 and Felinoid
 		now level of Erica is 1;
 		now lastfuck of Erica is turns;
 
-instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and level of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FELINOID SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with Klauz on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
@@ -618,7 +618,7 @@ instead of navigating Gray Abbey Library while (Felinoid Companion is tamed and 
 	say "     The animalistic coupling of the felinoid and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Klauz drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Gray Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-FELINOID-SEX WALKIN [line break]";
@@ -640,10 +640,10 @@ instead of going inside from Gray Abbey Library while (Level of Erica > 0 and Le
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
-instead of navigating Gray Abbey Library while (XP of Erica is 0 and Fang is in Gray Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FANG SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see Fang's furred shape silently stalk after Erica. Knowing that he's a wild and horny beast, you see where this might lead...";
@@ -736,16 +736,16 @@ instead of navigating Gray Abbey Library while (XP of Erica is 0 and Fang is in 
 [   6: Carl fucked Erica                                             ]
 [  50: player told Carl to stop pursuing Erica                       ]
 
-instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricaMeetsCarl]";
 
-instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction is 0):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Erica MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	say "[EricaMeetsCarl]";
@@ -755,8 +755,8 @@ to say EricaMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
-	move player to Gray Abbey Library;
+instead of going up from Bunker while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -774,10 +774,10 @@ instead of going up from Bunker while (Erica is in Bunker and Carl is in Gray Ab
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
@@ -795,10 +795,10 @@ instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is i
 			say "     DEBUG: Erica & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricaCarlScene4]";
 
-instead of navigating Gray Abbey Library while (Erica is in Bunker and Carl is in Gray Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Erica is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and HP of Erica > 0 and HP of Erica < 21 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if CarlEricInteraction is 5: [first time]
 		if debugactive is 1:
 			say "     DEBUG: Erica & CARL FUCK - FIRST TIME - CarlEricInteraction: [CarlEricInteraction]";
@@ -982,13 +982,13 @@ to say EricaCarlThreesome Sex Menu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Erica's pussy from behind while she sucks Carl";
 		now sortorder entry is 1;
-		now description entry is "Go doggy-style on the college athlete";
+		now description entry is "Go doggy style on the college athlete";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Erica's ass from behind while she sucks Carl";
 		now sortorder entry is 2;
-		now description entry is "Go doggy-style on the college athlete";
+		now description entry is "Go doggy style on the college athlete";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
@@ -1000,7 +1000,7 @@ to say EricaCarlThreesome Sex Menu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Carl's ass while he eats Erica's pussy";
 		now sortorder entry is 4;
-		now description entry is "Go doggy-style on the husky";
+		now description entry is "Go doggy style on the husky";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
@@ -1203,10 +1203,10 @@ to say EricaCarlThreesome8: [player rides Carl's cock while Eric straddles his f
 	say "     <This scene is WIP, please have some patience for the next update>";
 
 [
-instead of navigating Gray Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Gray Abbey Library]";
+instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP of Erica is 4 and HP of Erica is 1 and (lastfuck of Erica - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Gray Abbey Library;
+	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERICA Fang SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with your Fang companion on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
@@ -1214,7 +1214,7 @@ instead of navigating Gray Abbey Library while (Fang Companion is tamed and XP o
 	say "     The animalistic coupling of Fang and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Fang drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, Fang isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Gray Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-Fang-SEX WALKIN [line break]";
