@@ -199,7 +199,7 @@ A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
-The player has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
+A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
 The player has a text called bodytype. The bodytype is usually "human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
@@ -4937,6 +4937,7 @@ Include Basic Locations by Core Mechanics.
 Include BFandI by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Debugging Tools by Core Mechanics.
+Include Definitions by Core Mechanics.
 Include Feats by Core Mechanics.
 include FS Graphics by Core Mechanics.
 Include Fucking by Core Mechanics.
