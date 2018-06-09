@@ -524,7 +524,7 @@ When play begins (this is the Hyperlink Interface setup trigger rule):
 			now mychar is 0;
 	clear the screen;
 	say "[line break][line break][line break]";
-	now pre-game hyperlink setting is false.   
+	now pre-game hyperlink setting is false.  
  
 To restore the game: (- RESTORE_THE_GAME_R(); -).
 
@@ -605,7 +605,7 @@ This produces output like the following (where emphasis is marked with asterisks
 
 In this situation, the text between the [o] and the [x] is automatically executed, so it is possible to write item discriptions like so:
 
-	Apple is a thing in The Office. The Description is "It's an apple. [Paragraph Break]Actions: '[o]look apple[x ]', '[o]take apple[x]', or '[o]eat apple[x]'".  Apple is edible. 
+	Apple is a thing in The Office. The Description is "It's an apple. [Paragraph Break]Actions: '[o]look apple[x ]', '[o]take apple[x]', or '[o]eat apple[x]'". Apple is edible. 
 
 If you want scenery items to be automatically emphasized, you can manually set them as hyperlinked, or include a line like the following (which would add emphasis to "desk" in the final line above):
 
@@ -702,7 +702,7 @@ The flexibility of Hyperlink Interface means it can be used for multiple purpose
 
 	Object hyperlink highlighting is false. The style of direction-word is hyperlink-bold-style.
 
-	Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns.  
+	Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns. 
 
 	After looking: try listing exits.
 
@@ -770,7 +770,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	The Quinnabel topic is a speakable with message "'Found her in an old mushroom mine,' the gnome says, warming to his subject. The dragon sniffs you tentatively. 'She's got quite a [t]personality[x].'".
 
-	The personality topic is a speakable with message "'Oh, she's shy at first, but she'll warm up to you right away if you let her.' And sure enough, the dragon finally seems to take a liking to you, and purrs contentedly as you scratch it behind the ears.". After hyperlink-asking the personality topic for the first time: say "'See, you're not such a bad sort,' the gnome says. 'Why don't you take this key and see to that drawbridge yourself.' And he hands you a scuffed silver key (oversized even for you)."; move silver key to player. The silver key unlocks the shack door.
+	The personality topic is a speakable with message "'Oh, she's shy at first, but she'll warm up to you right away if you let her.' And sure enough, the dragon finally seems to take a liking to you, and purrs contentedly as you scratch it behind the ears.". After hyperlink-asking the personality topic for the first time: say "'See, you're not such a bad sort,' the gnome says. 'Why don't you take this key and see to that drawbridge yourself.' And he hands you a scuffed silver key (over-sized even for you)."; move silver key to player. The silver key unlocks the shack door.
 
 	The drawbridge topic is a speakable with message "'Hrmph,' the gnome mutters, crossing his arms defiantly, 'I'm supposed to be on vacation.'".
 

@@ -100,7 +100,7 @@ to say fsdm attack:
 				infect;
 			else if "Touched by Madness" is listed in feats of player and player is mpreg_ok and ((player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of player < 4 and inasituation is false:
 				If MFSDUBM is false:
-					say "     He pauses as if stopped by some unseen force, the power of which compelling him to move off of you. Baffled for a moment, the dragon is somehow affected by your presence. Before you might do anything with this newfound freedom, though, his perception of the situation returns. Looking at him now, his demeanor has radically shifted; harsh once was his regard; assertive, domineering, his expression now soft and abiding, almost matronly.";
+					say "     He pauses as if stopped by some unseen force, the power of which compelling him to move off of you. Baffled for a moment, the dragon is somehow affected by your presence. Before you might do anything with this new-found freedom, though, his perception of the situation returns. Looking at him now, his demeanor has radically shifted; harsh once was his regard; assertive, domineering, his expression now soft and abiding, almost matronly.";
 					say "     Bearing down upon you once more, his slick, dripping tongue slathering your smaller frame in an odd show of affection, until you are drenched in his saliva, blatantly arousing you. He doesn't even remotely seem interested in this; rather, he suddenly drags himself over you, soft underbelly and clearly erect cock grinding against your lubricated frame before he stops, showing no desire to spare you of his massive weight. Instinctively, you push against his pressure, but this only abides his tainted intent, and your endeavors backfire when you push yourself past his anal ring.";
 					say "     Unable to contest this new, severely twisted desire, he begins to grind himself against the sand, his hole tightening against your frame as your lower torso soon follows, pulling you deeper into his slick depths. This overwhelming heat; this hungry, supple abyss, it [if cocks of player > 0 or cunts of player > 0]is more than enough to set you off, almost immediately, fate sealed when this is all that the dragon needs to reach his own climax[else]torments you to no end, your fate soon sealed as the dragon reaches climax[end if], and though your fate may seem grim, you find yourself pulled to a destination alien even to this perverse domain before your vision fades. The dragon would no doubt recover and move on, even after soaking his underbelly with his own cum, the occupancy of his new captive not outwardly apparent to those who might see his large form...";
 					now MFSDUBM is true;
@@ -204,7 +204,7 @@ to say fsdm attack:
 To say fsdm loss:
 	if a random chance of fsdsub in 9 succeeds:
 		now boundmod is 1;
-		say "     Before you can land the final blow, the dragon suddenly backs away and concedes to you. His demeanor rather peculiar, you can summize that you've defeated this one before, and has succumbed to newfound, submissive inclinations";
+		say "     Before you can land the final blow, the dragon suddenly backs away and concedes to you. His demeanor rather peculiar, you can summize that you've defeated this one before, and has succumbed to new-found, submissive inclinations";
 		if libido of player < 40 and "Dominant" is not listed in feats of player:
 			say ". In no mood to humor his need, you send him off, slowly retreating back into the water's depths. You go about your business once more, now that the matter has been attended to.";
 		else:
@@ -658,7 +658,7 @@ to say FSDM_6: [Oral Giving Cock]
 		now tempnum is 0;
 	say "     Your continued attention quickly picks up in pace, fueled by your own[if player is neuter], insatiable[end if] lust";
 	if boundmod is 1 and (cocks of player > 0 or cunts of player > 0):
-		say ". Driven by his newfound submissive instinct, the beast moves his head down to meet your crotch, intent on attending you in turn. Shall you oblige his offering?";
+		say ". Driven by his new-found submissive instinct, the beast moves his head down to meet your crotch, intent on attending you in turn. Shall you oblige his offering?";
 		if player consents:
 			say "     Eagerly, the sea dragon's thick tongue [if cocks of player > 1]wraps around one of your dicks, throbbing[else if cocks of player is 1]wraps around your dick, throbbing[else if cunts of player > 1]caresses one of your cunts, aching[else]caresses your cunt, aching[end if] needily against the slick, writhing organ's touch";
 			now tempnum2 is 1;

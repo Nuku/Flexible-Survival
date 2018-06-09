@@ -334,7 +334,7 @@ Section: Changing the font color
 
 Finally, font colors can be changed with say (color) letters, where the same range of colors may be used as for the background. So for instance
 
-	say "There is a [red letters]piping hot[default letters] pie on the table."
+	say "There is a [red letters]piping hot[default letters] pie on the table.";
 
 We should be careful with color effects. Some older interpreters do not deal well with color, and part of the audience plays interactive fiction on black and white devices or via a screenreader. The phrase "say default letters" restores whatever background and foreground are normal on this system. It is not safe to assume that the player is necessarily using one particular color scheme; black-on-white, white-on-black, and white-on-blue are all relatively common.
 
@@ -459,13 +459,13 @@ Note that attempting to compile this example for Glulx will fail, because it use
 	down	"D   "	"    "
 
 	To say top rose:
-		say "[rose up][rose northwest][rose north][rose northeast]".
+		say "[rose up][rose northwest][rose north][rose northeast]";
 
 	To say middle rose:
 		say "     [rose west] . [rose east]";
 
 	To say bottom rose:
-		say "[rose down][rose southwest][rose south][rose southeast]".
+		say "[rose down][rose southwest][rose south][rose southeast]";
 
 	Rule for constructing the status line:
 		fill status bar with Table of Fancy Status;

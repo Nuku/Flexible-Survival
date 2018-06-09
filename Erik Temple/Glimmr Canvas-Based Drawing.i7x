@@ -3116,7 +3116,7 @@ We then define the rooms and other behavior. Note that each room has an image-ma
 	Every turn while the player is in the Den:
 		say "[one of]The Manticore roars[or]A snort echoes through the chamber. The Manticor shakes its mane[or]The Manticore stares at you. You feel that your impudence is truly epic[or]The spiked pad at the end of the Manticore's tail sways lazily over the beast's back[purely at random]."
 
-	The Manticore is an animal in the Den. "The Manticore stirs. His eyes lock on yours." The character is the Manticore-sprite. The description is "More fearsome than the villagers said. A massive catlike creature. Its tail is studded with large, deadly spikes."
+	The Manticore is an animal in the Den. "The Manticore stirs. His eyes lock on yours." The character is the Manticore-sprite. The description is "More fearsome than the villagers said. A massive cat-like creature. Its tail is studded with large, deadly spikes."
 
 	Understand "shoot [something]" as attacking.
 

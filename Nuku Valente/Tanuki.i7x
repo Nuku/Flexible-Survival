@@ -126,7 +126,7 @@ check ballshrinking:
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
 	if cock width of player < 1:
-		say "You have no more balls!  Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
+		say "You have no more balls! Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now cocks of player is 0;
 		now cock length of player is 0;
 		now cock width of player is 0;
@@ -273,7 +273,7 @@ to say tancoindesc:
 
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
-tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".
+tanuki coin is a grab object. It is part of the player. It is fast. It is not temporary. The usedesc of tanuki coin is "[usetancoin]".
 
 to say usetancoin:
 	say "[line break]     You flip the coin";

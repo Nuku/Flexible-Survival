@@ -3920,7 +3920,7 @@ This is the turnpass rule:
 			increase moralereset by ( moralereset divided by 5);
 			increase maxmorale by ( maxmorale divided by 5);
 		if "Proud Parent" is listed in feats of player:
-			let SP be sarahpups / 5;
+			let SP be SarahPups / 5;
 			if SP > 20, now SP is 20;
 			increase moralereset by SP;
 			increase maxmorale by SP;

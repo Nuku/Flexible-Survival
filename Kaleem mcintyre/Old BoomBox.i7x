@@ -161,11 +161,11 @@ This is the musiclisten rule:
 
 To say jazzfriends:
 	if Sarah is in the bunker:
-		if sarahslut is 0:
+		if SarahSlut is 0:
 			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[If Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 		else:
 			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[If Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
-			if sarahpups > 1:
+			if SarahPups > 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
@@ -218,11 +218,11 @@ to say R&Bfriends:
 	If Coleen is in the bunker:
 		say "     The rhythm of the melody playing on the boombox puts Coleen to sleep.";
 	if Sarah is in the bunker:
-		if sarahslut is 0:
+		if SarahSlut is 0:
 			say "     When a firm husky arm snakes its way out around your waist to hold you close, you jump a little, before noticing that it is just Sarah snuggling up against you. Smiling down at the medic, you lay your head on top of hers and let the music simply wash away all of your thoughts. There is no here or now, there is only this moment where you are connected to everything around you by invisible threads. Perhaps especially so to the husky woman next to you.";
 		else:
 			say "     Sarah makes her way over to you and then leans against your shoulder, her body weighing you down with the weight of her unspoken thoughts and feelings. You turn to look at the female once before smiling and then turning your head back to the boom box.";
-			if sarahpups > 0:
+			if SarahPups > 0:
 				say "     Sarah's pups all come around to lay by their mother while yawning and yipping tiredly before falling right asleep.";
 	if little fox is tamed:
 		say "     Dash comes over to nuzzle up against your leg and you smile somewhat reassuringly to the vulpine as you stare down at him warmly. The small kit yips at you before jumping up onto the cot you're sitting on to nuzzle your side. The little fox is soon asleep and snoring at you with his fluffy tail wrapped around his masked face. You reach out to stroke the vulpines diminutive body as you continue to listen to the music.";
@@ -251,7 +251,7 @@ to say RockandRollfriends:
 	if Sarah is in the bunker:
 		say "     You find yourself getting down with Sarah as you and she dance together while shaking your tails in time with each other. Listening to the other bark and then whip her head around as though caught in a frenzy, you have to laugh as you notice the once somewhat uptight female letting herself go in a therapeutic release of inhibitions.";
 		say "     Brushing up beside her to feel Sarah's furry body rolling against your own, you suddenly wish that both of you were in a normal bar doing this while getting drunk off of shared vodka and rum while dance lights flash around both your bodies. Maybe when all of this is over you and she could have your own private dance session together. Whether that will be with the husky female dancing on your lap or in your bed, well, the jury is out on that one.";
-		if sarahpups > 0:
+		if SarahPups > 0:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
 	If Coleen is in the bunker:
 		say "     At hearing the music playing on the boombox, Coleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
@@ -280,11 +280,11 @@ to say RockandRollfriends:
 
 to say Oceanfriends:
 	if Sarah is in the bunker:
-		if sarahslut is 0:
+		if SarahSlut is 0:
 			say "     At hearing this kind of slow and melodious music, Sarah is quick to come up over to where you are lying down to snuggle up with you. With her cuddled in close, you find your arm wrapping around her without you thinking about it. The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
 		else:
 			say "     At hearing this kind of slow and melodious music, Sarah is quick to come up over to where you are lying down to snuggle up with you. Her furry body warms you up quickly and you find your arm wrapping around her without you thinking about it. The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
-			if sarahpups > 0:
+			if SarahPups > 0:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:

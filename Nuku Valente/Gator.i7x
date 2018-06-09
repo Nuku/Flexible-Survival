@@ -7,7 +7,7 @@ Gator by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 gatordefeat is a number that varies.
 gatorconsent is a number that varies.
 
@@ -119,7 +119,7 @@ When Play begins:
 	now HP entry is 45;
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
@@ -246,7 +246,7 @@ to say GatorDenSex:
 				follow the sex change rule;
 				decrease the humanity of the player by 5;
 			if cock length of player > 10:
-				say "     She squeals loudly as you try to cram your oversized manhood into her, but it's too much. She scampers away from you in a wriggle, but before you can be disappointed, you feel her soft hands on you, stroking firmly at you. 'Poor little dear,' she says with a smile. 'I will help us both,' she promises, engulfing you in the warm heat of her mouth, lapping at you with a large tongue and stroking at you with her skilled fingers. Your body tingles with pleasure, and change, as your genitals throb with the telltale hint of transformation as she works you towards a peak rapidly. The changing throbbing reaches its climax just as you do, spilling your seed into her waiting maw.";
+				say "     She squeals loudly as you try to cram your over-sized manhood into her, but it's too much. She scampers away from you in a wriggle, but before you can be disappointed, you feel her soft hands on you, stroking firmly at you. 'Poor little dear,' she says with a smile. 'I will help us both,' she promises, engulfing you in the warm heat of her mouth, lapping at you with a large tongue and stroking at you with her skilled fingers. Your body tingles with pleasure, and change, as your genitals throb with the telltale hint of transformation as she works you towards a peak rapidly. The changing throbbing reaches its climax just as you do, spilling your seed into her waiting maw.";
 				if cock width of player > 20:
 					say "     The force and volume of your seed is so great that it overflows her long snout and runs down her front in great rivers, painting her heaving breasts in your pearly virility. She groans as her belly distends, gulping down as much as she can even as it gets everywhere else, leaving her quite a mess.";
 				follow the sex change rule;

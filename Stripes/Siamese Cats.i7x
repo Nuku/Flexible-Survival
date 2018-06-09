@@ -265,7 +265,7 @@ to say siamsex1:	[ride cock]
 
 
 to say siamsex2:	[fuck ass]
-	say "     Wanting to have your way with the cute kitty's bottom, you head over to the male and roll him over onto all fours. He mewls cutely and squirms a little, but doesn't pull away as you line up your cock with his tailhole. You rock your hips, grinding against his cheeks and leaking precum between them.";
+	say "     Wanting to have your way with the cute kitty's bottom, you head over to the male and roll him over onto all fours. He mewls cutely and squirms a little, but doesn't pull away as you line up your cock with his tail-hole. You rock your hips, grinding against his cheeks and leaking precum between them.";
 	say "     After a little teasing like this, you start to sink into his tight rump. He releases a soft mewl and stretches his paws forward, kneading reflexively. You pet his back and squeeze his rump, calling him a good kitty. Once you're hilted in his ass, you pause for a few breaths before starting to thrust. Reaching around, you can feel his cock has gotten quite hard as his excitement builds and he is soon pushing back into your thrusts.";
 	WaitLineBreak;
 	say "     The female twin has also started to recover and she comes closer. You reach over and start to play with her pussy with one hand while continuing to stroke the tom's back and bottom. They purr happily, nuzzling and kissing until finally you reach your peak and drive your cock deep inside him. Unleashing your hot seed, you pump is bottom full of your thick cum.";

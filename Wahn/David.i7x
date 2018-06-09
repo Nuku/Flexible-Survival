@@ -48,7 +48,7 @@ Version 1 of David by Wahn begins here.
 [  66: Ritual by Lilith is ready (sharing Brutus with David)            ]
 [  67: refused both Lilith and Nermine                                  ]
 [  68: refused both Lilith and Nermine                                  ]
-[  69: Did the Ritual, Brutus and David are 'married'                   ]
+[  69: Did the Ritual, Brutus and David are 'married'                  ]
 [  81: Brutus is ready to snap and dom-fuck David                       ]
 [  82: Brutus got dommy and fucked David                                ]
 [  83: Brutus is locked into the enslavement path with David            ]
@@ -509,7 +509,7 @@ to say DavidTalk1: [chatting]
 	if HP of David is 3: [in the camp]
 		say "     David says 'As you can see, the sample gathering is still going well. It's unbelievable how much stamina Tiny Tim has. [if CampBravoWomenAllowed is 1]Several of the female soldiers got sent out as well by now, their bellies already swelling with minotaur calves.' [end if][if Adam is in Quartermaster's Tent]The quartermaster had a half-minotaur son too - he's in her tent helping her out.' [end if]";
 	if HP of David is 4: [in the bunker]
-		if Sarahpups > 3:
+		if SarahPups > 3:
 			say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Grey Abbey Library]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
 		else:
 			say "     David says 'Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read[if Fang is in the Grey Abbey Library]. And your wolf kept looking at me all the time like he wanted to mount me[end if].'";
@@ -1609,7 +1609,7 @@ to say DavidSex6: [Sven's ass gets fucked by David]
 	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then whisper in his ear to look over to one of the farther-away beds in the bunker. There, your snowmeow kitty Sven is lying on his stomach, reading a book, tail waving in the air above his enticing furry butt. As wound-up as you already have David, it doesn't take much more than describing how Sven's tight and ready hole would feel around his cock to get him interested. After undoing the soldier's pants and letting them drop, you quickly get rid of your own clothes and the two of you walk over towards Sven naked.";
 	WaitLineBreak;
 	say "     You're almost at the bed before Sven notices you and turns his head, eyes going wide as he sees [if cunts of player > 0 and cocks of player is 0]his mistress and her human friend [else]his master and his human friend [end if]walk towards him in the nude - and quite obviously horny. A shy but eager smile spreads over his face, then you're with him and start softly scritching behind his ears, which has Sven close his eyes and purr in contentment. David meanwhile runs a hand along the snow leopard's tail flirting in the air before him and asks 'I - can I fuck you?' Sven just keeps purring loudly, then stretches his body and raises his furry butt in unmistakable eagerness.";
-	say "     Taking a kneeling position behind the sexy kitty, David grabs his hard cock and rubs it teasingly over Sven's pucker and making it wet with his precum. Your feline pet's tail meanwhile strokes against David's naked chest, its end curling around his back almost as if to pull him closer. You can hear David mutter 'Such soft fur you have, pretty kitty' under his breath, then he's pressing forward against Sven, his hard cock spreading open the snowmeow's tailhole. 'Yes! Fuck me, please!' Sven mrowls in delight, grinding his ass backwards to meet each thrust as David starts pounding into him.";
+	say "     Taking a kneeling position behind the sexy kitty, David grabs his hard cock and rubs it teasingly over Sven's pucker and making it wet with his precum. Your feline pet's tail meanwhile strokes against David's naked chest, its end curling around his back almost as if to pull him closer. You can hear David mutter 'Such soft fur you have, pretty kitty' under his breath, then he's pressing forward against Sven, his hard cock spreading open the snowmeow's tail-hole. 'Yes! Fuck me, please!' Sven mrowls in delight, grinding his ass backwards to meet each thrust as David starts pounding into him.";
 	WaitLineBreak;
 	if cocks of player > 0:
 		say "     With your two friends already enjoying each other's bodies, it's for you to decide where and how you want to join in.";
