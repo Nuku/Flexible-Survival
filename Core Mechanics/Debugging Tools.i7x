@@ -1,5 +1,6 @@
-Version 1 of Debugging Tools by Core Mechanics begins here.
+Version 2 of Debugging Tools by Core Mechanics begins here.
 [Version 1 - By Wahn, moved to Core Mechanics]
+[Version 2 - By Dys, adds more functions, changes npcdebugmode to debugmode]
 "Adds a debug function for npcs to the Flexible Survival game"
 
 [ Activating the debug mode show the npc's variables in their description and show when a walk-in event fires]
@@ -11,13 +12,14 @@ Version 1 of Debugging Tools by Core Mechanics begins here.
 debugactive is a number that varies. debugactive is 0.
 RandomGenNumber is a number that varies.
 
-npcdebugmode is an action applying to nothing.
-understand "npcdebug" as npcdebugmode.
-understand "npc debug" as npcdebugmode.
-understand "debug npcs" as npcdebugmode.
-understand "debugnpcs" as npcdebugmode.
+debugmode is an action applying to nothing.
+understand "npcdebug" as debugmode.
+understand "npc debug" as debugmode.
+understand "debug npcs" as debugmode.
+understand "debugnpcs" as debugmode.
+understand "debug" as debugmode.
 
-carry out npcdebugmode:
+carry out debugmode:
 	if debugactive is 0:
 		say "NPC DEBUG MODE ACTIVATED.";
 		now debugactive is 1;
@@ -36,7 +38,6 @@ carry out turncountdisplay:
 
 TestMode is an action applying to nothing.
 TestingActive is a truth state that varies.
-
 understand "iwannatest" as TestMode.
 
 check TestMode:
@@ -114,10 +115,8 @@ carry out TestMode:
 
 SubDomFlip is an action applying to nothing.
 understand "flip janus coin" as SubDomFlip.
-understand "flip Janus Coin" as SubDomFlip.
 understand "flip sub dom" as SubDomFlip.
 understand "flip subdom" as SubDomFlip.
-understand "flip SubDom" as SubDomFlip.
 
 carry out SubDomFlip:
 	say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, ";
@@ -135,11 +134,11 @@ carry out SubDomFlip:
 		say "you catch - no, try to catch it in your hand.";
 		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like its giving you the cold shoulder since you fit neither of its different faces.";
 
-PregTestMirror is an action applying to nothing.
-understand "preg test" as PregTestMirror.
-understand "pregtest" as PregTestMirror.
+PregStatus is an action applying to nothing.
+understand "preg status" as PregStatus.
+understand "pregstatus" as PregStatus.
 
-carry out PregTestMirror:
+carry out PregStatus:
 	say "     DEBUG: You summon up a magic mirror and look into it:[line break]";
 	say "impreg_ok: ";
 	if player is impreg_ok:
@@ -252,6 +251,47 @@ carry out PlayerSizeChange:
 		say "     Set player size to huge.";
 		now scalevalue of player is 5;
 
+[Allows the spawning of any item in game.]
+itemcheat is an action applying to one topic.
+understand "itemcheat [text]" as itemcheat.
+
+check itemcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out itemcheat:
+	repeat with x running through grab objects:
+		if the printed name of x exactly matches the text topic understood, case insensitively:
+			increase carried of x by 1;
+			break;
+
+[Impregnates the player with specified creature.]
+impregwith is an action applying to one topic.
+understand "impreg with [text]" as impregwith.
+
+check impregwith:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+
+carry out impregwith:
+	repeat with X running from 1 to number of filled rows in table of random critters:
+		choose row X from the table of random critters;
+		if name entry exactly matches the text topic understood, case insensitively:
+			impregnate with name entry;
+			break;
+
+[Infects player with any creature to test infection.]
+infectwith is an action applying to one topic.
+understand "infect with [text]" as infectwith.
+
+check infectwith:
+	if debugactive is 0, say "You aren't currently debugging.";
+
+carry out infectwith:
+	repeat with X running from 1 to number of filled rows in table of random critters:
+		choose row X from the table of random critters;
+		if name entry exactly matches the text topic understood, case insensitively:
+			infect name entry;
+			break;
+
 [Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
 AddRemoveKinky is an action applying to nothing.
 understand "add kinky" as AddRemoveKinky.
@@ -259,8 +299,10 @@ understand "remove kinky" as AddRemoveKinky.
 
 carry out AddRemoveKinky:
 	if player is kinky:
+		say "DEBUG: Kinky removed.";
 		remove "Kinky" from feats of player;
 	else:
+		say "DEBUG: Kinky added.";
 		add "Kinky" to feats of player;
 
 

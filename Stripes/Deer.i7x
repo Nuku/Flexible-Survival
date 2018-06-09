@@ -264,7 +264,7 @@ to say SusanSexMenu:
 	[]
 	if cock length of player >= 15 and Susanoversize is true:
 		choose a blank row in table of fucking options;
-		now title entry is "Hyper Fun";
+		now title entry is "Hyper fun";
 		now sortorder entry is 4;
 		now description entry is "Now you know you can fit your giant cock on her, why not do it again?";
 	[]
