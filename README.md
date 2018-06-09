@@ -6,6 +6,11 @@ FS is an adult text RPG that focuses on themes of transformation and related top
 
 All the while, FS still manages to be a cohesive survival experience. You have to make sure you are fed and hydrated, while simultaneously making sure you stay sane in this strange, nanite-fueled apocalypse.
 
+## Contributing
+Anyone is welcome to contribute to FS! If you're interested in writing content for the game, editing existing content, or programming new systems and mechanics, there's more than likely a place for you on the team! Feel free to fork this repo and make any changes you want. To chat with the other devs, check out the discord link below!
+
+**[See the contribution guide here for more info](../blob/master/CONTRIBUTING.md)**
+
 ## Join our Discord!
 If you're a fan of FS, or if you're interested in learning more, you can always join our Discord to chat with fellow players and the development team. If you're interested in contributing, you can check out our contributing guide here on GitHub, or get in contact with us on Discord!
 
