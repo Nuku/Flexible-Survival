@@ -203,7 +203,7 @@ to say dominick_sexmenu:
 	blank out the whole of table of fucking options;
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Doggy-style";
+		now title entry is "Doggy style";
 		now sortorder entry is 1;
 	if cunts of player > 0 and scalevalue of player < 4 and HP of Dominick >= 4:
 		choose a blank row in table of fucking options;
@@ -271,7 +271,7 @@ to say dominick_sexmenu:
 				let nam be title entry;
 				now sextablerun is 1;
 				now lastfuck of Dominick is turns;
-				if nam is "Doggy-style":
+				if nam is "Doggy style":
 					say "[sexwithDominick_01]";
 				else if nam is "Lap ride":
 					say "[sexwithDominick_02]";
@@ -1148,7 +1148,7 @@ to say ForcedSubToDomSex5:			[Step by step Omega TF sequence]
 		mimpregchance;
 		now ForcedBreederslutBoyTF is 3;
 
-to say ForcedSubtoDomSex6:			[Dom fucks your ass doggystyle]
+to say ForcedSubtoDomSex6:			[Dom fucks your ass doggy style]
 	say "     Feeling the aching need to have Dominick buried inside your ass, you drop onto all fours and present yourself to him. Grabbing your ass with both paws, he lays his canine cock on top of your rear. He then proceeds to grind it back and forth slowly, teasing you with his dick between your cheeks. This sends shivers through you, prompting you to push back against his incredible prick.";
 	if player is breederslutbodied:
 		say "     'Such a cute little bitch [if player is pure]you've turned[else]you're turning[end if] out to be,' he says, running his paws over your smaller shiba inu form. 'My dick's nearly as big as your whole body. You must feel so deliciously full,' he says in your ear, rubbing your stuffed belly. And while he might exaggerate how small you are, he's quite right that his cock's comparatively huge, making a bit of a bulge in your delightfully stuffed tummy.";
@@ -1174,7 +1174,7 @@ to say ForcedSubtoDomSex6:			[Dom fucks your ass doggystyle]
 			say "     After the animalistic mating is over, you're left stuck on his knot while lost in the afterglow. The feeling of all that hot doggy sperm inside you is strangely satisfying, making you feel content and passive. It is some time before Dom's able to remove his manhood from you, releasing a gush of trapped cum when it pops free. Sandwiching his meat between your buns, he grinds the messy pole against your ass. This way the dominant husky's scent will linger on you long after you've left. But do you really want to leave, you ask yourself, sighing softly as you bask in afterglow. You keep your rear raised to hold his thick load inside you like a good breeder slut, until Dom says that you can go. You get up unsteadily onto your feet as you try to recall what you wanted to do next.";
 	infect "Breederslut";
 
-to say ForcedSubToDomSex7:			[Dom fucks your snatch doggystyle.]
+to say ForcedSubToDomSex7:			[Dom fucks your snatch doggy style.]
 	say "     Feeling the aching need to have him buried inside your cunt, you drop onto all fours and present yourself to him. Grabbing your ass with both paws, he presses his muzzle to your muff and gives you a long, slow lick up your pussy[if anallevel > 1], taint and asshole[end if]. This sends shivers through you, prompting you to push back against his slobbery tongue.";
 	say "     'I appreciate your eagerness, my little slut, but you need to work on your stance if you want to be a proper pedigree bitch of mine,' he says. His paws roam over your body, adjusting your stance into a more naturally canine one. A little press at your shoulders, a repositioning of your head and neck, an adjustment of your hips to better raise your rear for to him - all making you a little closer to a perfect show doggy. And as he's making these little shifts, his fingers find their way to your snatch, fingering your juicy pussy as a reward to encourage you to be a good doggy girl for him.";
 	WaitLineBreak;

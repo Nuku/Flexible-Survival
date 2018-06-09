@@ -982,13 +982,13 @@ to say EricaCarlThreesome Sex Menu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Erica's pussy from behind while she sucks Carl";
 		now sortorder entry is 1;
-		now description entry is "Go doggy-style on the college athlete";
+		now description entry is "Go doggy style on the college athlete";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Erica's ass from behind while she sucks Carl";
 		now sortorder entry is 2;
-		now description entry is "Go doggy-style on the college athlete";
+		now description entry is "Go doggy style on the college athlete";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
@@ -1000,7 +1000,7 @@ to say EricaCarlThreesome Sex Menu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Carl's ass while he eats Erica's pussy";
 		now sortorder entry is 4;
-		now description entry is "Go doggy-style on the husky";
+		now description entry is "Go doggy style on the husky";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;

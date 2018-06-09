@@ -43,8 +43,8 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
+	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
+	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
 	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
@@ -271,22 +271,22 @@ To reciting2:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":
-					now coleentalk is the number understood;
+					now ColeenTalk is the number understood;
 			-- 34:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenfound is the number understood;
+					now ColeenFound is the number understood;
 			-- 35:	[Coleen]
 				if the player's command matches "[number]":
-					now coleencollared is the number understood;
+					now ColeenCollared is the number understood;
 			-- 36:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenalpha is the number understood;
+					now ColeenAlpha is the number understood;
 			-- 37:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenslut is the number understood;
+					now ColeenSlut is the number understood;
 			-- 38:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenspray is the number understood;
+					now ColeenSpray is the number understood;
 			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
 					now HP of doctor mouse is the number understood;
@@ -463,13 +463,13 @@ To reciting2:
 					now lust of Sven is the number understood;
 			-- 64:	[Sarah]
 				if the player's command matches "[number]":
-					now sarahslut is the number understood;
+					now SarahSlut is the number understood;
 			-- 65:	[Sarah]
 				if the player's command matches "[number]":
 					now sarahtalk is the number understood;
 			-- 66:	[Sarah]
 				if the player's command matches "[number]":
-					now sarahpups is the number understood;
+					now SarahPups is the number understood;
 			-- 67:	[-nothing-]
 				now tempnum is 0;		[Duplicate removed]
 			-- 68:	[Brunch w/Alex]
@@ -698,11 +698,11 @@ To reciting2:
 						now Concert Hall is unresolved;
 						now violinfound is 0;
 					if HP of Leonard is 6:
-						now leonardtimer is turns;
+						now Leonardtimer is turns;
 					if HP of Leonard is 7:
 						now libido of Leonard is 0;
 					if HP of Leonard is 9:
-						now leonardtimer is turns;
+						now Leonardtimer is turns;
 					if HP of Leonard >= 10:
 						now Hunting Prides is unresolved;
 					if HP of Leonard is 11:
@@ -2093,13 +2093,13 @@ To reciting2:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
-	now sarahpregnant is 0;
-	if sarahtalk is 0 and sarahslut is 0:
+	now SarahPregnant is 0;
+	if sarahtalk is 0 and SarahSlut is 0:
 		now Husky Pack is unresolved;
 	else:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
-	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
+	if SarahPups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
@@ -2379,22 +2379,22 @@ Carry out reciting:
 						now Womanfruittree is resolved;
 			-- 33:	[Coleen]
 				if the player's command matches "[number]":
-					now coleentalk is the number understood;
+					now ColeenTalk is the number understood;
 			-- 34:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenfound is the number understood;
+					now ColeenFound is the number understood;
 			-- 35:	[Coleen]
 				if the player's command matches "[number]":
-					now coleencollared is the number understood;
+					now ColeenCollared is the number understood;
 			-- 36:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenalpha is the number understood;
+					now ColeenAlpha is the number understood;
 			-- 37:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenslut is the number understood;
+					now ColeenSlut is the number understood;
 			-- 38:	[Coleen]
 				if the player's command matches "[number]":
-					now coleenspray is the number understood;
+					now ColeenSpray is the number understood;
 			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
 					now HP of doctor mouse is the number understood;
@@ -2558,13 +2558,13 @@ Carry out reciting:
 					now lust of Sven is the number understood;
 			-- 64:	[Sarah]
 				if the player's command matches "[number]":
-					now sarahslut is the number understood;
+					now SarahSlut is the number understood;
 			-- 65:	[Sarah]
 				if the player's command matches "[number]":
 					now sarahtalk is the number understood;
 			-- 66:	[Sarah]
 				if the player's command matches "[number]":
-					now sarahpups is the number understood;
+					now SarahPups is the number understood;
 			-- 67:	[-nothing-]
 				now tempnum is 0;		[Duplicate removed]
 			-- 68:	[Brunch w/Alex]
@@ -2794,11 +2794,11 @@ Carry out reciting:
 						now Concert Hall is unresolved;
 						now violinfound is 0;
 					if HP of Leonard is 6:
-						now leonardtimer is turns;
+						now Leonardtimer is turns;
 					if HP of Leonard is 7:
 						now libido of Leonard is 0;
 					if HP of Leonard is 9:
-						now leonardtimer is turns;
+						now Leonardtimer is turns;
 					if HP of Leonard >= 10:
 						now Hunting Prides is unresolved;
 					if HP of Leonard is 11:
@@ -4179,13 +4179,13 @@ Carry out reciting:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
-	now sarahpregnant is 0;
-	if sarahtalk is 0 and sarahslut is 0:
+	now SarahPregnant is 0;
+	if sarahtalk is 0 and SarahSlut is 0:
 		now Husky Pack is unresolved;
 	else:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
-	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
+	if SarahPups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
@@ -4298,7 +4298,7 @@ carry out Trixiecheck1:
 	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
 	say "Weapon: [weapon object of player]   Frank M/F: [franksex]   Frank M/M: [frankmalesex][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[else]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[else]0[end if][line break]";
-	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
+	say "COLEEN: Location: [location of Coleen]   Talk: [ColeenTalk]   Found: [ColeenFound]   Collared: [ColeenCollared]   Alpha: [ColeenAlpha]   Slut: [ColeenSlut]   Spray: [ColeenSpray][line break]";
 	say "HP of Dr Mouse: [HP of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
 	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";
@@ -4308,7 +4308,7 @@ carry out Trixiecheck1:
 carry out Trixiecheck2:
 	say "Orthas: [HP of Orthas][line break]";
 	say "Fancy: [fancyquest]   HP of Sven: [HP of sven]  Lust of Sven: [lust of sven][line break]";
-	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
+	say "SARAH: Slut: [SarahSlut]   Talk: [sarahtalk]   Pups: [SarahPups][line break]";
 	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
 	say "Sandra: [HP of Sandra]   Frank (libido): [libido of Frank]   Fang: [HP of Fang][line break]";
 	say "Libido of Fang: [libido of Fang]   Pigfed: [pigfed]   Pigfucked: [pigfucked][line break]";

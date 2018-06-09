@@ -225,7 +225,7 @@ Figure of Jay_naked_icon is the file "Jay_naked.jpg".
 Figure of Jay_suit_icon is the file "Jay_suit.jpg".
 Figure of Jay_suit_quest_icon is the file "Jay_suit_quest.jpg".
 Figure of Jay_undies_icon is the file "Jay_undies.jpg".
-Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
+Figure of LeonardViolin_icon is the file "Leonardv_ig.jpg".
 Figure of Lilith_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
 Figure of Lilith_face_icon is the file "Succubus_face.jpg".

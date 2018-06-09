@@ -490,7 +490,7 @@ to say MiyukiSexMenu:
 		now description entry is "Let Miyuki hump you";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Give yourself to Miyuki (ovipositor doggy-style)";
+	now title entry is "Give yourself to Miyuki (ovipositor doggy style)";
 	now sortorder entry is 3;
 	now description entry is "Let Miyuki egg you";
 	[]
@@ -513,7 +513,7 @@ to say MiyukiSexMenu:
 						say "[MiyukiSex1]";
 					-- "Take her canine shaft in your pussy":
 						say "[MiyukiSex2]";
-					-- "Give yourself to Miyuki (ovipositor doggy-style)":
+					-- "Give yourself to Miyuki (ovipositor doggy style)":
 						say "[MiyukiSex3]";
 					-- otherwise: say "Sex menu failed!";
 				wait for any key;
@@ -565,7 +565,7 @@ to say MiyukiSex2: [Miyuki fucks player pussy]
 	if MiyukiRelationship < 10:
 		now MiyukiRelationship is 10; [player got fucked]
 
-to say MiyukiSex3: [Miyuki fucks player pussy - doggy-style and ovi]
+to say MiyukiSex3: [Miyuki fucks player pussy - doggy style and ovi]
 	setmonster "Ice Fox";
 	choose row monster from the table of random critters;
 	say "     Sliding your fingers down over the band of scales on Miyuki's belly, you rub the narrow slit between the flexible little plates down at her crotch. Then you plant a kiss on the white fox's muzzle and tell her that you want her to take you as she pleases. With a broad smile, the sorceress gives you an affectionate lick in return and says, 'Stroke me.' Eager to follow her order, you to slip a finger between the ridges of her slit, feeling the warm flesh inside as it starts to push out. A blunt-headed tube of flesh slides right into your waiting palm, with the shaft to go with it hardening rapidly start to fondle and stroke her appendage. It looks fairly interesting - with a relatively rigid shaft, but a flexible opening instead of a dickhead at the end. Your curiosity pushes you to experiment a little with it and as you push the tip of your index finger into the fleshy tube, you realize that it is hollow and quite stretchy.";

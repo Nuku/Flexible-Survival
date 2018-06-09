@@ -118,7 +118,7 @@ instead of conversing the Lisa:
 	else if rabbitsibling is 3: [Sandra Quest]
 		say "     Figuring this is the best place to look for something that might interest Sandra, you ask Lisa if she has any rabbit-themed toys.";
 		say "     'Oh? I see you've found some interesting company!' She gestures at your distinctive rabbit ears. 'Hmm... I think I might have something...' She goes into the back room, the sound of tussled containes softly filling the air until she finally returns.";
-		say "     'This what you looking for?' She displays a distinctly carrot-shaped dildo, and a rather oversized one at that. 'This was clearly meant as a novelty toy, not really intended for use, but these days there's really no such thing.' As you reach for it, she pulls it back. 'Tsk, now then, I can't just give this away on a whim! How about this, for a bottle of clean water, I'll give it to you, deal?'";
+		say "     'This what you looking for?' She displays a distinctly carrot-shaped dildo, and a rather over-sized one at that. 'This was clearly meant as a novelty toy, not really intended for use, but these days there's really no such thing.' As you reach for it, she pulls it back. 'Tsk, now then, I can't just give this away on a whim! How about this, for a bottle of clean water, I'll give it to you, deal?'";
 		if player consents:
 			if water bottle is owned:
 				delete water bottle;
@@ -165,7 +165,7 @@ To mousefuck:
 		stop the action;
 	now lastfuck of Lisa is turns;
 	let lust be 0;
-	let oversized be 0;
+	let over-sized be 0;
 	let response1 be "";
 	say "Lisa looks you over a moment before lifting her shoulders. 'I live in a porn shop. A little play isn't new, right?' She moves up to you and runs soft hands across your front and sides, 'Come with me into the back, and be naked when you do it.' She saunters off into her private backroom, through a curtain of hanging beads that softly clack with the sound of jostled wood behind her. ";
 	if a random number from 1 to 2 is 1: [ Aggressive]

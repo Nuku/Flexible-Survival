@@ -118,7 +118,7 @@ to orcabind:
 						if orcaintense is 1:
 							say "     [one of]You struggle to wiggle out from under the toy, its hollow rubber body weighing you down[or]Straining, you try to find some leverage to push the orca off of you[or]Determined to escape, you try to find a grip on the orca's immaculate hide to push it away[at random].";
 						else if orcaintense is 2:
-							say "     [one of]Breathing heavily, you try to find a grip on the orca's immaculate hide to push it away[or]Despite your arousal, you continue to try to wiggle out from under the oversized toy, not intent on becoming its eternal plaything[or]You writhe and squirm beneath the dogged orca, clawing at its hide to coax it off of you[at random].";
+							say "     [one of]Breathing heavily, you try to find a grip on the orca's immaculate hide to push it away[or]Despite your arousal, you continue to try to wiggle out from under the over-sized toy, not intent on becoming its eternal plaything[or]You writhe and squirm beneath the dogged orca, clawing at its hide to coax it off of you[at random].";
 						else if orcaintense is 3:
 							say "     [one of]Feeling the bag enclosing around you, you renew your efforts to push the horny cetacean off of you, your struggles made more difficult by your increasingly slick, constricting surroundings[or]Unwilling to succumb to this pleasure, you struggle to find a good grip on the orca's sleek hide, trying to shove it back[or]You writhe and buck beneath the insistent orca, trying to find some leverage in spite of your increasingly slick, arousing conditions[at random].";
 						else if orcaintense is 4:

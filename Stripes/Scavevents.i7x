@@ -623,7 +623,7 @@ The sarea of DbLD is "Allzones".
 
 Instead of resolving a DbLD:
 	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face. It seems that some creature took rather violent exception to him from the signs of destruction all around. The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was. Whatever strange infection this unlucky person had, it really left him unable to fight. Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet. Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
-	say "     And while it doesn't seem to have done its previous owner much good, you unbuckle the single, oversized shoulderpad from his malproportioned body and take it with you. You know it's not really going to help much, but it's better than nothing and isn't doing that guy any good now.";
+	say "     And while it doesn't seem to have done its previous owner much good, you unbuckle the single, over-sized shoulderpad from his malproportioned body and take it with you. You know it's not really going to help much, but it's better than nothing and isn't doing that guy any good now.";
 	increase carried of shoulder pad by 1;
 	increase score by 5;
 	now DbLD is resolved;

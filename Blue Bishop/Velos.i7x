@@ -604,9 +604,9 @@ to say diegomusing:
 
 Part 15 - Leonard
 
-the vmusings of Leonard is "[leonardmusing]";
+the vmusings of Leonard is "[Leonardmusing]";
 
-to say leonardmusing:
+to say Leonardmusing:
 	say "     You decide to reveal your occupant to Leonard, who has [if HP of Leonard >= 16]asked one of his feline maids to grab him a drink[else]moved to prepare a drink at his bar[end if]. Doubtlessly, when Velos emerges from your hole, even the lion's exceptional composure begins to crack under the pressure of such a peculiar sight.";
 	say "     'Oh, no, this really won't do at all...' Disregarding Leonard's distress, the serpent finds himself instead distracted by the rather cultured decorum. Thankfully, it's not long before he makes an effort to clear the tension in the air.";
 	say "     'Oh? My apologies. As you can imagine, my circumstances are ill-suited to present myself in any manner more dignified than this.'";
@@ -639,7 +639,7 @@ to say leonardmusing:
 	say "     'At first it wasn't immediately clear to me; a strange artifice that constantly tugged at my better judgment, but you've made it very apparent what that is now: You possess some power of coercion.' Leonard is a bit taken aback by this reveal, clearly not prepared for it, and subsequently going on the defensive.";
 	say "     'That claim is preposterous! Do you dare take me as some manner of... snake!?'";
 	say "     'You're doing it right now! Maybe you have no control over it, hm? I'd tell you that such outside influence has no power over me, if it'd dissuade you from committing this rather bothersome distraction.' The pressure of these circumstances crack his composure further with each inch gained, the lion's posture devolving into something increasingly feral and desperate.";
-	if HP of leonard >= 4:
+	if HP of Leonard >= 4:
 		say "     'Ah, [if HP of Leonard >= 16]mate[else if HP of Leonard >= 9]love[else]my pet[end if]--love...' He attempts to circumnavigate Velos's position in the argument by vying for your favor, moving to you, though trying to keep his distance from your occupant. 'Don't listen to this... ludicrous creature's deception. He cannot even conceive my feelings for you.'";
 		say "     Staring into his eyes, you can't help but be pulled along by his words; however, before he can go any further, you're hit with a sharp jolt that tremors through your spine, Velos pulling you away from the lion's influence. Your attention drawn from Leonard, he moves to pull the lion's attention from you, prodding the feline in the torso, smearing his immaculate fur with the serpent's bodily lubricant.";
 		say "     'Ah, ah, now. Quite telling that you'd try to find someone else to do your job for you at a moment's difficulty.' Chastising him, Leonard backs away from you, instinctually trying to rub off the smear, and beginning to look quite cross.";

@@ -74,7 +74,7 @@ When Play begins:
 	now victory entry is "[Leopardman attack]";
 	now desc entry is "[leopardman desc]";
 	now face entry is "broad sexy feline muzzle, with golden slit pupiled eyes and rounded feline ears sitting atop your new leopard-like face";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "powerful and lean, your well muscled form is carried easily on your powerful legs, their muscles designed for leaping and climbing, which rest easily on your rather pawlike feet. Your hands are tipped with sharp claws, easily suited for both combat and climbing";[ Body Description, format as the text "Your Body is (your text)"]
+	now body entry is "powerful and lean, your well muscled form is carried easily on your powerful legs, their muscles designed for leaping and climbing, which rest easily on your rather paw-like feet. Your hands are tipped with sharp claws, easily suited for both combat and climbing";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]leopard spotted[or]leopard furred[or]Black and yellow spotted[or]soft furred[or]short fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long, thin feline tail lashing teasingly behind you, its eager movements showing off your well-rounded ass, even as it twitches eagerly as if begging someone to pin it down and fuck you.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]leopard[or]barbed[or]pointed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]

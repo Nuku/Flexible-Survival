@@ -69,7 +69,7 @@ to say darkelfF:
 
 to say beatthedarkelf:
 	if cocks of player > 0 and libido of player > 20:
-		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and oversized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
+		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and over-sized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
 		say "     [bold type]Shall you give into this impulse?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";

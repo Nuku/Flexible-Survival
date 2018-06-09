@@ -29,7 +29,7 @@ To say losetohgryphon:
 				if cunt length of player >= 12:
 					say "[gryphonfuck1]"; [player herm pussy fuck]
 				else:
-					say "[gryphonfuck4]"; [oversized pussy fuck]
+					say "[gryphonfuck4]"; [over-sized pussy fuck]
 			else if a random chance of analchance in 18 succeeds:
 				say "[gryphonfuck7]";
 			else if cock length of player > 6:
@@ -52,7 +52,7 @@ To say losetohgryphon:
 			else if cunt length of player >= 12:
 				say "[gryphonfuck5]"; [female player pussy fuck]
 			else:
-				say "[gryphonfuck4]"; [oversized pussy fuck]
+				say "[gryphonfuck4]"; [over-sized pussy fuck]
 		else:
 			if anallevel is 1:
 				say "[gryphonfuck6]";
@@ -72,7 +72,7 @@ to say gryphonfuck3: [player fucks gryphon pussy]
 	say "     Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well-muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured, keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
 
 
-to say gryphonfuck4: [oversized pussy fuck]
+to say gryphonfuck4: [over-sized pussy fuck]
 	say "     The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[ovichance]";
 	if "Male Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player, increase cunt length of player by 1;
 

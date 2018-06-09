@@ -161,23 +161,23 @@ to say awesomefrscent:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
-		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
+		say "The strange fruit has a strong, manly scent that seems mouth-wateringly sweet.";
 
-the scent of the awesomer fruit is "[awesomerfrscent]".
+the scent of the awesomer fruit is "[AwesomerFrScent]".
 
-to say awesomerfrscent:
+to say AwesomerFrScent:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
-		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
+		say "The strange fruit has a lovely, feminine scent that seems mouth-wateringly sweet.";
 
-the scent of the awesomest fruit is "[awesomestfrscent]".
+the scent of the awesomest fruit is "[AwesomestFrScent]".
 
-to say awesomestfrscent:
+to say AwesomestFrScent:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
-		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
+		say "The strange fruit has a rich mix of male and female scents that seems mouth-wateringly sweet.";
 
 the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 

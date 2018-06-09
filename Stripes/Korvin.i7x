@@ -424,7 +424,7 @@ to say conf_Korvin_sexmenu:
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck him doggy-style";
+		now title entry is "Fuck him doggy style";
 		now sortorder entry is 1;
 		now description entry is "Get the buff dog on all fours and mount that tight ass of his";
 	[]
@@ -467,7 +467,7 @@ to say conf_Korvin_sexmenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Fuck him doggy-style":
+				if nam is "Fuck him doggy style":
 					say "[conf_Korvin_sex01]";
 				else if nam is "Fuck him on his back":
 					say "[conf_Korvin_sex02]";

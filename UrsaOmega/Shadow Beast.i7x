@@ -34,7 +34,7 @@ to say losetoshadowbeast:
 			say "     With its pendulous balls resting at your chin, you can feel those warm orbs pulse and throb moments before the creature snarls in climax. It drives all fifteen inches of its cock into your mouth and empties its copious load down your throat and into your belly, filling you with the warmth of its fertile seed. Tasting the excess that bubbles up around its shaft, you savor the strong taste of this virile creature's semen. A wave of lust overtakes you, filling you with a lustful need for more. But the cat's already done with you and pads off, leaving you feeling horny for more. It takes you an effort to not go off after it or go searching immediately for another of its kind to submit yourself to in the hopes of getting properly bred.";
 		else if fightoutcome is 22: [Submit]
 			say "     The cat is clearly pleased at your submission to it, adopting a more relaxed stance. The beast tugs at your gear, indicating that you should remove it - a request you comply with quickly, putting your gear aside and kneeling before the creature.";
-			say "[sbdoggystyle]";
+			say "[sbdoggy style]";
 		else:
 	[	if fightoutcome is 20 or fightoutcome is 21: [Damage and lust succumb]		]
 			say "     The shadowy cat's onslaught is too much to bear, and you fall prostrate before it. The beast senses the last of your resistances failing, and adopts a more relaxed stance, advancing on you with purpose. Despite your weak struggling, it manages to remove your gear quickly with its teeth and tentacles, leaving you shivering and naked on the floor before it.";
@@ -71,7 +71,7 @@ to say sbmissionary:
 	WaitLineBreak;
 	say "     After what feels like an eternity of being roughly bred by the creature, the end seems to be near as the cat speeds up its already frantic thrusting. The beast growls as its climax nears, and with one titanic thrust it bottoms out in you. You feel its huge malehood twitch as the first spurts of hot, fertile cum spurt into your [if cunts of player > 0]womb[else]rectum[end if], coating your insides with thick ropes of feline seed. The cat continues thrusting throughout its orgasm, pushing its load deeper into you. The flow eventually abates, and the beast pulls out with a wet pop, its cum dribbling from your abused [if cunts of player > 0]cunt[else]pucker[end if]. The tentacles let your legs down, and the cat slinks away into the shadows, its interest with you lost now that you've served its pleasures.[impregchance]";
 
-to say sbdoggystyle:
+to say sbdoggy style:
 	say "     The beast circles your prostrated form contentedly, looking over its latest conquest. From the way its sizeable length is quickly slipping from its sheath, you suspect it approves heartily. It pushes you down to your hands and knees with its tentacles, and you maintain the all-fours posture, [if player is submissive]eager to please your shadowy master[else]hoping the cat won't be too rough on you[end if]. The creature stalks behind you, and suddenly you feel the thing's warm breath on your bare skin as it sniffs around your rear. You come to the uncomfortable realization that it's probably ascertaining your ability to bear its offspring; [if player is impreg_able]it purrs with satisfaction at your apparent fertility[else]it gives a growl of disappointment at your inability to bear its young, but seems to be undeterred in mounting you[end if].";
 	WaitLineBreak;
 	say "     The creature leaps onto your back, its lithe and muscular form draping itself over yours. The soft fur almost feels nice on your back, but you're quickly reminded of what's going on when the beast's forelimbs hook themselves around your hips. A hunch of its own hips brings something rough and wet to slide up your thigh; with some shuffling the creature brings the head of its erection to your [if cunts of player > 0]moist slit[else]quivering pucker[end if]. A pair of fearsome jaws lock themselves around your shoulder, reminding you of the price of resistance[if player is submissive]. You moan as you feel your bestial master take complete control of you, and you push yourself back against his length, silently begging him to take you[end if]. The beast pushes its length into you, hilting itself in one smooth thrust; the sudden penetration first makes you cry out in pleasure, then in pain as the creature's cruel barbs scrape along your insides.";
@@ -100,7 +100,7 @@ When Play begins:
 	now skin entry is "dark-furred";  [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a feline tail that twitches this way and that behind you.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "feline";
-	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and catlike ears";  [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and cat-like ears";  [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it cracks and shifts into a quadrupedal stance, becoming sleek and muscled. You feel like a coiled spring, ready to pounce on prey at a moment's notice. Two long black tentacles with strong gripping pads at their ends grow out of your back, giving you another pair of appendages";
 	now skin change entry is "inky black fur covers you from head to toe";
 	now ass change entry is "your new feline tail pushes out from somewhere above your rear";  [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
@@ -130,7 +130,7 @@ When Play begins:
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]sleek[or]toned[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"]
-	now type entry is "[one of]feline[or]catlike[at random]";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human...]
+	now type entry is "[one of]feline[or]cat-like[at random]";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human...]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;

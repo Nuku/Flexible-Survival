@@ -103,7 +103,7 @@ to say sidneyconvinced:
 	say "     It doesn't seem particularly special. The top half is a tennis-ball-sized device with a small needle tip and a few buttons. Below that is a clear cannister full of dull gray goo placed like a handle behind the trigger.";
 	say "     'We were given this for our mission. It's some sort of fancy nanite transfer unit - a one-time sample collection device. An expensive little gizmo, they said. The nanites here,' he says while tapping the glass capsule, 'collect a complete data sample of the target. That way they can then be analyzed... or transfered into someone else to make an identical physical copy.'";
 	attempttowait;
-	say "     Looking at the soldier's bent nose, jutting chin and unibrow, you think you have an idea of where this is going, but are surprised by what he says next. 'I've always wanted to be a woman - soft, beautiful, loving, fertile. I know I don't look the type, and that's kinda the problem. No way I'd've ever been able save up enough for an operation and it wouldn't make me pretty.";
+	say "     Looking at the soldier's bent nose, jutting chin and unibrow, you think you have an idea of where this is going, but are surprised by what he says next. 'I've always wanted to be a woman - soft, beautiful, loving, fertile. I know I don't look the type, and that's kinda the problem. No way I'd have ever been able save up enough for an operation and it wouldn't make me pretty.";
 	say "     'Now this whole mess, it's a dream come true - but it's full of risks. I saw the guys I was sent in with get turned into mindless breeding sluts and crazy multi-gender monsters[if cocks of player > 0 and cunts of player > 0] (no offence)[end if], and I don't want that. I want to still be me, but finally better. I've been putting it off for a while - trying to psych myself up into doing it, I guess - and even found a few possible candidates to copy around here. But getting a sample's too risky, especially since I'm long out of ammo and have no backup. Unless you're willing to maybe help me out?' he asks. 'I've got a few possible donors in mind.'";
 	now HP of Sidney is 2;
 	say "[sidneyoptions]";
@@ -387,7 +387,7 @@ to say sexwithSidney:
 		say "     Sidney's undergone a major change. You should talk to her and see how she's taking it before trying to jump in the sack with her.";
 	else if HP of Sidney is 4 or HP of Sidney is 5:
 		if cocks of player > 0:
-			say "[sexwithSidney_01]"; [doggy-style over desk for first M/F]
+			say "[sexwithSidney_01]"; [doggy style over desk for first M/F]
 			now HP of Sidney is 6;
 		else:
 			say "[sexwithSidney_04]"; [cunnilingus for F/F]
@@ -401,9 +401,9 @@ to say sidney_sexmenu:
 	blank out the whole of table of fucking options;
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Doggy-style";
+		now title entry is "Doggy style";
 		now sortorder entry is 1;
-		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] doggy-style";
+		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] doggy style";
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 2;
@@ -430,7 +430,7 @@ to say sidney_sexmenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Doggy-style":
+				if nam is "Doggy style":
 					say "[sexwithSidney_01]";
 				else if nam is "Missionary":
 					say "[sexwithSidney_02]";
@@ -468,9 +468,9 @@ to say sexwithSidney_02:
 
 to say sexwithSidney_03:
 	if sidneyanal is false:
-		say "     At your suggestion of trying the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if][']s back door, she's surprisingly open to the idea. 'Yeah, I want to do everything this new me has to offer. I wasn't really interested in that kind of fun as a guy, but getting it in the butt as a [if lust of Sidney > 8]pregnant [end if]girl makes it extra-extra-kinky,' she says. 'Just take it easy on me. It's my first time, after all,' she adds. You nod and start by [if anallevel is 3]rimming her tailhole[else]spreading some spit across her tailhole[end if] after she [if level of Sidney is 71]puts her forelegs up on the desk[else]leans her body over the desk[end if].";
+		say "     At your suggestion of trying the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if][']s back door, she's surprisingly open to the idea. 'Yeah, I want to do everything this new me has to offer. I wasn't really interested in that kind of fun as a guy, but getting it in the butt as a [if lust of Sidney > 8]pregnant [end if]girl makes it extra-extra-kinky,' she says. 'Just take it easy on me. It's my first time, after all,' she adds. You nod and start by [if anallevel is 3]rimming her tail-hole[else]spreading some spit across her tail-hole[end if] after she [if level of Sidney is 71]puts her forelegs up on the desk[else]leans her body over the desk[end if].";
 	else:
-		say "     Sidney grins at your suggestion that the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] take it in the back door again. 'Sounds like fun. It makes me feel so naughty,' she says with a wink. 'I'm such a dirty girl for taking it up the butt[if lust of Sidney > 8] while pregnant[end if],' she adds as she [if level of Sidney is 71]puts her forelegs up on the desk[else]leans her body over the desk[end if]. She raises her tail extra-high, giving you a fine view of that puckered hole of hers. You again start by [if anallevel is 3]rimming her tailhole[else]spreading some spit across her tailhole[end if] to get her ready to go.";
+		say "     Sidney grins at your suggestion that the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] take it in the back door again. 'Sounds like fun. It makes me feel so naughty,' she says with a wink. 'I'm such a dirty girl for taking it up the butt[if lust of Sidney > 8] while pregnant[end if],' she adds as she [if level of Sidney is 71]puts her forelegs up on the desk[else]leans her body over the desk[end if]. She raises her tail extra-high, giving you a fine view of that puckered hole of hers. You again start by [if anallevel is 3]rimming her tail-hole[else]spreading some spit across her tail-hole[end if] to get her ready to go.";
 	say "     After your prep's gotten her crinkled hole relaxed and slick, you move atop her and get your hard shaft lined up. You press your [cock of player] cock against her butthole and ease it in [if cock length of player > 12]extra-[end if]slowly, letting her adjust to having your [cock size desc of player]manhood moving inside her. Her asshole remains snug and squeezing around your cock even after it's relaxed and ready for you to fuck it. And fuck it you do, working your shaft in and out of her furry butt in slow, steady strokes that quickly has her panting and moaning[if sidneyanal is false]. And while this may be Sidney's first experience with anal sex, it seems her copied body knows what to do, responding with[else]. Sidney's copied body responds with[end if] sensual rolls of her hips and well-timed squeezes of her inner walls, adding to the pleasure you both feel. The [if level of Sidney is 21]sultry vixen yips[else if level of Sidney is 22 or level of Sidney is 23]sexy otter churrs[else]feral wusky barks[end if] in pleasure as you quicken your pace.";
 	if sidneyanal is false:
 		say "     'This feels... uggh... so deliciously na-ah-ah-naughty. I... ooo... feel like such a-ahh! dirty little slut,' she groans and pants between your thrusts. Pleased with how much your lover is enjoying her first anal experience, you become all the more aroused. And while it takes an effort not to pound her relentlessly, your thrusts do become firmer, drawing such cute little whimpers from the [if level of Sidney is 21]sexy vulpine[else if level of Sidney is 22 or level of Sidney is 23]sleek lutrine[else]feral canine[end if] beneath you. Reaching down between her legs, you diddle her pussy and rub her clit, driving her to orgasm. Her hips grind back against you and her anus flutters wildly around your shaft as she cums, and so you cum hard in response shortly thereafter. You blast your [cum load size of player] load into her tight ass, creaming her bowels with your sticky seed[if cock width of player > 24] until the excess comes flowing out around your spurting member[end if]. By the time you've finished and pulled out, Sidney's completely worn out and sags down onto the floor, your cum leaking from her stretched and well-used pucker.";

@@ -475,7 +475,7 @@ to say Stevenonbottom:
 		say "     'What do you think you're doing? I don't know if I'm ready for that sor- Uhh... I mean, I'm not really interested in that,' he says, trying to sound firm though with that same repressed desire you've heard from him before";
 	else:
 		say "     'Whoa! Slow down there. I don't know if I'm up for that again,' he starts to protest, trying his best to hold back his desire";
-	say ". Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tailhole again and grin at how it twitches.";
+	say ". Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tail-hole again and grin at how it twitches.";
 	attempttowait;
 	let bonus be ( charisma of player - 10 ) / 2;
 	if "Haggler" is listed in feats of player:

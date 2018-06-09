@@ -52,7 +52,7 @@ When Play begins:
 	now victory entry is "[losetohippo]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[hippodesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "the broad head and large mouth of a hippo";
-	now body entry is "big and muscled, with oversized definition and impressive muscle tone. Your fingers have become short and meaty, making it a little harder for you to do delicate work with them";
+	now body entry is "big and muscled, with over-sized definition and impressive muscle tone. Your fingers have become short and meaty, making it a little harder for you to do delicate work with them";
 	now skin entry is "a thick, gray hide and glistens as if some body oil has been spread across your";
 	now tail entry is "You have a short, thick tail ending in a clump of ragged hair.";
 	now cock entry is "[one of]gray[or]purplish-gray[at random]";
