@@ -157,7 +157,7 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 
 Section 3 - NPC and Location
 
-Vent is a man. The HP of vent is usually 0.
+Vent is a man. The HP of Vent is usually 0.
 The description of Vent is "[VentDescription]".
 The conversation of Vent is { "blah blah blarg" }.
 The scent of Vent is "[VentScent]".
@@ -712,6 +712,7 @@ to say VentFoxLastScavScene:
 Chapter 2 - Sex Scenes
 
 to say FuckVentFoxAss:[Player fucks the fox's ass.]
+	now scalevalue of Vent is VentSubSize;
 	if VentSubSize is 3:
 		if cockname of player is listed in infections of Knotlist:
 			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own [if cocks of player > 1]cocks to harden them[else]cock to harden it[end if], before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
@@ -810,6 +811,7 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 	setmonster "Latex Fox";
+	now scalevalue of Vent is VentDomSize;
 	choose row monster from the table of random critters;
 	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly strip out of your clothes and get onto all fours. As you present your [bodydesc of player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before continuing with his plan.";
 	if VentFluidAmount is 0: [Average Fluid]
@@ -1207,20 +1209,12 @@ to say VentAnalWS:
 
 to say VentPostSexWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):
-		if player is similar in size to DomVent: [Vent is similar in size to the player]
+		if player and Vent are equalsized or player is larger than Vent: [Vent is similar in size to the player]
 			say "     <placeholder junk.>";
 		else: [Player is significantly smaller than Vent]
 			say "     <smaller placeholder junk.>";
 
-Section 6 - Functions
-
-Definition: A person (called x) is similar in size to DomVent:
-	if x is the player:
-		if scalevalue of x >= VentDomSize:
-			yes;
-	no;
-
-Section 7 - Dev Tools
+Section 6 - Dev Tools
 
 LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.
