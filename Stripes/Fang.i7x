@@ -158,7 +158,7 @@ to say fangsex:
 
 to say fangsex1:		[suck wolf cock]
 	say "     Watching the powerful form of the wolf move around as he paces by the door, you catch sight of his large sheath and swollen balls. Licking your lips, you decide you'd like a taste of the big wolf's thick seed. You walk over and pet his head, scritching his ears. His ears perk up at the show of affection and nuzzles at your hand, licking your fingers. Reaching down with your other hand, you slip it underneath him and start rubbing his warm maleness, getting a rumble of pleasure from the large wolf. He almost seems to smile as he rolls over onto his back, baring himself to you as his swelling cock starts to slip free. His red shaft pokes from his sheath, growing longer and fuller as you start stroking it.";
-	say "     Leaning down, you brush your tongue over the tip of his pointed glans, getting a taste of his dribbling precum. It has a strong, virile taste that excites you and, taking a deep breath, you plunge your mouth down over that throbbing prick. Licking and sucking lustfully, you rub at his growing knot and full balls. The wolf releases growls of pleasure and thrusts lightly into your mouth as his paws gently grip you. You move yourself over a little, bringing your groin above his face, allowing the wolf's tongue to play over your [if cocks of player > 1]leaking cocks[else if cocks of player is 1]throbbing cock[end if][if cocks of player > 0 and cunts of player > 0] and [end if][if cunts of player > 1]dripping cunts[else if cunts of player is 1]dripping cunt[else if player is neuter]tight asshole[end if]. Kneading the wolf's balls, you almost choke as he cums, spraying a torrent of thick, rich wolfcum into your mouth and down your throat[if cocks of player > 0 or cunts of player > 0], pushing you to orgasm as well with his tongue[end if]. Sliding off the spent shaft, you lick your lips for the excess which flowed out, your belly warm with your wolf pet's semen.";
+	say "     Leaning down, you brush your tongue over the tip of his pointed glans, getting a taste of his dribbling precum. It has a strong, virile taste that excites you and, taking a deep breath, you plunge your mouth down over that throbbing prick. Licking and sucking lustfully, you rub at his growing knot and full balls. The wolf releases growls of pleasure and thrusts lightly into your mouth as his paws gently grip you. You move yourself over a little, bringing your groin above his face, allowing the wolf's tongue to play over your [if cocks of player > 1]leaking cocks[else if cocks of player is 1]throbbing cock[end if][if player is herm] and [end if][if cunts of player > 1]dripping cunts[else if cunts of player is 1]dripping cunt[else if player is neuter]tight asshole[end if]. Kneading the wolf's balls, you almost choke as he cums, spraying a torrent of thick, rich wolfcum into your mouth and down your throat[if cocks of player > 0 or cunts of player > 0], pushing you to orgasm as well with his tongue[end if]. Sliding off the spent shaft, you lick your lips for the excess which flowed out, your belly warm with your wolf pet's semen.";
 	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
 
@@ -264,7 +264,7 @@ to say fangsandrasex:
 			infect "Feral Wolf";
 		else:
 			say "     Momentarily tempted by sexy bunny's offer, you manage to shake it off and grab the wolf roughly by the neck. 'No Fang, I'm the alpha and that's the way it stays,' you growl, forcing him to the floor. He growls a little in frustration, but you hold him firm. 'Don't you get uppity because Sandra lets you fuck her. I'm still the one on top here,' you add grabbing his balls firmly, making him whine and dip his ears. 'I merely let you because she enjoys it, not because you deserve to be anything more than beta.'";
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "     It seems Fang will need a reminder of his place beneath you. Being both male and female, there are options open to you. Would you prefer to fuck the wolf (Y) or ride his lupine cock (N)?";
 				if the player consents:
 					say "[fangdomfuck]";
@@ -492,7 +492,7 @@ instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of
 		infect "Feral Wolf";
 	else:
 		say "     Momentarily tempted by idea of submitting to the wolf, you manage to shake it off and grab the wolf roughly by the neck. 'No Fang, I'm the alpha and that's the way it stays,' you growl, forcing him to the floor. He growls a little in frustration, but you hold him firm. 'Don't you get uppity because I made you wait. I'm still the one on top here,' you add grabbing his balls firmly, making him whine and dip his ears. 'I have more important things to deal with than you. Just because you're guarding the place doesn't mean you're in charge, beta.'";
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			say "     It seems Fang will need a reminder of his place beneath you. Being both male and female, there are options open to you. Would you prefer to fuck the wolf (Y) or ride his lupine cock (N)?";
 			if the player consents:
 				say "[fangdomfuck2]";

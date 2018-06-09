@@ -162,7 +162,7 @@ Instead of conversing the Dmitri:
 	say "     [one of]'I wish there were less ferals in this neighborhood. It discourages potential customers,' he grumbles angrily.[or]'I wonder how Bain is doing right now. The batty guy's probably cooped up in his mansion,' he muses while staring at the suit of armor.[or]'Shame there isn't more wine anywhere in the city,' he says, staring at an empty wine glass.[or]'I hope this all gets sorted out soon,' he says. 'Business has been too slow.'[or]'Collecting these antiques has helped me keep my sanity in these trying times.'[or]'So did you see the new museum exhibit that opened this summer?' he asks. Not even waiting for you to respond, he elaborates upon his view of the pieces at the exhibit and their financial worth.[at random]";
 
 Instead of fucking the Dmitri:
-	if(lastfuck of Dmitri - turns < 6):
+	if (lastfuck of Dmitri - turns < 6):
 		say "     Chuckling softly, the peacock states, 'I know you're enthusiastic to have some more fun with me, but I'd rather you wait a little while so that we can savor the experience.'";
 	else: [ready for sex]
 		say "     As you walk up to Dmitri, he smiles and asks, 'I wonder what you are thinking about...'";

@@ -118,7 +118,7 @@ when play ends:
 			if tailname of player is "Junkman":
 				say "     You discover early on that plugging yourself in feels very good and provides you with more energy. While you seem able to survive on just food or power, you operate at your best running on some of both. As an extra bonus, after a good, long charge, you are a randy lover with very long endurance, pleasing your partners greatly. ";
 			say "     You open what panels you can and replace any frayed wires or corroded tubes you can find with replacements you scavenge from old appliances you collected during your yard sale hunting. While you can't really tell what most of these do, you do start to feel better over time as you make these repairs. While your new form is rather offputting, you do manage to make some new friends and meet new lovers, who also seem pleased with your body's improved function. By keeping proper maintenance on yourself, you manage to live a long and pleasurable life, surviving several generations of other species. ";
-			if cocks of player > 0 and cunts of player > 0 and "Sterile" is not listed in feats of player:
+			if player is herm and "Sterile" is not listed in feats of player:
 				say "     Over your long life, you give birth to and sire numerous offspring which are junk-cybernetic versions of their other parent. ";
 			else if cocks of player > 0:
 				say "     Over your long life, you sire numerous offspring which are junk-cybernetic versions of their other parent. ";

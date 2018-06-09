@@ -373,7 +373,7 @@ A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
 graphics is a truth state that varies.
 
-before examining a thing(called t):
+before examining a thing (called t):
 	if the icon of t is figure of pixel:
 		continue the action;
 	project the icon of t;

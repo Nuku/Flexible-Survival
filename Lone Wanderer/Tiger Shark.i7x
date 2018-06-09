@@ -78,7 +78,7 @@ Instead of resolving Shark Warrior:
 			say "     The fish-guy lets out a vocal 'Yes!' before he practically jumps atop you, pressing his hard body against yours. His skin gets your clothes wet, making them stick a bit to his body, but you can also feel his hard pecs and abs through the fabric. His elongated muzzle finds your own, tilting to adjust for its altered shape as he catches your mouth in a lustful kiss. Surprisingly enough, his teeth aren't as prominent as you expected, and you even end up seeking them out with your tongue to convince yourself that they are truly there. All the while, the eager fish-man begins to peel off your clothes, tugging off each layer with increasing impatience as you kiss. 'Alright, pal. How about we skip to the good stuff? I've got some nice cocks that need some attention, too.' You sneak a peek towards his uncovered groin. He's sporting two pointed, glistening erections, each throbbing hard against your thighs.";
 			[say "     How would you like to pleasure the big guy?";]
 			if cocks of player > 0:
-				say "     Do you want to [link]suck him off (0)[as]0[end link], [link]fuck him (1)[as]1[end link] or [link]ride him(2)[as]2[end link]?";
+				say "     Do you want to [link]suck him off (0)[as]0[end link], [link]fuck him (1)[as]1[end link] or [link]ride him (2)[as]2[end link]?";
 				now calcnumber is -1;
 				while calcnumber < 0 or calcnumber > 2:
 					say "Choice? (0-2)>";
@@ -90,7 +90,7 @@ Instead of resolving Shark Warrior:
 				else:
 					say "[tsw_ride]";
 			else:
-				say "     Do you want to [link]suck him off (0)[as]0[end link] or [link]ride him(1)[as]1[end link]?";
+				say "     Do you want to [link]suck him off (0)[as]0[end link] or [link]ride him (1)[as]1[end link]?";
 				now calcnumber is -1;
 				while calcnumber < 0 or calcnumber > 2:
 					say "Choice? (0-2)>";

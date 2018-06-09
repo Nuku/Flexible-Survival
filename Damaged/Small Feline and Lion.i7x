@@ -516,7 +516,7 @@ when play ends:
 			say "     After your release, you continue to take advantage of your appearance like this, playing off people's sympathies or making them underestimate you";
 			if cocks of player > 0 and cunts of player is 0:	[MALE]
 				say ". You take more and more to cross-dressing, often using it as a means to slip into girls-only areas or luring in a new playmate-to-be before revealing your throbbing cock.";
-			else if cocks of player > 0 and cunts of player > 0:	[HERM]
+			else if player is herm:	[HERM]
 				say ". You are a lustful little cat girl though, seeking out lovers of all genders and from all forms of felines. And while lions may be your favorite, nothing says you can't enjoy the others as well. You eventually move in with a sexy male lion who indulges your girlish playing around and is happy to let you play with the other kitties as long as he can get his fair share of your hot pussy.";
 			else if cocks of player is 0:
 				say ". You are a lustful little cat girl though, seeking out as many felines of any species as you can get, as long as they have a hard cock to fill you. And while lions may be your favorite, nothing says you can't enjoy the others as well. You eventually move in with a sexy male lion who indulges your girlish playing around and is happy to let you play with the other kitties as long as he can get his fair share of your hot pussy.";

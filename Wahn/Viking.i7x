@@ -1179,7 +1179,7 @@ to say SonyaTalk3:
 			say "     ";
 
 Instead of fucking the Sonya:
-	if(lastfuck of Sonya - turns < 5):
+	if (lastfuck of Sonya - turns < 5):
 		say "     Sonya puts a hand on your chest to hold you back, gently but firmly. With a little shake of her head, she says 'Sorry my love, I [one of]can't spend all my energy here in bed with you - even though I want to. We can't raid if no one scouts the coast and I've got to go soon[or]have got to clean my armor and sharpen my sword right now[or]need a bit of a break. You can really wear a woman out, you know[at random].' Giving you an affectionate kiss on the cheek, your viking wife then steps away from you.";
 	else:
 		say "[SonyaSexMenu]";
@@ -1507,7 +1507,7 @@ to VikingInfect:
 	infect "Viking";
 	now non-infectious entry is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
 

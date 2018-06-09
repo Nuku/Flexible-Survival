@@ -388,7 +388,7 @@ Instead of fucking the Bastet:
 	say "[BastetSexMenu]";
 
 to say BastetSexMenu:
-	if(lastfuck of Bastet - turns < 5):
+	if (lastfuck of Bastet - turns < 5):
 		say "     Bastet puts a hand on your chest to hold you back and says, 'Have some patience please, I am not a slut that is always ready for your pleasure... like some bitches you might know.' Her last words are accompanied by a pointed stare at Nermine, who stands ready at the store counter, dressed in nothing but her fur. The sexy jackaless even gives you two a provocative smile as she notices the looks coming her way, then cups her shapely breasts and demonstratively strokes their nipples. The proud lioness next to you just gives a disapproving huff and looks away, her tail twitching in annoyance.";
 	else:
 		now BastetSexOrTalk is true; [approval message in her sex menu]

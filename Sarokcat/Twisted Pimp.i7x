@@ -110,7 +110,7 @@ When Play begins:
 
 Section 3 - Estrogen Pill
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "estrogen pill"	"This small potent looking object has a heart symbol, subdivided by a plus."	1	estrogen pill
 
@@ -118,7 +118,7 @@ estrogen pill is a grab object. It is temporary. It is a part of the player.
 
 the usedesc of estrogen pill is "[estrogen pill use]";
 
-before using a grab object(called x):
+before using a grab object (called x):
 	if x is estrogen pill:
 		LineBreak;
 		if cocks of player > 0:

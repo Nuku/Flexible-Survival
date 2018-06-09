@@ -870,26 +870,26 @@ to say CellBlockAdesc:
 
 A person can be policed. A person can be lockered. A person can be imprisoned. A person can be stationed. A person is usually not policed. A person is usually not lockered. A person is usually not imprisoned. A person is usually not stationed.
 
-Definition: A person(Called X) is policed:
-	If x is the player, no;
+Definition: A person (called x) is policed:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Station, yes;
 	no;
 
-Definition: A person(Called X) is lockered:
-	If x is the player, no;
+Definition: A person (called x) is lockered:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Lockerroom, yes;
 	no;
 
-Definition: A person(Called X) is imprisoned:
-	If x is the player, no;
+Definition: A person (called x) is imprisoned:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Cell Block A, yes;
 	no;
 
-Definition: A person(Called X) is stationed:
-	If x is the player, no;
+Definition: A person (called x) is stationed:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Station, yes;
 	if the location of x is Police Lockerroom, yes;

@@ -100,7 +100,7 @@ Instead of resolving a Magical Girl:
 
 Section 3a - Sailor Outfit
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "Sailor Outfit"	"A sailor soldier outfit designed to make you a sex symbol to both men and women alike."	1	Sailor Outfit
 

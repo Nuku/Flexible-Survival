@@ -107,7 +107,7 @@ Instead of fucking Kitsune:
 		if player consents:
 			LineBreak;
 			let pick be 0;
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "Deciding that you want to see the sexy fox-man play the part of your submissive, you smile darkly at him and then take him into a hard embrace before whispering your desires in his ear. The silver vulpine shivers slightly and then nods at you before asking you how you wish to have him.";
 				say "     [bold type]Which sex do you use on him?[roman type][line break]";
 				LineBreak;

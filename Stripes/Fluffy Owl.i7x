@@ -118,7 +118,7 @@ when play ends:
 	if bodyname of player is "Fluffy Owl":
 		if humanity of player < 10:
 			say "     Losing yourself to your new instincts and a renewed wave of changes because of it, you head out into the city. You make your way to the roof of a small office building and with only a little trepidation, leap off into the air. You glide clumsily at first, but somehow manage to fly soon enough. You soar through the night air, drawn back to the hospital. There, you join the other fluffy owls in the nest that they have set up in one wing, ";
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "enjoying a life of mating with the many females and being mated to lay more eggs for the parliament.";
 			else if cocks of player > 0:
 				say "enjoying a life of mating with the many females so they may lay more eggs for the parliament.";
@@ -133,6 +133,6 @@ when play ends:
 				if lastfuck of Alex is not 255:
 					say "     You remain the friend and occasional lover of Alex, the ferrety lawyer, throughout your life. He always squirms so cutely when you nip at him with your beak or brush your feathers across his cock. You do have to keep some distance from him, for professional reasons, and always take care against any conflict on your cases. But you are able to 'consult' with him from time to time, valuing both his advice and his company at those times. His more easy-going attitude and advice helps offset your sometimes harsh urges for swift and strong decisions, helping you to reach a more sound and balanced verdict on many cases.";
 			else:
-				say "you become a pilot, having an instinctual longing to fly, but aren't quite able to do it on your own. As the pilot, you can remain unseen by the passengers. The flight crew all soon grow used to your appearance and accept you readily enough. Your willingness to work the red-eye flights, which are better for your nocturnal body, helps quite a bit too. You become popular with several of the flight attendants as well[if cocks of player > 0 and cunts of player > 0], both male and female[end if]. You enjoy many an opportunity to renew your membership in the Mile High Club.";
+				say "you become a pilot, having an instinctual longing to fly, but aren't quite able to do it on your own. As the pilot, you can remain unseen by the passengers. The flight crew all soon grow used to your appearance and accept you readily enough. Your willingness to work the red-eye flights, which are better for your nocturnal body, helps quite a bit too. You become popular with several of the flight attendants as well[if player is herm], both male and female[end if]. You enjoy many an opportunity to renew your membership in the Mile High Club.";
 
 Fluffy Owl ends here.

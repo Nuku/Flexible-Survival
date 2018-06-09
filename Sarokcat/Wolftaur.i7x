@@ -45,7 +45,7 @@ To say Wolftaur loss:
 				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or alternatively take his tight hole yourself (N)? ";
 				if player consents:
 					say "     [line break]";
-					if cocks of player > 0 and cunts of player > 0:
+					if player is herm:
 						say "     As a herm, you have the choice which hole you want to sink down on his hard canine shaft. Which shall it be? (Y = pussy, N = ass) ";
 						if player consents:
 							say "     [line break]";

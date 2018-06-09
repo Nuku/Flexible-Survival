@@ -132,7 +132,7 @@ when play ends:
 			if player is pure:
 				project the figure of Mammoth_CVF_icon;
 			say "     You succumb to your strange, new instincts and wander the museum and its environs. There you have fun playing with the other massively-endowed mammoths living there. Over time, you become fully grown like them. ";
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "     Your cock[smn], balls and breasts all swell to sizes comparable to theirs[if player is not pure] and your body completes its change to be like them[end if] from the over-exposure to their excessive cum. Your cunt also becomes wide and deep, big enough to accept their enormous cocks. You, like all the mammoths, can't fit much more than the giant glans and the first few feet, but it's plenty. After mating, a mammoth is left adorably rounded, bloated like a balloon filled with cum, unable to move for hours.";
 			else if cocks of player > 0:
 				say "     Your cock[smn] and balls swell to sizes comparable to theirs[if player is not pure] and your body completes its change to be like them[end if] from the over-exposure to their excessive cum. You enjoy mating with the lovely mammoths. Given your huge size, they can't fit much more than the giant glans and the first few feet, but it's plenty. After mating, a mammoth is left adorably rounded, bloated like a balloon filled with cum, unable to move for hours. And being purely male, you experience doing that to the sexy herms often.";

@@ -18,7 +18,7 @@ To decide which action name is the action to be: (- action_to_be -).
 Rule for printing a parser error while the latest parser error is the can't see any such thing error and the action to be is the masslittering action:
         say "You don't see that in your backpack.";
 
-Carry out masslittering something(called x):
+Carry out masslittering something (called x):
 	if x is wielded or x is equipped:
 		say "You're [if x is wielded]wielding[else]wearing[end if] that. Take it off first.";
 		stop the action;

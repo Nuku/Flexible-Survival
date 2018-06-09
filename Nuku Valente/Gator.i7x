@@ -321,7 +321,7 @@ to GatorBind:
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
-			say "     Your mind blanks out as your arousal comes to a head, and you can't help but [if player is male]grasp your hardened member and jerk yourself off[else if player is female]play with your clit[else]thrust your fingers in and out of your ass[end if] until you reach your climax. Your orgasm relieves a bit of the pressure in your mind, and you can think straight again.";
+			say "     Your mind blanks out as your arousal comes to a head, and you can't help but [if player is male]grasp your hardened member[smn] and jerk yourself off[else if player is female]play with your clit[sfn][else]thrust your fingers in and out of your ass[end if] until you reach your climax. Your orgasm relieves a bit of the pressure in your mind, and you can think straight again.";
 			LineBreak;
 			now struggleatt is 0;
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
@@ -387,12 +387,12 @@ to GatorBind:
 				LineBreak;
 				if obliging is true:
 					decrease struggleatt by 1;
-					say "     [one of]You accept your fate as the gator rests her weight on you, rumbling faintly in approval[or]'Looks like somebody is going to be gator chow,' the predator taunts as you let her have her way with you[or]The gator chuckles, and her hands knead her stomach, pressing down on your unresisting form[or]You sit back and wait as the stomach does its work[or]You don't resist as the gator's insides press into you[at random].";
+					say "     [one of]You accept your fate as the gator rests her weight on you, rumbling faintly in approval[or]'Looks like somebody is going to be gator chow,' the predator taunts as you let her have her way with you[or]The gator chuckles, and her hands knead her stomach, pressing down on your unresisting form[or]You sit back and wait as her stomach does its work[or]You don't resist as the gator's insides press into you[at random].";
 					wyvhumanityroll;
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
 					decrease struggleatt by 1;
-					say "     [one of]'Having fun in there?' the reptile taunts when you cease your struggles[or]You take a break amidst the churning walls[or]While you rest, you feel the stomach bob up and down, and you guess that the gator must be taking a dip[or]The gator caresses her tummy, almost happy for you when you don't put up a struggle[or]It's so warm inside of the gator that you find yourself relaxing[at random].";
+					say "     [one of]'Having fun in there?' the reptile taunts when you cease your struggles[or]You take a break amidst the churning walls[or]While you rest, you feel the gator's stomach bob up and down, and you guess that she must be taking a dip[or]The gator caresses her tummy, almost happy for you when you don't put up a struggle[or]It's so warm inside of the gator that you find yourself relaxing[at random].";
 					wyvhumanityroll;
 					increase lustatt by 7 + (lustadjust * 2);
 				wait for any key;

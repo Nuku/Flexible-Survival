@@ -53,13 +53,13 @@ to say LuciferSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Rub Lucifer's prostate to make him cum";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the stallion's ass";
 		now sortorder entry is 2;
 		now description entry is "Pound your dick into Lucifer's hole";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Take that big horsecock in your pussy";
 		now sortorder entry is 3;

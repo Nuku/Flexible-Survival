@@ -402,7 +402,7 @@ to say SexWithSven:
 		now lastfuck of Sven is turns;
 		if Candy is in Bunker, now lastSvendrink is turns;
 		say "     As you approach Sven this time, he seems to notice something in how you approach him and mewls softly, stretching out on his cot like a lounging feline. Sitting beside him, you rub his tummy and smile as he purrs happily. 'I have something special for you, kitty,' you say softly as you pull out the collar. His eyes lock onto the baby blue strap and he releases a soft mew, almost unheard. He nibbles at his lip a little as you lean in to stroke along the soft fur of his neck.";
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			say "     As you prepare to give the sexy snowmeow his new collar, you try to decide if you'd prefer to top him or ride him in celebration.";
 			say "     [bold type] You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";
 			LineBreak;
@@ -645,7 +645,7 @@ to say SvenTrio:
 			say "[impregchance]";
 			say "     The three of you lay there for some time, enjoying the afterglow from your wild threesome. Before the others drift off completely, you get them to move off you, leaving them to snuggle while you get back to other matters.";
 	else:													[results cycle - Sex B]
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			say "     You snuggle with the two pretty play-toys as run your fingers through their soft fur, nuzzling them each in turn. With such willing partners, you try to decide what you'd like to do with them this time. You slide your hands down to their bottoms, wondering if you'd like to fuck both their adorable asses.";
 			say "     [bold type] Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";
 			LineBreak;

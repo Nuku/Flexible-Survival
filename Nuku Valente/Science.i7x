@@ -98,7 +98,7 @@ The nerd has a research called current.
 cur is a text that varies.
 
 Local Survey is a Research.
-The description of it is "Surveying our immediate surroundings will better prepare us for the unexpected(Perception +5%)".
+The description of it is "Surveying our immediate surroundings will better prepare us for the unexpected (Perception +5%)".
 The cost of it is 30.
 The completion of it is Local Survey Rule.
 
@@ -106,7 +106,7 @@ This is the local survey rule:
 	now perception of tribe of player is ( perception of tribe of player * 105 ) / 100;
 	say "The perception of your tribe is now [perception of tribe of player]";
 
-An everyturn rule(this is the SCIENCE rule):
+An everyturn rule (this is the SCIENCE rule):
 	if science of tribe of player < 1, continue the action; [ No research without research points ]
 	if current of nerd is complete and current of nerd is not indefinite:
 		say "Your current research topic is complete. You should pick a new one.";

@@ -21,7 +21,7 @@ to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappoint
 		say "     You fall to your knees before the lizard woman, and she kicks you to the ground, cautiously keeping her distance.";
 	else:
 		say "     After one blow too many, you sink to the ground in a pile, and the scaled woman approaches your fallen form slowly.";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "     She crouches down to get closer to you before running a hand over your crotch and finds your cock. She sighs, and her hand falls further down, finding your pussy, which draws a surprised gasp from her. 'Now that is interesting. I'd say it's not something you find every day, but times have changed.' She begins undressing you eagerly, tossing your gear and possessions with abandon before stripping down herself.";
 		say "[WhiptailHermTrib]";
 	else if cocks of player > 0:
@@ -74,7 +74,7 @@ to say WhiptailVanquishedSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		choose a blank row in table of fucking options;
 		now title entry is "Herm Oral";
 		now sortorder entry is 1;

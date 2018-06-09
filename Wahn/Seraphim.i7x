@@ -282,7 +282,7 @@ instead of sniffing Gabriel:
 	say "Gabriel is surrounded by the faint smell of sandalwood.";
 
 instead of fucking Gabriel:
-	if(lastfuck of Gabriel - turns < 5):
+	if (lastfuck of Gabriel - turns < 5):
 		say "     Gabriel lowers his head submissively and says 'Forgive me, [if cunts of player > 0 and cocks of player is 0]mistress [else]master [end if]but I need a break...'";
 	else:
 		now sextablerun is 0;
@@ -293,13 +293,13 @@ instead of fucking Gabriel:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job";
 		]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
 		[
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Gabriel fuck your pussy";
 			now sortorder entry is 3;
@@ -310,7 +310,7 @@ instead of fucking Gabriel:
 		now sortorder entry is 4;
 		now description entry is "Let the tame angel fill your ass with his seed";
 		]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Gabriel's ass";
 			now sortorder entry is 5;

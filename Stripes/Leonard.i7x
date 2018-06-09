@@ -652,7 +652,7 @@ Instead of resolving Music Store:
 		if violinfound is 0, now violinfound is 2;
 		if violinfound is 1, now violinfound is 3;
 	else if fightstatus is 2:
-		say "     After the sprites have had their fun, you are left deposited outside their store. 'Oh! You should come back again so we can play some more,' one of them giggles. 'Yeah! I want a turn playing with your [if cocks of player > 0 and cunts of player > 0][one of]cock[or]pussy[at random][else if cocks of player > 0]cock[else if cunts of player > 0]cunt[else]feet[end if] next time' another pipes in. 'Ooo! Dibs!' another says with a giggle. They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
+		say "     After the sprites have had their fun, you are left deposited outside their store. 'Oh! You should come back again so we can play some more,' one of them giggles. 'Yeah! I want a turn playing with your [if player is herm][one of]cock[or]pussy[at random][else if cocks of player > 0]cock[else if cunts of player > 0]cunt[else]feet[end if] next time' another pipes in. 'Ooo! Dibs!' another says with a giggle. They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
 		if violinfound is 0, now violinfound is 2;
 		if violinfound is 1, now violinfound is 3;
 	else:

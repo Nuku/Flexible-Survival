@@ -210,7 +210,7 @@ instead of fucking the Duke:
 
 to say DukeSexMenu:
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -228,13 +228,13 @@ to say DukeSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Duke and jerk him off at the same time.";
 		now toggle entry is DukeSex rule;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Duke's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the German shepherd's ass with your cock.";
 		now toggle entry is DukeSex rule;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your ass";
 		now sortorder entry is 7;

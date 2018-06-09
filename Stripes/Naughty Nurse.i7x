@@ -55,7 +55,7 @@ to say VixenHermNurseGetAnal:
 to say LoseToVixenNurse:
 	choose row monster from the table of random critters;
 	if vixgender is 0:
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			if a random chance of 1 in 2 succeeds:
 				say "[VixenFemNurseMaleScene]";
 			else:
@@ -76,7 +76,7 @@ to say LoseToVixenNurse:
 			if a random chance of x in 200 succeeds:
 				attempttowait;
 				say "     The vixen nurse, panting a little from her orgasm, takes in the scent of your arousal and smiles. Reminded of her initial plan, her cock starts to rise again. Getting hard in your mouth again. Lost in your lust, you help her along, licking and sucking it to restore her erection. With some help from you, soon she's up and ready to go again, which you are far more eager for than before.";
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					if a random chance of 1 in 2 succeeds:
 						say "[VixenHermNurseAssFuck]";
 					else:

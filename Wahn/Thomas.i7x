@@ -576,7 +576,7 @@ Instead of fucking the Thomas:
 	else if (HP of Thomas is 100): [avoiding the player]
 		say "ERROR-Thomas-100B: He should be avoiding the player now and not be seen again.";
 	else:
-		if(lastfuck of Thomas - turns < 5):
+		if (lastfuck of Thomas - turns < 5):
 			say "     Thomas says 'Sorry I'm still worn out from last time. Give me some space, ok?'";
 		else:
 			say "[ThomasSexMenu]";
@@ -589,7 +589,7 @@ to say ThomasSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -600,7 +600,7 @@ to say ThomasSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Thomas long horsecock in your mouth.";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -618,7 +618,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the herm centaur's pussy with your cock.";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;

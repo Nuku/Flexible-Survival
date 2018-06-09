@@ -36,7 +36,7 @@ Instead of resolving a Mushroom cave:
 
 Section 2 - Item
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "glowing mushroom"	"A weird mushroom that you found. Faintly glows with a green light (shrinking item)."	0	glowing mushroom
 

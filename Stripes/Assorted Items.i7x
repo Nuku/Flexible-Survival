@@ -8,7 +8,7 @@ Section 1 - Nullo Wafers
 
 [ - Project discarded for now, replaced by BlueBishop's nullification powder - ]
 [
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "nullo wafers"	"A box of bland, dry cookies. It's packaging proclaims [']Now with less flavor![']"	1	nullo wafers
 
@@ -71,7 +71,7 @@ to say nullo wafers use:
 
 Section 2 - Libido Pill
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "libido pill"	"A sex-enhancement pill for getting you (or someone else) horny."	0	libido pill
 

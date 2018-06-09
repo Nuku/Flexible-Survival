@@ -85,10 +85,10 @@ To say Tenrec HermVic:
 
 To say Tenrec loses:
 	if inasituation is false:
-		if libido of player < 30 or (cocks of player > 0 and cunts of player > 0):
+		if libido of player < 30 or (player is herm):
 			say "'Well, you can just throw me right over the side,' the ottershrew gasps, cradling his bruised and battered body. 'You might think you are a tough guy, but you got lucky this time.' His narrow chest heaves as he struggles to catch a breath, long thick tail flopping against the ground. 'Still, you did screw up in one place.' He grins, weakly, as his tail tenses. 'You should have put a net over me.' With a bark and a sudden muscular push of his tail, the tenrec flips right over the side of the wharf, diving into the water. You'll have to catch him next time!";
 		else:
-			say "Left dazed and staggering after your last blow, the tenrec is left open for you to finish him off. Would you like to knock him down and [link]ride him(1)[as]1[end link], [link]use his muzzle(2)[as]2[end link] or [link]throw him back?(3)[as]3[end link]?";
+			say "Left dazed and staggering after your last blow, the tenrec is left open for you to finish him off. Would you like to knock him down and [link]ride him (1)[as]1[end link], [link]use his muzzle (2)[as]2[end link] or [link]throw him back? (3)[as]3[end link]?";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
 				say "Choice? (1-3)>[run paragraph on]";
@@ -126,7 +126,7 @@ To say Tenrec loses:
 	if libido of player < 30:
 		say "'Well, you can just throw me right over the side,' the ottershrew gasps, cradling his bruised and battered body. 'You might think you are a tough guy, but you got lucky this time.' His narrow chest heaves as he struggles to catch a breath, long thick tail flopping against the ground. 'Still, you did screw up in one place.' He grins, weakly, as his tail tenses. 'You should have put a net over me.' With a bark and a sudden muscular push of his tail, the tenrec flips right over the side of the wharf, diving into the water. You'll have to catch him next time!";
 	else:
-		say "Would you like to[link]ride him(1)[as]1[end link], [link]use his muzzle(2)[as]2[end link] or [link]throw him back?(3)[as]3[end link]?";
+		say "Would you like to[link]ride him (1)[as]1[end link], [link]use his muzzle (2)[as]2[end link] or [link]throw him back? (3)[as]3[end link]?";
 		now calcnumber is 0;
 ]
 

@@ -141,7 +141,7 @@ to say GuardLie: [lie to get into the camp]
 		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
 
 to say GuardBeg: [mooch some food from a guard]
-	if(lastGuardBeg - turns < 12):
+	if (lastGuardBeg - turns < 12):
 		say "     The soldier lowers a hand to his pocket, then stops. 'Wait a minute - I gave you something not too long ago! I can't hand out stuff constantly. That'll attract too much attention and all kinds of critters will show up asking for food.'";
 	else:
 		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now please go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
@@ -703,7 +703,7 @@ instead of sniffing Adam:
 
 Instead of fucking Adam:
 	project Figure of Adam_icon;
-	if(lastfuck of Adam - turns < 6):
+	if (lastfuck of Adam - turns < 6):
 		say "     Adam chuckles as you try to talk him into sex again. 'You're just insatiable, aren't you? Too bad I don't have quite dad's stamina, so I need a break before I'm ready to go again...'";
 	else:
 		say "[AdamSexMenu]";
@@ -722,13 +722,13 @@ to say AdamSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Taste some half-minotaur seed.";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow you";
 		now sortorder entry is 2;
 		now description entry is "Put Adam's mouth to good use.";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Adam fuck your pussy";
 		now sortorder entry is 3;
@@ -739,7 +739,7 @@ to say AdamSexMenu:
 	now sortorder entry is 4;
 	now description entry is "Let the boy fill your ass with his seed.";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Adam's ass";
 		now sortorder entry is 5;

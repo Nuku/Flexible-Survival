@@ -321,7 +321,7 @@ Instead of fucking the Nadia:
 	if (HP of Nadia is 0 or HP of Nadia is 99): [not yet met or refused]
 		say "ERROR-Nadia-001F: She should not be around yet anywhere where players can fuck her.";
 	else:
-		if(lastfuck of Nadia - turns < 6):
+		if (lastfuck of Nadia - turns < 6):
 			say "     'Give me a moment, please,' Nadia says from within the confines of her nest, panting slightly. 'As much as I'd like to be bred again, I need some time to recover.'";
 		else if cocks of player is 0:
 			say "     Nadia looks askance, crestfallen. 'As much as I'm indebted to you, I can't do that. Not that I have anything against it, but I just don't swing that way.'";
@@ -333,13 +333,13 @@ Instead of fucking the Nadia:
 to say NadiaSexMenu:
 	blank out the whole of table of fucking options;
 [
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the beautiful bird blow you.";
 		now toggle entry is NadiaSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
@@ -351,7 +351,7 @@ to say NadiaSexMenu:
 	now description entry is "Give the beautiful bird some oral attention.";
 	now toggle entry is NadiaSex rule;
 ]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;

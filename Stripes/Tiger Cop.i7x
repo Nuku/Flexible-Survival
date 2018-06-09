@@ -377,7 +377,7 @@ to say totalTH:
 			now breast size of player is 4;
 
 to say THpostchange:
-	if cocks of player > 0 and cunts of player > 0:		[herm]
+	if player is herm:		[herm]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress herm like the others. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy and throbbing cock ache with a need to be played with, but for a price.";
 	else if cocks of player > 0:				[male]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress femme. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your throbbing cock aches with a need to be played with, but for a price.";
@@ -390,7 +390,7 @@ Section 5 - Won at Motel
 
 to say mqsuccess:
 	now mqstatus is 50;
-	say "     With their matron beaten, the tigresses all look at you expectantly. The fallen tigress, and soon the others as well, start mewling and displaying themselves for the attention of the strong [if cocks of player > 0 and cunts of player > 0]herm[else if cocks of player > 0]male[else]female[end if] who has beaten them.";
+	say "     With their matron beaten, the tigresses all look at you expectantly. The fallen tigress, and soon the others as well, start mewling and displaying themselves for the attention of the strong [if player is herm]herm[else if cocks of player > 0]male[else]female[end if] who has beaten them.";
 	say "     As you eye all the lusty felines before you, the cop comes in, dragging another pair of felines in by the scruff while the others he's brought wait submissively by the door. His pants are open and his stiff rod is slick with cum and juices. It seems he's already shown a few of them who's in charge.";
 	say "     'Good work, deputy,' he chuckles as he pushes the two tigresses onto some of the others. He steps up to the deposed matron, intent on having his way with hir.";
 	WaitLineBreak;
@@ -405,7 +405,7 @@ to say mqsuccess:
 	now battleground is "void";
 
 to say MQvictory:						[Victory]
-	if cocks of player > 0 and cunts of player > 0:		[herm]
+	if player is herm:		[herm]
 		say "     You set yourself on a cute pair of tigresses, pounding one while the other fingerfucks your pussy. You motion for another pair to tend to your breasts with those rough tongues of theirs. Eager to please their new masters, they work extra hard, giving you a wonderfully long and pleasurable fuck. While you're pounding away, you're treated to the show of watching the cop screwing the matron hard and fast while several of the other girls fawn over both of them. As you watch, the ex-matron quickly becomes another small, mewling tigress like the others.";
 		say "     When you're done with your first pair, you push them aside and pull another up from the bed. You press hir to the wall and pound into hir tight cunt. Hir inner walls grip and squeeze around you like a pro, building you back to climax quickly. Not wanting to let hir take control that way, you pull out of hir and sink into hir tailhole. Shi mrowls in surprise and cums heavily onto the wall before you fill hir butt with your seed and move on to the next one.";
 		say "     You push your next tigress to lie back on the bed and you straddle hir cock, taking it deep inside you. You ride hir hard and fast while stroking both yourself and another feline's cock to cum all over your current playmate. Your fast pace makes hir cum with a loud mrowl of delight, filling you with hir hot cum.";
@@ -494,7 +494,7 @@ to say BTchangeover:
 		now cock of player is "ebon feline";
 
 to say BTpostchange:						[New BT form]
-	if cocks of player > 0 and cunts of player > 0:		[herm]
+	if player is herm:		[herm]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a strong, powerful tigress herm. You are muscled, yet voluptuous to keep all these girls in line. With your strength, you can easily pin down any recalcitrant girl and fuck hir or ride hir into lustful obedience as you see fit. Your white fur is like the snow and its stripes like the night. You are much larger now, almost as big as your boss, Marks.";
 		say "     The girls look to you for protection as their guard now while he is out making arrangements for when you will all leave this shabby motel behind and move to greener pastures out of the city.";
 	else if cocks of player > 0:				[male]
@@ -757,7 +757,7 @@ to say THendingF:		[succumb after fleeing]
 to say THBadEnd1:		[succumb after failing at motel hunt]
 	say "     When the military starts to move it, your master is ready. You have trouble following everything that is going on, but you are all kept together. You all follow his orders as best you can. He was quite stern about it, so you all obey, restraining your urges when others are examining you. Once you've all been rendered non-infectious, you are all moved again with the help of several of your master's friends.";
 	say "     You are all moved to a lovely new home in another city, where you live and work as whores in his private club. His harem of tigresses tend to his needs and peddle themselves for his benefit. Always grateful for your assistance, you become a favorite of his and it is a happy life for a slut like yourself. His corrupt contacts keep the law off your backs (except when it's as a bribe to keep a corrupt official happy.)";
-	If cocks of player > 0 and cunts of player > 0:					[HERM PART]
+	if player is herm:					[HERM PART]
 		say "     As the only white tigress sextoy in the brothel, you are a special item and you get a set of regulars who come in looking for time with you. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways.";
 	else if cunts of player > 0:							[FEMALE PART]
 		say "     As the only purely female sextoy in the brothel, as well as the only white tigress, you have a special set of regulars who enjoy partaking in your beautiful body. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways.";
