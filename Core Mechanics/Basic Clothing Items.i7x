@@ -138,7 +138,7 @@ The size of jogging pants is 3.
 The AC of jogging pants is 0.
 The effectiveness of jogging pants is 0.
 The placement of jogging pants is "waist".
-The descmod of jogging pants is "A pair of jogging pants cover your hips and legs.  They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
+The descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
 The slot of jogging pants is "waist".
 the scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
 
