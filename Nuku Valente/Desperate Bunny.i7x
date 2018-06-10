@@ -474,8 +474,7 @@ to say sandrasex2: [become bunny siblings]
 		now lastfuck of Sandra is turns;
 		increase score by 25;
 		if Sandra is not in Bunker:
-			if waiterhater is 0, wait for any key;
-			LineBreak;
+			WaitLineBreak;
 			increase score by 5;
 			add "water bottle" to invent of bunker;
 			add "water bottle" to invent of bunker;
