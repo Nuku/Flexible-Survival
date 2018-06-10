@@ -1,11 +1,11 @@
-Version 1 of Feral Latex Fox by Dys begins here.
+Azari by Dys begins here.
 
 "Moves the feral latex fox from the shag shack to his own file for expansion and additional content."
 
 Section 0 - Variables
 
-FeralLatexFox_Met is a truth state that varies. FeralLatexFox_Met is usually false.
-FeralLatexFox_Corruption is a number that varies. FeralLatexFox_Corruption is usually 0.
+Azari_Met is a truth state that varies. Azari_Met is usually false.
+Azari_Corruption is a number that varies. Azari_Corruption is usually 0.
 [ 0: Not corrupted yet                                                      ]
 [ 1: Corruption started. Player finds themselves desiring to be bred by the ]
 [    fox                                                                    ]
@@ -15,23 +15,42 @@ FeralLatexFox_Corruption is a number that varies. FeralLatexFox_Corruption is us
 [ 4: Final stage. Player submits, becoming the fox's permanent breeding     ]
 [    slave. Forced to return at least once a day to be bred                 ]
 
+Section 1 - Location & NPC
 
-to say FeralLatexFox_Start: [Feral Male Latex Fox]
+Shag Shack Back Alley is a location.
+North of Shag Shack Entrance is Shag Shack Back Alley.
+The description of Shag Shack Back Alley is "[ShagShackBackAlley_Desc]".
+The scent of Shag Shack Back Alley is "[ShagShackBackAlley_Scent]".
+
+Azari is a man.
+The description of Azari is "[Azari_Desc]".
+The conversation of Azari is { "blah" }.
+The scent of Azari is "[Azari_Scent]".
+
+to say ShagShackBackAlley_Desc:
+	if Azari_Met is false:
+		say "     Stepping around the corner, you take in your new surroundings. It's clear that the alley hasn't been touched since the start of all of this mayhem, the dumpster nearly completely empty and the ground surprisingly clutter-free. Despite all this, you can't help but feel slightly unnerved by being here. Something about the dim, narrow space makes you tense up, expecting something to come at you at any moment, despite this being well within the safe area around the mall.";
+	else:
+		say "     <Description you get when Azari is here.>";
+
+Section 2 - Scenes
+
+to say Azari_Start:
 	setmonster "Latex Fox";
 	choose row monster from the table of random critters;
-	if FeralLatexFox_Met is false:
-		now FeralLatexFox_Met is true;
-		say "[FeralLatexFox_Intro]";
+	if Azari_Met is false:
+		now Azari_Met is true;
+		say "[Azari_Intro]";
 [	else:
-		if FeralLatexFox_Corruption is:
+		if Azari_Corruption is:
 			--0: [Not corrupted yet. Just sex with the fox.]
 			--1: [Corruption has started. Will likely progress at this point.]
 			--2: [Corruption grows stronger.]
 			--3: [Even more.]
 			--4: [Final stage.]]
 
-to say FeralLatexFox_Intro:
-	say "     ";
+to say Azari_Intro:
+	say "     <is ded for now.>";
 	say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes";
@@ -40,22 +59,22 @@ to say FeralLatexFox_Intro:
 	if player consents:
 		LineBreak;
 		if scalevalue of player < 3:
-			say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [FeralLatexFox_Sex_SmallPlayer]";
+			say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [Azari_Sex_SmallPlayer]";
 		else if scalevalue of player is 3:
-			say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. [FeralLatexFox_Sex_AveragePlayer]";
+			say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. [Azari_Sex_AveragePlayer]";
 		else if scalevalue of player > 3:
 			say "     Using your [if scalevalue of player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
 			say "     Making your way out of the Shack, you pass Jerome, who simple raises a brow at your sudden departure and says, 'No refunds'.";
 	else:
 		LineBreak;
 		if scalevalue of player < 3:
-			say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [FeralLatexFox_Sex_SmallPlayer]";
+			say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [Azari_Sex_SmallPlayer]";
 		else if scalevalue of player is 3:
-			say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [FeralLatexFox_Sex_AveragePlayer]";
+			say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [Azari_Sex_AveragePlayer]";
 		else if scalevalue of player > 3:
 			say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
 
-to say FeralLatexFox_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
+to say Azari_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
 	if player is kinky:
 		say "Eager to use you, the sex-crazed feral grabs your arm in his [one of]rubbery[or]latex[or]squeaky[at random] teeth, yanking you to the side and forcing you to roll over. This seems to be all the invitation he needs, as he quickly begins prodding at your ass with his large rubber cock. The pre dripping from his tip is enough for it to slip between your butt cheeks, and a few rough thrusts later, the tip finds it's way into your hole.";
 		say "     With his shaft now inside you, the feral beings to make his body grow, increasing in size until he's larger than a lion, [if scalevalue of player < 2]completely dwarfing your minuscule body[else]more than large enough to cover your smaller body completely[end if]. After his body finishes growing, his [one of]latex[or]rubber[or]rubbery[at random] cock begins to expand as well, [if scalevalue of player < 2]the added inch of girth stretching your hole even more, much to your own agony[else]the added girth stretching you out rather painfully[end if]. You're pretty sure it also got a handful of inches longer, too...";
@@ -77,7 +96,7 @@ to say FeralLatexFox_Sex_SmallPlayer: [Sex scenes for a small player with the fo
 		WaitLineBreak;
 		say "     Eventually, the flow of cum slows, and your left feeling decently bloated. The feral, being done with you, begins to tug your hole with his knot, trying to free his shaft. Of course, this is rather painful for you, until he eventually manages to yank it out with a wet pop, a rush of his own seed following it out.[mimpregchance]";
 
-to say FeralLatexFox_Sex_AveragePlayer: [Sex scenes for an average player]
+to say Azari_Sex_AveragePlayer: [Sex scenes for an average player]
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:[No growth / light cum inflation scene]
@@ -108,4 +127,4 @@ to say FeralLatexFox_Sex_AveragePlayer: [Sex scenes for an average player]
 				say "     After he dismounts you, he gives your drenched backside a few licks before he decides to turn around and return to the position you found him in when you entered the room. His body quietly shrinks back to it's normal size, and you take that as your cue to exit the room.";
 
 
-Feral Latex Fox ends here.
+Azari ends here.

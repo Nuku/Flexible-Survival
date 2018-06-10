@@ -5038,7 +5038,6 @@ Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by MGEddie.
-Include Feral Latex Fox by Dys.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5416,6 +5415,7 @@ Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Athanasia by Stripes.
+Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
 Include Blake by Ssely.

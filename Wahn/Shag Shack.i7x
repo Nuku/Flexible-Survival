@@ -289,7 +289,7 @@ to say ShagShackSexMenu:
 	now sortorder entry is 9;
 	now description entry is "Time to blow off a furry hunk";
 	[]
-	if cocks of player > 0:
+	if cocks of player > 0 and Azari_Met is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Spend time with the caged feral fox";
 		now sortorder entry is 10;
@@ -401,7 +401,7 @@ to say ShagShackSexMenu:
 					-- "Give Bryce the wolftaur a blowjob":
 						say "[ShagShackSex9]"; [by Qazarar]
 					-- "Spend time with the caged feral fox":
-						say "[FeralLatexFox_Start]"; [by Dys]
+						say "[Azari_Start]"; [by Dys]
 					-- "Stand at attention for Levi, the tiger soldier":
 						say "[ShagShackSex11]"; [by Weaveroflight]
 					-- "Spend time with Ryan, a cute fennec fox":
