@@ -6,7 +6,7 @@ Version 1 of Campus Couple NPC by Closerhenry begins here.
 [ CampusCoupleRelationship                                              ]
 [   0: Have not met Jadako and Coach Weber                              ]
 [   1: Have learned where the couple's room                             ]
-[   100: Permanantly locked out of the two                              ]
+[   100: Permanently locked out of the two                              ]
 
 CampusCoupleRelationship is a number that varies.
 
@@ -92,7 +92,7 @@ to say JadakoTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Himself"):
 					say "[JadakoTalk1]";
-				if (nam is "CoachWeber"):
+				if (nam is "Coach Weber"):
 					say "[JadakoTalk2]";
 				if (nam is "Sports"):
 					say "[JadakoTalk3]";
@@ -267,7 +267,7 @@ to say CampusCoupleSex1:
 	LineBreak;
 	say "     The room is silent for a moment as you (and most likely Joseph as well) consider why Jadako has so much lube. 'Okaaaaaay...' Joseph says as he uncaps the bottle of lube and gets a healthy amount on his hands. 'You should probably get on your knees now on the coffee table,' Joseph instructs. You comply to the coach as he rubs the lube over his cock, getting his shaft nice and slippery. The coffee table has a nice pillowtop, protecting your knees from the hard wood. Jadako stands in front if you, his cock dangling only a few inches from your face. It twitches ever so often, obviously excited to go in a hole for once. A drop of drool falls from you open mouth, which causes the feline to let out a little chuckle. 'And I thought I was the cock slut... Obviously I have a lot to learn from you,' he purrs as gives his cock a single pump. Behind you, the sound of a cap closing reveals that Joseph is all lubed up now.";
 	WaitLineBreak;
-	say "     From behind you feel the coach's head rub up against your hole, sending shivers of pleasure down your body. He simply teases you for a little, which both lubes your hole slightly and relaxes your back entrance. Jadako moves forward and lays is dick across your face, its musky scent drivng you wild. The frisky feline grinds his dick along your face, the barbs lightly tickling it. 'I'm going in now, don't let me surprise you,' Joseph announces, giving you a couple seconds to prepare yourself. It's also just enough time for Jadako to pull his cock off your face and position itself in front of your mouth. You open wide, making sure to exhale a slow, hot breath onto the cat's head. With a swift motion, Joseph pushes into your back hole, causing you to gasp. Jadako takes his opportunity and shoves into your open mouth, filling your other end. Your tongue wraps around the sexy cat's man meat, savoring it's musky flavor. The canine coach behind you pushes further in, until you feel his knot bump into your backside.";
+	say "     From behind you feel the coach's head rub up against your hole, sending shivers of pleasure down your body. He simply teases you for a little, which both lubes your hole slightly and relaxes your back entrance. Jadako moves forward and lays is dick across your face, its musky scent driving you wild. The frisky feline grinds his dick along your face, the barbs lightly tickling it. 'I'm going in now, don't let me surprise you,' Joseph announces, giving you a couple seconds to prepare yourself. It's also just enough time for Jadako to pull his cock off your face and position itself in front of your mouth. You open wide, making sure to exhale a slow, hot breath onto the cat's head. With a swift motion, Joseph pushes into your back hole, causing you to gasp. Jadako takes his opportunity and shoves into your open mouth, filling your other end. Your tongue wraps around the sexy cat's man meat, savoring it's musky flavor. The canine coach behind you pushes further in, until you feel his knot bump into your backside.";
 	LineBreak;
 	say "     Coach Weber slides out halfway, then pushes back in. He continues this motion, while you lap greedily at Jadako's barbed cock. Not content with standing by, the feline begins softly bucking his hips as he places his hands gently on your head. His claws lightly scratch the top of your head as his cock thrusts in and out of your mouth. You let these two lovers fuck you from both ends, relishing the feeling of being filled. Every time Joseph's large balls slap into the back of your ass, and the feeling of Jadako's barbs stimulates your mouth. You reach a hand under you to your [if cocks of player > 0][cock of player] cock, and begin stroking it in ecstasy[else if cunts of player > 0]cunt and stick your fingers in, desperately stirring around[else]nipples, twisting and pulling them[end if]. The coach's meaty hands grasp tightly at your backside as he thrusts, grunting with each one. 'Unf! You've got a-ugh- great ass, I don't think I can go much longer!' he exclaims whilst panting.";
 	LineBreak;

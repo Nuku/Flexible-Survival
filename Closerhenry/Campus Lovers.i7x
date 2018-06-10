@@ -4,7 +4,7 @@ Version 2 of Campus Lovers by Closerhenry begins here.
 [ CampusCoupleRelationship                                              ]
 [   0: Have not met Jadako and Coach Weber                              ]
 [   1: Have learned where the couple's room                             ]
-[   100: Permanantly locked out of the two                              ]
+[   100: Permanently locked out of the two                              ]
 
 CampusLoversTrackingVariable is a number that varies.
 CampusLoversProgressTurn is a number that varies.
