@@ -8,8 +8,5 @@
 --regex-Inform=/^\s*Definition: A person ?(.+?) ?is ([^\[]+):/\2/f,func/
 --regex-Inform=/^\s*(.+?) ?is a (woman|man)/\1/f,func/
 --regex-Inform=/^\s*instead of ?(.+?):/\1/f,func/
-<<<<<<< HEAD
 --regex-Inform=/^\s*(.+?) ?is a room/\1/f,func/
-=======
 --regex-Inform=/^\s*This is the (.+?) rule:/\1/f,func/
->>>>>>> c3a2ada18acffcc96041bf429ac5982725491a76
