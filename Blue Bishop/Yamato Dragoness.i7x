@@ -281,7 +281,7 @@ to say yamato dragoness desc:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";

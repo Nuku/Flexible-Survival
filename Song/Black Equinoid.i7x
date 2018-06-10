@@ -109,7 +109,7 @@ when play ends:
 		else:
 			say "     There is some confusion at first when your equinoid body is brought in, for there are several strains of equines and proper classification is slow. It seems ones like you are rare, few leaving the park where they're established. Once that's resolved, it goes much more smoothly, as you're not considered a dangerous strain. A movie producer spots you on TV as you are released and hires you immediately to play a minotaur-like creature in his upcoming movie. It turns out to be a [one of]big blockbuster, providing more than enough money[or]lukewarm summer movie and provides some cash[or]big flop, but it provides just enough cash[at random] to start a new, peaceful life. Eventually becoming a naturalist, you study nature, and using your movie experience as a hoofhold, you get your own nature show [if intelligence of player > 14 and charisma of player > 14]that lasts several seasons. It does rather well, being insightful and intelligent while also well presented and entertaining[else]for a brief time[end if].";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "lucky horseshoe"	"A lucky horseshoe. You heard somewhere that throwing it over your shoulder gets good luck. Weird, huh?"	1	lucky horseshoe
 

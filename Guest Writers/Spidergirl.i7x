@@ -12,7 +12,7 @@ to say spidergirl attack:
 	let spider_choice be "neither";
 	if a random chance of 1 in 4 succeeds and player is not impreg_able:
 		say "[spidergirl_oral]";
-	if cocks of player > 0 and cunts of player > 0 and a random chance of 1 in 2 succeeds:
+	if player is herm and a random chance of 1 in 2 succeeds:
 		say "[spidergirl_male]";
 	else if cunts of player > 0:
 		say "[spidergirl_female]";
@@ -148,7 +148,7 @@ when play ends:
 		else:
 			say "Your arachnid form proves perfect for exploring ruined buildings. You are immediately recruited into the armed forces, eventually rescuing hundreds of people from disasters, often lowering them from great heights on web ropes. On your off days you help out with construction projects, ultimately becoming known the world over as a hero.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "spider webbing"	"A swatch of tough spider webbing. It seems pretty sticky."	1	spider webbing
 

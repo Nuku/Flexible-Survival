@@ -33,7 +33,7 @@ The conversation of Urik is { "<Placeholder>" }.
 The scent of Urik is "     Urik has a quite masculine smell, underlined with a little bit of sweat and cum that somehow just makes him more attractive.".
 
 Instead of fucking Urik:
-	if(lastfuck of Urik - turns < 5):
+	if (lastfuck of Urik - turns < 5):
 		say "     Urik says, 'I need a break for a moment [master]. Please...'";
 	else:
 		LineBreak;
@@ -57,7 +57,7 @@ Instead of fucking Urik:
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
 		[]
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Urik fuck your pussy";
 			now sortorder entry is 3;
@@ -69,7 +69,7 @@ Instead of fucking Urik:
 			now sortorder entry is 4;
 			now description entry is "Let the orc warrior fill your ass with his seed";
 		]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Urik's ass";
 			now sortorder entry is 5;

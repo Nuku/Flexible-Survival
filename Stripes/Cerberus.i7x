@@ -83,7 +83,7 @@ to say beatthecerberus:
 				continue the action;
 			else:
 				say "     Not in the mood for oral pleasures, you consider your other options for how to use your prize";
-		if cocks of player > 0 and cunts of player > 0:			[HERM]
+		if player is herm:			[HERM]
 			say "     Being dual-equipped yourself, would you prefer to slake your urges by fucking hir or riding that hard cock between hir legs? ";
 			say "     [bold type]Would you like to fuck hir or ride that hard cock between hir legs?[roman type][line break]";
 			LineBreak;
@@ -320,14 +320,14 @@ when play ends:
 			say "     As your mind unravels, you start to give in to your body's instinctual urges and wander off into the city as your humanity fades away into the background of your mind. ";
 			if facename of player is "Cerberus":
 				say "     With the help of your two other heads, you make your way back to the Museum and follow the scents down the halls to find a service door down into the basement. Tracking those scents easily with your three noses, you made your way down and find the Cerberus den, joining the others of your kind. You receive a very lustful welcome from the other three-headed dog people, who share triple-kisses with you. Soon enough, you are rolling around with them, mating one another";
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					say "     You take turns mounting them and being mounted, sometimes enjoying one bitch's pussy while another takes you as hir bitch with hir tailcock";
 				else if cocks of player > 0:
 					say "     You take turns mounting several of them, filling their hot pussies. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you still have plenty of sex";
 				else:
 					say "     You are taken as a bitch by most of the pack, filling your hot [if cunts of player > 1]pussies[else]pussy[end if] over and over again. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you are still bred often";
 				say "     The lustful, animalistic orgy goes on for a few hours before things calm down into a more regular routine of sex and searching the Museum and surrounding area. When the military moves into the city, your pack is on guard to defend the Museum from any who would seek to disturb it. Several soldiers are overpowered by you and your powerful pack-mates, brought back to the basement den and mounted until they are more Cerberus herms to breed and be bred by.";
-			else if cocks of player > 0 and cunts of player > 0:
+			else if player is herm:
 				say "     You feel as if something is missing, but you know not what nor where to find it. You wander out into the city and find your way into the park. Your powerful, canine body pounces upon one of the Painted Wolf Herms you find. After a bit of a scuffle, you two are rutting wildly, swapping places until you've both been thoroughly filled with cum. You head off together to her den and make plans for the future of the pack growing in both your wombs.";
 			else if cocks of player > 0:
 				say "     As you roam the city, feeling as if something is missing by not quite able to figure out what, you are found by a mostly-unchanged human. She has four enlarged breasts and featureless golden eyes, but no other visible changes. You approach her eagerly, hoping to satisfy your animal lusts upon her, but there is something about her gaze and her stance that makes you come up short. Clearly experienced at handling dogs, she soon has you obediently taking treats and is calling you by pet names. Your canine body quickly submits to her training during the remaining time in the city; teaching you to be a good dog and rewarding you with treats or hand jobs. Your mind slips further and further away during this time until you're nothing be an obedient and powerful guardian for your mistress.";
@@ -347,7 +347,7 @@ when play ends:
 			else:
 				say "     Your large, powerful body and its trifold chest cavity draw some interest from the scientists, who run several physical tests on you. These go on for a time, but are stopped abruptly when the military pulls the scientists onto other, more pressing projects. While your powerful body is of some interest, there are more dangerous and hyper-infectious strains to be analyzed. After your eventual release, a few scientists keep in touch with you for a little while, but their interest is soon caught up by other projects.";
 				say "     You get work as a manual laborer, with your strong body suitable for the work. Your heavy-duty lungs and hearts are able to push you longer and harder any of the other workers, allowing you to do the work of two men easily. Recognized for your physical ability, your boss quietly starts paying you more than the others and you are smart enough not to let them know. And it really helps, as your big body comes with a big appetite.";
-				say "     Your large, canine body draws the interest of several infected canines and lupines and soon you have a collection of lovers and mates[if cocks of player > 0 and cunts of player > 0]. You sire and give birth of several large, canine pups over the years from various lovers and breeds[else if cocks of player > 0]. You sire a variety of large, canine pups with various lovers and breeds[else]. You give birth to several large, canine pups over the yours for various lovers and breeds[end if]. And while you sometimes feel as if something is missing, your large family and numerous lovers help fill that longing for companionship.";
+				say "     Your large, canine body draws the interest of several infected canines and lupines and soon you have a collection of lovers and mates[if player is herm]. You sire and give birth of several large, canine pups over the years from various lovers and breeds[else if cocks of player > 0]. You sire a variety of large, canine pups with various lovers and breeds[else]. You give birth to several large, canine pups over the yours for various lovers and breeds[end if]. And while you sometimes feel as if something is missing, your large family and numerous lovers help fill that longing for companionship.";
 	else if facename of player is "Cerberus" and bodyname of player is not "Hydra Beast":
 		if humanity of player < 10:
 			say "     As you succumb to the infection, your two silent heads start taking over more. But they have succumb as well to your changing instincts and seek to follow their lustful urges as well. You still remain the primary leader, but the others take control more often, usually when an idea for sex crosses their minds. Not that you really mind, as you share the enjoyment of their plans with them, often pleasantly surprised by the varied, kinky desires of the left one and by the wild, lustful urges of the right one. Thanks to them, your existence is a much more varied and pleasurable one than it may have else been.";

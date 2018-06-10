@@ -23,7 +23,7 @@ This is the entertainvailable rule:
 		rule succeeds;
 	rule fails;
 
-An everyturn rule(this is the entertainer rule):
+An everyturn rule (this is the entertainer rule):
 	if the remainder after dividing turns by 4 is not 0, continue the action;
 	if workers of entertainer is 0, stop the action;
 	let foragers be workers of entertainer;

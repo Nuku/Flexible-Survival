@@ -279,7 +279,7 @@ keepbody is a number that varies. keepbody is usually 0.
 keepcock is a number that varies. keepcock is usually 0.
 
 
-Table of infection heat(continued)
+Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
 "Parasitic Plant"	400	400	"[parasiticluststart]"	"dripping wet cunts "	--	--	"[parasiticlust]"	true	true	"[parasiticluststart]"
 

@@ -29,7 +29,7 @@ to say losetofennec:
 	else:
 		say "     The fennec fox yips triumphantly as he knocks you to the ground and you're too weak to keep resisting him. ";
 	say "     The small fox pounces atop you, running his paws over your body and quickly pulling off your gear. This he intersperses with playful gropes, caresses and pinches that work to get you excited. Slipping a paw between your legs, he ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "fondles your cock and balls before sliding further to finger your pussy, eliciting a moan in response.";
 		if a random chance of 5 in 7 succeeds:
 			say "[fennecvag]";

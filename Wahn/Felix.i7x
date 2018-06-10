@@ -350,7 +350,7 @@ Instead of fucking the Felix:
 	else if (HP of Felix is 100): [avoiding the player]
 		say "ERROR-Felix-100B: He should be removed from the game.";
 	else:
-		if(lastfuck of Felix - turns < 6):
+		if (lastfuck of Felix - turns < 6):
 			say "     Felix says 'Sorry I'm still worn out from last time. Give me some space, ok?'";
 		else if (Libido of Felix < 6 or Libido of Felix > 90):
 			say "     Felix says 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
@@ -360,7 +360,7 @@ Instead of fucking the Felix:
 to say FelixSexMenu:
 	project the Figure of Felix_icon;
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -371,7 +371,7 @@ to say FelixSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Felix long horsecock in your mouth.";
 	now toggle entry is FelixSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -619,7 +619,7 @@ Instead of fucking the Andre:
 	else if (HP of Felix is 100): [avoiding the player]
 		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
 	else:
-		if(lastfuck of Andre - turns < 6):
+		if (lastfuck of Andre - turns < 6):
 			say "     Andre says 'Phew, I need a break for a bit. Another time, ok?'";
 		else:
 			say "[AndreSexMenu]";
@@ -627,7 +627,7 @@ Instead of fucking the Andre:
 to say AndreSexMenu:
 	project the Figure of Andre_icon;
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -638,7 +638,7 @@ to say AndreSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Andre's cock in your mouth.";
 	now toggle entry is AndreSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;

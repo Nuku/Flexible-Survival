@@ -11,7 +11,7 @@ animal heat is a truth state that varies. animal heat is usually False. [This va
 turns in heat is a number that varies. turns in heat is usually 0. [ Counter to say how long you've been in heat.]
 inheat is a truth state that varies. inheat is usually False. [ Variable for other mods to easily check if you are in heat right now.]
 slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent too many random husky encounters.]
-lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
+lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn (3 hr period) rather then each event turn.]
 heatform is a number that varies. [This is used to denote whether the player's last turn was spent in female heat or mpreg heat]
 heatlevel is a number that varies. heatlevel is usually 2. [This is used to denote the intensity of player heat (1=off / 2=normal / 3=intense)]
 heatdrive is a number that varies. heatdrive is usually 0. [heatdrive controls how outside events drive a player's heat (0=combat, 1=regular play)]

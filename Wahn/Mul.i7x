@@ -81,25 +81,25 @@ to say MulLockerroomSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him from behind";
 		now sortorder entry is 1;
 		now description entry is "Push Mul against the wall and really pound into him";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him ride you";
 		now sortorder entry is 2;
 		now description entry is "Lie down on a bench and let Mul fuck himself on your pole";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him missionary style";
 		now sortorder entry is 3;
 		now description entry is "Let Mul lie on a bench and take him, face to face";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride Mul's thick shaft";
 		now sortorder entry is 4;
@@ -117,7 +117,7 @@ to say MulLockerroomSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Allow your feline companion to mount Mul";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Mul while fingering his ass";
 		now sortorder entry is 7;
@@ -624,19 +624,19 @@ to say MulLibrarySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him from behind";
 		now sortorder entry is 1;
 		now description entry is "Push Mul against a bookcase and really pound into him";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him ride you";
 		now sortorder entry is 2;
 		now description entry is "Lie down on a bench and let Mul fuck himself on your pole";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him missionary style";
 		now sortorder entry is 3;

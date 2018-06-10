@@ -121,7 +121,7 @@ Zoo Paths 5 is a door. Zoo Paths 5 is dangerous. The marea of Zoo Paths 5 is "Zo
 East of Zoo Paths 1 is Zoo Exploration. Northeast of Zoo Paths 2 is Zoo Exploration. North of Zoo Paths 3 is Zoo Exploration. Southeast of Zoo Paths 4 is Zoo Exploration. South of Zoo Paths 5 is Zoo Exploration.
 Zoo Paths 1 is east of Zoo Rest Area. Zoo Paths 2 is northeast of Zoo Rest Area. Zoo Paths 3 is north of Zoo Rest Area. Zoo Paths 4 is southeast of Zoo Rest Area. Zoo Paths 5 is south of Zoo Rest Area.
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "red herring"	"The only plushy that survived the destruction of its compatriots in and around the zoo rest area. It is wonderfully soft with bright red fur, green plastic eye-buttons and a goofy grin stitched on. Why would the city zoo have fish toys? It doesn't even have an aquarium... Strange, maybe this means something."	1	red herring
 

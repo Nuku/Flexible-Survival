@@ -257,7 +257,7 @@ Section 3 - Fucking Erica
 
 Instead of fucking the Erica:
 	if (HP of Erica is 0): [virgin woman]
-		if (cocks of player > 0):
+		if player is male:
 			say "     Stepping up to Erica, you embrace her and give her a deep kiss. When you come back up for air, you look deep into her eyes and ask to be her first man and show her what it really means to be a woman. There's only a short moment of hesitation, then Erica nods and leans her head forward to kiss you back.";
 			say "     The two of you make out for a moment, holding on to each other. In between playful tongue-wrestling, you let your hands wander all over her, feeling up her slender body, cupping the perky breasts through her t-shirt and giving those nice firm buns of her ass a slight squeeze. While she still has the build of an athlete, it is clearly a female now, with feminine curves in addition to toned muscle. Eager to get get to know her more intimately, you grab her by the hand and lead the young woman to your bunk.";
 			say "     Erica quickly takes off her shoes and socks, then pulls off her shirt and throws it aside, revealing a nicely defined chest - and the perfectly shaped mounds of her two B-cup breasts. You follow suit, rapidly sliding off your own clothing, then step close to your waiting partner. Gently cupping her breasts, you use your fingers to rub and brush over her nipples, making the young woman gasp for a second. Seems like your handsome student has gotten quite sensitive there after her transformation. With a smile on your face you lean down and run your tongue over her chest, then circle each of her nipples with its tip and finally suck on them. Making Erica pant in lust is a lot of fun, and with your nose pressed against her warm skin you also take a deep breath of her clearly feminine scent.";
@@ -285,13 +285,13 @@ to say EricaSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Put your horny friend's mouth to good use";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
@@ -302,13 +302,13 @@ to say EricaSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Finger-fuck Erica to make her cum";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the young woman with your cock";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Erica's ass";
 		now sortorder entry is 5;

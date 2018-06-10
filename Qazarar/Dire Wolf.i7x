@@ -128,7 +128,7 @@ when play ends:
 		else:
 			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "dire-wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: dire wolf['] is written on the side."	1	dire-wolf cum
 

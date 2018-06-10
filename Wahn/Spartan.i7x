@@ -123,7 +123,7 @@ to say Spartan loses:
 
 to say Spartan ride:
 	say "     Spreading his long red cloak on the ground, you motion the young man to lie down on it. He looks pretty good, his toned body stretched out and long hard cock standing erect, waiting for your pleasure.";
-	if (cocks of player > 0) or (cocks of player > 0 and cunts of player > 0 and anallevel > 1):[male + herm (except those with less anal)]
+	if (cocks of player > 0) or (player is herm and anallevel > 1):[male + herm (except those with less anal)]
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Spartan's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
@@ -370,7 +370,7 @@ when play ends:
 
 Section 5 - Drop Item
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "pita bread"	"A round pocked of bread, filled with salad leaves, meat and spicy sauce."	1	pita bread
 

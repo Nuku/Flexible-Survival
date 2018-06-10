@@ -1369,7 +1369,7 @@ carry out Larissatesting:
 	say "Tailed?: [if tailed of Larissa is true]Yes[else]No[end if]";
 	say "Cock: [cock of Larissa]";
 	say "Cocks: [if cocks of Larissa > 0][cocks of Larissa] cocks, [cock length of Larissa] inches long ([cock size desc of larissa]) with [cock width of Larissa]-sized balls ([Larissaballs])[else]No cocks: [cock length of Larissa] x [cock width of Larissa][end if].";
-	say "Cunts: [if cunts of Larissa > 0][cunts of Larissa] cunts, [cunt length of Larissa] inches deep and [cunt width of Larissa] inches wide([cock size desc of larissa])[else]No cunts: [cunt length of Larissa] x [cunt width of Larissa][end if].";
+	say "Cunts: [if cunts of Larissa > 0][cunts of Larissa] cunts, [cunt length of Larissa] inches deep and [cunt width of Larissa] inches wide ([cock size desc of larissa])[else]No cunts: [cunt length of Larissa] x [cunt width of Larissa][end if].";
 	say "Breasts: [breasts of Larissa] breasts. Size: [breast size of Larissa] ([breast size desc of Larissa]).";
 	say "Size: [scalevalue of Larissa]";
 	say "Body descriptor: [bodydesc of Larissa]";

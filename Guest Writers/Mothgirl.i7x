@@ -127,7 +127,7 @@ when play ends:
 		else:
 			say "You are able to fly anywhere you want in the city and take up a small delivery service, in exchange you get money and multiple sex partners to satisfy your lust.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "cock pill"	"This small pea like object is blue in color and seems to have a phallic symbol of a penis on it"	1	cock pill
 

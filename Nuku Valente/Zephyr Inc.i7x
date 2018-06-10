@@ -171,7 +171,7 @@ Carry out zephbuying:
 	decrease freecred by price entry;
 [	decrease score by price entry divided by 5; ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "nanite collector"	"[nanitecolldesc]"	25	nanite collector
 "pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol

@@ -29,7 +29,7 @@ to say felinegymnastdesc:
 [Loss scenes. Uses a random number to pick one. Herms use 5 for getting fucked and Females use 3 for it so a clean range of numbers can be used.
 	1 - Anal (All w/ more anal, M/F with normal, disabled with less anal)
 	2 - Oral (All)
-	3 - Footjob(M/H), Get fucked (F)
+	3 - Footjob (M/H), Get fucked (F)
 	4 - Fuck her (M/H)
 	5 - Get fucked (H)]
 [Note: Uses anallevel: 1=no anal, 2=you will do her butt, 3=50/50 she rims and does your butt instead of 2]
@@ -38,7 +38,7 @@ to say losetofelinegymnast:
 	say "     You let out one last, pained groan as you slump onto the ground in front of the bench, too battered to move.";
 	let cattysceneindex be a number;
 	[Herm - can get any scene]
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		if anallevel > 1:
 			now cattysceneindex is a random number between 1 and 5;
 		else:
@@ -55,7 +55,7 @@ to say losetofelinegymnast:
 			now cattysceneindex is a random number between 1 and 3;
 		else:
 			now cattysceneindex is a random number between 2 and 3;
-	[Genderless - Can get oral or anal(if more/normal)]
+	[Genderless - Can get oral or anal (if more/normal)]
 	else:
 		if anallevel > 1:
 			now cattysceneindex is a random number between 1 and 2;

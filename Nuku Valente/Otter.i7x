@@ -202,7 +202,7 @@ When Play begins:
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "Fish"	"A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters."	1	Fish
 

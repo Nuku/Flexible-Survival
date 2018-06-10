@@ -582,7 +582,7 @@ Does the player mean grabbing the pristine negligee: it is very likely.
 
 Section 7 - Monster Items
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "testosterone pill"	"This small potent looking object has a flower with a cross symbol over it."	0	testosterone pill
 "pristine negligee"	"[pristine negligee desc]"	0	pristine negligee
@@ -626,7 +626,7 @@ the usedesc of damaged negligee is "You cannot use that here.".
 the usedesc of cute panties is "You cannot use that here.".
 the usedesc of sexy nightie is "You picked that up for Lance's boyfriend. Hmmm... what was his name again?".
 
-before using a grab object(called x):
+before using a grab object (called x):
 	if x is testosterone pill:
 		LineBreak;
 		if cunts of player > 0:
@@ -991,7 +991,7 @@ to say butterflymagic:
 	replace character number 7 in bmagic with "[bcupsize]";
 	say "[bmagic]";
 
-To recite butterflymagic(x - text):
+To recite butterflymagic (x - text):
 	now bmagic is "[x in upper case]";
 	now ButterflyForeplay is False;
 	now ButterflyPregnant is False;

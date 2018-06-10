@@ -210,7 +210,7 @@ Instead of resolving a Dr Feel Good:
 
 Section 9 - Table of Game Objects
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "doctor's uniform"	"A cosmetic doctor's coat and a pair of white pants given to you after helping a young fennec out of a tight jam."	3	doctor's uniform
 

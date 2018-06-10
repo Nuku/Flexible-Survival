@@ -480,7 +480,7 @@ Instead of resolving a Sanctuary:
 
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "icicle knives"	"Twin pair of daggers made from the thoughts and feelings of those who were devoured by a monster and then frozen in an icy tomb of flesh and slime. Carry a chilly sharp edge to them that can pierce as well as cut."	5	icicle knives
 

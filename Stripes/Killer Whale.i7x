@@ -78,7 +78,7 @@ to say orcadefeatsex4:		[oral sex]
 
 to say beattheorca:
 	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and ( cocks of player > 0 or cunts of player > 0 ):
-		if cocks of player > 0 and cunts of player > 0 and anallevel > 1:
+		if player is herm and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 			say "     [bold type] Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
 			LineBreak;

@@ -196,7 +196,7 @@ Section 5 - Peacock Feather
 peacock feather is a grab object. It is a part of the player. It is temporary. peacock feather is infectious. The strain of peacock feather is "Peacock".
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "peacock feather"	"A peacock feather. It looks pretty."	1	peacock feather
 

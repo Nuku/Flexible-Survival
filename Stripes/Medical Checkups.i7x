@@ -711,7 +711,7 @@ instead of resolving Obstetrics Department:
 
 Section 5 - Cunt Pill
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "cunt pill"	"It's a small pill in the shape of a pink medicine capsule, and the female symbol had been etched on one side of it."	1	cunt pill
 

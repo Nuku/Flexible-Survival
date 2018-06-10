@@ -168,7 +168,7 @@ The proximity of it is "You can smell someone's dinner coming from the".
 
 Book - Building!
 
-An everyturn rule(this is the Can We Build It rule):
+An everyturn rule (this is the Can We Build It rule):
 	if blueprints is not started, continue the action;
 	let z be the number of valid not placed constructs;
 	if z is 0, continue the action;

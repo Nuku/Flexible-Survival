@@ -47,13 +47,13 @@ to say NaiadSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 1;
 		now description entry is "Slide your [cock of player] shaft into the naiad's moist pussy";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her ass";
 		now sortorder entry is 2;

@@ -36,7 +36,7 @@ Instead of resolving a Mushroom cave:
 
 Section 2 - Item
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "glowing mushroom"	"A weird mushroom that you found. Faintly glows with a green light (shrinking item)."	0	glowing mushroom
 
@@ -129,6 +129,7 @@ Instead of resolving a Hungry dog:
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear the beast puts his muzzle to the air, starting to turn around, but you run as fast as you can from the scene.";
 		LineBreak;
 		say "     (Further options for this scene are locked for players who did not select 'more vore'. You can change your settings with the help of Trixie in the library, if you really want to see the rest.)";
+		now Hungry Dog is resolved;
 
 Little trouble is a situation.
 The sarea of Little trouble is "Outside".

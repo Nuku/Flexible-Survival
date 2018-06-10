@@ -298,7 +298,7 @@ when play ends:
 		if humanity of player < 10:
 			say "     As you lose your grip on your mind, a new set of instincts and thoughts replace your old memories. A lot of it is a jumble of medical knowledge that occupies your thoughts, drawing you to come to the city hospital. There you feel a need to work alongside the other canine doctors wandering the halls. They welcome you happily, and lustfully, as do the other denizens of the medical facility.";
 			if hospquest < 2:
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					say "     Following your new urges, you hump and are humped by many of the other canine doctors, breeding more of your kind. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";
 				else if cocks of player > 0:
 					say "     Following your new urges, you hump many of the other canine doctors, breeding more of your kind. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";

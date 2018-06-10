@@ -613,7 +613,7 @@ to say AmuranJerkedOff:
 
 to say AmuranAnal:
 	say "     Knowing right where you want the bug, you tantalizingly remove all of your clothes, making sure every movement arouses him even more. Throwing your clothes to the side after your sensual show, Amuran watches you intently as you lay yourself back on the warm, sun-lit pool rim, displaying your ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "[if cocks of player > 1]slick cocks[else]hardening cock[end if] and [if cunts of player > 1]dripping womanhoods[else]dripping cunt[end if]";
 	else if cocks of player > 0:
 		say "[if cocks of player > 1]already-hard cocks[else]rock-solid cock[end if]";
@@ -623,7 +623,7 @@ to say AmuranAnal:
 		say "[bodydesc of player] thighs and ass";
 	say " to the lascivious celestial. [if player is neuter][else]You have no intention of using your equipment, however; you have a different plan in mind. [end if]His pitch-black eyes roving over your prone form, you give Amuran a [']come hither['] expression as he eyes you; he quickly obliges, each step bobbing his cock in the warm air. Stopping just short of running you over, Amuran seems to be on the same train of thought as you; slowly lining his plated cock up with your rear, he grips your legs with his chitinous hands, steadying you against the ridged member pressing at your back entrance. Doing your best to relax, you reach out and stroke Amuran's chitinous chest, your touch wordlessly edging him on.";
 	say "     With a suddenness you're not used to seeing from the cautious, deliberate bug, you abruptly feel your rear filled with the first few inches of insect cock; you're unable to do anything but moan in pleasure at the sudden intrusion. Amuran churrs lowly as he enters you, your rear clenching down on his cock, gripping it ever so pleasurably. Stopping his advance into your back end, his solid cock throbbing sensually as he breathes; you're able to feel every one, all of them sending blasts of pleasure through your [bodydesc of player] self. You stay like that for a few moments, locked to the bug by the ridged dick spearing your rear";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say ". [if cocks of player > 1]Your cocks standing rigid[else]Your cock rock-hard[end if] and [if cunts of player > 1]cunts already dripping[else]your slit already waiting to be filled[end if]";
 	else if cocks of player > 0:
 		say ". [if cocks of player > 1]Your cocks solid in the warm air[else]Your dick rigid from all the pleasure you're feeling[end if]";
@@ -634,7 +634,7 @@ to say AmuranAnal:
 	say ", you wrap your legs around the bugman's chitinous body, locking the two of you together in an affectionate bond. Taking you up on your wordless offer, Amuran thrusts forward, burying his plated cock in your rear.";
 	WaitLineBreak;
 	say "     Your world goes blank, you being entirely unable to process [']anything['] that's happening. Storms of pleasure wrack your head as your ass is crammed full of bug-cock, the ridged dick utterly filling your rear. Your pleasured moans combine with Amuran's low churrs, combining into a cacophony of noise echoing throughout the sanctum. Within seconds, he begins slowly thrusting into you, withdrawing more and more of his ridged cock with each thrust. Within mere moments, he's pistoning rapidly into your rear, every drive making explosions go off in your head as gasps of joy escape your lips. Soon enough, the ability for logical thought leaves you, the only thing you can think about are the consecutive feelings of emptiness and fullness coming from your backside. You finally give up trying to follow what's happening; laying back down, you let your eyes roll into your head as Amuran thrusts swiftly into you, basking in the white-hot glow of pleasure. After a few more minutes of this, the dam finally bursts; with a wordless yell of pleasure, you hit your climax, ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "[if cocks of player > 1]cocks spraying your seed all across your stomach[else]blasting your load into the air[end if] while [if cunts of player > 1]your cunts gush femcum down onto the ground[else]your cunt sprays liquid onto the stone below[end if]";
 	else if cocks of player > 0:
 		say "[if cocks of player > 1]your cocks shooting your seed everywhere[else]cock firing cum into the warm air[end if]";

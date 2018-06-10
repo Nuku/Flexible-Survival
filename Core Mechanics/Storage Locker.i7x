@@ -118,46 +118,46 @@ understand "retrieve [grab object]" as retrieving.
 understand "retrieveall [grab object]" as allretrieving.
 understand "massretrieve" as massretrieving.
 
-Check stashing a grab object(called x):
+Check stashing a grab object (called x):
 	if storage locker is not visible, say "Stash it where?" instead;
 	if carried of x <= 0, say "You don't seem to have any [x] on you right now." instead;
 	if x is journal, say "You'd best hang onto that." instead;
 	if x is wielded, say "You're using that right now." instead;
 	if x is equipped, say "You're using that right now." instead;
 
-Carry out stashing a grab object(called x):
+Carry out stashing a grab object (called x):
 	decrease carried of x by 1;
 	increase stashed of x by 1;
 	say "You put a [x] into the locker for storage.";
 
-Check retrieving a grab object(called x):
+Check retrieving a grab object (called x):
 	if storage locker is not visible, say "Retrieve from where?" instead;
 	if stashed of x <= 0, say "There doesn't seem to have any [x] in the storage locker right now." instead;
 
-Carry out retrieving a grab object(called x):
+Carry out retrieving a grab object (called x):
 	decrease stashed of x by 1;
 	increase carried of x by 1;
 	say "You take a [x] from the storage locker.";
 
 
-Check allstashing a grab object(called x):
+Check allstashing a grab object (called x):
 	if storage locker is not visible, say "Stash them where?" instead;
 	if carried of x <= 0, say "You don't seem to have any [x] on you right now." instead;
 	if x is journal, say "You'd best hang onto that." instead;
 	if x is wielded, say "You're using that right now." instead;
 	if x is equipped, say "You're using that right now." instead;
 
-Carry out allstashing a grab object(called x):
+Carry out allstashing a grab object (called x):
 	let num be carried of x;
 	increase stashed of x by num;
 	now carried of x is 0;
 	say "You put [num] of [x] into the locker for storage.";
 
-Check allretrieving a grab object(called x):
+Check allretrieving a grab object (called x):
 	if storage locker is not visible, say "Stash them where?" instead;
 	if stashed of x <= 0, say "There doesn't seem to have any [x] in the storage locker right now" instead;
 
-Carry out allretrieving a grab object(called x):
+Carry out allretrieving a grab object (called x):
 	let num be stashed of x;
 	increase carried of x by num;
 	now stashed of x is 0;
