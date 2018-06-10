@@ -253,7 +253,7 @@ instead of addfeating the basic feats:
 	if "Vore Predator" is listed in feats of player and "Iron Stomach" is listed in feats of player:
 		addfeat "Safe Appetite" with "You will not gain infection from consuming your foes.";
 	if stamina of player > 14:
-		addfeat "Toughened" with "You take less damage than others(-20% damage)";
+		addfeat "Toughened" with "You take less damage than others (-20% damage)";
 	if scenario is "Researcher" and ( intelligence of player > 14 or level of player >= 9 ):
 		addfeat "Expert Researcher" with "Your expert skills allow you a second opportunity to get an infection vial.";
 	if intelligence of player > 14:
@@ -306,7 +306,7 @@ instead of addfeating the basic feats:
 			addfeat "Resistant" with "You are more resistant to random physical changes from infection.";
 		if "Resistant" is not listed in feats of player:
 			addfeat "Mutable" with "You are more prone to physical changes from mutation.";
-		addfeat "Mighty Mutation" with "You can gain(and lose) stats from mutants.";
+		addfeat "Mighty Mutation" with "You can gain (and lose) stats from mutants.";
 		if "Mighty Mutation" is listed in feats of player:
 			addfeat "Bestial Power" with "Your body will no longer drop in stats from random mutation.";
 		addfeat "Vampiric" with "You suck some blood from your defeated foe, recovering a little health, thirst and hunger.";

@@ -65,7 +65,7 @@ Basic Hyperlinks ends here.
 
 Basic Hyperlinks allows us to annotate pieces of output text as hyperlinks, assigning a number to each one. For instance, we might have
 
-	Mossy Bank is a room. "The shore here is made up of round rocks, very heavily grown over with a slippery grey-green moss. To the [set link 1]north[end link] is a small shack."
+	Mossy Bank is a room. "The shore here is made up of round rocks, very heavily grown over with a slippery gray-green moss. To the [set link 1]north[end link] is a small shack."
 
 This tells Inform that we want to make 'north' here a hyperlink, and that we are assigning this link the number 1. We should not attempt to nest hyperlinks, as the results are likely to be messy.
 
@@ -108,7 +108,7 @@ Example: * Mossy Bank - A running version of the Mossy Bank scenario.
 
 	Include Basic Hyperlinks by Emily Short.
 
-	Mossy Bank is a room. "The shore here is made up of round rocks, very heavily grown over with a slippery grey-green moss. To the [set link 1]north[end link] is a small shack."
+	Mossy Bank is a room. "The shore here is made up of round rocks, very heavily grown over with a slippery gray-green moss. To the [set link 1]north[end link] is a small shack."
 
 	Small Shack is north of Mossy Bank. "This little shack opens to the [set link 2]south[end link]."
 

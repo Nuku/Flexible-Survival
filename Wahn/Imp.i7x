@@ -53,13 +53,13 @@ to say Imp Sex Menu:
 	now description entry is "Snap the little demon's neck";
 	[]
 	[
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Wrap him around your dick and jerk off";
 		now sortorder entry is 2;
 		now description entry is "Use the little demon as a cock-sleeve";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Stick him in your pussy";
 		now sortorder entry is 3;
@@ -248,7 +248,7 @@ to say ImpEncounter:
 			say "     Silence stretches out around you, except for the wind blowing past the buildings. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other close to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Be happy that they get fresh mortal prey and don't try to chew on us instead.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 	wait for any key;
 
-An everyturn rule:   [hellhound bad end progress every turn]
+An everyturn rule: [hellhound bad end progress every turn]
 	if libido of Skarnoth is 10: [player got found and marked]
 		if ImpPlayerMarkingTurn - turns is 8:
 			say "     A shiver runs down your spine suddenly and out of nowhere you hear... something. It is a padding sound, accompanied by scraping noise - like paws on asphalt, with their claws scratching over the stone as their owner sprints after prey. Then another and another beast joins the hunt, the rising sound soon accompanied by hungry growls and eager barks. Cold sweat breaks out over you as you become more and more convinced that they will suddenly appear and rip you to shreds - but then the strange effect reaches a terrifying climax as an unknown creature screeches in pain. The noises cuts off with shocking abruptness after that, the last thing in the air being satisfied growls out of many bestial throats.";
@@ -278,7 +278,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Imp":
-		if humanity of player < 10:   [succumbed]
+		if humanity of player < 10: [succumbed]
 			say "     Finally giving in to your base desires, you take off and fly over the city on the search for someone to fuck. Small as you may be, from high up everyone looks tiny and weak - which makes you feel powerful and strong. They're just insects to you, mortal mayflies to be played with. Before long, your search bears fruit - there is a small group of people holed up on top of a building, uninfected humans that have the stairwell barricaded and cower from the monsters below in a shack on the roof. Of course, this doesn't protect them from you as you, with your wings and demonic powers. With little more than a few fireballs thrown around, you frighten them into obedience and gain a flock of fucktoys to serve your every whim. This even goes so far that they never even dare to try calling out to the soldiers as they sweep the city, instead hiding according to your commands and being left behind - all yours, forever.";
 		else:[sane]
 			say "     Rescued by the military, you are released after a short while of quarantine. With your small stature and demonic looks, it isn't easy to find a new place in the post-nanite world, but the fact that you do have functional wings does pay off in the end and you're hired as a courier by the 'Skymail' express delivery service. Supplanting the bike couriers of the big cities, the mixed crew of gryphons, harpies and even demons just like yourself does quite well, and before long the bigger companies usually have a little balcony added to their high rises for speedy drop-offs. As you and those like you become part of the typical day to day of many people - regularly swooshing past over their heads with important documents - the distrust about looking like a demon lessons bit by bit too. Sure, you get splashed with holy water by bigots once in a while, but that becomes the exception as society integrates all the new species of new people...";

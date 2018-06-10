@@ -16,7 +16,7 @@ The earea of Abandoned Lot is "Outside".
 the description of Abandoned Lot is "[LotDesc]".
 
 to say LotDesc:
-	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
+	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
 	say "A road leads east between the buildings. You can make out the entrance to a junkyard there";
 
 Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
@@ -150,7 +150,7 @@ Chapter 2 - Storage Room and Steven
 
 Section 1 - The environment
 
-The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of colour or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
+The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of color or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
 
 South of the Warehouse Door is the Storage Room.
 
@@ -607,7 +607,7 @@ Instead of resolving a junkyard home:
 		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
 		move the player to Steven's home;
 		now Steven's home is known;
-		now junkyard home is resolved.
+		now junkyard home is resolved;
 
 
 Section 4 - Finding a tool

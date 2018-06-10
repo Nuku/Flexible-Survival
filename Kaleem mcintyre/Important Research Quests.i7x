@@ -58,7 +58,7 @@ Instead of resolving Important Treasure:
 	else if opcl is 3:
 		say "Walking through the seedier portion of town you find yourself bumping into someone who suddenly comes flying out of an opened doorway. Grunting from the impact of your two bodies colliding you stagger for a moment before catching yourself. Once you are settled you look to find the face of the four armed iguana from before gazing up at you with a slightly punch-drunk look plastered onto his scaly face. 'Hey! I know you!' The bleary eyed reptile slurs while blinking owlishly up at you. 'You're that suspect I'm supposed to question!' The uniformed iguana chuckles playfully before grabbing you into a strong bear hug and then nuzzling the underside of your [face of player] neck.";
 		WaitLineBreak;
-		say "The smell of something rancid coming off from the other man makes you want to retch. Just how much did the officer have to drink? 'I'm so happy I found you, now I can tell Greg that I did a good job and get a pat on the head from him.'  At this point you're about totally lost, but seeing how inebriated the other is you start to open your mouth to ask the cop a question. However, before you can several rugged looking mutants come out of the building the iguana had just flown from with angry looks plastered onto their muzzles.";
+		say "The smell of something rancid coming off from the other man makes you want to retch. Just how much did the officer have to drink? 'I'm so happy I found you, now I can tell Greg that I did a good job and get a pat on the head from him.' At this point you're about totally lost, but seeing how inebriated the other is you start to open your mouth to ask the cop a question. However, before you can several rugged looking mutants come out of the building the iguana had just flown from with angry looks plastered onto their muzzles.";
 		WaitLineBreak;
 		say "The group of five quickly surround you and your drunken companion and then go to growling and hissing like mad which makes you narrow your eyes. 'H-hey, back off you guys. I-I'ma police officer!' the iguana says, but that only makes the rowdy looking group of mutants start to chuckle as some of them begin to leer at the vulnerable reptile. 'We know, we've been looking to do our civic duty for a while now, haven't we guys?' The rest of the mutants all nod together while rubbing their growing hard ons. 'Why don't you leave the lizard here, friend? We'll take [italic type]real[roman type] good care of this lightweight.'";
 		WaitLineBreak;
@@ -159,7 +159,7 @@ Instead of resolving Important Treasure:
 		now opcl is 5;
 		increase score by 7;
 	else if opcl is 5:
-		say "A out of place whistle stops you in your tracks. Turning around you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure coloured eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
+		say "A out of place whistle stops you in your tracks. Turning around you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure colored eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
 		WaitLineBreak;
 		say "Assuming that this is the package that Omio had been expecting you thank the blonde and then turn to go about your way. However, you find yourself pausing midstep when you hear the other woman speak up suddenly. 'You should go see about them.' Tilting your head to the side you ask the female who she's talking about. 'The two lizards. They need some help right about now, so go and see them.'[line break]";
 		say "Confusion rips through your mind as you try and figure out what you are being asked. It's not like you're actually friends with the two reptiles, right? So why should you go see about two grown men who can probably take care of themselves well enough? You find your answer coming, not from a sudden epiphany, but from the human woman as she glares cool ice blue eyes at you pointedly.";
@@ -171,7 +171,7 @@ Instead of resolving Important Treasure:
 		increase score by 20;
 		now Important Treasure is resolved;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "lumpy box"	"Supposed medical equipment and solutions that the red headed researcher Omio wanted/needed."	1	lumpy box
 
@@ -271,7 +271,7 @@ Instead of resolving a Friendship's Proof:
 		say "Seeing that the raptor is about to do something drastic as the muscles along the orange and yellow reptile's body begin to tense up like a coiled wire you grunt to draw the two officer's attentions. Immediately the iguana and raptor turn to regard you with feral scowls covering their muzzles.";
 		WaitLineBreak;
 		say "'You!? What are you doing here!?' Dan asks while curling the twin sets of arms he possesses over across his chest and abdomen, respectfully. Telling him that you... just came by because of the shouting you look at Greg carefully to see what the other will do next. 'Uhm... this is kinda a private party so could you... maybe get lost?' The tone of the iguana makes you give the other man a [']look['], but before you can say anything Greg is moving like a shot towards his partner.[line break]";
-		say "Charging before the other can reach Dan you throw all of your weight into the raptor forcing him to crash hard into the concrete ground underneath both of your feet. The needle that he had in his hand is set free when the raptor's scaled hand flies open against his command. The glass rolls sloppily across the ground before crashing into the side of a pole where it smashes into a hundred different pieces. The contents therein, which were clear white in colour, unhurriedly evaporate against the ground just as Greg shouts his dismay to the world.";
+		say "Charging before the other can reach Dan you throw all of your weight into the raptor forcing him to crash hard into the concrete ground underneath both of your feet. The needle that he had in his hand is set free when the raptor's scaled hand flies open against his command. The glass rolls sloppily across the ground before crashing into the side of a pole where it smashes into a hundred different pieces. The contents therein, which were clear white in color, unhurriedly evaporate against the ground just as Greg shouts his dismay to the world.";
 		WaitLineBreak;
 		say "'Son of a bitch! Look at what you made me do!' The raptor hisses into your face and then swipes his claws at your face with the full intention of gouging your eyes out. Ducking quickly enough so that you can save your vision you kick yourself away from the pissed off lizard before he can try to strike a second time. 'Greg stop!' Dan's voice seems to draw the raptor back from his furious daze as the trench coat wearing detective turns to regard his partner somewhat incredulously.[line break]";
 		say "When the four armed iguana comes over and then pounces himself over on top of his companion you get the feeling that there's nothing left for you to do here anymore. The hot and wet kisses that the two scalies begin to share with one another quickly become lewd in nature as Dan stripes both himself and his partner out of their respective clothing. You take a few seconds to watch as the deceptively muscled form of the green and black scaled iguana become revealed to the[if daytimer is day]light of day[else]rays of the moon[end if] before noticing Greg's own well-toned form shifting and flexing as the raptor hybrid squirms around onto the ground underneath his eager lover.";
@@ -382,7 +382,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "medallion"	"An unusual bronze artifact that bears a serpent biting at its own tail."	1	medallion
 
-medallion is a grab object. It is part of the player.  It is not temporary.
+medallion is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing medallion:
 	say "A strong scent of ancient times and alchemical mixtures covers the medallion.";
@@ -444,7 +444,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "undisclosed case"	"A case Omio hastily shoved into your hands."	1	undisclosed case
 
-undisclosed case is a grab object. It is part of the player.  It is not temporary.
+undisclosed case is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing undisclosed case:
 	say "The case smells of something fruity as well as spicy. Liquor, maybe?";

@@ -79,7 +79,7 @@ Instead of resolving a Smashed Hive:
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				say "     Patting Honey's head and telling her you'll take care of it, you point towards the bear's path. She buzzes nervously, worry showing on her face. 'You'd face it for me? But it's so big and scary. Please be careful.'  Taking her little hand in yours, you go head to the path and start following the tracks.";
+				say "     Patting Honey's head and telling her you'll take care of it, you point towards the bear's path. She buzzes nervously, worry showing on her face. 'You'd face it for me? But it's so big and scary. Please be careful.' Taking her little hand in yours, you go head to the path and start following the tracks.";
 				let bonus be ( perception of player minus 10 ) divided by 2;
 				let featbonus be 0;
 				if "Expert Hunter" is listed in feats of player, increase featbonus by 2;
@@ -90,7 +90,7 @@ Instead of resolving a Smashed Hive:
 					say "At first, it's pretty easy to follow the bear's trail with all the dripping honey and its footprints on the sandy path. But as the messy drops become less frequent and fallen leaves cover the path, it becomes more difficult. You almost walk past a break between the trees, but spot a few broken branches and a tuft of brown fur. Sure enough, a little investigating shows the bear's gone off the trail at this point. It seems this bear's been through here several times.";
 					attempttowait;
 					say "     Following the tracks and snapped branches for a few minutes leads you to a cluster of large boulders. The bear seems to have made its home here, having scattered a few odds and ends around, including a large clay pot labeled as 'hunny'. When the bear lumbers into view, she's stuffing her maw with a pawful of sticky honey from another such crock pot. Her ill-gotten gains have made this one somewhat pudgier than the other bears around, causing her red shirt to stretch tightly over her upper chest, struggling to contain her large bosom.";
-					say "     Seeing you both there, she drops the honey pot in surprise. It smashes to the ground in a sticky mess. 'Oh bother,' she says. 'Look at what you made me do.'  She licks the last of the honey from her sticky paw before balling it into a fist and striding towards you. 'The honey's mine - every last smackerel,' she growls.";
+					say "     Seeing you both there, she drops the honey pot in surprise. It smashes to the ground in a sticky mess. 'Oh bother,' she says. 'Look at what you made me do.' She licks the last of the honey from her sticky paw before balling it into a fist and striding towards you. 'The honey's mine - every last smackerel,' she growls.";
 					now HP of bee girl is 3;
 					challenge "Bear";
 					if fightoutcome >= 10 and fightoutcome <= 19:
@@ -100,7 +100,7 @@ Instead of resolving a Smashed Hive:
 						else:
 							say "     In the mood to celebrate, you give her ass a firm push, making sure she's good and stuck before burying your face between her legs. Feeling you there, she moans and tries to squirm her way free, but she's thoroughly stuck and at your mercy. You bring your mouth to her juicy cunt and start eating out the bad bruin, lapping up her hot juices and thrusting a few fingers into her pussy. She moans and groans in pleasure as you have your way with her, unable to stop you. Though from the sounds of it, she probably wouldn't want you to, instead crying for more. Your rough attention soon drives her to a loud orgasm that delivers more of her delicious juices onto your tongue.";
 						attempttowait;
-						say "     Stepping back, you are hugged by the bee girl. She's sticky with some of the honey, having been messily eating it while you had your fun with the bear. You're treated to a sweet, sticky kiss from her, complete with eager groping. 'Oh, you were so brave and strong to face that mean bear. Come, I want to reward you.'  She smiles sweetly and leads you back to the hive's clearing, proudly carrying the bear's last honey jar. Back beneath the hive's tree, she holds up the crock for you. On your knees, you start by pouring a small taste of it into your mouth, but as Honey buries her face in your crotch and starts licking, you keep going, wanting mouthful after mouthful.";
+						say "     Stepping back, you are hugged by the bee girl. She's sticky with some of the honey, having been messily eating it while you had your fun with the bear. You're treated to a sweet, sticky kiss from her, complete with eager groping. 'Oh, you were so brave and strong to face that mean bear. Come, I want to reward you.' She smiles sweetly and leads you back to the hive's clearing, proudly carrying the bear's last honey jar. Back beneath the hive's tree, she holds up the crock for you. On your knees, you start by pouring a small taste of it into your mouth, but as Honey buries her face in your crotch and starts licking, you keep going, wanting mouthful after mouthful.";
 						say "     By the time you've emptied the remainder of the jar down your throat and down your front, your [if cocks of player > 0 or cunts of player > 0]groin[else]body[end if] is hot with excitement and you long for something more. The bee girl, as if expecting this, pulls something she's kept hidden under the honey in her little bag. It is some purple jelly that smells delicious, your mouth watering the moment you see it. 'You'll make a wonderful queen; one who's kind, strong, brave and sexy,' she says as you gobble down the hormone- and nanite-rich royal jelly, hardly hearing her as that heat you're feeling surges higher.";
 						attempttowait;
 						say "     You push the cute bee girl to the ground and bury your face between her legs, lapping at her pussy to get at her honeyed juices. She moans and pants as you excitedly eat her out, your body demanding more. As she's driven to orgasm again and again, the effects of the royal jelly take hold. Your skin becomes smooth and lovely with a golden-bronze tan as your body reshapes itself. You become tall, slender and sexy, with a narrow waist, curved hips and flat stomach. Your face shifts into one of great, feminine beauty and framed by a full head of black and yellow hair. While your body and face are ones that many a model would envy, they are further enhanced by bee-like features. Chitin forms in the likeness of elbow length gloves, knee high boots and a skimpy [if cunts of player is 0 and cocks of player > 0]speedo[else]bikini[end if] at your waist. The plating at your torso accents your [if breast size of player > 0]bosom[else]flat chest[end if] while an orange puff of fur around your neck looks like the collar to an elegant coat or robe, adding to your sexy look. You grow a second pair of arms, small and handy for little tasks and holding like those of the bee girl. But the greatest pleasure comes as your antennae and bee abdomen grows in, the latter being plump and beautiful with a sharp stinger at the end.";
@@ -129,10 +129,10 @@ Instead of resolving a Smashed Hive:
 						increase thirst of player by 4;
 						now lastfuck of bee girl is turns;
 					else if fightoutcome >= 20 and fightoutcome <= 29:
-						say "     Having lost and been used by the large bruin, you stagger back into the woods. Honey rejoins you, taking your hand and helping you back to the old hive. 'I'm glad you were willing to stand up to the bear for me, but I'm just happy you're back safe and sound.'  You nod and take her hand, leaving the ruins of the old hive behind for good.";
+						say "     Having lost and been used by the large bruin, you stagger back into the woods. Honey rejoins you, taking your hand and helping you back to the old hive. 'I'm glad you were willing to stand up to the bear for me, but I'm just happy you're back safe and sound.' You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now HP of bee girl is 4;
 					else:
-						say "     Unwilling or unable to keep fighting, you and Honey make a break for it, running back into the woods. The pudgy bear only gives pursuit briefly before she's tried and panting for breath. She gives an angry roar of warning not to return and heads back to her campsite. You and the bee girl make your way back to the old hive. 'I'm glad you tried standing up to the bear for me. They're really scary, aren't they?'  You nod and take her hand, leaving the ruins of the old hive behind for good.";
+						say "     Unwilling or unable to keep fighting, you and Honey make a break for it, running back into the woods. The pudgy bear only gives pursuit briefly before she's tried and panting for breath. She gives an angry roar of warning not to return and heads back to her campsite. You and the bee girl make your way back to the old hive. 'I'm glad you tried standing up to the bear for me. They're really scary, aren't they?' You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now HP of bee girl is 4;
 					now Smashed Hive is resolved;
 				else:
@@ -416,7 +416,7 @@ An everyturn rule:
 
 the fuckscene of bee girl is "[SexWithHoney]".
 
-to say sexwithHoney:
+to say SexWithHoney:
 	if lastfuck of bee girl - turns < 4:
 		say "     You've had some fun with the bee girl quite recently. Perhaps you should give her a break for a little longer?";
 	else if player is neuter:

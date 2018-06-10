@@ -166,7 +166,7 @@ to say yfv:    [sticks y/ies on if single female - verb]
 
 [
 Example:
-say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
+say "Your cock[smn] smash[esmv] into the goblin's face. Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
 1 cock: Your cock smashes into the goblin's face...
 2+ cocks: Your cocks slam into the goblin's face...
 1 cunt: ...Your juicy pussy then grinds against his pointy nose.
@@ -578,7 +578,7 @@ This is the SetPlayerPronouns rule:
 		-- "Neutral":
 			SetNeutralPronouns for player;
 		-- "Auto":
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				if breast size of player > 0: [herm]
 					SetHermPronouns for player;
 				else: [male herm]

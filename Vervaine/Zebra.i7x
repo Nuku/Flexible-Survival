@@ -467,7 +467,7 @@ When Play begins:
 	now body change entry is "its chest thickens and stretches into a more zebra-like barrel. Legs thickening and shifting into a digitigrade stance, your feet round out into rough hooves underneath you. Your arms thicken with new muscle while your fingers seem to flow and merge, leaving you with only three fingers and a thumb on each hand. The tips of your reformed digits are covered in thick, black nails, giving your hands a strong hoof-like appearance"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft, black-and-white-striped fur slowly covers your body, your skin twitching and shuddering as it settles into place"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it firms up, and you feel a sharp stretching sensation as a thin whip-like zebra tail pushes its way out from above your ass. With a sharp, short shock of pain, strands of thick zebra hair explode out of the tip of the appendage and form a tuft of fur"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it darkens to a deep-black colour, and its tip blunts into an equine tip. A zebra's sheath forms at its base, and it pulls up into it, ready to emerge when you get aroused"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it darkens to a deep-black color, and its tip blunts into an equine tip. A zebra's sheath forms at its base, and it pulls up into it, ready to emerge when you get aroused"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 19;
 	now dex entry is 19;
 	now sta entry is 16;
@@ -541,7 +541,7 @@ when play ends:
 		else:
 			say "     Rescued finally by the military, you find yourself standing out in life afterwards due to your strange new zebra-like form. Eventually, you manage to find yourself a job that pays well enough, and though your promotion opportunities seem slim, it at least pays the bills. You find yourself feeling terribly isolated and alone at times as a changed creature in a world surrounded by humans, these feelings usually leading you to one of the local bars to drink until you feel better. On one of these trips, however, you run into another changed, a [one of]horse[or]lion[or]tiger[or]deer[or]gator[or]wolf[or]hyena[at random]morph of all things, and while not quite of the same species, you certainly do find plenty in common in a world full of humans. Eventually, you end up back at your place, and a few nights later, you end up over at theirs. Almost before you know it, you are spending all of your free time together, and eventually, just end up getting a larger place for the both of you. You both find yourselves trying to make life better for the changed, or at least lower the level of discrimination. The two of you eventually attract several other misfit changed in the area, those without any others of their species around for support, and soon, you move into an even larger place, which is often full of many different species, working and living together in harmony (for the most part). It may be a very strange collection of individuals, but it looks like you managed to find a herd of your own to belong to after all...";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "zebra fur"	"A tuft of black zebra mane fur."	1	zebra fur
 

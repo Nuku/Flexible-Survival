@@ -4,7 +4,7 @@ Version 1 of Ebonflame Draken by Blue Bishop begins here.
 "Adds an Ebonflame Draken to Flexible Survival."
 [Inspired by the Ash Drakenoid]
 
-blanchefight is a truth state that varies.  blanchefight is usually false.
+blanchefight is a truth state that varies. blanchefight is usually false.
 
 When Play begins:
 	add { "Ebonflame Draken" } to infections of hermaphrodite;
@@ -27,7 +27,7 @@ to say ebdrakenvic:
 		say "     Her plans become clear when you feel the tip one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through your anal ring. She cackles as you tremble against her digit so casually shaming you.";
 		say "     '[one of]Such a soft hole, I'm going to take great joy in ravaging it[or]I'm going to love tearing you in half[or]Oh, don't worry, you're not going to feel a thing... After I'm done with you[at random]!' Finally pulling the talon free, it's apparent she wanted to humiliate you more than prepare, [if scalevalue of player > 3]climbing on top of[else]positioning herself behind[end if] you before the pointed tip of the reptile's savage dick briefly presses against you quivering hole. Immediately, she plunges the massive thing as far in as she can, grunting as she forces what remains with successive thrusts. Not only is it apparent that she doesn't care to prepare you, but she actively enjoys hearing you howl in pain as her sharp barbs dig into your supple flesh, laughing and mocking you all along the way.";
 		say "     The rod must be as hard as steel, since she has no problem shifting her weight all over the place, as if trying to pry your hole wider. You'd think she's hardly interested in fucking you if not for occasionally being wracked by the searing pain of her molten precum. You're dizzied by how intense the sensation is, until you eventually get somewhat numb to it.";
-		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervour. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
+		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervor. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed -- breed -- fuck, FUCK[or]Cum -- CUM, fuck[or]I-...I must -- FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.[movichance]";
 		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord";
 		if blanchefight is true:
@@ -39,7 +39,7 @@ to say ebdrakenvic:
 		say "     Her plans become clear when you feel the tip one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through[if cunts of player > 1] one of[end if] your cunt[sfn]. She cackles as you tremble against her digit so casually shaming you.";
 		say "     '[one of]Such a soft hole, I'm going to take great joy in ravaging it[or]I'm going to love tearing you in half[or]Oh, don't worry, you're not going to feel a thing... After I'm done with you[at random]!' Finally pulling the talon free, it's apparent she wanted to humiliate you more than prepare, [if scalevalue of player > 3]climbing on top of[else]positioning herself behind[end if] you before the pointed tip of the reptile's savage dick briefly presses against you supple lips. Immediately, she plunges the massive thing as far in as she can, grunting as she forces what remains with successive thrusts. Not only is it apparent that she doesn't care to prepare you, but she actively enjoys hearing you howl in pain as her sharp barbs dig into your tender flesh, laughing and mocking you all along the way.";
 		say "     The rod must be as hard as steel, since she has no problem shifting her weight all over the place, as if trying to stretch your[if cunt length of player < 10] already strained[end if] pussy wider. You'd think she's hardly interested in fucking you if not for occasionally being wracked by the searing pain of her molten precum. You're dizzied by how intense the sensation is, until you eventually get somewhat numb to it.";
-		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervour. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
+		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervor. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed -- breed -- fuck, FUCK[or]Cum -- CUM, fuck[or]I-...I must -- FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.[fovichance]";
 		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord";
 		if blanchefight is true:
@@ -59,9 +59,6 @@ to say ebdrakenvic:
 			say "     You feel like you briefly black out from the intense sensation. You quicky regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
 		else:
 			say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
-
-[	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']]
 
 to say ebdrakendef:
 	say "     The Draken reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";
@@ -162,7 +159,7 @@ when play ends:
 				say ". This terrible, dark compulsion eventually becomes too much, however, and you're eventually forced to tear out an escape for yourself. It takes some weeks for the military to eventually stop searching for you -- perhaps because you weren't infectious and there's more pressing matters to attend to.";
 				say "     Too lucid to join your sisters and too twisted to join society proper, you're forced to dwell in society's dark underbelly, torn between sating your fiery need and not becoming the monsters that first turned you. It's strange, at first, when you find others actively willing to be your plaything, but even they are paltry compared to the thrill of your terrible hunt...";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 

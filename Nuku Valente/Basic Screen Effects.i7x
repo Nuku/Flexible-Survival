@@ -178,55 +178,55 @@ Right alignment depth is a number that varies. Right alignment depth is 14.
 Section 2 (for Z-machine only)
 
 To say default letters:
-	(- @set_colour 1 1; -)
+	(- @set_color 1 1; -)
 
 To say red letters:
-	(- @set_colour 3 0; -)
+	(- @set_color 3 0; -)
 
 To say green letters:
-	(- @set_colour 4 0; -)
+	(- @set_color 4 0; -)
 
 To say yellow letters:
-	(- @set_colour 5 0; -)
+	(- @set_color 5 0; -)
 
 To say blue letters:
-	(- @set_colour 6 0; -)
+	(- @set_color 6 0; -)
 
 To say magenta letters:
-	(- @set_colour 7 0; -)
+	(- @set_color 7 0; -)
 
 To say cyan letters:
-	(- @set_colour 8 0; -)
+	(- @set_color 8 0; -)
 
 To say white letters:
-	(- @set_colour 9 0; -)
+	(- @set_color 9 0; -)
 
 To say black letters:
-	(- @set_colour 2 0; -)
+	(- @set_color 2 0; -)
 
 To turn the/-- background black:
-	(- @set_colour 0 2; -);
+	(- @set_color 0 2; -);
 
 To turn the/-- background red:
-	(- @set_colour 0 3; -);
+	(- @set_color 0 3; -);
 
 To turn the/-- background green:
-	(- @set_colour 0 4; -);
+	(- @set_color 0 4; -);
 
 To turn the/-- background yellow:
-	(- @set_colour 0 5; -);
+	(- @set_color 0 5; -);
 
 To turn the/-- background blue:
-	(- @set_colour 0 6; -);
+	(- @set_color 0 6; -);
 
 To turn the/-- background magenta:
-	(- @set_colour 0 7; -);
+	(- @set_color 0 7; -);
 
 To turn the/-- background cyan:
-	(- @set_colour 0 8; -);
+	(- @set_color 0 8; -);
 
 To turn the/-- background white:
-	(- @set_colour 0 9; -);
+	(- @set_color 0 9; -);
 
 Basic Screen Effects ends here.
 
@@ -334,7 +334,7 @@ Section: Changing the font color
 
 Finally, font colors can be changed with say (color) letters, where the same range of colors may be used as for the background. So for instance
 
-	say "There is a [red letters]piping hot[default letters] pie on the table."
+	say "There is a [red letters]piping hot[default letters] pie on the table.";
 
 We should be careful with color effects. Some older interpreters do not deal well with color, and part of the audience plays interactive fiction on black and white devices or via a screenreader. The phrase "say default letters" restores whatever background and foreground are normal on this system. It is not safe to assume that the player is necessarily using one particular color scheme; black-on-white, white-on-black, and white-on-blue are all relatively common.
 
@@ -398,7 +398,7 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		center "Press SPACE to begin.";
 		wait for the SPACE key;
 		clear the screen;
-		leave space.
+		leave space;
 
 	To turn screen black:
 		say white letters;
@@ -410,13 +410,13 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		turn the background white;
 		say black letters;
 		clear the screen;
-		leave space.
+		leave space;
 
 	To leave space:
 		say paragraph break;
 		say paragraph break;
 		say paragraph break;
-		say paragraph break.
+		say paragraph break;
 
 	Table of Fancy Status
 	left	central	right
@@ -459,15 +459,15 @@ Note that attempting to compile this example for Glulx will fail, because it use
 	down	"D   "	"    "
 
 	To say top rose:
-		say "[rose up][rose northwest][rose north][rose northeast]".
+		say "[rose up][rose northwest][rose north][rose northeast]";
 
 	To say middle rose:
 		say "     [rose west] . [rose east]";
 
 	To say bottom rose:
-		say "[rose down][rose southwest][rose south][rose southeast]".
+		say "[rose down][rose southwest][rose south][rose southeast]";
 
 	Rule for constructing the status line:
 		fill status bar with Table of Fancy Status;
 		say default letters;
-		rule succeeds.
+		rule succeeds;

@@ -82,7 +82,7 @@ Instead of resolving a Magical Girl:
 	say "     ([link]N[as]n[end link]) - No.";
 	If player consents:
 		LineBreak;
-		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow coloured light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
+		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow colored light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
 		Say "Where once before you had been dressed somewhat normally you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		now carried of Sailor Outfit is 1;
@@ -100,7 +100,7 @@ Instead of resolving a Magical Girl:
 
 Section 3a - Sailor Outfit
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "Sailor Outfit"	"A sailor soldier outfit designed to make you a sex symbol to both men and women alike."	1	Sailor Outfit
 

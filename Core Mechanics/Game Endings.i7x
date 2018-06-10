@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "fooledya" as supersponsor.
+understand "junetastic" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -78,10 +78,10 @@ to ratetheplayer:
 					break;
 			choose row tempnum from table of library books;
 			if humanity of player < 10:
-				say ".  Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read";
+				say ". Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read";
 			else:
-				say ".  With all the excitement you went through at the library, the book you found remains firmly in your mind";
-			say ".  In the Abbey, type [bold type][']dewey [bookcode entry]['][roman type] to find it again in your next game";
+				say ". With all the excitement you went through at the library, the book you found remains firmly in your mind";
+			say ". In the Abbey, type [bold type][']dewey [bookcode entry]['][roman type] to find it again in your next game";
 		say ".";
 	LineBreak;
 
@@ -92,7 +92,7 @@ when play ends:
 		now skinname of player is "starvation";
 		now tailname of player is "starvation";
 		now cockname of player is "starvation";
-		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[else if hunger of player >= 100]starvation[else]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[else if hunger of player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
 	else if bodyname of player is "Tigertaur Sex Toy":
 		say "     Even though you try a few times, you never manage to escape the clutches of your tigertuar masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
 		stop the action;		
@@ -127,9 +127,9 @@ when play ends:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 			else if player is mpreg_ok and mpregcount >= 6:
 				if "Breeding True" is not listed in feats of player and "They Have Your Eyes" is not listed in feats of player:
-					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs.  Your body begins automatically storing some cum from anyone or anything that's screwed you.  Soon after you give birth, a small amount of the stored cum is automatically leaked out from a few of these storage chambers to be used to re-impregnate you if someone hasn't yet mated you.  This medley of semen is somehow mixed together to give you children from several sires.  You spend the rest of your life in a constant state of male pregnancy.  At first, you're alarmed by this, but soon you're seeking out diverse lovers to add their semen to your stores, loving the beautiful array of hybrid children you birth.  Your ever-growing brood cares for your every whim, allowing you to enjoy your new life as a male breeder.  Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
+					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing some cum from anyone or anything that's screwed you. Soon after you give birth, a small amount of the stored cum is automatically leaked out from a few of these storage chambers to be used to re-impregnate you if someone hasn't yet mated you. This medley of semen is somehow mixed together to give you children from several sires. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but soon you're seeking out diverse lovers to add their semen to your stores, loving the beautiful array of hybrid children you birth. Your ever-growing brood cares for your every whim, allowing you to enjoy your new life as a male breeder. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
 				else:
-					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs.  Your body begins automatically storing a large cum from the last creatures that screwed you.  Each time you give birth, a small amount of the cum is used to re-impregnate you automatically.  You spend the rest of your life in a constant state of male pregnancy.  At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.  Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
+					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing a large cum from the last creatures that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
 			if "Wild Womb" is listed in feats of player:
 				say "However, thanks to your unusual tendency to birth feral children, many of your young soon strike out on their own, often sneaking away in the night, as their instinct to breed and spread their infection takes control.";
 		if bodyname of player is "Dragoness":

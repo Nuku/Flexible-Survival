@@ -52,7 +52,7 @@ instead of sniffing the little fox:
 	say "[DashScent]";
 
 instead of sniffing Dash:
-	say "[DashScent]"
+	say "[DashScent]";
 
 to say DashScent:
 	say "     The fox's smell reminds you of the woods, full of nature and pine. Although there is also has another scent you cant quite place, the only thing that pops into your mind is a... well [italic type]baby[roman type] smell.";
@@ -60,7 +60,7 @@ to say DashScent:
 to say DashDesc:
 	if debugactive is 1:
 		say "     DEBUG -> FangDash: [FangDashRel] <- DEBUG[line break]";
-	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and grey than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
+	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
 
 instead of conversing the Dash:
 	if player is in Computer Lab and Dash is in Computer Lab:
@@ -138,7 +138,7 @@ Instead of resolving Abandoned Fox:
 			say "     Do you help it?";
 			if the player consents:
 				delete food;
-				say "     Unable to bear hearing the poor things cries going unanswered, you carefully kneel down and pull out some food(-1 food), cautiously at first, then with increasing enthusiasm the half starved fox kit tears at the food, ripping and playing with it until it is all gone. You smile at the cute sight before standing up and getting ready to leave, though you haven't gone more than a few steps when you hear something behind you. Turning round, you see the fox kit you helped is valiantly trying to keep up with you, its large vulpine eyes staring at you adoringly. Trying to shoo it back to the empty den seems pointless, and the cute little fox seems to have taken a strong fancy to you now, shrugging you give in and let it come with you. The little fox kit bouncing along in your wake and occasionally darting off to pounce on and threaten one of the nearby leaves on the ground.";
+				say "     Unable to bear hearing the poor things cries going unanswered, you carefully kneel down and pull out some food (-1 food), cautiously at first, then with increasing enthusiasm the half starved fox kit tears at the food, ripping and playing with it until it is all gone. You smile at the cute sight before standing up and getting ready to leave, though you haven't gone more than a few steps when you hear something behind you. Turning round, you see the fox kit you helped is valiantly trying to keep up with you, its large vulpine eyes staring at you adoringly. Trying to shoo it back to the empty den seems pointless, and the cute little fox seems to have taken a strong fancy to you now, shrugging you give in and let it come with you. The little fox kit bouncing along in your wake and occasionally darting off to pounce on and threaten one of the nearby leaves on the ground.";
 				say "     You lean down next to your new little friend, deciding it might be best to check some things that will help in the future. Tapping the little fox on its side, it quickly rolls over onto its back still chewing on one of the leaves it was [italic type]hunting[roman type]. Mildly embarrassed, you begin to rub its tummy and glance down further... well alright, so apparently your new little friend is a boy! Glad that that's over, you gently begin to scrub his ears. Now to think of a name for him, while your busy thinking the little fox begins to dash around at various targets, then it clicks. Dash, you try the name out seeing how it feels and how he responds to it. Truth be told the little fox doesn't seem to have any feeling on the matter, but it's better than nothing. As you head back to the park trail, you make him a little nest in your backpack, making sure he will be comfortable while you travel.";
 				now little fox is tamed;
 				move Dash to Computer Lab;
@@ -182,11 +182,11 @@ after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Das
 	LineBreak;
 	if player consents:
 		LineBreak;
-		say "     Walking up to Fang slowly with your head bowed and arms outstretched, you softly get close to the ground and check on Dash. With what your alpha had said going through your mind you glance up at the huge wolf. Without much thought your mouth starts to work on autopilot, you explain to Fang how you understand that Dash need to become stronger but there is another way. Fang looks down at you with an arrogant smirk on his muzzle as his eyes almost seem to bore inside of you. 'What are you saying? You agree that he needs to become stronger... but then act like you don't want me to train him, make up your mind!' Well aware that you are on thin ice with your alpha you continue with your opinion. You ask Fang if he was ever around children before the nanites, a look of confusion passes over his muzzle, until while mentioning the different sorts of children he could have been exposed to you ask if he ever had kids of his own.";
-		say "     The wolves eyes widen for a moment, although he still says nothing to affirm or deny it. But you decide to hope for the best and grab onto the reaction that you saw, slowly moving your hand closer to Dash you ask the canine if he can tell how small the fox kit is? How afraid he must be of the monsters that roam the city? You follow that up with mentioning that Dash is a child, that he doesn't need an alpha who views him as a tool he deserves more, he deserves a family. The look on the wolves face almost looks like one of betrayal, 'What about you bitch!? You take him out into the city... you expose him to all of those monsters yourself!' Almost like a floodgate opening, you yell back at Fang, telling him that the reason you take Dash with you is so he can more about the city and if something ever happens to you. You want him to be able to know how to survive and where to hide and survive!";
+		say "     Walking up to Fang slowly with your head bowed and arms outstreched, you softly get close to the ground and check on Dash. With what your alpha had said going through your mind you glance up at the huge wolf. Without much thought your mouth starts to work on autopilot, you explain to Fang how you understand that Dash need to become stronger but there is another way. Fang looks down at you with an arrogant smirk on his muzzle as his eyes almost seem to bore inside of you. 'What are you saying? You agree that he needs to become stronger... but then act like you don't want me to train him, make up your mind!' Well aware that you are on thin ice with your alpha you continue with your opinion. You ask Fang if he was ever around children before the nanites, a look of confusion passes over his muzzle, until while mentioning the different sorts of children he could have been exposed to you ask if he ever had kids of his own.";
+		say "     The wolves eyes widen for a moment, although he still says nothing to afirm or deny it. But you decide to hope for the best and grab onto the reaction that you saw, slowly moving your hand closer to Dash you ask the canine if he can tell how small the fox kit is? How afraid he must be of the monsters that roam the city? You follow that up with mentioning that Dash is a child, that he dos'nt need an alpha who views him as a tool he deserves more, he deserves a family. The look on the wolves face almost looks like one of betrayal, 'What about you bitch!? You take him out into the city... you expose him to all of those monsters yourself!' Almost like a floodgate opens yeall back at Fang, telling him that the reason you take Dash with you is so he can more about the city and if something ever happens to you, you want him to be able to know how to survive and where to hide and survive!";
 		WaitLineBreak;
-		say "     Fang's face is a mixture of shock and rage, 'Nothing will happen to you... your mine.' While he started out in a loud growl, the last part is said softly. You tell your alpha that their is no way to know what the future holds, you can't hide the choked up sound in your voice, at the sound of you upset Dash starts to fight once again even going as far as to dig his tiny teeth into the massive paw of the canine. Fang lets the small fox go who sprints quickly to your side checking you over, the whole time the wolf watches the two of you. Without warning you feel your alphas large body rub up against you as he bumps you with his head. 'Nothing will happen to you... or to the pup, no matter what I will keep him safe... that's a promise.'";
-		say "     Leaning down Fang licks over Dash's small muzzle, without another word he starts to pad out the door. Shockingly the fox kit follows him, eventually attempting to walk directly underneath the big wolf. You swear you almost hear a deep snicker from your alpha, hopefully you made the right choice in allowing those two to spend more time together, then again Fang promised to keep Dash safe and that's enough for you.";
+		say "     Fang's face is a mixture of shock and rage, 'Nothing will happen to you... your mine.' While he started out in a loud growl, the last part is said softly. You tell your alpha that their is no way to know what the future holds, you can't hide the choked up sound in your voice, at the sound of you upset Dash starts to fight once again even going as far as to dig his tiny teeth into the massive paw of the canine. Fang lets the small fox go who sprints quickly to your side checking you over, the whole time the wolf watches the two of you. Without warning you feel your alphas large body rub up against you as he bumps you with his head. 'Nothing will happen to you... or to the pup, no matter what I will keep him safe... thats a promise.'";
+		say "     Leaning down Fang licks over Dash's small muzzle, without another word he starts to pad out the door. Shockingly the fox kit follows him, eventually attempting to walk directly underneath the big wolf. You swear you almost hear a deep snicker from your alpha, hopefully you made the right choice in allowing those two to spend more time together, then again Fang promsied to keep Dash safe and thats enough for you.";
 		now FangDashRel is 2;
 	else:
 		LineBreak;
@@ -237,7 +237,7 @@ instead of sniffing the skunk kit:
 	say "[PeppyScent]";
 
 instead of sniffing Peppy:
-	say "[PeppyScent]"
+	say "[PeppyScent]";
 
 to say PeppyScent:
 	say "     The little guy smells of skunk, but that doesn't seem to bother you much at all.";
@@ -424,4 +424,4 @@ Section 2.4 - Skunk Kit Ending
 
 [For endings, see the 'Skunkbeast Lord' file by Stripes.]
 
-Baby Pets end here.
+Baby Pets ends here.

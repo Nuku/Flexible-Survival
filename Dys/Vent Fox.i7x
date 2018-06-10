@@ -1,7 +1,7 @@
 Version 2 of Vent Fox by Dys begins here.
 [VERSION 2:                                                          ]
 [v2.0 Adds Dominant Vent scenes                                      ]
-[v2.1 He's an actual NPC now. No need to the quotes in the desc.     ]
+[v2.1 He's an actual NPC now. No need to the quotes in the desc      ]
 
 "Adds a random encounter in the mall, and an NPC that can be interacted with."
 
@@ -13,7 +13,7 @@ Version 2 of Vent Fox by Dys begins here.
 [ 100 = didn't help                                                  ]
 [ 101 = let Vent get raped by Logan                                  ]
 
-[ VentFluidAmount - The amount of bodily fluids Vent produces.       ]
+[ VentFluidAmount - The amount of bodily fluids Vent produces        ]
 [  0 = average                                                       ]
 [  1 = more than average                                             ]
 [  2 = way more than average                                         ]
@@ -23,7 +23,7 @@ Version 2 of Vent Fox by Dys begins here.
 [  0 = never interacted                                              ]
 [  1 = one interaction. Unlocks scenes where the fox dominates       ]
 [  2 = two interactions. Unlocks kinkier scenes with the fox         ]
-[  3 = three+ interactions. Unlocks extreme content with fox.        ]
+[  3 = three+ interactions. Unlocks extreme content with fox         ]
 
 [ VentOviAmount - amount of oviposition to occur in supported scenes ]
 [  0 = none                                                          ]
@@ -38,7 +38,7 @@ Version 2 of Vent Fox by Dys begins here.
 [  3 = marking at any time, especially during penetration            ]
 
 [ VentFoxLastFed tracks how many turns have passed since Vent        ]
-[ was last fed.                                                      ]
+[ was last fed                                                       ]
 
 [ VentDomSize is the body size for Vent to take during dominant sex. ]
 [   3 = Average Latex Fox sized                                      ]
@@ -180,7 +180,7 @@ to say VentDescription:
 	say "     Vent is now only a bit smaller than a horse normally, however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball sized balls.";
 
 to say VentScent:
-	say "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can also pick up faint hints of a foxy musk as well.";
+	say "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can pick up faint hints of a foxy musk as well.";
 
 instead of conversing the Vent:
 	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
@@ -1181,40 +1181,46 @@ Chapter 3 - Watersports
 
 to say VentAnalWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 7 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2 succeeds):
-		if VentFluidAmount is 0: [Average levels of urine.]
-			say "     With his knot still engorged, Vent let's out a purr before you feel a stream of fluid entering your bowels. It takes you just a moment to realize that he's pissing inside of you, marking you as his. The hot, yellow liquid latex fills you even further, making you swell a bit larger before that flow stops as well. Seemingly happy with his work, your foxy friend resolves to simply cuddle with you as the two of you wait for his knot to deflate enough for him to pull out.";
-		else if VentFluidAmount is 1: [Above average levels of urine.]
-			say "     Vent pees in your bum while he's knotted to you, inflating you a decent bit.";
-		else if VentFluidAmount is 2: [Excessive levels of urine.]
-			say "     Vent pees in your butt while he's knotted to you, distending your belly with an excessive amount of piss.";
-		else if VentFluidAmount is 3: [Extreme levels of urine.]
-			say "     Vent takes a leak in your ass, making you look like you're ready to give birth.";
+		if VentDomSize is 3: [Average sized Vent]
+			if scalevalue of player is 3: [Average sized player]
+				if VentFluidAmount is 0: [Average levels of urine.]
+					say "     With his knot still engorged, Vent lets out a purr before you feel a hot stream of fluid entering your bowels. It takes you just a moment to realize that he's pissing inside of you, marking you as his. The hot, yellow liquid latex fills you even further, making you swell a bit larger. It's acrid scent seems to permeate from your form, the heady smell making you moan blissfully before that flow finally starts to dwindle as well. Seemingly happy with his work, your foxy friend decides he's simply going to cuddle with you for now as the two of you wait for his knot to deflate enough for him to pull out.";
+				else if VentFluidAmount is 1: [Above average levels of urine.]
+					say "     Vent pees in your bum while he's knotted to you, inflating you a decent bit.";
+				else if VentFluidAmount is 2: [Excessive levels of urine.]
+					say "     Vent pees in your butt while he's knotted to you, distending your belly with an excessive amount of piss.";
+				else if VentFluidAmount is 3: [Extreme levels of urine.]
+					say "     Vent takes a leak in your ass, making you look like you're ready to give birth.";
 	else: [No WS.]
-		if VentDomSize is 3 and scalevalue of player > 1: [Vent is average sized and player is not tiny]
-			say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your respective highs. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilled cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
-		else if VentDomSize is 3 and scalevalue of player is 1: [Vent is average sized and player is tiny]
-			say "     With your tiny form still stuck on his knot and your belly swollen with his seed, Vent places a relatively large paw on your chest, holding you gently as the two of you come down from your bliss. He gives you a few gentle licks with his rubbery tongue as you both wait for his knot to come down. You can't help but relax from the feeling of comfort you get from being with your latex friend.";
-		else if VentDomSize is 4 and scalevalue of player > 2: [Vent is large and player is not small]
+		if VentDomSize is 3 and scalevalue of player > 2: [Vent is average sized and player is not tiny]
+			say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your respective highs. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilled cum, darting his extendable tongue out of his mouth to lap up the mess[if VentFluidAmount > 1], making sure to lick along your swollen belly as well[end if]. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that washes over you as you relax in his embrace.";
+		else if VentDomSize is 3 and scalevalue of player <= 2: [Vent is average sized and player is tiny]
+			say "     With your tiny form still stuck on his knot and your belly [if VentFluidAmount is 0]swollen[else if VentFluidAmount is 1]obscenely filled[else if VentFluidAmount is 2]grotesquely stuffed and drooping[else]so filled[end if] with his seed[if VentFluidAmount is 3] that it's more than twice the size of your entire form[end if], Vent places a relatively large paw on your [if VentFluidAmount > 2]chest[else]stomach[end if], holding you gently as the two of you come down from your bliss. He gives you a few gentle licks with his rubbery tongue as you both wait for his knot to shrink. You can't help but relax from the feeling of comfort you get from being with your latex friend.";
+		else if VentDomSize is 4 and scalevalue of player > 3: [Vent is large and player is not small]
 			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
-		else if VentDomSize is 4 and scalevalue of player <= 2: [Vent is large and player is small]
+		else if VentDomSize is 4 and scalevalue of player <= 3: [Vent is large and player is small]
 			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
-		else if VentDomSize is 5 and scalevalue of player > 3: [Vent is huge and player is not average]
+		else if VentDomSize is 5 and scalevalue of player > 4: [Vent is huge and player is not average]
 			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
-		else if VentDomSize is 5 and scalevalue of player <= 3: [Vent is huge and player is average]
+		else if VentDomSize is 5 and scalevalue of player <= 4: [Vent is huge and player is average]
 			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
 
 to say VentPostSexWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):
-		if VentFluidAmount is 0: [average pee]
-			say "     Now that his tool is free from your hole, Vent circles you a few times. You watch as he slowly stalks around you before you realize what, exactly, he's going to do. True to your assumptions, he hikes up his leg and releases a stream of yellow latex over you, coating you in his urine. You can't help but let out a moan as the fox marks you. As he's peeing, he shifts his body so that he's standing over your body, peeing up into your face. Desiring to taste his acrid fluids, you open your mouth, and he presses his length into you, the last bit of his urine filling of your mouth. You savor its heady, bitter taste for a few moments before you swallow it down.";
-		else if VentFluidAmount is 1: [more pee]
-			say "     Vent pees on your body to mark you as his.";
-		else if VentFluidAmount is 2: [excessive pee]
-			say "     Vent pees on your body to mark you as his.";
-		else:
-			say "     Vent pees on your body to mark you as his.";
+		if player is similar in size to DomVent: [Vent is similar in size to the player]
+			say "     <placeholder junk.>";
+		else: [Player is significantly smaller than Vent]
+			say "     <smaller placeholder junk.>";
 
-Section 6 - Dev Tools
+Section 6 - Functions
+
+Definition: A person (called x) is similar in size to DomVent:
+	if x is the player:
+		if scalevalue of x >= VentDomSize:
+			yes;
+	no;
+
+Section 7 - Dev Tools
 
 LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.

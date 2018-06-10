@@ -17,7 +17,7 @@ Chapter - Compatibility
 Section - Inclusions
 
 Include Basic Screen Effects by Emily Short.
-Include Glulx Text Effects by Emily Short.
+Include Glulx Text Effects by Emily Short. 
 Include Basic Hyperlinks by Emily Short.
 Include Text Capture by Eric Eve.
 
@@ -60,13 +60,13 @@ Object hyperlinking something is an activity on objects.
 
 Before printing the name of a thing (called item):
 	Say "[o]";
-
+	
 After printing the name of a thing (called item):
 	Say "[x]";
-
+	
 Before printing the plural name of a thing (called item):
 	Say "[o]";
-
+	
 After printing the plural name of a thing (called item):
 	Say "[x]";
 
@@ -134,12 +134,12 @@ SECTION hyperlink command prompt
 This is the set hyperlink command prompt rule:
 	let count of exits be the number of viable directions;
 	now the command prompt is "[o]Look[x] | [o]Inventory[x] | [o]Menu[x] | [o]Exits[x][line break][line break]>>" (A);
-
+	
 	[MAIN LINE    <----------------------------------------------------------------------------------------------------]
 
 To set off echo line event:
 	(- if(glk_gestalt(gestalt_LineInputEcho, 0)) glk_set_echo_line_event(gg_mainwin,0); -)
-
+	
 After reading a command:
 	if hyperlink clicked is false:
 		if the result of gestalt of LineInputEcho is not 0:
@@ -207,7 +207,7 @@ Direction hyperlink highlighting is initially true.
 
 Understand "[a direction]" as going. Understand "[an open door]" as entering.
 
-Direction hyperlinking something is an activity.
+Direction hyperlinking something is an activity. 
 
 Rule for printing the name of a direction (called dir) while looking (this is the Hyperlink Interface highlight directions while looking rule):
 	carry out the direction hyperlinking activity with dir.
@@ -238,9 +238,9 @@ Parser highlighting is initially false.
 To say as the parser:
 	now we-are-parser-speaking is true;
 	set the text style for the style of parser-word.
-
+	 
 To say as normal:
-	now we-are-parser-speaking is false;
+	now we-are-parser-speaking is false; 
 	reset styles with the style of parser-word.
 
 
@@ -252,44 +252,44 @@ Before printing a parser error when parser highlighting is true (this is the Hyp
 	say "[as the parser]".
 
 After printing a parser error when parser highlighting is true (this is the Hyperlink Interface after printing a parser error rule):
-	say "[as normal]".
+	say "[as normal]". 
 
 
 Chapter - Hyperlink Types
 
 A hyperlink type is a kind of thing. object-word is a hyperlink type. direction-word is a hyperlink type. topic-word is a hyperlink type. parser-word is a hyperlink type.
 
-A hyperlink emphasis is a kind of value. The plural of hyperlink emphasis is hyperlink emphases.
+A hyperlink emphasis is a kind of value. The plural of hyperlink emphasis is hyperlink emphases. 
 
-A hyperlink type has a hyperlink emphasis called style.
+A hyperlink type has a hyperlink emphasis called style. 
 
-The active style is a hyperlink emphasis that varies.
+The active style is a hyperlink emphasis that varies. 
 
-we-are-parser-speaking is initially false.  [It's possible to have, say, an emphasized object hyperlink within a parser error message; this variable keeps track of whether we need to return to the parser style after switching off another hyperlink style.]
+we-are-parser-speaking is initially false. [It's possible to have, say, an emphasized object hyperlink within a parser error message; this variable keeps track of whether we need to return to the parser style after switching off another hyperlink style.]
 
 Capturing-depth is a number that varies. Capturing-depth is initially 0.
 
 To say o:
 	increment capturing-depth;
 	if capturing-depth is 1 and object hyperlink highlighting is true:
-		set the text style for the style of object-word;
+		set the text style for the style of object-word; 
 		now the active style is the style of object-word;
 		start HI hyperlink capture.
-
+	
 To say t:
 	increment capturing-depth;
 	if capturing-depth is 1 and topic hyperlink highlighting is true:
-		set the text style for the style of topic-word;
+		set the text style for the style of topic-word; 
 		now the active style is the style of topic-word;
 		start HI hyperlink capture;
-
-To say d:
+ 
+To say d: 
 	increment capturing-depth;
 	if capturing-depth is 1 and direction hyperlink highlighting is true:
 		set the text style for the style of direction-word;
 		now the active style is the style of direction-word;
 		start HI hyperlink capture.
-
+	 
 To say x:
 	decrement capturing-depth;
 	if capturing-depth is 0:
@@ -324,7 +324,7 @@ To say endlink:
 		choose row ( HI-hyperlinks-counter ) in the Table of Hyperlink Commands;
 		now replacement entry is "[cap-text]";
 
-
+	         
 Section - Glulx Style Definitions
 
 The hyperlink emphases are hyperlink-color1-style, hyperlink-color2-style, hyperlink-bold-style, hyperlink-italics-style, hyperlink-fixedwidth-style, and hyperlink-no-style.
@@ -336,7 +336,7 @@ Table of User Styles (continued)
 style name	fixed width	font weight	relative size	color
 special-style-1	false	bold-weight	0	"#0000FF"
 special-style-2	false	bold-weight	0	"#339933"
-
+ 
 
 
 
@@ -360,31 +360,31 @@ To reset styles with (val - a hyperlink emphasis):
 		say variable letter spacing;
 	else:
 		say roman type;
-	if we-are-parser-speaking is true, say as the parser.
+	if we-are-parser-speaking is true, say as the parser. 
 
 
 Chapter - Changing Style
 
 Understand the command "hyperlinks" as something new.
-Setting the hyperlink emphasis is an action out of world applying to nothing. Understand "hyperlinks" as setting the hyperlink emphasis.
-
+Setting the hyperlink emphasis is an action out of world applying to nothing. Understand "hyperlinks" as setting the hyperlink emphasis. 
+ 
 tempstyles is a list of hyperlink emphases that varies.
 
-Carry out setting the hyperlink emphasis (this is the Hyperlink Interface carry out setting hyperlink emphasis rule):
+Carry out setting the hyperlink emphasis (this is the Hyperlink Interface carry out setting hyperlink emphasis rule): 
 	carry out the setup hyperlink emphasis activity;
 
 Setup hyperlink emphasis is an activity.
 
-Rule for setup hyperlink emphasis (this is the setup hyperlink emphasis rule):
-	let mychar be 1;
+Rule for setup hyperlink emphasis (this is the setup hyperlink emphasis rule): 
+	let mychar be 1;   
 	[Keep track of which menu number is assigned to each of the four possible options.]
 	let object-number be 0;
 	let direction-number be 0;
 	let topic-number be 0;
 	let parser-number be 0;
 	while mychar is not 0:
-		clear the screen;
-		let menu-counter be 0;
+		clear the screen;  
+		let menu-counter be 0; 
 		say "[story title] makes use of [emphasiz]ed hyperlinks. It is [if hyperlinks required is true]necessary[else]recommended[end if] that your interpreter program correctly displays them with some form of emphasis. Type a number below to cycle through display options until you find one that shows clearly on your system." (A);
 		say line break;
 		if object hyperlink highlighting is true:
@@ -441,7 +441,7 @@ Rule for setup hyperlink emphasis (this is the setup hyperlink emphasis rule):
 			advance style with parser-word;
 		otherwise if mychar is 9:
 			clear the screen;
-			try setting screen reader mode;
+			try setting screen reader mode; 
 			say "Press any key to continue." (I);
 			wait for any key;
 			now mychar is 0;
@@ -451,8 +451,8 @@ Rule for setup hyperlink emphasis (this is the setup hyperlink emphasis rule):
 		now pre-game hyperlink setting is false;
 		do nothing;
 	otherwise:
-		try looking.
-
+		try looking. 
+	  
 To advance style with (kwtype - a hyperlink type):
 	now the style of kwtype is the hyperlink emphasis after the style of kwtype.
 
@@ -462,16 +462,16 @@ Chapter - Screen Reader Mode
 
 [Screen reader mode does not have much effect by itself; it's mainly provided as a hook for authors with games containing other visual-oriented features. For instance, Blue Lacuna's backwards messages are described in prose rather than presented literally if screen reader mode is true.]
 
-Screen reader mode is a truth state that varies.
+Screen reader mode is a truth state that varies. 
 
 Setting screen reader mode is an action out of world. Understand "screenreader" or "screen reader" as setting screen reader mode.
-
+	
 Carry out setting screen reader mode (this is the Hyperlink Interface carry out setting screen reader mode rule):
 	if screen reader mode is true:
 		now screen reader mode is false;
 		say "Screen reader mode has been deactivated." (A);
 	else:
-		now screen reader mode is true;
+		now screen reader mode is true; 
 		say "Screen reader mode has been activated. [story title] uses [emphasiz]ed hyperlinks to indicate important words you may type to advance the story. Your reader software may put a [recogniz]able vocal stress on [emphasiz]ed words like [o]this[x] one. If it doesn't, you can type [o]things[x] from any prompt for a list of nearby objects, or type [d]exits[x] for a list of nearby directions. Type [o]hyperlinks[x] to adjust the style of hyperlinks, or type screen reader with no space to toggle this mode on or off." (B).
 
 Section - Exits
@@ -483,7 +483,7 @@ Understand "exits" as listing exits. Listing exits is an action out of world app
 Definition: a direction (called thataway) is viable if the room thataway from the location is a room.
 
 Carry out listing exits (this is the Hyperlink Interface carry out listing exits rule):
-	let count of exits be the number of viable directions;
+	let count of exits be the number of viable directions; 
 	if the count of exits is 0, say "[It] [seem] there [are] nowhere to go." (A);
 	otherwise say "From here, [if the number of viable directions is 1]the only way out [are] to[otherwise][we] [can go] to[end if] [a list of viable directions]." (B).
 
@@ -501,7 +501,7 @@ Definition: a thing is other if it is not the player.
 
 
 Chapter - Beginning Play
-
+	 
 Section - Hyperlink Interface setup rule
 
 pre-game hyperlink setting is a truth state that varies. pre-game hyperlink setting is true.
@@ -511,12 +511,12 @@ When play begins (this is the Hyperlink Interface setup trigger rule):
 		now pre-game hyperlink setting is false;
 		continue the action;
 	clear the screen;
-	let mychar be 1;
+	let mychar be 1; 
 	say "Welcome to [o][story title][x][if release number > 0], release [release number][end if].[paragraph break]If no words above were [color]ed or [emphasiz]ed, press K now.[paragraph break]Press [t]N[x] to begin from the beginning or [t]R[x] to restore an existing story." (A);
 	while mychar is not 0:
-		now mychar is single-character;
+		now mychar is single-character; 
 		if mychar is 82 or mychar is 114: [ r or R: restore ]
-			restore the game;
+			restore the game;  
 		if mychar is 75 or mychar is 107: [ k or K: hyperlink ]
 			carry out the setup hyperlink emphasis activity;
 			now mychar is 0;
@@ -524,16 +524,16 @@ When play begins (this is the Hyperlink Interface setup trigger rule):
 			now mychar is 0;
 	clear the screen;
 	say "[line break][line break][line break]";
-	now pre-game hyperlink setting is false.
-
+	now pre-game hyperlink setting is false.  
+ 
 To restore the game: (- RESTORE_THE_GAME_R(); -).
 
 
 Chapter - Error Reporting
 
-Section - Not a verb I recognise
+Section - Not a verb I recognize
 
-Rule for printing a parser error when the latest parser error is the not a verb I recognise error (this is the Hyperlink Interface not a verb I recognise rule) : say "[as the parser]That's neither a verb I [recogniz]e nor a hyperlink you can use right now[as normal]." (A). [Acknowledge that the player may be trying to type a hyperlink, not just a verb.]
+Rule for printing a parser error when the latest parser error is the not a verb I recognize error (this is the Hyperlink Interface not a verb I recognize rule) : say "[as the parser]That's neither a verb I [recogniz]e nor a hyperlink you can use right now[as normal]." (A). [Acknowledge that the player may be trying to type a hyperlink, not just a verb.]
 
 
 Chapter - Messages
@@ -549,9 +549,9 @@ For showing the hyperlink introduction text (this is the Hyperlink Interface sho
 
 To say emphasiz: if the American dialect option is active, say "emphasiz"; else say "emphasis". To say Emphasiz: if the American dialect option is active, say "Emphasiz"; else say "Emphasis".
 
-To say color: if the American dialect option is active, say "color"; else say "colour". To say Color: if the American dialect option is active, say "Color"; else say "Colour".
+To say color: if the American dialect option is active, say "color"; else say "color". To say Color: if the American dialect option is active, say "Color"; else say "color".
 
-To say recogniz: if the American dialect option is active, say "recogniz"; else say "recognis". To say Recogniz: if the American dialect option is active, say "Recogniz"; else say "Recognis".
+To say recogniz: if the American dialect option is active, say "recogniz"; else say "recogniz". To say Recogniz: if the American dialect option is active, say "Recogniz"; else say "recogniz".
 
 To decide what number is the number of active hyperlink systems:
 	let ctr be 0;
@@ -605,7 +605,7 @@ This produces output like the following (where emphasis is marked with asterisks
 
 In this situation, the text between the [o] and the [x] is automatically executed, so it is possible to write item discriptions like so:
 
-	Apple is a thing in The Office. The Description is "It's an apple. [Paragraph Break]Actions: '[o]look apple[x ]', '[o]take apple[x]', or '[o]eat apple[x]'".   Apple is edible.
+	Apple is a thing in The Office. The Description is "It's an apple. [Paragraph Break]Actions: '[o]look apple[x ]', '[o]take apple[x]', or '[o]eat apple[x]'". Apple is edible. 
 
 If you want scenery items to be automatically emphasized, you can manually set them as hyperlinked, or include a line like the following (which would add emphasis to "desk" in the final line above):
 
@@ -624,7 +624,7 @@ Automatic emphasis normally occurs when looking, opening or taking inventory. If
 	The Hyperlink Interface highlight objects when looking rule is not listed in any rulebook.
 
 Conversely, if you want object highlighting during other times, you can use code like this:
-
+	
 	Rule for printing the name of a thing (called item) while asking which do you mean:
 		carry out the object hyperlinking activity with item.
 
@@ -667,11 +667,11 @@ The four modes are object-word, direction-word, topic-word, and parser-word. Pos
 To change the Glulx colors, you can adjust g-color1 and g-color2 by amending the Table of Common Color Values-- see the documentation for "Glulx Text Effects" by Emily Short for more information.
 
 	Table of Common Color Values (amended)
-	glulx color value	assigned number
+	glulx color value	assigned number   
 	g-color1	15645627
 
 All messages the extension prints are customizable responses. Use the RESPONSES testing command to view them, then adjust with a line like the following:
-
+	
 	The setup hyperlink emphasis rule response (B) is "This is what [o]objects[x] look like."
 
 Section: Screen Reader Mode
@@ -702,7 +702,7 @@ The flexibility of Hyperlink Interface means it can be used for multiple purpose
 
 	Object hyperlink highlighting is false. The style of direction-word is hyperlink-bold-style.
 
-	Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns.
+	Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns. 
 
 	After looking: try listing exits.
 
@@ -716,7 +716,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	Include Hyperlink Interface by Leonardo Boselli. Use American dialect.
 
-	Topic hyperlink highlighting is true. Parser highlighting is true. Hyperlinks required is true.
+	Topic hyperlink highlighting is true. Parser highlighting is true. Hyperlinks required is true. 
 
 	After printing the banner text: say "First time players type ABOUT for more instructions.".
 
@@ -726,29 +726,29 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	Carry out hyperlink-asking:
 		let subject be a random other person in the location;
-		say "[message of noun][paragraph break]".
-
-	A speakable is a kind of thing. A speakable has some text called the message. Instead of doing anything other than hyperlink-asking to a speakable: say "That's merely a topic of conversation.". Does the player mean doing something other than hyperlink-asking to a speakable: it is very unlikely.
+		say "[message of noun][paragraph break]".	
+ 
+	A speakable is a kind of thing. A speakable has some text called the message. Instead of doing anything other than hyperlink-asking to a speakable: say "That's merely a topic of conversation.". Does the player mean doing something other than hyperlink-asking to a speakable: it is very unlikely. 
 
 	Section - Exits
 
 	Every room has some text called the exits text.
 
-	First carry out listing exits:
+	First carry out listing exits: 
 		unless the exits text of location is "":
 			say the exits text of location;
 			say line break;
 		stop the action.
 
-	After looking: try listing exits.
+	After looking: try listing exits. 
 
 	Section - Instructions
 
 	Understand "about" as requesting the about text. Requesting the about text is an action out of world applying to nothing. Carry out requesting the about text: carry out the showing the hyperlink introduction text activity.
-
+  
 	Section - Game
 
-	Gnome's Garden is a room with description "Brightly pastel flowers dot this well-kept garden, bordering a button-cute shack with whimsical stylings on the edge of the river, which is spanned here by a [drawbridge]." and exits text "A [d]path[x] of cherry-colored bricks winds off towards some distant hills, while the [if shack door is open][d]door[x] to the gnome's shack stands open[else]door to the gnome's shack is closed[end if][if drawbridge is open]. The lowered drawbridge spans the river to a treasure-strewn [d]wonderland[x][end if].". Understand "path" as west when location is Gnome's Garden.
+	Gnome's Garden is a room with description "Brightly pastel flowers dot this well-kept garden, bordering a button-cute shack with whimsical stylings on the edge of the river, which is spanned here by a [drawbridge]." and exits text "A [d]path[x] of cherry-colored bricks winds off towards some distant hills, while the [if shack door is open][d]door[x] to the gnome's shack stands open[else]door to the gnome's shack is closed[end if][if drawbridge is open]. The lowered drawbridge spans the river to a treasure-strewn [d]wonderland[x][end if].". Understand "path" as west when location is Gnome's Garden. 
 
 	A stone table is a hyperlinkless fixed in place supporter in Gnome's Garden. On the table is a copy of the Daily Gnomon with description "You can't read gnomish, but you can make a great gnocchi." The hyperlink of the Daily Gnomon is "copy". The button-cute shack is scenery in Gnome's Garden. Instead of entering shack, try going north.
 
@@ -756,15 +756,15 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	The drawbridge is a closed unopenable door. "[if closed]The drawbridge is raised, allowing passage by a steady stream of tiny steamboats, but preventing access to the treasure-strewn wonderland on the other side of the river[else]Wee steamboats queue impatiently behind the lowered drawbridge[end if].". It is east of Gnome's Garden and west of the Treasure-Strewn Wonderland. The description of drawbridge is "[if closed]If only you could find a way to lower it and cross the river![else]The treasure-strewn wonderland across the river awaits![end if]".
 
-	The cherry-brick path is a backdrop. It is everywhere. Understand "cherry/cherry-colored/colored" as path.
+	The cherry-brick path is a backdrop. It is everywhere. Understand "cherry/cherry-colored/colored" as path. 
 
 	Golden Pasture is a room with description "The grass here is thick and heavy, sparkling with gold and amber hues." and exits text "Only the [d]path[x] back to the garden is clear." Golden Pasture is west of Gnome's Garden. Understand "path" as east when location is Golden Pasture.
 
 	The gnome is a person in Golden Pasture. "A [gnome] perches on a checkered toadstool here, stroking his beard in relaxed contentment." The description is "Dressed in brightly colored clothes, he has the cheerful air of someone on holiday.".
 
-	After examining the gnome, say "You could ask him about his [t]dragon[x], the [t]weather[x], or the [t]drawbridge[x].".
+	After examining the gnome, say "You could ask him about his [t]dragon[x], the [t]weather[x], or the [t]drawbridge[x].". 
 
-	A pet dragon creature is a female animal in Golden Pasture. "Clinging anxiously to the gnome's cap is a tiny bronze [o]creature[x].". The description is "Looking closer, you see she is a beautiful baby dragon. She regards you [if we have hyperlink-asked the personality topic]with a friendly twinkle in her eye[else]fearfully, clutching the gnome's hat with an almost comically tight grip[end if]."
+	A pet dragon creature is a female animal in Golden Pasture. "Clinging anxiously to the gnome's cap is a tiny bronze [o]creature[x].". The description is "Looking closer, you see she is a beautiful baby dragon. She regards you [if we have hyperlink-asked the personality topic]with a friendly twinkle in her eye[else]fearfully, clutching the gnome's hat with an almost comically tight grip[end if]."  
 
 	The dragon topic is a speakable with message "'You like her?' the gnome says fondly, petting the dragon which watches you nervously. 'She's named [t]Quinnabel[x].'".
 
@@ -776,7 +776,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	The weather topic is a speakable with message "'Looks like another day of beautiful sunshine again,' he grumbles.".
 
-	The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic.
+	The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic. 
 
 	The description of Cozy Shack is "Strewn with bric-a-brac; your eyes are drawn immediately to the prominent [lever] on the riverward wall.". The exits text of Cozy Shack is "The only place to go is back [outside].". Instead of going outside in Cozy Shack, try going south. Instead of exiting in Cozy Shack, try going south.
 

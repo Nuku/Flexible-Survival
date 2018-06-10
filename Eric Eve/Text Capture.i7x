@@ -272,13 +272,13 @@ The test "if text capturing is active" can be used to determining whether or tex
 
 LIMITATIONS
 
-1.  The extension uses only a single text buffer, and each time a start capturing text/output something/stop capturing text sequence is executed, the buffer contents will be overwritten. You can get round this by copying the contents of the buffer to an indexed text variable, as shown above.
+1. The extension uses only a single text buffer, and each time a start capturing text/output something/stop capturing text sequence is executed, the buffer contents will be overwritten. You can get round this by copying the contents of the buffer to an indexed text variable, as shown above.
 
-2.  The text capture buffer can hold a maximum of 256 characters, so it should be used only for fairly short pieces of text, not huge amounts of it all at once. Overrunning the buffer will cause a run-time error in Z-Code games, and the loss of all characters beyond the 256th in Glulx games. If a larger buffer is needed, change CAPTURE_BUFFER_LEN to something larger. You can do this with the option "Use maximum capture buffer length of at least 512" (or whatever other buffer size you want).
+2. The text capture buffer can hold a maximum of 256 characters, so it should be used only for fairly short pieces of text, not huge amounts of it all at once. Overrunning the buffer will cause a run-time error in Z-Code games, and the loss of all characters beyond the 256th in Glulx games. If a larger buffer is needed, change CAPTURE_BUFFER_LEN to something larger. You can do this with the option "Use maximum capture buffer length of at least 512" (or whatever other buffer size you want).
 
-3.  To make this extension work under Glulx, character number 255 is used as an end-of-string marker. If for any reason the output between start capturing text and end capturing text includes this character, say captured text will truncate the string just before it. This is unlikely to be a problem in the vast majority of games.
+3. To make this extension work under Glulx, character number 255 is used as an end-of-string marker. If for any reason the output between start capturing text and end capturing text includes this character, say captured text will truncate the string just before it. This is unlikely to be a problem in the vast majority of games.
 
-4.  Beware of using certain debugging verbs such as RULES or RULES ALL whenever text capturing might become active, since their output will be captured as well, almost certainly leading to overflow of the text capture buffer.
+4. Beware of using certain debugging verbs such as RULES or RULES ALL whenever text capturing might become active, since their output will be captured as well, almost certainly leading to overflow of the text capture buffer.
 
 
 Example: * Intelligent Putting - Using text capture to improve implicit take messages.

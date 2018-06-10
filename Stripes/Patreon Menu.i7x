@@ -36,14 +36,15 @@ carry out supersponsor:
 		say "[if sshh is true](9) Hard hat - Taken[else][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
 		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
+		say "[link](12) Claim all the pets![as]12[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-10)> ";
+			say "Choice? (0-12)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 11:
+			if calcnumber >= 0 and calcnumber <= 12:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 11.";
+				say "Invalid choice. Pick from 0 to 12.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
@@ -169,6 +170,10 @@ carry out supersponsor:
 			else:
 				say "     You release the iron clad defense of your mind.";
 				remove "Sanity Saver" from feats of player;
+		else if calcnumber is 12:
+			repeat with petget running through pets:
+				now petget is tamed;
+			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
 		else:
 			now trixieexit is 1;
 		LineBreak;
@@ -196,7 +201,7 @@ to sslvl12:
 Table of Game Objects (continued)
 name	desc	weight	object
 "dildo club"	"A big, bright purple dildo. It's about three feet long and has a handle on it for easy swinging."	5	dildo club
-"banana peel gun"	"A colourful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
+"banana peel gun"	"A colorful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
 "orange shield"	"A round shield made of burnished bronze with an red-orange 'P' emblem on it."	6	orange shield
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
@@ -206,7 +211,7 @@ dildo club is an armament. It is part of the player. It has a weapon "[one of]yo
 the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
 [Banana Peel Gun]
-banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colourful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
+banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
 
 the scent of the banana peel gun is "The odd toy gun smells unsurprisingly like banana pudding. Unfortunately, none can be found inside."
 

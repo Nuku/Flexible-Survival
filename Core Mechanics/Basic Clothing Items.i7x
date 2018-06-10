@@ -9,7 +9,7 @@ Version 1 of Basic Clothing Items by Core Mechanics begins here.
 When Play begins:
 	[testing drop of all items in the library]
 	[
-	add { "ripped jeans", "black jeans", "sturdy jeans", "skinny jeans", "hot pants", "grey pants", "camo pants", "jogging pants", "bermuda shorts", "black miniskirt", "pencil skirt", "floral skirt" } to invent of Grey Abbey Library;
+	add { "ripped jeans", "black jeans", "sturdy jeans", "skinny jeans", "hot pants", "gray pants", "camo pants", "jogging pants", "bermuda shorts", "black miniskirt", "pencil skirt", "floral skirt" } to invent of Grey Abbey Library;
 	add { "centaur cum", "centaur cum", "centaur cum", "centaur cum", "centaur cum", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn", "behemoth horn" } to invent of Grey Abbey Library;
 	]
 	[not sure why setting the plural boolean does not work for the pants, but this should (for now) fix that after the fact, at the same start]
@@ -18,19 +18,19 @@ When Play begins:
 	now plural of sturdy jeans is true;
 	now plural of skinny jeans is true;
 	now plural of hot pants is true;
-	now plural of grey pants is true;
+	now plural of gray pants is true;
 	now plural of camo pants is true;
 	now plural of jogging pants is true;
 	now plural of bermuda shorts is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "ripped jeans"	"A pair of jeans with some rips and slashes in them. Before all of this started, their look might have been a fashion statement, but these days one usually ends up with ripped clothing after a fight."	1	ripped jeans
 "black jeans"	"A pair of solid black jeans. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations."	1	black jeans
 "sturdy jeans"	"A pair of sturdy jeans in the typical blue color of that type of pants. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations."	1	sturdy jeans
 "skinny jeans"	"A pair of jeans made from thin and fairly flexible material. They look like they'd be snug just about everywhere on any person that can wiggle their way into such a tight garment."	1	skinny jeans
 "hot pants"	"A pair of red hot pants, barely long enough to cover someone's thighs even to about a third."	1	hot pants
-"grey pants"	"A pair of grey cloth pants, most likely belonging to a business suit."	1	grey pants
+"gray pants"	"A pair of gray cloth pants, most likely belonging to a business suit."	1	gray pants
 "camo pants"	"A pair of camo pants in various shades of green. Clearly, these belong to the uniform of a soldier of the US army."	1	camo pants
 "jogging pants"	"A pair of jogging pants made from fairly soft and stretchy fabric."	1	jogging pants
 "bermuda shorts"	"A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer."	1	bermuda shorts
@@ -103,18 +103,18 @@ The descmod of hot pants is "A pair of red hot pants cover your hips and legs. T
 The slot of hot pants is "waist".
 the scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
 
-grey pants is a grab object.
-grey pants is equipment.
+gray pants is a grab object.
+gray pants is equipment.
 It is not temporary.
-The plural of grey pants is true.
-The taur-compatible of grey pants is false.
-The size of grey pants is 3.
-The AC of grey pants is 0.
-The effectiveness of grey pants is 0.
-The placement of grey pants is "waist".
-The descmod of grey pants is "A pair of grey pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-The slot of grey pants is "waist".
-the scent of grey pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+The plural of gray pants is true.
+The taur-compatible of gray pants is false.
+The size of gray pants is 3.
+The AC of gray pants is 0.
+The effectiveness of gray pants is 0.
+The placement of gray pants is "waist".
+The descmod of gray pants is "A pair of gray pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
+The slot of gray pants is "waist".
+the scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
 
 camo pants is a grab object.
 camo pants is equipment.
@@ -138,7 +138,7 @@ The size of jogging pants is 3.
 The AC of jogging pants is 0.
 The effectiveness of jogging pants is 0.
 The placement of jogging pants is "waist".
-The descmod of jogging pants is "A pair of jogging pants cover your hips and legs.  They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
+The descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
 The slot of jogging pants is "waist".
 the scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
 
@@ -202,12 +202,12 @@ When Play begins:
 	add { "black t-shirt", "white t-shirt", "maroon pullover", "zephyr shirt", "camo shirt", "sleeveless shirt", "mesh shirt" } to invent of Grey Abbey Library;
 ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "black t-shirt"	"A simple black t-shirt, without any pattern or frills to it."	1	black t-shirt
 "white t-shirt"	"A simple white t-shirt, without any pattern or frills to it"	1	white t-shirt
 "maroon pullover"	"A fairly large maroon pullover. It is perfect to keep its wearer warm."	1	maroon pullover
-"zephyr shirt"	"A simple dark grey t-shirt, with a light blue stylized Z covering the middle of its chest. Depending on whom you ask, it either makes the wearer look like a superhero, or a corporate drone of Zephyr."	1	zephyr shirt
+"zephyr shirt"	"A simple dark gray t-shirt, with a light blue stylized Z covering the middle of its chest. Depending on whom you ask, it either makes the wearer look like a superhero, or a corporate drone of Zephyr."	1	zephyr shirt
 "camo shirt"	"A t-shirt with camo patterns in various shades of green. Clearly, it belongs to the uniform of a soldier of the US army."	1	camo shirt
 "sleeveless shirt"	"A white sleeveless shirt, made from and stretchy fabric. It looks suitable to be working out in it."	1	sleeveless shirt
 "mesh shirt"	"A tight shirt made of some kind of black, sheer mesh. You can literally see right through it."	1	mesh shirt
@@ -260,7 +260,7 @@ The size of zephyr shirt is 3.
 The AC of zephyr shirt is 0.
 The effectiveness of zephyr shirt is 0.
 The placement of zephyr shirt is "chest".
-The descmod of zephyr shirt is "Your upper body is covered by a dark grey t-shirt with the Zephyr logo.".
+The descmod of zephyr shirt is "Your upper body is covered by a dark gray t-shirt with the Zephyr logo.".
 The slot of zephyr shirt is "chest".
 the scent of zephyr shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
@@ -316,8 +316,8 @@ When Play begins:
 	now plural of stiletto heels is true;
 	now plural of jogging shoes is true;
 	now plural of cowboy boots is true;
-	
-Table of Game Objects(continued)
+
+Table of Game Objects (continued)
 name	desc	weight	object
 "combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them."	3	combat boots
 "brown loafers"	"A pair of brown loafers. They look comfortable and one can just slide right in without having to worry about tying them."	1	brown loafers
@@ -429,12 +429,12 @@ When Play begins:
 	now plural of white briefs is true;
 	now plural of mesh undies is true;
 	now plural of pink panties is true;
-	
-Table of Game Objects(continued)
+
+Table of Game Objects (continued)
 name	desc	weight	object
 "ragged loincloth"	"A ragged piece of brown fabric that one can tie around their hips to cover the bare essentials."	0	ragged loincloth
 "simple loincloth"	"A simple white cotton loincloth. One can tie it around their hips to cover the bare essentials."	0	simple loincloth
-"boxer briefs"	"A pair of black boxer briefs with a grey band of elastic at the top. Simple, yet functional."	0	boxer briefs
+"boxer briefs"	"A pair of black boxer briefs with a gray band of elastic at the top. Simple, yet functional."	0	boxer briefs
 "white briefs"	"A pair of tight white briefs. Simple, yet functional."	0	white briefs
 "orange jockstrap"	"A jockstrap in bright orange, clearly made for people who do not mind showing off quite a bit."	0	orange jockstrap
 "mesh undies"	"Underwear made of sheer black mesh. You can literally see right through it."	0	mesh undies
@@ -544,8 +544,8 @@ When Play begins:
 	now plural of lab goggles is true;
 	now plural of prop glasses is true;
 	now plural of rose-tinted glasses is true;
-	
-Table of Game Objects(continued)
+
+Table of Game Objects (continued)
 name	desc	weight	object
 "stylish sunglasses"	"A set of Lu-Beam sunglasses with a very stylish shape. Those are sure to make anyone look like a star."	0	stylish sunglasses
 "basic sunglasses"	"A set of fairly basic sunglasses with a black plastic frame. Nothing special, but they'll protect your eyes."	0	basic sunglasses
@@ -653,14 +653,14 @@ When Play begins:
 
 	add { "" } to invent of Grey Abbey Library;
 ]
-	
-Table of Game Objects(continued)
+
+Table of Game Objects (continued)
 name	desc	weight	object
 "motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective."	3	motorcycle helmet
 "bike helmet"	"A plastic foam bicycle helmet, complete with a white shell and reflective stripes, as well as a strap to fasten it to the wearer's head."	1	bike helmet
 "protective helmet"	"A white protection helmet as might be worn by industrial workers. That should certainly ward off some bumps to the wearer's head."	2	protective helmet
 "tin-foil hat"	"A bunch of tin foil, bent into shape to cover a human's head. It might protect its wearer from alien mind control rays, or could possibly ensure that the head is still juicy and not burned on the outside when baked..."	0	tin-foil hat
-"grey fedora"	"A grey fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, or a hipster."	0	grey fedora
+"gray fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, or a hipster."	0	gray fedora
 "baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
 "knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
 "football helmet"	"A white football helmet with the logo of the Tenvale Gorillas on both sides. Heavy, but protective."	3	football helmet
@@ -718,18 +718,18 @@ The descmod of tin-foil hat is "A tin-foil hat covers your head, providing a dub
 The slot of tin-foil hat is "head".
 the scent of tin-foil hat is "The hat smells a bit like metal".
 
-grey fedora is a grab object.
-grey fedora is equipment.
+gray fedora is a grab object.
+gray fedora is equipment.
 It is not temporary.
-The plural of grey fedora is false.
-The taur-compatible of grey fedora is true.
-The size of grey fedora is 3.
-The AC of grey fedora is 0.
-The effectiveness of grey fedora is 0.
-The placement of grey fedora is "head".
-The descmod of grey fedora is "A grey fedora covers your head, making you look like a private detective from the prohibition days.".
-The slot of grey fedora is "head".
-the scent of grey fedora is "The hat smells like wool.".
+The plural of gray fedora is false.
+The taur-compatible of gray fedora is true.
+The size of gray fedora is 3.
+The AC of gray fedora is 0.
+The effectiveness of gray fedora is 0.
+The placement of gray fedora is "head".
+The descmod of gray fedora is "A gray fedora covers your head, making you look like a private detective from the prohibition days.".
+The slot of gray fedora is "head".
+the scent of gray fedora is "The hat smells like wool.".
 
 baseball cap is a grab object.
 baseball cap is equipment.
@@ -790,8 +790,8 @@ When Play begins:
 	add { "" } to invent of Grey Abbey Library;
 	]
 	now plural of football pads is true;
-	
-Table of Game Objects(continued)
+
+Table of Game Objects (continued)
 name	desc	weight	object
 "leather jacket"	"A black leather jacket some shiny silver buttons and zippers. Stylish and protective."	4	leather jacket
 "sturdy greatcoat"	"A full-body coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight."	5	sturdy greatcoat
@@ -902,7 +902,7 @@ The size of shoulder pad is 3.
 The AC of shoulder pad is 13.
 The effectiveness of shoulder pad is 13.
 The placement of shoulder pad is "body".
-The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
+The descmod of shoulder pad is "A single, armored pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
 the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 

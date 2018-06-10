@@ -5,7 +5,7 @@ Reservoir by Kaleem mcintyre begins here.
 Section 1 - Reservoir facility
 
 Resevquest is a number that varies.
-bloblost is a truth state that varies.  bloblost is usually false.
+bloblost is a truth state that varies. bloblost is usually false.
 waterworks is a number that varies.
 
 [ *** Content removed due to size issues and need for repairs ]
@@ -186,7 +186,7 @@ The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
-		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicoloured slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls.";
+		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls.";
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are not found by any more mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;
@@ -207,7 +207,7 @@ doorsearch is a number that varies.
 Instead of Resolving ThreeDoors:
 	If resevquest is 4:
 		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room... then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is.";
-		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way.  It's not like you can you really go back and ask one of the creatures here for help.  Well, not and expect to get a useful answer anyway.  You have something of a dilemma on your hands.";
+		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way. It's not like you can you really go back and ask one of the creatures here for help. Well, not and expect to get a useful answer anyway. You have something of a dilemma on your hands.";
 		say "[doorcheck]";
 
 descriptionmessage is a text that varies.
@@ -480,7 +480,7 @@ Instead of resolving a Sanctuary:
 
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "icicle knives"	"Twin pair of daggers made from the thoughts and feelings of those who were devoured by a monster and then frozen in an icy tomb of flesh and slime. Carry a chilly sharp edge to them that can pierce as well as cut."	5	icicle knives
 

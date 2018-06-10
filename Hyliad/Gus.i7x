@@ -1,13 +1,13 @@
 Version 1 of Gus by Hyliad begins here.
 [Version 1 - Put into its own file]
- 
+
 [ GusTalkProgress                                     ]
 [   0: starting value                                 ]
-[   1: ...                                            ]
-[   2: ...                                            ]
-[   3: ...                                            ]
-[   4: ...                                            ]
-[   5: ...                                            ]
+[   1:                                                ]
+[   2:                                                ]
+[   3:                                                ]
+[   4:                                                ]
+[   5:                                                ]
 
 GusTalkProgress is a number that varies.
 HadGusBackgroundTalk is a truth state that varies. HadGusBackgroundTalk is usually false.
@@ -238,7 +238,7 @@ to say GusSex5: [receive vaginal]
 
 to say GusSex6: [receive anal]
 	say "     Gus nods. 'But of course! If it pleases you, [sir].' You start stripping, but as you remove your top, you are surprised to feel someone behind you uncovering your bottom parts. It's the stork of course, and you let him help out, stepping out of your clothes after he pulls them down. You don't even have time to finish removing your top before you suddenly feel his taloned hands spread your buttcheeks, and his tongue getting a taste of you. You're still uncomfortably trying to remove your top when his tongue penetrates your anus, giving you a rimming to prepare what's to come. By the time you complete your stripping, his tongue is probing deep inside of you, and you are breathing heavily, putting a hand on the back of his head to hold him there and keep yourself steady. He is clearly used to the act, and his skilful tongue rubs you just right. However, this is just the warm-up, and soon enough he stops, standing next to you while licking his lips, and encouraging you to position yourself on the mattress with a peck on the cheek as you see that his cock is fully ready for you.";
-	if (cocks of player > 0 and cunts of player > 0):
+	if player is herm:
 		say "     You crawl on the bed and position yourself ready, soon joined by the bird who leans over you, surrounding you with an arm to hug you close as he lines up his cock with your ass. Thanks to his tongue work, he easily penetrates you., and as he gives little kisses on your cheek, he sinks further until he's all the way inside. Once that is done, he hugs you with both of his arms, both to help keeping steady in your fuck and to hold you close, and he starts moving his hips back and forth. The stork is clearly very enthusiastic, and his rhythm soon quickens as he keeps humping, however he certainly does not forget about your own pleasure, which is made obvious when he lowers his hands further down your body and starts both fingering your pussy and jerk you off in rhythm with his thrusts.";
 		WaitLineBreak;
 		say "     The triple stimulation, coupled with his other arm hugging you and his continued kissing and snuggling, provides a lot of simultaneous stimulation, and before long, his lovemaking brings you to ecstasy. Gus happens to reach his orgasm right before you do, letting out little moans as he unleashes his seed inside of your ass, only a second before the double masturbation and feeling of being filled send you over the edge, as you release both your cum and feminine juices on the bed beside you. The stork's animal instincts have clearly taken over his polite attitude, and he just humps you wildly for a little while, eager to release all of his semen inside of you. Ultimately he does so, and the two of you fall flat on the bed, panting hard and recovering. After a while, Gus slowly pulls out, continuing to smooch your neck and cheeks in the process. Standing up, he takes a second to catch his breath and walks to your clothes, picking them up and handing them to you.";

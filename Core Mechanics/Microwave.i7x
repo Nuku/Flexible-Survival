@@ -27,7 +27,7 @@ Carry out Purifying:
 
 Section 2 - New Items
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "distilled cum"	"Some creature's seed boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled cum
 "distilled booze"	"The results of purifying some tainted booze you found around the city. It might be a bit strong, but hopefully shouldn't be infectious." 	1	distilled booze

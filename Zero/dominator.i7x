@@ -8,7 +8,7 @@ slutmaster is a number that varies. slutmaster is usually 0.
 to say domdesc:
 	say "[randomdesc]";
 	say "[masterofslutsdom]";
-	say "Walking down the street, you are suddenly attacked by a male, furry, muscular[one of]black[or]brown[or]multi-coloured[or]white[or]red[or]orange[or]yellow[or]light blue[or]blue[at random][slutname] wearing only a metal chain around his neck.[line break]";
+	say "Walking down the street, you are suddenly attacked by a male, furry, muscular[one of]black[or]brown[or]multi-colored[or]white[or]red[or]orange[or]yellow[or]light blue[or]blue[at random][slutname] wearing only a metal chain around his neck.[line break]";
 	say "[sluttybodycheck]";
 
 
@@ -77,7 +77,7 @@ to say sluttysubmit:
 		infect "Male Slut";
 	else if facename of player is "Male Slut":
 		infect "Female Slut";
-	else if cocks of player > 0 and cunts of player > 0 and a random chance of 1 in 2 succeeds:
+	else if player is herm and a random chance of 1 in 2 succeeds:
 		infect "Female Slut";
 	else if cocks of player > 0:
 		infect "Male Slut";
@@ -123,7 +123,7 @@ to say domvictory:
 					say "After looking you up and down, he rubs his body against yours. 'Nice equipment. Time for some fun.'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.";
 			else: [none]
 				say "After looking you up and down, he pats you on the head while giving you a pitying look. 'I don't know what happened to you, but let's fix it, shall we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random]off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[one of][cuntinc][cuntinc][or][cockinc][cockinc][at random]";
-		if cocks of player > 0 and cunts of player > 0 and a random chance of 1 in 2 succeeds:
+		if player is herm and a random chance of 1 in 2 succeeds:
 			infect "Female Slut";
 		else if cocks of player > 0:
 			infect "Male Slut";

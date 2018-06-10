@@ -129,6 +129,7 @@ instead of fucking Liliana:
 Section 2 - Sex scene mechanics
 
 to say LilianaSexRandomizer:
+	setmonster "Black Equinoid";
 	[ Meeting the subsequent conditionals appends values to the end of the qq list. Afterwards, the list shuffled and a random number is selected. Values and meanings:
 		1 = player giving oral
 		2 = player receiving oral
@@ -209,31 +210,19 @@ to say eqwarsex3: [Player fucks Liliana vaginally]
 
 to say eqwarsex4: [Liliana fucks player vaginally]
 	[puts black equinoid as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Black Equinoid":
-			now monster is y;
-			break;
+	setmonster "Black Equinoid";
 	say "     Her hoofed hands slide over your body and soon guide you to lie down. She moves atop you, sliding her equine shaft into your juicy cunt so she may fuck you. You kiss and caress one another as she youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your womb. After some snuggling, you both get back up and prepare to continue your journey together.[impregchance]";
 	now libido of player is libido of player / 2;
 
 to say eqwarsex5: [Liliana fucks player anally]
 	[puts black equinoid as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Black Equinoid":
-			now monster is y;
-			break;
+	setmonster "Black Equinoid";
 	say "     Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze. Knowing what she needs of you, you move onto all fours and raise your tail. She presses her cock to your tight pucker and pushes it into you with a soft nicker. The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if cocks of player > 0]. You cannot help but cum in response, spraying your submissive seed onto the ground[end if]. After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
 	now libido of player is libido of player / 2;
 
 to say eqwarsex6: [Bath sex scene when standing in Equinoid Camp]
 	[puts black equinoid as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Black Equinoid":
-			now monster is y;
-			break;
+	setmonster "Black Equinoid";
 	say "     Your companion takes your hand and leads you back to the large hall where you were initiated into the tribe. The bath near the center has been cleaned since [if lilianabathsex is 1]your last romp together[else]the ceremony[end if], now as clear as a pristine mountain lake. With a pleased little sigh, the herm lowers herself into the warm, soothing water, sinking to her shoulders beneath its subtly rippling surface. 'Come, don't be shy. The water's perfect,' Liliana teases, the sultry look in her eyes inviting you closer. [if player is herm]Your stiffening length[smn] and a trickle of wetness between your thighs urge[else if player is male]Your stiffening length[smn] urge[smv][else if player is female]A trickle of wetness between your thighs urges[else]A tingle in your rear urges[end if] you to abide the horse's offer, and you follow after her unthinkingly.";
 	say "     Sinking into the pool, your thoughts are numbed by the rich, heady scents that fill your every breath, an arousing yet disarming aroma that you can't quite place. Smiling placidly, you sink against your mate's curvaceous figure, wrapping your arms around her waist as she casts you a soft and loving look. 'Mmh. Allow me,' she all but whispers in your ear, and the commanding kiss that follows makes you shiver and moan into her maw. Her long, flat tongue curls around your own, leading a dance of spit-slick palates while her breath fills your lungs in intoxicating waves. Her softly furred hands roam over your back, exploring every subtle contour with shiver-inducing deliberation. Her stiffening cock grinds against your belly, mottled flesh sliding back and forth across your soft, thin coat.";
 	WaitLineBreak;

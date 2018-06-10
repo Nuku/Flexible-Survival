@@ -1,6 +1,6 @@
 Control Pills by Hellerhound begins here.
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "birth control pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	birth control pill
 "fertile pill"	"A small blue pill, with the words 'Fertile 9h' on it. You've never seen the like before."	1	fertile pill

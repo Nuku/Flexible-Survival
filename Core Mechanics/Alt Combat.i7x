@@ -1,8 +1,8 @@
 Version 2 of Alt Combat by Core Mechanics begins here.
-[Version 2.10 - armour and shield tweaks]
+[Version 2.10 - armor and shield tweaks]
 [- Originally Authored By: Stripes -]
 
-"Oh my God!  Who gave them super-powers?!"
+"Oh my God! Who gave them super-powers?!"
 
 Section 0 - Basic variables
 
@@ -11,7 +11,7 @@ altattackmade is a number that varies.	[ This tracks whether an alternate attack
 combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
 ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 ktcockmatch is a truth state that varies.
-ktcockmatch is usually false.           [ Checks for matching player cock while using the 'Know Thyself' feat. ]
+ktcockmatch is usually false.          [ Checks for matching player cock while using the 'Know Thyself' feat. ]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
 skipretaliate is a truth state that varies. [Used to detect if monster will be denied a chance to retaliate.]
@@ -24,7 +24,7 @@ monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
 bonusattack is a number that varies.	[ Used to track how many bonus attacks a player's earned in a round. ]
 chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
 fightoutcome is a number that varies.	[ Used to track the different outcomes of a fight. ]
-absorb is a number that varies.           [ Used to track the damage absorbed by armour/shield/feats. ]
+absorb is a number that varies.          [ Used to track the damage absorbed by armor/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
 duckyactive is a truth state that varies.	[ Used to mark if the ducky's last-minute save has been used this turn. ]
@@ -35,8 +35,8 @@ pldodgebonus is a number that varies.	[ Used to total the player's special dodge
 pldamagebonus is a number that varies.	[ Used to total the player's special damage bonuses. ]
 plfleebonus is a number that varies.	[ Used to total the player's special flee bonuses. ]
 plmindbonus is a number that varies.	[ Used to total the player's special mental/will bonuses. ]
-plnatarmour is a number that varies.	[ Used to hold the player's natural armour value. ]
-plweaknatarmour is a number that varies.	[ Used to hold the player's weakened natural armour value. ]
+plnatarmor is a number that varies.	[ Used to hold the player's natural armor value. ]
+plweaknatarmor is a number that varies.	[ Used to hold the player's weakened natural armor value. ]
 pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
 petchance is a number that varies.		[ Used to hold the player pet's/kids' chance to attack. ]
 monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
@@ -91,8 +91,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now pldamagebonus is 0;
 	now plfleebonus is 0;
 	now plmindbonus is 0;
-	now plnatarmour is 100;
-	now plweaknatarmour is 50;
+	now plnatarmor is 100;
+	now plweaknatarmor is 50;
 	now pethitbonus is 0;
 	now monhitbonus is 0;
 	now mondodgebonus is 0;
@@ -156,22 +156,22 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase petchance by square root of ( 30 * charisma of player );
 		if petchance > 650, now petchance is 650;
 	if "Toughened" is listed in feats of player:		[boosting natural protection]
-		now plnatarmour is 625;							[25^2]
-		now plweaknatarmour is 156;						[ (25/2)^2 ]
+		now plnatarmor is 625;							[25^2]
+		now plweaknatarmor is 156;						[ (25/2)^2 ]
 	if hospquest >= 19:
 		if bodyname of player is "Enhanced Chimera":
 			if player is pure:
 				increase plhitbonus by 1;
 				increase pldamagebonus by 1;
-				increase plnatarmour by 300;
-				increase plweaknatarmour by 75;
+				increase plnatarmor by 300;
+				increase plweaknatarmor by 75;
 			else:
 				increase plhitbonus by 1;
-				increase plnatarmour by 200;
-				increase plweaknatarmour by 50;
+				increase plnatarmor by 200;
+				increase plweaknatarmor by 50;
 		else:
-			increase plnatarmour by 100;
-			increase plweaknatarmour by 25;
+			increase plnatarmor by 100;
+			increase plweaknatarmor by 25;
 	now fightoutcome is 100;
 	let nam be name entry;
 [	let typ be type entry;	]
@@ -340,7 +340,7 @@ this is the monster combat mode rule:
 			now foundcom is 1;
 			break;
 	if foundcom is 0:			[if that combat mode cannot be found, it reverts to default]
-		say "Error: Combat mode '[searchparam]' could not be found.  Reverting to default.";
+		say "Error: Combat mode '[searchparam]' could not be found. Reverting to default.";
 		wait for any key;
 		repeat with y running from 1 to number of filled rows in table of Critter Combat:
 			choose row y in table of Critter Combat;
@@ -419,7 +419,7 @@ This is the player attack rule:
 			increase dam by (( the Perception of the player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
 		if a random chance of the morale of the player in 200 succeeds:
-			say "Filled with sudden motivation, your attack scores particularly well!  ";
+			say "Filled with sudden motivation, your attack scores particularly well! ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
@@ -427,7 +427,7 @@ This is the player attack rule:
 			if z is not 0:	[Natural Armaments used]
 				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defences[at random], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
-				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else:
 				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		else:
@@ -725,9 +725,9 @@ this is the playerpoisoned rule:
 		decrease playerpoison by playerpoison / 7;	[drops very high values faster, mostly for hard mode]
 		say "As the toxins in your system continue to affect you, you take another [special-style-2][dam][roman type] damage";
 		if poisonnum > 0:
-			say "!  Your nanites continue to try and purge it from your system, quickly working to break down more of it.";
+			say "! Your nanites continue to try and purge it from your system, quickly working to break down more of it.";
 		else:
-			say "!  Your nanites manage to purge the last of it from your system, leaving you free of its debilitating effects.";
+			say "! Your nanites manage to purge the last of it from your system, leaving you free of its debilitating effects.";
 			increase plhitbonus by 2;
 		decrease HP of player by dam;
 		if HP of player < 1:
@@ -877,7 +877,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
 		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( HP of player * 100 ) / maxHP of player ) < 10 and velossaved is false:
-		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
+		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges. 'Boo.' Stunned by this new foe, the [name entry] is thrown off balance for a moment. By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep. Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe. This drives your opponent is back for a few moments['] reprieve.[cycling]";
 		increase HP of player by 5;
 		now velossavedyes is true;
 		now velossaved is true;
@@ -912,21 +912,21 @@ to say normalabsorbancy:		[normal absorbancy]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -938,21 +938,21 @@ to say highabsorbancy:			[increased chance to block better]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 90 succeeds:
 				now absorb is ( damagein * ac of x ) / 300;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 90 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 90;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -964,18 +964,18 @@ to say weakabsorbancy:			[only partial absorbancy]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plweaknatarmour;		[natural protection dropped]
+	let totalarmor be plweaknatarmor;		[natural protection dropped]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 200 succeeds:		[half as likely to block]
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			let factor be a random number between 1 and effectiveness of x;
 			let effectiveac be ( ac of x * factor ) / 200;			[1/2 effectiveac]
-			increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+			increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -986,21 +986,21 @@ to say headabsorbancy:			[targets head]
 	now absorb is 0;
 	let targetlocation be "head";
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1011,21 +1011,21 @@ to say bodyabsorbancy:			[targets body]
 	now absorb is 0;
 	let targetlocation be "body";
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of ( effectiveness of x) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1035,31 +1035,31 @@ to say bodyabsorbancy:			[targets body]
 to say areaabsorbancy:			[area of affect attack]
 	now absorb is 0;
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			now absorb is ( damagein * ac of x * effectiveness of x) / 30000;	[shields help deflect more of these blows]
 			if absorb is 0, now absorb is 1;
-			now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+			now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 		if ac of x > 0 and placement of x is "body":
-			increase totalarmour by ( ac of x * ac of x * effectiveness of x * 3 ) / 400;			[75% from body]
+			increase totalarmor by ( ac of x * ac of x * effectiveness of x * 3 ) / 400;			[75% from body]
 		if ac of x > 0 and placement of x is "head":
-			increase totalarmour by ( ac of x * ac of x * effectiveness of x ) / 400;	[25% from head]
-	let denominator be 100 + square root of totalarmour;
+			increase totalarmor by ( ac of x * ac of x * effectiveness of x ) / 400;	[25% from head]
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
 	now absorb is damagein - damageout;
 
 
-to say noarmourabsorbancy:			[normalized natural defence only]
+to say noarmorabsorbancy:			[normalized natural defence only]
 	now absorb is 0;
 	now damageout is damagein;
-	let totalarmour be 0;
+	let totalarmor be 0;
 	if "Toughened" is listed in feats of player:
-		increase totalarmour by 400;				[20^2]
-	if totalarmour > 0:
-		let denominator be 100 + square root of totalarmour;
+		increase totalarmor by 400;				[20^2]
+	if totalarmor > 0:
+		let denominator be 100 + square root of totalarmor;
 		let numerator be ( 1000 * damagein );
 		let midcalc be numerator / denominator;
 		now damageout is ( midcalc + 5 ) / 10;		[rounds to the nearest integer]
@@ -1071,16 +1071,16 @@ to say noshieldabsorbancy:		[no shield protection]
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be plnatarmour;		[natural protection]
+	let totalarmor be plnatarmor;		[natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is targetlocation:
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
-				increase totalarmour by ac of x * ac of x;
+				increase totalarmor by ac of x * ac of x;
 			else:
 				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
-				increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+				increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1092,23 +1092,23 @@ to say nofeatabsorbancy:
 	let targetlocation be "body";
 	if a random chance of 1 in 4 succeeds, now targetlocation is "head";	[25% chance of headshot]
 	now damageout is damagein;
-	let totalarmour be 0;		[no natural protection]
+	let totalarmor be 0;		[no natural protection]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
 			if a random chance of (effectiveness of x) in 100 succeeds:
 				now absorb is ( damagein * ac of x ) / 400;
 				if absorb is 0, now absorb is 1;
-				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
+				now damageout is damagein - absorb;			[reduced dmg used for armor calculation below]
 	repeat with x running through equipped equipment:
 		if ac of x > 0:
 			if placement of x is targetlocation:
 				if a random chance of (effectiveness of x) in 100 succeeds:
-					increase totalarmour by ac of x * ac of x;
+					increase totalarmor by ac of x * ac of x;
 				else:
 					let factor be a random number between 1 and effectiveness of x;
 					let effectiveac be ( ac of x * factor ) / 100;
-					increase totalarmour by ( effectiveac * effectiveac );
-	let denominator be 100 + square root of totalarmour;
+					increase totalarmor by ( effectiveac * effectiveac );
+	let denominator be 100 + square root of totalarmor;
 	let numerator be ( 10000 * damageout );
 	let midcalc be numerator / denominator;
 	now damageout is ( midcalc + 99 ) / 100;		[protection rounds down]
@@ -1156,7 +1156,7 @@ to win:
 				now ubprompted is true;			[player will be prompted for ub]
 	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry]. Shall you give into your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>[run paragraph on]";
@@ -1172,7 +1172,7 @@ to win:
 			else:
 				now ok is 1;
 		else if vorechoice is 1 and ubchoice is 1:				[player has choice ub/vore]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [name entry]. Shall you give into your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
 			now calcnumber is -1;
 			while calcnumber < 1 or calcnumber > 2:
 				say "Choice? (1 or 2)>[run paragraph on]";
@@ -1186,18 +1186,18 @@ to win:
 				ubbyplayer;			[See Alt Vore file]
 				now fightoutcome is 14;	[player ub'ed foe]
 		else if vorechoice is 1 and ubchoice is 0:				[hunger overrides ub]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  In the end, it is the emptiness in your stomach that wins out and you don't hold it back.  You advancing on them with the intent to sate your stomach's call with the [name entry].";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the emptiness in your stomach that wins out and you don't hold it back. You advancing on them with the intent to sate your stomach's call with the [name entry].";
 			now ok is 0;
 			vorebyplayer;			[See Alt Vore file]
 			now fightoutcome is 13;	[player vored foe]
 		else if vorechoice is 0 and ubchoice is 1:				[ub overrides hunger]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  In the end, it is the hollowness in your uterus that wins out and you don't hold it back.  You advancing on them with the intent to use the [name entry] to fill the emptiness you feel in your womb.";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the hollowness in your uterus that wins out and you don't hold it back. You advancing on them with the intent to use the [name entry] to fill the emptiness you feel in your womb.";
 			now ok is 0;
 			ubbyplayer;			[See Alt Vore file]
 			now fightoutcome is 14;	[player ub'ed foe]
 	else if voreprompted is true:
 		if vorechoice is 0:
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you. Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry]. Shall you give into this desire to [link]consume[as]y[end link] them?";
 			if the player consents:
 				now ok is 0;
 				vorebyplayer;		[See Alt Vore file]
@@ -1205,13 +1205,13 @@ to win:
 			else:
 				now ok is 1;
 		else if vorechoice is 1:
-			say "     As your battle is coming to a close, you feel that primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips and don't hold it back, advancing on them with the intent to sate your stomach's call with them.";
+			say "     As your battle is coming to a close, you feel that primal rumbling in your belly, your hunger welling up inside you. Looking down at your fallen foe, you lick your lips and don't hold it back, advancing on them with the intent to sate your stomach's call with them.";
 			now ok is 0;
 			vorebyplayer;		[See Alt Vore file]
 			now fightoutcome is 13;	[player vored foe]
 	else if ubprompted is true:
 		if ubchoice is 0:
-			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb.  Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away.  Shall you give into this desire and [link]unbirth[as]y[end link] them?";
+			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb. Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away. Shall you give into this desire and [link]unbirth[as]y[end link] them?";
 			if the player consents:
 				now ok is 0;
 				ubbyplayer;		[See Alt Vore file]
@@ -1219,7 +1219,7 @@ to win:
 			else:
 				now ok is 1;
 		else if ubchoice is 1:
-			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb.  Looking down at your foe, you finger yourself and don't hold it back, advancing on them with the intent to fill your uterus right away with them.";
+			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb. Looking down at your foe, you finger yourself and don't hold it back, advancing on them with the intent to fill your uterus right away with them.";
 			now ok is 0;
 			ubbyplayer;		[See Alt Vore file]
 			now fightoutcome is 14;	[player ub'ed foe]
@@ -1358,30 +1358,30 @@ Section 5 - Critter Combat
 Chapter 0 - Definition of entries
 
 [ DEFINITIONS OF ENTRIES:
-name:			The name of the rule.  Must be matched exactly by the altcombat entry of the critter.
+name:			The name of the rule. Must be matched exactly by the altcombat entry of the critter.
 combat:		This is the basic rule to be followed when a monster counter-attacks, preceded only by the continuous entry and _replacing_ the
-			standard retaliation rule entirely.  There should always be a rule in this field.
-preattack:		This rule is followed at the very start of the 'to retaliate' feature, but can be called by other combat rules as well.  It is meant
+			standard retaliation rule entirely. There should always be a rule in this field.
+preattack:		This rule is followed at the very start of the 'to retaliate' feature, but can be called by other combat rules as well. It is meant
 			for effects that take place before a normal attack and occurs _before_ a player's avoidance check.
-postattack:		This rule is followed at the very end of the 'to retaliate' feature, but again can be called by other combat rules as well.  It is
-			meant for effects that take place after a normal attack.  This could be as simple as bragging, to poisoning a player (to be managed
+postattack:		This rule is followed at the very end of the 'to retaliate' feature, but again can be called by other combat rules as well. It is
+			meant for effects that take place after a normal attack. This could be as simple as bragging, to poisoning a player (to be managed
 			by the playerpoisoned rule) and so on.
-altattack1:		This is an alternate, dexterity-based attack the creature will sometimes use.  These can be attacks w/effects, different damage,
-			armour piercing, etc...
+altattack1:		This is an alternate, dexterity-based attack the creature will sometimes use. These can be attacks w/effects, different damage,
+			armor piercing, etc...
 alt1chance:		The likelihood the first alternate attack will be chosen.
 altattack2:		This is another alternate, dexterity-based attack the creature will sometimes use.
-alt2chance:		The likelihood the second alternate attack will be chosen (if the first is not).  If neither alternate occurs, it defaults to normal
+alt2chance:		The likelihood the second alternate attack will be chosen (if the first is not). If neither alternate occurs, it defaults to normal
 			methodology.
 monmiss:		This rule replaces the regular miss statement and may contain necessary code for counting/resetting/etc...
-continuous:		This rule takes place before any and all combat rules.  It is much like the pre-attack, but happens regardless of the attack method
-			being used.  Good for enemy regen, player HP drain, player libido boosting, etc... that happens every turn.
+continuous:		This rule takes place before any and all combat rules. It is much like the pre-attack, but happens regardless of the attack method
+			being used. Good for enemy regen, player HP drain, player libido boosting, etc... that happens every turn.
 altstrike:		This rule replaces the standard dexterity to-hit attempt by the monster (ex: using Int, Char, etc...)
 
-While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defense, for example).  As well, with the rules broken out, they can more easily be repeated in the table in other combinations.  The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independently before any combat rule).  A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
+While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defense, for example). As well, with the rules broken out, they can more easily be repeated in the table in other combinations. The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independently before any combat rule). A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
 
-As they are all rules, they need not be restricted for one creature.  Several creatures could use the same 'bearhug rule' with their own stats in effect.
+As they are all rules, they need not be restricted for one creature. Several creatures could use the same 'bearhug rule' with their own stats in effect.
 
-A note on alternate attacks: This is the 'damage' portion of a dexterity strike replaced.  If you need non-dexterity attacks, go to the combat entry/altstrike entry.  If you need more than 2 alternate attacks, you can break them up as sub-selections of alt1 and alt2 or just make a combat entry for it all and be done with it.
+A note on alternate attacks: This is the 'damage' portion of a dexterity strike replaced. If you need non-dexterity attacks, go to the combat entry/altstrike entry. If you need more than 2 alternate attacks, you can break them up as sub-selections of alt1 and alt2 or just make a combat entry for it all and be done with it.
 
 ]
 
@@ -1427,19 +1427,19 @@ Part 2 - Alternate Attack Example - Bearhug
 this is the bearhug rule:
 	choose row monster from table of random critters;
 	if name entry is "Snake" or name entry is "Naga":		[crushing coils]
-		say "The [one of][name entry][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction!  You will need to break free before squeezes the fight right out of you.";
+		say "The [one of][name entry][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction! You will need to break free before squeezes the fight right out of you.";
 	else:									[crushing arms]
-		say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug!  You will need to break free before it squeezes the fight right out of you.";
+		say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug! You will need to break free before it squeezes the fight right out of you.";
 	let freedom be 0;
 	while HP of player > 0 and freedom is 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg / round]
 		now damagein is dam;
-		say "[noarmourabsorbancy]";		[ignores armour]
+		say "[noarmorabsorbancy]";		[ignores armor]
 		decrease HP of player by ( dam - absorb );
 		if absorb is 0:
-			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip!  ([HP of player]/[maxHP of player] HP)[line break]";
+			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip! ([HP of player]/[maxHP of player] HP)[line break]";
 		else:
-			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([HP of player]/[maxHP of player] HP)[line break]";
+			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip! ([HP of player]/[maxHP of player] HP)[line break]";
 		if HP of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
@@ -1459,13 +1459,13 @@ Part 3 - Post-Attack Example - Brag
 
 this is the brag rule:
 	choose row monster from table of random critters;
-	say "[one of]'Woo!  Take that!' [or]'Aww yeah!' [or]'Like a boss, baby!' [or]'Po feels embarrassed for you,' [at random][one of]your enemy chuckles[or]your opponent gloats[or]the [name entry] laughs derisively[at random].";
+	say "[one of]'Woo! Take that!' [or]'Aww yeah!' [or]'Like a boss, baby!' [or]'Po feels embarrassed for you,' [at random][one of]your enemy chuckles[or]your opponent gloats[or]the [name entry] laughs derisively[at random].";
 	if monsterHP < HP entry, increase monsterHP by 1;
 
 Part 4 - Pre/Post/Miss Combo Example - Power Strike 1
 
-[Any creature that undergoes stat shifts needs to reset either during its description before each fight or (if possible) before that fight ends, like this.  Trying to reset them within the win/lose scenes is not recommended, as the use of 'Control Freak' feat will cause them to be skipped.
-Warning: if an alternate attack before this one could break the fight and somehow prevent the postattack entry from running, you must provide a reset there as well.  It's best to have this reset in the description to cover all your bases.]
+[Any creature that undergoes stat shifts needs to reset either during its description before each fight or (if possible) before that fight ends, like this. Trying to reset them within the win/lose scenes is not recommended, as the use of 'Control Freak' feat will cause them to be skipped.
+Warning: if an alternate attack before this one could break the fight and somehow prevent the postattack entry from running, you must provide a reset there as well. It's best to have this reset in the description to cover all your bases.]
 
 this is the ps1charge rule:
 	choose row monster from table of random critters;
@@ -1480,7 +1480,7 @@ this is the ps1attack rule:
 	if monsterpowerup is 0:
 		standardhit;							[if not a charged attack, act as normal]
 	if monsterpowerup is 1:
-		say "The enhanced attack strikes!  [run paragraph on]";
+		say "The enhanced attack strikes! [run paragraph on]";
 		standardhit;							[standard attack w/enhanced stats]
 		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
 		increase dex entry by 2;
@@ -1536,7 +1536,7 @@ Part 6 - Conditional Alternate Attack Example - Humping
 this is the humping rule:
 	choose row monster from table of random critters;
 	if monsterpowerup is 1:
-		say "The enhanced attack strikes!  [run paragraph on]";
+		say "The enhanced attack strikes! [run paragraph on]";
 		standardhit;							[standard attack w/enhanced stats]
 		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
 		increase dex entry by 2;
@@ -1548,7 +1548,7 @@ this is the humping rule:
 		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		say "You are grabbed by the [name entry], which grinds its throbbing cock against your [bodytype of player] body.  Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you.  It takes an effort of will to resist giving into the alluring creature, but you manage to push it away.  Your drive to continue resisting has waned somewhat after the arousing attack.  You take [special-style-2][dam][roman type] damage!";
+		say "You are grabbed by the [name entry], which grinds its throbbing cock against your [bodytype of player] body. Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you. It takes an effort of will to resist giving into the alluring creature, but you manage to push it away. Your drive to continue resisting has waned somewhat after the arousing attack. You take [special-style-2][dam][roman type] damage!";
 		increase libido of player by a random number from 2 to 6;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
@@ -1567,7 +1567,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "The [one of][name entry][or]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly.  Its many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
+	say "The [one of][name entry][or]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly. Its many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
 	if absorb > dam:
@@ -1582,7 +1582,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 Part 8 - Alternate Combat Example - Fire Breath
 
 firebreathcount is a number that varies.
-firebreathready is a truth state that varies.  firebreathready is usually false.
+firebreathready is a truth state that varies. firebreathready is usually false.
 
 this is the firebreath rule:
 	choose row monster from the table of random critters;
@@ -1608,60 +1608,60 @@ this is the firebreath rule:
 			let fbhit be 0;		[Missed]
 		if name entry is "Ash Dragator":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red wave of fire is spat out at you.  You try to evade, but the fiery blast washes over you.  You suffer [dam] damage![roman type]";
+				say "[special-style-2]The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red wave of [special-style-2]fire[roman type] is spat out at you.  You move to evade, but are still caught in part of the blast.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]Dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red fireball is spat out in your direction, but you manage to evade it!";
+				say "The [one of]Dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
 		else if name entry is "Ash Drakenoid":
 			if fbhit is 2:
-				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago.  Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you.  You are burned for [dam] damage![roman type]";
+				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago.  You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw.  You are burned for [special-style-2][dam][roman type] damage!";
+				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
 			else:
-				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago.  Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
+				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
 		else if name entry is "Ash Whelp":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.  It strikes you squarely in the [one of]face[or]chest[purely at random].  You take [dam] damage![roman type]";
+				say "[special-style-2]The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you.  You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random].  You take [special-style-2][dam][roman type] damage!";
+				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you. You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random]. You take [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.  You manage to avoid the poorly aimed attack!";
+				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. You manage to avoid the poorly aimed attack!";
 		else if name entry is "feral sea dragon" or name entry is "feral sea dragoness":
 			if fbhit is 2:
-				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you.  You are knocked over and scalded badly by the constant stream of steaming sea water.  You take [special-style-2][dam][roman type] damage!";
+				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You are knocked over and scalded badly by the constant stream of steaming sea water. You take [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
-				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you.  You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it a several times.  You take [special-style-2][dam][roman type] damage!";
+				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it a several times. You take [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose towards you.  You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
+				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose towards you. You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
 		else if name entry is "Yamato Dragon" or name entry is "Yamato Dragoness":
 			if fbhit is 2:
-				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire over you.  Strangely, it doesn't burn but every pain receptor on your body screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. Strangely, it doesn't burn but every pain receptor on your body screams in agony. You suffer [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
-				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire towards you.  Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire towards you. Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire over you.  You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
+				say "The [one of]oriental dragon[or][name entry][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
 		else if name entry is "Salamander":
 			if fbhit is 2:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly.  The heat threatens is like that of a blast furnace and threatens to overwhelm you.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly. The heat threatens is like that of a blast furnace and threatens to overwhelm you. You suffer [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
+				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
 		else if name entry is "Magic Drake":
 			if fbhit is 2:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames. This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it.  The strange fire is both burning hot and also strangely arousing.  It saps some of your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames. You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it. The strange fire is both burning hot and also strangely arousing. It saps some of your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames.  Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
+				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames. Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
 		else:
 			if fbhit is 2:
-				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames wash over you, burning you badly.  You take [dam] damage![roman type]";
+				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames wash over you, burning you badly. You take [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you.  You try to evade, but are still partially caught in the flames, burning you.  You take [special-style-2][dam][roman type] damage!";
+				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you. You try to evade, but are still partially caught in the flames, burning you. You take [special-style-2][dam][roman type] damage!";
 			else:
-				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames come close, but you manage to get out of the way barely in time!";
+				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames come close, but you manage to get out of the way barely in time!";
 		if fbhit > 0:
 			now damagein is dam;
 			say "[areaabsorbancy]";		[area of effect attack]

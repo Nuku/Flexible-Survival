@@ -78,7 +78,7 @@ Author: David Silver <dms.silver@gmail.com>
 [33mcommit d9bb9a7b19ebbfb6a7abbfa45dff9429241c76bb[m
 Author: David Silver <dms.silver@gmail.com>
 
-    Fixed bug in sprites, added sprites(oops), added Guy, Girl, and Hermaphrodite flags for creatures.
+    Fixed bug in sprites, added sprites (oops), added Guy, Girl, and Hermaphrodite flags for creatures.
 
 [33mcommit 98093a05df23336d562119b02e297485546af3f2[m
 Author: David Silver <dms.silver@gmail.com>
@@ -275,7 +275,7 @@ Author: David Silver <dms.silver@gmail.com>
 [33mcommit 30eec9620b1fce9f5d169e65711943b468b24301[m
 Author: David Silver <dms.silver@gmail.com>
 
-    Fixed a bug with drakenoids, added cheat dev command(givelevel)
+    Fixed a bug with drakenoids, added cheat dev command (givelevel)
 
 [33mcommit 1c43929901d3a33abd5a0d12902b3f10bd6eedd4[m
 Author: David Silver <dms.silver@gmail.com>

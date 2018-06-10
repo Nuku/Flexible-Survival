@@ -28,7 +28,7 @@ The sarea of Peace is "Plains".
 Instead of resolving a Peace:
 	say "Jogging across the plains you come across a large bipedal blue and white furred wolf meditating in the middle of an orangish-yellow patch of grass. From the look of the other, with his imposing physique, strong jawline, rich azure and ivory furry and yellow belt strapped around his waist, the strange wolf seems to be oddly out of place given the normal mutants that roam the plains. Not that there was anything wrong with being odd, especially given the fact that this [']is['] a crossed legged blue and white lupine you're seeing after all.";
 	LineBreak;
-	say "Not having a reason to bother the other you simply continue to watch the wolf for several more minutes. When a sudden strong breeze causes the odd coloured lupine's long and fluffy tail to start to sway behind him you find yourself chuckling at the peaceful smirk that draws itself up across the wolf's muzzle. When you feel that you've spent enough time watching the other you turn around and then head off in another direction to continue on your journey. Making your way about your business, you fail to note a golden pair of eyes looking at where you are going as the wolf cracks its eyelids open to track your movements.";
+	say "Not having a reason to bother the other you simply continue to watch the wolf for several more minutes. When a sudden strong breeze causes the odd colored lupine's long and fluffy tail to start to sway behind him you find yourself chuckling at the peaceful smirk that draws itself up across the wolf's muzzle. When you feel that you've spent enough time watching the other you turn around and then head off in another direction to continue on your journey. Making your way about your business, you fail to note a golden pair of eyes looking at where you are going as the wolf cracks its eyelids open to track your movements.";
 	increase humanity of player by 10;
 	if humanity of player > 100, now humanity of player is 100;
 	increase score by 5;
@@ -59,7 +59,7 @@ When play begins:
 	Add Cosplay to badspots of guy;
 
 Instead of resolving a Cosplay:
-	say "'No, I am not going to wear either that jacket or that tacky red scarf. So just forget about it!' You find yourself stopping as these words enter into your ears just as you pass an open store front. Peeking inside you find a large grey wolf standing on the balls of his hind feet offering up something in the way of clothing to a smaller orange and white fox. 'Come on already. It's just for today,' the wolf growls. By the tone of the other's voice you can tell that wolf is male, the same as his foxy companion. 'And besides, you'd look kinda cute with this on!' The wolf's tail is wagging a mile a minute as rumbles a murr out from his throat while looking at the sexy looking vulpine.";
+	say "'No, I am not going to wear either that jacket or that tacky red scarf. So just forget about it!' You find yourself stopping as these words enter into your ears just as you pass an open store front. Peeking inside you find a large gray wolf standing on the balls of his hind feet offering up something in the way of clothing to a smaller orange and white fox. 'Come on already. It's just for today,' the wolf growls. By the tone of the other's voice you can tell that wolf is male, the same as his foxy companion. 'And besides, you'd look kinda cute with this on!' The wolf's tail is wagging a mile a minute as rumbles a murr out from his throat while looking at the sexy looking vulpine.";
 	LineBreak;
 	say "'Forget it, I'm not getting into this fetish of yours, even if we both do look like furry cosplay characters.' From the small smile that is blooming across the other's muzzle you can tell that the vulpine is wavering ever so slightly in his conviction. When the wolf tries again to get his companion to wear the clothing he had held in between his paws the fox turns to wag his long plume of a tail at the other in playful indignation. That proves to be a mistake on the vulpine's part.";
 	WaitLineBreak;
@@ -177,7 +177,7 @@ Instead of resolving a Dr Feel Good:
 				Increase score by 10;
 				Now Dr Feel Good is resolved;
 		if fightoutcome >= 20:		[lose/run]
-			Say "Getting your tail beaten by the two vixens you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out.  You are uncertain how much time passes while you're unconscious.";
+			Say "Getting your tail beaten by the two vixens you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out. You are uncertain how much time passes while you're unconscious.";
 			now heat enabled is false; [temporarily turning off heat effects]
 			now skipturnblocker is 1; [temporarily turns off several other visible end of turn effects]
 			if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
@@ -186,7 +186,7 @@ Instead of resolving a Dr Feel Good:
 			follow the turnpass rule;
 			now heat enabled is true; [heat effects turned back on]
 			now skipturnblocker is 0; [restores normal end of turn functions for the final turn skip after the scene]
-			say "When next you wake up you find yourself lying on the bed the fennec boy had been on, the other being nowhere in sight, with some confusion as to what's going on.  Slowly the memories return to you and you grunt in vexation before trying rising up off of the stiff mattress underneath your [bodyname of player] back. When you find that all of your motor function are a little out of whack a slight bit of panic crosses your mind, but soon your body's natural healing factor is kicking into gear to get everything back into order.";
+			say "When next you wake up you find yourself lying on the bed the fennec boy had been on, the other being nowhere in sight, with some confusion as to what's going on. Slowly the memories return to you and you grunt in vexation before trying rising up off of the stiff mattress underneath your [bodyname of player] back. When you find that all of your motor function are a little out of whack a slight bit of panic crosses your mind, but soon your body's natural healing factor is kicking into gear to get everything back into order.";
 			WaitLineBreak;
 			Say "Once you are up and about you look over yourself to see if everything is as it should be before giving yourself a few test pats. Seeing that both your arms and legs are just as they had been before your little clash with the vixen you find yourself calling everything to an immediate halt when you rub your palm over your groin. Blinking as you feel that something is not as it should be you undo your pants and then have a look down. What you see makes your mouth slowly drop open as you look to find that [if cocks of player is 0]you now have a cock dangling between your legs[else]your cock has gotten a little bigger[end if].";
 			WaitLineBreak;
@@ -210,7 +210,7 @@ Instead of resolving a Dr Feel Good:
 
 Section 9 - Table of Game Objects
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "doctor's uniform"	"A cosmetic doctor's coat and a pair of white pants given to you after helping a young fennec out of a tight jam."	3	doctor's uniform
 

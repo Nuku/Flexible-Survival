@@ -63,7 +63,7 @@ to say SkarnothSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Give him a blow-job";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck him";
 		now sortorder entry is 2;
@@ -75,7 +75,7 @@ to say SkarnothSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Share oral pleasures with your male demon";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride Skarnoth's dick (vaginal)";
 		now sortorder entry is 4;
@@ -86,7 +86,7 @@ to say SkarnothSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Let the demon fill your ass with his seed";
 	]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Skarnoth's ass";
 		now sortorder entry is 6;
