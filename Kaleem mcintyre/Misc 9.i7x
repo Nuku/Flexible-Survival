@@ -162,7 +162,7 @@ Instead of resolving a Fashion Statement:
 
 Section 9 - Table of Game Objects
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "muscle shirt"	"A tight fitting pair of pants with a black mesh muscle shirt to go along with it."	3	muscle shirt
 
@@ -178,7 +178,7 @@ Instead of smelling muscle shirt:
 
 Section 9a - Red Cap
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "red cap"	"A red baseball cap with the letter of your first name printed onto it."	1	red cap
 
@@ -196,7 +196,7 @@ Instead of smelling cap:
 
 Section 9b - Silver Dress
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "silver dress"	"A flowing silver dress that looks to be about your size. Glass slippers not included."	1	silver dress
 

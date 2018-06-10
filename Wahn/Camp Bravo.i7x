@@ -141,7 +141,7 @@ to say GuardLie: [lie to get into the camp]
 		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
 
 to say GuardBeg: [mooch some food from a guard]
-	if(lastGuardBeg - turns < 12):
+	if (lastGuardBeg - turns < 12):
 		say "     The soldier lowers a hand to his pocket, then stops. 'Wait a minute - I gave you something not too long ago! I can't hand out stuff constantly. That'll attract too much attention and all kinds of critters will show up asking for food.'";
 	else:
 		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now please go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
@@ -703,7 +703,7 @@ instead of sniffing Adam:
 
 Instead of fucking Adam:
 	project Figure of Adam_icon;
-	if(lastfuck of Adam - turns < 6):
+	if (lastfuck of Adam - turns < 6):
 		say "     Adam chuckles as you try to talk him into sex again. 'You're just insatiable, aren't you? Too bad I don't have quite dad's stamina, so I need a break before I'm ready to go again...'";
 	else:
 		say "[AdamSexMenu]";
@@ -722,13 +722,13 @@ to say AdamSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Taste some half-minotaur seed.";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow you";
 		now sortorder entry is 2;
 		now description entry is "Put Adam's mouth to good use.";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Adam fuck your pussy";
 		now sortorder entry is 3;
@@ -739,7 +739,7 @@ to say AdamSexMenu:
 	now sortorder entry is 4;
 	now description entry is "Let the boy fill your ass with his seed.";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Adam's ass";
 		now sortorder entry is 5;
@@ -1135,7 +1135,7 @@ to say CampBravoFuckTTFemale:
 		say "     While Alexander finishes organizing the women for this round, you and Elaine head over to the hitching post. Tiny Tim is happy to see you both, giving big, crushing hugs and asking if you're here to fuck again. 'There's more female soldiers here ready and eager to do their duty and let you breed them - if you're up for it, stud,' she says, stroking the bull's swelling member. To get him ready, she guides his shaft to her mouth and starts licking and sucking on him. He moans happily and rubs the soldier's head, pushing to take more of his shaft.";
 		say "     Getting the nod from the sergeant, you prompt the pair to separate long enough for Elaine to take her spot on the jeep's hood. With her legs spread and juicy vagina on display, Tiny Tim wastes no time in moving over her and thrusting his large shaft into the small woman. She guides one of his meaty hands to her breasts, letting him grope her with a big grin on his bovine face as he pounds into her.";
 		WaitLineBreak;
-		say "     After giving them time together (and taking in the sexy show as they do), you move into position behind the mighty bull-man. He grunts a little as he feels your lubed-up cock prodding at his tail-hole. Elaine pulls him down for a big, sloppy kiss, allowing you to ease yourself into the distracted minotaur's asshole. And while it's as hot and tight as ever, you're able to slip into its snug embrace more easily, his hole becoming more accustomed to being penetrated by you.";
+		say "     After giving them time together (and taking in the sexy show as they do), you move into position behind the mighty bull-man. He grunts a little as he feels your lubed-up cock prodding at his tailhole. Elaine pulls him down for a big, sloppy kiss, allowing you to ease yourself into the distracted minotaur's asshole. And while it's as hot and tight as ever, you're able to slip into its snug embrace more easily, his hole becoming more accustomed to being penetrated by you.";
 		say "     You let the minotaur set a pace he's comfortable with once and follow it, and are pleased with how quickly he's back to his usual rapid pounding. Having had plenty of warm-up time, it's not much longer before your cock pushing against his prostate has him blow. With a mighty bellow, he blasts shot after shot of hot cum into the ecstatic soldier beneath him. From the way his anal muscles and glutes are squeezing down around you, you know he's pumping the female soldier's belly full of his virile seed. Elaine cries out in orgasmic response, wriggling atop the spurting shaft while caressing his muscular chest. It's difficult to hold back, but you manage to hold on knowing there's lots more fun ahead.";
 		WaitLineBreak;
 		say "     Dropping to very slow thrusts, you remain inside the minotaur while Elaine lets him continue to play with her boobs and rub her cum-filled belly a little longer. She praises him on being such a sexy, virile stud... one with many more females to breed. She eases herself off that still-twitching shaft an inch at a time, savoring these last few moments. With a wet pop of the cock coming free, the scent of the big guy's pheromone-laden musk grows even heavier in the air as what sounds like a gooey mess of it pours out onto the messy towel. Elaine crawls across the hood so she can give the big guy a sloppy kiss while signalling the sergeant to bring in the next soldier.";

@@ -78,7 +78,7 @@ to say orcadefeatsex4:		[oral sex]
 
 to say beattheorca:
 	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and ( cocks of player > 0 or cunts of player > 0 ):
-		if cocks of player > 0 and cunts of player > 0 and anallevel > 1:
+		if player is herm and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 			say "     [bold type] Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
 			LineBreak;
@@ -100,7 +100,7 @@ to say beattheorca:
 
 
 to say orcavicsex1:
-	say "     Victorious against the muscled orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pull the male into a headlock. Intent on asserting your dominance, you grind your throbbing [cockname of player] cock against his ass, pushing it under his tail. The beast can only impotently struggle as you tease his tail-hole with the tip of your [cock size desc of player] rod before you ram it into the vulnerable portal, your victim's moans his only reply.";
+	say "     Victorious against the muscled orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pull the male into a headlock. Intent on asserting your dominance, you grind your throbbing [cockname of player] cock against his ass, pushing it under his tail. The beast can only impotently struggle as you tease his tailhole with the tip of your [cock size desc of player] rod before you ram it into the vulnerable portal, your victim's moans his only reply.";
 	say "     Pumping your organ into him with assertive determination, you would sate your lust by making an example of this lesser male and confirm your claim on this to this territory. Roughly abusing the orca's hole, his own lust betrays him, moaning audibly as the sheer force of your thrusts brings him to cum into sand, the tight clenching of his abused hole enough to bring you to your own orgasm, [one of]flooding his bowels with your thick seed[or]pulling out just before to spend your seed across his back[at random]. Relinquishing him, you punctuate your violation with a hard swat on the Killer Whale's abused rump before he takes off. Satisfied to reasserting your territory by humiliating the muscled beast, you depart back from whence you came.";
 	increase orcadom by 1;
 

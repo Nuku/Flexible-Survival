@@ -488,7 +488,7 @@ to say badAlexandrasex4:		[Anal]
 	if lust of Alexandra > 12:
 		say "     Using some blankets for padding under her rounded belly, you get the ex-cop down on her hands and knees. You grab her taut ass and give it a firm squeeze[if lastdobiemess is 1 or lastdobiemess is 2]. Her crotch fur, damp from her messy jeans, smells strongly of your scent from the last time you used your dobie bitch[else if lastdobiemess is 5 or lastdobiemess is 7]. Her crotch fur, damp from her messy jeans, smells strongly of her scent from the last time you played with your dobie bitch[else if lastdobiemess is 97 or lastdobiemess is 98 or lastdobiemess is 99]. Her crotch fur, damp from her messy jeans, smells strongly of Fang's scent from the last time he used your dobie bitch[end if]. She releases a soft whimper of excitement and her short tail wags frantically as juices run down her legs. Pleased at the sight, you kneel behind her and get your cock lined up with her wet pussy. You tease your glans against her puffy, wet lips before aiming a little further up and push against her crinkled anus.";
 		if dobieanal is false:
-			say "     'I... that's...' she starts to say, her ears dipping a little as she realizes what you have in mind. 'I've never done anything like that before,' she whimpers. From the way her tail's still wagging, you can tell she's excited by the prospect, so you give another press against her tail-hole. 'Mmm... alright, let's get kinky, boss,' she moans.";
+			say "     'I... that's...' she starts to say, her ears dipping a little as she realizes what you have in mind. 'I've never done anything like that before,' she whimpers. From the way her tail's still wagging, you can tell she's excited by the prospect, so you give another press against her tailhole. 'Mmm... alright, let's get kinky, boss,' she moans.";
 		else:
 			say "     'Mmm... I think you're feeling kinky again, boss,' she whimpers. 'Come on, then. Use your dirty doggy bitch,' she moans, pressing her rear back against your cock, urging you to fuck her ass again.";
 		say "     Grabbing her ass tightly, you thrust forward, pushing your cock into her [if dobieanal is false]virgin [end if]hole and start fucking her. You're prepared to start slow, but Alexandra pushes back, urging you to fuck her rough and hard. You give her rear a swat and call her such a bad, dirty doggy and pound away at her. Your [cock size desc of player] cock [if cock length of player > 30]stretches her back door wide and adds a bit of a phallic bulge to your bad doggy bitch's already rounded belly as you bugger her[else if cock length of player > 20]stretches her back door open and plumps up your bad doggy bitch's already rounded belly a little further as you bugger her[else if cock length of player > 10]stuffs your bad doggy bitch's wonderfully tight anus[else]buggers your bad doggy bitch's back door[end if]. Her anal walls squeeze and pull around your shaft[if cockname of player is listed in infections of Knotlist] as your knot grinds against her dark pucker[end if], her body pushing back eagerly into every thrust. Her pregnant belly rocks with every hard push into her sexy bottom. She may moan and whimper at being fucked up the ass, but she pants and leaks juices constantly as well, clearly very turned on by being used in such a way.";
@@ -500,7 +500,7 @@ to say badAlexandrasex4:		[Anal]
 	else:
 		say "     You push the ex-cop down onto her hands and knees, grabbing her taut ass and giving it a firm squeeze[if lastdobiemess is 1 or lastdobiemess is 2]. Her crotch fur, damp from her messy jeans, smells strongly of your scent from the last time you used your dobie bitch[else if lastdobiemess is 5 or lastdobiemess is 7]. Her crotch fur, damp from her messy jeans, smells strongly of her scent from the last time you played with your dobie bitch[else if lastdobiemess is 97 or lastdobiemess is 98 or lastdobiemess is 99]. Her crotch fur, damp from her messy jeans, smells strongly of Fang's scent from the last time he used your dobie bitch[end if]. She releases a soft whimper of excitement and her short tail wags frantically as juices run down her legs. Pleased at the sight, you kneel behind her and get your cock lined up with her wet pussy. You tease your glans against her puffy, wet lips before aiming a little further up and push against her crinkled anus.";
 		if dobieanal is false:
-			say "     'I... that's...' she starts to say, her ears dipping a little as she realizes what you have in mind. 'I've never done anything like that before,' she whimpers. From the way her tail's still wagging, you can tell she's excited by the prospect, so you give another press against her tail-hole. 'Mmm... alright, let's get kinky, boss,' she moans.";
+			say "     'I... that's...' she starts to say, her ears dipping a little as she realizes what you have in mind. 'I've never done anything like that before,' she whimpers. From the way her tail's still wagging, you can tell she's excited by the prospect, so you give another press against her tailhole. 'Mmm... alright, let's get kinky, boss,' she moans.";
 		else:
 			say "     'Mmm... I think you're feeling kinky again, boss,' she whimpers. 'Come on, then. Use your dirty doggy bitch,' she moans, pressing her rear back against your cock, urging you to fuck her ass again.";
 		say "     Grabbing her ass tightly, you thrust forward, pushing your cock into her [if dobieanal is false]virgin [end if]hole and start fucking her. You're prepared to start slow, but Alexandra pushes back, urging you to fuck her rough and hard. You give her rear a swat and call her such a bad, dirty doggy and pound away at her. Your [cock size desc of player] cock [if cock length of player > 30]stretches her back door wide and makes a prominent and phallic bulge in your bad doggy bitch as you bugger her[else if cock length of player > 20]stretches her back door open and produces a visible swelling in your bad doggy bitch as you bugger her[else if cock length of player > 10]stuffs your bad doggy bitch's wonderfully tight anus[else]buggers your bad doggy bitch's back door[end if]. Her anal walls squeeze and pull around your shaft[if cockname of player is listed in infections of Knotlist] as your knot grinds against her dark pucker[end if], her body pushing back eagerly into every thrust. She may moan and whimper at being fucked up the ass, but she pants and leaks juices constantly as well, clearly very turned on by being used in such a way.";
@@ -870,26 +870,26 @@ to say CellBlockAdesc:
 
 A person can be policed. A person can be lockered. A person can be imprisoned. A person can be stationed. A person is usually not policed. A person is usually not lockered. A person is usually not imprisoned. A person is usually not stationed.
 
-Definition: A person(Called X) is policed:
-	If x is the player, no;
+Definition: A person (called x) is policed:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Station, yes;
 	no;
 
-Definition: A person(Called X) is lockered:
-	If x is the player, no;
+Definition: A person (called x) is lockered:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Lockerroom, yes;
 	no;
 
-Definition: A person(Called X) is imprisoned:
-	If x is the player, no;
+Definition: A person (called x) is imprisoned:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Cell Block A, yes;
 	no;
 
-Definition: A person(Called X) is stationed:
-	If x is the player, no;
+Definition: A person (called x) is stationed:
+	if x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Station, yes;
 	if the location of x is Police Lockerroom, yes;
@@ -1884,7 +1884,7 @@ to say alexandra_repairs:
 				say ". Shall you do so?";
 				if the player consents:
 					if cocks of player > 0 and anallevel > 1:
-						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms. As you kiss the cute corgi, Alexandra politely excuses herself until you two are done. Kneading his ass with one hand, you guide your cock under his tail with the other. The little guy moans softly and his tail wags excitedly. Easing him down slowly, you let your [cock of player] cock pop into his tight tail-hole[if cock length of player > 15]. Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[else if cock length of player > 7]. Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[else]. Your [cock size desc of player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
+						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms. As you kiss the cute corgi, Alexandra politely excuses herself until you two are done. Kneading his ass with one hand, you guide your cock under his tail with the other. The little guy moans softly and his tail wags excitedly. Easing him down slowly, you let your [cock of player] cock pop into his tight tailhole[if cock length of player > 15]. Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[else if cock length of player > 7]. Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[else]. Your [cock size desc of player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
 						say "     You bounce the cute fellow easily up and down your cock. He pants and moans as you fuck his ass. His own canine cock throbs against your belly, the six-inch red rod spurting precum onto it with every press of your penis against his prostate. As his excitement builds, his knot swells up and soon he's spurting dog cum across the both of you with a cry of ecstasy. Feeling him clamp down around your shaft, you push deep into him one last time and cum, pumping your [cum load size of player] load into the happy doggy.";
 						say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support. 'Oh wow! I mean... I'd never... that was awesome. I wish I knew how great that felt; I'd have been doing that for years had I known.' Taking a seat on the floor, you cuddle the cute guy, wiping up the mess you've made with a [if cock width of player >= 12]few rags[else]rag[end if]. After a few more kisses, you let Alexandra know you're ready to get back to work.";
 						now HP of Jimmy is 5;
@@ -2064,7 +2064,7 @@ Instead of resolving a Survivor Group:
 			let the dice be a random number from 1 to 20;
 			let humanlikebonus be false;
 			if 2 is listed in bookcollection, increase bonus by 2;
-			if the player is facially human and the player is skintone human and the tail of the player is "" and breast size of player <= 6 and cock length of player <= 18 and cock width of player <= 12 and breasts of player <= 2: [The player appears human to casual scrutiny and does not have hugely over-sized junk that cannot be hidden.]
+			if the player is facially human and the player is skintone human and the tail of the player is "" and breast size of player <= 6 and cock length of player <= 18 and cock width of player <= 12 and breasts of player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
 				increase bonus by 2;
 				now humanlikebonus is true;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";

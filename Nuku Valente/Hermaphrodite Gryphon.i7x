@@ -29,7 +29,7 @@ To say losetohgryphon:
 				if cunt length of player >= 12:
 					say "[gryphonfuck1]"; [player herm pussy fuck]
 				else:
-					say "[gryphonfuck4]"; [over-sized pussy fuck]
+					say "[gryphonfuck4]"; [oversized pussy fuck]
 			else if a random chance of analchance in 18 succeeds:
 				say "[gryphonfuck7]";
 			else if cock length of player > 6:
@@ -52,7 +52,7 @@ To say losetohgryphon:
 			else if cunt length of player >= 12:
 				say "[gryphonfuck5]"; [female player pussy fuck]
 			else:
-				say "[gryphonfuck4]"; [over-sized pussy fuck]
+				say "[gryphonfuck4]"; [oversized pussy fuck]
 		else:
 			if anallevel is 1:
 				say "[gryphonfuck6]";
@@ -72,7 +72,7 @@ to say gryphonfuck3: [player fucks gryphon pussy]
 	say "     Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well-muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured, keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
 
 
-to say gryphonfuck4: [over-sized pussy fuck]
+to say gryphonfuck4: [oversized pussy fuck]
 	say "     The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[ovichance]";
 	if "Male Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player, increase cunt length of player by 1;
 
@@ -189,9 +189,9 @@ to say hgryphon_pw_01:
 		say "     With almost no effort, her massive pussy swallows your entire cock. With what could almost pass for a smirk, the gryphon squawks 'I guess you're just not man enough...' Anger and lust getting the better of you, you pull your cock out of her voluminous cunt and, repositioning slightly, place the tip at the entrance to her back door. Her eyes going wide with fear, your prey is about to voice her dissent, but too late, your lust won't be denied. With some effort you push past her tightly clenched sphincter, drawing loud pained squawks from your victim. You start slowly fucking her tight asshole, in and out, gradually picking up speed. Eventually the gryphon's squawking changes pitch; however she felt before, she definitely seems to be enjoying this now.";
 	else:
 		say "     With what almost sounds like a combination of a squawk and purring the gryphon spreads her legs further apart, her blue lips trembling against your [cock of player] manhood. She stares up at you expectantly as you slowly enter her accommodating tunnel. A look of absolute pleasure crosses the gryphon's face as you start to slide in and out. You pick up speed, your balls slapping against her on every thrust.";
-	attempttowait;
+	WaitLineBreak;
 	say "     As your rhythmic fucking continues, your victim starts to squeeze her gigantic blue breasts. You see a small dribble of milk escape both of her nipples as she roughly fondles herself. Continuing with your assault, you start to get annoyed by her massive erection. It's so big that it manages to slap your chin on each thrust. On one thrust a bit of precum escapes the gryphon's cock and hits your tongue; the taste is magical, and you need more. Shifting a bit, you manage to take the tip of the gryphon's knotted black cock into your mouth, and you start wildly pumping away at it with both hands while still fucking her abused hole furiously.";
-	attempttowait;
+	WaitLineBreak;
 	say "     The combined stimulation is too much for the gryphon as her body is wracked with orgasm. Gob after gob of the most delicious cum starts pouring down your throat, while at the same time milk gushes from the gryphon's massive breasts, soaking the both of you. Your blue partner's orgasm causes her muscles to involuntarily clamp down on your throbbing cock, this increased friction is all it takes as you start to pump her full of your seed.";
 	say "     Spent and exhausted you get dressed and walk away, leaving the Hermaphrodite Gryphon to lie in a pool of her own milk.";
 	decrease libido of player by 30;
@@ -200,15 +200,15 @@ to say hgryphon_pw_01:
 
 to say hgryphon_pw_02:
 	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot. The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk.";
-	attempttowait;
+	WaitLineBreak;
 	say "     As you increase your pace, you see what appears to be milk dribbling from the beast's large nipples. You bend down and take one of the nipples into your mouth. While you greedily consume all the milk these wonderful teats will produce, a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and slide that bulb past your slick labial lips. You feel climax approaching, so you thrust down as hard as you can to force that wonderful bulge inside.";
 	if cunt length of player < 6:
 		say "     It's no use, you are just too small to take it all in. The gryphon chirps soothingly understanding your frustration. Suddenly, you let out a startled yelp as you feel an electrifying tickling sensation on your clit and look down to see the puffed end of a blue tail to be the cause.";
-		attempttowait;
+		WaitLineBreak;
 		say "     'Perhaps this will help ease your suffering,' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on her tasty, milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
 	else:
 		say "     Seeing what you are trying to do, your blue lover waits for the right moment, and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you; your knees buckle and you collapse into the soft furry warmth of the gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride.";
-		attempttowait;
+		WaitLineBreak;
 		say "     'It's alright baby, mama's here,' the gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling, the gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely register achieving orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour), the gryphon herm lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
 	say "     You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partner's massive furry blue breasts. Eventually, the gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on gryphon cock. You start gingerly sliding the bulbous black shaft out, and as it passes your abused nether lips, a torrent of cum spills out, drenching the almost unconscious gryphon below. You get dressed and leave, the gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.";
 	PlayerDrink 5;
@@ -222,10 +222,10 @@ to say hgryphon_pw_03:
 to say hgryphon_pw_04:
 	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot. The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk.";
 	say "     Realizing that knot is not going in without a bit more force than gravity can provide, you get an idea. Taking your large [cock of player] rod, you push it down between your lover's massive blue furred tits. You take the gryphon's arms and have her cross her chest, under her breasts but over your cock, effectively locking you in place. 'Hold on tight!' you say as you lean back, using the leverage your giant cock provides to force the knot inside. You both moan loudly as the pain quickly transforms to intense pleasure, the gryphon starting to rock back and forth as you become accustomed to her size.";
-	attempttowait;
+	WaitLineBreak;
 	say "     Enjoying the sensation, you join in, rocking your hips back and forth, causing your cock to start fucking the gryphon's ample cleavage. You feel something moist start rubbing the tip of your rock hard shaft and look down to see the gryphon's beak encasing the head of your cock. Worrying that the gryphon's impressive beak is about to take a bite our of your favorite organ, you start to withdraw, but you quickly realize there is nothing to worry about as her tongue starts to dance across the head of your engorged member. You feel your [short ball size] balls start to contract as you near orgasm. Sensing you're near, the gryphon pick up the pace of her fucking, pounding your abused pussy mercilessly.";
 	say "     'HARDER, FASTER!' you scream as you feel your orgasm approaching. With a guttural yell you climax, releasing gob after gob of hot thick cum straight down the gryphon's throat. Not to be left out, the gryphon gives one last hard thrust and starts dumping what feels like gallons of hot seed into your belly. Knowing that you are tied on that knot and not going anywhere until the gryphon is done cumming, you ease yourself forward and rest your head on one of her bountiful blue breasts.";
-	attempttowait;
+	WaitLineBreak;
 	say "     You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the gryphon's magnificent nectar. Once your thirst has been quenched, you notice that the gryphon's cock has shrunk down and can now be easily removed. As you rise to your feet, the gryphon's cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying gryphon seed everywhere.[ovichance]";
 	say "     'Call me!' the gryphon squawks plaintively as you stumble away, dressing yourself as you go.";
 	PlayerDrink 5;
@@ -243,9 +243,9 @@ to say hgryphon_TG:
 	increase XP of Garrett by 1;
 	say "     Approaching the gryphon, you take her cock in hand and start stroking it. She gives a satisfied moan and relinquishes it to you. Stroking the dark-skinned meat gets the creature all the more aroused and compliant. Taking out the bottle of gryphon cum, you let her have a tantalizing sniff of it. She moans and asks what that [one of]great[or]rich[or]yummy[at random] stuff is. You wave it under her beak and say that it's pure, he-gryphon milk, rich and potent.";
 	say "     'It's from a buff, sexy gryphon - all male and all stud. Firm chest, strong shoulders and hard, hard cock. His virile spunk refined and purified into a potent milk. Doesn't that just sound simply delicious?' you whisper sensually to her, stroking her pulsing rod all the while. It leaks increasingly the further you go on. 'Have some and you'll be a he-gryphon stud just like that.'";
-	attempttowait;
+	WaitLineBreak;
 	say "     Between your stroking keeping her aroused and the drink's alluring scent, she moans that she wants it so bad. Grinning, you pass her the bottle and watch eagerly as she downs it without hesitation. The man-milk's effects are quick, causing a rapid shift in the herm's body. Her shoulders broaden and chest flattens as her boobs recede. The wet sounds of her frantically fingering her pussy end with a final wet slurp and an orgasmic cry as the new he-gryphon's digits are pushed out of the closing hole. Despite the blasts of fresh semen shooting forth, the horny creature's balls and cock plump up a little further.";
-	attempttowait;
+	WaitLineBreak;
 	say "     By the time it's over, the hybrid is now fully male, a cute and sexy [if the remainder after dividing hgryphon_TGcount by 4 is 1]twink[else if the remainder after dividing hgryphon_TGcount by 4 is 2]stud[else if the remainder after dividing hgryphon_TGcount by 4 is 3]girly-boy[else]dude[end if]. He sags back against their resting spot, panting to catch his breath while running his paws over his gender-shifted body. Whether it is an effect of the semen milk, the powerful orgasm or the delicious afterglow, the creature seems quite pleased with his present state.";
 	say "     Taking the opportunity, you run your fingers through his feathers sensually and tell him about Garrett, the sexy male stud who is making the special milk he's just enjoyed. You describe the buff gryphon male in a way that makes the woozy gryphon lustful with gay thoughts. You add that the milkman would enjoy meeting him and showing him just how much fun two sexy male gryphons can have together. You finish by providing directions to the floating city and send him on his way, quite certain your friend will be very pleased to meet the newcomer.";
 	if HP of Garrett < 6, now HP of Garrett is 6;

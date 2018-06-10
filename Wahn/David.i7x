@@ -152,7 +152,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
 				say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but he moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
-				if (cocks of player > 0 and cunts of player > 0):
+				if player is herm:
 					LineBreak;
 					say "     [bold type]Being dual-gendered, which way do you want to enjoy your new soldier friend?[roman type][line break]";
 					LineBreak;
@@ -164,9 +164,9 @@ Instead of resolving a Thankful Soldier:
 					else: [let him fuck your pussy]
 						LineBreak;
 						say "[DavidPatrolVaginal]";
-				else if(cocks of player > 0):
+				else if cocks of player > 0:
 					say "[DavidPatrolAnal]";
-				else if(cunts of player > 0):
+				else if cunts of player > 0:
 					say "[DavidPatrolVaginal]";
 				else:
 					say "[DavidPatrolRubbing]";
@@ -202,7 +202,7 @@ Instead of resolving a Thankful Soldier:
 				else:
 					say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss. [if thirst of David is 1]After a moment of hesitation, he replies in kind and you make out with each other, exploring each other's mouths with your tongues[else if thirst of David > 1]He eagerly complies, hungrily making out with you and exploring your mouth with his tongue[end if]. Meanwhile, you run a hand through his hair and goose his bubble butt with the other one.";
 					say "     As you come back up for air, he [if thirst of David is 1]stammers 'I... just can't resist. So... good.', moaning as you squeeze his ass and feel his bulge pressing against your body. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.[else if thirst of David > 1]says 'I'm so horny right now. You're amazing...', moaning as you squeeze his ass and feel his bulge pressing against your body. Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.[end if]";
-				if(cocks of player > 0 and cunts of player > 0):
+				if player is herm:
 					say "     [bold type]Being dual-gendered, which way do you want to enjoy your soldier friend?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck his Ass.";
@@ -213,9 +213,9 @@ Instead of resolving a Thankful Soldier:
 					else: [let him fuck your pussy]
 						LineBreak;
 						say "[DavidPatrolVaginal]";
-				else if(cocks of player > 0):
+				else if cocks of player > 0:
 					say "[DavidPatrolAnal]";
-				else if(cunts of player > 0):
+				else if cunts of player > 0:
 					say "[DavidPatrolVaginal]";
 				else:
 					say "[DavidPatrolRubbing]";
@@ -282,7 +282,7 @@ DavidBrutusMarcVar is a number that varies.
 The scent of David is "     David has a nice masculine human smell.".
 
 Instead of fucking David:
-	if(lastfuck of David - turns < 5):
+	if (lastfuck of David - turns < 5):
 		say "     David says 'I'd love to, but I'm still pretty worn out from the last time...'";
 	else:
 		if David is in Parade Ground:
@@ -302,7 +302,7 @@ Instead of fucking David:
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
 		[]
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let David fuck your pussy";
 			now sortorder entry is 3;
@@ -314,7 +314,7 @@ Instead of fucking David:
 			now sortorder entry is 4;
 			now description entry is "Let the young soldier fill your ass with his seed.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take David's ass";
 			now sortorder entry is 5;
@@ -1609,7 +1609,7 @@ to say DavidSex6: [Sven's ass gets fucked by David]
 	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then whisper in his ear to look over to one of the farther-away beds in the bunker. There, your snowmeow kitty Sven is lying on his stomach, reading a book, tail waving in the air above his enticing furry butt. As wound-up as you already have David, it doesn't take much more than describing how Sven's tight and ready hole would feel around his cock to get him interested. After undoing the soldier's pants and letting them drop, you quickly get rid of your own clothes and the two of you walk over towards Sven naked.";
 	WaitLineBreak;
 	say "     You're almost at the bed before Sven notices you and turns his head, eyes going wide as he sees [if cunts of player > 0 and cocks of player is 0]his mistress and her human friend [else]his master and his human friend [end if]walk towards him in the nude - and quite obviously horny. A shy but eager smile spreads over his face, then you're with him and start softly scritching behind his ears, which has Sven close his eyes and purr in contentment. David meanwhile runs a hand along the snow leopard's tail flirting in the air before him and asks 'I - can I fuck you?' Sven just keeps purring loudly, then stretches his body and raises his furry butt in unmistakable eagerness.";
-	say "     Taking a kneeling position behind the sexy kitty, David grabs his hard cock and rubs it teasingly over Sven's pucker and making it wet with his precum. Your feline pet's tail meanwhile strokes against David's naked chest, its end curling around his back almost as if to pull him closer. You can hear David mutter 'Such soft fur you have, pretty kitty' under his breath, then he's pressing forward against Sven, his hard cock spreading open the snowmeow's tail-hole. 'Yes! Fuck me, please!' Sven mrowls in delight, grinding his ass backwards to meet each thrust as David starts pounding into him.";
+	say "     Taking a kneeling position behind the sexy kitty, David grabs his hard cock and rubs it teasingly over Sven's pucker and making it wet with his precum. Your feline pet's tail meanwhile strokes against David's naked chest, its end curling around his back almost as if to pull him closer. You can hear David mutter 'Such soft fur you have, pretty kitty' under his breath, then he's pressing forward against Sven, his hard cock spreading open the snowmeow's tailhole. 'Yes! Fuck me, please!' Sven mrowls in delight, grinding his ass backwards to meet each thrust as David starts pounding into him.";
 	WaitLineBreak;
 	if cocks of player > 0:
 		say "     With your two friends already enjoying each other's bodies, it's for you to decide where and how you want to join in.";

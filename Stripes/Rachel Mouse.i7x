@@ -256,7 +256,7 @@ to say sexwithmousegirl:
 			if name entry is "Mental Mouse":
 				now monster is y;
 				break;
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			let T be a random number between 1 and 9;
 			if T is 1 or T is 2:
 				say "[rachelsexmale1]";

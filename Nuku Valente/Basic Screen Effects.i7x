@@ -398,7 +398,7 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		center "Press SPACE to begin.";
 		wait for the SPACE key;
 		clear the screen;
-		leave space.
+		leave space;
 
 	To turn screen black:
 		say white letters;
@@ -410,13 +410,13 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		turn the background white;
 		say black letters;
 		clear the screen;
-		leave space.
+		leave space;
 
 	To leave space:
 		say paragraph break;
 		say paragraph break;
 		say paragraph break;
-		say paragraph break.
+		say paragraph break;
 
 	Table of Fancy Status
 	left	central	right
@@ -470,4 +470,4 @@ Note that attempting to compile this example for Glulx will fail, because it use
 	Rule for constructing the status line:
 		fill status bar with Table of Fancy Status;
 		say default letters;
-		rule succeeds.
+		rule succeeds;

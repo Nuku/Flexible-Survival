@@ -99,7 +99,7 @@ When Play begins:
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "cowboy milk"	"A plastic bottle full of milk of Corbin James, the cowboy cuntboy you met."	1	cowboy milk
 

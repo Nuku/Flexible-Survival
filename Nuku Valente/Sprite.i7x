@@ -1,7 +1,7 @@
 Version 2 of Sprite by Nuku Valente begins here.
 [ Version 2.1 - Relocated to Urban Forest area. ]
 
-"Adds a Sprite to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Sprite to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 0 - Flags and Tags
 

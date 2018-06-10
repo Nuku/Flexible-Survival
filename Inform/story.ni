@@ -283,7 +283,7 @@ A situation has a number called minscore. The minscore of a situation is usually
 A featset is a kind of thing.
 inasituation is a truth state that varies. inasituation is normally false.
 
-Definition: A grab object(called X) is wielded:
+Definition: A grab object (called x) is wielded:
 	if weapon object of player is x, yes;
 	no;
 
@@ -364,7 +364,7 @@ Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
 
-Definition: A situation(called X) is available:
+Definition: A situation (called x) is available:
 	if sarea of x is "Nowhere", no;
 	if x is resolved, no;
 	if x is close:
@@ -372,31 +372,31 @@ Definition: A situation(called X) is available:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of X < (the level of the player plus levelwindow plus 1):
+		else if the level of x < (the level of the player plus levelwindow plus 1):
 			yes;
 	no;
 
-Definition: A situation(called X) is close:
-	if ( sarea of X exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
+Definition: A situation (called x) is close:
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
 		yes;
 	no;
 
-Definition: A scavevent(called X) is scavable:
-	if ( sarea of X exactly matches the text battleground, case insensitively ) or ( sarea of X is "Allzones" or the sarea of X is "allzones" ):
+Definition: A scavevent (called x) is scavable:
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( sarea of x is "Allzones" or the sarea of x is "allzones" ):
 		if score < minscore of x:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of X < (the level of the player plus levelwindow plus 1):
+		else if the level of x < (the level of the player plus levelwindow plus 1):
 			yes;
 	no;
 
 
-Definition: A person(Called X) is pure:
-	if bodyname of x is facename of X:
-		if bodyname of x is tailname of X:
-			if bodyname of x is skinname of X:
-				if bodyname of x is cockname of X:
+Definition: A person (called x) is pure:
+	if bodyname of x is facename of x:
+		if bodyname of x is tailname of x:
+			if bodyname of x is skinname of x:
+				if bodyname of x is cockname of x:
 					yes;
 	no;
 
@@ -409,21 +409,21 @@ Definition: A person (called x) is purehuman:
 						yes;
 	no;
 
-Definition: A person(called X) is male:			[note: this is both male and herm]
+Definition: A person (called x) is male:			[note: this is both male and herm]
 	if cocks of x > 0, yes;
 
-Definition: A person(called X) is female:			[note: this is both female and herm]
+Definition: A person (called x) is female:			[note: this is both female and herm]
 	if cunts of x > 0, yes;
 
-Definition: A person(called X) is herm:
+Definition: A person (called x) is herm:
 	if cocks of x > 0 and cunts of x > 0, yes;
 
-Definition: A person(called X) is neuter:
+Definition: A person (called x) is neuter:
 	if cocks of x is 0 and cunts of x is 0, yes;
 
 A person can be booked. A person can be bunkered. A person is usually not booked. A person is usually not bunkered.
 
-Definition: A person(Called X) is booked:
+Definition: A person (Called x) is booked:
 	If x is the player, no;
 	If x is Trixie, no;
 	if x is Velos, no;
@@ -444,7 +444,7 @@ Definition: A person(Called X) is booked:
 	if the location of x is Attic, yes;
 	no;
 
-Definition: A person(Called X) is bunkered:
+Definition: A person (Called x) is bunkered:
 	If x is the player, no;
 	if x is Velos, no;
 	if the location of x is Bunker, yes;
@@ -465,7 +465,7 @@ A room has a text called earea. earea is usually "void". [exploration area]
 The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
-instead of examining a grab object(called x):
+instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
 	if "Weaponsmaster" is listed in feats of player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
@@ -630,7 +630,7 @@ Definition: A grab object (called D) is present:
 		if the name corresponding to a object of d in the table of game objects is listed in the invent of the location of the player, yes;
 	no;
 
-before examining the grab object(called x):
+before examining the grab object (called x):
 	let good be 0;
 	if x is owned, now good is 1;
 	if x is present, now good is 1;
@@ -1615,13 +1615,13 @@ understand "wield [owned grab object]" as using.
 understand "write in [owned grab object]" as using.
 understand "use cot" as resting.
 
-Check using a grab object(called x):
+Check using a grab object (called x):
 	if hardmode is true and x is journal and (LastJournaluse minus 8) < turns:
 		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours.";
 		stop the action;
 	continue the action;
 
-Carry out using a grab object(called x):
+Carry out using a grab object (called x):
 	if x is owned:
 		process x;
 	else:
@@ -1642,14 +1642,14 @@ Carry out massusing:
 
 Resolving is an action applying to one thing.
 
-Carry out resolving a situation(called X):
+Carry out resolving a situation (called x):
 	say "This situation has not been properly written!";
 
 After resolving a situation:
 	try looking;
 	[follow the ngraphics_blank rule;]
 
-to delete (X - a grab object):
+to delete (x - a grab object):
 	decrease the carried of x by 1;
 	if carried of x < 0:
 		now carried of x is 0;
@@ -1794,7 +1794,7 @@ To Extend game by (x - a number):
 	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type]";
 
 
-To process (X - a grab object):
+To process (x - a grab object):
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";
 		let found be 0;
@@ -2249,7 +2249,7 @@ To WaitLoveFunction:
 
 Section Clearless
 
-[creates (and sets) flag for skipping most(all?) clear the screen]
+[creates (and sets) flag for skipping most (all?) clear the screen]
 [same as for waithate, both command and function.]
 clearnomore is a number that varies.
 
@@ -2350,7 +2350,7 @@ understand "get [present grab object]" as grabbing.
 understand "take [present grab object]" as grabbing.
 understand "grab [present grab object]" as grabbing.
 
-carry out grabbing something(called x):
+carry out grabbing something (called x):
 	let found be 0;
 	let num be 0;
 	repeat with Q running through invent of the location of the player:
@@ -2376,7 +2376,7 @@ burninating is an action applying to one thing.
 understand "trash [owned grab object]" as burninating.
 understand "junk [owned grab object]" as burninating.
 
-carry out burninating something(called x):
+carry out burninating something (called x):
 	let found be 0;
 	if x is journal:
 		say "You really don't think that's a good idea.";
@@ -2404,7 +2404,7 @@ allburninating is an action applying to one thing.
 understand "trashall [owned grab object]" as allburninating.
 understand "junkall [owned grab object]" as allburninating.
 
-carry out allburninating something(called x):
+carry out allburninating something (called x):
 	let found be carried of x;
 	if x is not owned:
 		say "You don't seem to be holding any.";
@@ -2446,7 +2446,7 @@ littering is an action applying to one thing.
 
 understand "drop [owned grab object]" as littering.
 
-carry out littering something(called x):
+carry out littering something (called x):
 	let found be 0;
 	let num be 0;
 	if x is wielded and x is not journal:
@@ -2523,7 +2523,7 @@ This is the sex change rule:
 	choose row monster from the table of random critters;
 	let singlesexadjust be 0;
 	if "Single Sexed" is listed in feats of player:
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			let singlesexadjust be 1;	[currently herm]
 		else if cocks of player > 0:
 			let singlesexadjust be 2;	[currently male]
@@ -3960,7 +3960,7 @@ This is the turnpass rule:
 	rule succeeds;
 
 to say spontaneousorgasm:
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees. Your [if cocks of player is 1]cock sprays[else]cocks spray[end if] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs. You leave a [if cock width of player + ( 2 * cunt width of player ) < 18]messy splotch[else if cock width of player + ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else if cocks of player > 0:
 		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees. Your [if cocks of player is 1]cock sprays[else]cocks spray[end if] your hot seed across your clothes and the ground. Your blasted cum leaves a [if cock width of player < 18]messy splotch[else if cock width of player < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
@@ -4168,7 +4168,7 @@ looknow is a number that varies.
 
 Afterexamine rules is a rulebook.
 
-instead of examining a person(called x):
+instead of examining a person (called x):
 	if x is the player:
 		follow the self examine rule;
 		follow the afterexamine rules;
@@ -4376,15 +4376,15 @@ This is the location choice rule:
 	if title entry is "Bunker":
 		say "You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.";
 	else if title entry is "Caught Outside":
-		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you.(Gain Spartan Diet)[line break]";
+		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you. (Gain Spartan Diet)[line break]";
 	else if title entry is "Rescuer Stranded":
-		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
+		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive! (Start with no supplies, an iron man mode, can you survive?)[line break]";
 	else if title entry is "Forgotten":
 		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	else if title entry is "Hard mode":
 		say "You always had a desire to challenge yourself so purposely waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	else if title entry is "Researcher":
-		say "You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection(You won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
+		say "You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
 	say "Continue?";
 	if the player consents:
 		now looknow is 0;
@@ -5590,7 +5590,7 @@ Book - Start the Game
 instead of going somewhere while player is overburdened:
 	say "You are too over burdened to move. Drop some of that junk!";
 
-instead of going through a dangerous door(called X):
+instead of going through a dangerous door (called x):
 	if the HP of the player < 1:
 		say "You are too injured to go far. You rest instead.";
 		Rest;
@@ -6216,7 +6216,7 @@ to say gsopt_3:
 		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you (Gain Spartan Diet).[bold type][if gsgt is 2]-Set[end if][roman type][line break]";
 		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive (Start with no supplies, an iron man mode, can you survive?)![bold type][if gsgt is 3]-Set[end if][roman type][line break]";
 		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![bold type][if gsgt is 4]-Set[end if][roman type][line break]";
-		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection(You won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[bold type][if gsgt is 5]-Set[end if][roman type][line break]";
+		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[bold type][if gsgt is 5]-Set[end if][roman type][line break]";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:

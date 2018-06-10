@@ -119,7 +119,7 @@ When Play begins:
 
 Section 3 - Estosterogen Pill
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "estosterogen pill"	"This bi-color pill has a pair of interconnected rings marked onto it, one with a cross and the other with a plus quartering them."	1	estosterogen pill
 
@@ -127,7 +127,7 @@ estosterogen pill is a grab object. It is temporary. It is a part of the player.
 
 the usedesc of estosterogen pill is "[estosterogen pill use]";
 
-before using a grab object(called x):
+before using a grab object (called x):
 	if x is estosterogen pill:
 		LineBreak;
 		if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:

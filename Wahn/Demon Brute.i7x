@@ -444,7 +444,7 @@ to say dbcapturesex_11: [Brutus rides - anal]
 			say "     Brutus rides the demonic cock slowly at first, taking his time adjusting to the massive intruder before making the most of the opportunity. The fallen demon struggles, not to break free, but to pin your companion down and take him violently. Brutus is able to keep it pinned though, holding the weakened demon down with his great strength and the leverage of his position over it. Not able to hold himself back for long, his pace soon quickens until he's bouncing up and down on the groaning demon's rod and they're both pushed to orgasm[if DemonBruteStatus is 1]. He paints the demon's scaly hide with his seed even as it fills his bowels with its infernal load[else]. Your demonic companion's cunt clutches tightly around his foe's shaft, milking it for its infernal load[end if][if cocks of player > 0 or cunts of player > 0]. The sight of this sends you into orgasm as well[end if]. Once the demon's balls are drained, Brutus pulls off of its rod and offers for it to lick its own load from his asshole, which it does despite its obvious anger. That done, the messy, sex-stinking demon is tossed aside with a growl that it's free to go now. The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "demon tooth"	"A pretty long, curved fang with a sharp tip. You knocked it out of a demon brute's mouth. Maybe you could find someone who has knowledge of the supernatural and show it to them - there might be something interesting to be done with it."	1	demon tooth
 
@@ -894,7 +894,7 @@ to say DemonBruteSexMenu:
 		project the figure of BrutusGood_icon;
 	setmonster "Demon Brute";
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -906,7 +906,7 @@ to say DemonBruteSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Suck him off.";
 		now toggle entry is DemonBruteSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -936,7 +936,7 @@ to say DemonBruteSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Get Brutus off by fingering his ass.";
 		now toggle entry is DemonBruteSex rule;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take the demon brute's ass";
 		now sortorder entry is 8;
@@ -1483,7 +1483,7 @@ When Play begins:
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "demonbrute";[ Row used to designate any special combat features, "default" for standard combat. ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "demon seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, and is still warm."	1	demon seed
 

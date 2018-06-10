@@ -197,7 +197,7 @@ when play ends:
 	if bodyname of player is "Centaur Stallion" or bodyname of player is "Centaur Mare":
 		if humanity of player < 10:
 			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd. ";
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "     As a herm centaur, you are popular among the other members of the herd and are often mounted by the stallions and sought out by the mares in heat. You happily have sex with them all, whinnying lustfully as you mate with them.";
 			else if cocks of player > 0:
 				say "     As a male centaur, you help to guard the territory. When they come into season, you are sought out by several of the mares in heat looking for you to give them a foal.";

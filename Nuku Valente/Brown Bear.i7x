@@ -1,4 +1,5 @@
 Version 4 of Brown Bear by Nuku Valente begins here.
+
 [ Version 1.0 - Initial mob from Nuku Valente's equine extension - Illpill                                               ]
 [ Version 1.1 - Moved to Nuku Valente's folder, unknown changes - Nuku                                                   ]
 [ Version 1.2 - Bear can no longer expand you if you have microwaved or male preferred - Nuku Valente                    ]
@@ -167,7 +168,7 @@ when play ends:
 		else:
 			say "     Your body shape strongly inclines you to seek an outdoor life. Your resourcefulness, hardiness and aptitude are noted and your kind are soon recognized as excellent park warden material. Despite often being posted to wilderness areas, you are seldom left completely alone for long as bears begin to build an increasing fanbase amongst both the infected and the more [one of]adventurous[or]deviant[at random] uninfected.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "honeycomb"	"A red-painted tin containing a wonderfully sweet smelling slice of coarse honeycomb. From the size of the cells, you know you really don't want to find the hive."	1	honeycomb
 

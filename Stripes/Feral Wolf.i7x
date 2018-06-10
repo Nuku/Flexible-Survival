@@ -76,7 +76,7 @@ to say beatferalwolf:
 			if the player consents:
 				LineBreak;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					say "you decide what to do with him. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours. But being both male and female, there are options open to you.";
 					say "     [bold type] Would you prefer to fuck the wolf or ride his lupine cock?[roman type][line break]";
 					LineBreak;
@@ -263,7 +263,7 @@ when play ends:
 			else:
 				say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: wolf['] is written on the side."	1	wolf cum
 

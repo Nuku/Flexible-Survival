@@ -555,7 +555,7 @@ Instead of resolving a PeachTree:
 	now PeachTree is resolved;
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "tasty peach"	"A very plump and juicy peach. It is much larger than a typical peach, but smells all the more delicious."	1	tasty peach
 
@@ -576,7 +576,7 @@ to say yummypeach:
 	if libido of player > 100, now libido of player is 100;
 
 instead of sniffing tasty peach:
-	say "The over-sized peach smells delicious and tempting.";
+	say "The oversized peach smells delicious and tempting.";
 
 
 Section 5 - State Fair Events
@@ -740,7 +740,7 @@ Instead of resolving a Caught Glider:
 	say "     Hearing some commotion start up suddenly behind you, you turn around in time to see one of those cotton-candy-colored sugar gliders run across the laneway. In hot pursuit of her are a pack of the colorful, sugar-crazed ferrets. 'Sugar thief!' 'Come back here!' 'Don't let her get away, guys!' 'Candy-assed scoundrel!' they call out excitedly, laughing as they give chase. Following cautiously, you watch the sugar glider string them along for a while rather than just glide away, giggling as well at the fun and yelling taunts back at them.";
 	say "     But when it looks like she's going to get away, she banks the wrong way and is jumped by several of the ferrets who doubled-back and were waiting atop the roof of one of the stalls. The fluffy pink girl is pulled to the ground and pinned down by the excited ferrets. 'Let's show her what we do to sugar thieves,' one says with a wide, toothy grin. 'Yeah!' 'Do it!' 'Thieves get fucked!' the others cheer.";
 	say "     The sugar glider giggles at this and squirms playfully as the ferrets around her start groping her cute body. 'Oh, don't you dare, you soda jerks. Don't you dare stuff my sweet, juicy cunts,' she says while parting her legs and spreading the wet lips of her two pussies. 'You're such naughty hobs for even suggesting it,' she sniffs haughtily, grinning all the more even as she continues to frig herself.";
-	say "     Of course, with such tantalizing teasing, the ferrets eagerly pile atop her, two lucky males getting the chance to stuff her cunts. A bright blue jill holds the sugar glider's head between her legs and from the moaning she's giving, the pink girl's long tongue is hard at work in the female ferret's cunt. The other ferrets break into little groups and pass around some celebratory soda, an impromptu orgy breaking out as they celebrate their victory. The manic tube rats change partners often and it's hard for you to keep your eyes on the sugar glider during it all, having several other sexy makeout sessions to watch. The whole thing gets you quite worked up and soon you're [if cocks of player > 0 and cunts of player > 0]stroking your cock[smn] and fingering your puss[yfn] while watching the rampant sex[else if cocks of player > 0]stroking your cock[smn] while watching the rampant sex[else if cunts of player > 0]fingering your puss[yfn] while watching the rampant sex[else]rubbing over your body and grinding your bare groin against the corner of the bench you're using as cover[end if][if cocks of player > 0 or cunts of player > 0]. You eventually masturbate yourself to orgasm while watching all the fucking going on[end if].";
+	say "     Of course, with such tantalizing teasing, the ferrets eagerly pile atop her, two lucky males getting the chance to stuff her cunts. A bright blue jill holds the sugar glider's head between her legs and from the moaning she's giving, the pink girl's long tongue is hard at work in the female ferret's cunt. The other ferrets break into little groups and pass around some celebratory soda, an impromptu orgy breaking out as they celebrate their victory. The manic tube rats change partners often and it's hard for you to keep your eyes on the sugar glider during it all, having several other sexy makeout sessions to watch. The whole thing gets you quite worked up and soon you're [if player is herm]stroking your cock[smn] and fingering your puss[yfn] while watching the rampant sex[else if cocks of player > 0]stroking your cock[smn] while watching the rampant sex[else if cunts of player > 0]fingering your puss[yfn] while watching the rampant sex[else]rubbing over your body and grinding your bare groin against the corner of the bench you're using as cover[end if][if cocks of player > 0 or cunts of player > 0]. You eventually masturbate yourself to orgasm while watching all the fucking going on[end if].";
 	say "     Eventually, the ferret orgy starts to break up when it's noticed that they're out of soda again. As the business gets refocused on the pursuit of pop, they head off as an excited mob full of energetic poinging. Looking around as they head off, you're unable to spot the sugar glider, though there seems to be a new, hot pink jill among the group of sugar-crazed ferrets.";
 	if lastcaffeine of Sweet Tooth - turns < 8:		[extend manic phase]
 		increase lastcaffeine of Sweet Tooth by 4;

@@ -256,7 +256,7 @@ When Play begins:
 
 Section 3 - Items
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "spidertaur hair"	"A few long strands of pale-white hair."	1	spidertaur hair
 "silk hammock"	"A large but surprisingly light hammock, made from real spidertaur silk. It has two wooden stability rods at the ends, as well as sticky holding strands to hang it up pretty much anywhere. So you can [bold type]rest[roman type] in comfort wherever you like!"	10	silk hammock
@@ -319,7 +319,7 @@ instead of sniffing Aelias:
 Instead of fucking Aelias:
 	setmonster "Spidertaur";
 	choose row monster from the table of random critters;
-	if(lastfuck of Aelias - turns < 5):
+	if (lastfuck of Aelias - turns < 5):
 		say "     Aelias chuckles and says 'Just give me a moment to catch my breath, little fly...'";
 	else:
 		now sextablerun is 0;

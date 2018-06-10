@@ -102,7 +102,7 @@ to say DeniseTalk3:
 	say "     C";
 
 Instead of fucking the Denise:
-	if(lastfuck of Denise - turns < 2):
+	if (lastfuck of Denise - turns < 2):
 		say "     Denise puts a hand on your chest, giggling lightly as she says, 'Oh dear - you're just insatiable. I like it. Give me one moment to catch my breath, then I'm game for more fun.'";
 	else:
 		now sextablerun is 0;

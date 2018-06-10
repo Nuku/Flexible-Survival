@@ -272,7 +272,7 @@ To say butterfly attack:
 		if "Sterile" is not listed in feats of player:
 			add "Sterile" to feats of player;
 		if cocks of player > 0:
-			say "She grabs [if cocks of player > 1]one of[end if]your [cocktext]shaft[smn] in her hand and squeezes it painfully. 'If you don't want to lose this, start licking.' Possibly due to the nanites, you find yourself turned on by the butterfly's new-found assertiveness. You oblige and begin licking her asshole as commanded. Her proboscis shoots down the hole at the tip of [if cocks of player > 1]one of [end if]your [cocktext]cock[smn] but it's different from before as she penetrates deeper, all the way to your [ball size]. Her long tongue pierces through the valves and begins to suck the stored seed right out of your balls. You feel your cock[smn] soften and your balls shrink as your mojo is drawn out of them, leaving you sterile. As your groin convulses in pain, she recoils her tongue and chides, 'You're not licking.'[line break][line break]";
+			say "She grabs [if cocks of player > 1]one of[end if]your [cocktext]shaft[smn] in her hand and squeezes it painfully. 'If you don't want to lose this, start licking.' Possibly due to the nanites, you find yourself turned on by the butterfly's newfound assertiveness. You oblige and begin licking her asshole as commanded. Her proboscis shoots down the hole at the tip of [if cocks of player > 1]one of [end if]your [cocktext]cock[smn] but it's different from before as she penetrates deeper, all the way to your [ball size]. Her long tongue pierces through the valves and begins to suck the stored seed right out of your balls. You feel your cock[smn] soften and your balls shrink as your mojo is drawn out of them, leaving you sterile. As your groin convulses in pain, she recoils her tongue and chides, 'You're not licking.'[line break][line break]";
 			if "One Way" is not listed in feats of player:
 				decrease cock length of player by 1;
 				decrease cock length of player by cock length of player divided by 3;
@@ -582,7 +582,7 @@ Does the player mean grabbing the pristine negligee: it is very likely.
 
 Section 7 - Monster Items
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "testosterone pill"	"This small potent looking object has a flower with a cross symbol over it."	0	testosterone pill
 "pristine negligee"	"[pristine negligee desc]"	0	pristine negligee
@@ -626,7 +626,7 @@ the usedesc of damaged negligee is "You cannot use that here.".
 the usedesc of cute panties is "You cannot use that here.".
 the usedesc of sexy nightie is "You picked that up for Lance's boyfriend. Hmmm... what was his name again?".
 
-before using a grab object(called x):
+before using a grab object (called x):
 	if x is testosterone pill:
 		LineBreak;
 		if cunts of player > 0:
@@ -991,7 +991,7 @@ to say butterflymagic:
 	replace character number 7 in bmagic with "[bcupsize]";
 	say "[bmagic]";
 
-To recite butterflymagic(x - text):
+To recite butterflymagic (x - text):
 	now bmagic is "[x in upper case]";
 	now ButterflyForeplay is False;
 	now ButterflyPregnant is False;

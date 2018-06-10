@@ -1299,7 +1299,7 @@ Instead of fucking the Elijah:
 		if name entry is "Seraphim":
 			now monster is y;
 			break;
-	if (HP of Elijah is 0): [in the chapel, losing him to the demons] [***]
+	if HP of Elijah is 0: [in the chapel, losing him to the demons] [***]
 		say "     The poor angel is hurt and chained up, with an unknown number of demons surely not too far away. Are you sure you want to do this right now?[line break]";
 		if player consents:
 			say "     The need for instant satisfaction of your urges wins out over the alarm bells your rational mind rings. You move over to the chained angel and pull the shreds of his tunic off his body, revealing his well-shaped and muscular physique to your lustful gaze. He's quite well equipped, the manhood dangling between his legs respectably long without even being hard. You can't wait to see how big it'll get, so you step up and start rubbing your [bodytype of player] body up against the angel, fondling his cock and balls.";
@@ -1317,7 +1317,7 @@ Instead of fucking the Elijah:
 			move player to Entrance to the Red Light District;
 		else:
 			say "     You manage to get your feral impulses under control. Now that you're a bit more rational again, you can't think of a worse time or place to try to get it on with an angel.";
-	else if (HP of Elijah is 1) or (HP of Elijah is 2): [unconscious on the bunk, transform into Evil Elijah]
+	else if (HP of Elijah is 1 or HP of Elijah is 2): [unconscious on the bunk, transform into Evil Elijah]
 		if bodyname of player is not listed in the infections of hellspawn and bodyname of player is not "Hellhound":
 			[if the player isn't a demon, he's not corrupt enough]
 			say "     Looking down over the angel on his bunk, you decide you'd rather let him rest for now. He's strikingly handsome and wakes lust in you from just looking at him, but only the most wicked creatures would take advantage of this helpless and injured person who isn't even conscious most of the time.";
@@ -1326,7 +1326,7 @@ Instead of fucking the Elijah:
 			say "     The remains of your human morality throw up a last despairing wail of protest. Do you want to silence those voices and just continue?[line break]";
 			if player consents:
 				say "     You pull the blanket off the angel's bunk, revealing his naked and very inviting body to your lewd gaze.";
-				if (cocks of player > 0) and (cunts of player > 0): [herms may choose]
+				if player is herm: [herms may choose]
 					say "     Which part of your versatile sex do you want to use to deflower your little angel? (Y for cock, N for pussy)[line break]";
 					if the player consents:
 						say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [cock of player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
@@ -1346,7 +1346,7 @@ Instead of fucking the Elijah:
 						say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now HP of Elijah is 99;
-				else if (cocks of player > 0): [male]
+				else if player is male: [male]
 					say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [cock of player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
 					say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
 					say "     You start pumping in and out of your defenseless partner, delighted how each movement makes him gasp and moan, and run a hand over a tightly muscled chest down to his slowly hardening cock. Giving the angel's balls a playful squeeze, you then grab his cock, pumping up and down on its shaft in rhythm with your own thrusts.";
@@ -1355,7 +1355,7 @@ Instead of fucking the Elijah:
 					say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now HP of Elijah is 99;
-				else if (cunts of player > 0): [female]
+				else if player is female: [female]
 					say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. You proceed to stroke him, your hands gliding over his smooth skin and tracing the outlines of well-defines muscles. As you reach the angel's crotch, you give his balls a playful squeeze, then grab his cock and start pumping your hand up and down its shaft. It quickly fills out and hardens, growing enough that you can put a second hand on it.";
 					say "     When his manhood is good and ready, standing proudly erect like a flagpole, you climb up on the bunk yourself. At first you rub the head of his perfect shaft slowly over the lips of your cunt, but then your need to get him inside the dripping and ready cave quickly overwhelms your restraint. Guiding his cock with one hand, you lower yourself down onto it, panting and moaning as it slides into your body. As you sink in deeper and deeper, the angel starts groaning silently in his sleep, gasping when you take him all the way and your hips touch his balls.";
 					say "     You start moving up and down on the shaft of your defenseless partner, delighted how each movement makes him gasp and moan, and run your hands over his tightly muscled chest. The feelings his cock wakes in you are just heavenly, rubbing against all the right spots. You could go on like this forever, your mind in a pleasant buzz of lust and satisfaction.";
@@ -1421,18 +1421,18 @@ to say ElijahSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Taste some heavenly seed";
 	choose a blank row in table of fucking options;
-	if (cunts of player > 0):
+	if player is female:
 		now title entry is "Let Elijah fuck you";
 	else:
 		now title entry is "Let Elijah ass-fuck you";
 	now sortorder entry is 4;
 	now description entry is "Ride Elijah's angel cock";
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow you";
 		now sortorder entry is 2;
 		now description entry is "Put your angel's mouth to good use";
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Elijah's ass";
 		now sortorder entry is 3;
@@ -2111,7 +2111,7 @@ when play ends:
 				say "     You don't see that much of Elijah after that, but are told he joined the special unit responsible for containing the outbreak. That job keeps him too busy to visit, although he does send you letters and greeting cards for your birthday and Christmas every year, without fail.";
 		else if (Elijah is in the bunker) and (HP of Elijah is 4): [human-like]
 			if (humanity of player < 10):
-				say "     When you succumb to your infection, Elijah is heartbroken about losing the friend and lover who helped him explore his new-found humanity. He sets out and tries to heal you, grasping your head in both hands and praying for your sanity - but fails. You're just too far gone, with almost nothing of your former self remaining inside. With tears in his eyes, he lets you go to live out your time in the city. Devastated about his inability to save you, he becomes somewhat fanatic about containing the outbreak, patrolling the borders of the city day and night, stopping anyone with even the slightest hint of change from leaving.";
+				say "     When you succumb to your infection, Elijah is heartbroken about losing the friend and lover who helped him explore his newfound humanity. He sets out and tries to heal you, grasping your head in both hands and praying for your sanity - but fails. You're just too far gone, with almost nothing of your former self remaining inside. With tears in his eyes, he lets you go to live out your time in the city. Devastated about his inability to save you, he becomes somewhat fanatic about containing the outbreak, patrolling the borders of the city day and night, stopping anyone with even the slightest hint of change from leaving.";
 			else:
 				if bodyname of player is listed in the infections of hellspawn or bodyname of player is "Hellhound": [can't stand demons]
 					say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Then Elijah pulls you to the side, explaining that he's thankful for you saving him and showing him the pleasant side of being almost human - but that he just can't bear the touch of your corrupted form. With a tear in his eye, he gives you a little goodbye wave and leaves with the chaplain. You don't see any more of Elijah after that, but are told he joined the special unit responsible for containing the outbreak.";

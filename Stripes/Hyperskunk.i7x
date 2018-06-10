@@ -96,7 +96,7 @@ when play ends:
 		else:							[survive]
 			say "     When you are rescued by the military, you are examined by some of the military doctors, who are used to the more common skunks they find related to the strain in the park. You tell them a sanitized version of your contact with Dr. Moffatt and one of the psychologists among the group is familiar with her previous work and praises some of her papers. After hearing that you'd had some [']sessions['] with her, he's more than willing to give you a speedy pass on your mental evaluation, not realizing that the respected doctor's professional motivations might have changed. You see no reason to dissuade him and are processed more speedily thanks to his recommendation for release.";
 			let xgen be 0;
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				let xgen be 1;
 			else if cocks of player > 0:
 				let xgen be 2;

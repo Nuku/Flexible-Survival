@@ -183,7 +183,7 @@ Instead of fucking the Carl:
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck him.";
@@ -218,7 +218,7 @@ Instead of fucking the Carl:
 			say "     Pulling off your clothes and gear and setting them down in a near pile, you stroll over to the transformed soldier. As you step up to Carl and offer to have sex with him, you see an eager expression come over his face, his ears perking up and his gaze hungrily wandering over your body. He starts breathing harder, panting with a half-open mouth, and the bulge of his pants starts growing noticeably. Then suddenly, Carl looks behind him with a curious tilt of his eyebrows and starts to chuckle at his exuberantly wagging tail. 'You know what - I'm okay with being a dog now. This body feels strong and pretty amazing - though there are some things I still need to get the hang of.' After a last quick look at his tail, his gaze moves to the bulge in his pants, then to you. In a husky voice he adds 'If you wanna explore some of them with me, I'm game', then pulls his shirt up and over his head, revealing a furry and toned chest.";
 			if graphics is true:
 				project the figure of Carl_knot_icon;
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Fuck Carl.";
@@ -360,7 +360,7 @@ to say CarlSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Give him a blow-job";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
@@ -372,7 +372,7 @@ to say CarlSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Share oral pleasures with your male husky";
 	]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Carl fuck your pussy";
 		now sortorder entry is 4;
@@ -383,7 +383,7 @@ to say CarlSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Let the husky fill your ass with his seed";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Carl's ass";
 		now sortorder entry is 6;
@@ -875,7 +875,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 
 	if player consents:
 		LineBreak;
 		say "     Unobtrusively making your way closer, you watch the husky soldier lower his head to give Candy's muzzle a lick, then say 'Sexy little minx, aren't you. I think I'll take you up on that offer.' Sliding his hand under the band of Candy's thin, lace-trimmed panties, Carl rubs a finger up and down his crack, then pushes it in - making the pink raccoon sigh in pleasure. After a few moments more of tongue-wrestling and fingering, Carl gives an urgent grunt of 'Get on all fours,' then undoes and drops his pants, moments later followed by his shirt. Keeping his own outfit on, Candy drops on all fours on Carl's mattress, then waves his rear at the husky soldier. Flicking his tail up, he raises his skirt, revealing the shapely butt barely covered by the thin fabric of his panties.";
-		say "     As the girly candy striper moans, 'Mmm... come on... Fill your sweet Candy,' Carl immediately falls to his knees behind him and pulls Candy's underwear down to his knees. Then he lines up his erect, canine cock with the coon's pucker before thrusting in with a wild growl. Carl grips his bubble-butt firmly and starts pounding away at him, much to the coon's delight. Even though Candy's tail-hole took Carl quite easily, he seems to be pretty snug around the husky's shaft, making Carl moan and grunt about how good it feels to be inside him. The cute raccoon's tail swishes about as he pushes back into each of the soldier's thrusts with a soft moan, his flesh soft and warm around Carl's thrusting cock.";
+		say "     As the girly candy striper moans, 'Mmm... come on... Fill your sweet Candy,' Carl immediately falls to his knees behind him and pulls Candy's underwear down to his knees. Then he lines up his erect, canine cock with the coon's pucker before thrusting in with a wild growl. Carl grips his bubble-butt firmly and starts pounding away at him, much to the coon's delight. Even though Candy's tailhole took Carl quite easily, he seems to be pretty snug around the husky's shaft, making Carl moan and grunt about how good it feels to be inside him. The cute raccoon's tail swishes about as he pushes back into each of the soldier's thrusts with a soft moan, his flesh soft and warm around Carl's thrusting cock.";
 		WaitLineBreak;
 		say "     While being mounted from behind and squeezing his inner muscles to make Carl wild, the girly raccoon reaches down to wrap his paw around his own hot-pink cock. He strokes himself as Carl pounds away at his ass, driving his knotted cock into the coon's tight asshole again and again. Eventually, the feel of Candy's warm, gripping bottom around his cock and the sight of such a sexy girly boytoy beneath him, moaning cute little sounds, becomes too much for Carl to hold in any longer. Squeezing Candy's fuzzy rump with both hands, he drives his shaft deep inside him, unleashing his hot load of canine seed and knotting the candy striper's ass as his knot expands to full size. Getting creamed with a fresh load of cum and feeling Carl's knot grow inside him is enough to set off Candy himself, spraying his pink cum onto the sheets of the mattress below and filling the air with the scent of cotton candy.";
 		say "     'Wow - that was great!' Candy pants after catching his breath, then continues with, 'I wouldn't mind 'visiting the troops' more often. Wanna make this a regular thing?' There is not even a second of hesitation before Carl barks out 'Definitively! Can't wait to sink my bone into this tight little bun the next time.' At that, he moves his hips a little bit, lightly pulling against the inside of Candy's pucker with the still fully hard knot inside him and making the coon gasp in lust from the sensation. Then he relents and pushes forward again, grinding his loins against the candy striper's butt while waiting for his knot to go down. You leave the two of them like that and go back down into the library.";

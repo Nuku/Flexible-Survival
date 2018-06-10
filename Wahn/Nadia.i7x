@@ -321,7 +321,7 @@ Instead of fucking the Nadia:
 	if (HP of Nadia is 0 or HP of Nadia is 99): [not yet met or refused]
 		say "ERROR-Nadia-001F: She should not be around yet anywhere where players can fuck her.";
 	else:
-		if(lastfuck of Nadia - turns < 6):
+		if (lastfuck of Nadia - turns < 6):
 			say "     'Give me a moment, please,' Nadia says from within the confines of her nest, panting slightly. 'As much as I'd like to be bred again, I need some time to recover.'";
 		else if cocks of player is 0:
 			say "     Nadia looks askance, crestfallen. 'As much as I'm indebted to you, I can't do that. Not that I have anything against it, but I just don't swing that way.'";
@@ -333,13 +333,13 @@ Instead of fucking the Nadia:
 to say NadiaSexMenu:
 	blank out the whole of table of fucking options;
 [
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the beautiful bird blow you.";
 		now toggle entry is NadiaSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
@@ -351,7 +351,7 @@ to say NadiaSexMenu:
 	now description entry is "Give the beautiful bird some oral attention.";
 	now toggle entry is NadiaSex rule;
 ]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
@@ -665,7 +665,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 		say "     Chirping with delight, Nadia grabs the fertile pill out of the air with her talons as you toss it to her. You're worried that she might devour it as-is, but she easily rips apart the foil package and tosses it aside before popping the pill into her beak and swallowing. Crooning softly, the broody bird settles back into her nest to wait for it to work, and work it does.";
 		decrease carried of fertile pill by 1;
 		if NadiaPregCounter1 is 0:[not pregnant yet]
-			say "     Slowly, Nadia begins to moan softly as a gentle warmth gathers in her lower belly and begins to spread out to the rest of her body. Unable to control herself, the bird of paradise rubs her breasts as they grow bigger and firmer, milk glands and ducts within developing to better feed future chicks she will bear. The rest of her body is not forgotten - her hips widen a little, the bone structure shifting to better allow eggs through. Not to be left out, her pussy grows wet as it becomes more prominent, her thickening lips advertising her new-found boost in fertility.";
+			say "     Slowly, Nadia begins to moan softly as a gentle warmth gathers in her lower belly and begins to spread out to the rest of her body. Unable to control herself, the bird of paradise rubs her breasts as they grow bigger and firmer, milk glands and ducts within developing to better feed future chicks she will bear. The rest of her body is not forgotten - her hips widen a little, the bone structure shifting to better allow eggs through. Not to be left out, her pussy grows wet as it becomes more prominent, her thickening lips advertising her newfound boost in fertility.";
 			say "     The transformation complete, Nadia sinks back into her nest with a contented sigh with her wings splayed out. She looks happier, her body more motherly and elegant, the myriad colors on her body more vibrant. A good time for her to be bred, in fact, and she looks eager enough.";
 			increase NadiaFertilityCounter by 1;
 			if NadiaDescription < 6:  [she's not reached goddess stage yet]
@@ -691,7 +691,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 					say "     Pushed through the size of the third trimester, Nadia looks fit to lay any moment - but the growth doesn't stop, instead carrying her well past overdue territory to the point where there's no doubt that she's carrying multiples. Her breasts, too, are swollen and tender to the point where they're finally feeling the effects of gravity, droplets of milk oozing from her nipples at a steady pace, dampening her feathers.";
 					say "     As the growth finally abates, Nadia chirps and croons, folding her wings about herself protectively. One of her hands cradles the swell of her womb, while the other reaches for the dampened feathers about her pussy. Giving in to her desires, the pregnant avian gives sinks back into her nest as she masturbates, albeit with some difficulty owing to her condition.";
 				else if NadiaPregVisibility is 2:
-					say "     As you watch, Nadia's belly grows in earnest, her nanites working furiously to usher the new life growing within her into the world all that sooner. The pill's effects push her size clear through the second trimester and into the beginning of the third - her belly button rises closer and closer to the swell of her womb, and she giggles as it finally pops out, flapping at the air with her wings as she adjusts her balance to cope with her new-found weight.";
+					say "     As you watch, Nadia's belly grows in earnest, her nanites working furiously to usher the new life growing within her into the world all that sooner. The pill's effects push her size clear through the second trimester and into the beginning of the third - her belly button rises closer and closer to the swell of her womb, and she giggles as it finally pops out, flapping at the air with her wings as she adjusts her balance to cope with her newfound weight.";
 					say "     Not to be outdone, Nadia's breasts have swelled even larger, filling with life-giving milk. Yet they remain high and firm, and Nadia tests them gently as the pill's effects fade, chirping and cooing as she rubs her talons against them.";
 					say "     'Being pregnant is wonderful in and of itself,' she says happily, her eyes glazed and distant. 'But feeling my chicks blossom this quickly in my womb...I want this to go on forever.'";
 				else if NadiaPregVisibility is 1:

@@ -350,7 +350,7 @@ Instead of fucking the Felix:
 	else if (HP of Felix is 100): [avoiding the player]
 		say "ERROR-Felix-100B: He should be removed from the game.";
 	else:
-		if(lastfuck of Felix - turns < 6):
+		if (lastfuck of Felix - turns < 6):
 			say "     Felix says 'Sorry I'm still worn out from last time. Give me some space, ok?'";
 		else if (Libido of Felix < 6 or Libido of Felix > 90):
 			say "     Felix says 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
@@ -360,7 +360,7 @@ Instead of fucking the Felix:
 to say FelixSexMenu:
 	project the Figure of Felix_icon;
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -371,7 +371,7 @@ to say FelixSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Felix long horsecock in your mouth.";
 	now toggle entry is FelixSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -440,7 +440,7 @@ to say FelixSex3: [cunt licked by Felix]
 	infect "Centaur Mare";
 
 to say FelixSex4: [fingering Felix ass]
-	say "     You go and give Felix a kiss on the cheek, then whisper in his ear 'How about you let me play with your ass a bit? I know you only want your boyfriend to fuck you, but we can still have some fun, can't we? Come on, you'll like it.' After a moment's hesitation, he smiles and gives you a nod. Running your hands down over the Felix muscled chest, then along his flank as you walk around his equine body to his read end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his reddish tail to reveal his asshole. You lean forward and lick over the young centaur's pucker, revelling in his initial 'Oh? Oh!' and the gasps that follow. Running your tongue up and down his crack, then poking his hole with it, you make Felix pant and moan and soon you hear him say 'This feels amazing!'";
+	say "     You go and give Felix a kiss on the cheek, then whisper in his ear 'How about you let me play with your ass a bit? I know you only want your boyfriend to fuck you, but we can still have some fun, can't we? Come on, you'll like it.' After a moment's hesitation, he smiles and gives you a nod. Running your hands down over the Felix muscled chest, then along his flank as you walk around his equine body to his read end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his reddish tail to reveal his asshole. You lean forward and lick over the young centaur's pucker, reveling in his initial 'Oh? Oh!' and the gasps that follow. Running your tongue up and down his crack, then poking his hole with it, you make Felix pant and moan and soon you hear him say 'This feels amazing!'";
 	LineBreak;
 	say "     Oh, but that's only the start of what you have planned for him... you bring your hand to his hole and start to massage it. After starting slow with one and two fingers, you get him to loosen up and soon are able to slip three, then four fingers in - followed by your whole hand. Pushing deeper into the centaur's body, you stroke his inner passage, grinning at the lust-filled panting and moaning you create with that. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps it makes Felix do every time you stroke over it. Concentrating on that, it doesn't take much longer until the centaur orgasms, his sphincter gripping your arm tightly as a huge load of cum gushes from his horsecock onto the ground, creating a small puddle.";
 	infect "Centaur Stallion";
@@ -619,7 +619,7 @@ Instead of fucking the Andre:
 	else if (HP of Felix is 100): [avoiding the player]
 		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
 	else:
-		if(lastfuck of Andre - turns < 6):
+		if (lastfuck of Andre - turns < 6):
 			say "     Andre says 'Phew, I need a break for a bit. Another time, ok?'";
 		else:
 			say "[AndreSexMenu]";
@@ -627,7 +627,7 @@ Instead of fucking the Andre:
 to say AndreSexMenu:
 	project the Figure of Andre_icon;
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -638,7 +638,7 @@ to say AndreSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Andre's cock in your mouth.";
 	now toggle entry is AndreSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;

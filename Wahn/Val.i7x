@@ -154,7 +154,7 @@ An everyturn rule:
 		decrease ValPregCounter by 1;
 
 Instead of fucking the Val:
-	if(lastfuck of Val - turns < 2):
+	if (lastfuck of Val - turns < 2):
 		say "     Val puts a hand on your chest to hold you back and says 'Please, I need a break for a moment, okay?";
 	else:
 		say "[ValSexMenu]";

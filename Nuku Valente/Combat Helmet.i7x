@@ -3,7 +3,7 @@ Combat Helmet by Nuku Valente begins here.
 "Adds a combat helmet, and a situation to find it."
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "combat helmet"	"A basic army helmet. It should provide some minor protection while worn."	4	combat helmet
 

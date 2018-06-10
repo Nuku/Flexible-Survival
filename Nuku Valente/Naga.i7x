@@ -66,8 +66,7 @@ to say LoseToNaga:
 			now thirst of player is 999;
 			now battleground is "void";
 			now combat abort is 1;
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			end the story saying "You have been eaten and digested by a naga.";
 			stop the action;
 	else if a random chance of 2 in 3 succeeds:

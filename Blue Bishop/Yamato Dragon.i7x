@@ -159,9 +159,9 @@ to say Yamato Dragon attack:
 					say ", each ridge grinding across your [if cunt width of player < 20]quickly [end if]stuffed cunt with an aching excess";
 				say ". Soon enough you can see the outline of his massive organ bulging through your beleaguered frame, your body trembling as you fight to stay conscious.";
 				if libido of player > 33:
-					say "     Almost immediately you cry out, wracked by the throes of your terribly strained orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]over-sized [end if]invader,[if cocks of player > 1] your own cocks sputtering their [cum load size of player] load against you, and[else if cocks of player > 0] your own cock sputtering its [cum load size of player] load against you, and[end if] more than enough to set the dragon himself off. The beast loudly roars, a deafening proclamation of his bliss, as each powerful throb sends tremors through you, the once-defined outline of his dick quickly rounded off from gout after successive gout of hot seed until it begins to sputter free of you.";
+					say "     Almost immediately you cry out, wracked by the throes of your terribly strained orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]oversized [end if]invader,[if cocks of player > 1] your own cocks sputtering their [cum load size of player] load against you, and[else if cocks of player > 0] your own cock sputtering its [cum load size of player] load against you, and[end if] more than enough to set the dragon himself off. The beast loudly roars, a deafening proclamation of his bliss, as each powerful throb sends tremors through you, the once-defined outline of his dick quickly rounded off from gout after successive gout of hot seed until it begins to sputter free of you.";
 				else:
-					say "     After what seems like an eternity you're met with the dragon's loud roar, a deafening proclamation of his bliss. Each powerful throb sends tremors through you, as the once-defined outline of his dick is quickly rounded off from gout after successive gout of hot seed until it begins to sputter free of you. In the wake of this you cry out, wracked by the terribly strained throes of your own orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]over-sized [end if]invader[if cocks of player > 1], your own cocks sputtering their [cum load size of player] load against you[else if cocks of player > 0], your own cock sputtering its [cum load size of player] load against you[end if].";
+					say "     After what seems like an eternity you're met with the dragon's loud roar, a deafening proclamation of his bliss. Each powerful throb sends tremors through you, as the once-defined outline of his dick is quickly rounded off from gout after successive gout of hot seed until it begins to sputter free of you. In the wake of this you cry out, wracked by the terribly strained throes of your own orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]oversized [end if]invader[if cocks of player > 1], your own cocks sputtering their [cum load size of player] load against you[else if cocks of player > 0], your own cock sputtering its [cum load size of player] load against you[end if].";
 				say "     Lost in a dizzying, spent haze, you barely notice as the dragon descends back to the ground, firmly pulling you free of his now-softening dick before allowing you to fall off him, its audibly wet departure leaving a trail of his cum from your wrecked hole.";
 				say "     '[one of]That you squirm like that[or]To sleeve me so well, as you do[at random], [if HP of player < 1 and player is not submissive][one of]your protests amuse me[or]your struggle is in vain[or]you are mine regardless[at random][else][one of]you may be suitable as one of my consorts[or]I might reward your further obedience[or]you will return to me[at random][end if].' Leaving you with his parting remark, he retreats back into the air. It takes a fair amount of time recovering from your overfilled state before finding your things and heading back out.[impregchance]";
 				if "Modest Organs" is not listed in feats of player and (cunt length of player < 24 or cunt width of player < 15):
@@ -258,7 +258,7 @@ to say Yamato Dragon attack:
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
 					if player is not twistcapped, add "Twisted Capacity" to feats of player;
 			else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
-				say "     [if HP of player < 1 and player is not submissive]Making a final attempt to crawl free, you only encourage the over-sized reptile to pull you back by one of[else]Forced to gawk at the over-sized reptile, he offers you a twisted grin as he begins pulling you closer by[end if] your legs. Your front exposed, he buries his [if scalevalue of player < 5]massive[else]large[end if] snout between your thighs. Coarse scales grinding against you vulnerable, [bodytype of player] frame, you must abide his thick tongue's shameless attention, firmly caressing your [cunt size desc of player] cunt[sfn]. In the distance, forced to watch the crotch of his own serpentine form, you see his massive cock slowly growing hard against the open air.";
+				say "     [if HP of player < 1 and player is not submissive]Making a final attempt to crawl free, you only encourage the oversized reptile to pull you back by one of[else]Forced to gawk at the oversized reptile, he offers you a twisted grin as he begins pulling you closer by[end if] your legs. Your front exposed, he buries his [if scalevalue of player < 5]massive[else]large[end if] snout between your thighs. Coarse scales grinding against you vulnerable, [bodytype of player] frame, you must abide his thick tongue's shameless attention, firmly caressing your [cunt size desc of player] cunt[sfn]. In the distance, forced to watch the crotch of his own serpentine form, you see his massive cock slowly growing hard against the open air.";
 				if MYDGM is 0:
 					say "     [if cunt width of player > 19]Well-endowed as you are, you're[else]You're[end if] not exactly sure how this beast intends to fit that thing inside you, making you [if HP of player > 0 or player is submissive]a fair bit worried about what is to follow[else]even more worried than you already are[end if]. This notion doesn't even cross his mind as he frees";
 				else:
@@ -272,9 +272,9 @@ to say Yamato Dragon attack:
 					say ", each ridged edge grinding across your [if cunt width of player < 20]quickly [end if]stuffed pussy with an aching excess";
 				say ". [if scalevalue of player < 5]Almost immediately[else]Soon enough[end if] you can see the outline of his massive organ bulging through your beleaguered, [bodytype of player] frame, its demented apparency exacerbating your already overloaded senses.";
 				if libido of player > 33:
-					say "     Almost immediately you cry out, wracked by the throes of your terribly strained orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]over-sized [end if]invader[if cocks of player > 0] as your own cock[smn] waste[smv] your [cum load size of player] load against you and the creature's crotch[end if], more than enough to trigger your twisted reward. The dragon loudly announcing his bliss with a roar, you watch on, exhausted, as the dick's once-defined outline is quickly rounded off in the wake of his release, hot seed [if scalevalue of player < 5]quickly flooding you until it's forced to sputter from your stuffed cunt[else]gradually flooding you until you're absolutely bloated with the stuff[end if].";
+					say "     Almost immediately you cry out, wracked by the throes of your terribly strained orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]oversized [end if]invader[if cocks of player > 0] as your own cock[smn] waste[smv] your [cum load size of player] load against you and the creature's crotch[end if], more than enough to trigger your twisted reward. The dragon loudly announcing his bliss with a roar, you watch on, exhausted, as the dick's once-defined outline is quickly rounded off in the wake of his release, hot seed [if scalevalue of player < 5]quickly flooding you until it's forced to sputter from your stuffed cunt[else]gradually flooding you until you're absolutely bloated with the stuff[end if].";
 				else:
-					say "     The dragon loudly announcing his bliss with a roar, you watch on, exhausted, as the dick's once-defined outline is quickly rounded off in the wake of his release, hot seed [if scalevalue of player < 5]quickly flooding you until it's forced to sputter from your stuffed cunt[else]gradually flooding you until you're absolutely bloated with the stuff[end if]. In the wake of this you cry out, wracked by the strained throes of your own orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]over-sized [end if]invader[if cocks of player > 0] as your own cock[smn] waste[smv] your [cum load size of player] load against you and the creature's crotch[end if].";
+					say "     The dragon loudly announcing his bliss with a roar, you watch on, exhausted, as the dick's once-defined outline is quickly rounded off in the wake of his release, hot seed [if scalevalue of player < 5]quickly flooding you until it's forced to sputter from your stuffed cunt[else]gradually flooding you until you're absolutely bloated with the stuff[end if]. In the wake of this you cry out, wracked by the strained throes of your own orgasm, [cunt size desc of player] hole weakly squeezing against its [if cunt width of player < 20]oversized [end if]invader[if cocks of player > 0] as your own cock[smn] waste[smv] your [cum load size of player] load against you and the creature's crotch[end if].";
 				say "     Forced to endure some of the monster's weight as he recovers for a moment along with you, you're finally spared as he wrenches his now-softening dick free from you, an audible, wet sound of its departure as it leaves a trail of his white fluid in its wake.";
 				say "     '[if scalevalue of player < 4][one of]Such a little thing[or]So tiny you are[at random][else][one of]That you squirm like that[or]To barely abide me, as you do[at random][end if], [if HP of player < 1 and player is not submissive][one of]your protests amuse me[or]your struggles are in vain[or]you are mine regardless[at random][else][one of]you're suitable as my toy[or]I might reward your further obedience[or]you will return to me[at random][end if].' Having offered up his parting remark he retreats back into the air, leaving you to take a fair amount of time recovering from your utterly stuffed state before finding your things and heading back out.[impregchance]";
 				if "Modest Organs" is not listed in feats of player and (cunt length of player < 20 or cunt width of player < 10):
@@ -326,28 +326,28 @@ to yamatbiasshift:
 		if YDSF is 0:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male dragon. Surely you fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male dragon. Surely you fate is tied to him, should you succumb[roman type].";
 		else if YDSF is 4:
 			now YDSF is 3;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male dragon. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male dragon. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male dragon. Surely your fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male dragon. Surely your fate is tied to him, should you succumb[roman type].";
 	else: [Female]
 		if YDSF is 0:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Surely you fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely you fate is tied to her, should you succumb[roman type].";
 		else if YDSF is 1:
 			now YDSF is 2;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
 	setmongender 3;		[creature is male]
@@ -358,7 +358,7 @@ to say yamato dragon desc:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";
@@ -596,7 +596,7 @@ to say YamatM_4: [Cunt Catching]
 		say "     Eyeing the dragon up lewdly, [if scalevalue of player > 4]it's clear that, even at your size, he probably wouldn't fit.[run paragraph on][else]it's apparent that there's no chance he'd ever fit![run paragraph on][end if] He seems to pick up on your desire and grins darkly at you.";
 		say "     'I know what it is you seek. If you will allow me, I might surprise you...' Somewhat ominous though that offering might've been you nonetheless oblige it, since you've gone this far already";
 	else:
-		say "     Eyeing the dragon up lewdly, you consider the prospect of riding his over-sized dick. He grins darkly at you once you make your request.";
+		say "     Eyeing the dragon up lewdly, you consider the prospect of riding his oversized dick. He grins darkly at you once you make your request.";
 		say "     '[one of]I can respect one who tests their limits[or]I am sure you will fit, with a bit of work[or]I am going to enjoy this task[at random]...' He seems amused by your offering, though you remain confident in making it";
 	say ". Lowering himself to the ground, the serpent exposes his hindquarters for you, allowing you to curiously fondle the expansive stretch of his underside's coarse, yellow scales.";
 	say "     Feeling his firm cleft of a genital slit, it's enough to cause him to rumble lowly in wanton approval, taut lips parting to gradually expose his proud, massive dick. Growing flesh much more supple and yielding to your touch, should you engage in a bit of foreplay? Else, you'll [IF FIRST]see what the dragon has up his sleeve[else]get straight to the point[end if].";
@@ -612,13 +612,13 @@ to say YamatM_4: [Cunt Catching]
 		say "     Inch by inch, your body descends across this obscene girth, until after what seems like forever you finally reach your destination, pressed firmly against the monster's scaled crotch, twitching organ blatantly visible before you, sheathed in your own flesh. It's by this point that the dragon lets go of you, showing little desire to continue.";
 		say "     '[one of]It is done[or]Very well[at random], [one of]I think you can handle it from here[or]set whatever pace pleases you[or]it is all yours[at random].' He presents this matter-of-factly, but you can tell the beast is secretly mocking you. You're absolutely paralyzed with the intense sensation of being utterly impaled by the dick, shall you command the dragon to do the work for you? You figure he won't be particularly easy on you if you do, though...";
 		if player consents:
-			say "     Your words strained by the overwhelming intrusion, your over-sized companion eventually picks up on your plea.";
+			say "     Your words strained by the overwhelming intrusion, your oversized companion eventually picks up on your plea.";
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly. Hit with a single, hard gout of precum sputtering from your strained hole, you immediately and unceremoniously orgasm, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else]cunt weakly aching against the dragon's overwhelming intrusion[end if]. The beast can't help but laugh at how you've clearly bit off more than you can chew.";
 			say "     '[one of]You should be better than this, little one[or]What a pitiful little whelp[or]Oh, how embarrassing for you[at random]. [one of]I am just getting started[or]Now then[at random]...' Exhausted and spent as you already are, this doesn't stop the dragon from repeating the ritual a second time, this time harder, then again, then faster. It's hard to keep conscious as your pussy is repeatedly abused, over and over again.";
 			say "     The pace eventually reaches a fever pitch, bathed in the hot, panting breath of the serpent until, finally, the air is filled with his loud roar. Suddenly and harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of player > 4] almost[end if] immediately before it begins to gush out from your hole, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to cause you to orgasm a second time.";
 		else:
-			say "     Ever the tenacious -- or perhaps foolish -- you make the [if scalevalue of player > 3]slow[else]tremendous[end if] effort of pulling yourself up along your over-sized companion's overwhelming intrusion.";
+			say "     Ever the tenacious -- or perhaps foolish -- you make the [if scalevalue of player > 3]slow[else]tremendous[end if] effort of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]Hmm, still have you pride, then[or]Oh, feel you can handle yourself[at random]? [one of]I doubt that will last for very long[or]This will be entertaining[at random]...' Forcing yourself past each crevice is an ordeal in of itself, until your legs finally buckle under the strain and you're sent plummeting down once more, landing against the serpent's scaled underbelly with an audible slap. Hit with a single, hard gout of precum, you immediately and unceremoniously orgasm, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else]cunt weakly aching against the dragon's overwhelming intrusion[end if]. The beast can't help but laugh at how you've clearly bit off more than you can chew.";
 			say "     '[one of]As I suspected[or]Typical[or]Of course[at random]. [one of]But do not think we are done here just yet[or]I, however, am not finished[or]Now it is my turn[at random]!' Exhausted and spent as you already are, the dragon exploits this opening to take charge of the situation. Talons wrapping around you a second time, he builds a motion of raising you half way before plunging you back down, becoming harder and faster with each descent. It's hard to keep conscious as your pussy is repeatedly abused, over and over again.";
 			say "     The pace eventually reaches a fever pitch, bathed in the hot, panting breath of the serpent until, finally, the air is filled with his loud roar, suddenly and harshly pumped with gout after successive gout of his massive load, belly ballooning outward[if scalevalue of player > 4] almost[end if] immediately before it begins to gush out from your hole, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to cause you to orgasm a second time.";
@@ -630,7 +630,7 @@ to say YamatM_4: [Cunt Catching]
 		say "     Inch by inch, your body descends across this obscene girth until, after what seems like forever, you finally reach your destination, pressed firmly against the monster's scaled crotch, twitching organ blatantly visible before you, sheathed in your own flesh. It's by this point that the dragon lets go of you, showing little desire to continue.";
 		say "     '[one of]It is done[or]Very well[at random], [one of]I think you can handle it from here[or]set whatever pace pleases you[or]it is all yours[at random].' He presents this matter-of-factly, but you can tell the beast is secretly mocking you. It's extremely hard to move with this intense sensation of being utterly impaled by the dick, shall you command the dragon to do the work for you? You figure he won't be particularly easy on you if you do, though...";
 		if player consents:
-			say "     Your words[if scalevalue of player > 3] slightly[end if] strained by the overwhelming intrusion, your over-sized companion eventually picks up on your plea.";
+			say "     Your words[if scalevalue of player > 3] slightly[end if] strained by the overwhelming intrusion, your oversized companion eventually picks up on your plea.";
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly, before repeating this ritual. With each successive, hard gout of precum sputtering from your strained hole, it becomes more and more difficult for you to restrain your orgasm. You put up a decent fight for a while, before you finally succumb, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else]cunt weakly aching against the dragon's overwhelming intrusion[end if]. The beast chuckles lowly at you.";
 			say "     '[one of]Not bad[or]I am impressed[at random], [one of]but not quite good enough[or]I expected you to succumb sooner[or]it is surprising you lasted even that long[at random].' Exhausted and spent as you already are, this doesn't stop the dragon from exploiting you vulnerability to continue hammering you, each plunge faster and harder than the last. It's hard to keep conscious as your pussy is repeatedly abused, over and over again.";
@@ -638,7 +638,7 @@ to say YamatM_4: [Cunt Catching]
 			say "     As his fury subsides, the dragon slowly pulls you free of his softening dick, a flood of his seed escaping you in its wake, before setting you down back on the ground. Taking a moment to clean himself off of the mess, he grins at your completely ruined state.";
 			say "     '[one of]I am impressed[or]Very impressive[or]Well done[at random], [one of]you show a lot of promise[or]perhaps we should train again soon[or]it will be easier for you next time[at random].' Reassuring you even as you were completely wrecked, he eventually leaves you to recover from the whole ordeal. Eventually, you get enough strength to walk again...[impregchance]";
 		else:
-			say "     Ever the tenacious, you make the [if scalevalue of player > 3]slow[else]tremendous[end if] endeavor of pulling yourself up along your over-sized companion's overwhelming intrusion.";
+			say "     Ever the tenacious, you make the [if scalevalue of player > 3]slow[else]tremendous[end if] endeavor of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice is an ordeal in of itself, but you eventually manage to work something of a slow and methodical pace, building a humble motion against his rod. Occasional gouts of precum sputtering from your hole, it's a challenge to restrain your quickly rising bliss. Shall you give in? Otherwise, you'll try to keep your pace.";
 			if player consents:
 				say "     Firmly hilting with the dragon one last time, it's more than enough to set you off, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else]cunt weakly aching against the dragon's overwhelming intrusion[end if]. The beast chuckles lowly at you. You imagine he's going to try and take charge from here, but your will is strong enough to make a run for it. Shall you pull yourself free?";
@@ -669,7 +669,7 @@ to say YamatM_4: [Cunt Catching]
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
 			say "     '[one of]I am impressed[or]Very impressive[or]Exceptional[at random], [one of]you must have a lot of practize[or]I think few could match your skill[or]you are full of surprises[at random]!' Musing over your display, he catches his breath before returning, once more, to the sky, and leaving you to your own devices.[impregchance]";
 		else:
-			say "     Ever the tenacious, you make the[if scalevalue of player < 5] slow[end if] endeavor of pulling yourself up along your over-sized companion's overwhelming intrusion.";
+			say "     Ever the tenacious, you make the[if scalevalue of player < 5] slow[end if] endeavor of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice sends pleasure down your spine, your tainted revels a little surprising to the dragon as you begin to build a motion. Occasional gouts of precum sputtering from your hole, you easily manage the whole ordeal. Shall you go rough and fast? Otherwise, you'll keep things slow.";
 			if player consents:
 				say "     As you begin to kick it into high gear, the creature can't help but writhe with each descent, as though unprepared for how well you'd handle him. Though your strange talent allows you to handle this ordeal without immediately succumbing, it nonetheless tests the very limits of your ability, your body becoming more exhausted with each passing second.";
@@ -701,7 +701,7 @@ to say YamatM_5: [Anal Catching]
 		say "     Eyeing the dragon up lewdly, [if scalevalue of player > 4]it's clear that, even at your size, he probably wouldn't fit.[run paragraph on][else]it's apparent that there's no chance he'd ever fit![run paragraph on][end if] He seems to pick up on your desire and grins darkly at you.";
 		say "     'I know what it is you seek. If you will allow me, I might surprise you...' Somewhat ominous though that offering might've been you nonetheless oblige it, since you've gone this far already";
 	else:
-		say "     Eyeing the dragon up lewdly, you consider the prospect of riding his over-sized dick. He grins darkly at you once you make your request.";
+		say "     Eyeing the dragon up lewdly, you consider the prospect of riding his oversized dick. He grins darkly at you once you make your request.";
 		say "     '[one of]I can respect one who tests their limits[or]I am sure you will fit, with a bit of work[or]I am going to enjoy this task[at random]...' He seems amused by your offering, though you remain confident in making it";
 	say ". Lowering himself to the ground, the serpent exposes his hindquarters for you, allowing you to curiously fondle the expansive stretch of his underside's coarse, yellow scales.";
 	say "     Feeling his firm cleft of a genital slit, it's enough to cause him to rumble lowly in wanton approval, taut lips parting to gradually expose his proud, massive dick. Growing flesh much more supple and yielding to your touch, should you engage in a bit of foreplay? Else, you'll [if MYDGM is 0]see what the dragon has up his sleeve[else]get straight to the point[end if].";
@@ -717,13 +717,13 @@ to say YamatM_5: [Anal Catching]
 		say "     Inch by inch, your body descends across this obscene girth, until after what seems like forever you finally reach your destination, pressed firmly against the monster's scaled crotch, twitching organ blatantly visible before you, sheathed in your own flesh. It's by this point that the dragon lets go of you, showing little desire to continue.";
 		say "     'It is done. Is this not what you wanted? I expect you would rather do as you wish from here.' He presents this matter-of-factly, but you can tell the beast is secretly mocking you. You're absolutely paralyzed with the intense sensation of being utterly impaled by the dick, shall you command the dragon to do the work for you? You figure he won't be particularly easy on you if you do, though...";
 		if player consents:
-			say "     Your words strained by the overwhelming intrusion, your over-sized companion eventually picks up on your plea.";
+			say "     Your words strained by the overwhelming intrusion, your oversized companion eventually picks up on your plea.";
 			say "     'Oh? I assumed you could handle it yourself, given how eagerly you threw yourself on me.' Teasing you as the dragon does, he does eventually oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly. Hit with a single, hard gout of precum sputtering from your strained hole, you immediately and unceremoniously orgasm, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else if cunts of player > 0]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if]. The beast can't help but laugh at how you've clearly bit off more than you can chew.";
 			say "     'You should be better than this, little one. I am just getting started...' Exhausted and spent as you already are, this doesn't stop the dragon from repeating the ritual a second time, this time harder, then again, then faster. It's hard to keep conscious as your ass is repeatedly abused, over and over again.";
 			say "     The pace eventually reaches a fever pitch, bathed in the hot, panting breath of the serpent until, finally, the air is filled with his loud roar. Suddenly and harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of player > 4] almost[end if] immediately before it begins to gush out from your ass, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to cause you to orgasm a second time.";
 		else:
-			say "     Ever the tenacious -- or perhaps foolish -- you make the [if scalevalue of player > 3]slow[else]tremendous[end if] effort of pulling yourself up along your over-sized companion's overwhelming intrusion.";
+			say "     Ever the tenacious -- or perhaps foolish -- you make the [if scalevalue of player > 3]slow[else]tremendous[end if] effort of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     'Hmm, still have you pride, then? I doubt that will last for very long...' Forcing yourself past each crevice is an ordeal in of itself, until your legs finally buckle under the strain and you're sent plummeting down once more, landing against the serpent's scaled underbelly with an audible slap. Hit with a single, hard gout of precum, you immediately and unceremoniously orgasm, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else if cunts of player > 0]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if]. The beast can't help but laugh at how you've clearly bit off more than you can chew.";
 			say "     'As I suspected. But do not think we are done here just yet.' Exhausted and spent as you already are, the dragon exploits this opening to take charge of the situation. Talons wrapping around you a second time, he builds a motion of raising you half way before plunging you back down, becoming harder and faster with each descent. It's hard to keep conscious as your ass is repeatedly abused, over and over again.";
 			say "     The pace eventually reaches a fever pitch, bathed in the hot, panting breath of the serpent until, finally, the air is filled with his loud roar, suddenly and harshly pumped with gout after successive gout of his massive load, belly ballooning outward[if scalevalue of player > 4] almost[end if] immediately before it begins to gush out from your ass, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to cause you to orgasm a second time.";
@@ -736,7 +736,7 @@ to say YamatM_5: [Anal Catching]
 		say "     Inch by inch, your body descends across this obscene girth until, after what seems like forever, you finally reach your destination, pressed firmly against the monster's scaled crotch, twitching organ blatantly visible before you, sheathed in your own flesh. It's by this point that the dragon lets go of you, showing little desire to continue.";
 		say "     '[one of]It is done[or]Very well[at random], [one of]I think you can handle it from here[or]set whatever pace pleases you[or]it is all yours[at random].' He presents this matter-of-factly, but you can tell the beast is secretly mocking you. It's extremely hard to move with this intense sensation of being utterly impaled by the dick, shall you command the dragon to do the work for you? You figure he won't be particularly easy on you if you do, though...";
 		if player consents:
-			say "     Your words[if scalevalue of player > 3] slightly[end if] strained by the overwhelming intrusion, your over-sized companion eventually picks up on your plea.";
+			say "     Your words[if scalevalue of player > 3] slightly[end if] strained by the overwhelming intrusion, your oversized companion eventually picks up on your plea.";
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly, before repeating this ritual. With each successive, hard gout of precum sputtering from your strained hole, it becomes more and more difficult for you to restrain your orgasm. You put up a decent fight for a while, before you finally succumb, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else if cunts of player > 0]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if]. The beast chuckles lowly at you.";
 			say "     '[one of]Not bad[or]That is reasonable[at random], [one of]but not quite good enough[or]I expected you to succumb sooner[or]it is surprising you lasted even that long[at random].' Exhausted and spent as you already are, this doesn't stop the dragon from exploiting you vulnerability to continue hammering you, each plunge faster and harder than the last. It's hard to keep conscious as your ass is repeatedly abused, over and over again.";
@@ -744,7 +744,7 @@ to say YamatM_5: [Anal Catching]
 			say "     As his fury subsides, the dragon slowly pulls you free of his softening dick, a flood of his seed escaping you in its wake, before setting you down back on the ground. Taking a moment to clean himself off of the mess, he grins at your completely ruined state.";
 			say "     '[one of]I am impressed[or]Very impressive[or]Well done[at random], [one of]you show a lot of promise[or]perhaps we should train again soon[or]it will be easier for you next time[at random].' Reassuring you even as you were completely wrecked, he eventually leaves you to recover from the whole ordeal. Eventually, you get enough strength to walk again...[mimpregchance]";
 		else:
-			say "     Ever the tenacious, you make the [if scalevalue of player > 3]slow[else]tremendous[end if] endeavor of pulling yourself up along your over-sized companion's overwhelming intrusion.";
+			say "     Ever the tenacious, you make the [if scalevalue of player > 3]slow[else]tremendous[end if] endeavor of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice is an ordeal in of itself, but you eventually manage to work something of a slow and methodical pace, building a humble motion against his rod. Occasional gouts of precum sputtering from your hole, it's a challenge to restrain your quickly rising bliss. Shall you give in? Otherwise, you'll try to keep your pace.";
 			if player consents:
 				say "     Firmly hilting with the dragon one last time, it's more than enough to set you off, [if cocks of player > 0]cock[smn] painting the dragon with your [cum load size of player] load[else if cunts of player > 0]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if]. The beast chuckles lowly at you. You imagine he's going to try and take charge from here, but your will is strong enough to make a run for it. Shall you pull yourself free?";
@@ -788,7 +788,7 @@ to say YamatM_5: [Anal Catching]
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
 			say "     '[one of]I am impressed[or]Very impressive[or]Exceptional[at random], [one of]you must have a lot of practize[or]I think few could match your skill[or]you are full of surprises[at random]!' Musing over your display, he catches his breath before returning, once more, to the sky, and leaving you to your own devices.[mimpregchance]";
 		else:
-			say "     Ever the tenacious, you make the[if scalevalue of player < 5] slow[end if] endeavor of pulling yourself up along your over-sized companion's overwhelming intrusion.";
+			say "     Ever the tenacious, you make the[if scalevalue of player < 5] slow[end if] endeavor of pulling yourself up along your oversized companion's overwhelming intrusion.";
 			say "     '[one of]This should be fun to watch[or]Good luck[or]Take all the time you need[at random]...' Forcing yourself past each crevice sends pleasure down your spine, your tainted revels a little surprising to the dragon as you begin to build a motion. Occasional gouts of precum sputtering from your hole, you easily manage the whole ordeal. Shall you go rough and fast? Otherwise, you'll keep things slow.";
 			if player consents:
 				say "     As you begin to kick it into high gear, the creature can't help but writhe with each descent, as though unprepared for how well you'd handle him. Though your strange talent allows you to handle this ordeal without immediately succumbing, it nonetheless tests the very limits of your ability, your body becoming more exhausted with each passing second.";
@@ -860,28 +860,28 @@ to yamatbiasshift:
 		if YDSF is 0:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Surely you fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Surely you fate is tied to him, should you succumb[roman type].";
 		else if YDSF is 4:
 			now YDSF is 3;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Your fate remains tied to a female, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 1;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the male beast. Surely your fate is tied to him, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the male beast. Surely your fate is tied to him, should you succumb[roman type].";
 	else: [Female]
 		if YDSF is 0:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely you fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely you fate is tied to her, should you succumb[roman type].";
 		else if YDSF is 1:
 			now YDSF is 2;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Your fate remains tied to a male, should you succumb, but continued exposure will cause a shift in your bias[roman type].";
 		else if YDSF is 3 or YDSF is 2:
 			now YDSF is 4;
 			if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
+				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
 
 
 Section 2 - Monster Insertion
@@ -959,7 +959,7 @@ to say usedragonscale:		[only alters sizes, not gender]
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";
@@ -982,7 +982,7 @@ to say usedragonhair:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";

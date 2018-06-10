@@ -60,7 +60,7 @@ to say DireWolfVictorySex:
 to say DireWolfDesc:
 	setmongender 3;
 	if inasituation is false: [regular text]
-		say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]over-sized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
+		say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]oversized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
 	else:
 		say ""; [dealt with at the source]
 
@@ -128,7 +128,7 @@ when play ends:
 		else:
 			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "dire-wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: dire wolf['] is written on the side."	1	dire-wolf cum
 

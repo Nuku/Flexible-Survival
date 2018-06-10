@@ -148,7 +148,7 @@ Section 3 - Monster Heat
 
 [ +++++ ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "awesomest fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
 "awesomer fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit

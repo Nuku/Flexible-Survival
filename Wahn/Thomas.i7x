@@ -576,7 +576,7 @@ Instead of fucking the Thomas:
 	else if (HP of Thomas is 100): [avoiding the player]
 		say "ERROR-Thomas-100B: He should be avoiding the player now and not be seen again.";
 	else:
-		if(lastfuck of Thomas - turns < 5):
+		if (lastfuck of Thomas - turns < 5):
 			say "     Thomas says 'Sorry I'm still worn out from last time. Give me some space, ok?'";
 		else:
 			say "[ThomasSexMenu]";
@@ -589,7 +589,7 @@ to say ThomasSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -600,7 +600,7 @@ to say ThomasSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Thomas long horsecock in your mouth.";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -618,7 +618,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the herm centaur's pussy with your cock.";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
@@ -716,7 +716,7 @@ to say ThomasSex4: [Thomas cunt licked/fingered]
 	infect "Centaur Stallion";
 
 to say ThomasSex5: [Thomas pussy fucked by player]
-	say "     You go and give Thomas a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the centaur herm's lips. Running your hands down over Thomas' muscled chest, then along his flank as you walk around his equine body to his rear end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his blond tail to reveal an already moist pussy. You lean forward and lick over the black centaur's sensitive folds, revelling in the gasps you get out of him. Running your tongue along the inside of his pussy lips, you make Thomas pant and moan, and soon you hear him say 'I'm soo horny - please, fuck me now!'";
+	say "     You go and give Thomas a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the centaur herm's lips. Running your hands down over Thomas' muscled chest, then along his flank as you walk around his equine body to his rear end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his blond tail to reveal an already moist pussy. You lean forward and lick over the black centaur's sensitive folds, reveling in the gasps you get out of him. Running your tongue along the inside of his pussy lips, you make Thomas pant and moan, and soon you hear him say 'I'm soo horny - please, fuck me now!'";
 	LineBreak;
 	if cock length of player < 20:
 		say "     Who could resist that? Quickly throwing off your clothes, you bring your rock hard [cock of player] cock to Thomas' wet, winking pussy and thrust deep into him in one go. His pussy is very large, taking everything you've got easily. Though clearly equipped for bigger cocks, Thomas does his best to grip you tight with his vaginal muscles and the two of you enjoy yourselves quite a bit. Fucking the black centaur herm with abandon, you soon feel a familiar tingle in your balls and plunge in deep one last time before you start cumming. Spurt after spurt of your fertile seed jet out of your hard shaft and vanish in the depths of his vagina.";

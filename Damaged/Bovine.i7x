@@ -433,7 +433,7 @@ When Play begins:
 	now mpregheat entry is true;
 	now mpregtrigger entry is "";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "cow milk"	"A fresh bottle of delicious cow milk straight from the source. There is a cork in the top to keep it closed."	1	cow milk
 

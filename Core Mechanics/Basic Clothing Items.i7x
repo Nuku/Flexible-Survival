@@ -23,7 +23,7 @@ When Play begins:
 	now plural of jogging pants is true;
 	now plural of bermuda shorts is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "ripped jeans"	"A pair of jeans with some rips and slashes in them. Before all of this started, their look might have been a fashion statement, but these days one usually ends up with ripped clothing after a fight."	1	ripped jeans
 "black jeans"	"A pair of solid black jeans. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations."	1	black jeans
@@ -202,7 +202,7 @@ When Play begins:
 	add { "black t-shirt", "white t-shirt", "maroon pullover", "zephyr shirt", "camo shirt", "sleeveless shirt", "mesh shirt" } to invent of Grey Abbey Library;
 ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "black t-shirt"	"A simple black t-shirt, without any pattern or frills to it."	1	black t-shirt
 "white t-shirt"	"A simple white t-shirt, without any pattern or frills to it"	1	white t-shirt
@@ -317,7 +317,7 @@ When Play begins:
 	now plural of jogging shoes is true;
 	now plural of cowboy boots is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them."	3	combat boots
 "brown loafers"	"A pair of brown loafers. They look comfortable and one can just slide right in without having to worry about tying them."	1	brown loafers
@@ -430,7 +430,7 @@ When Play begins:
 	now plural of mesh undies is true;
 	now plural of pink panties is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "ragged loincloth"	"A ragged piece of brown fabric that one can tie around their hips to cover the bare essentials."	0	ragged loincloth
 "simple loincloth"	"A simple white cotton loincloth. One can tie it around their hips to cover the bare essentials."	0	simple loincloth
@@ -545,7 +545,7 @@ When Play begins:
 	now plural of prop glasses is true;
 	now plural of rose-tinted glasses is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "stylish sunglasses"	"A set of Lu-Beam sunglasses with a very stylish shape. Those are sure to make anyone look like a star."	0	stylish sunglasses
 "basic sunglasses"	"A set of fairly basic sunglasses with a black plastic frame. Nothing special, but they'll protect your eyes."	0	basic sunglasses
@@ -654,7 +654,7 @@ When Play begins:
 	add { "" } to invent of Grey Abbey Library;
 ]
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective."	3	motorcycle helmet
 "bike helmet"	"A plastic foam bicycle helmet, complete with a white shell and reflective stripes, as well as a strap to fasten it to the wearer's head."	1	bike helmet
@@ -791,7 +791,7 @@ When Play begins:
 	]
 	now plural of football pads is true;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "leather jacket"	"A black leather jacket some shiny silver buttons and zippers. Stylish and protective."	4	leather jacket
 "sturdy greatcoat"	"A full-body coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight."	5	sturdy greatcoat
@@ -800,7 +800,7 @@ name	desc	weight	object
 "roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely roadsigns. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate."	30	roadsign breastplate
 "football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Gorillas emblazoned on the left pec."	9	football pads
 "life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light."	2	life jacket
-"shoulder pad"	"An over-sized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	1	shoulder pad
+"shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	1	shoulder pad
 
 leather jacket is a grab object.
 leather jacket is equipment.

@@ -25,7 +25,7 @@ This is the farmvailable rule:
 		rule succeeds;
 	rule fails;
 
-An everyturn rule(this is the Farming rule):
+An everyturn rule (this is the Farming rule):
 	if workers of farmer is 0, continue the action;
 	let foragers be workers of farmer;
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -65,7 +65,7 @@ This is the huntvailable rule:
 	if "Hunting" is listed in perks of tribe of player, rule succeeds;
 	rule fails;
 
-An everyturn rule(this is the Hunting rule):
+An everyturn rule (this is the Hunting rule):
 	if workers of hunter is 0, continue the action;
 	let foragers be workers of hunter;
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -97,7 +97,7 @@ This is the maxwarrior rule:
 This is the warvailable rule:
 	rule succeeds;
 
-An everyturn rule(this is the Warrior Payday rule):
+An everyturn rule (this is the Warrior Payday rule):
 	if workers of warrior is 0, continue the action;
 	let foragers be workers of warrior;
 	decrease foragers by 5;
@@ -133,7 +133,7 @@ This is the settlervailable rule:
 	if openland > 0, rule succeeds;
 	rule fails;
 
-An everyturn rule(This is the Brave Settler rule):
+An everyturn rule (This is the Brave Settler rule):
 	if openland < 1, now workers of settler is 0;
 	let foragers be workers of settler;
 	if foragers is 0, continue the action;

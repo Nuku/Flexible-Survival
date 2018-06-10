@@ -264,7 +264,7 @@ When Play begins:
 
 Section 6 - Centaur Heat
 
-Table of infection heat(continued)
+Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
 "Mutant Centaur"	10	7	"[centheat]"	"winking and dripping green cunt "	--	--	"[defaultheat]"	true	false	--
 

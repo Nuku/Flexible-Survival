@@ -53,7 +53,7 @@ to say beatthenerdymouse:
 		else if calcnumber is 2:	[rough/bully sex]
 			if cocks of player > 0 and anallevel > 1 and a random chance of anallevel in 5 succeeds:
 				say "***Anal on mousie.";
-			else if cocks of player > 0 and cunts of player > 0:
+			else if player is herm:
 				say "***Force mousie into oral. Make suck cock and lick pussy. Tease how he seems to love that cock and how this is probably the most pussy he'll ever get so he better do a good job.";
 			else if cocks of player > 0:
 				say "***Force mousie into oral. Make suck cock and lick pussy. Tease how he seems to love that cock.";

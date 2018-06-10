@@ -85,7 +85,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			attempttowait;
+			WaitLineBreak;
 			if libido of player < 30, now libido of player is 30;
 			if humanity of player < 21:
 				say "     Overwhelmed by your transition, thoughts of your old life fade away. You choose to accept living in the peaceful village with the equinoids. In time, you and the others seem to forget that you were ever unwelcome, and you live a simple life with the strong and beautiful equinoids.";
