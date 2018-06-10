@@ -686,7 +686,7 @@ carry out CellUnlocking:
 			say "     The lock's busted, you can't unlock it anymore.";
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "Cell Key"	"A relatively unremarkable key that opens the cell doors of the Orc Lair. There's still a few dried cum stains on it."	0	Cell Key
 

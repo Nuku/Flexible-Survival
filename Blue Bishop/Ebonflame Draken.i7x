@@ -159,7 +159,7 @@ when play ends:
 				say ". This terrible, dark compulsion eventually becomes too much, however, and you're eventually forced to tear out an escape for yourself. It takes some weeks for the military to eventually stop searching for you -- perhaps because you weren't infectious and there's more pressing matters to attend to.";
 				say "     Too lucid to join your sisters and too twisted to join society proper, you're forced to dwell in society's dark underbelly, torn between sating your fiery need and not becoming the monsters that first turned you. It's strange, at first, when you find others actively willing to be your plaything, but even they are paltry compared to the thrill of your terrible hunt...";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 

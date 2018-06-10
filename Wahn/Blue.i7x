@@ -195,7 +195,7 @@ to say BlueSpeakerSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "[']donate['] some cum";
 		now sortorder entry is 1;
@@ -213,7 +213,7 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Pound the goo person's pussy";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's ass";
 		now sortorder entry is 4;
@@ -370,7 +370,7 @@ to say BlueSex5: [ass fucked by Blue]
 	setmonster "Blue Goo";
 	say "     As you tell Blue that you want to [']donate['] some of your [if cocks of player > 0]cum[else]fluids[end if] to sustain him and his people, the aquamarine goo person smiles eagerly at you and raises a hand to his chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the valleys and bumps of his flawless abs. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo man starts to kneel down in front of you - only to be stopped by your hand on his arm. His transparent brows rise, and an eager grin spreads over his face as you add that you want him to fuck your [']donation['] out of you, then slide a hand down to his crotch and give the slick length of his cock a squeeze. It throbs against your touch and quickly hardens, coming to stand erect and poking you in the stomach. Enticed by his obvious eagerness, you happily [SelfStripCrotch], then saunter over to one of the empty desks and lay back on it, your ass just at the edge of the table.";
 	say "     'You need it bad, don't you [if player is not defaultnamed], [name of player][else], my friend[end if]?' Blue asks in a yearning tone, walking up to you with his hard cock leading the way. The sound of the Blue Guardian clearing their throat does little to distract the horny man from his target, and he crouches down in front of you, extending a moist, aquamarine-blue tongue to lick along your crack and prepare your hole for entry. ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "Continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your pussy and teases its sensitive lips. Then the goo man kisses his way up along your hard shaft, eventually catching its head between his lips and suckling on it for a little while. 'I can hardly wait to taste your load,' he adds after pulling off of your dick with an intentionally loud pop, then gets up to stand between your legs. ";
 	else if cocks of player > 0:
 		say "Continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your cock and kisses his way up along your hard shaft, eventually catching its head between his lips and suckling on it for a little while. 'I can hardly wait to taste your load,' he adds after pulling off of your dick with an intentionally loud pop, then gets up to stand between your legs. ";
@@ -383,7 +383,7 @@ to say BlueSex5: [ass fucked by Blue]
 	WaitLineBreak;
 	say "     Blue's stroking hands now move to grip you by the hips, followed by him pulling his slick shaft out of your body. Your ass feels strangely empty for a few moments after the sudden exit of his shaft, its pucker squeezing shut and then opening again as if unsure what it should do now. Then just as it starts to pull tighter for another contraction, Blue's cock is back, hammering into you with a vengeance. His rapid thrust only stops when he's balls-deep inside of you again, hips slamming against your ass. Both transparent, blue arms holding you swell, and his hands grip on tight to prevent you from sliding back on the table's surface. Blue looks at you with an impish grin and says, 'Sorry for the delay. I had to have a little discussion with myself, and Clint convinced all of me that this was the way to go. You like a good hard fuck, right?' It is nothing but a rhetorical question, as the next pull back and hard thrust comes right away, never giving you a second to reply before you groan in lust at the next penetration.";
 	say "     The horny goo man saws his shaft in and out of your body, driving you to new heights with his relentless lovemaking and really making good use of those ridges on his cock. The way that they tug at your hole with every retraction of his cock makes you all tingly inside in a very good way, and you can feel yourself getting quite close to orgasm. As you gasp out a warning to tell Blue this, the blue goo reacts by shifting his left hand to your shoulder so that he can keep a hold of you while his other hand ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "wraps itself around your erection and strokes along its length. Having run out of hands, Blue forms a third appendage with a little concentration, this one more vague and tentacle-like since it lies outside of the human shapes that he is used to. It moves to stroke over your pussy, then slides its tip into it, exploring your depths.";
 	else if cocks of player > 0:
 		say "wraps itself around your erection and strokes along its length. His fingers are slick and warm against your skin, rubbing you in just the right way to drive you crazy.";
@@ -391,7 +391,7 @@ to say BlueSex5: [ass fucked by Blue]
 		say "strokes over your pussy, then slips in two fingers and rubs your clit with the thumb. His touch is slick and warm against your skin, rubbing you in just the right way to drive you crazy.";
 	WaitLineBreak;
 	say "     Having made his preparations for your impending orgasm, Blue breaks out all of the stops and gets back to fucking you with hard thrusts, rubbing you at the same time. With the [if player is herm]triple[else]double[end if] stimulation, you are soon pushed right over the edge. Sucking in a sharp breath and writhing on the desk, you feel the orgasm crashing over you like a wave. Your gooey partner quickly ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "clamps his hand over the head of your hard cock and bends the tentacle still deep inside of you to cover your clit too. This is just in time for the first spurts of cum and femcum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky-white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body. Your femcum meanwhile has less distance to go, just up a fairly short tentacle, creating a visible but fairly transparent flow there.";
 	else if cocks of player > 0:
 		say "clamps his hand over the head of your hard cock, just in time for the first spurt of cum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body.";

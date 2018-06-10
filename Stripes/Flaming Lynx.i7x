@@ -31,7 +31,7 @@ to say losetoflaminglynx:
 		decrease humanity of player by a random number between 2 and 4;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	else if cocks of player > 0 and cunts of player > 0:		[Herm - fellatio/unwanted]
+	else if player is herm:		[Herm - fellatio/unwanted]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body [if cocks of player > 0]and gives a faint rumble of pleasure as he finds your cock [end if]before growling in disdain upon noticing your cunt moments later. ";
 		let fllynxanal be 0;
 		if anallevel is 3, increase fllynxanal by 2;

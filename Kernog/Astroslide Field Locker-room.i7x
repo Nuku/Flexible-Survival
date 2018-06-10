@@ -70,13 +70,13 @@ to say RomanHumiliation:
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
 	setmonster "Football Gorilla";
-	if (Furry is banned):
+	if Furry is banned:
 		say "     Too much fur for your taste.";
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if (cocks of player > 0):
+		if cocks of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Join in for a cum-bath (giving)";
 			now sortorder entry is 1;

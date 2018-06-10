@@ -158,7 +158,7 @@ when play ends:
  			say "     Eventually, you do succumb to your desires, but not on the Broodmother's terms. You relieve your lusts on those drawn in by your enthralling scents and twisted appearance, converting them into members of a new, independent hive with you as your leader. Catching wind of the disappearances, you and your flock are forced to find a nice, warm cave to hide and lie down in. Afraid to return to the surface, you decide to live in there and just accept your new urges, slaking your lusts and hunger on each other for sustenance.";
 			say "     After a few months of your lonely existence, you find that you can no longer hear Mother's voice anymore. Something has changed. You feel stronger and more virile now, and you find that you can communicate telepathically with your followers, sharing your pleasure with them from afar. Your lips twist into a wicked grin at the realization that YOU are their Broodmother now. Eager to fill your role as their leader, you spend the rest of your days guiding your hive, capturing and transforming those who stray too close to your den. It's a simple existence - but one filled with pure, unending bliss.";
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "psionic egg"	"A strange, purple, fleshy egg that constantly secretes a clear, musky goo. You feel odd while holding it, and you swear you hear someone whispering nearby"	1	psionic egg
 

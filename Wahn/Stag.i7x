@@ -115,7 +115,7 @@ to say Stag loses:
 	now sortorder entry is 5;
 	now description entry is "Let the stag fill your ass with his seed.";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take the stag's ass.";
 		now sortorder entry is 6;
@@ -288,9 +288,9 @@ Instead of fucking Mike:
 		if name entry is "Stag":
 			now monster is y;
 			break;
-	if(HP of Mike < 5):
+	if HP of Mike < 5:
 		say "     Mike shakes his head and says 'Not now. I've got other things to worry about.' He turns back to Lea on the bed, stroking her hair and holding her to keep her calm.";
-	else if(lastfuck of Mike - turns < 5):
+	else if (lastfuck of Mike - turns < 5):
 		say "     Mike says 'I'm still worn out from last time. Give me a moment to catch my breath...'";
 	else:
 		now sextablerun is 0;
@@ -301,13 +301,13 @@ Instead of fucking Mike:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
 		[]
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Mike fuck your pussy";
 			now sortorder entry is 3;
@@ -318,7 +318,7 @@ Instead of fucking Mike:
 		now sortorder entry is 4;
 		now description entry is "Let the stag fill your ass with his seed.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Mike's ass";
 			now sortorder entry is 5;
@@ -586,7 +586,7 @@ instead of sniffing Xerxes:
 Chapter 2 - Xerxes Sex Menu
 
 Instead of fucking Xerxes:
-	if(lastfuck of Xerxes - turns < 5):
+	if (lastfuck of Xerxes - turns < 5):
 		say "     Xerxes still seems a bit worn out from the last fun-time. Let him rest a bit more...";
 	else if lust of Xerxes is 3:
 		say "[AwesomeXerxesSex0]";
@@ -601,7 +601,7 @@ Instead of fucking Xerxes:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
@@ -613,7 +613,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 3;
 			now description entry is "Share oral pleasures with your human dog pet.";
 		[]
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Xerxes fuck your pussy";
 			now sortorder entry is 4;
@@ -624,7 +624,7 @@ Instead of fucking Xerxes:
 		now sortorder entry is 5;
 		now description entry is "Let the human dog fill your ass with his seed.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Xerxes ass";
 			now sortorder entry is 6;
@@ -766,7 +766,7 @@ to say XerxesSex4: [player ass fucked]
 	WaitLineBreak;
 	say "     Quickly stripping off your clothes, you grab the bottle Mike gave you and apply a generous amount of lube to your hole, then get on the cot and assume a position on all fours in front of Xerxes. You wiggle your ass at him and reach back to spread your cheeks invitingly. Already hot and ready from your earlier stroking, your human dog doesn't hesitate a second before he mounts you from behind in typical doggie-style, hugging your chest as his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in against you. As your pucker yields to Xerxes['] invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
 	if lust of Xerxes >= 4:
-		say "     Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut with you hard and fast for a while, taking the time to run his hands over your [one of][bodytype of player][or][if cocks of player > 0 and cunts of player > 0]herm[else if cocks of player > 0]male[else if cunts of player > 0]female[else]genderless[end if][as decreasingly likely outcomes] body as he takes slower thrusts at first, enjoying the feel of your hot, tight hole around his pulsing shaft. His hands roam over you[if lust of Xerxes < 7] almost as if he were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. He nuzzles at the back of your neck, panting with a growing excitement that has his pace quicken in response. As he thrusts harder, you moan what a good boy he is.";
+		say "     Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut with you hard and fast for a while, taking the time to run his hands over your [one of][bodytype of player][or][if player is herm]herm[else if cocks of player > 0]male[else if cunts of player > 0]female[else]genderless[end if][as decreasingly likely outcomes] body as he takes slower thrusts at first, enjoying the feel of your hot, tight hole around his pulsing shaft. His hands roam over you[if lust of Xerxes < 7] almost as if he were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. He nuzzles at the back of your neck, panting with a growing excitement that has his pace quicken in response. As he thrusts harder, you moan what a good boy he is.";
 	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the sheets below[else if cunts of player > 0] that makes your pussy drip with femcum[end if]. Your anal muscles twitching around his cock obviously excites Xerxes, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
 	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms[if lust of Xerxes >= 4]. 'Mmm... Master good fuck,' he mumbles softly, snuggling up to you lovingly[end if].";
 
@@ -1214,7 +1214,7 @@ instead of sniffing Helen:
 Chapter 2 - Helen Sex Menu
 
 Instead of fucking Helen:
-	if(lastfuck of Helen - turns < 5):
+	if (lastfuck of Helen - turns < 5):
 		say "     Helen still seems a bit worn out from the last fun-time. Let her rest a bit more...";
 	else if lust of Helen is 3:
 		say "[AwesomerHelenSex0]";
@@ -1229,7 +1229,7 @@ Instead of fucking Helen:
 		now sortorder entry is 1;
 		now description entry is "Give her a blow-job.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have her suck your cock";
 			now sortorder entry is 2;
@@ -1241,7 +1241,7 @@ Instead of fucking Helen:
 			now sortorder entry is 3;
 			now description entry is "Share oral pleasures with your human dog pet.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Helen's pussy";
 			now sortorder entry is 4;

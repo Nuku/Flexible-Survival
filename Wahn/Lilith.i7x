@@ -553,7 +553,7 @@ Instead of fucking the Lilith:
 	if (HP of Lilith is 0):  [not yet met]
 		say "ERROR-Lilith-001C: She should not be around yet anywhere where players can see her.";
 	else:
-		if(lastfuck of Lilith - turns < 5):
+		if (lastfuck of Lilith - turns < 5):
 			say "     Lilith says 'Even a succubus needs some breaks. Come back later.'";
 		else:
 			say "[LilithSexMenu]";
@@ -564,13 +564,13 @@ to say LilithSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the succubus blow you";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
@@ -581,13 +581,13 @@ to say LilithSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Give the succubus some oral attention";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the succubus pussy with your cock";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Lilith's ass";
 		now sortorder entry is 5;

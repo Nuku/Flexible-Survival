@@ -96,7 +96,7 @@ instead of using cat key:
 		say "The lock clicks, and the door opens a little.";
 		now the Catwalk door is unlocked;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "cat key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	cat key
 

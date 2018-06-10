@@ -171,7 +171,7 @@ to say ChrisTalk3:
 	say "     C";
 
 Instead of fucking the Chris:
-	if(lastfuck of Chris - turns < 5):
+	if (lastfuck of Chris - turns < 5):
 		say "     Chris puts a hand on your chest to hold you back and says 'Please, I need a break for a moment, okay?";
 	else:
 		now sextablerun is 0;

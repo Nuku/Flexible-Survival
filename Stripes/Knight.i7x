@@ -39,7 +39,7 @@ to say knightdesc:
 	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face with [one of]a short beard[or]long, flowing hair[or]a small scar that makes him look rugged without disfiguring him[or]a square jaw and noble features[or]wavy brown hair[in random order]. He is a tall and fit man, his body strong from training and combat. Equipped in a chainmail coat, this is covered by a loose tunic of bright colors. The emblem on his chest is one of a crest depicting [stateknightcrest]. He wears rather plain breeches with leather boots below the waist, the former showing a prominent package beneath the [one of]brown[or]gray[or]tan[or]dusty[at random] fabric.";
 	say "     Sizing you up, he reaches for the sword at his side. ";
 	if kpstatus is 1:				[player is Knight]
-		if cocks of player > 0 and cunts of player > 0:
+		if player is herm:
 			say "     'Greetings. [']Tis surprising to see a noble knight and beautiful lady in one, but these are strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 		else if cunts of player > 0:
 			say "     'Greetings, lady knight. It seems even the beautiful maidens may become knights in these strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";

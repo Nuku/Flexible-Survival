@@ -382,7 +382,7 @@ to say fgob_vicsex2:	[f-gob anal sex]
 
 to say fgob_vicsex3:	[f-gob oral sex]
 	say "     Grinning, [if scalevalue of player > 4]you set yourself down, pulling the creature to your massive form[else]you set yourself down, relinquishing yourself of any attire that might get in the way and pulling the creature to you[end if]. Clarifying her already quite apparent mission, you gesture down to your ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "[if a random chance of 1 in 2 succeeds][fgob_vicsex3_m][else][fgob_vicsex3_f][end if]";
 	else if cocks of player > 0:
 		say "[fgob_vicsex3_m]";
@@ -460,7 +460,7 @@ to say mgob_vicsex2:	[m-gob anal sex]
 
 to say mgob_vicsex3:	[m-gob oral sex]
 	say "     Grinning, [if scalevalue of player > 4]you set yourself down, pulling the creature to your massive form[else]you set yourself down, relinquishing yourself of any attire that might get in the way and pulling the creature to you[end if]. Clarifying his already quite apparent mission, you gesture down to your ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "[if a random chance of 1 in 2 succeeds][mgob_vicsex3_m][else][mgob_vicsex3_f][end if]";
 	else if cocks of player > 0:
 		say "[mgob_vicsex3_m]";

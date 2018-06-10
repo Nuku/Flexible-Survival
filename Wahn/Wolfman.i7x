@@ -474,8 +474,8 @@ to say JenniferMartialSkillTalk:
 	say "     Smiling happily as she lets her gaze wander over the gathered wolfmen and cheerleaders, she clearly is very content with what the little band of young women brought to bear under her leadership. With a chuckle, Jennifer circles her nipples on both sides, making them hard and erect and then giving some soft pinches to them. 'We definitely needed to be tough after the boys were born too. I can tell you that the little ones were greedy for milk right away, and all too quickly grew teeth. But even the marks of overly eager suckling just vanished in moments. Anyways, overall I can say that me and the girls are not as fragile as we may appear, and we're athletic and trained in self defense too. A number of beasts we can across before moving into this place had to learn that the hard way.' Raising her head and looking at you with a very confident expression, the young woman is a sight to behold - naked and very pleasant on the eyes, yet also strong and fierce.";
 
 Instead of fucking the Jennifer:
-	if (Jenniferfucked is 0): [first time]
-		if(cocks of player > 0): [males]
+	if Jenniferfucked is 0: [first time]
+		if cocks of player > 0: [males]
 			say "     You let your gaze wander over Jennifer's naked form, your manhood hardening as you watch her lithe body. As your looks meet for a moment, you indicate your growing bulge - and from the answering lust-filled twinkle in her eye it looks like you're gonna get some action. Eagerly, you strip off your clothing, revealing your naked [bodytype of player] body to the watching crowd of wolfmen and cheerleaders. Jennifer takes two bouncy steps closer then jumps up on you, wrapping her legs around your hips and pulling your head to hers with both hands for a deep kiss. You inevitably find yourself holding the lightweight young woman by her perky ass, tongue-wrestling with a very enthusiastic partner. While you're still a bit dazed by another deep kiss, she reaches down to grab your cock and holds it upwards so she can sink her pussy on top of it.";
 			LineBreak;
 			say "     It's an amazing feeling to be inside Jennifer, rubbing against the inner walls of her pussy with your shaft as she slides up and down on your cock. Years of gymnastics training have left her very flexible and you bet she could take any size of cock - and having well trained muscles to also grip it tightly and make the fuck a memorable one. With Jennifer bouncing up and down on your cock, her perky breasts are directly in front of your face so you catch one with your mouth and start sucking on it, running your tongue over its nipple.";
@@ -488,7 +488,7 @@ Instead of fucking the Jennifer:
 				if Jenniferwolves is 0: [first kid]
 					FindHighestPlayerStat;
 					now JenniferFirstKidSpecialStat is HighestPlayerStat;
-		else if (cunts of player > 0): [females]
+		else if cunts of player > 0: [females]
 			say "     You let your gaze wander over Jennifer's naked form, your pussy getting wet as you watch her lithe body. As your looks meet for a moment, you give her a suggestive wink - and from the answering lust-filled twinkle in her eye it looks like you're gonna get some action. Eagerly, you strip off your clothing, revealing your naked [bodytype of player] body to the watching crowd of wolfmen and cheerleaders. Jennifer takes two bouncy steps closer then jumps up on you, wrapping her legs around your hips and pulling your head to hers with both hands for a deep kiss. You inevitably find yourself holding the lightweight young woman by her perky ass, tongue-wrestling with a very enthusiastic partner. While you're still a bit dazed by another deep kiss, she reaches down to fondle your pussy lips. 'Let's have some girl-time,' she says and directs you to carry her over to a nearby bunk bed.";
 			say "     There, you lie down side by side, head to hip. Jennifer starts out stroking and fondling your pussy, licking over its folds and rubbing the sensitive clit. You follow suit, imitating her very arousing caresses as best as you can. You don't know exactly how long you two spend pleasing each other, so lost are you in the bliss she fills you with. Only when you reach the peak of your arousal and orgasm, you become aware of your surroundings again and the group of cheerleaders and their wolfmen offspring who cheer you on. As you fall back and lie on the bunk writhing, riding out the orgasm, you feel something soft and furry brush against your leg. It's Septus, grinning up at you, then opening his muzzle to lap at your dripping pussy. He slurps up the juices running out of you and keeps licking you, even sticking his long tongue inside, prolonging your pleasant buzz even more.";
 			say "     In the end, you sit back up on the bunk, flanked by both Jennifer and her son, making out with both of them. The onlookers were quite riled up from the show, and you hear moans and lustful growls echo through the warehouse, both in the private section and right around you in the training area.";
@@ -498,7 +498,7 @@ Instead of fucking the Jennifer:
 			say "     In the end, you sit back up on the bunk, flanked by both Jennifer and her son, making out with both of them. The onlookers were quite riled up from the show, and you hear moans and lustful growls echo through the warehouse, both in the private section and right around you in the training area.";
 		now lastfuck of Jennifer is turns;
 		now Jenniferfucked is 1;
-	else if (Jenniferfucked > 0): [repeat sex]
+	else if Jenniferfucked > 0: [repeat sex]
 		if (lastfuck of Jennifer - turns < 6 and HP of Septus < 7):
 			say "     As you approach Jennifer, she immediately sees the lust-filled twinkle in your eyes. Running her hand over your cheek and pulling you in for a quick kiss on the lips, she says 'I'd love to sweety, but I do have some training of my own to do. Can't afford getting rusty with the moves - and the boys would be disappointed if I didn't train with them.' Giving you an apologetic pat on the arm, she steps over to the other cheerleaders to go though very flexible and... bouncy naked gymnastics moves. You decide to join the wolfmen a while as they watch the girls.";
 		else if lastfuck of Jennifer - turns < 4 and HP of Septus >= 7 and HP of Septus < 50: [team leader]
@@ -520,13 +520,13 @@ to say JenniferSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Put the cheerleader's mouth to good use";
 	[]
-	if (cunts of player > 0):
+	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
@@ -537,19 +537,19 @@ to say JenniferSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Finger-fuck Jennifer's pussy to make her cum";
 	[]
-	if (cocks of player > 0):
+	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the cheerleader with your cock";
 	[]
-	if (cocks of player > 0):
+	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Jennifer's ass";
 		now sortorder entry is 5;
 		now description entry is "Fill the cheerleader's ass with your cock";
 	[]
-	if (cocks of player > 0):
+	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Share Jennifer with Septus";
 		now sortorder entry is 6;
@@ -627,7 +627,7 @@ to say JenniferSex3: [Jennifer's cunt licked/fingered]
 	wait for any key;
 
 to say JenniferSex4: [Jennifer's pussy fucked by player]
-	if(thirst of Jennifer is 2): [pregnant version]
+	if thirst of Jennifer is 2: [pregnant version]
 		say "     Jennifer strokes her bulging belly and remarks 'This pregnancy makes me horny as fuck. I need [if HP of player < 7]a[else]your[end if] cock inside me.'";
 		say "     Not one to disappoint, you quickly slide off your gear and guide the naked cheerleader to a nearby bench. You kiss her deeply while running a caressing hand over her breasts and belly down to her moist pussy. Sitting on the bench and lying down lengthwise on it, you hold your by now rock-hard erection straight up for her. Jennifer steps up, aligning her folds with the tip of your cock and then slowly starts to sink down on it. It's still amazing to you how tight she can grasp you with a pussy that has taken a lot of large cocks and birthed several wolfmen. Years of gymnastics training really paid off, you'd say[if HP of Septus >= 7 and HP of Septus < 50], and now it's all yours to enjoy[end if].";
 		if HP of Septus >= 7 and HP of Septus < 50:
@@ -652,7 +652,7 @@ to say JenniferSex4: [Jennifer's pussy fucked by player]
 	wait for any key;
 
 to say JenniferSex5: [fucking Jennifer's ass]
-	if(thirst of Jennifer is 2): [pregnant version]
+	if thirst of Jennifer is 2: [pregnant version]
 		say "     Jennifer strokes her bulging belly and remarks 'This pregnancy makes me horny as fuck. I need [if HP of player < 7]a[else]your[end if] cock inside me.'";
 		say "     Not one to disappoint, you quickly slide off your clothes and guide the naked cheerleader to a nearby bunk. You kiss her deeply while running a caressing hand over her breasts and belly down to her moist pussy. Pushing a finger inside, you get it wet with her juices, then turn her around and push it against her pucker. She yelps at the unexpected entrance into her rear, then starts moaning as you rub her insides. Soon you add a second finger, spreading her a bit more and get her ready and panting for your cock.";
 		say "     You have her get on all fours on the bunk, then step up behind her and press your manhood into her rear entrance. With her loosened up by your fingering, you have no problems sinking down into her tight embrace and start pumping in and out. From her reaction and the incredibly tight grip around your penis, you don't think she's had anal sex all that often[if HP of Septus >= 7 and HP of Septus < 50] and grin in the knowledge that now that fine ass of hers is yours to break in[end if].";
@@ -676,7 +676,7 @@ to say JenniferSex6: [sharing Jennifer with Septus][***]
 		say "     Pulling Septus aside, you tell him what a great job he's been doing as team captain and ask if he wants a well-earned threesome with Jennifer and you, to which he eagerly agrees. He obviously can't wait to get it on with the cheerleader and while you take off your clothing, his shaft rapidly slides out of its sheath and hardens. 'Come on, buddy,' he says, putting his arm around your shoulders. '[if HP of Septus is 7]The other girls are fine, but they just to compare to her[else]***[end if]. I've been looking forward to some more fun with the team's star couple. And with how much I miss fucking her, between me and you, manager' - he reaches down with that and gives your own hardening shaft a few jerks - 'it'll be something she won't soon forget.'";
 	else if HP of Septus >= 50:
 		say "     Pulling Septus aside, you ask him if he wants to do a threesome with Jennifer and you, and he eagerly agrees. He obviously can't wait to get it on with two cheerleaders and while you take off your clothing, his shaft rapidly slides out of its sheath and hardens. 'Come on,' he says, putting his arm around your shoulders. 'Between me and you' - he reaches down with that and gives your own hardening shaft a few jerks - 'it'll be something she won't soon forget.'";
-	if(thirst of Jennifer is 2): [pregnant version]
+	if thirst of Jennifer is 2: [pregnant version]
 		say "     The two of you walk over to Jennifer together, your cocks getting just a bit harder as you watch her naked body with its bulging, pregnant belly from close up. Seeing the erections pointing at her, she smiles and remarks. 'I see you boys want to have some fun. Good... this pregnancy makes me horny as fuck. I need a cock - or two - inside me.'";
 		LineBreak;
 		say "     Taking one cock in each hand, she guides you over to a nearby bunk and pushes Septus to sit on it, then takes a wide stance with her legs and bends over to suck him. You're left standing behind her, your manhood pointing straight at the moist and swollen pussy of the young human woman. Not able to resist entering that inviting cave, you bring your hips forward, cock sliding in between her pussy lips. Jennifer's moans are a bit muffled because of the wolfman cock in her mouth, but she clearly enjoys being filled by your [cock of player] shaft. While you thrust in and out of her body from behind, Septus has his hands on her head, pumping it up and down on his wolfman cock and panting in lust.";
@@ -783,7 +783,7 @@ Instead of fucking Septus:
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
-	if(lastfuck of Septus - turns < 5):
+	if (lastfuck of Septus - turns < 5):
 		say "     Septus says 'I'm still worn out from last time. Give me a moment to catch my breath...'";
 	else:
 		if bodyname of player is "Football Wolfman":
@@ -800,13 +800,13 @@ Instead of fucking Septus:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
 		[]
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Septus fuck your pussy";
 			now sortorder entry is 3;
@@ -817,7 +817,7 @@ Instead of fucking Septus:
 		now sortorder entry is 4;
 		now description entry is "Let the wolfman fill your ass with his seed.";
 		[]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Septus ass";
 			now sortorder entry is 5;
@@ -1164,15 +1164,15 @@ when play ends:
 			say "     Ahhh, it's a wonderful game!";
 		else if HP of Septus > 49 and HP of Septus < 99: [cheerleader]
 			say "     When rescue comes, you're poked and prodded a bit in a medical holding facility outside the city, then declared non-infectious and let go. You seek out the other wolfmen and their cheerleader mothers and join the team for good, training hard to become something special - a wolfman cheerleader among all the young women - and earning the position of co-leader beside Jennifer. Not much later, a crafty businessman announces the creation of the 'Shifted American Football League' - sporting your team in epic battles against (among others) giants, dinosaurs and panther-taurs. Always accompanied by their breathtaking cheer-leading team of course.";
-			if (cocks of player > 0):
+			if cocks of player > 0:
 				say "     The enticing shows you give at each game bring quite a bit of interest from the team's fans with it, with women often trying to sneak in to the hotel- or lockerrooms to get to know you better. You reward those that are clever or persistent about it with a ride on your wolfman cock, filling them with your fertile seed and impregnating them with the next generation of players. Thankfully, the libido of the shifted was accounted for when the S-AFL was thought up, so there's actually a child support provision written right into your contract.";
-				if (cunts of player > 0):
+				if cunts of player > 0:
 					say "     Beside the fan-girls, you also have a very devoted mass of male followers. You pick up one or two of the more muscular and handsome ones sometimes after a game when your pussy demands to be filled...";
-			else if (cunts of player > 0):
+			else if cunts of player > 0:
 				say "     The enticing shows you give at each game bring quite a bit of interest from the team's fans with it and you pretty much have a free selection of men from among them. You pick up one or two of the more muscular and handsome ones sometimes after a game when your pussy demands to be filled... which leads to two pregnancies over the next few months and you giving birth to two of the next generation of players. Thankfully, the libido of the shifted was accounted for when the S-AFL was thought up, so there's actually a child support provision written right into your contract.";
-			if(Jenniferwolves > 1):
+			if Jenniferwolves > 1:
 				say "     Your sons with Jennifer prove to be excellent players in their own right, making it into the top teams of the new sport. You're very proud every time you see one of them out on the field.";
-			else if(Jenniferwolves is 1):
+			else if Jenniferwolves is 1:
 				say "     Your son with Jennifer proves to be an excellent player in his own right, earning a place as a Running Back beside you on the field. The first time he scores a winning touchdown, the whole cheer-leading team comes into the lockerroom after the game, riding his cock one after another as a reward. And like father like son, he puts wolf-cubs in quite a few of them.";
 		else if HP of Septus is 99:
 			say "     When rescue comes, you're poked and prodded a bit in a medical holding facility outside the city, then declared non-infectious and let go. When you hear word of the 'Shifted American Football League' starting up and that the Wolfmen are going to be one of the star teams, you feel an ache pulling to the nascent sport. You go all their games, even the road games, traveling across the dangerous wilds of the chaotic nation between the clusters of civilization. You always pick a seat off at the back to remain unseen, not wanting to be recognized, conflicted over your urge to play and your shame of being kicked off the team.";
@@ -1180,23 +1180,23 @@ when play ends:
 			say "     You start out as a rookie prospect, but you soon get noticed thanks to all your added training and natural advantage as a football wolfman. After a few games where you're playing in the second and third line-up, you get pulled in to open a game - against the undefeated Wolfmen. Seeing you facing off against them, you get a lot of angry glares from the opposing team and Septus refuses to meet your glances. So you do the only thing you can, grit your teeth, growl at the wolfman in front of you and play the best damn game you can. It is a rough game, both sides going all out and, despite your team being ranked one of the lowest in the league, you guys manage to keep it close. In the end, you lose by only a few points against a team that regularly has double the score of their opponents. But it's not the near victory or the word from the coach that you'll be a starter from now on that has you most pleased, but it's the pat on the back you get from Septus when the game's done that really gets you stoked.";
 		else:
 			say "     When rescue comes, you're poked and prodded a bit in a medical holding facility outside the city, then declared non-infectious and let go. You seek out the other wolfmen and their cheerleader mothers and join the team for good, training hard to become one of the best players and earning the position of Quarterback. Not much later, a crafty businessman announces the creation of the 'Shifted American Football League' - sporting your team in epic battles against (among others) giants, dinosaurs and panther-taurs. Always accompanied by their breathtaking cheer-leading team of course.";
-			if (cocks of player > 0):
+			if cocks of player > 0:
 				say "     Your exalted position brings a lot of adoration and fans with it, with women often trying to sneak in to the hotel- or lockerrooms to get to know you better. You reward those that are clever or persistent about it with a ride on your wolfman cock, filling them with your fertile seed and impregnating them with the next generation of players. Thankfully, the libido of the shifted was accounted for when the S-AFL was thought up, so there's actually a child support provision written right into your contract.";
-				if (cunts of player > 0):
+				if cunts of player > 0:
 					say "     Beside the fan-girls, you also have a very devoted mass of male followers. You pick up one or two of the more muscular and handsome ones sometimes after a game when your pussy demands to be filled...";
-			else if (cunts of player > 0):
+			else if cunts of player > 0:
 				say "     Your exalted position brings a lot of adoration with it and you pretty much have a free selection of men from among your devoted fans. You pick up one or two of the more muscular and handsome ones sometimes after a game when your pussy demands to be filled... which leads to two pregnancies over the next few months and you giving birth to two of the next generation of players. Thankfully, the libido of the shifted was accounted for when the S-AFL was thought up, so there's actually a child support provision written right into your contract.";
-			if(Jenniferwolves > 1):
+			if Jenniferwolves > 1:
 				say "     Your sons with Jennifer prove to be excellent players in their own right, making it into the top teams of the new sport. You're very proud every time you see one of them out on the field.";
-			else if(Jenniferwolves is 1):
+			else if Jenniferwolves is 1:
 				say "     Your son with Jennifer proves to be an excellent player in his own right, earning a place as a Running Back beside you on the field. The first time he scores a winning touchdown, the whole cheer-leading team comes into the lockerroom after the game, riding his cock one after another as a reward. And like father like son, he puts wolf-cubs in quite a few of them.";
 	else:
 		if humanity of player > 10:
-			if (HP of Septus is 5): [beat the entrance test, was at the lair]
+			if HP of Septus is 5: [beat the entrance test, was at the lair]
 				say "     Even if you didn't become a wolfman yourself and join the team, Septus, Jennifer and the others are still very impressed with you. When the creation of the 'Shifted American Football League' is announced several months after you leave the city, you get invited to the first game, joining the players in the lockerroom and watching the action right from the side of the field. As a honorary member, you get a free lifetime ticket for their games and are always welcome in the player areas and at celebrations... which usually turn into orgies between the wolfmen and their cheerleaders sooner or later.";
-				if(Jenniferwolves > 1):
+				if Jenniferwolves > 1:
 					say "     Your sons with Jennifer prove to be excellent players in their own right, making it into the top teams of the new sport. You're very proud every time you see one of them out on the field.";
-				else if(Jenniferwolves is 1):
+				else if Jenniferwolves is 1:
 					say "     Your son with Jennifer proves to be an excellent player in his own right, earning a place as the Quarterback. The first time he scores a winning touchdown, the whole cheer-leading team comes into the lockerroom after the game, riding his cock one after another as a reward. And like father like son, he puts wolf-cubs in quite a few of them.";
 			else if HP of Septus >= 7 and HP of Septus < 50:
 				say "     When the rescue comes, you do your best to make the soldiers understand that you know where there's a huge football team's worth of infected survivors and that you're the strange team's manager. You do your best to make them understand that you'll need to talk them down if they're to come out peacefully. You make sure to emphasize that they've not been infecting others, but are themselves transformed. It takes some effort, but luckily you're able to make the squad leader understand and you're soon able to help get your whole team picked up.";

@@ -41,7 +41,7 @@ to say losetomathteacher:
 to say beatthemathteacher:
 	let mathnum be 0;
 	say "     You push the math teacher onto all fours and flip up the back of her dress. Exposing her rear, you take her ruler and slap her rump with several thwacks, venting ancient frustrations with your previous professors as well as disciplining this one for attacking you. She starts to moan and you can see her panties getting wet and becoming stretched taut by her erection. ";
-	if cocks of player > 0 and cunts of player > 0:
+	if player is herm:
 		say "     Shall you have some more fun with her? You could [link]fuck her (1)[as]1[end link], [link]ride her cock (2)[as]2[end link] or [link]let her go (3)[as]3[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:

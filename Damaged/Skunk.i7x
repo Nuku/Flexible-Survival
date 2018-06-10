@@ -296,7 +296,7 @@ to say skunk in heat:
 	increase libido of player by a random number between 5 and 10;
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "skunk goo"	"Black skunk goo on a stick."	1	skunk goo
 

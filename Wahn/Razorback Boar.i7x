@@ -222,7 +222,7 @@ to say RazorbackBoarSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him from behind";
 		now sortorder entry is 1;

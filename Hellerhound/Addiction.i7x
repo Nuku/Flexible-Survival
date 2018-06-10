@@ -18,7 +18,7 @@ addictname is a text that varies.
 foundaitem is a number that varies.
 
 
-before using a grab object (called X):
+before using a grab object (called x):
 	if X is addictive and X is owned:
 		now foundaitem is 0;
 		repeat with Z running from 1 to the number of rows in the Table of Addictive Items:
@@ -61,7 +61,7 @@ an everyturn rule:
 
 Section 2 - Test Drug
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "blood pill"	"A pill you got from some strange street."	1	blood pill
 

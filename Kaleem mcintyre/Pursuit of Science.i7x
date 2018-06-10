@@ -542,7 +542,7 @@ Instead of resolving a Dream of a Unicorn:
 
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "leopard suit"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly wacky researcher made for you. The material is very flexible and adjusts well onto your body. It seems unusually strong, imparting some protection to you."	5	leopard suit
 
@@ -559,7 +559,7 @@ Instead of smelling leopard suit:
 
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "lumpy box"	"Supposed medical equipment and solutions that the red headed researcher Omio wanted/needed."	1	lumpy box
 

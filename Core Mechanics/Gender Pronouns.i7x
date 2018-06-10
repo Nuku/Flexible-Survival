@@ -578,7 +578,7 @@ This is the SetPlayerPronouns rule:
 		-- "Neutral":
 			SetNeutralPronouns for player;
 		-- "Auto":
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				if breast size of player > 0: [herm]
 					SetHermPronouns for player;
 				else: [male herm]

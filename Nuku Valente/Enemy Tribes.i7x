@@ -65,7 +65,7 @@ to rival menu:
 	decrease the menu depth by 1;
 	rival menu;
 
-An everyturn rule(This is the Enemies Breed rule):
+An everyturn rule (This is the Enemies Breed rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	repeat with enemy running through active species:
 		if population of enemy is 0, next;
@@ -105,7 +105,7 @@ An everyturn rule(This is the Enemies Breed rule):
 				now gain is gain / 100;
 				increase morale of enemy by gain;
 
-An everyturn rule(This is the Enemy Expanding rule):
+An everyturn rule (This is the Enemy Expanding rule):
 	repeat with enemy running through active species:
 		if population of enemy is 0, next;
 		if openland < 1, next;
@@ -146,7 +146,7 @@ An everyturn rule(This is the Enemy Expanding rule):
 			decrease openland by 1;
 
 
-An everyturn rule(This is the Enemy Attacking rule):
+An everyturn rule (This is the Enemy Attacking rule):
 	repeat with enemy running through active species:
 		if population of enemy is 0, next;
 		if openland > 0, next;

@@ -416,7 +416,7 @@ An everyturn rule:
 
 the fuckscene of bee girl is "[SexWithHoney]".
 
-to say sexwithHoney:
+to say SexWithHoney:
 	if lastfuck of bee girl - turns < 4:
 		say "     You've had some fun with the bee girl quite recently. Perhaps you should give her a break for a little longer?";
 	else if player is neuter:

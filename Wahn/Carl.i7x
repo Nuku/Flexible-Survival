@@ -183,7 +183,7 @@ Instead of fucking the Carl:
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				LineBreak;
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck him.";
@@ -218,7 +218,7 @@ Instead of fucking the Carl:
 			say "     Pulling off your clothes and gear and setting them down in a near pile, you stroll over to the transformed soldier. As you step up to Carl and offer to have sex with him, you see an eager expression come over his face, his ears perking up and his gaze hungrily wandering over your body. He starts breathing harder, panting with a half-open mouth, and the bulge of his pants starts growing noticeably. Then suddenly, Carl looks behind him with a curious tilt of his eyebrows and starts to chuckle at his exuberantly wagging tail. 'You know what - I'm okay with being a dog now. This body feels strong and pretty amazing - though there are some things I still need to get the hang of.' After a last quick look at his tail, his gaze moves to the bulge in his pants, then to you. In a husky voice he adds 'If you wanna explore some of them with me, I'm game', then pulls his shirt up and over his head, revealing a furry and toned chest.";
 			if graphics is true:
 				project the figure of Carl_knot_icon;
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Fuck Carl.";
@@ -360,7 +360,7 @@ to say CarlSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Give him a blow-job";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
@@ -372,7 +372,7 @@ to say CarlSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Share oral pleasures with your male husky";
 	]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Carl fuck your pussy";
 		now sortorder entry is 4;
@@ -383,7 +383,7 @@ to say CarlSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Let the husky fill your ass with his seed";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Carl's ass";
 		now sortorder entry is 6;

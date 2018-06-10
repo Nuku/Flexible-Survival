@@ -150,7 +150,7 @@ Carry out an actor shooting something (called the target) with something (this i
 		end if;
 	end if.
 
-Report shooting something (called the target) with something(called the boomstick) (this is the report shooting people rule):
+Report shooting something (called the target) with something (called the boomstick) (this is the report shooting people rule):
 	if the target is a person begin;
 		if the target is dead begin;
 			say "With one final shot from your [boomstick], [printed name of the target] drops to the ground, dead." instead;
@@ -158,7 +158,7 @@ Report shooting something (called the target) with something(called the boomstic
 	say "You shoot [the target] with your [boomstick]. [The target] jerks back from the impact. ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
-Report shooting something (called the target) with something(called the boomstick) (this is the report shooting non-people rule):
+Report shooting something (called the target) with something (called the boomstick) (this is the report shooting non-people rule):
 	if the target is not a person, say "You shoot [the target] with your [boomstick]. Well, I hope that made you feel better. Hopefully shooting [the target] won't attract any unwanted attention.".
 
 Check someone shooting something (called the target) with something (called the boomstick) (this is the others must have a projectile to shoot rule):
@@ -182,7 +182,7 @@ Check someone shooting something (called the target) with something (called the 
 Check someone shooting something (called the target) with something (called the boomstick) (this is the other people suicide rule):
 	if the target is the person asked, say "[The person asked] says 'I refuse to commit suicide!'" instead.
 
-Report someone shooting something (called the target) with something(called the boomstick) (this is the report another shooting a person rule):
+Report someone shooting something (called the target) with something (called the boomstick) (this is the report another shooting a person rule):
 	if the target is a person begin;
 		if the target is dead begin;
 			say "[The person asked] shoots [printed name of the target], who drops to the ground, dead." instead;
@@ -195,7 +195,7 @@ Report someone shooting something (called the target) with something(called the 
 		end if;
 	end if.
 
-Report someone shooting something (called the target) with something(called the boomstick) (this is the report another shooting a non-person rule):
+Report someone shooting something (called the target) with something (called the boomstick) (this is the report another shooting a non-person rule):
 	if the target is not a person, say "In a seemingly random act of violence, [the person asked] shoots [the target].".
 
 After someone shooting something (called the target) with something (called the boomstick) (this is the shot to death rule):
@@ -250,7 +250,7 @@ Carry out an actor stabbing something (called the target) with something (this i
 		end if;
 	end if.
 
-Report stabbing something (called the target) with something(called the pigsticker) (this is the report stabbing people rule):
+Report stabbing something (called the target) with something (called the pigsticker) (this is the report stabbing people rule):
 	if the target is a person begin;
 		if the target is dead begin;
 			say "With one final thrust of your [pigsticker], [printed name of the target] drops to the ground, dead." instead;
@@ -258,7 +258,7 @@ Report stabbing something (called the target) with something(called the pigstick
 	say "You stab [the target] with your [the pigsticker]. [The target] yells out in pain. ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
-Report stabbing something (called the target) with something(called the pigsticker) (this is the report stabbing non-people rule):
+Report stabbing something (called the target) with something (called the pigsticker) (this is the report stabbing non-people rule):
 	if the target is not a person, say "You stab [the target] with your [the pigsticker]. Well, I hope that made you feel better. Hopefully stabbing [the target] won't attract any unwanted attention.".
 
 Check someone stabbing something (called the target) with something (called the pigsticker) (this is the others must have a blade to stab rule):
@@ -282,7 +282,7 @@ Check someone stabbing something (called the target) with something (called the 
 Check someone stabbing something (called the target) with something (called the pigsticker) (this is the other people harikari rule):
 	if the target is the person asked, say "[The person asked] says 'I refuse to commit suicide!'" instead.
 
-Report someone stabbing something (called the target) with something(called the pigsticker) (this is the report another stabbing a person rule):
+Report someone stabbing something (called the target) with something (called the pigsticker) (this is the report another stabbing a person rule):
 	if the target is a person begin;
 		if the target is dead begin;
 			say "[The person asked] stabs [printed name of the target], who drops to the ground, dead." instead;
@@ -295,7 +295,7 @@ Report someone stabbing something (called the target) with something(called the 
 		end if;
 	end if.
 
-Report someone stabbing something (called the target) with something(called the pigsticker) (this is the report another stabbing a non-person rule):
+Report someone stabbing something (called the target) with something (called the pigsticker) (this is the report another stabbing a non-person rule):
 	if the target is not a person, say "In a seemingly random act of violence, [the person asked] stabs [the target].".
 
 After someone stabbing something (called the target) with something (called the pigsticker) (this is the stabbed to death rule):

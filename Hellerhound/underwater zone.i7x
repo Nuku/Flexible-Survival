@@ -20,7 +20,7 @@ gill fruit is a grab object.
 gill fruit has a usedesc "[gill fruit use]".
 hasgills is a number that varies.
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "Gill Fruit"	"An oddly slitted fruit, green-blue and ripe to eat."	1	gill fruit
 
@@ -51,7 +51,7 @@ instead of going down from Open Ocean:
 
 Section 3 - Sea Dragon Cum
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "sea dragon cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
 

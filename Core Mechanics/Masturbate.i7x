@@ -38,7 +38,7 @@ instead of using porn collection:
 			say "[simplemast]";
 		else:
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the hard core magazines and begin playing with yourself[if breast size of player > 8]. You start by rubbing over your [bodyname of player] body and playing with your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if breast size of player > 5]. You start by rubbing over your [bodyname of player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if breast size of player > 2]. You start by rubbing over your [bodyname of player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else]. You start by rubbing over your [bodyname of player] body and teasing your nipples[end if][if breasts of player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				say "     Being a herm, you place a hand at your [if cocks of player is 1]cocks[else]cock[end if] and the other at your [if cunts of player is 1]cunt[else]cunts[end if] and start playing with them. You stroke your [cock size desc of player] [cock of player] shaft slowly at first while fingering the wet folds of your [if cunts of player is 1]pussy[else]pussies[end if]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [ball size], feeling the pressure build up in them.";
 				if companion of player is mouse girl:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
@@ -80,7 +80,7 @@ instead of using porn collection:
 
 
 to say simplemast:
-	say "     You settle yourself down to [if cocks of player > 0 and cunts of player > 0]play around with your junk for a bit[else if cocks of player > 0]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines, using it for added inspiration and get yourself off, relieving some of your excess arousal";
+	say "     You settle yourself down to [if player is herm]play around with your junk for a bit[else if cocks of player > 0]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines, using it for added inspiration and get yourself off, relieving some of your excess arousal";
 	if the companion of player is mouse girl:
 		say ". Partway into your masturbatory session, thoughts of sexy mice slip into your mind.";
 		decrease humanity of player by 1;

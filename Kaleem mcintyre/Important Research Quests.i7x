@@ -171,7 +171,7 @@ Instead of resolving Important Treasure:
 		increase score by 20;
 		now Important Treasure is resolved;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "lumpy box"	"Supposed medical equipment and solutions that the red headed researcher Omio wanted/needed."	1	lumpy box
 

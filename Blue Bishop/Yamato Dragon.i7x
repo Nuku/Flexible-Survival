@@ -358,7 +358,7 @@ to say yamato dragon desc:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";
@@ -959,7 +959,7 @@ to say usedragonscale:		[only alters sizes, not gender]
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";
@@ -982,7 +982,7 @@ to say usedragonhair:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player > 0:
+	else if player is herm:
 		now sex entry is "Both";
 	else if cocks of player > 0:
 		now sex entry is "Male";

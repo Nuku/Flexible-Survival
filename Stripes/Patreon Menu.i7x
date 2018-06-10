@@ -36,14 +36,15 @@ carry out supersponsor:
 		say "[if sshh is true](9) Hard hat - Taken[else][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
 		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
+		say "[link](12) Claim all the pets![as]12[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-10)> ";
+			say "Choice? (0-12)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 11:
+			if calcnumber >= 0 and calcnumber <= 12:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 11.";
+				say "Invalid choice. Pick from 0 to 12.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
@@ -169,6 +170,10 @@ carry out supersponsor:
 			else:
 				say "     You release the iron clad defense of your mind.";
 				remove "Sanity Saver" from feats of player;
+		else if calcnumber is 12:
+			repeat with petget running through pets:
+				now petget is tamed;
+			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
 		else:
 			now trixieexit is 1;
 		LineBreak;

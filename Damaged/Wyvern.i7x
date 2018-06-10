@@ -1950,7 +1950,7 @@ to wyvernbiasrequest:
 				now wyvernbias is 5;
 				now trixieexit is 1;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "wyvern goop"	"Thick, whitish-yellow ooze. You've kept the stuff wrapped up so that it doesn't completely harden."	1	wyvern goop
 

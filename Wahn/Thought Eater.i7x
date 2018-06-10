@@ -75,7 +75,7 @@ to say TESlaveSexMenu:
 	setmonster "Herm Human";
 	choose row monster from the table of random critters;
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -86,19 +86,19 @@ to say TESlaveSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put the Asian dude's shaft in your mouth.";
 	now toggle entry is TESlaveSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put the herm slave's mouth to good use.";
 		now toggle entry is TESlaveSex rule;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the herm slave's pussy with your cock.";
 		now toggle entry is TESlaveSex rule;
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 5;
