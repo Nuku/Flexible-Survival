@@ -17,21 +17,24 @@ Azari_Corruption is a number that varies. Azari_Corruption is usually 0.
 
 Section 1 - Location & NPC
 
-Shag Shack Back Alley is a location.
-North of Shag Shack Entrance is Shag Shack Back Alley.
-The description of Shag Shack Back Alley is "[ShagShackBackAlley_Desc]".
-The scent of Shag Shack Back Alley is "[ShagShackBackAlley_Scent]".
+Shag Shack Alley is a room.
+North of Shag Shack Entrance is Shag Shack Alley.
+The description of Shag Shack Alley is "[ShagShackAlley_Desc]".
+The scent of Shag Shack Alley is "[ShagShackAlley_Scent]".
 
 Azari is a man.
 The description of Azari is "[Azari_Desc]".
 The conversation of Azari is { "blah" }.
 The scent of Azari is "[Azari_Scent]".
 
-to say ShagShackBackAlley_Desc:
+to say ShagShackAlley_Desc:
 	if Azari_Met is false:
 		say "     Stepping around the corner, you take in your new surroundings. It's clear that the alley hasn't been touched since the start of all of this mayhem, the dumpster nearly completely empty and the ground surprisingly clutter-free. Despite all this, you can't help but feel slightly unnerved by being here. Something about the dim, narrow space makes you tense up, expecting something to come at you at any moment, despite this being well within the safe area around the mall.";
 	else:
 		say "     <Description you get when Azari is here.>";
+
+to say ShackShackAlley_Scent:
+	say "<placeholder>.";
 
 Section 2 - Scenes
 
