@@ -1209,7 +1209,7 @@ to say VentAnalWS:
 
 to say VentPostSexWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):
-		if Vent is equalsized with player or Vent is smaller than player: [Vent is similar in size to the player]
+		if Vent is smaller than player or Vent is equalsized with player: [Vent is similar in size to the player]
 			say "     <placeholder junk.>";
 		else: [Player is significantly smaller than Vent]
 			say "     <smaller placeholder junk.>";
