@@ -271,7 +271,7 @@ when play begins:
 Instead of resolving a Veterinary Hospital:
 	if lust of Medea is 1:
 		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if cunts of player > 0]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
-		attempttowait;
+		WaitLineBreak;
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you do your best to remain focused by repeatedly looking at the list you were given as a reminder of what you need to find. As you're nearing the end, it is becoming quite difficult, all those intense, sexual, animal scents have you panting with lust. A large part of you just wants to give up on humanity, find some beast and let it have its way with you as long and as often as it likes. Knowing you can't tarry any longer, you pack up what you've found and make for the exit";
 		if furry is not banned and hermaphrodite is not banned:
 			say ".";

@@ -270,7 +270,7 @@ carry out bfanditesting6:
 	repeat with y running from 1 to number of filled rows in Table of Game Objects:
 		choose row y in Table of Game Objects;
 		say "[name entry][line break]";
-	attempttowait;
+	WaitLineBreak;
 	say "Listing all entries in table of random critters with loot entries, their loot, and loot chance.";
 	sort table of random critters in lev order;
 	repeat with y running from 1 to number of filled rows in table of random critters:

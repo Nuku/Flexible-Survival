@@ -73,7 +73,7 @@ to say gsd_desc:
 				increase KorvinSubmitCounter by 1;
 				now combat abort is 1;
 				now fightoutcome is 22;
-				attempttowait;
+				WaitLineBreak;
 				say "[losetogsd]";
 		else:
 			say "     That [bold type]scarred[roman type] German Shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches [if gsd_pet < 10]confidently[else]cautiously, but[end if] with an aggressive swagger. The buff male cracks his knuckles and gives a soft growl.";
@@ -686,7 +686,7 @@ to say gsd_special_final_01:
 		say "     After several rounds of swapping between fucking and petting him, you can't hold back any longer and set to pounding his toned butt hard and fast. You drive your pulsing rod into him over and over again, enjoying his needful whimpers while you continue to jerk him off. Sensing your approaching release, you push harder and deeper[if cockname of player is not listed in infections of internallist], slapping your balls against his[else], slapping your hips against his fuzzy rear[end if].";
 		say "     'You want it, don't you? Be a good dog and beg your master to give you his hot load,' you growl between gritted teeth, your peak so close now. The German Shepherd, panting heavily and dribbling constantly from his cock, can barely manage an assenting bark of begging for it. You smile and with another 'Good boy' you push your [cock size desc of player] cock fully into him[if cock length of player > 36], bulging his belly to fit it all[else if cock length of player > 24], visibly stretching his toned tummy to fit it all[end if]. Your [cock of player] dick throbs and pulses inside his rear, spurting shot after shot of gooey semen into his bowels. As your load fills him, he expels his own seed onto the ground, cumming messily over and over again as he in delight howls alongside you.";
 		say "     With your cock still buried fully in him, you pat his head. 'You're mine now, pup. I'm your Master and your Alpha. I'm top dog and you'll do what I say from now on.' His ears dip and he nods. 'Yes, you're Alpha,' he responds, now forced to accept your dominance over him. You smile and pet him further, calling him your good dog while sliding your spent shaft from his butt.";
-	attempttowait;
+	WaitLineBreak;
 	say "[gsd_recruited]";
 	now gsd_pet is 12;
 
@@ -706,7 +706,7 @@ to say gsd_special_final_03:
 	say "     While you're eager to ride him to completion, you do your best to hold back and draw this out. In addition to extending the pleasure for you both, it gives you more opportunity to pet, scritch and otherwise treat your former for as your new pet dog to reinforce his new role. Despite his earlier aggression, he can't help but pant and wag his tail in response to this attention from his new owner. And from the throbbing of his cock and the amount of pre it's drooling into you, you can tell he appreciates the attention you're giving his shaft as well.";
 	say "     With that hard dick sliding in and out of you, you can only be patient for so long. Wanting your release and to secure your place quite literally atop him, you start riding him hard and fast, pressing your hot petals against his swollen knot with each slam down. Clenching your fingers in his fur, you push down one final time as he bucks up, popping that thick bulb into your cunt. Your inner muscles clamp down on it and you cry out in orgasmic release, cumming hard, followed moments later by his own orgasm. The shepherd cums long and hard, sending shot after shot of canine seed into your womb until as you ride out your climax until you're both spent and exhausted.";
 	say "     While waiting for his knot to go down, you pet him some more, calling him your good dog and telling him that you're his Mistress and Alpha from now on. His defiance worn down after having been put in his place this one final time, he nods and ascents. 'Yes, you're the Alpha now,' he pants. Once he knot's shrunk enough, you pull off him and make him lick your messy cunt as his first task as your new loyal pet, which he does with eagerness.[impregchance]";
-	attempttowait;
+	WaitLineBreak;
 	say "[gsd_recruited]";
 	now gsd_pet is 12;
 

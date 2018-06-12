@@ -172,7 +172,7 @@ to say cheetahwomaninheat:
 				now monster is entry 1 of cmonlist;
 				choose row monster from the table of random critters;
 				say "Catching the scent of a feline on the air, your heat-driven instincts take over and you follow it in search of relief. You find the [name entry] soon enough, your pheromones having caught its nose. Immediately upon seeing the creature, you submit yourself, offering your [bodytype of player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
-				attempttowait;
+				WaitLineBreak;
 				follow the cock descr rule;
 				follow the cunt descr rule;
 				follow the breast descr rule;

@@ -344,7 +344,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		now P is 1;
 		follow the player injury rule;
 		say "You are [descr].";
-		attempttowait;
+		WaitLineBreak;
 
 Section 4 - Glowing Ember
 
@@ -358,7 +358,7 @@ The usedesc of glowing ember is "[glowingemberuse]";
 
 to say glowingemberuse:
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
-	attempttowait;
+	WaitLineBreak;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 
 the scent of glowing ember is "The small ember smells faintly smoky.".

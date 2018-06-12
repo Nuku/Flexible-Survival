@@ -1,4 +1,4 @@
-Story Skipper backup by Nuku Valente begins here.
+Story Skipper backup by Core Mechanics begins here.
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
@@ -1482,4 +1482,4 @@ carry out Trixiecheck2:
 	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[else]NO[end if]     Kitsune: [ktp][line break]";
 	say "Diego: [if Diegochanged is 0]Male[else if Diegochanged is 1]Herm[else]Female[end if]     Eric: ???[line break]";
 
-Story Skipper ends here.
+Story Skipper backup ends here.

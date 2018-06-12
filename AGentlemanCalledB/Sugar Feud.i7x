@@ -17,7 +17,7 @@ Instead of resolving a Sugar Shack:
 	choose row monster in table of random critters;
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";
 	say "     When you step up to the counter there's no sign of the glider who was here moments ago. Peering over the counter, you see the shelves of the stall have been picked clean, but there is a large cotton candy machine in the back that appears mostly undisturbed. 'Isn't it great!?' You whip around to find the source of the voice behind you, finding yourself face to face with the grinning sugar glider. 'And it still works!' she cheers, grabbing your arm and pulling you around to the door at the back of the stall, then inside.";
-	attempttowait;
+	WaitLineBreak;
 	say "     As she flips on the machine, you hear the muffled sound of a generator stirring to life somewhere under the stall. The sugar glider bounces and cheers with glee as the cotton candy machine begins warming up. Soon the machine is heated and humming happily, simply awaiting the ingredients for its fluffy treat, which the sugar glider is all too happy to provide. 'Red or blue?' she asks you, fishing into her pouch and pulling out two handfuls of small sugary candies. 'Too slow!' she shouts before you even have a chance to open your mouth, dropping both handfuls of candy into the machine with a smile.";
 	say "     She squeals with excitement as the machine begins spinning her contribution into sugary fluff, and when she can wait no longer, she simply reaches into the open drum, forgoing the sticks entirely as she collects a great spool of the stuff on her arm. Pulling out a sizable mass of the cottony fluff, the eager glider wastes no time digging in, burying her face in the cotton candy with a muffled 'Mmmm', filling her mouth with the stuff before waving her candy coated hand in your face, offering you a taste. You pull a small piece of the fluff off her arm and poke it into your mouth, savoring the powerful sweetness of the fresh cotton candy, and soon you're reaching for another piece. The two of you continue like this for some time, until her arm has been picked clean. After licking the last of the sweet fluff from between her fingers, the sugar glider gives you a cute smirk and offers you her paw. With the sugary taste of the last batch still on your lips, part of you wants to reach out and accept her paw, but a small part of you wonders if it's really a good idea. Will you take the sugar glider's offer?";
 	if the player consents:
@@ -51,7 +51,7 @@ Instead of resolving a Sugar Shack:
 			wait for any key;
 			now humanity of player is 0;
 			now battleground is "void";
-			attempttowait;
+			WaitLineBreak;
 			end the story saying "Having succumbed to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 		else:
 			say "     Spent, you collapse atop your lover as the last of your changes ripple down your legs, encouraged by the sticky nectars coating your thighs. The sugar glider hugs you tightly in a loving embrace that spans most of your body thanks to the soft membrane between her arms and legs. She nuzzles gently against your [if cocks of player > 0]face and licks your cheek softly[else]tail[end if] with a sigh of contentment as your transformation comes to and end. As you bask in the afterglow of your sweet, sugary sex your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Even as the sugar induced fog starts to recede in the wake of your climax, your mouth waters at the thought of that sweet, sweet treat. Will you give in to the urge to go back for more?";
@@ -60,7 +60,7 @@ Instead of resolving a Sugar Shack:
 				wait for any key;
 				now humanity of player is 0;
 				now battleground is "void";
-				attempttowait;
+				WaitLineBreak;
 				end the story saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 			else:
 				say "     Deciding you need to get out of this sickly sweet dream while you still have a mind to, you do your best to shake your head clear of the sugary haze and quickly gather your gear to leave before the sugar glider can recover from her afterglow and tempt you with more sweet fun.";

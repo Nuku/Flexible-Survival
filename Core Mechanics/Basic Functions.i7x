@@ -8,7 +8,7 @@ To change the current menu to (X - table name):
 to clear the screen and hyperlink list:
 	clear the screen;
 	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
-	now hyperlink list is {}.
+	now hyperlink list is {};
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
 To say row of (N - number) spaces: (- spaces {N}; -).
@@ -73,6 +73,13 @@ to PlayerEat (N - number):
 	if hunger of player < 0:
 		now hunger of player is 0;
 
+to PlayerHunger (N - number):
+	LineBreak;
+	say "[bold type]Your hunger has increased by [N]![roman type][line break]";
+	decrease hunger of player by N;
+	if hunger of player < 0:
+		now hunger of player is 0;
+
 to PlayerDrink (N - number):
 	LineBreak;
 	say "[bold type]Your thirst is reduced by [N]![roman type][line break]";
@@ -80,7 +87,12 @@ to PlayerDrink (N - number):
 	if thirst of player < 0:
 		now thirst of player is 0;
 
-to PlayerHealed (N - number): 
+to PlayerThirst (N - number):
+	LineBreak;
+	say "[bold type]Your thirst has increased by [N]![roman type][line break]";
+	increase thirst of player by N;
+
+to PlayerHealed (N - number):
 	LineBreak;
 	say "[bold type]Your hitpoints increase by [N]![roman type][line break]";
 	increase HP of player by N;
@@ -105,7 +117,7 @@ to SanBoost (N - number):
 	increase humanity of player by N;
 	if humanity of player > 100:
 		now humanity of player is 100;
-		
+
 to LibidoLoss (N - number):
 	LineBreak;
 	say "[bold type]Your libido has decreased by [N]![roman type][line break]";
@@ -183,7 +195,7 @@ StatGainAction is an action applying to one topic.
 carry out StatGainAction:
 	say "StatChange 'Strength' using 2[line break]";
 	StatChange "Strength" using 2;
-	
+
 understand "teststatloss" as StatLossAction.
 
 StatLossAction is an action applying to one topic.

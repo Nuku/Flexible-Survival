@@ -54,7 +54,7 @@ instead of conversing the Harold:
 			now hellgatherquest is 5;
 	else if Haroldtalk is 2 and a random chance of 2 in 5 succeeds:
 		Say "     'Am I ever so glad to see you!' Harold says with a hint of desperation coloring his voice. Confused, you cock an eyebrow at the large stallion. 'Look, I know you shouldn't ask this of friends, but I REALLY need your help.' Giving the unicorn a quizzical look, you ask Harold what the problem is. The horned equine curls a finger begging you closer before he himself leans down to whisper something into your ear. 'See, the thing is, the club's slowly running out of food and before long we're going to need to send some people out to go and find some provisions, otherwise things are going to get... uncomfortable... around here for some of us.'";
-		attempttowait;
+		WaitLineBreak;
 		say "     Harold turns his gaze towards some of the predators in the club and you quickly come to understand the unspoken message. 'I know this not your problem, but I also know you travel outside a lot, so if you could snag maybe ten things of food and maybe ten liters of water, then I'd be really indebted to you.' Letting the other man know that you'll see what you can do, you receive a somber nod from Harold before the bartender pulls himself to stand in his usual upright position back behind his bar. 'Ok. And thanks.' You nod and then turn to leave from the bar to go about your way.";
 		now Haroldtalk is 3;
 	else if Haroldtalk is 3 and ( carried of water bottle < 10 or carried of food < 10 ) and a random chance of 2 in 5 succeeds:
@@ -83,7 +83,7 @@ instead of conversing the Harold:
 			say "     'Hey, would you mind tasting this for me?' Harold asks just after pouring a pink tinged liquor from a pair of shakers he had been tossing about into a lone wine glass atop his bar. Seeing the drink, and noting the funny way the liquid shimmers an almost pale white in underneath the flashing lights of the club, you glance up at the bartender, then back to the drink. Shall you try it?'";
 			if the player consents:
 				say "     Deciding you could go for a drink, you shrug and pick up the glass, taking a sip of it.";
-				attempttowait;
+				WaitLineBreak;
 				say "[drinkflavor]";
 				increase score by 2;
 			else:
@@ -110,13 +110,13 @@ to say drinkflavor:
 		if thirst of player > 100, now thirst of player is 100;
 	if T is 7:
 		say "     At the first taste of the unnamed drink you find yourself instantly feeling somewhat tipsy as the world around you begins to shift ever so slightly. Not letting this deter you however, you knock back the rest of the alcoholic beverage in a single gulp before slamming the wine glass down onto the bar. This proves to be a mistake on your part because very soon you are swaying and giggling in your seat as you look up to Harold with half lidded eyes. Staring up at Harold you suddenly find that the other man looks particularly sexy with all those muscles and that awesome silver mane of his wrapped in that too tight black vest he has on. 'T-too strong?' The unicorn asks while taking a quick step back as something in your drunken eyes has him severely spooked. Seeing his fear and that cute little bob of his throat where his delicious looking Adam's apple is nervously vibrating, you instantly fly over the counter to tackle the unicorn.";
-		attempttowait;
+		WaitLineBreak;
 		say "     Harold yelps as he catches you with his muscular arms, however, the horned equine is not at all prepared for you to kiss, lick, nip, bite and all out chew on his throat as you quickly find yourself [italic type]hungry[roman type] for the sweet tasting mythic beast. It takes the other almost two minutes to pry your [bodyname of player] form away from him, but when he does Harold has no time to try and calm you down because you quickly pass out seconds later. In the dim fog of black unconsciousness, you could almost swear that you heard someone say [']WAY too strong['], but you're not sure.'";
 		unicornify;
 	if T is 8:
 		say "     At the first taste of the unnamed drink, you find it rather tasty, with a [one of]fruity[or]strong[or]minty[or]powerful[at random] flavor and a [one of]mild[or]sharp[or]subtle[or]sweet[or]rich[at random] aftertaste. You smile and swallow down the rest of it. It's not quite the sort of thing you'd usually get, but it's pleasant enough and you tell the unicorn so. He seems fairly pleased with your review. 'Well, that one's coming along well, I guess. I'll need to stock up a bit more before I can put it on the menu though. Got to make sure I have a supply of the [']special ingredient['],' he adds with a wink.";
 		say "     'Uh oh,' you think to yourself.";
-		attempttowait;
+		WaitLineBreak;
 		weakrandominfect;
 		infect;
 		SanLoss 5;

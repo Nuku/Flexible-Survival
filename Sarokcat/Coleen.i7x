@@ -552,7 +552,7 @@ to say FirstColeenSpraySex:
 		now ColeenSpray is 99;
 		say "     Not wanting to give up so easily, you tell her that you don't usually cause people to change, especially when they're not already changing on their own. She seems skeptical of your claims, so you play your final card, reminding her of the restorative spray. You suggest that if she used a bit of it each time after sex, she'd be able to stop any changes before they start to show up. You even add that she'll certainly be safe from getting infected by creatures in here, so there's no need to save it for that when it could be put to much better use.";
 		say "     Clearly tempted by the prospect of sex, the idea gives her pause. Moving in closer, you run your hands lightly along her sides and back, caressing her tantalizingly while continuing to reassure her. Before she realizes it, you're slipping off her jacket and moving a hand under her shirt to caress her bare back. Her unchanged skin is soft and smooth, a pleasant change from the scales and fur of many of the beasts of the city. Guiding her forward, you pull her into a kiss with one hand and start to remove her pants with the other. Soon you have her quite nude and laying upon her cot, ready to be made love to. Caught up in the excitement and with the spray to allay any concerns, she welcomes you into her arms.";
-		attempttowait;
+		WaitLineBreak;
 		if cocks of player > 0:
 			say "[Coleen_pretfsex01]";
 		else:

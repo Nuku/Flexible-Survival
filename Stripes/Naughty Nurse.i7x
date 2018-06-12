@@ -74,7 +74,7 @@ to say LoseToVixenNurse:
 			if fightoutcome is 22, increase x by 15; [submitted]
 			if cunts of player > 0, increase x by 15; [F/H]
 			if a random chance of x in 200 succeeds:
-				attempttowait;
+				WaitLineBreak;
 				say "     The vixen nurse, panting a little from her orgasm, takes in the scent of your arousal and smiles. Reminded of her initial plan, her cock starts to rise again. Getting hard in your mouth again. Lost in your lust, you help her along, licking and sucking it to restore her erection. With some help from you, soon she's up and ready to go again, which you are far more eager for than before.";
 				if player is herm:
 					if a random chance of 1 in 2 succeeds:

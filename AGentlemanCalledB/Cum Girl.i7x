@@ -48,7 +48,7 @@ to say losetoCumGirl:
 	else:
 		say "     An expression of disappointment slowly creeps across the cum girl's usually emotionless face as she discovers your bare groin, and without a second glance she rises to her feet and sets off in search of a proper victim.";
 	if cumgirlfed > 35: [Temporary fission scene, to be built as a pre-combat event in later versions.]
-		attempttowait;
+		WaitLineBreak;
 		say "     You watch her take a few more steps before stumbling again and falling to the ground with an uncharacteristic moan. You observe with morbid fascination as the cum girl pants and groans, her shifting fluid form pulsating violently as she sinks to the ground, melting away into a large, shapeless mass.";
 		say "     Suddenly a limb surges out of the gooey mass, rapidly taking on a human-like form as it pulls its way out of the sticky goop. Then another limb emerges, followed quickly by several more. Two distinct forms begin to take shape as the bodiless limbs work to drag themselves out of the mass from which they emerged. Soon you realize there are two smaller cum girls forming from the pile of bodily fluids. Pulling themselves apart with one final sickening slurp, the twin cum girls take a few moments to caress each other before they wander off in opposite directions with a parting kiss. While the prospect of more of the insatiable creatures wandering around down here is a troubling one, at least the giant cum creature you were facing a few short minutes ago is no longer a concern.";
 		now cumgirlfed is 0;

@@ -136,27 +136,6 @@ Instead of resolving a Angel vs Demons:
 				break;
 		Now Angel vs Demons is resolved;
 
-
-Burned-Out Chapel is a room. It is fasttravel.
-The description of Burned-Out Chapel is "[chapelplacedesc]".
-earea of Burned-Out Chapel is "Outside".
-
-instead of sniffing Burned-Out Chapel:
-	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
-
-to say chapelplacedesc:
-	if (Elijah is not in Burned-Out Chapel and HP of Elijah is 0): [if the player got here before Elijah was captured]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other than kindling. The altar is cracked, and the wooden cross behind it has had manacles added to it. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
-	else if (HP of Elijah is 0): [Starting state - Elijah chained up]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other than kindling. A winged humanoid is chained to the wooden cross standing behind a cracked altar. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
-	else if (HP of Elijah > 0) and (HP of Elijah < 100 or HP of Elijah is 101): [Elijah rescued]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, you see a wooden cross with manacles dangling down from it. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
-	else if (HP of Elijah is 100): [after the demons had an orgy there]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, there is a horrible sticky mess of ash and demonic cum. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
-
-Northeast of Burned-Out Chapel is Sacristy.
-The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles beside it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
-
 Section 2 - Elijah the Seraphim
 
 [Smells, Description, Conversation]

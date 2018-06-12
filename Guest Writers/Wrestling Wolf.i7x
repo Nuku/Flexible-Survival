@@ -184,7 +184,7 @@ this is the wrestlew rule:
 	else if a random chance of 1 in 5 succeeds:
 		now chargeup is 1;
 		say "[one of]The wolf gets on the turnbuckles and howls, shaking his fists in the air as he eggs on the non-existent crowd.[or]The wrestler rushes from side to side in the ring, bouncing himself off the ropes, passing up opportunities to try hitting you.[or]The giant wolf growls and flexes, then mimes listening to the cheering crowd with exaggerated sweeps of his muscled arms.[at random]";
-		attempttowait;
+		WaitLineBreak;
 	else:
 		retaliate; [follows the advanced model if alternate]
 

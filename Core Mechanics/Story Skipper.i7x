@@ -812,7 +812,7 @@ To reciting2:
 			-- 195: [HP of Chris]
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
-					if the HP of chris > 0 and the HP of chris < 100, move chris to Grey Abbey 2F;
+					if the HP of chris > 0 and the HP of chris < 100, move chris to Sitting Area;
 			-- 196: [HP of Vanessa - status]
 				if the player's command matches "[number]":
 					now HP of Vanessa is the number understood;
@@ -2072,7 +2072,7 @@ to restorepart2:	[values 60 - 161]
 		now Hungry Piggy is resolved;
 		now HBMR is 1;
 	if pigfed is 3:
-		now Philip is in the bunker;
+		now Philip is in the Large Shed;
 		now Pig Pen is not fasttravel;
 [76:	[Philip - sex]]
 [77:	[cute crab - pet]]
@@ -2199,7 +2199,7 @@ to restorepart2:	[values 60 - 161]
 	if HP of Solstice is 3 or HP of Solstice is 4:
 		now lastfuck of Solstice is turns;
 	if HP of Solstice > 4:
-		move Solstice to Grey Abbey Library;
+		move Solstice to Makeshift Rec Room;
 [92:	[Ronda the Slut Rat]]
 	now carried of lizard juice is 0;
 	now Art Collector is resolved;
@@ -2526,7 +2526,7 @@ to restorepart2:	[values 60 - 161]
 	if HP of Sam <= 4:
 		now Sam is in Mini-Lab;
 	else if HP of Sam < 70:
-		now Sam is in Bunker;
+		now Sam is in Large Shed;
 	else:
 		remove Sam from play;
 	if HP of Sam is 16 or HP of Sam is 98, dragontaur_active;
@@ -2750,7 +2750,7 @@ to restorepart2:	[values 60 - 161]
 			setmonster "Blue Chaffinch";
 			choose row monster from the table of random critters;
 			now area entry is "nowhere";
-			now Icarus is in Grey Abbey Library;
+			now Icarus is in Garden View;
 	if HP of Icarus is 5 or HP of Icarus is 6:
 		now HP of Icarus is 4;	[dialed back for sex]
 	if HP of Icarus is 7:
@@ -2897,7 +2897,7 @@ to restorepart3:	[values 162 - 223]
 	if HP of Nadia > 0:
 		now Bird Troubles is resolved;
 	if HP of Nadia > 0 and HP of Nadia < 99:
-		move Nadia to Grey Abbey 2F;
+		move Nadia to Garden View;
 	if HP of Nadia is 5:
 		increase carried of feathered cloak by 1;
 [163: [NadiaFertilityCounter]]
@@ -2918,7 +2918,7 @@ to restorepart3:	[values 162 - 223]
 		remove Ares from play;
 [173: [HP of Hayato]]
 	if HP of Hayato > 15:
-		move Hayato to Grey Abbey 2F;
+		move Hayato to Darkened Alcove;
 	else:
 		move Hayato to Disused Garage;
 	if HP of Hayato > 5:
@@ -2991,7 +2991,7 @@ to restorepart3:	[values 162 - 223]
 	else:
 		now Bouncy Castle is unknown;
 	if HP of Bubble > 3 and HP of Bubble < 99:
-		move Bubble to Grey Abbey 2F;
+		move Bubble to Makeshift Rec Room;
 [181:	[HP of Newt]]
 	if HP of Athanasia < 11, now HP of Newt is 0;
 	if HP of Newt >= 4:
@@ -3030,7 +3030,7 @@ to restorepart3:	[values 162 - 223]
 		now the Cell Door 2 is unlocked;
 [189: [Onyx]]
 	if XP of Onyx >= 6 and XP of Onyx <= 29:
-		move Onyx to Grey Abbey Library;
+		move Onyx to Back Of The Library;
 	else if XP of Onyx >= 30 and XP of Onyx <= 49:
 		move Onyx to Palomino;
 	else:
@@ -3060,7 +3060,7 @@ to restorepart3:	[values 162 - 223]
 		move Val to Slave Cell 1;
 [195: [HP of Chris]]
 	if HP of Chris is 1:
-		move Chris to Grey Abbey 2F;
+		move Chris to Sitting Area;
 	else:
 		remove Chris from play;
 [196: [HP of Vanessa - status]]
@@ -3072,7 +3072,7 @@ to restorepart3:	[values 162 - 223]
 	else if HP of Vanessa >= 50:
 		remove Vanessa from play;
 	else:
-		move Vanessa to Bunker;
+		move Vanessa to Back Of The Library;
 	now lust of Vanessa is 0;
 [197: [XP of Vanessa - # of kids]]
 	if HP of Vanessa is 0 or HP of Vanessa >= 50, now XP of Vanessa is 0;
@@ -3081,7 +3081,7 @@ to restorepart3:	[values 162 - 223]
 	if HP of Meredith is 0 or HP of Meredith >= 100:
 		remove Meredith from play;
 	else:
-		move Meredith to Bunker;
+		move Meredith to Back Of The Library;
 	if HP of Meredith >= 9 and HP of Meredith < 100, now libido of Meredith is 1;
 	now XP of Meredith is 0;
 [199: [level of Meredith - # of kids]]
@@ -3089,7 +3089,7 @@ to restorepart3:	[values 162 - 223]
 [200: [HP of Gwen - status & Gwen UB]]
 	if Meredith is not bunkered, now HP of Gwen is 0;
 	if HP of Gwen > 2 and HP of Gwen <= 60:
-		move Gwen to Bunker;
+		move Gwen to Back Of The Library;
 		if HP of Gwen <= 20:
 			now HP of Gwen is 3;
 		else if HP of Gwen <= 35:
@@ -3105,7 +3105,7 @@ to restorepart3:	[values 162 - 223]
 	else if HP of Rane is 6:
 		move Rane to shrine;
 	else if HP of Rane is 7:
-		move Rane to Grey Abbey 2F;
+		move Rane to Sitting Area;
 	if HP of Rane is 5:
 		now The blue Oni is unresolved;
 	else:
@@ -3165,7 +3165,7 @@ to restorepart3:	[values 162 - 223]
 		move Hadiya to Hyena Shack;
 		now icon of Hadiya is Figure of Hadiya_0_icon;
 	else:
-		move Hadiya to Grey Abbey 2F;
+		move Hadiya to Sitting Area;
 	if HP of Hadiya > 0:
 		now Annoyed Hyena is resolved;
 		now Hyena Shack is known;
@@ -3183,7 +3183,7 @@ to restorepart3:	[values 162 - 223]
 		now HP of Gobby is 0;
 		remove Gobby from play;
 	else:
-		move Gobby to Grey Abbey 2F;
+		move Gobby to Sitting Area;
 [216:	[HP of Sidney - NPC overall status]]
 	now Meeting Sidney is unresolved;
 	remove Sidney from play;
@@ -3191,7 +3191,7 @@ to restorepart3:	[values 162 - 223]
 	now sa_otteress is false;
 	now sa_wusky is false;
 	if HP of Sidney >= 3 and HP of Sidney < 99:
-		move Sidney to Grey Abbey 2F;
+		move Sidney to Breakroom;
 	if HP of Sidney >= 3:
 		now Meeting Sidney is resolved;
 [217:	[level of Sidney - forms]]
@@ -3231,12 +3231,12 @@ to restorepart3:	[values 162 - 223]
 	if HP of Macadamia < 13:
 		move Macadamia to Nutso Factory;
 	else:
-		move Macadamia to Bunker;
+		move Macadamia to Breakroom;
 [223:	[HP of Yolanda]]
 	if HP of Yolanda < 6:
 		move Yolanda to Raven Nest;
 	else if HP of Yolanda < 100:
-		move Yolanda to Grey Abbey 2F;
+		move Yolanda to Darkened Alcove;
 	else:
 		remove Yolanda from play;
 

@@ -1,4 +1,4 @@
-Version 221 of Story Skipper by Nuku Valente begins here.
+Version 221 of Story Skipper backup2 by Core Mechanics begins here.
 [ Version up to 5/16/2015 ]
 [ Version 221 - Saving Micaela and Sidney ]
 
@@ -4322,4 +4322,4 @@ carry out Trixiecheck2:
 	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[else]NO[end if]     Kitsune: [ktp][line break]";
 	say "Diego: [if Diegochanged is 0]Male[else if Diegochanged is 1]Herm[else]Female[end if]     Eric: ???[line break]";
 
-Story Skipper ends here.
+Story Skipper backup2 ends here.

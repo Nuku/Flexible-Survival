@@ -241,7 +241,7 @@ this is the lamiaboob rule:	[***]
 			say "That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
 			now matlamiacaught is 2;	[unable to continue fighting]
 	if matlamiacaught is 1:
-		attempttowait;
+		WaitLineBreak;
 		increase playernum by stamina of player + level of player;	[endurance test]
 		increase matlamianum by sta entry + lev entry;
 [		say "STAM TEST: [playernum] vs [matlamianum]:[line break]";	]
@@ -262,7 +262,7 @@ this is the lamiaboob rule:	[***]
 			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2;	[unable to continue fighting]
 	if matlamiacaught is 1:
-		attempttowait;
+		WaitLineBreak;
 		increase playernum by intelligence of player + level of player;	[intelligence test]
 		increase matlamianum by int entry + lev entry;
 [		say "INTELLIGENCE TEST: [playernum] vs [matlamianum]:[line break]";	]
@@ -283,7 +283,7 @@ this is the lamiaboob rule:	[***]
 			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2;	[unable to continue fighting]
 	if matlamiacaught is 1:
-		attempttowait;
+		WaitLineBreak;
 		increase playernum by 100 + humanity of player - libido of player;	[libido/humanity test]
 		increase matlamianum by 150;
 [		say "LIBIDO/HUMANITY TEST: [playernum] vs [matlamianum]:[line break]";	]
@@ -313,7 +313,7 @@ this is the lamiaboob rule:	[***]
 		choose row monstercom from the table of critter combat;
 		now alt1chance entry is 0;
 		now mlamiaboobmash is true;
-		attempttowait;
+		WaitLineBreak;
 
 [ matlamiacaught - temp variable ]
 [ 0 = broke free                 ]

@@ -341,27 +341,27 @@ To say soda reference:
 To StevenFuck:
 	if cunts of player > 0:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You slip off your pants and seat your vulva around his cock and begin pumping it, back and forth, eagerly, as he falls against the bookshelf.";
-		attempttowait;
+		WaitLineBreak;
 		say "His grunts become groans of pleasure, as his hair starts to let itself down into a flowing mane. He fumbles with his shirt, trying to take it off as his hands harden into hooves. Finally he rips it off and sucks your mouth hard, his tongue fiercer with more passion than you've ever felt.";
-		attempttowait;
+		WaitLineBreak;
 		say "Each kiss becomes more intense than the last, as every buried passion comes forth as he jerks his pelvis into you, his butt ramming against the bookshelf. With one last bang, he snaps the bookcase into splinters, sending everything left on the shelf to the ground, while he ejaculates into you, letting loose a wild whinny.";
-		attempttowait;
+		WaitLineBreak;
 	else:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You grab his shaft with one hand and begin rubbing it up and down.";
-		attempttowait;
+		WaitLineBreak;
 		if cocks of player > 0:
 			if Cock Length of player > 8:
 				say "You drop your own pants, and rub your own penis against his. He starts to gasp, but you keep your lips against his, tongues twirling around each other. He salivates passionately, and he grips your sides as his hips start rocking, banging into the bookshelf with ever-increasing bangs.";
-				attempttowait;
+				WaitLineBreak;
 		else:
 			say "He tries to pull away, in one last attempt at freedom, but you grab him with both hands and kiss him hard as you wriggle your whole body up and down his member. He falls against the bookshelf as you hug him more tightly his feet rising up off the ground, hands gradually coming to meet yours.";
-			attempttowait;
+			WaitLineBreak;
 		say "Finally, he pulls his mouth away from yours, but only for a second, as he darts back in, kissing you in the cheek and neck. His moans become whinnies of joy as his face stretches forward, kissing you further and further down your face. You sidle around as he kisses the back of your neck, and inserts his giant horse penis into your ass.";
-		attempttowait;
+		WaitLineBreak;
 		say "Now it is your turn to gasp, as he cuddles you tightly with his strong stallion arms. He bangs you, harder, harder, each time cracking the bookshelf into pieces. With one final kick, he smashes the pallet into smithereens as the cum creams into your abdomen, soaking your legs and dripping onto the floor.";
-		attempttowait;
+		WaitLineBreak;
 	say "Now all of your clothes are on the floor, Steven's right beside you. Both of you tumble to the floor, as he whinnies in excitement. His deep equine eyes jiggle with pleasure. 'Oh, let's not stop now,' he breathes, 'Let's do it again!' He kisses you again, and his feet, now hooves, stamps against the ground, smashing the picture frame and ripping the books in two. You two slide towards the middle and start doing it again, this time even faster and harder than before.";
-	attempttowait;
+	WaitLineBreak;
 	if cunts of player > 0:
 		if breasts of player > 3:
 			say "He drives his member into your hole, his balls banging against your ass, his hands gripping two of your breasts and stroking them, all while he kisses you, sucking at your lips and your tongue. You both gasp and groan very loudly as you pound the ground over and over again, until you suddenly feel Steven being lifted from you. You open your eyes to see the guards, having broken down the door, pulling your away from the primal scene.";
@@ -476,7 +476,7 @@ to say Stevenonbottom:
 	else:
 		say "     'Whoa! Slow down there. I don't know if I'm up for that again,' he starts to protest, trying his best to hold back his desire";
 	say ". Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tailhole again and grin at how it twitches.";
-	attempttowait;
+	WaitLineBreak;
 	let bonus be ( charisma of player - 10 ) / 2;
 	if "Haggler" is listed in feats of player:
 		increase bonus by 3;
@@ -487,7 +487,7 @@ to say Stevenonbottom:
 	if bonus + dice > 14:
 		say "     You continue to tantalize him, not pressing the matter too fast. You tell him how sexy he is and how hard just looking at him makes you. As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if Stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[else]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
 		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole. That horse pucker spreads open for you [if cock length of player < 20]readily, having little difficulty accommodating your [cock size desc of player] manhood[else]slowly, having a little trouble with your [cock size desc of player] manhood[end if]. His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away. He releases a nickering moan and blushes all the redder upon your next thrust. While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
-		attempttowait;
+		WaitLineBreak;
 		say "     The grinding of your cock against his prostate soon gets to him and he's panting heavily soon enough. You keep at playing with his cock and balls, enjoying how they pulse and throb with growing need. The sight of him laying there as you drill into him is wonderfully arousing; the tough stallion looks so sexy as he moans with a cock buried in his butt. As your pace picks up, he's not able to hold out much longer, the stimulation against his prostate eventually putting him over the edge. He groans loudly and cums in messy spurts across himself, staining his red coat with streaks of white.";
 		say "     The sight of him cumming's enough to push you over the top as well. Driving your [cock of player] shaft [if cock length of player < 18]fully [end if]into him, you groan and cum messily into his ass. Your gooey load pools in his bowels, making him extra-slick for the few last thrusts as you drain your balls in him. By the time you pull out, he's left panting and dazed with a sated smiled on his equine face.";
 		if Stevenmm < 4, increase Stevenmm by 1;

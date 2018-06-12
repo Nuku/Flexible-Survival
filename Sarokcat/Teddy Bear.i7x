@@ -92,7 +92,7 @@ to teddybearvored:
 	decrease humanity of player by 6;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
-	attempttowait;
+	WaitLineBreak;
 	if humanity of player >= 10 or inasituation is true:
 		say "     When you come to, you are [one of]behind the counter of one of the carnival stands[or]resting in an out of the way corner[or]resting against a waste bin[or]behind one of the prize booths[at random] with little tufts of polyfill still clinging to you. As you try to brush them off, these little bits of fluff sink into you.";
 		infect;  [Added infection from being vored]
@@ -117,7 +117,7 @@ to teddybearvored:
 		now humanity of player is 0;
 		now battleground is "void";
 		now combat abort is 1;
-		attempttowait;
+		WaitLineBreak;
 		end the story saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
 		stop the action;
 

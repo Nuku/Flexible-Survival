@@ -53,7 +53,7 @@ to plushlionvored:
 	decrease humanity of player by 6;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
-	attempttowait;
+	WaitLineBreak;
 	if humanity of player >= 10 or inasituation is true:
 		say "     When you start to come to, you find yourself buried in a thick wad of plushy stuffing. Pushing yourself free of it, you find that you've been deposited [one of]behind the counter of one of the carnival stands[or]in an out of the way corner[or]against a waste bin[or]behind one of the prize booths[at random]. You feel a little weak and drained after your ordeal and it takes some effort to stand. As you head back towards the relative safety of the entrance, you try to brush the clinging fiberfill from yourself, not noticing as some of the bits of fluff sink into you.";
 		infect;  [Added infection from being vored]
@@ -80,7 +80,7 @@ to plushlionvored:
 		now humanity of player is 0;
 		now battleground is "void";
 		now combat abort is 1;
-		attempttowait;
+		WaitLineBreak;
 		end the story saying "Having been consumed by the plush lion, you've been turned into another of the stuffed felines roaming the fairgrounds.";
 		stop the action;
 

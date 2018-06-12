@@ -28,7 +28,7 @@ Instead of resolving a Central Library:
 		now centrallib is 1;
 		say "     You find your way to the city's Central Library, once an impressive stone building that has been suffering due to neglect by the city. And the recent crisis has not helped at all. You can see signs of a fire on one side, blackened with soot. As you get closer, about to cross the street to approach the entrance, you spot a burly security guard on the steps between the stone lions. A large, muscled fellow covered in dark fur and battered jacket. It is one of those crazed wolverines you've seen in the area guarding with manic obsession and great violence.";
 		project the figure of James_icon;
-		attempttowait;
+		WaitLineBreak;
 		say "     Spotting you, the wolverine does not immediately attack, but seems to be struggling with himself. He seems not to have fully succumbed to the viciousness that the others like him possess. 'Just... just stay back,' he calls over, warning you off. 'This place is sealed. Just go away and I won't have to hurt you.'";
 		say "     Keeping your distance, you manage to talk to him. It seems he's done a good job keeping the area clear, so you're able to talk to him from across the street without worry about attracting attention. 'My name is... James. It's James, dammit,' he growls, struggling to hang onto it. 'I live nearby and walked over to come on duty early in the morning. I guess I didn't notice what was happening in the city since it was so early and the sun hadn't come up yet. Or maybe I was already changing and was too focused on getting to work. I remember being really gung-ho about guarding the library from the moment I put on my coat and went out the door. Didn't matter that it wasn't even 5 a.m. that morning.' He paces up and down the steps, looking down both sides of the deserted street and takes a deep breath to relax and refocus, letting you cross the street to join him on the steps.";
 		say "     'Well, I started changing once I got here, slowly turning into the burly creature I am now. I... it probably should have upset me, but I help feeling that it would only help me guard the library better. And now I'm so young and strong. Only problem's been that I can't leave my post because my replacement hasn't come to take his shift. Can't leave it unguarded. So many crazy creatures around now,' he says, growling a little in his throat. 'Gotta keep watch. There's been no chance to sleep and only what little food the librarians might give me while I'm patrolling inside the library. It's been getting harder and harder to keep it together. Haven't slept since that morning. Can't. Gotta protect the library. Gotta...' he trails off.";
@@ -37,7 +37,7 @@ Instead of resolving a Central Library:
 		project the figure of James_icon;
 		say "     Finding yourself in the vicinity of the Central Library, you approach again, being cautious to let the wolverine guard notice you at a distance. He's initially put on edge, but when you reassure him that it's just you returning, he relaxes and lets you approach. 'It's nice to see you again. Good to have someone who hasn't gone completely over the edge yet to talk to.'";
 		say "     It seems that the library is still safe thanks to his unending vigil. You find yourself wondering what you could find within to help you and ponder ways to get past the guard.";
-	attempttowait;
+	WaitLineBreak;
 	say "[libraryentrance]";
 
 
@@ -343,7 +343,7 @@ Section 3 - Inside the Central Library
 
 to say libraryexplore:
 	say "     Inside the library, you start looking around quickly, passing through the stacks. You spot a few signs of transformed victims - clothes and cum stains mostly - but not many. Clearly only a few people were here when the outbreak started. You scan through the stacks, looking for anything that might be helpful to your situation.";
-	attempttowait;
+	WaitLineBreak;
 	let randomlist be a list of numbers;
 	if 1 is not listed in bookcollection, add 1 to randomlist;
 	if 2 is not listed in bookcollection, add 2 to randomlist;
@@ -383,7 +383,7 @@ to say libraryexplore:
 	else if entry 1 of randomlist is 7:
 		say "[libbook7]"; [animal handling]
 		now bookfound is 7;
-	attempttowait;
+	WaitLineBreak;
 	if XP of player > ( level of player plus one ) times 10:
 		level up;
 	else if "Fast Learner" is listed in feats of player and XP of player > ( level of player plus one ) times 8:
@@ -448,7 +448,7 @@ to say libraryexplore:
 				if cunt width of player < 4, now cunt width of player is 4;
 				if breasts of player is 0, now breasts of player is 2;
 				if breast size of player < 3, now breast size of player is 3;
-		attempttowait;
+		WaitLineBreak;
 		if libido of player < 60, now libido of player is 60;
 		now humanity of player is 0;
 		end the story saying "You have joined the librarian harpies in their home at the Central Library.";

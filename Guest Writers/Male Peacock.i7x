@@ -46,12 +46,12 @@ to say peacockvictory:
 		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
 		say "     You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened. You don't think you would be able to actually oppose what is about to happen, though...";
 		say "     He motions towards the bed in the middle of the room. You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit. He slides over your [bodydesc of player] body... it feels like a light, warm blanket. You think that maybe this won't be SO bad after all...";
-		attempttowait;
+		WaitLineBreak;
 		say "     After you don't know how much pleasant time, you find yourself back in the city, no idea how or when. The time you shared with the strange bird is a hazy, yet blissful, blur. You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
 	else:
 		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him; you have no choice but to walk with him into the alleyway.";
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue and palate until finally rewarded with a hot, sticky mess as the bird groans in orgasmic release.";
-		attempttowait;
+		WaitLineBreak;
 		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colorful tail. He gives it a mesmerizing wave and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
 		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;

@@ -4991,7 +4991,7 @@ Include PIG Frat by Stripes.
 Include Pirate Island by Sarokcat.
 Include Power Plant by Hellerhound.
 Include Qytat a'th Lundrues by hellerhound.
-Include Red Light by Hiccup.
+Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
@@ -5415,7 +5415,6 @@ Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Athanasia by Stripes.
-Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
 Include Blake by Ssely.

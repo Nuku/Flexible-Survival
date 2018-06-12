@@ -73,7 +73,11 @@ carry out tapeing:
 			say "[TrafficDrone#006Vid]";
 		-- "Urban Explorer Helmet Cam Vid #1": [Source: Wahn/Recordings.i7x]
 			say "[UrbanExplorerVid1]";
-[Template - see below the end of file]
+[ Template to fill for new tapes ]
+[
+		-- "TAPE NAME":
+			say "[TAPE SCENE]";
+]
 
 to deletetape (x - text):	[removes 1 tape of a given type from the player's inventory]
 	let found be 0;
@@ -113,9 +117,3 @@ Carry out tapedropping:
 	remove entry z from tapes of player;
 
 Tape Inventory ends here.
-
-[ Template to fill for new tapes ]
-[
-		-- "TAPE NAME":
-			say "[TAPE SCENE]";
-]

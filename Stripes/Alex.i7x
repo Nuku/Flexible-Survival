@@ -358,7 +358,7 @@ to say alexbrunchtime:
 		[WaitLineBreak]
 		say "     You slip off the robe and stretch out your body in front of the mirror, watching the changes in your reflection. Your body grows more lithe and flexible. You test out this flexibility, bending and contorting yourself with ease in front of the full length mirror[if cocks of player > 1]. And speaking of [']full length['], the sight of your changing body excites your cocks to full erection. Like Alex's, they are smooth and slender with an upward curving glans[else if cocks of player is 1]. And speaking of [']full length['], the sight of your changing body excites your cock to full erection. Like Alex's, it is smooth and slender with an upward curving glans[end if][if cunts of player > 1]. You take a moment to examine your pussies as well, playing with your pink folds, rich with the scent of aroused mustelid[else if cunts of player is 1]. You take a moment to examine your pussy as well, playing with your pink folds, rich with the scent of aroused mustelid[end if].";
 		say "[brunchtimechange]";
-		attempttowait;
+		WaitLineBreak;
 		project the figure of Alex_icon;
 		now the icon of Alex is Figure of Alex_icon;
 		say "     Your changes done, you bound back into the living room with fresh excitement to find Alex has continued changing as well. His infection has progressed up further, fully covering his head and arms now, making him a tan and brown ferret. He has a cute mask of dark fur around his eyes on his now mustelid muzzle. You chirr and nuzzle him, running your nimble paws over his body as you both share several kisses before parting.";

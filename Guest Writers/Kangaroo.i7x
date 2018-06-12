@@ -16,14 +16,14 @@ to say redroodesc:
 
 to say kangaroo attack:
 	say "With a deft blow to the jaw, then a sweeping of her tail, the kangaroo knocks you down onto your back before a large foot is placed on your chest, her muzzle splitting into a grin. 'You're going to be my joey for today.' Trying to get away, a heavy foot is slammed into your back, pressing you to the ground again. Rolling you over, the kangaroo strips your clothes off to see what she has to work with, grinning even wider at what she sees.";
-	attempttowait;
+	WaitLineBreak;
 	if cocks of player > 0:
 		say "'Oh, what do we have here?' Her hands start to caress your [bodydesc of player] body, tracing fingers down till she reaches your flagging [cock of player] shaft. 'Perfect,' she whispers. Climbing up your body, her drooling pussy hovers over your maleness. Slamming down onto you, a grunt rises from your chest from the force as a moan escapes her chest. Bouncing quickly with the help of those powerful legs, she rides you with more force than you're used to, grinding her much larger hips hard against yours while her cunt squeezes tightly, drooling lewdly over your lower half.";
-		attempttowait;
+		WaitLineBreak;
 		say "Riding you harder with each passing second, you soon end up giving her what she wants. Ropes of your seed pump up into her gripping depths as her powerful hips grind down on you to draw every last spurt from you. She bounces some more, a paw slipping down between the connection to help bring her own orgasm to fruition. The tight velvet of her cunt squeezes over you, milking any more of your seed you're able to give her. 'Oh, you've been fun. I will have to find you again, very soon,' she pants down at you, resting on your limp form, before she pushes off of you with a shove. She bounces away, dripping your seed across the ground as she goes, leaving you in a puddle of juices.";
 	else:
 		say "'Drat, you need better equipment dear!' Though taking this opportunity, she pushes you back, pressing her own cunt against your face. 'Be a dear,' she says with an authoritative voice, grinding her pussy to your face, making you eat her out with her juices drooling down your chin. Huffs of irritation comes from her as you don't give her the pleasure she wants. 'You're going to have to do better than that, if you want to breathe,' she notes, before a gasp rises from her as your tongue starts to go to town, hips arching into the pleasuring mouth. 'Yes! That's it!'";
-		attempttowait;
+		WaitLineBreak;
 		say " Her body shakes, shuddering as you bring her closer to her climax. 'Oh there!' Her voice cuts off into a loud moan as quick thumps of her tail hitting the ground warns of the oncoming flood of pussy juice, splashing across your face. Screaming in pure bliss, she grinds against your face as her juices keep coming, flooding your mouth, making you think you're about to drown. Keeping up with the juices as best you can, she finally stops and lets you flop onto your back with a gasp of air. 'Not what I needed, but it will do,' she huffs, bounding off in search of something more fulfilling.";
 
 To say kangaroo loss:
@@ -32,11 +32,11 @@ To say kangaroo loss:
 	if player consents:
 		if cocks of player > 0 and cock length of player > 10:
 			say "As you press [cock of player] manhood to her cunt, she winces, jerking away. 'No dear, that won't do.' She then slips onto the ground on her back, patting her belly for you to climb on. Moving over her belly, she takes your cock in between her tits, wrapping the furred mounds of flesh around [cock size desc of player] [cock of player] pole letting you thrust between them her tongue lapping over the tip when it peeks through the top of her cleavage. With groans of pleasure from you she doubles her effort, suckling over the tip lapping any precum that drools from the tip. The force of your thrusts, making her tits shake in her hands with muffled slapping sounds.";
-			attempttowait;
+			WaitLineBreak;
 			say "Whines from the kangaroo girl under you tip you off that she's getting off from being used like this. Popping off your cock head the hot breath washing over the tip as she looks up to you, her eyes needful. 'Please...' is all she says and, with all the sensations, a few more hard thrusts push you over the edge before your [cock of player] dick swells up. The thick ropes of your seed fire off splattering the surprised kangaroo in the face, then down along her neck, the last few errant strands landing over her tits. Soft pants from both of you rise up, before you climb off her and walk away, leaving her to whine as she gets up defeated and horny. ";
 		else if cocks of player > 0:
 			say "You move between those spread legs, taking her thighs in each hand. Your [cock of player] shaft presses into that moist tunnel, a moan rising from both of you, punctuated with a hard thrust by you making her gasp. Her breasts jiggle about with each thrust, body rocking on the tail, your hands pressing her legs further apart allowing you to get deeper into her squeezing tunnel. Your balls slap against her rump and tail with muffled slaps after every thrust into the wet, squeezing tunnel.";
-			attempttowait;
+			WaitLineBreak;
 			say "Grunting deeply, you lean over her upper body rocking her body harder with your thrusts. With a particularly hard thrust, you knock her off her tail both falling to the ground a grunt coming from both of you. The jolt of the fall sends her into climax, the tight spasming cunt around your [cock of player] cock sends you over the edge, firing off your thick seed into her. Once you have finished, you climb off her panting limp body getting your clothes back on you leave her there and head off.";
 	else:
 		say "Quickly scrabbling to her feet, she bounds off quickly not wanting to be hurt any more.";

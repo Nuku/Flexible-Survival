@@ -221,8 +221,7 @@ To Combat Menu:
 		if weakwilled is true and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
 			[chance to submit in combat if you have the Weak-Willed flaw, feel free to adjust odds]
 			say "[line break]Your [one of]weak-willed[or]submissive[or]easily-influenced[as decreasingly likely outcomes] nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
+			WaitLineBreak;
 			follow the submit rule;
 			next;
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
@@ -425,7 +424,7 @@ This is the player attack rule:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of player], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defences[at random], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of player] body[or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player] form's natural defenses[at random], hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting the [name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else:
@@ -1052,7 +1051,7 @@ to say areaabsorbancy:			[area of affect attack]
 	now absorb is damagein - damageout;
 
 
-to say noarmorabsorbancy:			[normalized natural defence only]
+to say noarmorabsorbancy:			[normalized natural defense only]
 	now absorb is 0;
 	now damageout is damagein;
 	let totalarmor be 0;
@@ -1441,8 +1440,7 @@ this is the bearhug rule:
 		else:
 			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip! ([HP of player]/[maxHP of player] HP)[line break]";
 		if HP of player > 0:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
+			WaitLineBreak;
 			let num1 be a random number between 0 and ( Strength of player + level of player );
 			let num2 be a random number between 1 and ( str entry + lev entry );
 			if name entry is "Snake" or name entry is "Naga":

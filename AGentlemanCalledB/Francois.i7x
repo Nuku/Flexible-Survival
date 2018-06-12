@@ -17,10 +17,10 @@ Instead of Resolving a Gourmet Treats:
 		say "     While traveling through the high rise district, you come across what you can only assume is the strange bakery Karen mentioned. While the boarded-up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. Eager to follow through with your plan to free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building; noticing some movement and groaning near the back counter, you pause for a moment before steeling yourself and swinging the door open.";
 	else:
 		say "     While traveling through the high rise district, you come across a rather unusual-looking building. While the boarded-up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded-up windows, the exterior of the building appears relatively undamaged; thinking there may still be some useful supplies within, you decide to step inside.";
-	attempttowait;
+	WaitLineBreak;
 	let T be a random number between 1 and 4;
 	say "     A bell above the door jingles loudly as you step inside, [if HP of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[else]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene, you quickly realize you've walked in on a [if T is 1]small pack of huskies[else if T is 2]group of german shepherds[else if T is 3]small pack of Chocolate Labs[else if T is 4]pair of Retrievers[end if] who have captured another creature and are having some fun with their prize in the secluded bakery. As the canines move towards you, there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here than you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Labs[else if T is 4]Retrievers[end if].";
-	attempttowait;
+	WaitLineBreak;
 	if T is 1:
 		say "[BakeryHusky]";
 	if T is 2:
@@ -31,7 +31,7 @@ Instead of Resolving a Gourmet Treats:
 		say "[BakeryRetriever]";
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Having dealt with the intruder, the canines return to the other survivor, and as you lay beaten on the floor, you hear the poor fellow begin moaning. The longer you listen, the more his cries begin to shift to submission. The last thing you hear before slipping from consciousness is his cry of ecstasy mingled with his captor's howl of pleasure.";
-		attempttowait;
+		WaitLineBreak;
 		say "     You eventually awaken some time later, and you are surprised to find yourself on a makeshift bed made from several smaller pieces of furniture and blankets. As you rise to a sitting position, you glance around nervously, looking for the [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if] who bested you, expecting them to try and keep you captive as they did the other survivor. Surprisingly, although perhaps for the best, there is no sign of them.";
 		say "     'Do not worry, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am François, master chef, at your service.'";
@@ -67,7 +67,7 @@ to say BakeryHusky:
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
-			attempttowait;
+			WaitLineBreak;
 			if bonus + dice > 15:
 				say "     You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
 			else:
@@ -92,7 +92,7 @@ to say BakeryGShep:
 			say " and feels his grip weakening as a result.";
 		else:
 			say ", but the shepherd simply chuckles at your effort, twisting your arm painfully as he tightens his grip.";
-		attempttowait;
+		WaitLineBreak;
 		say "     Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begin stripping you of your gear, you continue struggling, desperate to break free, but the effort of your continued struggles begins to weigh on your stamina";
 		let playernum be a random number between 1 and (strength of player + stamina of player);
 		let shepnum be a random number between 1 and (str entry + sta entry);
@@ -101,7 +101,7 @@ to say BakeryGShep:
 			increase escape by 1;
 		else:
 			say ". Unfortunately the same is not true of your enemy, and despite your best efforts you make no headway.";
-		attempttowait;
+		WaitLineBreak;
 		if escape < 2:
 			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if player is herm]sucking and licking at your rising cock and moistening pussy[else if cocks of player > 0]sucking and licking at your rising cock[else if cunts of player > 0]sucking and licking at your moistening cunt[else]licking at your groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. Eventually this sexual assault slowly abates, as the Shepherd kissing you pulls away with a grin, growling to his companion at your groin before pushing him aside roughly. As the shepherd before you pulls back his sheath with a smirk, you feel the grip of the one binding your arms loosen slightly. If you're going to escape, now would be the time.";
 			let playernum be a random number between 1 and (100 - libido of player);
@@ -116,7 +116,7 @@ to say BakeryGShep:
 			say "     Soon you can feel each of their knots as they pound your mouth and [if cunts of player > 0]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if cunts of player > 0]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting your face and body with their cum along with the shepherd you've been stroking off.[impregchance]";
 			infect "German Shepherd";
 			infect "German Shepherd";
-			attempttowait;
+			WaitLineBreak;
 			now fightoutcome is 21;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "German Shepherd";
