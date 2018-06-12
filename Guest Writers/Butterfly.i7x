@@ -49,7 +49,7 @@ To say butterfly defeat:
 	if "Sterile" is not listed in feats of player:
 		if a random chance of 1 in 3 succeeds:
 			let ButterflyCanGetPregnant be True;
-		if a random chance of 1 in 3 succeeds and "Fertile" is listed in feats of the player:
+		if a random chance of 1 in 3 succeeds and "Fertile" is listed in feats of player:
 			let ButterflyCanGetPregnant be True;
 	if ButterflyPregnant is True:
 		follow the ButterflyTummyDesc rule;
@@ -106,7 +106,7 @@ To say butterfly defeat:
 		else:
 			say "DEBUG: You should never get here.";
 	else:
-		if cocks of player > 0 and a random number from 1 to 100 < libido of player:
+		if player is male and a random number from 1 to 100 < libido of player:
 			let speech be "";
 			if ButterflyRaped is 0:
 				now speech is "'You didn't need to be so rough!' she protests with tears forming in her eyes. As you approach she fidgets anxiously, worried at what you may do. She ponders escape but still hopes that you may continue where you previously left off.";
@@ -175,7 +175,7 @@ To say butterfly defeat:
 				else:
 					now ButterflyLikesYou is True;
 			now ButterflyNegligeeTorn is True;
-		else if cunts of player > 0 and a random number from 1 to 100 < libido of player:
+		else if player is female and a random number from 1 to 100 < libido of player:
 			let speech be "";
 			if ButterflyRaped is 0:
 				now speech is "'You didn't need to be so rough!' she protests with tears forming in her eyes. As you approach she fidgets anxiously, worried at what you may do. She ponders escape but still hopes that you may continue where you previously left off.";
@@ -262,7 +262,7 @@ To say butterfly attack:
 	if "Sterile" is not listed in feats of player:
 		if a random chance of 1 in 3 succeeds:
 			let ButterflyCanGetPregnant be True;
-		if a random chance of 1 in 3 succeeds and "Fertile" is listed in feats of the player:
+		if a random chance of 1 in 3 succeeds and "Fertile" is listed in feats of player:
 			let ButterflyCanGetPregnant be True;
 	if ButterflyPregnant is True:
 		follow the ButterflyTummyDesc rule;
@@ -422,17 +422,17 @@ When Play begins:
 	now defeated entry is "[butterfly defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
-	now desc entry is "[mongendernum 4]The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire][if gestation of ButterflyBaby is 3] Small droplets of milk twinkle on the ducts of her nipples.[end if][if ButterflyRaped is 1] One of her hands moves protectively to cover her vagina as she recognizes you.[end if][ButterflyTummy] For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen. [if ButterflyRaped > 0 or inheat is true] She is carrying an ominous looking little black bag in her hand. [end if][if ButterflyRaped is 1]She glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random] flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False] She smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]She looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]She looks at you remarkably calmly considering your previous encounter[else]She looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped greater than 0]. Something tells you that submitting to her would be bad for your health[end if].";[ Description of the creature when you encounter it.]
-	now face entry is "a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes, two antennae on top of your head, and a streamlined";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "velvet and silky";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a large, round abdomen covered in yellow and black stripes.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "ribbed";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it becomes more streamlined and two antennae poke out at top of your head. Your eyes brighten into a [one of]brilliant[or]vibrant[or]vivid[at random] green"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it becomes adapted for flight. Limbs narrow and become lean. Some large and colorful wings sprout out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your skin softens becoming velvet textured"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it develops yellow and black stripes and pushes out into a large round abdomen"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it develops a ribbed texture"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now desc entry is "[mongendernum 4]The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire][if gestation of ButterflyBaby is 3] Small droplets of milk twinkle on the ducts of her nipples.[end if][if ButterflyRaped is 1] One of her hands moves protectively to cover her vagina as she recognizes you.[end if][ButterflyTummy] For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen. [if ButterflyRaped > 0 or inheat is true] She is carrying an ominous looking little black bag in her hand. [end if][if ButterflyRaped is 1]She glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random] flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False] She smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]She looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]She looks at you remarkably calmly considering your previous encounter[else]She looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped greater than 0]. Something tells you that submitting to her would be bad for your health[end if]."; [ Description of the creature when you encounter it.]
+	now face entry is "a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes, two antennae on top of your head, and a streamlined"; [ Face description, format as "Your face is (your text)"]
+	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "velvet and silky"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a large, round abdomen covered in yellow and black stripes."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ribbed"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it becomes more streamlined and two antennae poke out at top of your head. Your eyes brighten into a [one of]brilliant[or]vibrant[or]vivid[at random] green"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes adapted for flight. Limbs narrow and become lean. Some large and colorful wings sprout out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your skin softens becoming velvet textured"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it develops yellow and black stripes and pushes out into a large round abdomen"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it develops a ribbed texture"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 16;
 	now HP entry is 30;
@@ -709,7 +709,7 @@ to say butterfly grove scene:
 		[odds of pregnancy are higher here given the amount of sex]
 		if a random chance of 1 in 2 succeeds:
 			let ButterflyCanGetPregnant be True;
-		if a random chance of 1 in 2 succeeds and "Fertile" is listed in feats of the player:
+		if a random chance of 1 in 2 succeeds and "Fertile" is listed in feats of player:
 			let ButterflyCanGetPregnant be True;
 	if ButterflyPregnant is True:
 		let ButterflyCanGetPregnant be False;
@@ -731,7 +731,7 @@ to say butterfly grove scene:
 		increase perception of player by 2;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You decide to head back to the library.";
-		move the player to Grey Abbey library;
+		move player to Grey Abbey library;
 		follow the turnpass rule;
 		stop the action;
 	else if ButterflyRaped > 1 and ButterflyPregnant is False:
@@ -800,7 +800,7 @@ to say butterfly grove scene:
 						if name entry is "Butterfly":
 							now area entry is "High";
 							break;
-		if player_returned_negligee is False and cocks of player > 0 and ButterflyPregnant is False:
+		if player_returned_negligee is False and player is male and ButterflyPregnant is False:
 			say "You fight at first, but you sense her heart isn't in it as she quickly submits, but instead of tears or anger she lies down on her left side and lifts her leg into the air giving you a clear view of the juices drooling out of her cunt and down her leg. 'Fuck me master,' she says. 'I'm master's toy. Use me. Break me.' Seizing the leg held in front of you, you unzip and remove the boot and then remove her stocking peeling it off the smooth skin of her leg. Still holding her raised right leg in your hands you sit down and straddle her left leg on the ground. Caressing the athletic limb before you, pulling it to your chest you begin to kiss her foot and lick between her toes. You're surprised by her electric reaction as both her antennae straighten out and she moans in ecstasy. Then you remember reading about butterflies having the ability to taste using their feet, and as you examine her closely you notice pores you assume to be for this purpose. Reaching between her widely-spread legs you fondle around her vagina and thigh smearing your fingers with the sweet honey she's been secreting the entire time. Groaning at the sensation you know she wants it. You reach forward and drag down on side of her top as a [ButterflyBreastDesc] breast bursts free from the leather with a pop. A chain reaction starting the garb covering her other breast slips free as a rosy nipple projects itself between the criss-crossed cords. 'Don't tease me master,' she begs, kneading her clit with one hand and trying to reach your pants with the other.[line break][line break]";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "Unimpressed at the interruption you take both her arms and tie them together behind her back with the stocking you removed. With no intention of satisfying her desire so quickly you stick a finger up her anus and begin to probe around. Feeling her back passage open involuntarily as your touch she momentarily loses control of muscles and erupts in a fountain of pee arching on to the ground as you hold her legs spread apart. She blushes intensely at her transgression as you release your [cocktext]cock[smn] from your pants and slap [if cocks of player > 1]the largest[else]it[end if] noisily on her drenched pussy lips. Pushing in the butterfly moans, your penis spreading her wide. Pumping hard, your [cocktext]piston runs the length of her passage filling her strained vaginal tissue.[line break][line break]";
@@ -810,7 +810,7 @@ to say butterfly grove scene:
 				now libido of player is (libido of player) / 2;
 				impregnatebutterfly;
 			wait for any key;
-		else if player_returned_negligee is False and cunts of player > 0:
+		else if player_returned_negligee is False and player is female:
 			say "You fight at first, but you sense her heart isn't in it as she quickly submits, but instead of tears or anger she lies down on her left side and lifts her leg into the air giving you a clear view of the juices drooling out of her cunt and down her leg. 'Fuck me master,' she says. 'I'm master's toy. Use me. Break me.' Seizing the leg held in front of you, you unzip and remove the boot and then remove her stocking peeling it off the smooth skin of her leg. Rolling her on to her tummy you take both her arms and tie them together behind her back with the stocking you removed. As she lifts her face off the ground her eyes find your naked crotch, legs spread either side, sitting right in front of her. You reach down a hand and spread your lips apart as you survey the surroundings nonchalantly. As she hobbles forward without the use of her arms she plants her face into your groin and begins to service you, her antennae bouncing all the while. You grip deep in her blonde tresses and pull her head in firmly as you grind your [if cunts of player > 1]multiple [end if]damp cunt[sfn] against her face. Her prehensile tongue explores your insides reaching to places no cock has ever been. You feel yourself cum as she attempts to feed on your juices, but the volume is too great and you squirt your cum over her face. She splutters as some goes up her nose, but you're too preoccupied rifling through the contents of the black bag she'd been carrying.[line break][line break]";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "Still attempting to expel the remains your jizz from her nasal cavity she fails to notice as you reach around to her exposed rear end. As you stuff the large vibrator that you discovered in her bag deep into her wet pussy she loses her balance and falls the short distance to the ground face-first with her wings twitching. You flick the switch stimulating her vagina as she moans. Making full use of her bag's contents you set about attaching the strap-on you discovered inside it to your own crotch. You lift her stripy abdomen and spear her ass hole with your artificial dick. Initially she squeals at the sensations of both anal sex and double penetration, but as you pump at both her holes she loses her mind drooling from the corner of her mouth and onto the ground. Pulling her top half up by her restrained arms you reach around and drag down the ties on her leather top allowing her breasts to spill free. You continue to ram at her behind as her breasts cavort freely in the air.[line break][line break]";
@@ -860,7 +860,7 @@ to say butterfly grove scene:
 		follow the ButterflyTummyDesc rule;
 		increase perception of player by 2;
 		wait for any key;
-	else if ButterflyProcreated is True and ButterflyLove is True and ButterflyRaped is 0 and cocks of player > 0:
+	else if ButterflyProcreated is True and ButterflyLove is True and ButterflyRaped is 0 and player is male:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy][line break][line break]";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Your Butterfly lover is very pleased to see both you, and the offspring you created together greeting you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove.[line break][line break]";
@@ -884,12 +884,12 @@ to say butterfly grove scene:
 				now libido of player is (libido of player) / 2;
 				impregnatebutterfly;
 			wait for any key;
-			decrease the humanity of the player by 5;
-			if the humanity of the player < 10:
+			decrease the humanity of player by 5;
+			if the humanity of player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her.";
-	else if cocks of player is 0 and cunts of player > 0 and ButterflyRaped is 0 and ButterflyLove is True:
+	else if player is not male and player is female and ButterflyRaped is 0 and ButterflyLove is True:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy][line break][line break]";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Your Butterfly lover is very pleased to see you and greets you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove.[line break][line break]";
@@ -910,8 +910,8 @@ to say butterfly grove scene:
 				say "The butterfly eases you down to the ground on your back and begins to play with your vagina[sfn]. She tastes the stray moisture using her mouth, never losing your gaze with her own. With your clitoris erect and covered in a layer of her clear saliva she lifts into the air hovering above you with her wings. Slowly she rotates her body lowering her rear down upon your face as she resumes pleasuring your [if cunts of player > 1]many [end if]cunt[sfn]. With her hands parting your [skin of player] thighs, her breasts bounce lively on your tummy as you suck at her petals. Feeling your lover's warm breath as she takes in your scent, you readily grasp the deep love she feels for you. Sensing the unspoken understanding her cunt quivers and tightens around your fingers once again probing her insides. Spreading and rubbing your vagina[sfn] with her fingers she explores your insides with her proboscis reaching deep into places no cock has ever seen. You climax in unison, her wings jerking with each spasm as her sticky fluids cascade over your face and she buries hers in your equally wet orifice[sfn]. Your mate lifts off, once again rotating her body, and descends down. [if breast size of player > 0]Your [breast size desc of player] breasts cushion her fall. [else]Her breasts cushion her fall. [end if]Your bodies steaming and dripping with both sweat and cum she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth you drift off to sleep.[line break]";
 			infect "Butterfly";
 			wait for any key;
-			decrease the humanity of the player by 5;
-			if the humanity of the player < 10:
+			decrease the humanity of player by 5;
+			if the humanity of player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her right now.";
@@ -926,12 +926,12 @@ to say butterfly grove scene:
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
 	say "You decide to head back to the library.";
-	move the player to Grey Abbey library;
+	move player to Grey Abbey library;
 	follow the turnpass rule;
 
 After examining butterfly grove:
 	say "You head home.";
-	move the player to Grey Abbey Library;
+	move player to Grey Abbey Library;
 
 
 Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttravel. It is private.

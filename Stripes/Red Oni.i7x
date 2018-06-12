@@ -25,7 +25,7 @@ to say losetoredoni:
 	if HP of Hayato is 97:		[doing Oni Lair challenges]
 		say "     [if HP of player > 0]You surrender to the oni, unwilling to continue fighting the powerful creature. Not simply accepting your surrender, the oni bashes you one last time with his club, knocking you to the ground hard[else]You are defeated by the powerful creature and knocked to the ground by its massive club[end if].";
 	else:
-		if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+		if player is female and a random chance of 2 in 3 succeeds:
 			say "     [if HP of player > 0]You give up resisting and surrender to the oni, only to be struck by one last blow that leaves your ears ringing[else]You are grappled by the oni after its last blow leaves your ears ringing[end if]. Pushed to the ground beneath it, the creature spreads your legs wide and presses the dark glans of its crimson cock to your [cunt size desc of player] pussy. With a growl, that pulsing pillar of meat is jammed into your cunt[if cunt length of player < 9], stuffing you painfully full with one harsh thrust[else if cunt length of player < 12], stretching your cunny a little to take the last few inches[else], jamming its full length into you with one harsh thrust[end if]. You cry out at the sudden intrusion, but [if HP of player > 0]it is far too late to try to stop the monstrous ogre now, unable to do more than squirm weakly in the creature's powerful grip[else]are too weakened from the fight to do more than squirm weakly in the creature's powerful grip.";
 			say "     Fucking you roughly, the demon ogre has no desire other than its own release. Responding to that thrusting pole within it, your vagina squeezes and tugs at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success. fueled by cruelty and lust, it callously disregards your needs in favor of its own. By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done. Your cunt [if cunt length of player < 12]aches and your cervix feels bruised[else]is aching and is messy with the creature's semen[end if], but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
 		else if a random chance of ( anallevel - 1 ) in 3 succeeds:
@@ -56,7 +56,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Red Oni"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Red Oni"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "The [one of]red oni[or]demon ogre[or]red brute[or]muscular oni[at random] [one of]bashes you with its enormous club[or]strikes you with its spiked club[or]pounds you with a big fist[or]kicks you hard enough to knock you back a few feet[or]grabs you with one of its clawed hands and headbutts you[at random]!";
 	now defeated entry is "[beattheredoni]";
 	now victory entry is "[losetoredoni]";
@@ -85,7 +85,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -107,11 +107,11 @@ When Play begins:
 Section 3 - Definitions
 
 Definition: a person is redonicocked:
-	if the cockname of the player is "Red Oni", yes;
+	if cockname of player is "Red Oni", yes;
 	no;
 
 Definition: a person is redonibodied:
-	if the bodyname of the player is "Red Oni", yes;
+	if bodyname of player is "Red Oni", yes;
 	no;
 
 

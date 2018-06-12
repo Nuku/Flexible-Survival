@@ -29,7 +29,7 @@ to say komododragondesc:
 
 to say losetokomododragon:
 	say "     Victorious, the savage beast knocks you to the ground and hisses loudly. It rips at your clothes and gear, adding new tears as it pulls them off roughly. As it does, its long, slender tongue flicks out, tasting your scent in the air and licking your cheek. ";
-	if cunts of player > 0 and cunt length of player > 9:
+	if player is female and cunt length of player > 9:
 		say "     With you naked beneath it, it grinds its throbbing cocks across your belly, dribbling sticky precum onto your flesh[if HP of player < 1]. You try to squirm away, but are too weak to continue resisting this powerful brute[end if]. You know full well what he wants and what he's going to take.";
 		if ( cunts of player > 1 or the player is planttailed ) and a random chance of 3 in 5 succeeds:
 			if cunts of player > 1:

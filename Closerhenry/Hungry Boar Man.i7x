@@ -25,7 +25,7 @@ Instead of Resolving a Hungry Piggy:
 	if hbmr is 0:
 		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What's even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He's enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he's friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don't worry, I'm not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
 		increase hbmr by 1;
-		move the player to Pig Pen;
+		move player to Pig Pen;
 		now the pig pen is known;
 		increase the score by 1;
 		now Hungry Piggy is Resolved;
@@ -67,7 +67,7 @@ instead of conversing Philip:
 			say "     Deciding to give it a shot, you ask Philip if he knows anything about the Phi Iota Gamma fraternity you encountered. 'Ahhh, the mighty Phi Iota Gamma... *oink* *snort* ...those were the days. I was the frat's mud wrestling champ. How do you think I got to be good?' He rolls over in the mud a few times, thinking back on those times.";
 			say "     You try to suggest that he sponsor you to join the frat, but he just rubs his tummy. 'Now, I don't know... you've not really proven yourself to be Phi Iota Gamma material. Besides, I've got some food worries to deal with. Why just you just focus [bold type]FEED[roman type]ing me until I'm satisfied and we'll see if you're ready for the mighty Phi Iota Gamma?' He chuckles, unleashing another wave of oinks and squeals.";
 			now piginitiation is 3;
-	else if piginitiation is 3 and a random chance of 1 in 3 succeeds and philip is in the large shed and ( cocks of player > 0 or cunts of player > 0 ):
+	else if piginitiation is 3 and a random chance of 1 in 3 succeeds and philip is in the large shed and player is not neuter:
 		say "     Deciding to bring up his old fraternity again now that he's fed and safe, you get a much better response from the big piggy. 'Those were some good times back with the guys at the mighty Phi Iota Gamma,' he says with a series of loud oinking at the end. 'Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 		say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
 		say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.' He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
@@ -180,7 +180,7 @@ To pigfeed:
 					say "     'Thank you!' he snorts and then follows you back to the library. When you arrive, he quickly makes himself at home, eventually deciding on making his new home inside the large shed behind the library. The shed starts to smell as bad as he does. He does at least add two bottles of water for the supply stash.";
 					say "     After he settles in, he approaches you and smiles a little as he says, 'You know, you've been so nice to me that I've realized that you must want to be more than friends. You want to become my piggy lover, don't you? Let's rut like pigs in heat!'";
 					increase score by 5;
-					now lust of philip is turns;	[starts availability counter on Philip + Sandra]
+					now lust of philip is turns; [starts availability counter on Philip + Sandra]
 					now the pig pen is not known;
 					now pig pen is not fasttravel;
 					follow turnpass rule;
@@ -496,9 +496,9 @@ to say sexwithphilip:
 		continue the action;
 	else if Sandra is bunkered and HP of Philip is 2 and a random chance of 1 in 3 succeeds:
 		say "     When you go to approach Philip for more sex, you find Sandra already there. On her knees and stroking the big pig's cock, she smiles up at you and offers for you to join her. Grinning happily, you get on your knees beside her and start licking and sucking alongside her. You take turns pushing that thick rod into your mouth while the other licks along its shaft or kisses the pig's messy balls. You and the bunny share sloppy kisses, your tongues heavy with the taste of the pig's cock as they slide against one another between exchanges of position. In your lustful eagerness, his dirty, musky scent doesn't bother either of you, if anything turning you on further.";
-		if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+		if player is female and a random chance of 1 in 2 succeeds:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy girls out for his meat before choosing which will get it this time. Sandra's a little disappointed when he ends up moving in behind you, but happily spreads your pussy lips open for the big boar as he thrusts into you. As Philip grunts and oinks atop you, rutting you like a hog, the bunny girl's beneath you, licking at those juices dripping from your stuffed cunt. And when the boar cums and his excess cum overflows wet cunny, she's right there to lap it all up. When Philip pulls out, you all collapse into a sticky, sweaty heap in the mud.[fimpregchance]";
-		else if cunts of player is 0 and pigfucked >= 3 and a random chance of anallevel in 6 succeeds:
+		else if player is not female and pigfucked >= 3 and a random chance of anallevel in 6 succeeds:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two lovers out for his meat before choosing which will get it this time. Sandra's a little disappointed when he ends up moving in behind you, but happily spreads your ass cheeks for the big boar as he thrusts into you. As Philip grunts and oinks atop you, rutting you like a hog, the bunny girl's beneath you[if player is male], sucking at your cock while kneading the boar's balls. And when the boar cums and you climax, she's right there to suck down your [cum load size of player] load and then lick the greasy excess leaking from your stuffed pucker[else], kneading Philip's balls while she watches his meaty log drive into your ass again and again. And when the boar cums and fills you with his hot cum, she's right there to lick the greasy excess from your stuffed pucker[end if]. When Philip pulls out, you all collapse into a sticky, sweaty heap in the mud.[mimpregchance]";
 		else:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy lovers out for his meat before choosing which will get it this time. Sandra giggles happily as the big boar ends up moving behind her. She wiggles her cute bunny tail and reaches between her legs, spreading her pussy lips in a wanton display as Philip mounts her with a belching oink. As Philip grunts and oinks atop her, rutting her like a hog, you move underneath them to lick at that stuffed cunt of hers.";
@@ -562,7 +562,7 @@ to say sexwithphilip:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
 				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
 				now breasts of player is 8;
-	if pigfucked > 0 and cocks of player > 0 and cockname of player is not "Piggy":
+	if pigfucked > 0 and player is male and cockname of player is not "Piggy":
 		say "     As the heat of Philip's strong cum warms your insides, you feel a tingle in your cock as it throbs and spurts its seed onto the messy floor. Your shaft changes, becoming humanlike, but pinker. It is musky and has a thick scent, much like your piggy lover's.";
 	now cock of player is cock entry;
 	now cockname of player is "Piggy";
@@ -582,7 +582,7 @@ Section 6 - Ending the Piggy
 When play ends:
 	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":
 		if Philip is in the Large Shed:
-			if humanity of the player < 10:
+			if humanity of player < 10:
 				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			else if pigfucked > 0:
 				if player is not male:

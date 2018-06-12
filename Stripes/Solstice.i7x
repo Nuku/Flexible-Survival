@@ -260,35 +260,35 @@ to say solsticesex:
 Section 5 - Definitions
 
 Definition: a person is vgfaced:
-	if the facename of the player is "Vulpogryph", yes;
+	if facename of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgskinned:
-	if the skinname of the player is "Vulpogryph", yes;
+	if skinname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgbodied:
-	if the bodyname of the player is "Vulpogryph", yes;
+	if bodyname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgcocked:
-	if the cockname of the player is "Vulpogryph", yes;
+	if cockname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgtailed:
-	if the tailname of the player is "Vulpogryph", yes;
+	if tailname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is partvg:
-	if the facename of the player is "Vulpogryph", yes;
-	if the skinname of the player is "Vulpogryph", yes;
-	if the bodyname of the player is "Vulpogryph", yes;
-	if the cockname of the player is "Vulpogryph", yes;
-	if the tailname of the player is "Vulpogryph", yes;
+	if facename of player is "Vulpogryph", yes;
+	if skinname of player is "Vulpogryph", yes;
+	if bodyname of player is "Vulpogryph", yes;
+	if cockname of player is "Vulpogryph", yes;
+	if tailname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is fullyvg:
-	if the facename of the player is "Vulpogryph" and the skinname of the player is "Vulpogryph" and the bodyname of the player is "Vulpogryph" and the cockname of the player is "Vulpogryph" and the tailname of the player is "Vulpogryph", yes;
+	if facename of player is "Vulpogryph" and skinname of player is "Vulpogryph" and bodyname of player is "Vulpogryph" and cockname of player is "Vulpogryph" and tailname of player is "Vulpogryph", yes;
 	no;
 
 

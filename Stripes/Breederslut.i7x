@@ -57,7 +57,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 12; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -117,23 +117,23 @@ to say bsheat:
 Section 8 - Definitions
 
 Definition: a person is breederslutfaced:
-	if the facename of the player is "Breederslut", yes;
+	if facename of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breederslutskinned:
-	if the skinname of the player is "Breederslut", yes;
+	if skinname of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breederslutbodied:
-	if the bodyname of the player is "Breederslut", yes;
+	if bodyname of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breederslutcocked:
-	if the cockname of the player is "Breederslut", yes;
+	if cockname of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breedersluttailed:
-	if the tailname of the player is "Breederslut", yes;
+	if tailname of player is "Breederslut", yes;
 	no;
 
 

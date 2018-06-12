@@ -108,7 +108,7 @@ To say Plush Lion loss:
 [			choose a blank row in table of fucking options;
 			now title entry is "Ride it (vaginal)";
 			now sortorder entry is 2;
-			now description entry is "get your cunt stuffed";		]
+			now description entry is "get your cunt stuffed"; ]
 			choose a blank row in table of fucking options;
 			now title entry is "Pussy-licking";
 			now sortorder entry is 5;
@@ -116,7 +116,7 @@ To say Plush Lion loss:
 [		choose a blank row in table of fucking options;
 		now title entry is "Ride it (anal)";
 		now sortorder entry is 3;
-		now description entry is "get your ass stuffed";	]
+		now description entry is "get your ass stuffed"; ]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -182,16 +182,16 @@ When Play begins:
 	now defeated entry is "[Plush Lion loss]";
 	now victory entry is "[Plush Lion attack]";
 	now desc entry is "[mongendernum 3]     A life size plush lion toy approaches down the midway, its furry body seeming both cute and threatening. It's large leonine brown mane sticks out dramatically from around its yellow furred neck, making it seem larger and more impressive, and definitely leaving no doubt as to the gender of the stuffed toy. Not that you could have much doubt after you caught a glimpse of its stiff cock, hanging out of its furry sheath beneath its belly, leaving no doubt as to the creatures intentions as it focuses its stuffed leonine eyes on you.";
-	now face entry is "soft lioness muzzle with overlarge lion eyes and cute fluffy ears set above your changed";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "soft lioness muzzle with overlarge lion eyes and cute fluffy ears set above your changed"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "sleek and soft. Like that of a soft plush lioness, its sleek enticing lines advertising your readiness to one and all, your arms and legs are more paw-like and leonine than human at this point, and walking on two legs can only be accomplished with some effort. For some reason, that seems okay though as being on all fours seems to excite you and make you feel even more like a submissive lioness"; [Your Body is (your text)"]
-	now skin entry is "[one of]golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long, plush lioness tail swaying behind you, with a soft tuft of fake fur tufted at the end. Your tail swings wide every now and then, showing its submissive tendencies by exposing your attributes for anyone to use.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]thick feline[or]leonine[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "you feel it push forward into a soft lioness muzzle, you can feel your thoughts grow fuzzy as your head and face fill up with soft fluff, most of your remaining thoughts focused on seeing the strong male lion toy again"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it shifts and changes, your insides churning as they become mostly unnecessary as your body fills up with soft stuffing. Your legs drawing up under your body even as your hands seem to flatten out into large plush paws, making you realize you would feel almost more comfortable on four feet now than on two feet, just like a proper lioness should be."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin entry is "[one of]golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a long, plush lioness tail swaying behind you, with a soft tuft of fake fur tufted at the end. Your tail swings wide every now and then, showing its submissive tendencies by exposing your attributes for anyone to use."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]thick feline[or]leonine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "you feel it push forward into a soft lioness muzzle, you can feel your thoughts grow fuzzy as your head and face fill up with soft fluff, most of your remaining thoughts focused on seeing the strong male lion toy again"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it shifts and changes, your insides churning as they become mostly unnecessary as your body fills up with soft stuffing. Your legs drawing up under your body even as your hands seem to flatten out into large plush paws, making you realize you would feel almost more comfortable on four feet now than on two feet, just like a proper lioness should be."; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your flesh tingles as it is covered in soft golden fabric fur. "; [Your skin feels funny as (your text)" ]
-	now ass change entry is "a long lioness tail slowly extends from your rear, the strange pleasant sensations of the new limb causing you to lash it back and forth as it grows in, moaning a bit at the feel of a soft tuft of fur growing at the end signals your new fabric attachment is complete"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it shifts and seems draw up closer to your belly as a sheath attaches itself to your body, drawing your new barbed cock up into it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now ass change entry is "a long lioness tail slowly extends from your rear, the strange pleasant sensations of the new limb causing you to lash it back and forth as it grows in, moaning a bit at the feel of a soft tuft of fur growing at the end signals your new fabric attachment is complete"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it shifts and seems draw up closer to your belly as a sheath attaches itself to your body, drawing your new barbed cock up into it"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 17;
 	now sta entry is 15;

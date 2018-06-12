@@ -84,7 +84,7 @@ Instead of resolving a Missing Cow:
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Having driven the gryphon off, you have a look at Wendy the cow, now calmly munching on a mouthful of grass. She doesn't seem to be bothered at all from having been fucked by a gryphon - multiple times at least, before you arrived, judging from the amount of cum oozing out of her pussy and making the fur on her back end wet and sticky.";
 			say "     [WendyGryphonAftermath]";
-	now battleground is "Void";[avoids random fights after]
+	now battleground is "Void"; [avoids random fights after]
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;

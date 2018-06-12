@@ -87,7 +87,7 @@ Instead of resolving a Magical Girl:
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		now carried of Sailor Outfit is 1;
 		now battleground is "void";
-		Move the player to the Bunker;
+		move player to the Bunker;
 		Now Magical Girl is resolved;
 		Increase score by 1;
 	else:

@@ -236,11 +236,11 @@ When Play begins:
 	now defeated entry is "[slutdef]";
 	now victory entry is "[slutvictory]";
 	now desc entry is "[slutdesc]";
-	now face entry is "a wolf's muzzle with a pair of pointed wolf ears covered in [skin of player]. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
+	now face entry is "a wolf's muzzle with a pair of pointed wolf ears covered in [skin of player]. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself"; [ Face description, format as "You have a (your text)."]
 	now body entry is "that of a sexy anthro wolf, with soft-padded paws and firm muscles";
 	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]light black fur over your";
-	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "constantly dribbling canine";[ Cock Description, format as you have a 'size' (your text) cock.]
+	now tail entry is "You have a long wolf's tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "constantly dribbling canine"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later. A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you rapidly loses fat your body becoming that of a sexy wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft and shiny black fur covers your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -283,10 +283,10 @@ When Play begins:
 	now defeated entry is "[sluttydef]";
 	now victory entry is "[sluttyvictory]";
 	now desc entry is "[sluttydesc]";
-	now face entry is "is that of a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
-	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."]
-	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
+	now face entry is "is that of a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself"; [ Face description, format as "You have a (your text)."]
+	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your"; [ skin Description, format as "You have (your text)."]
+	now tail entry is "You have a short and fluffy rabbit tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "constantly dribbling bunny";
 	now face change entry is "it stretches out into a rabbit's muzzle, two long rabbit ears sprouting from the top of your head a second later. A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you rapidly loses fat, your body becoming that of a sexy bunny"; [ body change text. format as "Your body feels funny as (your text)." ]

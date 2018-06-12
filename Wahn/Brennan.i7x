@@ -1667,7 +1667,7 @@ to say BrennanSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Give the handsome trans-guy a hard pounding";
 	[]
-	if cunts of player > 0 and libido of Brennan > 5 and libido of Brennan < 100:
+	if player is female and libido of Brennan > 5 and libido of Brennan < 100:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Brennan's cock in your pussy";
 		now sortorder entry is 6;

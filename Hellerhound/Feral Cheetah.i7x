@@ -27,7 +27,7 @@ To say cheetah defeat:
 		now cheetahmate is 2;
 		infect "Feral Cheetah";
 	else if cheetahmate is 2:
-		if the cockname of the player is "Feral Cheetah" and cocks of player is 0 and cunts of player > 0:
+		if cockname of player is "Feral Cheetah" and cocks of player is 0 and player is female:
 			say "You turn yourself over, showing your ready cunt to your mate, and he pounces, driving himself home in one quick, fluid motion. He pounds at you, his balls slapping your ass as you thrust back, trying to get him as deep as you can. A haze of pleasure begins to cloud your eyes, and by the time your climax comes, you are no longer in conscious control. The feeling of his warm seed filling your insides is welcome, and his little barbs tickle as his cock pulses.[impregchance]";
 			say "His cock slides out with much pleasure and dripping of seed, and you lick-kiss him in the cheek for doing you suck a service.";
 		else:
@@ -121,17 +121,17 @@ When Play begins:
 	now attack entry is "[one of]bites with sharp fangs, drawing blood[or]slashes at you, opening large wounds [or]leaps over you, slashing as it is flying[at random]!"; [Text used when the monster makes an Attack]
 	now defeated entry is "[cheetah defeat]";
 	now victory entry is "[cheetah victory]";
-	now desc entry is "[mongendernum 3][if cheetahmate is 0]A male cheetah stands in your way, quick and lithe, with spotted fur and sharp claws. He looks like a fearsome opponent.[else if cheetahmate is 1]Your confessed mate is in front of you, looking at you with lust in his eyes. He is a fearsome opponent, and hoping that you will submit to pleasure.[else if cheetahmate is 2]Your glorious mate is ahead, and you can barely control the desire to submit to his pleasures.[end if]";[ Description of the creature when you encounter it.]
-	now face entry is "feline, with an actively twitching nose";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "lithe and strong, with a shape for speed and muscles for true strength";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "smooth spotted fur over your";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "Your tail is decently sized, spotted, and whipping back and forth.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "tan spined, and sheathed cheetah ";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it grows longer, the front narrowing, and both eyes looking ahead. Your pupils dilate oddly, and you realize they have become slitted"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your spine bends, shoving you onto all fours as the rest of your body changes shape, leaving you with a lithe, rippling body"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it grows spotted fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it grows more compact and muscles grow and shift beneath the surface, perfect for running. A furry, lithe tail sprouts out a second later "; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "spines grow out, and a furry sheath covers the bottom"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now desc entry is "[mongendernum 3][if cheetahmate is 0]A male cheetah stands in your way, quick and lithe, with spotted fur and sharp claws. He looks like a fearsome opponent.[else if cheetahmate is 1]Your confessed mate is in front of you, looking at you with lust in his eyes. He is a fearsome opponent, and hoping that you will submit to pleasure.[else if cheetahmate is 2]Your glorious mate is ahead, and you can barely control the desire to submit to his pleasures.[end if]"; [ Description of the creature when you encounter it.]
+	now face entry is "feline, with an actively twitching nose"; [ Face description, format as "Your face is (your text)"]
+	now body entry is "lithe and strong, with a shape for speed and muscles for true strength"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "smooth spotted fur over your"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "Your tail is decently sized, spotted, and whipping back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "tan spined, and sheathed cheetah "; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it grows longer, the front narrowing, and both eyes looking ahead. Your pupils dilate oddly, and you realize they have become slitted"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your spine bends, shoving you onto all fours as the rest of your body changes shape, leaving you with a lithe, rippling body"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it grows spotted fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it grows more compact and muscles grow and shift beneath the surface, perfect for running. A furry, lithe tail sprouts out a second later "; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "spines grow out, and a furry sheath covers the bottom"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 26;
 	now sta entry is 24;
@@ -206,9 +206,9 @@ to say cheetahheat:
 Section 4 - Endings
 
 when play ends:
-	if the bodyname of the player is "Feral Cheetah":
+	if bodyname of player is "Feral Cheetah":
 		if cheetahmate is 0:
-			if the humanity of the player < 10:
+			if the humanity of player < 10:
 				if player is female:
 					say "You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
 				else:

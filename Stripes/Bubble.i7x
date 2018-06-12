@@ -84,7 +84,7 @@ to say bubblesex00:
 	now title entry is "Eat her out";
 	now sortorder entry is 5;
 	now description entry is "lick Bubble's snatch";]
-[	if cunts of player > 0 or cocks of player > 0:
+[	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 6;

@@ -146,13 +146,13 @@ When Play begins:
 	now face entry is "that of a gorilla, with a very wide, thin-lipped mouth, almost as wide and flat nose and human-like eyes under heavy brows. Short fur covers your whole head with the exception of your inner facial area";
 	now body entry is "relatively wide and burly, with strong muscles that allow you to move and run pretty fast despite the large bulk. The curve of your spine and two elongated arms make it easy to drop to all fours to do so, but you're still capable of upright walking if you chose to do so";
 	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
-	now tail entry is "You have a wide and meaty butt, ideally cushioned to sit down on if you want to rest your bulky shape.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a wide and meaty butt, ideally cushioned to sit down on if you want to rest your bulky shape.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]human[or]human-like[at random]";
-	now face change entry is "it reshapes itself into a gorilla's simian visage, with a wide and very flat nose, pretty thin-lipped mouth and protruding brows over human-like eyes. Short fur sprouts everywhere but the innermost facial area"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it morphs into burly shape of a big gorilla, large-boned and with considerable bulk, but also a set of strong muscles to go with all that. Your arms end up being a bit longer than your legs, which allows for easy walking on all fours from, now on, if you so choose."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "dense black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it gets meaty and well-cushioned, perfect to rest a heavy body on when you sit down"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your member grows thicker and gains a dark black skin color and human-like shape"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it reshapes itself into a gorilla's simian visage, with a wide and very flat nose, pretty thin-lipped mouth and protruding brows over human-like eyes. Short fur sprouts everywhere but the innermost facial area"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it morphs into burly shape of a big gorilla, large-boned and with considerable bulk, but also a set of strong muscles to go with all that. Your arms end up being a bit longer than your legs, which allows for easy walking on all fours from, now on, if you so choose."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "dense black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it gets meaty and well-cushioned, perfect to rest a heavy body on when you sit down"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your member grows thicker and gains a dark black skin color and human-like shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 30;
 	now dex entry is 12;
 	now sta entry is 20;
@@ -167,9 +167,9 @@ When Play begins:
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;        [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]

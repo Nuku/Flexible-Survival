@@ -40,7 +40,7 @@ to say messypigattack:
 
 
 to say beatthepig:
-	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and cocks of player > 0:
+	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and player is male:
 		say "     The pig, when realizing that the encounter is not going well, turns to make a run for it, but as you catch a glimpse of her wet pussy as she turns away, your porcine cock throbs with need.";
 		say "     [bold type]Do you have your way with the female swine?[roman type][line break]";
 		LineBreak;
@@ -69,12 +69,12 @@ When Play begins:
 	now attack entry is "[one of]The pig creature charges at you, slamming forcefully into your stomach and knocking the wind out of you![or]Chomp! The pig bites your arm. Perhaps disappointed in your taste, she backs off and prepares for another attack.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthepig]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[messypigattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[messypigdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "pudgy with a large pig's snout and two floppy ears";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "large, with copious amounts of heavy fat. Some would probably like your rotund figure, if it weren't for the wretched stench that it emits";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "a pinkish hue";[ skin Description]
-	now tail entry is "Your ass has reshaped to a ridiculous degree, with each plush cheek rivaling your own head. Last time you checked, you did have a tail, but with your now titanic tush, it's not such an easy task to get even a glimpse of your corkscrew piggy tail.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "";[ Cock Description, format as you have a 'size' (your text) cock]
+	now desc entry is "[messypigdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "pudgy with a large pig's snout and two floppy ears"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "large, with copious amounts of heavy fat. Some would probably like your rotund figure, if it weren't for the wretched stench that it emits"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "a pinkish hue"; [ skin Description]
+	now tail entry is "Your ass has reshaped to a ridiculous degree, with each plush cheek rivaling your own head. Last time you checked, you did have a tail, but with your now titanic tush, it's not such an easy task to get even a glimpse of your corkscrew piggy tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is ""; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel an odd feeling against your nose, as if invisible hands are molding and shaping it, as well as stretching it. Right before your eyes, you see your nose deform, becoming large and snout-like, perfectly matching that of a pig. Your ears can also be felt, changing into large and floppy versions of their former selves"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your stomach gurgles, and your body quickly starts to put on fat! Your frame billows with sudden and heavy fat, completely ruining your figure. There is a mildly unpleasant smell in the air after the change as well, and it does not take long to realize that it's you"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it tingles all over, its color shifting mildly. The change isn't too obvious at first, but you quickly realize that you're much pinker then you used to be"; [ skin change text. format as "Your skin feels funny as (your text)." ]

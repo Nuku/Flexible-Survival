@@ -467,12 +467,12 @@ to say AngieSexMenu:
 	now description entry is "Let the sexy pantheress fuck your mouth";
 	[]
 	if AngieAroused is not 7:
-		if cocks of player > 0 and cunts of player is 0:
+		if player is puremale:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her";
 			now sortorder entry is 1;
 			now description entry is "Mount the sexy pantheress";
-		if cunts of player > 0 and cocks of player is 0:
+		if player is purefemale:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked by her";
 			now sortorder entry is 2;
@@ -1029,7 +1029,7 @@ to say AngiePTFun:
 
 [Angie + Rubber tigress fun]
 to say AngieRTFun:
-	If cunts of player > 0:
+	if player is female:
 		say "     Angie blinks when she notices you. 'Oh my! You weren't kidding, were you?' You shake your head as you spread your arms, then slowly turn in a circle showing off your rubbery body to the pantheress. Intrigued, she drops to all fours and circles around you, nipping and pressing against your body, testing the smooth texture of your skin. Being touched like that and breathing in her feline scent quickly begins to arouse you.";
 		say "     Sweet juices begin to dribble down your inner thighs. Angie laps at it, her rough tongue slipping over your smooth skin, growling in encouragement as you spread your legs to allow her better access to you dripping cunt. She gives you one long lap which makes you squeak with pleasure. You beg for more but instead she stands, pressing her huge throbbing cock against your stomach. She kisses you, your tongue twists around hers briefly before Angie pulls back. Her eyes are wide with amazement and lust. 'My god, you really are a living toy!' Her grin turns wicked, 'Time to play!'";
 		WaitLineBreak;

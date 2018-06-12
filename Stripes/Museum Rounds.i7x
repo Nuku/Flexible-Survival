@@ -182,7 +182,7 @@ to say mrevent05:
 			LineBreak;
 			let bonus be ( charisma of player - 10 ) divided by 2;
 			let sexbonus be 0;
-			if cunts of player > 0, increase sexbonus by 3;
+			if player is female, increase sexbonus by 3;
 			if breast size of player > 3, increase sexbonus by 1;
 			if cock length of player > 12, increase sexbonus by 1;
 			let dice be a random number from 1 to 20;
@@ -327,8 +327,8 @@ to say mrevent08:
 			setmonster "Clockwork Fox";
 			choose row monster from the table of random critters;
 			now sex entry is "Female";
-			if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
-			if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+			if "Male Preferred" is listed in the feats of player, now sex entry is "Male";
+			if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";
 			say "     The clockwork fox guy runs his paws over your [bodydesc of player] body, caressing and cuddling you. His motions are smooth and precise thanks to his recent oiling, only soft whirrs and clicks as the gears move inside him. His cool muzzle slides across your neck, giving you soft nips as he helps you out of your gear and guides you to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the fox's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful tod [if player is female]dips a pair of fingers into your pussy[else]grabs your ass and fingers your tight pucker[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how he'll give you a winding you'll never forget.";
 			say "     The brassworks fox runs his paws down your back and grabs your ass as he moves to get his mechanical cock lined up with your [if player is female]juicy pussy[else]puckered hole[end if]. He starts slow, letting his cool, brass erection brush against you a few times so it may leak its oily precum onto it. His paws wander back up your [bodytype of player] body as he thrusts into you with a happy chiming. The brass rod warms up quickly as he pumps into you, making you moan in pleasure. His oily pre leaks into you, making the metallic flesh's passing smooth and sensual.";
 			say "     Your enjoyment of this unusual mating only grows as the tod's nimble paws tweak and tease at your body[if player is male]. One paw finds its way to your cock[smn] and sets itself to caressing your manhood in time to the rhythmic motion of his pistoning rod[end if][if breast size of player > 0]. He places a paw at your bosom, groping your breasts and pinching your nipples[end if]. While those diligent paws tease you to even greater heights of pleasure, he softly chirrs and clicks in your ear about how a fresh oiling always makes him so horny. Certainly its made his penile system run smoothly and quickly.";
@@ -376,8 +376,8 @@ to say mrevent08:
 			setmonster "Clockwork Fox";
 			choose row monster from the table of random critters;
 			now sex entry is "Male";
-			if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
-			if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+			if "Female Preferred" is listed in the feats of player, now sex entry is "Female";
+			if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";
 			say "     The clockwork fox girl runs her paws over your [bodydesc of player] body, caressing and cuddling you. Her motions are smooth and precise thanks to her recent oiling, only soft whirrs and clicks as the gears move inside her. Her cool muzzle slides across your neck, giving you soft nips as she helps you out of your gear and tugs you over to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the vixen's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful fox girl [if player is female]dips a pair of fingers into your pussy[else]takes hold of your cock and strokes it[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how she [if player is male]wants you to wind her so tight she'll scream when her mainspring pops[else]wants you to get her pussy nice and lubed up so one of the tods can wind her up[end if].";
 			if player is male:
 				say "     The clockwork vixen takes your [cock of player] cock in hand and starts stroking it as she pours some of the new oil onto it. After some playful stroking that leaves your shaft fully hard and glistening, she bends over the workbench and raises her mechanized tail with a musical moan. She chimes happily as you drive your [cock size desc of player] shaft into her cunt. It is somewhat cool at first as she guides you into a chair. She's well lubricated by the scented oils she's producing, her recent oiling making her sexual mechanism run smoothly and quickly. It grips around your cock like flesh would, but squeezes and milks at your cock in a rhythmic, mechanical manner. Finding it quite pleasurable, you run your hands over her metallic fur and start pounding away at her. Reaching around, you take hold of her lovely breasts and fondle them to chiming moans and giggles as she urges you to wind her faster.";

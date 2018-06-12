@@ -7,8 +7,8 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Pink Poodle" } to infections of girl;
 	add { "Pink Poodle" } to infections of furry;
-	add { "Pink Poodle" } to infections of Caninelist;		[list of canine infections]
-	add { "Pink Poodle" } to infections of Knotlist;		[list of cock infections with a knot]
+	add { "Pink Poodle" } to infections of Caninelist; [list of canine infections]
+	add { "Pink Poodle" } to infections of Knotlist; [list of cock infections with a knot]
 
 HeatedPoodle is a number that varies.
 nopoodlesex is a number that varies.
@@ -41,16 +41,16 @@ to say losetoPinkPoodle:
 		if HP of player > 0:
 			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
 			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
-			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
+			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
-			else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+			else if player is female and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeat69]";
 			else:
 				say "[pinkpoodledefeatoral]";
 		else:
 			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. ";
 			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
-			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
+			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else:
 				say "[pinkpoodledefeatoral]";
@@ -72,7 +72,7 @@ To say beatthePinkPoodle:
 	if nopoodlesex > 2 and ( the remainder after dividing nopoodlesex by 5 is not 0 ):
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but decide to leave her be as you have with her kind in the past.";
 		increase nopoodlesex by 1;
-	else if HP of Dominick >= 60 and HP of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
+	else if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
 		if player is male:
 			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to [link]fuck her (2)[as]2[end link] yourself or [link]have her suck you off (3)[as]3[end link] instead. You could also control your urges and [link]leave her be (0)[as]0[end link]?";
@@ -157,53 +157,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Pink Poodle";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The pink poodle [one of]strikes you sharply across the face with an open paw[or]squeezes her large breasts together tantalizingly, distracting you just long enough to get in a quick hit[or]scratches you with her well-manicured claws[or]teases you playfully as she strikes a sultry pose[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthePinkPoodle]";				[ Text when monster loses. Change 'Pink Poodle' as above. ]
-	now victory entry is "[losetoPinkPoodle]";					[ Text when monster wins. Change 'Pink Poodle' as above. ]
-	now desc entry is "[PinkPoodledesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "a slim and attractive canine muzzle, tipped with a bright pink nose, but the most striking feature is the puffy pink bouffant atop your canine head, which blends into your long, fluffy poodle ears";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "elegant and well proportioned, with an attractive canine figure and sharp features. Your paw-like hands and feet are accentuated by pink paw pads and short matching claws";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "thick curly pink fur, styled neatly around your shoulders and chest, as well as large fluffy pompons on your forearms and lower legs that create an appearance not unlike thick-furred high fashion boots and arm warmers. The rest of your body is almost hairless as if recently shaven, exposing your pale";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a thin shaven poodle tail, with a large pink pompon at its tip.";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]bright pink[or]knotted[or]canine[or]pointed[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "a bout of dizziness comes over you. You try to shake your head clear but quickly stop when something pink and fluffy strikes you in the face. As you gently stroke your new pink poodle ears, you watch a slim canine muzzle form before your eyes, while the thick pink fur spreads from your ears up your head, forming a large bouffant hairstyle";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "changes begin to roll through you. You watch with fascination as your hand shifts to a dainty, paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you develop an elegant and well-proportioned canine figure.";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your chest grows tight. A thick coat of curly pink fur forms over your shoulders and chest, forming a large puff-ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, leaving you with large, fashionable pompons covering your forearms and calves";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at its tip";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue[ppheatreset]";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 13;			[ These values may be used as part of alternate combat.]
+	now name entry is "Pink Poodle"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "The pink poodle [one of]strikes you sharply across the face with an open paw[or]squeezes her large breasts together tantalizingly, distracting you just long enough to get in a quick hit[or]scratches you with her well-manicured claws[or]teases you playfully as she strikes a sultry pose[at random]!"; [ Successful attack message ]
+	now defeated entry is "[beatthePinkPoodle]"; [ Text when monster loses. Change 'Pink Poodle' as above. ]
+	now victory entry is "[losetoPinkPoodle]"; [ Text when monster wins. Change 'Pink Poodle' as above. ]
+	now desc entry is "[PinkPoodledesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "a slim and attractive canine muzzle, tipped with a bright pink nose, but the most striking feature is the puffy pink bouffant atop your canine head, which blends into your long, fluffy poodle ears"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "elegant and well proportioned, with an attractive canine figure and sharp features. Your paw-like hands and feet are accentuated by pink paw pads and short matching claws"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "thick curly pink fur, styled neatly around your shoulders and chest, as well as large fluffy pompons on your forearms and lower legs that create an appearance not unlike thick-furred high fashion boots and arm warmers. The rest of your body is almost hairless as if recently shaven, exposing your pale"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a thin shaven poodle tail, with a large pink pompon at its tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]bright pink[or]knotted[or]canine[or]pointed[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "a bout of dizziness comes over you. You try to shake your head clear but quickly stop when something pink and fluffy strikes you in the face. As you gently stroke your new pink poodle ears, you watch a slim canine muzzle form before your eyes, while the thick pink fur spreads from your ears up your head, forming a large bouffant hairstyle"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "changes begin to roll through you. You watch with fascination as your hand shifts to a dainty, paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you develop an elegant and well-proportioned canine figure."; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "your chest grows tight. A thick coat of curly pink fur forms over your shoulders and chest, forming a large puff-ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, leaving you with large, fashionable pompons covering your forearms and calves"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at its tip"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue[ppheatreset]"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 13; [ These values may be used as part of alternate combat.]
 	now per entry is 13;
 	now int entry is 12;
 	now cha entry is 17;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 60;			[ The monster's starting HP. ]
-	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 8;			[ Monster's average damage when attacking. ]
-	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 10;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 7;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slim[or]elegant[or]well proportioned[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 60; [ The monster's starting HP. ]
+	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 8; [ Monster's average damage when attacking. ]
+	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 10; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
+	now breast size entry is 7; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 80; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]slim[or]elegant[or]well proportioned[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Heat Table
 
@@ -218,9 +217,9 @@ When Play begins:
 	now heat duration entry is 10;
 	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs. Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
 	now description text entry is "";
-	now heat start entry is "[pinkpoodleheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[pinkpoodleheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
-	now inheat entry is "[pinkpoodleheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now heat start entry is "[pinkpoodleheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[pinkpoodleheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[pinkpoodleheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "     A subtle warmth fills your body as you get an empty feeling in the rear. Your anus quivers and puffs out pinkly as the scent of heated pheromones drift from it. You feel a growing want for canine companionship to fill that void inside you.";

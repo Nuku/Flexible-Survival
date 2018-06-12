@@ -204,7 +204,7 @@ to say sexwithBlanche:
 to blanchesexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if cocks of player > 0 and Blanche is not gravid:
+	if player is male and Blanche is not gravid:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary position";
 		now sortorder entry is 1;

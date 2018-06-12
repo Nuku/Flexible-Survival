@@ -19,16 +19,16 @@ to say feline desc:
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if Feline_type is 3:			[forced hunting pride fight]
-		setmongender 14;	[creatures are female]
+		setmongender 14; [creatures are female]
 		say "     You are facing off against a small pride of roving feline girls. The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent. Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride. As Leonard has requested, you'll have to defeat and break up these groups to help protect your pride sisters[if HP of Leonard is 10]. Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
 		let levcalc be level of Hunting Prides;
 		if hardmode is true:
 			if level of player > level of Hunting Prides:
 				now levcalc is level of player;
 				if HP of Leonard is 10:
-					decrease levcalc by 1;		[first one weakest]
+					decrease levcalc by 1; [first one weakest]
 				else if HP of Leonard is 12:
-					increase levcalc by 1;		[final one strongest]
+					increase levcalc by 1; [final one strongest]
 		now HP entry is 20 + ( levcalc * 4 );
 		now monsterHP is 20 + ( levcalc * 4 );
 		now wdam entry is 7 + ( levcalc / 4 );
@@ -41,7 +41,7 @@ to say feline desc:
 		now int entry is 16;
 		now cha entry is 20;
 	else if Feline_type is 4:	[forced male lion fight w/usurper]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "     You are facing a large, strongly muscled and powerful lion/human hybrid. He has a black mane and golden fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
 		if hardmode is true and level of player > 14, let debit be level of player - 14;
 		now HP entry is 75 + ( debit * 5 );
@@ -56,7 +56,7 @@ to say feline desc:
 		now int entry is 10;
 		now cha entry is 15;
 	else if Feline_meow < 5 or cunts of player is 0:
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		increase feline_encountered by 1;
 		if a random chance of 1 in 2 succeeds:
 			project the figure of Feline_F1_icon;
@@ -83,7 +83,7 @@ to say feline desc:
 		now cha entry is 20;
 	else:
 		if HP of Leonard >= 15 and HP of Leonard < 100:
-			setmongender 3;		[creature is male]
+			setmongender 3; [creature is male]
 			say "     Before you is one of the male lions of the park. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. He roars as he sees you, moving in as his cock slips further from its sheath. Perhaps you're recognized as the matronly female of Leonard's pride or perhaps he simply sees a sexy lioness, but either way, it seems he wants to claim you as his own.";
 		if hardmode is true and level of player > 14, let debit be level of player - 14;
 		now Feline_type is 2;
@@ -172,15 +172,15 @@ to say lion def:
 	let z be 0;
 	say "     The big cat tries to rake you with his monstrous claws one more time, but you jump back nimbly even as you see it slump down";
 	if HP of Leonard >= 15 and HP of Leonard < 100 and bodyname of player is "Feline":
-		say ". Knocked down and beaten, the leonine man is lying on the ground, his cock still mostly hard after being denied release. Eyeing it, you wonder if perhaps you might risk having a little fun with him to teach him better respect for Leonard's pride. You certainly wouldn't mind sampling that feline meat[if cocks of player > 0 and Feline_meow < 8] or even that tawny ass[end if] of his now that he's subdued. Do you want to have some fun with him?";
+		say ". Knocked down and beaten, the leonine man is lying on the ground, his cock still mostly hard after being denied release. Eyeing it, you wonder if perhaps you might risk having a little fun with him to teach him better respect for Leonard's pride. You certainly wouldn't mind sampling that feline meat[if player is male and Feline_meow < 8] or even that tawny ass[end if] of his now that he's subdued. Do you want to have some fun with him?";
 		now z is 1;
 	else if libido of player + ( Feline_meow * 3 ) > 50:
-		say ". Knocked down and beaten, the leonine man is lying on the ground, his cock still mostly hard after being denied release. Eyeing it, you find yourself wondering if you could risk having a little fun with that feline meat[if cocks of player > 0 and Feline_meow < 8] or even that tawny ass[end if] now that he's subdued. Do you want to have some fun with him?";
+		say ". Knocked down and beaten, the leonine man is lying on the ground, his cock still mostly hard after being denied release. Eyeing it, you find yourself wondering if you could risk having a little fun with that feline meat[if player is male and Feline_meow < 8] or even that tawny ass[end if] now that he's subdued. Do you want to have some fun with him?";
 		now z is 1;
 	if z is 1:
 		if the player consents:
 			now tempnum is 0;
-			if cocks of player > 0 and Feline_meow < 8:
+			if player is male and Feline_meow < 8:
 				say "     Looking over the defeated lion, you wonder if you'd prefer to stuff his furry ass (Y) or have a ride on that feline cock. (N)";
 				if the player consents:
 					now tempnum is 1;
@@ -255,7 +255,7 @@ to say feline cleanup: [post-battle reset of stats to catgirl values]
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 3, let debit be level of player - 3;
-	if hardmode is false and Feline_type is 2 and monsterHP <= 0, increase XP of player by 22;	[XP difference for beating the male]
+	if hardmode is false and Feline_type is 2 and monsterHP <= 0, increase XP of player by 22; [XP difference for beating the male]
 	now Feline_type is 1;
 	now HP entry is 20 + ( debit * 3 );
 	now wdam entry is 7 + ( debit / 3 );
@@ -282,12 +282,12 @@ When Play begins:
 	now attack entry is "[feline att]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[feline def]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[feline vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[feline desc]";[ Description of the creature when you encounter it.]
-	now face entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a proud and beautiful lioness[else]the cute head of a small lioness[end if]";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a sexy lioness woman. Being full height and full-figured, you are a matronly pride mother now. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down your body if it isn't being constantly drunk[else if breast size of player > 2]a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly[else]a female lioness. You are only about four feet tall, though your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on. Despite the smaller size of your breasts, they are often leaking a stream of thick cream that runs down into your fur if it isn't being drunk constantly[end if]";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[else]tawny brown fur covered[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "You have a long, tufted lion's tail.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "leonine";[ Cock Description, format as you have a 'size' (your text) cock]
+	now desc entry is "[feline desc]"; [ Description of the creature when you encounter it.]
+	now face entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a proud and beautiful lioness[else]the cute head of a small lioness[end if]"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a sexy lioness woman. Being full height and full-figured, you are a matronly pride mother now. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down your body if it isn't being constantly drunk[else if breast size of player > 2]a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly[else]a female lioness. You are only about four feet tall, though your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on. Despite the smaller size of your breasts, they are often leaking a stream of thick cream that runs down into your fur if it isn't being drunk constantly[end if]"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[else]tawny brown fur covered[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "You have a long, tufted lion's tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "leonine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your head shifts and becomes that of a lovely lioness, proud and matronly in appearance[else]your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins of all around you become enticing and you can feel arousal building[end if]"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]it shifts back into that of a womanly lioness. You can't help but moan and purr in pleasure at this change, feeling drawn to your handsome mate once more[else]urge to giggle becomes powerful as you shrink and gain the softness of a small lioness[end if]"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -300,31 +300,30 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 20;			[ How many HP has the monster got? ]
-	now lev entry is 3;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;		[ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 3;		[ Width of female sex infection will try and give you ]
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]petite[or]girlish[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "[one of]leonine[or]feline[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "park_feline";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now HP entry is 20; [ How many HP has the monster got? ]
+	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
+	now area entry is "Park"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 9; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is ""; [ Loot monster drops, ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]petite[or]girlish[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "[one of]leonine[or]feline[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "park_feline"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -336,7 +335,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the leoninelust rule:		[continuous lustful weakening of player]
 	if Feline_type is 2 or Feline_type is 4:		[lion man only]
 		choose row monster from the table of random critters;
-		let dam be ( Feline_meow * ( lev entry + ( a random number from 60 to ( 90 + lev entry ) ) ) ) divided by 100;	[damage based on built-up feline urges]
+		let dam be ( Feline_meow * ( lev entry + ( a random number from 60 to ( 90 + lev entry ) ) ) ) divided by 100; [damage based on built-up feline urges]
 		if HP of Leonard >= 7 and HP of Leonard <= 13:
 			now dam is ( dam * 2 ) / 3;
 			if dam > ( wdam entry / 2 ), now dam is wdam entry / 2;
@@ -371,11 +370,11 @@ this is the feline nursing rule:
 		if feline_status is 2:
 			say "Leonard nuzzles the newest member of his pride and has her remain waiting on his bed, promising he'll be back to spend more time with her soon.";
 			now Feline_attached is 0;
-			now feline_status is 0;		[reset to new kitty]
+			now feline_status is 0; [reset to new kitty]
 		else if feline_status is 3:
 			say "Leonard nuzzles the feline who came in with you, telling her what a fine job she did. He pats her ass, sending her on her way.";
 			now Feline_attached is 0;
-			now feline_status is 0;		[reset to new kitty]
+			now feline_status is 0; [reset to new kitty]
 		else if bodyname of player is "Feline":
 			if breast size of player <= 0:
 				say "     The small feline clinging to you mewls and nuzzles at your flat chest. Kneading her paws, she tries suckling from your nipple. When it continues to yield no milk, she releases another sad mewl. With your head growing clearer, you manage to force yourself to put the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you for having changed.";
@@ -394,11 +393,11 @@ this is the feline nursing rule:
 			else:
 				say "     You feeling too much of your humanity slipping away, you manage to force yourself to set the feline down before things get any worse. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
 				now Feline_attached is 0;
-				now feline_status is 0;		[reset to new kitty]
+				now feline_status is 0; [reset to new kitty]
 		else:
 			say "     Without a leonine body for her to nurse from, you manage to focus enough to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
 			now Feline_attached is 0;
-			now feline_status is 0;		[reset to new kitty]
+			now feline_status is 0; [reset to new kitty]
 
 
 an everyturn rule:
@@ -421,7 +420,7 @@ to say feline heat end:
 	else:
 		say "You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
 	now Feline_attached is 0;
-	now feline_status is 0;		[reset to new kitty]
+	now feline_status is 0; [reset to new kitty]
 
 to say feline heat:
 	if Feline_attached > 0:
@@ -436,13 +435,13 @@ to say feline heat:
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Feline";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
-	now heat duration entry is 400;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now infect name entry is "Feline"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 400; [ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
-	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
-	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat. for example: the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[feline heat end]";		[this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
+	now description text entry is ""; [ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
+	now heat start entry is ""; [this is a to say block that causes things to happen when the player enters heat. for example: the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
+	now heat end entry is "[feline heat end]"; [this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[feline heat]";
 
 ]
@@ -468,7 +467,7 @@ when play ends:
 			else if HP of Leonard >= 3 and HP of Leonard < 10:	[w/Leonard]
 				say "     Your feline instincts start to come to the fore as your human mind falls to pieces. You make your way back to the park, drawn by the scent of the other felines like yourself there, feeling a growing need within your loins. You are drawn back to a tunnel cave at the far side of the park, smelling your leonine lover. Leonard smiles and happily welcomes you back, telling you how pleased he is to see you as a proper feline playtoy like you were always meant to be. You can't help but agree with him, knowing him to be your alpha, your pride leader.";
 				say "     And speaking of his pride, when he takes you to his bed to mount you again, you find that he has several other cute lioness girls on the bed already stuffed full of his seed. After a lustful welcome by them all that leaves you bloated with lion seed, you and the other girls stagger out, heading off to hunt for more lovely furnishing and supplies for your lion master's home. Between trips out, you meet the rest of your pride mates, the handsome lion having gathered or created many lustful felines through his charms. And when the military comes through the area, he charms several more, tricking the soldiers into thinking his den is a safe place for them and many a lone soldier, separated from their unit ends up there only to become another lioness lover.";
-				if cocks of player > 0 and cunts of player is 0 and bodyname of player is "Feline" and player is pure:
+				if player is puremale and bodyname of player is "Feline" and player is pure:
 					say "     Despite your girlish appearance, you remain male and hold a special place in the pride. He keeps an eye on you around the other girls, but is more than happy to stuff your tight, little bottom. After a few years, he takes to having you mount some of the girls while he fucks you. Over time, you grow and mature, becoming a big, strong male like him. Soon you're ready to lead a pride of your own, though you're always willing to bend over and offer your ass up to him, remaining his submissive little girly-boy at heart. Any pride leaders formed from his or yours are taught the same as well, submitting to Leonard as their leader, giving the aristocratic lion considerable power in the parklands.";
 			else if HP of Leonard >= 10 and HP of Leonard <= 14:	[succumbed during rivalry period]
 				if feline_pride_defeat is true:
@@ -483,21 +482,21 @@ when play ends:
 						if player is female:
 							say "     You quickly begin to regard this strong and clever male as your new leonine master and submit to him, letting him mount and breed you as he sees fit. His pride of lionesses, you among them, go out into the park to seek out more feline victims to bring back for him to add to the pride. And it's not just felines who get your attention, the arriving soldiers become your prey as well. Many of your pride sisters fall, but new ones are added from those you capture and your master manages to maintain his hold over the park.";
 							say "     Over time, the once well-decorated tunnel cave becomes a shambles as art and furniture are destroyed during your lover's wild rages and even wilder lusts. Eventually even the bed, torn and soiled by sexual fluids, becomes unusable and must be removed. It sometimes feels like a hard life with your leonine lover, though you can't really tell why, as you are happy being one of the many girls in his pride. You are second only to his black-haired favorite, who takes particular pleasure in using you both as her enforcer and as her plaything.";
-						if cocks of player > 0 and cunts of player is 0:
+						if player is puremale:
 							say "     As another male lion, you are eventually driven out of the pride after he's fucked you repeatedly, leaving you to struggle to form a pride of your own as you become a larger, male lion. But having been bested and used by the strongest in the park has you only able to claim only a few feline girls of your own. Fearful of the clever lion and his powerful pride, you are eventually forced to leave city with your pride, undertaking a perilous plan to escape that succeeds mostly out of desperation. Your band makes it to a small village and takes over, infecting the populace. The success does much to heal your bruised ego, but you remain a cautious leader and make little attempt to expand beyond your minor territory, content to keep your pride safe and satisfied.";
 				else:
 					say "     Your feline instincts start to come to the fore as your human mind falls to pieces. You make your way back to the park, drawn by the scent of the other felines like yourself there, feeling a growing need within your loins. You are drawn back to a tunnel cave at the far side of the park, seeking your leonine lover. But when you arrive there, you are met by some unfamiliar felines who bring you inside to meet the new lion who's taken up residence there. The air inside is heavy with the scent of this new male and his arousal, especially on the plush bed once used by... someone... you have trouble remembering... as the strong male mounts you and fucks you repeatedly.";
 					if player is female:
 						say "     You quickly begin to regard this strong and clever male as your new leonine master and submit to him, letting him mount and breed you as he sees fit. His pride of lionesses, you among them, go out into the park to seek out more feline victims to bring back for him to add to the pride. And it's not just felines who get your attention, the arriving soldiers become your prey as well. Many of your pride sisters fall, but new ones are added from those you capture and your master manages to maintain his hold over the park.";
 						say "     Over time, the once well-decorated tunnel cave becomes a shambles as art and furniture are destroyed during your lover's wild rages and even wilder lusts. Eventually even the bed, torn and soiled by sexual fluids, becomes unusable and must be removed. It sometimes feels like a hard life with your leonine lover, though you can't really tell why, as you are happy being one of the many girls in his pride[if HP of Leonard is 12 or HP of Leonard is 13]. You are second only to his black-haired favorite, who takes particular pleasure in using you both as her enforcer and as her plaything[end if].";
-					if cocks of player > 0 and cunts of player is 0:
+					if player is puremale:
 						say "     As another male lion, you are eventually driven out of the pride after he's fucked you repeatedly, leaving you to struggle to form a pride of your own as you become a larger, male lion. But having been bested and used by the strongest in the park has you only able to claim only a few feline girls of your own. Fearful of the clever lion and his powerful pride, you are eventually forced to leave city with your pride, undertaking a perilous plan to escape that succeeds mostly out of desperation. Your band makes it to a small village and takes over, infecting the populace. The success does much to heal your bruised ego, but you remain a cautious leader and make little attempt to expand beyond your minor territory, content to keep your pride safe and satisfied.";
 			else if HP of Leonard is 100:
 				say "     After the orgy that ensues after the battle, you and many other lioness girls join the clever lion's pride as he takes up residence in the tunnel cave. The victorious male takes particular pleasure in fucking you and his three favorite new horny girls on the large bed inside, thoroughly coating the plush mattress and soft sheets in his virile scent.";
 				if player is female:
 					say "     You quickly begin to regard this strong and clever male as your new leonine master and submit to him, letting him mount and breed you as he sees fit. His pride of lionesses, you among them, go out into the park to seek out more feline victims to bring back for him to add to the pride. And it's not just felines who get your attention, the arriving soldiers become your prey as well. Many of your pride sisters fall, but new ones are added from those you capture and your master manages to maintain his hold over the park.";
 					say "     Over time, the once well-decorated tunnel cave becomes a shambles as art and furniture are destroyed during your lover's wild rages and even wilder lusts. Eventually even the bed, torn and soiled by sexual fluids, becomes unusable and must be removed. It sometimes feels like a hard life with your leonine lover, though you can't really tell why, as you are happy being one of the many girls in his pride. You are second only to his black-haired favorite, who takes particular pleasure in using you both as her enforcer and as her plaything.";
-				if cocks of player > 0 and cunts of player is 0:
+				if player is puremale:
 					say "     As another male lion, you are eventually driven out of the pride after he's fucked you repeatedly, leaving you to struggle to form a pride of your own as you become a larger, male lion. But having been bested and used by the strongest in the park has you only able to claim only a few feline girls of your own. Fearful of the clever lion and his powerful pride, you are eventually forced to leave city with your pride, undertaking a perilous plan to escape that succeeds mostly out of desperation. Your band makes it to a small village and takes over, infecting the populace. The success does much to heal your bruised ego, but you remain a cautious leader and make little attempt to expand beyond your minor territory, content to keep your pride safe and satisfied.";
 			else if HP of Leonard is 15:
 				say "     When you awaken from your catnap after the wonderful mating with your handsome lover and his new servants, you feel little need to leave the place, having found where you belong - at Leonard's side, caring for his pride. He takes to mating you often, even after you quickly start to grow full with a large litter. You bear him many litters of cute feline cubs, who are among the strongest of his children.";
@@ -514,7 +513,7 @@ when play ends:
 		else:
 			say "     You survive and are taken to the military's holding facility. Many of the soldiers treat you like a little girl and not like an adult. This allows you a few privileges you wouldn't otherwise have. And if you get caught roaming around the base to meet up with another feline there for a little fun, you simply act like you got lost and you're off the hook.";
 			say "     After your release, you continue to take advantage of your appearance like this, playing off people's sympathies or making them underestimate you";
-			if cocks of player > 0 and cunts of player is 0:	[MALE]
+			if player is puremale:	[MALE]
 				say ". You take more and more to cross-dressing, often using it as a means to slip into girls-only areas or luring in a new playmate-to-be before revealing your throbbing cock.";
 			else if player is herm:	[HERM]
 				say ". You are a lustful little cat girl though, seeking out lovers of all genders and from all forms of felines. And while lions may be your favorite, nothing says you can't enjoy the others as well. You eventually move in with a sexy male lion who indulges your girlish playing around and is happy to let you play with the other kitties as long as he can get his fair share of your hot pussy.";

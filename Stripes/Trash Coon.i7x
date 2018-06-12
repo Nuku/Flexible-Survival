@@ -55,9 +55,9 @@ to say beatthetrashcoon:
 	else:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. Deciding to make use of this opportunity, you turn and head off, leaving her behind.";
 		let skipx be 1;
-	if cocks of player > 0 and skipx is 0:
+	if player is male and skipx is 0:
 		say "     Your cock grows quite hard and throbs, soon slipping between her wet folds to dive into her needy pussy. She chirrs in pleasure as you penetrate her and start thrusting. With the cushion of her fat and the soft trash beneath her, you pound away vigorously, enjoying the soft sway of her body as you mate with her. You kiss one another repeatedly and your paws wander up to her bosom to grope her big breasts [if breast size of player > 0]while she does the same to you[else]while her paws squeeze and pull at your ass with each thrust[end if]. Your tongues slide around inside each other's mouths as the pace quickens until finally you drive hard into her, pumping your hot [cockname of player] semen into her and she orgasms powerfully in response. Her quivering pussy milks and squeezes at your cock, drawing out you cum until you collapse panting atop her. Spent now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful mating.";
-	else if cunts of player > 0 and skipx is 0:
+	else if player is female and skipx is 0:
 		say "     Your [if cunts of player > 1]pussies[else]pussy[end if] grows drippingly wet and your clit throbs. You bring a hand between her thighs, stroking and teasing her wet snatch. She chirrs in pleasure as you dive a trio of fingers into her start pumping, and she quickly returns the favor by rubbing your sensitive folds and slipping a few fingers into you. You kiss one another repeatedly while fingering one another. Your tongues slide around inside each other's mouths as the pace quickens until finally you are each pumping vigorously into the other as you orgasm powerfully in response. Your groins and hands are soaked in female cum as your pussies quiver and squeeze at the digits filling them until finally you collapse panting atop her softly padded body. Satisfied now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
 	else if skipx is 0:
 		say "     Lacking much of a gender of your own, but still excited by the rotund female, you dive between her legs and start licking at her juicy cunt. Her strong scent and the taste of her juices is very exciting. You dive your tongue into her and rub her clit with your thumb, enjoying the chirring sounds of pleasure she's emitting. You work her to an eventual climax that is quite powerful and leaves your face soaked in her cum. You move atop her and give her a sticky kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
@@ -71,10 +71,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Trash Coon"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The large coon punches you![or]The female raccoon twists your arm painfully![or]The horny raccoon woman takes you into a strong hug, burying your face in her bosom. Her strong smell makes you a little woozy![or]The big coon heaves you up and tosses you into a pile of junk![or]The female raccoon socks you one in the jaw![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthetrashcoon]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetotrashcoon]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Trash Coon"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The large coon punches you![or]The female raccoon twists your arm painfully![or]The horny raccoon woman takes you into a strong hug, burying your face in her bosom. Her strong smell makes you a little woozy![or]The big coon heaves you up and tosses you into a pile of junk![or]The female raccoon socks you one in the jaw![at random]"; [ Successful attack message ]
+	now defeated entry is "[beatthetrashcoon]"; [ Text when monster loses. ]
+	now victory entry is "[losetotrashcoon]"; [ Text when monster wins. ]
 	now desc entry is "[trashcoondesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a scruffy looking raccoon. You have a raccoon's dark mask around your eyes and a perpetually dirty face. Your cute ears move and flick around, twitching at every sound";
 	now body entry is "bulky and well-padded. Your hands have darker, nimble fingers ending in little, black claws";
@@ -84,7 +84,7 @@ When Play begins:
 	now face change entry is "your mouth and nose elongate into a narrow, whiskered muzzle with a black nose at the end. A raccoon's dark mask forms around your eyes as your ears move up and reform into cute little cups";
 	now body change entry is "you grow heavy, becoming soft and pudgy. This spreads down your arms and legs, terminating as your hands and feet become dark, nimble paws with little black claws at the end of your digits";
 	now skin change entry is "scruffy gray fur spreads across your body";
-	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it pulses and throbs. The air is filled with a strong, musky scent as your excitement grows until finally you moan loudly and cum hard, spurting your semen as your cock reshapes itself into that of a raccoon";
 	now str entry is 15;
 	now dex entry is 16;
@@ -100,7 +100,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

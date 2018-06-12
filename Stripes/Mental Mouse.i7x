@@ -60,7 +60,7 @@ to say losetomouse:
 	else:
 		say "     The victorious mice squeak happily as they pull you into their arms and start snuggling and groping you lustfully. Their soft, small bodies rub against you, and you quickly start to become aroused as well. Your hands find their way to the breasts of one of the busty little herms and start to tease her nipples. Your head is guided over to a stiff mousecock and you take it into your mouth readily, finding yourself becoming closer to the busty mice and eager to please them. Your head is stroked as she thrusts into your mouth, dripping her pre down your throat while your grope her bosom.";
 	WaitLineBreak;
-	if cocks of player > 0 and cock length of player > 12:
+	if player is male and cock length of player > 12:
 		if mouse girl is tamed:
 			say "     Rachel, with her paws already stroking your cock, sets herself to licking and kissing along your large length. After some playful teasing, she moves into position to take your huge member into her small pussy. You run your hands over her, helping her to press down onto it. She groans and squeaks, her belly bulging considerably as your penis is stuffed into the three foot tall mouse.";
 		else:
@@ -68,7 +68,7 @@ to say losetomouse:
 	else if player is male:
 		say "     [if mouse girl is tamed]Rachel[else]Another of the mice[end if], with her paws already stroking your cock, moves to climb atop it. She releases a soft squeak as her dripping cunt is lowered down over your meaty shaft, making her body quiver in delight. You can feel her wet cunt squeeze and grip around your cock, milking at it for your seed while she rides it.";
 	if player is female:
-		say "     [if cocks of player is 0 and mouse girl is tamed]Rachel[else]A third mouse[end if] moves in between your legs, boosting up your hips and getting her hard cock lined up with your pussy. At this point, as aroused as you are, you help as best you can and are soon rewarded with the thrust of her shaft into you, spreading open your wet petals. The small mouse strokes your legs and thighs as her hips rock, pumping her throbbing, leaking penis into you again and again. You moan in delight around your mouthful of mousemeat, as the two eager herms continue to thrust into you.";
+		say "     [if player is not male and mouse girl is tamed]Rachel[else]A third mouse[end if] moves in between your legs, boosting up your hips and getting her hard cock lined up with your pussy. At this point, as aroused as you are, you help as best you can and are soon rewarded with the thrust of her shaft into you, spreading open your wet petals. The small mouse strokes your legs and thighs as her hips rock, pumping her throbbing, leaking penis into you again and again. You moan in delight around your mouthful of mousemeat, as the two eager herms continue to thrust into you.";
 	WaitLineBreak;
 	say "     You and the mice continue like this for some time, groping, grinding, rubbing and teasing as your excitement grows and grows. You and the mice work to please each other, moving more and more in synch as your lovemaking continues. You can [if mousecurse is 1]intensely [else]almost [end if]feel their pleasure and joy as your closeness to them grows stronger and you all cum in unison. You gulp down the mouse's hot seed from her cock[if player is male] while pumping your own load into the other eager mousie[end if][if player is female] and get a warm blasts of mousecum to fill your womb as well from the other[end if].[impregchance]";
 	WaitLineBreak;
@@ -173,10 +173,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mental Mouse"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Mental Mouse"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]While two of the mice, a third jumps onto you, trying to pull you down![or]The mice around you take turns slapping your ass and groping you![or]The herms make a tantalizing display of their bodies, trying to tempt and arouse you with their beautiful, murine forms![or]The horny mice tackle you, trying to pull you into their welcoming arms![at random]";
-	now defeated entry is "[beatthemouse]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetomouse]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthemouse]"; [ Text when monster loses. ]
+	now victory entry is "[losetomouse]"; [ Text when monster wins. ]
 	now desc entry is "[mousedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now mouse-like, with large, rounded ears, a cute little nose and twitching whiskers. Your hair has grown back in, but is long, flowing and gray. Your ears, you find, are quite sensitive and seem to resonate slightly with the calls from distant mice";
 	now body entry is "quite small, barely three feet tall. Your body has clear, womanly curves to it, with a slender, feminine waist and hips. Your hands are cute, mouse-like paws with nimble digits";
@@ -202,7 +202,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

@@ -69,16 +69,16 @@ When Play begins:
 	now defeated entry is " ";
 	now victory entry is " ";
 	now desc entry is "     This isn't supposed to be an actual infection, just a standin - please report how you saw this.";
-	now face entry is "completely human";  [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "human-looking";     [ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "human";             [ format as the text "You have (your text) skin."]
+	now face entry is "completely human";  [ Face description, format as "Your face is (your text)."]
+	now body entry is "human-looking";     [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "human";             [ format as "You have (your text) skin."]
 	now tail entry is "";                  [ write a whole Sentence or leave blank. ]
 	now cock entry is "human";             [ format as "You have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [  format as "Your body feels funny as (your text)." ]
-	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips seem to return to a normal human's figure"; [ format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it seems to feel hot, then after a few gasps you realize it looks completely human"; [ format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it seems to feel hot, then after a few gasps you realize it looks completely human"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 12;
 	now sta entry is 12;
@@ -115,7 +115,7 @@ when play ends:
 	if bodyname of player is "Herm Human":
 		if humanity of player < 10: [succumbed]
 			say "     Succumbing to the inner voice that tells you to return to your master, you make your way back to the dark tunnels under the Trevor Labs. Walking through the shadowy hallways filled with tentacled aberrations without fear, you soon find the thought eater again, joining his growing throng of obedient slaves.";
-			if cunts of player > 0 and "Sterile" is not listed in feats of player: [has a vag, not sterile]
+			if player is female and "Sterile" is not listed in feats of player: [has a vag, not sterile]
 				say "     Serving your master in all his desires, your pussy getting bathed daily with his potent seed, it doesn't take long until your belly starts to swell with his child. Being part of his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're deliriously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
 			else if player is mpreg_ok and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
 				say "     Devoted to please your master, you tell him about your changed physiology. The thought eater is immensely satisfied in having something so extraordinary as a slave, immediately ordering you to bend over and get ready for him to fuck you. With his potent seed being shot into your womb several times a day, it's only a question of time until your belly starts to swell with his child. Being a special jewel in his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're deliriously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";

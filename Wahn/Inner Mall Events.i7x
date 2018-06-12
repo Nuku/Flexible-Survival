@@ -157,7 +157,7 @@ to say SizeEnvyMenu:
 	now sortorder entry is 2;
 	now description entry is "Trade a little mouth action for several bottles of clean water";
 	[]
-	if cocks of player > 0 and carried of water bottle > 0: [only males and herms can compete, and you need a bottle]
+	if player is male and carried of water bottle > 0: [only males and herms can compete, and you need a bottle]
 		choose a blank row in table of fucking options;
 		now title entry is "Step up and ask to join the competition";
 		now sortorder entry is 3;

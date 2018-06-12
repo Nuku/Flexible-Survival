@@ -98,7 +98,7 @@ to say sexwithJimmy:
 	else if player is neuter:
 		say "     There's not much point in playing with him given your lack of genitals.";
 	else:
-		if HP of Jimmy >= 5 and cocks of player > 0 and a random chance of anallevel in 7 succeeds:
+		if HP of Jimmy >= 5 and player is male and a random chance of anallevel in 7 succeeds:
 			say "[Jimmysex02]";
 		else:
 			say "[Jimmysex01]";

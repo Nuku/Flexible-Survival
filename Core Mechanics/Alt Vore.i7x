@@ -112,10 +112,10 @@ to vorebyplayer:
 	choose row monster from the table of random critters;
 	let hvorechance be hvorelevel * hvorelevel;
 	if hvorelevel > 1 and ( a random chance of hvorechance in 16 succeeds ) and name entry is not listed in infections of HardVoreExclusion:
-		say "[hvorebyplayer00]";	[Master hard vore scene]
-		decrease humanity of player by 2;	[Additional humanity loss]
+		say "[hvorebyplayer00]"; [Master hard vore scene]
+		decrease humanity of player by 2; [Additional humanity loss]
 	else:
-		say "[vorebyplayer00]";		[Master vore scene]
+		say "[vorebyplayer00]"; [Master vore scene]
 	let vv be a random number between 1 and 6;
 	let powerchance be 4;
 	if "Bestial Power" is listed in feats of player, increase powerchance by 2;
@@ -163,12 +163,12 @@ to say vorebyplayer00:	[master list to decide scenes]
 	if vorecount >= 4 and name entry is not "Mannequin" and name entry is not "Snake" and name entry is not "Naga" and vorespecial1 is false:
 		say "[vorebyplayer03]";
 	else if vorecount >= 5 and name entry is not listed in infections of HardVoreExclusion and ( currentmonster is cocked or currentmonster is cunted ) and hvoreoffer is false:
-		say "[hvorebyplayer00]";	[one-time check for hard vore]
+		say "[hvorebyplayer00]"; [one-time check for hard vore]
 	else if name entry is "Bald Eagle" and a random chance of 3 in 5 succeeds:
 		say "[vbp_baldeagle]";
 	else if name entry is "Hawkman" and a random chance of 3 in 5 succeeds:
 		say "[vbp_hawkman]";
-	else if name entry is "Hermaphrodite Gryphon" and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 3 in 5 succeeds:
+	else if name entry is "Hermaphrodite Gryphon" and player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_hermgryph]";
 	else if vorecount > 4 and name entry is "Leopardman" and a random chance of 3 in 5 succeeds:
 		say "[vbp_leopardman]";
@@ -176,7 +176,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_gazelle]";
 	else if name entry is "Elk" and vorespecial1 is true and a random chance of 3 in 5 succeeds:
 		say "[vbp_elk]";
-	else if name entry is "Messy Pig" and vorespecial1 is true and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 3 in 5 succeeds:
+	else if name entry is "Messy Pig" and vorespecial1 is true and player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_messypig]";
 	else if vorespecial1 is true and (the remainder after dividing vorecount by 3 is 0) and name entry is not "Snake" and name entry is not "Naga":
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
@@ -197,7 +197,7 @@ to say vorebyplayer02:		[extended basic - head first]
 	choose row monster from the table of random critters;
 	say "     Your foe crumples at your feet, defeated and immobile. From within you, you can feel that familiar predatory instinct arising, and without pause, you commit yourself to the act. Kneeling next to the beaten [name entry], you quickly check to make sure they won't be fighting back, and lick your lips in anticipation. Bringing them forward, you lick their face and head, before your jaws yawn widely and you pull their head inside. As soon as you feel their head touch your throat, you swallow, pulling them along with it. As they're pulled in, your mouth begins to stretch even wider, eagerly opening up for the form of your prey.";
 	say "     With a mouthful of [name entry], you greedily gulp and swallow, taking in their wider shoulders and chest as your body begins to change to accommodate their form. Your neck bulges, showing the progress of your meal towards your gut, and the sensations only drive you to swallow again, their chest sliding down your throat as their hips come to rest in your mouth. Their rich, delicious flavor floods your tongue as their body slides over it, making your inner predator rumble happily. You pause to lick at their form a few times, before your greedy gullet makes you swallow again, pulling more and more of them in.";
-	say "     It only take a few minutes of hard swallowing before less and less of the defeated [name entry] remains outside your gaping maw. Their legs slowly slide in and followed lastly by their feet, your tongue licking at them as they disappear between your lips. Your neck and stomach bulge obscenely, showing off the size of the meal you've just eaten, as your throat muscles work to get all of them into your eager belly. The gurgles begin, and you feel the rapid progress of digestion starting up, your predatory nanites helping your body's natural processes greatly[if ( cocks of player > 0 or cunts of player > 0 ) and libido of player > 50]. Excited by what you've done, you slip a hand down to your crotch and start masturbating with one hand while rubbing your belly bulge with the other, taking perverse pleasure in what you've done[end if].";
+	say "     It only take a few minutes of hard swallowing before less and less of the defeated [name entry] remains outside your gaping maw. Their legs slowly slide in and followed lastly by their feet, your tongue licking at them as they disappear between your lips. Your neck and stomach bulge obscenely, showing off the size of the meal you've just eaten, as your throat muscles work to get all of them into your eager belly. The gurgles begin, and you feel the rapid progress of digestion starting up, your predatory nanites helping your body's natural processes greatly[if player is not neuter and libido of player > 50]. Excited by what you've done, you slip a hand down to your crotch and start masturbating with one hand while rubbing your belly bulge with the other, taking perverse pleasure in what you've done[end if].";
 	say "     In no time, your massively distended belly shrinks down, the prey inside being reduced into fuel for your body. The rush of the consumed creature flashes through your body, giving you a feeling of strength and pride. Gathering your things, you give your slightly rounded stomach a pat, thanking your foe for their contribution to your survival, and you head out into the city once again.";
 
 to say vorebyplayer03:		[special 1 - first time feet first, voluntary prey]
@@ -310,7 +310,7 @@ Chapter 4 - Hard Vore by Player
 to say hvorebyplayer00:	[master list to decide scenes]
 	choose row monster from the table of random critters;
 	if hvorecount is 0:
-		say "[hvorebyplayer01]";	[first hard vore scene]
+		say "[hvorebyplayer01]"; [first hard vore scene]
 	else if name entry is "Ram" and vorespecial1 is true and a random chance of 3 in 5 succeeds:
 		say "[hvbp_ram]";
 	else if name entry is "Ewe" and a random chance of 3 in 5 succeeds:
@@ -323,11 +323,11 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvbp_incubus]";
 	else if name entry is "Hermaphrodite Dolphin" and dolphintricked > 2 and a random chance of 3 in 5 succeeds:
 		say "[hvbp_dolphin]";
-	else if cocks of player > 0 and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
+	else if player is male and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer04]";
-	else if currentmonster is cocked and ( cunts of player > 0 or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
+	else if currentmonster is cocked and ( player is female or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer05]";
-	else if hvorecount is odd and currentmonster is cocked and ( cunts of player > 0 or anallevel > 1 ):
+	else if hvorecount is odd and currentmonster is cocked and ( player is female or anallevel > 1 ):
 		say "[hvorebyplayer02]";
 	else:
 		say "[hvorebyplayer03]";
@@ -351,7 +351,7 @@ to say hvorebyplayer01:
 		say "     You continue your meal at a more leisurely pace now, playing your tongue across your tasty meal's [if currentmonster is cocked and currentmonster is cunted]cock and cunny, savoring the mix of flavors[else if currentmonster is cocked]cock, enjoying teasing them to arousal[else if currentmonster is cunted]cunny, toying with [ghim] via a quick tonguefucking[else]bare groin[end if]. But your hunger won't be delayed for long, so you only tease [ghim] enough to get them all hot and bothered despite [ghis] precarious situation. Taking a few big gulps, your throat pulls the [name entry] down into your belly. You pat the rounded bulge your meal makes in your distended tummy as you feel your opponent's struggles weaken before stopping entirely. Soon afterwards, your belly starts to go down as you consume [ghis] body to satisfy your unnatural hunger.";
 		now hvorelevel is 1;
 		say "[bracket]Hard Vore is now off. This setting can be changed in the [bold type]vore menu[roman type].[close bracket][line break]";
-	now hvoreoffer is true;		[prevents later auto-offer]
+	now hvoreoffer is true; [prevents later auto-offer]
 
 to say hvorebyplayer02:
 	choose row monster from the table of random critters;
@@ -432,7 +432,7 @@ to say hvbp_ewe:
 		now wolfcheck is true;
 	else:
 		say "     'You look pretty tasty, my little lamb chop,' you say, continuing to grope and manhandle her.";
-		say "     '[one of]Please. Please. I'm just so lonely and horny,' she bleats[or][if player is male]I just need it so bad. Please won't you fuck me?' she moans with need[else]I... I... I didn't mean it. I was just so horny,' she bleats[end if][or]I'm sorry[if wolfcheck is true and cunts of player is 0], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if]. I didn't mean to upset you. I'll j-j-just be going now,' she whimpers[or][if wolfcheck is false]Please. I just need someone for a little while,' she moans, grinding her hips up[else]No-no-no-no,' she bleats fearfully, your lupine aggression frightening her[end if][if cocks of player > 0 and wolfcheck is true]I j-j-just need a fuck so bad. Even one from a w-w-wolf,' she bleats, torn between her fear and her need[else if wolfcheck is true]I j-j-just need to get off so bad. Even with a w-w-wolf,' she bleats, torn between her fear and her need[else if player is male]I just need a fuck so bad. Aren't I pretty enough to fuck?' she bleats, sexily rubbing her hands over her fluffy body[else]I just need to get off so bad. Please, let's just cuddle for a little while,' she bleats, sexily rubbing her hands over her fluffy body[end if][at random].";
+		say "     '[one of]Please. Please. I'm just so lonely and horny,' she bleats[or][if player is male]I just need it so bad. Please won't you fuck me?' she moans with need[else]I... I... I didn't mean it. I was just so horny,' she bleats[end if][or]I'm sorry[if wolfcheck is true and cunts of player is 0], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if]. I didn't mean to upset you. I'll j-j-just be going now,' she whimpers[or][if wolfcheck is false]Please. I just need someone for a little while,' she moans, grinding her hips up[else]No-no-no-no,' she bleats fearfully, your lupine aggression frightening her[end if][if player is male and wolfcheck is true]I j-j-just need a fuck so bad. Even one from a w-w-wolf,' she bleats, torn between her fear and her need[else if wolfcheck is true]I j-j-just need to get off so bad. Even with a w-w-wolf,' she bleats, torn between her fear and her need[else if player is male]I just need a fuck so bad. Aren't I pretty enough to fuck?' she bleats, sexily rubbing her hands over her fluffy body[else]I just need to get off so bad. Please, let's just cuddle for a little while,' she bleats, sexily rubbing her hands over her fluffy body[end if][at random].";
 	WaitLineBreak;
 	if player is male:
 		say "     Having grown aroused, you sink your [cock of player] cock into her mutton muff, drawing a baaing moan of delight and relief. Your hunger won't be denied long, but a little fun before your meal seems acceptable. You pant heavily and start thrusting, pounding her juicy snatch. Still fondling her breasts, you lean in and start licking at them and sucking on her nipples. Her cunny quivers around your shaft as it slides into that hot, wet tunnel of hers over and over again.";
@@ -446,7 +446,7 @@ to say hvbp_ewe:
 		else:
 			setmonster "[bodyname of player]";
 		choose row monster from the table of random critters;
-	else if ( "Male Preferred" is listed in feats of player or bodyname of player is "Ram" or cocks of player > 0 ) and guy is not banned:
+	else if ( "Male Preferred" is listed in feats of player or bodyname of player is "Ram" or player is male ) and guy is not banned:
 		setmonster "Ram";
 		choose row monster from the table of random critters;
 
@@ -525,7 +525,7 @@ Chapter 5 - UB by Player
 
 to ubbyplayer:
 	choose row monster from the table of random critters;
-	say "[ubbyplayer00]";		[Master ub scene]
+	say "[ubbyplayer00]"; [Master ub scene]
 	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipreglevel is 3]even as they are being encased in a protective shell[else]as they bond to your imprisoning womb via a rapidly forming placenta[end if]. With the [name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now. The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
 	decrease humanity of player by 3;
 	now gestation of child is a random number between 8 and 16;

@@ -19,9 +19,9 @@ To say latex wolf loses:
 to say RegularLatexWolfLoses:
 	if libido of player <= 50:
 		Say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
-	if libido of player > 50 and cocks of player > 0:
+	if libido of player > 50 and player is male:
 		Say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
-	if libido of player > 50 and cocks of player is 0 and cunts of player > 0:
+	if libido of player > 50 and cocks of player is 0 and player is female:
 		Say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
 	if HP of Bradford is 3:
 		if bradfordbounty > 0:
@@ -40,9 +40,9 @@ To say latex wolf wins:
 To say RegularLatexWolfWins:
 	if ( a random chance of 1 in 4 succeeds or ( player is kinky and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
 		say "     As you go down in front of the wolf creature, [if HP of player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if cocks of player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if cocks of player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if cunts of player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginae quiver with arousal[else if cunts of player is 1]. The goo forms phallic bulges that are pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
-		say "     As your body is subject to this abuse, the black goo continues to spread over you, covering your [bodydesc of player] body and over your [facename of player] head. Your head is engulfed and your mouth and nose covered in flowing latex, cutting off your air supply momentarily. As you begin to grow woozy from lack of oxygen, an air passage is opened and you are allowed to breathe. Having seized control of your [bodytype of player] body, the latex wolf works its flowing, rubbery goo over [if cunts of player > 0 or anallevel > 1]and inside [end if]your flesh, using your body for its own pleasure. It eventually cums, spraying gooey black semen [if cunts of player > 0 or anallevel > 1]inside you[else]over you[end if][if player is male] while pumping out your own seed onto the ground. Your balls drained, it sends a tendril of black goo flowing along your urethra and flowing into your testes, claiming them with its own dark cum until they're full and swollen with it[end if].[impregchance]";
+		say "     As your body is subject to this abuse, the black goo continues to spread over you, covering your [bodydesc of player] body and over your [facename of player] head. Your head is engulfed and your mouth and nose covered in flowing latex, cutting off your air supply momentarily. As you begin to grow woozy from lack of oxygen, an air passage is opened and you are allowed to breathe. Having seized control of your [bodytype of player] body, the latex wolf works its flowing, rubbery goo over [if player is female or anallevel > 1]and inside [end if]your flesh, using your body for its own pleasure. It eventually cums, spraying gooey black semen [if player is female or anallevel > 1]inside you[else]over you[end if][if player is male] while pumping out your own seed onto the ground. Your balls drained, it sends a tendril of black goo flowing along your urethra and flowing into your testes, claiming them with its own dark cum until they're full and swollen with it[end if].[impregchance]";
 		say "     Weak and thoroughly used by the wolf creature, you are left lying on the ground as it flows off of you, much of its tainted latex having bonded with you. You can feel it sinking into your [bodytype of player] body, seeking to make you like itself.";
-		if cocks of player > 0 and cock width of player < 6, increase cock width of player by 1;
+		if player is male and cock width of player < 6, increase cock width of player by 1;
 		decrease humanity of player by a random number between 2 and 4;
 		infect "Latex Wolf";
 	else:
@@ -82,9 +82,9 @@ When Play begins:
 	now defeated entry is "[latex wolf loses]";
 	now victory entry is "[latex wolf wins]";
 	now desc entry is "[mongendernum 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[else]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
-	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as the text "You have (your text) skin."]
+	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "Thin and black, your tail whips back and forth behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "deep red with a canine knot towards the bottom"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose elongates, growing into a muzzle as your teeth sharpen"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -165,7 +165,7 @@ to say lwmast2:
 Section 4 - Endings
 
 when play ends:
-	if the bodyname of the player is "Latex Wolf":
+	if bodyname of player is "Latex Wolf":
 		if humanity of player < 10:
 			say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical. ";
 			if intelligence of player < 16 or dexterity of player < 24:

@@ -365,7 +365,7 @@ instead of fucking Boghrim:
 	LineBreak;
 	project the figure of Boghrim_naked_icon;
 	setmonster "Orc Warrior";
-	if cocks of player is 0 or cockname of player is not "Orc Warrior" or player is not pure:
+	if player is not male or cockname of player is not "Orc Warrior" or player is not pure:
 		say "     You're currently not quite 'man enough' to have sex with Boghrim. Brazenly approaching the mighty orc right in the middle of the drinking hall and under the eyes of the gathered orcs... seems something that only a true orc warrior would do - which you're not... right now.";
 	else:
 		now sextablerun is 0;
@@ -875,7 +875,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Orc Boss";[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Orc Boss"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]Boghrim[or]The powerful orc[or]The green-skinned brute[or]The muscular orc[or]The brutish orc[or]The muscled brute[at random] [one of]throws himself on you, pushing you down on the mattress. You can feel his erect cock rub against your side hotly before you manage to wind your way out of his grasp.[or]gets a grip on your shoulder and pushes you down, putting you on all fours with your ass raised. When you feel one of this thick fingers brush over your asshole an eye-blink later, you barely manage to crawl away before he starts to finger-fuck you.[or]grabs you by the neck, pulling your head down against his crotch. His cock rests hotly against your cheek for a moment, leaving a string of precum when you manage to pull away.[or]gives you a light slap that dazes you for a second, then lets his large hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";
 	now defeated entry is "[line break]";
 	now victory entry is "[line break]";
@@ -904,7 +904,7 @@ When Play begins:
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

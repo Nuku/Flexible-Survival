@@ -34,15 +34,15 @@ When Play begins:
 	now victory entry is "[jackalboy attack]";
 	now desc entry is "The jackalboy is watching you!!";
 	now face entry is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's"; [You have a (your text) face."]
-	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal-like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "You have a sleek, black-furred jackal's tail attached to your rear, swaying happily over your tight and sexy ass with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "Your face tingles as your mouth pushes forward into a sleek black muzzle, and your eyes blur as they shift in both color and position. New sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears complete shifting into proper canine ears, swiveling around on top of your head like a proper jackal's"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it seems to slim down, its form becoming both sleek and slim as it seems to shorten slightly. You can feel your legs shift and change as well, causing you to stumble for a minute as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet. Soon your feet finish their transformation and you find yourself balancing easily on your new jackal-like paws, as you stand on your slender digitigrade legs"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a soft tingling sensation spreads across your body and soft, sleek, black jackal fur begins to push its way out of it. The fur quickly covers your body in a sexy coat of short dark fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a strange tingling sensation seems to grow in your rear. It softens and flattens somewhat, then with a soft pulling sensation you feel a thin black canine tail slowly extend from your tailbone, lengthening until it is down past your knees before the changing stops"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "its shaft thins and changes, the tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal-like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "You have a sleek, black-furred jackal's tail attached to your rear, swaying happily over your tight and sexy ass with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "Your face tingles as your mouth pushes forward into a sleek black muzzle, and your eyes blur as they shift in both color and position. New sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears complete shifting into proper canine ears, swiveling around on top of your head like a proper jackal's"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it seems to slim down, its form becoming both sleek and slim as it seems to shorten slightly. You can feel your legs shift and change as well, causing you to stumble for a minute as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet. Soon your feet finish their transformation and you find yourself balancing easily on your new jackal-like paws, as you stand on your slender digitigrade legs"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "a soft tingling sensation spreads across your body and soft, sleek, black jackal fur begins to push its way out of it. The fur quickly covers your body in a sexy coat of short dark fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a strange tingling sensation seems to grow in your rear. It softens and flattens somewhat, then with a soft pulling sensation you feel a thin black canine tail slowly extend from your tailbone, lengthening until it is down past your knees before the changing stops"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "its shaft thins and changes, the tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 20;
 	now sta entry is 10;
@@ -51,26 +51,25 @@ When Play begins:
 	now cha entry is 26;
 	now sex entry is "Male"; 						[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 100;
-	now lev entry is 10;								[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 20;								[ Amount of Damage monster Does when attacking.]
-	now area entry is "Shop";						[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;					[ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;					[ Size of balls ]
-	now breasts entry is 0;							[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;					[ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 10; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 20; [ Amount of Damage monster Does when attacking.]
+	now area entry is "Shop"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls ]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 0;
 	now cunt width entry is 0;
-	now libido entry is 30;							[ Amount player Libido will go up if defeated ]
-	now loot entry is "";								[ Loot monster drops, ]
-	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;								[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is ""; [ Loot monster drops, ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]slender[at random]";
-	now type entry is "canine";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;						[ Is this a magic creature? true/false (normally false) ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is true;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

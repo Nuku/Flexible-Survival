@@ -20,7 +20,7 @@ to say quilledtouskydesc:
 
 
 to say losetoquilledtousky:
-	if cunts of player > 0 and a random chance of 1 in 3 succeeds:
+	if player is female and a random chance of 1 in 3 succeeds:
 		say "     The quilled tousky bounds over to your prone form, and attempts to lick your face. His ungainly beak interferes, and he simply winds up affectionately clonking you upside the head with it. 'Marp!' he joyfully exclaims, as if clumsily smacking his beak into you is an event worthy of triumphant celebration. As he's doing this, he ends up grinding his sheath against you, coaxing his stiffening cock out. He starts to his feet, as if surprised to have this pulsing red rod of canine cock protruding from himself. He leans in and grinds against you further, tongue lolling out.";
 		say "     When this confusing creature's cock bumps against your pussy, he ends up inadvertently sinking it into you. He gives a long, moaning 'marrrrpppp' and starts humping you in earnest. You moan and even marp back to him as he pounds into you. Pleased with this new game you're showing him, he tries to lick your face some more, resulting in several more bonks from his beak and splatters of drool from his canine tongue. Clearly not getting this kind of fun too often, the strange hybrid doesn't last long and pumps his hot load into your cunt. Panting, he pulls out, dribbling the last of his seed across your thigh.[ovichance]";
 		say "     He bounces in a circle around you for a bit before hearing something in the distance and running off towards it, tripping over his own paws as he starts running while mid-bounce. What an odd creature.";

@@ -23,7 +23,7 @@ Instead of resolving a Tight Fit:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -77,7 +77,7 @@ Instead of resolving a Tight Fit:
 		say " [if scalevalue of player is 3]to squirm in and out of[else if scalevalue of player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
 		let bonus be ( the dexterity of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		if scalevalue of player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -108,7 +108,7 @@ Instead of resolving a Protected Supplies:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -146,13 +146,13 @@ Instead of resolving a Protected Supplies:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
 					next; [skips if day/night doesn't match]
 			add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and facename of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and facename of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
@@ -254,7 +254,7 @@ Instead of resolving a Dented Bike:
 	let difficulty be a random number from 8 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice > difficulty:
@@ -287,7 +287,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -298,7 +298,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -310,7 +310,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -323,7 +323,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be a random number from 10 to 18;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( strength of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		if crowbar is owned:
 			increase bonus by 3;
 			let x be 1;
@@ -350,7 +350,7 @@ Instead of resolving a Abandoned Cars:
 	let difficulty be a random number from 8 to 15;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( strength of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	if crowbar is owned:
 		increase bonus by 3;
 		let x be 1;
@@ -402,7 +402,7 @@ Instead of resolving a Plains Scavenging:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -458,7 +458,7 @@ Instead of resolving a Plains Scavenging:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -495,7 +495,7 @@ Instead of resolving a Plains Scavenging:
 		else:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
-			if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+			if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
@@ -582,7 +582,7 @@ Instead of resolving a Free Drink:
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
 			now winefound is 2;
-		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
+		if bodyname of player is "Satyr" and player is pure and player is male:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			LineBreak;
 			say "     Do you go with the satyrs?";
@@ -647,7 +647,7 @@ Instead of resolving a Patient Rooms:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -689,7 +689,7 @@ Instead of resolving a Patient Rooms:
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
 		increase dice by bonus;
@@ -724,7 +724,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
@@ -737,7 +737,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
 		increase dice by bonus;
@@ -752,7 +752,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;

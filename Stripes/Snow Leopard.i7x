@@ -78,7 +78,7 @@ to say beatthesnowmeow:
 		now title entry is "Ride him";
 		now sortorder entry is 3;
 		now description entry is "get that cock of his in you";
-		if cunts of player is 0 and player is submissive:
+		if player is not female and player is submissive:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal doggy style";
 			now sortorder entry is 4;
@@ -162,21 +162,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Snow Leopard"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The agile feline slashes at you with his sharp claws![or]The snow leopard tries to bear you down under his weight. You barely scramble free, but are scratched up in the process![or]The snowmeow manages to bite your shoulder![or]The snowmeow knees your firmly in the breadbasket![or]The creature digs his claws into you, but you painfully pull free of its pointy grip![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthesnowmeow]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetosnowmeow]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Snow Leopard"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The agile feline slashes at you with his sharp claws![or]The snow leopard tries to bear you down under his weight. You barely scramble free, but are scratched up in the process![or]The snowmeow manages to bite your shoulder![or]The snowmeow knees your firmly in the breadbasket![or]The creature digs his claws into you, but you painfully pull free of its pointy grip![at random]"; [ Successful attack message ]
+	now defeated entry is "[beatthesnowmeow]"; [ Text when monster loses. ]
+	now victory entry is "[losetosnowmeow]"; [ Text when monster wins. ]
 	now desc entry is "[snowmeowdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "feline in form, with leopard-like marking across it"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a short, but agile feline. Your hands are paw-like, and your fingers end in sharp claws. Your body does not seem well-suited to the hot weather hanging over the city"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "thick, fluffy fur. It is a snowy white and ash gray in color, with a leopard-like pattern across it. Your thick coat does not help with the southern sun as your pelt warms your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have the thickly furred, luxuriously beautiful tail of a snow leopard."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "gray"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "a short muzzle forms and your face takes on a more feline shape. Soon your head is that of a sexy snow leopard"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it shifts and changes. You become more feline in form as you become below average in height, about five feet tall. Your hands tingle and throb as they reshape into paw-like hands complete with sharp claws. As you change, you can feel the summer heat of the city bearing down on you even more"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you gain a thick coat of luxurious fur. The lovely snow leopard fur covers you, soft and fluffy. It is very warm as well, you notice, making you notice the city's heat all the more"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a fluffy, feline tail forms. It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "takes on an even, gray hue. Your glans shifts shape slightly, becoming something between a man and a feline's in shape"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "feline in form, with leopard-like marking across it"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a short, but agile feline. Your hands are paw-like, and your fingers end in sharp claws. Your body does not seem well-suited to the hot weather hanging over the city"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "thick, fluffy fur. It is a snowy white and ash gray in color, with a leopard-like pattern across it. Your thick coat does not help with the southern sun as your pelt warms your"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have the thickly furred, luxuriously beautiful tail of a snow leopard."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "gray"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "a short muzzle forms and your face takes on a more feline shape. Soon your head is that of a sexy snow leopard"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it shifts and changes. You become more feline in form as you become below average in height, about five feet tall. Your hands tingle and throb as they reshape into paw-like hands complete with sharp claws. As you change, you can feel the summer heat of the city bearing down on you even more"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "you gain a thick coat of luxurious fur. The lovely snow leopard fur covers you, soft and fluffy. It is very warm as well, you notice, making you notice the city's heat all the more"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "a fluffy, feline tail forms. It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "takes on an even, gray hue. Your glans shifts shape slightly, becoming something between a man and a feline's in shape"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 15;
 	now dex entry is 20;
 	now sta entry is 14;
@@ -191,7 +191,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 11; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 11; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 6; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 7; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

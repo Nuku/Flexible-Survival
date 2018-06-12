@@ -64,7 +64,7 @@ Instead of Resolving a Old Record Store:
 			say "     Not knowing what's going on, but not liking this craziness anymore, you decide to split while the getting's good. Rushing out of the front door, the old boombox in hand, you make your way down the street and back to the bunker at top speeds. Behind you, the door to the music shops quietly shuts and then locks itself, but only after the figure of an old man walks by the window. Obviously, you've just been become the butt of someone's elaborate prank... right?";
 			now BoomBox is in the Bunker;
 			now battleground is "void";
-			move the player to the Bunker;
+			move player to the Bunker;
 			now Old Record Store is resolved;
 		else:
 			LineBreak;

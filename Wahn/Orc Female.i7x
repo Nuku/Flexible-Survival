@@ -413,7 +413,7 @@ When Play begins:
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 4;        [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 6;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -866,7 +866,7 @@ to say KatyaSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Sink your manhood into the orc's ass";
 	[]
-	if cunts of player > 0 and KatyaRelationship > 4:
+	if player is female and KatyaRelationship > 4:
 		choose a blank row in table of fucking options;
 		now title entry is "69 and scissor with her";
 		now sortorder entry is 6;

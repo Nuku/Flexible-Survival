@@ -13,7 +13,7 @@ when play begins:
 dronevict is a number that varies.
 
 to say beatthedrone:
-	if dronevict > 2 and libido of player > 33 and a random chance of dronevict in 5 succeeds and ( cunts of player > 0 or cocks of player > 0 ):
+	if dronevict > 2 and libido of player > 33 and a random chance of dronevict in 5 succeeds and ( player is not neuter ):
 		say "     Having knocked down the wasp girl, you make a grab for her before she can get away. Now that you've caught this cute little thing, you need to decide what you'll do with her. Shall you put her honeyed lips to work or just let her go?";
 		if player consents:
 			if player is male:
@@ -39,21 +39,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Drone Wasp"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Drone Wasp"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body, causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]";
 	now defeated entry is "[beatthedrone]";
 	now victory entry is "[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before fluttering off to brag to her sisters.[or]The drone pins you down to the ground and grins, forcing your lips against her sex as she rubs her small mound against you. She moans softly as you're forced to pleasure her, lapping along her slick honeypot until she finally cums. Satisfied, the wasp giggles to herself and flies off as quickly as she came.[at random]";
 	now desc entry is "[mongendernum 4]A small, shy of four feet, wasp-like girl with delicate, buzzing wings on her back. Her skin is yellow with brown markings and a short, soft layer of fuzz. Her hands have only three fingers and small claws at the end of each digit. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face is mostly human with cute, short, brown/blond hair. She looks at you with a soft smile on her lips, buzzing left and right.";
-	now face entry is "charmingly human"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "black and brown striped"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "normal"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your face tingles softly, but not much physically changes from the human norm, except that it is now cute and female looking."; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free."; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin changes color, changing to yellow and brown, the striped markings covering your body."; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel something internal shifting around."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "you feel something internal shifting around."; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "charmingly human"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "black and brown striped"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "normal"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "your face tingles softly, but not much physically changes from the human norm, except that it is now cute and female looking."; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free."; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "your skin changes color, changing to yellow and brown, the striped markings covering your body."; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel something internal shifting around."; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "you feel something internal shifting around."; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 10;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
@@ -68,7 +68,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

@@ -42,10 +42,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Black Wolf"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "Andrew's a lover, not a fighter."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheblackwolf]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoblackwolf]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Black Wolf"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "Andrew's a lover, not a fighter."; [ Successful attack message ]
+	now defeated entry is "[beattheblackwolf]"; [ Text when monster loses. ]
+	now victory entry is "[losetoblackwolf]"; [ Text when monster wins. ]
 	now desc entry is "[blackwolfdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "rather lupine in form, with an elongated muzzle, pointed ears and a wolfish face. Your features are rather soft and friendly though, even somewhat sexy. You have rather pretty, violet eyes";
 	now body entry is "altered to have paw-like hands and digitigrade feet to go along with its otherwise rather normal build. It does possess a rather attractive, even sexy quality to it that's hard to pin down to anything specific though";

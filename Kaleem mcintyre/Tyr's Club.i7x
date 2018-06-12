@@ -87,13 +87,13 @@ Instead of fucking the Tyr:
 					say "[TyrLost_Neuter]";
 		else:
 			now TyrDefeated is 0;
-			if a random chance of 2 in 6 succeeds and cunts of player > 0:
+			if a random chance of 2 in 6 succeeds and player is female:
 				say "[TyrWon_Cunnilingus]";
-			else if a random chance of 1 in 6 succeeds and cunts of player > 0:
+			else if a random chance of 1 in 6 succeeds and player is female:
 				say "[TyrWon_Training]";
 			else if player is female:
 				say "[TyrWon_Vaginal]";
-			else if cocks of player > 0 and cunts of player is 0 and ( a random chance of 2 in 5 succeeds or ( anallevel is 3 and a random chance of 1 in 3 succeeds ) ):
+			else if player is puremale and ( a random chance of 2 in 5 succeeds or ( anallevel is 3 and a random chance of 1 in 3 succeeds ) ):
 				say "[TyrWon_AnalPlay]";
 			else:
 				say "[TyrWon_NoSex]";
@@ -150,7 +150,7 @@ to TyrSexMenu:
 		now title entry is "Lose: Training massage";
 		now sortorder entry is 15;
 		now description entry is "let him win and do some training.";
-	if cocks of player > 0 and cunts of player is 0:
+	if player is puremale:
 		if anallevel is 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Anal play + hand job";

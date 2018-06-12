@@ -51,7 +51,7 @@ Instead of fucking Urik:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job";
 		[]
-		if (lust of Urik > 0 and cocks of player > 0):
+		if (lust of Urik > 0 and player is male):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;

@@ -44,10 +44,10 @@ to say sierradesc:
 		if hermaphrodite is banned:
 			add { "Sierrasaur" } to infections of guy;
 			now sierramale is true;
-			setmongender 3;		[creature is male]
+			setmongender 3; [creature is male]
 		else:
 			add { "Sierrasaur" } to infections of hermaphrodite;
-			setmongender 7;		[creature is mherm]
+			setmongender 7; [creature is mherm]
 		if sierramem is 0:
 			say "     You happen upon what - at first - appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[else if scalevalue of player is 4]only slightly larger[else]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
 			now sierramem is 1;
@@ -85,7 +85,7 @@ to checkboundrecover:
 	if a random chance of recoverchance in 9 succeeds:
 		now boundrecover is true;
 		now recoverchance is -1;
-	if "Sanity Saver" is listed in the feats of the player, now humanity of player is 100;
+	if "Sanity Saver" is listed in the feats of player, now humanity of player is 100;
 
 to sierrabind:
 	now lustatt is libido of player;
@@ -101,7 +101,7 @@ to sierrabind:
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the firm flesh[else if player is female]cunt throbbing firmly against the firm flesh[else]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the firm flesh[else if player is female]cunt throbbing firmly against the firm flesh[else]a particularly trying task given your lack of outlet[end if][if player is male and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if enduring is true:
@@ -289,7 +289,7 @@ to sierrasex:
 	if sierramem is 1:
 		say "     Having a clearer view of the reptile's underside, [if sierramale is true]you're exposed to their previously obscured genitalia[else]it appears to be some manner of hermaphrodite[end if]. Large, blunt-headed and fairly rounded cock bobbing subtly before you, you quickly get the impression that this tool is never not hard, even as you don't get the impression it's particularly aroused at this moment. Its base acts the starting point to a fairly defined, taut cleft, appearing to be a firm and unyielding [if sierramale is true]anal cloaca[else]bestial vent of a cunt[end if].";
 		now sierramem is 2;
-	if cunts of player > 0 and cunt length of player > 5 and ((boundstate is true and a random chance of 1 in 8 succeeds) or (boundstate is false and a random chance of 1 in 6 succeeds)):
+	if player is female and cunt length of player > 5 and ((boundstate is true and a random chance of 1 in 8 succeeds) or (boundstate is false and a random chance of 1 in 6 succeeds)):
 		say "     Not particularly graceful in its motion, it shamelessly prods your exposed cunt with its rock-hard dick. [if HP of player < 1]Not particularly inclined to be on the receiving end of it, you deliberately make it difficult for the creature to progress, which only forces it to lay on top of you, pinning you down before shoving[else]Once it gets it aim right, it shoves[end if] its tool past your supple folds. [if sierrapure is true]Fairly rough the organ may be, your similar strain is resilient enough to only make it more pleasurable for you[else]Considering how rough and unyielding the organ is, this is a fairly uncomfortable ordeal until it's eventually lubricated by its copious precum[end if][if player is male], cock[smn] soon driven to attention as well[else if cunts of player > 2], unattended cunts soon aching with need as well[else if cunts of player is 2], unattended cunt soon aching with need as well[end if], forcing a moan free from your lips.";
 		increase lustatt by 45 + (lustadjust * 10);
 		say "     Its initial thrusts are slow and ponderous, though this is of only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly being to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ last time";
@@ -429,7 +429,7 @@ When Play begins:
 	now int entry is 8; [8]
 	now cha entry is 10; [10]
 	now sex entry is "Both";
-	now HP entry is 155;	[155]
+	now HP entry is 155; [155]
 	now lev entry is 9; [9]
 	now wdam entry is 7; [7]
 	now area entry is "Plains"; [Plains]
@@ -489,9 +489,9 @@ when play ends:
 		if humanity of player < 10:
 			if voreloss is true:
 				say "     Succumbing from inside the reptile, you eventually grow obsessively fond of these twisted confines. Though you never grow to full size, you nonetheless remain ever tended to by your parental kin, leaving your new home only to be fed ";
-				if (cunts of player > 0 or player is mpreg_ok) and "Sterile" is not listed in feats of player:
+				if (player is female or player is mpreg_ok) and "Sterile" is not listed in feats of player:
 					say "and give birth to the beast's offspring";
-				else if cocks of player > 0 and sierramale is false:
+				else if player is male and sierramale is false:
 					say "and sire the beast's offspring";
 				say ".";
 				say "     Over time, the creature's pack grows in size, leaving you with others to deal with";
@@ -503,13 +503,13 @@ when play ends:
 			else:
 				say "     Overwhelmed by your infection you eventually lose all self control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
 				say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, that your new companion succumbs as you had, eventually offering itself ";
-				if cocks of player > 0 and ((cunts of player > 0 or player is mpreg_ok) and "Sterile" is not listed in feats of player) and sierramale is false:
+				if player is male and ((player is female or player is mpreg_ok) and "Sterile" is not listed in feats of player) and sierramale is false:
 					say "to sire your children";
 					if sierramale is true:
 						say " and you to sire its";
-				else if cocks of player > 0 and sierramale is false:
+				else if player is male and sierramale is false:
 					say "for you to sire its children";
-				else if (cunts of player > 0 or player is mpreg_ok) and "Sterile" is not listed in feats of player:
+				else if (player is female or player is mpreg_ok) and "Sterile" is not listed in feats of player:
 					say "to sire your children";
 				else:
 					say "to satisfy you on a whim and help you find more to be brought into the fold";

@@ -21,7 +21,7 @@ to say losetorodeoclown:
 		increase libido of player by 6;
 		if libido of player > 100, now libido of player is 100;
 		say "     With your drink in you, you feel rather muddleheaded and horny, submitting to the strange creature as she runs her hands over you, sliding off your clothes and pack. ";
-		if (cocks of player > 0 and cunts of player is 0) or (player is herm and a random chance of 1 in 2 succeeds):
+		if (player is puremale) or (player is herm and a random chance of 1 in 2 succeeds):
 			say "     She runs her hand down to your hard cock and takes a hold of it, guiding you further into her arms with the other. Glancing down, you can see that under her above average cock is a huge pussy, wide, wet and waiting. With one hand on your cock and the other pulling at your ass, she gets you into position and takes your penis into her with one easy thrust.";
 			say "     You moan and rock your hips, having trouble focusing your milk-addled mind on anything more than thrusting into that smooth, slick hole. Her pussy, clearly wide enough to take in even the largest steer to calm it, somehow still manages to grip your shaft nicely[if cock length of player > 18 or cock width of player > 12]. Even your huge meat is able to fully fit in her, simply stretching out her cartoony, rubbery body, to her great delight[end if]. Being so very horny despite your calmness, you fuck her at hard, like a wild bull or angry bronco, much to her delight. She is moaning and pushing into your thrusts with yells of 'Yee-haw!' and 'Ride [']em, cowboy!' as she waves her stetson in the air and slaps your backside with it. When you finally cum, you drive your cock fully into her and unleash your hot seed[if cock width of player > 12]. Your huge balls pump their supply of semen into her, bloating her tummy delightfully full and plump[end if]. When your hips finally come to rest with your balls empty, you drift further into your milky haze and pass out as you see the pleased rodeo clown walking off, stroking her cum-filled tummy.";
 		else:
@@ -80,7 +80,7 @@ When Play begins:
 	now cock entry is "[one of]smoothly pink[or]evenly pink[or]almost human[or]smooth[at random]";
 	now face change entry is "your head reshapes itself into something almost human. A broad smile forms on your lips and your hair becomes long and brown, held in a ponytail";
 	now body change entry is "it thankfully becomes human in shape. But closer scrutiny shows that it is not quite right in how it all moves";
-	now skin change entry is "you gain smooth, pink skin. There is a coolness over your face, spreading across your lips and around your eyes as permanent rodeo clown marking are added. Strange tingles spread across your unusually smooth, pink flesh as a layer of loose, colorful clothing grows to cover your body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "you gain smooth, pink skin. There is a coolness over your face, spreading across your lips and around your eyes as permanent rodeo clown marking are added. Strange tingles spread across your unusually smooth, pink flesh as a layer of loose, colorful clothing grows to cover your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it becomes shrinks and becomes a tight little rump, then swells almost cartoonishly into a plump and padded rear end";
 	now cock change entry is "reforms into the shape of a human penis. It is very smooth and evenly pink, in a tone that's almost right, but a little too bright for normal flesh";
 	now str entry is 12;
@@ -97,7 +97,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

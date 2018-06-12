@@ -32,7 +32,7 @@ to say Helot wins:
 			WaitLineBreak;
 			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
-		else if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0: [Spartan females + herms]
+		else if bodyname of player is "Spartan" and facename of player is "Spartan" and player is female: [Spartan females + herms]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all.' Looking downward, he notices that even though you do have a male body, there is a pussy between your legs. 'Oh wait - you aren't a Spartan boy after all. What were you thinking coming here, girl? Not that it matters now... gonna pound that pussy!' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get me ready, little Spartan,' he says tauntingly, holding out his erection and grinning widely as you have to crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I promised you I'll fuck you. Get on your back, girlie.' Stepping back, he leers at you in lust as you move to lie down on your red cloak. Your captor moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pussy lips, he says 'Look me in the eye when I fuck you like a common slave! Admit it, this is what you wanted all along!' Then he thrusts into you with a satisfied grunt, burying his hard shaft in your vagina. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting to be the Spartan's slave with that realization, you grind back against him, moaning deeply as his cock rubs your insides. Slamming forward with powerful thrusts, the young warrior's hips hitting yours with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you, splashing into your womb. You can feel his hard shaft pulse against your inner walls with each further burst of cum. 'Feel that, you Spartan bitch? That's a former slave's load filling you. Try to explain that to your family!'[fimpregchance]";
@@ -161,7 +161,7 @@ to say Helot loses:
 
 to say Helot ride:
 	say "     Spreading the dropped loincloth a bit on the ground with your foot so he at least has something under his ass, you tell the young man to lie down. He obeys your commands quickly and without hesitation, looking pretty good with his toned body stretched out and the long hard cock standing erect, waiting for your pleasure.";
-	if (cocks of player > 0) or (player is herm and anallevel > 1): [male + herm (except those with less anal)]
+	if (player is male) or (player is herm and anallevel > 1): [male + herm (except those with less anal)]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Helot's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
@@ -228,13 +228,13 @@ When Play begins:
 	now desc entry is "[HelotDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. Your wear but a pair of sandals and a pretty ragged loincloth of faded cloth";
-	now skin entry is "smooth, sun-bronzed";[ format as the text "You have (your text) skin"]
-	now tail entry is "You have a tight, firmly muscled butt.";[ write a whole Sentence or leave blank. ]
-	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "it is reshaped into a that of a young man, muscular, but with a lean build. Looking down, you notice sandals on your feet and a ragged loincloth around your hips - where did those come from?"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it smoothes out, becoming almost hairless and sun-bronzed"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)" ]
+	now skin entry is "smooth, sun-bronzed"; [ format as "You have (your text) skin"]
+	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
+	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a that of a young man, muscular, but with a lean build. Looking down, you notice sandals on your feet and a ragged loincloth around your hips - where did those come from?"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it smoothes out, becoming almost hairless and sun-bronzed"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 16;
@@ -252,7 +252,7 @@ When Play begins:
 	now cock width entry is 5;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 0;
 	now cunt width entry is 0;
@@ -260,7 +260,7 @@ When Play begins:
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "lean";[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now body descriptor entry is "lean"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
@@ -283,7 +283,7 @@ when play ends:
 				else: [didn't have sex with a Spartan - succumbs to horsemen]
 					say "Finding survival out alone in the city difficult, you struggle through every day as good as you can. One day you only barely escape a hunting wyvern, with it totally devastating your hideout and any supplies you couldn't grab on the way out. Running through the streets, you find yourself shelter-less and alone. As you later sit in an alley, eating a soggy bag of chips in the rain, the idea comes to you that maybe being a slave to a good master who takes care of you wouldn't be so bad after all...";
 					say "That thought still in your head after a wet and cold night in the alley, you decide to do it and go looking for someone. A patrol of horsemen crossing your path a few hours later seems a good choice. Stepping into their path openly, you wait till they approach, being a bit surprised that you aren't trying to run or fight. Selecting a handsome Clydesdale Stud from their number, you walk up to him and offer yourself to him, reaching out to caress his crotch. Lincoln, the horseman, is pleasantly surprised and accepts, making you blow all his buddies to celebrate. You're brought to the stables as the new stable-boy... and stable-toy of the handsome horseman, and over time a deep affection grows between the two of you. Interestingly, you never change even after weeks of intimate contact, giving Lincoln the raised status of having a human all of his own.";
-					if cunts of player > 0 and "Sterile" is not listed in feats of player: [has a vag, not sterile]
+					if player is female and "Sterile" is not listed in feats of player: [has a vag, not sterile]
 						say "Having a vagina, no matter what the rest of your appearance says about your gender, it's only a question of time until the seed your master shoots into your womb daily takes root. Your belly soon swells larger and larger with the developing foal within, and several days later you give birth to a beautiful little colt...";
 					else if player is mpreg_ok and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
 						say "Given your changed physiology, it's only a question of time until the seed your master shoots into your ass daily takes root. Your belly soon swells larger and larger with the developing foal within, and several days later you give birth to a beautiful little colt...";

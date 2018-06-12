@@ -40,7 +40,7 @@ to say Yamato Dragon attack:
 			say "     '[one of]Very wise to back down, little one, lest you make a fool of yourself[or]You are not as foolish a little thing as I had expected.[run paragraph on] Very well[or]I see your need is just as great as mine[at random].' In the wake of his remark he demands that you free yourself of any other attire you might have on, forced to oblige, else he tear them free of you.";
 		else:
 			say "     '[one of]Impudent little whelp, you are now mine[or]It amuses me that you thought you could contest my will[or]Know your place, little thing[or]Such gall, you will suffer from more than defeat[at random]!' Taunting you, as he does, it's very clear that you're now at the mercy of this impressive, serpentine creature.";
-		if "Touched by Madness" is listed in feats of player and cocks of player > 0 and cock length of player < 20 and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
+		if "Touched by Madness" is listed in feats of player and player is male and cock length of player < 20 and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
 			If MYDTBMM is 0:
 				say "     Before he sets himself on you, the dragon stops dead in his tracks, apparently stricken by some sort of irreverent thought. Pondering for a moment, he seem to struggle with himself before the creature looks like he's come to some conclusion, demented grin across his scaled lips.";
 				say "     'N-no... I have something different in store for you...' To punctuate his foreboding remark, he pulls you closer, draconic snout descending to engulf your crotch. Caressed by his slick tongue's immediate and shameless affection, your [if cocks of player > 1]cocks are[else]cock is[end if] driven hard before he relents, appearing satisfied.";
@@ -144,7 +144,7 @@ to say Yamato Dragon attack:
 					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
 					if player is not twistcapped, add "Twisted Capacity" to feats of player;
-			else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+			else if player is female and a random chance of 1 in 2 succeeds:
 				say "     Talons wrapping around your serpentine frame, the dragon pulls you up into the air, dragging you along as he ascends. [if HP of player < 1 and player is not submissive]Instinctively struggling against the beast's hold, being let go quickly stops being an option, given how high up you are[else]At the mercy of this beast, you watch on as the earth becomes more and more distance, instinctively driving you to cling to him in return[end if]. Entirely exposed before him as you are, he presses you against his growing arousal, forced to abide his hardening cock as he grinds it between your legs.";
 				if MYDGM is 0:
 					say "     Though you're similar in form to your [if HP of player < 1 and player is not submissive]assailant[else]patron[end if][if cunt length of player > 19], and fairly well-endowed,[end if] you're not exactly sure how he intends to fit impressive tool inside you; regardless, this notion doesn't even cross the dragon's mind before he";
@@ -257,7 +257,7 @@ to say Yamato Dragon attack:
 					LineBreak;
 					say "     [italic type]...After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier...[roman type][line break]";
 					if player is not twistcapped, add "Twisted Capacity" to feats of player;
-			else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+			else if player is female and a random chance of 1 in 2 succeeds:
 				say "     [if HP of player < 1 and player is not submissive]Making a final attempt to crawl free, you only encourage the oversized reptile to pull you back by one of[else]Forced to gawk at the oversized reptile, he offers you a twisted grin as he begins pulling you closer by[end if] your legs. Your front exposed, he buries his [if scalevalue of player < 5]massive[else]large[end if] snout between your thighs. Coarse scales grinding against you vulnerable, [bodytype of player] frame, you must abide his thick tongue's shameless attention, firmly caressing your [cunt size desc of player] cunt[sfn]. In the distance, forced to watch the crotch of his own serpentine form, you see his massive cock slowly growing hard against the open air.";
 				if MYDGM is 0:
 					say "     [if cunt width of player > 19]Well-endowed as you are, you're[else]You're[end if] not exactly sure how this beast intends to fit that thing inside you, making you [if HP of player > 0 or player is submissive]a fair bit worried about what is to follow[else]even more worried than you already are[end if]. This notion doesn't even cross his mind as he frees";
@@ -350,7 +350,7 @@ to yamatbiasshift:
 				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -975,7 +975,7 @@ The usedesc of dragon hair is "[usedragonhair]";
 
 to say usedragonhair:
 	choose row monster from table of random critters;
-	setmonster "Yamato Dragoness";		[only alters sizes, not gender]
+	setmonster "Yamato Dragoness"; [only alters sizes, not gender]
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
@@ -1004,7 +1004,7 @@ to YamatMvore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if player is male and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			decrease libido of player by (libido of player / 10) + 1;
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;
@@ -1151,7 +1151,7 @@ when play ends:
 				say "     [if scalevalue of player < 4]B[else]Substantive b[end if]ulg that once was you, having sunk to the lowermost pits of the monster's labyrinthine organs, gradually begins to recede until nothing remains. The dragon[if tempnum is 0]ess[end if][']s, no doubt, bottomless hunger [if scalevalue of player > 3]only partially[else]barely[end if] sated by its pitiful victim, [if tempnum is 1]he[else]she[end if] gradually floats off in search of new prey to fall under [if tempnum is 1]his[else]her[end if] raw might, nobody the wiser to your ultimate fate...";
 			else:
 				if YDSF is 0:
-					if cunts of player > 0 and (cocks of player is 0 or (cocks of player > 0 and a random chance of 1 in 2 succeeds)):
+					if player is female and (cocks of player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
 						if guy is banned or guy is warded:
 							now YDSF is 4;
 						else:

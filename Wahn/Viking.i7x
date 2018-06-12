@@ -495,7 +495,7 @@ to say AffectionateVikingLossSex: [3+ times with the player]
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth]
-				now VikingPregnancy is 1;[invisibly pregnant]
+				now VikingPregnancy is 1; [invisibly pregnant]
 				if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 					now VikingKidShape is bodyname of player;
 				else: [human player]
@@ -759,14 +759,14 @@ When Play begins:
 	now desc entry is "[VikingDesc]";
 	now face entry is "a handsome young man's, framed by a mane of shoulder-long, unkempt blond hair. Your cheeks and chin sport a short blond beard";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in a woolen tunic and pants, plus a pair of leather boots";
-	now skin entry is "smooth, pale"; [ format as the text "You have (your text) skin"]
+	now skin entry is "smooth, pale"; [ format as "You have (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "Human"; [ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into a handsome male visage, the cheeks and chin covered by a short blond beard. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it smoothes out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it shapes itself into a handsome male visage, the cheeks and chin covered by a short blond beard. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it smoothes out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 20;
 	now sta entry is 18;
@@ -875,7 +875,7 @@ to say VikingDuelVictory:
 		say "     As you land blow after blow on the mighty Viking chieftain, the jeers and shouted abuse from the crowd of onlookers slowly ebb out until all of them finally just watch excitedly as the two of you fight on. A few minutes later, you land a solid blow against Frithjof's face, leaving the man to stumble backward a bit and shake his head to clear it. Wiping his bloodied lip, he spits a broken tooth into the sand, then meets your eyes with a glare - before suddenly giving you a grin and a hearty chuckle. 'Seems like I underestimated you, creature. You can fight!'";
 		say "     A murmur goes through the crowd of Vikings, then Sonya steps forward, brushing off the hands of her cousins who half-heartedly try to hold her back. Coming to stand in the circle next to you, she gives the gathered crowd and her father an angry stare, then shouts 'I told you this monster was mighty in combat - I wouldn't have let anyone else touch me! But did anyone believe me? No - you just nattered old-wives tales about magic.' With a defiant glare at her father, Sonya moves to stand beside you.";
 	else:
-		say "     As you land blow after blow on the mighty Viking chieftain, the jeers and shouted abuse from the crowd of onlookers slowly ebb out until all of them finally just watch excitedly as the two of you fight on. A few minutes later, you land a solid blow against Frithjof's face, leaving the man to stumble backward a bit and shake his head to clear it. Wiping his bloodied lip, he spits a broken tooth into the sand, then meets your eyes with a glare - before suddenly giving you a grin and a hearty chuckle. 'Seems like I underestimated you, [if cunts of player > 0 and cocks of player is 0]girl[else]boy[end if]. You can fight!'";
+		say "     As you land blow after blow on the mighty Viking chieftain, the jeers and shouted abuse from the crowd of onlookers slowly ebb out until all of them finally just watch excitedly as the two of you fight on. A few minutes later, you land a solid blow against Frithjof's face, leaving the man to stumble backward a bit and shake his head to clear it. Wiping his bloodied lip, he spits a broken tooth into the sand, then meets your eyes with a glare - before suddenly giving you a grin and a hearty chuckle. 'Seems like I underestimated you, [if player is purefemale]girl[else]boy[end if]. You can fight!'";
 		say "     A murmur goes through the crowd of Vikings, then Sonya steps forward, brushing off the hands of her cousins who half-heartedly try to hold her back. Coming to stand in the circle next to you, she gives the gathered crowd and her father an angry stare, then shouts 'I told you this outlander was a powerful warrior - I wouldn't have let anyone else touch me! But did anyone believe me? No - you just nattered old-wives tales about magic.' With a defiant glare at her father, Sonya moves to stand beside you, a hand on your shoulder in support.";
 	WaitLineBreak;
 	say "     Frithjof looks at you and Sonya, then nods. 'Hah - seems like we've got a wedding to celebrate! With you already having fucked the girl and having given her father a well-deserved thrashing to beat some sense into him, it's a done deal. Back to the ship - met for everyone!' A cheer goes through the gathered Vikings, and they come together to congratulate the two of you. Lifting Sonya and you into the air, they carry you along to the boats, set you down in one together and row back towards the large Viking ship.";
@@ -889,11 +889,11 @@ to say VikingDuelVictory:
 	say "     ([link]Y[as]y[end link]) - Have public sex with Sonya.";
 	say "     ([link]N[as]n[end link]) - Just party with the vikings, for now.";
 	if player consents:
-		say "     You smile at Sonya and nod, then give her another kiss, after which she quickly goes below-deck, coming back up just moments later with a bundle of furs. She throws them down on a crate standing on deck, then shouts 'But that isn't all [if cunts of player > 0 and cocks of player is 0]she[else]he[end if] did to me that day.' Then she undoes her belt, pulling her tunic up over her head and baring her shapely breasts and pale-skinned upper body before the crowd. Her trousers follow a second later, leaving your bride to walk up to you naked, swaying her hips. Taking your hand, she leads you to the improvised bedding, kissing your cheek and saying 'Show them what you can do, my love' before she lays down on it, her legs dangling over the edge and slightly spread.";
+		say "     You smile at Sonya and nod, then give her another kiss, after which she quickly goes below-deck, coming back up just moments later with a bundle of furs. She throws them down on a crate standing on deck, then shouts 'But that isn't all [if player is purefemale]she[else]he[end if] did to me that day.' Then she undoes her belt, pulling her tunic up over her head and baring her shapely breasts and pale-skinned upper body before the crowd. Her trousers follow a second later, leaving your bride to walk up to you naked, swaying her hips. Taking your hand, she leads you to the improvised bedding, kissing your cheek and saying 'Show them what you can do, my love' before she lays down on it, her legs dangling over the edge and slightly spread.";
 		LineBreak;
 		say "     [VikingPublicSex]";
 	else:
-		say "     You smile at Sonya, but shake your head, telling her it'd be too cruel to show all those men and women a perfect body - her perfect body - that they can never have. Not that you aren't tempted, you say with a grin, goosing Sonya's ass playfully. 'As you wish, [if cunts of player > 0 and cocks of player is 0]my wife[else]my husband[end if],' she says, then gives you another quick kiss before going to fill your mead-horns again. Stories of battles and raids told by the other Vikings follow, although with another mead cask soon empty, the tales get more and more incomprehensible.";
+		say "     You smile at Sonya, but shake your head, telling her it'd be too cruel to show all those men and women a perfect body - her perfect body - that they can never have. Not that you aren't tempted, you say with a grin, goosing Sonya's ass playfully. 'As you wish, [if player is purefemale]my wife[else]my husband[end if],' she says, then gives you another quick kiss before going to fill your mead-horns again. Stories of battles and raids told by the other Vikings follow, although with another mead cask soon empty, the tales get more and more incomprehensible.";
 		say "     Nevertheless, the party is great fun - at least what you remember of it when you wake up several hours later, lying in a pile of furs next to Sonya on her bed. Seems like the two of you wanted to get some action going at some point, but drunkenly fell asleep before you got more than halfway undressed. With a wince at the hangover almost splitting your skill, you stand up quietly, leaving your wife to sleep hers off in peace. Going back on deck, you find one man who isn't quite as bad off as yourself, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 	increase carried of viking sword by 1;
 	now Viking Ship is known;
@@ -915,7 +915,7 @@ to say VikingPublicSex:
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth]
-				now VikingPregnancy is 1;[invisibly pregnant]
+				now VikingPregnancy is 1; [invisibly pregnant]
 				if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 					now VikingKidShape is bodyname of player;
 				else: [human player]
@@ -1044,7 +1044,7 @@ to say SonyaDesc:
 	else if (VikingRelationship > 99):
 		say "ERROR-Sonya-100A: She should no longer be in the game, the player having refused her father's challenge.";
 	else:
-		say "     Sonya Frithjofsdotter is a very attractive blond woman with shoulder-long golden-blond hair. She is dressed in fur-rimmed boots, a comfortable set of leather pants and a woolen tunic pulled tight with a belt. Everything about her screams warrior, from her lithe and muscled shape to simply the way she stands, a confident look in her eyes that says she can take anyone in a fight - well, except you, the [if cunts of player > 0 and cocks of player is 0]wife[else]husband[end if] she adores. ";
+		say "     Sonya Frithjofsdotter is a very attractive blond woman with shoulder-long golden-blond hair. She is dressed in fur-rimmed boots, a comfortable set of leather pants and a woolen tunic pulled tight with a belt. Everything about her screams warrior, from her lithe and muscled shape to simply the way she stands, a confident look in her eyes that says she can take anyone in a fight - well, except you, the [if player is purefemale]wife[else]husband[end if] she adores. ";
 		if VikingPregnancy is 1:
 			say "There is a kind of special glow about her that tells you she's expecting a child, thanks to your sperm's virility.";
 		else if VikingPregnancy is 2:
@@ -1140,7 +1140,7 @@ to say SonyaTalk1:
 		-- 9:
 			say "     Sonya says: 'Legends tell of a strange tree whose fruit allows men to breathe water like a fish. With all the strange things going on in this land, it might just exist here...'";
 		-- 10:
-			say "     Sonya says in a thoughtful tone: 'Seeing many men, women and beasts enjoy themselves so wantonly all over this strange land made me curse myself for swearing my oath more than once. Even the strongest warrior finds lust difficult to resist... and it was hard, every day I was out there.' She smiles at you, embracing you and affectionately brushing her cheek against yours, then says 'Thank the gods I met you, my brave [if cunts of player > 0 and cocks of player is 0]wife[else]husband[end if]. All the waiting was worth it, for getting you in the end.'";
+			say "     Sonya says in a thoughtful tone: 'Seeing many men, women and beasts enjoy themselves so wantonly all over this strange land made me curse myself for swearing my oath more than once. Even the strongest warrior finds lust difficult to resist... and it was hard, every day I was out there.' She smiles at you, embracing you and affectionately brushing her cheek against yours, then says 'Thank the gods I met you, my brave [if player is purefemale]wife[else]husband[end if]. All the waiting was worth it, for getting you in the end.'";
 
 to say SonyaTalk2:
 	if VikingKidCounter is 1: [just one kid so far]
@@ -1193,13 +1193,13 @@ to say SonyaSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Have sex with your Viking wife";
 	[]
-	if cocks of player > 0 and cockname of player is listed in infections of Knotlist:
+	if player is male and cockname of player is listed in infections of Knotlist:
 		choose a blank row in table of fucking options;
 		now title entry is "Mount her doggy style";
 		now sortorder entry is 2;
 		now description entry is "Have sex with your Viking wife, tying her with your knot";
 	[]
-	if cocks of player > 0 and cockname of player is listed in infections of felinelist:
+	if player is male and cockname of player is listed in infections of felinelist:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her ride your feline shaft";
 		now sortorder entry is 3;
@@ -1254,7 +1254,7 @@ to say SonyaSex1: [fucking her]
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth]
-				now VikingPregnancy is 1;[invisibly pregnant]
+				now VikingPregnancy is 1; [invisibly pregnant]
 				if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 					now VikingKidShape is bodyname of player;
 				else: [human player]
@@ -1294,7 +1294,7 @@ to say SonyaSex2: [doggy style]
 		let VikingPregChance be a random number from 1 to 20;
 		if VikingPregChance > 10: [50% chance]
 			now VikingPregCounter is 48;      [48 turns till birth]
-			now VikingPregnancy is 1;[invisibly pregnant]
+			now VikingPregnancy is 1; [invisibly pregnant]
 			if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 				now VikingKidShape is bodyname of player;
 			else: [human player]
@@ -1317,7 +1317,7 @@ to say SonyaSex3: [feline spines]
 		let VikingPregChance be a random number from 1 to 20;
 		if VikingPregChance > 5: [75% chance]
 			now VikingPregCounter is 48;      [48 turns till birth]
-			now VikingPregnancy is 1;[invisibly pregnant]
+			now VikingPregnancy is 1; [invisibly pregnant]
 			if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 				now VikingKidShape is bodyname of player;
 			else: [human player]
@@ -1388,7 +1388,7 @@ to say SonyaArrivalSex1:
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth]
-				now VikingPregnancy is 1;[invisibly pregnant]
+				now VikingPregnancy is 1; [invisibly pregnant]
 				if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 					now VikingKidShape is bodyname of player;
 				else: [human player]
@@ -1439,7 +1439,7 @@ to say SonyaArrivalSex2:
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth]
-				now VikingPregnancy is 1;[invisibly pregnant]
+				now VikingPregnancy is 1; [invisibly pregnant]
 				if the player is not facially human or the player is not bodily human or the player is not skintone human: [player a legendary monster]
 					now VikingKidShape is bodyname of player;
 				else: [human player]

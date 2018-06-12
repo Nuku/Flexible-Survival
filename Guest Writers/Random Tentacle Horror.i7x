@@ -35,7 +35,7 @@ to say horror victory:
 	else:
 		now cuntsmall is 0;
 	let mpregpath be 0;
-	if cunts of player is 0 and player is mpreg_ok, now mpregpath is 1;
+	if player is not female and player is mpreg_ok, now mpregpath is 1;
 	if ( "Male Preferred" is listed in feats of player and mpregpath is 0) or "Sterile" is listed in feats of player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 	else if gestation of child > 0:
@@ -45,7 +45,7 @@ to say horror victory:
 		else:
 			say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 			now lasttentaclebattleoutcome is 5;
-	else if cunts of player is 0 and player is mpreg_ok:
+	else if player is not female and player is mpreg_ok:
 		if tentaclerape is 0:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so. The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. A slimy tentacle probes over your body as the creature draws you closer. As the tendril glides between your ass cheeks, the tentacled monstrosity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
@@ -336,17 +336,17 @@ When Play begins:
 	now attack entry is "[one of]A bit of gloop detaches from the ceiling and splatters on your shoulder. Taking advantage of the distraction, the beast launches its moist appendages towards you from three different directions, wrapping around your arms and legs and lifting you into the air. New tentacles quickly squirm their way inside of your clothing. The tentacles rub all across your body, leaving damp patches wherever they've touched you, and driving your arousal up a notch. You struggle back to your senses and then out of the creatures grasp... Too bad you were 20 feet in the air when you broke free... [or]You feel something tap your on your left shoulder, whipping your head around wildly to the left you see nothing. A second set of taps is felt coming from your right shoulder, and you yank your head around to the right, only to find nothing there again. Turning back towards the creature, you are just in time to receive what feels like a boxer's punch, as four tentacles wrapped around each other slam into your unsuspecting, and unprotected face.[or]The creatures appendages erupt with sticky fluids, coating you from all angles. At first you're not concerned in the least, however you quickly realize that the goop is cutting of your air. Struggling to wipe the gunk from your mouth, you slip and fall, slamming into the unforgiving concrete floor. Thankfully this dislodges enough goo for you to get a breath, but afterwords, you stand up shakily, your head feeling fuzzy. You can't decide if the lightheaded feeling you're fighting is due to your recent deprivation of oxygen, or the mild concussion your good pal the concrete floor gave you... You tell the voices in your head to shut up, and prepare to continue your struggle against the monster.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[horror defeated]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[horror victory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[horror description]";[ Description of the creature when you encounter it.]
-	now face entry is "largely human, well... except for the glowing red eyes and slimy prehensile hair...";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "studded with random phallic, prehensile appendages that drip slime and make most movements awkward";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "pale and slime covered";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "slime covered, prehensile";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "everything seems to get brighter, your eyes beginning to glow red and adjusting for much dimmer environments, while your hair falls out and is replaced by a hundreds of slimy, prehensile tendrils."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "as random portions all over feel an indescribable pressure build beneath your skin. Finally something gives way and you sprout at least 20 prehensile phallic, slime covered tentacle appendages, all of which are foot longer than your cock."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "you grow paler and your pores begin to leak slime that doubles as a potent aphrodisiac"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "something thick and heavy shifts inside you"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it grows erect. You reach for it, and before your hand reaches it, your cock moves up into your hand. You wipe your hand on your sleeve as your cock has now started a slow, constant leak of unidentifiable goo. Your arm underneath your sleeve tingles and you make a mental note not to wipe the goo on your clothing again..."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now desc entry is "[horror description]"; [ Description of the creature when you encounter it.]
+	now face entry is "largely human, well... except for the glowing red eyes and slimy prehensile hair..."; [ Face description, format as "Your face is (your text)"]
+	now body entry is "studded with random phallic, prehensile appendages that drip slime and make most movements awkward"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "pale and slime covered"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "slime covered, prehensile"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "everything seems to get brighter, your eyes beginning to glow red and adjusting for much dimmer environments, while your hair falls out and is replaced by a hundreds of slimy, prehensile tendrils."; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "as random portions all over feel an indescribable pressure build beneath your skin. Finally something gives way and you sprout at least 20 prehensile phallic, slime covered tentacle appendages, all of which are foot longer than your cock."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "you grow paler and your pores begin to leak slime that doubles as a potent aphrodisiac"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "something thick and heavy shifts inside you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it grows erect. You reach for it, and before your hand reaches it, your cock moves up into your hand. You wipe your hand on your sleeve as your cock has now started a slow, constant leak of unidentifiable goo. Your arm underneath your sleeve tingles and you make a mental note not to wipe the goo on your clothing again..."; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 20;
 	now sta entry is 20;

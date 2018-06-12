@@ -610,7 +610,7 @@ to say CampBravoElaineTTRush:
 		say "     'Pretty proud of getting to fuck the minotaur, aren't you, stud?' she says teasingly. 'I must say, you put on quite the show with the big guy. I know the Sarge appreciated how well your [']unorthodox technique['] was able to help move through that backlog in soldiers. And it seems Tiny Tim had a great time, too. If anything, I'm a little sorry that I couldn't be a part of it. ";
 		if CampBravoWomenAllowed is 0:
 			say "But it's men only at the hitching post.'";
-			increase thirst of Major Padgett by 4;[speeds up trying to convince him again]
+			increase thirst of Major Padgett by 4; [speeds up trying to convince him again]
 		else if thirst of Elaine is 0:
 			say "As it stands, I'm still waiting for my round with him now that females are allowed at the hitching post.'";
 		else if thirst of Elaine is 1:
@@ -899,7 +899,7 @@ instead of conversing Sergeant Alexander:
 	now sortorder entry is 3;
 	now description entry is "Present yourself to the minotaur for fucking.";
 	[]
-	if scalevalue of player >= 3 and cocks of player > 0 and cock length of player >= 9 and libido of Tiny Tim > 0 and lastfuck of Tiny Tim - turns >= 4:
+	if scalevalue of player >= 3 and player is male and cock length of player >= 9 and libido of Tiny Tim > 0 and lastfuck of Tiny Tim - turns >= 4:
 		if MovingOrwell >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Request to fuck Tiny Tim.";
@@ -1158,7 +1158,7 @@ to say CampBravoFuckTTFemale:
 
 
 to say AlexanderFucking:
-	if cocks of player > 0 or cunts of player is 0:
+	if player is male or cunts of player is 0:
 		say "     He shakes his head as you proposition him. 'Sorry, sonny - this man's only here for the ladies. Why don't you do a round at the post, if you're into that stuff...'";
 	else:
 		if (lastfuck of Alexander - turns < 12):

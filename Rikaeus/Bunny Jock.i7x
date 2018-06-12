@@ -17,7 +17,7 @@ to say bunnyjockdesc:
 
 to say losetobunnyjock:
 	now bunnyjocknosex is 0;
-	if ( cunts of player > 0 and a random chance of 1 in 4 succeeds ) or ( cunts of player is 0 and a random chance of 2 in 5 succeeds ) or anallevel is 1:
+	if ( player is female and a random chance of 1 in 4 succeeds ) or ( cunts of player is 0 and a random chance of 2 in 5 succeeds ) or anallevel is 1:
 		say "     '[if player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if hp of player > 0]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
 		say "     With the lapine jock keeping a steady grip, he strokes his cock while you lick across his glans. As you get more into it, you open your mouth, trying to work that mighty cock of his past your lips[if scalevalue of player < 4]. It takes some time to get started, but you somehow manage to stretch your mouth open enough to accept it with the help of the bunny's firm thrusting[else]. It's a little slow going at first, but soon enough you're taking it past your lips and into your warm mouth[end if]. You lick and suck at the huge shaft as best you can while the big guy grunts and moans in growing pleasure. As his arousal builds higher, he thrusts harder and faster before eventually cumming with a loud '[one of]Awwwww yeah[or]Slam dunk[or]Suck it harder[at random]!' upon release. Once he's emptied a sloshing amount of bunny cum into your belly, he pops his drooling cock free.";
 		say "     'Damn! I'm late for practice! See ya later bud!' He shouts before quickly tucking his dick back into his basketball shorts and then dashing off towards the athletic side of campus. You however lay there, your stomach gurgling from the lapine cum that was released into you..";
@@ -91,16 +91,16 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Bunny Jock"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Bunny Jock"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[bunnyjockattack]";
-	now defeated entry is "[beatthebunnyjock]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetobunnyjock]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthebunnyjock]"; [ Text when monster loses. ]
+	now victory entry is "[losetobunnyjock]"; [ Text when monster wins. ]
 	now desc entry is "[bunnyjockdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a rabbit, with long, fluffy ears and a short muzzle with whiskers and buck teeth";
 	now body entry is "decently muscled, looking nice and powerful. Whenever someone stares at them you feel the urge to pose and show off. Your hands are paw-like with blunted claws and soft, pink pads on them. Your feet are much the same, but elongated and rabbit-like";
 	now skin entry is "gray, furred";
 	now tail entry is "You have a cute, fluffy bunny tail above your strong, toned glutes.";
-	now cock entry is "[one of]sheathed[or]bunny[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now cock entry is "[one of]sheathed[or]bunny[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "it reshapes itself, gaining a short muzzle with whiskers. Your teeth shift and change as well as you grow a pair of large incisors at the front. Your ears are tugged up hard, almost painfully so, as they stretch upwards into long, bunny ears to complete the transition";
 	now body change entry is "your body starts to convulse, your stomach muscles ripple before they start to change. Quickly you start to form washboard abs that would make anyone stare openly. Your hands and feet have changed during this period as well, becoming enlarged paws and bunny-like feet";
 	now skin change entry is "soft, gray fur spreads over your body";
@@ -120,7 +120,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 30; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 18; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

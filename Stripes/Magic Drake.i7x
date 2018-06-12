@@ -83,13 +83,13 @@ to say losetomagicdrake:
 			say "     'That's a good familiar. You're my fine, fat-assed slut. It's time for you to serve me. I know you want it,' she rumbles, teasing her drooling glans against your pucker, which quivers and kisses at it. You can feel your rear want her inside you, feeling empty without your mistress. This feeling grows and by the time she's done teasing you, you're panting heavily and on the edge of begging for it.";
 			say "     Holding your ass tightly in both taloned hands, she thrusts [if HP of player > 0]slowly into you, letting your back passage stretch gradually at first[else]into you firmly, sending a sharp twinge through your back passage as it's forced open[end if]. Your body stretches and bulges, your insides distorting and shifting to accommodate the massive intruder ploughing into you[if scalevalue of player < 3]. Her cock is so big compared to your [body size of player] [bodytype of player] form that you end up stretched around her meat like a fleshy condom[else if scalevalue of player < 5]. Her cock, nearly as big as a normal person on its own, stuffs you impossibly full and leaves clear impression of it against your bulging flesh[else]. Her cock, nearly as big as a normal person, stuffs you incredibly full, so much so there's a definite bulge formed by it[end if]. And even with this, the experience is incredibly arousing, your whole body squeezing and tugging at the pulsating pillar pounding away at you, working steadily deeper[if scalevalue of player < 5] until finally there's a phallic protrusion of her glans stretching your torso[end if].";
 			say "     Struggling for breath as her throbbing, thrusting log pumps inside you, you can only pant weakly as you're suspended in the air upon her massive prick. Overcome with arousal at being so fully used by the dragoness, you run your hands over your cock-stretched body, loving being able to feel every twitch and throb it makes. Your mistress rumbles on about what a fine fuck you are, and a good, slutty familiar, and a naughty cocksleeve. Her words send shivers of delight through your sex-addled mind[if player is not neuter] and, already on the edge of release, you're driven to climax, cumming hard with feeble gasps and moans of ecstasy[end if]. Feeling your body squeeze and clench down around her, your mistress achieves her own climax and cums hard into you, releasing a torrent of semen that [if scalevalue of player < 3]fills you to overflowing as your body sloshes beyond fullness[else if scalevalue of player < 5]fills you to the point of rounding your body with fullness[else]fills your belly to a sloshing fullness that leaves it visibly plumper[end if].[mimpregchance][mimpregchance]";
-			if cocks of player > 0 and cock length of player < cock length entry and "Female Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player:
+			if player is male and cock length of player < cock length entry and "Female Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player:
 				say "     While cumming, the draconic sorceress reaches around to grab your throbbing, spurting cock and pumps it vigorously. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your manhood to grow further. When she's done both her climax and her spell, she [if scalevalue of player < 3]peels you off her softening penis[else]eases her you off her softening penis[end if] and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
 				increase cock length of player by 1;
 				now cock length of player is ( ( cock length of player * 3 ) + cock length entry ) / 4;
 				decrease humanity of player by 1;
 				increase libido of player by 5;
-			else if cocks of player > 0 and cock width of player < cock width entry and "Female Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player:
+			else if player is male and cock width of player < cock width entry and "Female Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player:
 				say "     While cumming, the draconic sorceress reaches around to [if cockname of player is listed in infections of internallist]rub over your hidden balls[else]grab your twitching balls and knead them[end if]. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testes to grow further. When she's done both her climax and her spell, she [if scalevalue of player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it form your gaping back door.";
 				increase cock width of player by 1;
 				now cock width of player is ( ( cock width of player * 3 ) + cock width entry ) / 4;
@@ -207,7 +207,7 @@ to say beatthemagicdrake:
 			now title entry is "Receive cunnilingus";
 			now sortorder entry is 7;
 			now description entry is "get her to eat you out";]
-		if cunts of player > 0 and ( cunt length of player > 30 or cunt width of player > 18 ):
+		if player is female and ( cunt length of player > 30 or cunt width of player > 18 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Ride that cock - Vaginal";
 			now sortorder entry is 4;
@@ -623,16 +623,16 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Magic Drake"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random]."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthemagicdrake]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetomagicdrake]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random]."; [ Successful attack message ]
+	now defeated entry is "[beatthemagicdrake]"; [ Text when monster loses. ]
+	now victory entry is "[losetomagicdrake]"; [ Text when monster wins. ]
 	now desc entry is "[magicdrakedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "pushed out with a draconic muzzle and a short set of backwards-pointing horns";
 	now body entry is "a little on the pudgy side with a little extra fat to round out your somewhat girlish, 5['] 6' figure. Your hands and feet are changed as well, having been exchanged for reptilian talons. Upon your back is a pair of dragon wings";
 	now skin entry is "[one of]scaley green[or]green-scaled[at random]";
-	now tail entry is "[mdtaildesc]"; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "green"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now tail entry is "[mdtaildesc]"; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "green"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "it tingles with a strange energy. This builds until there comes a loud snap. More pops and snaps follow as your head shifts and reshapes itself. A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
 	now body change entry is "an unusual sensation spreads through you. Starting off as a tingle of strange energy, it builds until your body starts reshaping itself. Your figure changes, becoming roughly five and a half feet tall, with a somewhat feminine figure and a few added pounds to round out your curves. The energy surges at your back, forming draconic wings[mdscaletweak]";
 	now skin change entry is "it starts to flake and itch. The itching grows into tingles as a green tinge starts seeping into your skin. Soon it hardens into reptilian scales that are smooth and sensitive";
@@ -652,7 +652,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 30; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 24; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 10; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 10; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

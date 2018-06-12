@@ -285,9 +285,9 @@ carry out paulahealing:
 		say "     'We've got to ration our medical supplies. I know you're kind of a big help to Alexandra, but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
 	else:
 		let healed be ( maxHP of player - HP of player ) / 2;
-		if "Rapid Healing" is listed in the feats of the player:
+		if "Rapid Healing" is listed in the feats of player:
 			now healed is ( healed times 110 ) divided by 100;
-		if "Regeneration" is listed in the feats of the player:
+		if "Regeneration" is listed in the feats of player:
 			now healed is ( healed times 110 ) divided by 100;
 		if ( healed + HP of player ) > maxHP of player, now healed is ( maxHP of player - HP of player );
 		increase HP of player by healed;

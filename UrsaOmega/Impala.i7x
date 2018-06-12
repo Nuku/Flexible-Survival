@@ -35,20 +35,20 @@ to say losetoimpalaguy:
 		if player is impreg_able:
 			say "a need to have your womb filled and your belly swell with child[run paragraph on]";
 		say " and you feel a little light headed. 'You'd make a fine addition to my herd...' he says huskily into your ear, before leaning in for a kiss. Lost in his musk, you eagerly return the kiss, mashing your own [facename of player] face against his sleek muzzle. He reaches one cloven hand behind you to squeeze and grope your [bodydesc of player] body. You allow yourself to be guided into all fours, with the impala behind you on his knees, rubbing his growing slender erection against your rear. ";
-		if cunts of player is 0 and player is mpreg_able:
+		if player is not female and player is mpreg_able:
 			say "He stops for a moment and brings his nose down to your fertile rear end. He smells deeply for a second, then says, 'Hrm... Smells like you have a womb in there. Just need a big ram to come and fill you up. You're going to feel so much better when you have my fawn in your belly.' ";
-		if cunts of player > 0 and player is impreg_able:
+		if player is female and player is impreg_able:
 			say "He sticks his muzzle between your legs, breathing in your fertile scent. 'Mmm... I love the scent of needy ewes. Don't worry, you're going to feel so good when your belly swells with my fawn...' ";
-		if player is submissive and cocks of player > 0 and player is not impreg_able:
+		if player is submissive and player is male and player is not impreg_able:
 			say "'You just want a big, strong male to dominate you, don't you? You're just a submissive little ewe. That's alright, I'm gonna take care of you. You'll feel so much better when I fill you up.' ";
 		say "You shudder with need as you feel his erection press against your entrance. He rubs the tip against your[if player is not female] pucker[end if][if player is female] labia[end if], letting his precum lube it. Consumed by your lust for this strong, lithe impala, you push back on his rod, his narrow glans breaching you with a slight pop. The impala rolls his hips, gently working more of his length into your [if player is not female]back passage[end if][if player is female]vagina[end if][if player is male]. You let out a soft moan as his tapered tip brushes past your prostate, making your own painfully hard cock dribble a bit of your own pre. Soon he's fully hilted his slender breeding tool inside you, his balls coming to rest on your own[end if][if player is female]. He angles his thrusts to maximize the stimulation to your clit, making you moan under him. Soon he's hilted his slender breeding tool inside you, his tapered tip pushing at your cervix[end if].";
 		if waiterhater is 0, wait for any key;
 		LineBreak;
 		say "     He nibbles on the back of your neck as he begins long, slow strokes in an out of you; each thrust feels like it fills you to your very core. You clench down on his outward strokes, feeling an intense need to feel your [if player is not female]ass[else]womb[end if] fill with his seed. You gasp as he reaches [if player is male]under your [bodydesc of player] body to wrap a hand around your rock-hard [cock of player] erection[else]around your chest to caress and stroke your breasts, no doubt imagining them swelling with milk for his child[end if]. Soon he's leaning over you, rutting you hard with short, fast strokes that rub your [if player is not female]prostate[else]clit[end if] just right[if player is male], stroking your cock in time with his thrusts[end if]. The all-out assault on your pleasure button and his [if player is male]hand around your own cock[else]soft caressing[end if] is too much to handle for long, and in the blink of an eye you're crying out in orgasm[if player is male], spurting cum over the ground[end if] while your muscles milk the impala's dick for all it has; now he's grunting and you feel the blissful sensation of your [if player is not female]ass[else]womb[end if] being filled with impala cum. The impala rolls you onto your side, caressing your belly and kissing your cheek while keeping his softening cock in you, plugging you up while his seed does its work. Finally, he gives you one last kiss before getting up. 'Mmm, next time just start by bending over. It's much more fun that way...' he says before bounding off, leaving you to clean yourself up and get dressed.[impregchance]";
 	else:
-		if cocks of player > 0 and player is not impreg_now: [Can't be impregnated, is not currently pregnant, and male]
+		if player is male and player is not impreg_now: [Can't be impregnated, is not currently pregnant, and male]
 			say "The impala man gives you a violent kick to the ground before saying, 'Next time, don't come around a stronger male's territory!'";
-		else if cunts of player > 0 and player is not impreg_now: [can't be impregnated, is not currently pregnant and female]
+		else if player is female and player is not impreg_now: [can't be impregnated, is not currently pregnant and female]
 			say "The impala man smells you and frowns, then gives you a violent kick to the ground. 'Hrmph. You're no use to me if I can't put my fawn in you. Come back when you're ready for breeding.'";
 		else if player is impreg_now: [male and female, already pregnant]
 			say "The impala man moves on you with intent, but then notices your full belly. 'Come back when you're ready for breeding again, little ewe, so I can put a strong fawn in you...' he says with a pat on your rear and a wink.";
@@ -133,8 +133,8 @@ to say impaladesc:
 			say "and her eyes are filled with confusion as she tries to figure out which gender you are. 'What kind of creature are you?'";
 		say " the impala woman exclaims. She rubs a perky breast with one hoof-like hand while the other reaches down between her legs to play with her engorged sex a bit before charging you!";
 		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
-		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+		if "Female Preferred" is listed in the feats of player, now sex entry is "Female";
+		if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";
 	if impalamode is 1:
 		setmongender 3; [creature is male]
 		say "     You hear the sound of swift footsteps and you turn to see a male figure approaching you in a sort of half prance, half run. He has a slender, lithe body covered in reddish brown fur, with a white patch on his belly. Twin twisting horns curve impressively from his head and between his legs hangs a substantial sheath and pendulous balls. His long muzzle is pointed at you, ";
@@ -146,8 +146,8 @@ to say impaladesc:
 			say "and his eyes are filled with confusion as he tries to figure out which gender you are. 'What kind of creature are you?'[run paragraph on]";
 		say " the impala man exclaims. He charges you!";
 		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
-		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+		if "Male Preferred" is listed in the feats of player, now sex entry is "Male";
+		if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";
 
 Section 2 - Monster Insertion
 
@@ -162,16 +162,16 @@ When Play begins:
 	now defeated entry is "[beattheimpala]";
 	now victory entry is "[losetoimpala]";
 	now desc entry is "[impaladesc]";
-	now face entry is "that of an impala, with a long graceful neck and deerlike muzzle, and topped with large alert ears[if player is male]; large, twisty horns jut out of your forehead, displaying your virility[end if]"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of an impala, with a long graceful neck and deerlike muzzle, and topped with large alert ears[if player is male]; large, twisty horns jut out of your forehead, displaying your virility[end if]"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "slender and deerlike";
-	now skin entry is "reddish-brown furred"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your furry, impala-like tail hangs behind you."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now skin entry is "reddish-brown furred"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "Your furry, impala-like tail hangs behind you."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "tapered";
-	now face change entry is "your face pushes out into the deerlike muzzle of an impala, with your nose moving down to the end of it and your ears enlarging and moving to the top of your head to better hear incoming predators[if player is male]. Your forehead feels strange as two twisty horns grow from your skull, curving outward to display your new impala virility[end if]"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "your face pushes out into the deerlike muzzle of an impala, with your nose moving down to the end of it and your ears enlarging and moving to the top of your head to better hear incoming predators[if player is male]. Your forehead feels strange as two twisty horns grow from your skull, curving outward to display your new impala virility[end if]"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "it becomes slender and graceful, ideal for outrunning predators";
 	now skin change entry is "it becomes covered in short reddish brown fur, with a white patch covering your belly";
-	now ass change entry is "it becomes tight and pert, with a fuzzy impala tail growing over it"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes more slender and tapered, retreating into its new fuzzy sheath"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "it becomes tight and pert, with a fuzzy impala tail growing over it"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it becomes more slender and tapered, retreating into its new fuzzy sheath"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 12;
@@ -186,7 +186,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -210,9 +210,9 @@ when play ends:
 	if bodyname of player is "Impala":
 		if humanity of player < 10:
 			say "     You succumb fully to your impala instincts, joining up with a herd of other impalas roaming the plains.";
-			if cunts of player is 0 and player is submissive:
+			if player is not female and player is submissive:
 				say "     Your submissive nature gets the better of you, and when the lead male moves to drive you out of his territory, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. He spends almost as much time with you as he does with the females, you come to love the feeling of his cock filling you.";
-			else if cunts of player is 0 and player is mpreg_ok:
+			else if player is not female and player is mpreg_ok:
 				say "     When the lead male of the herd moves to drive you out, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. Driven by a strange scent emanating from your rear, he mounts you right there, filling your ass up with his seed. He's surprised when he finds out you're pregnant with his fawn, but happy that you can be a productive member of his herd. In time, you become his favorite doe, bearing him many strong breeder-males like yourself.";
 			else if player is male:
 				say "You eventually fight your way to the lead male position, fathering many fawns with your plentiful harem of slender impala women.";

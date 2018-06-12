@@ -42,7 +42,7 @@ to say losetoplatypus:
 			say "     After a few moments of prodding, he finally has enough lubrication to push his cock into you slowly, letting out a moan of relief. 'You're such a nice lay after so long...' He grunts as he starts thrusting with vigor, grabbing your legs for extra leverage. His belly pressed against yours, he starts to thrust in deeper. His heavy womb presses down on your belly.";
 			say "     The rythmic rocking pleasure builds into a small eternity. He tenses up, holding your hips to his, twitching as he cums into you. With each twitch of his cock, you feel his warm seed begin to flood you. The heat of his potent seed sends you over the edge, your hips twitching and your hands grasping at the sand beneath you.";
 			say "     Giving into bliss, you hit orgasm, your sphincter squeezing his shaft tightly, holding onto as much hot cum as you can. The platypus flops onto his back, pulling his cock out of your tight sphincter. 'Wow. I haven't had sex like that in days. I'll have to find you again sometime.' He grunts and stands, staggering a moment with the weight of his egg-filled belly, then starts walking off into the ocean to clean off his fur. [ovichance]";
-	if bodyname of player is "Platypus" and player is pure and player is not mpreg_ok and cocks of player > 0 and cunts of player is 0:
+	if bodyname of player is "Platypus" and player is pure and player is not mpreg_ok and player is puremale:
 		LineBreak;
 		say "     You feel something tingling in your belly as it grows warm and put your hands on it in concern. Then a thought clicks suddenly into your head: You can now become pregnant through anal sex, much like the platypus who did this to you. [line break]     [']MPreg['] has been added to your list of feats.";
 		add "MPreg" to feats of player;
@@ -51,7 +51,7 @@ to say losetoplatypus:
 to say beattheplatypus:
 	say "     The platypus grabs his belly and falls back, raising a hand up in surrender. He looks up at you with his brown eyes and says, 'Just... whatever you do, just leave my clutch alone.' Gazing at and holding his gravid womb, he patiently awaits your decision.";
 	if libido of player > 40:
-		if cunts of player > 0 or cocks of player > 0:
+		if player is not neuter:
 			say "     As you look over the platypus, you realize that fun with the pregnant male could be exactly what you need, and the stirring in your groin seems to agree with your assessment.[line break][line break]Do you have some fun with the poor man?";
 			if the player consents:
 				say "     You hush the platypus and kiss him firmly on his bill. You whisper in his ear some reassurances, stroking his fur, your hands going down to his belly. A gentle push rocks him gently back into the sand, the soft beach forming a makeshift bed. As you smile and disrobe, the male seems to relax, realizing you don't intend to hurt him.";
@@ -87,16 +87,16 @@ When Play begins:
 	now defeated entry is "[beattheplatypus]";
 	now victory entry is "[losetoplatypus]";
 	now desc entry is "[platypusdesc]";
-	now face entry is "now sporting a long black bill, just like a fuzzy duck"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a curvy platypus with a little bit of a belly and wide child-bearing hips"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "short course brown fur that hides your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "A broad, flat tail sprouts from above your butt, going down to your calves."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "dark"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your lips and nose pinch forward, darkening and hardening as it grows into a bill, course creamy fur sprouting from the rest of your face. Your ears recede into your head, making you dizzy for a moment, but you soon regain your bearings"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel a tingling in your gut. You quickly put on a little weight as your body gets a little chubbier, fur growing all over. Your hips push out, making your body look pear-shaped, almost as if getting ready for children"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your body starts to tingle while rough brown fur covers your skin"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you stumble, your spine elongating. A thin tail growing from above your ass, and as it settles in, it begins to flatten out and grow wider, much like a beaver's"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it tingles, becoming darker. The skin around the base of your cock pinches up into a sheath, growing soft brown fur. The tingling intensifies as you whimper, unable to stop yourself from cumming where you stand"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "now sporting a long black bill, just like a fuzzy duck"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a curvy platypus with a little bit of a belly and wide child-bearing hips"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "short course brown fur that hides your"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "A broad, flat tail sprouts from above your butt, going down to your calves."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "dark"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "your lips and nose pinch forward, darkening and hardening as it grows into a bill, course creamy fur sprouting from the rest of your face. Your ears recede into your head, making you dizzy for a moment, but you soon regain your bearings"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you feel a tingling in your gut. You quickly put on a little weight as your body gets a little chubbier, fur growing all over. Your hips push out, making your body look pear-shaped, almost as if getting ready for children"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "your body starts to tingle while rough brown fur covers your skin"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you stumble, your spine elongating. A thin tail growing from above your ass, and as it settles in, it begins to flatten out and grow wider, much like a beaver's"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it tingles, becoming darker. The skin around the base of your cock pinches up into a sheath, growing soft brown fur. The tingling intensifies as you whimper, unable to stop yourself from cumming where you stand"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 17;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
@@ -111,7 +111,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

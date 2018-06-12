@@ -74,7 +74,7 @@ to say libraryentrance:
 	now title entry is "Fight!";
 	now sortorder entry is 3;
 	now description entry is "Do you fight your way past him";
-	if jamessex is 0 or ( jamessex is 1 and cunts of player > 0 ) or ( jamessex is 2 and bodyname of player is "Wolverine Guard" ):
+	if jamessex is 0 or ( jamessex is 1 and player is female ) or ( jamessex is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Sex him up";
 		now sortorder entry is 4;
@@ -443,7 +443,7 @@ to say libraryexplore:
 				now cock length of player is 0;
 				now cock width of player is 0;
 			if "Male Preferred" is not listed in feats of player:
-				if cunts of player is 0, now cunts of player is 1;
+				if player is not female, now cunts of player is 1;
 				if cunt length of player < 6, now cunt length of player is 6;
 				if cunt width of player < 4, now cunt width of player is 4;
 				if breasts of player is 0, now breasts of player is 2;

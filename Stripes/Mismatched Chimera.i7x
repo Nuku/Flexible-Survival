@@ -126,7 +126,7 @@ to say losetomischim:
 		choose row monster from the table of random critters;
 		now dex entry is 15; [ reset dexterity for random infection ]
 		now lev entry is 6; [ reset level for random encounter availability ]
-		if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+		if player is female and a random chance of 1 in 2 succeeds:
 			say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
 			say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your womb.";
 			say "[randomimpreg]";
@@ -167,61 +167,60 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Mismatched Chimera"; [Name of your new Monster]
-   now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";
-   now defeated entry is "[beatthemischim]";
-   now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "canine, rabbit-eared head"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "feline in form with bony spines protruding from your back"; [ Body Description, format as the text "Your Body is (your text)."]
-   now skin entry is "scales over your body and white fur over your arms and legs to cover your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
-   now tail entry is "You have a slimy, suckered, octopus tentacle for a tail."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "equine member with a knot at the base of your"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it becomes that of a dog, but with long rabbit ears"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it becomes that of a humanoid feline with saurian back spines"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it is covered in green scales over your body, but long white fur over your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a wet appendage starts to grow from it, shaping itself into an octopod's tentacle. It wiggles around behind you, largely beyond your control"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it becomes equine in shape, but with a vulpine knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 15;
-   now dex entry is 15;
-   now sta entry is 15;
-   now per entry is 15;
-   now int entry is 15;
-   now cha entry is 15;
-   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 60;
-   now lev entry is 6; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-   now wdam entry is 8; [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
-   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 12; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 6; [ Number of Breasts infection will give you. ]
-   now breast size entry is 3; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 5;
-   now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is ""; [ Dropped item. Key will be used later ]
-   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-   [ These represent the new additions to the table of random critters ]
-   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]mismatched[or]patchwork[at random]";
-   now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is true;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Mismatched Chimera"; [Name of your new Monster]
+	now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";
+	now defeated entry is "[beatthemischim]";
+	now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "canine, rabbit-eared head"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "feline in form with bony spines protruding from your back"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "scales over your body and white fur over your arms and legs to cover your"; [ skin Description, format as "your body is covered in (your text) skin."]
+	now tail entry is "You have a slimy, suckered, octopus tentacle for a tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "equine member with a knot at the base of your"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it becomes that of a dog, but with long rabbit ears"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes that of a humanoid feline with saurian back spines"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it is covered in green scales over your body, but long white fur over your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a wet appendage starts to grow from it, shaping itself into an octopod's tentacle. It wiggles around behind you, largely beyond your control"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes equine in shape, but with a vulpine knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 15;
+	now dex entry is 15;
+	now sta entry is 15;
+	now per entry is 15;
+	now int entry is 15;
+	now cha entry is 15;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 60;
+	now lev entry is 6; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
+	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 6; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 5;
+	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]mismatched[or]patchwork[at random]";
+	now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
 	if bodyname of player is "Mismatched Chimera":
 		if humanity of player < 10:
 			say "     As your identity collapses, you are left with your fractured mind and instincts. Lacking any true focus to your instincts, you wander the city in a haze. You pass from one territory group to another, mating with the creatures there, but never transforming further, remaining a mismatched hodgepodge of creatures. Several try to keep you as a mate or prisoner, but you always escape eventually and move on. Your existence is aimless and with little conscious thought, but filled with sex of endless variety from all those you meet.";
-			if "Sterile" is not listed in feats of player and cunts of player > 0:
+			if "Sterile" is not listed in feats of player and player is female:
 				say "     Your womb gives birth of a wide array of hybrid children over the years. Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 			else if player is male:
 				say "     You sire a wide array of hybrid children over the years. Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
@@ -229,7 +228,7 @@ when play ends:
 				say "     You watch time march on over the centuries, taking lovers from the various new species and races that continually form from the intermingling of the infected groups. They rise and fall around you, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal witness to the variety of life until the end of time.";
 		else:
 			say "     After your rescue from the city, you are left aimless and take frequently to wandering the world for extended periods. Your altered, hybrid body makes you stand out always, but you can always seem to find companionship for a time, perhaps drawn in by the medley of pheromones you emit. You take on temporary dalliances of all kinds on these journeys, loving to experience the endless variety of lovers this world can provide to you. You are never changed by these lovers, no matter how infected or mindless these may be.";
-			if "Sterile" is not listed in feats of player and cunts of player > 0:
+			if "Sterile" is not listed in feats of player and player is female:
 				say "     Your womb gives birth to a wide array of hybrid children over the years. Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. Even as your old friends and allies pass on, you continue your eternal drifting across the globe. You are always drifting discretely through the world in your search to experience the ever-changing array of life rising and falling on this planet. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 			else if player is male:
 				say "     You sire a wide array of hybrid children over the years. Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. Even as your old friends and allies pass on, you continue your eternal drifting across the globe. You are always drifting discretely through the world in your search to experience the ever-changing array of life rising and falling on this planet. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";

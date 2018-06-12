@@ -11,7 +11,7 @@ when play begins:
 	add One flew into the Cuckoos Nest to badspots of girl;
 
 Instead of resolving a One flew into the Cuckoos Nest:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     Moving through the woods, you reach a small clearing that seems rather peaceful. All around, some remains of the buildings from before the forest took over are visible between the trunks, and it seems like people are actually living here. There are a few tents and improvised shelters here and there. One spot in the middle of it might have been a bus stop - with two benches side by side, that looks like the perfect spot to rest a little after your tiring work of exploring.";
 	say "     While walking towards the bench, you pass by a small tent with a male and female cuckoo inside... and can't help but throw a look inside at them. Based on the affectionate ways the two are talking and holding each other, you think that they are probably a couple. With a smile on your lips, you move on and sit down on the nearby bench. Sitting down relieves your aching muscles and re-energizes your body. A short while later, the male cuckoo steps out of the tent and calls back to his mate that he is going to hunt for supplies, then leaves into the woods.";
 	WaitLineBreak;
@@ -41,7 +41,7 @@ when play begins:
 	add Two crash into the Cuckoos Nest to badspots of girl;
 
 Instead of resolving a Two crash into the Cuckoos Nest:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While traveling through the woods you decide to see what the cuckoo couple you encountered before is up to. Walking back to the small community of transformed people in one of the less dangerous sections of the forest, what you find seems a little larger than what you remember. There is a new little shack or two and additional hammocks in places that used to be vacant. In the midst of it all is a large crackling campfire, around which two infected individuals sit and chat while toasting some marshmallows for s'mores. One of them is an anthro squirrel, who laughs amusedly as his fox-morph companion bites into his sweet treat and soon has a glob of gooey marshmallow dangling from his lips. A little embarrassed, the fox wipes the goop off his mouth, then smiles as he is handed another fresh marshmallow.";
 	say "     You continue on your way to the tent of the cuckoo couple location. Approaching from a different angle than you had previously you see a couple of things that you hadn't seen last time. Behind the tent there appears to be a sizable pile of clothing. ";
 	if CuckooWatched is 100: [ignored them]
@@ -126,7 +126,7 @@ Sandwich Shop is a situation.
 The sarea of Sandwich Shop is "Forest".
 
 Instead of resolving a Sandwich Shop:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say	"     While walking through the woods you cross the ruins of a small mini-mall. Trees seem to have sprouted throughout many of the stores and one of the light-posts in front of the building has fallen on a sedan, with the wreck now covered in heavily grown foliage on the outside and inside of the car. Another light-post is leaning sharply and on the verge of falling over. There are three stores within the building complex - the closest by is a liquor store, shards of glass from broken bottles cover its floor. It appears that anything drinkable is gone, all the shelves long looted.";
 	say "     The next closest store is a mattress store. Its door has a slogan stating 'Sleep... with us!' (the word 'better' is scratched off). All of the beds inside have been completely ruined, their mattresses covered in claw-marks and cum-stains. You see a couple of broken bottles on the floor too - seems like the looters must have decided to start a party in there. Last is a sandwich shop that's part of a small corporate chain. Its inside is a mess with all the tables tipped over, onion peels and shredded lettuce littering the floor and blots of crusted marinara sauce splattered over the walls and menu board.";
 	WaitLineBreak;
@@ -162,7 +162,7 @@ when play begins:
 	add Thief's Punishment to badspots of girl;
 
 instead of resolving Thief's Punishment:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods you come across a small campsite that is next to a collapsed gym. A blue tent has been set up next to it, in front of which a small campfire merrily burns, shining firelight on a workout bench and couple of barbells that must have been salvaged from the ruin. Sitting on the ground right next to the fire is a can of beans and a six-pack of water bottles. While you're still trying to decide what to do now, you hear the sound of a zipper from the tent, then its entrance is pulled open from the inside and a burly anthro tigress comes out.";
 	say "     To say she does a bit of weightlifting would be the understatement of the century - her seven foot tall body is covered in large bulging muscles, washboard abs, and what must be twenty inch biceps when she flexes. She's wearing a black sports bra to cover her D cup breasts, and tight black Lycra shorts whose fabric seems to be strained to their limit by her massive thighs and toned buttocks. The tigress is quick to notice your presence so close to her camp and she smiles, then waves at you, calling out to come over and share her fire. She seems sane enough and fairly friendly so you walk closer and begin to chat with her.";
 	WaitLineBreak;
@@ -201,7 +201,7 @@ when play begins:
 	add Thief's Reformation to badspots of girl;
 
 instead of resolving Thief's Reformation:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods, you once again find yourself near the fitness studio ruin and are reminded of the muscled tigress you encountered there earlier. Curious about how she is doing now you decide to head over. Soon stepping out into the little clearing, you see that the campsite is a little different than the first time. A fair bit of rubble from the front of the collapsed gym has been removed, forming a large mound a little off to the side. This now allows a glimpse into the inside of the building - or at least what's left of it, squished between the floor and low-sagging ceiling.";
 	say "     Looks like all that is holding the roof up at least a little are the countless smashed exercise machines, bent and broken from the collapse. Parts of broken mirrors still hang up on some of the small portions of the walls that are still upright, with the rest covering the floor in shards and splinters. But not everywhere, at a second glance - there is actually a path into the mess of a ruin which has been swept free of glass and stone shards, weaving around and sometimes through the tangles of broken machines. Must be a tight squeeze to get through in some places. Doesn't look like Bridget would fit.";
 	WaitLineBreak;

@@ -13,8 +13,8 @@ mlamiabeaten is a number that varies.			[fights won]
 
 when play begins:
 	add { "Lamia" } to infections of girl;
-	add { "Lamia" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Lamia" } to infections of Internallist;	[list of infections w/internal male genitals]
+	add { "Lamia" } to infections of Reptilelist; [list of reptile infections]
+	add { "Lamia" } to infections of Internallist; [list of infections w/internal male genitals]
 
 to say lamiadesc:
 	say "     Making your way through the hospital, you encounter [if mlamiamet is false]what appears to be a half-human, half snake creature[else]the lamia creature once more[end if]. Dressed in a bulging, clearly ill-fitting nurse's outfit[if mlamiamet is false]. It's also apparent how stacked the lamia is, having to re-tailor the attire to fit her bulging,[else], complete with those[end if] six pairs of breasts, barely able to contain themselves within it. Having spotted you, she's very quick to slither her way over, boobs jiggling with each heave of her large, advancing body. Her human skin is a flawlessly smooth and her scaled hide is a milky white, a sharp contrast to her raven black hair.";
@@ -29,7 +29,7 @@ to say losetolamia:
 	else:
 		say "     Collapsing from exhaustion, she cries out in almost overwrought despair, lunging forward to wrap you into a tight embrace. Clothing practically bursting at the seams to contain her numerous breasts, you're very firmly [one of][or]re[stopping]introduced to them as she practically tries to smother you with her cleavage, fussing obsessively over you.";
 		say "     '[one of]Oh no[or]Shh[or]Ah[at random], I'm so sorry, [one of]I didn't mean to be so rough[or]you gave me little choice[or]I'll take care of you[at random]!' Clearly, she seems to have twisted her victory into an opportunity to 'care' for you, pulling any attire or supplies from you and tossing them aside.";
-	if cocks of player > 0 and a random chance of 1 in 3 succeeds:
+	if player is male and a random chance of 1 in 3 succeeds:
 		say "     Scaled coils gently constricting you, they caress along your[if scalevalue of player > 4], larger[end if] [bodytype of player] form as her grip gradually tightens around you, the half-serpent repositioning herself as her hand moves along you grope at your[if cockname of player is listed in infections of internallist] partially[end if] exposed, [cock size desc of player] dick[smn].";
 		say "     '[one of]I really need this[or]This ought to be fun[or]Someone's excited to see me[at random]...' Eager to bring you into full arousal, it doesn't take long for her to get what she wants[if HP of player <= 0], in spite of your impotent struggles[end if]. Hissing eagerly, her movement finally reveals her[one of][or] familiar,[stopping] triple pussies.";
 		say "     Head forcibly buried within her abundant cleavage again, she gradually sinks the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of [if cocks of player > 3]three of your cocks[else if cocks of player is 3]all three cocks[else if cocks of player is 2]both your cocks[else]your cock[end if] within her tight, scaled lips. The creature hissing and moaning with twisted glee, she can barely temper any restraint in burying your flesh inside her, and, [if cockname of player is listed in infections of knotlist]after forcing her way past your knot[smn][else]once hilting you within her slick depths[end if], so does her coils tighten further to hide her [one of]newfound[or]familiar[stopping] toy from the outside world[if scalevalue of player > 3] -- a feat made somewhat challenging by your size[end if].";
@@ -43,7 +43,7 @@ to say losetolamia:
 	else:
 		say "     [if HP of player > 0]Rather than risk you starting to struggle again[else]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom. With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk. Without even realizing it, you shift your lips to one of her many nipples and wrap them around it. You suckle softly as the maternal lamia coos softly about how you're a good [if player is female]girl[else]boy[end if] and to drink up like a good baby.";
 		say "     Her milk flows readily, flowing across your tongue. It is warm, rich and creamy, the flavor so good that you want more. Nursing from her is soothing and you relax more fully, her snug coils around you feeling more like a hug to you than a prison. The wet nurse gently caresses your head as she rocks you gently as she hums a soothing tune.";
-		if libido of player > 33 and ( cocks of player > 0 or cunts of player > 0 ):
+		if libido of player > 33 and player is not neuter:
 			if player is male:
 				say "     You grow aroused as you nurse, a fact that doesn't go unnoticed by the multi-breasted beauty. Feeling your erection[smn] pressing firmly against her hugging tail, she shifts against [if cocks of player > 1]them[else]it[end if], making you throb all the harder. 'Mmm... such an eager boy,' she coos, separating her coils at your groin so she can reach down and take hold of your [cock size desc of player] manhood. She continues to have you suckle from her, shifting your head to a fresh breast while she plays with your cock[smn]. Her practiced hand teases your [cock of player] penis[esmn] until finally you cum hard, spraying your white load even as her many breasts squirt streams of milk over you. Tired now that you've got a full belly of warm milk and are in the haze of your afterglow, you start to drift off for a nap. You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
 			else:
@@ -75,7 +75,7 @@ to say beatthelamia:
 			choose a blank row in table of fucking options;
 			now title entry is "Titty fuck";
 			now sortorder entry is 2;
-			now description entry is "nestle your cock between those milky melons";		]
+			now description entry is "nestle your cock between those milky melons"; ]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive cunnilingus";
@@ -154,53 +154,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Lamia";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The lamia[or]The altered nurse[or]The creature[or]She[at random] [one of]tries to wrap around you[if scalevalue of player > 4]r larger form[end if] and pin you into the submission, forcing you to struggle free and put some distance between you and her[or]lashes you firmly with the tail end of her serpentine body[or]attempts to grip at and overpower you, forcing you to pry yourself free of her hold[at random].";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthelamia]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetolamia]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[lamiadesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "rather attractive and human-looking, though sporting reptilian eyes and a snake's tongue";        [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "a slender human's down to the waist, with the lower half being that of a snake's, long and scaly";    [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]soft[or]supple[or]half-scaled[at random]";    [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "";    [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]human[or]normal[at random]";                        [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though with sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's";    [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your legs meld into one, elongating into the body of a snake, with your torso being that of a human's. It takes a while to adjust to moving with these powerful coils, but you eventually get the hang of it";    [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your torso tingles, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales";    [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel something settle in your lower torso, but nothing physically changes that you can see";    [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it succumbs to some transformative effect. Checking yourself, it appears distinctly human-looking.";        [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 16;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 15;			[ These values may be used as part of alternate combat. ]
+	now name entry is "Lamia"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The lamia[or]The altered nurse[or]The creature[or]She[at random] [one of]tries to wrap around you[if scalevalue of player > 4]r larger form[end if] and pin you into the submission, forcing you to struggle free and put some distance between you and her[or]lashes you firmly with the tail end of her serpentine body[or]attempts to grip at and overpower you, forcing you to pry yourself free of her hold[at random]."; [ Successful attack message ]
+	now defeated entry is "[beatthelamia]"; [ Text when monster loses. ]
+	now victory entry is "[losetolamia]"; [ Text when monster wins. ]
+	now desc entry is "[lamiadesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "rather attractive and human-looking, though sporting reptilian eyes and a snake's tongue";        [ Face. Format as Your face is [face of player]. ]
+	now body entry is "a slender human's down to the waist, with the lower half being that of a snake's, long and scaly";    [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]soft[or]supple[or]half-scaled[at random]";    [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "";    [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]human[or]normal[at random]";                        [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though with sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's";    [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "your legs meld into one, elongating into the body of a snake, with your torso being that of a human's. It takes a while to adjust to moving with these powerful coils, but you eventually get the hang of it";    [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "your torso tingles, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales";    [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel something settle in your lower torso, but nothing physically changes that you can see";    [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it succumbs to some transformative effect. Checking yourself, it appears distinctly human-looking.";        [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 16; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 15; [ These values may be used as part of alternate combat. ]
 	now per entry is 14;
 	now int entry is 13;
 	now cha entry is 16;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 85;			[ The monster's starting HP. ]
-	now lev entry is 12;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 11;			[ Monster's average damage when attacking. ]
-	now area entry is "Hospital";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 12;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 3;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 16;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 12;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "fertile pill";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]flexible[or]elongated[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "[one of]reptilian[or]serpentine[or]lamia[or]snake-like[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "matlamia";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 85; [ The monster's starting HP. ]
+	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 11; [ Monster's average damage when attacking. ]
+	now area entry is "Hospital"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 12; [ Number of nipples the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 3; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 16; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 12; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now loot entry is "fertile pill"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]flexible[or]elongated[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "[one of]reptilian[or]serpentine[or]lamia[or]snake-like[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "matlamia"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -222,29 +221,29 @@ this is the lamiaboob rule:	[***]
 	now alt1chance entry is 6;
 	choose row monster from table of random critters;
 	let matlamiacaught be 1;
-	let playernum be 50 + ( level of player * 2 ) + strength of player;		[strength test]
+	let playernum be 50 + ( level of player * 2 ) + strength of player; [strength test]
 	let matlamianum be 50 + ( lev entry * 2 ) + str entry;
 	say "The serpentine woman manages to wind her tail around you, squeezing down...";
-[	say "STR TEST: [playernum] vs [matlamianum]:[line break]";	]
+[	say "STR TEST: [playernum] vs [matlamianum]:[line break]"; ]
 	let playernum be a random number between 30 and playernum;
 	let matlamianum be a random number between 30 and matlamianum;
 	say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
 	if playernum >= matlamianum:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 133;	[75% dmg this round]
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 133; [75% dmg this round]
 		say "Able to keep your arms free, you grab the encroaching coils and force them open enough to escape. The constriction does [special-style-2][dam][roman type] damage before then though.";
 		decrease HP of player by dam;
 		now matlamiacaught is 0;
 	else:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg this round]
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "Her coils ensnare your limbs, trapping them within her body's grip. You can feel the warm, wet touch of her leaking slits as well as she slide across your thigh even as she wraps herself around your tighter. You take [special-style-2][dam][roman type] damage from the constriction. Even as you continue to resist, she mashes your face into her extra-ample bosom.";
 		if HP of player <= 0 or libido of player >= 110:
 			say "That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
-			now matlamiacaught is 2;	[unable to continue fighting]
+			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
-		increase playernum by stamina of player + level of player;	[endurance test]
+		increase playernum by stamina of player + level of player; [endurance test]
 		increase matlamianum by sta entry + lev entry;
-[		say "STAM TEST: [playernum] vs [matlamianum]:[line break]";	]
+[		say "STAM TEST: [playernum] vs [matlamianum]:[line break]"; ]
 		let playernum be a random number between 20 and playernum;
 		let matlamianum be a random number between 20 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
@@ -252,7 +251,7 @@ this is the lamiaboob rule:	[***]
 		say "You twist and squirm in her grip, doing your best to keep from suffocating amid her fleshy fun-pillows. Eventually, she tosses you aside in frustration. '[one of]Oh, why don't you want to have fun[or]Aren't these good enough for you[or]What? Don't you like hugs[at random]?' she asks, giving a pair of her tits a jiggle, jostling around the rest of the rows as well.";
 		now matlamiacaught is 0;
 	else if matlamiacaught > 0:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg this round]
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		decrease HP of player by dam;
 		increase libido of player by a random number between 4 and 6;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
@@ -260,12 +259,12 @@ this is the lamiaboob rule:	[***]
 		say "With your face buried in her fleshy fun-pillows, you have trouble breathing. The only air you can get heavily laced with the milky scent of her multi-bosom, dulling your wits even as you grow aroused. And it gets even harder for your poor brain to remain oxygenated when her tail tightens further around your chest. This forced exhalation results in you motorboating those jugs of hers, to her giggling delight. '[one of]Oh! I always love that[or]Tee hee! That tickles[or]Oooo! That's more like it[at random][if matlamiacaught is not 2]!' The experience weakens you, causing [special-style-2][dam][roman type] damage even as you grow more aroused.[else]!'[end if]";
 		if HP of player <= 0 or libido of player >= 110 and matlamiacaught is 1:
 			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
-			now matlamiacaught is 2;	[unable to continue fighting]
+			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
-		increase playernum by intelligence of player + level of player;	[intelligence test]
+		increase playernum by intelligence of player + level of player; [intelligence test]
 		increase matlamianum by int entry + lev entry;
-[		say "INTELLIGENCE TEST: [playernum] vs [matlamianum]:[line break]";	]
+[		say "INTELLIGENCE TEST: [playernum] vs [matlamianum]:[line break]"; ]
 		let playernum be a random number between 10 and playernum;
 		let matlamianum be a random number between 10 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
@@ -273,7 +272,7 @@ this is the lamiaboob rule:	[***]
 		say "Sensing her grip relax as she laughs, you re-focus yourself on trying to escape. With a strong push, you're able to break free of her coils. She's disappointed at your behavior, but giggles all the more. '[one of]I guess I'll just have to catch you again[or]Now, don't be like that? I can tell you were having fun, too[or]Too rough? Well, come here and I'll give you a hug to make it up to you[at random].'";
 		now matlamiacaught is 0;
 	else if matlamiacaught > 0:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 110;	[90% dmg this round]
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 110; [90% dmg this round]
 		decrease HP of player by dam;
 		increase libido of player by a random number between 5 and 8;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
@@ -281,12 +280,12 @@ this is the lamiaboob rule:	[***]
 		say "Her grip eases a little as she laughs and your immediate response is to gasp for air, but all you get is another lungful of her arousing scent followed by a mouthful of nipple. You end up sucking down on her hard nip before you realize what you're doing. Your resistance fades further and you become all the more aroused[if player is herm]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it, causing an excess of your feminine juices to leak from your cunt[sfn][else if player is male]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it[else if player is female]. You grind your hips and try to wiggle your legs as fresh feminine juices leak from your cunt[sfn][end if][if matlamiacaught is not 2]. It becomes harder to hold out as you take another [special-style-2][dam][roman type] damage and become further aroused[end if].";
 		if HP of player <= 0 or libido of player >= 110 and matlamiacaught is 1:
 			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
-			now matlamiacaught is 2;	[unable to continue fighting]
+			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
-		increase playernum by 100 + humanity of player - libido of player;	[libido/humanity test]
+		increase playernum by 100 + humanity of player - libido of player; [libido/humanity test]
 		increase matlamianum by 150;
-[		say "LIBIDO/HUMANITY TEST: [playernum] vs [matlamianum]:[line break]";	]
+[		say "LIBIDO/HUMANITY TEST: [playernum] vs [matlamianum]:[line break]"; ]
 		let playernum be a random number between 1 and playernum;
 		let matlamianum be a random number between 1 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
@@ -294,7 +293,7 @@ this is the lamiaboob rule:	[***]
 		say "The taste of her milk shocks you into the realization of what's going on. Spitting it out across her breast, you push yourself away from her grip. Thankfully, she'd relaxed further when you started nursing, so you're able to squirm free before she can stop you.";
 		now matlamiacaught is 0;
 	else if matlamiacaught > 0:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;	[100% dmg this round]
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		decrease HP of player by dam;
 		increase libido of player by a random number between 8 and 12;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 2;

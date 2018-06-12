@@ -31,7 +31,7 @@ to say beatthemonstercostume:
 	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap. ";
 	if werewolfcostumenosex > 2:
 		say "     As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
-	else if cocks of player > 0 and libido of player > 25 and werewolfcostumenosex < 3:
+	else if player is male and libido of player > 25 and werewolfcostumenosex < 3:
 		say "     Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
 		if the player consents:
 			now werewolfcostumenosex is 0;
@@ -66,8 +66,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Werewolf Costume"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The werewolf costume flails at you with its arms, hard claws scraping you![or]The costume creature throws itself onto you, trying to smother you with its empty body![or]The werewolf mask bites at you![or]The animate costume rubs itself against your groin while its empty limbs wrap around you![at random]"; [Text used when the monster succeeds on an attack]
+	now name entry is "Werewolf Costume"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The werewolf costume flails at you with its arms, hard claws scraping you![or]The costume creature throws itself onto you, trying to smother you with its empty body![or]The werewolf mask bites at you![or]The animate costume rubs itself against your groin while its empty limbs wrap around you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthemonstercostume]";
 	now victory entry is "[losetomonstercostume]";
 	now desc entry is "[monstercostumedesc]";
@@ -95,7 +95,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

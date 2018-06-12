@@ -236,7 +236,7 @@ to say losetowereraptor:
 			else:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her. You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and turns around, pressing her hindquarters, and more specifically her dripping snatch, into your face. With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over. You bury your nose between her legs and start licking wildly at her pussy, lapping up her heated juices and getting a roar of pleasure from her[if player is female]. You roar in return as she sets to licking at your juicy cunt in return[end if]. In the throes of her lust, her claws dig into you but you hardly notice, your wild and primitive lust driving you to lick until [if player is female]you both cum loudly with another hissing roar[else]she cums with another loud, hissing roar[end if].";
 		else:
-			if cunts of player > 0 and a random chance of 3 in 4 succeeds:
+			if player is female and a random chance of 3 in 4 succeeds:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him. You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases as triumphant road and grinds his hard cock against your rear. Catching the scent of his lust, your excitement grows and your feral nature takes over. You spread your legs and raise your tail, hissing your need for the strong male to mount you. Grabbing your shoulders with his clawed hands, he climbs atop you and drives his pulsing rod into you, making you both roar in pleasure. He pounds into you rough and hard, his claws digging into you as he thrusts into your juicy cunt like the primitive beast he is. He nips and licks along your neck, his hot breath sliding along your neck as he mates you. The feel of his saurian shaft sliding into you is just what your wereraptor body needs to satisfy its lustful desires. When your pleasures peak, he drives hard into you one last time and unleashes his hot seed, filling your womb with his saurian seed. You both roar loudly in ecstasy at the triumphant climax of the wild mating.[ovichance]";
 			else if anallevel > 1 and a random chance of 2 in 3 succeeds and cunts of player is 0:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him. You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases as triumphant road and grinds his hard cock against your rear. Catching the scent of his lust, your excitement grows and your feral nature takes over. You spread your legs and raise your tail, hissing as you submit to the stronger male's dominance. Grabbing your shoulders with his clawed hands, he climbs atop you and drives his pulsing rod into you, making you both roar in pleasure. He thrusts into you rough and hard, his claws digging into you as he pounds into you like the primitive beast he is. He nips and licks along your neck, his hot breath sliding along your neck as he fucks you in a display of feral dominance. When your pleasures peak, he drives hard into you one last time and unleashes his hot seed, filling your belly with his saurian seed. As he cums, he roars again, nipping firmly at your neck and grinding his pulsing shaft deep inside you[if player is male]. This added pressure against your prostate and the hot rush of his semen into you pushes you over the edge and you climax as well.[movichance]";
@@ -257,7 +257,7 @@ to say losetowereraptor:
 to say beatthewereraptor:
 	if wrcurseNermine is 9:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
-	else if bodyname of player is "Wereraptor" and ( cocks of player > 0 or cunts of player > 0 ):
+	else if bodyname of player is "Wereraptor" and player is not neuter:
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[else]him[end if] instinctively. You bear [if wrmode is 1]her[else]him[end if] to the ground and pin them.";
 		say "     [bold type]Shall you give into your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
 		LineBreak;
@@ -291,7 +291,7 @@ to say beatthewereraptor:
 						say "[wrvict1]";
 					else:
 						say "[wrvict3]";
-				else if cocks of player > 0 and anallevel > 1:
+				else if player is male and anallevel > 1:
 					say "     As your loosen the reins on your wereraptor lusts, shall you show your dominance and [link]mount him (Y)[as]y[end link] or [link]blow one another (N)[as]n[end link]?";
 					if the player consents:
 						say "[wrvict2]";
@@ -331,10 +331,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Wereraptor"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Wereraptor"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The wereraptor growls and claws at you with [if wrmode is 2]his[else]her[end if] taloned hands![or]The enraged creature gives you a vicious slash with [if wrmode is 2]his[else]her[end if] foot claws![or]The saurian creature slams [if wrmode is 2]his[else]her[end if] long, thick tail into you, knocking you sideways![or]The wereraptor snaps at you with [if wrmode is 2]his[else]her[end if] saurian jaws![at random]";
-	now defeated entry is "[beatthewereraptor]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetowereraptor]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthewereraptor]"; [ Text when monster loses. ]
+	now victory entry is "[losetowereraptor]"; [ Text when monster wins. ]
 	now desc entry is "[wereraptordesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "[if wrcurseactivity is true]animalistic head of a raptor with piercing yellow eyes and[else]a humanoid face with saurian features. It has yellow eyes and is[end if] covered in [if player is herm]dark crimson[else if player is female]black[else if player is male]green[else]pale gray[end if] scales";
 	now body entry is "[if wrcurseactivity is true]shaped like some kind of human-velociraptor hybrid. You are hunched over, balancing on your powerful hind legs. Your arms have a strong tendency to fold up against your chest when not in use or when you are running, charging like a velociraptor in those movies you used to watch. Your hands and feet now only possess three digits each[else]roughly human in shape, but with taloned hands and feet. Aside from a tendency to fold your arms up against your chest, you carry yourself mostly like any other person[end if]";
@@ -360,7 +360,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

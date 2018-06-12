@@ -149,7 +149,7 @@ to say sexwithHadiya:
 		WaitLineBreak;
 		say "     Your asshole is pried open roughly by the hyena's cock, spread and forced to take her throbbing meat. After all the teasing, or perhaps you're just starting to need it rough, this feels wonderful, filling a vacancy in you that only your hyena mistress can fill. When her jaws are back around your throat, she starts pounding away at you, your body bent beneath her as she tears into you with her pointed, animal cock and pressing you downwards with each slamming thrust. Your cock dribbles and drools, trapped between your groin and your mistress's furry belly - so very hard. Her hips slam into yours, her cock bruising your prostate from how hard she's slamming into you, making you whimper and moan, in ecstasy despite (or perhaps even because of ) the pain.";
 		WaitLineBreak;
-		if HP of Hadiya is 6 and cunts of player > 0 and "One Way" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
+		if HP of Hadiya is 6 and player is female and "One Way" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
 			say "     After pounding away at you in this position for a long, long time, she flips you over, putting you on all fours and mounting you like an animal. You grind your ass back against her, sore and tired, but still needing that hot, gooey reward inside you. As she's sinking her shaft into you, her paw strays to your pussy, completely forgotten in the excitement, and brushes over it lightly. 'Here you are, such a needy bitch taking it up the ass. You don't need this pussy at all, do you? When you get fucked, you just want it in your ass, so it's just getting in the way. Your mistress doesn't want it, so you don't need it, do you?' she rumbles in your ear, moving her paw to play with your cock and your balls.";
 			say "     [bold type] Do you agree with your mistress, no longer wanting and needing your pussy?[roman type][line break]";
 			LineBreak;
@@ -390,7 +390,7 @@ to say sexwithGobby:
 	else if lastfuck of Gobby - turns < 6:
 		say "Gobby seems a little preoccupied with his hyena mistress at the moment.";
 	else:
-		if cocks of player > 0 and HP of Gobby > 1 and lastfuck of Hadiya - turns >= 6 and a random chance of anallevel in 7 succeeds and anallevel > 1:
+		if player is male and HP of Gobby > 1 and lastfuck of Hadiya - turns >= 6 and a random chance of anallevel in 7 succeeds and anallevel > 1:
 			say "     Wanting a go at the goblin's ass, you grab the little guy's rear and pull out your cock. He gives a little squeak and squirms, but doesn't pull away. His nimble hands clutch your shaft [if cockname of player is not listed in infections of InternalList] and balls[end if], stroking and teasing to get you fully hard. As he's doing so, you slip those tight pants of his down, baring his bottom.";
 			WaitLineBreak;
 			say "     'Hey, if you sluts are going to go at it, I want in on this action,' Hadiya growls with a grin on her muzzle. 'Gobby, get over here and put that mouth of yours to work.'";

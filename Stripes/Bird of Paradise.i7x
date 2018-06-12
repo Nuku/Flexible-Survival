@@ -28,14 +28,14 @@ to say losetobirdofparadise:
 
 
 to say beatthebirdofparadise:
-	if bopdefeated is 3 and cocks of player > 0:
+	if bopdefeated is 3 and player is male:
 		increase bopdefeated by 1;
 		say "     As your blows stagger the beautiful bird, you leap forward and tackle her to the ground before she can make her escape like the others. She squawks and flaps her wings wildly, trying to break free, but is too weakened by the fight to get away. Having been worked up by her lustful dancing and alluring song, you're reluctant to let her go now that you've got her. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
 		if the player consents:
 			say "[bopvictorysex1]";
 		else:
 			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent. You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again. Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
-	else if bopdefeated > 3 and cocks of player > 0 and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
+	else if bopdefeated > 3 and player is male and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
 		increase bopdefeated by 1;
 		say "     Getting yourself into position, you move in close and knock the beautiful bird to the ground with your final blow only to tackle her down moments later. She squawks and tries to get free, but you've gotten quite worked up from her tempting show and consider getting yourself some release. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
 		if the player consents:
@@ -169,23 +169,23 @@ this is the bopsong rule:
 Section 4 - Definitions
 
 Definition: a person is bopfaced:
-	if the facename of the player is "Bird of Paradise", yes;
+	if facename of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is bopskinned:
-	if the skinname of the player is "Bird of Paradise", yes;
+	if skinname of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is bopbodied:
-	if the bodyname of the player is "Bird of Paradise", yes;
+	if bodyname of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is bopcocked:
-	if the cockname of the player is "Bird of Paradise", yes;
+	if cockname of player is "Bird of Paradise", yes;
 	no;
 
 Definition: a person is boptailed:
-	if the tailname of the player is "Bird of Paradise", yes;
+	if tailname of player is "Bird of Paradise", yes;
 	no;
 
 Section 5 - Endings

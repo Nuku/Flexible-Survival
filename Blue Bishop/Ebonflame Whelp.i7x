@@ -28,14 +28,14 @@ to say ebwhelpvic:
 	if ebneuterswitch is true:
 		if anallevel is not 0 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 			now tempnum is 2;
-		else if cunts of player > 0 and a random chance of 3 in 4 succeeds:
+		else if player is female and a random chance of 3 in 4 succeeds:
 			now tempnum is 1;
 		else:
 			now tempnum is 0;
 	else:
 		if (cunts of player is 0 and anallevel > 1 and player is male_vacant) and ((anallevel is 2 and (player is kinky or player is mpreg_ok)) or anallevel is 3):
 			now tempnum is 2;
-		else if cunts of player > 0 and player is fem_vacant:
+		else if player is female and player is fem_vacant:
 			now tempnum is 1;
 		else:
 			now tempnum is 0;
@@ -48,7 +48,7 @@ to say ebwhelpvic:
 		say ". Completely without restraint the lizard makes a beeline for your ass. Nipping and clawing at your hips, it's little legs flit about in a weak attempt at removing any obstruction before properly positioning itself. [if HP of player > 0]Obliging the small dragon, you eventually help him get him properly positioned[else]You weakly try to push the small dragon off of you, but this only invites him to nip and claw at you into submission, eventually getting himself into position[end if].";
 		say "     With a tainted urgency, you immediately feel yourself [if scalevalue of player < 4]impaled[else]stabbed[end if] by the tiny monster's instantly erect dick down your barely ready asshole, burying it's long, tapered length down your hole until he's slapping his smooth, scaled crotch between your thighs. You feel the thing, like a searing hot poker, worm its way around your innards, sputtering its molten-hot precum[if scalevalue of player < 4] deep[end if] inside you. Absolutely dead set on weakly pounding your ass into oblivion, you have to endure the sounds of its loud, wanton squealing filling air, hardly drowning out his increasingly wet motions.";
 		say "     [if HP of player > 0]Barely given time to become aroused from[else]Gradually aroused by[end if] this[if birthedwhelp is true], twisted[end if] embarrassing display, [if player is male]your cock[smn] ache[smv] against the open air, driving you to stroke yourself through all this[else if player is female]your cunt[sfn] ache[sfv] against the open air, driving you to fondle yourself through all this[else]much in spite of your lack of outlet[end if]. It doesn't take long for the whelp to finally howl out, clinging to you tightly as you're pumped with gout after successive gout of his scalding load. His release seems so excessive, you're soon made dizzy with the sheer volume[if scalevalue of player < 3], body visibly bloating to accommodate all of it[end if]";
-		if libido of player > 30 and (cocks of player > 0  or cunts of player > 0):
+		if libido of player > 30 and player is not neuter:
 			say ". The whole ordeal is more than enough to set you off, staining the ground with your [if player is male][cum load size of player] load[else] juices[end if]";
 		say ".";
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of its oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, it slowly pulls itself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking its own parent[end if], he leaves you to recover from being so thoroughly filled.";
@@ -87,7 +87,7 @@ to say ebwhelpdef:
 		say "     Letting out one last, mournful cry, the whelp finally falls to the ground with a soft thud. Faintly chirping and stirring, it looks like it'll take a while to recover. You choose this time to go about your business once more, before it wakes.";
 
 to say ebwhelpdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	now firebreathcount is 0;
 	now firebreathready is false;
 	if birthedwhelp is false:

@@ -243,13 +243,13 @@ to say PericlesSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and cunts of player < 1:
+	if player is male and cunts of player < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride the Spartan cock";
 		now sortorder entry is 1;
 		now description entry is "Take the Spartan-Helot leader for a ride";
 	[]
-	if cocks of player > 0 and cunts of player < 1:
+	if player is male and cunts of player < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Pericles off"; [only males can suck him off]
 		now sortorder entry is 2;

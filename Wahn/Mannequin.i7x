@@ -42,14 +42,14 @@ When Play begins:
 	now desc entry is "[mannequinDesc]";
 	now face entry is "smooth, with striking angular features like a statue";
 	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "pale and flawless";[ format as the text "You have (your text) skin"]
-	now tail entry is "";[ write a whole Sentence or leave blank. ]
-	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into a chiseled male visage"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "your limbs are reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "all blemishes and hairs vanish, leaving you with flawless pale skin"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your manhood becomes human-shaped and covered in pale skin"; [ format as "Your cock feels funny as (your text)" ]
+	now skin entry is "pale and flawless"; [ format as "You have (your text) skin"]
+	now tail entry is ""; [ write a whole Sentence or leave blank. ]
+	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it shapes itself into a chiseled male visage"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "your limbs are reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "all blemishes and hairs vanish, leaving you with flawless pale skin"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your manhood becomes human-shaped and covered in pale skin"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 22;
 	now sta entry is 13;

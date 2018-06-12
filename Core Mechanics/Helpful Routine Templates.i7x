@@ -12,7 +12,7 @@ to malemonstersex: [This is the most basic version of player loss routines for m
 	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     This is for anal catching. It checks to see if the player has 'less anal' first, then checks to see that the player doesn't have a better hole (or, if they do, they have 'more anal'), before rolling a 1 in 2 to see if it happens and rolling again if they have more.";
 		say "     Remember to end the scene with a male pregnancy 'to say' command.[mimpregchance]";
-	else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+	else if player is female and a random chance of 1 in 2 succeeds:
 		say "     This is for cunt-particular sex. If you want to cut corners, you can use the same scene as the above, except with different references for what is penetrated. It's certainly a shortcut, but players won't mind as long as the scene is good enough on its own merits.";
 		say "     One thing to be mindful of is cock-particular references in your scene. If you wrote the anal first, you might make a passing reference to player genitalia. Obviously, the female genital references have to be tweaked to account for the penetration (or partial penetration, if they have multiple), but you may want male anatomy to take priority, to further qualify hermaphrodite players.";
 		say "     Similarly, end this with a standard pregnancy command.[impregchance]";
@@ -32,7 +32,7 @@ to malebreedersex: [This is a variation of be above, for monsters who are strict
 		say "     Though less bad, it's also not a good idea to create a context of the monster 'conceding' to this scene and deliberately pointing out the 'shortcomings' of the player. There's no reason to 'point players in the right direction'; there's no progression associated with your monster; they're not a door, so you don't need to tell the player they're missing the right 'key'. In the end it just annoys players by having the writer tell them they're playing their character wrong.";
 
 to femalemonstersex: [This is the most basic version of player loss routines for female creatures]
-	if cocks of player > 0 and a random chance of 1 in 2 succeeds:
+	if player is male and a random chance of 1 in 2 succeeds:
 		say "     This if for cunt sex with the player pitching. You may want to consider size restriction, if your monster is particularly small.";
 		say "     For 'Breeder' Variations, you simply remove the roll.";
 	else:
@@ -42,7 +42,7 @@ to femalemonstersex: [This is the most basic version of player loss routines for
 to hermmonstersex: [This is a 'robust' version of player loss routines for herm creatures]
 	if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     Due to the dominant nature of the scenes, herms behave more or less like males, since penetrative sex is more dominant than scenes where the monster is catching.[mimpregchance]";
-	else if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+	else if player is female and a random chance of 1 in 2 succeeds:
 		say "     Second verse, same as the first.[impregchance]";
 	else if cocks of player > 1 and a random chance of 1 in 2 succeeds:
 		say "     This is a scene with the monster catching the player's cock. If you're not into anal, you can remove that and have this instead, though having all of it is prefereable. You can, of course, cut this instead, if you don't like the idea of your monster 'power bottoming'.";

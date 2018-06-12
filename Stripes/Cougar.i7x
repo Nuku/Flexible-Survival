@@ -17,9 +17,9 @@ to say losetocougar:
 		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Expecting her to want you to suck her off, you open your mouth. But instead of a mouthful of cock, you get a mouthful of her hot piss as she releases her bladder with a chuckle. Coughing and sputtering at the acrid surprise, she sprays more across your face before forcing her penis into your mouth to empty the rest down your throat. After your hot drink is done, she moves on to satisfying her lusts.";
 	else if a random chance of 1 in 3 succeeds:
 		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Knowing what's expected of you and [if HP of player > 0]accepting that you must satisfy the feline's needs[else]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it. You lick and suck at the dribbling member while she rumbles and purrs in pleasure. After a few minutes of having you suck her off for foreplay, she moves on to satisfying her lusts more actively.";
-	if cocks of player > 0 and cunts of player is 0:
+	if player is puremale:
 		say "[cougarride]";
-	else if cunts of player > 0 and cocks of player is 0:
+	else if player is purefemale:
 		say "[cougartop]";
 	else:
 		if a random chance of 1 in 2 succeeds:
@@ -67,21 +67,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Cougar"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The tough feline slashes at you with her sharp claws![or]The puma tries to bear you down under her weight. You get away, but not without several scratches![or]The cougar's teeth dig into your side![or]The mountain lion kicks you in the leg![or]The creature grabs you with one paw and digs her claws in while the other moves to grope you![or]Grabbing your wrists, the big cat pushes your arms away so she can grind her body against yours. You can feel her firm breasts and throbbing cock pressed against you![at random]"; [Text used when the monster succeeds on an attack]
+	now name entry is "Cougar"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The tough feline slashes at you with her sharp claws![or]The puma tries to bear you down under her weight. You get away, but not without several scratches![or]The cougar's teeth dig into your side![or]The mountain lion kicks you in the leg![or]The creature grabs you with one paw and digs her claws in while the other moves to grope you![or]Grabbing your wrists, the big cat pushes your arms away so she can grind her body against yours. You can feel her firm breasts and throbbing cock pressed against you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthecougar]";
 	now victory entry is "[losetocougar]";
 	now desc entry is "[cougardesc]";
-	now face entry is "feline in form, with a short muzzle and yellow, feline eyes. The sides of your muzzle are darker and there are marks above your eyes, but otherwise, it lacks any markings"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "athletic and firmly muscled, with a vaguely feline form and large paws for hands. Your body and limbs are shaped such that you can comfortably switch to going upright or on all fours, and find yourself changing between these postures naturally when the need arises"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "golden brown fur with a creamy belly"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Attached at your rear is a cougar's tail, golden brown and darkening towards the tip."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]deep brown[or]sensually barbed[or]feline[as decreasingly likely outcomes]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it reshapes into a feline muzzle and head"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes more feline in form and more athletically built. You feel comfortable switching between walking upright and on all fours. Your hands become feline paws with retractable claws"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "golden brown fur spreads all over your body. Your coloration is uniform over most of your body, lacking elaborate markings or patterns and only a shift to a creamy color at your belly and groin"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a feline tail grows into place, swishing as it becomes more distinctly puma-like in form and pattern"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your balls churn and your cock reshapes itself into a vaguely human form, but with the stimulating spines of a feline penis. Your shaft changes color, becoming a deep brown as these changes complete themselves"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "feline in form, with a short muzzle and yellow, feline eyes. The sides of your muzzle are darker and there are marks above your eyes, but otherwise, it lacks any markings"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "athletic and firmly muscled, with a vaguely feline form and large paws for hands. Your body and limbs are shaped such that you can comfortably switch to going upright or on all fours, and find yourself changing between these postures naturally when the need arises"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "golden brown fur with a creamy belly"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "Attached at your rear is a cougar's tail, golden brown and darkening towards the tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]deep brown[or]sensually barbed[or]feline[as decreasingly likely outcomes]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "it reshapes into a feline muzzle and head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it becomes more feline in form and more athletically built. You feel comfortable switching between walking upright and on all fours. Your hands become feline paws with retractable claws"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "golden brown fur spreads all over your body. Your coloration is uniform over most of your body, lacking elaborate markings or patterns and only a shift to a creamy color at your belly and groin"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "a feline tail grows into place, swishing as it becomes more distinctly puma-like in form and pattern"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "your balls churn and your cock reshapes itself into a vaguely human form, but with the stimulating spines of a feline penis. Your shaft changes color, becoming a deep brown as these changes complete themselves"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
@@ -96,7 +96,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

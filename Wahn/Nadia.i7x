@@ -152,18 +152,18 @@ to say NadiaEggBirth: [time to give birth]
 			WaitLineBreak;
 			say "     [NadiaMultiPregBirthing]";
 			now NadiaPregCounter1 is NadiaPregCounter2; [pregnancy progress of the 2nd pregnancy transferred to 1st as it's the next one to pop out]
-			now NadiaPregCounter2 is 0;[clearing the variable]
+			now NadiaPregCounter2 is 0; [clearing the variable]
 		if NadiaPregCounter3 > 0: [third running pregnancy becomes second]
 			now NadiaPregCounter2 is NadiaPregCounter3; [pregnancy progress of the 3nd pregnancy transferred to 2st as it's second in line]
-			now NadiaPregCounter3 is 0;[clearing the variable]
+			now NadiaPregCounter3 is 0; [clearing the variable]
 	else:
 		say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the library and check with Nadia.";
 		if NadiaPregCounter2 > 0: [second running pregnancy becomes first]
 			now NadiaPregCounter1 is NadiaPregCounter2; [pregnancy progress of the 2nd pregnancy transferred to 1st as it's the next one to pop out]
-			now NadiaPregCounter2 is 0;[clearing the variable]
+			now NadiaPregCounter2 is 0; [clearing the variable]
 		if NadiaPregCounter3 > 0: [third running pregnancy becomes second]
 			now NadiaPregCounter2 is NadiaPregCounter3; [pregnancy progress of the 3nd pregnancy transferred to 2st as it's second in line]
-			now NadiaPregCounter3 is 0;[clearing the variable]
+			now NadiaPregCounter3 is 0; [clearing the variable]
 	increase NadiaChickCounter by 1;
 	increase NadiaFertilityCounter by 1;
 	if NadiaDescription < 6:  [she's not reached Goddess stage yet]
@@ -357,7 +357,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock.";
 		now toggle entry is NadiaSex rule;
-	if (cocks of player > 0 and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and Char-I of Nadia is "1"):
+	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and Char-I of Nadia is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;
@@ -736,7 +736,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and H
 	say "     Stepping up to the library's second floor, you're greeted by the familiar sight of Nadia's nest - and the unfamiliar sight of her not in it. Instead, she's leaning against one of the open windows, singing a few notes every now and then into the city, her voice carrying out amongst the buildings. It's as if she's looking for something, but although she hurriedly waves you over the moment she sees you, you're clearly not the source of her agitation.";
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
 	say "     Admittedly, it's a little hard to remember just which of Nadia's chicks is which, especially when the broody bird keeps on adding to their number, but it shouldn't be too hard to find one of them when avians, especially ones as colorful as birds of paradise, aren't exactly a common sight on the campus. You agree to keep an eye out for her lost chick when you're in the area; Nadia nods and turns back to the window, calling out every now and then in the hope that her lost daughter will return to her.";
-	now Lost Chick is unresolved;[event open now]
+	now Lost Chick is unresolved; [event open now]
 	now HP of Nadia is 2;   [quest given]
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):

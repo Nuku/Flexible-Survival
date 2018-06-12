@@ -61,13 +61,13 @@ to say TehuantlSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and HP of Tehuantl < 50: [male/herm player, female Tehuantl]
+	if player is male and HP of Tehuantl < 50: [male/herm player, female Tehuantl]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "Make use of your pussy's pussy";
 	[]
-	if cocks of player > 0 and HP of Tehuantl < 50 and TehuantlStatus is 2: [male/herm player, female Tehuantl in heat]
+	if player is male and HP of Tehuantl < 50 and TehuantlStatus is 2: [male/herm player, female Tehuantl in heat]
 		choose a blank row in table of fucking options;
 		now title entry is "Soothe her heat";
 		now sortorder entry is 2;
@@ -85,7 +85,7 @@ to say TehuantlSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Put your kitty's rough tongue to use";
 	[]
-	if cunts of player > 0 and HP of Tehuantl < 50 and TehuantlStatus is 2: [female player, female Tehuantl in heat]
+	if player is female and HP of Tehuantl < 50 and TehuantlStatus is 2: [female player, female Tehuantl in heat]
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 5;
@@ -97,7 +97,7 @@ to say TehuantlSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Make use of your kitty's manhood";
 	[]
-	if cocks of player > 0 and HP of Tehuantl > 49: [any player, male Tehuantl]
+	if player is male and HP of Tehuantl > 49: [any player, male Tehuantl]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the jaguar's ass";
 		now sortorder entry is 7;
@@ -278,7 +278,7 @@ to say TehuantlandSven:
 			say "     Deciding to leave your feline pets be, you try to put the thought out of your mind as Sven disappears upstairs. Soon after you hear the jingling of Tehuantl's belled collar and some hushed conversation upstairs before you turn your attention to other things.";
 [
 	else:
-		say "***Alternate Sven scene w/Tehuantl.";		]
+		say "***Alternate Sven scene w/Tehuantl."; ]
 
 to say TehuantlandSnow:
 	if TehuantlSnowStatus is 0:

@@ -59,7 +59,7 @@ an everyturn rule:
 		increase libido of player by a random number between 1 and 3;
 		if larvaegg is 0:
 			increase larvacounter by 1;
-			if cunts of player > 0 and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
+			if player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, increase larvacounter by 1;
 			if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if larvacounter >= 12 and gestation of child is 0:
@@ -108,7 +108,7 @@ an everyturn rule:
 		else if larvaegg is 2:
 			decrease libido of player by 4;
 			increase larvacounter by 1;
-			if cunts of player > 0 and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
+			if player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, increase larvacounter by 1;
 			if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if larvacounter >= 36:
@@ -184,10 +184,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Black Wasp"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The wasp grabs at you with its insect legs, trying to shove you down![or]The black insect jabs its phallic stinger against you several times, leaking precum onto you![or]The bug nips at you with its mandibles![or][if scalevalue of player < 4]The insect grabs you flies up several feat before tossing you to the ground[else]The insect grabs onto your arm and flies frantically. While not able to lift you, it does drag you around, pulling you into something nearby[end if]![or]The wasp buzzes angrily and bashes its chitinous body against yours![or]The insects numerous feet scratch at you with their little claws![at random]";
-	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. ]
+	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. ]
 	now desc entry is "[blackwaspdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "insectile in apperance, with large, segmented eyes and a pair of antenna on your head";
 	now body entry is "has become segmented like that of an insect. Your arms and legs become partially insectile, with clawed digits and inhuman joints. You also possess an additional pair of vestigial insect legs pulled up against your sides. They twitch occasionally, and you can make them move if you concentrate, but they are still too weak and hard to control for proper use yet";
@@ -213,7 +213,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

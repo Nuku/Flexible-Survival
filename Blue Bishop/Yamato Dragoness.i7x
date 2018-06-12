@@ -67,7 +67,7 @@ to say Yamato Dragoness vic:
 			else:
 				say "[if FYDTBMM is 0]shows no remorse in tormenting you, now relegating to being a mere toy for her twisted hunger[else]never relents in tormenting her toy in the name of her twisted hunger[end if]";
 			say ". These persisting motions quickly arousing you, [if player is neuter]much in spite your lack of outlet[else if HP of player < 1 and player is not submissive]much in spite your better judgment[else]writhing impotently against these tainted confines[end if], it's not long before ";
-			if lust of player > 33 and (cunts of player > 0 or cocks of player > 0):
+			if lust of player > 33 and (player is not neuter):
 				say "you cry out in orgasm, [if player is male]your throbbing, sputtering cock[smn][else]your audible climax[end if] more than enough to bring her over the edge along with you. The [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, your [if FYDTBMM is 0]uncertain[else]inevitable[end if] fate is punctuated by your sudden disappearance, pulled into the depths of her voracious portal in the wake of her bliss.";
 			else:
 				say "finally she cries out in orgasm, the [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, pulled into the depths of her voracious portal in the wake of this bliss.";
@@ -130,7 +130,7 @@ to say Yamato Dragoness vic:
 			else:
 				say "     You're gradually roused back from unconsciousness, quicking finding yourself trapped within the tight, translucent confines of an egg, compelling yourself to break free of this hot, moist prison. Exposed to the dry, [if daytimer is night]night[else]day[end if]time air once more, she at least offered the small courtesy of leaving you [if showlocale is true]in the park[else]where you first met[end if]. It takes you some time to find your things and return back from whence you came.";
 		else if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
-			if cocks of player > 0 and a random chance of 1 in 2 succeeds:
+			if player is male and a random chance of 1 in 2 succeeds:
 				say "     Pinning you to the ground with a talon, you feel her scaled lips encircle your [if player is internal]crotch, coaxing your [cock size desc of player] cock[smn] out into the open air[else][cock size desc of player] cock[smn], coaxing you into becoming fully hard[end if]. Satisfied with your preparation, she pulls your [if HP of player > 0]exposed[else]battered[end if] form up into the air with her.";
 				say "     '[one of]Such a little thing, I will grant you but a glimpse of your inevitable fate[or]So small and flightless you are, feel the open sky, as we all do[or]You will feel what only I might offer you[at random].' Drawing attention to your shared infection, her influence floods you with a rush of uncontrollable, tainted excitement at the notion of being great beast's consort.";
 				say "     Her larger frame soon entwining itself with your own, you can feel the dragoness's scales grind firmly against you";
@@ -208,7 +208,7 @@ to say Yamato Dragoness vic:
 					say "     Tight, heated vent inviting you to continue, your lips embrace the dragoness's hungry cunt and, in turn, she rewards your attendance by continuing to tease you, causing you to writhe in insatiable need. The [if HP of player < 1 and player is not submissive]victim[else]smaller[end if] half of this twisted ouroboros, you eventually feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey.";
 				say "     After a few moments, she finally wrenches you free of her, setting you down on the ground by your tail. Satisfied, she grins at you for a moment before silently floating off, away from you[if cocks of player > 1] and your cum-soiled self[end if], doubtlessly fatigued and lust sated. You gather your things[if cocks of player > 1], clean yourself off,[end if] and depart back from whence you came.";
 		else:
-			if cocks of player > 0 and a random chance of 1 in 2 succeeds:
+			if player is male and a random chance of 1 in 2 succeeds:
 				say "     [if HP of player < 1 and player is not submissive]Charged by a surge of rebellion, you make one final attempt to crawl away, only to be grabbed by the dragoness and dragged closer[else]Tainted need clear in her eyes, the dragoness shows no restraint in pulling you closer to her[end if]. [if scalevalue of player > 4]Massive as you are, [one of]it's clear[or]you're reminded[stopping] that she eclipses even you in size[else if scalevalue of player is 4]Fairly large as you are, [one of]it's clear[or]you're reminded[stopping] that she's much, much larger than you[else]Her appearance is somewhat intimidating, given how absolutely massive she is[end if]; regardless, you're forced to watch on as her scaled snout descends on you, tongue emerging to caress your [if player is internal]crotch, coaxing your [cock size desc of player] cock[smn] out into the open air[else]exposed, [cock size desc of player] cock[smn], coaxing you into becoming fully hard[end if][if HP of player > 0 and player is not submissive], in spite of your better judgment[end if].";
 				say "     Blatantly revealing her plans for you, she slowly begins to shift over, lengthy, serpentine frame giving way until the creature's reptilian vent is exposed before you";
 				if FYDM is 0:
@@ -273,7 +273,7 @@ to say Yamato Dragoness vic:
 		yamatbiasshift;
 
 to say yamato dragoness desc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -641,7 +641,7 @@ to YamatFvore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if player is male and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			decrease libido of player by (libido of player / 10) + 1;
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;

@@ -128,7 +128,7 @@ To say beatthehgryphon:
 				now title entry is "Anal ride";
 				now sortorder entry is 3;
 				now description entry is "get that knotted cock in your ass"; ]
-			if cocks of player > 0 and cock length of player > 7 and cunts of player > 0 and cunt length of player > 5:
+			if player is male and cock length of player > 7 and player is female and cunt length of player > 5:
 				choose a blank row in table of fucking options;
 				now title entry is "Titty fuck + ride";
 				now sortorder entry is 4;
@@ -265,21 +265,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Hermaphrodite Gryphon"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Hermaphrodite Gryphon"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random].";
 	now defeated entry is "[beatthehgryphon]";
 	now victory entry is "[losetohgryphon]";
 	now desc entry is "[HermGryphonDesc]";
-	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a thin, leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your ears are drawn upwards to the top of your head and a wicked beak pushes forward"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "a flush of arousal stirs through you, a dense carpet of blue fur engulfing you in its warm, encouraging presence"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel a new weight. A glance shows a long, [skin of player] tube growing over your ass. The end blossoms out into a blue, furry tuft. You have a tail"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your cock deepens to a midnight black, a large, swollen knot forming towards the base and a soft, blue, furry sheath overtaking the very base of it"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a thin, leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "your ears are drawn upwards to the top of your head and a wicked beak pushes forward"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "a flush of arousal stirs through you, a dense carpet of blue fur engulfing you in its warm, encouraging presence"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel a new weight. A glance shows a long, [skin of player] tube growing over your ass. The end blossoms out into a blue, furry tuft. You have a tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "your cock deepens to a midnight black, a large, swollen knot forming towards the base and a soft, blue, furry sheath overtaking the very base of it"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
@@ -294,7 +294,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 13; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

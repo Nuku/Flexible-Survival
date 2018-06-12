@@ -141,7 +141,7 @@ instead of sniffing Nakoma's Tent:
 	say "Nakoma's tent smells of herbs, scented oil, fur and a hint of equine arousal.";
 
 Definition: a person is blequinoidbodied: [Determines if the player is fully black equinoid]
-	if the bodyname of the player is "Black Equinoid" and player is pure, yes;
+	if bodyname of player is "Black Equinoid" and player is pure, yes;
 	no;
 
 Equinoid Camp ends here.

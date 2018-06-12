@@ -18,7 +18,7 @@ to say losetodragontaur:
 	if HP of Sam is 15:
 		say "     Sam grabs you roughly and [if scalevalue of player < 4]hefts you over his head. With a growl, he tosses you several yards away[else]pushes you back with a powerful shove[end if]. You land half on and half off a cot, painfully injuring your back.";
 	else:
-		if cunts of player > 0 or ( anallevel > 1 and a random chance of 2 in 3 succeeds ):
+		if player is female or ( anallevel > 1 and a random chance of 2 in 3 succeeds ):
 			say "     Having defeated you, the dragontaur roars triumphantly and presses you to the ground. It rumbles in your ear as it moves to mount you about [if player is female]it's going to breed you full of whelps[else]pound you until you're overflowing with cum[end if] and thrusts into you with little preamble. It's tapered tip is designed for prying open reluctant holes and pushes its way into your [if player is female][cunt size desc of player] pussy with ease[else]tight anus[end if]. The draconic cock thickens as it pushes further into you, each of those ridges on it acting as delightfully pleasurable markers of just how much meat the powerful taur is stuffing inside you. The dragon fucks you with wild, animalistic abandon, pounding you until you're nearly insensate with lust and finally climax as he blasts shot after shot of his creamy load into your wanton hole, bloating your [if player is female]womb[else]belly[end if] with his prodigious output. Finished, he pushes you aside, leaving you on the ground and leaking his cum from your overstuffed and gaping [if player is female]pussy[else]asshole[end if].[ovichance]";
 		else:
 			say "     Having defeated you, the dragontaur rumbles excitedly and presses you to the ground. It murrs in your ear about how [one of]much fun it's going to have with you[or]it's been looking for some fun[at random]. You are beyond resisting its advances at this point, wrapping your arms around him and burying your face to his firm scales, taking in his spicy scent while he chuckles and rubs your head.";
@@ -28,7 +28,7 @@ to say losetodragontaur:
 to say beatthedragontaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
-	else if a random number between 1 and 100 < dragontaurcatch and ( cocks of player > 0 or cunts of player > 0):
+	else if a random number between 1 and 100 < dragontaurcatch and ( player is not neuter):
 		say "     The beaten dragontaur backs away from you, stumbling somewhat from his injuries. Like the others, he prepares to release a blast of flame to allow his escape, but you rush forward and clamp his muzzle shut in an arm lock. He thrashes briefly before exhaling a cloud of smoke as the flames fail. You press him to the ground and pin down his wings.";
 		say "     [bold type]With him caught, you consider having some fun with him. Shall you go ahead with that plan?[roman type][line break]";
 		LineBreak;
@@ -68,10 +68,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dragontaur"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Dragontaur"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The dragontaur slams its tail into you, bashing you aside![or]The dragontaur rears up and slashes you with its foreclaws![or]It snaps and tears at you with its fangorious maw![or]The dragontaur punches you soundly in the jaw![or]The dragon creature grabs you with its clawed hands and slams its bony head into yours. The head butt leaves you seeing stars for a moment.[at random]";
-	now defeated entry is "[beatthedragontaur]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetodragontaur]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthedragontaur]"; [ Text when monster loses. ]
+	now victory entry is "[losetodragontaur]"; [ Text when monster wins. ]
 	now desc entry is "[dragontaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "draconic with a long, pointed muzzle that slight curve at the end. There are a pair of large ivory horns which jut from the back of your head along with three smaller pairs below that";
 	now body entry is "considerably transformed, having gained a tauric lower half that is draconic in appearance. While your upper body largely resembles that of a strong, fit human being, your lower body is that of a stocky dragon";
@@ -97,7 +97,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

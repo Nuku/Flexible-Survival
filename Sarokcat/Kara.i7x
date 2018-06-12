@@ -81,7 +81,7 @@ to say sexwithkara:
 		now lastfuck of Kara is turns;
 	else if matriarchdefeated is 2:
 		say "(---  Content currently incomplete. No sex for you. :(  ---)";
-		now lastfuck of Kara is turns;									]
+		now lastfuck of Kara is turns; ]
 	else if bodyname of player is "Herm Hyena":
 		say "[karasex1]";
 		infect "Herm Hyena";
@@ -89,7 +89,7 @@ to say sexwithkara:
 [	else if player is submissive:
 		say "(---  Content currently incomplete. No sex for you. :(  ---)";
 		infect "Herm Hyena";
-		now lastfuck of Kara is turns;									]
+		now lastfuck of Kara is turns; ]
 	else:
 		say "'Sorry, but I kind of was hoping for another hyena, if you know what I mean,' Kara says with a feral grin as she sizes you up. 'Ever since those wonderful sexy bikers, I haven't been able to think about much else. Especially so since I am part of the [']gang['] now too,' she says with a shake of her head. 'Though if you were to join the gang as well... well just think how much fun we could have...' the slutty hyena herm says teasingly. She runs her clawed hand over your body and then plants a deep lusty kiss right on your mouth, her sharp teeth rubbing up against yours as her taste fills your mouth. Her tongue teases your own for a minute, before she breaks the kiss and backs off for a second, leaving you panting with arousal as she shoots you a wink. 'Think about it anyways...' she says as she goes back to what she was doing.";
 
@@ -183,23 +183,23 @@ carry out Tattooplayer:
 			now tatsave is 0;
 			say "'Damn, that's too bad, and it looked so hot on you too,' she says with a sigh, before leading you back to a small room off to the side with some medical looking equipment. 'This is going to hurt a bit, so here ya go,' you hear Kara say from behind you, before something pricks your side and the world seems to swim out of focus before unconsciousness claims you. You eventually wake up feeling strangely groggy and achy in one of the tattoo chairs, and looking around you notice Kara absently sketching new pieces of rather hyenalike art to hang on the walls. Seeing you are awake, the new gang member gives you a toothy grin before coming over to check on you. 'Sorry about that, Always easier to do the painful stuff when the subject isn't able to scream or squirm around. Your all done now, no more tattoo for you,' she says with a soft sigh as she helps you unsteadily back to your feet. 'I'd like to say come back again for a new one sometime, but... well with the materials and the scarring from the tattoo removal, I probably won't be able to put another tattoo on you before the military come. So I guess you just have to go on being your plain old self, though maybe you could look me up if we ever get out of here and we can see about inking you up proper then,' the hyena artist says with a wink as she trails her claw over your skin teasingly, before handing you back your pack and going back to what she was doing.";
 			now tatstatus is 2;
-			if "Hyena Tattoo" is listed in feats of the player:
-				Remove "Hyena Tattoo" from feats of the player;
-			if "Dragon Tattoo" is listed in feats of the player:
-				Remove "Dragon Tattoo" from feats of the player;
+			if "Hyena Tattoo" is listed in feats of player:
+				Remove "Hyena Tattoo" from feats of player;
+			if "Dragon Tattoo" is listed in feats of player:
+				Remove "Dragon Tattoo" from feats of player;
 				decrease strength of player by 2;
 				decrease capacity of player by 10;
-			if "Feline Tattoo" is listed in feats of the player:
-				Remove "Feline Tattoo" from feats of the player;
+			if "Feline Tattoo" is listed in feats of player:
+				Remove "Feline Tattoo" from feats of player;
 				decrease dexterity of player by 2;
-			if "Wolf Tattoo" is listed in feats of the player:
-				Remove "Wolf Tattoo" from feats of the player;
+			if "Wolf Tattoo" is listed in feats of player:
+				Remove "Wolf Tattoo" from feats of player;
 				decrease Perception of player by 2;
-			if "Unicorn Tattoo" is listed in feats of the player:
-				Remove "Unicorn Tattoo" from feats of the player;
+			if "Unicorn Tattoo" is listed in feats of player:
+				Remove "Unicorn Tattoo" from feats of player;
 				decrease stamina of player by 2;
-			if "Gryphon Tattoo" is listed in feats of the player:
-				Remove "Gryphon Tattoo" from feats of the player;
+			if "Gryphon Tattoo" is listed in feats of player:
+				Remove "Gryphon Tattoo" from feats of player;
 				decrease Intelligence of player by 2;
 		else:
 			say "'Thought you would be! It definitely suits you after all, and if any of those creatures out there are smart enough to ask where ya got such a sexy tat, you send em to me, especially if they are hyenas,' Kara says with a teasing wink before going back to what she was doing.";
@@ -227,19 +227,19 @@ carry out Pierceplayer:
 			say "'The matriarch wants a piercing? Wow... I'm honored!' the colorful pierced hyena says with a happy grin as she bobs her head at you submissively. 'I just hope I can find something special enough for someone so wonderful... Well actually I do have a few special piercings I was saving for a really special client, and it would be harder to get any more special than you after all!' Kara says eagerly as she gestures you to take a seat in her work chair while she retrieves several small boxes full of studded jewelry and rings from various spots where they were hidden in the tattoo parlor.[line break]";
 			say "You settle back in the comfy chair as Kara goes to work on your majestic form, your submissive subject eagerly holding up different pieces of jewelry for your opinion before carefully piercing your ears in several places. The slight pain of the piercing as well as the enticing view of your fellow hyena's body makes the entire situation seem increasingly erotic the longer it goes on, and by the time she is attaching the last of the piercings to your muzzle, you are feeling far more dominant and hornier than ever. And the sight of Kara's lovely excited body is just too tempting to pass up as she leans over you. You feel a grin stretch your face wide as she begins to lean in to adjust some of the piercings, putting herself in the perfect position for you to give her a little 'reward' for her services. The submissive hyena gasps in surprise as she feels your hand wrap around her thick black cock, her gasps quickly turn to moans however as you give the excited member a few strokes. The look of pleasure on Kara's muzzle only encourages you a bit more as you draw in the lesser hyena for a teasing kiss, one hand stroking the light fur on her head, while the other continues to tease her privates. The lips of her muzzle are soft and sweet as you place your mouth on them, and the slight taste of metal from her pierced tongue only serves to amuse you further, though as your hand wanders downward to her clit and her damp pussy you discover her tongue isn't the only fun piercing your little hyena has for you to play with.[line break]";
 			say "Grinning slightly as you break the lewd kiss, you can see Kara panting desperately in need as your hands play with her body, her own paw-like hands gripping the arms of the chair tightly as she moans with delight. A feeling of incredible power and dominance washes through you as you see how easily she submits to your touch, the sight of a fellow hyena all but begging for you to let them cum exciting you in all sorts of ways. Glancing at the nearby mirror, you are surprised for a second at the extremely dominant picture laid out before you, a sexy pierced hyena slut at the mercy of your own sexy body, with the powerful tribal style jewelry and piercings only seeming to accentuate the imagery. The effect is to make you feel very much like a conquering tribal or medieval ruler of some sort, dominating your sexy subjects... A feeling you are sure you will grow to appreciate very quickly indeed, you think with a smirk on your face as you decide to finish teasing your fellow hyena and let her finally have her reward. With both of your hands and your mouth working over her body in earnest at last, it isn't long before Kara is screaming out her pleasure to the empty studio, as she spills her seed on the floor like an offering to her new goddess before collapsing in exhaustion. Grinning with pleasure as you step away from the chair, you pause for a second to admire your new powerful look in the mirror, before continuing on your way and leaving her lying there on the floor to recover.[line break]";
-			add "Matriarch Piercing" to feats of the player;
+			add "Matriarch Piercing" to feats of player;
 			now piercestatus is 1;
 			now piercesave is 1;
 			increase charisma of player by 4;
 			increase maxHP of player by 30;
 		else if matriarchdefeated is 1:
 			Say "'Oh hey you want a piercing?' Kara says with a smug smirk on her hyena-like face, 'Yeah I can see where a little failed slut like you would want a sexy little piercing to show the world just how submissive you are... Don't worry, I am sure I can find something to show your status around here...' the more dominant hyena says with a chuckle, her attitude making you blush slightly even as arousal runs through your body at her dominant tone and posture. You find yourself not able to resist in the least as she pushes you down into her working chair, before she begins digging through the cabinet next to you eagerly. After several minutes of searching, you hear Kara let out a yip of pleasure as she pulls out a thin series of chain links, and several small ring piercings and turns to you with a large grin across her muzzle.. The sight of all the cold metal about to pierce your skin makes you shudder nervously, unsure if this is really a good idea anymore, but you aren't given a chance to protest as Kara quickly and professionally attaches a nipple ring to each of your nipples, the cold metal rubbing up against your flesh feeling surprisingly good even as she threads the small chain between them so whenever one of them moves, all the other rings tug and tease at your other breasts. You moan slightly with lust even as she moves back to admire her work and attach a couple of small tinkling bells to your nipples as well. Kara stands back and admires her work with a lusty grin, even as you struggle with yourself trying not to cry out at the pleasure that shoots through your body when she tugs on the silver chain teasingly. You moan as you try to get used to the feeling of the chain and the piercings rubbing their smooth metal against your body and groan at how very sensitive your nipples now seem to be, with every movement of your body sending out a soft ringing noise as if to advertise your readiness to anything that might be nearby. Eventually though, you manage to get control of yourself again, and she lets you up to recover from the swift piercing, although even now, you aren't sure you will ever be fully recovered from the sexy sensations, at least not as long as you have these lovely piercings in you advertising your sluttiness for all to see and hear...";
-			add "Nipple Piercing" to feats of the player;
+			add "Nipple Piercing" to feats of player;
 			now piercestatus is 1;
 			now piercesave is 2;
 		else if matriarchdefeated is 2:
 			say "'Oh hey you want a piercing?' Kara says with a smug smirk on her hyena-like face, 'Yeah I can see where a little breeding slut like you would want a sexy little piercing to show the wold just how nice and submissive you are... Don't worry, I have just the thing for you...' the more dominant hyena says with a chuckle, her powerful attitude making you feel both aroused and submissive as she straps you tightly into her working chair, the tight bands of leather holding you in place only making the situation seem increasingly more erotic as she pulls out a thin series of chain links, and several small ring piercings. The sight of all the cold metal about to pierce your skin makes you shudder with excitement as Kara quickly and professionally attaches a nipple ring to each of your nipples, the cold metal feeling surprisingly good even as she threads the small chain between them so whenever one of them moves, all the other rings tug and tease at your other breasts. You pant with lust and arousal even as she moves down to do a soft piercing right at the most sensitive spot on your groin, making you gasp and writhe helplessly against your bonds, even as she connects your newest piercing to your others via another length of small chain. Kara stands back and admires her work with a lusty grin, even as you writhe in pleasure against the straps, the more dominant hyena reaching down occasionally to tug on one of the connected chains and send pleasure shooting through you all over again. Eventually though, she lets you up to recover from the swift piercing, although now that your new chained piercing is complete, you aren't sure you will ever recover fully from the constantly lustful sensations...";
-			add "NippleandChain Piercing" to feats of the player;
+			add "NippleandChain Piercing" to feats of player;
 			now piercestatus is 1;
 			now piercesave is 3;
 		else if bodyname of player is "Herm Hyena":
@@ -257,17 +257,17 @@ carry out Pierceplayer:
 			now piercestatus is 0;
 			now piercesave is 0;
 			say "'Well that's your loss I suppose, though it looked so very nice on you...' she says with a soft sigh as she gets a pair of sterile metal cutters out of a drawer. 'Maybe I will have a new idea for a piercing for you for next time though,' Kara says with a hyena-like grin as she goes to work removing your piercing.";
-			if "NippleandChain Piercing" is listed in feats of the player:
-				Remove "NippleandChain Piercing" from feats of the player;
-			if "Hyenastyle Piercings" is listed in feats of the player:
-				Remove "Hyenastyle Piercings" from feats of the player;
+			if "NippleandChain Piercing" is listed in feats of player:
+				Remove "NippleandChain Piercing" from feats of player;
+			if "Hyenastyle Piercings" is listed in feats of player:
+				Remove "Hyenastyle Piercings" from feats of player;
 				decrease charisma of player by 2;
-			if "Nipple Piercing" is listed in feats of the player:
-				Remove "Nipple Piercing" from feats of the player;
-			if "Matriarch Piercing" is listed in feats of the player:
+			if "Nipple Piercing" is listed in feats of player:
+				Remove "Nipple Piercing" from feats of player;
+			if "Matriarch Piercing" is listed in feats of player:
 				decrease maxHP of player by 30;
 				decrease charisma of player by 4;
-				Remove "Matriarch Piercing" from feats of the player;
+				Remove "Matriarch Piercing" from feats of player;
 		else:
 			say "'Sounds good to me!' the hyena herm says with a grin as she looks you up and down appraisingly. 'I have to admit, I think it looks damn sexy like that myself,' she says as she strokes her thick knotted hyena cock absently, the sight making your mouth water slightly...";
 	else if piercingquest is 3:
@@ -275,7 +275,7 @@ carry out Pierceplayer:
 
 
 An everyturn rule:
-	if "NippleandChain Piercing" is listed in feats of the player:
+	if "NippleandChain Piercing" is listed in feats of player:
 		if libido of player < 80:
 			now libido of player is 80;
 		if child is not born and gestation of child > 0:
@@ -283,15 +283,15 @@ An everyturn rule:
 				decrease gestation of child by 1;
 		if a random number between one and 20 < 6:
 			say "You feel increasingly bestial and aroused due to your sexy piercing, as your nipples and genitals are teased more and more with each step, reminding you of just what a slutty, submissive creature you really are deep down inside.";
-			decrease humanity of the player by 2;
-	if "Nipple Piercing" is listed in feats of the player:
+			decrease humanity of player by 2;
+	if "Nipple Piercing" is listed in feats of player:
 		increase libido of player by 5;
 		[add increase encounter chance by 1 to this piercing as well]
-	if "Matriarch Piercing" is listed in feats of the player:
+	if "Matriarch Piercing" is listed in feats of player:
 		If a random chance of 1 in 4 succeeds:
 			increase Morale of player by 2;
 			increase libido of player by 2;
-	if "Hyena Tattoo" is listed in feats of the player:
+	if "Hyena Tattoo" is listed in feats of player:
 		if a random chance of 1 in 4 succeeds:
 			say "You feel a warm heat spread throughout your body from the strange hyena tattoo Kara gave you. You grin almost ferally, feeling both powerful and horny as increasingly hyena-like instincts and thoughts invade you heat-filled mind.";
 			increase libido of player by 10;

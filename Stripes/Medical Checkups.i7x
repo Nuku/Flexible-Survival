@@ -165,7 +165,7 @@ to say medeaadjustments:
 		now medeaget is 3;
 	else if medeaget is 3:
 		say "     'In thanks for your help, I can provide you with several services. As before, I can determine if you're pregnant and provide some information on the fetus. I can also adjust your degree of fertility [if lust of Doctor Medea >= 3]and your estrus cycle [end if]if you'd like. Would you like me to do that? I could make you extra fertile or even sterile if you'd like.' While she seems rather eager about the first, she's clearly less enthused about the second.";
-	if medeaub is false and medeaget >= 3 and cunts of player > 0 and playercanvore is true:
+	if medeaub is false and medeaget >= 3 and player is female and playercanvore is true:
 		say "     As you're listening to her, you feel that dark hunger inside you well up. That heady scent of reptilian arousal starts to make your mouth water. Your reaction does not go unnoticed and the doctor urges you to take a seat while she examines you. 'Hmmm... this is most interesting. And you say that your body's become capable of ingesting prey nearly your own size whole? Most intriguing.'";
 		WaitLineBreak;
 		say "     She runs a few quick tests and poking your belly with some very long needles. 'This is by no means my field of expertise, so I can't really do anything to help you cope with this hunger. But the effect it's had on your nanites and your body may be used in another manner. Several unusual chemicals are being produced by the tissues of your digestive system to allow you to stretch and engulf your meals. Were I to inject these chemicals into your reproductive system, I expect similar results would occur for it,' she says, her regular excitement returning. 'This would allow you take your intended victim into your uterus, essentially [']unbirthing['] them. Imagine something like in vitro fertilization writ large, with it being a mature creature being used instead of a test-tube baby to become your fetus. Similar behavior's been observed among a few creatures in the city, but it is a rare ability.' The more she talks about it, the more worked up she gets, this plan of hers clearly exciting both her scientific curiosity as well as her strange fascination with all things pregnancy-related.";
@@ -316,11 +316,11 @@ to say medeaadjustments:
 					say "     The lizard doctor pokes and prods at you with a few instruments, throwing in the (mis)use of a few fingers in there as well[if inheat is true]. By the time she's done, you're left panting and moaning, much to her obvious delight[else]. By the time she's done, you aren't quite sure if you want it to continue or are glad it's over[end if]. She checks her data quickly and runs a couple of quick tests.";
 					let defaultheat be true;
 					choose row 1 in table of infection heat;
-					if the cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
+					if cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
 						choose a row with a infect name of (cockname of player) in Table of infection heat;
-						if cunts of player > 0 and fheat entry is false:	[no female heat for that form]
+						if player is female and fheat entry is false:	[no female heat for that form]
 							choose row 1 in table of infection heat;
-						else if cunts of player is 0 and mpregheat entry is false:		[no mpreg-heat for that form]
+						else if player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
 							choose row 1 in table of infection heat;
 						else:
 							now defaultheat is false;

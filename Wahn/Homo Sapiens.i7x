@@ -143,14 +143,14 @@ When Play begins:
 	now cocks entry is 1;             [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4;        [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;           [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;           [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;       [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;       [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;        [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 45;
-	now loot entry is "mammoth jerky";[ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "mammoth jerky"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]prehistoric[or]lean[or]muscled[or]rugged[or]athletic[at random]";

@@ -59,7 +59,7 @@ Instead of resolving a Overrun Garden:
 			say "     Your struggle with the plant is quite difficult, but you persist, tearing roots and smashing flowers as you struggle to get reach the main body of the plant. During your fight, [if HP of Joanna >= 90]Joanna[else]the kinkajou[end if] is able to break free because you've destroyed enough of the vines and she makes a break for it. For a moment, you think she's left you all alone, but you hear a small engine choking to start. Looking away from the large, torn bags of fertilizer at the plant's base as you make it there, you spot her coming out of a small gardening shed wielding a gas powered hedge trimmer with a wild look in her eyes. You tackle the vines, holding them taut as she slashes through them, splattering their green juices out. She slashes at the plant's base, slowly cutting through it as you keep the last of the vines off her until it's sawed clean through and you both collapse, panting for breath after your life or death fight.";
 			Waitlinebreak;
 			move Joanna to Flower Garden;
-			move the player to Flower Garden;
+			move player to Flower Garden;
 			now Flower Garden is known;
 			say "     After a short rest, [if HP of Joanna >= 90]Joanna[else]she[end if] rolls over beside you and hugs you tightly, then kisses you softly on the cheek. 'Oh, thanks for coming to save me. I... that plant... plant?' she starts upright, noticing her changes. The plant's assault on her has left her partially a plant, with green fur over her body and her feet growing tendrils and roots. Her large eyes, like her face and the flowers blossoming in her hair, are a vibrant red, beautifully contrasting with her verdant fur. There is a little green around her eyes, much like eye shadow. Her groin, as you saw earlier, has quite dramatically changed, now having a quartet of long cock tendrils with a swollen pair of bulbs for balls. Beneath those, she has a trio of slick pussies shaped like lovely orchids[if daytimer is day]. She stretches her arms wide and sighs in pleasure, taking in the sunlight, turning slowly as her roots automatically dig into the soft soil and have to be pulled out with each step[end if].";
 			Waitlinebreak;
@@ -341,42 +341,42 @@ to say joannaselection:
 		now description entry is "Lavish attention on her numerous genitalia to get a messy finish.";
 		now toggle entry is joannasexy rule;
 	[]
-	if cocks of player > 0 and HP of joanna is not 2:
+	if player is male and HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 2;
 		now description entry is "Have her suck you off.";
 		now toggle entry is joannasexy rule;
 	[]
-	if cunts of player > 0 and HP of joanna is not 2:
+	if player is female and HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 3;
 		now description entry is "Get that wondrous tongue in your womanly flower.";
 		now toggle entry is joannasexy rule;
 	[]
-	if cocks of player > 0 and HP of Joanna > 1:
+	if player is male and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Joanna";
 		now sortorder entry is 4;
 		now description entry is "Stuff her lovely flowers with your cock(s).";
 		now toggle entry is joannasexy rule;
 	[]
-	if cunts of player > 0 and HP of Joanna > 1:
+	if player is female and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy fucked";
 		now sortorder entry is 5;
 		now description entry is "Go for a ride on those tentacle cocks of hers.";
 		now toggle entry is joannasexy rule;
 	[]
-	if cunts of player is 0 and HP of Joanna > 1:
+	if player is not female and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 6;
 		now description entry is "Try one of those squirming tentacle cocks up your ass.";
 		now toggle entry is joannasexy rule;
 	[]
-	if cocks of player > 0 and HP of Joanna >= 5:
+	if player is male and HP of Joanna >= 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual Fucking";
 		now sortorder entry is 7;
@@ -547,7 +547,7 @@ to say joannasex8:
 	now libido of player is ( 2 * libido of player ) / 5;
 
 to say joannasex9:
-	say "     Reaching down to rub at Joanna's long, slender tendrils, you're pretty sure you'd be able to take them all at once. The possibility of having all four stuffed into your [if cunts of player > 0 and player is plantcocked]plant-like pussy makes it drip with juices[else if player is female]pussy makes it drip with juices[else if player is planttailed]plant-like, vaginal asshole makes it drip with juices[else]ass makes your pucker quiver in anticipation[end if]. Letting her slick tongue slide from your throat, you make the offer to her. She grins at the idea and her cocks stir in your hands. With a clear consensus from all involved, you lower yourself to the ground and spread your legs, offering yourself to her. She smiles lustfully at the sight of your [if player is female]waiting pussy, which you hold open in offering[else if player is planttailed]pussy-like anus as you spread your cheeks and raise your rear[else]tight pucker as you spread your cheeks and raise your rear[end if] for her. She runs her paws over your body and along your thighs as her tendrils move into position.";
+	say "     Reaching down to rub at Joanna's long, slender tendrils, you're pretty sure you'd be able to take them all at once. The possibility of having all four stuffed into your [if player is female and player is plantcocked]plant-like pussy makes it drip with juices[else if player is female]pussy makes it drip with juices[else if player is planttailed]plant-like, vaginal asshole makes it drip with juices[else]ass makes your pucker quiver in anticipation[end if]. Letting her slick tongue slide from your throat, you make the offer to her. She grins at the idea and her cocks stir in your hands. With a clear consensus from all involved, you lower yourself to the ground and spread your legs, offering yourself to her. She smiles lustfully at the sight of your [if player is female]waiting pussy, which you hold open in offering[else if player is planttailed]pussy-like anus as you spread your cheeks and raise your rear[else]tight pucker as you spread your cheeks and raise your rear[end if] for her. She runs her paws over your body and along your thighs as her tendrils move into position.";
 	Waitlinebreak;
 	say "     The first doesn't hesitate, slipping into you quickly and making you moan. As you're beginning to adjust to having that one in you, the next it at your [if player is female]pussy[else if player is planttailed]vaginal orifice[else]anus[end if]. It teases briefly against your [if player is female]wet folds and clit[else]stretched hole, leaking more pre to prepare you[end if] before driving into you with as much eagerness as the first. They thrust into you again and again, moving in synch with one just behind the other, letting them both press against your [if player is female]cervix[else]prostate[end if] in rapid succession. With a pair of them in you now, the others wait for the moment, sliding along your thighs and dripping precum onto you[if cocks of player > 1]. Joanna takes one of your cocks in each paw, stroking and pumping at them[else if cocks of player is 1]. Joanna takes your cock in her paws, stroking and pumping at it[end if].";
 	Waitlinebreak;
@@ -625,23 +625,23 @@ to say joannaclubsex:
 Section 9 - Definitions
 
 Definition: a person is plantfaced:
-	if the facename of the player is "Parasitic Plant", yes;
+	if facename of player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is plantskinned:
-	if the skinname of the player is "Parasitic Plant", yes;
+	if skinname of player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is plantbodied:
-	if the bodyname of the player is "Parasitic Plant", yes;
+	if bodyname of player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is plantcocked:
-	if the cockname of the player is "Parasitic Plant", yes;
+	if cockname of player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is planttailed:
-	if the tailname of the player is "Parasitic Plant", yes;
+	if tailname of player is "Parasitic Plant", yes;
 	no;
 
 

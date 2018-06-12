@@ -240,13 +240,13 @@ to say FinnSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the horseman's equine shaft";
 	[]
-	if cocks of player > 0 and FinnTrackingProgress is 3: [only males and herms can fuck him, virgin Finn]
+	if player is male and FinnTrackingProgress is 3: [only males and herms can fuck him, virgin Finn]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the handsome farmhand into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take the horseman's ass for a ride";
 	[]
-	if cocks of player > 0 and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
+	if player is male and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the handsome farmhand's ass";
 		now sortorder entry is 4;

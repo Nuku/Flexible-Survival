@@ -88,9 +88,9 @@ The scent of Chase is "[ChaseScent]";
 
 to say ChaseScent:
 	if HP of Chase < 3: [standard]
-		say "     The male tiger has a powerful scent, much stronger than the other tigers inside the den. The aroma is almost enough to make you want to dip your head and avoid eye contact. It must be a reflection on his place within the streak. [if cunts of player > 0 or lust of Chase > 0] Everytime he glances your way you can also pick up a scent that has an almost spicy scent to it that speaks of his desire for you[end if].";
+		say "     The male tiger has a powerful scent, much stronger than the other tigers inside the den. The aroma is almost enough to make you want to dip your head and avoid eye contact. It must be a reflection on his place within the streak. [if player is female or lust of Chase > 0] Everytime he glances your way you can also pick up a scent that has an almost spicy scent to it that speaks of his desire for you[end if].";
 	else if HP of Chase is 3 or HP of Chase is 4: [dominant Chase]
-		say "     Chase has a very powerful scent, much stronger than he did previously. The aroma is more than enough to make you dip your head and bare your throat avoiding eye contact, the heady scent of his pheromones almost overwhelm the scent of the other tigers completely. This is hardly surprising seeing as he has now become the king of the streak. [if cunts of player > 0 or lust of Chase > 0] As you approach he tilts his head up scenting the air. The tiger immediately turns towards you with a smug grin on his face, giving you a wink as he idly rubs his cock with one paw.[end if].";
+		say "     Chase has a very powerful scent, much stronger than he did previously. The aroma is more than enough to make you dip your head and bare your throat avoiding eye contact, the heady scent of his pheromones almost overwhelm the scent of the other tigers completely. This is hardly surprising seeing as he has now become the king of the streak. [if player is female or lust of Chase > 0] As you approach he tilts his head up scenting the air. The tiger immediately turns towards you with a smug grin on his face, giving you a wink as he idly rubs his cock with one paw.[end if].";
 	else if HP of Chase is 5 or HP of Chase is 6: [submissive Chase]
 		say "     ...";
 
@@ -421,7 +421,7 @@ instead of fucking the Chase:
 		say "     You haven't even talked to Chase since agreeing to be his mate. Amazing sex is one thing, but your relationship will now be quite different, so it might be best to talk about that with your dominant top first.";
 	else if HP of Chase is 4 and Dexterity of Chase is 0: [player has not chosen a dominant form]
 		say "     'Before we [italic type]celebrate[roman type] I still think there is some things we need to discuss...'";
-	else if cunts of player is 0 and lust of Chase is 0:
+	else if player is not female and lust of Chase is 0:
 		if "MPreg" is not listed in feats of player:
 			say "     'Hmm, that's a tempting offer,' Chase says as he runs his eyes over your body, pausing to shake his head at your aroused cock. 'But I think I'll have to pass on it right now,' Chase says with a shrug, then grins. 'I'll make you a pretty good counteroffer though,' Chase says before leaning forward and rubbing the sides of his head along your face and body. His whiskers tickle you as they trace along your sides, and his furred cheeks feel soft and sleek, leaving a strange tingling sensation behind where he rubbed against you. 'I think you would make a great tigress,' the tiger man says with a grin as he leans back against the wall, and you feel the tingling intensify within you where he marked you with his scent. 'So why don't you come back and make your offer again when you are one?' Chase adds in amusement.";
 			infect "Tiger";

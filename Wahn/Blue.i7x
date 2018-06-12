@@ -201,13 +201,13 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Jerk off on [ObjectPro of Blue Speaker]";
 	[]
-	if (cocks of player > 0 ):
+	if (player is male ):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's mouth";
 		now sortorder entry is 2;
 		now description entry is "Give the goo person a direct cum injection";
 	[
-	if (cocks of player > 0 and libido of Blue Speaker is 1): [female shape]
+	if (player is male and libido of Blue Speaker is 1): [female shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's pussy";
 		now sortorder entry is 3;
@@ -225,7 +225,7 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Let the goo person fuck your ass";
 	[]
-	if (cunts of player > 0 and libido of Blue Speaker is 2): [male shape]
+	if (player is female and libido of Blue Speaker is 2): [male shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Blue fuck your pussy";
 		now sortorder entry is 6;
@@ -472,7 +472,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

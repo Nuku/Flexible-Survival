@@ -30,7 +30,7 @@ instead of fucking Mul:
 	if Mul is in Slave Cell 2:
 		say "     He's pretty worn out, let him sleep for now.";
 	else:
-		if cocks of player is 0 or cockname of player is not "Orc Warrior" or player is not pure:
+		if player is not male or cockname of player is not "Orc Warrior" or player is not pure:
 			say "     You're currently not quite 'man enough' to fuck Mul. Brazenly approaching the mighty orc right in the middle of the drinking hall and surrounded by his buddies... seems something that only a true orc warrior would do - which you're not... right now.";
 		else if MulAnalAcceptance is 0:
 			say "     Oh yeah, looking at the broad and green back of Mul, plus the deliciously firm ass barely hidden by his loincloth, you feel a longing for the big lug of an orc in your loins, making your cock start to fill out. But... how would you arrange it? The orc sees you as a slave, so just approaching him would simply lead to a brawl. Maybe you should try again once you've got something to hold over his head. With the views of orcs in general saying that only breeders get fucked... maybe you could get one over on Mul sometime when he's alone and break him in a bit first...";
@@ -105,13 +105,13 @@ to say MulLockerroomSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Power-bottom your orcish slut";
 	[]
-	if (cocks of player > 0 and demon brute is tamed and DemonBruteStatus < 2):
+	if (player is male and demon brute is tamed and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Brutus fuck Mul";
 		now sortorder entry is 5;
 		now description entry is "Give the demon a treat and let him sink his prick into Mul";
 	[]
-	if (cocks of player > 0 and felinoid companion is tamed):
+	if (player is male and felinoid companion is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Klauz fuck Mul";
 		now sortorder entry is 6;
@@ -473,7 +473,7 @@ to say MulBottomAnalRide:[Mul rides the player's cock, or gets fingered]
 		else:
 			say "     Doing the best duty a submissive partner can give, you console the orc that this could be just a one-time thing, and that maybe, it might be 'curable' through special stimulation techniques. Unobtrusively, you mention that he did enjoy having his prostate played with in the past... the argument makes your big, muscled orc pause for a second, then he gives a huff through his nose and glances towards the garage door. There is not a living thing in sight. Coming to a decision, he then leans forward resting his upper body against the car hood, presenting a firmly muscled butt to you. 'Get licking slave-boy,' your orc master commands in a low voice, holding his buttcheeks apart with two strong hands. Eagerly kneeling down and pressing your nose against the somewhat hairy skin of his crack, you then take a deep sniff of his clean, masculine smell and start lapping away at his hole. Mul's pucker is pretty relaxed and accommodating, easily allowing you to push your tongue into his body - yeah, this has become a well-trained fuckhole, even if he still tries to deny it. Amid low moans, the green-skinned brute gives a silent grunt of 'Yeah, just like that - and use your fingers too.' You immediately get to work probing and stroking his insides with two, then three fingers, much to the orc's arousal. It is no great wonder that as soon as you put some attention to his back door, the orc's cock sprang to full-on erection and hardness. By now the piece of green-skinned man-meat is throbbing very noticeably, leaking a steady stream of pre onto the floor.";
 			WaitLineBreak;
-			if cocks of player is 0 or a random chance of 1 in 2 succeeds: [comes from having eaten his ass]
+			if player is not male or a random chance of 1 in 2 succeeds: [comes from having eaten his ass]
 				say "     When you reach your other arm through between his legs and start massaging his full, green balls at the same time, it's only a question of time till you push him to the point of no return. Only a short while later, Mul's moans and grunts quickly get pretty loud, culminating in almost a roar as thick spurts of cum blast from his cock to splat all over the front grill of the car he's leaning over.";
 				say "     After waiting a while for his orgasm to subside and to catch his breath, Mul turns around and pulls you to your feet, then bends you over the car hood in his place. He gropes your butt, then holds your cheeks apart with his fingers as he brings his still pretty hard cock up and rubs it against you, leaving your hole wet with the cum still clinging to its tip and everything more that he can milk out of his manhood. Giving your ass a light slap after that bit of deception is done, he pins you down with a stare and growls 'Not a word about this - I fucked you, if anyone asks.' With that said, the orc gives you a victorious leer - as if he had actually fucked you, then strides out of the garage, leaving you to pick yourself up after the fight and sex. After giving him some lead-time, you eventually pack up your gear too and get back to the orc lair.";
 			else: [rides the player's cock]
@@ -647,7 +647,7 @@ to say MulLibrarySexMenu:
 	now sortorder entry is 4;
 	now description entry is "Power-bottom your orcish slut";
 	[]
-	if (cocks of player > 0 and demon brute is tamed and DemonBruteStatus < 2):
+	if (player is male and demon brute is tamed and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Brutus fuck Mul";
 		now sortorder entry is 5;
@@ -665,7 +665,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 7;
 		now description entry is "Allow the feral wolf to mount Mul";
 	[]
-	if (HP of Sven > 7 and HP of Sven < 30 and cocks of player > 0): [***sex-pet Sven only currently]
+	if (HP of Sven > 7 and HP of Sven < 30 and player is male): [***sex-pet Sven only currently]
 		choose a blank row in table of fucking options;
 		now title entry is "Get Sven to fuck Mul";
 		now sortorder entry is 8;

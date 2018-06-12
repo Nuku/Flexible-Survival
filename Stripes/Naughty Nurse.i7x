@@ -72,7 +72,7 @@ to say LoseToVixenNurse:
 			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [if player is female]her[else if player is male]his[else]their[end if] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsack with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
 			let x be libido of player;
 			if fightoutcome is 22, increase x by 15; [submitted]
-			if cunts of player > 0, increase x by 15; [F/H]
+			if player is female, increase x by 15; [F/H]
 			if a random chance of x in 200 succeeds:
 				WaitLineBreak;
 				say "     The vixen nurse, panting a little from her orgasm, takes in the scent of your arousal and smiles. Reminded of her initial plan, her cock starts to rise again. Getting hard in your mouth again. Lost in your lust, you help her along, licking and sucking it to restore her erection. With some help from you, soon she's up and ready to go again, which you are far more eager for than before.";
@@ -119,13 +119,13 @@ to say BeatTheVixenNurse:
 	now sortorder entry is 2;
 	now description entry is "Play with her using your hand";
 	[
-	if cunts of player > 0 and vixgender is 1:
+	if player is female and vixgender is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride her cock";
 		now sortorder entry is 3;
 		now description entry is "Take her knotted cock on your own terms?";
 	[]
-	if cunts of player > 0 and vixgender is 1:
+	if player is female and vixgender is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her fuck your pussy";
 		now sortorder entry is 4;
@@ -215,54 +215,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Vixen Nurse"; [Name of your new Monster]
-   now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
-   now defeated entry is "[BeatTheVixenNurse]";
-   now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as the text "Your body is (your text)."]
-   now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "steely-gray vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Silvery fur covers his muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it becomes a slender and seductively curved one. You can feel your butt shift as it becomes a taut bubble butt, ripe for mounting. Your hands become paw-like, with little black claws at the tips of your fingers. You can hear cracks and pops as your ankle and foot changes, becoming digitigrade paws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it grows a soft, fluffy layer of silvery fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a floofy fox tail extends from your spine. It is covered in soft, silvery fur"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it takes on a steely-gray color. Changing shape, it becomes pointed at the glans with a knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 12;
-   now dex entry is 14;
-   now sta entry is 10;
-   now per entry is 12;
-   now int entry is 15;
-   now cha entry is 18;
-   now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 36;
-   now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-   now wdam entry is 5; [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
-   now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 4; [ Number of Breasts infection will give you. ]
-   now breast size entry is 4; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 5;
-   now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
-   now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
-   [ These represent the new additions to the table of random critters ]
-   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
-   now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is false;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "vixennurse"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Vixen Nurse"; [Name of your new Monster]
+	now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
+	now defeated entry is "[BeatTheVixenNurse]";
+	now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as "Your body is (your text)."]
+	now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "steely-gray vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Silvery fur covers his muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes a slender and seductively curved one. You can feel your butt shift as it becomes a taut bubble butt, ripe for mounting. Your hands become paw-like, with little black claws at the tips of your fingers. You can hear cracks and pops as your ankle and foot changes, becoming digitigrade paws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it grows a soft, fluffy layer of silvery fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a floofy fox tail extends from your spine. It is covered in soft, silvery fur"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it takes on a steely-gray color. Changing shape, it becomes pointed at the glans with a knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 12;
+	now dex entry is 14;
+	now sta entry is 10;
+	now per entry is 12;
+	now int entry is 15;
+	now cha entry is 18;
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 36;
+	now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
+	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 4; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 5;
+	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
+	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "vixennurse"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)
@@ -299,7 +298,7 @@ when play ends:
 		if humanity of player < 10:
 			say "     Falling to the instincts and reprogramming of the infection, you drift off into the city and eventual come to the city hospital. There you are taken in by the silvery vixen nurses of the hospital staff, feeling the urge to work alongside them. They welcome you happily, and lustfully, as do the other denizens of the large medical facility.";
 			if hospquest < 2:
-				if "Sterile" is not listed in feats of player and cunts of player > 0:
+				if "Sterile" is not listed in feats of player and player is female:
 					say "     After a particularly energetic romp with one of the jaguar orderlies, you become pregnant and are transferred to the maternity ward. There you tend to the hospital's cubs, adding your own litter to them and feeding the cute cubs from your bosom.";
 				else if player is male:
 					say "     Being a rare vulpine in their midst with a cock, you are quite popular with the female vixens and mate with many of them, adding many more cubs to the maternity ward to grow and add to the hospital's population.";
@@ -313,7 +312,7 @@ when play ends:
 					say "     During a mission to an old hotel on the outskirts of the red light district, your team is assaulted by a herd of powerful equines. The ferocious orderlies manage to hold their own, but you are dragged off. The horses spend many weeks trying to turn you into another equine slave for their brothel, but the treatment given to you by the mouse doctor holds enough to keep your body intact. But your mind does not fare as well and succumbs to the constant training they give you, turning you into a slutty, silver fox. You act as their medical staff, helping them with their conversions when needed and the rare injuries that are too much for the nanites. When not performing these infrequent duties, you are there to provide a change of pace to anyone looking for something a little different from the otherwise equine whorehouse.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Driven by your new instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember the experiences that lead you to know him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
-				if "Sterile" is not listed in feats of player and cunts of player > 0:
+				if "Sterile" is not listed in feats of player and player is female:
 					say ". You birth many bizarre, hybrid creatures from these matings";
 				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower";
 				if player is female:

@@ -138,7 +138,7 @@ to say SarahRescue:
 		increase GroupFightCounter by 1;
 	if fightoutcome < 20: [player won]
 		say "     Standing victorious over a pile of groaning huskies as they gingerly touch their bruises and try to get up again, you quickly step over a sprawled out bitch and grab Sarah, lifting her up in your arms and running away from the scene of the fight as quickly as you can. You do stop once or twice to look back and see if you are being followed by the huskies - or attracted any other creature's attention - but thankfully, it looks like you're in the clear. Carrying the wounded woman back to the library, you gently lay her on the reception desk and ";
-		if "Expert Medic" is listed in feats of the player:
+		if "Expert Medic" is listed in feats of player:
 			say "expertly bandage her wound, using the remains of her ripped t-shirt to tie around her torso. ";
 		else:
 			say "do your best to treat her wound, tying her ripped t-shirt around her torso in an improvised bandage. ";
@@ -359,7 +359,7 @@ to say SarahSlutState:
 
 instead of conversing the Sarah:
 	if SarahSlut > 0 and SarahSlut < 4: [Slut Path]
-		say "[one of]'Please fuck me, I need - Oh sorry. Lost control of myself there.'[or]'Mmmm huskies.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]";	[todo]
+		say "[one of]'Please fuck me, I need - Oh sorry. Lost control of myself there.'[or]'Mmmm huskies.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]"; [todo]
 	else if SarahSlut > 3: [End of Slut Path]
 		say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
 	else if SarahTalk is 0: [Sane]
@@ -759,55 +759,55 @@ to say SarahSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Lie back and let the husky please you";
 	[]
-	if SarahCured is 5 and cocks of player > 0: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest a tit-fuck";
 		now sortorder entry is 3;
 		now description entry is "Ask your husky friend to let you grind your cock between her breasts";
 	[]
-	if SarahCured > 5 and cocks of player > 0: [player-dominant oral is okay]
+	if SarahCured > 5 and player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Tit-fuck the sexy husky";
 		now sortorder entry is 4;
 		now description entry is "Grind your cock between her breasts";
 	[]
-	if SarahCured is 5 and cocks of player > 0: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest face-fucking her";
 		now sortorder entry is 5;
 		now description entry is "Ask your husky friend to let you fuck her muzzle";
 	[]
-	if SarahCured > 5 and cocks of player > 0: [player-dominant oral is okay]
+	if SarahCured > 5 and player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck Sarah";
 		now sortorder entry is 6;
 		now description entry is "Grind your cock against that talented tongue in her muzzle";
 	[]
-	if SarahCured is 5 and cunts of player > 0: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is female: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest grinding your pussy against her muzzle";
 		now sortorder entry is 7;
 		now description entry is "Ask your husky friend to let you use her muzzle";
 	[]
-	if SarahCured > 5 and cunts of player > 0: [player-dominant oral is okay]
+	if SarahCured > 5 and player is female: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy-grind Sarah's muzzle";
 		now sortorder entry is 8;
 		now description entry is "Grind your pussy against Sarah's muzzle";
 	[]
-	if SarahCured is 6 and cocks of player > 0: [never talked about sex before]
+	if SarahCured is 6 and player is male: [never talked about sex before]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck her";
 		now sortorder entry is 9;
 		now description entry is "Try to get into Sarah's pussy (for her first time as a husky)";
 	[]
-	if SarahCured > 7 and cocks of player > 0: [at least had the "I want to fuck you" talk with Sarah]
+	if SarahCured > 7 and player is male: [at least had the "I want to fuck you" talk with Sarah]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Sarah ride your dick (anal)";
 		now sortorder entry is 10;
 		now description entry is "Allow the husky to ride you - with your dick in her ass";
 	[]
-	if SarahCured > 7 and cocks of player > 0: [Sarah is okay with doggy style (anal)]
+	if SarahCured > 7 and player is male: [Sarah is okay with doggy style (anal)]
 		choose a blank row in table of fucking options;
 		now title entry is "Pound Sarah doggy style (anal)";
 		now sortorder entry is 11;
@@ -1503,7 +1503,7 @@ when play ends:
 		if SarahSlut is 4: [collared slut Sarah]
 			if humanity of player < 10: [player succumbed]
 				say "     Returning to the bunker, you waste no time in pouncing on your little slut husky, her happy moans and begging are music to your ears as you indulge yourself with your slut. You find yourself grinning as you enjoy some private time with her, instinctively knowing how best to dominate and control the submissive bitch. Soon though, she becomes less and less a husky bitch, perhaps due to your dominance as she begins to take on a form more like your own. The changes are small at first, though they grow more and more prominent as your strong dominant infection overwhelms her own, making her into a more suitable breeder for your needs.";
-				If cocks of player > 0: [male/herm]
+				if player is male: [male/herm]
 					say "     You grin as her body becomes an even better match for your own. Its form better able to take your powerful [cock of player] cock again and again, so she can breed you lots of little babies. And you waste no time testing this as you sink yourself into her warm wetness over and over, enjoying your dominance over your little pet. Eventually though, it is time to leave the small little bunker, a whole city waiting for you out there for you and your little slut, and you lead your newly changed submissive mate out into the world, you to find your destiny, and her to service your every whim and bear your offspring...";
 					if SarahPups > 0: [Player bred Sarah]
 						say "     Her pups succumb to the changes even faster than their mother, her newly changed milk running through their vulnerable bodies and altering them as well. Soon her offspring are properly representative of your new forms, and looking at them you are proud to see them as proof of your own virility and the start of the many many young you plan to sire with your lovely little breeding slut.";

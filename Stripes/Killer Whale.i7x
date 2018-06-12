@@ -77,7 +77,7 @@ to say orcadefeatsex4:		[oral sex]
 
 
 to say beattheorca:
-	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and ( cocks of player > 0 or cunts of player > 0 ):
+	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and player is not neuter:
 		if player is herm and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 			say "     [bold type] Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
@@ -88,7 +88,7 @@ to say beattheorca:
 				say "[orcavicsex1]";
 			else:
 				say "[orcavicsex2]";
-		else if cocks of player > 0 and anallevel > 1:
+		else if player is male and anallevel > 1:
 			say "[orcavicsex1]";
 		else if player is female:
 			say "[orcavicsex2]";
@@ -173,11 +173,11 @@ when play ends:
 	if bodyname of player is "Killer Whale":
 		if humanity of player < 10:			[SUCCUMB]
 			say "     As the last of your humanity is washed away as a sand castle by the waves of the ocean, you are drawn back to the beachside. You join the other beachgoers and lose yourself in the enjoyment of the beachfront area. You swim among the other creatures, strong and powerful. You are not troubled by the other predators often and happily satisfy your urges on the others swimming in the area. ";
-			if orcadom < 4 and cocks of player > 0:
+			if orcadom < 4 and player is male:
 				say "     The only difficulties you have are with the other male orcas in the area, as you fight with them over the territory and to defend the breeding females of your pod.";
 			else if player is male:
 				say "     Having driven away several of the other muscled orcamen from the area, the territory is yours and you have little trouble driving away the other weaker males. With the territory near the city claimed as yours, you build up a large pod of females to breed. Those killer whales who do venture into your waters are quickly beaten and dominated as you did the others before them.";
-			else if orcafdom < 4 and cunts of player > 0:
+			else if orcafdom < 4 and player is female:
 				say "     You find a powerful male among the other killer whales swimming in the waters around the city and join his pod, relishing the feel of him atop you. He breeds you, and the other females of the pod, often, to add to his mates. The males, when mature, are driven off to find pods of their own. You miss them a little, but there will always me more young ones, as your mate is strong and virile.";
 			else if player is female:
 				say "     Doubtlessly unprepared for such a reign as yours, you wrangle together a number of males and females for your own pod, wherein the males are subjugated to your whims and to those of the females whom you matron over. Rarely do you find a consort to sufficiently placate your desires, but when you do you make considerable use of them, regardless of their compliance.";

@@ -35,7 +35,7 @@ to say LoseToGoatJanitor:
 
 to say BeatTheGoatJanitor:
 	say "     Frustrated with fighting the old goat, you body check him with your shoulder after your last blow, sending him tumbling to the ground. He groans weakly as he hits the floor, falling on his side";
-	if libido of player > 29 and ( cocks of player > 0 or cunts of player > 0 ):
+	if libido of player > 29 and player is not neuter:
 		say ". Your blood (and excitement) up after the fight with the surprising spry goat. Shall you take advantage of the opportunity to get some relief?";
 		if the player consents:
 			if player is male: [males]

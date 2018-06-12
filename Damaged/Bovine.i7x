@@ -23,49 +23,49 @@ to say bovine desc:
 	if hardmode is true and level of player > 6, let debit be level of player - 6;
 	choose row monster from the table of random critters;
 	if a random number from 1 to 10 > 3:	[Anthro Cow]
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		say "[cow desc]";
 		now Bovine_type is 1;
-		now wdam entry is 5 + ( debit / 4 );	[Amount of Damage cow Does when attacking.]
+		now wdam entry is 5 + ( debit / 4 ); [Amount of Damage cow Does when attacking.]
 		now lootchance entry is 20;
 	[else if BullMaster is 1:		[Anthro Bull - You fed the feral bull orc cum]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 2;		[Anthro Bull - You fed the feral bull gryphon milk]
-		setmongender 5;		[creature is a full herm]
+	else if BullMaster is 2; [Anthro Bull - You fed the feral bull gryphon milk]
+		setmongender 5; [creature is a full herm]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 3;		[Anthro Bull - You fed the feral bull cow milk]
-		setmongender 6;		[creature is a trans female]
+	else if BullMaster is 3; [Anthro Bull - You fed the feral bull cow milk]
+		setmongender 6; [creature is a trans female]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 4;		[Anthro Bull - You fed the feral bull dog milk]
-		setmongender 7;		[creature is a male herm]
+	else if BullMaster is 4; [Anthro Bull - You fed the feral bull dog milk]
+		setmongender 7; [creature is a male herm]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 5;		[Anthro Bull - You splashed cow milk across the feral bull's crotch]
-		setmongender 8;		[creature is a trans male]
+	else if BullMaster is 5; [Anthro Bull - You splashed cow milk across the feral bull's crotch]
+		setmongender 8; [creature is a trans male]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;]
 	else:						[Feral Bull]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "[feral bull desc]";
 		now Bovine_type is 2;
 		if CowBully is 0:
-			now wdam entry is 0;			[Passive bull is 0, even in hard mode]
+			now wdam entry is 0; [Passive bull is 0, even in hard mode]
 		else:
-			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
+			now wdam entry is 28 + ( ( 2 * debit ) / 5 ); [Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
 		now lootchance entry is 20;
 
 to say losetobovine:
@@ -136,7 +136,7 @@ to say LoseToFeralBull:
 				fimpregchance;
 				fimpregchance;
 				infect "Bovine";
-				now mooing is mooing / 2;	[increasing milk thirst]
+				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
 			else if player is mpreg_ok:
 				say "     Lifting his nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat, even if you're not the average cow. Pacing over to you he sniffs at your rear and you feel yourself rising to all fours and presenting your ass to the beast. His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your hole. Suddenly nothing seems to matter but having him within you. [if scalevalue of player < 5 or player is not twistcapped]His bellowing thrusts are softened by your attempts to buck forward with him, trying to avoid being impaled by his gigantic rod. Suddenly his breeding tool seems to swell even bigger, stretching your already taxed snatch to the breaking point, and explodes with his orgasm, painting every inch of your insides white[else]His bellowing thrusts are countered by your own as you rock your hips back against his motion, feeling him deep within you. Suddenly his breeding tool seems to swell even larger, somehow making even your gigantic hole feel full, and explodes with his orgasm, painting every inch of your insides white[end if]. Dismounting, he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
@@ -144,7 +144,7 @@ to say LoseToFeralBull:
 				mimpregchance;
 				mimpregchance;
 				infect "Bovine";
-				now mooing is mooing / 2;	[increasing milk thirst]
+				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
 			else:
 				say "     The bull licks at you a few times but loses interest and wanders off to find some grass to munch on.";
@@ -338,7 +338,7 @@ to say feral bull attack:
 			say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[combat abort]";
 		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you.[or]Looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal.[at random]";
 		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
-			increase monsterHP by 9 + ( HP entry / 5 );	[ +25 HP for regular play ]
+			increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
 		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.";
 
 Section 2 - Monster Insertion
@@ -353,12 +353,12 @@ When Play begins:
 	now attack entry is "[bovine attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[BeatTheBovine]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[LoseToBovine]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[bovine desc]";[ Description of the creature when you encounter it.]
-	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like Holstein Friesian cattle over a thick[else] black and white splotched, furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seeming to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "bovine";[ Cock Description, format as you have a 'size' (your text) cock]
+	now desc entry is "[bovine desc]"; [ Description of the creature when you encounter it.]
+	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like Holstein Friesian cattle over a thick[else] black and white splotched, furred[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seeming to be to scare flies away."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "bovine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it draws forward, flowing into a large blunt muzzle even as your ears migrate up your head and stretching out to have a very bovine appearance. Slow thoughts begin to slowly push away your present needs. You find yourself mooing softly under your breath"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "grows and stretches, bones growing hugely into the frame of an anthro cow, forcing your muscles and posture to follow"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it thickens and sprouts a pattern of black and white hair, slowly merging together into a very cow-like appearance"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -371,31 +371,30 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 80;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 2;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Park";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 28;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 14;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 4;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 9;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 28;		[ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex infection will try and give you ]
-	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "cow milk";			[ Loot monster drops, ]
-	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now HP entry is 80; [ How many HP has the monster got? ]
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 2; [Amount of Damage monster Does when attacking.]
+	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 28; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 14; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 4; [ Number of Breasts infection will give you. ]
+	now breast size entry is 9; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 28; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 8; [ Width of female sex infection will try and give you ]
+	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now loot entry is "cow milk"; [ Loot monster drops, ]
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if player is female]maternal[else]beefy[end if]";
-	now type entry is "bovine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "bovine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Monster Heat
 
@@ -421,13 +420,13 @@ To say CowMilkAddict:			[Getting a direct hit feeds you. This seems like a lot o
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Bovine";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
-	now heat duration entry is 400;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now infect name entry is "Bovine"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 400; [ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
-	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
-	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat..]
-	now heat end entry is "";		[this is the same as heat start only it's for ending the cycle.]
+	now description text entry is ""; [ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
+	now heat start entry is ""; [this is a to say block that causes things to happen when the player enters heat..]
+	now heat end entry is ""; [this is the same as heat start only it's for ending the cycle.]
 	now inheat entry is "[bovineheat]";
 	now fheat entry is true;
 	now mpregheat entry is true;

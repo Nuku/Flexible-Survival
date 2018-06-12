@@ -32,7 +32,7 @@ to say losetoincubus:
 			WaitLineBreak;
 			say "     The pleasure you feel as his large, perfect cock pushes into you is one of utter, sinful delight. He fucks you hard and fast, rocking his hips and pumping his shaft into you. His hands roam over your body, joining his tail in teasing against your flesh. It is only the soft sound of the beating of his wings that tells you how he's supporting himself so easily atop you. His body, penis, fingers, tongue, mouth and tail all move with the practiced ease of one who's spent countless ages exploring sexual pleasure and loving every moment of it. You cannot help but moan and push back into his thrusts as he buggers you, your asshole practically milking at his cock with lustful need.";
 			say "     Finally, after what feels like hours of sinful fucking, he drives his shaft fully into you and unleashes his hot seed, pouring his tainted load into your bowels[if cocks of player is 1]. Your balls tighten and your cock throbs as he pumps it, spraying your semen onto his waiting hand before bringing it forward for you both to lustfully lap up[else if player is male]. He pumps at your cocks, playfully stroking each to orgasm in turn while his other hand waits to catch the load. Each sticky handful of cum is brought forward for you both to lustfully lap up[end if]. His large balls slap against your thighs as he drains them his infernal seed into you. Spent, he pushes you to the ground, gives you a tongue-filled kiss and a final grope before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.[impregchance]";
-	else if player is submissive and ( ( cunts of player > 0 and a random chance of 3 in 5 succeeds ) or ( cocks of player is 0 and a random chance of anallevel in 5 succeeds ) ):
+	else if player is submissive and ( ( player is female and a random chance of 3 in 5 succeeds ) or ( cocks of player is 0 and a random chance of anallevel in 5 succeeds ) ):
 		say "     [if HP of player > 0]Having submitted to[else]Beaten by[end if] the infernal temptation of the incubus, you are pushed down by the alluring male. Looking up at the creature who's bested you - an his stiff erection - your submissive tendencies kick in. Licking your lips, you reach for his cock without even realizing it. You only take notice of your actions and the fact that you're welcoming his perfect penis into your mouth when he chuckles darkly.";
 		say "     'It seems you're already quite well suited to becoming my slutty plaything. Go on, toy, suck that cock you so clearly desire.'";
 		say "     You blush at his order and submit yourself to the demonic tempter's will. You work your tongue along its smooth flesh and across its leaking glans. And sucking on the incubus's cock only makes you more aroused[if player is herm], rock hard and dripping yourself[else if player is male], rock hard yourself[else if player is female], dripping yourself[end if]. By the point he tells you to [if player is female]lay down and spread your legs[else]get on all fours and raise your ass[end if], you do so without hesitation.";
@@ -90,7 +90,7 @@ to say beattheincubus:
 				say "     When you refuse, the incubus's face briefly becomes one of demonic anger before returning to its beautiful appearance. 'Very well, then. Perhaps you will be more accommodating once you join our ranks more fully. I promise to show you such wonderful pleasures of the flesh, my dear,' he says with a dark smile. 'I expect you will become a most impressive temptation,' he says, still grinning. 'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail. With that, he turns and heads off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time..";
 		else:
 			say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you. 'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over. 'I look forward to you joining our ranks more fully so we may share in the pleasures of the flesh. I expect you will become a most impressive temptation,' he says with a grin. 'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail. With that, he turns and heads off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.";
-	else if cocks of player > 0 and incubusnosex < 3:
+	else if player is male and incubusnosex < 3:
 		say "     'Alas, I am defeated,' the incubus moans as it staggers back as it tries to remain standing. 'I cannot resist your might any further,' the incubus says as he falls to his knees. 'You may now make use of my body as you would,' he says with an exaggerated sigh, reaching for your groin and licking his lips.";
 		say "     [bold type]Shall you take your prize and make the sex demon blow you, or will you refuse this final temptation?[roman type][line break]";
 		LineBreak;
@@ -135,17 +135,17 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Incubus"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[incubus fight]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheincubus]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoincubus]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Incubus"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[incubus fight]"; [ Successful attack message ]
+	now defeated entry is "[beattheincubus]"; [ Text when monster loses. ]
+	now victory entry is "[losetoincubus]"; [ Text when monster wins. ]
 	now desc entry is "[incubusdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that a beautiful human, with lovely features, full lips and a seductive smile. Your eyes have amber irises that glow a little bit. Growing from your brow are a pair of small, red horns";
 	now body entry is "that of a handsome and attractive human being, toned and strong. Attached to your back are a pair of bat-like wings. These are red and well-sized, maybe even large enough to fly with once you figure out the details";
 	now skin entry is "[one of]soft, human[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a round, bubble butt with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a round, bubble butt with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer, more sexually attractive appearance. Small horns push out of your brow"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer, more sexually attractive appearance. Small horns push out of your brow"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder, you stare in wonder as two small bulges of flesh push out of your back, before popping open in an almost orgasmic release. Unfurling further and further after that, you soon have a pair of large dark red bat wings on your back";
 	now skin change entry is "your skin seems to soften and smooth out, any blemishes and unwanted hair wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a perfect, sexy ass, forming a wonderfully fuckable bubble butt. Then a long and thin tail grows out of your back just above it, sporting a spaded tip at the end";
@@ -164,7 +164,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

@@ -30,7 +30,7 @@ to say Feral Wolf attack:
 			say "     Satisfied, he pads back over to your face and gives you a playful lick before bounding off into the streets of the infected city.";
 			now FeralWolfdefeat is 1;
 		else:
-			if cunts of player > 0 and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)):
+			if player is female and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)):
 				if cunt length of player < 15 or cunt width of player < 10:
 					say "     He pushes you over onto your stomach and climbs up on top of you, grinding his quickly hardening shaft against your rump. You whimper as he digs his claws into your hips and presses the tip of his shaft against [if cunts of player > 1]one of your cunts[else]your cunt[end if]. Wasting no time, he slams it into you, making you gasp out in both pain and pleasure, his grip on you making it easy for him to pound his shaft you. He growls and bites down on your neck, pulling back slightly in a canine mating bite and you quickly submit to him both in body and mind.";
 					say "     Within minutes, you are yipping and barking like a good little breeding bitch, howling out your submission for all to hear. You shiver and moan out, panting harder, as you feel the wolf's thick knot ramming against your cunt's moist lips, begging him to tie you and pump you full of fertile seed. He roars out his dominance and spreads your pussy open with his knot, your back arching in pleasure as you are bred. His knot's soon swollen to 3 times the size and has locked you to him, his thrusting and quickly speeding up.";
@@ -67,7 +67,7 @@ to say beatferalwolf:
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
 	else if inasituation is false and wolffight is not 3 and HP of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
-		if a random number between 1 and 100 < ( fangcount - 95 ) and (cocks of player > 0 or cunts of player > 0 ):	[3rd to 5th wolf]
+		if a random number between 1 and 100 < ( fangcount - 95 ) and (player is not neuter ):	[3rd to 5th wolf]
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make an obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
 			say "     [bold type]Shall you try to tame this beastly wolf creature?[roman type][line break]";
 			LineBreak;
@@ -196,16 +196,16 @@ When Play begins:
 	now defeated entry is "[beatferalwolf]";
 	now victory entry is "[Feral Wolf attack]";
 	now desc entry is "[FeralWolfDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "feral wolf face, with a long canine snout filled with the sharp teeth of a predator"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "that of an average sized and well-muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "feral wolf face, with a long canine snout filled with the sharp teeth of a predator"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "that of an average sized and well-muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "rough black fur spreads rapidly over your form, leaving you more capable to endure the elements."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length turning pitch black"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "rough black fur spreads rapidly over your form, leaving you more capable to endure the elements."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length turning pitch black"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;
 	now dex entry is 16;
 	now sta entry is 12;

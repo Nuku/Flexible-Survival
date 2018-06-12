@@ -205,12 +205,12 @@ to say dominick_sexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy style";
 		now sortorder entry is 1;
-	if cunts of player > 0 and scalevalue of player < 4 and HP of Dominick >= 4:
+	if player is female and scalevalue of player < 4 and HP of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
 		now description entry is "Get bounced on the husky's big pole";
-	if cunts of player > 0 and HP of Dominick >= 4:
+	if player is female and HP of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
@@ -228,7 +228,7 @@ to say dominick_sexmenu:
 	now title entry is "Cock worship";
 	now sortorder entry is 9;
 	now description entry is "Lavish that doggy cock with attention";
-	if HP of Dominick >= 5 and HP of Dominick < 10 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
+	if HP of Dominick >= 5 and HP of Dominick < 10 and player is female and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
 		if "Submissive" is not listed in feats of player and level of player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";
@@ -244,7 +244,7 @@ to say dominick_sexmenu:
 	else if HP of Dominick >= 10 and HP of Dominick < 20:
 [		if libido of Dominick > 0:		]
 		if libido of Dominick is 1:			[***temp only available for Female Husky***]
-			if cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
+			if player is female and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
 				choose a blank row in table of fucking options;
 				now sortorder entry is 90;
 				if libido of Dominick is 1:			[last capture was Female Husky]
@@ -512,7 +512,7 @@ to say sexwithDominick_05:
 	say "     When you nuzzle down to his plump, virile balls, you feel the soft brush of fur against your sides. The stud's other pets have moved alongside you and start worshipping that beautiful cock of his as well. While a part of you doesn't want to share, you know the husky wants them to help. Besides, his penis deserves all the attention it can get. And so the three of you swap between his hefty balls, plump sheath, throbbing shaft and drooling glans. And once it emerges and swells up, his thick knot is given plenty of attention as well.";
 	WaitLineBreak;
 	say "     The confident male stands up proudly as his trio of pets pay homage to his virility. You are given the occasional pat on the head or ear scritch, just like the other two doggy girls get[if player is female]. 'Look at this - three fine bitches who know their place. Now be sure to lick every inch of it[else]. 'Now you pay attention to my two fine bitches here. They know how to treat my stud cock.' He slaps it across your face. 'You're nothing but a cock-sucking whore for a real male's cock[end if].' His words have you increase your efforts, trying to please the dominant alpha.";
-	say "     The three of you continue your licking, kissing and caressing of his shaft until he's about to blow. With a sharp bark, he commands you all to 'Sit!' and then to 'Beg.' Sitting up and begging like dogs, the two girls lean in closer to you and you follow suit. With their heads to either side of yours, they hold their muzzles open and whimper with need while Dom pumps his throbbing member. You open your mouth just as the husky's hot seed begins to spew forth, splattering across your face and into your open mouth. He shifts his aim, making sure to reward the three of you with a messy coating of his semen. It clings to you and it delightfully sticky and rich in flavor. You all obediently hold steady while he cums onto you, only relaxing once he's finished and commands you to clean each other up. There's a lot of hot [if cunts of player > 0 and cocks of player is 0]lesbian [end if]kissing and licking between the three of you while the spent husky watches on with a smug smile on his muzzle. 'Good girls. Now play nice. There's plenty to go around.'";
+	say "     The three of you continue your licking, kissing and caressing of his shaft until he's about to blow. With a sharp bark, he commands you all to 'Sit!' and then to 'Beg.' Sitting up and begging like dogs, the two girls lean in closer to you and you follow suit. With their heads to either side of yours, they hold their muzzles open and whimper with need while Dom pumps his throbbing member. You open your mouth just as the husky's hot seed begins to spew forth, splattering across your face and into your open mouth. He shifts his aim, making sure to reward the three of you with a messy coating of his semen. It clings to you and it delightfully sticky and rich in flavor. You all obediently hold steady while he cums onto you, only relaxing once he's finished and commands you to clean each other up. There's a lot of hot [if player is purefemale]lesbian [end if]kissing and licking between the three of you while the spent husky watches on with a smug smile on his muzzle. 'Good girls. Now play nice. There's plenty to go around.'";
 	if HP of Dominick is 4, increase HP of Dominick by 1;
 
 Section 7 - Beta and Omega Statuses
@@ -543,7 +543,7 @@ to say dom_captured3some_00:
 	WaitLineBreak;
 	if libido of Dominick is 1:		[Female Husky]
 		say "     A needy whine is the first you notice that the female husky has arrived. The former stray has been cleaned and groomed and is looking much prettier. She's got a new collar on and is panting at the sight of you going to town on Dom's cock. She fingers her dripping snatch, which leads you to notice she's got a tattoo above it marking her as a [']breeding bitch['].";
-		say "     At Dom's behest, you make room for her between his legs and the two of you take turns sucking him off. The two of you both share and compete at once - working to please your common master, but each vying to be the one to finish him off[if cunts of player > 0 and cocks of player is 0]. This does not stop you both from fingering one another as well[else]. This does not stop you from taking over fingering her as well[end if], showing it to be a friendly competition.";
+		say "     At Dom's behest, you make room for her between his legs and the two of you take turns sucking him off. The two of you both share and compete at once - working to please your common master, but each vying to be the one to finish him off[if player is purefemale]. This does not stop you both from fingering one another as well[else]. This does not stop you from taking over fingering her as well[end if], showing it to be a friendly competition.";
 		WaitLineBreak;
 		let playernum be 100 + libido of player + ( level of player * 2 );
 		let monsternum be 190;
@@ -668,7 +668,7 @@ to say ForcedSubToDomSex2:			[Creampie Trial]
 	say "     Despite having cum only a few minutes ago, the pink husky expertly works Dom's dick, and he soon hugs her to his chest before thrusting his knot into her ample snatch. He growls into her neck as he continues to buck his hips into her, and you watch his balls draw up a second time to drop their load into her pussy. He falls back into his chair, letting the husky girl take the lead on the aftercare and leaning into her licks. He runs his hands down her back and spreads her cheeks, squeezing them in his paws. Once again, the moment lasts not long at all as Dom pulls her off, the husky whimpering as his knot leaves her body. Still, she too returns to her spot at the side of Dom's chair. Dom stretches languidly, his thick doggy dick bouncing as he does so, still incredible erect despite unloading twice already. He gets up lazily and stretches again, arms reaching for the ceiling, before making his way slowly to where you've been tied up. He unties your leash from the ring and says, [one of]'I think you've learned patience, my little bitch. Let's see how you do with gratitude.'[or]'You've been a good slut, let's see if that continues.'[stopping]";
 	if HP of Dominick > 30 and HP of Dominick < 34:
 		say "     Dom walks you over to his desk, clears off the top of it, and turns to look at you. He asks, 'Do you want my seed, bitch? Do you need to have your master's essence in you?' You don't even think of hesitating before nodding. Dom grabs your bobbing face in his hand and growls, 'What have I told you, girlie? You say yes or no when speaking to me.' He releases you, and this time you answer in the affirmative fervently, and Dom gives your cheek a light slap of approval. You attempt to get onto the desk, but Dom holds you back, then orders you to wait. He whistles and points to his desk, saying, 'Kissies, girls.' The dog girls leap up immediately and trot over to the desk before you. The samoyed hops onto the desk tail-end first and lies down while the husky waits for her to get into position. Then the pink husky clambers onto the desk and onto the teal dog girl. They begin making out and grinding their bodies together, their wagging tails showing their enthusiasm.";
-		say "     Your master leans in close and says, 'If you want my spunk, you're going to take it any way I give it to you, including second-hand. If you want to taste your master, you're going to have to work for it. Get to it, slut.' Dom shoves you to your knees, placing your head level with the writhing rears of the doggy girls, their snatches still wet with arousal and your master's cum. You lean in, eager to get your prize, sticking your face right into the waiting pussies. Alternating between the two, you try to slurp and suck as much seed as you can out of their well-bred holes. You feel a strong hand on the back of your head before feeling Dom's breath on your ear. [if player is female]'I thought that a girl would at least know what she liked;[else]'I know that you don't have your own snatch, but[end if] is that really the best you can do? Let me show you how a man does it.'";
+		say "     Your master leans in close and says, 'If you want my spunk, you're going to take it any way I give it to you, including second-hand. If you want to taste your master, you're going to have to work for it. Get to it, slut.' Dom shoves you to your knees, placing your head level with the writhing rears of the doggy girls, their snatches still wet with arousal and your master's cum. You lean in, eager to get your prize, sticking your face right into the waiting pussies. Alternating between the two, you try to slurp and suck as much seed as you can out of their well-bred holes. You feel a strong hand on the back of your head before feeling Dom's breath on your ear. [if player is female]'I thought that a girl would at least know what she liked; [else]'I know that you don't have your own snatch, but[end if] is that really the best you can do? Let me show you how a man does it.'";
 		WaitLineBreak;
 		if player is female:
 			say "     He grabs your legs and lifts them up, but when you turn to look at him, he orders you to keep servicing his pets. It doesn't take long for you to figure out what he's doing, however, because his tongue enters your cunt soon enough. Dom begins eating you out with abandon, and you try to do the same to the doggy girls, but it's hard to concentrate under your master's pleasurable assault. Dom's tongue is long and flexible, and it reaches spots in your cunt that send shocks of ecstasy running through your body. You gasp with each new sensation and attempt to reach down to your clit. Dom smacks your hand away with a growl, and you get the idea that you should pay more attention to what he's doing and apply it to the pussies in front of you. Or maybe just leave your master to his work; either way, you continue eating the dog girls out as best you can while moaning and shuddering so frequently.";

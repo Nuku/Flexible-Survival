@@ -99,8 +99,8 @@ to say alpha huskypack lost:
 		say "     Time passes, and the sounds of the others grow quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
 		let z be a random owned grab object;
 		decrease carried of z by 1;
-[		sort invent of the player in random order;	]
-[		remove entry 1 from invent of the player;		]
+[		sort invent of the player in random order; ]
+[		remove entry 1 from invent of the player; ]
 	else: [ player submitted ]
 		say "     Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions, petting and licking you all over. The leader, however, is looking you in the eyes. 'If you want to join us,' he says, 'you will have to be stronger than that.";
 		if player is male:

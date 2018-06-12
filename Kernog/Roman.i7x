@@ -205,7 +205,7 @@ to say RomanConvince:
 	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 	if GorillasMember > 3:
 		increase bonus by 2;
-	if cunts of player > 0 and breast size of player is 0:
+	if player is female and breast size of player is 0:
 		if player is not male:
 			increase bonus by 5;
 		else:
@@ -405,13 +405,13 @@ to say RomanFuck2:
 		now sortorder entry is 2;
 		now description entry is "Everything is in the name.";
 	[]
-	if (cunts of player > 0 and Breast Size of player > 0):
+	if (player is female and Breast Size of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Sex-ed";
 		now sortorder entry is 3;
 		now description entry is "Have some [']girl time['] with Roman.";
 	[]
-	if (cunts of player > 0 and Breast Size of player is 0):
+	if (player is female and Breast Size of player is 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Cunt-boy special";
 		now sortorder entry is 4;

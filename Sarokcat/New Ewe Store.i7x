@@ -191,7 +191,7 @@ instead of conversing the Mary:
 	else if NESProgress is 4:
 		say "     'Hi there again! I want to thank you again for all your help. I can't really do much to repay you except by giving you some tips for finding stuff out in the city.' The little ewe speaks softly, nervous next to her hero. 'It's mostly a matter of keeping your eyes open and knowing where to look,' she says, continuing on to give you some anecdotes from her searching, though you do pick up a few ideas which may be helpful. As she starts to go on about nimbly climbing some rubble, stops herself. 'I'm sorry. I was rambling a little.'";
 		say "     You have gained the [']Three Bags Full['] feat, which confers +1 to all scavenging rolls and checks.";
-		add "Three Bags Full" to feats of the player;
+		add "Three Bags Full" to feats of player;
 		now NESProgress is 5;
 	else if RamFucked > 0:
 		say "     Mary smiles at you happily as you greet her. 'It's always good to see you here, but I think the flock leader will be even happier to see you, if you know what I mean,' she says as she gives you a nudge in Leon's direction.";

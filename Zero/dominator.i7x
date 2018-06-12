@@ -160,16 +160,16 @@ When Play begins:
 	now defeated entry is "[domdef]";
 	now victory entry is "[domvictory]";
 	now desc entry is "[domdesc]";
-	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player], a metal chain is rapped around your neck ";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player], a metal chain is rapped around your neck "; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of a muscular wolf's and covered in [skin of player]";
 	now skin entry is "short,[one of]velvety[or]soft[or]shiny[at random]deep black fur";
-	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a long wolf's tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "constantly hard canine";
-	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later, a chain appearing from nowhere and rapping around your neck"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your body's fat is converted into muscle, becoming that of a muscular wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later, a chain appearing from nowhere and rapping around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your body's fat is converted into muscle, becoming that of a muscular wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft and shiny black fur covers your body. ";
 	now ass change entry is "a long wolf's tail grows and begins waggling happily.";
-	now cock change entry is "it becomes canine, and incredibly hard."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it becomes canine, and incredibly hard."; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 19;
 	now dex entry is 12;
 	now sta entry is 15;

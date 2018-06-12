@@ -280,7 +280,7 @@ to say losetofpony:
 		say "     She rides you eagerly, her hooves rubbing over your [bodytype of player] body[if rfponytype is 2], her wings aflutter with excitement[else if rfponytype is 3] while glowing magic from her horn lets her grope your balls[end if]. You can feel her hot juices running down your shaft and across your balls as she rides your rod faster and faster. As the happy [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if] squeezes and grinds down hard onto your cock, she smiles and swishes her flowing [rfponycolor2] hair. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her, you cum hard, pumping your hot load into the pleased pony as a fresh rush of hot juices from her soaks your crotch. Once you're drained, she nuzzles your cheek and pulls off[if cock length of player > 20] with a groan[end if].";
 	else:
 		say "     Grinning down at you, she giggles all the more as she looks over your prone form. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says, hopping atop you. She raises her [rfponycolor2] tail and grinds her wet mare's pussy down into your face, the scent and sweetness of her juices overpowering your senses. You lick your lips, getting your first sample of her juices before diving your tongue into her juicy, mare's pussy. She moans and nickers happily[if rfponytype is 2] as her wings flutter[end if], giggling about what a good friend you are and to lick her faster.";
-		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and cunts of player > 0]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
+		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and player is female]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
 	say "     'I hope to see you again, my new friend. It's been magic.' That said, she [if rfponytype is 2]flies[else]trots[end if] off, probably in search of another new friends. It's some time before your head clears enough for you to get up and head on your way.";
 
 
@@ -341,7 +341,7 @@ When Play begins:
 	sort rfpclist2 in random order;]
 	sort pfpclist in random order;
 [	sort rfpbmlist in random order;]
-	now name entry is "Friendship Pony"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Friendship Pony"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[fpattack]";
 	now defeated entry is "[beatthefpony]"; [ Text when monster loses. Change 'fpony' as above. ]
 	now victory entry is "[losetofpony]"; [ Text when monster wins. Change 'fpony' as above. ]
@@ -351,11 +351,11 @@ When Play begins:
 	now skin entry is "[fpskindesc]";
 	now tail entry is "You have a long and lush tail of [pfphair] hair emerging from a round hole at the base of your spine. Despite being nothing but long strands of glossy plastic, it swishes and moves on its own, drawing attention to your [if player is fponyskinned][one of]equine bottom[or]sexy ass[or]hot flanks[or]booty mark[at random][else][one of]equine bottom[or]sexy ass[or]hot flanks[at random]";
 	now cock entry is "[one of]equine[or]pony[or]horsey[or][pfpcock][at random]";
-	now face change entry is "[fponyfacechange]"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "[fponybodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "[fpskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "[fptailchange]"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans. But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face change entry is "[fponyfacechange]"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "[fponybodychange]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "[fpskinchange]"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "[fptailchange]"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans. But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
@@ -370,7 +370,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -380,7 +380,7 @@ When Play begins:
 	now loot entry is "pony cider"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 22; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]smooth[or][if cocks of player > 0 and cunts of player is 0]stocky[else]slender[end if][or]toyetic[at random]";
+	now body descriptor entry is "[one of]smooth[or][if player is puremale]stocky[else]slender[end if][or]toyetic[at random]";
 	now type entry is "[one of]equine[or]pony[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
@@ -671,31 +671,31 @@ the scent of pony cider is "The cider smells strongly of apples and equines.".
 Section 6 - Definitions
 
 Definition: a person is unpony:
-	if the bodyname of the player is "Friendship Pony", no;
-	if the facename of the player is "Friendship Pony", no;
-	if the skinname of the player is "Friendship Pony", no;
-	if the tailname of the player is "Friendship Pony", no;
-	if the cockname of the player is "Friendship Pony", no;
+	if bodyname of player is "Friendship Pony", no;
+	if facename of player is "Friendship Pony", no;
+	if skinname of player is "Friendship Pony", no;
+	if tailname of player is "Friendship Pony", no;
+	if cockname of player is "Friendship Pony", no;
 	yes;
 
 Definition: a person is fponyfaced:
-	if the facename of the player is "Friendship Pony", yes;
+	if facename of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponyskinned:
-	if the skinname of the player is "Friendship Pony", yes;
+	if skinname of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponybodied:
-	if the bodyname of the player is "Friendship Pony", yes;
+	if bodyname of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponycocked:
-	if the cockname of the player is "Friendship Pony", yes;
+	if cockname of player is "Friendship Pony", yes;
 	no;
 
 Definition: a person is fponytailed:
-	if the tailname of the player is "Friendship Pony", yes;
+	if tailname of player is "Friendship Pony", yes;
 	no;
 
 

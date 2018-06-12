@@ -208,7 +208,7 @@ City Hall Offices is a situation. The level of City Hall Offices is 1. City Hall
 The sarea of City Hall Offices is "High".
 
 Instead of resolving a City Hall Offices:
-	now battleground is "Void";[avoids random fights after]
+	now battleground is "Void"; [avoids random fights after]
 	say "     Roaming through the streets of the high rise district, you eventually come to an unassuming office-building, far less glamorous than the more ornate actual city hall of the city. This is where bureaucrats and statisticians have their offices, doing their important yet often overlooked work. It seems like that latter fact works in your favor right now - as the building seems to have been completely ignored in the time since the nanite outbreak. No signs of looting or habitation at all. Just an abandoned office building, waiting for you to gain entrance.";
 	say "     It is fairly easy to smash one of the windows on the back side, climbing into the open office filled with cubicles. Standing between the little box-shaped pens for human workers is somewhat eerie, making you feel like you don't belong here. Shaking off the sensation, you quickly move on and check doors left and right in an adjoining hallway - restrooms, office supply cupboard, a few one person offices, then - AHA - the server room! The place does turn out to be locked though, with a powerless key-card reader so you don't even waste the time to search for the card but instead go and grab a fire extinguisher from a nearby wall...";
 	WaitLineBreak;

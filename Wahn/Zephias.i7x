@@ -57,14 +57,14 @@ Instead of resolving a Captured Soldier:
 		say "     ([link]N[as]n[end link]) - Not your problem.";
 		if player consents:
 			LineBreak;
-			if lust of Zephias is 2 and cunts of player > 0 and cocks of player is 0: [that Julio is gay is known, so the female sex option with him doesn't come up]
+			if lust of Zephias is 2 and player is purefemale: [that Julio is gay is known, so the female sex option with him doesn't come up]
 				say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? She's so concerned about you that she offers himself in your place. How sweet.' He lowers the soldier to the ground, positioning him to sit against the building wall on one side of the alley, still wrapped tight in his silk bindings. 'There, you even get a ringside seat for the show.' Zephias says and chuckles. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says 'Okay Fucktoy, strip!'";
 				say "     A lustful shiver runs down your spine as you hear the hybrid creature's order, striking a chord with your submissive nature. You drop your gear on the ground and start giving the two of them a little show, stretching and turning as you slide off your clothes piece by piece. You can almost feel their eyes on your exceedingly naked form, making you feel all warm inside and very sexy. By the time you're completely naked, Zephias['] human-like shaft is fully hard, jutting out from between protective chitinous plates.";
 				WaitLineBreak;
 				if a random chance of 1 in 2 succeeds:
 					say "     [ZephiasAlleyFuck]";  [fuck on the ground]
 				else:
-					say "     [ZephiasAlleyWallFuck]";[fuck against the wall]
+					say "     [ZephiasAlleyWallFuck]"; [fuck against the wall]
 			else: [random selection if Zephias or the soldier fucks the player]
 				say "     [ZephiasJulioRandomSelection]";
 		else:[let Zephias carry the guy off]
@@ -74,29 +74,29 @@ Instead of resolving a Captured Soldier:
 
 to say ZephiasJulioRandomSelection:
 	if a random chance of 1 in 2 succeeds:[Zephias fucks the player]
-		say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? [if cunts of player > 0 and cocks of player is 0]She's so concerned about you that she offers herself in your place. How sweet.' [else]He's so concerned about you that he offers himself in your place. How sweet.' [end if]He lowers the soldier to the ground, positioning him to sit against the building wall on one side of the alley, still wrapped tight in his silk bindings. 'There, you even get a ringside seat for the show.' Zephias says and chuckles. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says 'Okay Fucktoy, strip!'";
+		say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? [if player is purefemale]She's so concerned about you that she offers herself in your place. How sweet.' [else]He's so concerned about you that he offers himself in your place. How sweet.' [end if]He lowers the soldier to the ground, positioning him to sit against the building wall on one side of the alley, still wrapped tight in his silk bindings. 'There, you even get a ringside seat for the show.' Zephias says and chuckles. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says 'Okay Fucktoy, strip!'";
 		say "     A lustful shiver runs down your spine as you hear the hybrid creature's order, striking a chord with your submissive nature. You drop your gear on the ground and start giving the two of them a little show, stretching and turning as you slide off your clothes piece by piece. You can almost feel their eyes on your exceedingly naked form, making you feel all warm inside and very sexy. By the time you're completely naked, Zephias['] human-like shaft is fully hard, jutting out from between protective chitinous plates.";
 		WaitLineBreak;
 		if a random chance of 1 in 2 succeeds:
 			say "     [ZephiasAlleyFuck]";  [fuck on the ground]
 		else:
-			say "     [ZephiasAlleyWallFuck]";[fuck against the wall]
+			say "     [ZephiasAlleyWallFuck]"; [fuck against the wall]
 	else:[the player is told to fuck themselves on the captive soldier's cock]
-		say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? [if cunts of player > 0 and cocks of player is 0]She's so concerned about you that she offers himself in your place. How sweet.' [else]He's so concerned about you that he offers himself in your place. How sweet.' [end if]He lowers the soldier to the ground, positioning him on his back, then cuts away those strands wrapped around his hips and pulls down the young man's zipper. 'Your ass is safe, soldier boy - but I still want to see you in action today.' Zephias says and chuckles, pulling down the soldier's pants a bit to reveal his whole crotch and half-hard cock. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says 'Okay Fucktoy, strip!'";
-		if cocks of player is 0 and cunts of player > 0: [female player - though that doesn't get Julio hard]
+		say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? [if player is purefemale]She's so concerned about you that she offers himself in your place. How sweet.' [else]He's so concerned about you that he offers himself in your place. How sweet.' [end if]He lowers the soldier to the ground, positioning him on his back, then cuts away those strands wrapped around his hips and pulls down the young man's zipper. 'Your ass is safe, soldier boy - but I still want to see you in action today.' Zephias says and chuckles, pulling down the soldier's pants a bit to reveal his whole crotch and half-hard cock. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says 'Okay Fucktoy, strip!'";
+		if player is not male and player is female: [female player - though that doesn't get Julio hard]
 			say "     A lustful shiver runs down your spine as you hear the hybrid creature's order, striking a chord with your submissive nature. You drop your gear on the ground and start giving the two of them a little show, stretching and turning as you slide off your clothes piece by piece. You can almost feel their eyes on your exceedingly naked form, making you feel all warm inside and very sexy. By the time you're completely naked, Zephias['] human-like shaft is fully hard, jutting your way from between protective chitinous plates. The soldier on the other hand... isn't hard at all. 'Oh, is our little Fucktoy not to your liking? Guess you'd have preferred the time in my lair more, then. Oh well...' he pulls the soldier a bit to the side, positioning him to sit against the building wall on one side of the alley '...then I get to fuck her and you can watch.'";
 			WaitLineBreak;
 			if a random chance of 1 in 2 succeeds:
 				say "     [ZephiasAlleyFuck]";  [fuck on the ground]
 			else:
-				say "     [ZephiasAlleyWallFuck]";[fuck against the wall]
+				say "     [ZephiasAlleyWallFuck]"; [fuck against the wall]
 		else:[male, herm, neuter players]
 			say "     A lustful shiver runs down your spine as you hear the hybrid creature's order, striking a chord with your submissive nature. You drop your gear on the ground and start giving the two of them a little show, stretching and turning as you slide off your clothes piece by piece. You can almost feel their eyes on your exceedingly naked form, making you feel all warm inside and very sexy. By the time you're completely naked, the soldier's cock stands erect as a flagpole, showing his clear arousal at watching your performance. Zephias puts a hand on it and strokes up and down a few times, then waves you closer.";
 			WaitLineBreak;
 			if a random chance of 1 in 2 succeeds:
 				say "     [BlowingJulio]";  [blow him while Zephias fucks the player]
 			else:
-				say "     [RidingJulio]";[ride the soldier's cock]
+				say "     [RidingJulio]"; [ride the soldier's cock]
 
 to say ZephiasAlleyFuck:
 	setmonster "Spidertaur";

@@ -122,7 +122,7 @@ To say Alpha Wolf loss:
 							say "     Keeping the wolf pinned on his back, you ride up and down on his cock, enjoying his lustful panting and moaning as he struggles the thrust up into you. You keep a hand firmly on his pelvis, ensuring that you're the one setting the pace and in charge of this hard fucking you're getting. You take your time with it, rubbing down onto the wolf's knot, but not letting him tie with you, denying him release several times as you draw out as much pleasure as you can from your carnal act. Only once you're ready do you push yourself firmly down onto the wolf's cock and let his engorged knot stretch your [if player is female]vagina wide[else]asshole open[end if] to tie with him. You bounce rapidly upon it and clamp down hard, getting the wolf to howl loudly in release as he blasts his thick load into your [if player is female]waiting womb[else]bowels[end if] before you cum hard[if player is male], spraying your own seed across his body[end if].[impregchance]";
 							say "     After his knot has gone down, you pull yourself off him and get up. As he starts to rise, you give his ass a shove with your heel, sending him on his way. He slinks off, growling about his superiority even as he backs away, but he doesn't seem quite as confident as before. Having been beaten and used seems to have shaken his alpha identity somewhat. And with the scent of defeat[if player is male] and another male marking him[end if], he may face some trouble if he can't get a confidence boost before meeting up with the rest of the pack.";
 							let targetnum be 16;
-							if cocks of player > 0, decrease targetnum by ( cock width of player / 5 );
+							if player is male, decrease targetnum by ( cock width of player / 5 );
 							if targetnum < 12, now targetnum is 12;
 							if a random chance of alphawolfbeaten in targetnum succeeds, now alphawolfreplaced is true;
 							decrease libido of player by 15;
@@ -141,7 +141,7 @@ To say Alpha Wolf loss:
 								say "     After a very enjoyable tongue job from the beaten male, you grip his head firmly and bury his nose in your muff. You cum hard with a groan of pleasure, soaking his muzzle and your thighs in your hot juices. You keep your plaything's muzzle trapped there, ordering him to lick you clean before you'll let him go. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
 							say "     Once you're finished, you push the wolf's head away dismissively. As he starts to rise, you give his ass a shove with your heel, sending him on his way. He slinks off, head soaked in the scent of the one who defeated him. As he backs away with his tail between his legs, he growls about his superiority, but it doesn't seem quite as confident as before. Having been beaten and used seems to have shaken his alpha identity somewhat. And with the scent of defeat[if player is male] and another male's seed all over his face and muzzle[end if], he may not be able to hold his position in the pack if he cannot maintain his dominance.";
 							let targetnum be 18;
-							if cocks of player > 0, decrease targetnum by cocks of player + ( cock width of player / 5 );
+							if player is male, decrease targetnum by cocks of player + ( cock width of player / 5 );
 							if targetnum < 10, now targetnum is 10;
 							if a random chance of alphawolfbeaten in targetnum succeeds, now alphawolfreplaced is true;
 							increase libido of player by 15;
@@ -168,16 +168,16 @@ When Play begins:
 	now defeated entry is "[Alpha Wolf loss]";
 	now victory entry is "[Alpha Wolf attack]";
 	now desc entry is "[alphawolfdesc]";
-	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a thick canine tail wagging happily behind you, its presence somehow feeling so very right.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it stretches out into a large lupine muzzle, new scents filling your mind as nose works overtime, especially hoping to catch the scent of the strong alpha who changed you..."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it shifts and changes, your spine snapping and your legs shifting. You feel yourself becoming more comfortable now on your newly-formed canine feet and handpaws."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "thick black fur begins to grow all over your body, its rough, shaggy presence making you much more suitable for nights spent outside, running underneath the moon with the pack."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a large lupine tail pushes its way out of your backside. Once it finishes growing, you find yourself wagging it slightly in pleasure at the new canine appendage marking you as a more suitable mate for the alpha."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your aching member grows thicker and tapers to a sharp point, a large canine knot forming at the base of your new lupine sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a thick canine tail wagging happily behind you, its presence somehow feeling so very right."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it stretches out into a large lupine muzzle, new scents filling your mind as nose works overtime, especially hoping to catch the scent of the strong alpha who changed you..."; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it shifts and changes, your spine snapping and your legs shifting. You feel yourself becoming more comfortable now on your newly-formed canine feet and handpaws."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "thick black fur begins to grow all over your body, its rough, shaggy presence making you much more suitable for nights spent outside, running underneath the moon with the pack."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a large lupine tail pushes its way out of your backside. Once it finishes growing, you find yourself wagging it slightly in pleasure at the new canine appendage marking you as a more suitable mate for the alpha."; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your aching member grows thicker and tapers to a sharp point, a large canine knot forming at the base of your new lupine sheath."; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 14;
 	now sta entry is 17;

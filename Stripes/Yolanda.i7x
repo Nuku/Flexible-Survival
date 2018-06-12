@@ -133,12 +133,12 @@ to say movingYolanda:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her. 'Give me back my shinies! My playthings! You feathery thieves! Lice-ridden bandits! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait a while, hoping she'll return, but she never does. Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
 				now HP of Yolanda is 100;
 				remove Yolanda from play;
-				move the player to Grey Abbey Library;
+				move player to Grey Abbey Library;
 			else:
 				say "     Driven into retreat by the harpies, you quickly search for an avenue of escape from the harpies. With the backpack of baubles you were carrying unprotected, it gets snatched up by another of the bird women. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight to give pursuit. She adds a 'You big coward!' down at you as she struggles into the air with the remaining packs atop her. 'Give me back my shinies! My playthings! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait briefly, but doubt she'd return to you after having abandoned her treasures to be stolen. In the end, you return back to the library, giving up on this ill-fated venture.";
 				now HP of Yolanda is 100;
 				remove Yolanda from play;
-				move the player to Grey Abbey Library;
+				move player to Grey Abbey Library;
 	else:
 		say "     You fill her in on a few details on how things have been going, leaving out some of the kinkier details so she doesn't scoff at you about them. Not that she's really one to talk, but no point in giving her more material to tease you about.";
 		if HP of Yolanda is 3, now HP of Yolanda is 4;
@@ -165,7 +165,7 @@ to say sexwithYolanda:
 			now title entry is "Receive vaginal";
 			now sortorder entry is 1;
 			now description entry is "take it in the pussy";
-		if cunts of player > 0 and HP of Yolanda >= 3:
+		if player is female and HP of Yolanda >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Bound for vaginal";
 			now sortorder entry is 2;
@@ -282,7 +282,7 @@ to say yolandasex01_b:
 	say "     After gently nuzzling your cunny with the curve of her beak, she grabs an appropriately [if cunt length of player < 5]small[else if cunt length of player < 10]sized[else if cunt length of player < 15]large[else]huge[end if] dildo from her collection with one of her feet. The toy is textured with [one of]ridges[or]bumps[or]ticklers[or]a spiral pattern[at random] to increase the sensual stimulation. Taking a moment to tease your juicy pussy with the tip of the dong and give your side a playful nip that causes you to squirm ineffectually in your restraints, she affixes the toy into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. Taking a moment to adjust the fit and making sure you get a good look at the phallus that'll soon be filling you, she struts around your prone form.";
 	if HP of Yolanda < 3:
 		say "     'Rather trusting, aren't you? Letting a strange mutant tie you up. What's to stop me from leaving you like this? Or sharing you with those annoying gryphons until you're as feather-brained as them?' She brushes her wingtip teasingly down your chest and over your crotch[if player is male]. Your cock[smn] twitch[esmv] and stiffens[smv] further and your puss[yfn] grow[sfv] all the wetter[else]. Your puss[yfn] grow[sfv] all the wetter in response[end if], though you start to have second thoughts. You give your bonds a tug to test them, but you're secured tightly. She gives a chuckling caw at your struggle and fingers you once again to show she's the one in control.";
-		say "     'Mmm, yes. Feel that. You're so hot and juicy,' she says with a sensual rumble as she pumps her digits inside you, making your cunt quiver. She gives you a nip with her beak as she adjusts herself over you. Her soft feathers brush over your chest[if breast size of player > 0 and cocks of player > 0], tickling sensually at your breasts even as your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan from these myriad pleasures[else if player is male] and your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan with pleasure[else if breasts of player > 0], tickling sensually at your nipples, as the textured dildo pushes into you, causing you to moan in dual pleasure[end if]. Returning to a more avian posture, she seats herself atop you and starts rocking her hips. The lower position means she can only take slower thrusts, but she doesn't seem to mind as this lets her draw it out all the longer.";
+		say "     'Mmm, yes. Feel that. You're so hot and juicy,' she says with a sensual rumble as she pumps her digits inside you, making your cunt quiver. She gives you a nip with her beak as she adjusts herself over you. Her soft feathers brush over your chest[if breast size of player > 0 and player is male], tickling sensually at your breasts even as your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan from these myriad pleasures[else if player is male] and your stiff manhood is nestled into the ebon plumage between you. The textured dildo then pushes into you, causing you to moan with pleasure[else if breasts of player > 0], tickling sensually at your nipples, as the textured dildo pushes into you, causing you to moan in dual pleasure[end if]. Returning to a more avian posture, she seats herself atop you and starts rocking her hips. The lower position means she can only take slower thrusts, but she doesn't seem to mind as this lets her draw it out all the longer.";
 		say "     'Getting fucked by a girl, fucked by a bird - such a perv,' she caws, nipping at your shoulders with her beak. She's right, you find; there is something strangely arousing about letting yourself get tied up and then fucked by a woman/bird wearing a strap-on. This turns you on all the more and you try to push up into her thrusts, but your bonds don't allow it well, giving you an additional reminder of your kinky predicament. This leaves the bird to set the pace, drawing it out for her own amusement. The raven's clearly had plenty of experience with the role, only letting you achieve small orgasms that leave you wanting more rather than properly satisfying you[if cunts of player > 1]. She even takes pauses to swap from one cunt to another, both ensuring you're thoroughly fucked and building your need all the higher[end if]. Yours is by no means the first pussy she's stuffed, working that stimulating phallus with practized skill and ease to ride you to the sexually edge while she savors her prize before finally bringing it to a head with a powerful orgasm from both of you. You cry out with much-needed release as the bird caws in orgasmic delight through your mutual climaxes.";
 		if player is kinky or player is submissive:
 			say "     Finished, she pulls the sex toy out of you with a wet slurp and struts around to your front, getting to lick it clean of your own juices before removing and storing it";
@@ -595,7 +595,7 @@ Instead of resolving a Raven Key Fob:
 
 Section 5 - Yolanda and Icarus
 
-instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
+instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( player is male ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	LineBreak;
@@ -620,7 +620,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Libr
 		now HP of Yolanda is 8;
 
 an everyturn rule:
-	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 or cunts of player > 0 ) and skipturnblocker is 0:
+	if player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and player is not neuter and skipturnblocker is 0:
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;

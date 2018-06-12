@@ -58,7 +58,7 @@ carry out tapeing:
 		-- "Grocery Store Tape":
 			say "[RomanTransformationFootage]"; [Source: Kernog/Roman.i7x]
 		-- "Gorilla Locker-room Tape 1":
-			say "[FootballTeamSlice1]";[Source: Kernog/Astroslide Field Locker-room.i7x]
+			say "[FootballTeamSlice1]"; [Source: Kernog/Astroslide Field Locker-room.i7x]
 		-- "Carter's Tape":
 			say "[CartersRecording]"; [Source: Luneth/Origins.i7x]
 		-- "Francis Koenig Observation Video":

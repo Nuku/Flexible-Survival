@@ -87,7 +87,7 @@ instead of fucking the Gorilla Team-Members:
 		now sortorder entry is 2;
 		now description entry is "Take position in a circle of masturbating males and let them bathe you in their cum";
 		[]
-		if (cocks of player > 0 and Guy is not banned):
+		if (player is male and Guy is not banned):
 			choose a blank row in table of fucking options;
 			now title entry is "Join a chain fuck";
 			now sortorder entry is 3;

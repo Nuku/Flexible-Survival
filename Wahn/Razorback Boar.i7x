@@ -319,7 +319,7 @@ to say RazorbackBoarSex2: [riding him (anal)]
 	say "     Seems like your partner finally gave in to his rut, freeing up his libido-fueled urge to breed you hard. And oh boy, does he perform - the stocky body of this boar really has quite a few muscles - all of which perform to their utmost as his hips start to pound against your ass. Garth is grunting and chuffing hard as he fucks you, and his snout is buried in the curve of your neck, taking deep breaths of your scent and licking your skin, clearly turned on by all the sweat and pheromones. 'Oh yeah! Gonna fffuuuuckkk you good!' he grunts, almost drunk on lust, breathlessly barking out the words. 'Gonna show everyone that this forest IS MINE!' he adds next, getting louder with each word as he builds up to a howling orgasm, his thick shaft sending forth a deluge of cum to flood your asshole. You can feel the throb of his manhood against your stretched pucker and a pleasant warmth fills you more and more with every new spurt. Garth's full balls churn out quite a bit of seed to really stuff you good, trying [if player is not mpreg_ok]futilely[else]hard[end if] to knock you up with his piglets.[mimpregchance]";
 	WaitLineBreak;
 	say "     The heavy form of the razorback boar keeps you pinned under him as Garth's orgasm runs its course, with the panting male holding and caressing your body as his cock fills you with cum. He even plants a kiss or two on your shoulder and neck as he starts to catch his breath, then says in a still somewhat breathless voice, 'Thanks, you're a great lay. And - ah well, I can't say I'm sorry for turning things around on ya. It's just how I swing, you know? But don't think that means I leave my partners hanging, ";
-	if cocks of player > 0 and cunts of player is 0:
+	if player is puremale:
 		say "even if it's a dude!' And with that, the boar takes your still rock-hard cock in his hand, chuckling at the string of pre-cum connecting it to your abs. 'I can see you liked it. Let's get you off buddy!' Garth adds and starts to jerk you off, feeling out what really turns you on. With his dick still buried balls-deep in your ass and the general state of high arousal you're in, it doesn't take long at all until his efforts bear fruit - turning your cock into a cum-fountain that spurts long strings of seed all over your abs, chest and even chin.";
 	else if player is male:
 		say "even if she's part dude!' And with that, the boar takes your still rock-hard cock in his hand, chuckling at the string of pre-cum connecting it to your abs. 'I can see you liked it. Let's get you off babe!' Garth adds and starts to jerk you off, feeling out what really turns you on. With his dick still buried balls-deep in your ass and the general state of high arousal you're in, it doesn't take long at all until his efforts bear fruit - turning your cock into a cum-fountain that spurts long strings of seed all over your abs, chest and even chin. Meanwhile, femcum squirts and trickles from your wet pussy, soaking Garth's pubes and running down over the base of his cock and his balls.";
@@ -440,9 +440,9 @@ When Play begins:
 	now face entry is "that of a wild boar, with an elongated snout showing sharp tusks. With the bristly fur covering all of it and two eyes capable of giving a very penetrating stare, you're an image of untamed spirit";
 	now body entry is "stocky in build, but quite obvious muscles make up much of that large bulk - from the broad shoulders down to the cloven hooves on which you stand. Anyone looking at you can easily see why wild boars shouldn't be messed with";
 	now skin entry is "[one of]bristly-furred[or]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a firm bubble butt, complete with a short tail ending in a brush of hairs.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a firm bubble butt, complete with a short tail ending in a brush of hairs.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "human-like";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into an elongated visage complete with a boar's snout and sharp tusks. Bristly fur sprouts all over your face, giving you a hardy appearance"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into an elongated visage complete with a boar's snout and sharp tusks. Bristly fur sprouts all over your face, giving you a hardy appearance"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a quite stocky form, though quite a bit of that bulk is made out of muscles. Heavy-footed - or rather hoofed, as your feet transform too - you may be, but there is little doubt that you're a force to be reckoned with looking like this. You're no weakling domestic pig. No, you're a razorback boar now";
 	now skin change entry is "fur sprouts and grows all over your body, clothing you in a dark brown bristly coat";
 	now ass change entry is "it tightens up into a firm, bubble butt and a tail sprouts out of your spine just above";
@@ -461,9 +461,9 @@ When Play begins:
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 13;        [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 6;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]

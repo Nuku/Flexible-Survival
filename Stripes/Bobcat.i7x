@@ -26,7 +26,7 @@ Section 2 - Monster Victory
 
 to say losetobobcat:
 	say "     [if HP of player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before ";
-	if cunts of player > 0 and ( anallevel < 3 or a random chance of 3 in 4 succeeds ):
+	if player is female and ( anallevel < 3 or a random chance of 3 in 4 succeeds ):
 		say "getting you on your back and moving atop you. The vibrating dildo at its crotch slides across your pussy, the sensation getting you wet[if HP of player <= 0] despite yourself[end if] and a small moan escapes your lips.";
 		say "     Your moan only grows louder as the bobcat pushes that rumbling shaft into your cunt. Your hips raise up and tremble a little at the delight his manhood gives[if cunt length of player > 15] despite its comparatively small size[end if][if HP of player > 0]. You grab onto the sexbot's hips, urging to fuck you, which it readily responds by doing[else]. You try to push the sexbot's hips away, but it has no trouble continuing in its task to fuck you[end if]. As the sextoy creature picks up the pace and intensifies its vibrator functions, your [if HP of player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight the sex toy provides overwhelms you.";
 		WaitLineBreak;
@@ -117,10 +117,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Bobcat"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if cocks of player > 0 and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if cocks of player > 0 and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[else]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";
-	now defeated entry is "[beatthebobcat]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetobobcat]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Bobcat"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if player is male and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if player is male and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[else]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";
+	now defeated entry is "[beatthebobcat]"; [ Text when monster loses. ]
+	now victory entry is "[losetobobcat]"; [ Text when monster wins. ]
 	now desc entry is "[bobcatdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if skinname of player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if skinname of player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blow jobs";
 	now body entry is "altered inside and out. You're now only about five and a half feet tall and have a decidedly feline build with paws instead of hands and feet. But the greater changes are the internal ones, with your insides feeling more like they're artificial and now made of latex and mechanical parts rather than living flesh. Rather than having a normal heartbeat, your heart sounds more like a motor softly purring away. Upon your back at the shoulders, you have a set of handle loops made of padded rubber, perfect for holding onto you from behind";
@@ -146,7 +146,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -204,7 +204,7 @@ to say bobcatinheat:
 	if libido of player > 80 and slutfucked > 8 and ( location of player is not sleepsafe or location of player is fasttravel ):
 		say "[line break]     A passerby catches your eye and you approach them before you realize what you're doing. Soon you're offering yourself up for sex to them, an offer they accept.";
 		let randombobcatfun be { 1 }; [blow job]
-		if cocks of player > 0 and ( girl is not banned or hermaphrodite is not banned ):
+		if player is male and ( girl is not banned or hermaphrodite is not banned ):
 			add { 2 } to randombobcatfun; [give vag]
 			if anallevel > 2, add { 3 } to randombobcatfun; [give anal]
 		if player is female:
@@ -225,7 +225,7 @@ to say bobcatinheat:
 	else if libido of player > 80:
 		increase slutfucked by 1;
 		if a random chance of 1 in 3 succeeds:
-			say "[line break][one of]You moan softly as you feel a strong, compelling urge to be played with[or]Your orifices feel empty and unused; you're tempted to find someone to satisfy your craving[or]You pant and moan as a wave of need passes through your [if cunts of player > 0 and anallevel > 1]cunny and asshole[else if player is female]cunny[else]asshole[end if], making you long for someone to fuck you[or]You feel a rush of heat to your sextoy loins and you long to find someone to use them[or]Thoughts of bending over for the next horny mutant you see become increasingly tempting[purely at random].";
+			say "[line break][one of]You moan softly as you feel a strong, compelling urge to be played with[or]Your orifices feel empty and unused; you're tempted to find someone to satisfy your craving[or]You pant and moan as a wave of need passes through your [if player is female and anallevel > 1]cunny and asshole[else if player is female]cunny[else]asshole[end if], making you long for someone to fuck you[or]You feel a rush of heat to your sextoy loins and you long to find someone to use them[or]Thoughts of bending over for the next horny mutant you see become increasingly tempting[purely at random].";
 
 
 to say bobcatheatsex1:		[blow job]

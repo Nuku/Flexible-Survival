@@ -71,7 +71,7 @@ When Play begins:
 	now cocks entry is 1;
 	now cock length entry is 9;        [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 4;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;
@@ -446,7 +446,7 @@ to say MiyukiTalk4: [be blessed]
 	increase stamina of player by 2;
 	LineBreak;
 	say "[bold type]'All-Mother's Blessing' has been added to your feats![roman type][line break]";
-	add "All-Mother's Blessing" to feats of the player;
+	add "All-Mother's Blessing" to feats of player;
 	now lust of Miyuki is 4; [player blessed]
 
 to say MiyukiTalk5: [helper quest]

@@ -31,21 +31,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Rhino"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Rhino"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The rhinoceros slams into you with his powerful body![or]The strong rhino man grabs you and tosses you to the side![or]The enraged rhino bashes at you with his powerful fists![or]The wild creature slams his body into you, grinding his large, stiff cock against you as he crushes you in his arms before tossing you down![at random]";
-	now defeated entry is "[beattherhino]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetorhino]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattherhino]"; [ Text when monster loses. ]
+	now victory entry is "[losetorhino]"; [ Text when monster wins. ]
 	now desc entry is "[rhinodesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "that of a rhino, with a large horn rising from your pointed face and a second, smaller one behind that. Your eyes, having moved further to the side of your head, are able to see around your horn as well as providing greater peripheral vision at the cost of losing most of your binocular, forward vision"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "large and powerfully built, with broad shoulders and thick arms and legs. Your hands are big and meaty, good for smashing with. Your feet are large and flat to support your heavy weight"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "tough, leathery gray"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your large behind has a small, thin tail ending in a clump of dark hair draped across it."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]rhino[or]dark gray[or]rock hard[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it stretches and warps, growing and pulling forward into a large muzzle. A stabbing pain at the end of your face gets stronger and stronger until your large horn grows in and a smaller second one soon follows it. By the time the changes are complete, you have the large, hard head of a rhino"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "becomes big and powerfully built. You broad shoulders and strong muscles to carry your heavy, dense body. This muscles spread down your arms and legs. Your hands become big and meaty, with thick fingers and hard fists. Your feet become large and flat, with small, broad hoof-toes to support your weight"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin gets thicker and tougher, in a tough gray hide"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it becomes large and firmly muscled. You feel a funny tingle at the end of your spine as a short, slender tail grows it. It is gray and leathery with a clump of dark gray hair at the end"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "takes on a dark gray tone and reshapes itself. It becomes a thick tube of meat, ending in a flared glans similar to an equine cock, but much harder"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "that of a rhino, with a large horn rising from your pointed face and a second, smaller one behind that. Your eyes, having moved further to the side of your head, are able to see around your horn as well as providing greater peripheral vision at the cost of losing most of your binocular, forward vision"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "large and powerfully built, with broad shoulders and thick arms and legs. Your hands are big and meaty, good for smashing with. Your feet are large and flat to support your heavy weight"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "tough, leathery gray"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "Your large behind has a small, thin tail ending in a clump of dark hair draped across it."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]rhino[or]dark gray[or]rock hard[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "it stretches and warps, growing and pulling forward into a large muzzle. A stabbing pain at the end of your face gets stronger and stronger until your large horn grows in and a smaller second one soon follows it. By the time the changes are complete, you have the large, hard head of a rhino"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "becomes big and powerfully built. You broad shoulders and strong muscles to carry your heavy, dense body. This muscles spread down your arms and legs. Your hands become big and meaty, with thick fingers and hard fists. Your feet become large and flat, with small, broad hoof-toes to support your weight"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "your skin gets thicker and tougher, in a tough gray hide"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "it becomes large and firmly muscled. You feel a funny tingle at the end of your spine as a short, slender tail grows it. It is gray and leathery with a clump of dark gray hair at the end"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "takes on a dark gray tone and reshapes itself. It becomes a thick tube of meat, ending in a flared glans similar to an equine cock, but much harder"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 17;
 	now dex entry is 12;
 	now sta entry is 22;
@@ -60,7 +60,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -90,7 +90,7 @@ The usedesc of rhino cum is "[drinkrhinocum]";
 to say drinkrhinocum:
 	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found. It has a strong taste to it, but you find it very exciting despite its salty flavor. ";
 	increase libido of player by 5;
-	if cocks of player > 0 and cock length of player < 12:
+	if player is male and cock length of player < 12:
 		say "     You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[else]cock expands[end if] another inch almost immediately after you finish your drink.";
 		increase cock length of player by 1;
 

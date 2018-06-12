@@ -105,7 +105,7 @@ to say wolv_oral:
 to say beatthewolverine:
 	now wolvfightresult is 1;
 	if lbfight is 0 and libfight is not 1 and wrknifefight is false and inasituation is false:
-		if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
+		if player is female and libido of player > 39 and bodyname of player is "Wolverine Guard":
 			say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you. The excitement of the fight has gotten your wolverine body quite aroused. Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.";
 			say "     [bold type]Do you give in to your urges and ride that thick monster?[roman type][line break]";
 			LineBreak;
@@ -144,9 +144,9 @@ When Play begins:
 	now defeated entry is "[beatthewolverine]";
 	now victory entry is "[losetowolverine]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[wolverinedesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as the text "Your body is (your text)."]
-	now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as the text "You have (your text) skin."]
+	now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as "Your body is (your text)."]
+	now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "You have a short, thickly furred tail hanging from your rear."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "brown"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Coarse, dark fur starts to spread over it, giving you a wolverine's head"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -190,7 +190,7 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Wolverine Guard":
 		if humanity of player < 10:
-			if jamessex is 3 and cunts of player > 0:
+			if jamessex is 3 and player is female:
 				say "     You find your growing urge to protect and defend your post increasing. Joining James at the Central Library, you become his mate and share the duty with him. He accepts him place now, no longer fighting his powerful body. Most of the time, you both guard it together, though occasionally alone so the other can get a brief nap. As with that first time, you rut often on the library steps. The lustful growls of your animalistic sex carry far, warning any would be interlopers away. You eventually bear him some kits, who grow big and strong like their parents and take up the duty to protect the library as well. You live peaceably with the librarians inside, guarding their home and leaving them undisturbed. There is some commotion when the soldiers come through the city, but you, your mate and your offspring are able to drive them off, protecting your post.";
 			else:
 				say "     You find your growing urge to protect and defend your post increasing. Cutting short your wandering, you head back to the bunker at the Abbey to clear your head. Once there, you decide to scout around from top to bottom, making sure it's secure before you relax. You find nothing, but still remain on edge, and patrol on guard for any disturbances. You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive. You keep it, and its contents, safe from interlopers day after day.";

@@ -130,7 +130,7 @@ to say losetotigress:
 				decrease humanity of player by 3; [...but give in a little more]
 			else:
 				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping pussy lips along your spent shaft while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest[if cocks of player > 1] to add to the mess of your own seed already there[end if], as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines.";
-		else if cunts of player > 0 and cocks of player is 0:		[Yes = FEMALE Identified!]
+		else if player is purefemale:		[Yes = FEMALE Identified!]
 			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble. Shi lowers hirself onto the mattress and bring hir muzzle to your [character number breast size of player in cupsize] cup bosom. Hir raspy tongue plays over your [skinname of player] flesh as shi licks and kisses at your chest. While tending to your hard nipples, shi moves hir paw between your legs to stroke the wet lips of your [if cunts of player is 1]pussy[else]pussies[end if]. Shi dips them in slowly and starts to stroke your vaginal walls, working to find all the spots that excite you. Quite adept at hir work, you find yourself growing to a quick climax which soaks hir paw in your juices.";
 			say "     As you shiver with the tingles of your orgasm running through you, shi slides down your [bodyname of player] body and buries hir muzzle between your legs, licking at your juicy folds. Hir rough, feline tongue sends new waves of pleasure through you. It dives deep into you, once again finding those pleasure spots and ravaging them, intent on giving hir jane a fine romp.[if cunts of player > 1] While hir tongue ends to your upper slit, hir right paw is working away at the other, making sure it is not neglected in any way.[end if]";
 			say "     Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your honeypot with practiced intent. Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it. It is a dark red with a pointed glans and small bumps along it. This time, shi eases off repeatedly as you start to build close to orgasm, having roughly gauged the signs from your first and letting you instead build over and over. You are soon moaning and whimpering with need, much to hir satisfaction.";
@@ -150,7 +150,7 @@ to say losetotigress:
 				decrease humanity of player by 3; [...but give in a little more]
 			else:
 				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping folds over yours while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest, as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines."; [Female no-sex ending]
-		else if cunts of player is 0 and cocks of player > 0:		[Yes = MALE Identified!]
+		else if player is not female and player is male:		[Yes = MALE Identified!]
 			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble. Shi lowers hirself onto the mattress atop you and rubbing hir body against yours. Hir soft striped fur running along your [skinname of player] flesh, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours. Shi moves a paw down to stroke hir john's cock[smn] as shi nibbles and nuzzles hir way down your chest and belly.";
 			say "     With hir muzzle between your legs, shi starts licking and kissing your cock[smn]. Hir raspy tongue slides along your sensitive [cockname of player] penis and lavishes attention on it, eager to please hir john.[if cocks of player > 1] As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw.[end if]";
 			increase libido of player by 10; [Oral submission increases Libido]
@@ -236,7 +236,7 @@ to say losetotigress:
 					decrease humanity of player by 2; [...and give in a little more]
 					if libido of player > 100:
 						now libido of player is 100;
-		else if cunts of player > 0 and cocks of player is 0:		[Yes = FEMALE Identified!]
+		else if player is purefemale:		[Yes = FEMALE Identified!]
 			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock at your [cunt size desc of player] cunt before it sinks into you. You moan your pleasure as you feel the firm piece of meat pushing in, teasing you delightfully with those bumps. Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you.";
 			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's got hir paws on your [character number breast size of player in cupsize] cup tits and fondles them as shi drives hirself into you again and again. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your womb. This sends you into a powerful climax, hot feminine juices flowing from your pussy as shi fills you with hir seed.[impregchance]";
 			if a random chance of 1 in 3 succeeds:				[One in three chance of gender change now]
@@ -260,7 +260,7 @@ to say losetotigress:
 						decrease humanity of player by 2; [...and give in a little more]
 						if libido of player > 100:
 							now libido of player is 100;
-		else if cunts of player is 0 and cocks of player > 0:		[Yes = MALE Identified!]
+		else if player is not female and player is male:		[Yes = MALE Identified!]
 			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock nudge at your anal ring before easing slowly into you. You groan softly and try to relax as you feel the firm piece of meat pushing in, its pointed tip and hir flowing pre helping it push into you. As it sinks in further, you are teased by those delightful, soft barbs. Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you.";
 			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in hir jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir paws around your wrists, holds you pinned down, though by this point you're eager to have hir violate you. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your bowels. This sends you into a powerful climax, shooting your cum onto the mattress to join the multitude of others as shi fills you with hir seed.[mimpregchance]";
 			if a random chance of 1 in 3 succeeds:				[One in three chance of gender change now]
@@ -344,7 +344,7 @@ to say beattigress:
 					now libido of player is 0;
 			else:									[Herm no-sex ending]
 				say "     Having had your fun, you get up slowly and stroke over hir ears before you get off the mattress and leave the alley behind. Feeling somewhat satisfied for now, your loins warm with the thoughts of finding another of these sexy felines to play with as you see fit.";
-		else if cunts of player > 0 and cocks of player is 0:		[Yes = FEMALE Identified!]
+		else if player is purefemale:		[Yes = FEMALE Identified!]
 			LineBreak;
 			say "     As the tigress mewls hir need again, you decide to put that lovely, striped muzzle to use. You sit across hir face, lowering your juicy pussy over hir muzzle. Shi licks hir lips, then runs hir raspy tongue across your wet folds. You moan in pleasure as you feel it glide across you and you grind down firmly onto hir muzzle, encouraging hir to send that talented tongue deep inside you.";
 			say "     As the tigress works hir tongue inside your [cunt size desc of player] vagina, you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
@@ -368,7 +368,7 @@ to say beattigress:
 					now libido of player is 0;
 			else:
 				say "     Having had your fun, you get up slowly and stroke over hir ears before you get off the mattress and leave the alley behind. Feeling somewhat satisfied for now, your loins warm with the thoughts of finding another of these sexy felines to play with as you see fit."; [Female no-sex ending]
-		else if cunts of player is 0 and cocks of player > 0:		[Yes = MALE Identified!]
+		else if player is not female and player is male:		[Yes = MALE Identified!]
 			say "     As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move to straddle hir chest. Shi smiles up at you, licking hir lips even as you move into position. Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen [if cocks of player is 1]member[else]members[end if].";
 			increase libido of player by 10; [Oral submission increases Libido]
 			if libido of player > 100:
@@ -475,53 +475,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Tigress Hooker"; [Name of your new Monster]
-   now attack entry is "[one of]Slamming hir shoulder into you, shi pushes you back against a nearby wall, grabbing your groin![or]Punched in the gut, you reflexively bend forward, allowing hir to bury your face in hir cleavage![or]The tigress grabs you in a reverse arm lock and grinds the hard bulge under hir skirt against your rear until you can twist free![or]You have but a moment to awe at the tigress's flexibility before that kick strikes you upside the head! Dazed, you try to get up, only to have hir press your face under hir skirt and against hir pink panties![or]After several quick slashes of hir claws, shi grabs your shoulders and pulls you forward into an equally fierce kiss![or]With a judo throw, shi tosses you to the ground, then pounces atop you, nipping along your neck with a rumbling purr! As you roll away, shi manages to grab your ass one last time![at random]";
-   now defeated entry is "[beattigress]";
-   now victory entry is "[losetotigress]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[tigress_desc]"; [ Description of the creature when you encounter it.]
-   now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, paw pads and fur"; [ Body Description, format as the text "Your Body is (your text)"]
-   now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random]."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "ebon feline"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is " shivers of delight run down your spine. You can feel it growing, extending out into a long tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it becomes dark, almost black in color. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-   now str entry is 14;
-   now dex entry is 20;
-   now sta entry is 14;
-   now per entry is 14;
-   now int entry is 12;
-   now cha entry is 18;
-   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 55;
-   now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-   now wdam entry is 7; [Amount of Damage monster Does when attacking.]
-   now area entry is "Red"; [ Location of monster, in this case Red Light District ]
-   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 9; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2; [ Number of Breasts infection will give you. ]
-   now breast size entry is 4; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 4;
-   now libido entry is 0; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "motel key"; [ Dropped item. Key will be used later ]
-   now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
-   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
-   now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is false;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Tigress Hooker"; [Name of your new Monster]
+	now attack entry is "[one of]Slamming hir shoulder into you, shi pushes you back against a nearby wall, grabbing your groin![or]Punched in the gut, you reflexively bend forward, allowing hir to bury your face in hir cleavage![or]The tigress grabs you in a reverse arm lock and grinds the hard bulge under hir skirt against your rear until you can twist free![or]You have but a moment to awe at the tigress's flexibility before that kick strikes you upside the head! Dazed, you try to get up, only to have hir press your face under hir skirt and against hir pink panties![or]After several quick slashes of hir claws, shi grabs your shoulders and pulls you forward into an equally fierce kiss![or]With a judo throw, shi tosses you to the ground, then pounces atop you, nipping along your neck with a rumbling purr! As you roll away, shi manages to grab your ass one last time![at random]";
+	now defeated entry is "[beattigress]";
+	now victory entry is "[losetotigress]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[tigress_desc]"; [ Description of the creature when you encounter it.]
+	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, paw pads and fur"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random]."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ebon feline"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is " shivers of delight run down your spine. You can feel it growing, extending out into a long tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes dark, almost black in color. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 14;
+	now dex entry is 20;
+	now sta entry is 14;
+	now per entry is 14;
+	now int entry is 12;
+	now cha entry is 18;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 55;
+	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
+	now area entry is "Red"; [ Location of monster, in this case Red Light District ]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 4;
+	now libido entry is 0; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is "motel key"; [ Dropped item. Key will be used later ]
+	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Game Objects (continued)
 name	desc	weight	object

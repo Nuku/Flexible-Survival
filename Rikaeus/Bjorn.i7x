@@ -78,7 +78,7 @@ to say BjornTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about his tribe";
 	[]
-	if cocks of player > 0 and Bjorn is in Rocky Cliff:
+	if player is male and Bjorn is in Rocky Cliff:
 		choose a blank row in table of fucking options;
 		now title entry is "Spar";
 		now sortorder entry is 2;

@@ -310,7 +310,7 @@ to say SexWithDiego:
 		say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets his eyes wander over your form. 'Hmm... maybe. I'll really have to think about your offer for a while,' he says, reaching down to adjust his furry balls a little. 'There's lots of gals in this city here who want some of this, so I don't just hump anyone. And since you aren't much of a trickster, I don't know if you're worth my while...' he goes on to say, finishing up with a grin and a wink.";
 		say "     [bold type]Sounds like he wants you to join in for his pastime of playing tricks on people.[roman type][line break]";
 		stop the action;
-	else if cocks of player > 0 and DiegoChanged is 0 and DiegoButtSlut is 0: [male+herm player and regular male Diego]
+	else if player is male and DiegoChanged is 0 and DiegoButtSlut is 0: [male+herm player and regular male Diego]
 		if player is female: [herms]
 			say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets his eyes wander over your form. 'Hmm you look pretty good there,' Diego says with some interest. 'Sadly though, I can already tell you have a trick hidden away next to your lovely treat,' the coyote says as he gestures to your cock. 'Nice try there - but this coyote is just here for the ladies. Better luck next time, eh? Be sure to come back to me if you happen to become a full woman though.'";
 		else: [male]
@@ -341,13 +341,13 @@ to say DiegoSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Give [if DiegoChanged is 0]him[else]her[end if] a blow-job";
 	[]
-	if (cocks of player > 0 and (DiegoChanged > 0 or DiegoButtSlut > 0)):
+	if (player is male and (DiegoChanged > 0 or DiegoButtSlut > 0)):
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]";
 		now sortorder entry is 2;
 		now description entry is "Use the coyote's mouth";
 	]
-	if (cunts of player > 0 and DiegoChanged < 2):
+	if (player is female and DiegoChanged < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's dick (vaginal)";
 		now sortorder entry is 3;
@@ -359,37 +359,37 @@ to say DiegoSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Let the coyote fuck you";
 	[]
-	if (cocks of player > 0 and DiegoChanged > 0):
+	if (player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Fuck against the wall";
 		now sortorder entry is 5;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (cocks of player > 0 and DiegoChanged > 0):
+	if (player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Doggy style";
 		now sortorder entry is 6;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (cocks of player > 0 and DiegoChanged > 0):
+	if (player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - From behind, against the wall";
 		now sortorder entry is 7;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (cocks of player > 0 and DiegoButtSlut > 0):
+	if (player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - Fuck against the wall";
 		now sortorder entry is 8;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
-	if (cocks of player > 0 and DiegoButtSlut > 0):
+	if (player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - Doggy style";
 		now sortorder entry is 9;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
-	if (cocks of player > 0 and DiegoButtSlut > 0):
+	if (player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - From behind, against the wall";
 		now sortorder entry is 10;
@@ -492,7 +492,7 @@ to say DiegoSex3: [player pussy fucked by Diego's dick]
 	coyotify;
 
 to say DiegoSex4: [player ass fucked]
-	if cunts of player > 0 and DiegoButtSlut is 0: [player has a pussy and Diego isn't ready for anal himself]
+	if player is female and DiegoButtSlut is 0: [player has a pussy and Diego isn't ready for anal himself]
 		say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets his eyes wander over your form. 'Hmm, you look pretty good there,' Diego says with clear interest, but then raises one eyebrow questioningly and adds, 'There's one thing I don't understand though - why would you want me to put my little coyote treat up your rear end? Got a sexy pussy on you, I can tell.' The coyote gestures at your crotch and taps the side of his muzzle, indicating that he can smell your arousal. 'So what do you say? Wanna take this dishonorable gentleman's cock in your pussy?'";
 		stop the action;
 	else: [Diego plunges his cock into the player's ass]

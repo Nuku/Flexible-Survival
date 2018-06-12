@@ -47,7 +47,7 @@ to say sexwithNewt:
 			now title entry is "Blow job";
 			now sortorder entry is 2;
 			now description entry is "have her suck your cock";
-		if cocks of player > 0 and cock length of player < 18:
+		if player is male and cock length of player < 18:
 			choose a blank row in table of fucking options;
 			now title entry is "Titty fuck";
 			now sortorder entry is 3;
@@ -61,22 +61,22 @@ to say sexwithNewt:
 		now title entry is "Lick Newt";
 		now sortorder entry is 5;
 		now description entry is "lick Newt's snatch.";
-		if cunts of player > 0 or cocks of player > 0:
+		if player is not neuter:
 			choose a blank row in table of fucking options;
 			now title entry is "69";
 			now sortorder entry is 6;
 			now description entry is "have a 69 with the salamander";
-		if ( cocks of player > 0 or cunts of player > 0 ) and lastfuck of Athanasia - turns >= 6:
+		if player is not neuter and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (oral)";
 			now sortorder entry is 10;
 			now description entry is "share her with the phoenix";
-[		if cocks of player > 0 and lastfuck of Athanasia - turns >= 6:
+[		if player is male and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (fuck)";
 			now sortorder entry is 11;
 			now description entry is "have a sexy romp with both hot females";]
-		if cunts of player > 0 and lastfuck of Athanasia - turns >= 6:
+		if player is female and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (dildo)";
 			now sortorder entry is 12;
@@ -134,7 +134,7 @@ to say newtsex02:	[blow job]
 
 to say newtsex03:	[titty fuck]
 	say "     Coming up to Newt, you run your arms along her sides and up to her breasts. After kissing her, you tease her pierced nipples and tell her how you'd like your cock[smn] nestled between those beautiful mounds of hers. Dropping to her knees slowly, she slides her long tongue down your body as she brings her bosom to your [cock size desc of player] erection[smn]. While only B-cups, she presses them gently around your manhood, providing a warm and slick hug of breast flesh against your shaft[smn] for you to enjoy.";
-	say "     As she works her chest against your penis[esmn], her tongue plays around, getting into all kinds of kinky trouble. At first, you feel it tease across your glans, lapping up your precum. After getting you quite worked up, it moves on to your hips and thighs before slipping lower[if cunts of player > 0 and cockname of player is listed in infections of Internallist]. After licking across your balls and gently squeezing them, it finds it way behind them to your puss[yfn] and runs across your netherlips[else if player is female]. Sliding beneath her breasts, it finds its way to your puss[yfn] and runs across your netherlips[else if cockname of player is listed in infections of Internallist]. Sliding beneath her breasts, it finds its way to your ballsack and licks across it before gently squeezing your [ball size][end if][if anallevel is 3]. Not even your anus is spared, her playful tongue finding its way to your pucker and giving it a few teasing licks[end if].";
+	say "     As she works her chest against your penis[esmn], her tongue plays around, getting into all kinds of kinky trouble. At first, you feel it tease across your glans, lapping up your precum. After getting you quite worked up, it moves on to your hips and thighs before slipping lower[if player is female and cockname of player is listed in infections of Internallist]. After licking across your balls and gently squeezing them, it finds it way behind them to your puss[yfn] and runs across your netherlips[else if player is female]. Sliding beneath her breasts, it finds its way to your puss[yfn] and runs across your netherlips[else if cockname of player is listed in infections of Internallist]. Sliding beneath her breasts, it finds its way to your ballsack and licks across it before gently squeezing your [ball size][end if][if anallevel is 3]. Not even your anus is spared, her playful tongue finding its way to your pucker and giving it a few teasing licks[end if].";
 	say "     By the time her wandering tongue returns back to licking your glans, you're on the edge of blowing and a few last licks push you to orgasm. Spraying streaks of your semen across her exotic face and breasts, you watch as her tongue slithers across her slick flesh, licking it up as quickly as she can. The sight of this turns you on all the more and you shoot your [cum load size of player] load onto the sexy salamander. When you're spent, she leans back, resting on her hands and making a sexy show of licking herself clean only using that elongated tongue of hers. What a delicious sight.";
 
 to say newtsex04:	[get cunnilingus]

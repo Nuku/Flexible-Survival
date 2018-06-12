@@ -410,7 +410,7 @@ to say MQvictory:						[Victory]
 		say "     When you're done with your first pair, you push them aside and pull another up from the bed. You press hir to the wall and pound into hir tight cunt. Hir inner walls grip and squeeze around you like a pro, building you back to climax quickly. Not wanting to let hir take control that way, you pull out of hir and sink into hir tailhole. Shi mrowls in surprise and cums heavily onto the wall before you fill hir butt with your seed and move on to the next one.";
 		say "     You push your next tigress to lie back on the bed and you straddle hir cock, taking it deep inside you. You ride hir hard and fast while stroking both yourself and another feline's cock to cum all over your current playmate. Your fast pace makes hir cum with a loud mrowl of delight, filling you with hir hot cum.";
 		say "     Through the night this orgy continues, always welcoming any returning girls in kind. You and Marks fuck them over and over to assert your dominance. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
-	else if cocks of player > 0	:			[male]
+	else if player is male	:			[male]
 		say "     You set yourself on a cute pair of tigresses, pounding one while the other sucks your balls. Eager to please their new masters, they work extra hard, giving you a wonderfully long and pleasurable fuck. While you're pounding away, you're treated to the show of watching the cop screwing the matron hard and fast while several of the other girls fawn over both of them. As you watch, the ex-matron quickly becomes another small, mewling tigress like the others.";
 		say "     When you're done with your first pair, you push them aside and pull another up from the bed. You press hir to the wall and pound into hir tight cunt. Hir inner walls grip and squeeze around you like a pro, building you back to climax quickly. Not wanting to let hir take control that way, you pull out of hir and sink into hir tailhole. Shi mrowls in surprise and cums heavily onto the wall before you fill hir butt with your seed and move on to the next one. Shi is made to mate with another tigress on the bed beneath hir, driving your cock into the middle one and forcing hir to thrust into the one below.";
 		say "     Through the night this orgy continues, always welcoming any returning girls in kind. You and Marks fuck them over and over to assert your dominance. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
@@ -545,13 +545,13 @@ to say losetotigercop:
 		else:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver. He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching hole. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
 	else:
-		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or anallevel > 1 ):
+		if a random chance of 1 in 3 succeeds and ( player is female or anallevel > 1 ):
 			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble. 'Punks like you are nothin['] but trouble. Should've gotten a good, hard spankin['] from your dad to beat some respect into you.' With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
 			if player is female:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
 				say "     Wiping the slick rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
 			else:
-				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver. He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube. You groan at the sudden, hard intrusion as it thrusts into you and starts sliding it back and forth[if cocks of player > 0 and player is submissive], getting you hard despite yourself[end if]. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder[if cocks of player > 0 and player is submissive] until you finally cum[end if]. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
+				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver. He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube. You groan at the sudden, hard intrusion as it thrusts into you and starts sliding it back and forth[if player is male and player is submissive], getting you hard despite yourself[end if]. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder[if player is male and player is submissive] until you finally cum[end if]. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
 				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
 		if player is female:
 			[puts Tigress Hooker as lead monster in case of impregnation]
@@ -617,47 +617,47 @@ When Play begins:
 	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[tigercopdesc]"; [ Description of the creature when you encounter it.]
-  	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, pawpads and fur"; [ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, pawpads and fur"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ebon feline"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is " shivers of delight run down your spine. You can feel it growing, extending out into a long tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes dark, almost black in color. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-   now str entry is 14;
-   now dex entry is 20;
-   now sta entry is 14;
-   now per entry is 14;
-   now int entry is 12;
-   now cha entry is 18;
-   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 90;
-   now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-   now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-   now area entry is "nowhere"; [ Location of monster, start nowhere, High if active]
-   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 9; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2; [ Number of Breasts infection will give you. ]
-   now breast size entry is 4; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12; [ Length of female sex infection will attempt to give you. ]
-   now cunt width entry is 4; [ Width of female sex infection will try and give you ]
-   now libido entry is 100; [ Amount player Libido will go up if defeated ]
-   now loot entry is "pepperspray"; [ Dropped item. Key will be used later ]
-   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
-   now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is true;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now cock change entry is "it becomes dark, almost black in color. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 14;
+	now dex entry is 20;
+	now sta entry is 14;
+	now per entry is 14;
+	now int entry is 12;
+	now cha entry is 18;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 90;
+	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
+	now area entry is "nowhere"; [ Location of monster, start nowhere, High if active]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
+	now libido entry is 100; [ Amount player Libido will go up if defeated ]
+	now loot entry is "pepperspray"; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 9 - Endings
@@ -749,7 +749,7 @@ to say THendingE:		[succumb after helped w/keys]
 to say THendingF:		[succumb after fleeing]
 	say "     Surrendering to your new desires, you are drawn back to familiar streets and come to a motel. You aren't sure why it's familiar, but it feels like you should be here. The scent of other felines, tigresses at that, only reinforce this feeling. Spotted by the herm tigress on watch, shi takes your paw and leads you upstairs to where the matron - your matron - is. Shi has another tigress with hir, who shi's just finished filling.";
 	say "     There is something familiar about hir as well. 'That's [if player is herm]hir[else if player is female]her[else]him[end if], matron Jackie,' shi exclaims ecstatically. 'The one I told you about. Oh, [if player is herm]shi[else if player is female]she[else]he[end if][']s here. I'm so happy.' Shi takes you in hir arms, purring happily as shi nuzzles you. Hir hard cock presses against your body. Shi tells you how happy shi is to see you and how nice it is you've come to join hir. Shi loves it here so much, and so will you.";
-	If cunts of player > 0 and "Sterile" is not listed in feats of player:	[BREEDABLE]
+	if player is female and "Sterile" is not listed in feats of player:	[BREEDABLE]
 		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among hir girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize hir girls, you have both been reduced to hir special slaves, to be fucked whenever shi wants. In time, you both grow heavy with your matron's cubs, breeding more sexy tigresses.";
 	else:											[NON-BREEDABLE]
 		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among hir girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize hir girls, you have both been reduced to hir special slaves, to be fucked whenever shi wants.";
@@ -764,7 +764,7 @@ to say THBadEnd1:		[succumb after failing at motel hunt]
 	else:											[MALE PART]
 		say "     As the only male sextoy in the brothel, as well as the only white tiger, you have a special set of regulars who enjoy pounding you in that sweet ass of yours. The feel of their hot cream in you always feels wonderful and there are always a few who come in looking to be filled by the sexy tiger. Which is good for you as your master doesn't allow you to fuck the other whores, though they will happily suck you off or fuck you. And you know your master has a special place for you any time he pounds you and fills your stripety ass.";
 [Non-sterile female/herm addition]
-	If cunts of player > 0 and "Sterile" is not listed in feats of player:	[BREEDABLE]
+	if player is female and "Sterile" is not listed in feats of player:	[BREEDABLE]
 		say "     When your heat comes, he takes you out of trade for a few days, exclusively breeding you over and over again until he's sure his seed has taken and you'll bear his cubs. As you rub your growing belly, you smile contentedly, so happy you decided to help him back in the infected city.";
 	if hellHoundLevel > 0:
 		LineBreak;

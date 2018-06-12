@@ -266,18 +266,18 @@ When Play begins:
 	now name entry is "Polar Bear";
 	now attack entry is "He should not fight, how did you see this?";          [ Text used when the monster succeeds on an attack ]
 	now defeated entry is "He should not fight, how did you see this?";         [ Text when monster loses. ]
-	now victory entry is "He should not fight, how did you see this?";[ Text when monster wins. ]
+	now victory entry is "He should not fight, how did you see this?"; [ Text when monster wins. ]
 	now desc entry is "This is not a wandering monster.";                      [ Description of the creature when you encounter it. ]
-	now face entry is "now the large and wide head of a polar bear, with a short muzzle tipped in a wet, black nose. Two rounded ears and a respectable set of teeth finish the picture of an ursine predator";[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a bipedal polar bear, thickly proportioned and muscled, with large paw-like hands ending in sharp claws";[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]fur-covered[or]white-furred[or]snow-white furred[at random]";[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short ursine tail that hangs over your ass.";[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "ursine";[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it re-forms into a pretty wide and big shape, with the lower half of your face pushing out to become a muzzle, filled with sharp teeth. Your nose takes on a black color, also getting really wet, while both of your ears move to the top of your head and become rounded and ursine";[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands and feet become paw-like, ending in sharp claws";[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "thick snow-white fur spreads across your skin";[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your rump becomes thicker, more rounded and bear-like, with a short fuzzy tail hanging down over your new ursine ass";[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "a furred sheath grows around it, protecting it when it's not erect";[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "now the large and wide head of a polar bear, with a short muzzle tipped in a wet, black nose. Two rounded ears and a respectable set of teeth finish the picture of an ursine predator"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a bipedal polar bear, thickly proportioned and muscled, with large paw-like hands ending in sharp claws"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]fur-covered[or]white-furred[or]snow-white furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "ursine"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "it re-forms into a pretty wide and big shape, with the lower half of your face pushing out to become a muzzle, filled with sharp teeth. Your nose takes on a black color, also getting really wet, while both of your ears move to the top of your head and become rounded and ursine"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands and feet become paw-like, ending in sharp claws"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "thick snow-white fur spreads across your skin"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "your rump becomes thicker, more rounded and bear-like, with a short fuzzy tail hanging down over your new ursine ass"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "a furred sheath grows around it, protecting it when it's not erect"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 20;
 	now dex entry is 12;
 	now sta entry is 22;
@@ -292,7 +292,7 @@ When Play begins:
 	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;           [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 12;           [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;               [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;               [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -324,9 +324,9 @@ When Play begins:
 	now face entry is "delicate and beautiful, with a petite nose and elfin features. Your full, lustrous lips seem to be made to smile and laugh. The eyes through which you see the world are slightly larger than a human's, showing very round and shiny green irises. Two pointed ears poke out from under your long blond hair and complete the picture";
 	now body entry is "that of a lithe and slender human being, if proportioned to be pretty short. It is garbed in tight, dark green leather pants and leaf green tunic, allowing for unhindered, graceful movement";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a petite and shapely butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a petite and shapely butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into beautiful, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into beautiful, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a more attractive form, leaving you with a lithe and slender body in proportions a bit shorter than a regular human. A sound of wind-chimes behind you draws your attention, and when you turn around, there's a small pile of clothing sitting on the ground at your feet. Slipping into the soft boots, tight leather pants and soft tunic that were provided for you makes things feel just right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a petite, shapely behind";
@@ -345,9 +345,9 @@ When Play begins:
 	now cocks entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 2;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;          [ Width of female sex the infection will try to give a player. ]
@@ -378,9 +378,9 @@ When Play begins:
 	now face entry is "beautiful and elfin, with handsome, if a bit delicate features. Your full, lustrous lips seem to be made to smile and laugh. The eyes through which you see the world are slightly larger than a human's, showing very round and shiny green irises. Two pointed ears poke out from under your long blond hair and complete the picture";
 	now body entry is "that of a lithe and slender human being, if proportioned to be pretty short. It is garbed in tight, dark green leather pants and leaf green tunic, allowing for unhindered, graceful movement";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a firm and shapely bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a firm and shapely bubble butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into handsome, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into handsome, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a more attractive form, leaving you with a lithe and slender body in proportions a bit shorter than a regular human. A sound of wind-chimes behind you draws your attention, and when you turn around, there's a small pile of clothing sitting on the ground at your feet. Slipping into the soft boots, tight leather pants and soft tunic that were provided for you makes things feel just right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a petite, shapely behind";
@@ -399,9 +399,9 @@ When Play begins:
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;          [ Width of female sex the infection will try to give a player. ]

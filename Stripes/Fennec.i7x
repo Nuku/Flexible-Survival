@@ -145,10 +145,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Fennec"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Fennec"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The fennec yips annoyingly loud over and over again, forcing you to cover your ears... at which point he [fennecattack]![or]The fennec fox dodges agilely around you and [fennecattack]![or]The fennec claws and scratches at you wildly![or]The fennec yips and snaps at you with its sharp teeth![or]The fox brushes his tail in front of your face, blocking your vision momentarily, during which time he [fennecattack]![or]The tan fox gives you a playful grope as he slips a paw past your defenses.[at random]";
-	now defeated entry is "[beatthefennec]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetofennec]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthefennec]"; [ Text when monster loses. ]
+	now victory entry is "[losetofennec]"; [ Text when monster wins. ]
 	now desc entry is "[fennecdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "quite vulpine in appearance with a narrow muzzle, dark eyes and large, bat-like ears";
 	now body entry is "short and slender, only a little over five feet tall. At first, you might think it belongs to an adolescent, but you are quite mature, just short. Your hands and feet are now paws with digits ending in small claws";
@@ -174,7 +174,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

@@ -19,8 +19,8 @@ to say Spartan wins:
 			say "     Being bred by your master, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if player is male]Long bursts of cum jet out of the tip of your manhood, splashing over the ground and the shreds of your former cloak[else]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Spartan pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes his cock off on your skin, then stands up.";
 			LineBreak;
 			say "     Exhausted, you sink to the ground. Lying there, naked and sweaty, the Spartan's cum oozing out of your asshole, you see him walk around and stand over you. 'There, let that be a lesson. It would be good for you if you remembered it.' He spits on the ground then leaves you lying in the dust. After the Spartan is gone, you clean yourself up as much as possible, then use the faded shreds of your former cloak to bind a loincloth around your hips.";
-			say "[StealthHelotTransformation]";[full transformation]
-		else if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan") and cunts of player > 0:[females and herms in Amazonian/Spartan form]
+			say "[StealthHelotTransformation]"; [full transformation]
+		else if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan") and player is female:[females and herms in Amazonian/Spartan form]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he moves forward to rip aside your clothes to reveal your pussy. 'You silly little bitch! You can disguise yourself as a warrior, but your true nature always shines through - one of us would never just give in and beg for mercy as you just did! Couldn't hold back your urges anymore - I bet. Fine, have your wish! Get here and suck my cock.'";
 			LineBreak;
 			say "     Forcefully pulling your head to his crotch, the Spartan thrusts his cock into your mouth, fucking your face without restraint or mercy. He pumps in and out, pushing deep until your nose touches his pubic hair and his shaft is in your throat. You cough from the rough treatment, but he just keeps going, shoving his cock down your throat and angrily saying 'Yeah, choke on it - you should have thought twice about donning that disguise!' Both hands on your head, he holds you tight, his thick shaft in your throat cutting off your air. Only when you start feeling woozy and see stars does he release you to collapse at his feet, gasping for air.";
@@ -36,7 +36,7 @@ to say Spartan wins:
 		say "     With a shove, he pushes you to lie on the ground before him. 'Do you admit defeat before me and swear you'll submit to my commands?' the young Spartan asks you. Not ready to face another pounding like that, you lower your head in submission and nod. 'Good - this workout has made me horny. Present yourself. I want to see what I have won.'";
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0:[Spartans, but not herms and females]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - but you clearly need to train more if you ever hope to finish first in this test. For now. I'm clearly superior... and want to make use of my winning privileges. On your knees.'";
-		else if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0):[amazons, and herm/female Spartans]
+		else if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan" and player is female):[amazons, and herm/female Spartans]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'A woman as a soldier? Pah. Silly girl. On your knees - I'll show you your proper place.'";
 		else: [every other shape]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - on your knees, slave. I want to make use of you.'";
@@ -123,7 +123,7 @@ to say Spartan loses:
 
 to say Spartan ride:
 	say "     Spreading his long red cloak on the ground, you motion the young man to lie down on it. He looks pretty good, his toned body stretched out and long hard cock standing erect, waiting for your pleasure.";
-	if (cocks of player > 0) or (player is herm and anallevel > 1):[male + herm (except those with less anal)]
+	if (player is male) or (player is herm and anallevel > 1):[male + herm (except those with less anal)]
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Spartan's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
@@ -184,7 +184,7 @@ When Play begins:
 	now desc entry is "[SpartanDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. A Greek helmet with a large red horse-hair plume covers your short black hair";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in nothing but a pair of sandals and a long red cloak, held around your shoulders by a brooch";
-	now skin entry is "smooth, sun-bronzed";[ skin Description, format as the text "You have (your text) skin."]
+	now skin entry is "smooth, sun-bronzed"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "You have a tight, firmly muscled butt."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human";
 	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. A Greek helmet materializes out of a swirl of silvery dust to cover your head and short-cut black hair";
@@ -208,7 +208,7 @@ When Play begins:
 	now cock width entry is 5;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;
 	now cunt length entry is 0;
 	now cunt width entry is 0;

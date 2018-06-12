@@ -59,9 +59,9 @@ to say losetoocelot_bt:
 	if ocelotchoice is 1:				[sub-ocelot chosen]
 		if player is male:
 			say "     'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy for me to play with[else]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play[end if].' He snuggles you close and takes your cock in his paw. The feline's touch soon has you erect. Eager and excited now, you return the favor to him, even lowering yourself to your knees to lick and suck at his shaft. He purrs happily, rubbing your head as you bob over his six inch cock.";
-			if cunts of player > 0 and a random chance of 3 in 4 succeeds:	[vaginal]
+			if player is female and a random chance of 3 in 4 succeeds:	[vaginal]
 				say "[ocelotloss_bt_v1]";
-			else if cunts of player is 0 and anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( player is submissive and a random chance of 1 in 4 succeeds ) or ( player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
+			else if player is not female and anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( player is submissive and a random chance of 1 in 4 succeeds ) or ( player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
 				say "[ocelotloss_bt_a1]";
 			else:	[oral]
 				say "[ocelotloss_bt_o1]";
@@ -107,7 +107,7 @@ to say ocelotloss_bt_a1:	[sub on sub - anal]
 
 
 to say ocelotloss_bt_o1:	[sub on sub - oral]
-	if cocks of player > 0 and a random chance of 1 in 2 succeeds:
+	if player is male and a random chance of 1 in 2 succeeds:
 		say "     The [if scalevalue of player > 2]smaller[else]small[end if] ocelot rubs his dainty paws over your head, petting you as you work your mouth over his pulsing shaft. Precum wets your tongue as you continue to please him. He purrs happily at this opportunity to receive some attention, complimenting you on what a fine, subby kitty you'll make. Quite excited and eager now, you do your best to get the feline off and you're soon rewarded for your efforts with a mouthful of sticky ocelot cum. It has a soft taste that is quite pleasing, so much so you have to share it, pulling him into a kiss and pushing some of it into his mouth while your tongues wrestle. After the kiss, he strokes your ass lightly. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random], but I hope you'll come join us soon,' he purrs. '[one of]You'd make a fine playmate for me[or]I think my master would love playing with you, too[or]I know you'd love my big, sexy master[or]We could have so much fun pleasing my master together[at random].'[impregchance]";
 
 
@@ -167,9 +167,9 @@ to say losetoocelot_ld:
 	if ocelotchoice is 1:				[sub-ocelot chosen]
 		if player is male:
 			say "     'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy in need of some proper attention from a big, strong kitty[else]There it is. I smell a cute kitty fucktoy inside you, eager for some proper attention from a big, strong kitty[end if].' ... He snuggles you close and takes your cock in his paw. The feline's touch soon has you erect. Eager and excited now, you return the favor to him, even lowering yourself to your knees to lick and suck at his shaft. He purrs happily, rubbing your head as you bob over his six inch cock.";
-			if cunts of player > 0 and a random chance of 3 in 4 succeeds:	[vaginal]
+			if player is female and a random chance of 3 in 4 succeeds:	[vaginal]
 				say "[ocelotloss_bt_v1]";
-			else if cunts of player is 0 and anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( player is submissive and a random chance of 1 in 4 succeeds ) or ( player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
+			else if player is not female and anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( player is submissive and a random chance of 1 in 4 succeeds ) or ( player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
 				say "[ocelotloss_bt_a1]";
 			else:	[oral]
 				say "[ocelotloss_bt_o1]";
@@ -371,10 +371,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Ocelot"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[ocelotattack]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheocelot]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoocelot]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Ocelot"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[ocelotattack]"; [ Successful attack message ]
+	now defeated entry is "[beattheocelot]"; [ Text when monster loses. ]
+	now victory entry is "[losetoocelot]"; [ Text when monster wins. ]
 	now desc entry is "[ocelotdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "of a spotted feline, with a small muzzle and rounded ears";
 	now body entry is "[ocelotbodydesc]";
@@ -400,7 +400,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 2; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -423,11 +423,11 @@ to say ocelotbodydesc:
 	if ocelotchoice is 2:	[big kitty]
 		say "that of a heavy-set feline creature. You probably weigh over 300 lbs, but the weight doesn't seem to inconvenience you very much, feeling stronger muscles and a six foot frame below the fat to help support it. Your hands have become pudgy paws that seem eager to grab, grope or swat some asses";
 		if skinname of player is "Ocelot":
-			say ". Your body has also formed a harness, fingerless gloves and [if cocks of player > 0 or cunts of player is 0]a codpiece[else]panties[end if] all out of black leather for you as well";
+			say ". Your body has also formed a harness, fingerless gloves and [if player is male or cunts of player is 0]a codpiece[else]panties[end if] all out of black leather for you as well";
 	else:			[slender kitty]
 		say "that of a slender feline creature. This body, only about five feet tall, is quite lithe, capable of using its flexibility to please your lovers. To help with this, your paws have slender, nimble digits that are very sensitive, almost as if they're able to locate every spot needing attention";
 		if skinname of player is "Ocelot":
-			say ". Your body has also formed a harness, cuffs and [if cocks of player > 0 or cunts of player is 0]a codpiece[else]panties[end if] all out of black leather for you as well";
+			say ". Your body has also formed a harness, cuffs and [if player is male or cunts of player is 0]a codpiece[else]panties[end if] all out of black leather for you as well";
 
 
 to say ocelotbd:
@@ -449,7 +449,7 @@ to say ocelotbodychange:
 Section 3 - Definitions
 
 Definition: a person is ocelotbodied:
-	if the bodyname of the player is "Ocelot", yes;
+	if bodyname of player is "Ocelot", yes;
 	no;
 
 

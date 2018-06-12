@@ -55,8 +55,8 @@ to say beatthebluechaffinch:
 		now formcheck is 1;
 	else if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
 		now formcheck is 2;
-	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if cocks of player > 0 and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape. ";
-	if cocks of player > 0 and formcheck is 1:	[avian pred]
+	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if player is male and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape. ";
+	if player is male and formcheck is 1:	[avian pred]
 		if nobluechaffinchsex > 2:
 			if facename of player is "Fluffy Owl":
 				say "     As before, you rein in your predatory owl instincts and let the braggart go, opting to instead shake your fist at him and warning him that you'll be ready, as always, to send him packing. You hope he'll eventually learn to leave you alone, but you don't expect that'll happen anytime soon, given how fixated most infected people become.";
@@ -73,7 +73,7 @@ to say beatthebluechaffinch:
 			else:
 				say "     Regaining control of yourself, you slow to a halt and let the defeated songbird take flight. You content yourself by screeching back that you'll send him packing again if he comes back.";
 				increase nobluechaffinchsex by 1;
-	else if cocks of player > 0 and formcheck is 2:	[feline]
+	else if player is male and formcheck is 2:	[feline]
 		if nobluechaffinchsex > 2:
 			say "     As before, you rein in your feline instincts and let the braggart go, opting to instead shake your fist at him and warning him that you'll be ready, as always, to send him packing. You hope he'll eventually learn to leave you alone, but you don't expect that'll happen anytime soon, given how fixated most infected people become.";
 		else:
@@ -223,7 +223,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Blue Chaffinch"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Blue Chaffinch"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "The [one of]blue chaffinch[or]energetic avian[or]blue songbird[or]passerine male[or]male songbird[at random] [one of]snaps at your with his pointed beak[or]buffets you with his wings[or]flaps up a few feet and slashes at you with his foot claws[or]claws at you with his taloned hand[at random]!";
 	now defeated entry is "[beatthebluechaffinch]";
 	now victory entry is "[losetobluechaffinch]";
@@ -252,7 +252,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 2; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

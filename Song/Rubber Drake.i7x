@@ -33,10 +33,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Rubber Drake"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "ERROR: Rubber Drake - Not a creature."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattherubberdrake]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetorubberdrake]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Rubber Drake"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "ERROR: Rubber Drake - Not a creature."; [ Successful attack message ]
+	now defeated entry is "[beattherubberdrake]"; [ Text when monster loses. ]
+	now victory entry is "[losetorubberdrake]"; [ Text when monster wins. ]
 	now desc entry is "[rubberdrakedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "stretched out into a draconic muzzle with brow ridges and horns. It all feels kind of rubbery and molded together. Even the tiara you're wearing is part of it and appears as if shoddily painted golden-yellow. It's like some kind of [if mdasslevel > 0]Magic Drake [end if]mask that you can't take off, though it certainly feels like it's part of you when you touch it";
 	now body entry is "excessively curved with outlandishly oversized hips and buttocks on an otherwise average (if nine-foot tall) frame. This massive bottom has no real weight to it, feeling empty as if filled only with air, much like the rest of you. Your hands and feet have changed, now sporting rubbery talons like costume gloves. You have a pair of latex wings on your back that, despite being balloon-like, you're able to move around[if mdasslevel > 0]. Overall, you look and feel like a rubbery imitation of a certain drake you've met[end if]";
@@ -62,7 +62,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 36; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 30; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 15; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 15; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -71,7 +71,6 @@ When Play begins:
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]plump[or]pudgy[or]rubbery[or]inflatable[or]curvaceous[or]girly[or]feminine[at random]";
 	now type entry is "[one of]draconic[or]inflatable[at random]";

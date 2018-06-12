@@ -28,10 +28,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Gray Squirrel"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "non-combative."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthegraysquirrel]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetograysquirrel]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Gray Squirrel"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "non-combative."; [ Successful attack message ]
+	now defeated entry is "[beatthegraysquirrel]"; [ Text when monster loses. ]
+	now victory entry is "[losetograysquirrel]"; [ Text when monster wins. ]
 	now desc entry is "[graysquirreldesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "at once adorable and sexy as a squirrel. You have cute whiskers, a short muzzle and rounded ears. You have a long mane of flowing hair that always seems permed";
 	now body entry is "[if player is female]very sexy, always moving to show off its shapely form. You possess wide hips, a slender waist and overall feminine lines[else]very sleek and agile, with great flexibility[end if]. Your hands end in dainty little paws with claws made for climbing";
@@ -42,7 +42,7 @@ When Play begins:
 	now body change entry is "your spine starts to bend and flex as you become a cute and sexy squirrel with dainty, nimble paws with hard claws for climbing at your fingertips";
 	now skin change entry is "smooth, fluffy gray fur spreads over you. It has a lighter tone across the chest and loins, drawing the eyes there";
 	now ass change entry is "a long tail forms, rapidly filling out with a large, fluffy coat of gray fur and forming into a big squirrel tail with a noticeable curl at the end";
-	now cock change entry is "it shifts and takes on a largely human form with a natural flesh tone to it"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it shifts and takes on a largely human form with a natural flesh tone to it"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 10;
 	now dex entry is 20;
 	now sta entry is 10;
@@ -57,7 +57,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 12; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 6; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -90,7 +90,7 @@ when play ends:
 				else:
 					say "     As his sexy male doe, he pumps you full of his hot seed over and over again. Your sexy body never stops turning him on and your virile mate is always ready for another go. You both spend a long and enjoyable winter together with the squirrel atop you almost constantly fucking you.";
 			else:
-				say "     As your humanity slips away and your squirrel nature takes over, you are drawn to the city park. You live there, snacking on the nuts and fucking those you come across. You catch a mate for yourself when the soldiers come through the city, dropping from the trees onto the lone, scared [if cunts of player > 0 or cocks of player is 0]guy as he's running through the woods[else]girl as she's running through the woods[end if]. Soon enough, you've got another sexy squirrel companion to snuggle and fuck.";
+				say "     As your humanity slips away and your squirrel nature takes over, you are drawn to the city park. You live there, snacking on the nuts and fucking those you come across. You catch a mate for yourself when the soldiers come through the city, dropping from the trees onto the lone, scared [if player is female or cocks of player is 0]guy as he's running through the woods[else]girl as she's running through the woods[end if]. Soon enough, you've got another sexy squirrel companion to snuggle and fuck.";
 		else:
 			if HP of Macadamia >= 13:
 				say "     As the time for rescue draws near, you try your best to convince Mack to come with you. Finally, your sexy body wins out over the squirrel's hoard of nuts. He's very disappointed to have to leave most of it behind, only able to take a few jars of his specially prepared nuts with him in his pack. He gives you a grin and a wink, munching on some of them while the soldiers work to evacuate you before offering some to the soldiers. Thinking nothing of it, they snack on a few as well, finding them very tasty. Later, at the base, you spot signs of them starting to get a little squirrelly and grin. And soon enough, Mack's working on turning them into sexy does eager for another taste of the squirrel's nut butter.";

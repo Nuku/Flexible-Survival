@@ -107,14 +107,14 @@ when play ends:
 		stop the action;
 	else if bodyname of player is "dead":
 		stop the action;
-	else if humanity of the player < 10 and HP of the player > 0:
+	else if humanity of player < 10 and HP of the player > 0:
 		if bodyname of player is "Dragoness" and HP of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of player] form and [facename of player] face.";
 		if bodyname is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
-		if cock length of player > 10 or cock width of player > 6 and cocks of player > 0:
+		if cock length of player > 10 or cock width of player > 6 and player is male:
 			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
 			if cocks of player > 1:
 				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";

@@ -225,21 +225,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Feline Gymnast"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Feline Gymnast"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back.[or]She slashes quickly at any part of you she can reach.[at random]";
-	now defeated entry is "[beatthefelinegymnast]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetofelinegymnast]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthefelinegymnast]"; [ Text when monster loses. ]
+	now victory entry is "[losetofelinegymnast]"; [ Text when monster wins. ]
 	now desc entry is "[felinegymnastdesc]";
-	now face entry is "very human, except for the furry pair of cat ears"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "very thin, but with [one of]smooth[or]toned[or]sleek[at random] muscles. Your hands and feet, while retaining their human shape, now have retractable claws where your fingernails were"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]rich[or]dark[or]luxurious[at random] blue fur. It feels soft against your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long tail covered in a lovely shade of blue swaying behind you, helping you keep your balance."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]light pink, feline[or]barbed, feline[or]cat-like[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it becomes thinner and much more womanly. Your scalp feels odd as two furry feline ears pop out of your head"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "a sudden weight is lifted from your shoulders. Looking down, you notice you have become much thinner, and your muscles have a much smoother tone to them"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "luxurious blue fur begins growing over your body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its color shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "very human, except for the furry pair of cat ears"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "very thin, but with [one of]smooth[or]toned[or]sleek[at random] muscles. Your hands and feet, while retaining their human shape, now have retractable claws where your fingernails were"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]rich[or]dark[or]luxurious[at random] blue fur. It feels soft against your"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a long tail covered in a lovely shade of blue swaying behind you, helping you keep your balance."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]light pink, feline[or]barbed, feline[or]cat-like[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "it becomes thinner and much more womanly. Your scalp feels odd as two furry feline ears pop out of your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "a sudden weight is lifted from your shoulders. Looking down, you notice you have become much thinner, and your muscles have a much smoother tone to them"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "luxurious blue fur begins growing over your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance."; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its color shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 15;
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
@@ -254,7 +254,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 1; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

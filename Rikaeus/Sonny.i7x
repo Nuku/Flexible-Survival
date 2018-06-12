@@ -188,13 +188,13 @@ to say SonnySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the sheep boy's ovine shaft";
 	][]
-	if cocks of player > 0 and libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
+	if player is male and libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the friendly sheep into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take Sonny's ass for a ride";
 	[
-	if cocks of player > 0 and libido of Sonny is 1: [only males and herms can fuck him, also just for Sonny who isn't a virgin]
+	if player is male and libido of Sonny is 1: [only males and herms can fuck him, also just for Sonny who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the friendly sheep";
 		now sortorder entry is 4;

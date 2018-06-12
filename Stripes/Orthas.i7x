@@ -260,7 +260,7 @@ to say orthasfuck:
 		say "     'Even I need a moment to breathe, hon, you come back later.'";
 	else:
 		now lastfuck of Orthas is turns;
-		if cocks of player > 0 and cunts of player < 1: [ male player ]
+		if player is male and cunts of player < 1: [ male player ]
 			say "     'Well, fine, but be sure to come by later if you get somewhere for me to plant them,' she says, remembering last time. She disrobes, revealing her toned, athletic body once again, unveiling her good sized breasts -- that seemed to grow a bit after her first pregnancy -- and runs her hands over your tight, sexy male form as well, waiting to get at what she knows is down in your drawers.";
 			say "     And before long, she's got it! The sultry dragoness is on her knees between your legs, her lovely bosom wrapped around your cock, and the tip of the member poking through her cleavage is firmly embedded in her mouth. Her long draconic tongue is running circles around your member, teasing you all the way to full erection. She leans over the couch, and lifts her long, muscular tail, exposing her tight pussy lips. You know what lies hidden there, but it doesn't deter you in the least, making you smile as you grip her hips and stab your member home.";
 			WaitLineBreak;
@@ -290,7 +290,7 @@ to say orthasfuck:
 					say "     After two more, she lifts you up and gives you a big sloppy kiss. 'Aaaah... you're wonderful, you know that?'";
 			else:
 				say "     'Awww!' She giggles. 'And here I thought I was going to get you to suck them out,' she says.";
-		else if cunts of player > 0 and cocks of player < 1: [ female player]
+		else if player is female and cocks of player < 1: [ female player]
 			let seed be 0;
 			blank out the whole of table of itemselection;
 			repeat with Q running through owned cum grab objects:
@@ -452,54 +452,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Dragon"; [Name of your new Monster]
-   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]";
-   now defeated entry is "[beatorthas]";
-   now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "draconic head"; [ Face description, format as the text "You have a (your text)."]
-   now body entry is "that of a well-muscled anthro dragon"; [ Body Description, format as the text "Your Body is (your text)."]
-   now skin entry is "dark scaled"; [ skin Description, format as the text "You have (your text) skin."]
-   now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts and reforms into a dragon's head"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "your body shifts and alters itself, becoming that of a humanoid dragon"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "hard scales form on your skin, covering your entire body in a tough, but flexible hide"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a slender, draconic tail forms behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it changes shape, gaining firm ridges along its length to stimulate your partner"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 20;
-   now dex entry is 24;
-   now sta entry is 20;
-   now per entry is 15;
-   now int entry is 12;
-   now cha entry is 15;
-   now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
-   now HP entry is 150;
-   now lev entry is 12; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-   now wdam entry is 10; [Amount of Damage monster Does when attacking.]
-   now area entry is "nowhere"; [ Location of monster, in this case nowhere]
-   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2; [ Number of Breasts infection will give you. ]
-   now breast size entry is 3; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 5;
-   now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is ""; [ Dropped item. Key will be used later ]
-   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-   [ These represent the new additions to the table of random critters ]
-   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
-   now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is true;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Dragon"; [Name of your new Monster]
+	now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]";
+	now defeated entry is "[beatorthas]";
+	now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "draconic head"; [ Face description, format as "You have a (your text)."]
+	now body entry is "that of a well-muscled anthro dragon"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "dark scaled"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts and reforms into a dragon's head"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your body shifts and alters itself, becoming that of a humanoid dragon"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "hard scales form on your skin, covering your entire body in a tough, but flexible hide"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a slender, draconic tail forms behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it changes shape, gaining firm ridges along its length to stimulate your partner"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 20;
+	now dex entry is 24;
+	now sta entry is 20;
+	now per entry is 15;
+	now int entry is 12;
+	now cha entry is 15;
+	now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
+	now HP entry is 150;
+	now lev entry is 12; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
+	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 5;
+	now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
+	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 7 - Endings

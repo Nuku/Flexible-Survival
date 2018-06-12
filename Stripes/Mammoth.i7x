@@ -76,10 +76,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mammoth"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The mammoth slams into you, trying to smother you with her hairy bosom![or]The mammoth herm swings her semi-hard cock at you like a meat club. THWACK![or]The mastadon knocks you over and drops her hefty ballsack onto your face, teabagging you with the heavy orbs![or]The mammoth herm grabs you with her trunk, trying to choke the fight out of you![or]The mastadon punches you violently with its powerful fists![or]The mastadon herm jabs at you with her ivory tusks![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthemammoth]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetomammoth]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Mammoth"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The mammoth slams into you, trying to smother you with her hairy bosom![or]The mammoth herm swings her semi-hard cock at you like a meat club. THWACK![or]The mastadon knocks you over and drops her hefty ballsack onto your face, teabagging you with the heavy orbs![or]The mammoth herm grabs you with her trunk, trying to choke the fight out of you![or]The mastadon punches you violently with its powerful fists![or]The mastadon herm jabs at you with her ivory tusks![at random]"; [ Successful attack message ]
+	now defeated entry is "[beatthemammoth]"; [ Text when monster loses. ]
+	now victory entry is "[losetomammoth]"; [ Text when monster wins. ]
 	now desc entry is "[mammothdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "elephantine, with a trunk and big tusks";
 	now body entry is "large and stocky, like a big block of meat. Your hands are large, but only possess small, meaty fingers. Your feet are round, flat and have barely noticeable toes";
@@ -105,7 +105,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 60; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 40; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 15; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

@@ -31,9 +31,9 @@ to say snakedesc:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	else if cocks of player > 0 and cunts of player is 0:
+	else if player is puremale:
 		now sex entry is "Male";
-	else if cocks of player is 0 and cunts of player > 0:
+	else if player is not male and player is female:
 		now sex entry is "Female";
 	else if player is herm:
 		now sex entry is "Both";
@@ -161,7 +161,7 @@ to snakecoresex:
 	if snakedomm is 0, now snakedomm is 1;
 
 to theserpentchecks: [Invocation of validation for TBM scene]
-	if cunts of player > 0 or (scalevalue of player > 2 or player is twistcapped): [Quantify Capacity]
+	if player is female or (scalevalue of player > 2 or player is twistcapped): [Quantify Capacity]
 		now snakecap is 1;
 		if scalevalue of player > 2:
 			increase snakecap by 1;
@@ -177,7 +177,7 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 		increase tempnum by snakeocc;
 	else:
 		now tempnum is 0;
-	if "Touched by Madness" is listed in feats of player and (player is fem_vacant or snakeocc > 0) and cunts of player > 0 and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	if "Touched by Madness" is listed in feats of player and (player is fem_vacant or snakeocc > 0) and player is female and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now fsnakevalid is true;
 		now msnakevalid is false;
 	else if "Touched by Madness" is listed in feats of player and (player is male_vacant or snakeocc > 0) and cunts of player is 0 and player is mpreg_ok and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
@@ -225,7 +225,7 @@ When Play begins:
 	now cock entry is "[one of]hemipenis[or]serpentine[at random]";
 	now face change entry is "your head flattens and gains an extended jaw. Your ears disappear down to small holes and your eyes move to the sides of your serpent head to form beady, black orbs. There is a band of bright color around your neck and on the underside of your jaw";
 	now body change entry is "your spine pops repeatedly, extending and growing at it becomes more flexible. As your body becomes more serpentine, you retain your limbs, but they become slender and flexible as well. You are able to tuck against your sides to allow your snake body to slither across the ground or walk, as you prefer at any moment. Your hands and feet gain sharp claws at the end of their digits";
-	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath. Your new skin is silver in color, with a bright patch of yellow from your jaw down to your inner thighs"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath. Your new skin is silver in color, with a bright patch of yellow from your jaw down to your inner thighs"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "your hips shift and pop, your ass almost disappearing away as a long snake tail extends in its place";
 	now cock change entry is "your shaft becomes slick and pointed, much akin to that of a snake or lizard";
 	now str entry is 8;
@@ -242,7 +242,7 @@ When Play begins:
 	now cocks entry is 2; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -310,14 +310,14 @@ when play ends:
 				say ". Your venom is quite powerful and arousing, getting your victims so aroused they cannot help but mate you vigorously before you finish them off";
 			if player is male:
 				say ". You do release a few of the females and herms after properly fucking them, somehow knowing they'll grow full of large eggs which will hatch into new snakes";
-			if cunts of player > 0 and "Sterile" is not listed in feats of player:
+			if player is female and "Sterile" is not listed in feats of player:
 				say ". Your temporary lovers fill you with their seed, filling you with clutches of eggs which will hatch and grow into more enlarged serpents";
 			say ".";
 		else:
 			if facename of player is "Snake" and skinname of player is "Snake" and tailname of player is "Snake" and cockname of player is "Snake":
 				say "     The military rescue gets you out of the infected city and back to civilization. But you don't suit civilization very well anymore. You manage to get a job at large firm which specializes at buying out smaller companies and selling them off. You particularly enjoy the idea of you capturing and then crushing each like smaller prey. While this makes you quite successful at your job, you make few friends.";
 				say "     Outside of work, your predatory nature makes you lustful and aggressive. You often travel the night streets in search of prey to slake your wild lusts upon. Your arousing venom quickly gets them so horny that they willingly mate with you lustfully before you finally leave them there in a daze from your venom and the afterglow. Your bite is very effective and your lovemaking so effective that you never hear word of any of them ever reporting the event or considering pressing charges at all[if player is male], even those who grow full with eggs[end if], as a shady detective you hire informs you";
-				if cunts of player > 0 and "Sterile" is not listed in feats of player:
+				if player is female and "Sterile" is not listed in feats of player:
 					say ". You gain a few clutches of eggs from these nocturnal lovers you pick. Much like snakes in the wild, you feel no affection for these young serpents and ship them off to boarding schools at a very young age";
 				say ".";
 			else:

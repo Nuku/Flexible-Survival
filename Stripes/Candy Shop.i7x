@@ -161,10 +161,10 @@ to say Sweet Tooth scene:
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
-		if cocks of player > 0, add 4 to randomferret; [M/F top]
-		if cocks of player > 0, add 5 to randomferret; [gay ferret (fuck/oral)]
-		if cunts of player > 0, add 6 to randomferret; [get share-fucked]
-		if cunts of player > 0, add 7 to randomferret; [69 w/male]
+		if player is male, add 4 to randomferret; [M/F top]
+		if player is male, add 5 to randomferret; [gay ferret (fuck/oral)]
+		if player is female, add 6 to randomferret; [get share-fucked]
+		if player is female, add 7 to randomferret; [69 w/male]
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
 			say "[candyshopsex1]";
@@ -210,10 +210,10 @@ to say Sweet Tooth scene:
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
-		if cocks of player > 0, add 4 to randomferret; [M/F top]
-		if cocks of player > 0, add 5 to randomferret; [gay ferret (fuck/oral)]
-		if cunts of player > 0, add 6 to randomferret; [get share-fucked]
-		if cunts of player > 0, add 7 to randomferret; [69 w/male]
+		if player is male, add 4 to randomferret; [M/F top]
+		if player is male, add 5 to randomferret; [gay ferret (fuck/oral)]
+		if player is female, add 6 to randomferret; [get share-fucked]
+		if player is female, add 7 to randomferret; [69 w/male]
 		remove tempnum from randomferret, if present;
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
@@ -244,7 +244,7 @@ to say Sweet Tooth scene:
 
 
 after navigating Sweet Tooth:
-	move the player to the State Fair;
+	move player to the State Fair;
 
 
 Section 3 - Various sex scenes
@@ -375,23 +375,23 @@ an everyturn rule:
 Section 9 - Definitions
 
 Definition: a person is sugarfaced:
-	if the facename of the player is "Sugar Ferret", yes;
+	if facename of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugarskinned:
-	if the skinname of the player is "Sugar Ferret", yes;
+	if skinname of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugarbodied:
-	if the bodyname of the player is "Sugar Ferret", yes;
+	if bodyname of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugarcocked:
-	if the cockname of the player is "Sugar Ferret", yes;
+	if cockname of player is "Sugar Ferret", yes;
 	no;
 
 Definition: a person is sugartailed:
-	if the tailname of the player is "Sugar Ferret", yes;
+	if tailname of player is "Sugar Ferret", yes;
 	no;
 
 

@@ -65,15 +65,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Fluffy Owl"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Fluffy Owl"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The big-breasted owl grabs you and buries your face in her downy bosom, trying to smother you with them![or]The fluffy owl slashes at you with a taloned hand![or]The stacked avian emits a high-pitched shriek that hurts your ears and makes you wobble unsteadily as it scrambles your inner ear![or]The owl woman makes a gliding swoop around you, then comes in to slash at you with her taloned feet![or]The owl creature presses her soft, fluffy body against yours, rubbing those huge breasts against you, hooting softly with need![or]The bird woman angrily snaps at you with her sharp beak![or]The avian woman grabs her big breasts and shakes them enticingly at you![at random]";
-	now defeated entry is "[beatthefluffyowl]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetofluffyowl]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthefluffyowl]"; [ Text when monster loses. ]
+	now victory entry is "[losetofluffyowl]"; [ Text when monster wins. ]
 	now desc entry is "[fluffyowldesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now the head of a fluffy barn owl with sharp eyes and a sharp beak. You have a faint trace of lips as well, though they are hard to see at first glance";
 	now body entry is "light and slender, but still having strong muscles. This fitness can mostly be felt in your chest and arms, running to the feathery wings that your arms have become. Your hands have reshaped themselves into bird-like talons, as have your feet";
 	now skin entry is "fluffy, brown and cream feathers cover your";
-	now tail entry is "You have a broad, flat tail of brown feathers over your pert bottom."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a broad, flat tail of brown feathers over your pert bottom."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "slick, hidden";
 	now face change entry is "it changes and reshapes itself into that of a barn owl. Your head has a very rounded face, with a lighter fluff of feathers making it soft and cute. Your eyes are sharp, as is your small beak";
 	now body change entry is "your body becomes light and slender, but still strong and muscled. You can feel the muscles on your upper body reshaping and tightening around your shoulders before the changes spread to your arms. As you watch, your arms reshape themselves into wing-like structures covered in soft feathers. Your hands thankfully remain, though they do change form as well, reshaping into bird-like talons, as do your feet";
@@ -94,7 +94,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 15; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

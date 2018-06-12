@@ -107,10 +107,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Gunbunny"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Gunbunny"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[gunbunnyattack]";
-	now defeated entry is "[beatthegunbunny]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetogunbunny]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthegunbunny]"; [ Text when monster loses. ]
+	now victory entry is "[losetogunbunny]"; [ Text when monster wins. ]
 	now desc entry is "[gunbunnydesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "very human, save for the set of [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]gray[else]black[end if] bunny ears atop your head. Your face is [if player is female]pretty and effeminate[else]girlish[end if] with a cute, if slightly bucktoothed smile";
 	now body entry is "largely human-looking, with a figure that is svelte[if player is female] and effeminate[end if]. This illusion is marred by the paw-patterned gloves stuck over your decidedly paw-shaped hands. They are cartoonish and [if HP of doctor matt >= 12 and HP of doctor matt < 100]white[else if hospquest < 14]gray[else]black[end if] with pink pawpads drawn on the underside. Your limbs are slender and sexy, though you can feel a hidden strength and bounciness in your legs, allowing you to run faster and jump higher than you ever could before";
@@ -136,7 +136,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -307,7 +307,7 @@ when play ends:
 						say "     A rush of excitement runs through you and you can't help but giggle a little. This gun just feels so right in your paw-hands that intuitively know how you power it up and charge back into the fray with renewed vigor. You end up leading a counterattack by your remaining squad-mates and send the centaurs scattering after a few volleys of searing energy take down the lead equines. You and your squad chase down a few stragglers to make sure they know not to mess with Zephyr again before returning to secure the transport. Once it's all said and done, you get a nice bonus out of it as well as the gratitude of the engineer.";
 						say "     And while you have to reluctantly return to prototype energy rifle, the tech arranges to get you a new one of your very own a couple months later - the first of the production models. You thank her heartily for it with a big kiss that turns into a romp right there in her lab[if player is male], leaving her with a bunny bun in the oven[end if]. Your squad ends up working with her regularly, always getting the newest tech from her division to play with. And your budding relationship with her continues as well, soon becoming a couple and moving in together.";
 					else if level of player >= 8:
-						say "     While they're tough, you're able to slow their charge thanks to your fast movements and lots of bullets. In the end, your squad is forced to fall back, leaving the case you were escorting to get trampled, but at least managing to carry off the engineer while you provide cover fire for the remains of your team. And while the higher-ups are upset at the lost cargo, at least the tech who developed it was kept safe. You're even given a small bonus for guarding everyone's retreat. You use it to treat the others in the squad to a night out on the town, which ends in some hot and heavy fun with them back at your place[if cocks of player > 0 or player is impreg_ok]. This romp results in quite a few bunny babies by the time it's all said and done[end if].";
+						say "     While they're tough, you're able to slow their charge thanks to your fast movements and lots of bullets. In the end, your squad is forced to fall back, leaving the case you were escorting to get trampled, but at least managing to carry off the engineer while you provide cover fire for the remains of your team. And while the higher-ups are upset at the lost cargo, at least the tech who developed it was kept safe. You're even given a small bonus for guarding everyone's retreat. You use it to treat the others in the squad to a night out on the town, which ends in some hot and heavy fun with them back at your place[if player is male or player is impreg_ok]. This romp results in quite a few bunny babies by the time it's all said and done[end if].";
 					else:
 						say "     They prove to be quite tough and you're only able to slow a few from the charge thanks to your fast movements and wild sprays of bullets. While it does little to stop them, you're able to keep yourself from being overrun. The rest of the squad, the engineer and the equipment you were escorting all end up being lost though, with you as the sole survivor able to get away. The higher-ups are none to pleased with the failed mission and you get chewed out about it repeatedly over the next several days. The execs, always money-focused, decide to only give you half-pay for the mission and reassign you to another squad. In the end, the fault is placed on your fallen squad-mates - something which rankles you badly, but you can't object too strongly about it or face punishment yourself.";
 						say "     On your new team, you're seen as a bit of a bad luck charm, but thankfully things never go quite so bad as that one mission. You'd leave, but the excitement and the pay are enough to keep you there. It's a living.";

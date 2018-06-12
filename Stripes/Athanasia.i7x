@@ -97,7 +97,7 @@ instead of going down from Volcanic Crater:
 		say "     You have no reason to go down there.";
 	else if HP of Athanasia is 2:
 		say "     Looking down into the fiery pit, you are reluctant to go down there, but this is certainly the hottest place around for the phoenix's egg. Deciding to take a look, you begin to very carefully scale down into the crater. The great heat makes this a terrible struggle, but you manage to persevere, feeling a need to see it through for Athanasia. Reaching the tunnels down there, you enter the cave.";
-		move the player to Volcanic Cave;
+		move player to Volcanic Cave;
 		if phoenix egg is owned:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements. Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find. It should also be quite safe down here. There's no reason anything should venture into this infernal cave to disturb it. Unpacking it, you bring the egg to one of the magma pools and, hoping you're doing the right thing, lower the egg onto the semi-solid crust covering it. The soft layer dips and cracks a little, letting some of the lava flow up and pool around the egg. It seems unharmed by this and even seems to become more golden and lustrous. You sigh in relief and step away, reminding yourself to return to check on it later. You feel thirsty and drained after your climb and stay down here.";
 			delete phoenix egg;
@@ -111,20 +111,20 @@ instead of going down from Volcanic Crater:
 			increase thirst of player by 12;
 			decrease HP of player by ( HP of player / 5 );
 	else if HP of Athanasia is 3:
-		move the player to Volcanic Cave;
+		move player to Volcanic Cave;
 		say "     Checking on the egg, you find it much as you left it, if perhaps a little shinier. Hopefully that's a good sign.";
 	else if HP of Athanasia is 4:
-		move the player to Volcanic Cave;
+		move player to Volcanic Cave;
 		say "     Inside the cave, you find the broken remains of the phoenix egg blackened and crumbling scattered around the lava pool. Fearing the worst, you start calling out Athanasia's name while searching the alcoves and crevices of the cavern. You find nothing and are about to give up hope when there is a loud, triumphant shriek from outside the cave. Running to its mouth, you see a large, fiery plume of lava boil up before unfolding a pair of wide wings. The lava pours off the reborn phoenix like water and it comes swooping into the cave.";
 		project the figure of Athanasia_icon;
 		say "     Still aflame, the firebird wraps its wings around you, holding you to her fiery breast, but you are unharmed. You can feel the inferno of heat, but it does not harm you, only feeling warm and soothing as the red and gold bird nuzzles you. 'You did wonderfully,' the bird says cheerfully, spinning you around in its wings, giving an affectionate nip on the shoulder before setting you down.";
 		say "     The bird spreads its wings for you, showing off its reborn body. 'I was just having a refreshing bath when I heard you calling out for me. Isn't my new body lovely?' the phoenix asks, preening its rich red and gold plumage. 'And I have changed like I needed to. Now I'm reborn for this w... this place,' the firebird adds, turning around and raising her tail to show off a plump and wet cloacal pussy which you don't recall being there before. 'Mmmm... and it feels so good,' she adds with a coy glance at you and a shake of her tailfeathers.";
 		now HP of Athanasia is 5;
 	else:
-		move the player to Volcanic Cave;
+		move player to Volcanic Cave;
 
 instead of going up from Volcanic Cave:
-	move the player to Volcanic Crater;
+	move player to Volcanic Crater;
 	if HP of Athanasia < 4:
 		follow the turnpass rule;
 
@@ -176,9 +176,9 @@ to say sexwithAthanasia:
 		now lastfuck of Athanasia is turns;
 		if HP of Athanasia is 5:
 			say "[athanasiasex00]"; [first time]
-		else if (cunts of player > 0 or cocks of player > 0) and ( ( HP of Athanasia is 8 or HP of Athanasia is 9 ) and a random chance of 1 in 2 succeeds ) or ( HP of Athanasia > 9 and a random chance of 1 in 4 succeeds ):	[volcano]
+		else if (player is not neuter) and ( ( HP of Athanasia is 8 or HP of Athanasia is 9 ) and a random chance of 1 in 2 succeeds ) or ( HP of Athanasia > 9 and a random chance of 1 in 4 succeeds ):	[volcano]
 			say "[athanasiasex06a]"; [volcano - lead-in]
-			if cocks of player > 0 and ( a random chance of 2 in 3 succeeds or HP of Athanasia is 8 ):
+			if player is male and ( a random chance of 2 in 3 succeeds or HP of Athanasia is 8 ):
 				say "[athanasiasex06b]"; [volcano - sex]
 			else if a random chance of 1 in 2 succeeds or HP of Athanasia is 8:
 				say "[athanasiasex06c]"; [volcano - basalt dildo]
@@ -193,14 +193,14 @@ to say sexwithAthanasia:
 			else:
 				say "[athanasiasex05b]"; [basalt toy - male/neuter]
 			if HP of Athanasia is 7, now HP of Athanasia is 8;
-		else if cocks of player > 0 and a random chance of 3 in 5 succeeds:	[wants cock]
+		else if player is male and a random chance of 3 in 5 succeeds:	[wants cock]
 			if HP of Athanasia >= 7 and a random chance of 2 in 5 succeeds:
 				say "[athanasiasex03]"; [fuck her - on her back]
 			else if a random chance of 1 in 2 succeeds:
 				say "[athanasiasex02]"; [fuck her]
 			else:
 				say "[athanasiasex01]"; [birdy blow job]
-		else if cunts of player > 0 and a random chance of 1 in 2 succeeds:	[wants pussy]
+		else if player is female and a random chance of 1 in 2 succeeds:	[wants pussy]
 			say "[athanasiasex04]"; [receive cunnilingus]
 		else:
 			say "[athanasiasex07]"; [give cunnilingus]
@@ -419,7 +419,7 @@ to say athanasiasex08:		[dommy fuck]
 
 
 [*** - flight scene?
-	[else if cocks of player > 0 and HP of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
+	[else if player is male and HP of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
 		if HP of Athanasia is 11:
 			say "     I've been feeling stronger lately. I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek. Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it. 'In that case, I'll take care of the flying. It will not be a problem. Don't you trust me?' she trills teasingly. Given all the amazing things she's already shown herself capable of, what's one more?";]
 ]

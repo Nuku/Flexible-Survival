@@ -44,10 +44,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Queen Bee"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "No fighting"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthequeenbee]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoqueenbee]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Queen Bee"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "No fighting"; [ Successful attack message ]
+	now defeated entry is "[beatthequeenbee]"; [ Text when monster loses. ]
+	now victory entry is "[losetoqueenbee]"; [ Text when monster wins. ]
 	now desc entry is "[queenbeedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, beautiful and regal in appearance, with large, dark eyes and lips as sweet and golden as honey. Your flowing hair is yellow and black and has a pair of long antennae rising from them";
 	now body entry is "slender and [if player is female]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[else]effeminate with its slender waist and curving hips. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak. All in all, you look very much the sexy [']queen['] bee[end if]";
@@ -73,7 +73,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -95,7 +95,7 @@ When Play begins:
 Section 3 - Definitions
 
 Definition: a person is queenbeecocked:
-	if the cockname of the player is "Queen Bee", yes;
+	if cockname of player is "Queen Bee", yes;
 	no;
 
 

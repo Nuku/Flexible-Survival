@@ -30,7 +30,7 @@ To say kangaroo loss:
 	if lisaartemiscount2 > 0 and lisaartemiscount2 < 5, increase lisaartemiscount2 by 1;
 	say "Whimpering she rears back onto her tail, using it as a seat while her thick legs open, showing off her moist cunt to you. [bold type]Do you accept her offer[roman type]?";
 	if player consents:
-		if cocks of player > 0 and cock length of player > 10:
+		if player is male and cock length of player > 10:
 			say "As you press [cock of player] manhood to her cunt, she winces, jerking away. 'No dear, that won't do.' She then slips onto the ground on her back, patting her belly for you to climb on. Moving over her belly, she takes your cock in between her tits, wrapping the furred mounds of flesh around [cock size desc of player] [cock of player] pole letting you thrust between them her tongue lapping over the tip when it peeks through the top of her cleavage. With groans of pleasure from you she doubles her effort, suckling over the tip lapping any precum that drools from the tip. The force of your thrusts, making her tits shake in her hands with muffled slapping sounds.";
 			WaitLineBreak;
 			say "Whines from the kangaroo girl under you tip you off that she's getting off from being used like this. Popping off your cock head the hot breath washing over the tip as she looks up to you, her eyes needful. 'Please...' is all she says and, with all the sensations, a few more hard thrusts push you over the edge before your [cock of player] dick swells up. The thick ropes of your seed fire off splattering the surprised kangaroo in the face, then down along her neck, the last few errant strands landing over her tits. Soft pants from both of you rise up, before you climb off her and walk away, leaving her to whine as she gets up defeated and horny. ";
@@ -53,7 +53,7 @@ When Play begins:
 	now attack entry is "[one of]A left hook catches you in the chin, making you stumble[or]Sweeping around, the powerful tail slams into your side, knocking the wind out of your lungs[or]After blocking a punch, she throws an uppercut into your chin, followed by a left and then a right jab to your stomach[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches[at random].[rookickreset]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[redroodesc]";[ Description of the creature when you encounter it.]
+	now desc entry is "[redroodesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "rounded, medium-sized muzzle with a black nose pad at the very tip";
 	now body entry is "a soft rounded shoulder build with a tight stomach, leading down into wide hips, large spring-like thighs and feet";
 	now skin entry is "[one of]rusty red furred[or]short furred[or]softly furred[at random]";
@@ -133,7 +133,7 @@ to say rookickreset:
 Section 4 - Definitions
 
 Definition: a person is redroobodied:
-	if the bodyname of the player is "Red Kangaroo", yes;
+	if bodyname of player is "Red Kangaroo", yes;
 	no;
 
 

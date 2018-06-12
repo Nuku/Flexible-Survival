@@ -47,7 +47,7 @@ to say beattheshadowbeast: [Victory scenes]
 		say "     ([link]Y[as]y[end link]) - Grab the Shadow Beasts tail and drag it back for some fun.";
 		say "     ([link]N[as]n[end link]) - Let the beast away to lick it's wounds.";
 		if player consents: [sex!]
-			If cocks of player > 0:
+			if player is male:
 				say "     Just before the creature can escape, you lunge forward and wrap your hand with the panther tail, bringing it to a quick halt. Inky darkness surrounds your hand as the Shadow beast tries to escape into the darkness unsuccessfully in its wounded state. You reel it in closer, ironically catching one of its own grasping tentacles to pull it closer. There is a moment when you fear its claws will come out, but as you move over the snarling creature and cup its hefty feline balls, the intention becomes clear for it and the beast relaxes. You wrestle the creature gently, bringing it to the ground and spooning it from behind, pressing between its grasping tentacles and grinding into its sleek fur. You stroke its underside with your hands.";
 				say "     It's so soft, and your tom-kitty purrs for you. You ache for some fun though, and you probably shouldn't keep a lab full or more of big cats, so you get to business. Feeling around above those hefty nuts you find the big cat's pert ring. As you push your fingers into it, the beast moves its tentacles around your legs and against your inner thighs, stroking softly at your own shaft and balls; it's eager for you too. You pry the big cat open, making it yowl and squirm as you shift your body downwards to get your cock under that tail. Not an easy task with those tentacles still wrapped around your junk, the gripping pads stroking continuously and giving an odd tugging sensation. You push your cock between the fingers you have in shadow cat's hole as you pull them out simultaneously.";
 				say "     As you sink into it, the cat gives a loud pleased hiss. You roll your hips, thrusting from your sideways position on the ground and reach over to stroke the shadowbeast's own cock, the barbs catching in your hand as you try to pump it. Green and amber slitted eyes appear in dark corners of the room, watching, but not disturbing you and the yowling beast, waiting their turn to try and tame you, or for you to tame them. As you come to a climax, you thrust yourself into as deep as you can and cry out as you unload. The shadow beast's form ripples, its euphoria briefly messing with its shadow form abilities. There is a splatter, as the beasts length twitches, sending out ropes of its virile seed over the floor between its kicking legs.";
@@ -95,16 +95,16 @@ When Play begins:
 	now defeated entry is "[beattheshadowbeast]";       [ Text when monster loses. Change 'shadowbeast' as above. ]
 	now victory entry is "[losetoshadowbeast]";         [ Text when monster wins. Change 'shadowbeast' as above. ]
 	now desc entry is "[shadowbeastdesc]";
-	now face entry is "that of a panther, sleek and predatory";  [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a panther, sleek and predatory";  [ Face. Format as Your face is [face of player]. ]
 	now body entry is "the form of a large feral cat, but with two long tentacles emerging from your back";
-	now skin entry is "dark-furred";  [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a feline tail that twitches this way and that behind you.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now skin entry is "dark-furred";  [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a feline tail that twitches this way and that behind you.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "feline";
-	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and cat-like ears";  [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and cat-like ears";  [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "it cracks and shifts into a quadrupedal stance, becoming sleek and muscled. You feel like a coiled spring, ready to pounce on prey at a moment's notice. Two long black tentacles with strong gripping pads at their ends grow out of your back, giving you another pair of appendages";
 	now skin change entry is "inky black fur covers you from head to toe";
-	now ass change entry is "your new feline tail pushes out from somewhere above your rear";  [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes more tapered, the head of your shaft growing wicked-looking barbs to stimulate your mates with";  [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "your new feline tail pushes out from somewhere above your rear";  [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it becomes more tapered, the head of your shaft growing wicked-looking barbs to stimulate your mates with";  [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 14;
 	now dex entry is 18;
 	now sta entry is 12;
@@ -119,7 +119,7 @@ When Play begins:
 	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15;          [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 7;            [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6;               [ Number of breasts the infection will give a player. ]
+	now breasts entry is 6;               [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -200,7 +200,7 @@ when play ends:
 			say "     When the military comes to clean up the city the soldiers on duty are a bit unsure how to handle your somewhat unusual form. One of them, being more adventurous than the others, guides you back to the quarantine zone for inspection and anti-infection treatment. The scientists on duty marvel at your unusual appendages, testing them in rather crude methods as they wonder the extent of your control over your tentacles. A firm flick and a resounding smack against the back of one of their heads gives them all the information they need to know.";
 			say "     Being treated and then sent on your way, you find yourself unsure about what to do next as you wander the new world without a certain path to follow. Luckily, you end up finding a spot in need of a couple of hands to do some heavy lifting without a lot of questions being asked while passing through a somewhat shady city. With your extra added appendages and feline stamina, you are able to work the longest of those hired and soon find yourself getting into contact with a number of employers on the lookout for a strong back and tight lip. Daylight work turns into nighttime excursions, and soon you find yourself working seedier gigs until your name becomes a hushed whisper on the lips of people with things to hide.";
 			say "     A number of jobs, some pleasant, others not, lead you to finding your way into the beds of both 'meta' and regular humans, male and female, on the nights when work runs slow. Those who you spend the most time with end up being marked as people who you can actually call friend.";
-			if cunts of player > 0 and "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			if player is female and "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     It doesn't take long till one of your couplings has predictable results, with your stomach beginning to round out with a litter. Taking an extended leave from work, you rear your young, showing them how to use their tentacles and fade into the shadows.";
 
 Shadow Beast ends here.

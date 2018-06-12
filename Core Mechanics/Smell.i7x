@@ -60,13 +60,13 @@ understand "sniff around" as heresniffing.
 carry out heresniffing:
 	try sniffing the location of the player;
 [	repeat with X running through all the visible things in the location of the player:
-		try sniffing X;	]
+		try sniffing X; ]
 
 
 Section 2 - The player
 
 instead of sniffing yourself:
-	say "You smell like a [if player is herm]hermaphrodite[else if player is female]female[else if player is male]male[else]neuter[end if] [bodyname of the player].";
+	say "You smell like a [if player is herm]hermaphrodite[else if player is female]female[else if player is male]male[else]neuter[end if] [bodyname of player].";
 	if animal heat is True:
 		say "There is an animalistic musk around you.";
 	if child is not born and gestation of child > 0:

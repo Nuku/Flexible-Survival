@@ -21,7 +21,7 @@ to say losetolatexmistress:
 		if wslevel > 1 and a random chance of ( wslevel * wslevel ) in 12 succeeds:
 			say "     Getting whipped for the delay, you groan and start lapping across her clit. You run your tongue up and down those quivering lips and delve into her dark tunnel. Deciding to punish you for your delay, she grabs the back of your head with her free hand and holds you in place as she releases her bladder. You cough and sputter as that acrid fluid soaks your face and flows into your mouth. With another blow, she orders you to drink, so you find yourself licking across her pee hole and drinking her piss. It has a strong aftertaste of latex to it that clings to your tongue.";
 			say "     When the flow stops, she orders you back to licking, which you do eagerly, if for nothing else than to try and get that taste out of your mouth... or perhaps to get more of it, part of your confused mind thinks. As you eat her out, you get struck several more times and ordered to go faster, slower or deeper, or to suck her clit, or any other thing she desires of you. And you obey, moaning softly as the pain and pleasure blur. Eventually, your obedient licking pays off, your mistress flogging you hard as she cries out in orgasmic bliss. When she pushes you away, you tumble onto the ground, too sore from the whipping to rise. She grinds her heel down onto your shoulder, calling you a good slave. Reeking of her scent, you can't help but smile before passing out, having been complimented by your dark mistress.";
-			if the facename of the player is not "Latex Mistress":		[WS results in face TF]
+			if facename of player is not "Latex Mistress":		[WS results in face TF]
 				choose row monster from the table of random critters;
 				say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 				now facename of player is name entry;
@@ -135,23 +135,23 @@ When Play begins:
 Section 3 - Definitions
 
 Definition: a person is ltxmfaced:
-	if the facename of the player is "Latex Mistress", yes;
+	if facename of player is "Latex Mistress", yes;
 	no;
 
 Definition: a person is ltxmskinned:
-	if the skinname of the player is "Latex Mistress", yes;
+	if skinname of player is "Latex Mistress", yes;
 	no;
 
 Definition: a person is ltxmbodied:
-	if the bodyname of the player is "Latex Mistress", yes;
+	if bodyname of player is "Latex Mistress", yes;
 	no;
 
 Definition: a person is ltxmcocked:
-	if the cockname of the player is "Latex Mistress", yes;
+	if cockname of player is "Latex Mistress", yes;
 	no;
 
 Definition: a person is ltxmtailed:
-	if the tailname of the player is "Latex Mistress", yes;
+	if tailname of player is "Latex Mistress", yes;
 	no;
 
 [

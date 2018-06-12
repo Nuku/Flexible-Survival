@@ -14,19 +14,19 @@ to say skunk_desc:
 	let debit be 0;
 	if hardmode is true and level of player > 5, let debit be level of player - 5;
 	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
 		now Skunk_type is 1;
-		now HP entry is 28 + ( debit * 4 );			[- How many HP has the monster got? -]
+		now HP entry is 28 + ( debit * 4 ); [- How many HP has the monster got? -]
 		now monsterHP is 28 + ( debit * 4 );
-		now wdam entry is 6 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
+		now wdam entry is 6 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
 	else: [male skunk]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "This skunkbeast would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes.";
 		now Skunk_type is 2;
-		now HP entry is 64 + ( debit * 5 );			[- How many HP has the monster got? -]
+		now HP entry is 64 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 64 + ( debit * 5 );
-		now wdam entry is 10 + ( ( 4 * debit ) / 11 );		[-Amount of Damage monster Does when attacking.-]
+		now wdam entry is 10 + ( ( 4 * debit ) / 11 ); [-Amount of Damage monster Does when attacking.-]
 	if bodyname of player is "Skunkbeast Lord":	[skunkbeast player auto-loses]
 		now wdam entry is 0;
 		now combat abort is 1;
@@ -84,7 +84,7 @@ to say skunkg vict:
 	now skunkfight is 2;
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
-	else if cocks of player > 0 and skunkready > 2:
+	else if player is male and skunkready > 2:
 		say "     Victorious, the female skunk grabs your [cock size desc of player] cock and starts pumping at it vigorously. With your [cock of player] meat hard in her paw, she sinks her muzzle down overtop of it. She licks and sucks at your shaft, drooling black goo onto it as you blast your hot load into her muzzle. She licks her lips and swallows your semen down. She grins as the stick, black goo doesn't remain on your skin for long as it smooths out in places and starts to sink into you, leaving behind a soft, almost rubbery-textured fur even as you feel a tingle in your groin.";
 		follow the sex change rule;
 	else:
@@ -117,15 +117,15 @@ to say skunk_vict:
 
 to say sblvictorysex:
 	now fightoutcome is 11;
-	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk. Her beautiful body presses against yours and she runs her paws across your bestial form. Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[else]lord[end if][if skrp is 1]. Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if player is neuter]. The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
+	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk. Her beautiful body presses against yours and she runs her paws across your bestial form. Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if player is not male and player is female]lady[else]lord[end if][if skrp is 1]. Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if player is neuter]. The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
 	if player is not neuter:		[not neuter]
 		let randomskunksex be a list of numbers;
-		if cocks of player > 0, add 1 to randomskunksex;
-		if cocks of player > 0, add 1 to randomskunksex;	[double-likelihood]
-		if cocks of player > 0, add 2 to randomskunksex;
-		if cunts of player > 0, add 3 to randomskunksex;
-		if cunts of player > 0 and cocks of player is 0, add 4 to randomskunksex;
-		if cunts of player > 0 and cocks of player is 0, add 4 to randomskunksex;	[double-likelihood]
+		if player is male, add 1 to randomskunksex;
+		if player is male, add 1 to randomskunksex; [double-likelihood]
+		if player is male, add 2 to randomskunksex;
+		if player is female, add 3 to randomskunksex;
+		if player is purefemale, add 4 to randomskunksex;
+		if player is purefemale, add 4 to randomskunksex; [double-likelihood]
 		sort randomskunksex in random order;
 		if entry 1 of randomskunksex is 1, say "[sblsex1]";
 		if entry 1 of randomskunksex is 2, say "[sblsex2]";
@@ -149,7 +149,7 @@ to say sblsex3:		[skunkbeast tops player]
 		if name entry is "Skunkbeast Lord":
 			now monster is y;
 			break;
-	say "     As the skunk is running her paws over your body in tribute to her [if cunts of player > 0 and cocks of player is 0]mistress[else]master[end if], you notice the scent of another in the air. A skunkbeast snuffles towards you, having been drawn by your scent[if skrp is 1]. The skunk face at your groin smiles at the sight of him. '[one of]Oh, look at how hung he is[or]Just what we need[or]Oh baby[at random]!' she moans excitedly, your shared cunt getting wet at the sight of him[end if]. You rumble happily and shift around and present your rump to him, offering your dripping cunt to the sexy beast. He growls and climbs atop your [bodydesc of player] form, sinking his large cock into your skunkbeast body and stuffing you oh so wonderfully. As he pounds away at you, the skunk girl [if player is male]licks and sucks at your cock until you cum down her throat[else]latches onto one of your nipples, nursing for your milk[end if]. When the skunkbeast atop you finally cums, you both growl loudly, loving the sensation of his ample load being blasted into your needy womb as he seeks to breed you.[impregchance]";
+	say "     As the skunk is running her paws over your body in tribute to her [if player is purefemale]mistress[else]master[end if], you notice the scent of another in the air. A skunkbeast snuffles towards you, having been drawn by your scent[if skrp is 1]. The skunk face at your groin smiles at the sight of him. '[one of]Oh, look at how hung he is[or]Just what we need[or]Oh baby[at random]!' she moans excitedly, your shared cunt getting wet at the sight of him[end if]. You rumble happily and shift around and present your rump to him, offering your dripping cunt to the sexy beast. He growls and climbs atop your [bodydesc of player] form, sinking his large cock into your skunkbeast body and stuffing you oh so wonderfully. As he pounds away at you, the skunk girl [if player is male]licks and sucks at your cock until you cum down her throat[else]latches onto one of your nipples, nursing for your milk[end if]. When the skunkbeast atop you finally cums, you both growl loudly, loving the sensation of his ample load being blasted into your needy womb as he seeks to breed you.[impregchance]";
 
 
 to say sblsex4:		[cunnilingus]
@@ -169,12 +169,12 @@ When Play begins:
 	now attack entry is "[skunk_attack]";
 	now defeated entry is "[skunk_defeat]";
 	now victory entry is "[skunk_vict]";
-	now desc entry is "[skunk_desc]";[ Description of the creature when you encounter it.]
-	now face entry is "that of a large-muzzled female skunk's";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "curvaceous and screams 'female and NEEDS it'. Men want to fuck you, women want to be you... and fuck you";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip. A pair of white stripes travel up its length, completing the effect.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "human shaped";[- Cock Description, format as you have a "size" (your text) cock-]
+	now desc entry is "[skunk_desc]"; [ Description of the creature when you encounter it.]
+	now face entry is "that of a large-muzzled female skunk's"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "curvaceous and screams 'female and NEEDS it'. Men want to fuck you, women want to be you... and fuck you"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip. A pair of white stripes travel up its length, completing the effect."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "human shaped"; [- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "[skunk bodyshift]"; [body change text. format as "Your body feels funny as (your text)."]
 	now skin change entry is "a sea of black moves over your back and a sea of white over your chest, while a matching stripe forms down the middle of the black"; [- skin change text. format as "Your skin feels funny as (your text)." -]
@@ -220,7 +220,7 @@ this is the skunkspray rule:
 	if a random chance of 1 in 10 succeeds and bodyname of player is not "Skunkbeast Lord":
 		skspray;
 	else:
-		retaliate;				[follows the advanced model if alternate]
+		retaliate; [follows the advanced model if alternate]
 
 to skspray:						[ignores defenses, requires no hit, hum/lib check instead to resist]
 	choose row monster from table of random critters;
@@ -251,7 +251,7 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 		decrease humanity of player by a random number between 2 and ( ( libdam + 1 ) / 2 );
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
-	now peppereyes is 0;										[pepperspray wears off]
+	now peppereyes is 0; [pepperspray wears off]
 	if libido of player >= 110 or HP of player <= 0 or humanity of player < 10:
 		if HP of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
@@ -269,13 +269,13 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Skunk";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
-	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now infect name entry is "Skunk"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 5; [ This is the number of days a heat "cycle" lasts, usually 7 ]
+	now heat duration entry is 2; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move."; [ This is the text that is written to the screen when the player comes into heat]
-	now heat start entry is "[skunk heat start]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it's for ending the cycle. GSSD her sex is reduced back to its previous size. Delete entire line if you wish nothing to happen. ]
-	now inheat entry is "[skunk in heat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now heat start entry is "[skunk heat start]"; [this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
+	now heat end entry is "[skunk heat end]"; [this is the same as heat start only it's for ending the cycle. GSSD her sex is reduced back to its previous size. Delete entire line if you wish nothing to happen. ]
+	now inheat entry is "[skunk in heat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is false;
 

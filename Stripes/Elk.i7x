@@ -31,14 +31,14 @@ to say losetoelk:
 	else:
 		say "Standing overtop of you, he grabs your head roughly and presses your face to his strong chest, forcing you to breathe in his powerful scent. The musky odor of the elk fills your senses, making you lose focus and grow increasingly aroused. You become eager to submit to the rutting male's needs.";
 		increase libido of player by 5;
-	if cunts of player > 0 and a random chance of 3 in 4 succeeds:
+	if player is female and a random chance of 3 in 4 succeeds:
 		say "     In a daze, you don't resist as the strong male pushes you onto all fours and hikes up your ass. With a firm thrust, he drives his thick rod into your [if cunt width of player < 4]tight [end if]pussy[if cunt length of player < 12]. It is difficult to take his enlarged shaft at first, but you press back onto it regardless[else]. Your [cunt size desc of player] cunt has little difficulty taking the cervine's shaft and you push back into his thrusts[end if], your body lusting for the musky elk. His hands grope and fondle you roughly as he fucks you, focused on his own satisfaction rather than your own, but even that turns you on all the more in your present state. Anything to get the virile male off so you can be seeded and bred by him, your horny body demands.";
 		say "     And eventually you get just that as he drives hard into you and unleashes his hot seed[if cunt length of player < 16]. With his animalistic cock pressed as deep into you as it can go, his seed splashes against your cervix, fluid pressure quickly building until it pushes past that final barrier and pours thickly into your womb[else]. With his animalistic cock buried fully inside you, his seed sprays into you, pooling against your cervix to be drawn into your womb[end if] [if the player is impreg_able]in an attempt to breed you[else]in a failed attempt to breed you[end if]. You moan and cry out, cumming as you feel the rutting male staking his claim on your uterus. Once his balls are drained, he pulls out, [one of]wipes his sticky cock across your ass[or]has you lick it clean[or]smears his sticky cock across your face[at random] and then drives you off before looking for another female to mate.[fimpregchance]";
-	else if cunts of player is 0 and anallevel > 1 and a random chance of anallevel in 5 succeeds:
+	else if player is not female and anallevel > 1 and a random chance of anallevel in 5 succeeds:
 		say "     In a daze, you don't resist as the strong male pushes you onto all fours and hikes up your ass. Lacking a pussy for him to breed, the victorious male will be claiming your ass of his would-be rival. With a firm thrust, he drives his thick rod into your [if scalevalue of player < 3]smaller [end if]body, forcing your puckered hole to spread open for him. In your lustful daze, you press back onto it despite the initial difficulty in taking the cervine shaft. Your body, lusting for the musky elk, submits to the stronger, and therefore more virile, male. His hands grope and fondle you roughly as he fucks you, focused on his own satisfaction rather than your own, but even that turns you on all the more in your present state. Anything to get the virile male off so you can be rutted and seeded by him, your horny body demands.";
 		say "     And eventually you get just that as he drives hard into you and unleashes his hot seed. With his animalistic cock buried fully inside your clenching ass, his seed sprays into you, pooling inside your bowels and filling your rear with the heat of his rut[if the player is mpreg_able]. Your fecund ass milks the stud's cock for all it can give, your sex-addled body and mind longing to be bred[end if][if player is male]. You moan and cry out, cumming as you feel the rutting male staking his claim in your rump with his virile load. Once his balls are drained, he pulls out, [one of]wipes his sticky cock across your ass[or]has you lick it clean[or]smears his sticky cock across your face[at random] and then drives off his defeated rival before looking for a proper female to mate.[mimpregchance]";
 	else:
-		say "     In a daze, you don't resist as the strong male guides your head down to his throbbing erection. In your present state, the sight and scent of that musky pillar of meat makes your mouth water. You plunge your mouth overtop of it without further prompting and start sucking him off eagerly. The taste of it is strong and arousing, full of virility and strength. You play your tongue along its smooth surface, swallowing down the precum that dribbles from it while the elk thrusts into your mouth with increasing speed. His hands keep a firm grip on your [if cocks of player > 0 and the player is elkfaced]antlers[else]head[end if] as his fifteen inch cock pushes into your mouth and down your throat.";
+		say "     In a daze, you don't resist as the strong male guides your head down to his throbbing erection. In your present state, the sight and scent of that musky pillar of meat makes your mouth water. You plunge your mouth overtop of it without further prompting and start sucking him off eagerly. The taste of it is strong and arousing, full of virility and strength. You play your tongue along its smooth surface, swallowing down the precum that dribbles from it while the elk thrusts into your mouth with increasing speed. His hands keep a firm grip on your [if player is male and the player is elkfaced]antlers[else]head[end if] as his fifteen inch cock pushes into your mouth and down your throat.";
 		say "     With a loud groan of relief, his penis throbs in your mouth and unleashes blast after blast of cum. His seed, strong and musky like his scent, is thick and plentiful. You gulp it all down, rubbing his ballsack as you do, eager for all he'll give. By the time he's done, your belly is full of his heated load and you are left aroused and unsatisfied. When he drives you off after his own fun is over, your lustful daze continues for some time before your head begins to clear.";
 		if libido of player < 80, now libido of player is ( ( 3 * libido of player ) + 80 ) / 4;
 
@@ -131,7 +131,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Elk"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Elk"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "The [one of]big elk[or]cervine creature[or]rutting male[or]wapiti[or]musky male[as decreasingly likely outcomes] [one of]bashes you with a hoof-like hand[or]knees you with a knocks you aside with a swing of his antlers[or]charges you, impaling you with one of his prongs[or]grabs you and twists your arm painfully as he tries to bring you to the ground[or]grabs your head and buries it in the musky scent of his fur, weakening your resolve to resist the studly male[at random].";
 	now defeated entry is "[beattheelk]"; [ Text when monster loses. Change 'elk' as above. ]
 	now victory entry is "[losetoelk]"; [ Text when monster wins. Change 'elk' as above. ]
@@ -160,7 +160,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -182,7 +182,7 @@ When Play begins:
 Section 3 - Definitions
 
 Definition: a person is elkfaced:
-	if the facename of the player is "Elk", yes;
+	if facename of player is "Elk", yes;
 	no;
 
 Section 4 - Elk Antler
@@ -197,7 +197,7 @@ it is part of the player.
 It is temporary.
 
 to say elkantleruse:
-	say "     Looking over the antler, you feel a strange compulsion that you don't resist[if player is elkfaced and cocks of player > 0]. Placing the piece of horn against one of your own antlers, there is a strange, crunchy sound as they fuse together. This is soon followed by the tingle of the nanites spreading through you[else]. Placing the piece of horn against the side of your head, there is a strange, crunching sound as they fuse together. You can feel the bony chunk sinking into you even as the tingles of nanites begin[end if].";
+	say "     Looking over the antler, you feel a strange compulsion that you don't resist[if player is elkfaced and player is male]. Placing the piece of horn against one of your own antlers, there is a strange, crunchy sound as they fuse together. This is soon followed by the tingle of the nanites spreading through you[else]. Placing the piece of horn against the side of your head, there is a strange, crunching sound as they fuse together. You can feel the bony chunk sinking into you even as the tingles of nanites begin[end if].";
 	setmonster "Elk";
 	choose row monster from the table of random critters;
 	if "Male Preferred" is listed in feats of player:

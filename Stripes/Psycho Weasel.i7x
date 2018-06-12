@@ -97,10 +97,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Psycho Weasel"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Psycho Weasel"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The crazed weasel batters at you with the long sleeves of his straightjacket![or]The wild-eyed creature bites you![or]The crazy weasel wraps his arms around you and humps his throbbing cock against your side![or]The weasel punches at you wildly![or]The weasel slams his shoulder into you, knocking you against the wall![or]The wild babble the creature keeps spouting fills you with confusion, giving it an opportunity to strike you![at random]";
-	now defeated entry is "[beatthepsychoweasel]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetopsychoweasel]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthepsychoweasel]"; [ Text when monster loses. ]
+	now victory entry is "[losetopsychoweasel]"; [ Text when monster wins. ]
 	now desc entry is "[psychoweaseldesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a weasel-like creature, with a muzzle full of pointed teeth, wild eyes and a scraggly appearance";
 	now body entry is "slender and flexible, with paws for hands and feet. Your weasel body moves with manic energy, but also has some uncontrolled twitches and spasms";
@@ -126,7 +126,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

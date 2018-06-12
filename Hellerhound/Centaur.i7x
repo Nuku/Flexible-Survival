@@ -71,11 +71,11 @@ To say centaur defeat:
 	if libido of player < 50:
 		Say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
 		increase carried of fresh apple by 1;
-	if libido of player > 50 and cocks of player > 0:
+	if libido of player > 50 and player is male:
 		Say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
-		if the humanity of the player > 90:
+		if the humanity of player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
 			increase carried of fresh apple by 1;
 			increase libido of player by 20;
@@ -88,14 +88,14 @@ To say centaur defeat:
 				say "The tentacles wrap around your cock, and then enter your ass with a slight poke of pain, driving you over the edge. The combined scream of rage from the centaur, along with the one of pleasure from you, mixes horribly and seems to shatter the air. The tentacles retract, and the centaur curls up, pulling your [cock of player] cock out of its dripping ass.";
 			say "Dazed by the sex, you wander off.";
 			now libido of player is 0;
-			decrease the humanity of the player by 4;
-	if libido of player > 50 and cocks of player is 0 and cunts of player > 0:
+			decrease the humanity of player by 4;
+	if libido of player > 50 and cocks of player is 0 and player is female:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vine-like bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
-		if the humanity of the player < 40:
+		if the humanity of player < 40:
 			say "The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
 			increase carried of fresh apple by 1;
 			now libido of player is 0;
-		else if the humanity of the player < 90:
+		else if the humanity of player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			if cunt width of player < 16:[too small, cock won't fit]
@@ -181,9 +181,9 @@ To say centaur attack:
 
 to say centaurgrowtorso:
 	say "you tip forwards, face first as a pair of new legs grows out from your behind, and an equine torso follows";
-	if the skinname of the player is "Mutant Centaur":
+	if skinname of player is "Mutant Centaur":
 		say ", covered with black fur, newly grown muscles rippling underneath.";
-	else if the skinname of the player is "Human":
+	else if skinname of player is "Human":
 		say ", the human skin contorting and stretching, leaving pink streaks as it expands to support the required muscles.";
 	increase hunger of player by 10;
 	say "You feel hungry, the energy being sapped out of you by the new growth.";
@@ -210,17 +210,17 @@ When Play begins:
 	now attack entry is "[one of]The Centaur punches your face with its hand[or]The Centaur headbutts you[or]The Centaur's green tentacles rise from under him and slap you[or]The Centaur rears up and slams you with his one of its hooves[at random]!";
 	now defeated entry is "[centaur defeat]";
 	now victory entry is "[centaur attack]";
-	now desc entry is "[centaurmeet]";[ Description of the creature when you encounter it.]
-	now face entry is "human, with horse ears";[ Face description, format as the text "Your face is (your text)"]
+	now desc entry is "[centaurmeet]"; [ Description of the creature when you encounter it.]
+	now face entry is "human, with horse ears"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "that of a centaur, with a muscled, human upper torso. Your body has well-defined muscles, but they seem a little strange and don't quite move right. Your arms are strong and muscular, and roughly human in appearance as well. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
-	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind. It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
 	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
-	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse. Your muscles grow and shift, moving into slightly different positions. Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse. Your muscles grow and shift, moving into slightly different positions. Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a green horse's tail";
-	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be. Your cock becomes twisted and deformed as it's infested by the strange infection. It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be. Your cock becomes twisted and deformed as it's infested by the strange infection. It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;
 	now dex entry is 24;
 	now sta entry is 20;
@@ -282,9 +282,9 @@ when play ends:
 	if bodyname of player is "Mutant Centaur":
 		if humanity of player < 10:
 			say "     As your new, tainted instincts take over, you are drawn back to the plains to join the growing herd of corrupted centaurs in their fight to spread their infection to the others";
-			if centaurmate is 1 and cunts of player > 0:
+			if centaurmate is 1 and player is female:
 				say ". You are welcomed by your powerful mate, the first and strongest of the herd. Being the first of his tainted mares, you are given a place above the others and fucked often. You bear him many children, each time becoming more like him until you look as if you were made for each other, as indeed you were[if player is male]. You are allowed to keep your cock and use it often to corrupt captured centaurs or to punish any in the herd who deserve discipline[end if]. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
-			else if centaurmate is 1 and cocks of player > 0:
+			else if centaurmate is 1 and player is male:
 				say ". You are welcomed by the herd's powerful leader, the first and strongest of the herd. Being the first he corrupted, you are given a place above the others and made into his lieutenant. He is a little disappointed that you did not return to him as a mare, but instead prepares you a special mash of tainted apples and his cum, which makes your cock grow into an impressive stallion's like his. You are allowed to use it often to corrupt captured centaurs and to punish any in the herd who deserve discipline. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
 			if centaurmate is 2:
 				say ". Having initially rejected the first mutant centaur's offer, you are punished for your lack of willingness to accept your place by his side. You are treated as a lowly breeding mare, mounted and fucked by any herd member who wishes to use you to slake their lusts or simply for want of someone to punish and hurt. You accept this over time, knowing it is your place[if player is female]. You are used by the male foals to train them to mount, fuck and corrupt others. You grow heavy with foals of your own and they always are taken away to be raised by the herd, denying you even the love of your children[end if][if player is male]. You are punished often for having a cock, with the stallions squeezing your penis and balls with their tentacles. It is never taken away though, instead only used as another means to hurt you for your initial rejection of their leader[end if].";

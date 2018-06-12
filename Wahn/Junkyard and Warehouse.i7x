@@ -33,60 +33,60 @@ instead of sniffing Warehouse Door:
 Section 2 - Entering the Warehouse
 
 Definition: a person is facially human:
-	if the facename of the player is "Human", yes;
-	if the facename of the player is "Herm Human", yes;
-	if the facename of the player is "Awesome tree", yes;
-	if the facename of the player is "Siren", yes;
-	if the facename of the player is "Greek Nymph", yes;
-	if the facename of the player is "Spartan", yes;
-	if the facename of the player is "Helot", yes;
-	if the facename of the player is "Amazonian", yes;
-	if the facename of the player is "Naiad", yes;
-	if the facename of the player is "Math Teacher", yes;
-	if the facename of the player is "Viking", yes;
-	if the facename of the player is "Knight", yes;
-	if the facename of the player is "Squire", yes;
+	if facename of player is "Human", yes;
+	if facename of player is "Herm Human", yes;
+	if facename of player is "Awesome tree", yes;
+	if facename of player is "Siren", yes;
+	if facename of player is "Greek Nymph", yes;
+	if facename of player is "Spartan", yes;
+	if facename of player is "Helot", yes;
+	if facename of player is "Amazonian", yes;
+	if facename of player is "Naiad", yes;
+	if facename of player is "Math Teacher", yes;
+	if facename of player is "Viking", yes;
+	if facename of player is "Knight", yes;
+	if facename of player is "Squire", yes;
 	no;
 
 Definition: a person is skintone human:
-	if the skinname of the player is "Human", yes;
-	if the skinname of the player is "Herm Human", yes;
-	if the skinname of the player is "Awesome tree", yes;
-	if the skinname of the player is "City Sprite", yes;
-	if the skinname of the player is "Wood Elf", yes;
-	if the skinname of the player is "Elven Hunter", yes;
-	if the skinname of the player is "Harpy", yes;
-	if the skinname of the player is "Siren", yes;
-	if the skinname of the player is "Succubus", yes;
-	if the skinname of the player is "Incubus", yes;
-	if the skinname of the player is "Greek Nymph", yes;
-	if the skinname of the player is "Spartan", yes;
-	if the skinname of the player is "Helot", yes;
-	if the skinname of the player is "Amazonian", yes;
-	if the skinname of the player is "Naiad", yes;
-	if the skinname of the player is "Caveman", yes;
-	if the skinname of the player is "Math Teacher", yes;
-	if the skinname of the player is "Viking", yes;
-	if the skinname of the player is "Knight", yes;
-	if the skinname of the player is "Squire", yes;
-	if the skinname of the player is "Gunbunny", yes;
+	if skinname of player is "Human", yes;
+	if skinname of player is "Herm Human", yes;
+	if skinname of player is "Awesome tree", yes;
+	if skinname of player is "City Sprite", yes;
+	if skinname of player is "Wood Elf", yes;
+	if skinname of player is "Elven Hunter", yes;
+	if skinname of player is "Harpy", yes;
+	if skinname of player is "Siren", yes;
+	if skinname of player is "Succubus", yes;
+	if skinname of player is "Incubus", yes;
+	if skinname of player is "Greek Nymph", yes;
+	if skinname of player is "Spartan", yes;
+	if skinname of player is "Helot", yes;
+	if skinname of player is "Amazonian", yes;
+	if skinname of player is "Naiad", yes;
+	if skinname of player is "Caveman", yes;
+	if skinname of player is "Math Teacher", yes;
+	if skinname of player is "Viking", yes;
+	if skinname of player is "Knight", yes;
+	if skinname of player is "Squire", yes;
+	if skinname of player is "Gunbunny", yes;
 	no;
 
 Definition: a person is bodily human:
-	if the bodyname of the player is "Human", yes;
-	if the bodyname of the player is "Herm Human", yes;
-	if the bodyname of the player is "Wood Elf", yes;
-	if the bodyname of the player is "Elven Hunter", yes;
-	if the bodyname of the player is "Awesome tree", yes;
-	if the bodyname of the player is "Greek Nymph", yes;
-	if the bodyname of the player is "Spartan", yes;
-	if the bodyname of the player is "Helot", yes;
-	if the bodyname of the player is "Amazonian", yes;
-	if the bodyname of the player is "Naiad", yes;
-	if the bodyname of the player is "Math Teacher", yes;
-	if the bodyname of the player is "Viking", yes;
-	if the bodyname of the player is "Knight", yes;
-	if the bodyname of the player is "Squire", yes;
+	if bodyname of player is "Human", yes;
+	if bodyname of player is "Herm Human", yes;
+	if bodyname of player is "Wood Elf", yes;
+	if bodyname of player is "Elven Hunter", yes;
+	if bodyname of player is "Awesome tree", yes;
+	if bodyname of player is "Greek Nymph", yes;
+	if bodyname of player is "Spartan", yes;
+	if bodyname of player is "Helot", yes;
+	if bodyname of player is "Amazonian", yes;
+	if bodyname of player is "Naiad", yes;
+	if bodyname of player is "Math Teacher", yes;
+	if bodyname of player is "Viking", yes;
+	if bodyname of player is "Knight", yes;
+	if bodyname of player is "Squire", yes;
 	no;
 
 Instead of entering the Storage Room:
@@ -96,7 +96,7 @@ Instead of going through the Warehouse Door:
 	if location of the player is the Abandoned Lot:
 		try going south;
 	else:
-		move the player to the Abandoned Lot;
+		move player to the Abandoned Lot;
 
 Instead of going south from the Abandoned Lot:
 	if Stevenremoved is 0:
@@ -126,7 +126,7 @@ Instead of going south from the Abandoned Lot:
 					now changed is true;
 				if changed is false:
 					say "     You explain that you are another survivor and that you wish to enter. The guard's gaze jumps left and right as he checks the street for roaming creatures nearby, then he nods. 'Of course. Let me open this up, he says and closes the slat. Through the thick door, you hear him call, 'We got a new visitor!' then you can hear the sound of a heavy locking bar being removed from the other side of the door. Opening the entrance a moment later, the guy hastily waves you inside before throwing it shut again. Offering his hand, he shakes yours and says, 'Welcome. I'm Steven by the way.'";
-					move the player to Storage Room;
+					move player to Storage Room;
 				else:
 					say "     The guard gives a startled cry when he sees the rest of your body, but you quickly explain that you are just another infected survivor, and you wish to enter for just a moment. 'I'm sorry,' he says. 'Too many of us have had, ahem, encounters with the beasts outside.' Starting to close the viewing slat at first, he then pauses for a second and looks at you with a little calculation in his eyes. 'Wait - I... I might make an exception,' he whispers, 'If you could bring me a soda. I haven't had one in so long.'";
 					if soda is owned:
@@ -137,7 +137,7 @@ Instead of going south from the Abandoned Lot:
 							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly clloses the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
 							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
 							delete soda;
-							move the player to Storage Room;
+							move player to Storage Room;
 							now StevenSwayed is 1;
 						else:
 							say "     Shaking your head, you step away from the door. The viewing slat quickly closes.";
@@ -175,7 +175,7 @@ instead of sniffing Steven:
 Before conversing Steven:
 	if the player is in Storage Room:
 		say "As you begin to converse with Steven, he waves to another guard. 'Take my place, will ya?' He takes you aside and says, 'We should talk away from everyone else.' He takes you across the floor to a row of storage compartments, now being used as makeshift guard quarters. He opens one up and lets you step inside.";
-		move the player to Steven's Office;
+		move player to Steven's Office;
 		move Steven to Steven's Office;
 
 After going to Storage Room from Steven's Office:
@@ -307,7 +307,7 @@ to say sexwithSteven:
 				say "You lustily let down your pants as your flower goes red with anticipation. As people around you begin screaming, however, a couple of guards grab you, careful not to touch your parts. They hurl open the door and toss you outside onto the stinging gravel.";
 			else:
 				say "You start doing a belly dance as everyone, civilians and guards alike, suddenly tenses up. No sooner do you turn around and slowly pull down your pants do the guards grab you and throw you, ass-backwards, onto the gravel outside.";
-		move the player to the Abandoned Lot;
+		move player to the Abandoned Lot;
 	else:
 		if Stevenremoved is 0:
 			if Steventrust is 0:
@@ -368,7 +368,7 @@ To StevenFuck:
 	else:
 		say "He presses your body up and down his equine body, until you finally catch his cock with your hands. Now you bring your head down onto it and start sucking it, loudly, strongly, with as much ferocity as his tongue. He falls over backwards, gasping, pounding the floor as loud as he can, screaming long and hard. He spasms hard, exhaling at the top of his lungs, and just as the seed comes forth and fills your mouth, the door roars open as heavy footsteps barge in and yank you away from your satisfied boyfriend.";
 	say "The guards grab at Steven, two at each arm, three at each leg, in order to subdue him. They finally pin him against the wall, away from you, while another three drag you out. A hushed murmur has fallen amidst the crowd outside, but all you hear is your heart racing and your stomach spinning with glee. You barely notice being thrown outside.";
-	move the player to Abandoned Lot;
+	move player to Abandoned Lot;
 	increase libido of player by 10;
 	now Stevenremoved is 1;
 	newStevenconverse;
@@ -457,7 +457,7 @@ to say Stevensuck:
 			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";
 		say "you moaning beneath him for him to mount you, bringing a smile to his equine face.";
 		say "     The strong horse guides his throbbing cock against your [if player is female]pussy before thrusting into your wet hole[else]pucker before thrusting into your tight hole[end if]. Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0]. He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[else]. He rubs one hand over your flat [bodytype of player] chest[end if].";
-		if cocks of player > 0 and cunts of player is 0:		[male sub bonus scene]
+		if player is puremale:		[male sub bonus scene]
 			say "     His hand moves lower, wrapping around your [cock size desc of player] [cock of player] dick and stroking it as he fucks you. 'What a strange mare you are with a leaking cock like this. You're a sexy mare though, aren't you? Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you. You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you. At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
 		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him. He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating. Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you. His loud, while not as big as the last, it still quite impressive and gives your [if player is female]womb[else]lower belly[end if] a wonderfully full feeling. After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
 
@@ -539,13 +539,13 @@ When play begins:
 	now libido entry is 40;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]muscular[at random]";
-	now type entry is "equine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "equine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
 
@@ -605,7 +605,7 @@ Instead of resolving a junkyard home:
 		say "You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach.";
 		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
 		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
-		move the player to Steven's home;
+		move player to Steven's home;
 		now Steven's home is known;
 		now junkyard home is resolved;
 

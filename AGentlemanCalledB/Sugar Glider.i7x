@@ -33,7 +33,7 @@ to say losetoSugarGlider:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process.[run paragraph on]";
 		else:
 			say "     Beaten by the giggling marsupial, you are unable to resist as she pushes you to the ground, stripping you of your clothing and gear in the process.[run paragraph on]";
-	if cocks of player > 0 and a random chance of 1 in 3 succeeds:	[69]
+	if player is male and a random chance of 1 in 3 succeeds:	[69]
 		say " The glider climbs atop you, moving into a 69 position. This gives you an eyeful of her two dripping, sugary snatches as her sweet waters drip out onto your lips. When her long, dexterous tongue slides along your cock, wrapping around it and squeezing it wetly, you can't help but moan, letting some of her juices drip out onto your tongue. With the taste of her saccharine syrup flooding your senses, it's not long before the sweet aroma of the drooling lips before you becomes too much. You begin licking and sucking as those syrupy folds, alternating between her pussies as best you can to further please your giggly companion. As you're working your tongue deep into one of her cunts, the sugar glider lowers her muzzle down, engulfing your cock and sucking down on it firmly.";
 		say "     Your tongue and lips work at those sweet folds of hers, lapping at that candy-sweet clit of hers. She moans and giggles in delight around your throbbing manhood while her agile tongue plays across it. She even slips her tongue out and curls it around your balls, licking and squeezing at them as she sucks you off. Having two honeyed treats to dig into, you lap at both her pussies, using your fingers to please the second while you eat out the other.";
 		WaitLineBreak;
@@ -72,12 +72,12 @@ to say beattheSugarGlider:
 	say "     Beaten, the giggling sugar glider falls to the ground. She looks up at you with a coy grin, putting her body on display as she traces a finger along the outer lips of each of her cunts, trying to entice you to take part in a different game";
 	if nosugarglidersex > 2:
 		say ", but you have little interest in the ditzy marsupial. As with the others of her kind before her, you shake your head and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
-	else if ( cocks of player > 0 or cunts of player > 0 ) and ( libido of player > 40 or bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" or bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider" ):
+	else if player is not neuter and ( libido of player > 40 or bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" or bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider" ):
 		say " and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider? (Y/N)";
 		if the player consents:
 			now nosugarglidersex is 0;
 			say "     Deciding to have some fun with the eager glider, you drop your gear and move towards her[run paragraph on]";
-			if cocks of player > 0 and a random chance of 1 in 3 succeeds:	[fellatio]
+			if player is male and a random chance of 1 in 3 succeeds:	[fellatio]
 				say " front. She gives a disappointed squeak as you grab her head and pull it towards your crotch instead of using your manhood to satisfy her need, but you're more in the mood for some quick, oral relief. Despite not getting what she wanted, the horny marsupial smiles and seems quite pleased to lavish attention upon your [cock of player] cock[smn].";
 				say "     Her saliva smells sweet and is a little sticky, but that tongue of hers is a delight. The long, dexterous tongue slips out and runs across your maleness, licking your manhood and balls. You are soon fully hard and dripping precum across your lustful prize's lips. She welcomes your [cock size desc of player] cock into her muzzle, sucking at it greedily while her paws grip your ass. The sugary scent of the horny girl has gotten you quite excited and you thrust firmly into her slick muzzle while running your fingers through her cotton-candy fur until you cum with a groan of ecstasy. The sexy marsupial swallows down your load, the scent of her arousal growing much stronger in the air as she orgasms as well, leaving wet patches of her juices on the ground and running down her thighs as she fingers her twin pussies to satisfy herself.";
 				WaitLineBreak;
@@ -126,72 +126,71 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Sugar Glider";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The Sugar Glider [one of]reaches into her pouch, withdrawing a small piece of candy. 'Catch!' she shouts, tossing the candy towards you. Distracted by the flying sweets, she quickly steps forwards, planting a sugary kiss on your cheek before you can react[or]runs towards you before stopping suddenly and spinning her body. Her long, thick tail strikes you in the face as she spins, filling your dizzy head with her sugary sweet scent[or]strikes you with her short, sharp claws[or]leaps towards you, wrapping you in her wing-like embrace, giggling happily as you struggle to push her off[or]wraps her long, soft tail around your [bodydesc of player] [bodytype of player] body, temporarily distracting you from fighting[at random].";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheSugarGlider]";				[ Text when monster loses. Change 'Sugar Glider' as above. ]
-	now victory entry is "[losetoSugarGlider]";					[ Text when monster wins. Change 'Sugar Glider' as above. ]
-	now desc entry is "[SugarGliderdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "cute and rodent-like, with large eyes and swivelling ears[if player is SugarGliderskinned and cocks of player > 0]. There is a pink stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[else if player is SugarGliderskinned]. There is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";
-	now body entry is "slender and light, yet strangely soft and malleable like taffy[if player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "a short coat of sugary cotton candy like fur. It is [if player is male]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[else]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, thick, somewhat prehensile tail, nearly as long as you are tall and covered in thick [if player is male]blue[else]pink[end if] cotton candy fur.";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]bright pink[or]narrow[or]slender[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your thoughts become clouded with a sudden craving for sugary treats, pressure build in your face as it is reshaped into a short, rodent-like muzzle, with large eyes made for seeing in the dark and swivelling ears atop your head";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your whole form goes soft. It shifts to a slender, rodent-like form with [if player is female]a large marsupial pouch on your belly and[end if] small, dexterous, paw-like hands and feet built for climbing. An unusual pulling sensation builds in your sides, as well as the edges of your arms and legs, and you watch with fascination as your body stretches like fresh taffy, forming large, wing-like membranes between your limbs";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you try and suppress the urge to giggle, thanks to the tickling sensation of the [if player is male]blue[else]pink[end if] and [if player is male]pink[else]blue[end if] cotton candy fur spreading over your body";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel a strange pulling building at the end of your spine, and you watch as your spine stretches to form a long tail covered in [if player is male]blue[else]pink[end if] cotton candy fur";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it shifts, becoming quite slender as it takes on a bright pink tone";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 10;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 11;			[ These values may be used as part of alternate combat.]
+	now name entry is "Sugar Glider"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "The Sugar Glider [one of]reaches into her pouch, withdrawing a small piece of candy. 'Catch!' she shouts, tossing the candy towards you. Distracted by the flying sweets, she quickly steps forwards, planting a sugary kiss on your cheek before you can react[or]runs towards you before stopping suddenly and spinning her body. Her long, thick tail strikes you in the face as she spins, filling your dizzy head with her sugary sweet scent[or]strikes you with her short, sharp claws[or]leaps towards you, wrapping you in her wing-like embrace, giggling happily as you struggle to push her off[or]wraps her long, soft tail around your [bodydesc of player] [bodytype of player] body, temporarily distracting you from fighting[at random]."; [ Successful attack message ]
+	now defeated entry is "[beattheSugarGlider]"; [ Text when monster loses. Change 'Sugar Glider' as above. ]
+	now victory entry is "[losetoSugarGlider]"; [ Text when monster wins. Change 'Sugar Glider' as above. ]
+	now desc entry is "[SugarGliderdesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "cute and rodent-like, with large eyes and swivelling ears[if player is SugarGliderskinned and player is male]. There is a pink stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[else if player is SugarGliderskinned]. There is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";
+	now body entry is "slender and light, yet strangely soft and malleable like taffy[if player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "a short coat of sugary cotton candy like fur. It is [if player is male]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[else]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a long, thick, somewhat prehensile tail, nearly as long as you are tall and covered in thick [if player is male]blue[else]pink[end if] cotton candy fur."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]bright pink[or]narrow[or]slender[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "your thoughts become clouded with a sudden craving for sugary treats, pressure build in your face as it is reshaped into a short, rodent-like muzzle, with large eyes made for seeing in the dark and swivelling ears atop your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "your whole form goes soft. It shifts to a slender, rodent-like form with [if player is female]a large marsupial pouch on your belly and[end if] small, dexterous, paw-like hands and feet built for climbing. An unusual pulling sensation builds in your sides, as well as the edges of your arms and legs, and you watch with fascination as your body stretches like fresh taffy, forming large, wing-like membranes between your limbs"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "you try and suppress the urge to giggle, thanks to the tickling sensation of the [if player is male]blue[else]pink[end if] and [if player is male]pink[else]blue[end if] cotton candy fur spreading over your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel a strange pulling building at the end of your spine, and you watch as your spine stretches to form a long tail covered in [if player is male]blue[else]pink[end if] cotton candy fur"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it shifts, becoming quite slender as it takes on a bright pink tone"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 11; [ These values may be used as part of alternate combat.]
 	now per entry is 16;
 	now int entry is 10;
 	now cha entry is 16;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 31;			[ The monster's starting HP. ]
-	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 2;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 2;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 8;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 65;			[ Target libido the infection will rise towards. ]
-	now loot entry is "crushed candies";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 33;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]malleable[or]slender[or]lithe[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "marsupial";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 31; [ The monster's starting HP. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 2; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 2; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 8; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 65; [ Target libido the infection will rise towards. ]
+	now loot entry is "crushed candies"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 33; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]malleable[or]slender[or]lithe[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "marsupial"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Definition: a person is sugargliderskinned:
-	if the skinname of the player is "Sugar Glider", yes;
+	if skinname of player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugargliderbodied:
-	if the bodyname of the player is "Sugar Glider", yes;
+	if bodyname of player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugarglidercocked:
-	if the cockname of the player is "Sugar Glider", yes;
+	if cockname of player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugarglidertailed:
-	if the tailname of the player is "Sugar Glider", yes;
+	if tailname of player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugargliderfaced:
-	if the facename of the player is "Sugar Glider", yes;
+	if facename of player is "Sugar Glider", yes;
 	no;
 
 Section 3 - Crushed Candy

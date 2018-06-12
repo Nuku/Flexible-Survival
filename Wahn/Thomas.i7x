@@ -131,7 +131,7 @@ to say LoseToCentaurs:
 	say "     Meanwhile Raul keeps fucking the black man with deep thrusts and soon he gives a lust-filled shout as he fills the human's ass with creamy centaur cum. Danny the centaur calls to him 'Wanna switch? I want to fuck that hole too and my bitch can clean you up.' Grinning, Raul agrees and pulls out of the human's ass with a wet slurping sound, then walks over to you and takes Danny's place. Presented with his long cock wet with the mare's juices and his cum, you take hold of it and start licking it all up. Grunts and moans from somewhere nearby tell you when Danny plunges his shaft into the black man's freshly fucked hole and starts thrusting...";
 	WaitLineBreak;
 	say "     The three centaurs take turns fucking the mare and human male, as well as getting blowjobs from you. Before too much longer, it's two mares as their other captive transforms further and further with each load of cum dumped into his hole. Soon he's fully female, sporting a nice pair of breasts and a deep pussy undoubtedly already bearing a developing foal. Finally when they are too exhausted to get their cocks up another time, the stallions have a short discussion if they should take you along too. 'Nah, we've got enough to do keeping an eye on this mare' - Raul says and slaps the former black man's equine ass and laughs as she whinnys - 'while we fully train her. Taking two and having them both run off in the night would just be stupid.' They herd their well-fucked mares away from the ruins, out into the wide plains where you lose sight of them. You're left behind, covered in centaur cum drying on your skin.";
-	infect "Centaur Mare";[from the pussy juices]
+	infect "Centaur Mare"; [from the pussy juices]
 	infect "Centaur Stallion";
 	infect "Centaur Stallion";
 	infect "Centaur Mare";
@@ -612,7 +612,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Thomas pussy to make him cum.";
 	[]
-	if (cocks of player > 0 and (HP of Thomas is 3 or HP of Thomas is 4 or HP of Thomas is 5)):
+	if (player is male and (HP of Thomas is 3 or HP of Thomas is 4 or HP of Thomas is 5)):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
@@ -630,7 +630,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Stimulate the herm centaur's ass with your hand.";
 	[]
-	if (cocks of player > 0 and lust of Thomas > 1):
+	if (player is male and lust of Thomas > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Thomas ass";
 		now sortorder entry is 8;
@@ -712,7 +712,7 @@ to say ThomasSex4: [Thomas cunt licked/fingered]
 	say "     Oh, but that's only the start of what you have planned for him... you bring your hand to his pussy and start to massage it. Slipping three, then four fingers, then your whole hand into the centaur's body, you stroke his inner passage, grinning at the lust-filled panting and moaning you create with that. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps it draws from Thomas every time you glide over it. Concentrating on that, it doesn't take much longer until the centaur herm orgasms, femcum gushing out of his opening and dripping off your arm. His long horsecock meanwhile gushes a huge load of cum onto the ground below, creating a small puddle.";
 	say "     As he comes down from his orgasm high, you step up to Thomas and pull him into a kiss. In between making out vigorously, he says 'Having a pussy feels great! Thanks for talking me into this.'";
 	if HP of Thomas is 2:
-		now HP of Thomas is 3;[now he's ready for mare sex]
+		now HP of Thomas is 3; [now he's ready for mare sex]
 	infect "Centaur Stallion";
 
 to say ThomasSex5: [Thomas pussy fucked by player]
@@ -730,7 +730,7 @@ to say ThomasSex5: [Thomas pussy fucked by player]
 	say "     The both of you coming down from your orgasm highs, Thomas moves around to take you into his arms and kisses you. In between making out vigorously, he says 'I love having you fuck me. Thanks for talking me into this.'";
 	infect "Centaur Stallion";
 	if HP of Thomas is 3 and a random chance of 1 in 3 succeeds:
-		now HP of Thomas is 4;[knocked up by the player]
+		now HP of Thomas is 4; [knocked up by the player]
 
 to say ThomasSex6: [player's pussy fucked by Thomas]
 	say "     You go and give Thomas a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the centaur herm's lips. Running your hands down over Thomas' muscled chest, then along his flank as you walk around his equine body. Then you kneel down and rub his balls, stroking his black horsecock as it emerges from its sheath. Groaning in anticipation as his cock hardens, Thomas says 'I can't wait to fuck you.' and steps a bit to the side so you're now fully under him.";
@@ -748,7 +748,7 @@ to say ThomasSex7: [fingering Thomas ass]
 	say "     Oh, but that's only the start of what you have planned for him... you bring your hand to his hole and start to massage it. After starting slow with one and two fingers, you get him to loosen up and soon are able to slip three, then four fingers in - followed by your whole hand. Pushing deeper into the centaur's body, you stroke his inner passage, grinning at the lust-filled panting and moaning you create with that. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps it draws from Thomas every time you glide over it. Concentrating on that, it doesn't take much longer until the centaur orgasms, his sphincter gripping your arm tightly as a huge load of cum gushes from his horsecock onto the ground, creating a small puddle.";
 	say "     As he comes down from his orgasm high, you step up to Thomas and pull him into a kiss. In between making out vigorously, he says 'It's amazing how hot it feels to have you play with my ass! Thanks for talking me into this.'";
 	if lust of Thomas is 1:
-		now lust of Thomas is 2;[now he's ready for anal sex]
+		now lust of Thomas is 2; [now he's ready for anal sex]
 	infect "Centaur Stallion";
 
 to say ThomasSex8: [fucking Thomas ass]

@@ -243,7 +243,7 @@ to say alexandratalk_bg:
 		now lastfuck of Alexandra is turns + 8;
 		try fucking Alexandra;
 	else if level of Alexandra is 1 and a random chance of 1 in 3 succeeds and Alexandrastory3 is false:
-		say "     'It felt so good to have you take me like that out in the street, fucking me like the bitch I am,' she says with a soft moan, her paw in her jeans. 'Mmm... I've been feeling my cunt changing a little[if cocks of player > 0 and cockname of player is listed in infections of Knotlist] to conform better to your knot[else if player is male], becoming a better fit for your sexy cock[else], getting hotter and wetter at just the thought of you playing with me[end if][if player is male] and stretching out so it can give birth to as many pups as you want to breed in me[end if]. Mmm... just thinking about it's getting me all worked up again, boss?' she moans, pressing her body to yours.";
+		say "     'It felt so good to have you take me like that out in the street, fucking me like the bitch I am,' she says with a soft moan, her paw in her jeans. 'Mmm... I've been feeling my cunt changing a little[if player is male and cockname of player is listed in infections of Knotlist] to conform better to your knot[else if player is male], becoming a better fit for your sexy cock[else], getting hotter and wetter at just the thought of you playing with me[end if][if player is male] and stretching out so it can give birth to as many pups as you want to breed in me[end if]. Mmm... just thinking about it's getting me all worked up again, boss?' she moans, pressing her body to yours.";
 		WaitLineBreak;
 		now Alexandrastory3 is true;
 		now lastfuck of Alexandra is turns + 8;
@@ -301,13 +301,13 @@ to say badAlexandrasex:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and lust of Alexandra <= 12:
+	if player is male and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Bend her over";
 		now sortorder entry is 1;
 		now description entry is "Bend her over a table and fuck the bitch.";
 	[]
-	if cocks of player > 0 and lust of Alexandra <= 12:
+	if player is male and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Against the wall";
 		now sortorder entry is 2;
@@ -342,19 +342,19 @@ to say badAlexandrasex:
 	now sortorder entry is 7;
 	now description entry is "Lick Alexandra's snatch.";
 	[]
-	if cunts of player > 0 or cocks of player > 0 and lust of Alexandra <= 12:
+	if player is not neuter and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 8;
 		now description entry is "69 with the dobie.";
 	[]
-	if cocks of player > 0 and ( HP of Alexandra > 3 or lust of Alexandra > 12 ):
+	if player is male and ( HP of Alexandra > 3 or lust of Alexandra > 12 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
 		now description entry is "Fuck those lovely melons of hers.";
 	[]
-	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
+	if player is not neuter and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
@@ -627,7 +627,7 @@ to say badAlexandraFang0:
 		if HP of Fang is 3 or HP of Fang is 4: [alpha Fang can't be stopped]
 			say "     Heading over towards the large wolf and the doberman bitch, you start to tell them to break it up, but Fang ignores you. He pounces atop the dog woman and drives his cock into her with an angry growl at you, causing you to slink back. You try to approach again, but he growls and snaps at you and you slink back from your alpha wolf, submitting to his dominance of you. Seeing you give in and backing off, he growls 'watch' at you before turning his attention back to her. It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 			say "[badAlexandraFang1]";
-		else if cocks of player is 0 and cunts of player > 0: [herm player]
+		else if player is not male and player is female: [herm player]
 			say "[badAlexandraFang3]";
 		else if player is not male: [neuter player]
 			say "     You start to head over to the wolf and doberman, intent on showing her who she really belongs to, but you stop short after a few steps. Remembering that you have no means to properly reinforce to your bitch that she's your sex toy if you lack a sex of your own. You can only settle in to watch and accept that Alexandra'll need to get what her bitch body needs from Fang until you're better equipped to satisfy her. As you're sitting down somewhere lined up for the sexy show, Fang pounces atop your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
@@ -1340,7 +1340,7 @@ to say goodalexandrasex_first:
 	say "     Once the long kiss is broken, time suddenly springs back into motion, now feeling like high-speed. You toss aside your gear as Alexandra yanks open her shirt. You're kissing her again as she fumbles with her belt and pants. You bury your face in her bosom as you pop open her bra and push the near-nude doberwoman backwards over her desk.";
 	say "[goodalexandrasex00]";
 	WaitLineBreak;
-	say "     Time seems to return to normal after [if ( cocks of player > 0 or cunts of player > 0 ) and recentsex is false]your second orgasm[else if player is not neuter]your orgasm[else if recentsex is false]her second orgasm[else]her orgasm[end if]. You roll off the panting doberwoman and the two of you slip to the floor. You snuggle in each other's arms with your backs to the desk - nude, sticky and warm with afterglow. After a few final kisses, you help the cop up. She restores her attire and you collect your gear before stepping out together, hand in hand. There's no way [if population of police station > 6]those on duty don't[else]the guy on duty doesn't[end if] know what happened in there. They're polite enough not to stare, but you get the feeling they quite approve of the two you being together.";
+	say "     Time seems to return to normal after [if player is not neuter and recentsex is false]your second orgasm[else if player is not neuter]your orgasm[else if recentsex is false]her second orgasm[else]her orgasm[end if]. You roll off the panting doberwoman and the two of you slip to the floor. You snuggle in each other's arms with your backs to the desk - nude, sticky and warm with afterglow. After a few final kisses, you help the cop up. She restores her attire and you collect your gear before stepping out together, hand in hand. There's no way [if population of police station > 6]those on duty don't[else]the guy on duty doesn't[end if] know what happened in there. They're polite enough not to stare, but you get the feeling they quite approve of the two you being together.";
 
 to say goodalexandrasex00:
 	let recentsex be false;
@@ -1883,7 +1883,7 @@ to say alexandra_repairs:
 			else:
 				say ". Shall you do so?";
 				if the player consents:
-					if cocks of player > 0 and anallevel > 1:
+					if player is male and anallevel > 1:
 						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms. As you kiss the cute corgi, Alexandra politely excuses herself until you two are done. Kneading his ass with one hand, you guide your cock under his tail with the other. The little guy moans softly and his tail wags excitedly. Easing him down slowly, you let your [cock of player] cock pop into his tight tailhole[if cock length of player > 15]. Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[else if cock length of player > 7]. Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[else]. Your [cock size desc of player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
 						say "     You bounce the cute fellow easily up and down your cock. He pants and moans as you fuck his ass. His own canine cock throbs against your belly, the six-inch red rod spurting precum onto it with every press of your penis against his prostate. As his excitement builds, his knot swells up and soon he's spurting dog cum across the both of you with a cry of ecstasy. Feeling him clamp down around your shaft, you push deep into him one last time and cum, pumping your [cum load size of player] load into the happy doggy.";
 						say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support. 'Oh wow! I mean... I'd never... that was awesome. I wish I knew how great that felt; I'd have been doing that for years had I known.' Taking a seat on the floor, you cuddle the cute guy, wiping up the mess you've made with a [if cock width of player >= 12]few rags[else]rag[end if]. After a few more kisses, you let Alexandra know you're ready to get back to work.";
@@ -2320,7 +2320,7 @@ to say A_Task56:
 	else:
 		say "     She points out several neighborhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rise. You listen to her detail the situation in those areas and promise to check them out the next chance you get. You take some time to study her map in detail, especially some of the city's key landmarks and any relatively safe routes or paths she's marked between them. Knowing those should help you get around more easily.";
 		say "[bold type]You have gained the [']City Map['] feat.[roman type]";
-		add "City Map" to feats of the player;
+		add "City Map" to feats of player;
 		say "[bestowcitymapfeat]";
 	now HP of Alexandra is 67;
 

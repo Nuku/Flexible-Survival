@@ -144,21 +144,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Corrupted Spawner"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Corrupted Spawner"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "The [one of]corrupted woman[or]infected female[or]lustful mutant[or]horny breeder[at random] [one of]slams herself against you, groping wildly[or]presses here transformed body to yours and kisses you while grabbing your ass[or]strikes at you with her [if corrvicchange1 is 18 or corrvicchange1 is 19]clawed [end if]hands[or]clocks you in the face while flailing to knock you down[or]presses her bosom[if corrvicchange1 is 20] and their throbbing dick-nipples [end if]against you, moaning for sex[or][if corrvicchange1 < 6]wraps her surprisingly strong tail around your waist[else if corrvicchange1 is 9]lashes out at you with her tentacles[else if corrvicchange1 is 14]grabs at you with her robotic arms[else if corrvicchange2 is 16]entwines her elongated tongue around your wrist, leaving you open for a grope[else if corrvicchange2 is 18]bites down onto you with her toothy maw[else]knees you in the side while trying to throw herself onto you[end if][at random].";
-	now defeated entry is "[beatthecorruptedvic]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetocorruptedvic]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthecorruptedvic]"; [ Text when monster loses. ]
+	now victory entry is "[losetocorruptedvic]"; [ Text when monster wins. ]
 	now desc entry is "[corruptedvicdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human in appearance, but having small patches of gray scales at the corners of your eyes";
 	now body entry is "slender and feminine with curvy hips. Overall, it looks rather human, but has a few visible differences. Most prominently, you have a trio of six-inch tendrils fluttering from your outer thighs and bony plates covering your forearms and the back of your hands";
-	now skin entry is "has a yellow hue and has patches of gray scales across your breastbone, hips, wrists and ankles"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now skin entry is "has a yellow hue and has patches of gray scales across your breastbone, hips, wrists and ankles"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
 	now tail entry is "You have a long tail covered in gray scales that slowly flattens out and becomes akin to a slimy, tongue-like appendage. You have a little trouble controlling it at times, finding it prone to licking things (which you indeed end up tasting) when you least expect it if you don't focus on keeping it in check.";
-	now cock entry is "[one of]spaded[or]altered[or]mutant[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "delightful shivers of pleasure accompany the changes occurring. Your face takes on a largely human appearance with beautiful, soft features and a lovely smile. Your brow is a little oddly shaped and there are patches of gray scales at the corners of your eyes"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now cock entry is "[one of]spaded[or]altered[or]mutant[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "delightful shivers of pleasure accompany the changes occurring. Your face takes on a largely human appearance with beautiful, soft features and a lovely smile. Your brow is a little oddly shaped and there are patches of gray scales at the corners of your eyes"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your form shifts and reshapes itself with increasingly pleasant alterations. By the time it settles down, your body thankfully has a generally human shape with feminine curves. There are several odd differences, some prominent and others more subtle. Your forearms and the back of your hands are armored by bony plates. Growing from your outer thighs, you have a few waving tendrils that are quite erotically sensitive to the touch";
-	now skin change entry is "your flesh turns yellow and patches of scales appear on your chest, hips and in a few other spots"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "your flesh turns yellow and patches of scales appear on your chest, hips and in a few other spots"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "a wet, sticky sensation builds up just above your ass, eventually forming into a long, thin tail. This new appendage is covered in scales on its upper half. As you look along the tail, you can see it flatten out and become wet, looking more like a gray tongue";
-	now cock change entry is "spurts of precum spray from it as it alters and reshapes itself, gaining a spaded glans clearly meant for pushing into breeding holes"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "spurts of precum spray from it as it alters and reshapes itself, gaining a spaded glans clearly meant for pushing into breeding holes"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 14; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -173,7 +173,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

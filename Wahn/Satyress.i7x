@@ -142,16 +142,16 @@ When Play begins:
 	now defeated entry is "[Satyress loses]";
 	now victory entry is "[Satyress wins]";
 	now desc entry is "[SatyressDesc]";
-	now face entry is "beautiful and mostly human-like, though with small goat horns sticking up from your forehead. The lusty look filling your eyes betrays the thoughts of sex and arousal that have become part of you";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "beautiful and mostly human-like, though with small goat horns sticking up from your forehead. The lusty look filling your eyes betrays the thoughts of sex and arousal that have become part of you"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "short, lithe and pretty flexible. Your upper body is that of a young woman, maybe a gymnast, while your lower body rests on two slender goat-like legs, your nimble goat hooves ringing off the floor with every step";
-	now skin entry is "[one of]goat-furred[or]smooth[or]pale[at random]"; [ format as the text "You have (your text) skin"]
-	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take.";[ write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]";[ format as "You have a 'size' (your text) cock ]
-	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "your feet shift underneath you, cracking and fusing into large goat-like hooves as your legs assume a digitigrade stance. After a minute you find it almost natural to balance on your new appendages, and are surprised at how nimble they are, the fact that your upper body has become that of a slender and flexible young woman seems almost secondary to your new satyr's legs"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your upper body's skin becomes very light, pale and smooth, while your lower body erupts with cute little curls of blond fur"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a small little goat-like tail bursts forth, settling in comfortably over your parky ass"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your aching member grows tight as it fits itself into a goat-like sheath hanging between your legs your balls hanging low below"; [ format as "Your cock feels funny as (your text)" ]
+	now skin entry is "[one of]goat-furred[or]smooth[or]pale[at random]"; [ format as "You have (your text) skin"]
+	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take."; [ write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "your feet shift underneath you, cracking and fusing into large goat-like hooves as your legs assume a digitigrade stance. After a minute you find it almost natural to balance on your new appendages, and are surprised at how nimble they are, the fact that your upper body has become that of a slender and flexible young woman seems almost secondary to your new satyr's legs"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your upper body's skin becomes very light, pale and smooth, while your lower body erupts with cute little curls of blond fur"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a small little goat-like tail bursts forth, settling in comfortably over your parky ass"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your aching member grows tight as it fits itself into a goat-like sheath hanging between your legs your balls hanging low below"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 14;

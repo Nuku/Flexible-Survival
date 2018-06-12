@@ -83,7 +83,7 @@ to say losetoDVtaur4:	[DV blow job]
 to say beattheDVtaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
-	else if a random number between 1 and 100 < DVtaurcatch and ( cocks of player > 0 or cunts of player > 0):
+	else if a random number between 1 and 100 < DVtaurcatch and ( player is not neuter):
 		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her. ";
 		if player is male:
 			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2}[as]2[end link], get a [link]blow job (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
@@ -145,10 +145,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dracovixentaur"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Dracovixentaur"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The dracovixentaur slams its tail into you, bashing you aside![or]The dracovixen rears up and slashes you with its foreclaws![or]It snaps and tears at you with its fangorious maw![or]The dracovixentaur punches you soundly in the jaw![or]The hybrid creature grabs you with its clawed hands and slams its armored head into yours. The head butt leaves you seeing stars for a moment.[or]The dracovixentaur slaps you soundly across the cheek![or]The hybrid creature grabs you with her clawed hands and slams your face into her bosom. The surprise motorboating leaves you momentarily dazed.[or]The dracovixen giggles and gives her breasts a tantalizing grope as she moves sexily around you.[at random]";
-	now defeated entry is "[beattheDVtaur]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoDVtaur0]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattheDVtaur]"; [ Text when monster loses. ]
+	now victory entry is "[losetoDVtaur0]"; [ Text when monster wins. ]
 	now desc entry is "[DVtaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "a mix of draconic and vulpine features blending into a sexy combination. You have a long, slender muzzle with a foxish grin. There are a pair of ivory horns which jut from the back of your head along with three smaller pairs below that. Tucked behind those are a pair of vulpine ears and long, flowing, lilac hair";
 	now body entry is "considerably transformed, having gained a tauric lower half that is part dragon and part vixen in appearance. While your upper body largely resembles that of a sexy and fit human woman, your lower body is that of a hybridized dragon-fox";
@@ -174,7 +174,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 8; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 8; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

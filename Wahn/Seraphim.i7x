@@ -228,9 +228,9 @@ When Play begins:
 	now face entry is "quite beautiful, with chiseled features bare of even the slightest imperfection. A full head of shoulder-length and slightly curled brown hair frames the picture of a handsome male";
 	now body entry is "that of a well-built and muscular human being, toned and strong. It is garbed in a robe of pure white, flowing fabric. Two large wings sprout from your back, bearing white feathers";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into perfectly sculpted male features. Shoulder-length locks of brown hair form to frame your handsome visage"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into perfectly sculpted male features. Shoulder-length locks of brown hair form to frame your handsome visage"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a very well-built form, leaving you with a toned and strong human-like body. A moment later, a pair of large white wings unfold behind your back, leaving you to wonder if you might fly once you've figured out how they actually work. Then finally, there is a short ringing in the air behind you, as if from hundreds of tiny bells, leaving you to find a neatly folded white robe on the ground as you turn around. Slipping into the silk-soft item of clothing, you just feel right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
@@ -283,7 +283,7 @@ instead of sniffing Gabriel:
 
 instead of fucking Gabriel:
 	if (lastfuck of Gabriel - turns < 5):
-		say "     Gabriel lowers his head submissively and says 'Forgive me, [if cunts of player > 0 and cocks of player is 0]mistress [else]master [end if]but I need a break...'";
+		say "     Gabriel lowers his head submissively and says 'Forgive me, [if player is purefemale]mistress [else]master [end if]but I need a break...'";
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;

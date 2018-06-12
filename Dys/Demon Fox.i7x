@@ -230,7 +230,7 @@ to say DemonFoxFirstVictory:
 	WaitLineBreak;
 
 to say DemonFoxFirstRead:
-	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possessive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact. [if cocks of player > 0 and cunts of player is 0]Interestingly[else]Thankfully[end if], it only seem to be attracted to [italic type]males[roman type].";
+	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possessive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact. [if player is puremale]Interestingly[else]Thankfully[end if], it only seem to be attracted to [italic type]males[roman type].";
 	now DemonFoxRead is true;
 	now TomeInteractions is 2;
 	now TomeEventPending is true;

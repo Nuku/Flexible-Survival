@@ -138,9 +138,9 @@ to say sexwithliliana:
 	else if bodyname of player is "Black Equinoid" and the player is pure:
 		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body. She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
 		let qq be { 1, 1 }; [oral]
-		if cunts of player > 0, add 2 to qq; [fucked]
-		if cocks of player > 0, add 3 to qq; [fuck her]
-		if cunts of player is 0 and ( anallevel is 3 or player is mpreg_ok ) and player is submissive, add 4 to qq; [anal]
+		if player is female, add 2 to qq; [fucked]
+		if player is male, add 3 to qq; [fuck her]
+		if player is not female and ( anallevel is 3 or player is mpreg_ok ) and player is submissive, add 4 to qq; [anal]
 		sort qq in random order;
 		if entry 1 of qq is 1, say "[eqwarsex1]";
 		if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -153,7 +153,7 @@ to say sexwithliliana:
 	else:
 		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body. 'We need to get you looking like a proper equinoid again.' She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you. Precum leaves slick trails across your body as she does this. ";
 		if a random chance of 1 in 3 succeeds:
-			say "     You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0]. She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1]. Her hands drift down to your cocks, taking one in each and stroking them[else if cocks of player is 1]. Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0]. Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[else if player is female]. She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if]. You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body. As the semen soaks into you, you feel more equinoid.";
+			say "     You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0]. She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1]. Her hands drift down to your cocks, taking one in each and stroking them[else if cocks of player is 1]. Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and player is female]. Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[else if player is female]. She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if]. You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body. As the semen soaks into you, you feel more equinoid.";
 		else:
 			say "     You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth. She moans softly and runs her hands over your [facename of player] head. You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load. As your body absorbs the tasty treat, you feel more equinoid.";
 		infect "Black Equinoid";
@@ -167,9 +167,9 @@ An everyturn rule:
 			if libido of equinoid warrior + libido of player > 200 and lastfuck of equinoid warrior - turns >= 4:
 				say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body. She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further. ";
 				let qq be { 1, 1 }; [oral]
-				if cunts of player > 0, add 2 to qq; [fucked]
-				if cocks of player > 0, add 3 to qq; [fuck her]
-				if cunts of player is 0 and ( anallevel is 3 or player is mpreg_ok ) and player is submissive, add 4 to qq; [anal]
+				if player is female, add 2 to qq; [fucked]
+				if player is male, add 3 to qq; [fuck her]
+				if player is not female and ( anallevel is 3 or player is mpreg_ok ) and player is submissive, add 4 to qq; [anal]
 				sort qq in random order;
 				if entry 1 of qq is 1, say "[eqwarsex1]";
 				if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -182,7 +182,7 @@ An everyturn rule:
 		else if lastfuck of equinoid warrior - turns >= 4 and a random chance of 1 in 5 succeeds:
 			say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body. 'We need to get you looking like a proper equinoid again.' She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you. Precum leaves slick trails across your body as she does this";
 			if a random chance of 1 in 3 succeeds:
-				say "     You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0]. She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1]. Her hands drift down to your cocks, taking one in each and stroking them[else if cocks of player is 1]. Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0]. Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[else if player is female]. She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if]. You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body. As the semen soaks into you, you feel more equinoid.";
+				say "     You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0]. She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1]. Her hands drift down to your cocks, taking one in each and stroking them[else if cocks of player is 1]. Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and player is female]. Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[else if player is female]. She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if]. You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body. As the semen soaks into you, you feel more equinoid.";
 			else:
 				say "     You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth. She moans softly and runs her hands over your [facename of player] head. You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load. As your body absorbs the tasty treat, you feel more equinoid.";
 			infect "Black Equinoid";
@@ -217,7 +217,7 @@ to say eqwarsex4:
 
 
 Definition: a person is blequinoidbodied:
-	if the bodyname of the player is "Black Equinoid", yes;
+	if bodyname of player is "Black Equinoid", yes;
 	no;
 
 

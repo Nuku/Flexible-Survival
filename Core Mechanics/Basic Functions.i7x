@@ -156,7 +156,7 @@ to FeatLoss (Featname - text):
 	LineBreak;
 	if Featname is listed in feats of player:
 		say "[bold type][Featname] has been removed from your feats![roman type][line break]";
-		remove Featname from feats of the player;
+		remove Featname from feats of player;
 	else if debugactive is 1:
 		say "ERROR: Trying to remove [Featname], which the player does not have.";
 
@@ -164,7 +164,7 @@ to FeatGain (Featname - text):
 	LineBreak;
 	if Featname is not listed in feats of player:
 		say "[bold type][Featname] has been added to your feats![roman type][line break]";
-		add Featname to feats of the player;
+		add Featname to feats of player;
 	else if debugactive is 1:
 		say "ERROR: Trying to add [Featname], which the player already has.";
 

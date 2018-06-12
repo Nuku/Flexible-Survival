@@ -135,7 +135,7 @@ Instead of fucking the Klauz:
 	say "[sexwithfelinoidpet]";
 
 to say KlauzScent:
-	say "     Klauz smells strong and masculine[if cunts of player > 0 or player is mpreg_ok]. It is quite arousing[end if].";
+	say "     Klauz smells strong and masculine[if player is female or player is mpreg_ok]. It is quite arousing[end if].";
 
 to say Klauzdesc:
 	say "     Klauz, the golden Felinoid that you rescued is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. Of course you can't help but wonder just how the large cat sees you and why it bothers following you around. Whether it sees you more as a friend or companion, or as a potential mate...";
@@ -214,7 +214,7 @@ to say sexwithfelinoidpet:
 	setmonster "Felinoid";
 	if lastfuck of felinoid companion - turns < 4:
 		say "     You need to wait a while before making such an offer again to Klauz.";
-	else if HP of Felinoid companion > 4 and the remainder after dividing HP of Felinoid companion by 3 is 2 and libido of player >= 30 and ( cocks of player > 0 or cunts of player > 0 ):
+	else if HP of Felinoid companion > 4 and the remainder after dividing HP of Felinoid companion by 3 is 2 and libido of player >= 30 and player is not neuter:
 		say "     Your large lion-like companion approaches you nuzzling at you trying to get your attention. You bend down to get a closer look making sure that he didn't get hurt. When you bend down, you feel his rough tongue run across your cheek. He licks your face a few more times before forcing your head down beneath him with his massive paw. Looking up, you see his large feline erection. The smell of his musk is overwhelming filling your lungs with each breath. You take a few more inhalations, savoring the felines musk before wrapping your lips gently around his cock. The barbs move from your lips down into your throat as you slowly bob your head back and forth. You run your tongue along his cock trying to please every inch. As you do so you begin frantically removing any gear possible tossing it to the side. Eventually taking off enough to expose your rear. The large feline takes notice then suddenly pulls his cock from your lips, as if he can smell your need to be [if player is impreg_able]bred[else]fucked[end if]. He quickly moves around you. You instinctively adjust your position to all fours and reveal your [if player is female]wet cunny[else]tight pucker[end if]. Your companion quickly mounts you and lines the tip of his wet cock with your awaiting hole.";
 		say "     He pushes his wet cock deep into you with ease. You can feel each bump and barb rub against your hole and your inner walls. Once you feel his heavy pair of balls resting against your own, he begins to hump you in earnest. His barbs fill you with pleasure as they rub against your insides[if player is male] causing you steadily leak precum beneath you[end if]. The nubs on his shaft quickly, and repeatedly, go in and out of your [if player is female]quivering cunny[else]clenching ring[end if] sending shivers up your spine[if player is male]. With each hard thrust in, you can feel his balls slap against your own accompanied by a wet slurp coming from your abused hole[end if]. You can't help but moan beneath the dominant male as he fucks you. Even though he is your comrade and you took him in as your pet, you have continued to allow him to become the more dominant party, allowing him to have his way with you whenever you please. The dominant male picks up the pace of his already rough fucking.";
 		say "     After some time, he bites down hard on the nape of your neck, surely drawing blood. The rough bite sets you over the edge as you cum [if player is male]beneath the dominant male painting the ground with your sticky seed[else]hard, your vaginal walls gripping at his feline rod[end if]. Not much longer he releases your nape and releases a loud roar as he thrusts his feline shaft deep inside of you and releases shoots his virile seed deep into you. He pulls his cock out, which causes you to moan for more, and shoots the last two or three shoots onto your ass. Which you are sure is a way to mark his territory. As per usual, he walks back around you and has you lick his cock clean. You've begun to enjoy the taste of his cum more and more, but most importantly you are happy to have pleased the dominant male. After you lick his cock clean, he struts away leaving you by yourself. You quickly put your gear back on, savoring the taste of his musk trapped on your lips.[impregchance]";
@@ -364,7 +364,7 @@ when play ends:
 					else:
 						say "     You make sure to bring your snowmeow pet along with you as you head off into the city with your felinoid companion. After an evening of lustful attention from you both, he succumbs to his infection, becoming a lustful feline thirsty for [if player is not male]your companion's cock[else]you and your companion's cocks[end if]. He is mounted and fucked repeatedly, used to slake your lusts between capturing and transforming others into breeding sluts. You occasionally allow him to mount and breed a female, siring submissive snowmeow kittens. These grow to become subservient, lustful fucktoys to the dominant felinoids that you create and breed.";
 [				else if HP of Sven >= 30 and HP of Sven < 50:
-					say "***confident Sven succumb ending add-on.";		]
+					say "***confident Sven succumb ending add-on."; ]
 			else:
 				if HP of Fang is 3 or HP of Fang is 4:	[felinoid player w/companion and Fang]
 					if player is female:
@@ -398,7 +398,7 @@ when play ends:
 				[ see Feral Wolf file for this ending ]
 				now tempnum is 0;
 			else:
-				if cunts of player > 0 and ( HP of Fang is 3 or HP of Fang is 4 ):
+				if player is female and ( HP of Fang is 3 or HP of Fang is 4 ):
 					[ see Fang file for this ending ]
 					now tempnum is 0;
 				else if player is female:

@@ -106,7 +106,7 @@ to say sexwithLucy:
 			now title entry is "Tail fun";
 			now sortorder entry is 6;
 			now description entry is "Let Lucy put her tail to work.";
-		if cocks of player > 0 and HP of Lucy >= 3:
+		if player is male and HP of Lucy >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal";
 			now sortorder entry is 7;
@@ -200,7 +200,7 @@ Instead of resolving a Memories of the Mall:
 	if libido of player < 50, increase libido of player by 5;
 	increase lastfuck of Lucy by 6; [ready for more sex]
 	now battleground is "void";
-	move the player to Mall Atrium;
+	move player to Mall Atrium;
 
 
 to mallrecall:
@@ -223,7 +223,7 @@ to mallrecall:
 			else:
 				say "     As you start heading back to safe territory after your excursion, you find yourself thinking of the mall, wanting to head back there to hang out. The mall's a safe place, you remind yourself, and head back in that direction eagerly. You arrive safely and enter the shopping plaza[if the player is mallratbodied], feeling quite at home here[end if], and head to the central atrium.";
 			now battleground is "void";
-			move the player to Mall Atrium;
+			move player to Mall Atrium;
 
 
 Section 5 - Endings

@@ -178,16 +178,16 @@ to say sexwithLarissa:
 
 
 to say LarissaTFsex:		[Menu options to be added later as more scenes are composed?]
-	if ( ( cocks of player > 0 and cunts of Larissa > 0 ) or ( cunts of player > 0 and cocks of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist and bodycat of Larissa is 2:
+	if ( ( player is male and cunts of Larissa > 0 ) or ( player is female and cocks of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist and bodycat of Larissa is 2:
 		say "[Larissasex_taurfun]";
 	else if player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
 			say "[Larissasex_MF]"; [player tops]
 		else:
 			say "[Larissasex_FM]"; [Larissa tops]
-	else if cocks of player > 0 and cunts of Larissa > 0:		[M/F, M/H, H/F]
+	else if player is male and cunts of Larissa > 0:		[M/F, M/H, H/F]
 		say "[Larissasex_MF]";
-	else if cunts of player > 0 and cocks of Larissa > 0:		[F/M, F/H, H/M]
+	else if player is female and cocks of Larissa > 0:		[F/M, F/H, H/M]
 		say "[Larissasex_FM]";
 	else if cocks of Larissa > 0:						[M/M]
 		say "[Larissasex_MM]";
@@ -285,7 +285,7 @@ to say Larissasex_taurfun:
 			say "[Larissasex_taurMF]"; [player tops]
 		else:
 			say "[Larissasex_taurFM]"; [Larissa tops]
-	else if cocks of player > 0 and cunts of Larissa > 0:
+	else if player is male and cunts of Larissa > 0:
 		say "[Larissasex_taurMF]"; [player tops]
 	else:
 		say "[Larissasex_taurFM]"; [Larissa tops]

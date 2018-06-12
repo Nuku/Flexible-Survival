@@ -68,7 +68,7 @@ Instead of resolving Strange Serpent:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
 							now area entry is "nowhere";
-							now non-infectious entry is true;	[Wasps locked again]
+							now non-infectious entry is true; [Wasps locked again]
 							break;
 				if the player consents:
 					say "     Quickly, you grab a hold of him, much to his surprise, and start trying to pull him free of you. Sadly, his form is too slick for you to get a good grip, and even when it seems you might even have some grip he doesn't budge, instead eliciting jolts of twisted pleasure across your form, until you inevitably relent.";
@@ -174,7 +174,7 @@ an everyturn rule:
 			if velospostmusings is not empty and a random chance of 2 in 3 succeeds:
 				say "[one of]Struck with the pangs of rather ponderous prodding by [link]Velos[as]talk Velos[end link], you get the impression that he may want to talk to you, likely preferring not to just pop out when you might be in the middle of something.[or]You find yourself infrequently pestered by your occupant in a rather deliberate manner, giving you the impression that [link]Velos[as]talk Velos[end link] might want to talk to you.[or]You're forced to contend with [link]Velos[as]talk Velos[end link][']s attempts to draw your attention, maybe he has something to talk to you about?[at random]";
 			if HP of Velos < 9 and a random chance of HP of velos in 10 succeeds:
-				increase score by 0;		[skipping message]
+				increase score by 0; [skipping message]
 			else:
 				if a random chance of 1 in 3 succeeds:
 					say "     [one of]Quizzically, you prod your stomach, eliciting an occasional twitch from your passenger, who's probably resting right now[or]Your stomach twitches slightly with the shifting of your residence, such activity relenting as quickly as it started[or]You're forced to contend with slight discomfort as your resident twists and writhes within your confines--perhaps out of boredom--forcing you to prod him in discontent until he relents[cycling].";
@@ -185,7 +185,7 @@ an everyturn rule:
 				else:							[large player]
 					say "     [one of]You tense slightly as your occupant makes a rather sudden jolt within your confines, though it's not enough to be a substantial distraction[or]Your briefly forced to grit your teeth in a wave of tense, twisted pleasure, the serpent readjusting himself a fair bit. A little embarrassed afterwards, you hope nobody saw that, as his occupancy isn't made outwardly apparent[or]You're lightly assaulted with some rather erratic movement by your resident. Aimless as it is, you get the impression he's lost track of his orientation[cycling].";
 	if level of velos > 2:
-		now velossaved is false;	[reset velos's fight saving feature]
+		now velossaved is false; [reset velos's fight saving feature]
 
 Section 4 - Musing w/Velos
 

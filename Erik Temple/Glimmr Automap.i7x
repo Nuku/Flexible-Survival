@@ -53,7 +53,7 @@ Chapter - Configuration
 
 When play begins:
 	if glulx graphics is supported:
-		now the current zoom is map zoomed in;[refers to Automap's zoom, which must always be set to zoomed in.]
+		now the current zoom is map zoomed in; [refers to Automap's zoom, which must always be set to zoomed in.]
 		if the current zoom level of the map-renderer is 0:
 			now the current zoom level of the map-renderer is the initial zoom level of the associated tileset of the map-renderer;
 		if the map viewport is not a map-display window:
@@ -203,7 +203,7 @@ For scaling a map-display window (called the viewport) (this is the resize canva
 	#end if;
 	reserve automap memory of y-win to the nearest whole number rows by x-win to the nearest whole number columns;
 	if the map is drawn and the current zoom is not map absent:
-		do nothing;[Automap's map is drawn by the phrase "if the map is drawn"; hence this odd instruction.]
+		do nothing; [Automap's map is drawn by the phrase "if the map is drawn"; hence this odd instruction.]
 	now the map-width of the map-renderer is (map width * tile-width of associated tileset of the map-renderer);
 	now the map-height of the map-renderer is (map height * tile-height of associated tileset of the map-renderer);
 	now the canvas-width of the associated canvas of the viewport is map-width of the map-renderer;
@@ -322,7 +322,7 @@ A clicking graphlink rule when the current graphlink window is a map-display win
 					#if utilizing Glimmr debugging;
 					say "[>console][GLAM]Mouse input received on graphlink '[current graphlink]' in window [italic type][current graphlink window][roman type]: ([current graphlink x], [current graphlink y]). Automap graphlink rules triggered for room [i][glulx equivalent of alt entry][/i].[<]";
 					#end if;
-					follow the automap graphlink rules for the glulx equivalent of alt entry;[the glulx equivalent is a type-casting routine. It returns a room.]
+					follow the automap graphlink rules for the glulx equivalent of alt entry; [the glulx equivalent is a type-casting routine. It returns a room.]
 				else:
 					#if utilizing Glimmr debugging;
 					say "[>console][GLAM]Mouse input received on graphlink '[current graphlink]' in window [italic type][current graphlink window][roman type]: ([current graphlink x], [current graphlink y]). Automap graphlink rules triggered.[<]";

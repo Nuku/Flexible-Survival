@@ -22,7 +22,7 @@ to say chinvic:
 	else:
 		say "     Banging on you one last time, you finally succumb to exhaustion, falling to the earth. The rodent backs away from you, appearing a little surprised she managed to take you down.";
 		say "     [if chindem is false]Squeaking incomprehensibly at you, n[else]'[one of]S-so tempting[or]M-maybe just a little[or]I-I won? O-oh, I could[at random]...' N[end if]o doubt in need to sate her infection's wanton influence, she quickly climbs on top of you, giddily fondling over you and inspecting what you have to offer, freeing you of any obstruction in her way all the while.";
-	if cocks of player > 0 and cock length of player < 17 and a random chance of 1 in 2 succeeds:
+	if player is male and cock length of player < 17 and a random chance of 1 in 2 succeeds:
 		if chindem is false:
 			say "     [if scalevalue of player > 3]Chittering in awe over your physical scale[else]Chittering eagerly[end if] as she crawls";
 		else:
@@ -44,9 +44,9 @@ to say chinvic:
 		say "     [if HP of player < 1]Subjected to[else]Attending[end if] this creature's wanton need, the wet, loud endeavor brings her to ecstasy, squeaking out weakly as she clings to you, [if HP of player < 1]forced to[else]having you[end if] swallow down a flood of her subsequent sexual fluids. Exhausted as she now is, [if HP of player < 1]you toss the rodent free of you[else]you pull yourself free of the rodent[end if], who weakly scrambles off into the distance, leaving you to recover from the ordeal and retreat back from whence you came.";
 
 to say chinloss: [Placeholder, player victory scenes expected to be added in later]
-	if cocks of player is 0 or ( nochinchillasex > 2 and the remainder after dividing nochinchillasex by 5 is not 0 ):
+	if player is not male or ( nochinchillasex > 2 and the remainder after dividing nochinchillasex by 5 is not 0 ):
 		say "     Eventually, the critter collapses, too exhausted to fight back any further. With nothing more to gain from this exchange, you choose to depart, letting the rodent retreat back from whence it came.";
-		if cocks of player > 0, increase nochinchillasex by 1;
+		if player is male, increase nochinchillasex by 1;
 	else:
 		say "     Eventually, the critter collapses, too exhausted to fight back any further. With the energetic creature down, you're free to take advantage of the situation if you'd like. You can see traces of a sexy female figure beneath the little fuzzball's fluffy fur. Shall you [if cock length of player > 16]have some naughty fun with her[else]fuck her[end if]?";
 		if the player consents:
@@ -99,16 +99,16 @@ When Play begins:
 	now defeated entry is "[chinloss].";
 	now victory entry is "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "short chinchilla muzzle, small gray mouse-like ears, and cute, little whiskers adorned on it";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You fairly long tail which fluffs out quite a bit.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws. While your hands and arms shrink, as very small claws sprout from your new paw tips."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "gray fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "A long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face entry is "short chinchilla muzzle, small gray mouse-like ears, and cute, little whiskers adorned on it"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You fairly long tail which fluffs out quite a bit."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape."; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws. While your hands and arms shrink, as very small claws sprout from your new paw tips."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "gray fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "A long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes."; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 20;
 	now sta entry is 10;

@@ -408,7 +408,7 @@ to say sidney_sexmenu:
 		now title entry is "Missionary";
 		now sortorder entry is 2;
 		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] missionary style";
-	if cocks of player > 0 and HP of Sidney >= 7:
+	if player is male and HP of Sidney >= 7:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 5;
@@ -483,7 +483,7 @@ to say sexwithSidney_03:
 to say sexwithSidney_04:
 	if player is male:
 		say "     Taking out your cock[smn], you offer [itthemm] to the [if level of Sidney is 21]vulpine[else if level of Sidney is 22 or level of Sidney is 23]lutrine[else]canine[end if] female. She [if level of Sidney is 71]pants[else]grins[end if] at the sight of [itthemm] and leans in to nuzzle [itthemm]. Sniffing at the scent of your arousal, she moans softly and then slides her muzzle over your shaft. She licks and sucks at your cock with gusto, her body knowing just what to do. You rub a hand encouragingly over her head, petting the eager girl.";
-		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cock[smn][if cockname of player is listed in infections of InternalList and cunts of player > 0] and puss[yfn][else if player is female], balls and puss[yfn][else if cockname of player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[else]talented[end if] tongue. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8]. The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
+		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cock[smn][if cockname of player is listed in infections of InternalList and player is female] and puss[yfn][else if player is female], balls and puss[yfn][else if cockname of player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[else]talented[end if] tongue. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8]. The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
 		if a random chance of 3 in 5 succeeds:
 			if cocks of player is 1:
 				say "     With her so eagerly at work, you can only hold out so long before grunting in release. You pump your [cum load size of player] load into her muzzle and down her throat as she swallows as much semen as she can get. Releasing your spent shaft, she licks her chops and smiles up at you. 'Yummy!'";

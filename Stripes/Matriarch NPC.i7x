@@ -79,7 +79,7 @@ to say sexwithMatriarch:
 	now sex entry is "Both";
 
 to say HyenaMatSexScenes:
-	if cocks of player > 0 or cunts of player is 0:
+	if player is male or cunts of player is 0:
 		if player is male:		[MALE/HERM]
 			say "     Your matriarch reaches down and grabs your twitching cock, growling a little. '[one of]And what does a little bitch like you think she's going to do with this?' she rumbles[or]A submissive bitch like you doesn't need something like this,' she growls[or]And why do you have a useless toy like this?' she laughs[or]You don't need this useless thing any more, you submissive bitch,' she teases[at random]. She swats your shaft away, slapping it against your thigh with disdain. ";
 		else:				[NEUTER]

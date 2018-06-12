@@ -13,7 +13,7 @@ Instead of Resolving the Government Assistance:
 	say "     As you are traveling through the city, you recognize a couple of government buildings and offices, largely in ruin. The air is heavy with smoke and soot, but you start to run regardless. You recall that you're close to the State Capitol Building. If there's anywhere they'll know what's going on and where you can get assistance, it'll be there. You cough as you keep pushing through the smokey air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
 	say "     The devastation here is extensive, with burnt out and smashed buildings all around. Several of the streets are cracked and broken, spewing flames. It looks almost like some twisted war zone. The creatures here must be particularly dangerous and devastating. From the look of the destruction, these creatures are probably roaming around the whole area, making traveling here quite risky. You'd best be extra cautious if you plan on looking around here.";
 	now The Approaching the Capitol Building is known;
-	move the player to Approaching the Capitol Building;
+	move player to Approaching the Capitol Building;
 	now Government Assistance is resolved;
 
 
@@ -77,35 +77,35 @@ Section 3 - Roaming Creatures
 
 instead of going north from Approaching the Capitol Building:
 	follow the capitol wandering rule;
-	move the player to Charred Streets;
+	move player to Charred Streets;
 
 instead of going south from Charred Streets:
 	follow the capitol wandering rule;
-	move the player to Approaching the Capitol Building;
+	move player to Approaching the Capitol Building;
 
 instead of going north from Charred Streets:
 	follow the capitol wandering rule;
-	move the player to Path of Ashes;
+	move player to Path of Ashes;
 
 instead of going south from Path of Ashes:
 	follow the capitol wandering rule;
-	move the player to Charred Streets;
+	move player to Charred Streets;
 
 instead of going east from Path of Ashes:
 	follow the capitol wandering rule;
-	move the player to A Volcanic Crater;
+	move player to A Volcanic Crater;
 
 instead of going west from Path of Ashes:
 	follow the capitol wandering rule;
-	move the player to Rusty Walkways;
+	move player to Rusty Walkways;
 
 instead of going west from A Volcanic Crater:
 	follow the capitol wandering rule;
-	move the player to Path of Ashes;
+	move player to Path of Ashes;
 
 instead of going east from Rusty Walkways:
 	follow the capitol wandering rule;
-	move the player to Path of Ashes;
+	move player to Path of Ashes;
 
 this is the capitol wandering rule:
 	now battleground is "Capitol";

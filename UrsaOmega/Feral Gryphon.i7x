@@ -34,7 +34,7 @@ to say losetoGryphon:
 		if waiterhater is 0, wait for any key;
 		LineBreak;
 		say "     He breeds you roughly, his cock pistoning in and out of your [if player is female]cunt[else]back passage[end if] with an animalistic ferocity. [if player is male]You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust. [end if]The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if player is female]vagina[else]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
-		if ( cunts of player > 0 and cunt width of player < 7 ) or ( cunts of player is 0 and scalevalue of player < 3 and player is not twistcapped ):
+		if ( player is female and cunt width of player < 7 ) or ( cunts of player is 0 and scalevalue of player < 3 and player is not twistcapped ):
 			say " He grinds it against your [if player is female]cunt-lips[else]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
 		else:
 			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if player is female]nether-lips[else]asshole[end if] uncomfortably; on the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
@@ -180,16 +180,16 @@ When Play begins:
 	now defeated entry is "[beattheGryphon]"; [ Text when monster loses. Change 'Gryphon' as above. ]
 	now victory entry is "[losetoGryphon]"; [ Text when monster wins. Change 'Gryphon' as above. ]
 	now desc entry is "[Gryphondesc]";
-	now face entry is "the visage of a majestic eagle, feathered and beaked"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "the visage of a majestic eagle, feathered and beaked"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "that of a lion, fully quadrupedal, with powerful muscles rippling under your skin that speak of your predatory nature";
-	now skin entry is "golden-furred and feathered"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, leonine tail hanging over your rear."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now skin entry is "golden-furred and feathered"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a long, leonine tail hanging over your rear."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]knotted[or]leonine[or]tapered[at random]";
-	now face change entry is "it pushes outwards, hardening into a predatory beak. Your ears retreat into your body, becoming simple openings as your head becomes that of an eagle"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "it pushes outwards, hardening into a predatory beak. Your ears retreat into your body, becoming simple openings as your head becomes that of an eagle"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "it twists and shifts into your new leonine form, bones cracking as they reform into a quadrupedal stance";
 	now skin change entry is "golden lion fur covers your body, while avian feathers sprout from your head and neck";
-	now ass change entry is "A golden lion tail sprouts from above your ass"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes tapered, with a slight bulge appearing at the base of it. Your cockhead feels strange as it grows barbs, giving it a rough texture"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "A golden lion tail sprouts from above your ass"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it becomes tapered, with a slight bulge appearing at the base of it. Your cockhead feels strange as it grows barbs, giving it a rough texture"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 24;
 	now dex entry is 18;
 	now sta entry is 20;
@@ -204,7 +204,7 @@ When Play begins:
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 8;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -227,7 +227,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Feral Gryphon":
 		if humanity of player < 10:
-			if player is pure and HP of Garrett >= 7 and cocks of player > 0 and cunts of player is 0:
+			if player is pure and HP of Garrett >= 7 and player is puremale:
 				say "     As you succumb to your gryphon infection, you can feel your mind descending to bestial urges. Before you completely lose yourself, you make your way back to Qytat and Garrett's milking operation. The milkman greets you happily and makes a special place for you among his prized milkers. The doses of processed he-gryphon milk you receive do help keep more of your intellect intact even as they fuel your gay lusts and gryphon desires.";
 				say "     Garrett keeps you apprised of his success in arranging a deal with the military, as the two of you had planned. With his gryphon milkmen providing reconnaissance on the city, they in turn are left unharassed by the incoming soldiers. This leaves them free to continue to spread the male milk to others, further bolstering your numbers. To the soldiers just trying to get out of the city, one gryphon in a milk company hat is the same as another, so the swelling numbers go unremarked. And if the occasional stray squaddie gets snatched up for the milking facility - well, who's going to miss one here or there?";
 				say "     As for yourself, you are quite happy with your position managing the milking facility. There, you are able to spend your time with the other sexy male gryphons, both anthro and feral, being used to produce the potent cream. In the early days, your semen is collected multiple times a day by sexy assistants eager for the task. Later on, once the commercial product is released on the market, milking machines are obtained to further increase production - though everyone gets plenty of [']hands-on['] assistance as well.";
@@ -252,7 +252,7 @@ when play ends:
 					say "     Your stud mistress becomes your lover owner and rider, training you to be her mount as well as a breeder. You lay many a clutch of tame gryphon beasts, which are then trained as mounts as well. They take to it readily, in part because the training involves getting fucked by their riders often. Soon, there are gryphon mounts for all anthro gryphon studs living here. And while they can fly, having mounts allows them to fly farther afield and confront larger threats, ensuring that these gryphon-riding gryphons will claim many more breeder sluts and spread their numbers across the area and beyond.";
 			else:
 				say "     You succumb to your gryphon infection, roaming the streets and hunting prey to sate both your hunger and your lusts. You establish a nest at the top of an abandoned apartment building, adorning it with shiny baubles in hopes of attracting a mate.";
-				if cocks of player > 0 and player is not mpreg_ok:
+				if player is male and player is not mpreg_ok:
 					say "     Much to your surprise, you come across a beautiful female gryphon while out hunting one day. Luring her back to your nest with a fresh kill, you begin your courtship ritual; it concludes with you mounted on top of her, filling her cunt with your thick knot and her eager womb with your seed. You cuddle with your new mate in your nest, looking forward to seeing her lay your clutch... Then putting another in her.";
 					if gryphoness is tamed:
 						say "     Your female mate is somewhat perturbed at first that you're also keeping another gryphoness as your pet and mate. At first, she bullies the smaller Denise, but she eventually comes to accept the anthro gryphon as a nest-mate when she sees how lovingly she cares for the eggs you sire. While she can't produce as large of clutches as your mate does, Denise still ends up carrying your eggs in her womb. And while the anthro herm shows no interest in mounting your mate, she does enjoy the blow jobs she receives from her while for waiting her turn to be mounted.";
@@ -265,7 +265,7 @@ when play ends:
 					if gryphoness is tamed:
 						say "     After you've had your turn and your mate's recovered enough, he finds an additional prize waiting from him in your nest and turns his attention to the smaller gryphoness who's accompanied you. Faced with the big, feral stud before her, Denise cannot control her needs for long and is soon on all fours beneath your mate, getting fucked as you were. She becomes a plaything and pet for your mate as well as the caretaker for his eggs. And while she can't produce as large of clutches as you do, she still ends up carrying his eggs in her as well.";
 		else:
-			if player is pure and HP of Garrett >= 7 and cocks of player > 0 and cunts of player is 0:
+			if player is pure and HP of Garrett >= 7 and player is puremale:
 				say "     When the military finds you, they aren't sure what to do with a seemingly intelligent feral gryphon. You're held in a facility for a while, where scientists poke and test you for some time, even taking humiliating samples of 'genetic material' a few times. You put up with their ministrations for now; luckily, they deem you noninfectious before you lose your patience. They offer to release you into a nature preserve, but you have other plans and turn them down.";
 				say "     At first, you have some difficulty making a life for yourself given your altered form, but you only need to hold out for a few months. Once things settle down, you make contact with Garrett and move ahead with the plans you've made together. Having expanded his milking operation and built up a stockpile, he's finally ready to go to market. Your part in this is to act as the impressive (and exotically sexy) spokesman for the product. Ads are run, public appearances are made, private parties (orgies) are put on - all to promote the exotic and erotic new drink.";
 				say "     Of course, the commercial product has to be rendered non-infectious first with a quick microwaving. And while your it isn't infectious, it does make for a fine erotic stimulant, fueling male-on-male lusts, ensuring you'll always have a steady pool of clients in this new, sex-centric world. You can always count on new clients coming when an existing one convinces, tempts or tricks a friend into sampling some for a hot gay romp.";

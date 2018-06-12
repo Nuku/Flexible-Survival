@@ -32,7 +32,7 @@ to say losetoJaguarWarrior:
 	say "     [if HP of player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
 	if anallevel is 3 and a random chance of 1 in 3 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
-	else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+	else if player is female and a random chance of 2 in 3 succeeds:
 		say "[JagWarVic_Vag][impregchance]";
 	else if anallevel > 1 and a random chance of 1 in 4 succeeds:
 		say "[JagWarVic_Anal][mimpregchance]";
@@ -120,7 +120,7 @@ to say JaguarWarriorCaptured:
 			WaitLineBreak;
 			say "     As you roll off her exhausted form, the rumbling kitty snuggles up against you, staring up at you with a look of adoration as she slips out of consciousness. Clearly very little of the once dominant feline remains in this docile new creature and without a second thought you pull her into your arms as you rise to your feet. Your new pet nuzzles against your chest as you make your way back to the bunker.";
 			say "[TameTehuantl]";
-			now HP of Tehuantl is 10;	[female jaguar pet]
+			now HP of Tehuantl is 10; [female jaguar pet]
 	else if player is female:
 		say "     You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you grip his shoulders tightly and push him to the ground, lowering yourself down on top of him in the process. Even with you nearly sitting on his chest and pinning his shoulders to the ground the jaguar looks away, unable to make eye contact, and you relish in the submissive gesture.";
 		LineBreak;
@@ -175,16 +175,16 @@ When Play begins:
 	now defeated entry is "[beattheJaguarWarrior]";       [ Text when monster loses. Change 'Jaguar' as above. ]
 	now victory entry is "[losetoJaguarWarrior]";         [ Text when monster wins. Change 'Jaguar' as above. ]
 	now desc entry is "[JaguarWarriorDesc]";              [ Description of the creature when you encounter it. ]
-	now face entry is "that of an attractive feline";     [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "[JagBodyDesc]";                    [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "golden yellow fur, with elegant black rosettes and spots covering your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a tight, sexy bottom, accentuated by your elegant jaguar tail lashing back and forth as you move."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]red[or]barbed[or]spined[or]feline[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "everything goes fuzzy, your senses struggling to keep up as your head shifts to that of an attractive jungle cat"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "[JagBodyTF]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "golden yellow fur spreads across your body, adorned by elegant black rosettes and spots"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it becomes tight and sexy. Your balance seems to shift slightly as you gain a long, spotted jaguar's tail, which lashes back and forth excitedly even as it helps you maintain a sexy, graceful stride"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it shifts to a feline form, complete with menacing-looking barbs"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "that of an attractive feline";     [ Face. Format as Your face is [face of player]. ]
+	now body entry is "[JagBodyDesc]";                    [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "golden yellow fur, with elegant black rosettes and spots covering your"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a tight, sexy bottom, accentuated by your elegant jaguar tail lashing back and forth as you move."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]red[or]barbed[or]spined[or]feline[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "everything goes fuzzy, your senses struggling to keep up as your head shifts to that of an attractive jungle cat"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "[JagBodyTF]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "golden yellow fur spreads across your body, adorned by elegant black rosettes and spots"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "it becomes tight and sexy. Your balance seems to shift slightly as you gain a long, spotted jaguar's tail, which lashes back and forth excitedly even as it helps you maintain a sexy, graceful stride"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it shifts to a feline form, complete with menacing-looking barbs"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 17;                  [ These are now the creature's stats... ]
 	now dex entry is 18;                  [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16;                  [ These values may be used as part of alternate combat.]
@@ -199,7 +199,7 @@ When Play begins:
 	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6;           [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 3;            [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;               [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;               [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -208,9 +208,8 @@ When Play begins:
 	now libido entry is 70;               [ Target libido the infection will rise towards. ]
 	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]sleek[or]lithe[or]alluring[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now body descriptor entry is "[one of]sleek[or]lithe[or]alluring[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "feline";           [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]

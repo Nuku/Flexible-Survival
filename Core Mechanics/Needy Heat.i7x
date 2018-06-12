@@ -101,7 +101,7 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 This is the check heat rule:
 	if heat enabled is true and heatlevel is not 1:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if cunts of player > 0 and (cockname of player is not "Human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
+			if player is female and (cockname of player is not "Human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -109,7 +109,7 @@ This is the check heat rule:
 				now lastturn is turns;
 				increase turns in heat by 1;
 				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
-				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				if cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if fheat entry is false:	[no female heat for that form]
 						choose row 1 in table of infection heat;
@@ -119,35 +119,35 @@ This is the check heat rule:
 					now turns in heat is 0;
 					[ say "reset!"; ]
 				if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is not true:		[time to enter heat]
-					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
-					now heatform is 0;	[in female heat]
+					now inheat is True; [Player is now in heat. each cycle from now will run heat events]
+					now heatform is 0; [in female heat]
 					say "[trigger text entry]";
-					if there is heat start entry, say "[heat start entry]";	[Heat start Trigger]
+					if there is heat start entry, say "[heat start entry]"; [Heat start Trigger]
 				else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is True:	[still in heat, previously triggered.]
 					if heatform is 1:		[last turn was mpreg heat]
 						say "That heated need that has been burning deep inside you spreads to encompass your new pussy. Hot juices soak your thighs as your female sex goes into heat and you're left wanting to be mounted and bred.";
-						now heatform is 0;	[swap to female heat]
+						now heatform is 0; [swap to female heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 						if heatlevel is 3 and a random chance of 1 in 5 succeeds:
-							decrease turns in heat by 1;	[25% duration of heated period due to compounding rollback]
+							decrease turns in heat by 1; [25% duration of heated period due to compounding rollback]
 				else if inheat is true:	[heat period over]
 					say "Without any warning, the feral lust that had been growing inside you has faded. You are no longer in heat.";
-					now heatform is 0;	[ensuring treats as female heat for end]
+					now heatform is 0; [ensuring treats as female heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
-					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now libido of player is libido of player divided by 2; [Halve the players libido.]
 					now inheat is False;
 				else:		[not in heat period]
 					if heatlevel is 3 and a random chance of 1 in 4 succeeds:
-						increase turns in heat by 1;	[20% duration of non-heated period lost]
-			else if cunts of player is 0 and cockname of player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
+						increase turns in heat by 1; [20% duration of non-heated period lost]
+			else if player is not female and cockname of player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
 				now lastturn is turns;
 				increase turns in heat by 1;
-				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				if cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
 						choose row 1 in table of infection heat;
@@ -157,27 +157,27 @@ This is the check heat rule:
 					now turns in heat is 0;
 					[ say "reset!"; ]
 				if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is not True:	[not yet in heat]
-					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
-					now heatform is 1;	[in mpreg-heat]
+					now inheat is True; [Player is now in heat. each cycle from now will run heat events]
+					now heatform is 1; [in mpreg-heat]
 					say "[mpregtrigger entry]";
-					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
+					if there is heat start entry, say "[heat start entry]"; [Heat start Trigger]
 				else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is True:	[still in heat, previously triggered.]
 					if heatform is 0:		[last turn was female heat]
 						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if player is male]male[else]neuter[end if].";
-						now heatform is 1;	[swap to mpreg-heat]
+						now heatform is 1; [swap to mpreg-heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 						if heatlevel is 3 and a random chance of 1 in 5 succeeds:
-							decrease turns in heat by 1;	[25% duration of heated period due to compounding rollback]
+							decrease turns in heat by 1; [25% duration of heated period due to compounding rollback]
 				else if inheat is true:
 					say "As swiftly as it came, the feral lust that had been growing inside you has faded. You are no longer in heat.";
-					now heatform is 1;	[ensuring treats as mpreg heat for end]
+					now heatform is 1; [ensuring treats as mpreg heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
-					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now libido of player is libido of player divided by 2; [Halve the players libido.]
 					now inheat is False;
 				else:		[not in heat period]
 					if heatlevel is 3 and a random chance of 1 in 4 succeeds:
-						increase turns in heat by 1;	[20% duration of non-heated period lost]
+						increase turns in heat by 1; [20% duration of non-heated period lost]
 			else:
 				if animal heat is True:
 					say "As your body shifts you feel a cool sensation deep within, you will no longer be at the mercy of an animal heat anymore.";
@@ -188,29 +188,29 @@ This is the check heat rule:
 [This accelerates a new heat or extends the duration of a current heat. If the trigger is during combat, post-combat or otherwise during an event that might be thrown off by heat effects occurring, make sure heatdrive is set to 0 before running.]
 to drive heat:
 	if animal heat is true:
-		if cunts of player > 0 and (cockname of player is not "Human") and player is impreg_able:
-			if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+		if player is female and (cockname of player is not "Human") and player is impreg_able:
+			if cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 				choose a row with a infect name of (cockname of player) in Table of infection heat;
 				if fheat entry is false:	[no female heat for that form]
 					choose row 1 in table of infection heat;
 			else: [No specific Data, use Generic entry.]
 				choose a row 1 in Table of infection heat;
-		else if cunts of player is 0 and cockname of player is not "Human" and player is mpreg_able:
-			if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+		else if player is not female and cockname of player is not "Human" and player is mpreg_able:
+			if cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 				choose a row with a infect name of (cockname of player) in Table of infection heat;
 				if mpregheat entry is false:	[no mpreg heat for that form]
 					choose row 1 in table of infection heat;
 			else: [No specific Data, use Generic entry.]
 				choose a row 1 in Table of infection heat;
 		if inheat is false:
-			increase turns in heat by 1;	[accelerate beginning of heat]
+			increase turns in heat by 1; [accelerate beginning of heat]
 		else if inheat is true and ( turns in heat is ( heat cycle entry - heat duration entry ) * 8 ):
 			now heatdrive is 0;
 		else if inheat is true and ( turns in heat > ( heat cycle entry - heat duration entry ) * 8 ):
 			if heatdrive is 0:
-				decrease turns in heat by 1;	[delay ending of heat]
+				decrease turns in heat by 1; [delay ending of heat]
 			else:
-				decrease turns in heat by 2;	[delay ending of heat - bumped twice to make up for advancing during 'check heat rule' below]
+				decrease turns in heat by 2; [delay ending of heat - bumped twice to make up for advancing during 'check heat rule' below]
 		if heatdrive is 0:
 			increase score by 0;
 		else if heatdrive is 1:
@@ -222,7 +222,7 @@ to drive heat:
 This is the check heat rule:
 	if heat enabled is true:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if cunts of player > 0 and (cockname of player is not "Human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
+			if player is female and (cockname of player is not "Human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -230,7 +230,7 @@ This is the check heat rule:
 				now lastturn is turns;
 				increase turns in heat by 1;
 				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
-				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				if cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if fheat entry is false:	[no female heat for that form]
 						choose row 1 in table of infection heat;
@@ -240,30 +240,30 @@ This is the check heat rule:
 					now turns in heat is 0;
 					[ say "reset!"; ]
 				if turns in heat > ( (heat cycle entry - heat duration entry ) times 8) and (inheat is not True):
-					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
-					now heatform is 0;	[in female heat]
+					now inheat is True; [Player is now in heat. each cycle from now will run heat events]
+					now heatform is 0; [in female heat]
 					say "[trigger text entry]";
-					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
+					if there is heat start entry, say "[heat start entry]"; [Heat start Trigger]
 				else if turns in heat > ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
 					if heatform is 1:		[last turn was mpreg heat]
 						say "That heated need that has been burning deep inside you spreads to encompass your new pussy. Hot juices soak your thighs as your female sex goes into heat and you're left wanting to be mounted and bred.";
-						now heatform is 0;	[swap to female heat]
+						now heatform is 0; [swap to female heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 				else if inheat is true:
 					say "Without any warning, the feral lust that had been growing inside you has faded. You are no longer in heat.";
-					now heatform is 0;	[ensuring treats as female heat for end]
+					now heatform is 0; [ensuring treats as female heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
-					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now libido of player is libido of player divided by 2; [Halve the players libido.]
 					now inheat is False;
-			else if cunts of player is 0 and cockname of player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
+			else if player is not female and cockname of player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
 				now lastturn is turns;
 				increase turns in heat by 1;
-				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				if cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
 						choose row 1 in table of infection heat;
@@ -273,21 +273,21 @@ This is the check heat rule:
 					now turns in heat is 0;
 					[ say "reset!"; ]
 				if turns in heat > ( (heat cycle entry - heat duration entry ) times 8) and (inheat is not True):
-					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
-					now heatform is 1;	[in mpreg-heat]
+					now inheat is True; [Player is now in heat. each cycle from now will run heat events]
+					now heatform is 1; [in mpreg-heat]
 					say "[mpregtrigger entry]";
-					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
+					if there is heat start entry, say "[heat start entry]"; [Heat start Trigger]
 				else if turns in heat > ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
 					if heatform is 0:		[last turn was female heat]
 						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if player is male]male[else]neuter[end if].";
-						now heatform is 1;	[swap to mpreg-heat]
+						now heatform is 1; [swap to mpreg-heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 				else if inheat is true:
 					say "As swiftly as it came, the feral lust that had been growing inside you has faded. You are no longer in heat.";
-					now heatform is 1;	[ensuring treats as mpreg heat for end]
+					now heatform is 1; [ensuring treats as mpreg heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
-					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now libido of player is libido of player divided by 2; [Halve the players libido.]
 					now inheat is False;
 			else:
 				if animal heat is True:

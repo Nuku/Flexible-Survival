@@ -39,7 +39,7 @@ to say fhuskybeaten:
 	else:
 		say "     Exhausted, she slumps against you, tears streaming along her furry cheeks. Her paws gently brush at you as she mutters something of an apology";
 	let domtempting be false;
-	if HP of Dominick >= 60 and HP of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
+	if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
 		now domtempting is true;
 		say ". The sight of her sends a tingle of excitement through your cunt. This cute husky girl might make a good breeder pet for Dominick. The prospect of pleasing him ends a second shiver of lust through you";
 		if player is male:
@@ -57,7 +57,7 @@ to say fhuskybeaten:
 		now title entry is "Recruit for Dominick";
 		now sortorder entry is 1;
 		now description entry is "send the lust-crazed husky to Dom to be bred";
-	if "Dominant" is listed in feats of player and cocks of player > 0 and cock length of player > 5 and player is knotted:
+	if "Dominant" is listed in feats of player and player is male and cock length of player > 5 and player is knotted:
 		choose a blank row in table of fucking options;
 		now title entry is "Dominate and tie";
 		now sortorder entry is 2;
@@ -166,7 +166,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Female Husky"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Female Husky"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The sex-crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]";
 	now defeated entry is "[fhuskybeaten]";
 	now victory entry is "[fhuskywinner]";
@@ -195,7 +195,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 4; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 4; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

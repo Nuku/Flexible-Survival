@@ -107,7 +107,7 @@ to say losetosquire:
 		let analchance be 40 + ( anallevel * 10 );
 		if player is mpreg_ok, increase analchance by 10;
 		if anallevel is 1, now analchance is analchance / 2;
-		if cocks of player > 0 and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
+		if player is male and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
 			say "[squirewins_ride]";
 		else if player is female:
 			say "[squirewins_vaginal]";
@@ -122,7 +122,7 @@ to say losetosquire:
 		let analchance be 40 + ( anallevel * 10 );
 		if player is mpreg_ok, increase analchance by 10;
 		if anallevel is 1, now analchance is analchance / 2;
-		if cocks of player > 0 and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
+		if player is male and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
 			say "[squirewins_ride]";
 		else if player is female:
 			say "[squirewins_vaginal]";
@@ -279,10 +279,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Squire"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Squire"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The squire[or]The brave lad[or]The young man[or]The bold retainer[or]The brave squire[as decreasingly likely outcomes] [one of]swings his short sword at you[or]jab at you with his sword[or]manages a quick hit on you[or]feints before striking you with his blade[or]shows some skill as he dodges before thrusting at you[at random]!";
-	now defeated entry is "[beatthesquire]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetosquire]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthesquire]"; [ Text when monster loses. ]
+	now victory entry is "[losetosquire]"; [ Text when monster wins. ]
 	now desc entry is "[squiredesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "thankfully human in appearance - that of [if ( player is herm ) or ( player is neuter) ]a younger and more androgynous[else if player is male]yourself, but as a young man[else]yourself, but as a tomboyish girl[end if]. Your expression is often one of youthful eagerness and optimism, regardless of how you're feeling at that moment";
 	now body entry is "that of a young [if player is female]woman[else]man[end if]. Your body shows some muscle tone from exercise, speaking of a strength yet to come. Across your torso is a loose-fitting tabard with an emblem stitched into it of [stateplayercrest]";
@@ -308,7 +308,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

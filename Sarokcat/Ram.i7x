@@ -96,7 +96,7 @@ To say ram_loss:
 	else:
 		say "     With a particularly vicious shove, you knock the stubborn ram to the ground, leaving him winded. [if player is dominant]Grinning smugly, you approach the once-proud ram and pin him down with a firm foot on his chest[else]You can't help but smile from your victory as you step closer to the ram[end if]. [if player is dominant]Considering his vulnerable position, will[else]Will[end if] you have some fun with him?";
 		if the player consents:
-			if (cunts of player > 0) and (cocks of player > 0):
+			if (player is female) and (player is male):
 				LineBreak;
 				say "     Would you rather [link]ride his cock (Y)[as]y[end link] or [link]fuck his ass (N)[as]n[end link]?";
 				if the player consents:
@@ -304,7 +304,6 @@ When Play begins:
 	now libido entry is 30;
 	now loot entry is "tainted wool";
 	now lootchance entry is 40;
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]stocky[at random]";
 	now type entry is "ovine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

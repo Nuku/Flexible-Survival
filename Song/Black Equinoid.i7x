@@ -30,7 +30,7 @@ to say equine attack:
 			say "     She snorts loudly as she looks you over, then pushes you to the ground on your knees. 'Stay,' she orders in a tone that does not encourage argument. She leans back a bit and runs her thick fingers along her long, excited shaft, pulling the flesh along the stiff core in long but fast motions. She leaks heavy pre and pauses long enough to scoop it up and run it along the member, allowing her to rock her hips against the motions more quickly, the shaft bobbing close enough to kiss as the fluid emerges faster and faster. Her heavy balls sway and jostle with every pump as she stares at you almost unblinkingly, snorting louder as the tension hits the breaking point. With a loud neigh, the shaft bulges at the base, rippling up towards the top before painting your world white, her hot, sticky fluids raining across your face and front in a great deluge of virile horse cum, leaving you drenched with the horse's proof of fertility. With a dismissive snort, she rises and clops off.";
 
 to say beattheequinoid:
-	if cocks of player > 0 and cock length of player > 5 and a random number between 40 and 90 < libido of player:
+	if player is male and cock length of player > 5 and a random number between 40 and 90 < libido of player:
 		say "     The black furred equine sinks to the ground, then slumps over, panting and defeated. The battle, having gotten your blood pumping, has left your [cock size desc of player], [cock of player] cock engorged and throbbing. Before you can even think otherwise, you jump atop her and pin down her shoulders. She groans softly and reaches up to push you off, but ends up wrapping her arms around you instead. Even as you bring your hard rod into position, she spreads her legs for you and whinnies softly in anticipation, moaning as your glans slips in under her ballsack and presses into her wet pussy[if cock length of player < 12]. Her equinoid pussy is very accommodating, letting your penis in easily, but still grips you rather nicely as she clenches down around it in need of being filled[else if cock length of player < 20]. Her equinoid pussy is very accommodating, taking in your large penis easily, but still grips you rather nicely in her need to be filled[else]. Her equinoid pussy stretches a little to take your huge member, but is quite accommodating. She moans and grips you even harder, reaching a hard and messy orgasm even as you're still pushing deeper into her thick-lipped sex[end if].";
 		say "     Her long, equine cock rests across her body, twitching and spurting precum across the underside of her huge breasts as you pound into her. Quite aroused by the sight of this once-strong warrior reduced to a horny slut beneath you, it doesn't take long for the rhythmic contractions to push you over the edge. You drive hard into her sweltering depths, blasting your hot seed into her pussy. She arches her back and cums hard as well, painting her body with equine seed as you fill her. '[one of]Oh yes, breed me you great warrior[or]Fill me with your seed[or]Put your strong colt in me[or]Breed me like your mare[or]Oh, breed me you powerful stud[at random]!' she whinnies loudly. You do your best to satisfy her request, draining your balls into her before withdrawing. As you rise to your feet, she moans softly and simply lays there, rubbing her well-filled belly with a smile on her face. You can't help but grin as you walk off, knowing another of her tribe will have to replace her on patrol if you've just knocked her up.";
 		now equinoiddefeat is 0;
@@ -51,21 +51,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Black Equinoid"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Black Equinoid"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]";
 	now defeated entry is "[beattheequinoid]";
 	now victory entry is "[equine attack]";
 	now desc entry is "[mongendernum 5]A tall, imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat teeth. She is dressed in a simple sheet, like a toga that wraps around her well-formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth. '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, softball sized nuts swaying as she runs.";
-	now face entry is "an equine face, with an elongated snout and broad, flat teeth set in your long muzzle"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "tall and well muscled, with delightful curves despite your overall toned appearance"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]black furred[or]coarsely furred[or]furry[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short black tail that flicks behind you. The horse tail particularly likes to swat at any flies that approach."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]flat-headed[or]equine[or]mottled pink[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it draws forward into a long equine snout"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you swell with the appearance of muscles and height, growing taller by the moment"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "coarse black fur spreads rapidly over your form"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a short, black, straw-like tail emerges from above it, flicking lightly"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it twitches with sudden arousal, the end flattening in an equine manner, forming the reverse bell shape endemic of the species and tinting a mottled pink and black"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "an equine face, with an elongated snout and broad, flat teeth set in your long muzzle"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "tall and well muscled, with delightful curves despite your overall toned appearance"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]black furred[or]coarsely furred[or]furry[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a short black tail that flicks behind you. The horse tail particularly likes to swat at any flies that approach."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]flat-headed[or]equine[or]mottled pink[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "it draws forward into a long equine snout"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you swell with the appearance of muscles and height, growing taller by the moment"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "coarse black fur spreads rapidly over your form"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "a short, black, straw-like tail emerges from above it, flicking lightly"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it twitches with sudden arousal, the end flattening in an equine manner, forming the reverse bell shape endemic of the species and tinting a mottled pink and black"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 18;
 	now dex entry is 12;
 	now sta entry is 14;
@@ -80,7 +80,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 9; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

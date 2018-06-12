@@ -17,14 +17,14 @@ to say grizzlydesc:
 
 to say losetogrizzly:
 	let bearanal be anallevel - 1;
-	if cunts of player > 0 and a random chance of 1 in 3 succeeds:
+	if player is female and a random chance of 1 in 3 succeeds:
 		say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. The grizzly bear walks behind your kneeling form, firmly pushing your face into the dirt while stroking his hardening bearcock. 'Looks like I'll have to teach ya your place, cub...' Raising your hips up with one paw while guiding his cock to your moist, [cunt size desc of player] pussy with the other. ";
 		if cunt width of player < 3:
 			say "His thick cock stretches your lips open as you struggle to accommodate his substantial man-meat. With a grunt on his part and a moan from you he bottoms out inside you, his balls resting against your rear.";
 		else:
 			say "His thick cock spears your womanly folds with ease, smoothly sliding his shaft into your cunt with an approving grunt.";
 		say "     He begins sliding his cock in and out of your vagina, each thrust ending in the resounding slap of flesh on flesh. As both your climaxes grow closer, he leans over your back, fucking you deep and hard with his large ursine shaft. One of his thrusts hits you just right and you're crying out in pleasure as you cum around his length. Your muscular contractions milk up and down his length and then with a growl he's thrust all the way in your cunt and is cumming deep inside you. When he finishes his orgasm he pulls out of you, rubs his cock clean on your rear, and leaves you twitching on the ground, bear cum dripping from your abused cunt.[impregchance]";
-	else if cocks of player > 0 and a random chance of bearanal in 3 succeeds:
+	else if player is male and a random chance of bearanal in 3 succeeds:
 		say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. The grizzly bear walks behind your kneeling form, firmly pushing your face into the dirt while stroking his hardening bearcock. 'Looks like I'll have to teach ya your place, cub...' Raising your hips up with one paw while guiding his cock to your puckered anus. He rubs his glans against the entrance to your back passage, his pre dribbling from the tip and into the cleft of your ass. 'Heh... tight lil['] cub...' he grumbles, before beginning to force his way into your rectum. You gasp as he slips past your muscled ring and sheathes his entire length inside you in one firm thrust.";
 		if a random chance of 2 in 3 succeeds or player is mpreg_able:
 			say "     He begins to slide back and forth within you, his sizable cock pressing at your prostate in all the right ways. Before long, he's leaning over your back, penetrating you with long, deep ball-slapping thrusts. One thrust rubs your prostate just right and you're yelling out in orgasm, your [cock size desc of player] [cock of player] cock spurting your submissive seed over the ground. Your rippling anal contractions cause the rutting bear above you to groan and shoot his ursine seed deep in your guts, pulling out for the last few spurts to paint your backside white. He wipes his cock clean on your rear and leaves you twitching on the ground, bear cum dripping from your messy asshole.[mimpregchance]";
@@ -118,16 +118,16 @@ When Play begins:
 	now defeated entry is "[beatthegrizzly]";
 	now victory entry is "[losetogrizzly]";
 	now desc entry is "[grizzlydesc]";
-	now face entry is "now the head of a grizzly bear, with a short muzzle tipped in a large, wet, black nose and a wide head topped by two round bearish ears"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "now the head of a grizzly bear, with a short muzzle tipped in a large, wet, black nose and a wide head topped by two round bearish ears"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine paw-like hands ending in sharp claws";
-	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short, ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a short, ursine tail that hangs over your ass."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "ursine";
-	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";
 	now skin change entry is "thick shaggy brown bear fur spreads across your skin";
-	now ass change entry is "your rump becomes thicker and more rounded and bearlike, with a short fuzzy tail growing over your new ursine ass"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "a furred sheath grows around it, holding it when it's not erect"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "your rump becomes thicker and more rounded and bearlike, with a short fuzzy tail growing over your new ursine ass"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "a furred sheath grows around it, holding it when it's not erect"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 20;
 	now dex entry is 12;
 	now sta entry is 22;
@@ -142,7 +142,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 12; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -171,7 +171,7 @@ when play ends:
 			say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";
 			if player is female:
 				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing between your legs and in your womb, a need you've been ignoring during your time in the wild. After a brief period of wary sniffing you're on your hands and knees under the grizzly getting filled with bear cum. You rub a paw over your stomach contentedly, looking forward to raising your new cubs after the next hibernation.";
-			else if cocks of player > 0 and player is not mpreg_ok:
+			else if player is male and player is not mpreg_ok:
 				say "     One hot summer day, you run into a rare sight - another grizzly bear! A fertile female one, at that. You feel a need growing between your legs and in your balls, a need you've been ignoring during your time in the wild. After a brief period of wary sniffing you're on your hands and knees behind the grizzly, filling her womb up with your virile bear cum. You rub her stomach contentedly, looking forward to raising your new cubs after the next hibernation.";
 			else if player is mpreg_ok:
 				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing in your rear, a need you've been ignoring during your time in the wild. The bear is hostile at first, but after a brief period of wary sniffing he realizes you're just another female and then you're on your hands and knees under the grizzly getting filled with bear cum. You try to get the other grizzly to reciprocate, but he's having none of it - maybe next time. You rub a paw over your stomach contentedly, looking forward to raising your new cubs after the next hibernation.";

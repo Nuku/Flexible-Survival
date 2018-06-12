@@ -86,16 +86,16 @@ When Play begins:
 	now defeated entry is "[matriarch loss]";
 	now victory entry is "[matriarch attack]";
 	now desc entry is "[mongendernum 5]The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you."; [ Description of the creature when you encounter it.]
-	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "brown furred"; [ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "brown furred"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaching past your upper thigh."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]knotted[or]black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place. Finding your hands moving instinctively up to your ears, you feel them as they migrate up to the top of your skull. Making their new home on your scalp, they begin taking a more triangular shape, leaving you with hyena ears"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more paw like appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it tightens noticeably and becomes attractively muscled. Given no time to rest, you feel a sharp pain as your tail bone starts grow out, lengthening out to a more animalistic norm. Pain subsiding you find a freshly grown brown-furred tail, a quick test shows that you have slight control over your new hyena tail."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it turns pitch black, a knot forming at the base"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place. Finding your hands moving instinctively up to your ears, you feel them as they migrate up to the top of your skull. Making their new home on your scalp, they begin taking a more triangular shape, leaving you with hyena ears"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more paw like appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it tightens noticeably and becomes attractively muscled. Given no time to rest, you feel a sharp pain as your tail bone starts grow out, lengthening out to a more animalistic norm. Pain subsiding you find a freshly grown brown-furred tail, a quick test shows that you have slight control over your new hyena tail."; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it turns pitch black, a knot forming at the base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;
 	now dex entry is 20;
 	now sta entry is 18;
@@ -119,7 +119,6 @@ When Play begins:
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]muscled[at random]";
 	now type entry is "hyena"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

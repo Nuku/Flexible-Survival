@@ -212,17 +212,17 @@ When Play begins:
 	now attack entry is "";
 	now defeated entry is "";
 	now victory entry is "";
-	now desc entry is "";[ Description of the creature when you encounter it.]
-	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
-	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki."; [- body change text. format as "Your body feels funny as (your text)" -]
-	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)" -]
-	now ass change entry is "a thick and fluffy looking tail emerges from your bottom."; [- ass/tail change text. format as "Your ass feels funny as (your text)" -]
-	now cock change entry is "it grows a [skin of player] sheath."; [- cock change text. format as "Your cock feels funny as (your text)" -]
+	now desc entry is ""; [ Description of the creature when you encounter it.]
+	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears"; [ Face description, format as "Your face is (your text)"]
+	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps."; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]"; [- Cock Description, format as you have a "size" (your text) cock-]
+	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki."; [- body change text. format as "Your body feels funny as (your text)." -]
+	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)." -]
+	now ass change entry is "a thick and fluffy looking tail emerges from your bottom."; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
+	now cock change entry is "it grows a [skin of player] sheath."; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 14;
@@ -279,14 +279,14 @@ to say usetancoin:
 	say "[line break]     You flip the coin";
 	if internalbypass is false:
 		say "... It lands leaf-side up";
-		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
+		if player is not male or (player is male and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
 		now internalbypass is true;
 	else:
 		say "... It lands dragon-side up";
-		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
+		if player is not male or (player is male and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";

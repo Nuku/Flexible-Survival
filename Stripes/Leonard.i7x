@@ -199,7 +199,7 @@ to say sexwithLeonard:
 	else if HP of Leonard is 1:
 		now lastfuck of Leonard is turns;
 		now HP of Leonard is 2;
-		if cunts of player > 0 or bodyname of player is "Feline":
+		if player is female or bodyname of player is "Feline":
 			say "[Leonardsex_firsttimeA]";
 			infect "Feline";
 			infect "Feline";
@@ -323,7 +323,7 @@ to say Leonardsex_pridekitty:		[Brought Leonard a kitty from his pride]
 	say "     Feeling drawn to the masculine lion's body, you moan in pleasure as he runs his paws over you. Walking close behind you, his paws stroke your sides and rear as he guides you further into his cave home towards the four-poster bed. Divesting you of your gear and clothes, he presses his manly chest to your [bodytype of player] body. You moan in pleasure and nuzzle at his mane, taking in his strong scent.";
 	say "     'Mmmm... I must say, you look so pretty with one of pride nursing from your bosom,' he says with a rumble as he runs a paw down the kitty's back to scritch her ears and draw a rumble from her. His paw then drifts over to stroke your other breast. Walking close behind you, his paws stroke your sides and rear as he guides you further into his cave home towards the four-poster bed. Divesting you of your gear and clothes, helps the small kitty onto his bed to wait eagerly while he presses his manly chest to your [bodytype of player] body. You moan in pleasure and nuzzle at his mane, taking in his strong scent.";
 	say "     After the lioness kitty helps you onto the bed with her, Leonard pads onto it with a hungry, lustful look in his eyes as he smiles at having you both there to play with. 'Mmm... you're both such lovely treasures. Such sexy creatures here to get what they need from the sexy lion,' he rumbles as he runs a paw over each of you and you both respond to his touch, growing more eager for the male's attention. He rumbles and pads over to you, guiding you onto all fours and mounting you quickly. You release a mewling groan as he takes you quickly, getting right to the action this time, much to your body's pleasure.";
-	if cunts of player > 0 and a random chance of 1 in 2 succeeds:
+	if player is female and a random chance of 1 in 2 succeeds:
 		say "     The other feline moves in behind Leonard, nuzzling at his ballsack and licking at his cock each time it slides back before another thrust. You can feel her raspy tongue playing at the edge of your pussy before moving on to attend to your clit as the lion starts pounding you hard and fast. 'That's a good, sexy girl,' he rumbles between thrusts. 'Such a good, submissive slut you are. In need of a hot load of lion cum, aren't you?' You nod enthusiastically, your body lusting to feel the sexy lion breed you.";
 		say "     As he continues to tell you what an eager, needy, submissive kitties you both are, he pounds his pulsing shaft into you. You grip the sheets and beg him for him to fill you, for the kitty to keep licking, for him to take you. Soon your wish is granted as the lion drives hard into you and his balls pulse as his hot seed flows deep inside you, flooding your womb with his virile sperm. The horny kitty between your legs licks eagerly, lapping up the cum that leaks out around her master's shaft.";
 		say "     After he withdraws from you and mounts the other kitty, you roll onto your back, lost in the blissful pleasure of having his hot semen filling your tummy. Watching the show, you soon feel the urge to return the favor and nuzzle under Leonard's balls to lick at his cock and her pussy. The lustful romp continues like this for some time, with the three of you swapping positions and you both getting several loads from the big male. Eventually, your threesome runs down and you all end up snuggled together on the bed, purring happily as you drift off for a quick catnap.";
@@ -365,7 +365,7 @@ Part 2 - Mate Sex
 to Leonardmatesex:
 	if Feline_attached > 0 and feline_status is 0:
 		say "[Leonardmate_newkitty]";
-	else if cunts of player > 0 and player is felinebodied and a random chance of 2 in 5 succeeds:
+	else if player is female and player is felinebodied and a random chance of 2 in 5 succeeds:
 		say "[Leonardmatesex_lc]";
 	else:
 		say "     You snuggle up to your sexy mate and run your hands over his chest, making him rumble happily. He pulls you into his arms and gives you a kiss. As you kiss, you wonder how you might best show your love for the handsome lion.";
@@ -393,17 +393,17 @@ to Leonardmatesex:
 		now title entry is "Doggy style";
 		now sortorder entry is 5;
 		now description entry is "have the lion mount you like a beast";
-		if ( cunts of player > 0 or cocks of player > 0 ) and HP of Leonard >= 17:
+		if ( player is not neuter ) and HP of Leonard >= 17:
 			choose a blank row in table of fucking options;
 			now title entry is "Maid foot rub";
 			now sortorder entry is 6;
 			now description entry is "have the maids lick your feet (and more)";
-		if cocks of player > 0 and HP of Leonard >= 17:
+		if player is male and HP of Leonard >= 17:
 			choose a blank row in table of fucking options;
 			now title entry is "Maid fuck";
 			now sortorder entry is 7;
 			now description entry is "fuck one of the maids";
-		if ( cunts of player > 0 or cocks of player > 0 ) and Leonardcaraway is true:
+		if ( player is not neuter ) and Leonardcaraway is true:
 			choose a blank row in table of fucking options;
 			now title entry is "Sexy chef";
 			now sortorder entry is 8;
@@ -601,7 +601,7 @@ to say Leonardmaidsex2:
 
 to say Leonardcarawaysex1:
 	say "     The lingering scent of Caraway's cooking in the air momentarily draws your attention as you look over at the cute chef tidying up her kitchen. The sight of her in her cute apron and nothing else gets you turned on and you decide that you and Leonard should have some fun with her. You turn back to your mate and make the suggestion to him. '[one of]Certainly, my dear. I'm sure she'd appreciate some special attention[or]That is a wonderful idea, my dear. She's been such a diligent worker - she deserves a good fucking[or]She makes such a tempting sight in that apron of hers, doesn't she, my dear? Let's do that then[or]Of course, my dear. You brought her to me, so it is only fair that you might enjoy her company as well[or]Mmmm... she's such a sweet little treat, isn't she? Very well, let's go kiss the cook[at random].' Keeping his paw on your ass, you both head towards the kitchen, eyes locked on that sweet tush of hers.";
-	if cocks of player > 0 and a random chance of 2 in 5 succeeds:
+	if player is male and a random chance of 2 in 5 succeeds:
 		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her. She initially moves to bend over the counter, clearly having done so before for him. Seeing you there as well, she hesitates momentarily, only to be gently guided to lean over anyhow while the lion grinds his cock against her rear. 'We shall simply share in this lovely meal,' he purrs with a grin, slipping his cock into her juicy pussy. She gives a mrowl of pleasure in response and pushes backwards onto his impaling rod. His impressive shaft spreads her wet petals and fills that cute cunny of hers nice and full.";
 		say "     Leonard runs his paws over her rear, taking several thrusts while you watch on eagerly, stroking your own shaft. He doesn't go very long, just enough to get his wick wet and get the kitty worked up before he pulls out and moves aside, letting you have your turn. Lining up with the slick portal he's vacated, you sink your [cock of player] cock into her, taking your turn with several thrusts into the moaning girl. You and Leonard alternate, taking turns filling her hot pussy while the other watches on. She releases a needy mewl each time the current cock is removed only to sigh in pleasure as she's filled by the other one. Being shared like this gets her quite turned on, such hard proof that you both want her bringing such pleasure to her.";
 		say "     As your mate's arousal grows towards his peak, he remains mounted in her. Pounding her hard and fast, he presses her down onto the counter as he takes the nape of her neck in his jaws. He growls softly and buries his spurting rod deep inside her, filling the mrowling chef with his creamy load while you watch on. After draining his load into her, he pulls out and makes room for you again";
@@ -913,9 +913,9 @@ to say Leonardrivalfight:
 		say "     As you are scrambling down the hillside to rush into Leonard's arms, you hear a cry of despair from the clearing's edge. The black-haired lioness is there with the ragged remains of her pride, having come in the hopes of seeing victory, but only finding crushing defeat. Quick to react, you call out to your work team, ordering them to seize her. Those few girls still with her, loyalty already wavering after their last defeat by you, flee back into the woods as their pride dissolves. The black-haired one struggles weakly, but the fight has largely gone out of her, and the others soon drag her down and start the work of welcoming her into her new pride.";
 		WaitLineBreak;
 		say "     Now in Leonard's arms, he runs his strong paws over you, kissing you passionately and you moan in pleasure in response, your bond to this handsome and powerful male growing stronger still. You take his throbbing maleness in your hands and stroke it firmly, pumping at it to blast his hot load across your body before turning it upon his fallen foes, marking them as his. As they're starting to become more female and Leonard moves in to start mounting them properly, the dark-haired feline is pulled over to you. Grinning happily at the prospect of dealing with her properly, you press her muzzle to your chest, pushing her lips to your [if breast size of player > 0]bosom[else]nipple[end if][if the player is not felinebodied] even as it becomes more feline[end if].";
-		if "Male Preferred" is listed in feats of the player:
+		if "Male Preferred" is listed in feats of player:
 			say "     Your body, no longer able to maintain itself locked as a male, starts to become more feminine and girlish as your[if cocks of player > 1]cocks go[else]cock goes[end if] away to be replaced by a wet and juicy cunt.";
-			remove "Male Preferred" from feats of the player;
+			remove "Male Preferred" from feats of player;
 		say "     As the mewling feline starts to nurse from your nipple, your body continues to change, becoming larger and stronger than the girlish lionesses around you. When your felines from your work group notice this change, they mewl happily and start lavishing attention upon you, helping you grow even more matronly. You caress and snuggle them in turn, giving them turns at your other breast as they show their affection for their new pride mother. You purr and nuzzle the raven-haired feline, rumbling that she's home now and that her new pride loves her very much";
 		if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 			say ". And to show her how much you care for her, you shift her over into your lap onto your throbbing clit-like erection, sinking it into her wet pussy, fucking a hot load from her matronly pride mother into her needy womb. As you're cumming inside her, plumping her up with your virile seed, you feel Leonard there behind you, nuzzling and nibbling at your neck as you finish claiming her for the pride, telling you what a beautiful mate you've become.";
@@ -972,7 +972,7 @@ to say Leonardrivalfight:
 			now feline_attached is 0;
 			now PridePark is unresolved;
 			now lastdenevent is turns;
-			move the player to Lion's Den;
+			move player to Lion's Den;
 			follow the turnpass rule;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After the male has beaten and fucked you, he grabs you roughly by both strong paws and hefts you over his head. You moan weakly, still bloated with his cum, as he hurls you over the edge moments after Leonard knocks out his opponent, sending you crashing into your lover. Struck down by your defeated, cum-stained body of his pride favorite is a terrible blow to the exhausted lion. This crushes him body and soul, turning what would have been a roar of triumph into a wail of lamentation. When the final alpha lion attacks him, he puts up almost no fight at all, his spirit broken and he is quickly dispatched. You mewl and moan weakly from the ground beside this quick and brutal fight as your master is beaten and made to service the victor.";
@@ -1061,23 +1061,23 @@ to say Leonardrivalfight:
 Section 8 - Definitions
 
 Definition: a person is felinefaced:
-	if the facename of the player is "Feline", yes;
+	if facename of player is "Feline", yes;
 	no;
 
 Definition: a person is felineskinned:
-	if the skinname of the player is "Feline", yes;
+	if skinname of player is "Feline", yes;
 	no;
 
 Definition: a person is felinebodied:
-	if the bodyname of the player is "Feline", yes;
+	if bodyname of player is "Feline", yes;
 	no;
 
 Definition: a person is felinecocked:
-	if the cockname of the player is "Feline", yes;
+	if cockname of player is "Feline", yes;
 	no;
 
 Definition: a person is felinetailed:
-	if the tailname of the player is "Feline", yes;
+	if tailname of player is "Feline", yes;
 	no;
 
 

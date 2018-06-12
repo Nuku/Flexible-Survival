@@ -238,12 +238,12 @@ When Play begins:
 	now cock width entry is 6;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
-	now loot entry is "spidertaur hair";[ Loot monster drops, ]
+	now loot entry is "spidertaur hair"; [ Loot monster drops, ]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strange[or]hybrid[or]mutated[at random]";
@@ -518,7 +518,7 @@ when play ends:
 		if humanity of player < 10:
 			if player is male:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Females and some choicy males you keep to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
-			else if cunts of player > 0 and "Sterile" is not listed in feats of player:
+			else if player is female and "Sterile" is not listed in feats of player:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choicy males to impregnate you and help grow your brood of little spiderlings, the rest just serve as stored food for when you get hungry.";
 			else:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choicy males and females to have fun with, the rest just serve as stored food for when you get hungry.";

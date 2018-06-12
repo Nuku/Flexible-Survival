@@ -38,7 +38,7 @@ to say gargoyle attack:
 [ [Gargoyle loss] ]
 To say gargoyle loss:
 	say "Stunned that it could be defeated by you the gargoyle kneels down on one knee and then looks up at you with both awe and respect on it beautifully monstrous face while displaying itself fully for your approval. ";
-	if cocks of player > 0 and libido of player > 45:
+	if player is male and libido of player > 45:
 		say "Looking over the creature, you find yourself tempted to have your way with this strange, powerful creature.";
 		say "     [bold type]Shall you satisfy your lusts on this statuesque beast?[roman type][line break]";
 		LineBreak;

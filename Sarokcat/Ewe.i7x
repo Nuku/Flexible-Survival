@@ -46,16 +46,16 @@ When Play begins:
 	now defeated entry is "[ewe loss]";
 	now victory entry is "[ewe attack]";
 	now desc entry is "[mongendernum 4]     Traveling through the streets of the city, you come across a strange sheep-like person wandering around without aim, absently running her hands over her soft, fleece-covered body as she looks around. Before you can do more than wonder what an ewe is doing out here all alone, the female sheep spots you and bleats eagerly before charging right at you, her slightly-crazed eyes full of lust.";
-	now face entry is "short black muzzle";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "short black muzzle"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "stocky, but feminine, with lovely curves to your body. Your arms are thinner, ending in dainty, hoof-like hands which struggle to handle items at times. Your legs have strong thighs for leaping and crossing rough terrain and slender calves ending in dark hooves";
 	now skin entry is "[one of]woolly[or]soft wool[or]white fleeced[at random]";
-	now tail entry is "A short, round, sheep-like nub of a tail sits right over your ass, occasionally flicking one way or another in response to some stimulus, often lifting up teasingly above your rear.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]sheep-like[or]ram[or]black and pink spotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "you feel your ears stretch out to the sides of your head, your face pushing forward into a sheep-like muzzle"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your body seems to swell out slightly as it takes on a somewhat stocky yet feminine appearance, your fingers fusing into three almost hooflike fingers. The muscles in your legs then shift, making it easier to move on your new hooves."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it is covered in soft woolen fleece, almost begging to be touched"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startles you as it pushes its way out above your increasingly cute ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it twists and warps between your legs, growing thicker as it takes on a black and pink tint, before drawing up into a new sheath between your legs"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now tail entry is "A short, round, sheep-like nub of a tail sits right over your ass, occasionally flicking one way or another in response to some stimulus, often lifting up teasingly above your rear."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]sheep-like[or]ram[or]black and pink spotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "you feel your ears stretch out to the sides of your head, your face pushing forward into a sheep-like muzzle"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your body seems to swell out slightly as it takes on a somewhat stocky yet feminine appearance, your fingers fusing into three almost hooflike fingers. The muscles in your legs then shift, making it easier to move on your new hooves."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it is covered in soft woolen fleece, almost begging to be touched"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startles you as it pushes its way out above your increasingly cute ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it twists and warps between your legs, growing thicker as it takes on a black and pink tint, before drawing up into a new sheath between your legs"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 16;
 	now sta entry is 12;

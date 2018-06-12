@@ -695,7 +695,7 @@ to say ConfidentSvenSex:	[***]
 		now sortorder entry is 1;
 		now description entry is "Pound the big kitty's ass";
 	[]
-	if cunts of player > 0 or cocks of player > 0:
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		if player is female:
 			now title entry is "Ride him (vaginal)";

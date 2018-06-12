@@ -25,7 +25,7 @@ to say losetovixentaur:
 	if HP of Sam is 15:
 		say "     Sam growls and charges, slamming her body into yours and [if scalevalue of player < 4]sends you tumbling back several yards[else]knocks you over[end if]. You land half on and half off a cot, painfully injuring your back.";
 	else:
-		if cocks of player > 0 and a random chance of 2 in 3 succeeds:
+		if player is male and a random chance of 2 in 3 succeeds:
 			say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground. She murrs in your ear about how [if player is male]she wants you to breed some kits in her[else]much fun she's going to have with you[end if]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
 			say "     She gets your [cock size desc of player] [cock of player] shaft lined up and sinks down onto your throbbing rod with ease. She giggles and yips as she rides up and down. Her inner walls squeeze and ripple across your manmeat in so many delightful ways. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. The vixen fucks you with wild, animalistic abandon, pounding her hips down onto yours until you're nearly insensate with lust and finally climax as her pussy clamps down around your shaft as she cums. You blast your [if cock width of player > 20]large [end if]load into her, breeding the lustful vixen, possibly siring more of these alluring creatures. Having got what she wanted, she giggles and heads off after flashing you her pussy with your cum [if cock width of player > 20]flowing[else]leaking[end if] out of it.";
 		else:
@@ -36,7 +36,7 @@ to say losetovixentaur:
 to say beatthevixentaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Samantha down, having beaten the fight out of her.";
-	else if a random number between 1 and 100 < vixentaurcatch and ( cocks of player > 0 or cunts of player > 0):
+	else if a random number between 1 and 100 < vixentaurcatch and ( player is not neuter):
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds. Like the others, she prepares to shove you back, but you move in time to grab her and push her to the ground. With her caught, you consider having some fun with her.";
 		say "     [bold type]Shall you go ahead with that plan?[roman type][line break]";
 		LineBreak;
@@ -68,10 +68,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Vixentaur"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Vixentaur"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The vixentaur grinds her buxom breasts against your body![or]The vixentaur rears up and slashes you with her foreclaws![or]She snaps at you with her muzzle![or]The vixentaur slaps you soundly across the cheek![or]The vixen creature grabs you with her clawed hands and slams your face into her bosom. The surprise motorboating leaves you momentarily dazed.[or]The vixen giggles and gives her breasts a tantalizing grope as she moves sexily around you.[at random]";
-	now defeated entry is "[beatthevixentaur]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetovixentaur]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthevixentaur]"; [ Text when monster loses. ]
+	now victory entry is "[losetovixentaur]"; [ Text when monster wins. ]
 	now desc entry is "[vixentaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "vulpine with a long, slender muzzle with a sexy smile always on it. You have long lashes, pretty coral eyes and long, flowing cerise hair";
 	now body entry is "considerably transformed, having gained a tauric lower half that is vulpine in appearance. While your upper body largely resembles that of a sexy woman, your lower body is that of a sleek fox";
@@ -97,7 +97,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 8; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 8; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

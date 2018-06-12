@@ -44,7 +44,7 @@ to say wrestlingwolfattack:
 		now wrestlingwolfdefeat is 1;
 	else if ( wrestlingwolfdefeat is 2 or wrestlingwolfdefeat is 3 ) and cunts of player is 0:		[now open for M/M]
 		say "     Pinned down by the lupine wrestler, he gives you a growling skronk. 'Another bad showing. Come on, I'm starting tah think that yur losing on purpose or somethin['],' he growls. 'Always losing and not getting no pussy for me. Picked a little pansy tah fight,' he jibes, giving you a poke in the side to show he's just ribbing you. 'Guess I'm gonna have tah treat ya to another dose of deep wolf action,' he rumbles, lining up his big cock with your backside again.";
-		say "His large, lupine cock pushes into your [if scalevalue of player < 4]smaller [bodytype of player] body slowly, entering with somewhat more ease this time as he's more used to it and you're better prepared for[else]large [bodytype of player] body with relative ease, the big wolf more used to it and you're better prepared to take[end if] him. He nips at your shoulders as he starts pounding into you, driving himself into you again and again with increasing force. You moan and pant beneath him, soon howling like one of his fans as he buggers you deep with his thick cock[if wrestlingwolfdefeat is 3 and cocks of player > 0]. The wolf's paw slides underneath you to take a hold of your cock and stroke it[else if player is male]. The wolf's paw moves tentatively beneath you, and after some brief hesitation, wraps around your cock. He pauses for a moment as he grows used to the idea before resuming his thrusts and stroking your penis in time to his motions[end if][if player is male]. All of this soon becomes too much for you and you cum hard, splattering your seed across the floor of the ring as he[else], then[end if] [if scalevalue of player < 4]grinds his knot against your pucker[else]pops his thick knot into you[end if] and blasts a heavy load of lupine seed inside you once again.[mimpregchance]";
+		say "His large, lupine cock pushes into your [if scalevalue of player < 4]smaller [bodytype of player] body slowly, entering with somewhat more ease this time as he's more used to it and you're better prepared for[else]large [bodytype of player] body with relative ease, the big wolf more used to it and you're better prepared to take[end if] him. He nips at your shoulders as he starts pounding into you, driving himself into you again and again with increasing force. You moan and pant beneath him, soon howling like one of his fans as he buggers you deep with his thick cock[if wrestlingwolfdefeat is 3 and player is male]. The wolf's paw slides underneath you to take a hold of your cock and stroke it[else if player is male]. The wolf's paw moves tentatively beneath you, and after some brief hesitation, wraps around your cock. He pauses for a moment as he grows used to the idea before resuming his thrusts and stroking your penis in time to his motions[end if][if player is male]. All of this soon becomes too much for you and you cum hard, splattering your seed across the floor of the ring as he[else], then[end if] [if scalevalue of player < 4]grinds his knot against your pucker[else]pops his thick knot into you[end if] and blasts a heavy load of lupine seed inside you once again.[mimpregchance]";
 		say "     As his erection comes down, he pulls out of you and wipes it against your bottom. 'Mmm... not too bad, but I still want ya to try trainin['] up to put up a better fight next time, ya hear?' he says with a chuckle, giving your ass a hard spank as you're grabbing your stuff to flee the ring.";
 		now wrestlingwolfdefeat is 3;
 	else:
@@ -124,53 +124,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Wrestling Wolf"; [Name of your new Monster]
-   now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
-   now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[wrwolfdesc]";
-   now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth";[ Face description, format as the text "Your face is (your text)"]
-   now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human";[ Body Description, format as the text "Your Body is (your text)"]
-   now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a thick canine tail wagging happily behind you.";[ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "[one of]canine[or]wolf[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)" ]
-   now body change entry is "your feet and hands become paw like, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)" ]
-   now skin change entry is "thick, rugged black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-   now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-   now cock change entry is "your member grows thicker, the top of it tapering to a sharp point while a large canine knot forms at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-   now str entry is 24;
-   now dex entry is 17;
-   now sta entry is 19;
-   now per entry is 13;
-   now int entry is 9;
-   now cha entry is 14;
-   now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 150;
-   now lev entry is 15; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-   now wdam entry is 18; [Amount of Damage monster Does when attacking.]
-   now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive]
-   now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2; [ Number of Breasts infection will give you. ]
-   now breast size entry is 10; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 20; [ Length of female sex infection will attempt to give you. ]
-   now cunt width entry is 15; [ Width of female sex infection will try and give you ]
-   now libido entry is 35; [ Amount player Libido will go up if defeated ]
-   now loot entry is "";
-   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefy[at random]";
-   now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "wrwolf";[ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Wrestling Wolf"; [Name of your new Monster]
+	now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[wrwolfdesc]";
+	now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth"; [ Face description, format as "Your face is (your text)"]
+	now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a thick canine tail wagging happily behind you."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your feet and hands become paw like, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "thick, rugged black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your member grows thicker, the top of it tapering to a sharp point while a large canine knot forms at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 24;
+	now dex entry is 17;
+	now sta entry is 19;
+	now per entry is 13;
+	now int entry is 9;
+	now cha entry is 14;
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 150;
+	now lev entry is 15; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 18; [Amount of Damage monster Does when attacking.]
+	now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 10; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 20; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 15; [ Width of female sex infection will try and give you ]
+	now libido entry is 35; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefy[at random]";
+	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "wrwolf"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)

@@ -32,12 +32,12 @@ to say ymgdesc:
 		project figure of YuppieMink_icon;
 		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes haughty attitude. The matching white tennis ensemble she wears does little to conceal her pert breasts and shapely thighs, attractive even if she is huffy and upset. '[one of]This dock is absolutely filthy! It puts me in a crass mood.[run paragraph on][or]Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?[run paragraph on][or]This outbreak has ruined my shed-ule! You there! Amuse me for a bit![run paragraph on][or]Ah, a replacement for my cabana boy![run paragraph on][or]Does the harbormaster know who I am? This is asinine![run paragraph on][or]I hope you brought a racquet with you.[run paragraph on][at random]' she says it in a clipped tone, pausing before hopping from the deck to fight you!";
 		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
+		if "Female Preferred" is listed in the feats of player, now sex entry is "Female";
 	if ymgmode is 2:
 		setmongender 3; [creature is male]
 		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes contempt. The smart blue captain's jacket he wears with the matching hat is lovely, but the lack of pants leaves his dripping cock and swinging sack on full display. He doesn't seem to mind at all, setting down his wine glass before calling to you. '[one of]Ahoy there! You must be my new sexy cabin boy![run paragraph on][or]Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?[run paragraph on][or]This city is so droll. Nothing like Madrid. You look a bit like a whore I knew there, though. Come aboard and remind me more![run paragraph on][or]Thank goodness, someone to scrub this decking. I am dripping all over the inlaid hardwoods.[run paragraph on][or]Don't they know who I am? Why, I'll have them bent over the rail of my yacht and pound their asses until they're blue in the face. Mmm... that sounds lovely. Perhaps I'll practice a bit of that with you.[run paragraph on][or]Thank goodness, someone other than these blue collar types. Come aboard for some wine and a hard fucking, will you?[run paragraph on][at random]' He hops down from the deck, gearing up to fight!";
 		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
+		if "Male Preferred" is listed in the feats of player, now sex entry is "Male";
 
 to say ymgfight:
 	if ymgmode is 1:

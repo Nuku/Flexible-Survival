@@ -105,7 +105,7 @@ to say sexwithtristian:
 		else:
 			say "     'So you want to play the mare for a handsome little stallion like me?' Tristian says teasingly, as his equine lips lightly brush over your own lips. The scent of his stallion-like musk and sandalwood cologne fills your head with need even as he runs his hand teasingly along the front of your body. 'I think that sounds like fun... only I prefer my [']mares['] to be a bit more well-endowed,' he says as he runs his hands along his leather-encased crotch teasingly. This sight makes your mouth water even as your need grows even more desperate. 'Fortunately, I don't think that will be much of a problem for long...' Tristian says, as he runs his hands over your body again, kissing you teasingly while you feel your body reshape itself to better suit his desires...";
 			palominoinfect;
-	else if HP of Tristian is 11 and cocks of player > 0:
+	else if HP of Tristian is 11 and player is male:
 		say "     Leading you into a lounge in the back, he strips you down and gets you to lay back on the padded sofa. 'How about a special reward. I think my brother's hero deserves a rare delight.' He straddles your lap, grinding his ass down over your stiff cock. 'How about it, my precious pony - have you earned a treat?' Shall you [link]accept his offer (Y)[as]y[end link] or [link]ask him to fuck you (N)[as]n[end link]?";
 		if the player consents:
 			say "     Adjusting his positioning slightly, he lets your glans rub against his pucker. You can feel that tight hole slick with lube, and you realize he'd anticipated your request for sex and had prepared himself for your special reward. Twin moans of pleasure, one from each of you, come as his tight anal ring sinks down your throbbing meat.";

@@ -973,7 +973,7 @@ to say EricSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Eric's pussy to make him cum";
 	[]
-	if ((HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 99) and cocks of player > 0):
+	if ((HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 99) and player is male):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
@@ -1021,7 +1021,7 @@ to say EricSexMenu:
 		now sortorder entry is 12;
 		now description entry is "Have some fun with both of them together";
 	[]
-	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and HP of Eric is 99) and cocks of player > 0 or cunts of player > 0): [either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
+	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and HP of Eric is 99) and player is male or cunts of player > 0): [either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Klauz and Eric";
 		now sortorder entry is 13;

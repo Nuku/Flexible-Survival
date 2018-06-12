@@ -64,11 +64,11 @@ to say darkelfF:
 		say "     Then she begins to buck, and ride you like your were a sex toy. Her powerful downward thrusts smash your hips against the ground, and she grasps her breasts and pulsing cock. This sends her into a powerful, screaming, female orgasm that has her cunt squeeze and quiver around your tool. She continues this, cumming many more times before you cannot resist the involuntary pleasure of what she is doing to you, and cum yourself, sending your ejaculate up into her waiting womb while she splatters her hot, bitter seed across your face and body. Spent, you collapse as she rises from your softening member.";
 	else:
 		say "     Before you can recover, she has moved to straddle you and begins to scissor her legs with yours. She grinds her pussy against yours, sending waves and waves of pleasure through you, and rocking you into orgasm after orgasm, till it seems you might go mad from the pleasure. You lose count of the number of times you cum, and you cannot even begin to tell how many times she takes her pleasure from you. Eventually she is satisfied and sprays her hot cum across your body even as you're collapsing into exhaustion.";
-	say "     As blackness descends upon you from the vicious fucking you just received, you see your violator sauntering away. Her juices [If cocks of player > 0]mixed with your cum [end if]drip down her thighs as she strides with a satisfied sway to her hips. You hear her call back to you over her shoulder as you lose consciousness. 'That was fun. Come back again sometime and we'll try it again. My sisters and I would be more than happy to play with you again,' she cackles.";
+	say "     As blackness descends upon you from the vicious fucking you just received, you see your violator sauntering away. Her juices [if player is male]mixed with your cum [end if]drip down her thighs as she strides with a satisfied sway to her hips. You hear her call back to you over her shoulder as you lose consciousness. 'That was fun. Come back again sometime and we'll try it again. My sisters and I would be more than happy to play with you again,' she cackles.";
 
 
 to say beatthedarkelf:
-	if cocks of player > 0 and libido of player > 20:
+	if player is male and libido of player > 20:
 		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and oversized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
 		say "     [bold type]Shall you give into this impulse?[roman type][line break]";
 		LineBreak;
@@ -91,10 +91,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dark Elf"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthedarkelf]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetodarkelf]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Dark Elf"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [ Successful attack message ]
+	now defeated entry is "[beatthedarkelf]"; [ Text when monster loses. ]
+	now victory entry is "[losetodarkelf]"; [ Text when monster wins. ]
 	now desc entry is "[darkelfdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "feminine and exotically beautiful with wide, canted and vertically slit eyes. Your lips are plump and kissable and your ears are pointed and elven";
 	now body entry is "slender and agile with a very feminine set of curves. While a little below average in height, your arms and legs seem long and lithesome, giving you a slightly otherworldly appearance that isn't quite human. Your hands have long, slender fingers ending in sharp, inch-long nails";
@@ -120,7 +120,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 18; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 7; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

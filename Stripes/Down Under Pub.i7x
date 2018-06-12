@@ -76,7 +76,7 @@ to say down under pub scene:
 			say "     Seeing how it's outside of their operating hours (of noon to midnight), the pub's closed right now. You pop upstairs to visit Gillian instead.";
 			WaitLineBreak;
 			now battleground is "void";
-			move the player to Gillian's Flat;
+			move player to Gillian's Flat;
 		else:
 			say "     The pub, like in its days before the infection, is only open from noon to midnight. You should keep an eye on your [bold type]watch[roman type] and try back then.";
 	else if lastpubvisit - turns < 14:
@@ -84,7 +84,7 @@ to say down under pub scene:
 			say "     While you are welcome back at the Down Under Pub, they have limited supplies and have asked that patrons wait a week between visits. Since Gillian likes you, she's able to get you in every [bold type]two or three days[roman type], but you don't want to push it too much. Since you've got to wait before visiting the pub again, you instead let Gillian know you're upstairs and go wait for her. She's up with you shortly, getting one of the other girls to cover for her. Given the dampness around her muzzle and the taste of pussy on her lips when she kisses you, it's easy to guess how she convinced the girl to take her shift.";
 			WaitLineBreak;
 			now battleground is "void";
-			move the player to Gillian's Flat;
+			move player to Gillian's Flat;
 		else:
 			say "     While you are welcome back at the Down Under Pub, they have limited supplies and have asked that patrons wait a week between visits. Since the barmaid likes you so much, you can probably get in every few days, but you don't want to push it too much. You can probably get away with coming back every [bold type]two or three days[roman type] though.";
 	else:
@@ -98,13 +98,13 @@ to say down under pub scene:
 				say "[downunderpubvisit]";
 			else:
 				now battleground is "void";
-				move the player to Gillian's Flat;
+				move player to Gillian's Flat;
 		else:
 			say "[downunderpubvisit]";
 	if location of player is Down Under Pub:
 		say "     With your visit to the Aussie pub over, you head back to the nearby Red Light District to decide where to head next.";
 		WaitLineBreak;
-		move the player to Entrance to the Red Light District;
+		move player to Entrance to the Red Light District;
 
 to say downunderpubvisit:
 	setmonster "Red Kangaroo";
@@ -117,10 +117,10 @@ to say downunderpubvisit:
 	WaitLineBreak;
 	say "     After your meal, you hang out and chat with a bunch of the sexy kangaroos. After some arousing carousing, you find yourself feeling in the mood for some fun. Drunk, aroused and caught up in the moment as you are, you offer yourself up to the sexy roo beside you. You snuggle up close to the roo, fondling them as you kiss.";
 	let randomroos be { 1 }; [manly boomer]
-	if cocks of player > 0, add 2 to randomroos; [girly joey]
-	if cocks of player > 0, add 3 to randomroos; [horny jill]
-	if cunts of player > 0, add 4 to randomroos; [lez jill]
-	if cunts of player > 0, add 5 to randomroos; [roo pair]
+	if player is male, add 2 to randomroos; [girly joey]
+	if player is male, add 3 to randomroos; [horny jill]
+	if player is female, add 4 to randomroos; [lez jill]
+	if player is female, add 5 to randomroos; [roo pair]
 	sort randomroos in random order;
 	if entry 1 of randomroos is 1, say "[roopubsex1]";
 	if entry 1 of randomroos is 2, say "[roopubsex2]";
@@ -166,7 +166,7 @@ to say gillianpubfun:
 				say "     It seems luck's on your side this time, as [if HP of Gillian < 4]she's[else]Gillian's[end if] got a few minutes to spend with you and she's under the table, licking and lapping at your pussy eagerly. You moan in pleasure and rub her ears as her tongue dives into you again and again. Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it. Patting her side and turning in your seat, you raise one of your powerful roo legs high, spreading yourself. Getting in on the fun, she nibbles and kisses along your thighs so the others can get a peek at your dripping snatch before she dives back into eating you out. With her own tail raised high and her fingers in her snatch, she fingers herself wildly, much to the crowd's delight. Turned on by showing off your lover to the others, you have a very enjoyable time before finally cumming hard and soaking her muzzle in your juices. Setting her back down, you give her another kiss (which tastes of you) and pat on the rear to send her back to her duties.";
 		-- 1:
 			say "     Luckily for you, [if HP of Gillian < 4]she's[else]Gillian's[end if] got a few minutes between her duties and chooses to spend them with you. After a lustful kiss, she pulls you over to a nearby open space by the wall";
-			if cocks of player > 0 and a random chance of 3 in 5 succeeds:
+			if player is male and a random chance of 3 in 5 succeeds:
 				say ". Facing it, she raises her tail and shakes her ass at you, telling you to fuck her hard and fast. The nearby boomers and jills watch with happy grins as they watch you drive your [cock of player] cock into her juicy cunny[if cock length of player > 30]. It takes some effort, pressing the horny roo right up against the wall to get your [cock size desc of player] shaft fully buried into her, but you manage it in the end[else if cock length of player > 20]. it takes a little added effort to get your [cock size desc of player] shaft all the way into her[end if]. Because she'll need to get back to work, the sex is fast and hard, your hands running over her sexy bod while she pushes back with her powerful hips and squeezes her vaginal walls down around your shaft until you finally cum, filling her with a fresh, creamy load to run down her thighs while she waits the tables.";
 			else:
 				say ". Leaning back against it, she pushes you down to your knees and moans for you to eat her out. Knowing she needs it badly, you dive on it. She runs her hands over your head and keeps you pressed between her strong thighs. Her succulent pussy is a delicious delight, her juices subtly sweet and heady with her arousal. You tongue her wet folds while your fingers stroke her pussy all over. Knowing she'll need to be back to work soon, you drive a pair of fingers into her and frig her juicy box with rapid strokes while sucking on her clit, sending her over the edge. Her femme cum soaks your face and runs down her thighs, a tantalizing sight for the patrons to see while she waits their tables.";
@@ -236,9 +236,9 @@ to say roofloorshow:
 	let newgender be a random number between 1 and 5;
 	say "     It seems you've picked a fortunate time to come as another floor show starts up shortly after you finish up. Another partially changed human is brought in for the group, this one a [if randomgender is 1]man[else]woman[end if] with the head and paws of a [slutname]. [if randomgender is 1]He[else]She[end if] is naked and trying to cover up with [if randomgender is 1]his paws as best he can[else]her paws as best she can[end if], but the roos bringing in the new playtoy don't allow it, showing their prize off before laying [if randomgender is 1]him[else]her[end if] down on the fucking table and taking turns.";
 	say "     After several boomers and jills have had their chance, you get to move in and take a turn, finding they're well on their way to becoming another sexy [if newgender < 3]boomer[else if newgender > 3]jill[else]roo herm[end if]. Caught up in the excitement as you are, you eagerly move in to take your turn riding ";
-	if cocks of player > 0 and newgender > 2:
+	if player is male and newgender > 2:
 		say "her. Lining your cock up, you sink it into the increasingly eager roo slut's dripping and well-used snatch, pounding away at her. She moans and writhes on the pleasure, changing further as you add your thick seed to the mix already filling her. When finished, you move around to let her lick you clean even as the next boomer moves up to take your place.";
-	else if cunts of player > 0 and newgender < 4:
+	else if player is female and newgender < 4:
 		say "[if newgender < 3]his[else]her[end if] new roo cock. With a moan of pleasure, you sink down onto it and bounce eagerly on your powerful legs until finally [if newgender < 3]he[else]she[end if] can't hold back and a load of creamy roo cum blasts from their swelling balls. When finished, you move around to let [if newgender < 3]him lick his semen[else]her lick her semen[end if] from your recently creamed pussy, smiling at how eager they are to lap it up, even as the next jill moves in to take your place.";
 	else if player is male:
 		say "you stride up to his face, presenting your throbbing cock to him. He moans softly and dives his reforming muzzle over it. So far gone in his lustful transformation, he sets to licking and sucking at your cock hungrily. You grin and rub his head and growing roo ears as you pump into his changing muzzle, unleashing your thick roo seed down his throat to join the many other loads he's swallowed in his bloated tummy. As you move back, another jill moves in to ride his growing roo cock.";
@@ -311,9 +311,9 @@ to say sexwithgillian:
 		say "     Gillian smiles happily at your suggestion of sex. 'Yeah, let's have some fun,' she says as she pushes you eagerly over to the ";
 		let gilliansexlist be { 1 }; [give cunnilingus]
 		if player is not neuter, add 2 to gilliansexlist; [69]
-[		if cocks of player > 0, add 3 to gilliansexlist; [get blow job]			]
-		if cocks of player > 0, add 4 to gilliansexlist; [fuck her]
-[		if cunts of player > 0, add 5 to gilliansexlist; [strap-on: vaginal]		]
+[		if player is male, add 3 to gilliansexlist; [get blow job]			]
+		if player is male, add 4 to gilliansexlist; [fuck her]
+[		if player is female, add 5 to gilliansexlist; [strap-on: vaginal]		]
 [		if anallevel is 3 and cunts of player is 0, add 6 to gilliansexlist; [strap-on: anal]	]
 		sort gilliansexlist in random order;
 		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexlist; [avoids repeats unless only option]

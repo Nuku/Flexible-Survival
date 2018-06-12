@@ -152,53 +152,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Chocolate Lab"; [Name of your new Monster]
-   now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]The gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate Lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!";
-   now defeated entry is "[beatthelab]";
-   now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [skinname of player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as the text "Your Body is (your text)."]
-   now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "chocolate-brown, canine"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it seems to lose all internal structure. Your nose and mouth push out to form a canine muzzle while your ears and the rest of your head change as well. Your vision blurs momentarily as your eyes change somehow. The scent of cocoa fills you, exciting you, making you hunger for it. Somehow you know your head is made of chocolate, through and through. Your tongue lolls from your mouth, drooling a chocolaty syrup as your dark chocolate eyes look around"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "a strange sensation sinks into you as your whole body changes. Your body becomes that of an anthropomorphic dog, with paw-like hands and feet and digitigrade legs. But that's not strange when compared to the internal changes you're feeling. It is as if your muscles, bones and organs are melting and reforming into flowing chocolate. Your mind tries to maintain cohesion on it, holding your body in a state of semi-solid chocolateness"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "a soft layer of milk chocolate coats you that flexes and shifts as you move"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a short, canine tail grows from your ass. But it is not made of fur and flesh, but instead of malleable chocolate that wags all the same"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it becomes canine in shape, then starts to turn a smooth, even chocolate-brown in color. As this change in color happens, you can feel it becoming made of chocolate. A flexible sheath grows to bundle it up and white, creamy chocolate leaks from its tip"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 12;
-   now dex entry is 14;
-   now sta entry is 10;
-   now per entry is 15;
-   now int entry is 18;
-   now cha entry is 18;
-   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 40;
-   now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-   now wdam entry is 6; [Amount of Damage monster Does when attacking.]
-   now area entry is "High"; [ Location of monster, in this case the High Rise District]
-   now cocks entry is 3; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 6; [ Number of Breasts infection will give you. ]
-   now breast size entry is 4; [Size of breasts infection will try to attain ]
-   now male breast size entry is 2; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 6;
-   now libido entry is 70; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "chocolate milk"; [ Dropped item. Key will be used later ]
-   now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
-   now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]chocolate[or]confectionary[or]flowing[or]malleable[at random]";
-   now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is false;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Chocolate Lab"; [Name of your new Monster]
+	now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]The gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate Lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!";
+	now defeated entry is "[beatthelab]";
+	now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [skinname of player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "chocolate-brown, canine"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it seems to lose all internal structure. Your nose and mouth push out to form a canine muzzle while your ears and the rest of your head change as well. Your vision blurs momentarily as your eyes change somehow. The scent of cocoa fills you, exciting you, making you hunger for it. Somehow you know your head is made of chocolate, through and through. Your tongue lolls from your mouth, drooling a chocolaty syrup as your dark chocolate eyes look around"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "a strange sensation sinks into you as your whole body changes. Your body becomes that of an anthropomorphic dog, with paw-like hands and feet and digitigrade legs. But that's not strange when compared to the internal changes you're feeling. It is as if your muscles, bones and organs are melting and reforming into flowing chocolate. Your mind tries to maintain cohesion on it, holding your body in a state of semi-solid chocolateness"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "a soft layer of milk chocolate coats you that flexes and shifts as you move"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a short, canine tail grows from your ass. But it is not made of fur and flesh, but instead of malleable chocolate that wags all the same"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes canine in shape, then starts to turn a smooth, even chocolate-brown in color. As this change in color happens, you can feel it becoming made of chocolate. A flexible sheath grows to bundle it up and white, creamy chocolate leaks from its tip"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 12;
+	now dex entry is 14;
+	now sta entry is 10;
+	now per entry is 15;
+	now int entry is 18;
+	now cha entry is 18;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 40;
+	now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
+	now area entry is "High"; [ Location of monster, in this case the High Rise District]
+	now cocks entry is 3; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 6; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 2; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 6;
+	now libido entry is 70; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is "chocolate milk"; [ Dropped item. Key will be used later ]
+	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]chocolate[or]confectionary[or]flowing[or]malleable[at random]";
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Piggybacking Labs
@@ -333,12 +333,12 @@ when play ends:
 					say "     During your time at the camp, you inform the scientists of the lab[if labhost is 2]s[end if] hidden within your body, and eager for more data on your bizarre infection, they set about finding a way to separate the lab[if labhost is 2]s[end if] from you right away. When you awaken from the procedure, you no longer feel the lab[if labhost is 2]s['][else]'s[end if] presence within you, but despite being happy to be rid of them, you find yourself concerned for the lab[if labhost is 2]s[end if] now that they're in the military's hands.";
 			say "     You eventually settle down and become a chocolatier, having some innate feel for preparing it coming from your altered composition. You do have a few close calls early on while near the oven, but manage to move away and re-solidify while you still can. As time goes on, your products become in high demand to those who can afford your gourmet chocolates.";
 			if humanity of player < 50: [Going a little mad]
-				say "     You even start adding some of your white chocolaty cream from your [if cocks of player > 0 and breast size of player > 0]cock and breasts[else if player is male]cock[else]breasts[end if] to special items for special patrons. While not infectious, they do prove to be powerful aphrodisiacs that are most enticing. You keep their special ingredient secret from your clients. Their undocumented addition to your selection further increases your profits and success.";
+				say "     You even start adding some of your white chocolaty cream from your [if player is male and breast size of player > 0]cock and breasts[else if player is male]cock[else]breasts[end if] to special items for special patrons. While not infectious, they do prove to be powerful aphrodisiacs that are most enticing. You keep their special ingredient secret from your clients. Their undocumented addition to your selection further increases your profits and success.";
 			if humanity of player < 25: [...and then going completely mad]
 				say "     After a few years, you are struck with the sudden idea for your most daring and elaborate project yet. With the help of all your apprentices over several uninterrupted days, you are milked for as much white chocolate syrup as you'll give over and over. During this time, you're fed only a diet of pure, white chocolate by your assistants who slowly change, becoming chocolate Labs like you. You insist on only using your own chocolate on this project though, despite many volunteering to give as well.";
 				say "     The chocolate is prepared and heated, then poured into the elaborate, segmented mold you had specially commissioned for this project. When it cools, your team opens it carefully, releasing the large, white chocolate figure. It is a solid, white chocolate version of the creature you met in the city so long ago. You nervously nibble the ends off your fingers as you watch and wait, elated when it starts to move.";
 				say "     The white chocolate Lab is in your arms as soon as it can walk and fucking you moments after that. The flowing, ivory creature you've created becomes your mate and is capable of changing others into chocolate canines like yourself.";
-				If cunts of player > 0 and "Sterile" is not listed in feats of player: [BREEDABLE+H-SIRING]
+				if player is female and "Sterile" is not listed in feats of player: [BREEDABLE+H-SIRING]
 					say "     A few days later, while the creamy filling of his pups swirls with life in your womb[if player is male] and your mate's womb similarly filled[end if], you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
 				else if player is male: [SIRING ONLY]
 					say "     A few days later, while a creamy filling of your pups swirls with life in your mate's womb, you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";

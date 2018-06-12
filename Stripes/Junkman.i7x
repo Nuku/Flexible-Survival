@@ -60,10 +60,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Junkman"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Junkman"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The junkman bashes you with a fist covered in metal bits![or]The junkman kicks you with a heavy, metal foot![or]The scrapyard cyborg grabs you and tosses you roughly to the ground![or]The junk cyborg headbutts you with his metal-plated skull![at random]";
-	now defeated entry is "[beatthejunkman]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetojunkman]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthejunkman]"; [ Text when monster loses. ]
+	now victory entry is "[losetojunkman]"; [ Text when monster wins. ]
 	now desc entry is "[junkmandesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, but with a stainless steel panel across one side and under your chin. From the shape of it, you'd guess it belongs on some kind of kitchen appliance. You have three rows of mismatched bolts running over it, almost like a strange mohawk of metal";
 	now body entry is "human, but with numerous pieces of scrap protruding from or replacing body parts. There are some metal and plastic vanes attached to your shoulders, various external wires and cords, the handle to an old iron at your hip and metal pipes which sounds hollow replacing your left forearm, to name just a few. Your hands are thankfully normal save for a few wires embedded in the skin, allowing you full use of them. One foot has been replaced with the lower half of an iron and seems to match the handle at your hip[if player is male]. A quartet of brass tubes run across the surface of your skin and flex with it. These lead from a valve which has replaced your navel to your balls[end if][if player is female]. A trio of pink, plastic tubes run from your sides, starting just above the hip and across the surface of your skin. These lead down to your groin and link into your cunt, which is wet and slick with the oily lubricant flowing into it constantly[end if]";
@@ -89,7 +89,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

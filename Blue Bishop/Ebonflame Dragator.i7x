@@ -81,7 +81,7 @@ to say ebgatordesc:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	now impregnatevalid is false;
-	if cunts of player > 0 and ebneuterswitch is false:
+	if player is female and ebneuterswitch is false:
 		if player is fem_vacant:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;

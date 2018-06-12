@@ -218,7 +218,7 @@ Instead of going west from dirty sheds:
 		follow the turnpass rule;
 		if success is 1:
 			now progress of alex is 5;
-			move the player to Alex's Condo;
+			move player to Alex's Condo;
 			say "     Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order. 'Alright,' he says. 'Here's your reward for the last bit.' You receive one more food and one more water.";
 			increase carried of food by 1;
 			increase carried of water bottle by 1;
@@ -459,7 +459,7 @@ to say pillowtalk:
 	if T is 7:
 		say "Alex runs his paw along your side and nibbles your ear, telling you that Lorenda and Lee have been asking about you. It seems they want to thank you for saving them and getting them together. They've been rather overtly suggesting that you both come over sometime for a little fun at their place. Alex runs his finger along your thigh as he tells you that part, making it clear to you just what kind of fun those two have in mind.";
 	if T is 8:
-		say "Alex wriggles his flexible body out from under his half-filled tray and nuzzles between your legs, licking and kissing at your [if player is herm]cock and pussy[else if cocks of player > 0 and anallevel is 3]cock and anus[else if player is male]cock[else]pussy[end if]. You moan in delight, rubbing a paw through his headfur as you enjoy his oral ministrations with your meal until finally he gets a juicy treat as well when you cum.";
+		say "Alex wriggles his flexible body out from under his half-filled tray and nuzzles between your legs, licking and kissing at your [if player is herm]cock and pussy[else if player is male and anallevel is 3]cock and anus[else if player is male]cock[else]pussy[end if]. You moan in delight, rubbing a paw through his headfur as you enjoy his oral ministrations with your meal until finally he gets a juicy treat as well when you cum.";
 	if T is 9:
 		say "you talk to Alex about how he's changed while you've known him. He's become a much nicer person over the time you've known him. You cautiously ask him if he thinks it has to do with his growing changes, and he agrees. 'Part of it was the stress about my clients, but only part. I think letting my ferret side out has made me happier and more positive overall. I may get a little hyperactive at times, but it's hard to stay sad now. I have a little romp around the room or hide a few shiny things and I'm right as rain.'";
 	if T is 10:
@@ -474,7 +474,7 @@ when play ends:
 			say "     After your mind gives out to the infection, you are eventually drawn back to Alex's condo. After happily greeting you, he quickly realizes something is wrong and that you've lost yourself to the infection. He is briefly saddened by this, but rebounds quickly as you playfully coax him into another romp on the bed. You can't speak much any more, save for requests for sex or the occasional loving phrase for your sexy, ferret guardian during brief moments of clarity.";
 			say "     When the military comes through to rescue everyone, Alex takes care of you and makes sure you are safely taken with him and his clients. There is some argument about what to do with you, but Alex puts his legal prowess to the test and eventually gets you entrusted to his care after you're deemed non-infectious. He even shows you the press tape of his impassioned plea for the brave soul who rescued and protected his clients at the eventual loss of their own mind. You have trouble following the words, but it warms your heart to hear him talk about you with so much love.";
 			say "     He takes good care of you, giving you a lovely room of your own filled with toys, both mundane and sexual, to keep you happy while he's away at work. Lorenda and Lee are taken on as his house staff and your act as your daytime guardians. They are very happy to play with you and help sate your sexual needs.";
-			if cunts of player > 0 and "Sterile" is not listed in feats of player:	[BREEDABLE]
+			if player is female and "Sterile" is not listed in feats of player:	[BREEDABLE]
 				say "     Alex seems to be quite successful - certainly he's able to pay your playmates very well and he's soon buying an even larger home with a bigger playroom for you. It also comes complete with a lovely nursery for the growing kits in your womb. He's especially rambunctious after winning a big case and still surprises you with breakfast in bed at times.";
 			else:											[NON-BREEDABLE]
 				say "     Alex seems to be quite successful - certainly he's able to pay your playmates very well and he's soon buying an even larger home with a bigger playroom for you. He's especially rambunctious after winning a big case and still surprises your with breakfast in bed at times.";
@@ -487,7 +487,7 @@ when play ends:
 				say "     Thanks to the efforts of you and a few others, transformees maintain the right to hold elected positions with few restrictions. You also ensure that the only amendments to impeachment statues are reasonable ones to permit the removal of a newly-transformed elected representative, and only if they are deemed to have sufficient mental changes. As a candidate's views, politics and platform could radically change away from the electorate that selected them, this is a reasonable concern, but it also keeps good, sane officials from being removed for inconsequential changes. You are praised often for your fair-mindedness and insight when these new laws are enacted.";
 			else:
 				say "     While Alex becomes quite successful in civil-business litigation, often working on cases related to species and transformation issues, you are not quite able to match his success. He remains very supportive of you and you do manage to build up a good practice of your own, focusing on the handling of species-based hate crimes and discrimination. While public spokespeople seem to get the credit for influencing social change, you know you're there at the front lines fighting the cases they talk about when they speak out for equality. But somehow, despite your very busy lives, Alex is still able to find the time to make you breakfast in bed with his special pancakes every now and then.";
-			if cunts of player > 0 and "Sterile" is not listed in feats of player:	[BREEDABLE]
+			if player is female and "Sterile" is not listed in feats of player:	[BREEDABLE]
 				say "     Throughout your successful lives together, Lorenda and Lee are there for you both, good friends and occasional partners. Their hybrid kittens help to fill the large home you all share and are wonderful playmates to your own ferret kits.";
 			else:											[NON-BREEDABLE]
 				say "     Throughout your successful lives together, Lorenda and Lee are there for you both, good friends and occasional partners. Their hybrid kittens help to make your large house into a home.";

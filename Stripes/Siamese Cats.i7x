@@ -52,12 +52,12 @@ to say siamesecatdesc:
 		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
 		say "[swaptomale]";
-	else if cocks of player > 0 and cunts of player is 0:		[MALE PLAYER]
+	else if player is puremale:		[MALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
 		decrease dex entry by 2; [as if male before swap]
 		increase wdam entry by 1;
 		say "[swaptofemale]";
-	else if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
+	else if player is purefemale:		[FEMALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
 		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
@@ -220,9 +220,9 @@ to say beatthesiamesecat:
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
 			if the player consents:								[CHOSE MALE KITTY]
-				if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
+				if player is purefemale:		[FEMALE PLAYER]
 					say "[line break][siamsex1]";
-				else if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
+				else if player is puremale:	[MALE PLAYER]
 					say "[line break][siamsex2]";
 				else:	[HERM PLAYER]
 					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
@@ -236,9 +236,9 @@ to say beatthesiamesecat:
 						say "[line break][siamsex2]";
 			else:										[CHOSE FEMALE KITTY]
 				LineBreak;
-				if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
+				if player is purefemale:		[FEMALE PLAYER]
 					say "[line break][siamsex3]";
-				else if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
+				else if player is puremale:	[MALE PLAYER]
 					say "[line break][siamsex4]";
 				else:	[HERM PLAYER]
 					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
@@ -304,9 +304,9 @@ When Play begins:
 	now defeated entry is "[beatthesiamesecat]";
 	now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
-	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as "Your body is (your text)."]
+	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts into a feline muzzle. Your ears become large and dark colored, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -370,7 +370,7 @@ when play ends:
 					say "     You kiss and nuzzle Sven as you start to change, picking up his snow leopard pattern and he picks up some siamese traits, until eventually you becoming paired twins. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain largely intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Sven is briefly surprised by all this, but the love and adoration he's shared for you that you can now feel tells you how much he loves being one with you. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
 					say "     You do end up taking on Sven's pet-like nature, making you become a loving pet, eager to serve your owner as Sven does. When you are found by [if HP of Sven is 10 or coonsex > 0]Candy[else if pigfucked > 3]Philip[else if Sandra is in the bunker]Sandra[else]your zookeeper friend[end if], you are taken to their home to become a pair of lustful, loving pets for them. As lustful pets, you are there to satisfy their sexual desires and you submit to playing with their friends eagerly. As conjoined kitties, there are so many ways to please your new owner and their friends. Soon enough, you and Sven are together at the zoo, sharing in the joy of breeding with the great cats as your own watches with a smile.";
-					if cunts of player > 0 and "Sterile" is not listed in the feats of player:
+					if player is female and "Sterile" is not listed in the feats of player:
 						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens. These lovely felines are joined together at the tail as you are. They, and their many siblings to come, grow into lovely pet pairs much like their parents[if hermaphrodite is banned]. They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[else]. They come in a mix of couples, any combination of males, females and herms[end if]. These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner. You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do.";
 				else:
 					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your pet and you feel much better. The feeling never quite goes away, but a little romp with him makes everything a little brighter. You know he loves and adores you, and will never leave you, and this soothes the strange longing.";

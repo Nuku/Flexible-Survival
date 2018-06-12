@@ -28,20 +28,20 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Hyperskunk"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthehyperskunk]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetohyperskunk]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Hyperskunk"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
+	now defeated entry is "[beatthehyperskunk]"; [ Text when monster loses. ]
+	now victory entry is "[losetohyperskunk]"; [ Text when monster wins. ]
 	now desc entry is "[hyperskunkdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "lovely skunk head with feminine lines. You have pretty, gray eyes"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a sexy, wide-hipped skunk"; [ Body Description, format as the text "Your body is (your text)." ]
+	now face entry is "lovely skunk head with feminine lines. You have pretty, gray eyes"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a sexy, wide-hipped skunk"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "fluffy fur in a skunk pattern of black and white over your";
-	now tail entry is "You have a big, fluffy striped tail like a skunk."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "slate gray"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now tail entry is "You have a big, fluffy striped tail like a skunk."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "slate gray"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "your vision goes briefly blurry. Your jaw pops and shifts as your new head takes shape with a very skunk-like appearance";
 	now body change entry is "starts to shift and change starting at your hips. These widen, giving you a large and sexy bottom with wide birthing hips. Your thighs thicken as well to match. As the changes spread further down your legs, your feet become more paw-like, though still largely resemble normal feet. As this continues, spreading upward now, your waist grows fuller. It's not enough to call you fat, but you're not slender either and definitely have a few inches to pinch or for someone to wrap their arms around. Your upper body becomes shapely and sexy and your hands remain mostly human, though with slight traces of the skunk infection you've picked up like small claws instead of fingernails";
-	now skin change entry is "you gain a thick and fluffy coat of skunk patterned fur"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you get a nice, wide bottom with an even wider skunk tail, large and fluffy, to go with it"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now skin change entry is "you gain a thick and fluffy coat of skunk patterned fur"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you get a nice, wide bottom with an even wider skunk tail, large and fluffy, to go with it"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "becomes thick and meat as it pulses with arousal, shooting spurts of semen. As the changes subside, you can see that aside from its new, slate gray color, it looks rather like a normal, if thick, human dick";
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -57,7 +57,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 30; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 36; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 10; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

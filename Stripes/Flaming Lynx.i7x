@@ -25,7 +25,7 @@ to say losetoflaminglynx:
 	choose row monster from the table of random critters;
 	say "     The fiery feline growls sends the surging flames from its body across the ground, scorching the slimy tunnel floor into soot. As the flames subside to a faint glow across his fur like lamplight, he gives you a final cuff with one large paw, knocking you down onto the blackened patch. He sniffs at you and nuzzles along your body. For a moment, you think those flames will burn, but they are only pleasantly warm now - a warmth that you begin to find strangely soothing and you run a hand across his side, cautiously petting the wild feline. His fur doesn't quite feel like normal fur, though you'd be hard pressed to express what makes it different, as it is still soft and yielding.";
 	let lynxfun be 0;
-	if cunts of player > 0 and cocks of player is 0:			[Female - unwanted]
+	if player is purefemale:			[Female - unwanted]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body before growling in disdain upon noticing your cunt moments later. He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you. The fire seems to sink into your [bodytype of player] body, seeking to burn away that which is unwanted.";
 		decrease HP of player by wdam entry;
 		decrease humanity of player by a random number between 2 and 4;
@@ -149,10 +149,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Flaming Lynx"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Flaming Lynx"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[flaminglynxattack]";
-	now defeated entry is "[beattheflaminglynx]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoflaminglynx]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattheflaminglynx]"; [ Text when monster loses. ]
+	now victory entry is "[losetoflaminglynx]"; [ Text when monster wins. ]
 	now desc entry is "[flaminglynxdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a lynx with tufted ears and a sizeable cheekruff of fluffy fur";
 	now body entry is "transformed into that of a quadrupedal feline. You have the stocky build of a lynx, but expanded to roughly the size of a wolf or large dog. Your hands and feet have become large, padded paws hiding sharp claws";
@@ -162,7 +162,7 @@ When Play begins:
 	now face change entry is "a feline muzzle and whiskers form on your face. You can't help but yowl as your head reshapes itself into that of a lynx";
 	now body change entry is "your posture changes to one that prefers walking on all fours, though you manage to retain the ability to walk upright with some effort for now. Your body reshapes itself to become one of a strong, stocky feline with large, padded paws";
 	now skin change entry is "you heat seems to pour from your body, making the air around you ripple. A coat of fluffy fur spreads across your body in a mix of reds, oranges and yellows marked by charcoal black in the pattern of a lynx. As the last of this fur grows in the heat grows further and small flames begin to flicker across your furry coat";
-	now ass change entry is "you gain a short lynx tail with red fur and a flaming tip"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "you gain a short lynx tail with red fur and a flaming tip"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it gains a sheath and takes on a redder hue with a feline shape to it";
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -178,7 +178,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

@@ -300,13 +300,13 @@ to say CorbinSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Finger-fuck Corbin's pussy to make him cum";
 	[]
-	if (HP of Corbin > 1 and cocks of player > 0):
+	if (HP of Corbin > 1 and player is male):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the pussyboy with your cock";
 	[]
-	if (HP of Corbin > 1 and cocks of player > 0):
+	if (HP of Corbin > 1 and player is male):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Corbin's ass";
 		now sortorder entry is 5;

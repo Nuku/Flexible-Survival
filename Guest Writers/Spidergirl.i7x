@@ -73,7 +73,7 @@ to say spidergirl_neuter:
 
 to say spidergirl defeat:
 	say "The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp.";
-	if cocks of player > 0 and cock length of player >= 8: [ If player has cock, spidergirl tempts them ]
+	if player is male and cock length of player >= 8: [ If player has cock, spidergirl tempts them ]
 		say " She looks up at you and blinks pitifully; then you see the armor plates between her front pair of legs slide apart, exposing the soft pink folds of a very human-like pussy.[line break]Do you give her what she wants?";
 		if player consents:
 			say "You can feel your cock swell mightily as the spider creature presents herself to you. You push her down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; your lust is already taking you over, your body nestling against hers, your hips pounding against her lower body. The spider's inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can--before your orgasm swells up and bursts into her, pumping the spider's pussy full of your hot cum. You groan and finally pull out of her; she lays there, exposed and used, her human skin sweaty and flushed and her cunny trickling fluid. Suddenly her skin and face redden, and she quickly gets to her feet and scurries off, looking almost shy.";
