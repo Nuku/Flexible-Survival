@@ -69,22 +69,22 @@ Install the Flexible Survival game so you have an interpreter that can read the 
 
 http://blog.flexiblesurvival.com/p/links.html
 
-## 9. Move the Github repository files into your Inform files
-You will have to do this step every time you pull new changes from Github!
+## 9. Run the `sync.bat` script
+You will have to do this step every time a new folder is introduced (either pulled from Github or if you add a new folder yourself).
 
-Move the files in the Github repo:
+It will make a symlink from your Inform project to the Github repo, so that the Inform engine knows where the files are stored for compilation.
 
+Here are the manual mapping of files if you do not want to use the script:
 | Action                      | File/Folder                        | At  |
 | --------------------------- | ---------------------------------- | --- |
 | Copy the file from the folder `Documents\Github\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
 | Copy the folder from the folder `Documents\Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
 | Copy the folders from the folder `Documents\Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
+| Copy the file from the folder `Documents\Inform\Projects\Flexible Survival.materials\Release` | `Flexible Survival.gblorb` | `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release` |
 
 ## 10. Make your changes!
-Now whenever you make changes in Atom, you should run the `overwrite_inform_project.bat` script to synchronize your Github repository to your Inform project folders. Then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go`. Compiling takes a very long time! Expect to wait 5-20 minutes!
-
-If you want to share it with others or test it in a different engine, click `Release` to compile. The file will be produced at `Inform\Projects\Flexible Survival.inform\Build\output.gblorb`. You can move that to `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release\Flexible Survival.gblorb` and replace the existing file if you want to test it outside of the Inform editor. Then open the Start Menu and Play Flexible Survival!
+Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes! If you used the `sync.bat` script above, you will be able to use your `Play Flexible Survival` shortcut in the start menu to access your latest Release build (NOT Go!).
 
 ## 11. Record your changes and submit a Pull Request!
 Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.

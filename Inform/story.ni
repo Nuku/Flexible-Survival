@@ -199,7 +199,7 @@ A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
-The player has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
+A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
 The player has a text called bodytype. The bodytype is usually "human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
@@ -4937,6 +4937,7 @@ Include Basic Locations by Core Mechanics.
 Include BFandI by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Debugging Tools by Core Mechanics.
+Include Definitions by Core Mechanics.
 Include Feats by Core Mechanics.
 include FS Graphics by Core Mechanics.
 Include Fucking by Core Mechanics.
@@ -5037,7 +5038,6 @@ Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by MGEddie.
-Include Feral Latex Fox by Dys.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -5415,6 +5415,7 @@ Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Athanasia by Stripes.
+Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
 Include Blake by Ssely.
