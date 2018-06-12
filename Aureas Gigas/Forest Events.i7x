@@ -17,7 +17,7 @@ Instead of resolving a One flew into the Cuckoos Nest:
 	WaitLineBreak;
 	say "     He is barely out of sight before a burly white-coated bull strolls over to the tent and glances inside, then asks, 'Is he gone?' Stepping out to meet him, the female anthro bird nods and starts kissing the tall bovine. They vanish inside the tent together, and from the muted grunts and moans coming out of it, you can guess what's going on in there now. Chuckling at the antics of these people, you get up from the bench eventually and move back out into the woods to continue your exploration. A couple of minutes down a narrow footpath between the trees, you cross paths with the male cuckoo from before - on his way back towards the settlement.";
 	say "     [bold type]Remembering what is happening in his tent, part of you wants to give the man a little warning before he walks in on his partner having an affair.[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Warn the guy.";
 	say "     ([link]N[as]n[end link]) - Don't say anything.";
 	if player consents:
@@ -55,7 +55,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 	say "     Gray starts cleaning the inside of the tent, sweeping out any dirt or trash. He fluffs up a couple of pillows that lay inside. Content with the condition of the interior, the male sits inside the tent and takes a couple of deep breaths. He closes his eyes and start to murmur something. After listening a little harder you discover he is imagining Izzy getting fucked by someone with a massive cock. Still with his eyes closed, the imaginative male starts to play with his cock. His quickly erect penis is a little on the small size at five inches and avian in shape, which means large at the base and tapering off towards the tip. Rubbing the top of the pointed tip the bird says a little louder, 'Take that bull's dick... get a cream-pie as white as his coat...'";
 	say "     It seems like the scene playing in his memory is based on the event that occurred the last time you were here. A wild idea crosses your mind as you watch the small cocked cuckoo. Wouldn't it be fun to step into the tent yourself and start fooling around with the boy, making Izzy the voyeur for once.";
 	say "     [bold type]Do you want to head into the tent and switch things up for the couple?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Head inside.";
 	say "     ([link]N[as]n[end link]) - Don't go inside.";
 	if player consents:
@@ -101,7 +101,7 @@ Instead of resolving a Avian Tent:
 	WaitLineBreak;
 	say "     Stripping off the pilot's jumpsuit, the adulterous lady guides the anthro osprey to lie on a bedroll, and then starts to kiss down his toned abs and the tip of his 10 inch long avian cock. She then sits on the raptor's lap and starts tease Gray by softly stroking her foot-talons across his face. The blindfolded male quietly moans. Grinning Izzy asks, 'You don't mind if we have some company? I made a bet with my partner here that if he doesn't climax before I cum I'll find a sexy woman to have a threesome.' With a mild chuckle the bird of prey says, 'This ain't my first time at this type of rodeo, you would be surprised just how many couples have thing for a man in uniform. I'm gonna fuck you so hard it's going to be impossible for him to win the bet.";
 	say "     [bold type]Do you want to watch while the osprey hooks up with the cuckooess?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Don't watch.";
 	if player consents:
@@ -135,7 +135,7 @@ Instead of resolving a Sandwich Shop:
 	WaitLineBreak;
 	say "     You look around the area and sense no current danger. Even though the restaurant is ruined, some small instinctual part of you feels like there has to be some food around here that hasn't been ruined or purloined. The metal support beams inside the store creak and groan enough to give you some pause to worry about being trapped if the building collapses.";
 	say "     [bold type]What do you want to do now?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Scavenge inside the store.";
 	say "     ([link]N[as]n[end link]) - Leave the store.";
 	if player consents:
@@ -173,7 +173,7 @@ instead of resolving Thief's Punishment:
 	say "     The cat-like weightlifter laughs and says teasingly, 'I could eat a shrimp like you for a post workout snack. But you look a little too lean to taste any good. You'll have to be punished another way. What's your name, anyways? Shrimp seems accurate for how you look but I doubt your momma named you that.' Squirming in her grasp, the mouse stutters, 'My name i... is... ppp... Powell.' The tigress bodybuilder listens to him with a toothy grin, but does little to acknowledge him, instead looking over towards you. 'Feel free to watch if you want, I'm going to make mousy here work for his atonement.'";
 	WaitLineBreak;
 	say "     [bold type]It's only fair that thieves get punished, and it doesn't look she plans on doing any real harm to him...[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch the thief get punished.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if player consents:
@@ -221,7 +221,7 @@ instead of resolving Thief's Reformation:
 	say "     Your awkward conversation is interrupted by the sounds of a rowdy gang of six infected beings strutting out of the forest and into the clearing. They're all lizard-based infected, showing scaly skin and tails on their bodies. A large monitor lizard seems to be the one in charge, stepping forward and calling out, 'Hey look - it's a bitch and a pussy, but I don't know which one is which!' His goons burst into laughter. Continuing his statement he says, 'If you don't want to get hurt hand over all your water and supplies. You know how this goes, don't you mousy boy.' Powell glares at the intruders and replies, 'Go away I don't want to hurt you.' Stepping up besides her companion, Bridget flexes her muscles and growls, 'But I do.' Looking over her shoulder, she says to you in a more civil tone, 'You don't have to stick around if you don't like to. This is our fight, we can handle ourselves.'";
 	WaitLineBreak;
 	say "     [bold type]No matter what she says, the two of them are outnumbered pretty fiercely. Do you maybe want to stick around and help them fight off the gang of lizards?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Fight.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if player consents:

@@ -19,7 +19,7 @@ when play begins:
 
 to say losetoLiquidshifter:
 	say "     The sticky, glue like substance of the liquidshifter swamps over your feet, its cold slime slipping into every crack and crevice of your soles - you struggle, your strength seeming to just stretch out thick strands of the substance. You sink into the slime, coating over your digits and thoroughly binding them to the floor of which the creature chose to keep you. Slowly the liquidshifter would grow closer, the slimy, slow-but ever-so substantial movements begin to climb up to your waist.";
-	if cocks of player > 0:
+	if player is male:
 		say "     With time, the goo began to coat over your hard member, the twitching arousal being sent into overdrive as the creature teases its cold liquid over your length. It pushes against your tip, the liquid seeming to push into your urethra, the feeling of being filled in such a way so foreign to you. Of course, the pleasure was building up, the impromptu sound having blocked any cum from coming out, to your torture. The slime slid further over your member, the slime seeming to endlessly tease you, before it grips over the length tight, squeezing in a pulse, only enough to get you writhing in need for orgasm. 'This is mine, now. Not yours,' the dominant creature somehow whispered directly into your mind.";
 		WaitLineBreak;
 		say "     Suddenly, a phallic form shoves its way forcefully into your ass, the dildo-shaped, gluey form plugging you completely, turning your face into that of complete bliss. The wide grin on the face of the draconic-looking liquidshifter in front of you, eyes watching over your squirming form - the sight of having a new submissive toy to play with getting its own member to harden in front of you - its enjoyment of the situation obvious to you, even as your eyes roll to the back of your head in extreme pleasure. And so, you lay there, in a trap of complete bliss - the stickiness of the slime that covers you keeping you in your place - unable to move an inch as the liquidshifter does as he wants to your helpless body.";
@@ -41,7 +41,7 @@ to say beattheLiquidshifter:
 	say "     ([link]N[as]n[end link]) - Leave him.";
 	if player consents:
 		say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of its gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
-		if cunts of player > 0:
+		if player is female:
 			say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. It pulses and pumps, slowly pushing into your pussy, filling you out, much like earlier. Its intense vibrations get you off, forcing writhes of pleasure to rupture through your body, before you spurt your femcum into the pile of goo - combining fluids with the liquidshifter.";
 		else:
 			say "     You enjoy the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it. Before long, you spurt your seed into the goo, combining the fluids.";

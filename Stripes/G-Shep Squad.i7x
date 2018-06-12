@@ -149,7 +149,7 @@ to say bustersexmenu:
 	now sextablerun is 0;
 	say "     Approaching Buster with an offer of sex gets the German shepherd's ears to perk up. '[if gshepmood is 2]Alright recruit. I could use a break. You're a good dog for offering,' he says with a doggy grin and wagging tail[else if gshepmood is 1]Sounds good, recruit. Let's have another go at training you up to be a good dog, eh?' he says with a doggy grin and a wag of his tail[else]I'd say another round of doggy training is in order. Let's see if we can't clear up this feline mess and get you looking like a good, canine citizen,' he says assertively[end if]. While the canine officer divests you of your pack and gear, he [one of]slathers your face with sloppy doggy kisses[or]French kisses you, sliding his long, slobbery tongue past your lips[or]fondles himself with one paw, coaxing his stiffening shaft to rise from his sheath[or]makes a show of groping your ass for the other German shepherds around. They've seen (and partaken in) this sort of thing plenty of times before, so it doesn't really faze them too much, though there are a few barks and whistles[or]playfully humps your leg with his stiffening cock[in random order]. As things are heating up, you try to decide what you might like to do with the sexy canine stud.";
 	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if player is male:
 		if gshepmood is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him";
@@ -161,7 +161,7 @@ to say bustersexmenu:
 			now sortorder entry is 10;
 			now description entry is "let him suck you off";]
 	choose a blank row in table of fucking options;
-	if cunts of player > 0:
+	if player is female:
 		now title entry is "Get fucked - vaginal";
 	else:
 		now title entry is "Get fucked - anal";

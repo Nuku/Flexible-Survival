@@ -173,9 +173,9 @@ when play ends:
 			say "     He's very grateful for the rescue and thanks you for finally coming to help him with the zoo. He claims to have been getting the situation under control until those little soldier people showed up, but is really glad that you're here now to help him with it. You settle down, living there with him, playing around with the animals, getting them back into their cages, giving them the occasional soldier you find as a treat";
 			if player is herm:
 				say " and dousing much of the nearby area with your hot, sticky cum as your big, strong mate fucks you silly[if player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else if cocks of player > 0:
+			else if player is male:
 				say " and dousing much of the nearby area with your hot, sticky cum as you and your big, strong mate take turns fucking one another[if player is mpreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else if cunts of player > 0:
+			else if player is female:
 				say " when not stretching yourself out on one of the many open grazing plains while your big, strong mate fucks you silly[if player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
 			else:
 				say " and helping your giant friend use some of the cuter critters around as sextoys when he needs some sticky, messy relief[if player is mpreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";

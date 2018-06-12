@@ -21,7 +21,7 @@ to say losetoHermaid:
 		say "     [HermaidMaleLoss]";
 	else if cunts of player > 0 and cocks of player is 0:
 		say "     [HermaidFemLoss]";
-	else if cunts of player > 0 and cocks of player > 0:
+	else if player is herm:
 		say "     The seafaring herm looks at you thoughtfully, as if considering what to do with you. After a moment, she nods to herself and smiles.";
 		LineBreak;
 		say "     [one of][HermaidFemLoss][or][HermaidMaleLoss][at random]";
@@ -40,7 +40,7 @@ to say beattheHermaid:
 				say "	[HermaidFemVic]";
 			else if cunts of player is 0 and cocks of player > 0:
 				say "	[HermaidMaleVic]";
-			else if cunts of player > 0 and cocks of player > 0:
+			else if player is herm:
 				say "	You can use either your cock or cunt for this scene. Which one do you want to use? (Y for cock, N for pussy)";
 				if the player consents:
 					say "     [HermaidMaleVic]";

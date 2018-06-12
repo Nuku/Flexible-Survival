@@ -64,7 +64,7 @@ To say dryad defeat:
 
 
 To say dryad attack:
-	if cunts of player > 0:
+	if player is female:
 		say "As you go limp from the beating, greenish vines wrap around your [bodydesc of player] body, spreading your legs and lifting you off of the ground. The dryad steps forward and rubs her clit, grinning evilly. You watch in horror, it turns a wooden-brown with a bark-like texture and grows longer and thicker, becoming a small, six inch cock.";
 		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings,' she smirks as she pushes inside, causing you to scream in pain from the rough bark. The dryad pumps in and out of you, and you soon realize that her cock is absorbing the lubrication. Despite that, you eventually get used to the rough treatment, and pleasure starts to mix in with the pain. You are eventually brought to a climax, but as you descend from your orgasm, you quickly notice that the dryad has not slowed down at all. She keeps using your weary body, and soon, the overwhelming sensations make you lose consciousness.";
 		WaitLineBreak;

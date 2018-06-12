@@ -88,7 +88,7 @@ Instead of resolving a Missing Cow:
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it?";
 		LineBreak;
 		say "     [bold type]What now?[roman type][line break]";
@@ -132,7 +132,7 @@ to say WendyDesc:
 	say "     Wendy is a cow - but not just any cow. She's had quite a bit of excitement out in the dry plains lately, getting lost and having an... interesting time with a large feral gryphon. As you walk up to her stall, she gives a greeting 'Mooh', seemingly recognizing you. Then she turns, moving her hindquarters in your direction and looking back at you. Might just be your imagination, but it's a bit as if she was presenting herself to you, wanting a little more interspecies attention.";
 
 instead of fucking the Wendy:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Sadly, you won't get very far with Wendy in your current gender state. She might be horny for another fuck by an exotic partner, but just isn't intelligent enough to take an active role and do anything but get fucked by someone's cock.";
 	else if lastfuck of Wendy - turns < 4:
 		say "     Wendy still seems a little worn from your earlier fun with her. It might be better to give her a bit more of a break. Besides, what if you got caught?";

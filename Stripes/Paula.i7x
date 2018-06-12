@@ -150,7 +150,7 @@ to say sexwithPaula:
 to say Paulasexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 1;
@@ -172,7 +172,7 @@ to say Paulasexmenu:
 		now title entry is "***TBD***";
 		now sortorder entry is 5;
 		now description entry is "another sex position";]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;

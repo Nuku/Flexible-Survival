@@ -17,7 +17,7 @@ to say equine attack:
 		if equinoidstatus < 4 and equinoidstatus > 0, decrease equinoidstatus by 1;
 	else:
 		if a random chance of 2 in 3 succeeds: [ Prefer male action]
-			if cunts of player > 0:
+			if player is female:
 				if cunt length of player < 15 or cunt width of player < 10:
 					say "She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [bodyname of player] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.[line break][line break]As she pistons into you, the pain begins to slowly ebb as pleasure creeps in. You can feel your passage growing damp and hot as she gives your ass a firm swat, 'Dirty outside wench,' she growls in an ear like a curse as she pulls you back against a rough shove, slamming her hips into yours, the shaft feeling like it's pushing into your belly from the inside. You feel the potent tool swell, then explode in terrific waves of heat into your womb, filling you to the brim, then overflowing with gallons of seed.[impregchance]";
 					if "Male Preferred" is not listed in feats of player and ( "Modest Organs" is not listed in feats of player and cunt length of player > 7 ), increase cunt length of player by 1;

@@ -103,7 +103,7 @@ to say BakeryGShep:
 			say ". Unfortunately the same is not true of your enemy, and despite your best efforts you make no headway.";
 		WaitLineBreak;
 		if escape < 2:
-			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if player is herm]sucking and licking at your rising cock and moistening pussy[else if cocks of player > 0]sucking and licking at your rising cock[else if cunts of player > 0]sucking and licking at your moistening cunt[else]licking at your groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. Eventually this sexual assault slowly abates, as the Shepherd kissing you pulls away with a grin, growling to his companion at your groin before pushing him aside roughly. As the shepherd before you pulls back his sheath with a smirk, you feel the grip of the one binding your arms loosen slightly. If you're going to escape, now would be the time.";
+			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if player is herm]sucking and licking at your rising cock and moistening pussy[else if player is male]sucking and licking at your rising cock[else if player is female]sucking and licking at your moistening cunt[else]licking at your groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. Eventually this sexual assault slowly abates, as the Shepherd kissing you pulls away with a grin, growling to his companion at your groin before pushing him aside roughly. As the shepherd before you pulls back his sheath with a smirk, you feel the grip of the one binding your arms loosen slightly. If you're going to escape, now would be the time.";
 			let playernum be a random number between 1 and (100 - libido of player);
 			let shepnum be a random number between 30 and 100;
 			if playernum > shepnum:
@@ -111,9 +111,9 @@ to say BakeryGShep:
 		if escape is 2:
 			say "     Gathering all your strength, you manage to rip your arms free from your captor and quickly drive your elbow into his stomach. Turning rapidly, you kick the second startled Shepherd hard enough that he stumbles backwards into the third canine, who collapses with the sudden weight of his pack-mate. Without missing a beat, you turn back to your still-winded captor, grab a nearby stool and smash it across his face, knocking him out cold before you ready yourself to face your next opponent, who has managed to disentangle himself from his companion and is already moving to engage you.";
 		else:
-			say "     The thought passes however, as your lust-filled mind can only register the approach of a lovely cock towards your needy body. Chuckling slightly at the stupefied look on your face, the shepherd grabs your legs and tosses them over his shoulder. He rubs his cock over your [if cunts of player > 0]pussy[else]ass[end if] to make sure it's well lubed, then pushes inside of you with a painful slowness. You whimper and moan as he teases your innards with his member, turning you into a begging slut by the time he finally bottoms out. The shepherd that had formerly been holding your arms shifts his grip as his companion starts to thrust into you, then resumes his licking, adding a few whispers about what a needy bitch you are to cause you to blush in shame. After a few minutes of this treatment, the canine behind you growls slightly in frustration before he pushes you onto the one fucking you.";
+			say "     The thought passes however, as your lust-filled mind can only register the approach of a lovely cock towards your needy body. Chuckling slightly at the stupefied look on your face, the shepherd grabs your legs and tosses them over his shoulder. He rubs his cock over your [if player is female]pussy[else]ass[end if] to make sure it's well lubed, then pushes inside of you with a painful slowness. You whimper and moan as he teases your innards with his member, turning you into a begging slut by the time he finally bottoms out. The shepherd that had formerly been holding your arms shifts his grip as his companion starts to thrust into you, then resumes his licking, adding a few whispers about what a needy bitch you are to cause you to blush in shame. After a few minutes of this treatment, the canine behind you growls slightly in frustration before he pushes you onto the one fucking you.";
 			say "     Without missing a beat, the shepherd pulls out and quickly repositions your body before driving his cock straight back into you. He roughly bounces you up and down on his shaft, and after the first few thrusts, your arms and legs are wrapped around him as he continues his rough fucking. Your mind dimly registers the sound of something heavy being dragged, but you're too busy yipping like a bitch in heat to pay attention. That is probably why you don't expect when your partner suddenly detaches your arms from around his body and you fall backwards. You flail in midair for a moment before your back slams into a table that the other shepherd moved over to where you were being fucked. As you gasp in pain, one of the other two shepherds grabs your head and shoves his meat down your throat. You can feel your mind slipping a bit thanks to the lack of oxygen combined with the pleasure of the two canines['] brutal fucking. It becomes hard to think about anything besides finishing this before you pass out. You can feel the third Shepherd grab one of your hands and rub it up and down his meat. Your feeble mind manages to grip your hand around it as he pumps it up and down, and before long you're stroking his pulsing shaft without his encouragement.";
-			say "     Soon you can feel each of their knots as they pound your mouth and [if cunts of player > 0]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if cunts of player > 0]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting your face and body with their cum along with the shepherd you've been stroking off.[impregchance]";
+			say "     Soon you can feel each of their knots as they pound your mouth and [if player is female]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if player is female]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting your face and body with their cum along with the shepherd you've been stroking off.[impregchance]";
 			infect "German Shepherd";
 			infect "German Shepherd";
 			WaitLineBreak;
@@ -186,12 +186,12 @@ Instead of conversing the François:
 		now HP of Karen is 3;
 		now carried of Dog Treats is 1;
 	else if HP of François is 0:
-		say "     'I must thank you again, mon ami[if cocks of player is 0 and cunts of player > 0]e[end if],' François says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if cocks of player is 0 and cunts of player > 0]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if cocks of player > 0], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake François[end link] for you.";
+		say "     'I must thank you again, mon ami[if cocks of player is 0 and cunts of player > 0]e[end if],' François says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if cocks of player is 0 and cunts of player > 0]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if player is male], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake François[end link] for you.";
 		now HP of François is 1;
 		say "[FrançoisListCompile]";
 	else if libido of François >= 3 and Françoistalk1 is false and a random chance of 2 in 5 succeeds:
 		say "     'I was having such difficulty before you came along. I don't know if your coming around is scaring them off now, but I was having no end of trouble before. These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now. 'Zut alors! How most of them were rude lovers! No passion, no care for their lover, just raw lust.";
-		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them[if cocks of player > 0]. But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if cunts of player > 0]. But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]. But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
+		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them[if player is male]. But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if player is female]. But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]. But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Françoistalk1 is true;
 	else if a random chance of 3 in 5 succeeds and Francois_Undiscovered is not empty:
 		say "[FrançoisHint]";
@@ -207,7 +207,7 @@ instead of fucking the François:
 		say "     Perhaps you should talk to the friendly mutt first?";
 	else if player is neuter:
 		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
-	else if cocks of player is 0:
+	else if player is not male:
 		say "     'Ah désolé, mon amie. I have never had much interest in what you English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully.";
 	else if lastfuck of François - turns < 6:
 		say "     He licks his muzzle and eyes your crotch, but shakes his head. 'As much as I would relish to opportunity to show you my thanks again, there is so much else that needs to be done. Perhaps a little later though?' he adds with a smile and the brush of a paw down your side.";
@@ -792,7 +792,7 @@ to say lollicockGet:
 		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 			now lollicockCheck is 0;
 		if lollicockCheck is 1:
-			if cocks of player is 0:
+			if player is not male:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";
 				now cocks of player is 1;
 				now cock length of player is 5;
@@ -872,7 +872,7 @@ to say boysenberry blossom Use:
 	say "Biting into the boysenberry blossom, you are treated to a lovely fruity filling inside the flaky pastry. Eating the treat in several slow bites[run paragraph on]";
 	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 		say " you savor the fruity pastry. It tastes great but gives you a belly ache. Clearly your body doesn't agree with something about the treat.";
-	else if cocks of player is 0:
+	else if player is not male:
 		now cocks of player is 1;
 		now cock length of player is 5;
 		now cock width of player is 4;
@@ -893,7 +893,7 @@ to say bleuettonne Use:
 	say "     You bite into the bleuettonne and find your mouth filled with a burst of blueberry jelly, more than you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
 	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 		say " you swallow your mouthful and finish the rest in a second satisfying bite. As the fruity filling and chocolate hit your belly it rumbles. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
-	else if cocks of player is 0:
+	else if player is not male:
 		now cocks of player is 1;
 		now cock length of player is 5;
 		now cock width of player is 4;
@@ -940,7 +940,7 @@ to say muffin muffin Use:
 	say "     Biting into the muffin you find a sweet pink jelly fruit filling hidden inside, working your tongue into the opening, you lick the sweet treat out of the depths of the muffin before finishing it[run paragraph on]";
 	if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cocks of player > 0 ):
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
-	else if cunts of player is 0:
+	else if player is not female:
 		now cunts of player is 1;
 		now cunt length of player is 5;
 		now cunt width of player is 4;
@@ -961,7 +961,7 @@ the scent of lollicock is "The lollicock has a sweet aroma with a hint of male a
 
 to say lollicock Use:
 	let lollicockDildo be 0;
-	if cunts of player > 0:
+	if player is female:
 		say "     Eying up the cute cock-shaped treat, you are just about to wrap your lips around it before another, naughtier idea pops into your head. Would you like to 'play' with your food before enjoying the snack? (Y/N)";
 		if the player consents:
 			say "     Stripping your gear and finding a comfortable place to stop and really enjoy this treat, you slowly lick along the length of the candy cock, wetting its surface while you begin teasing you womanly folds with your free hand. Once both you and the treat are sufficiently lubricated, you take one last taste of the sweet and salty candy before plunging it into your drooling cunt. You moan loudly as you drive the rigid length into yourself, your quivering pussy leaking a sticky mixture of sugar and your own feminine juices as you fuck yourself to a powerful climax.";
@@ -975,7 +975,7 @@ to say lollicock Use:
 		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 			now lollicockCheck is 0;
 		if lollicockCheck is 1:
-			if cocks of player is 0:
+			if player is not male:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";
 				now cocks of player is 1;
 				now cock length of player is 5;

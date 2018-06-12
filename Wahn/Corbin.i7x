@@ -593,7 +593,7 @@ to say CorbinSex7: [Corbin + Felinoid]
 	say "     After getting in that first thrust, Klauz relaxes again, content in letting the horny cuntboy on top of him fuck himself on his stiff pole. Which Corbin does, with a lot of enthusiasm. Bouncing up and down on the feline shaft, your friend moans loudly and runs his hands through the large animal's belly fur, soon totally lost in the moment.";
 	LineBreak;
 	say "     Getting pretty aroused by watching your two friends go at it yourself, you decide it's time to join in.";
-	if cocks of player > 0:
+	if player is male:
 		say "[CorbinSex7_Male]";
 	else:
 		say "[CorbinSex7_Female]";

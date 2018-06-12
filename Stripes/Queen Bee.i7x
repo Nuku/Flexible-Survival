@@ -12,7 +12,7 @@ when play begins:
 
 to say losetoqueenbee:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -23,7 +23,7 @@ to say beatthequeenbee:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
 		if the player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -50,12 +50,12 @@ When Play begins:
 	now victory entry is "[losetoqueenbee]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[queenbeedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, beautiful and regal in appearance, with large, dark eyes and lips as sweet and golden as honey. Your flowing hair is yellow and black and has a pair of long antennae rising from them";
-	now body entry is "slender and [if cunts of player > 0]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[else]effeminate with its slender waist and curving hips. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak. All in all, you look very much the sexy [']queen['] bee[end if]";
+	now body entry is "slender and [if player is female]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[else]effeminate with its slender waist and curving hips. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak. All in all, you look very much the sexy [']queen['] bee[end if]";
 	now skin entry is "a mixture of chitin plates and golden-bronze tanned";
 	now tail entry is "Resting lightly against your rear is a large, striped bee abdomen, complete with a stinger.";
 	now cock entry is "[one of]armor-protected[or]honeyed[or]golden[at random]";
 	now face change entry is "your vision blurs. Something in your eyes change and colors seem more vibrant, standing out against the duller browns and grays of the city. As your marvelling at what you see, your face shifts form, becoming beautiful and feminine. Long, thick flowing hair of bright yellow and deep black sprouts from your head and washes down to your shoulders in seconds. A tingle runs through your mind as insectile antennae are added";
-	now body change entry is "you are transformed to once-again become the sexy [if cunts of player is 0][']queen['][else]queen[end if] bee. Your figure is tall and [if cunts of player > 0]womanly[else]effeminate[end if], with a slender waist and curved hips that draw the eye to your beautiful form. As the transformation spreads up, you form a furred collar and your shimmering wings to be your regal cloak";
+	now body change entry is "you are transformed to once-again become the sexy [if player is not female][']queen['][else]queen[end if] bee. Your figure is tall and [if player is female]womanly[else]effeminate[end if], with a slender waist and curved hips that draw the eye to your beautiful form. As the transformation spreads up, you form a furred collar and your shimmering wings to be your regal cloak";
 	now skin change entry is "your skin becomes at first quite human with a golden-bronze tan. But as the transformation continues, chitinous plates form over your forearms and lower legs as well as your midriff and groin";
 	now ass change entry is "a bulge forms at the base of your spine. You are filled with pleasure and a strange sense of promise for the future as it grows and becomes a bee abdomen. There is an orgasmic joy as its stinger grows out";
 	now cock change entry is "it turns a golden yellow and smells richly of sweet honeyed cum. Your genitals change and move inwards behind protective plates of chitin, emerging when aroused";
@@ -83,7 +83,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of][if cunts of player > 0]feminine[else]effeminate[end if][or]slender[or]idealized[or]elegant[or][if cunts of player > 0]womanly[else]effeminate[end if][or]sexy[or]beautiful[or]regal[cycling]";
+	now body descriptor entry is "[one of][if player is female]feminine[else]effeminate[end if][or]slender[or]idealized[or]elegant[or][if player is female]womanly[else]effeminate[end if][or]sexy[or]beautiful[or]regal[cycling]";
 	now type entry is "[one of]apian[or]bee-like[or]insectile[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false;

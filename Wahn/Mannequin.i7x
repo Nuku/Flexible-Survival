@@ -90,7 +90,7 @@ when play ends:
 			say "As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
 			stop the action; [no other endings - player removed from the city]
 		else:
-			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if cocks of player > 0]him[else if cunts of player > 0]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
+			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if player is male]him[else if player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
 			say "There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
 			say "Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
 
@@ -109,9 +109,9 @@ to say nullpowderuse:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Diminish Anatomy:[roman type][line break]";
-		say "(1) [if cocks of player > 0][link]Cock[as]1[end link][else][italic type]Cock-specific interaction[roman type][end if][line break]";
-		say "(2) [if cocks of player > 0][link]Balls[as]2[end link][else][italic type]Balls-specific interaction[roman type][end if][line break]";
-		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][else][italic type]Cunt-specific interaction[roman type][end if][line break]";
+		say "(1) [if player is male][link]Cock[as]1[end link][else][italic type]Cock-specific interaction[roman type][end if][line break]";
+		say "(2) [if player is male][link]Balls[as]2[end link][else][italic type]Balls-specific interaction[roman type][end if][line break]";
+		say "(3) [if player is female][link]Cunt[as]3[end link][else][italic type]Cunt-specific interaction[roman type][end if][line break]";
 		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][else if breasts of player > 0][link]Nipples[as]4[end link][else][italic type]Chest-specific interaction[roman type][end if][line break]";
 		LineBreak;
 		say "(0) [link]Abort[as]0[end link][line break]";
@@ -123,7 +123,7 @@ to say nullpowderuse:
 			else:
 				say "Invalid entry.";
 		if calcnumber is 1:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else if cocks of player is 1 and cock length of player < 4 and ("Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player):
 				say "     At this point, the powder will have no effect on you.";
@@ -174,7 +174,7 @@ to say nullpowderuse:
 					say "     You apply the powder to your rod. After a while, it shrinks down to the point where it's now [cock size desc of player] in size.";
 				now trixieexit is 1;
 		else if calcnumber is 2:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else if cock width of player < 4:
 				say "     At this point, the powder will have no effect on you. It seems you'll need to remove your cock[smn] or develop internal genitalia if you want to make them disappear.";
@@ -189,7 +189,7 @@ to say nullpowderuse:
 				say "     You apply the powder to [if player is internal]where your sack might be[else]your sack[end if]. After a while, they[if player is internal] seem to[end if] shrink down to the point where you[if player is internal], presumably,[end if] have [ball size].";
 			now trixieexit is 1;
 		else if calcnumber is 3:
-			if cunts of player is 0:
+			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else if cunts of player is 1 and cunt length of player < 4 and cunt width of player < 5 and ("Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player):
 				say "     At this point, the powder will have no effect on you.";

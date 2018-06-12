@@ -69,7 +69,7 @@ to say SkarnothSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Use the demon's mouth";
 	[
-	if (cocks of player > 0 or cunts of player > 0):
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Skarnoth";
 		now sortorder entry is 3;

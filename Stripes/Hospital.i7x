@@ -1086,7 +1086,7 @@ to say hosptfscene:
 	follow the sex change rule;
 	LineBreak;
 	waitlinebreak;
-	if cocks of player > 0:
+	if player is male:
 		while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
 			sort table of random critters in random order;
 			now monster is 1;
@@ -1097,7 +1097,7 @@ to say hosptfscene:
 		now cock of player is cock entry;
 		follow the sex change rule;
 		waitlinebreak;
-		if cocks of player is 0:	[now female]
+		if player is not male:	[now female]
 			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs. He teases your wet folds and turns to the audience. 'It seems I was mistaken. There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself. His other paw is at his groin, stroking his stiffening cock back to erection. Many in the audience cheer or laugh at that.";
 			wait for any key;
 			say "[drmousesex]";
@@ -1227,7 +1227,7 @@ to say tlloss:
 
 
 to say tlvictory:
-	if cocks of player > 0:
+	if player is male:
 		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body. 'No, I need... mustn't give... but so good. Why did I ever... ngg... but my work...' Deciding to make the decision for her, you push the horny hybrid onto one of the tables and tease her six breasts. The transformed doctor releases a soft yip and pants, reaching for your stiff penis despite the conflict in her failing mind.";
 		say "     Happy to oblige, you line up your cock her pussy, then slowly slide it into her. Dr Matt arches her back and moans loudly, spraying cum from her canine cock across her ample bosom as her virginity is taken. 'Oh my god, yes!' she cries in ecstasy. The lustful huskybunny's pussy squeezes and tugs at your cock eagerly, the slutty body responding automatically to a hard shaft filling it. You grunt as the herm's vagina works you over so eagerly, starting to thrust hard and fast into her.";
 		WaitLineBreak;
@@ -1242,7 +1242,7 @@ to say tlvictory:
 		say "     Hearing some soft moans behind you, you glance over to find Susan has gotten in on the action and is driving her cock into Orthas. The black dragoness moans weakly, still largely incapacitated from her fight with you. The smaller doe pounds away at the dragon's cunt aggressively. 'I've seen you eyeing my mate. He's mine, you slut. Take my fucking cum instead, you black bitch.'";
 		say "     You have never known Susan to show any interest in using her cock before, so the sight of her pounding away at the dragon is quite surprising and arousing. She pinches and squeezes the dragoness's huge breasts, teasing her nipples. Orthas moans and starts rocking her hips up to meet each thrust, responding to the aggressive mating she's getting from the smaller doe herm.";
 		WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times. You wrap a hand around her large, throbbing cock and focus on seeding her properly. The feel of the new hybrid's pussy around you is so good. Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
 		WaitLineBreak;
 		say "     With a final, hard thrust into her, you push your cock as deep as you can and unleash your hot load. Your cum spurts deep inside her and her body responds instantly, tugging and milking at your shaft for all you'll give and pulling it up into her womb. Pulling your spent shaft free, you wipe it clean on one of her big, fuzzy rabbit feet.";
@@ -1692,7 +1692,7 @@ to say ec_activation:
 	now skin of player is skin entry;
 	now body of player is body entry;
 	now cock of player is cock entry;
-	if cocks of player > 0:
+	if player is male:
 		if cock length of player < 16:
 			increase cock length of player by 3;
 			if cock length of player > 16:
@@ -1701,7 +1701,7 @@ to say ec_activation:
 			increase cock width of player by 2;
 			if cock width of player > 10:
 				now cock width of player is 10;
-	if cunts of player > 0:
+	if player is female:
 		if cunt length of player < 16:
 			increase cunt length of player by 3;
 			if cunt length of player > 16:

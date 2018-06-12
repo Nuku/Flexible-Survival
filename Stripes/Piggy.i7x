@@ -9,7 +9,7 @@ when play begins:
 
 to say losetopiggy:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -20,7 +20,7 @@ to say beatthepiggy:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
 		if the player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -98,7 +98,7 @@ when play ends:
 			say "     You succumb to your Piggy infection.";
 		else:
 			say "     You survive, but were infected by the Piggy.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

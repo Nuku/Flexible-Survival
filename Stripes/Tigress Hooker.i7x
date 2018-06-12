@@ -67,7 +67,7 @@ to say losetotigress:
 		if junknum is 1:									[Special junkyard encounter - freebie]
 			say "     As you agree to hir offer, shi gives you a lustful smile before nuzzling at your neck. Rumbling and purring as shi rubs hir body against yours, shi guides you to the discarded mattress as shi starts releasing the easy straps on hir street clothes. As you move with hir, shi nuzzles along your neck and slides your backpack's straps off your shoulders and sets it aside, not bothering to look for a payment this time. Your help has been payment enough for this romp.";
 			now junknum is 0;
-		if cunts of player > 0 and cocks of player > 0:				[Yes = HERM Identified!]
+		if player is herm:				[Yes = HERM Identified!]
 			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble, particularly pleased at the prospects of servicing you, both john and jane in one. Shi lowers hirself onto the mattress atop you and rubbing hir body against yours. Hir soft striped fur running along your body, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours. Shi moves a paw down to stroke your [cockname of player] [if cocks of player is 1]cock[else]cocks[end if] as shi nibbles and nuzzles hir way down your chest and belly. As shi slides down, hir paw drifts over your balls and to your wet slit, diving into it.";
 			say "     With hir muzzle between your legs, shi starts licking and kissing your [if cocks of player is 1]cock[else]cocks[end if]. Hir raspy tongue slides along your sensitive [cock of player] penis and lavishes attention on it. [if cocks of player > 1]As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw. [end if]Hir left paw is between your legs, working in and out of your wet [if cunts of player is 1]pussy's lips[else]pussies['] lips[end if]. The herm moans and mewls lustfully as shi lavishes attention upon both your male and female genitals. Hir muzzle moves from time to time to your dripping [if cunts of player is 1]pussy[else]pussies[end if], but is always drawn back to your cock. [if cunts of player is 1]While hir tongue ends to your upper slit, hir right paw is working away at the other(s), making sure they're not neglected in any way.[end if]";
 			increase libido of player by 10; [Oral submission increases Libido]
@@ -219,7 +219,7 @@ to say losetotigress:
 			if tempnum is 1:
 				stop the action;
 			say "     After searching through your belongs for a while, shi decides to get to it as your moaning grows louder. Shi pounces atop you and grinds hirself against your [bodyname of player] body, sliding hir leaking cock against your ass. As your firm cheeks press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it's a larger than average cock, but not massive like many you've seen since the outbreak. You can feel the tigress's pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
-		if cunts of player > 0 and cocks of player > 0:				[Yes = HERM Identified!]
+		if player is herm:				[Yes = HERM Identified!]
 			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock at your [cunt size desc of player] pussy before it sinks into you. You moan your pleasure as you feel the firm piece of meat pushing in, teasing you delightfully with those bumps. Your [cock size desc of player] [cock of player] [if cocks of player is 1]shaft dribbles[else]shafts dribble[end if] pre onto the mattress as shi mounts you.";
 			say "     Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you, as your own hard [if cocks of player is 1]cock[else]cocks[end if] and leaking precum show.";
 			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's puts a paw on your [breast size desc of player] tits and fondles them while the other moves to stroke your [cock size desc of player] [if cocks of player is 1]shaft[else]shafts[end if]. As shi drives hirself into you again and again, shi pumps at your throbbing member.";
@@ -241,14 +241,14 @@ to say losetotigress:
 			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's got hir paws on your [character number breast size of player in cupsize] cup tits and fondles them as shi drives hirself into you again and again. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your womb. This sends you into a powerful climax, hot feminine juices flowing from your pussy as shi fills you with hir seed.[impregchance]";
 			if a random chance of 1 in 3 succeeds:				[One in three chance of gender change now]
 				follow the sex change rule; [I think this will work]
-				if cocks of player > 0:						[New cock sex scene]
+				if player is male:						[New cock sex scene]
 					say "     You groan loudly as a smaller version of the tigress's cock grows in, hard and throbbing with fresh need. Spent, the tigress releases you and you roll onto your back with a soft mewl of need. Looking down, shi sees your new equipment and grins happily. Shi takes your small shaft in hir paw and starts stroking you before leaning down and taking it into hir muzzle. Shi licks and sucks at it, lavishing attention upon your newly-formed penis. Already sensitive after its growth, you quickly blow your load, giving hir a taste of your fresh seed.";
 					increase libido of player by 8; [New cock makes you horny...]
 					decrease humanity of player by 6; [...and give in a bit more]
 					if libido of player > 100:
 						now libido of player is 100;
 			if cunts of player > 1 and gestation of child is 0:		[multi-pussy, not preg]
-				if cocks of player is 0:					[Did not do new-cock scene instead]
+				if player is not male:					[Did not do new-cock scene instead]
 					say "     As shi eases hir cock from your cum-slick slit, shi keeps hir grip on your nape and moves hir cock to your second slit, pushing into you again. Shi starts to pound away at you again, filling your second hole. Shi goes hard and fast from the very beginning this time, eager to fill you with more of hir semen to breed you. You moan lustfully beneath hir, having another powerful orgasm as that barbed shaft throbs inside you and seeds you a second time, though with an albeit smaller load this time after such a fast turnaround.[if a random chance of 1 in 2 succeeds][impregchance][end if]"; [half as likely to impreg on 2nd try]
 					increase libido of player by 6; [2nd hole filled Libido increase of 6...]
 					decrease humanity of player by 3; [...and give in a little more]
@@ -265,7 +265,7 @@ to say losetotigress:
 			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in hir jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir paws around your wrists, holds you pinned down, though by this point you're eager to have hir violate you. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your bowels. This sends you into a powerful climax, shooting your cum onto the mattress to join the multitude of others as shi fills you with hir seed.[mimpregchance]";
 			if a random chance of 1 in 3 succeeds:				[One in three chance of gender change now]
 				follow the sex change rule; [I think this will work]
-				if cunts of player > 0:						[New pussy sex scene]
+				if player is female:						[New pussy sex scene]
 					say "     You moan softly as a wet little snatch forms between your legs, dripping with fresh need. Even as shi eases hir cock out of your ass, shi spots the new addition and mrrrowls in pleasure. Hir softening shaft grows hard again, eager to be the first to take your new, virgin hole. Shi eases hir cum-slick shaft into your small pussy, finding it a tight fit. Shi takes it slow at first, but soon quickens hir pace and takes you by the nape again, eager to breed you well. The stimulating barbs sliding along your vaginal walls feel so good, different from when shi was in your ass. You're soon pushing back into hir thrusts until finally shi pushes hir glans past your cervix and into your womb to unleash hir hot seed. You climax as well, having your first orgasm from your new pussy as the tigress who just gave it to you cums inside your newly-grown womb.[impregchance]";
 					increase libido of player by 8; [New pussy makes you horny...]
 					decrease humanity of player by 6; [...and give in a bit more]
@@ -296,7 +296,7 @@ to say beattigress:
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:									[Decides to fuck tigress]
 		LineBreak;
-		if cunts of player > 0 and cocks of player > 0:				[Yes = HERM Identified!]
+		if player is herm:				[Yes = HERM Identified!]
 			increase libido of player by 10; [Oral submission increases Libido]
 			if libido of player > 100:
 				now libido of player is 100;

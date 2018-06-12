@@ -148,56 +148,56 @@ to say swaptofemale:
 to say losetosiamesecat:
 	say "     Having bested you, the two cats look you over. 'I beat [']em,' the [siamesegender] purrs to the other, 'so I get to go first.' That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
 	if siamgender is male:
-		if cunts of player > 0:
+		if player is female:
 			say "     The tom gets you onto all fours and lines up his hard cock with your pussy. His russet-brown cock teases at your folds as he purrs in your ear. This quickly gets you excited and soon you're moaning for him to mount you. Grinning, he nibbles your ear and slowly slides himself into you.";
 		else:
 			say "     The tom gets you onto all fours and lines up his hard cock with your ass. He grinds it between your cheeks slowly as he purrs in your ear. You squirm nervously a little, but don't pull away from the exotic feline. He shifts his position, letting the glans of his russet-brown, human-like cock tease at your back entrance. You can feel his precum leaking out, quickly getting it nice and slick. It also has the effect of getting you excited and soon you moan softly for him to mount you. Grinning, he nibbles your ear and slowly slides himself into you.";
-		if cocks of player > 0:
+		if player is male:
 			say "     The female takes advantage of your position to move underneath you and start licking and kissing your cock, making you moan. Her raspy tongue plays across your shaft before she wraps her lips around it and takes it into her warm muzzle. She begins to slowly work over it, licking and sucking while you're getting fucked.";
 		else:
 			say "     The female takes advantage of your position to move in front of you. Taking your head in her paws, she presses your face between her legs, pushing it against her wet pussy. The fight clearly got her excited and her scent fills your nose, further arousing you. She moans and purrs loudly as you start to lick her.";
 		WaitLineBreak;
 		say "     The male behind you slides his hard shaft in and out of you. His paws stroke over your hips, sharp claws against your skin as if to keep you in place, but by this point, you are lost to the lust and have no interest in removing that cock that's fucking you so nicely. His pace is measured and disciplined, hitting all your sensitive spots and steadily building your arousal, making you moan and press back into each firm thrust.";
-		if cocks of player > 0:
+		if player is male:
 			say "     The female beneath you works at your cock with zeal, giving it almost unending attention. She only slides her muzzle off it occasionally to lick further back over your balls and spread hole as the male fucks you. You can hear him moan softly and poke you with his claws a little harder whenever her tongue is back there and brushes against his cock while licking you.";
 		else:
 			say "     The female in front of you rubs your head and ears while holding you to her pussy, sharp claws also poking free just slightly as they knead your flesh. Her hips quiver a little as you work your tongue over and into that sweet puss of hers. You run over her wet lips and tease her clit again and again, which makes her mewl in delight.";
-		if cunts of player > 0:
+		if player is female:
 			say "     You can feel that cock drive into your pussy again and again, making your hips quiver as you get closer to your climax. His paws knead at your ass, claws poking at it as he thrusts. Your vaginal walls squeeze around his hard meat as your juices leak out over his balls and your thighs.";
 		else:
 			say "     You can feel that hard cock drive into your ass again and again, making your hips quiver as you get closer to cumming. His paws knead at your ass, claws poking at it as he thrusts. Your tight ring squeezes around his hard meat as his penis presses against your prostate with each firm push into your rear.";
 		WaitLineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     The feline's rough tongue continues licking and sucking at your cock, lapping your precum from your tip. Glancing over, you can see her fingering herself as she does so. The sight of her fingers sinking into her wet pussy is enough to push you over the edge and your cock throbs in her muzzle, unleashing shot after shot of your hot seed into her waiting mouth. From the loud moans she's making under you, you suspect that she's quite pleased with her treat and cumming as well.";
 		else:
 			say "     The female grips your head more firmly and starts grinding her wet puss to your face as her moans get louder and louder. Soon enough, your playful tongue pushes her over the edge and she cums hard, further soaking you with her sweet juices. You lick and lap them up eagerly while your pussy clamps down on the cock filling you. You moan and push back against the male as your orgasm hits, spilling your juices over his shaft. Above you, you can feel the female lean a little forward and can hear the soft sounds of her kissing the tom fucking you.";
-		if cunts of player > 0:
+		if player is female:
 			say "     With your climax, you squeeze your dripping pussy around the feline's hard cock, inner walls quivering around it. He mewls in pleasure and slams his dick into you again and again until you're moaning and mewling as well. Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed. You can feel his hot cum flowing into you, painting the back of your vagina and flowing up into your womb.[impregchance]";
 		else:
 			say "     With your orgasm, you squeeze your tight ass around the feline's hard cock, inner muscles quivering around it. He mewls in pleasure and slams his dick into you again and again, pounding your prostate until you're moaning and mewling as well. Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed. You can feel his hot cum flowing into you, filling your bowels with his thick load.[impregchance]";
 		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down. The male slides himself slowly from you, some cum leaking out of your well-used hole before you can squeeze it shut to keep the rest warm and wet inside you. As the female moves back, you sag to the ground, panting softly and enjoying the afterglow while the pair head off, hand in hand.";
 	else:
-		if cocks of player > 0:
+		if player is male:
 			say "     She pushes you over onto your back and straddles you. She grinds her wet pussy down onto your [cockname of player] cock. You moan as you feel her wet lips sliding along your stiffening length, getting it nice and slick. After some very pleasant rubbing, she reaches down and guides your hard length into her cunt.";
 		else:
 			say "     She pushes you over onto your back and grabs one of your legs. She slides herself between your legs, one dark brown leg under your raised one and the other over on the other side. Scissored with you like this, she grinds her wet folds against yours, making you moan.";
-		if cunts of player > 0:
+		if player is female:
 			say "     The tom mewls softly as he eyes your pussy, but cannot have it while his female partner is playing with you. His stiff cock, human-like and a russet brown in color, throbs as he moves to your head. His precum drips down onto your lips as he brings it over your mouth. You lick away the pre from your lips, moaning softly at its enticing flavor. When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
 		else:
 			say "     The tom mewls softly as he watches his interlinked partner riding your hard cock. Not wanting to be left out, he moves to your head, positioning his stiff cock, human-like and russet brown, over you. His precum drips down onto your lips as he brings it over your mouth. You lick away the pre from your lips, moaning softly at its enticing flavor. When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
 		WaitLineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     Riding your cock slowly, the female runs her paws over your chest and kneads at it with her paws. You can feel her sharp claws against your skin, making you shiver a little. Her wet puss squeezes firmly around your cock each time she pushes her hips down and takes it into her, your hips thrusting up in response.";
 		else:
 			say "     The feline between your legs moanpurrs softly as she works her pussy against yours. Her paws scritch along your leg, running the tips of her claws over your skin makes a butterfly with you. Her soft folds slide against yours as you both get more and more wet with the mix of your juices. Her muzzle plays against your ankle and she starts nibbling on it.";
 		say "     You lick and suck at the tom's hard cock, moaning softly around it as his female partner plays with you. His paws move to stroke your head and ears as he gently thrusts between your lips. His pre leaks out onto your tongue and you happily lap it up, lost to the lust of the two felines playing with you.";
-		if cocks of player > 0:
+		if player is male:
 			say "     The female rides you harder and faster now, picking up the pace as her excitement builds. She wraps her arms around her male partner, partially for support and partially so she can start nibbling at his neck. He purrs softly at that and tilts his head to the side.";
 		else:
 			say "     The female's hips grind against you harder and faster as her excitement builds. You can feel her claws and teeth along your leg as she scritches and nibbles along it. Her wet puss and soft folds feel so nice against you, making you moan all the louder.";
 		WaitLineBreak;
 		say "     The tom's thrusts pick up, pumping himself between your wet lips faster. His paws hold your head steady as he thrusts into you again and again. His precum flows steadily into you until finally he throws his head back and mrowls in ecstasy, shooting thick cum into your mouth and down your throat. You gulp it down greedily, lustfully eager to have this kitty's seed in your tummy, moaning loudly as you cum as well.";
-		if cocks of player > 0:
+		if player is male:
 			say "     Watching the male cumming and feeling you set off moments later, shooting your hot seed into her eager pussy. She grinds down onto your firmly and squeezes her pussy around you tightly, climaxing as well. Her inner walls flutter around you, milking your shaft for as much as you'll give. Your hips buck, thrusting into her until you're drained.";
 		else:
 			say "     Watching the male cumming and feeling you set off moments later, she grinds herself against your quivering pussy, moaning happily in response. Your crotch is soaked moments later as she arches her back and cums hard, murrrowling as her orgasm shoots through her. Your hot juices intermingle with hers in an arousing scent of lust hanging around you and the two felines.";
@@ -206,7 +206,7 @@ to say losetosiamesecat:
 
 to say beatthesiamesecat:
 	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well. ";
-	if (libido of player > 29 or "Dominant" is listed in feats of player) and (cocks of player > 0 or cunts of player > 0):
+	if (libido of player > 29 or "Dominant" is listed in feats of player) and player is not neuter:
 		say "     They mewl softly, beaten now. Looking them over, you consider playing with one of them.";
 		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";
 		LineBreak;
@@ -277,7 +277,7 @@ to say siamsex3:	[FF oral]
 	say "     Deciding to put that feline's raspy tongue to good use, you guide her face between your legs and press her muzzle to your pussy. She mewls softly and squirms, but quickly sets her tongue to work. You moan softly as you feel her licking along your wet folds.";
 	say "     You run your fingers through her headfur and scritch her large ears, making her purr all the more. She also gets more and more into the task before her, showing that she's clearly had some practice at this. Her tongue is playful and talented, while her lips kiss and suck at your pussy lips and clit as well.";
 	WaitLineBreak;
-	say "     The male twin has also started to recover and he comes closer. You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other. They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum. Your hot juices flow out over her tongue and across her muzzle[if cocks of player > 0]. Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
+	say "     The male twin has also started to recover and he comes closer. You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other. They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum. Your hot juices flow out over her tongue and across her muzzle[if player is male]. Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
 	say "     As your orgasm rushes through you, you can feel the tom's cock throb in your hand, spraying his seed across the ground while the female's rear trembles. It seems she's been fingering herself while playing with you and the conjoined pair mrowl in delight as they cum.";
 	say "     Once your orgasm passes, you take a moment to rest and recover before pushing the female back. You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
@@ -354,8 +354,8 @@ when play ends:
 				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You somehow find your way back to Sven and have a long bout of wild, lustful sex with the feline[if HP of Sven < 8], completing his transformation into a hybrid snow leopard/siamese cat[end if]. Together, you and he set off into the city one cooler evening and come across another pair of felines who seem familiar to you and you are drawn to them. As you get closer, you can see that the conjoined cats are having some playful fun together.";
 				say "     As you approach them, the male finishes up in his conjoined twin. Noticing you, they smile and get up. 'Oh, it looks like you've found a special friend,' they purr as they move to snuggle with you both. They nuzzle and caress your bodies, seeming to know just where to touch to get you excited. Looking into Sven's soft, blue eyes you feel yourself compelled to be with him.";
 			else:
-				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You eventually come across a pair of felines who seem familiar to you and are drawn to them. As you get closer, you can see that the conjoined cats have a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[else]neuter[end if] person under them and are in the midst of transforming them.";
-				say "     As you approach, the conjoined pair look up and smile. 'Just in time,' they purr, motioning for you towards the changing individual as they become more like a Siamese cat[if cocks of player > 0]. She[else]. He[end if] gets up slowly at first; but, upon noticing you, seems to feel the same compulsion to be close to you as you are feeling.";
+				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You eventually come across a pair of felines who seem familiar to you and are drawn to them. As you get closer, you can see that the conjoined cats have a [if player is herm]herm[else if player is female]male[else if player is male]female[else]neuter[end if] person under them and are in the midst of transforming them.";
+				say "     As you approach, the conjoined pair look up and smile. 'Just in time,' they purr, motioning for you towards the changing individual as they become more like a Siamese cat[if player is male]. She[else]. He[end if] gets up slowly at first; but, upon noticing you, seems to feel the same compulsion to be close to you as you are feeling.";
 			if tailname of player is "Siamese Cat":
 				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. Your tails slowly intertwine and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if HP of Sven < 8]the hybrid Sven[else if HP of Sven is 8 or HP of Sven is 9]the sexy snow leopard[else if HP of Sven is 10]the colorful snow leopard[else]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
 			else:
@@ -377,14 +377,14 @@ when play ends:
 [			else if HP of Sven >= 30 and HP of Sven < 50:
 				say "***Ending w/confident Sven.";]
 			else:
-				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[else]neuter[end if] feline that you hit it off with[if cocks of player > 0]. She[else]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
-				say "     You move in together and have a pleasant life of indolence and sex [if cocks of player > 0]. She[else]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";
+				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if player is herm]herm[else if player is female]male[else if player is male]female[else]neuter[end if] feline that you hit it off with[if player is male]. She[else]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
+				say "     You move in together and have a pleasant life of indolence and sex [if player is male]. She[else]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";
 				if tailname of player is "Siamese Cat":
-					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your lover and mate, it clicks. You nuzzle and nibble their ears, whispering that you love them as you bring [if cocks of player > 0]her[else]his[end if] tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
+					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your lover and mate, it clicks. You nuzzle and nibble their ears, whispering that you love them as you bring [if player is male]her[else]his[end if] tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
 					say "     You both mrowl loudly in orgasm as the pleasure of this rushes through you. You can feel yourself becoming linked to your mate, sharing some sensation with them, as well as a deep, emotional bonding. You both remain individuals, but are also one. You are partners and lovers meant to be together and now inseparable.";
-					say "     You kiss and nuzzle your lover as [if cocks of player > 0]she[else]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
+					say "     You kiss and nuzzle your lover as [if player is male]she[else]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Your partner is briefly surprised by all this, but the loving bond you share soon overcomes the shock of the unforeseen change. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
 				else:
-					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your lover and you feel much better. The feeling never quite goes away, but a little kiss or lick from [if cocks of player > 0]her[else]him[end if] makes everything a little brighter.";
+					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your lover and you feel much better. The feeling never quite goes away, but a little kiss or lick from [if player is male]her[else]him[end if] makes everything a little brighter.";
 
 Siamese Cats ends here.

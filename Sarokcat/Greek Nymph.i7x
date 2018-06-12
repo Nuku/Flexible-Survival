@@ -13,7 +13,7 @@ when play begins:
 
 
 to say Greek Nymph attack:
-	if cocks of player > 0:
+	if player is male:
 		say "     With one last blow, the nymph knocks you to the ground, dazed. 'Yay that was fun!' the beautiful, young woman cries out, clapping her hands at her victory. 'I won! I won! Now, we get to play a new game!' The nymph eyes your prone form, making you nervous. Her eyes fix on your cock, which is already partially erect due to her naked state. 'And I know what I want to play with!' She grabs your cock, and the feel of her soft hands has you lying back on the floor with a groan as she slowly runs her hands all over it. 'Mmm, I just love your [cock of player] cock. It looks like fun. We should try it out,' the nymph says with a moan of her own as she positions herself above you.";
 		say "     You can't even put up a token protest as she slides herself onto your member, her warm wetness engulfing your cock and causing you to shudder in pleasure. Soon, she is lifting herself up and down on you, giggling as you writhe underneath her. Her long legs rub along your sides as they lift her, and her hands play over your chest. Before you know it, you are lost in the sensations of the moment, and all thoughts of the future fly out of your mind as you bring your hips up to meet her each time, loving the feel of penetrating her again and again. Your hands go to her hips as you begin to move in sync, and the nymph rubs her silky-soft skin over your body, laughing and whispering happy, little words as she rides you. After what seems like forever of her teasing touches and warmth, and yet also seems far, far too soon, you find yourself exploding into her, making her moan as she orgasms with you. Shuddering, you lie there on the cool floor, as she giggles and pulls herself off of your spent cock. 'Not as much endurance as a real satyr,' the nymph says as she pats you on the head sadly. 'But I'm sure you'll get there eventually. You should work on that for the next time we play together, okay?' She gives you a perky smile before sauntering happily off down the hall, giving you an excellent view of her nice ass and making you think eagerly about the promised [']next time[']";
 		if guy is not banned, infect "Satyr";
@@ -33,7 +33,7 @@ To say Greek Nymph loss:
 		now beatgrnymph is beatgrnymph / 2;
 	else:
 		say "     Knocking the naked nymph backwards, she slips and falls down with a cry. 'You're no fun!' the nymph proclaims, pouting. 'Why don't you want to play with us?' she whines pathetically at you, before bursting into tears. Not knowing what to do with a crying nymph, you just stop and stare as she picks herself up and runs off down the hallway in tears, you feel vaguely guilty at having reduced one of the perpetually happy creatures to tears. However, the feeling fades when she reaches the end of the halls, stops crying to look around for a minute, and takes off laughing again, a satyr in hot pursuit.";
-		if cocks of player > 0 or cunts of player > 0, increase beatgrnymph by 10;
+		if player is not neuter, increase beatgrnymph by 10;
 
 
 Section 2 - Monster Insertion

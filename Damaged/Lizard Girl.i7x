@@ -43,13 +43,13 @@ to say lizgirl check angry:
 to say lizgirl attack:
 	if lizgirlmarked is 0:
 		say "[lizgirl mark]";
-		if cocks of player > 0:
+		if player is male:
 			say "     'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less,' she pins you down on your back, leaving you unable to move in your weakened state. Slowly she lowers down onto your [cock of player] member, working herself up and down your rigid length. Just before your inevitable release she presses down tightly, taking your [cock length of player] inch shaft deep inside herself. Just as the flow of seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, worming down inside you, coming to rest at your balls. 'Now it's my turn,' she purrs, snapping your attention away from her assault on your reproductive system. All of a sudden, a pressure builds all down your member's length as her own seed pours into your body, leaving your balls swollen and tingling.";
 			say "     Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on to your thigh, rubbing her own juices over the wound. It stings a little, but you sigh contently, knowing she has future plans in store. 'Now be a good dear, and don't fight it anymore,' she chuckles over her shoulder before sashaying away.[lizgirl impreg][lizgirl female]";
 		else:
 			say "     'Oh, nothing for me to play with? I think we can fix that,' she growls sensually, pushing you on to your back and lowering herself between your legs. You would pull away but her reptilian tongue suddenly draws a gasp from you as it attacks your [cunt size desc of player] cunt, leaving you paralyzed and unable to resist. As her ministrations increase you feel a tingling in your groin until finally her lips draw a feral moan from your own, the release of your juices cementing her dominance over you. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has future plans in store.[lizgirl herm]";
 	else:
-		if cocks of player is 0:
+		if player is not male:
 			if lizgirlimpreg is 0:
 				say "     'You are already marked as mine! And yet still here you are with nothing for me?' she says angrily, pushing you on to your back and lowering herself between your legs. This time, you know what's coming and you spread yourself a little wider for her as she draws a soft trail of whimpers from you while she takes to your dripping slit. Slowly as her ministrations increase you feel a tingling as your clitoris grows, swelling out into a male shaft, even as a pair of orbs bulge into existence below them. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has future plans in store.[lizgirl mark][lizgirl herm]";
 			else:
@@ -82,9 +82,9 @@ to say lizgirl defeat:
 		now carried of lizard juice is 1;
 		now HP of ronda is 5;
 	if libido of player > 33:
-		if cocks of player > 0:
+		if player is male:
 			say "[lizdefmale]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "[lizdeffemale]";
 		else:
 			say "[lizdefnone]";
@@ -195,7 +195,7 @@ to say liz impreg:
 			now found is 1;
 			break;
 	if lizgirlimpreg is 1 and found is 1:
-		if cocks of player is 0:
+		if player is not male:
 			say "     With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
 		else:
 			say "     With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";

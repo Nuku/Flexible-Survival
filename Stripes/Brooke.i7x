@@ -25,9 +25,9 @@ Section 2 - Conversation
 Instead of conversing the Brooke:
 	if HP of Brooke is 0:
 		now HP of Brooke is 1;
-		say "     Working your way over to the dancing otter, you smile at him and try to get a few words in between songs. 'Oh, hey there! I saw you arrive earlier,' he responds. 'The name's Brooke. [if HP of Andrew > 1]I couldn't help noticing you and Andrew having fun, too. [end if][if cocks of player > 0]I was kind of hoping you'd swing by. I wouldn't mind getting sneaking out back to get to know you a little better[else]I hope you have a good time at the club[end if].' Since the next song's picking up, your brief introduction comes to an end with a wink from the otter cutey.";
+		say "     Working your way over to the dancing otter, you smile at him and try to get a few words in between songs. 'Oh, hey there! I saw you arrive earlier,' he responds. 'The name's Brooke. [if HP of Andrew > 1]I couldn't help noticing you and Andrew having fun, too. [end if][if player is male]I was kind of hoping you'd swing by. I wouldn't mind getting sneaking out back to get to know you a little better[else]I hope you have a good time at the club[end if].' Since the next song's picking up, your brief introduction comes to an end with a wink from the otter cutey.";
 	else if XP of Brooke is 0:		[***adjust for post sex later]
-		if cocks of player > 0:
+		if player is male:
 			say "     [one of]'Why don't we go make out, hot stuff?'[or][if dexterity of player < 16]'You could use a little practice with your dance moves,' he teases before showing off an energetic routine[else if dexterity of player < 20]'You dance pretty well, hot stuff,' he says, letting his flexible body slide along yours for a moment[else]'You really know how to move that hot bod of yours, don't you?' he says with a smile. Dancing up alongside you, he lets his flexible body grind against you to the rhythm of the beat[end if].[or][if HP of Andrew is 0]'Have you met Andrew yet?' he asks, motioning to a wolf sitting in one of the private booths. 'He's a friend of mine and I think he'd really like to get to know you better,' he says, letting a paw rub across your groin and giving your manhood a firm squeeze.[else if HP of Andrew is 1 or HP of Andrew is 2]'I noticed you talking to Andrew earlier. If you two hit it off, perhaps the three of us can have a little fun together.'[else if HP of Andrew > 2]'I couldn't help noticing you and Andrew getting to know each other better,' he says with a wink. 'He's quite a lot of fun. We could have fun like that too, if you'd like.'[end if][or]'Oh, I love this song,' he says excitedly and throws himself into an energetic dance routine.[or]Showing off, he goes into a frenetic set of dance moves that waves his arms, sways his body and ends with him flashing his rear to you.[or]'You'd be much better off just staying in here with us party animals than taking your chance out in the city.'[or]'Personally, I love the changes that've been made to this place since this all started. I mean, it was a good club before, but now it's awesome.'[or]'I'm glad everyone's managed to keep this place open. It's a lot more fun than just hiding while we wait for help.'[in random order]";
 		else:
 			say "[randomdesc]";
@@ -36,7 +36,7 @@ Instead of conversing the Brooke:
 		say "     'Yeah, I knew Andrew from the club before all this mess. Oh, I had the hots for him back then - nothing romantic, just wanting to jump his bones. But he wasn't interested in girls, let alone someone like the old me. I think he always knew, and he was never mean about it, but I just wasn't what he was looking for. But now,' the otter says with a smile, running his webbed paws down his slender and sexy boytoy body, 'I can get his motor running... or that of most guys here.'";
 		now brookeandrewtalk is true;
 	else:
-		if cocks of player > 0:
+		if player is male:
 			say "     [one of]'Why don't we go make out, hot stuff?'[or][if dexterity of player < 16]'You could use a little practice with your dance moves,' he teases before showing off an energetic routine[else if dexterity of player < 20]'You dance pretty well, hot stuff,' he says, letting his flexible body slide along yours for a moment[else]'You really know how to move that hot bod of yours, don't you?' he says with a smile. Dancing up alongside you, he lets his flexible body grind against you to the rhythm of the beat[end if].[or]'I don't know if it's my transformation or his, but I think Andrew's even hotter now that he's a sexy wolf. And MMm-mm-mm, boy is he hung,' the otter giggles, wiggling his hips in a lewd display.[or]'We should have another threesome with Andrew again soon. I had a lot of fun. And from how much you came, I can tell you did too,' he chirrs, rubbing up against you sensually.[or]'Oh, I love this song,' he says excitedly and throws himself into an energetic dance routine.[or]Showing off, he goes into a frenetic set of dance moves that waves his arms, sways his body and ends with him flashing his rear to you.[or]'You'd be much better off just staying in here with us party animals than taking your chance out in the city.'[or]'Personally, I love the changes that've been made to this place since this all started. I mean, it was a good club before, but now it's awesome.'[or]'I'm glad everyone's managed to keep this place open. It's a lot more fun than just hiding while we wait for help.'[in random order]";
 		else:
 			say "[randomdesc]";
@@ -56,7 +56,7 @@ to say sexwithBrooke:
 			break;
 	if HP of Brooke is 0:
 		say "     That's rather forward of you. You should probably introduce yourself first.";
-	else if cocks of player is 0:
+	else if player is not male:
 		say "     'I appreciate the offer, but I'm looking for guys.'";
 	else if lastfuck of Brooke - turns < 6:
 		say "     'Maybe later. I want to dance for a bit.'";

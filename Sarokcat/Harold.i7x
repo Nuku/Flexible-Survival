@@ -135,11 +135,11 @@ to say sexwithharold:
 		say "     'Hey now, I know we both had a lot of fun, but I do need to actually serve drinks sometimes as well,' Harold says with an amused grin, 'Don't worry, I am sure I will find time for another 'Unicorn ride' soon enough, and I'm sure the club members would appreciate another show as well,' he says with a chuckle, the thought making you blush even as your body grows warm with anticipation of another lovely exhibitionistic round with the handsome unicorn.";
 	else if Haroldaroused > 0:
 		now lastfuck of Harold is turns;
-		if cunts of player > 0:
+		if player is female:
 			say "[haroldfemalesex]";
 			unicornify;
 			increase haroldaroused by 1;
-		else if cocks of player > 0:
+		else if player is male:
 			say "[haroldmalesex]";
 			unicornify;
 			increase libido of Harold by 1;

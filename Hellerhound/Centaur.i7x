@@ -81,7 +81,7 @@ To say centaur defeat:
 			increase libido of player by 20;
 		else:
 			say "The appearance of the helping tentacles is a welcome development, and you begin thrusting with vigor, the lubrication of the creature's waste keeping you from ripping the walls.";
-			if cunts of player > 0:
+			if player is female:
 				say "The tentacles circle your cock, and one rubs by your clit on its way. Almost immediately, they abandon your moving cock for the wetness of your pussy, stroking in and out in coils as they work to bring you to climax.";
 				say "You lose the battle to hold the climax back as you let out a scream of pleasure, your semen filling the bowels of the centaur while its tentacles are washed out of your pussy by the flow of fluids.";
 			else:
@@ -149,7 +149,7 @@ to say compresscock:
 
 An everyturn rule:
 	if compressedcock is 1:
-		if cocks of player > 0:
+		if player is male:
 			now libido of player is 0;
 			decrease cock length of player by 4;
 			say "Your cock keeps bleeding, and shrank a little just now.";
@@ -167,7 +167,7 @@ To say centaur attack:
 	if cocks of player is not 0:
 		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
 		[male fury, centaur wants mate, not a companion!]
-	if cunts of player > 0:
+	if player is female:
 		Say "[centaur rape female]";
 	if player is neuter and "Male Preferred" is not listed in feats of player:
 		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
@@ -283,14 +283,14 @@ when play ends:
 		if humanity of player < 10:
 			say "     As your new, tainted instincts take over, you are drawn back to the plains to join the growing herd of corrupted centaurs in their fight to spread their infection to the others";
 			if centaurmate is 1 and cunts of player > 0:
-				say ". You are welcomed by your powerful mate, the first and strongest of the herd. Being the first of his tainted mares, you are given a place above the others and fucked often. You bear him many children, each time becoming more like him until you look as if you were made for each other, as indeed you were[if cocks of player > 0]. You are allowed to keep your cock and use it often to corrupt captured centaurs or to punish any in the herd who deserve discipline[end if]. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
+				say ". You are welcomed by your powerful mate, the first and strongest of the herd. Being the first of his tainted mares, you are given a place above the others and fucked often. You bear him many children, each time becoming more like him until you look as if you were made for each other, as indeed you were[if player is male]. You are allowed to keep your cock and use it often to corrupt captured centaurs or to punish any in the herd who deserve discipline[end if]. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
 			else if centaurmate is 1 and cocks of player > 0:
 				say ". You are welcomed by the herd's powerful leader, the first and strongest of the herd. Being the first he corrupted, you are given a place above the others and made into his lieutenant. He is a little disappointed that you did not return to him as a mare, but instead prepares you a special mash of tainted apples and his cum, which makes your cock grow into an impressive stallion's like his. You are allowed to use it often to corrupt captured centaurs and to punish any in the herd who deserve discipline. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
 			if centaurmate is 2:
-				say ". Having initially rejected the first mutant centaur's offer, you are punished for your lack of willingness to accept your place by his side. You are treated as a lowly breeding mare, mounted and fucked by any herd member who wishes to use you to slake their lusts or simply for want of someone to punish and hurt. You accept this over time, knowing it is your place[if cunts of player > 0]. You are used by the male foals to train them to mount, fuck and corrupt others. You grow heavy with foals of your own and they always are taken away to be raised by the herd, denying you even the love of your children[end if][if cocks of player > 0]. You are punished often for having a cock, with the stallions squeezing your penis and balls with their tentacles. It is never taken away though, instead only used as another means to hurt you for your initial rejection of their leader[end if].";
+				say ". Having initially rejected the first mutant centaur's offer, you are punished for your lack of willingness to accept your place by his side. You are treated as a lowly breeding mare, mounted and fucked by any herd member who wishes to use you to slake their lusts or simply for want of someone to punish and hurt. You accept this over time, knowing it is your place[if player is female]. You are used by the male foals to train them to mount, fuck and corrupt others. You grow heavy with foals of your own and they always are taken away to be raised by the herd, denying you even the love of your children[end if][if player is male]. You are punished often for having a cock, with the stallions squeezing your penis and balls with their tentacles. It is never taken away though, instead only used as another means to hurt you for your initial rejection of their leader[end if].";
 			say "     The military, having cordoned off the section of the plains nearest the city, try to keep the corrupted centaurs contained. The electric fence they initially erected at the edge of their lines does not hold out for long once your people make a concerted effort to cross it. Many manage to fight through the military barricade and soldiers, escaping to create herds of their own elsewhere. Eventually, the military manages to contain the rest of your people by using heavy equipment to dig a large trench and build a tall, concrete wall on the other side. Your people still have the large section of plains inside this wall and can make forays into the city to find more new members to be inducted into the herd.";
 		else:
-			say "     Your odd body attracts some attention from the military scientists when you and the others the soldiers can find are rescued. Your differences from the standard centaurs are noted and tested briefly, but you are categorized as an anomaly and given little further scrutiny, as there are more important and dangerous things to focus on than a centaur with green genitals. The other centaurs don't speak to you, always glaring at you or eying you suspiciously. With your altered body, you have little option of a regular life and take up a life as a farm hand. You do gardening and normal farm chores as well as give rides and perform pulling services. Your employer is understanding of your needs and allows you to mate with the horses there when the need arises[if cunts of player > 0]. You bear a few foals over the years, centaurs like yourself with green genitals, but no sign of the tentacles or any further corruption, thankfully[end if].";
+			say "     Your odd body attracts some attention from the military scientists when you and the others the soldiers can find are rescued. Your differences from the standard centaurs are noted and tested briefly, but you are categorized as an anomaly and given little further scrutiny, as there are more important and dangerous things to focus on than a centaur with green genitals. The other centaurs don't speak to you, always glaring at you or eying you suspiciously. With your altered body, you have little option of a regular life and take up a life as a farm hand. You do gardening and normal farm chores as well as give rides and perform pulling services. Your employer is understanding of your needs and allows you to mate with the horses there when the need arises[if player is female]. You bear a few foals over the years, centaurs like yourself with green genitals, but no sign of the tentacles or any further corruption, thankfully[end if].";
 
 
 Centaur ends here.

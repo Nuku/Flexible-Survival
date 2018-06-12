@@ -30,7 +30,7 @@ when play begins:
 to say Palominowins:
 	say "'wow you got here how did that happen.'";
 	wait for any key;
-	if cocks of player > 0:
+	if player is male:
 		say "yay";
 	else:
 		say "how the heck did you find me hiding here?";
@@ -97,10 +97,10 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Palomino":
 		if humanity of player < 10:
-			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper! You love the feeling of showing off your handsome [if player is herm]herm[else if cocks of player > 0]male[else if cunts of player > 0]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
-			if cocks of player > 0:
+			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper! You love the feeling of showing off your handsome [if player is herm]herm[else if player is male]male[else if player is female]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
+			if player is male:
 				say "     Soon you and several other strippers are nearly naked on stage and showing off for the all too appreciative audience, as you grind up against the naked bodies of a black swan, while a well-endowed panther grinds up against you from behind. Your first night is a tremendous success, though the best part is how happy your dominant stud is with you afterwards. You wake up from a night of wonderful sex to find several new piercings for you to wear to demonstrate who you belong to, as well as his tag hanging from your collar. Smiling happily, you settle in to your new life as one of the clubs strippers with ease, dancing all night for the patrons, and dancing with your mate and several other strippers afterwards.";
-			else if cunts of player > 0:
+			else if player is female:
 				say "     Soon you and several other strippers are nearly naked on stage and showing off for the all too appreciative audience, as you grind up against the naked bodies of a black swan, while a well-endowed panther grinds up against you from behind. Your first night on the stage is a tremendous success. Being female, you don't really draw your dominant stud's attention like you used to, but you've got plenty of dancers to enjoy a wild romp with after the show. You wake up from a night of wonderful sex to find yourself in a new harness suitable to your female form and a tag hanging from your collar denoting you as club property. Smiling happily, you settle in to your new life as one of the clubs strippers with ease, dancing all night for the patrons and dancing with several other strippers afterwards.";
 				if player is impreg_ok:
 					say "     After one particularly hot show, you and some of the male strippers enact a plan where they get Tristian riled up with a private show. During this, you sneak a ride on his cock after the guys have gotten him too hard with their asses and distract him with their luscious cocks, letting you get fucked by your palomino stud after so long. He seems a little hurt by this treachery at first, but gets over it quickly enough, especially as your belly starts to swell with his foals, more palomino studs to stalk the dance floor and ride the stripper poles.";

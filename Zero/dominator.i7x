@@ -44,9 +44,9 @@ to say masterofslutsdom:
 
 to say sluttysubmit:
 	say "The [slutname] grins as he watches you remove any and all clothing you have, submitting yourself to him.[line break]He takes hold of you purring into your ear about how your 'such a good slut and how there master would be pleased' ";
-	if cunts of player > 0:
+	if player is female:
 		if cunt length of player < 6:
-			if cocks of player > 0:
+			if player is male:
 				if cock length of player < 6:[small cunt small cock]
 					say "After looking you up and down, he pats you on the head. 'You're so small. We'll have to fix that, now won't we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'You're too small for me, little one. We'll have to go by the backdoor. Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cuntinc][cockinc]";
 				else: [small cunt normal cock]
@@ -54,7 +54,7 @@ to say sluttysubmit:
 			else: [small cunt]
 				say "After looking you up and down, he pats you on the head. 'You're so small. We'll have to fix that, now won't we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'You're too small for me, little one. We'll have to go by the backdoor. Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cuntinc]";
 		else:
-			if cocks of player > 0:
+			if player is male:
 				if cock length of player < 6: [cunt small cock]
 					say "After looking you up and down, he pats you on the head. 'Your cock's so small, but at least your cunt's good enough.'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'You're too small for me, little one. We'll have to go by the backdoor. Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your pussy. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[impregchance][or]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'You're too small for me, little one. We'll have to go by the backdoor. Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]He forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cockinc]";
 				else: [cunt and cock]
@@ -62,7 +62,7 @@ to say sluttysubmit:
 			else:	[cunt]
 				say "After looking you up and down, he rubs his body against yours. 'Nice equipment. Time for some fun.'[line break]He suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your [one of]pussy. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[impregchance][or]tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]He forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.";
 	else: [small cock]
-		if cocks of player > 0:
+		if player is male:
 			if cock length of player < 6:
 				say "After looking you up and down, he pats you on the head. 'Your cock's so small. We'll have to fix that, now won't we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cockinc]";
 			else: [cock]
@@ -79,9 +79,9 @@ to say sluttysubmit:
 		infect "Female Slut";
 	else if player is herm and a random chance of 1 in 2 succeeds:
 		infect "Female Slut";
-	else if cocks of player > 0:
+	else if player is male:
 		infect "Male Slut";
-	else if cunts of player > 0:
+	else if player is female:
 		infect "Female Slut";
 	else if a random chance of 1 in 2 succeeds:
 		infect "Female Slut";
@@ -98,9 +98,9 @@ to say domvictory:
 		say "[sluttysubmit]";
 	else:
 		say "Exhausted from the waves of physical and sexual attacks, you collapse, surrendering yourself to the male [slutname] who quickly strips you of any and all clothing.";
-		if cunts of player > 0:
+		if player is female:
 			if cunt length of player < 6:
-				if cocks of player > 0: [small cunt small cock]
+				if player is male: [small cunt small cock]
 					if cock length of player < 6:
 						say "After looking you up and down, he pats you on the head. 'You're so small. We'll have to fix that, now won't we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'You're too small for me, little one. We'll have to go by the backdoor. Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[cuntinc][cockinc]";
 					else: [small cunt normal cock]
@@ -108,7 +108,7 @@ to say domvictory:
 				else: [small cunt]
 					say "After looking you up and down, he pats you on the head. 'You're so small. We'll have to fix that, now won't we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'You're too small for me, little one. We'll have to go by the backdoor. Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cuntinc]";
 			else:
-				if cocks of player > 0:
+				if player is male:
 					if cock length of player < 6: [cunt small cock]
 						say "After looking you up and down, he pats you on the head. 'Your cock's so small, but at least your cunt's good enough.'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your pussy. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[impregchance][or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cockinc]";
 					else: [cunt and cock]
@@ -116,7 +116,7 @@ to say domvictory:
 				else:	[cunt]
 					say "After looking you up and down, he rubs his body against yours. 'Nice equipment. Time for some fun.'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your pussy. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[impregchance][or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.";
 		else: [small cock]
-			if cocks of player > 0:
+			if player is male:
 				if cock length of player < 6:
 					say "After looking you up and down, he pats you on the head. 'Your cock's so small. We'll have to fix that, now won't we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random] off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[line break][cockinc]";
 				else: [cock]
@@ -125,9 +125,9 @@ to say domvictory:
 				say "After looking you up and down, he pats you on the head while giving you a pitying look. 'I don't know what happened to you, but let's fix it, shall we?'[line break]He [one of]suddenly picks you up and presses against a nearby wall, his head nuzzling against the side of yours. 'Get ready.'[line break]He then thrusts forward, hard, impaling his large shaft into your tight asshole. He comes inside you over and over again, each time more pleasurable than the last, your mind drifting[or]forces you onto your knees and rubs his cock against your mouth, letting out a low moan of pleasure as you start to lick and suck at it. Soon he's exploding inside you, his cum making your mind drift[at random]off from the pleasure of being such a good slut for the powerful male. By the time you come around, the [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum covered body to remember the [slutname] by.[one of][cuntinc][cuntinc][or][cockinc][cockinc][at random]";
 		if player is herm and a random chance of 1 in 2 succeeds:
 			infect "Female Slut";
-		else if cocks of player > 0:
+		else if player is male:
 			infect "Male Slut";
-		else if cunts of player > 0:
+		else if player is female:
 			infect "Female Slut";
 		else if a random chance of 1 in 2 succeeds:
 			infect "Female Slut";

@@ -18,7 +18,7 @@ to say fluffyowldesc:
 to say losetofluffyowl:
 	if HP of player > 0:		[SUBMIT]
 		say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird. She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom. You moan softly and nuzzle at the soft feathers and warm breasts. You run your fingers through her down, stroking her breasts and teasing the hidden nipples. ";
-		if cocks of player > 0:
+		if player is male:
 			if a random chance of 1 in 2 succeeds:
 				say "     While you play with her giant tits, you can feel her taloned hand slip down to your cock and stroke it. She alternates between brushing her feathers over it and pumping at it until you're hard and leaking precum steadily.";
 				say "     She pushes you back and takes a seat in your lap, sinking her wet hole down around your erection. Being part avian, her pussy feels different around your cock, having become more like a bird's cloaca. Lost in your arousal, you find this quite pleasurable and enjoy the different ways it seems to grip and slide over your penis. You fuck her with your face buried in her soft feathers, suckling at a nipple until you cum, pumping your hot seed into her until you're both satisfied and part ways.";
@@ -44,7 +44,7 @@ to say beatthefluffyowl:		[WIN]
 		if the player consents:
 			LineBreak;
 			say "     Grabbing the owl's big hooters, you run your fingers through the soft down and squeeze the warm, soft flesh beneath. She hoots softly in pleasure and gives into your manhandling readily. It seems her enlarged breasts are quite sensitive. Finding those hidden nipples, you start to squeeze and tease them, getting her all the more excited.";
-			if cocks of player > 0:
+			if player is male:
 				if a random chance of 1 in 2 succeeds:
 					say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby bed. You sit her in your lap with her back to you as you guide her down onto your hard cock. Her cloacal vent spreads open for you easily and takes your cock in, gripping and twitching around it as you start fucking her while still playing with her large breasts. Her bird-like pussy feels slightly different around your cock, squeezing and pulling in ways that are different, but equally enjoyable. She hoots and moans in pleasure as you thrust into her again and again until you finally cum hard and shoot your hot seed into her, bathing her eggs in your semen. Once your balls are drained, you continue to hold the soft bird against you and play with her sensitive breasts and nipples until you can get her to cum again before you release her and part ways.";
 				else:
@@ -120,7 +120,7 @@ when play ends:
 			say "     Losing yourself to your new instincts and a renewed wave of changes because of it, you head out into the city. You make your way to the roof of a small office building and with only a little trepidation, leap off into the air. You glide clumsily at first, but somehow manage to fly soon enough. You soar through the night air, drawn back to the hospital. There, you join the other fluffy owls in the nest that they have set up in one wing, ";
 			if player is herm:
 				say "enjoying a life of mating with the many females and being mated to lay more eggs for the parliament.";
-			else if cocks of player > 0:
+			else if player is male:
 				say "enjoying a life of mating with the many females so they may lay more eggs for the parliament.";
 			else:
 				say "enjoying a life of being mated by one of the group's few males so you may lay more eggs for the parliament.";

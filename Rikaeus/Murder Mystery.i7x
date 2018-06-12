@@ -304,17 +304,17 @@ to say TawnyaFurEvidence:
 	if TawnyaFurSuspicion is 0: [never talked about it]
 		say "     Moving your hand into your pocket, you pull out the patch of brown fur and show it to her. 'The hell you showing it to me, are you stupid?' she asks you, her tone belaying that she does believe you are dumb. You tell her that you found it on the body and thought that it might be hers. The look on her face now says that Tawnya thinks you're beyond idiocy right now. 'I'm a fucking lizard-morph. I ain't got no fur on any part of my body. Are you blind?' She snarks. You shake your head mentally at her insults as you do believe you should check every possibility.";
 		say "     [bold type]Believe her? She might not be pure lizard...[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     She seems like a pretty trustworthy person, so you nod at her comment that she has no fur. Seeing the time, you realize you've been here a tiny bit and it appears the guard knows this too. The guard walks up and grabs Tawnya by the hand. He tells you that if you want to talk to her again, just approach her, otherwise she needs to go back to her cell. You nod and follow the guard and the irritated lizard woman back to lockup where you're once more face to face with the other suspects.";
 			now TawnyaFurSuspicion is 1; [she said she has none]
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     [bold type]How do you want to get to her fur?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
 			if player consents:
@@ -334,17 +334,17 @@ to say TawnyaFurEvidence:
 	else if TawnyaFurSuspicion is 1: [she said before she has no fur]
 		say "     'You're totally a fucking dumbass, I told you I DON'T HAVE FUR!' she says, yelling the last part into your face. Though she does back down when the wolverine gets into a pose that basically says that if she doesn't then he'll attack her. Instead, she just grumbles about idiots who don't know when to give up. However, while she's having her quiet monologue you realize you asked her again because you couldn't truly accept her earlier response at face value. Although.... then again she does seem trustworthy.";
 		say "     [bold type]Believe her? She might not be a pure lizard...[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     You shake your head and decide to accept her statement once again. For one, the female lizard appears to be getting rather pissed at you and for two, while that anger is there, she does seem to be trustworthy. So, with a sigh you tell the Wolverine that you're done for now. He moves to Tawnya and grabs her arm, a little tightly if the wince on the lizard woman's face said anything. But then again she should have known better than to get angry in the presence of a wolverine when she's a suspect. They don't take no shit from potential law breakers, especially severe ones like murder. The two of you are then directed back to the lockup where you see the other suspects.";
 			now TawnyaFurSuspicion is 1; [she said she has none]
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     [bold type]How do you want to get to her fur?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
 			if player consents:
@@ -364,7 +364,7 @@ to say TawnyaFurEvidence:
 	else if TawnyaFurSuspicion is 2: [she showed before she has no fur]
 		say "     'You've already seen that I have no fur so what the hell are you asking about that for?' the lizard-morph asks you. ";
 		say "     [bold type]Get it on with her?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sex with murder suspects is exciting!";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:
@@ -541,7 +541,7 @@ to say BarryFurEvidence:
 		say "     Once the two of you are situated in the interrogation room you pull out your only piece of physical evidence, the fur. Barry gives it a curious look, wondering why you brought that out. You mention that this was found in Tyler's dead hands and that since it doesn't match his, it was probably the killer's. The bear nods, following the conversation so far. 'So... what you want to know is if it's mine?' he asks you. You nod, saying that he got it right on the mark. 'Good, let me see it for a second,' Barry requests of you. It's odd but you shrug and hand it to him. The bear appears to feel it for a bit before laughing and setting it on the table.";
 		say "     'It's not mine, it's far too soft to be. Here, feel my fur,' the guy says, pulling your hand to his fur. As soon as you touch the big male's fur you immediately can tell that it's not him. Compared to the evidence, the bear's is slightly rough, but not enough to cause discomfort. The evidence on the other hand is extremely soft, as if it was silk. However, you notice that your hand is groping Barry's body a bit, and said man is grinning widely at you. 'Ohoho, do you want a closer look?' He grins lewdly at you, causing a warmth to pool down below.";
 		say "     [bold type]Do you want to have sex with the big ol['] bear?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! He doesn't seem too bad for a murder suspect.";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:
@@ -559,7 +559,7 @@ to say BarryFurEvidence:
 	if BarryFurSuspicion is 1:
 		say "     'Oh? You're back? Are you up for a ride on the big bad bear?' Barry asks you, wiggling his eyebrows and grinning lewdly at you.";
 		say "     [bold type]Do you want to have sex with the big ol['] bear?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! He doesn't seem too bad for a murder suspect.";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
 		if player consents:

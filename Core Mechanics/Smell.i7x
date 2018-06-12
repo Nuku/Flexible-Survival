@@ -66,7 +66,7 @@ carry out heresniffing:
 Section 2 - The player
 
 instead of sniffing yourself:
-	say "You smell like a [if player is herm]hermaphrodite[else if cunts of player > 0]female[else if cocks of player > 0]male[else]neuter[end if] [bodyname of the player].";
+	say "You smell like a [if player is herm]hermaphrodite[else if player is female]female[else if player is male]male[else]neuter[end if] [bodyname of the player].";
 	if animal heat is True:
 		say "There is an animalistic musk around you.";
 	if child is not born and gestation of child > 0:

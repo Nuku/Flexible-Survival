@@ -51,7 +51,7 @@ When Play begins:
 	now tail entry is "You have what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur.";
 	now cock entry is "[one of]perky[or]canine[at random]";
 	now face change entry is "your head changes shape rapidly, as if your nanites are rummaging through a bin of spare mutations. Once things mostly settle down, you find yourself with a happy husky head, a long, broad toucan beak, and an array of vividly-colored hedgehog quills spanning from your forehead to the back of your neck. You feel good about this change! You announce this fact to the world with an odd noise that sounds like 'Marp!'";
-	now body change entry is "your torso changes, becoming a bit fuller and more dense with just a bit of puppy-pudge. An exuberant, gleeful energy wells up within you. Let's go do something! Dunno what. Something! It'll be fun! Your arms cycle through a few different shapes and textures, eventually settling on something mostly dog-like. You scratch yourself behind the ears. Good [if player is herm]boygirl[else if cocks of player > 0]boy[else if cunts of player > 0]girl[else]... thing[end if]! Your legs do something weird, and you lose your balance. Hrmm, the ground's not great. You'd rather find something to perch on. Maybe a stick. Ooh, a stick! Is someone going to throw it for you?";
+	now body change entry is "your torso changes, becoming a bit fuller and more dense with just a bit of puppy-pudge. An exuberant, gleeful energy wells up within you. Let's go do something! Dunno what. Something! It'll be fun! Your arms cycle through a few different shapes and textures, eventually settling on something mostly dog-like. You scratch yourself behind the ears. Good [if player is herm]boygirl[else if player is male]boy[else if player is female]girl[else]... thing[end if]! Your legs do something weird, and you lose your balance. Hrmm, the ground's not great. You'd rather find something to perch on. Maybe a stick. Ooh, a stick! Is someone going to throw it for you?";
 	now skin change entry is "a strange, frantic tingle ripples over your body as sharp quills, colorful feathers, and soft fur all vie for control of your hide. Eventually, you settle into a bizarre equilibrium between the three.";
 	now ass change entry is "there is a sudden 'Poof!' A fluffy husky tail sprouts from your rear, wagging happily. Another poof, as colorful feathers pop out over its surface! Poof, ow! Long, sharp porcupine quills the size of knitting needles sprout from your tail! Better be careful where you wag that thing...";
 	now cock change entry is "your cock throbs and pulses. You curl yourself down and lick at it a bit. Happy little doggy cock. Nope, looks and tastes just fine. What were you doing again?";
@@ -114,7 +114,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

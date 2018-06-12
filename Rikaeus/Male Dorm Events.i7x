@@ -32,7 +32,7 @@ to say StudyingDormStudents:
 to say PublicDormFucking:
 	say "     On your way through the dorms you can hear the sounds of moans and groans. Out of curiosity you edge closer towards where they're coming from but as you reach the source of everything you realize two things. One, the voices are male, and two the door is wide open. So, you ask yourself a question.";
 	say "     [bold type]Do you peep on in the obvious public sex?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
 	say "     ([link]Y[as]y[end link]) - No, you'd rather not at the moment.";
 	if player consents:
@@ -50,14 +50,14 @@ to say CoupleDormFight:
 to say MaleDormSlut1:
 	say "     When you walk through the dorm building you swear you notice sexual sounds and all male by the tone of it. However, you're unsure if you want to continue going forward, so you ask you a question.";
 	say "     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
 	say "     ([link]Y[as]y[end link]) - No, you'd rather not at the moment.";
 	if player consents:
 		say "     'Mmm, fuck the dorm slut is tight as always,' a voice moans to your back right. Turning around you spot a group of three males: a lizard, a wolf, and a jock bunny, surrounding a twink-ish male fox. Out of the four of them, only the vulpine is as naked as can be, the others are currently still wearing their clothing. Though, you can tell that the voice you heard from earlier was the bunny, as he was currently balls deep into the bare-bodied guy below him. At the other end of him was the lizard who was happily fucking the fox's mouth, balls slapping against his chin. It didn't take long for the lapine to release his load, and instead of in his hole the male ends up spraying it all over the vulpine's back.";
 		say "     Taking the bunny's place is the wolf, while the lizard is still content to take purchase in the fox's mouth. 'Now remember, don't knot with him. We don't want to be stuck here for an hour or two,' the one at the front says. The canine rolled his eyes before slamming into the vulpine rather roughly. 'I know I know. This isn't my first rodeo with the slut.' You turn your attention to the guy getting fucked and notice he's pretty into it, moaning and groaning loudly as they all fuck him, minus the lapine who is simply sitting on a chair, watching it all. You realize that the fox notices you out of the corner of his eyes but doesn't say anything.";
 		WaitLineBreak;
-		say "     Not long after that, the lizard pulls out and lets out a gasp of pleasure before shooting his cum all over the male's face, the fox happily licking it up and cleaning the guy's cock off. Following that, the wolf let out a howl and backed out, spilling his seed and adding it to the bunny's earlier mix. Once he's done, the three get up and get cleaned up before heading off, leaving the vulpine to clean himself up. Before you can leave however, he wanders over to right where you are and gives you a smile. 'Hey there, I saw you watching, did you enjoy the show?' he asks you, a wide smile aimed in your direction. You raise a brow at him which just causes him to chuckle. 'Well, my name is Justin, and as you heard earlier, I'm the dorm slut[if cocks of player > 0]. Perhaps we can have fun sometime?'[else].'[end if] the newly named cock-hound offers, winking in your direction. He then sighs and heads off, telling you that he's going to his room. Shrugging your shoulders, you get back to what you were doing.";
+		say "     Not long after that, the lizard pulls out and lets out a gasp of pleasure before shooting his cum all over the male's face, the fox happily licking it up and cleaning the guy's cock off. Following that, the wolf let out a howl and backed out, spilling his seed and adding it to the bunny's earlier mix. Once he's done, the three get up and get cleaned up before heading off, leaving the vulpine to clean himself up. Before you can leave however, he wanders over to right where you are and gives you a smile. 'Hey there, I saw you watching, did you enjoy the show?' he asks you, a wide smile aimed in your direction. You raise a brow at him which just causes him to chuckle. 'Well, my name is Justin, and as you heard earlier, I'm the dorm slut[if player is male]. Perhaps we can have fun sometime?'[else].'[end if] the newly named cock-hound offers, winking in your direction. He then sighs and heads off, telling you that he's going to his room. Shrugging your shoulders, you get back to what you were doing.";
 		now JustinRelationship is 1;
 	else:
 		say "     You shake your head and continue onward as you aren't interested in what's happening at the moment.";
@@ -65,7 +65,7 @@ to say MaleDormSlut1:
 to say MaleDormSlut2:
 	say "     When you walk through the dorm building you swear you notice sexual sounds and all male by the tone of it. However, you're unsure if you want to continue going forward, so you ask you a question.";
 	say "     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
 	say "     ([link]Y[as]y[end link]) - No, you'd rather not at the moment.";
 	if player consents:

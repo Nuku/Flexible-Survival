@@ -59,7 +59,7 @@ to say BeatenElkBullSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -153,13 +153,13 @@ When Play begins:
 	now defeated entry is "[ElkBullBeaten]";
 	now victory entry is "[ElkBullVictorious]";
 	now desc entry is "[ElkBullDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -259,7 +259,7 @@ to say BeatenElkCowSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -351,13 +351,13 @@ When Play begins:
 	now defeated entry is "[ElkCowBeaten]";
 	now victory entry is "[ElkCowVictorious]";
 	now desc entry is "[ElkCowDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -457,7 +457,7 @@ to say BeatenElkHermSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -549,13 +549,13 @@ When Play begins:
 	now defeated entry is "[ElkHermBeaten]";
 	now victory entry is "[ElkHermVictorious]";
 	now desc entry is "[ElkHermDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -654,7 +654,7 @@ to say BeatenElkTransBullSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -748,13 +748,13 @@ When Play begins:
 	now defeated entry is "[ElkTransBullBeaten]";
 	now victory entry is "[ElkTransBullVictorious]";
 	now desc entry is "[ElkTransBullDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -854,7 +854,7 @@ to say BeatenElkTransCowSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -947,12 +947,12 @@ When Play begins:
 	now victory entry is "[ElkTransCowVictorious]";
 	now desc entry is "[ElkTransCowDesc]";
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose. Your muzzle is slender and your features delicate, looking alluring and feminine";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";

@@ -81,7 +81,7 @@ to say losetosquire:
 		else:
 			say "     The battle ends with a wild swing from the squire that manages to knock you off your feet. He gives a wild laugh as he pants to catch his breath. 'I... I beat you? A knight?' he says in shocked amazement. Standing taller, he sheathes his small sword and approaches you. 'Not much of a knight all then, are you? Perhaps I'd make for a better knight and you should go back to being a lowly squire,' he muses, grabbing you in a surprisingly strong grip. Tugging down his breeches, he reveals his stiff member. His seven incher stands proud, hard and ready, as he pushes aside your garb, ready to finally take his turn on top.";
 		WaitLineBreak;
-		if cunts of player > 0:
+		if player is female:
 			say "[squirewins_vaginal_shift]";
 		else:
 			say "[squirewins_anal_shift]";
@@ -92,9 +92,9 @@ to say losetosquire:
 		else:
 			say "     His last blow is followed by a leg trip that drops you to the ground, leaving you down in the dirt. He gives a mirthful laugh as he pants to catch his breath. 'Well fought, but it is clear who has received the better training,' he boasts proudly. That said, he sheathes his small sword and approaches you. 'And now, with the matter of the victor decided, let us have some fun. It's clear you need more training,' he says as he rolls you onto the ground. 'And I'd be happy to help a fellow squire out,' he says, tugging down his breeches to reveal his stiff member. His seven incher stands proud, hard and ready, as he pushes aside your garb.";
 		WaitLineBreak;
-		if cunts of player > 0:
+		if player is female:
 			say "[squirewins_vaginal]";
-		else if cocks of player > 0:
+		else if player is male:
 			say "[squirewins_anal_sq]";
 		else:
 			say "[squirewins_anal_n]";
@@ -109,7 +109,7 @@ to say losetosquire:
 		if anallevel is 1, now analchance is analchance / 2;
 		if cocks of player > 0 and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
 			say "[squirewins_ride]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "[squirewins_vaginal]";
 		else:
 			say "[squirewins_anal_n]";
@@ -124,7 +124,7 @@ to say losetosquire:
 		if anallevel is 1, now analchance is analchance / 2;
 		if cocks of player > 0 and ( a random chance of anallevel in 100 succeeds or cunts of player is 0 ):
 			say "[squirewins_ride]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "[squirewins_vaginal]";
 		else:
 			say "[squirewins_anal_n]";
@@ -137,7 +137,7 @@ to say squirewins_vaginal_shift:
 	else:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. With a fine view of your juicy pussy, he smiles eagerly. 'This encounter gets better and better; this fallen knight has a scabbard for my sword. ";
 	say "     But what kind of a knight cannot stand up to a squire? You're unworthy to be a knight for [if HP of player > 0]surrendering so easily[else]losing[end if] to a squire. You're clearly undeserving of your title,' he says as he pushes a few fingers into your cunt eagerly. He clumsily gropes and teases your cunny, relishing this opportunity with a female. After his inexperienced exploration, he gets his erection lined up with your wet folds and pushes his dribbling cock into your vagina with one confident motion.";
-	say "     He gives a satisfied moan as he sets himself to thrusting into you. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, he does rein it in after his initially overeager start. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if cocks of player > 0]takes hold of your [cock of player] cock and starts jerking you off as he makes love to you[else]puts a hand on your spread folds and tweaks your clit[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your quivering tunnel.";
+	say "     He gives a satisfied moan as he sets himself to thrusting into you. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, he does rein it in after his initially overeager start. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if player is male]takes hold of your [cock of player] cock and starts jerking you off as he makes love to you[else]puts a hand on your spread folds and tweaks your clit[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your quivering tunnel.";
 	WaitLineBreak;
 	say "     Your enjoyment of the increasingly skillful fucking you're receiving increases as it continues, though you don't quite realize why at first. At first you think it just your increasing excitement, but you come to realize the squire's cock is actually engorging further inside you, pushing deeper and filling you more fully. Looking up at him, you see these changes aren't limited to just his cock either. The young man's becoming more mature and strikingly handsome as his body grows to fill out his loose tunic. Even as you watch, his young face becomes that of a nobleman[if squirefeature is 1]. His scruffy brown hair is tamed even as he gains a manly beard to match[else if squirefeature is 2]. His blond locks become long and flowing, making him all the more attractive in his maturity[else if squirefeature is 3]. His pretty-boy face ages to become that of square-jawed man[else if squirefeature is 4]. His goofy grin is replaced by that of a mirthful man who knows no fear[else]. He looks down at you with those blue eyes of his features become regal and dignified[end if].";
 	say "     But the changes not limited to him alone, your knightly body becoming smaller even as he grows, helping to make him seem all the more impressive. ";
@@ -157,7 +157,7 @@ to say squirewins_vaginal_shift:
 	if cockname of player is "Knight":
 		now cockname of player is "Squire";
 		now cock of player is cock entry;
-		if cocks of player > 0:
+		if player is male:
 			say "     Tingles run through your cock as it changes subtly and you feel less desire to use it, not when you might instead yourself be fucked. ";
 		decrease humanity of player by 1;
 	if tailname of player is "Knight":
@@ -168,7 +168,7 @@ to say squirewins_vaginal_shift:
 	say "     As you regress back to the body of a late teen, your lust to be fucked increases further as well, your body desiring to be screwed. You are meant to service noble knights such as the one now thrusting into you. You long to find your own knight to serve and service.";
 	say "     Noticing that the crest on the maturing knight's tunic has changed to that of [stateknightcrest_new], you lift up the edge of your own tabard to confirm that the squire's crest of [stateknightcrest] has become yours now. The thought that you must find the knight with this crest pops into your head immediately. You feel a longing to enter his service as quickly as you can and, with your arousal very high at the moment, it is hard to fight the desire to search for him the moment the knight atop you is done.";
 	WaitLineBreak;
-	say "     The feel of this new knight's enlarged manhood gliding in and out of your heated cunny is wonderful. The feel of it drooling copious amounts of precum has you grinding back against him with yearning. Having watched you transform even as he did seems to be as great a turn-on for him as it has been for you. He quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching tunnel, spilling his seed into your womb[if cocks of player > 0]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] across yourself with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches.";
+	say "     The feel of this new knight's enlarged manhood gliding in and out of your heated cunny is wonderful. The feel of it drooling copious amounts of precum has you grinding back against him with yearning. Having watched you transform even as he did seems to be as great a turn-on for him as it has been for you. He quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching tunnel, spilling his seed into your womb[if player is male]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] across yourself with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches.";
 	say "     'I was right; you make for a much better squire,' he says, speaking with a mature and dignified voice now even as he fingers your cum-slick hole. 'I would claim you as my own squire, but it would not be right to leave my former master bereft of one. I shall need to seek out a fine and brave lad or lass to follow me on my adventures.' Getting up, he goes over to his sword, now transformed into a longsword suitable for a knight, and sheathes it in its now matching scabbard. He helps you to your feet and gives your messy rear a swat to send you on your way. 'Seek out your master and serve him as well as I did.'";
 
 
@@ -178,7 +178,7 @@ to say squirewins_anal_shift:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Your genderless crotch gives him momentary pause and he's drawn to rub across your nullpatch. 'What kind of knight has neither sword nor scabbard? No wonder you're unworthy to be a knight and [if HP of player > 0]surrendered so easily[else]lost[end if]. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
 	else:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. 'What kind of a knight cannot stand up to a squire? You're clearly unworthy to be a knight for [if HP of player > 0]surrendering so easily[else]losing[end if] to a squire. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
-	say "     As the young man sets himself to fucking you, he does so with some skill. And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if cocks of player > 0]takes hold of your [cock of player] cock and starts jerking you off as he buggers you[else]puts a hand on your barren crotch and rubs at it while buggering you[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your back passage.";
+	say "     As the young man sets himself to fucking you, he does so with some skill. And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if player is male]takes hold of your [cock of player] cock and starts jerking you off as he buggers you[else]puts a hand on your barren crotch and rubs at it while buggering you[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your back passage.";
 	WaitLineBreak;
 	say "     Your enjoyment of the anal fucking you're receiving increases as it continues, though you don't quite realize why at first. At first you think it just your increasing excitement, but you come to realize the squire's cock is actually engorging further inside you, pushing deeper and filling you more fully. Looking up at him, you see these changes aren't limited to just his cock either. The young man's becoming more mature and strikingly handsome as his body grows to fill out his loose tunic. Even as you watch, his young face becomes that of a nobleman[if squirefeature is 1]. His scruffy brown hair is tamed even as he gains a manly beard to match[else if squirefeature is 2]. His blond locks become long and flowing, making him all the more attractive in his maturity[else if squirefeature is 3]. His pretty-boy face ages to become that of square-jawed man[else if squirefeature is 4]. His goofy grin is replaced by that of a mirthful man who knows no fear[else]. He looks down at you with those blue eyes of his features become regal and dignified[end if].";
 	say "     But the changes not limited to him alone, your knightly body becoming smaller even as he grows, helping to make him seem all the more impressive. ";
@@ -195,7 +195,7 @@ to say squirewins_anal_shift:
 	if cockname of player is "Knight":
 		now cockname of player is "Squire";
 		now cock of player is cock entry;
-		if cocks of player > 0:
+		if player is male:
 			say "     Tingles run through your cock as it changes subtly and you feel less desire to use it, not when you might instead yourself be fucked. ";
 	if tailname of player is "Knight":
 		now tailname of player is "Squire";
@@ -204,7 +204,7 @@ to say squirewins_anal_shift:
 	say "     As you regress back to the body of a late teen, your lust to be fucked increases further as well, your body desiring to be screwed. You are meant to service noble knights such as the one now thrusting into you. You long to find your own knight to serve and service.";
 	say "     Noticing that the crest on the maturing knight's tunic has changed to that of [stateknightcrest_new], you lift up the edge of your own tabard to confirm that the squire's crest of [stateknightcrest] has become yours now. The thought that you must find the knight with this crest pops into your head immediately. You feel a longing to enter his service as quickly as you can and, with your arousal very high at the moment, it is hard to fight the desire to search for him the moment the knight atop you is done.";
 	WaitLineBreak;
-	say "     The feel of this new knight's enlarged manhood gliding in and out of you[if cocks of player > 0], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Having watched you transform even as he did seems to be as great a turn-on for him as it has been for you. He quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if cocks of player > 0]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] across yourself with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches.";
+	say "     The feel of this new knight's enlarged manhood gliding in and out of you[if player is male], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Having watched you transform even as he did seems to be as great a turn-on for him as it has been for you. He quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if player is male]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] across yourself with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches.";
 	say "     'I was right; you make for a much better squire,' he says, speaking with a mature and dignified voice now even as he fingers your cum-slick hole. 'I would claim you as my own squire, but it would not be right to leave my former master bereft of one. I shall need to seek out a fine and brave lad or lass to follow me on my adventures.' Getting up, he goes over to his sword, now transformed into a longsword suitable for a knight, and sheathes it in its now matching scabbard. He helps you to your feet and gives your messy rear a swat to send you on your way. 'Seek out your master and serve him as well as I did.'";
 
 to say squirewins_anal_sq:
@@ -232,11 +232,11 @@ to say squirewins_ride:
 to say squirewins_vaginal:
 	say "     The aroused squire slips his hand between your legs and runs his fingers over your wet slit[if HP of player > 0]. The[else]. Despite your attempts to resist, the[end if] touch of the handsome young man is quite arousing and you feel yourself growing flush from it.";
 	if kpstatus is 2:
-		say "     'It's rare for a lass to be a knight's squire[if cocks of player > 0]... though I see you have a sword as well as a scabbard,' he adds, letting his fingers tease your [cock of player] cock momentarily before returning to your pussy[else],' he says as he fingers your increasingly wet pussy[end if]. 'And as the victor, it is my duty to play the knight and assist in training the weaker squire,' he says with a leer. As he pulls down his pants to reveal his seven inch penis to be hard and ready to perform this task.";
+		say "     'It's rare for a lass to be a knight's squire[if player is male]... though I see you have a sword as well as a scabbard,' he adds, letting his fingers tease your [cock of player] cock momentarily before returning to your pussy[else],' he says as he fingers your increasingly wet pussy[end if]. 'And as the victor, it is my duty to play the knight and assist in training the weaker squire,' he says with a leer. As he pulls down his pants to reveal his seven inch penis to be hard and ready to perform this task.";
 	else:
 		say "     'Now normally, this is the knight's privilege, but my lord isn't here right now... And it is a squire's duty to aid his knight in fulfilling his obligations,' he says with a leer. As he pulls down his pants to reveal his seven inch penis to be hard and ready to perform this task.";
 	WaitLineBreak;
-	say "     With his cock pressed to your waiting folds, he wastes no time in thrusting into you with a satisfied moan. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, that he shows such zeal in his want for you provides a carnal excitement. In his lust, his hands [if cocks of player > 0]reach around to stroke and pump at your [cock of player] cock[else if breast size of player > 1]grope your [short breast size desc of player] breasts while his tongue lavishes your nipples[else]squeeze your ass while he runs his tongue across your chest and neck[end if].";
+	say "     With his cock pressed to your waiting folds, he wastes no time in thrusting into you with a satisfied moan. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, that he shows such zeal in his want for you provides a carnal excitement. In his lust, his hands [if player is male]reach around to stroke and pump at your [cock of player] cock[else if breast size of player > 1]grope your [short breast size desc of player] breasts while his tongue lavishes your nipples[else]squeeze your ass while he runs his tongue across your chest and neck[end if].";
 	say "     As his pace quickens towards climax, you find your hips pressing up into each thrust, wanting the young man to spill his seed inside you. And given his pace and zeal, you are not left longing for long, with him thrusting deep into your wet cunny and dumping several gooey shots of his seed. You cry out in orgasm in response, your lust overtaking you as you cry out while he cums inside you.";
 	if kpstatus is 2:
 		say "     'That should be enough training for now,' he says with a satisfied sigh. 'Perhaps that will even leave you with a reminder of the bold squire with whom you trained one [short time of day]. But we should go now and rejoin our knights so we might service them.' Spent and sticky, you see little point in talking further to the delusional lad and instead take your leave while you can.";
@@ -284,13 +284,13 @@ When Play begins:
 	now defeated entry is "[beatthesquire]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetosquire]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[squiredesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "thankfully human in appearance - that of [if ( player is herm ) or ( player is neuter) ]a younger and more androgynous[else if cocks of player > 0]yourself, but as a young man[else]yourself, but as a tomboyish girl[end if]. Your expression is often one of youthful eagerness and optimism, regardless of how you're feeling at that moment";
-	now body entry is "that of a young [if cunts of player > 0]woman[else]man[end if]. Your body shows some muscle tone from exercise, speaking of a strength yet to come. Across your torso is a loose-fitting tabard with an emblem stitched into it of [stateplayercrest]";
+	now face entry is "thankfully human in appearance - that of [if ( player is herm ) or ( player is neuter) ]a younger and more androgynous[else if player is male]yourself, but as a young man[else]yourself, but as a tomboyish girl[end if]. Your expression is often one of youthful eagerness and optimism, regardless of how you're feeling at that moment";
+	now body entry is "that of a young [if player is female]woman[else]man[end if]. Your body shows some muscle tone from exercise, speaking of a strength yet to come. Across your torso is a loose-fitting tabard with an emblem stitched into it of [stateplayercrest]";
 	now skin entry is "smooth, lightly-tanned";
 	now tail entry is "";
 	now cock entry is "human";
-	now face change entry is "the bones of your head shift with the occasional pop or crack that makes you wince. As these changes progress, your face becomes similar to your old one, but younger and [if ( player is herm ) or ( player is neuter) ]androgynous[else if cocks of player > 0]more like that of a young man[else]more like that of a tomboyish girl[end if]";
-	now body change entry is "changes spread through it. Your muscles tense and flex and your body reshapes itself, in time becoming that of a maturing [if cunts of player > 0]tomboy[else]young man[end if]. Your body shows some muscle as if you'd recently started physical training. As you look down at your chest, a tabard that is slightly too big for you forms across your torso. In bright colors, its bears the crest of [stateplayercrest] at its center. Any attempt to cover or remove this has it return in short order";
+	now face change entry is "the bones of your head shift with the occasional pop or crack that makes you wince. As these changes progress, your face becomes similar to your old one, but younger and [if ( player is herm ) or ( player is neuter) ]androgynous[else if player is male]more like that of a young man[else]more like that of a tomboyish girl[end if]";
+	now body change entry is "changes spread through it. Your muscles tense and flex and your body reshapes itself, in time becoming that of a maturing [if player is female]tomboy[else]young man[end if]. Your body shows some muscle as if you'd recently started physical training. As you look down at your chest, a tabard that is slightly too big for you forms across your torso. In bright colors, its bears the crest of [stateplayercrest] at its center. Any attempt to cover or remove this has it return in short order";
 	now skin change entry is "exciting tingles run all over your [bodydesc of player] body. Your flesh shifts and changes, subtly at first, until eventually becoming smooth, lightly tanned and quite human in appearance. There's the start of some callouses on your right hand from learning to wield something heavy, which your hand feel somehow empty without it";
 	now ass change entry is "your buttocks muscles firm up, forming a cute bubble-butt made for fucking. You feel an empty craving to have something buried in your asshole";
 	now cock change entry is "it pulses and throbs in arousal. Precum dribbles out with each pulse and your cockflesh changes as well. By the time you orgasm from the transformation, you're left with a very human-looking cock";
@@ -338,7 +338,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

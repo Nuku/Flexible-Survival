@@ -192,7 +192,7 @@ When Play begins:
 	now defeated entry is "[beattheenhancedchimera]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetoenhancedchimera]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[enhancedchimeradesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "a chimeric mix of features, the base of which is a square-jawed [if cocks of player > 0]stag[else]deer[end if]. The most prominent differences are the small horn on the end of your nose and the leonine mane that flows into golden-brown hair. Atop your head is an impressive set of antlers between your wolf-deer ears";
+	now face entry is "a chimeric mix of features, the base of which is a square-jawed [if player is male]stag[else]deer[end if]. The most prominent differences are the small horn on the end of your nose and the leonine mane that flows into golden-brown hair. Atop your head is an impressive set of antlers between your wolf-deer ears";
 	now body entry is "quite large, standing roughly nine feet tall and built to match. You have broad shoulders and a powerful chest. Your limbs are similarly built, with strong muscles. They don't bulge, instead possessing tight-knit might";
 	now skin entry is "a coat of brown fur that's broken up in several places by firm, leathery plates. These are most prominent on your chest, outer thighs and forearms. On your chest, they [if breast size of player > 0]cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else]emphasize your strong pecs and firm abs[end if]";
 	now tail entry is "Your tail is long, thick and reptilian in form. It has a thick hide and small bony ridges running along the top of it.";
@@ -244,7 +244,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

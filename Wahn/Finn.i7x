@@ -89,7 +89,7 @@ to say FinnTracked:
 				LineBreak;
 				say "     With some diplomatic finesse, you manage to explain to the horny centaur that there's no need to kill anyone right now. After all, if his sister was a virgin, then the debt should be payable with another virginity. Surely, such a strapping hunk of a horseman like Finn hasn't taken a dick before (and hopefully he'll forgive you for brokering this deal and saving his life). The red-faced young male is torn between his anger and libido as he looks at the prone horseman, then concern is added to the mix as he glances over to his sister. The centauress seems to be pretty entranced by her first heat flaring up strongly and is wandering off a little bit.";
 				LineBreak;
-				if cocks of player > 0: [male + herm]
+				if player is male: [male + herm]
 					say "     [bold type]Do you suggest to the centaur to go care for his sister ([link]Y[as]y[end link]), or will you offer to watch out for her while he is 'busy' ([link]N[as]n[end link])?[roman type][line break]";
 					if player consents: [fuck Finn?]
 						LineBreak;
@@ -150,7 +150,7 @@ to say FinnCentauressCaring:
 	say "     [bold type]Do you want to take care of her sexual needs ([link]Y[as]y[end link]), or will you just keep the young woman company and try to calm her down ([link]N[as]n[end link])? The first option holds a bit of a risk, even if her brother is currently otherwise occupied...[roman type][line break]";
 	if player consents:
 		LineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     [bold type]Fuck her ([link]Y[as]y[end link]), or do you just want to lick and stroke her pussy ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents:
 				LineBreak;
@@ -229,7 +229,7 @@ to say FinnSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -252,7 +252,7 @@ to say FinnSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Take the horseman's ass for a ride";
 	[]
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Finn's shaft in your pussy";
 		now sortorder entry is 5;

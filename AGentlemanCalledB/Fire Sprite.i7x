@@ -147,7 +147,7 @@ to say beatFireSpritegirl:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
 		now description entry is "have the sprite eat you out";
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
@@ -369,7 +369,7 @@ when play ends:
 	if bodyname of player is "Fire Sprite":
 		if humanity of player < 10:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
-			if cocks of player > 0:
+			if player is male:
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
 			if ( player is female and "Sterile" is not listed in feats of player ) or player is mpreg_ok:
 				say "     Eventually you happen upon an excited male sprite who is diligently working to set a large structure aflame. After a short time the structure is ablaze around you, and he is atop you, filling your needy body with his hot seed, his thrusts imbued with a burning passion that easily matches the inferno around you.";

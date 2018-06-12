@@ -159,7 +159,7 @@ to say beatthekoboldgang:
 	if bodyname of player is "Kobold Gang" and player is pure and cocks of player > 0:
 		say "     The last kobold, the leader with the blue scales, shakes as he falls to the ground on his back. 'This is... inconceivable! We were all beaten by a whelp like... you,' he groans. An idea comes to your head, that maybe you could show their 'leader' his place by taking him right here and now.";
 		say "     [bold type]Do you fuck their leader?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck the kobold!";
 		say "     ([link]N[as]n[end link]) - No, this defeat was humiliating enough.";
 		if player consents:

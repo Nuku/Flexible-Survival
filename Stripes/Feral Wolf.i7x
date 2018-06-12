@@ -88,7 +88,7 @@ to say beatferalwolf:
 					else:
 						LineBreak;
 						say "[feralwolffemalesex]";
-				else if cocks of player > 0:
+				else if player is male:
 					say "you stroke your swelling cock. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
 					say "[feralwolfmalesex]";
 				else:
@@ -129,8 +129,8 @@ to say FeralWolfVictorySex:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		if cocks of player > 0:
-			if cunts of player > 0:
+		if player is male:
+			if player is female:
 				LineBreak;
 				say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. Being a herm, you could easily roll him over and ride his thick canine shaft, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
 				if the player consents:
@@ -149,7 +149,7 @@ to say FeralWolfVictorySex:
 				say "     The feral creature sinks to the ground, then slumps over, panting and defeated. You look at him and smile, walking over to him to roll him over onto his chest. The wolf looks back at you and whimpers, quickly understanding what you plan to do. He closes his eyes and shivers before raising his rump up into the air, tail up high and showing off his ass. You laugh and climb on top of the wolf, pressing the tip of your shaft against his tight ring and teasing it lightly. The wolf below you groans and claws at the ground, pushing back against your length, obviously eager to be fucked. You waste no time after such an open invitation and spread his tail hole wide open, gasping out and moaning at how tight the wolf is. You take hold of his hips and begin slamming your length into the big canine's ass, his back arching as he moans loudly, enjoying the good fucking you're giving him.";
 				say "     Soon you are panting hard and climaxing hard, filling the formerly dominant wolf with your thick cum. Once you finish, you pull out of the wolf and walk around front to present your shaft to him for cleaning[if HP of Fang is 0]. Smiling to yourself, you think of how much fun it would be to have a wolf like this for a pet[end if].";
 		else:
-			if cunts of player > 0:
+			if player is female:
 				LineBreak;
 				say "     You lick your lips and smile, striding over to the wolf, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
 				say "     After a few minutes of teasing the poor wolf you take hold of his throbbing cock and line it up with [if cunts of player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur.";
@@ -242,7 +242,7 @@ when play ends:
 	if bodyname of player is "Feral Wolf":
 		if HP of Fang is 3 or HP of Fang is 4:				[alpha Fang]
 			if humanity of player < 10:
-				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases. After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if cunts of player > 0]alpha bitch[else]slutty beta[end if][if ColeenAlpha is 0 and HP of Fang is 3]. Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases. After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if player is female]alpha bitch[else]slutty beta[end if][if ColeenAlpha is 0 and HP of Fang is 3]. Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
 			else if Felinoid companion is tamed:
 				say "     When the military comes, you worry about how they'll react to you and Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. But you are surprised as they move towards him and he slowly stretches and stands upright, resembling the larger alpha wolves you've seen in the city than the feral wolf he once was. Despite a little unsteadiness on his reformed legs, he speaks confidently, telling a tale about how you rescued him from a fate of being an omega in a wolf pack and brought him here to safety. He alludes in passing that your current form is a result of the rescue, but doesn't elaborate. Having heard many tales from those barely able to escape after being transformed, the soldiers don't question this rather loosely accurate story. You pad over to your alpha and lean against him while he scritches your ears.";
 				say "     When they turn their attention to your felinoid companion, they are easily enough swayed to feel similar sympathy for him when you tell them about how you both got away from those plant vines in the park, his injury and eventual recovery. You add that he's been a loyal bodyguard since then. There are some concerns, but they are inclined to trust your word. It certainly helps that the big feline is on his best behavior and makes no trouble for the soldiers.";
@@ -256,7 +256,7 @@ when play ends:
 				say "     Sandra, lustful for the big wolf, comes over to visit often. Fang fucks her like a wild animal, stuffing his throbbing cock into her and keeping her coming back for more. The kinky bunny also enjoys watching the wolf ravage you as well, finding the sight of it very arousing between her own turns beneath the alpha wolf. The bunny's tummy grows large after one of these visits and Fang has her move in, adding her to his harem of lovers. She eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 		else:						[no Alpha Fang]
 			if humanity of player < 10:
-				if cocks of player > 0:
+				if player is male:
 					say "Giving in to your feral nature, you prowl the city street, looking for females to mount and dominate. Your mind is gone and now only the most primal of instincts remain.";
 				else:
 					say "Giving in to your feral nature, you prowl the city street, looking for a worthy male to mount and breed you. Your mind is gone and now only the most primal of instincts remain.";

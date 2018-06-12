@@ -109,7 +109,7 @@ check ballgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out ballgrowing:
-	if cocks of player is 0:
+	if player is not male:
 		say "Your tanuki magic forms a set a balls for you, growing a tiny cock to go with them.";
 		now cocks of player is 1;
 		now cock length of player is 2;
@@ -142,7 +142,7 @@ check cockgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out cockgrowing:
-	if cocks of player is 0:
+	if player is not male:
 		say "Your tanuki magic grows a cock for you as you form a tiny set a balls for yourself as well.";
 		now cocks of player is 1;
 		now cock width of player is 2;

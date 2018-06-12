@@ -123,7 +123,7 @@ when play ends:
 		else:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
 		if "Fertile" is listed in feats of player and ( number of entries in childrenfaces + FeralBirths) > 5:
-			if cunts of player > 0:
+			if player is female:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 			else if player is mpreg_ok and mpregcount >= 6:
 				if "Breeding True" is not listed in feats of player and "They Have Your Eyes" is not listed in feats of player:

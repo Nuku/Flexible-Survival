@@ -63,7 +63,7 @@ to say wolverinelocation:							[sets random location for the wolverine]
 to say losetowolverine:
 	now wolvfightresult is 2;
 	if lbfight is 1:						[Viking Longboat - Hospital Quest]
-		if cunts of player > 0:
+		if player is female:
 			if a random chance of 2 in 3 succeeds:
 				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
 				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around for a way out of this predicament, but find none.";
@@ -83,7 +83,7 @@ to say losetowolverine:
 		say ""; [Dealt with at the event source]
 	else:
 		[Normal encounter]
-		if cunts of player > 0:
+		if player is female:
 			if a random chance of 3 in 5 succeeds:
 				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
 				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around as well, but you can't spot anything of use or wealth around. Any food has long since been eaten by the wolverine and you don't see anything of particular value to you or anyone in this crisis.";
@@ -196,11 +196,11 @@ when play ends:
 				say "     You find your growing urge to protect and defend your post increasing. Cutting short your wandering, you head back to the bunker at the Abbey to clear your head. Once there, you decide to scout around from top to bottom, making sure it's secure before you relax. You find nothing, but still remain on edge, and patrol on guard for any disturbances. You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive. You keep it, and its contents, safe from interlopers day after day.";
 		else:
 			if centrallib is 5:
-				say "     When the military enters the city and rescue you and the other survivors, you recall another wolverine you met. Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments. He joins you in one of the military staging camps, happy to see a friendly face[if cunts of player > 0]. You share a good romp with him that evening[end if].";
+				say "     When the military enters the city and rescue you and the other survivors, you recall another wolverine you met. Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments. He joins you in one of the military staging camps, happy to see a friendly face[if player is female]. You share a good romp with him that evening[end if].";
 				say "     The security company, now involved, helps to get you both cleared. Your idea was able to rescue several of their employees and they offer to hire you on as well. You and James get partnered with ";
 				if player is herm:
 					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the off-duty pair eager to spend time with one another. ";
-				else if cocks of player > 0:
+				else if player is male:
 					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the female eager to spend time with either of you when off duty. ";
 				else:
 					say "another female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with James eager to spend time with either of you when off duty. ";

@@ -20,7 +20,7 @@ to say femalehuskydesc:
 to say fhuskywinner:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
-	else if cocks of player > 0:
+	else if player is male:
 		if a random chance of 1 in 2 succeeds:
 			say "     Having defeated you, the husky begins to pant heavily. She rolls you onto your back and clambers on top of you. Her deft fingers soon have you free of your clothing, tossed to the side as she barks in your face. She slips up and waves her excited furry snatch in your face before settling back, pressing your [cock size desc of player], [cock of player] shaft into her quivering cunt. She howls and yips as she rises and falls against you, her many breast jiggling about with every pound down against you. Her sex is a hot, wet oven, clenching powerfully and pulling you right over the edge.";
 			say "     As you catch your breath, she rubs over her softly furred belly, glowing with satisfaction at your seeding. Finally, she draws up from you with a wet sucking noise from her sated cunt, then prowls off, leaving you in a puddle of sweat to recover at your own pace.";
@@ -42,11 +42,11 @@ to say fhuskybeaten:
 	if HP of Dominick >= 60 and HP of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
 		now domtempting is true;
 		say ". The sight of her sends a tingle of excitement through your cunt. This cute husky girl might make a good breeder pet for Dominick. The prospect of pleasing him ends a second shiver of lust through you";
-		if cocks of player > 0:
+		if player is male:
 			say ". You could prepare her to become another slutty pet for the alpha stud, though perhaps you might just having some fun of your own.";
 		else:
 			say ". You could prepare her to become another slutty pet for the alpha stud or just let her go.";
-	else if cocks of player > 0:
+	else if player is male:
 		say ". You find yourself considering having some fun with the hapless creature's body. Do you take advantage of the situation and use the husky female to sate your lusts?";
 	else:
 		say ". You find yourself considering having some fun with the hapless creature, but can't really decide what to do at this time.";
@@ -62,12 +62,12 @@ to say fhuskybeaten:
 		now title entry is "Dominate and tie";
 		now sortorder entry is 2;
 		now description entry is "take what you want and knot the husky bitch's hot cunt";
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Quickie fuck";
 		now sortorder entry is 3;
 		now description entry is "get your rocks off by fucking the husky bitch";
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Lesbian licking";
 		now sortorder entry is 4;
@@ -152,7 +152,7 @@ to say fhuskybeaten_04:
 
 to say fhuskybeaten_dom:
 	say "     Taking hold of the husky girl from behind, you reach around to fondle her breasts and pussy[if scalevalue of player < 3]. To accommodate your smaller size, you get her to move down onto her knees with a gentle prompting while rubbing her folds[end if]. Already quite lustful before the fight even began, getting her ready is an easy task. You make certain to use several of the techniques Dom showed you to get her really worked up. All the while, Dom's scent (which has been clinging to your shiba inu [if player is breederslutbodied]form[else if player is breederslutskinned]fur[else]head[end if]) seeps into her sensitive nose, arousing her all the more.";
-	say "     After a few minutes of teasing and several small orgasms that increase her need rather than relieve it, you expect she's quite ready now[if cocks of player > 0]. You grind your shaft[smn] against her hip, but take it no further, using [itthemm] to tantalize her all the more[end if]. You nibble her ear and whisper what a horny girl she is and how you can just tell she needs a good, hard fucking. She moans about how much she needs it[if cocks of player > 0] and tries to push back onto your cock, but[else], and so[end if] you tell her where she can find a true husky stud to screw her. Quite suggestible at this point, you [one of]say that he's waiting for her[or]describe his studly physique and sexual prowess to her[or]go on about his ideal stud status as a top-ranked husky breeder[or]describe his hard, throbbing cock in lurid detail[at random].";
+	say "     After a few minutes of teasing and several small orgasms that increase her need rather than relieve it, you expect she's quite ready now[if player is male]. You grind your shaft[smn] against her hip, but take it no further, using [itthemm] to tantalize her all the more[end if]. You nibble her ear and whisper what a horny girl she is and how you can just tell she needs a good, hard fucking. She moans about how much she needs it[if player is male] and tries to push back onto your cock, but[else], and so[end if] you tell her where she can find a true husky stud to screw her. Quite suggestible at this point, you [one of]say that he's waiting for her[or]describe his studly physique and sexual prowess to her[or]go on about his ideal stud status as a top-ranked husky breeder[or]describe his hard, throbbing cock in lurid detail[at random].";
 	say "     Given the vapid nature of these husky girls, you know she'll have a better chance of staying on track long enough to reach the kennel if her addled mind is fully focused on wanting him to breed her. To ensure this, you assault her a final series of licks, caresses and touches. At this peak of arousal, you tell her once again that the stud is ready and waiting to give her the fucking she needs, eager to breed her full of beautiful pedigree pups. With your description and directions in her mind, you release her on her way, her lust-addled mind locked on this idealized stud to mate her. She dashes off, her body aching for the relief her new master will bring, and you can't help but be pleased with your success.";
 	now libido of Dominick is 1;
 	increase XP of Dominick by 1

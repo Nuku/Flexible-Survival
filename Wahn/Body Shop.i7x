@@ -173,7 +173,7 @@ to say MoreauPartSale:
 	now sortorder entry is 4;
 	now description entry is "Sell him your back end. You barely look at it anyways, right";
 	[]
-	if cocks of player > 0 or cunts of player > 0:
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Your Genitals";
 		now sortorder entry is 5;

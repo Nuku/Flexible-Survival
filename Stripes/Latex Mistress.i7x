@@ -33,7 +33,7 @@ to say losetolatexmistress:
 		now HP of player is HP of player / 2;
 	else:
 		say "     Having beaten you, this latex mistress pushes you roughly over [one of]some rubble[or]the back of a car[or]over a fallen garbage can[or]over a nearby bench[at random] and whips you several more times. Through this, she often humps against you, grinding her latex-clad body and exposed pussy against you. Having been slapped and whipped across it repeatedly, the flow of her hot juices across your thigh is delightfully soothing.";
-		say "     As the line between pleasure and pain begins to blur, she pauses for a moment to roughly manhandle your [if player is herm][cock of player] cock and dripping pussy[else if cocks of player > 0][cock of player] cock[else if cunts of player > 0]dripping pussy[else]bare crotch[end if] while plunging the handle of her whip into her pussy. She rides it for a few thrusts while moaning. Now wet with her juices, she pulls it out and instead crams the handle of that toughened latex whip into your anus, ignoring your cries. She takes you roughly with it, driving it hard and fast into you or bending it awkwardly inside you to press uncomfortably against you sensitive inner walls. There's pleasured mixed in with her painful discipline, but you do eventually pass out from the ordeal, awakening some time later more sore than you've ever been.";
+		say "     As the line between pleasure and pain begins to blur, she pauses for a moment to roughly manhandle your [if player is herm][cock of player] cock and dripping pussy[else if player is male][cock of player] cock[else if player is female]dripping pussy[else]bare crotch[end if] while plunging the handle of her whip into her pussy. She rides it for a few thrusts while moaning. Now wet with her juices, she pulls it out and instead crams the handle of that toughened latex whip into your anus, ignoring your cries. She takes you roughly with it, driving it hard and fast into you or bending it awkwardly inside you to press uncomfortably against you sensitive inner walls. There's pleasured mixed in with her painful discipline, but you do eventually pass out from the ordeal, awakening some time later more sore than you've ever been.";
 
 
 to say beatthelatexmistress:
@@ -43,7 +43,7 @@ to say beatthelatexmistress:
 		say "push her to the ground. With your foot pressed between this latex woman's shoulders, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
 	else:
 		say "consider your options. It might be fun to dominate the would-be dominatrix. Shall you ";
-		if cocks of player is 0:
+		if player is not male:
 			say "     [bold type]make her lick your pussy or let her go?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Lick your pussy.";
@@ -98,7 +98,7 @@ When Play begins:
 	now body change entry is "your body twists and changes, becoming more feminine in form until you have the body of a strong and sexy woman. Even as these changes spread to your extremities, black goo starts to bubble up from your fingertips and toes, flowing over your hands and feet to coat them in jet black latex. This latex shapes itself into shapely gloves with [if freecred > 1000]golden studs and clawed fingertips[else if freecred > 50]silver studs and clawed fingertips[else]black clawed fingertips[end if] and similarly decorated boots";
 	now skin change entry is "your skin shifts to a more human appearance before being covered in a layer of tight black latex that wells up from your nipples and flows across your skin[if player is ltxmfaced]. As this change spreads up to your neck, it joins with the mask into one united whole[else] and over your shoulders to form a collar at your neck[end if][if player is ltxmtailed]. As it progresses down your body, it blends into and fuses seamlessly with the latex encasing your crotch and ass[end if]. The black goo flows along your limbs, encasing them in the latex skinsuit as well [if player is ltxmbodied]and melding together with your latex gloves and boots into a complete body suit[else]before ending at your ankles and wrists to leave your feet and hands uncovered, the latex sealing into immobile cuffs at your extremities[end if]";
 	now ass change entry is "a cold chill runs down your spine as a sudden flow of black latex goo pushes itself out of your [one of]asshole[or]anus[or]pucker[at random] and begins to grow over your [one of]ass[or]cheeks[or]butt[at random]. Wrapping around your hips and loins tightly, it feels as if it's replaced your skin. It forms an opening at your crotch that reveals everything you have to show to the open air and melds into your [one of]asshole[or]anus[or]pucker[at random] to allow access there as well";
-	now cock change entry is "your cock shifts, altering back into a more normalized, human shape, covered in black latex. A single [if freecred > 1000]gold[else]silver[end if] stud forms in the middle of your penis, the cool chill of metal quite an interesting sensation[if cunts of player > 0]. Your pussy has a similar coating of black latex that is so form fitting and sensitive that it seems like your own flesh[end if]";
+	now cock change entry is "your cock shifts, altering back into a more normalized, human shape, covered in black latex. A single [if freecred > 1000]gold[else]silver[end if] stud forms in the middle of your penis, the cool chill of metal quite an interesting sensation[if player is female]. Your pussy has a similar coating of black latex that is so form fitting and sensitive that it seems like your own flesh[end if]";
 	now str entry is 12;
 	now dex entry is 15;
 	now sta entry is 14;
@@ -163,7 +163,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

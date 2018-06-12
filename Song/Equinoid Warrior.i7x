@@ -167,9 +167,9 @@ to say LilianaInfectiousFuck: [Runs whenever Liliana is the active pet and the p
 			say ". Her hands drift down to your cocks, taking one in each and stroking them";
 		else if cocks of player is 1:
 			say ". A hand drifts down to your cock and strokes it";
-			if cunts of player > 0:
+			if player is female:
 				say ". Her free hand moves a little lower before slipping [if cunts of player > 1]her fingers into your pussies[else]a finger into your pussy[end if], causing you to moan in response";
-		else if cunts of player > 0:
+		else if player is female:
 			say ". She rubs a hand between your legs and over your wet folds before slipping [if cunts of player > 1]her fingers into your pussies[else]a finger into your pussy[end if], causing you to moan in response";
 		say ". You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body. As the semen soaks into you, you feel more equinoid.";
 	else:
@@ -217,7 +217,7 @@ to say eqwarsex4: [Liliana fucks player vaginally]
 to say eqwarsex5: [Liliana fucks player anally]
 	[puts black equinoid as lead monster in case of impregnation]
 	setmonster "Black Equinoid";
-	say "     Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze. Knowing what she needs of you, you move onto all fours and raise your tail. She presses her cock to your tight pucker and pushes it into you with a soft nicker. The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if cocks of player > 0]. You cannot help but cum in response, spraying your submissive seed onto the ground[end if]. After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
+	say "     Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze. Knowing what she needs of you, you move onto all fours and raise your tail. She presses her cock to your tight pucker and pushes it into you with a soft nicker. The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if player is male]. You cannot help but cum in response, spraying your submissive seed onto the ground[end if]. After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
 	now libido of player is libido of player / 2;
 
 to say eqwarsex6: [Bath sex scene when standing in Equinoid Camp]

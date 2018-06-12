@@ -137,7 +137,7 @@ to say GertySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -148,7 +148,7 @@ to say GertySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the snakeman's ophidian shaft";
 	[]
-	[if cocks of player > 0:
+	[if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the lizardman";
 		now sortorder entry is 3;

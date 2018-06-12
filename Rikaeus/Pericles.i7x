@@ -80,7 +80,7 @@ instead of resolving Masturbation In Private:
 
 to ThirdPericlesEvent:
 	say "     Upon entering the library it appears like it's not that crowded. There are a few students dotted sparsely all over the place but that's about it. However, what catches your attention is something that occurs when you wander over to the wall containing the doors to the study rooms that are soundproof unless someone's right by the entrances. Behind one of them you hear grunting and moaning, sounds that intrigue you a lot. Out of curiosity, you turn the knob and open it a smidge. To your shock you find Pericles in the room, furiously masturbating. He's running his hand up and down his cock while he's making sounds that show he's clearly enjoying it. However, you stumble a bit and cause some noise, making him hear you and turn towards you.";
-	if cunts of player > 0:
+	if player is female:
 		say "     He frowns a bit at you before giving you a hesitant smile. 'Could... you leave me to uh.. take care of this?' He asks kindly and a bit forceful. From the tone of his voice, it appears that your body isn't something that he likes. Most likely the fact that you have female anatomy as you did see him stare at only men really. You shrug and oblige his desires and leave him be, closing the door behind you. Deciding loitering around wouldn't do well, you decide to go on your way. Maybe you'll get to see him sometime later. Perhaps if you want to sex him, then you may want to lose what makes you female. You could always find his room too.";
 		now Masturbation In Private is resolved;
 		now History Video is not resolved;
@@ -231,7 +231,7 @@ instead of fucking Pericles:
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
 	else if cunts of player > 1: [Player has a vagina]
 		say "     The buff male shakes his head at you and apologizes. 'I'm sorry but womanly parts aren't my thing, sorry.' Pericles then tells you that if you wish to have fun with him then come back as a male.";
-	else if cocks of player < 1 and cunts of player < 1: [Player is genderless]
+	else if player is neuter: [Player is genderless]
 		say "     When you approach him Pericles suddenly blushes and stutters out a response. 'I'm so sorry! I would love to but it's just awkward without a cock there to play with during sex.' He blurts out, looking embarrassed. You get the feeling that he'll only really have fun with you if you have a cock and only that.";
 	else:
 		say "     When Pericles wanders on over to the window to look over the entire campus a thought pops into your head, a rather dirty thought... What do you want to do to the man?";

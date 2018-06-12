@@ -13,13 +13,13 @@ Cheesecakemode is a number that varies. [1 = slim, 0 = rubenesque]
 
 to say CheesecakeBodyDesc:
 	if cheesecakemode is 1:
-		say "slim and [if cunts of player > 0]feminine[else]girlish[end if], with a tight, attractive figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
+		say "slim and [if player is female]feminine[else]girlish[end if], with a tight, attractive figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
 	else:
-		say "hefty and rubenesque with a luscious [if cunts of player > 0]feminine[else]girlish[end if] figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
+		say "hefty and rubenesque with a luscious [if player is female]feminine[else]girlish[end if] figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
 
 to say CheesecakeBodyTF:
 	if cheesecakemode is 1:
-		say "it becomes soft and malleable, just like cheesecake, shifting to a slender [if cunts of player > 0]feminine[else]girlish[end if] form[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
+		say "it becomes soft and malleable, just like cheesecake, shifting to a slender [if player is female]feminine[else]girlish[end if] form[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
 	else:
 		say "it becomes soft and malleable, just like cheesecake. You can't help but moan slightly as your form shifts, becoming plump and curvaceous, leaving you hefty and rubenesque[if breast size of player > 0 and breasts of player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
 
@@ -100,12 +100,12 @@ When Play begins:
 	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";					[ Text when monster wins. Change 'Gingerbread' as above. ]
 	now desc entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";						[ Description of the creature when you encounter it. ]
 	now face entry is "devoid of any human features save for your nose and eyes, which seem to be fully functional despite appearing to be drawn on with [if cocks of player is 0 and cunts of player > 0]pink[else]blue[end if] icing";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a gingerbread [if cocks of player > 0]man[else if cunts of player > 0]woman[else]person[end if]. Your entire form is strangely flat, with no discernible joints, though you are still able to move around normally, if a little stiffly";	[ Body Description, format as the text "Your body is (your text)." ]
+	now body entry is "that of a gingerbread [if player is male]man[else if player is female]woman[else]person[end if]. Your entire form is strangely flat, with no discernible joints, though you are still able to move around normally, if a little stiffly";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "dry, crusty gingerbread";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "cookie";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it is pressed flat, all your features disappearing except for your eyes and mouth which shift uncomfortably as they are overtaken by an icing-like appearance";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your joints suddenly start to become stiff. A powerful pressure builds as your body is pressed into a flattened human-like form, leaving you in the flat, featureless shape of a gingerbread [if cocks of player > 0]man[else if cunts of player > 0]woman[else]person[end if]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
+	now body change entry is "your joints suddenly start to become stiff. A powerful pressure builds as your body is pressed into a flattened human-like form, leaving you in the flat, featureless shape of a gingerbread [if player is male]man[else if player is female]woman[else]person[end if]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it becomes dry and crusty like gingerbread. While the cracking noises it makes are a little disconcerting at first, you still seem to be able to move without causing any damage";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "as it becomes uncomfortably tight, losing all form and definition as you backside becomes completely flat";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "shifts to a mostly human form before becoming strange, gingerbread-like flesh. It feels rough and dry, despite being perfectly soft and flexible";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
@@ -151,7 +151,7 @@ when play ends:
 			say "     You succumb to your Cheesecake infection.";
 		else:
 			say "     You survive, but were infected by the Cheesecake.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
@@ -164,7 +164,7 @@ when play ends:
 			say "     You succumb to your Gingerbread infection.";
 		else:
 			say "     You survive, but were infected by the Gingerbread.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

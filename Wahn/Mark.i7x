@@ -476,7 +476,7 @@ to say MarkSuitQuest:
 			say "     'It's perfect!' the elf says in a cheerful outburst, then lays the garment down carefully so he can stand up and peel the Christmas elf tunic and skin-tight green shirt off his body. The getup is carelessly thrown to the side and Jay slips the suit jacket on, closing its middle button over his slender, naked chest. 'Thank you so much!' a beaming Jay says to both of you, nodding to you and directing a lust-filled gaze at his husband. 'You don't know how much I missed being properly dressed.' Mark chuckles and nods his head, eyes resting on his lover's crotch, where a quickly hardening erection can be seen in the elf's skin-tight green leggings. 'Oh, I have a good guess if that's the indicator. Seems like it's time for dessert, my little hottie.' With that said, he starts to take off his waiter uniform, drawing Jay's full attention.";
 			WaitLineBreak;
 			project the figure of Jay_undies_icon;
-			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if cocks of player is 0]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
+			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if player is not male]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
 			say "     The moment passes as Jay leans in to nibble Mark's furry ear a little and lets his hands wander over the large ursine's body. Mark replies in kind, and you're all but forgotten for now as the two of them start to make out and undress even further. Now actually making your way out of the room, you close the door behind you and start hearing moans from inside as you walk away. Leaving the polar bear and elf couple, you feel pretty good about yourself, not just because of the excellent meal filling your stomach, but also the good turn you arranged for your new friends. And maybe you'll make use of their other offer sometime too...'";
 			now hunger of player is 0;
 			now thirst of player is 0;
@@ -631,7 +631,7 @@ to say TatiHyenaCharm:
 to say TatiHyenaFuck:
 	setmonster "Herm Hyena";
 	say "     Walking up to the hyenas fucking their new recruit, you step next to the one jerking his own cock and waiting his turn. The horny guy opens his mouth to warn you off and say that he's up next, only to let out a burst of laughter as you pull your clothes off and bend over the table instead, presenting yourself for him. 'Seems like I'm done waiting,' he tells his companion and shares a fist-bump with them, then steps up behind you and rubs his shaft up and down between the buns of your ass. ";
-	if cunts of player > 0:
+	if player is female:
 		say "Proceeding to brush the dickhead further down, your hyena moans in pleasure as he touches the soft folds of your sex. He pushes into your pussy without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet pussy,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your pussy, unloading his seed right against the trembling ring of your cervix. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy pussy and dumping their loads into it.";
 		infect "Herm Hyena";
@@ -664,7 +664,7 @@ Section 4 - Fucking
 [***********************************************************]
 
 instead of fucking the Mark:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Sniffing the air a little and glancing down to your crotch, Mark gives a rumbling sound from the depth of his broad chest as he clears his throat, then shakes his head. 'Sorry, but I'm gay. Not really interested in anything but men, at least in terms of sex....'";
 	else:
 		if thirst of Jay < 9:
@@ -690,7 +690,7 @@ to say MarkSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;

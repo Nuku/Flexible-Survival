@@ -316,12 +316,12 @@ instead of fucking the Kyle:
 		say "     When you broach the subject again, Kyle becomes visibly both nervous and excited. 'Okay, I think I'm ready for this. Let's head to the back room, okay?' The lizardman turns around and walks through the bookshop towards the back room, his pace faster than usual. Just as excited as Kyle, you follow. Once the two of you are together in the privacy of the rear area of the store, he turns back towards you. For a moment, he closes his eyes and breathes deeply. 'Alright, whenever you're ready.' You don't give Kyle the chance to be nervous, and you press right up against him, kissing him deeply. You put your arms around him, holding tight as he reciprocates. The intense lip locking is only broken occasionally to breathe.";
 		say "     You pull back slightly, and grin at Kyle. From his expression, you can tell he would be blushing if he were capable. At the same time, you let go of Kyle with one of your hands, and reach downwards to his pants. You take a few moments to fiddle with the button on the front as you make out with him, until eventually it comes open. Wasting no time, you grab the side of the waistline and yank, lowering his pants just enough that his now-hard member becomes partially visible. After that it is a simple task for you to reach in and quickly grasp his shaft, pulling it free of the legwear. For a time, you simply stand there, your hand wrapped around Kyle's reptilian cock, and your lips locked with his.";
 		WaitLineBreak;
-		if cocks of player > 0: [for males and herms]
+		if player is male: [for males and herms]
 			say "     Slowly you start to stroke the cock in your hand, pressing yourself more closely against Kyle. After a few moments of this, he relaxes slightly, and reaches downward himself, wrapping his scaled hand around your [cockname of player in lower case] cock, and beginning to match your pace. The two of you remain like that for a while, staring into each other's eyes as you each stroke the other's dick, mere inches away from each other. Soon enough, however, the arousal between the two of you grows stronger, and you each stroke faster, kiss harder, and push more deeply against the other. The friction heats up as you furiously masturbate each other, your cocks occasionally bumping against the other member.";
 			say "     In the moment of heated action, you're pressing so hard against Kyle that he falls, and as entwined as you are, you fall as well. You knock a stack of books over, and land in the pile it creates, still close to the lizardman's body. Not deterred in the least, you resume your energetic stroking, and it's mere moments before Kyle decides to do the same, and you're back to the state you were in before, albeit on the ground now. Soon, however, the lust builds to a peak, and finally both you and Kyle climax, repeated spurts of seed leaping outward, and covering both of your chests, as well as a number of books. You begin to breathe more slowly, and can hear that Kyle is doing the same, as you each melt into a simple embrace, laying on the discarded books, and unaffected by the sticky fluids pressed between you.";
 			WaitLineBreak;
 			say "     Your rest is interrupted, however, by the sound of an opening door and a voice. 'Is everything alright back here? I heard a crash.' Looking towards the door, you have just enough time to see Beverly peeking her head in before she gasps and closes it again. After that, you can't help but chuckle, and soon Kyle does the same. 'Okay, I'll admit, this whole situation is pretty funny.' He looks down at you and the pile you're laying on. 'Though maybe we got slightly out of hand. Next time we'll have to be more careful.' Kyle stands up, and reaches down to pull you up with him. 'And there's definitely going to be a next time, love. That was fantastic, believe me.' The lizardman suddenly leans forward and kisses you. 'Now, get out of here. I'll clean up back here and try to calm down Beverly. See you again soon.' You nod, and after a parting hug, leave the bookstore back room.";
-		else if cunts of player > 0: [female variant]
+		else if player is female: [female variant]
 			say "     Sorry, this text is a placeholder. There is currently no scene here for female players.";
 		now thirst of Kyle is 1;
 	else: [ready for sex]
@@ -334,7 +334,7 @@ to say KyleSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -345,7 +345,7 @@ to say KyleSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the lizardman's reptilian shaft";
 	[]
-	if cocks of player > 0: [only males and herms can fuck him]
+	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the lizardman";
 		now sortorder entry is 3;

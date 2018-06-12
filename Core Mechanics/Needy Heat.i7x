@@ -19,7 +19,7 @@ heatdrive is a number that varies. heatdrive is usually 0. [heatdrive controls h
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
 "Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly. It's not until you feel the warm trickle down your leg that you realize with a start what's happening. Glancing down to see your sex become swollen and red as your body advertises its fertility and readiness. [line break][line break]You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need. Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile.[line break]Your altered body is in heat."
-"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs. Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass. Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if cocks of player > 0]male [end if]heat overtakes you."
+"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs. Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass. Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if player is male]male [end if]heat overtakes you."
 
 [  note -
 fheat entry - truth state states if there is a female heat
@@ -44,7 +44,7 @@ to say huskyheatstart:
 		increase libido of player by 5;
 
 to say huskyheatend:
-	if cunts of player > 0:
+	if player is female:
 		decrease Cunt width of player by 1;
 		if cunt width of player < 1, now cunt width of player is 1;
 		decrease Cunt length of player by 2;
@@ -163,7 +163,7 @@ This is the check heat rule:
 					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
 				else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is True:	[still in heat, previously triggered.]
 					if heatform is 0:		[last turn was female heat]
-						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if cocks of player > 0]male[else]neuter[end if].";
+						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if player is male]male[else]neuter[end if].";
 						now heatform is 1;	[swap to mpreg-heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
@@ -279,7 +279,7 @@ This is the check heat rule:
 					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
 				else if turns in heat > ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
 					if heatform is 0:		[last turn was female heat]
-						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if cocks of player > 0]male[else]neuter[end if].";
+						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if player is male]male[else]neuter[end if].";
 						now heatform is 1;	[swap to mpreg-heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]

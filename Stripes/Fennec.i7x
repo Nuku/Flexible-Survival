@@ -37,7 +37,7 @@ to say losetofennec:
 			say "[fennec69]";
 		else:
 			say "[fennecoral]";
-	else if cocks of player > 0:
+	else if player is male:
 		say "fondles your cock and balls before stroking along your maleness, eliciting a moan in response.";
 		if ( anallevel > 1 and a random chance of 1 in 3 succeeds ) or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
 			say "[fennecanal]";
@@ -45,7 +45,7 @@ to say losetofennec:
 			say "[fennec69]";
 		else:
 			say "[fennecoral]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "slides his fingers along your wet folds before slipping into you to frig your pussy, eliciting a moan in response.";
 		if a random chance of 2 in 3 succeeds:
 			say "[fennecvag]";
@@ -83,13 +83,13 @@ to say fennecanal:
 		say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy pushes you over onto all fours and climbs atop you, pressing his vulpine cock to your pucker. He pushes it into you with a high-pitched yip and starts pumping into you hard and fast[if breast size of player > 0]. He reaches around to grope your bosom, playfully teasing your nipples as he fucks your back door[end if]. As the eager little fellow pounds away at you, you can't help but grow increasingly eager to have him continue[if scalevalue of player < 4], even pushing your hips firmly back as he tries to knot with you[else], eagerly pushing your hips back to take his knot into your larger body[end if]. Once tied with you, the fox works his hips in fast, short strokes as his cock pulses inside you, filling you with spurt after spurt of his virile seed. After his knot goes down, the cute fox gives you a few playful nips and heads off with a happy bounce in his step.[mimpregchance]";
 	else:
 		say "     After getting you good and worked up, he takes your legs and raises them up, raising your rear and putting your waiting pucker on display. Eager for sex at this point, you don't resist and even help hold your hips raised by supporting them with your hands. He yips excitedly and moves into position, his cock finding its way into your exposed anus after a few seeking thrusts. You moan as his shapely fox cock slides into you, hot and throbbing in the snug grip of your asshole.";
-		say "     As the lustful fox humps away energetically, you can't help but get increasingly aroused. The fox creature becomes beautiful to you as you watch him fuck you so well. His slender build, his soft fur, his cute ears, and especially that wonderful cock of his. Oh, it's just what your body needs. Soon you're moaning and yipping beneath him as he fucks your back door, your hips squeezing and wiggling as best you can from your position as he seeks to drive his knot into you. When he manages to tie with you, you cry out [if cocks of player > 0]in orgasm[else]as a rush of unfocused physical pleasure washes over you[end if], your rectal walls clenching down all the tighter around that swollen bulge of fox flesh. He doesn't last much longer past that, giving a sharp yip as he climaxes, painting your bowels with spurt after spurt of his virile seed. Once his knot goes down, the cute-eared fox gives you a tongue-filled kiss before heading off with a proud swagger.[mimpregchance]";
+		say "     As the lustful fox humps away energetically, you can't help but get increasingly aroused. The fox creature becomes beautiful to you as you watch him fuck you so well. His slender build, his soft fur, his cute ears, and especially that wonderful cock of his. Oh, it's just what your body needs. Soon you're moaning and yipping beneath him as he fucks your back door, your hips squeezing and wiggling as best you can from your position as he seeks to drive his knot into you. When he manages to tie with you, you cry out [if player is male]in orgasm[else]as a rush of unfocused physical pleasure washes over you[end if], your rectal walls clenching down all the tighter around that swollen bulge of fox flesh. He doesn't last much longer past that, giving a sharp yip as he climaxes, painting your bowels with spurt after spurt of his virile seed. Once his knot goes down, the cute-eared fox gives you a tongue-filled kiss before heading off with a proud swagger.[mimpregchance]";
 
 
 to say beatthefennec:
 	if libido of player > 25:
 		say "     Your final blow sends the fennec tumbling back. He lands on his ass with a pained yip. Feeling [if libido of player > 75]very [else if libido of player > 50]quite [end if]aroused from the excitement, you consider using him for a little stress relief.";
-		if cocks of player > 0:
+		if player is male:
 			say "     [bold type]Shall you mount the fox or let him go?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the fox.";
@@ -98,7 +98,7 @@ to say beatthefennec:
 				say "[fennecvicsex2]";
 			else:
 				say "     Deciding you'd rather find relief elsewhere than from this random fox, you give him a hard push with your foot and send him scrambling away with a yip.";
-		else if cunts of player > 0:
+		else if player is female:
 			say "     [bold type]Spotting his stiff cock, shall you ride that rod or let him go?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride his rod.";
@@ -224,7 +224,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

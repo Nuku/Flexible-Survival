@@ -63,7 +63,7 @@ To say Dolphin loses:
 		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
-	if cunts of player > 0: [prefer male action]
+	if player is female: [prefer male action]
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of player > 3:
 			say "She eagerly slams her cock into your cunt. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. She continues to ram your eager hole. You can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. Up to her hilt, she can only just barely tickle your cervix. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. 'I should be - unf - enjoying this. It's - urgh - rare for someone - Ah! - to handle me so well...' she trails off. You get the impression that while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
@@ -208,10 +208,10 @@ this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 		now attack entry is "The dolphin takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
 		now wdam entry is 14;
 	else if tempnum is 6:		[was closed in the original version, left closed]
-		if cocks of player > 0:
+		if player is male:
 			now attack entry is "The dolphin darts down to your nethers, grabs your cock, and TWISTS IT OMG THAT HURT!";
 			now wdam entry is 18;
-		else if cunts of player > 0:
+		else if player is female:
 			now attack entry is "The dolphin darts down to your nethers and chomps on your clit. YOWCH.";
 			now wdam entry is 10;
 		else:

@@ -98,9 +98,9 @@ when play ends:
 			let xgen be 0;
 			if player is herm:
 				let xgen be 1;
-			else if cocks of player > 0:
+			else if player is male:
 				let xgen be 2;
-			else if cunts of player > 0:
+			else if player is female:
 				let xgen be 3;
 			if HP of Doctor Moffatt is 8 or HP of Doctor Moffatt is 9 and xgen > 0:
 				say "     While you are being held, you do make friends with one person who is only lightly tainted by those commonplace skunks of the park. With your hyper-sexualized body, you easily catch [if xgen is 1 or xgen is 2]her[else]his[end if] attention and pique [if xgen is 1 or xgen is 2]her[else]his[end if] interest, but wait until your release to meet up with [if xgen is 1 or xgen is 2]her[else]him[end if]. It doesn't take you long to tease and tantalize [if xgen is 1 or xgen is 2]her[else]him[end if] into sex, during which you get [if xgen is 1 or xgen is 2]her[else]him[end if] to nurse from you. Your milk, still potent despite the military's treatment, gradually transforms your lover into a busty skunk herm sex pet for yourself.";

@@ -73,7 +73,7 @@ to say beatthesugarferret:
 		now sugarferretfight is 1;
 		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. When the last of them dealt with, you have a brief moment to take in what's happening.";
 	else:
-		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if cunts of player > 0]She[else]He[end if] plays too rough![at random]' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
+		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if player is female]She[else]He[end if] plays too rough![at random]' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
 
 
 to say sugarferretdesc:
@@ -192,6 +192,6 @@ when play ends:
 			if alexbrunch >= 4:
 				say "     Once you're released, you manage to meet up with Alex, the ferrety lawyer, and move into his new place, becoming his lover and mate. You have a fun life with him, able to enjoy wild romps on cola whenever you like, playing with Lorenda and Lee in their guises as paid housekeepers while really being just well-paid lovers and permanent houseguests. Alex continues his career as a very successful lawyer and thankfully doesn't pick up your caffeine hyperness, though he does develop quite the sweet tooth.";
 			else:
-				say "     Once you're released, you do your best to settle down into a new life. Luckily, you meet a cute [if cocks of player > 0]jill[else]hob[end if] among your release group and soon become their lover. In time, you move in together and have wild, over-caffeinated romps nearly every week-end. While your lover doesn't gain your reaction to cola and pop, they do develop quite the sweet tooth.";
+				say "     Once you're released, you do your best to settle down into a new life. Luckily, you meet a cute [if player is male]jill[else]hob[end if] among your release group and soon become their lover. In time, you move in together and have wild, over-caffeinated romps nearly every week-end. While your lover doesn't gain your reaction to cola and pop, they do develop quite the sweet tooth.";
 
 Sugar Ferret ends here.

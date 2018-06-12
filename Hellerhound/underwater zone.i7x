@@ -58,7 +58,7 @@ name	desc	weight	object
 the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon.".
 
 to say sea dragon cum use:
-	if cunts of player > 0:
+	if player is female:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
 		if the player consents:
 			if a random chance of one in two succeeds and guy is not banned:

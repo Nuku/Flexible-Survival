@@ -386,7 +386,7 @@ to say sexwithSidney:
 	else if HP of Sidney is 3:
 		say "     Sidney's undergone a major change. You should talk to her and see how she's taking it before trying to jump in the sack with her.";
 	else if HP of Sidney is 4 or HP of Sidney is 5:
-		if cocks of player > 0:
+		if player is male:
 			say "[sexwithSidney_01]"; [doggy style over desk for first M/F]
 			now HP of Sidney is 6;
 		else:
@@ -399,7 +399,7 @@ to say sexwithSidney:
 to say sidney_sexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy style";
 		now sortorder entry is 1;
@@ -416,7 +416,7 @@ to say sidney_sexmenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Receive oral";
 	now sortorder entry is 6;
-	now description entry is "have her [if cocks of player > 0]suck you off[else]eat you out[end if]";
+	now description entry is "have her [if player is male]suck you off[else]eat you out[end if]";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -481,16 +481,16 @@ to say sexwithSidney_03:
 
 
 to say sexwithSidney_04:
-	if cocks of player > 0:
+	if player is male:
 		say "     Taking out your cock[smn], you offer [itthemm] to the [if level of Sidney is 21]vulpine[else if level of Sidney is 22 or level of Sidney is 23]lutrine[else]canine[end if] female. She [if level of Sidney is 71]pants[else]grins[end if] at the sight of [itthemm] and leans in to nuzzle [itthemm]. Sniffing at the scent of your arousal, she moans softly and then slides her muzzle over your shaft. She licks and sucks at your cock with gusto, her body knowing just what to do. You rub a hand encouragingly over her head, petting the eager girl.";
-		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cock[smn][if cockname of player is listed in infections of InternalList and cunts of player > 0] and puss[yfn][else if cunts of player > 0], balls and puss[yfn][else if cockname of player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[else]talented[end if] tongue. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8]. The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
+		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cock[smn][if cockname of player is listed in infections of InternalList and cunts of player > 0] and puss[yfn][else if player is female], balls and puss[yfn][else if cockname of player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[else]talented[end if] tongue. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8]. The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
 		if a random chance of 3 in 5 succeeds:
 			if cocks of player is 1:
 				say "     With her so eagerly at work, you can only hold out so long before grunting in release. You pump your [cum load size of player] load into her muzzle and down her throat as she swallows as much semen as she can get. Releasing your spent shaft, she licks her chops and smiles up at you. 'Yummy!'";
 			else:
 				say "     With her so eagerly at work, you can only hold out so long before grunting in release. With one of your cocks in her muzzle, you pump a goodly share of your [cum load size of player] load into her muzzle and down her throat as she swallows as much semen as she can get. The rest ends up spraying out across her face and muzzle, marking her in gooey streaks of your seed. Releasing your spent shaft, she licks her chops and smiles up at you. 'Mmm... tasty and kinky. That was deliciously wild!'";
 		else:
-			say "     With her so eagerly at work, you can only hold out so long before grunting in release as she's busily licking the underside of [if cocks of player > 0]one of [end if]your shaft[smn]. You end up blowing your [cum load size of player] load across her face in gooey streaks of semen. The messy [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] smiles up at you. 'That was so hot! I love being a woman!'";
+			say "     With her so eagerly at work, you can only hold out so long before grunting in release as she's busily licking the underside of [if player is male]one of [end if]your shaft[smn]. You end up blowing your [cum load size of player] load across her face in gooey streaks of semen. The messy [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] smiles up at you. 'That was so hot! I love being a woman!'";
 	else:
 		say "     Presenting your juicy puss[yfn] to the [if level of Sidney is 21]vulpine[else if level of Sidney is 22 or level of Sidney is 23]lutrine[else]canine[end if] female, she [if level of Sidney is 71]pants[else]grins[end if] at the sight of your female loins and leans in to nuzzle your crotch. Sniffing at the scent of your arousal, she moans softly and drags her tongue slowly over your damp petals. She licks and tongues at your puss[yfn] and clit[sfn] before plunging her tongue into you. She eats you out with gusto, her body seeming to know just what to do. You rub a hand encouragingly over her head, petting the eager girl.";
 		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cunn[yfn] with attention inside and out. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it.";
@@ -507,7 +507,7 @@ after navigating Grey Abbey Library while ( HP of Sidney >= 6 and Sidney is book
 		say "     You move to a better vantage point a little closer. Sidney notices you watching her being mated by the wolf [if HP of Fang >= 3]stud [end if]and looks away. But her shame is only momentary - perhaps confident in enjoying her new gender however she likes or simply remembering that you [if HP of Fang >= 3]too have been under the virile alpha[else]too have had sex with the wolf[end if]. Regardless, she lets her cries of pleasure grow as the [if HP of Fang >= 3]large[else]eager[end if] lupine mates her. Your presence makes [if HP of Fang >= 3]no difference as far as he's concerned[else]little difference to him since his alpha is allowing him to continue[end if].";
 		say "     The wolf pounds into her with increasing energy, his growing knot smacking audibly against her wet folds. She grits her teeth, leans further forward and pushes back with her hips. Her pussy is pushed open by the constant battering, finally allowing him in with a wet pop. Sidney cries out in orgasm as the feral beast ties with her. He switches to short, rapid-fire thrusts, tugging and shifting his knot inside her quivering tunnel. He howls in orgasmic release a few moments later. From the happy grin on his panting face, you know he's shooting his feral semen into her, seeding his current bitch.";
 		WaitLineBreak;
-		say "     They remain tied like this for a while, waiting for Fang to finish unloading his [if HP of Fang >= 3]virile [end if]cum and for his knot to then go down. Fang does climb off her back and move butt to butt in canine style during this period[if cocks of player > 0 or cunts of player > 0]. You take this opportunity to masturbate, providing them with a small show in return for the one you've received[end if]. Once freed, they part ways after sharing a sloppy kiss. Fang [if HP of Fang >= 3]returns confidently[else]respectfully returns[end if] to his post while Sidney gets up more slowly. Despite her attempts to avoid a mess, she's too new to her being female to keep her overstretched cunt closed. The wolf's seed runs down her thighs even as she tries to hold back the flow with [if level of Sidney is 71]her fluffy tail[else]a paw[end if].";
+		say "     They remain tied like this for a while, waiting for Fang to finish unloading his [if HP of Fang >= 3]virile [end if]cum and for his knot to then go down. Fang does climb off her back and move butt to butt in canine style during this period[if player is not neuter]. You take this opportunity to masturbate, providing them with a small show in return for the one you've received[end if]. Once freed, they part ways after sharing a sloppy kiss. Fang [if HP of Fang >= 3]returns confidently[else]respectfully returns[end if] to his post while Sidney gets up more slowly. Despite her attempts to avoid a mess, she's too new to her being female to keep her overstretched cunt closed. The wolf's seed runs down her thighs even as she tries to hold back the flow with [if level of Sidney is 71]her fluffy tail[else]a paw[end if].";
 		say "     'That was... something else...' she syas with a bit of a forced laugh. 'Definitely a [']new experience['],' she adds. She makes her way slowly back towards the breakroom, trailing drops of wolfcum as she goes.";
 	else:
 		say "     Knowing what's coming up, you leave the pair to it. Sidney may be new to being a girl, but she can make her own decisions.";

@@ -155,7 +155,7 @@ to say ZekeSexMenu1: [Cooperative]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can do this]
+	if player is male: [only males and herms can do this]
 		choose a blank row in table of fucking options;
 		now title entry is "Frotting";
 		now sortorder entry is 1;
@@ -166,7 +166,7 @@ to say ZekeSexMenu1: [Cooperative]
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the fox's vulpine shaft";
 	[]
-	if cocks of player > 0: [only males and herms can 69 with him]
+	if player is male: [only males and herms can 69 with him]
 		choose a blank row in table of fucking options;
 		now title entry is "Sixty-nine";
 		now sortorder entry is 3;
@@ -211,7 +211,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Facefuck Zeke";
 		now sortorder entry is 1;
@@ -222,7 +222,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 	now sortorder entry is 2;
 	now description entry is "Dominantly ride the fox";]
 	[]
-	[if cocks of player > 0:
+	[if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Pound him";
 		now sortorder entry is 3;

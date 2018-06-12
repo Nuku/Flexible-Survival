@@ -68,7 +68,7 @@ to say Yamato Dragoness vic:
 				say "[if FYDTBMM is 0]shows no remorse in tormenting you, now relegating to being a mere toy for her twisted hunger[else]never relents in tormenting her toy in the name of her twisted hunger[end if]";
 			say ". These persisting motions quickly arousing you, [if player is neuter]much in spite your lack of outlet[else if HP of player < 1 and player is not submissive]much in spite your better judgment[else]writhing impotently against these tainted confines[end if], it's not long before ";
 			if lust of player > 33 and (cunts of player > 0 or cocks of player > 0):
-				say "you cry out in orgasm, [if cocks of player > 0]your throbbing, sputtering cock[smn][else]your audible climax[end if] more than enough to bring her over the edge along with you. The [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, your [if FYDTBMM is 0]uncertain[else]inevitable[end if] fate is punctuated by your sudden disappearance, pulled into the depths of her voracious portal in the wake of her bliss.";
+				say "you cry out in orgasm, [if player is male]your throbbing, sputtering cock[smn][else]your audible climax[end if] more than enough to bring her over the edge along with you. The [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, your [if FYDTBMM is 0]uncertain[else]inevitable[end if] fate is punctuated by your sudden disappearance, pulled into the depths of her voracious portal in the wake of her bliss.";
 			else:
 				say "finally she cries out in orgasm, the [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, pulled into the depths of her voracious portal in the wake of this bliss.";
 			say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you're finally granted the mercy of her comparatively less overbearing womb, only given a few seconds to appreciate the relief before thought fades from you entirely. Outwardly, [if scalevalue of player > 3]the dragoness would no doubt look somewhat pregnant with your impressive form, though perhaps this serpentine creature perceives this as a mere trophy, signifying her[else]your captivity would be imperceivable, further punctuating this dragoness's[end if] complete and utter dominance over you.";
@@ -114,7 +114,7 @@ to say Yamato Dragoness vic:
 						else:
 							say "     It's not enough, the serpentine creature's grip on you is vice-like, and it's clear he's not going to leave you be";
 							if "Horny Bastard" is listed in feats of player:
-								say ". Shifting slightly against this tight prison, you quickly realize how sore and used you are, [if cocks of player > 0]cock[smn] strained by overuse[else]body strained from the constant grinding of her scaled form[end if], empowered by some unholy libido that's been compelling her to use you for a fair amount of time now.";
+								say ". Shifting slightly against this tight prison, you quickly realize how sore and used you are, [if player is male]cock[smn] strained by overuse[else]body strained from the constant grinding of her scaled form[end if], empowered by some unholy libido that's been compelling her to use you for a fair amount of time now.";
 							else:
 								say ". Loud, irreverent groans escaping the beast's lips, she's rather shameless in her need for relief, in spite of these particularly twisted circumstances, grinding her scaled, elongated frame against yours with a blind determination.";
 							say "     Twisted, heated confines filled with the wet sounds of her persisting motion, you're eventually met with a long, exhausted groan by the creature, hot honey drenching your groin, before she -- finally -- goes limp, spent, and loosens up her hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to gather your things and head back out from where you came.";
@@ -122,7 +122,7 @@ to say Yamato Dragoness vic:
 					else:
 						say "     In spite what better judgment you might have, you oblige the serpentine creature's need";
 						if "Horny Bastard" is listed in feats of player:
-							say ". Shifting slightly against this tight prison, you quickly realize how sore and used you are, [if cocks of player > 0]cock[smn] strained by overuse[else]body strained from the constant grinding of her scaled form[end if], empowered by some unholy libido that's been compelling her to use you for a fair amount of time now.";
+							say ". Shifting slightly against this tight prison, you quickly realize how sore and used you are, [if player is male]cock[smn] strained by overuse[else]body strained from the constant grinding of her scaled form[end if], empowered by some unholy libido that's been compelling her to use you for a fair amount of time now.";
 						else:
 							say ". Loud, irreverent groans escaping the beast's lips, she's rather shameless in her need for relief, in spite of these particularly twisted circumstances, grinding her scaled, elongated frame against yours with a blind determination.";
 						say "     Twisted, heated confines filled with the wet sounds of her persisting motion, you're eventually met with a long, exhausted groan by the creature, hot honey drenching your groin, before she -- finally -- goes limp, spent, and loosens up her hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to gather your things and head back out from where you came.";
@@ -193,13 +193,13 @@ to say Yamato Dragoness vic:
 			else:
 				say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind along your ascent. Exposed before the [if daytimer is night]n[else]br[end if]ight sky, her taloned legs pull your head to her scaled snatch, revealing your imposed [if HP of player > 0 or player is submissive]task.[run paragraph on] Obligingly[else]punishment.[run paragraph on] Reluctantly[end if], your tongue caresses along its coarse lips, had scaling gradually parting way to reveal her soft flesh, inviting your writhing organ's slick touch.";
 				say "     '[one of]Yes[or]Ah[or]Mm[at random]... [one of]You will learn your place, whelp[or]You have but a taste of what I offer you[or]This is your natural appointment, under me as you are now[at random].' Her remark is punctuated by the feel of her talon";
-				if cocks of player > 0 or cunts of player > 0:
+				if player is not neuter:
 					say "[if cocks of player > 2]s, gripping two of your now-hardening, [cock size desc of player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if cocks of player is 2]s, gripping both of your now-hardening, [cock size desc of player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if cocks of player is 1]'s grip, latched onto your now-hardening, [cock size desc of player] cock, the other holding your similarly serpentine torso in place[else if cunts of player > 1]'s grip on your diminutive frame, freeing one to briefly tease one of your exposed portals[else]'s grip on your diminutive frame, freeing one to briefly tease your exposed portal[end if]. Eclipsing you in size, you can't help but shudder at the overwhelming sensation of her own tongue's reciprocation across [if cocks of player > 1]one of your cock's length[else if cocks of player is 1]the length of your cock[else]your [bodytype of player] form[end if].";
-					say "     Tight, heated vent inviting you to continue, your lips embrace the dragoness's hungry cunt and, in turn, she rewards your attendance with her own, draconic maw embracing [if cocks of player > 1]one of your dicks, pumping its exposed brother[else if cocks of player > 0]your dick[else if cunts of player > 1]the one of your own cunts[else if cunts of player > 0]your own cunt[end if]. The victim half of this twisted ouroboros, ";
+					say "     Tight, heated vent inviting you to continue, your lips embrace the dragoness's hungry cunt and, in turn, she rewards your attendance with her own, draconic maw embracing [if cocks of player > 1]one of your dicks, pumping its exposed brother[else if player is male]your dick[else if cunts of player > 1]the one of your own cunts[else if player is female]your own cunt[end if]. The victim half of this twisted ouroboros, ";
 					If libido of player > 33:
-						say "a muffled cry is quickly forced from your stuffed lips in blissful release, your subjugator[if cocks of player > 0] showing no relent in swallowing down your gushing, [cum load size of player] flood of sexual fluids[else]'s tongue showing no relent in pounding your gushing pussy[end if], [if cocks of player > 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your unengulfed cocks[else if cocks of player is 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your unengulfed cock[else if cocks of player > 0]greedily milking you of every last drop[else]driving you wild in throes of ecstasy[end if]. In the wake of this, you feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey.";
+						say "a muffled cry is quickly forced from your stuffed lips in blissful release, your subjugator[if player is male] showing no relent in swallowing down your gushing, [cum load size of player] flood of sexual fluids[else]'s tongue showing no relent in pounding your gushing pussy[end if], [if cocks of player > 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your unengulfed cocks[else if cocks of player is 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your unengulfed cock[else if player is male]greedily milking you of every last drop[else]driving you wild in throes of ecstasy[end if]. In the wake of this, you feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey.";
 					else:
-						say "you eventually feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey. Shortly, in the wake of this, a muffled cry is forced from your stuffed lips in blissful release, your subjugator[if cocks of player > 0]showing no relent in consuming your gushing, [cum load size of player] flood of sexual fluids[else]'s tongue showing no relent in assaulting your stuffed pussy[end if], [if cocks of player > 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your exposed cocks[else if cocks of player is 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your exposed cock[else if cocks of player > 0]milking you of every last drop[else]driving you wild in the throes of bliss[end if].";
+						say "you eventually feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey. Shortly, in the wake of this, a muffled cry is forced from your stuffed lips in blissful release, your subjugator[if player is male]showing no relent in consuming your gushing, [cum load size of player] flood of sexual fluids[else]'s tongue showing no relent in assaulting your stuffed pussy[end if], [if cocks of player > 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your exposed cocks[else if cocks of player is 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your exposed cock[else if player is male]milking you of every last drop[else]driving you wild in the throes of bliss[end if].";
 				else if (anallevel > 1 and a random chance of 1 in 2 succeeds) or anallevel is 3:
 					say "'s grip on your diminutive frame. Eclipsing you in size, as she does, you can't help but shudder at the overwhelming sensation of her tongue's twisted reciprocation, penetrating your anal ring without remorse, no doubt a torment to your genderless form.";
 					say "     Tight, heated vent inviting you to continue, your lips embrace the dragoness's hungry cunt and, in turn, she rewards your attendance with her own, draconic maw enveloping your anal ring, causing you to writhe in insatiable need. The [if HP of player < 1 and player is not submissive]victim[else]smaller[end if] half of this twisted ouroboros, you eventually feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey.";
@@ -261,9 +261,9 @@ to say Yamato Dragoness vic:
 				say "     Her plan for you is made very clear when she sets you back down where between her stout, hind legs, yellow-scaled cunt exposed to the open air. With very little restraint, the dragoness urges you closer to it, pressing you firmly against its carnal lips as it already begins to ooze her tainted juices.";
 				say "     '[one of]Get to work[or]Hurry up[or]Do not waste my time[at random], [one of]I have little patience for stalling[or]whelp[or]you would not want to test my patience[or]you are mine now[at random]!' [if HP of player < 1 and player is not submissive]Reluctantly, you're made to[else]Obligingly, you[end if] use your tongue to further invite her arousal. Slick portal eagerly squeezing against your initial, curious endeavors, you gradually plunge the organ deeper, [if scalevalue of player < 4]diminutive head pressed firmly against her lips as her tough scales part[else]tough scales parting[end if] to expose soft, supple flesh to you touch. [if FYDM is 0 and scalevalue of player < 4]Even as small as you are, her passage, oddly enough, remains extremely tight, almost challenging you efforts to invade her hole[else if FYDM is 0]Strangely enough, her passage remains extremely tight even with the most conservative approach, almost challenging any effort to invade her hole[else]Even as you work, her strangely tight portal continues to lightly challenge any effort to invade her hole[end if].";
 				if FYDM is 0, now FYDM is 1;
-				say "     Deep, approving moans escaping your captor's scaled lips, she presses you more firmly against her aching pussy, your maw quickly contending with the rising flood of her honey, senses quickly flooded with the taste and scent of her intoxicating sex. Relegated to a mere attendant to the dragoness's need, [if cocks of player > 0]you're driven erect[else if cunts of player > 0]you're made blatantly aroused[else]you find yourself tormented by an insatiable need[end if], overwhelming heat radiating from eager hole. It becomes unbearable, driving you to grind your [if cocks of player > 0]dick[smn][else if cunts of player > 0]own cunt[sfn][else]genital-less crotch[end if] against her ribbed body, slicked by her sexual fluids, the beast's wanton need rising in turn.";
+				say "     Deep, approving moans escaping your captor's scaled lips, she presses you more firmly against her aching pussy, your maw quickly contending with the rising flood of her honey, senses quickly flooded with the taste and scent of her intoxicating sex. Relegated to a mere attendant to the dragoness's need, [if player is male]you're driven erect[else if player is female]you're made blatantly aroused[else]you find yourself tormented by an insatiable need[end if], overwhelming heat radiating from eager hole. It becomes unbearable, driving you to grind your [if player is male]dick[smn][else if player is female]own cunt[sfn][else]genital-less crotch[end if] against her ribbed body, slicked by her sexual fluids, the beast's wanton need rising in turn.";
 				say "     In due time the serpent cries out in bliss, deceptive vent tightening against your hands as she's wracked in the throes of her orgasm";
-				if libido of player > 50 and (cocks of player > 0 or cunts of player > 0):
+				if libido of player > 50 and player is not neuter:
 					say ", more than enough to drive you into a similar release, painting the side of her hole with your own sexual fluids";
 				else:
 					say ", forcing you to abide her wanton fury as you're beleaguered frame is doused by her bestial honey";
@@ -283,9 +283,9 @@ to say yamato dragoness desc:
 		now sex entry is "Both";
 	else if player is herm:
 		now sex entry is "Both";
-	else if cocks of player > 0:
+	else if player is male:
 		now sex entry is "Male";
-	else if cunts of player > 0:
+	else if player is female:
 		now sex entry is "Female";
 	else:
 		now sex entry is "nochange";
@@ -328,10 +328,10 @@ to yamatfemsexmenu:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
-		say "(1) [if cocks of player > 0][link]Mount her[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(2) [if cocks of player > 0][link]Mount her anally[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
+		say "(1) [if player is male][link]Mount her[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(2) [if player is male][link]Mount her anally[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(3) [if player is male][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(4) [if player is female][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Attend her cunt[as]5[end link][line break]";
 		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
@@ -343,7 +343,7 @@ to yamatfemsexmenu:
 			else:
 				say "Invalid Choice.";
 		if calcnumber is 1:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[YamatF_1]"; [Cunt Pitching]
@@ -370,7 +370,7 @@ to yamatfemsexmenu:
 				yamatdomshift;
 				now trixieexit is 1;
 		else if calcnumber is 2:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[YamatF_2]"; [Anal Pitching]
@@ -397,7 +397,7 @@ to yamatfemsexmenu:
 				yamatdomshift;
 				now trixieexit is 1;
 		else if calcnumber is 3:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[YamatF_3]"; [Oral Receiving Cock]
@@ -406,7 +406,7 @@ to yamatfemsexmenu:
 				yamatdomshift;
 				now trixieexit is 1;
 		else if calcnumber is 4:
-			if cunts of player is 0:
+			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[YamatF_4]"; [Oral Receiving Cunt]
@@ -533,7 +533,7 @@ to say YamatF_4: [oral receiving cunt]
 	say "     Making your decision, the dragoness looms closely over your [if scalevalue of player < 5]significantly[else]slightly[end if] smaller, [bodytype of player] form, carefully helping you to reveal your assets before her until your [cunt size desc of player], partially aroused dick[if cunts of player > 1]s are[else] is[end if] exposed before her piercing gaze.";
 	say "     '[one of]Hm[or]Yes[or]Very well[at random], [one of]this should be simple[or]such a paltry task[or]I hope this will satisfy you[at random]...' Large, thick tongue escaping her lips as she speaks, the slick, flexible thing has no trouble engulfing your crotch, puss[yfn] completely buried under the writhing, pink flesh.";
 	say "     Her constant, unblinking gaze fixated on you, your [if scalevalue of player < 4]entire body[else]torso[end if] is bathed in her steamy breath, lower half disappearing under her scaled snout as her lips hilt against your crotch. As large as the serpent is, she seems extraordinarily dextrous with her tongue, able to squeeze and worm her way into your hole[sfn] with [if cunt length of player > 19]considerable[else]relative[end if] ease.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Her skillful work filling the air with the wet sounds of her tongue's efforts, it doesn't need long before you're brought to your very limit! Shall you pull out at the last second and shame her? Else, you'll reward the creature's diligence.";
 		if player consents:
 			say "     Her grip on you is fairly tight, practically pinning you to a tree, but you manage to order her off just before you cry out, aiming your previously unattended, saliva-slicked dick[smn] at the dragoness as you fire off your [cum load size of player] load, [if cock width of player > 24]utterly soaking[else]painting[end if] her snout with your thick cum. Her brief confusion allows you to spend your entire load on her.";
@@ -551,15 +551,15 @@ to say YamatF_5: [Oral Giving Cunt]
 	say "     Awash in a wave of heat, her feminine scent floods the air, your digits slicked by her tainted honey. Even for what little you force down her portal, she remains incredibly tight, visibly affected by your diminutive touch. Shall you be more affectionate? Else you'll keep your distance.";
 	if player consents:
 		say "     Unable to resist the opportunity, you press your body firmly against her draconic lips, [if scalevalue of player < 3]practically as big as you are[else if scalevalue of player is 3]almost as big as you are[else]impressively large even for someone of your size[end if]. Radiating an intense heat, you plunge your tongue in to caress her supple, hidden inner-flesh.";
-		say "     '[one of]Oh[or]Hmm[or]Yes[at random]... [one of]revel in all I have[or]savor your reward[or]enjoy what I have to offer[at random].' The dragoness rumbles lowly as your tongue caresses along the length of her now fluid-slicked opening, taste awash in her sweet flavor. It's not long before your continued, drawn out affections start making a mess of things. Practically swimming in her juices, you can't help but grind your [if cocks of player > 0][cock size desc of player], blatantly aroused cock[smn][else if cunts of player > 0]blatantly wet cunt[sfn][else]genderless crotch[end if] against her coarse scales.";
+		say "     '[one of]Oh[or]Hmm[or]Yes[at random]... [one of]revel in all I have[or]savor your reward[or]enjoy what I have to offer[at random].' The dragoness rumbles lowly as your tongue caresses along the length of her now fluid-slicked opening, taste awash in her sweet flavor. It's not long before your continued, drawn out affections start making a mess of things. Practically swimming in her juices, you can't help but grind your [if player is male][cock size desc of player], blatantly aroused cock[smn][else if player is female]blatantly wet cunt[sfn][else]genderless crotch[end if] against her coarse scales.";
 		say "     Completely drenched by the stuff, it's very clear your new friend won't be able to hold back much longer. Shall you take the full brunt of her release? Otherwise, you'll try to avoid making any more of a mess of yourself.";
 		if player consents:
 			say "     Tightening your grip, you wrap your lips around the monster's gushing nethers just before she's no longer able to hold back. [if scalevalue of player < 3]You maybe only last a few seconds before you're completely[else if scalevalue of player is 3]You put up a fair effort before you're eventually[else]It's a struggle to keep up with her, just shy of being[end if] overwhelmed by the flood, senses utterly flooded with the sweet taste of her abundant honey.";
-			say "     Completely overtaken by a primal need, it's not long before your [bodytype of player] body, grinding against the dragoness's, is wracked with bliss, [if cocks of player > 0]staining her your own, [cum load size of player] load[else if cunts of player > 0]staining her with your own sexual fluids[else]writhing in an insatiable need[end if]. Once your fervor dies down, you pull away and survey the carnage, utterly drenched in the monster's substantial sex. She seems amused by you.";
+			say "     Completely overtaken by a primal need, it's not long before your [bodytype of player] body, grinding against the dragoness's, is wracked with bliss, [if player is male]staining her your own, [cum load size of player] load[else if player is female]staining her with your own sexual fluids[else]writhing in an insatiable need[end if]. Once your fervor dies down, you pull away and survey the carnage, utterly drenched in the monster's substantial sex. She seems amused by you.";
 			say "     '[one of]Hmm[or]Ha[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random]... [one of]I think you're deserving of one last favor[or]You probably deserve a little extra[at random].' Lowering her snout, you're quickly assaulted by her large and powerful tongue, slick organ embracing your sullied form, licking clean the obscene mess you've made of yourself. When she's done, you're uncertain if being drenched in the monster's saliva is all that better than her sexual fluids.";
 		else:
 			say "     Just as she's no longer able to hold back, you try to put at least a little distance between the monster and her aching geyser. Roaring out loudly, her taut portal aches against the open, the air humid with her intense body heat and the scent of her sweet honey.";
-			say "     Unable to hold yourself back in the wake of this display, you're quickly wracked with your own bliss, [if cocks of player > 0]staining her your own, [cum load size of player] load[else if cunts of player > 0]staining her with your own honey[else]writhing in an insatiable need[end if]. Once your fervor dies down, you pull away and observe the end results of your little adventure. Though you managed to avoid getting completely drenched, you're still a mess of the monster's sticky sex. She seems amused by you.";
+			say "     Unable to hold yourself back in the wake of this display, you're quickly wracked with your own bliss, [if player is male]staining her your own, [cum load size of player] load[else if player is female]staining her with your own honey[else]writhing in an insatiable need[end if]. Once your fervor dies down, you pull away and observe the end results of your little adventure. Though you managed to avoid getting completely drenched, you're still a mess of the monster's sticky sex. She seems amused by you.";
 			say "     '[one of]Hmm[or]Ha[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random]... [one of]I think you're deserving of one last favor[or]You probably deserve a little extra[at random].' Lowering her snout, you're quickly assaulted by her large and powerful tongue, slick organ embracing your sullied form, licking clean the mess you've made of yourself. When she's done, you're fairly certain that being drenched in the monsters saliva isn't much of an improvement.";
 		say "     Laughing at you, the dragoness finally takes to the air and departs, leaving you to dry off and go back from whence you came.";
 	else:
@@ -641,7 +641,7 @@ to YamatFvore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if cocks of player > 0]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if cocks of player > 0]unloading your [cum load size of player] load against the supple flesh[else if cunts of player > 0]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			decrease libido of player by (libido of player / 10) + 1;
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;

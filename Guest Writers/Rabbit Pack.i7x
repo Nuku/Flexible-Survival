@@ -49,14 +49,14 @@ to say rabpacka:
 		say "You feel a weight on your chest as one of them sits on it, smiling happily at you. [one of]She then slides closer, putting her pussy right in front of you. You comply, licking it while she sighs and moans[or]He leans closer and kisses you lovingly, while you can feel a small pressure as his cock slides out on is own, a little spot of pre already matting your skin[at random].";
 
 to say rabpackb:
-	if cocks of player > 0:
+	if player is male:
 		if cock length of player > 10:
 			say "Meanwhile, you feel someone grabbing your cock and pressing it against its body. It must be a [one of]he, as you can feel his own penis and balls being rubbed against your member[or]she, since you feel two soft breasts being pressed against it[at random]. Sure it feels good...";
 		else:
 			say "Meanwhile, you feel someone grabbing your cock and slowly jerking it while [one of]licking across its length[or]sucking its tip[or]massaging your balls[at random]. Sure it feels good...";
 
 to say rabpackc:
-	if cunts of player > 0:
+	if player is female:
 		if cunt width of player > 7:
 			say "At the same time you feel at least a pair of tongues licking your feminine folds. You can't see what exactly is going on, but the increasing moistness of your groin is a sure indication...";
 		else:

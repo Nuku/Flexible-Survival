@@ -85,7 +85,7 @@ to say borisquestforcock:
 	else if lastfuck of Boris - turns < 6:
 		say "'Sorry friend,' Boris says with regret, 'I may be as eager as you seem to be to enjoy my new cock, but it still needs a bit of rest before it is ready and roarin to go again.'";
 	else if borisquest is 5:
-		if cocks of player > 0:
+		if player is male:
 			if christyquest is 0:
 				say "'Um, sorry friend,' Boris says, as he glances down at your [cock of player] cock, 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking, well let's just say I would rather it be mine,' Boris says apologetically. 'I just don't swing that way, if things were different. Hmm, that gives me an idea,' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly-acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out,' Boris finishes with a grin. 'You must have liked the look of it after all to pick such a nice one. Anyways,' he says, shaking himself as he gets back to the conversation at hand, 'Here is a key to the locker room we use here, there should be a box there marked [']Christy[']. If you bring that back here we can see about having some real fun,' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
 				now christyquest is 1;

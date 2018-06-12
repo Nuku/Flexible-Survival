@@ -90,7 +90,7 @@ when play ends:
 			say "     You succumb to your hentaifan infection.";
 		else:
 			say "     You survive, but were infected by the hentaifan.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

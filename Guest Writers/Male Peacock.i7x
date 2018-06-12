@@ -42,7 +42,7 @@ to say peacockattack:
 to say peacockvictory:
 	now peacockcontrol is 0;
 	choose row monster from the table of random critters;
-	if cunts of player > 0:
+	if player is female:
 		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
 		say "     You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened. You don't think you would be able to actually oppose what is about to happen, though...";
 		say "     He motions towards the bed in the middle of the room. You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit. He slides over your [bodydesc of player] body... it feels like a light, warm blanket. You think that maybe this won't be SO bad after all...";

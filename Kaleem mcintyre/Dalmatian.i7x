@@ -14,7 +14,7 @@ when play begins:
 
 to say losetoDalmatian:
 	say "";
-	if cocks of player > 0:
+	if player is male:
 		say " ";
 	else:
 		say "";
@@ -25,7 +25,7 @@ to say beattheDalmatian:
 		say "";
 		if the player consents:
 			say "";
-			if cunts of player > 0:
+			if player is female:
 				say "";
 			else:
 				say "";

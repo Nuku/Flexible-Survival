@@ -99,25 +99,25 @@ to say testerbotselection:
 	now sortorder entry is 5;
 	now description entry is "Have the robot fuck your ass.";
 	now toggle entry is testerbotsexy rule;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face fuck";
 		now sortorder entry is 1;
 		now description entry is "Use testorbot to orally please you.";
 		now toggle entry is testerbotsexy rule;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Testerbot";
 		now sortorder entry is 2;
 		now description entry is "Fill one of the robot's pussy-like orifices.";
 		now toggle entry is testerbotsexy rule;
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Fucked by Testerbot";
 		now sortorder entry is 3;
 		now description entry is "Order the robot to push one of those probes in you.";
 		now toggle entry is testerbotsexy rule;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal on Testerbot";
 		now sortorder entry is 4;
@@ -152,7 +152,7 @@ to say testerbotselection:
 					say "     Ordering the robot to bend over, you bring your hard cock to its artificial anal orifice. 'Yes, do me hard... uhhh...' It shudders visibly before continuing. 'I've been... ugh... such a bad robot bitch.' As you sink your cock into it, the robot clenches down on the worktable, cracking the wood a little. Ignoring it, you start thrusting into it as the snug back entrance clenches and squeezes much like an asshole. As you pound away, a hidden cassette player starts up inside the robot, playing some grunts and wet, slapping sounds lifted from a porno. This almost is enough to cover the dull, metal thumps as you bang against the boxy, metal robot's body. Grabbing the robot's side handles, you thrust hard into it and shoot your hot semen into that gripping hole until your balls are drained. Finished its duty, the robot slowly walks back to the wall socket to recharge, leaking your cum as it goes.";
 					decrease libido of player by 15;
 				else if nam is "Anal":
-					say "     At your order, the robot bends you over a worktable. You can her a motor whirring, followed by a clicking sound as one of the probes is moved and locked into position. The robot lines up the cock with your asshole and sighs audibly before saying 'I will make you my bitch' in a monotone voice before sliding the self-lubricating dildo up your butt. You grunt a little as it starts pressing into you, then start to enjoy it as the robot thrusts into you with measured strokes[if cocks of player > 0]. The cock attachment presses at your prostate with every thrust, pleasantly stimulating the sensitive gland[else]. The cock attachment pleasantly stimulates you as it slides back and forth inside you[end if]. An internal tape player starts up, playing back some grunts and moans from some porno. As the robot pounds into you, the dildo starts to vibrate, increasing the pleasure you receive until finally you cum with a moan of ecstasy. Finished its duty, the robot gingerly unhooks the used probe and holds it at a distance in its pincher hand before releasing it into a cleaning vat. After shuddering and bemoaning that it feels so dirty, the robot slumps back by the wall socket and plugs in to recharge.";
+					say "     At your order, the robot bends you over a worktable. You can her a motor whirring, followed by a clicking sound as one of the probes is moved and locked into position. The robot lines up the cock with your asshole and sighs audibly before saying 'I will make you my bitch' in a monotone voice before sliding the self-lubricating dildo up your butt. You grunt a little as it starts pressing into you, then start to enjoy it as the robot thrusts into you with measured strokes[if player is male]. The cock attachment presses at your prostate with every thrust, pleasantly stimulating the sensitive gland[else]. The cock attachment pleasantly stimulates you as it slides back and forth inside you[end if]. An internal tape player starts up, playing back some grunts and moans from some porno. As the robot pounds into you, the dildo starts to vibrate, increasing the pleasure you receive until finally you cum with a moan of ecstasy. Finished its duty, the robot gingerly unhooks the used probe and holds it at a distance in its pincher hand before releasing it into a cleaning vat. After shuddering and bemoaning that it feels so dirty, the robot slumps back by the wall socket and plugs in to recharge.";
 					decrease libido of player by 15;
 				wait for any key;
 		else:

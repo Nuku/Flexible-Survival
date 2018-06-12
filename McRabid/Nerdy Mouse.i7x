@@ -44,7 +44,7 @@ to say beatthenerdymouse:
 			say "Choice? (0-2)>[run paragraph on]";
 			get a number;
 		if calcnumber is 1:		[playful sex]
-			if cunts of player > 0:
+			if player is female:
 				say "***Ride mousie cock. A mix of apologetic and overly eager, but still fun. Finishes quick, but messy.";
 			else if anallevel > 1 and a random chance of anallevel in 5 succeeds:
 				say "***Ride mousie cock - anal. Tries to refuse, but his body is definitely turned on. Finishes quick, but messy.";
@@ -55,7 +55,7 @@ to say beatthenerdymouse:
 				say "***Anal on mousie.";
 			else if player is herm:
 				say "***Force mousie into oral. Make suck cock and lick pussy. Tease how he seems to love that cock and how this is probably the most pussy he'll ever get so he better do a good job.";
-			else if cocks of player > 0:
+			else if player is male:
 				say "***Force mousie into oral. Make suck cock and lick pussy. Tease how he seems to love that cock.";
 			else:
 				say "***Force mousie into oral. Make suck cock and lick pussy. Tease how this is probably the most pussy he'll ever get.";
@@ -130,7 +130,7 @@ when play ends:
 			say "     You give in to the vast nerdiness inside your head. After pouring over all of the books you can find in the library you grow bored and desire a more structured path of learning. Wandering around, you eventually find yourself at the College Campus and are overjoyed at the thought of getting a higher education. Almost immediately you find yourself on the receiving end of a wedgie to shouts of 'NERD!'. Ah, sweet academia.";
 		else:
 			say "     You survived, by some miracle, with your humanity still intact. It takes some time but you finally find a place you fit in, surrounded by those like you, by fellow nerds.";
-			if cocks of player > 0:      [MALE]
+			if player is male:      [MALE]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player: [F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

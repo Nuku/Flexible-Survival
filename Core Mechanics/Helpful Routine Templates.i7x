@@ -20,7 +20,7 @@ to malemonstersex: [This is the most basic version of player loss routines for m
 		say "     This is usually reserved for scenes where the player orally attends the monster. Really, it can be anything, so long as it doesn't require any sort of player genital configuration -- though you may references them, just be sure to have something for neuters. It's also a nice source of scene variation.";
 
 to malebreedersex: [This is a variation of be above, for monsters who are strictly into reproduction]
-	if cunts of player > 0:
+	if player is female:
 		say "     Normally, you don't check female genitalia first so as to give everyone anal access, but in a strict 'breeder' build, you can get away with ignoring it.";
 		say "     We generally avoid strict breeders, but this is more due to a history of male-snubbing and not anything to do with the build itself.";
 		say "     You can add 'and player is impreg_able' if you only want the monster to attempt impregnation if it's possible.[impregchance]";

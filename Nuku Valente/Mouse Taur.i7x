@@ -18,11 +18,11 @@ After resolving a Mouse Taur Encounter, try looking;
 Instead of Resolving a Mouse Taur Encounter:
 	if mtrp is 0:
 		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.' ";
-		if cunts of player > 0 and cocks of player > 0:
+		if player is herm:
 			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression. 'Glad to run into someone who can talk. My name is Lisa. What's your name?'";
-		else if cocks of player > 0:
+		else if player is male:
 			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I was hoping for something a little more...' she trails off, then shakes her head. 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand. 'Lisa. You are?'";
-		else if cunts of player > 0:
+		else if player is female:
 			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment. 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		else:
 			say "She sniffs the air lightly and looks at you with some confusion. 'You must have had such a hard time of it,' she says with some sympathy. 'I am Lisa, nice to meet you.'";
@@ -212,8 +212,8 @@ To mousefuck:
 	let response1 be "";
 	say "Lisa looks you over a moment before lifting her shoulders. 'I live in a porn shop. A little play isn't new, right?' She moves up to you and runs soft hands across your front and sides, 'Come with me into the back, and be naked when you do it.' She saunters off into her private backroom, through a curtain of hanging beads that softly clack with the sound of jostled wood behind her. ";
 	if a random number from 1 to 2 is 1: [ Aggressive]
-		if cunts of player is 0: [ oral ]
-			if cocks of player is 0: [You are not ready]
+		if player is not female: [ oral ]
+			if player is not male: [You are not ready]
 				say "When you push through the curtains, ready, she looks at you a bit oddly, 'No offense,' she starts, 'But you seem to be missing parts to play with.' She brushes alongside you back towards the front, 'You come right back when you feel more... capable.'";
 				now lastfuck of Lisa is turns plus 12;
 				stop the action;
@@ -273,11 +273,11 @@ To mousefuck:
 		say "Continue?";
 		if the player consents:
 			increase mousefucked by 1;
-			if cunts of player is 0: [ Have player eat her out ]
+			if player is not female: [ Have player eat her out ]
 				say "'There you are, well, see anything you would like?' the mouse asks you over her shoulder. In the middle of a pile of pillows she sits, coyly looking over her shoulder, her rear prominently on display for you. Eyes wide at the sight, you pad forward, one paw reaching instinctively to rub at that perfect, mousy, rear. 'Have a taste, it won't bite,' she says, breaking you of your trance, making you smile as you lean down. The smell reaches you and, feeling little light headed, you snake out your tongue as you lean into her, lapping at her outer lips.[line break][line break]'Oh yes, that's wonderful dear, right, right, oh yes right there,' she murmurs delightfully as you warm to the task. Working your fingers around her you hold her open as you begin to work your tongue deeper and deeper, delving for the source of the amazingly flavored honey that greets your sense of taste at every lick. As you continue, you find the little places that seem to make her quiver, taking stock of them as it were. Without warning the mouse you begin to play at each of them, changing the order, again and again. All too soon a mousy scream can be heard and your whole face becomes damp with her discharge. 'Oh... oh yes dear, come, let me clean you up,' she urges, helping you into a cuddle as she turns, lapping at your face, 'Let me take good care of you,' she adds with a smile, tongue pausing for just a moment to speak.[line break][line break]";
 			else: [ Have her eat out player ]
 				say "'Well aren't you just a cutie?' the mouse exclaims, seeing you sway slowly into the room. The mouse-taur is watching you from a big pile of pillows in one corner, seeing you notice her she smiles widely, 'Well? Come on over, I don't bite unless you ask nicely,' she says, beckoning you over. An urge, a need, compels you to disrobe for her and in moments every last stitch of clothing is on the floor.[line break][line break]";
-				if cocks of player is 0:
+				if player is not male:
 					say "'Perfect,' the mouse utters, one paw raised and reaching for your own hand, seeming to draw your own up, meeting it, taking it.[line break][line break]";
 				else:
 					say "The mouse wrinkles her nose a little at the sight of your [cock of player] [if cocks of player is 1]member[else]members[end if] but, spying the honey pot below, beckons you closer with an outstretched arm.[line break][line break]";
@@ -306,7 +306,7 @@ When play ends:
 		else:
 			say ".";
 	if HP of Sven is 54 and humanity of player > 9:		[Svetlana endings]
-		if cocks of player > 0:
+		if player is male:
 			say "     Svetlana keeps in touch with you[if mousefucked > 1] as well[end if], even coming to visit you at times when her mistress permits it. It seems Lisa's quite busy with her duties (which are never really elaborated upon), which keeps her from accompanying her pet. Burly guards keep the pink snowmeow safe on these journeys, making you feel that Lisa has become someone of import. You consider asking the pink kitty at times, but her lustful appetite for your attention during these visits always distracts you. You have long, energetic breeding sessions with the kitty, making sure she's well and truly knocked up before letting her leave. She and Lisa won't allow anyone else to breed the pink snowmeow but her brave hero, so you always make sure to do your duty as best and as often as you can during these rare visits.";
 		else:
 			say "     Svetlana keeps in touch with you[if mousefucked > 1] as well[end if], even coming to visit you at times when her mistress permits it. It seems Lisa's quite busy with her duties (which are never really elaborated upon), which keeps her from accompanying her pet. Burly guards keep the pink snowmeow safe on these journeys, making you feel that Lisa has become someone of import. You consider asking the pink kitty at times, but her lustful appetite for your attention during these visits always distracts you. You have long, lustful romps with the kitty, soaking up all the lavish pleasures she's learned on how to please the female body from her mistress during these rare visits.";

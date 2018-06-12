@@ -275,7 +275,7 @@ to say losetofpony:
 	else:
 		say "     Unable to continue resisting the pony's demands for friendship, you drop to your knees as she approaches you";
 	say ". The [if rfponytype is 1]cute equine[else if rfponytype is 2]pegasus[else]unicorn[end if] giggles happily as she bounds up to you putting her forelegs around you and cuddling so tightly it feels like your eyes are going to pop out of your head. After this crushing hug, she fall back on the ground when she releases you.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Spotting your cock, quite hard after that hug left nowhere else for your blood to go, she giggles all the more and licks her lips. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says[if rfponytype is 2 and cock length of player > 10] as her wings stiffen outwards at the sight of it[end if], hopping atop you. She grinds her wet mare's pussy down atop your throbbing rod, stiffening it right back up before it has a chance to get soft. After a little playful grinding between friends, she shifts her hips and pushes herself down onto your shaft, moaning as she takes your [cock of player] penis into her juicy folds[if cock length of player > 20]. Despite your considerable size, she's able to stretch to take you, her plasticky booty stretching wider as your cock plows into her[end if]. Her flanks, marked as they are with [rfponybm], rise and fall over your pulsing member.";
 		say "     She rides you eagerly, her hooves rubbing over your [bodytype of player] body[if rfponytype is 2], her wings aflutter with excitement[else if rfponytype is 3] while glowing magic from her horn lets her grope your balls[end if]. You can feel her hot juices running down your shaft and across your balls as she rides your rod faster and faster. As the happy [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if] squeezes and grinds down hard onto your cock, she smiles and swishes her flowing [rfponycolor2] hair. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her, you cum hard, pumping your hot load into the pleased pony as a fresh rush of hot juices from her soaks your crotch. Once you're drained, she nuzzles your cheek and pulls off[if cock length of player > 20] with a groan[end if].";
 	else:
@@ -296,7 +296,7 @@ to say beatthefpony:
 	say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. ";
 	if nofponysex > 2:
 		say "As with the others of your kind, you [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
-	else if cocks of player > 0:
+	else if player is male:
 		say "As you look over her, your eyes wander back to that rear of her and the juicy pussy under her [rfponycolor2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "     [bold type]Shall you grab those flanks and mount her?[roman type][line break]";
 		LineBreak;
@@ -311,7 +311,7 @@ to say beatthefpony:
 			LineBreak;
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
-	else if cunts of player > 0:
+	else if player is female:
 		say "As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "     [bold type] Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
 		LineBreak;
@@ -346,8 +346,8 @@ When Play begins:
 	now defeated entry is "[beatthefpony]"; [ Text when monster loses. Change 'fpony' as above. ]
 	now victory entry is "[losetofpony]"; [ Text when monster wins. Change 'fpony' as above. ]
 	now desc entry is "[fponydesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "vaguely equine in shape with large, [pfpcock] eyes and a friendly smile. You have a [if cunts of player > 0]pretty little muzzle[else]blocky, square-jawed muzzle[end if] at the end of your pony face. Atop your head you have [if cunts of player > 0]long, flowing hair of [pfphair] in color and made of long, glossy, plastic strands. It always seems to be properly styled[else]a crop of short, [pfphair] made of glossy, plastic strands[end if][if pfptype is 3]. Poking out from your hair is a short, magical horn - though the best you can manage with it is a couple of sparks[end if]";
-	now body entry is "that of a [if cunts of player > 0]slender female[else]stocky male[end if] pony creature with a smooth body and tubular limbs ending in flat and featureless hooves. And while you are still able to stand upright when you try, your normal posture is to be on all fours. Your front hooves strangely seem to be able to still pick up or hold things as if they were hands, though only if you don't think about it too much[if pfptype is 3]. Resting against your back are a small pair of feathered wings that seem far too small to lift you. Your attempts to use them only raise your back up a little[end if]";
+	now face entry is "vaguely equine in shape with large, [pfpcock] eyes and a friendly smile. You have a [if player is female]pretty little muzzle[else]blocky, square-jawed muzzle[end if] at the end of your pony face. Atop your head you have [if player is female]long, flowing hair of [pfphair] in color and made of long, glossy, plastic strands. It always seems to be properly styled[else]a crop of short, [pfphair] made of glossy, plastic strands[end if][if pfptype is 3]. Poking out from your hair is a short, magical horn - though the best you can manage with it is a couple of sparks[end if]";
+	now body entry is "that of a [if player is female]slender female[else]stocky male[end if] pony creature with a smooth body and tubular limbs ending in flat and featureless hooves. And while you are still able to stand upright when you try, your normal posture is to be on all fours. Your front hooves strangely seem to be able to still pick up or hold things as if they were hands, though only if you don't think about it too much[if pfptype is 3]. Resting against your back are a small pair of feathered wings that seem far too small to lift you. Your attempts to use them only raise your back up a little[end if]";
 	now skin entry is "[fpskindesc]";
 	now tail entry is "You have a long and lush tail of [pfphair] hair emerging from a round hole at the base of your spine. Despite being nothing but long strands of glossy plastic, it swishes and moves on its own, drawing attention to your [if player is fponyskinned][one of]equine bottom[or]sexy ass[or]hot flanks[or]booty mark[at random][else][one of]equine bottom[or]sexy ass[or]hot flanks[at random]";
 	now cock entry is "[one of]equine[or]pony[or]horsey[or][pfpcock][at random]";
@@ -420,7 +420,7 @@ to say fponybodychange:
 
 to say fponyfacechange:
 	ponystatuscheck;
-	say "a rush of giddy happiness overtakes you. Your vision goes blurry and - with a pop and pop - your eyes grows much larger than normal. As you're adjusting to this, your head changes as well, becoming vaguely equine in shape, in a very simplistic and stylized sort of way[if cunts of player > 0]. A mane of long, [pfphair] hair grows in atop your transformed head[else]. A crop of short, [pfphair] hair grows in atop your transformed head[end if][if pfptype is 3]. There is a final pop as a short horn suddenly pushes out of your forehead with a few sparkles of color[end if]";
+	say "a rush of giddy happiness overtakes you. Your vision goes blurry and - with a pop and pop - your eyes grows much larger than normal. As you're adjusting to this, your head changes as well, becoming vaguely equine in shape, in a very simplistic and stylized sort of way[if player is female]. A mane of long, [pfphair] hair grows in atop your transformed head[else]. A crop of short, [pfphair] hair grows in atop your transformed head[end if][if pfptype is 3]. There is a final pop as a short horn suddenly pushes out of your forehead with a few sparkles of color[end if]";
 
 to say fpskinchange:
 	ponystatuscheck;
