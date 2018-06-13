@@ -1795,7 +1795,7 @@ to say DoranSub_CuntOral: [Cunt Oral] [BODY MODDED]
 				else:
 					say "     You finally cry out, pussy tightening against the beast's skilled tongue[if player is male or cunts of player > 1] and talons[end if]. With a disciplined determination, [ghe] prolongs your bliss for as long as [ghe] can, [if cocks of player > 1]talons bunching up at your dick's head that [ghe] might lick it clean when [ghe] is concludes with the portal, though [ghe] is not so dexterous that [ghe] can stop some of it from spilling all over the ground[else if cocks of player is 1]talon bunching up at your dick's head that [ghe] might lick it clean when [ghe] is concludes with the portal[else]licking it clean once you conclude[end if].";
 					say "     '[one of]Ah[or]Alright[or]Yes[at random], [one of][DoranPlayerRegard] offers me so much[or]I hope I did [DoranPlayerRegard] proud[or]It was a great pleasure to serve [DoranPlayerRegard][at random].' [gchis] regard punctuation to [ghis] work, you've been cleaned of your prior mess, the [gdragon] pulling away and letting you off, settling back down next to the fire.";
- 			else:
+			else:
 				say "     You finally cry out, pussy tightening against the beast's skilled tongue[if player is male or cunts of player > 1] and talons[end if]. With a disciplined determination, [ghe] prolongs your bliss for as long as [ghe] can, [if cocks of player > 1]talons bunching up at your dick's head that [ghe] might lick it clean when [ghe] is concludes with the portal, though [ghe] is not so dexterous that [ghe] can stop some of it from spilling all over the ground[else if cocks of player is 1]talon bunching up at your dick's head that [ghe] might lick it clean when [ghe] is concludes with the portal[else]licking it clean once you conclude[end if].";
 				say "     '[one of]Ah[or]Alright[or]Yes[at random], [if DoranRoleIntensity is 4][one of][DoranPlayerRegard] offers me so much[or]I hope I did [DoranPlayerRegard] proud[or]It was a great pleasure to serve [DoranPlayerRegard][at random][else][one of]I hope [DoranPlayerRegard] is satisfied[or]I hope [DoranPlayerRegard] enjoyed that as much as I did[or]I think [DoranPlayerRegard]'s [gdragon] is finished here[at random][end if].' [gchis] remark punctuating [ghis] finished work, you've been cleaned of your prior mess, the [gdragon] pulling away and letting you off, settling back down next to the fire.";
 	else:
@@ -2018,7 +2018,7 @@ to say DoranSub_SuckCock: [Oral Giving] [BODY MODDED]
 			say " that taut housing. Barely able to contain [ghis] proud tool, it clearly wishes to be rid of its occupant, curvature of [ghis] sizeable knot felt hiding within these confines for the moment";
 			say "     Your hand gently pumps along the sheath's length, graced with groans from the [gdragon] and the feel of [ghis] tool rising from [ghis] depths, until [ghis] cock is completely rigid and eager. Precum [if DoranBallModStatus > 0]sputtering all over[else]staining[end if] [ghis] torso, it begs for attention.";
 		else:
-			 say " [ghis] eager flesh. Your hand gently traces along its soft, precum-slicked length, causing the dragon to subtly writhe against the tease. The portal strains to squeeze [ghis] tool through its scaled lips, until [ghis] cock is completely rigid and eager. Precum [if DoranBallModStatus > 0]sputtering all over[else]staining[end if] [ghis] torso, it begs for attention.";
+			say " [ghis] eager flesh. Your hand gently traces along its soft, precum-slicked length, causing the dragon to subtly writhe against the tease. The portal strains to squeeze [ghis] tool through its scaled lips, until [ghis] cock is completely rigid and eager. Precum [if DoranBallModStatus > 0]sputtering all over[else]staining[end if] [ghis] torso, it begs for attention.";
 	else:
 		now tempnum is 0;
 		if DoranInternal is false:
@@ -2096,8 +2096,8 @@ to say DoranSub_SuckCock: [Oral Giving] [BODY MODDED]
 				say ". [if DoranRoleIntensity is 4 and DoranBallModStatus is 0]Substantial though [ghis] load is, [ghe]'s trained enough restrained to not overwhelm you, allowing your diminutive form to down the thick, potent seed with little difficulty[else if DoranBallModStatus > 0]Given how diminutive your form is, [ghis] excessive release is simply too much for you to handle, the potent seed almost immediately sputtering from your hole[else]Given how diminutive your form is, you can barely keep up with all of it, [ghis] thick, potent seed quickly sputtering from your hole[end if]";
 			else if DoranBallModStatus > 0:
 				say ". Even as large as you are, it's a challenge to keep up with [ghis] excessive load[if DoranRoleIntensity is 4], though the obedient [gdragon] manages to muster enough restraint to let you savor [ghis] thick, potent seed[else], the [gdragon]'s thick, potent seed soon sputtering from your lips[end if].";
-			   else:
-				   say ". You gulp down [ghis] load with little difficulty[if DoranRoleIntensity is 4], aided by the obedient [gdragon] managing some measure of restraint[end if], allowing you to savor [ghis] thick, potent seed";
+				else:
+					say ". You gulp down [ghis] load with little difficulty[if DoranRoleIntensity is 4], aided by the obedient [gdragon] managing some measure of restraint[end if], allowing you to savor [ghis] thick, potent seed";
 		else:
 			say "     [if tempnum is 2]Substantive balls churning against your touch[else if DoranRP_var1 is 1]Delighting in [ghis] oozing cock[else]Continuing to watch from a distance[end if], it's not long before your continued [if DoranRP_var2 is 1]milking[else]pumping[end if] makes the beast roar out weakly, [ghis] dick[if DoranRP_var2 is 1] and anal ring[end if] throbbing against your hands, spending gout after successive[if DoranBallModStatus > 0], overwhelming[end if] gout against [ghis] face and torso[if DoranSelfBlueballing > 0], its volume exacerbated from [ghis] prior neglect[end if]";
 		say ". Eventually, you pull free of the [gdragon], now a spent and panting mess.";
@@ -3803,7 +3803,7 @@ to say DoranRP_VirileBeast: [Doran RP: The Virile Beast Query]
 		say "     'Alright! Let's get into the finer details. We can open this session two ways. Either with [DoranPlayerRegard] trespassing into my 'territory', or me having implicitly captured [DoranPlayerRegard] and our fun begins just as I'm dragging them back. Yes for trespassing? Else I will assume the latter is true.'";
 		if player consents:
 			say "     'Got it, trespassing it is.'";
-			 now DoranRP_var1 is 0;
+			now DoranRP_var1 is 0;
 		else:
 			now DoranRP_var1 is 1;
 			say "     'Got it, trophy it is.'";
