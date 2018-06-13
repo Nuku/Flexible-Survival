@@ -392,7 +392,7 @@ To impregnate with (x - text):
 	if "Cheerbreeder" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a Football Wolfman child?";
-			if the player consents:
+			if player consents:
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
@@ -405,7 +405,7 @@ To impregnate with (x - text):
 	else if "Chase's Breeder" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a Tiger child?";
-			if the player consents:
+			if player consents:
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
@@ -419,7 +419,7 @@ To impregnate with (x - text):
 	else if "Chris's Breeder Slut" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with an Orc Warrior child?";
-			if the player consents:
+			if player consents:
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
@@ -433,7 +433,7 @@ To impregnate with (x - text):
 	else if "Human Carrier" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a human child?";
-			if the player consents:
+			if player consents:
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
@@ -446,7 +446,7 @@ To impregnate with (x - text):
 	else:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a/an [x] child?";
-			if the player consents:
+			if player consents:
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
@@ -576,7 +576,7 @@ to selfimpregnate:
 		stop the action;]
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be self-impregnated?";
-		if the player consents:
+		if player consents:
 			increase score by 0;
 		else:
 			say "You choose not to accept the seed.";

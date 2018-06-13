@@ -33,7 +33,7 @@ to say sexwithSally:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Her cock.";
 			say "     ([link]N[as]n[end link]) - Her pussy.";
-			if the player consents:
+			if player consents:
 				say "[sallycock]";
 			else:
 				say "[sallypussy]";

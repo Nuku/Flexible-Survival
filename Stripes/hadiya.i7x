@@ -155,7 +155,7 @@ to say sexwithHadiya:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     Hadiya laughs as you admit that getting it in the ass is all you really need and plows into you hard and deep, grinding her knot against your pucker. 'That's my good slut, knows what's best for him - whatever Mistress wants.' You moan and nod, pressing back against her knot as your anus spreads, letting it pop into you, tying you to her. It pulses and throbs inside you as she pumps your cock all the faster. 'Cum for me, you bitch. Show me how much you love it.' You moan happily, finally having her permission to cum and blasting your hot seed across the floor after holding back for so long. With your ass clenching and milking around her cock, she cums soon after, giving you a hot, thick rush of hyena seed that fills your bowels and makes you cum all the more. You are both left panting and leaking as the last of your seed dribbles out. When her knot eventually goes down, she pulls free, pushes you down into the mess of your cum on the floor and flops back into her chair, not bothering to pull up her pants. After such a long, fulfilling, aching pounding, your ass is deliciously sore and you're too weak to get up for some time. Eventually you slink off, making a show of your soreness that has your mistress grinning even as your pussy shrinks down a little.[mimpregchance]";
 				decrease cunt length of player by 2;
@@ -220,7 +220,7 @@ to say sexwithHadiya:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     'That's exactly what I was hoping you'd say.' Immediately, she grabs you and forces your body up against the wall[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63)] of her shack[end if]. Just ramming it there, using her [if scalevalue of player < 4]greater weight[else]not inconsiderable weight[end if] to keep you pinned just in case you change your mind. Soon enough, you start to feel the warm bulge of her arousal grinding up against your rear, pushing and kneading against it while using the pressure to help get her aroused and ready. 'Not much one for foreplay, but I know what I want. And what I want happens to be that tight ass of yours. I'm going to make you my personal little bitch. I want you to come crawling back every time you feel the urge to get fucked. To crave me pounding that tight little rump of yours. To make it fit me like a glove...'";
 			WaitLineBreak;

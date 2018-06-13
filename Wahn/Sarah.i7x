@@ -64,12 +64,12 @@ instead of resolving a Husky Pack:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
 	say "     ([link]N[as]n[end link]) - Demand an explanation what he's doing with the human woman.";
-	if the player consents: [apologize]
+	if player consents: [apologize]
 		say "     You bow low and apologize for bothering them, saying that you will do your best to avoid their territory from now on. Then you turn and start to walk away, hearing one of the huskies call after you, 'You better run, you dumb [if player is female]bitch[else]jackass[end if].' The sound of ripping fabric and a frightened gasp follows and you can't help but look over your shoulder to see what is going on. Looks like the alpha husky decided that he wants to break in his newest pet right here and now - the woman is pressed against the wall of a building now, with him leaning over her and just having ripped her top half off. The red canine shaft standing proudly erect between his legs leaves little to the imagination of what will happen next.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to rescue the woman from her fate.";
 		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";
-		if the player consents: [rescue Sarah]
+		if player consents: [rescue Sarah]
 			LineBreak;
 			say "[SarahRescue]";
 		else: [leave her to them]
@@ -98,7 +98,7 @@ instead of resolving a Husky Pack:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to rescue the woman from her fate.";
 		say "     ([link]N[as]n[end link]) - Accept the situation for what it is and just walk away.";
-		if the player consents: [rescue Sarah]
+		if player consents: [rescue Sarah]
 			LineBreak;
 			say "[SarahRescue]";
 		else: [leave her to them]
@@ -114,7 +114,7 @@ to say SarahLeftSubmissive:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Fight to keep both you and Sarah from this fate.";
 	say "     ([link]N[as]n[end link]) - Submit to the desires of the Alpha Husky.";
-	if the player consents: [Rescue Sarah]
+	if player consents: [Rescue Sarah]
 		LineBreak;
 		say "[SarahRescue]";
 	else: [Total Submission]
@@ -425,7 +425,7 @@ to say SarahTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -853,7 +853,7 @@ to say SarahSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
 				wait for any key;

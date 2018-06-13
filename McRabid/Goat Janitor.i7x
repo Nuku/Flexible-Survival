@@ -37,7 +37,7 @@ to say BeatTheGoatJanitor:
 	say "     Frustrated with fighting the old goat, you body check him with your shoulder after your last blow, sending him tumbling to the ground. He groans weakly as he hits the floor, falling on his side";
 	if libido of player > 29 and player is not neuter:
 		say ". Your blood (and excitement) up after the fight with the surprising spry goat. Shall you take advantage of the opportunity to get some relief?";
-		if the player consents:
+		if player consents:
 			if player is male: [males]
 				say "     The goat glares up at you prone on the ground, 'Can't believe...' He grunts, standing up using his mop as a cane, '...that a dandy like you... beat me.' You narrow your eyes and decide to show this old goat how much of a man you are...";
 				say "     The exhausted janitor realizes your intent too late to do anything as you knock the mop aside and the goat, giving a weak bleat, falls once again to his knees before you. A devilish smirk crosses your features as you grab hold of his horns and grind his face against your balls.";

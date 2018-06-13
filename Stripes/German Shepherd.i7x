@@ -466,7 +466,7 @@ to say gsd_generic_vsex_00:
 					say "[gsd_generic_vsex_04]";
 		else if calcnumber is 0:
 			say "Knock him out: Shall you knock him out so he'll leave you in peace?";
-			if the player consents:
+			if player consents:
 				say "     Grabbing the defeated canine by the scruff of his neck, you slam him to the ground. Already quite worn from the battle, all it takes is a good, solid punch to knock his lights out. He releases a soft groan and passes out, leaving you free to go on your way.";
 				now sextablerun is 1;
 
@@ -565,7 +565,7 @@ to say gsd_special_vsex_00:
 					say "[gsd_special_vsex_05]";
 		else if calcnumber is 0:
 			say "Drive him off: Shall you send the arrogant creature packing?";
-			if the player consents:
+			if player consents:
 				say "     Grabbing the defeated canine by the scruff of his neck, you pull him this way. You call him a 'Bad dog' and otherwise berate him for daring to oppose you. In the end, you push him to the ground hard with your foot and tell him to get out of your sight. He whimpers and slinks away, only daring a few angry barks at you once he's gotten a few dozen meters away.";
 				now sextablerun is 1;
 

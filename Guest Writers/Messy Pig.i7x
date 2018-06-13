@@ -46,7 +46,7 @@ to say beatthepig:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Catch the piggy.";
 		say "     ([link]N[as]n[end link]) - Let the pig go.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You leap atop her, making her squeal loudly. She struggles to pull away, but you manage to keep a grip on the sow and pull out your throbbing pig sticker. With a loud, piggish oink, you thrust your stiff penis into her cunt. She continues to squirm and struggle, but it soon becomes less a matter of her trying to get away as more part of the game of fucking the sow. She squeals and paws at the ground with her hoof-like hands as you thrust into her again and again with your [bodytype of player] form atop her. Your cock throbs inside of her as you drive it in one last time, [if cock length of player > 19]making her belly bulge with your overgrown meat, [end if]pumping your hot cum deep inside of her as your porcine cock seeks to breed this plump sow. When you're finished with her, you give her ass a swat, sending her squealing again as she waddles away quickly, dripping your semen from her well-used pussy as she goes.";
 		else:

@@ -53,7 +53,7 @@ to say beattheplatypus:
 	if libido of player > 40:
 		if player is not neuter:
 			say "     As you look over the platypus, you realize that fun with the pregnant male could be exactly what you need, and the stirring in your groin seems to agree with your assessment.[line break][line break]Do you have some fun with the poor man?";
-			if the player consents:
+			if player consents:
 				say "     You hush the platypus and kiss him firmly on his bill. You whisper in his ear some reassurances, stroking his fur, your hands going down to his belly. A gentle push rocks him gently back into the sand, the soft beach forming a makeshift bed. As you smile and disrobe, the male seems to relax, realizing you don't intend to hurt him.";
 				if player is male:
 					say "     Moving yourself closer to the prone and nude male, you grin, sliding your form over his. Your hands start roaming his belly, feeling the firm eggs shift within, to which the platypus shudders, starting to grow erect, aroused by the feeling of the eggs stretching his belly taut. Squirming underneath of you, his hand starts going to your groin, starting to stroke your shaft lightly, trying to get you as aroused as he is.";

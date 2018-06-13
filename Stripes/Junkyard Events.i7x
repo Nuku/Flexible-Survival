@@ -43,7 +43,7 @@ Instead of resolving a Raiding Party:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Flee.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     Without anywhere worthwhile to hide and watch, you stay in the middle of the path and try to look intimidating. A few seconds later, some goblins come into view dragging something as they laugh cruelly to one another. The trio stops as they notice you just as their burden comes into view. Trapped in a net behind them is a tigress woman dressed in a skimpy outfit with mussed hair. She is largely insensate right now, probably struck by one of the goblins when she started making noise. With you barring their path, the goblin charges to defend their prize.";
 		now goblinfight is 3;
@@ -57,7 +57,7 @@ Instead of resolving a Raiding Party:
 				if goblinfight is 1:
 					say "     With the last goblin fled, you move over to check on the tigress woman. Using the fight as a distraction, she managed to bite through some of the ropes and pulls herself free as you come up. As she stands, you get a better look at her. She is wearing a short, red top and an even shorter, black skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. She has snowy, white fur that covers her bosom and the front of her shapely waist. As she brushes her red hair back into order, you catch sight of the gold earrings in her feline ears and bracelets on her wrists. She growls as she stomps down hard onto the net launcher, smashing it with her feline paw before sending it flying off into the scrapyard.";
 					say "     Looking at you, she grins and runs her paws over her body. 'Well, sweety, that was mighty nice of you. How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile. From the looks of it, it's been used a few times before. As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness. 'No charge this time, sweety,' the feline whore adds, running hir paws over your chest. 'I can show you a real good time. Anything you like,' shi rumbles with a grin, rubbing hir breasts and sheath against you. Shall you accept hir tempting offer?";
-					if the player consents:
+					if player consents:
 						now junknum is 1;
 						[puts Tigress Hooker as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -143,11 +143,11 @@ Instead of resolving a Stray Cat:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			if dirty water is owned and water bottle is owned:
 				say "     You have both dirty water and fresh water. Which will you give him? (Y=dirty, N=fresh)";
-				if the player consents:
+				if player consents:
 					say "[dirtysnow]";
 				else:
 					say "[bottlesnow]";

@@ -248,9 +248,9 @@ carry out BlouseObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -285,9 +285,9 @@ carry out TuxedoObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -322,9 +322,9 @@ carry out SummerObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -387,9 +387,9 @@ carry out SpikedCollarObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -427,9 +427,9 @@ carry out FuzzyCollarObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -467,9 +467,9 @@ carry out NametagCollarObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";

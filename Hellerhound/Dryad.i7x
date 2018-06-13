@@ -30,7 +30,7 @@ To say dryad defeat:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the dryad.";
 		say "     ([link]N[as]n[end link]) - No, not right now.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You move closer to the dryad and thrust your [cock of player] cock into her. To your surprise, you are able to push yourself balls deep inside of the dryad without any effort, and you begin to suspect something is wrong when you start to feel vines creeping along her inner walls. You try to pull out, but they grab hold and draw you all the way in. The dryad murmurs, 'Silly mortal, thinking you could rape me. Well, let me teach you a thing or two.' She leans into you, the vines along her internal walls stroking and milking at your cock insistently.";
 			let bonus be (( Strength of player minus 10 ) divided by 2);
@@ -41,7 +41,7 @@ To say dryad defeat:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Turn the tables back in your favor, and dominate the dryad";
 				say "     ([link]N[as]n[end link]) - Don't resist the dryad, letting her dominate you";
-				if the player consents:
+				if player consents:
 					say "     Straining your muscles against the vines with the use of a tight flex, you are able to break free from their hold. The dryad, sits in shock and fear beneath you, offering little resistance on her part as you place your hands upon her slender hips. Turning her around, so her ass faces towards you, you line your cock up with the syrupy folds of her now leaking snatch. It is obvious, that despite that fact that the dryad is not used to defeat, she seems to be enjoying it. With a pleased smirk, you fully reinstate your dominance over the woman, thrusting your cock balls deep inside of her. Half expecting another vine like assault, your muscles tense in preparation. But another assault doesn't come. Instead, the dryad moans whorishly in pleasure beneath you 'Oh yes!' she shouts at the top of her lungs, 'Who knew morals could... umph' You smirk as a soul crushing orgasm, leaves the dryad unable to finish her previous sentence. Her pussy clenching your shaft tightly, her eyes roll to the back of her head, becoming lidded with a powerful, submissive lust. Responding to that lust, you fuck the dryad with an eager, and undeniable but animalistic vigor. Between the tightness of the dryads cunt, and the sheer sexiness that comes from that fact that you have dominated such a powerful woman, it isn't long before you find yourself burying your load deep inside of her. Feeling you shoot powerful spurts of cum into her pussy, the dryad orgasms once more, before falling exhausted to the ground before you. Tired yourself, you make sure all you items are in order, before taking out an empty bottle from your pack, and filling it to the brink with some of the dryad's cum. After all, who knows when something like that may ever come in handy...";
 					increase carried of dryad cum by 1;
 					infect "Dryad";

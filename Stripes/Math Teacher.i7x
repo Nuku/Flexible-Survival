@@ -62,7 +62,7 @@ to say beatthemathteacher:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
 		say "     ([link]N[as]n[end link]) - Let her go.";
-		if the player consents:
+		if player consents:
 			say "[mathteachsex1]";
 		else:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
@@ -72,7 +72,7 @@ to say beatthemathteacher:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ride her cock.";
 		say "     ([link]N[as]n[end link]) - Let her go.";
-		if the player consents:
+		if player consents:
 			say "[mathteachsex2]";
 		else:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";

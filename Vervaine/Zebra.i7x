@@ -368,7 +368,7 @@ to say ZebraDommingPlayerSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Does the zebra not have time for his slut?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     The stallion takes a step back and shakes his head. 'On second thought, maybe I'll let you suffer a little longer without this,' he says as he grips his cock. He leaves you there, denied the release you wanted so badly.";
 				increase libido of player by 10;

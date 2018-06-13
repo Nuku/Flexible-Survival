@@ -94,7 +94,7 @@ instead of conversing the Kenaz:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     Deciding not to let the offer of free food go by you tell Kenaz that you'd be happy to eat right now. 'Ok. You can go have a seat while I put the food on the makeshift grill I've got setup.' Doing as asked you head over to the only empty table in the room and then look around the fire station while waiting for Kenaz to return. From what you can see Kenaz has kept the place up to code as far as cleanliness goes, however, over by the other side of the garage you notice that the firefighter has blockade the front door of the building off with various pieces of paraphernalia around the station. Your host comes back minutes later with something hot and steaming and you can feel your stomach rumbling from hunger. 'It's not much but I have some soup that we can share. I hope you don't mind chicken noodle.'";
 			WaitLineBreak;
@@ -280,7 +280,7 @@ To say aidKenaz4:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	If player consents:
+	if player consents:
 		LineBreak;
 		say "     Getting two of the other firefighters to help you drag Pertho into the unused backroom of the firehouse you lock the canine terror into the unlit area, much to the feral mutant's distress, and then sigh as you wonder just how such a beautiful day could have gone all to hell. 'Hey.' A hand clasps itself onto your shoulder, making your turn to regard the unfamiliar voice of the person speaking next to you. 'Don't beat yourself up so much. Things like this happen.' What you find, after blinking somewhat, is another Dalmatian, this one with golden brown hair on top of his head, smiling at you imploringly while looking at you with one bright blue and dark brown eye, respectively.";
 		LineBreak;
@@ -307,7 +307,7 @@ To say aidKenaz4:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		If player consents:
+		if player consents:
 			LineBreak;
 			say "     Telling the other that he should have come back here immediately to see about his companions if he went through all the trouble trying to get back into the city in the first place. Mannaz lowers his floppy ears and then faintly whimpers at you at that point. 'I-I know that, but...I was scared. I didn't want to end up like...everyone else here.' You get the feeling that you know what the other was about to say before he paused and rethought over his word choice. 'Hehe, I guess you can't run from destiny or whatever.' Sighing, the other simply shakes his head. 'Anyway, whatever happened with me is not so important as what needs to happen now.' At that the other heads over to the upper area of the firehouse by himself.";
 			say "     Not thinking anymore about the other man you go over to speak with Kenaz. The newly made Dalmatian just so happens to be sitting off by himself while the others are busy talking off to the side. 'Hey, thanks for finding Pertho for me. I really appreciate it.' You give the other man a [']look['] before blinking at him. 'Yeah, I know, but still.' Kenaz shakes his head, his floppy ears going every which a way. 'Anyway, thanks for everything. I'm going to let Pertho out in a minute and then...well some things are going to change around here. They have to at this point.'";
@@ -832,7 +832,7 @@ the scent of OtherDals is "The group of Dalmatians smell like canine firefighter
 
 Instead of conversing the OtherDals:
 	say "     Most of the firefighters spare you little more than a few passing glances as they look you over before going back to what they were doing. While not exactly rude their mannerisms leave much to be desired. However, the others quickly grow excited when Dagaz offers you a spot at their table to play a game of poker with them. Want to play a quick game of Poker? (Y=Yes, N=No)";
-	If player consents:
+	if player consents:
 		say "     Settling your rump into one of the wood chairs at the table you calmly ask the guys what kind of poker they intend to play. Mannaz is the one to say [']Straight['] and you nod to him before watching as Dagaz shuffles, cuts and then deals the cards out. Sweeping the flimsy red backed cards up into your [bodyname of player] hands you look over the spread you have and then up to each of the other three Dalmatians present.";
 		let bonus be (( the Charisma of the player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;

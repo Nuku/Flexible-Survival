@@ -787,7 +787,7 @@ Instead of resolving Dragon Prey:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize.";
 	say "     ([link]N[as]n[end link]) - Struggle to break free.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		let playernum be 10 + charisma of player;
 		if "Haggler" is listed in feats of player, increase playernum by 3;
@@ -852,7 +852,7 @@ instead of trading the super spicy sausage when the current action involves the 
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     Taking out the big, red sausage, you offer it to Christy. Her eyes go wide and she starts to drool just from looking at it. She leans in and takes a big, long sniff of it. 'Mmm... yeah. That smells soooooo good,' she rumbles. She opens her toothy maw, leaning in to get the meaty treat you're holding and, rather than risk your hand, you toss it into her mouth. She snaps her jaws shut and starts chewing it slowly, savoring the burny, burny goodness.";
 		say "     After finishing the large sausage, which is nothing but a tiny snack for the big dragoness, her tummy rumbles. At first you think it's just her hungry for more, but the rumbles continue as the fire in her belly starts to heat up. A deep red glow can be seen at the back of her throat as its noise grows in intensity. Christy starts to moan, at first you think from an upset stomach, but the sound turns out to be one of pleasure.";
@@ -884,7 +884,7 @@ instead of trading the super spicy sausage when the current action involves the 
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes (CV).";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     Licking deeper and fingering the dragon's gooey cumslit, it starts to pull more firmly on your tongue even as it stretches open. Lust-addled by everything that's happened, you don't hold back, pushing deeper to get more. Christy, feeling this new pleasure growing, starts moaning in delight again. You push a forearm into the dragon's cock, only to have it gripped tightly by the urethral passage and pulled in up to the shoulder. This presses your face against the yawning spire and within moments your cum-slathered head is drawn in as well. More and more of you quickly follows, first your shoulders and then chest, waist and hips.";
 			say "     Inside the throbbing, pulsating tunnel, you breathe in the heavy, thick scent of draconic musk. It is all around you now, flooding your senses and keeping you too turned on to think clearly about your current situation; it just feels too erotic to resist. Your arousal grows further as the slick flesh of his cock moves across your hips and groin. By this point, you're also moving deeper into her, part of you having moved from her penis and into her lower body. As you pass by her throbbing prostate, the dragon's moans grow louder and more musky fluid is leaked onto you.";
@@ -1090,7 +1090,7 @@ to say maleChristysex:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Suck him off.";
 			say "     ([link]N[as]n[end link]) - Get fucked.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[mchristy_oral0]";
 			else if player is female:

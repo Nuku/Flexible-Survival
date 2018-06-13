@@ -207,7 +207,7 @@ to say PericlesTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
 				wait for any key;
@@ -277,7 +277,7 @@ to say PericlesSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and decide against sexing up the buff Spartan leader.";
 				wait for any key;

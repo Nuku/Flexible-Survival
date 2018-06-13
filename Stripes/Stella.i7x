@@ -32,7 +32,7 @@ Instead of resolving a Eager Dal:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[convincestella]";
 		else:
 			say "     You decide against it and stay mum. After a few more minutes of chatting, the dalmatian herm gives a chipper farewell and goes off in search of fun elsewhere.";
@@ -55,7 +55,7 @@ to say convincestella:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "     You and Stella travel together to the Police Station[if HP of Alexandra < 57]. She and Alexandra don't really hit it off that well, but the Doberwoman does promise to help keep her safe[else]. She and Alexandra don't really hit it off, but she finds Jimmy absolutely adorable in his little outfit. Jimmy seems quite captivated by her plump sh... ahhh... cute smile[end if]. Once introductions are done, she flops out on one of the bunks with a happy sigh, paw going to her cock.";
 				move Stella to Police Lockerroom;
 				move player to Police Lockerroom;

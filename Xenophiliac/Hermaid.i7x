@@ -33,7 +33,7 @@ to say beattheHermaid:
 	WaitLineBreak;
 	if a random number between 40 and 120 < libido of player:
 		say "     The beautiful sea creature looks to have let her guard down, and the battle has awakened some primal urges within you. Do you act on them?";
-		if the player consents:
+		if player consents:
 			say "     You wrap your arms around the beautiful creature, holding her tightly, and blocking off any chance of escape. She jumps at the sudden contact and looks at you in fear. When she notes the lustful look in your eyes, however, she smiles seductively at you, and runs her hands sensually over your body.";
 			WaitLineBreak;
 			if player is purefemale:

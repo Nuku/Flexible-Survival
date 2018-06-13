@@ -9,7 +9,7 @@ the sarea of Gill Fruits Tree is "Beach".
 Instead of resolving a Gill Fruits Tree:
 	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "Do you wish to pick some?";
-	if the player consents:
+	if player consents:
 		increase carried of gill fruit by 1;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
 		now gill fruits tree is resolved;
@@ -60,7 +60,7 @@ the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon."
 to say sea dragon cum use:
 	if player is female:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
-		if the player consents:
+		if player consents:
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "Feral Sea Dragon";
 			else:

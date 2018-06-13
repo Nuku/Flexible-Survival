@@ -29,11 +29,11 @@ to say FoulS_Desc:
 to say FoulS_PlayerVictory:
 	say "     Landing a heavy hit straight to the creature's head, pushing it back and slamming it into the ground. Letting out a mournful scream as he falls to the ground, the Foul Scuttler slams to the ground, hurt and exhausted from the long fight you both just engaged in.";
 	say "     Feeling a familiar lustful sensation flowing through your veins, you consider having some fun with the mutated beast. Do you?";
-	if the player consents:
+	if player consents:
 		if player is purefemale:
 			say "     Walking up to the defeated creature, you take a moment to run your eyes over its unnerving form. You consider for a moment if you really want to indulge yourself with this creature's 15-inch cock, but as lust continues to build throughout you, you quickly disregard those thoughts and remove your clothes, setting them aside. The creature watches you intently, its wriggling cock beginning to protrude from beneath its large mass; both of you know what's coming next. Rolling the creature onto its rough, ridged back, it begins to pant heavily as you decide what to do with it. Grasping the Foul Scuttler's twitching, tentacled cock, you take a moment to run your hand along its shaft, feeling the quivering nubs massage your hand as the tentacled head wiggles wildly. You consider how pleasurable it would be to have this monstrous shaft in your cunt, or you could suck the creature off, taking its load straight into your stomach. (Y for cunt, N for mouth)";
 			LineBreak;
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[FemaleOuterWin]";
 			else:
@@ -42,7 +42,7 @@ to say FoulS_PlayerVictory:
 		else if player is herm:
 			say "     Walking up to the exhausted Scuttler, you stop a moment and think to yourself whether or not indulging yourself with this beast is truly a good idea. Your concerns are quickly thrown to the wayside by your rising lust, your [if cocks of player is 1]cock[else]cocks[end if] rapidly hardening at the thought of taking this creature's massive shaft. Rapidly removing your clothes, you throw them to the side as you push the creature onto his back. Growling angrily, the beast flails uselessly as it tries to right itself, but this is soon stopped when you grab the creature's drooping cock. The growl turns into a yelp of pleasure, the cock in your hand quickly hardening as you slowly rub your hand over the quivering shaft. Looking at the panting beast below you and the freakish cock currently in your hand, you figure that having this rod in your cunt would be an amazing experience, or you could take a straight injection of beast-seed down your throat, taking a snack for the road. (Y for cunt, N for mouth)";
 			LineBreak;
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[HermOuterWin]";
 			else:
@@ -51,7 +51,7 @@ to say FoulS_PlayerVictory:
 		else if player is not female and player is male:
 			say "     Approaching the defeated Scuttler cautiously, you wonder if fucking this beast is really a smart idea. You consider stopping for a few moments, but your hardening [if cocks of player is 1]cock[else]cocks[end if] get the best of you, and you quickly strip down, setting your clothes aside. Walking up to the beast, you use all your strength to roll the beast onto its back, and taking a look at what it's packing. The Foul Scuttler growls angrily at your rough treatment, but does not attempt to resist, curious at what you're doing with it. Hoisting yourself onto the creature's chest, you grab its mutant cock and begin rapidly stroking the beast to hardness, eliciting happy yelps from the mutant beast below you. Seeing as though the beast does not have any openings you could use, you figure that taking his beastly cock in your ass would be your best bet at getting off. Alternatively, you could go down on the beast, sucking him off and taking his load for yourself. (Y for ass, N for mouth)";
 			LineBreak;
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[MaleOuterWin]";
 			else:
@@ -60,7 +60,7 @@ to say FoulS_PlayerVictory:
 		else:
 			say "     Cautiously approaching the exhausted beast, you consider that fucking this strange creature may not be the best of ideas. The feeling of arousal building in your [bodytype of player] figure rapidly removes those concerns, your clothes swiftly removed and thrown to the side. You quickly push the fallen beast onto its back, the Scuttler yelping weakly and flailing about uselessly. Grabbing the beast's forearm-length shaft gently, you quickly reduce the angered beast to pleasured grunts and yelps as you languidly stroke the beast to full arousal; soon enough, the beast's thick cock is standing rigid in the damp air of the underground tunnels. Taking a look at the beast, you eventually come up with two options; you could ride this creature's monstrous shaft with your rear, or you could go down on the panting beast. (Y for ass, N for mouth)";
 			LineBreak;
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[NeutOuterWin]";
 			else:

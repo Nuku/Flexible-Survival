@@ -87,7 +87,7 @@ to say beatthejaguar:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride that cock.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
-			if the player consents:
+			if player consents:
 				say "[jagride]";
 			else:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
@@ -103,7 +103,7 @@ to say jagride:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get fucked.";
 	say "     ([link]N[as]n[end link]) - Suck him off.";
-	if the player consents:
+	if player consents:
 		say "     Focusing yourself on your original goal, you pull your head back and climb atop him. Getting your ass overtop of his slick prick, you lower yourself down onto it with a moan of pleasure with your defeated foe echoes. As you settle down into his lap, you run your hands through his rough fur, enjoying the feeling of having that feline cock stuffed inside your [if player is female]cunt[else]anus[end if]. You start riding up and down the kitty's meat, working to get the strong feline to cum for you[if cocks of player is 1]. You bring a hand to your cock and stroke it while stuffing yourself over and over with the jaguar's[else if cocks of player > 1]. You bring your hands to your cocks and stroke them while stuffing yourself over and over with the jaguar's[else if cunts of player is 1]. You bring your hand to your clit and rub it vigorously while stuffing yourself over and over with the jaguar's cock[else if cunts of player > 1]. You bring your hand to your clits and rub them vigorously while occasionally alternating which dripping pussy you have the jaguar's cock fill[else]. You knead your paws into the strong feline's fur as you stuff yourself over and over with the jaguar's cock[end if]. After a nice, enjoyable ride on the feline's hard manmeat, you smile as he groans and his penis twitches inside you, blasting hot spurts of jaguar cum into you[if player is not neuter], giving you a wonderful orgasm in response[end if]. Once his balls are drained and his prick has softened, you ease yourself off of him, dripping some cum from your well-used hole and feeling much better for it.[impregchance]";
 	else:
 		say "     Liking your new plan better, you knead and rub his ballsack while your lips and tongue work up and down his throbbing cock. Your unconscious foe moans in pleasure and leaks more precum. It has a strong taste, virile and arousing, that makes you want more. You bob your head up and down while lavishing attention upon the kitty's cock and eventually earning your reward. The jaguar releases another growling moan and his cock pulses in your mouth, sending shot after shot of his thick seed onto your tongue. Like his pre, it has a strong taste, but not unpleasantly so, speaking of the powerful feline's virility and strength as a breeder[if cunts of player is 1]. Your cunt quivers in response and you find yourself longing to have him fill your needy puss next time[else if cunts of player > 1]. Your cunts quiver in response and you find yourself longing to have him fill your needy pussies next time[else]. You find yourself longing to take his meaty cock into you next time as you'd originally planned[end if]. Licking your lips as you enjoy the lingering traces of his taste in your mouth, you get up and leave the unconscious and spent kitty there.";

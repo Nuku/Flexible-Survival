@@ -194,7 +194,7 @@ to say BeatenOrcSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You just walk away after checking him over for loot.";
 				WaitLineBreak;

@@ -20,7 +20,7 @@ Instead of resolving a Quiet Apartment Building:
 		say "[mouseapts]";
 	else:
 		say "     The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors. Shall you follow your hunch and go in to search the place?";
-		if the player consents:
+		if player consents:
 			say "[mouseapts]";
 		else:
 			say "     Deciding against it and suddenly wary of this impulse to enter the building, you back away quickly. You catch sight of some small mice looking from the windows as you back away. Again, you feel that call to go inside and quickly turn and run, wanting to get some distance between you and the strange mice who tried to lure you in.";
@@ -44,7 +44,7 @@ to say mouseapts:
 			say "     Shifting onto your side, you rest one leg against the back of the couch and drape the other down, offering up your dripping pussy to her. She smiles as another mouse, sensing your intent, spreads your wet folds for you and third guides Rachel's cock into you. You both squeak in delight as she pumps into you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your womb.[impregchance]";
 		else:
 			say "     Eyeing her eight inch, throbbing manmeat, you can sense her mind, the collective mind, seeking how you'd prefer to enjoy it. Shall you suck her off (Y) or stretch out and let her fill your ass (N)?";
-			if the player consents:
+			if player consents:
 				say "     Sensing your desires, the mouse slides herself back up your body, bringing her throbbing cock to your mouth. You wrap your lips around it and start sucking. She rocks her hips, thrusting into your mouth, already very close. You can feel another mouse at your cock, licking and sucking it clean while a third moves in behind Rachel to lap at the cum leaking from her cunt. Sharing in all this soon gets to be too much and you cum again as Rachel blasts her seed down your throat while you feed another load to that helpful mouse sucking you off.";
 			else:
 				say "     Sensing your desires, the mouse slides back and helps you roll onto your front. Another helpful mouse spreads your ass cheeks for her, Giving her a good view of your tight pucker as another guides her cock into position for a nice, smooth entry into you. You groan softly, but are filled with pleasure at having her cock slowly stuffing your backside. She runs her paws over your back as starts pounding away at you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your bowels.[mimpregchance]";
@@ -225,7 +225,7 @@ to say RachelTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the mouse girl, shaking your head slightly as she gives a questioning look.";
 				wait for any key;

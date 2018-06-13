@@ -1099,7 +1099,7 @@ instead of conversing the Brennan:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bearded man, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -1714,7 +1714,7 @@ to say BrennanSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bearded man, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -2181,7 +2181,7 @@ to say WolfRepeatThreesomeSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind and leave?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bed, shaking your head slightly as Brennan gives a questioning look, then leave the room.";
 				wait for any key;

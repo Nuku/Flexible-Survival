@@ -59,7 +59,7 @@ Instead of resolving Unusual Creature:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Just tell her to follow you.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
 				now battleground is "void";
@@ -147,7 +147,7 @@ instead of conversing the Susan:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You do agree to be the little herm's mate.";
 			say "     ([link]N[as]n[end link]) - You think the doe and you should see other people.";
-			if the player consents:
+			if player consents:
 				if "Female Preferred" is listed in feats of player:
 					say "     She sniffs you with some concern, 'Oh dear, uh, pun not intended. You simply cannot be my stag. I can smell it. So I will be the stag.' She playfully slaps your ass and gives you an impish smile. Warm tingles sweep over your form as change is felt building. 'Go talk to the doctor. I will wait for you.'";
 					deerfy;
@@ -321,7 +321,7 @@ to say SusanSexMenu:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the deer making her sigh with neediness.";
 				wait for any key;
@@ -414,7 +414,7 @@ to say Susanlabcoatscene:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her take you.";
 		say "     ([link]N[as]n[end link]) - Be the buck.";
-		if the player consents:
+		if player consents:
 			now x is 1; [accept]
 		else:
 			now x is 0; [refuse]
@@ -570,7 +570,7 @@ to deerfy:
 		infect "Deer";
 		if "Microwaved" is listed in feats of player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
-			if the player consents:
+			if player consents:
 				say "Ok.";
 				follow the sex change rule;
 			else:
@@ -585,7 +585,7 @@ to deerfy:
 		infect "Deer";
 		if "Microwaved" is listed in feats of player:
 			say "WARNING: Sex altering nanites detected! Allow?";
-			if the player consents:
+			if player consents:
 				say "Ok.";
 				follow the sex change rule;
 			else:

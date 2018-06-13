@@ -407,7 +407,7 @@ to say badAlexandrasex:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the doberwoman bitch, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -620,7 +620,7 @@ Part 3 - Event Scenes w/Fang
 to say badAlexandraFang0:
 	say "     You catch sight of Alexandra and Fang over by the door to the library. While she's on guard, he's sniffing around her with obvious interest. She acts like she's unaware of his attention, but you can see her tail wagging excitedly as he noses between her legs. When his teeth catch onto the seat of her jeans and start tugging on them, she unzips them and starts squirming out of them, moving onto all fours. 'That's right, you big, bad wolf. You've found yourself a juicy bitch,' she barks.";
 	say "     Shall you [link]enjoy the show (Y)[as]y[end link] as your two guards become better acquainted or do you object and [link]break them up (N)[as]n[end link], preferring to keep the Doberwoman all for yourself?";
-	if the player consents:
+	if player consents:
 		say "     Moving into a better position to watch the show, you smile at Alexandra as she wags her rear invitingly for the feral wolf. Requiring no more coaxing, he pounces atop the dog woman and drives his cock into her with a lustful growl. She moans and pants as he shifts position and starts fucking away at your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
 		say "[badAlexandraFang1]";
 	else:
@@ -757,7 +757,7 @@ to say badAlexandraSarah0:
 	say "     'Well, maybe,' she replies with a sly grin and a rub on the husky's head. 'How about you show me a little of what you've been teaching them?' Alexandra sits down on Sarah's cot, scooting in close to her and runs her paws over your husky slut's body, sending shivers of pleasure through her.";
 	say "     Clearly excited, she can't help but respond and reach out for the Doberman's sexy body. 'Mmm... that sounds like fun, but I don't know. I belong to Master. Would Master be okay with us playing together?'";
 	say "     Alexandra sinks a pair of fingers into the husky's pussy while turning her head in your direction with the other paw. 'The boss's been watching us for a while. Wanting to see if we'll make out, I expect. What do you say, boss? You want your bitch sluts to put on a show for you?'";
-	if the player consents:
+	if player consents:
 		say "     Having been spotted, you move to an open bunk in clear view of them. With a grin and a little wave, you motion for them to resume their fun, which they do enthusiastically. Alexandra pushes Sarah onto her back with a firm shove and, while fingering the husky's sopping pussy, she kisses her new friend. Sarah moans and barks, descending into her slutty pet role as the more aggressive female manhandles her. Alexandra squeezes the horny husky's large breasts, causing some milk to leak out as she whimpers. Seeing this, she grins and presses her muzzle to the leaking nipple, taking a sample of your pet's milk.";
 		say "     During this rough groping and molestation by the Doberman, the husky girl strips the clothes off her fellow bitch while panting and moaning in enjoyment like the horny, submissive pet she is. And once nude, Alexandra sits up and grabs the husky's head, pressing her muzzle between her thighs to the Doberwoman's juicy muff. 'Mmm... get licking, honey. I'm top bitch around here and you need to show me what you've been teaching those pups of yours.'";
 		say "     The husky girl's tail wags excitedly and she gives right in, her canine tongue slathering across Alexandra's juicy pussy in long, slow licks before diving deep into her. As you watch, she does her best to please her new tough friend and fellow bitch fucktoy, tongue agilely pleasuring the horny canine's cunt and even diving back to lick across her asshole a few times. She tries her best to ensure you have a good view of the action, but at times, her enthusiasm for it gets the better of her. But even though you can't always see it, you can tell she's giving it her all and the Doberwoman responds loudly and lustfully as she's eaten out by the horny slut, cumming several times.";
@@ -1007,7 +1007,7 @@ to say alexandratalk_gg_menu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the doberwoman bitch, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -1083,7 +1083,7 @@ to say alexandra_supplies:
 		say "     'I've started turning the police station into a defended shelter for those who need it, but we'll need some supplies for those too weak or scared to forage. Also, if we've already got a good stockpile, it'll be easier to convince people to come here. I'm sorry to trouble you with this, but I'd really appreciate it if you could scavenge some extra supplies for me. I've already started, but another six meals and six days worth of fresh water would really help.'";
 		if carried of food >= 6 and carried of water bottle >= 6:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon.' She gives you a quick kiss on the cheek, then realizes what she's done. 'Ah... umm...' She blushes at her ears and scoops up the supplies clumsily, hurrying off toward the storage lock-up. There is a hint of canine arousal in the air after her departure.";
 				decrease carried of food by 6;
 				decrease carried of water bottle by 6;
@@ -1095,7 +1095,7 @@ to say alexandra_supplies:
 				now sextablerun is 0; [continued talking allowed]
 		else if carried of food >= 6:
 			say "     Having the food supplies she needs already in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
 				decrease carried of food by 6;
 				increase score by 10;
@@ -1106,7 +1106,7 @@ to say alexandra_supplies:
 				now sextablerun is 0; [continued talking allowed]
 		else if carried of water bottle >= 6:
 			say "     Having the water supplies she needs already in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
 				decrease carried of water bottle by 6;
 				increase score by 10;
@@ -1123,7 +1123,7 @@ to say alexandra_supplies:
 		say "     'I was wondering if you'd had any luck finding those supplies we'll need here. Like I said, I could use another 6 food and 6 water rations to improve the stockpiles I've got. Did you manage to find what I need?'";
 		if carried of food >= 6 and carried of water bottle >= 6:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon.' She gives you a quick kiss on the cheek, then realizes what she's done. 'Ah... umm...' She blushes at her ears and scoops up the supplies clumsily, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
 				decrease carried of food by 6;
 				decrease carried of water bottle by 6;
@@ -1134,7 +1134,7 @@ to say alexandra_supplies:
 				now sextablerun is 0; [continued talking allowed]
 		else if carried of food >= 6:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
 				decrease carried of food by 6;
 				increase score by 10;
@@ -1144,7 +1144,7 @@ to say alexandra_supplies:
 				now sextablerun is 0; [continued talking allowed]
 		else if carried of water bottle >= 6:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
 				decrease carried of water bottle by 6;
 				increase score by 10;
@@ -1159,7 +1159,7 @@ to say alexandra_supplies:
 		say "     'I was wondering if you'd had any luck finding those supplies we'll need here. Thanks again for the food you brought, but like I said, I could use another 6 water rations to improve the stockpiles I've got. Did you manage to find what I need?'";
 		if carried of water bottle >= 6:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
 				decrease carried of water bottle by 6;
 				increase score by 10;
@@ -1174,7 +1174,7 @@ to say alexandra_supplies:
 		say "     'I was wondering if you'd had any luck finding those supplies we'll need here. Thanks again for the water you brought, but like I said, I could use another 6 food rations to improve the stockpiles I've got. Did you manage to find what I need?'";
 		if carried of food >= 6:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
-			if the player consents:
+			if player consents:
 				say "     The doberwoman smiles happily, a canine grin on her face. 'I knew I could count on you. Thanks a lot, hon. Ah... umm...' She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up. There is a hint of canine arousal in the air after her departure.";
 				decrease carried of food by 6;
 				increase score by 10;
@@ -1188,7 +1188,7 @@ to say alexandra_supplies:
 	else if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned:
 		say "     'I was thinking we should have some medical supplies here in case of emergencies. I figured I'd go check out the city hospital to get them. I'll be heading out there shortly. Did you want to come along? I should be fine, but the help would be appreciated if you're free.'";
 		say "     Shall you accompany the doberwoman on her scavenging expedition?";
-		if the player consents:
+		if player consents:
 			say "[paula_rescue]"; [See Paula.i7x for rescue and NPC content]
 		else:
 			say "     Stating that you have other things to deal with, you leave her to go on her expedition. Trusting her to be able to handle herself, she doesn't disappoint, returning a few hours later with some medkits and other medical supplies. She seems a little worn out, but in good spirits for her success at finding the items in an examination room.";
@@ -1208,7 +1208,7 @@ to say alexandra_gshep:
 		say "     The two of you head off together and make your way to the convenience store they've turned into their temporary HQ without incident. As you get close, you make an excuse of telling Alexandra to wait outside on the opposite corner while you let them know she's here. In reality, you just want to tell Buster so he can make sure his horny dogs don't get too frisky with the visiting doberwoman. From there, the crashed vans also largely block the view of the interior of the corner store beyond.";
 		WaitLineBreak;
 		say "     And it's a good thing you did, though for reasons far greater than you'd anticipated. Several of the officers, Buster included, are in the midst of what appears to be some kind of team-building orgy. Several of the canines, already spent, are sitting and watching on as the last few are fucking like dogs in heat. While Alexandra could handle them going around half-nude and grabbing each other's butts, this would probably be too much for her to accept from fellow officers. You'll have to do something and quick - will you try to [link]break it up (N)[as]n[end link] or [link]join in (Y)[as]y[end link] with the intent on getting the last few dogs finished fast.";
-		if the player consents:
+		if player consents:
 			setmonster "German Shepherd";
 			choose row monster from the table of random critters;
 			say "     Perhaps it's the sight and scent of canine sex, but your brain decides that speeding the sex romp to completion is the best solution. It certainly seems like the funnest solution. Feeling pressed for time, you tell Buster that he's going to have a [']surprise inspection['] in a few minutes and to get the others cleaned up while you help the others complete their team-building project.";
@@ -1310,7 +1310,7 @@ to say goodAlexandrasex:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the doberwoman bitch, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -1882,7 +1882,7 @@ to say alexandra_repairs:
 				say ". Lacking any genitals for the corgi to play with, you're forced to decline as well. The little guy seems briefly disappointed, but perks back up soon enough.";
 			else:
 				say ". Shall you do so?";
-				if the player consents:
+				if player consents:
 					if player is male and anallevel > 1:
 						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms. As you kiss the cute corgi, Alexandra politely excuses herself until you two are done. Kneading his ass with one hand, you guide your cock under his tail with the other. The little guy moans softly and his tail wags excitedly. Easing him down slowly, you let your [cock of player] cock pop into his tight tailhole[if cock length of player > 15]. Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[else if cock length of player > 7]. Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[else]. Your [cock size desc of player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
 						say "     You bounce the cute fellow easily up and down your cock. He pants and moans as you fuck his ass. His own canine cock throbs against your belly, the six-inch red rod spurting precum onto it with every press of your penis against his prostate. As his excitement builds, his knot swells up and soon he's spurting dog cum across the both of you with a cry of ecstasy. Feeling him clamp down around your shaft, you push deep into him one last time and cum, pumping your [cum load size of player] load into the happy doggy.";
@@ -1968,7 +1968,7 @@ to say A_Task53:	[Patrols]
 to say alexandra_patrol:
 	say "     'Actually, I was thinking it was about time to go on patrol again. I don't want any sex-crazed mutants getting too comfortable coming near here, [if population of Police Station > 0 or ( the number of policed people + the number of lockered people > 6 )]especially now that we've got several survivors living here[else]especially once more survivors start hearing about this place and showing up[end if]. While it'd certainly be safer for both of us to go together,' she says, her stubby tail wagging a little at the prospect, 'there shouldn't be any real problem. One of us should stay here on guard. Did you want to patrol around the area?";
 	now fightoutcome is 100;
-	if the player consents:
+	if player consents:
 		now inasituation is true;
 		say "     Alexandra wishes you good luck. 'I'll see you when you get back,' she says. You head out in the neighboring city and wander the area surrounding the station on the lookout for trouble";
 		if HP of Alexandra >= 63 and a random chance of 1 in 3 succeeds and at_patrol_01 is false:

@@ -43,7 +43,7 @@ to say beatthetrashcoon:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now notrashcoonsex is 0;
 			say "     Eying the horny coon, you decide to give in to your urges. Tossing aside your gear, you pounce onto her bulky body and kiss her passionately. A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";

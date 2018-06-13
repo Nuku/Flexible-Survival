@@ -49,7 +49,7 @@ Check researching:
 Carry out researching:
 	say "[description of noun]";
 	say "[line break]Begin?";
-	if the player consents:
+	if player consents:
 		now current of nerd is noun;
 		say "You begin researching [noun].";
 	else:

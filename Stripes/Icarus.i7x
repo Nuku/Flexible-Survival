@@ -416,7 +416,7 @@ to say icarussex5_ap:		[uncontrolled avian sex]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let your wild impulses do as they will.";
 		say "     ([link]N[as]n[end link]) - Rein in your instincts.";
-		if the player consents:
+		if player consents:
 			say "[icarussex5_ap_x]";
 		else:
 			say "[icarussex5_ap_s]";
@@ -474,7 +474,7 @@ to say icarussex5_fel:		[uncontrolled feline sex]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let your wild impulses do as they will.";
 		say "     ([link]N[as]n[end link]) - Rein in your instincts.";
-		if the player consents:
+		if player consents:
 			say "[icarussex5_fel_x]";
 		else:
 			say "[icarussex5_fel_s]";
@@ -533,7 +533,7 @@ to say icarussex6_ap:		[violent avian sex]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
-			if the player consents:
+			if player consents:
 				say "     As you resume fucking the overfull bird, he groans wetly and tries to squirm, but he's so full and too well pinned that he can hardly move. Keeping his ass raised and his head pressed down so you and pound his feathery ass caused the load already in there to continue to well up from his beak in a growing pool. With him stuffed so full, he makes for a wonderfully padded and squishy little birdie to fuck. Knowing that it is your own seed that's turned him into a cum-filled fucktoy makes it all the better.";
 				say "     When you climax again, pumping another [cum load size of player] load into him, the leaking cum flowing from his mouth becomes a gush of thick, white goo pouring from his gasping beak. His taloned hands claw at the floor and his pinned wings try to flutter as he struggles for breath. His wet gurgles fill the attic as the only thing he can manage to breathe in is your semen, filling his lungs and drowning him in your virile output. His eyes are wide and his squirming becomes frantic, but you don't let up, clamping his beak tight and preventing him for pulling in air. Eventually he grows weak and passes out from lack of oxygen with a final, gurgling sigh. The pulsing of your rod pumping your seed into him doesn't stop until the beating of his heart has stopped as well.";
 				say "     When you pull out and your hot cum continues to leak out of him from both ends, you can't help but grin, perversely delighted at having proven your virility in such a grisly manner. You spread the sheet over him, though it does little to cover the extensive mess you've made. That done, you leave his lifeless body there, distended and leaking cum into the ever-growing pool and soaking his death shroud.";
@@ -550,7 +550,7 @@ to say icarussex6_ap:		[violent avian sex]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
-			if the player consents:
+			if player consents:
 				say "     As you resume fucking the overfull bird, he groans wetly and tries to squirm, but he's so full and tightly held that he can hardly move. Forcing him to start bouncing in your lap again, his already overfull belly sloshes from all the cum filling him. With him stuffed so full, he makes for a wonderfully padded and squishy little birdie to fuck. Knowing that it is your own seed that's turned him into a cum-filled fucktoy makes it all the better.";
 				say "     When you climax again, pumping another [cum load size of player] load into him, the fresh rush of cum makes him swell more and more. His belly grows rounder and rounder with every pulse of your cock. Releasing his arms, you grab onto his belly so you can keep his bloated body from falling off your rod until you're done. He gurgles wetly as some of your seed wells up from his beak, but most of it stays inside his increasingly strained belly.";
 				say "     Eventually, he can't take the strain any longer and his stomach bursts. Blood, guts and loads of cum pour from his torn abdomen, spilling out across the floor. He gives a cry that is in part one of pain, but also of relief at the pressure finally releasing. As the life leaks out of his body, you pull him off your still spurting rod and dig your beak into his torn belly, dining upon his cum-stained viscera even as he watches until the light fades from his eyes and his head slumps down. You enjoy a few last bites before leaving the rest.";
@@ -605,7 +605,7 @@ to say icarussex6_fel:		[violent feline sex]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
-			if the player consents:
+			if player consents:
 				say "     As you resume fucking the overfull bird, he groans wetly and tries to squirm, but he's so full and too well pinned that he can hardly move. Keeping his ass raised and his head pressed down so you and pound his feathery ass causes the load already in there to continue to well up from his beak in a growing pool. With him stuffed so full, he makes for a wonderfully padded and squishy little birdie to fuck. Knowing that it is your own seed that's turned him into a cum-filled fucktoy makes it all the better.";
 				say "     When you climax again, pumping another [cum load size of player] load into him, the leaking cum flowing from his mouth becomes a gush of thick, white goo pouring from his gasping beak. His taloned hands claw at the floor and his pinned wings try to flutter as he struggles for breath. His wet gurgles fill the attic as the only thing he can manage to breathe in is your semen, filling his lungs and drowning him in your virile output. His eyes are wide and his squirming becomes frantic, but you don't let up, clamping his beak tight and preventing him from pulling in air. Eventually he grows weak and passes out from lack of oxygen with a final, gurgling sigh. The pulsing of your rod pumping your seed into him doesn't stop until the beating of his heart has stopped as well.";
 				say "     When you pull out and your hot cum continues to leak out of him from both ends, you can't help but grin, perversely delighted at having proven your virility in such a grisly manner. You spread the sheet over him, though it does little to cover the extensive mess you've made. That done, you leave his lifeless body there, distended and leaking cum into the ever-growing pool and soaking his death shroud. As you make your exit, you purr softly while licking your paws clean and grooming the tell-tale bloody cum from your face.";
@@ -622,7 +622,7 @@ to say icarussex6_fel:		[violent feline sex]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
-			if the player consents:
+			if player consents:
 				say "     As you resume fucking the overfull bird, he groans wetly and tries to squirm, but he's so full and tightly held that he can hardly move. Forcing him to start bouncing in your lap again, his already overfull belly sloshes from all the cum filling him. With him stuffed so full, he makes for a wonderfully padded and squishy little birdie to fuck. Knowing that it is your own seed that's turned him into a cum-filled fucktoy makes it all the better.";
 				say "     When you climax again, pumping another [cum load size of player] load into him, the fresh rush of cum makes him swell more and more. His belly grows rounder and rounder with every pulse of your cock. Releasing his arms, you grab onto his belly so you can keep his bloated body from falling off your rod until you're done. He gurgles wetly as some of your seed wells up from his beak, but most of it stays inside his increasingly strained belly.";
 				say "     Eventually, he can't take the strain any longer and his stomach bursts. Blood, guts and loads of cum pour from his torn abdomen, spilling out across the floor. He gives a cry that is in part one of pain, but also of relief at the pressure finally releasing. As the life leaks out of his body, you pull him off your still spurting rod and dig your muzzle into his torn belly, dining upon his cum-stained viscera even as he watches until the light fades from his eyes and his head slumps down. You enjoy a few last bites before leaving the rest.";
@@ -642,7 +642,7 @@ to say icarussex6_fel:		[violent feline sex]
 		if icarus_cbt is 2:
 			say "find yourself quite tempted to dig into the bird's succulent loins to sate your dark desires. Shall you do so?";
 			say "[bracket]Warning: Gory CBT content ahead.[close bracket][line break]";
-			if the player consents:
+			if player consents:
 				now x is 1;
 			else:
 				say "     Pulling off his pulsing rod, you point your muzzle a little higher. Digger your claws in deeper, you bite into his abdomen. You tear his entrails from his belly and start feasting on them as the weak bird cries out in simultaneous pain and delight. The scents of blood, fear and arousal get thicker in the air as your terrified prey struggles in vain. His cock twitched and throbs as it blasts splatters of bird semen at the underside of your muzzle even as you dig into his open belly. Some even lands in the bloody mess you're consuming, adding to the flavor of your grisly meal.";
@@ -940,7 +940,7 @@ to say icarussex6_dom:		[Used for both special preds - not open to regular]
 		now icarus_lastpred is 2;
 	say "     Noticing the dominant bird watching you with a sour mood, you put on a brief display to entice him. He glares at you and gives an aggressive call before gliding down. He knocks into you, [if scalevalue of player < 3]bowling you over[else if scalevalue of player is 3]knocking you down[else]making you stumble to your knees in surprise[end if]. Grabbing you by the scruff of the neck, he starts to drag you towards a service door - one you know leads down to the non-functional boiler room.";
 	say "     You've not seen your birdie master this upset or aggressive before. From the way his talons are already digging into you, you can tell he's going to be particularly violent with you if you let him take you down there. You can either [link]accept your punishment (Y)[as]y[end link] or try to [link]appease him (N)[as]n[end link] right here and now.";
-	if the player consents:
+	if player consents:
 		say "     Accepting that you must have upset your avian master somehow, you allow him to [if scalevalue of player < 4]drag[else]lead[end if] you through the heavy service door. Yanking you forward by your scruff, he snaps for you to go down into the dark basement with only the lantern he's picked up for light. Barely able to see the steps, you descend slowly while peering into the ill-lit room.";
 		say "     The easiest feature to make out in the dim light is the iron stairwell you're descending. It goes down for about a dozen steps before turning at the corner to go down the last few steps. The room itself is dark and dingy with stone walls on three sides and cinder block on the last. It was probably converted from a larger cellar when the abbey was renovated. Lots of pipes and wires run along the walls and ceiling, leading up and out to the main building. A lot of the room's space is taken up by an old boiler, electrical panels and other equipment for the building.";
 		WaitLineBreak;
@@ -1126,7 +1126,7 @@ to say icarussex0_dom:
 	say "     Icarus seems to sigh when you signal for him to come down. He's rather slow at coming down to join you, taking his time before flying down to the ground floor. He preens one of his wings as he gives you a sidelong glance.";
 	say "     'I'm not quite sure what you had in mind, but you're not giving me what I thought was coming. You get me all worked up to be the songbird pet to a big, strong, male predator and you go and change on me. I might've been better off the way things were before,' he says to you, his demeanor and posture changing as his voice changes pitch towards the end, returning to his previous, tough-guy attitude. Moving in closer, he runs his taloned hands over your body, gripping your shoulders quite firmly. 'Maybe you'd rather be on the bottom from now on,' he says, pushing you firmly back onto one of the tables.";
 	say "     The smaller bird's burst of frustration-driven dominance is exciting, tempting you into letting him fuck you. Shall you let him (Y) or will you reassert your dominance (N)?";
-	if the player consents:
+	if player consents:
 		say "     Your lust getting the best of you, you don't resist as the aggressive little bird moves his throbbing cock into position. Excited by his dominant attitude, you spread your legs for him, allowing the blue passarine to press his leaking glans against your [if player is female]wet pussy[else]tight anus[end if]. Chuckling, he digs his claws firmly into you and thrusts into you with a hard push of his hips. You moan at the rough intrusion, but are aroused by it as well.";
 		say "     Pounding away at you now, the blue bird has a smug grin on his beak, clearly pleased at having turned the tables on you. As his pulsing rod dives into your [if player is female]wet[else]tight[end if] hole again and again, Icarus chuckles and nips firmly at your shoulder with his beak. Your arousal continues to climb as he works his cock with some skill and his hands run over your [bodytype of player] body.";
 		say "     'Mmm... that's right - moan you little chick. You like it much better this way, don't you?' he says, [if player is male]stroking your cock[else]pinching your nipples[end if] as he does. He pauses in his thrusting and even starts to pull out, causing you to whimper with need. 'Such a needy slut you are, moaning to get fucked by a little birdie. Well, if you want me to finish fucking you, you'll be admitting you want to be my fucktoy from now on.'";
@@ -1138,7 +1138,7 @@ to say icarussex0_dom:
 		say "     You push aside the temptation to let him fuck you and grab the blue bird firmly by the shoulders. Being small and light, you lift him easily and turn so he's the one pinned back on the table now. Icarus tries to wrestle his way back on top, but you are, as proven in the past, much stronger than he is. Squeezing down hard on his shoulders and slamming him back onto the table, you growl for him to remember his place.";
 		if player is herm:		[herm]
 			say "     Being partially male and partially female, you are presented with the option of riding the bird's cock (Y) or fucking him again (N).";
-			if the player consents:
+			if player consents:
 				say "[icarussex0_sub_f]";
 			else:
 				say "[icarussex0_sub_m]";

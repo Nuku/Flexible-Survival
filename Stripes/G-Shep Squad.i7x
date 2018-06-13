@@ -28,7 +28,7 @@ Instead of resolving a Canine Patrol:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go and talk to them.";
 		say "     ([link]N[as]n[end link]) - Exit.";
-		if the player consents:
+		if player consents:
 			say "     As you approach the police dogs, one turns to face you while the other tends to the woman. He's wearing a policeman's cap, jacket, a pair of mirrored sunglasses and no pants. 'Are you [if gshepmood is 2]here to help?' he asks with a wag of his tail upon noticing your canine features[else if gshepmood is 1]a witness to this attempted assault?' he asks[else]an accomplice to this attempted assault?' he barks upon noticing your feline features[end if]. You explain that you'd just arrived on scene and were about to help when they appeared[if gshepmood is 2]. 'Good dog,' he says with another wag, 'but it's best to leave the police work to us.' [else if gshepmood is 1]. 'I see,' he says, looking you over. [else]. 'A likely story, cat,' he growls. [end if]He gets your statement and only has a few basic questions for you.";
 			say "     While this is going on, the other officer is talking to the distraught victim, both comforting and questioning her. He's wearing a pair of blue pants that have been opened at the back for his tail and has his badge hanging from a chain around his otherwise bare-furred chest. His fur's a lighter shade of brown and his face has more black on it than the other officer's. 'And what did he do then, ma'am?' he asks, his paw lightly rubbing her back.";
 			WaitLineBreak;
@@ -204,7 +204,7 @@ to say bustersexmenu:
 					say "[bustersex06]";
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

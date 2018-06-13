@@ -99,7 +99,7 @@ to say AzraelTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, which causes the angel to shrug and return to whatever he was working on.";
 				wait for any key;

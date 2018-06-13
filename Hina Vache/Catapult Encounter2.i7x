@@ -87,10 +87,10 @@ instead of resolving a loaded catapult:
 	say "You find a loaded catapult, a large plastic grocery bag filled with a thick liquid in the cup, and the arms just waiting to let fly.";
 	say "You look up to find the target, tilting your [face of player] head into the distance. There seems to be a large military blockade there, a huge earthen wall with turrets and barbed wire, giant tanks in lines behind that, and then armed men stretching as far as the eye can see. They are all alert and tense, probably from the one who set this up.";
 	say "Do you want to check out what the bags are filled with?";
-	if the player consents:
+	if player consents:
 		say "You tear a bag open at random, and find they are containing large volumes of cum, milk, and piss. Whoever did this was not on the side of the rescuers. ";
 		say "You could drink some of the reeking liquids, though that would not be without consequences for your health.";
-		if the player consents:
+		if player consents:
 			say "Overcoming your disgust, you dip your [face of player] head into the mess, slurping it up.";
 			decrease thirst of player by 25;
 			decrease humanity of player by 10;
@@ -103,7 +103,7 @@ instead of resolving a loaded catapult:
 	else:
 		say "You watch your step, careful not to get too close to the bags lest they pop.";
 	say "Do you wish to fire the catapult?";
-	if the player consents:
+	if player consents:
 		say "[catapult fire]";
 	else:
 		if gotcatares is 0:
@@ -111,7 +111,7 @@ instead of resolving a loaded catapult:
 		else:
 			say "You find that someone has renewed the supplies, though they seem harder to get this time. Do you wish to try to get them anyway?";
 			increase catadiff by 10;
-		if the player consents:
+		if player consents:
 			say "You begin to wriggle into the tangle of ropes.";
 			if a random number between one and catadiff is greater than the dexterity of the player:[the catapult fires]
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";

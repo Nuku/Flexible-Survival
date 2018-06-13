@@ -50,7 +50,7 @@ To say Manticore loss:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Cunt.";
 			say "     ([link]N[as]n[end link]) - Cock.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				now pick is 1;
 			else:

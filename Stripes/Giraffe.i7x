@@ -49,7 +49,7 @@ to say beatthegiraffe:
 		say "     You resist taking advantage of the fallen herm like the others before her and instead send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 	else if player is not neuter:
 		say "     You find yourself tempted to make use of that agile tongue to get a little relief for yourself. Shall you do so?";
-		if the player consents:
+		if player consents:
 			if player is female:
 				say "     [if player is male]While you're tempted to use her muzzle for your cock, you really want that tongue of hers in your cunny. [end if]Pressing her muzzle to your juicy slit, you grip her head by her short, knobby horns and grind your pussy against her lips. Her tongue slides out, diving into your pussy and writhes around inside you. You moan in pleasure and force her (though little forcing is actually needed once she's started) to eat you out with her agile tongue until you've had several powerful climaxes that leave you quite satisfied. When you're finally done with her, you push her head back, her tongue popping out with a wet slurp. She smiles up at you, licks her muzzle with a long, slow swipe of her tongue and bounds off, looking for someone else to play with now that you've gotten her so very hard. You almost feel bad for the poor, unfortunate soul who'll end up speared on that thick cock of hers... almost.";
 			else:

@@ -41,7 +41,7 @@ to say beatthefluffyowl:		[WIN]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     Grabbing the owl's big hooters, you run your fingers through the soft down and squeeze the warm, soft flesh beneath. She hoots softly in pleasure and gives into your manhandling readily. It seems her enlarged breasts are quite sensitive. Finding those hidden nipples, you start to squeeze and tease them, getting her all the more excited.";
 			if player is male:

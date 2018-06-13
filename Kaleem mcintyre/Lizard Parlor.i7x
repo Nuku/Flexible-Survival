@@ -20,8 +20,8 @@ The description of Dan is "The four armed iguana moves himself around the loft w
 The conversation of Dan is { "Let's Do It!" }.
 Dan is in Lizard Parlor.
 
-Instead of sniffing Dan:
-	Say "The four armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere.";
+instead of sniffing Dan:
+	say "The four-armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere.";
 
 instead of conversing the Dan:
 	if HP of dan is 0:
@@ -46,7 +46,7 @@ instead of conversing the Dan:
 
 
 Instead of fucking the Dan:
-	If lastfuck of Dan - turns < 6:
+	if lastfuck of Dan - turns < 6:
 		say "'Sorry, but I won't be doing anything until both Greg and I recover.' The younger reptile looks at his [one of]slumbering[or]lounging[or]meditating[at random] lover and then smiles somewhat playfully. 'Surprisingly enough, Greg has a lot more stamina now than he did before when he was a [']fleshy[']. Its times like these when I wonder if this virus-thing is a real blessing in disguise.' Dan snicker as Greg opens his eyes to regard him reproachfully. 'I was just being serious.' At that the raptor closes his eyes, only to snap them open once again.";
 	else:
 		say "'Hey, hope you don't mind, but if you want to get intimate with me then Greg comes along as a package deal.' The four armed male says as he hugs himself up to his larger lover while nuzzling and flicking his tongue onto the underside of the older detective's orange scaled throat. Seeing the two reptiles hugging close to one another you find yourself growing slightly aroused by the display, however, the thought of trying to take the two males on at once does make you pause somewhat.";
@@ -71,7 +71,7 @@ Instead of fucking the Dan:
 			say "'Well, that was fun.' Dan chuckles after he pulls his now thoroughly drool soaked muzzle away from Greg's own sticky face.' You say nothing to the iguana as you feel his heated cum churn around his cock, still buried inside of your aching ass. 'Want to go again in thirty minutes?' You can only blink in confusion at Dan before turning your head to look at Greg in complete disbelief. The raptor says nothing to you as he himself is shivering and panting quietly while keeping his head ducked down. Sparing a glace down you notice that two of Dan's hands are wrapped around Greg's cock and sac, respectively while milky white ribbons of cum are painted against your leg.";
 		else:
 			LineBreak;
-			Say "Shaking your head you let Dan know that you'll have to get back to him later on that. 'Alright. Catch you later then.' The younger iguana immediately turns his head to disregard you as he nuzzles and licks his thin tongue along the side of Greg's throat. You can tell that the two are about to do something really hot and sexy with each other so you quietly turn to go about your way.";
+			say "Shaking your head you let Dan know that you'll have to get back to him later on that. 'Alright. Catch you later then.' The younger iguana immediately turns his head to disregard you as he nuzzles and licks his thin tongue along the side of Greg's throat. You can tell that the two are about to do something really hot and sexy with each other so you quietly turn to go about your way.";
 		now lastfuck of Dan is turns;
 		now lastfuck of greg is turns;
 
@@ -85,8 +85,8 @@ The description of Greg is "The taller and more powerfully built raptor/komodo d
 The conversation of Greg is { "Time for a nap????" }.
 Greg is in Lizard Parlor.
 
-Instead of sniffing Greg:
-	Say "The raptor hybrid smells like a toughened detective that needs much more sleep... and sex. You almost feel sleepy just being around... him... ZZZzzz...";
+instead of sniffing Greg:
+	say "The raptor hybrid smells like a toughened detective that needs much more sleep... and sex. You almost feel sleepy just being around... him... ZZZzzz...";
 
 
 instead of conversing the Greg:

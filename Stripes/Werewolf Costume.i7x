@@ -33,7 +33,7 @@ to say beatthemonstercostume:
 		say "     As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
 	else if player is male and libido of player > 25 and werewolfcostumenosex < 3:
 		say "     Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
-		if the player consents:
+		if player consents:
 			now werewolfcostumenosex is 0;
 			say "     Grabbing the costume creature by the head, you press its muzzle to your groin and thrust your hard cock into is open mouth. It goes a weak moan and flops its limp arms, but is too weak to stop you from taking advantage of it. You pound your hips against its padded muzzle, grinning as it starts to respond by licking and sucking at your [cock of player] manmeat. As you continue, you can feel its soft paws slide up your legs, but they're no longer struggling, instead rubbing your thighs and gripping your ass so it can better pull its head into your thrusts.";
 			if a random chance of 3 in 5 succeeds:

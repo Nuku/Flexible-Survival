@@ -15,7 +15,7 @@ instead of resolving a Secure Area:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break]";
 	say "Do you wish to get to the door?";
-	if the player consents:
+	if player consents:
 		let dragatorwon be 0;
 		let dragatordefeated be 0;
 		say "     You run towards the barriers, determined to get inside.";
@@ -26,7 +26,7 @@ instead of resolving a Secure Area:
 				say "     You slam the halo with all your might and feel it crumble beneath you, revealing the rest of the way.";
 				WaitLineBreak;
 				say "     The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Gargoyle infection. You could turn back now, or maybe you want to challenge them?";
-				if the player consents:
+				if player consents:
 					say "You march froward, and they attack.";
 					now dragatorwon is 0;
 					challenge "Gargoyle";
@@ -82,7 +82,7 @@ carry out shifting:
 		say "Your feral impulses prevent you from concentrating hard enough to change.";
 		stop the action;
 	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
-	if the player consents:
+	if player consents:
 		say "";
 	else:
 		stop the action;]

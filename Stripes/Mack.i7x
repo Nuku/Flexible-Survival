@@ -51,7 +51,7 @@ Instead of resolving Finding Mack:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			attackingnutsofactory;
 			now Finding Mack is resolved;
 		else:
@@ -63,7 +63,7 @@ Instead of resolving Finding Mack:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			attackingnutsofactory;
 			now battleground is "void";
 			now Finding Mack is resolved;
@@ -93,7 +93,7 @@ to attackingnutsofactory:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			setmonster "Gray Squirrel";
 			say "     Feeling there'd be no better way to celebrate your victory, you let your hands slide through Macadamia's fluffy fur to cup those large nuts of his. The gray squirrel churrs happily and nuzzles your neck as you rub his heavy balls. As his cock starts to slide from his sheath, he sets your pack aside and starts sliding off your remaining clothes and his belt of pouches. Once that's done, he pushes you to the ground amid the nuts and gives you another kiss before rolling you onto all fours.";
 			say "     Quite aroused and excited now, you let him move atop you, bringing his stiff cock and heavy balls into position. 'Chuk... you did great, my sweet hazelnut,' he chitters, affectionately referring to the nut he used to represent you while planning the raid. He nibbles along your shoulder and neck before lining up his hard shaft. You moan in pleasure as he sinks it into your [if player is female]pussy quickly[else]asshole slowly[end if] and starts mating you. You reach back and rub those heavy, swinging orbs of his, knowing their hot nutbutter'll be filling you soon.";

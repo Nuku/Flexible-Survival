@@ -371,7 +371,7 @@ to say ForcedSubtoDomSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Does Dom deny you right as your reward is in reach?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
 				increase libido of player by 10;

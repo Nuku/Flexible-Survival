@@ -55,7 +55,7 @@ To say gazelle loss:
 					say "     Still upset with the gazelle person for attacking you, you give her a hard smack on her rear, making her tail twitch, as you send her on her way.";
 			else:
 				say ". You consider getting a ride on that cock of hers (Y) or just letting her go (N).";
-				if the player consents:
+				if player consents:
 					say "[gazelleride]";
 				else:
 					say "     Still upset with the gazelle person for attacking you, you give her a hard smack on her rear, making her tail twitch, as you send her on her way.";
@@ -90,7 +90,7 @@ When Play begins:
 	now cock entry is "[one of]gazelle[or]sheathed[or]bovine[as decreasingly likely outcomes]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it pushes forward into a short narrow muzzle, filling up with thick herbivore teeth. Sharp pressure shoots through your skull as two new gazelle like horns slowly press out of your skull, adding some weight to your head"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it seems to grow more lithe and lean, your feet changing into sharp hooves, as your legs shift and change to help you balance better on your new hooves. Your hands grow slightly shorter as your fingernails cover the tips, giving them a slightly hoof-like appearance, and your form becomes better suited to swift fast movements and leaps"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "soft brown and white patterned fur covers your body, your skin itching slightly as it settles into place."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "soft brown and white patterned fur covers your body, your skin itching slightly as it settles into place"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your ass tightens to for better running and jumping, as a soft gazelle tail sprouts behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it draws up tighter between your legs, becoming wrapped in a proper gazelle-like sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;

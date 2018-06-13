@@ -320,7 +320,7 @@ to say rondarescue:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "[helpingronda]";
 		else:
@@ -347,7 +347,7 @@ to say helpingronda:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take her pussy.";
 		say "     ([link]N[as]n[end link]) - Ride her cock.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now tempnum is 1;
 		else:

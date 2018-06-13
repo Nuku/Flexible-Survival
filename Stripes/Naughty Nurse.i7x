@@ -68,7 +68,7 @@ to say LoseToVixenNurse:
 			say "[VixenFemNurseFacesitting]";
 	else if vixgender is 1:
 		say "     The silver-furred vixen grins at you as she looks over her [if fightoutcome is 22]willing [end if]patient. Moving in close, she rubs her sexy body against yours, grinding her throbbing knotted erection against you even as she grabs your ass meaningfully. Knowing you're going to be mounted shortly by the horny vixen if you don't do anything, you consider trying to suck her off to satisfy her instead. Shall you attempt an [link]oral distraction (Y)[as]y[end link] or simply accept to let the herm [link]fuck you (N)[as]n[end link]?";
-		if the player consents:
+		if player consents:
 			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [if player is female]her[else if player is male]his[else]their[end if] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsack with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
 			let x be libido of player;
 			if fightoutcome is 22, increase x by 15; [submitted]
@@ -162,7 +162,7 @@ to say BeatTheVixenNurse:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Resist your urges and move on?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You let the vixens hand go and she quickly disappears down a hallway leaving you to gather your thoughts";
 				wait for any key;

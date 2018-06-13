@@ -48,7 +48,7 @@ to say beattheamazonian:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		if player is puremale:
 			say "     Pinning the amazonian woman down, you pull aside her loincloth and press a pair of fingers into her juicy cunt. She moans and tries to struggle, claiming she needs no man, but her clear arousal and her eyes on your throbbing cock betray her desires for you to prove otherwise. Getting your pulsing rod lined up with her, you sink it into her hot pussy, making her moan loudly as you start fucking her. You pound away at the warrior woman, thrusting into her again and again. Despite her protests, she cums several times before you are done with her, clearly aroused at being fucked by a man who could beat her in combat.";
 			say "     When you're done with her, you pull her up and grope her leaking, cum-filled pussy, reminding her that she was taken by a male. Despite her anger at this, it's clear that she's quite turned on by it as well, as if she's had something forbidden, taboo and therefore wonderfully arousing. You send her on her way with a firm swat on her rear as an added reminder of her defeat.";

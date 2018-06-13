@@ -141,7 +141,7 @@ to say ChrisTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -241,7 +241,7 @@ Instead of fucking the Chris:
 					now lastfuck of Chris is turns;
 			else if calcnumber is 100:
 				say "Break off?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;

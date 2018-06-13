@@ -153,7 +153,7 @@ instead of conversing the Boghrim:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -314,7 +314,7 @@ to say BoghrimTalk3: [go hunting]
 						WaitLineBreak;
 				else if calcnumber is 100:
 					say "Break off the conversation?";
-					if the player consents:
+					if player consents:
 						now sextablerun is 1;
 						say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
 						WaitLineBreak;
@@ -439,7 +439,7 @@ instead of fucking Boghrim:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;

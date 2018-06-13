@@ -81,7 +81,7 @@ instead of conversing the Harold:
 	else:
 		If a random chance of 1 in 3 succeeds and lastrandomharold - turns >= 8 and LastDrinkserved is not 250:
 			say "     'Hey, would you mind tasting this for me?' Harold asks just after pouring a pink tinged liquor from a pair of shakers he had been tossing about into a lone wine glass atop his bar. Seeing the drink, and noting the funny way the liquid shimmers an almost pale white in underneath the flashing lights of the club, you glance up at the bartender, then back to the drink. Shall you try it?'";
-			if the player consents:
+			if player consents:
 				say "     Deciding you could go for a drink, you shrug and pick up the glass, taking a sip of it.";
 				WaitLineBreak;
 				say "[drinkflavor]";

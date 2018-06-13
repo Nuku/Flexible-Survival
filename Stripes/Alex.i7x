@@ -38,7 +38,7 @@ Instead of conversing the Alex:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the Red Light District.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
 			now progress of alex is 1;
 			now find lorenda is unresolved;
@@ -89,7 +89,7 @@ Instead of resolving Meet Alex:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the Red Light District.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
 		now progress of alex is 1;
 		now find lorenda is unresolved;
@@ -192,7 +192,7 @@ Instead of going west from dirty sheds:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let bonus be (( charisma of player minus 10 ) divided by 2) + alexleeinfo;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
@@ -206,7 +206,7 @@ Instead of going west from dirty sheds:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				let bonus be ( Strength of player minus 10 ) divided by 2;
 				let dice be a random number from 1 to 20;
 				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
@@ -294,7 +294,7 @@ to say alexsexytimes2:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Mount him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
-		if the player consents:					[HERM - MALE OPTION]
+		if player consents:					[HERM - MALE OPTION]
 			say "     You answer by flipping the smaller male onto his chest and grinding your cock against his rear. He wiggles his tight ass against your shaft and presents his tight tailhole to you while passing you a bottle of lube he's pulled from the nightstand. 'Take me, you big, sexy hob,' he moans with another hard push back against you.";
 			say "[alexmalesexy2]";
 		else:							[HERM - FEMALE OPTION]

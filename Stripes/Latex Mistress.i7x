@@ -48,7 +48,7 @@ to say beatthelatexmistress:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Lick your pussy.";
 			say "     ([link]N[as]n[end link]) - Let her go.";
-			if the player consents:
+			if player consents:
 				now ltxmscene is 3;
 			else:
 				now ltxmscene is 99;

@@ -209,7 +209,7 @@ to say TylerBodyTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the dead body, shaking your head slightly as it gives no response.";
 				wait for any key;
@@ -289,7 +289,7 @@ to say TawnyaTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to her. He takes both of you back to lockup.";
 				wait for any key;
@@ -444,7 +444,7 @@ to say CaneTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
 				wait for any key;
@@ -526,7 +526,7 @@ to say BarryTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
 				wait for any key;

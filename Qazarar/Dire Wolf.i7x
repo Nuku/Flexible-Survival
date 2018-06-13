@@ -34,7 +34,7 @@ to say DireWolfVictorySex:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Have fun with the dire wolf.";
 	say "     ([link]N[as]n[end link]) - Leave it be.";
-	if the player consents:
+	if player consents:
 		if player is male:
 			say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. You could easily roll him over and ride[if cunts of player < 1] one of[end if] his pair of thick canine shafts, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
 			if player consents:

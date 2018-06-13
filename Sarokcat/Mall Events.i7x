@@ -10,7 +10,7 @@ The sarea of Tight space is "Mall".
 
 Instead of resolving Tight space:
 	say "You come across a very narrow opening in the sewers underneath the city, you think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there, and might leave you vulnerable to attack. Do you try to enter the tight space anyways?";
-	If player consents:
+	if player consents:
 		let T be a random number between one and five;
 		if T is 1:
 			say "It looks like the glint was just some leftover iridescent paint someone smeared here.";

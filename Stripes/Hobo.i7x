@@ -20,7 +20,7 @@ Instead of resolving a Mournful Dog:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Unfortunately, you have no food to spare. Perhaps you should try to find it again later when you have some to give it.";
 		if food is owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Do you offer it some food?";
-			if the player consents:
+			if player consents:
 				delete food;
 				increase dogfoodcount by 3;
 				let bonus be (( charisma of player minus 10 ) divided by 2);
@@ -47,7 +47,7 @@ Instead of resolving a Mournful Dog:
 			say "     Having no food to spare, you cannot give any to the dog. Perhaps you should find some and return later.";
 		if food is owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Do you offer it some food?";
-			if the player consents:
+			if player consents:
 				delete food;
 				increase dogfoodcount by 3;
 				let bonus be (( charisma of player minus 10 ) divided by 2);

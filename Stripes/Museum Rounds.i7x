@@ -178,7 +178,7 @@ to say mrevent05:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			let bonus be ( charisma of player - 10 ) divided by 2;
 			let sexbonus be 0;
@@ -341,7 +341,7 @@ to say mrevent08:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if player is male]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if player is female]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[else]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of player is 0;
@@ -390,7 +390,7 @@ to say mrevent08:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if player is male]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if player is female]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[else]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of player is 0;
@@ -433,7 +433,7 @@ to say mrevent09:
 	say "***satyr party";
 	say "     'Oh, lovely Valerie. Muse to our souls and protector of our grand party hall. We are well into our cups, but shall you and your companion join us for a drink?'";
 	say "join in?";
-	if the player consents:
+	if player consents:
 		say "***party - valerie continues on";
 		say "***if on quest, nick a little wine.";
 	else:

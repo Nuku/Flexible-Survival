@@ -21,7 +21,7 @@ to say Dolphin wins:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to be the dolphin's mate.";
 		say "     ([link]N[as]n[end link]) - Reject the dolphin, even if it might make her angry.";
-		if the player consents:
+		if player consents:
 			now dolphinwantmate is 1;
 		else:
 			say "She seems put off by your denial and screams, 'You will be brought down'";
@@ -100,7 +100,7 @@ to say dolphin fuck:
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
 		if "Microwaved" is listed in feats of player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
-			if the player consents:
+			if player consents:
 				say "Ok.";
 				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 				increase cunts of player by 1;

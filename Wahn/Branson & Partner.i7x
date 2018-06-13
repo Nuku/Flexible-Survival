@@ -85,7 +85,7 @@ to say MelanieTalkMenu:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the pretty deer, shaking your head slightly as she gives a questioning look.";
 				WaitLineBreak;

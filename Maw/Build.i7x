@@ -32,7 +32,7 @@ Check constructing:
 Carry out constructing:
 	say "[description of noun]";
 	say "[line break]Construct?";
-	if the player consents:
+	if player consents:
 		now building of blueprints is noun;
 		now origin of blueprints is location of player;
 		now facing of blueprints is second noun;

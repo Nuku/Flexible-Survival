@@ -180,7 +180,7 @@ to say DianaTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You tell the young woman that you don't have time to hang out with her right now and say your goodbyes.";
 				now Mall Optitian is resolved;

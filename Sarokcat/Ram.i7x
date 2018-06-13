@@ -95,11 +95,11 @@ To say ram_loss:
 		say "[subramdefeat]";
 	else:
 		say "     With a particularly vicious shove, you knock the stubborn ram to the ground, leaving him winded. [if player is dominant]Grinning smugly, you approach the once-proud ram and pin him down with a firm foot on his chest[else]You can't help but smile from your victory as you step closer to the ram[end if]. [if player is dominant]Considering his vulnerable position, will[else]Will[end if] you have some fun with him?";
-		if the player consents:
+		if player consents:
 			if (player is female) and (player is male):
 				LineBreak;
 				say "     Would you rather [link]ride his cock (Y)[as]y[end link] or [link]fuck his ass (N)[as]n[end link]?";
-				if the player consents:
+				if player consents:
 					say "[genericramride]";
 				else:
 					say "[genericramfuck]";
@@ -109,7 +109,7 @@ To say ram_loss:
 				say "[genericramfuck]";
 			else if (cunts of player is 0) and (cocks of player is 0):
 				say "     Without the proper equipment, there's not much for you to do with the beaten ram. Helpless as he is, you could [link]ride his cock (Y)[as]y[end link] or [link]leave him be (N)[as]n[end link].";
-				if the player consents:
+				if player consents:
 					say "[genericramride1]";
 				else:
 					say "     With a huff, you step back and watch as the ram staggers to his feet in a hurry and scrambles away in relief.";
@@ -164,7 +164,7 @@ to say subramdefeat:
 			say "[subramsex1]";
 		else:
 			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. Finally done with false pretenses, the ram turns around and shakes his furry rump at you[if anallevel is 3], bleating and moaning as he spreads his cheeks for you while slipping a finger in and out of his twitching pucker[end if]. If you wanted to, you could have some fun with him. Will you?";
-			if the player consents:
+			if player consents:
 				say "[subramsex]";
 			else:
 				LineBreak;
@@ -206,7 +206,7 @@ to say subramsex:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Changing your mind, [if player is dominant]you shove the ram onto the ground and tell him exactly that before ordering him to scram. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]you shrug your shoulders and tell him exactly that[end if].";
 				wait for any key;

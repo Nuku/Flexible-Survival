@@ -196,7 +196,7 @@ To say Alpha Husky loss:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Get some revenge.";
 			say "     ([link]N[as]n[end link]) - No, you're not interested.";
-			if the player consents:
+			if player consents:
 				say "     Acting as if you're about to accept his offer, you move in a little closer and then tackle the alpha husky down, growling at him that you think he needs a better reminder that you beat him.";
 				caughtthealphahusky;
 			else:

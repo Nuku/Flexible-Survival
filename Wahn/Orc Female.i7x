@@ -231,7 +231,7 @@ to say KatyaBeatenSexMenu:
 				increase libido of Katya by 1;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";
 				wait for any key;
@@ -757,7 +757,7 @@ instead of conversing the Katya:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the towering orc, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -912,7 +912,7 @@ to say KatyaSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the proud orc woman, shrugging your shoulders as she gives you a questioning look.";
 				wait for any key;

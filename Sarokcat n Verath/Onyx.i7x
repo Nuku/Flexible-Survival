@@ -372,7 +372,7 @@ Instead of fucking the Onyx:
 	else if XP of Onyx is 51:
 		now lastfuck of onyx is turns;
 		say "     'Oh hey, you want to have some fun with me?' Onyx says with a smile as you approach the changing equine with obvious sexual intent. 'Of course if I am going to be sexy little horse I need to have lots and lots of sex, and you should too so you can be just as sexy a horse as me...' the black equine says with a teasing smile as he draws closer to you, rubbing his softly furred equine body up against your own teasingly, his scent seeming increasingly arousing as the transforming male pulls you close and whispers in your ear. 'Why don't I show you some of the tricks the stallions told me about, and teach you how much fun it is to be saddled up and ridden?' he says teasingly, while his arousing scent makes your head swim with desire, and your body warms up in response to his touch. Do you give in to your building desires and the increasingly arousing touch of the horseboy?'";
-		if the player consents:
+		if player consents:
 			say "     You find yourself nodding almost automatically in response to Onyx's surprisingly forceful words, though you don't have much time to think about that as Onyx grins happily at your surrender, and quickly presses your unresisting body up against the wall of the hallway.";
 			if player is male:
 				if player is female:
@@ -496,7 +496,7 @@ to say onyxbunkersex:
 		say "     You approach Onyx as he paces around the library, expression tinged with slight discontent after his departure from the Stables. You make an offer for sex, to which he seems reluctant.";
 		say "     'Er, well... I don't know. After all that, I'm not sure if I should. After what happened to Diana... I don't know if I want to end up like that, you know?'";
 		say "     Given his current position, you're fairly certain you can offer him oral sex as a means to ease him into the prospect. Should you?";
-		if the player consents:
+		if player consents:
 			say "[onyxboral0]";
 			now lastfuck of Onyx is turns;
 		else:
@@ -504,7 +504,7 @@ to say onyxbunkersex:
 	else if XP of onyx is 8:
 		if the player is dominant:
 			say "     Seeing how Onyx has started to become more accepting of sex and his equine form, you think it might be good to coax him into taking a more submissive role with you. Shall you [link]take charge (y)[as]y[end link] and steer him in that direction or let things with the stallion unfold with him being [link]more dominant (n)[as]n[end link]?";
-			if the player consents:
+			if player consents:
 				say "[onyxbsuboral0]";
 			else:
 				say "[onyxboral1]";
@@ -528,7 +528,7 @@ to say onyxbunkersex:
 			if onyxdmra is 0:		[First time making the offer]
 				say "     Onyx runs his strong hands over your body, holding you close. 'Mmm... You've been such a good slut for me. Now, I know you usually prefer being the one in charge, and your big stud appreciates you giving that up for him. So I've going to let you take a turn on top,' he says, running his strong hand along your throbbing member. 'I received quite a bit of training at the Stables and I thought it might be nice to put it to practical use. You've helped me out so much, I think you deserve a big reward,' he says, stretching out across a table. Laying on his side, he reaches back and holds his ass cheeks apart, giving you a tantalizing view of his ebon pucker - ready, waiting and even pre-lubed.";
 				say "     Shall you take him up on his offer and take a turn fucking the stallion stud?";
-				if the player consents:
+				if player consents:
 					now recanal_skip is 1;
 					say "[onyxbrecanal]";
 				else:						[did not accept reciprocal anal]

@@ -79,7 +79,7 @@ to say sexwithAndrew:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[andrewdemonshow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that so, adding that [if player is male]you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package[else]he should probably stick to the playing with the regular club patrons for his fun. He sighs, but nods in agreement[end if].";
@@ -90,7 +90,7 @@ to say sexwithAndrew:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[AndrewBrutusShow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that [if player is male]you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package[else]he should probably stick to the playing with the regular club patrons for his fun. He sighs, but nods in agreement[end if].";
@@ -189,7 +189,7 @@ to say sexwithAndrew:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
-		if the player consents:
+		if player consents:
 			say "     The wolf leans against the table and raises his tail, having gotten out of the cargo pants while you were deciding. His heavy balls and cock slap down onto the wood as he smiles back at you. His long tail swishes in slow invitation and you don't wait any longer. Moving in behind him, you grind your hard [cock of player] shaft against his rear and he moans playfully. 'Come on, honey. Show me what you can do.' Not wanting to disappoint, you line your glans up with his tight pucker and slowly sink into him. His asshole spreads with practiced ease, relaxing enough to take your [cock size desc of player] cock into him, but staying tight enough to squeeze and tug at it nicely. He moans in pleasure as you penetrate him, then reach around to stroke his lupine cock.";
 			say "     As you fuck the wolf over the table, a few others around take notice for a little while but clearly aren't surprised or upset by it. Clearly a regular appearance, especially from the black wolf, they don't interrupt your fun together. A few other couples around do start up soon after though, adding to the experience. You pound him vigorously while stroking him off, your hand very slick from the copious amounts of precum running down his dick and pooling on the table. His inner walls rub over your sensitive shaft, moving and gripping around you to eventually drive you to a powerful orgasm that sends your hot seed deep into the gay wolf's asshole. Feeling your hot load filling him[if cock width of player > 16] more and more as your oversized balls drain[else if cock width of player > 8] as your large balls drain[end if], he howls in pleasure and cums hard, shooting his sticky load across the table and the back of the booth in another messy display. As his last shots are firing, he starts lapping up a big puddle of it within reach. After you pull out, he gives you a slobbery kiss that's rich with the taste of his semen and pats your ass in thanks for the nice fuck.";
 			now lastfuck of Andrew is turns;
@@ -209,7 +209,7 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 	say "     After getting the demon's pole well lubed up, Andrew stretches out on a raised platform and orders the demon to fuck him. The monstrous demon, aroused and eager after the oral preparation, lunges atop the wolf, pinning him to the platform and driving his infernal rod into Andrew. The wolf howls in lustful pleasure as the demon takes him hard, driving most of his cock into that sexy ass in one go and driving the rest in on the second thrust. The black wolf's ebon cock throbs and pulses, spurting precum across himself as he's pounded into by your demon slave while a techno remix of Night on Bald Mountain plays.";
 	say "     As the show goes on, the crowd becomes more and more worked up by the powerful display of raw sex. Pockets of sex start to break out, rapidly expanding into a full-on orgy with the wolf and the demon as the focus. You spot an opportunity to join in the fun and head over to one guy as he finishes sucking off another's cock."; [***]
 [ . You spot an opening near you if you want to join in on the orgiastic revelry.";
-	if the player consents:	]
+	if player consents:	]
 	if 1 is 1:
 		say "[randomdesc]"; [yields 'slutname' - male 1]
 		let male1type be slutname;

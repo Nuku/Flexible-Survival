@@ -92,7 +92,7 @@ to say beattheGryphon:
 					say "[feralgryph_milk02]";
 		else if calcnumber is 0:
 			say "Confirm: Will you let the creature leave unmolested?";
-			if the player consents:
+			if player consents:
 				say "     Deciding against it, the moment passes and the gryphon takes off, limping his way into the air to nurse his wounds.";
 				now sextablerun is 1;
 		else:

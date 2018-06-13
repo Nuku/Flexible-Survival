@@ -56,7 +56,7 @@ To say Donkeywoman loses:
 		if player is male and donkeywomanbeaten > 2, increase nodonkeywomansex by 1;
 	else:
 		say "     Having been beaten, the powerful-looking mistress seems somewhat less sure of herself as you drive her back with your blows. She starts to complain about your stubbornness as the others have, but you're tired of hearing it from these creatures. Grabbing her, you toss her to the floor roughly. Seeing the donkey female like that is strangely exciting and you're tempted to try teaching her a hard lesson with your hard cock. Shall you give into this urge and fuck her?";
-		if the player consents:
+		if player consents:
 			say "     Grabbing the dominant donkeywoman roughly, you pin her to the ground and climb atop her. She struggles and spits in your face, but you've had more than enough of her attitude. Unzipping her leather corset from the bottom, you uncover the dark folds of her pussy and brush a finger teasingly across them. She bites her lip, holding back a whimper even though her hips rock up to press against your touch.";
 			say "     Rolling the jenny onto her side, you hold one of her legs over your should while pushing your [cock size desc of player] cock into her juicy cunt. This time she does moan, which brings an even bigger grin to your face. Seeing little reason to restrain yourself against the aggressive and domineering donkey, you start thrusting right away rather than giving her [if cock length of player > 24]a much needed[else]an[end if] opportunity to adjust to having your [cock of player] shaft thrusting into her juicy cunt.";
 			WaitLineBreak;

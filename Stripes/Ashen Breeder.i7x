@@ -49,7 +49,7 @@ to say beattheashenbr:
 			increase ashenvicsex by 1;
 		else:
 			say "     Something about hir needy display arouses you and you feel a growing urge to mate with this strange beast. Shall you give into this desire?";
-			if the player consents:
+			if player consents:
 				say "     Rather than resist this urge, you give into your lustful desire and approach the horny herm breeder. You push hir down onto all fours and shi releases a series of pleasured chirps, raising hir ass in the air. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight. ";
 				if ashenvicsex is odd:
 					say "[ashenbreedersex01]";

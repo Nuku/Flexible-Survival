@@ -18,7 +18,7 @@ to say beatthepiggy:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if the player consents:
+		if player consents:
 			say "     The player agreed to sex. Fun times begin.";
 			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";

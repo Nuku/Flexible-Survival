@@ -262,7 +262,7 @@ When Play begins:
 	now defeated entry is "[beattheFireSprite]"; [ Text when monster loses. ]
 	now victory entry is "[losetoFireSprite]"; [ Text when monster wins. ]
 	now desc entry is "[FireSpritedesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire."; [ Face. Format as Your face is [face of player]. ]
+	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "that of a small, energetic sprite"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]

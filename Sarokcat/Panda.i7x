@@ -59,16 +59,16 @@ When Play begins:
 	now defeated entry is "[panda loss]";
 	now victory entry is "[panda attack]";
 	now desc entry is "[panda appears].";
-	now face entry is "a blend of panda and human features, with large dark eyes surrounded by black rings, your short round ears swivel around nimbly";   ["You have a (your text) face."]
+	now face entry is "a blend of panda and human features, with large dark eyes surrounded by black rings, your short round ears swivel around nimbly"; ["You have a (your text) face."]
 	now body entry is "Stocky and somewhat rounded, you have a slightly ursine body, though obviously still with some human influences, your legs are however slightly shorter, as are your arms, giving you a rather rounded, appearance. Though your hands are tipped with panda-like claws, they are still easily able to grip and manipulate objects"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]black and white patterned[or]panda furred[or]soft furred[or]short panda furred[at random]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a small, fluffy panda tail hanging down your ample backside."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]bearlike[or]panda[or]thick black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your mouth pushes forward slightly until it resembles a short muzzle, new scents exploding into your nose as it changes slightly, and your vision blurs as your eyes widen, and become better able to see in the dark, and you can feel black circles forming around them. Finally your face itself begins to take on a more rounded shape, with the ears moving to the top of your head."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "shoulders widen, and your legs seem to shrink. Your chest and body rounds out into a more bearlike build, as sharp claws grow out of your hands and feet."; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "short fur begins to push out of your skin, the soft black and white patterned fur quickly covering your entire body in a pandalike coat."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now face change entry is "your mouth pushes forward slightly until it resembles a short muzzle, new scents exploding into your nose as it changes slightly, and your vision blurs as your eyes widen, and become better able to see in the dark, and you can feel black circles forming around them. Finally your face itself begins to take on a more rounded shape, with the ears moving to the top of your head"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "shoulders widen, and your legs seem to shrink. Your chest and body rounds out into a more bearlike build, as sharp claws grow out of your hands and feet"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "short fur begins to push out of your skin, the soft black and white patterned fur quickly covering your entire body in a pandalike coat"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it expands, new muscles forming underneath your new soft padding, a short pandalike tail extends slightly behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it draws up tighter between your legs, becoming thicker and more bearlike as it is drawn into its new sheath."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it draws up tighter between your legs, becoming thicker and more bearlike as it is drawn into its new sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 17;
 	now dex entry is 15;
 	now sta entry is 17;

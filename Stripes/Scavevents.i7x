@@ -176,7 +176,7 @@ Instead of resolving a Protected Supplies:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
@@ -210,7 +210,7 @@ Instead of resolving a Dropped Handbag:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		let T be a random number between 1 and 100;
 		if T < 41:
@@ -572,7 +572,7 @@ Instead of resolving a Free Drink:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;

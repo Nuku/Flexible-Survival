@@ -33,7 +33,7 @@ Instead of resolving Easter Eggs:
 			now HP of Micaela is 1;
 	else:
 		say "     Shall you let the overly-friendly bunny [link]continue (Y)[as]y[end link] or simply [link]make her stop (N)[as]n[end link]?";
-		if the player consents:
+		if player consents:
 			say "[micaelaintro_01]";
 			now HP of Micaela is 2;
 		else:

@@ -44,7 +44,7 @@ To say gargoyle loss:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "An upturned wave of your hand has the gargoyle rising up to its two digitigrade feet and a smile tips at your lips as you watch the obedient beast do as commanded. Your eyes roam onto the beautiful gray marble-like skin of the creature from head down to toe and without thinking you find your hands reaching out to touch the gargoyle all over as you physically inspect its neck, chest, torso, back and then behind onto its surprisingly leathery feeling wings. Like an artisan having finished a masterpiece you feel charged by the dominance you have over the creature -- the gargoyle unmoving from where it stands as it lets you survey it fully -- and without any warning your greedy hands go down to lift the monster's serpentine tail up and out of the way, fascination having given birth to arousal. Your eyes lock in onto the tailhole of the creature -- nestled securely between the cheeks of its gray rump -- and quickly you find your [cock of player] shaft growing hard with eager need to mark the beast before you with your personal symbol.";
 			WaitLineBreak;

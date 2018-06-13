@@ -116,7 +116,7 @@ To say beatthePinkPoodle:
 				increase nopoodlesex by 1;
 		else:
 			say "     Would you like to have her [link]eat you out (y)[as]y[end link] or [link]leave her be (n)[as]n[end link]?";
-			if the player consents:
+			if player consents:
 				say "[pinkpoodleoral]";
 			else:
 				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";

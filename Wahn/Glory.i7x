@@ -137,7 +137,7 @@ to say GloryChoices:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     As you just stand up and leave, you can hear her sobbing behind you, followed by the door of the little room being slammed shut. Just giving her the cold shoulder after hearing that story really wasn't the most diplomatic thing to do.";
 				now GloryFate is 99; [abandoned by the player]

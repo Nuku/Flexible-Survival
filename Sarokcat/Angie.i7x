@@ -137,7 +137,7 @@ instead of using feline porn:
 		say "[SimpleFelineMast]";
 	else:
 		say "     Pulling out your feline porn, you look over the assorted stories and photos in search of something of interest. Shall you have a quick session to relieve a little pressure (Y) or do you want to draw it out and really let off some steam (N)?";
-		if the player consents:
+		if player consents:
 			say "[SimpleFelineMast]";
 		else:
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the merchandise showing graceful feline shapes, in addition to a few of Keith's pictures and begin playing with yourself. You start by rubbing over your [bodyname of player] body[if breast size of player > 8], caressing your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if breast size of player > 5], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if breast size of player > 2], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else] and teasing your nipples[end if][if breasts of player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
@@ -316,7 +316,7 @@ to say AngieTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -534,7 +534,7 @@ to say AngieSexMenu:
 				now lastfuck of Angie is turns;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
 				wait for any key;

@@ -13,7 +13,7 @@ when play begins:
 
 to say stop wyvern:
 	say "Do you try to stop them?";
-	if the player consents:
+	if player consents:
 		challenge "Wyvern";
 		say "After you finish with the first wyvern, the second attacks!";
 		wait for any key;
@@ -25,7 +25,7 @@ to say stop wyvern:
 		now thirst of player is 0;
 	else:
 		say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
-		if the player consents:
+		if player consents:
 			challenge "Wyvern";
 			say "After you finish with the first wyvern, the second attacks!";
 			wait for any key;
@@ -57,7 +57,7 @@ instead of resolving a pure pool:
 			if player is male and libido of player > 50:
 				if cockname of player is "Wyvern":
 					say "You could help resolve the situation by corrupting the pond yourself. Do you wish to?";
-					if the player consents:
+					if player consents:
 						say "You begin stroking your [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if], moaning as you do so. By the time the wyverns turn around and notice you, you are about to blow your load.";
 						if a random chance of one in 2 succeeds:
 							say "They begin stroking as well, rushing to come before you.";
@@ -77,7 +77,7 @@ instead of resolving a pure pool:
 		else:
 			say " that you watched the wyvern infect.";
 		say "Do you wish to drink from it?";
-		if the player consents:
+		if player consents:
 			say "You dip your head into the cloudy pool and drink deeply.";
 			infect "Wyvern";
 			infect "Wyvern";

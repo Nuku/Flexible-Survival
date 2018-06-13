@@ -113,14 +113,14 @@ to say libraryentrance:
 					say "[libguard5]";
 		else if calcnumber is 99:
 			say "Do you wish to leave and return later?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You bid adieu to the wolverine security guard, wishing him well. You tell him that you may stop by again later to check up on him. He smiles and nods, saying that talking to you has helped him remember himself a little. As you walk off, you look back, seeing him resuming his unending protection of the library.";
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 99/100 to exit.";
 		else if calcnumber is 100:
 			say "Shall you give up on this plan entirely?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You bid adieu to the wolverine security guard, wishing him well. Deciding not to risk further contact with the volatile guard, you make a mental note to avoid the vicinity in the future. Left to his own devices, the guard resumes his unending protection of the library.";
 				now Central Library is resolved;
@@ -193,7 +193,7 @@ to say libguard1:						[Bluff]
 to say libguard2:						[Bribe]
 	if jamesfed is 0:
 		say "     Recalling what James said about his poor diet because he can't leave, you offer to help him out with that. 'That would be right neighborly of you,' he replies. 'I could certainly use a meal or two and a couple of drinks.' Do you want to try giving him two meals worth of food and two bottles of water?";
-		if the player consents:
+		if player consents:
 			now jamesfed is 1;
 			delete food;
 			delete food;
@@ -235,7 +235,7 @@ to say libweaponoffer:
 		else:
 			say "     You wonder if you've got a suitable weapon to satisfy his needs, showing him a few of those you've got. He ends up taking an interest in your [if weaponpick is 1]nightstick[else if weaponpick is 2]crowbar[else if weaponpick is 3]tire iron[else if weaponpick is 4]flotsam club[else if weaponpick is 5]medium sledge[else if weaponpick is 6]mallet[end if]. He takes up the weapon and gives it a few experimental swings, grinning as he does.";
 			say "     Will you offer it to him in trade for entry?";
-			if the player consents:
+			if player consents:
 				say "     You tell him he can have it if he'll let you go in for a bit";
 				if journal is owned:
 					say ". You flash your journal quickly, claiming you need to drop the book off and want to look for another";
@@ -603,7 +603,7 @@ Instead of conversing the Doctor Matt while 5 is listed in bookcollection and ma
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     Showing Dr Matt the book, you suggest to him that you can act as reconnaissance for the military. You tell him that since you've been facing the creatures out there, you can provide information on their strengths, weaknesses, number and tactics. You add that having this information will help the soldiers be better prepared for the strains they'll encounter as well as probably get him more time to work while the military holds back to better prepare. With the promise of greater opportunity to investigate this outbreak, he accepts, telling you to prepare reports that can then be transmitted to the military forces.";
 		extend game by 24;
 		increase score by 30;
@@ -618,7 +618,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     Showing Dr. Mouse the book, you suggest to him that you can act as reconnaissance for him. You tell him that since you're been facing the creatures and finding where they're located, it may help his gathering of samples. The mouse's eyes flash and he grins widely at this offer. 'Oh yes! That would be a great boon indeed. Thank you very much for the offer. Please write up any information you can provide on the creatures. Be sure to include any details about the military as well. We don't want to run into trouble with them. Accidentally bump into them and have a problem.' You nod and provide the information to the delighted mouse, filling a stack of papers with notes, maps and more.";
 		extend game by 24;
 		increase score by 30;
@@ -633,7 +633,7 @@ Instead of conversing the Gina while 5 is listed in bookcollection and hyenainte
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     Telling Gina about your plan, she's very pleased with your idea. 'I'm really getting sick of some of these reports and stories I'm getting from the others out there. Useless stuff like [']Oh Gina, there was a bunch of dog-things out by the 7-11. You know, the one with the bad Slurpee machine. Well anyway, I saw them there a couple of days ago. Thought you should know.['] Got that one today. It took me ten minutes to get what little useful stuff she knew out of her, and even then, it probably won't amount to anything. Some quality reporting would help a lot";
 		if matriarchowned is 1:
 			say ". As the matriarch, you could even show the scouts what information you want and order them to give it properly. I'm sure several of them will shape up if you give them clear orders. That'll give us a real intelligence gathering squad.'";

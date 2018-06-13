@@ -83,7 +83,7 @@ To say battleon:
 	if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[fallenone]";
 	else if fightoutcome is 30: [fled]
-		Say "[runforit]";
+		say "[runforit]";
 	else if fightoutcome < 20: [player won]
 		say "This time it turns out to be much easier to ward off the pack as the group of three you just handled yelp and then whimper before scurrying off about their way. Hearing their comrades rushing off, after pulling back from having their tails kicked by the firefighter who happens to be using her baseball bat like a sword, the rest of the chocolate labs turn to run off after their cohorts, which then leaves you and the unnamed female alone with one another. When firefighter comes over to pat you onto the top of your slightly dripping chocolate head you sigh tiredly before looking up at the other woman.";
 		say "'Well, aren't you a good [if player is male and cunts of player < 0]boy[else if cocks of player < 0 and player is female]girl[else]critter[end if]. Thanks for the rescue attempt.' The salt and pepper haired firefighter smiles at you and then pats you one more time before going off about her way. You take a minute to catch your breath and then bark at her to wait. When she turns towards you, her bat slightly raised in preparation for another attack, you are quick to ask her if she is the missing firefighter from station 86. 'You can talk?' she asks with wide, unsure eyes. Of course, being human and all, that would be her first question/reaction.";

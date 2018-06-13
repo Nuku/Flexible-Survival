@@ -42,7 +42,7 @@ to say beatthevixentaur:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			if player is male:
 				say "     Keeping the defeated vixen pinned beneath you, you move around so you're laying across her back. Pushing her tail up, you get your cock into position and slide it across her wet folds. She vixen moans and fidgets beneath you with growing excitement. '[one of]Oh, you do want to play with me[or]Hurry up and give it to me[or]Come on! Fuck that naughty vixen[or]Breed me, you [bodytype of player] stud[at random]!' she says excitedly. Grabbing her sexy bottom, you drive your cock into her and start fucking, pounding the slutty fox's juicy hole.";

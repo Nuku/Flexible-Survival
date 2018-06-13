@@ -77,7 +77,7 @@ The sarea of FreshFish is "Warehouse".
 
 Instead of Resolving a FreshFish:
 	say "Amazingly, some sailing or oar-powered ships are still coming into the docks, bringing in [']scavenged['] supplies from coastal raids and trades among other things. Food, slaves, and other plunder feature prominently, with [']liberated['] military goods fetching a high price. There are pleasure boats, too, some still with high-class seeming occupants occasionally appearing. Not surprisingly, there are several fishing vessels that harvest what bounty is available inside the naval cordon thrown up by the military. One pulls right in next to you, dumping a massive load of fresh-caught sea-creatures onto its deck. You watch, amused, as the crew of tenrecs start sorting through the heap looking for anything that needs to be thrown back or fucked. Thinking on it, even with the diminished population, there just wouldn't be enough food in the city for everyone unless more came in from somewhere. Little wonder there is so much activity here. Maybe you could even snag some of that food for yourself, but are you daring enough to try scamming the tenrec fishermen out of some fish?";
-	if the player consents:
+	if player consents:
 		let bonus be ( Charisma of player - 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		if dice + bonus > 12:

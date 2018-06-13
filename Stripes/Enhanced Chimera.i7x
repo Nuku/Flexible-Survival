@@ -29,7 +29,7 @@ to say enhancedchimeradesc:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     Feeling rather aroused yourself, you show your acceptance of her advances by groping her throbbing genitals";
 			say "[ec_sex]";
 		else:

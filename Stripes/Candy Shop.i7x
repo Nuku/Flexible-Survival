@@ -22,7 +22,7 @@ Instead of resolving a CandyShop:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		setmonster "Sugar Ferret";
 		if bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider":
 			say "     Tempted by the candy, you decide they don't look very threatening and poke your head inside. The business of ferrets inside quickly snatch their piles of candy and look at you. The first to spot you, a teal ferret, yells 'Candy thief!' and the group poings on top of you, trying to mob you. Unsure what you've done, you yell that you're just here to visit and are eventually released, if viewed with some suspicion. The ferrets keep a close eye on you and are tight-fisted with their candy around you. Teasing insults of 'candy ass' and 'sugar snatcher' are bandied about by them when they talk to you.";
@@ -280,13 +280,13 @@ to say candyshopsex4:
 to say candyshopsex5:
 	if caffeinehigh of player is 0:
 		say "     Playfully tickling down one ferret's belly, your hand drifts down to their sheath and balls, rubbing over them as his swelling cock begins to emerge. Spotting your hard erection, he moves his paws to it eagerly and starts stroking you in return. Having found yourself a cute [one of]lavender pink[or]powder blue[or]pastel yellow[or]honeydew green[or]lilac[at random] hob to play with and your own shaft quite hard, would you rather mount him (Y) or get a blow job (N)?";
-		if the player consents:
+		if player consents:
 			say "     Rolling him onto all fours, he chirrs happily and raises his tail, waving his ass eagerly for you. After moving into position atop him, your [cock size desc of player] [cock of player] cock sinks into him easily, the little guy clearly well used to having a horny male atop him. You nuzzle his ears and start thrusting into him while he chirrs and giggles happily. Reaching around, you find his rod quite hard and leaking from the good fucking he's receiving. Feeling his cock twitch in your hand and his balls tighten up, you give him a hard, final thrust to push him over the edge, letting his spasming hole send you to climax moments later.";
 		else:
 			say "     Taking his cute, fuzzy head in your hands, you press your cock to his lips and moan as his muzzle slides down over it. His tongue works you eagerly, playfully teasing you. You start to chirr in pleasure, excited by his clearly well-practiced technique. Reaching between his legs, you find his rod quite hard and leaking. As his muzzle works your cock to climax and you send your hot seed down his throat, his meat pulses in your hand and blasts his sugary sweet load, which you just have to lick off your fingers.";
 	else:
 		say "     Managing to grab one of the ferrets as he tries to reach more soda, you pull him in close and grind your stiff cock against the [one of]turquoise[or]sunglow[or]lime green[or]magenta[or]amethyst[at random] hob's soft fur. Distracted by your maleness, he takes it in his paws and starts stroking it eagerly. He lets the tips of his claws slide across your sensitive flesh lightly enough to excite you while not hurting that [cock size desc of player] [cock of player] maleness he clearly wants so badly. Would you prefer to mount him (Y) or get a blow job (N)?";
-		if the player consents:
+		if player consents:
 			say "     Rolling him onto all fours, he chirrs excitedly and raises his tail, waving his ass eagerly for you. After moving into position atop him, your [cock size desc of player] [cock of player] cock sinks into him easily, the lustful guy clearly well used to having a horny male atop him. You nip at his ears and start thrusting into him while he chirrs and sinks his claws into the floor to push forcefully back into your thrusts. Reaching around, you find his rod quite hard and leaking from the good fucking he's receiving. Feeling his cock twitch in your hand and his balls tighten up, you pound him mercilessly to push him over the edge, letting his spasming hole send you to climax moments later while he screams in delight.";
 		else:
 			say "     Taking the over-excited hob's head in your paws, you press your cock to his lips and chirr as his muzzle slides down over it. His tongue works you eagerly, slathering over you lustfully for your sweet seed. His sharp teeth graze across your sensitive flesh in a clearly practiced manner, as their touch is enough to excite you, but not hurt you. You rub his ears and keep his head pressed to your groin, pounding into his muzzle, much to his obvious delight. You slip a paw down between his legs to fondle his throbbing shaft, finding it dribbling sweet smelling precum down over his sheath and balls. As his muzzle works your cock to climax and you send your hot seed down his throat, his meat pulses in your hand and blasts his sugary sweet load, which you then eagerly lick from your fingers.";

@@ -192,7 +192,7 @@ to say MarkTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -553,7 +553,7 @@ to say TatiHyenaMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind and leave?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back and turn around, intending to leave the restaurant, only to see that several more hyenas have come in behind you. 'Leaving so soon?' one of them says with a lewd grin, rubbing the front of his leather bike pants. Seems like just walking out of here isn't an option...";
 				wait for any key;
@@ -723,7 +723,7 @@ to say MarkSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

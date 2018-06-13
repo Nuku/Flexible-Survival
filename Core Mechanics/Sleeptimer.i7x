@@ -1,4 +1,5 @@
-Version 1 of Sleeptimer by Speedlover begins here.
+Version 1 of Sleeptimer by Core Mechanics begins here.
+[ Version 1.0 - Initial file - Speedlover ]
 
 Terminatorsleep is a truth state that varies. Terminatorsleep is usually false.
 Sleeptimercount is a number that varies. Sleeptimercount is usually 0.

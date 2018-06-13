@@ -64,7 +64,7 @@ to say BeatTheBehemoth:
 		say "     Knocking the Behemoth down with an impressive attack you watch as the mighty titan falls onto its side and then lets out a rumble of a roar as it sounds off its defeat.";
 		if libido of player > 40:
 			say "     Because you have subdued the Behemoth you could take this chance to reveal in your victory over it, but because of the difference in its size compared to yours there's not a lot you can do to sexually [']tame['] the beast. But then again, if you want, you could fondle it some and maybe tease it into orgasm. Do you want to?";
-			if the player consents:
+			if player consents:
 				say "     Making the decision to have some fun with the big brute you go over to the quietly panting beast to see tease it. Should you play with its balls and cock or its cunt? (Y=cock, N=cunt)";
 				if player consents:
 					say "     Noting the full testicles of the Behemoth you find yourself walking over to the fleshy orbs of the beast and then reaching out to hug them and thereby caress them with the front of your [bodyname of player in lower case] chest. Hugging against the massive orbs you run your tongue over the two foot wide spheres while sniffing over the musk laden sac of flesh housing them. Grinding yourself against the massive cum factories you listen as the Behemoth moans and purrs in bliss while keeping a careful eye out for any suspicious movements or gestures that may come from the beast. Seeing none forthcoming you continue you motions, squeezing and dancing yourself against the Behemoth's low hanging orbs before moving on up to where its cock is extended out from between its legs.";

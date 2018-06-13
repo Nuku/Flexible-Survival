@@ -46,7 +46,7 @@ to say beatthecentaurstallion:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Give in.";
 			say "     ([link]N[as]n[end link]) - Resist.";
-			if the player consents:
+			if player consents:
 				say "     Grabbing the stallion's large sheath, you rub over that warm flesh, getting him to moan and whinny, hopeful at getting some relief after all. As his cock starts to emerge, you eye that thick, black meat hungrily, licking your lips. Leaning further under him, you bring that large cock to your mouth and start licking and kissing at its flared glans, making it swell faster. Soon, centaur pre is leaking onto your tongue. You lick and suck at it until it grows too large and full to fit in your mouth before pulling it to you. Running your hands along the equine member, you fondle those huge balls while tending to the giant horse cock before you. As his glans flares and he starts to whinny excitedly, you hold the end with one hand while rubbing his balls with the other. Holding it in place, you get him to blast shot after shot of hot, equine cum into your mouth and down your throat. You swallow as much of it as you can, though much of his copious flow ends up running down your chest. Satisfied, you give his equine ass a swat, sending him galloping off. As you watch him go and rub your full, bloated tummy, you can feel the warmth of his seed inside you, spreading into tingles of his spreading infection.";
 				increase libido of player by 5;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 1;

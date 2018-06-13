@@ -283,7 +283,7 @@ to say beatthegoblin:
 					say "[gob_nosex]"; [let goblin go]
 			else:
 				say "enjoy some [link]oral attention (Y)[as]y[end link] from her or [link]let her go (N)[as]n[end link]?";
-				if the player consents:
+				if player consents:
 					say "[fgob_vicsex3]"; [f-gob oral sex]
 				else:
 					say "[gob_nosex]"; [let goblin go]
@@ -350,7 +350,7 @@ to say beatthegoblin:
 					say "[gob_nosex]"; [let goblin go]
 			else:
 				say "enjoy some [link]oral attention (Y)[as]y[end link] from him or [link]let him go (N)[as]n[end link]?";
-				if the player consents:
+				if player consents:
 					say "[mgob_vicsex3]"; [m-gob oral sex]
 				else:
 					say "[gob_nosex]"; [let goblin go]

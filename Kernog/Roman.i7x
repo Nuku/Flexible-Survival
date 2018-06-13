@@ -146,7 +146,7 @@ instead of conversing the Team Captain Roman:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from Roman, who gives you a puzzled look in return.";
 				wait for any key;
@@ -327,7 +327,7 @@ to say RomanFuck1:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Having second thoughts, you abstain from using Roman to satiate your needs. You step away, letting the ape rest for now.";
 				wait for any key;
@@ -444,7 +444,7 @@ to say RomanFuck2:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Having second thoughts, you abstain from using Roman to satiate your needs. You step away, letting the ape rest for now.";
 				wait for any key;

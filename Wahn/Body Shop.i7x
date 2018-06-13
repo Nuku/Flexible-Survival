@@ -115,7 +115,7 @@ to say MoreauTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -207,7 +207,7 @@ to say MoreauPartSale:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -434,7 +434,7 @@ to say MoreauPartBuy:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -528,7 +528,7 @@ to MoreauFaceSelection:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -644,7 +644,7 @@ to MoreauBodySelection:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -761,7 +761,7 @@ to MoreauSkinSelection:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -877,7 +877,7 @@ to MoreauTailSelection:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -993,7 +993,7 @@ to MoreauCockSelection:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;

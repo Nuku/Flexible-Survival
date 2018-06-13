@@ -79,7 +79,7 @@ when play begins:
 
 Instead of resolving a Flooded Street:
 	say "     You come across a small lake of cum blocking your path. This section of street is literally flooded with cum. Wading through the musky pond are several of those giant walking cocks. At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen. You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	WaitLineBreak;
 	if a random chance of 1 in 3 succeeds:
 		say "     You are spotted by one of the ambulatory cock creatures and its rush towards you alerts the others.";
 		LineBreak;
@@ -164,7 +164,7 @@ to say stripbarsearch:
 		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. It seems that this place was struck rather hard when the infection took hold. Despite outer appearances, the inside has been quite devastated. You decide to head back out, but not in time. A large glob of cum which was stuck to the ceiling comes down right on top of you. You try your best to wipe it off, but you can feel the tingles of the infection."; [random infection]
 		weakrandominfect;
 	if T is 6:
-		say "		Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. A quick check shows that the bar area has been already picked clean of anything that survived the initial damage. You turn to head out, but step on an empty bottle. Rolling away, it sends your foot out from under you and you fall. Your hand feels wet and sticky, having landed in a puddle of cum. You try to shake it off, but you can feel the tingles of the infection."; [random infection]
+		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. A quick check shows that the bar area has been already picked clean of anything that survived the initial damage. You turn to head out, but step on an empty bottle. Rolling away, it sends your foot out from under you and you fall. Your hand feels wet and sticky, having landed in a puddle of cum. You try to shake it off, but you can feel the tingles of the infection."; [random infection]
 		weakrandominfect;
 	if T is 7:
 		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You head over to check the bar, but find that it was destroyed during the outbreak and even partially burned. Did the bartender try to ward off the monsters with fire or did something else occur? Seeing how there is nothing usable left, you decide not to investigate further and instead head to leave. As you're heading to leave, you spot the backstage door decide to check it out before you go.";

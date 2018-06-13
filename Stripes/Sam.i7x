@@ -212,7 +212,7 @@ Instead of conversing the Sam:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Slip it to him.";
 		say "     ([link]N[as]n[end link]) - Leave him alone.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You pour the vial into an empty water bottle and head over to Sam. Saying it's a drink you picked up, you offer him a taste of the last bit of it. He looks up from what appears to be a list of sexual conquests to take the drink. For a moment, you're hopeful he'll try it, but he stops and looks the pale rose liquid over and gives it a sniff.";
 			say "     'What is this? What're you trying to slip me?' he asks, getting upset. 'This is from a nanite vial, isn't it?' he growls. Afraid he'll throw it away and you'll lose your chance, you grab the bottle from him. You try to force it to his mouth, insisting it's for his own good, but he growls and pushes you away[if number of bunkered people + number of booked people > 2]. The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[else if number of bunkered people + number of booked people is 2]. The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if]. You cap the bottle just in time before the enraged dragontaur charges.";
@@ -283,7 +283,7 @@ Instead of conversing the Sam:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Slip it to her.";
 		say "     ([link]N[as]n[end link]) - Leave well enough alone.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You pour the vial into an empty water bottle and head over to Sam. Saying it's a drink you picked up, you offer her a taste of the last bit of it. She looks up from what appears to be a list of sexual conquests to take the drink. For a moment, you're hopeful she'll try it, but she stops and looks the blue liquid over and gives it a sniff.";
 			say "     'What is this? What're you trying to slip me?' she asks, getting suspicious. 'This is from a nanite vial, isn't it?' she yips. Afraid she'll throw it away and you'll lose your chance, you grab the bottle from her. You try to force it to her mouth, insisting it's for her own good, but she growls and pushes you away[if number of bunkered people + number of booked people > 2]. The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[else if number of bunkered people + number of booked people is 2]. The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if]. You cap the bottle just in time before the enraged vixentaur charges.";
@@ -442,7 +442,7 @@ to assaultonminilab:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Surrender.";
 			say "     ([link]N[as]n[end link]) - Retreat.";
-			If player consents:
+			if player consents:
 				LineBreak;
 				say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italic type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
 				now surrender is 1;
@@ -515,7 +515,7 @@ to minilabvictory:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "[samtf_maledragon]";
 	else:
@@ -935,7 +935,7 @@ to say samDVfuck54:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "[samDVfuck2_bottom]";
 		else:

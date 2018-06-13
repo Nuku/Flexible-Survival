@@ -20,11 +20,11 @@ The sarea of Abandoned Fox is "Park".
 
 Instead of resolving Abandoned Fox:
 	say "Traveling through the park, you hear a strange soft noise coming from one of the nearby bushes. It sounds almost like something small calling out. Do you investigate?";
-	If player consents:
+	if player consents:
 		say "Pushing the screening bushes aside you find a small hole in the ground, and sprawled outside the whole is a skinny looking young fox pup making pathetic noises. Staring at the young fox and the area around the den, you realize it must have been abandoned for a while at this point. Its mother hasn't been back to feed it, and has likely become another victim of the changes sweeping the city at this point. Leaving the little pup here all alone crying for help. Sighing at life's unfairness you begin to turn away only to hear the soft yipping noises take on a more plaintive note as it notices you and starts pleading for food and attention";
 		if food is owned:
 			say ". Do you help it?";
-			if the player consents:
+			if player consents:
 				delete food;
 				say "Unable to bear hearing the poor things cries going unanswered, you carefully kneel down and pull out some food (-1 food), cautiously at first, then with increasing enthusiasm the half starved fox cub tears at the food, ripping and playing with it until it is all gone. You smile at the cute sight before standing up and getting ready to leave, though you haven't gone more than a few steps when you hear something behind you. Turning you see the fox cub you helped is valiantly trying to keep up with you, its large canine eyes staring at you adoringly. Trying to shoo it back to the empty den seems pointless, and the cute little fox seems to have taken a strong fancy to you now, shrugging you give in and let it come with you. The little fox cub bouncing along in your wake and occasionally darting off to pounce on and threaten one of the nearby leaves on the ground. It looks like you've acquired a little pet. As you head back to the park trail, you make it a little nest in your backpack, making sure it will be comfortable while you travel.";
 				now little fox is tamed;

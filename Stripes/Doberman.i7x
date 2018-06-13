@@ -73,7 +73,7 @@ to say losetodobie1:		[low-lust player loss]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Try making friends.";
 			say "     ([link]N[as]n[end link]) - Bide your time.";
-			if the player consents:
+			if player consents:
 				let bonus be (( charisma of player minus 10 ) divided by 2);
 				let dice be a random number from 1 to 20;
 				say "You roll 1d20([dice])+[bonus]=[dice + bonus] vs 16: ";
@@ -364,13 +364,13 @@ to say beatthedobie1:			[low-lust cop player victory]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     Grabbing her firmly, you pin her down with one arm while the other roams over her body, groping her ass and breasts before sliding down her pants and panties. She bites her lip, but soon starts to moan despite herself as her canine body starts to respond as you pump a pair of fingers into her increasingly wet pussy. Soon she's panting lustfully and unable to resist your further advances.";
 			say "     [bold type]Now that you've got her worked up, shall you [if player is male]fuck her[else]keep fingering her[end if] or get that muzzle and long tongue of hers to work pleasing you?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Penetrate her.";
 			say "     ([link]N[as]n[end link]) - Put her tongue to work.";
-			if the player consents:
+			if player consents:
 				if player is male:
 					say "     You grab the dog-woman's hip and pull her ass up as you move atop her. A small part of her seems to still want to resist for a moment before giving in and she grinds her sexy bottom against your throbbing cock, her tail wagging excitedly. She moans and yips as you thrust into her, pounding away at her doggy cunt. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You fuck the policewoman bitch, making her cum repeatedly before you blast your hot load deep inside her. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
 					increase dobielibido by 20;
@@ -471,7 +471,7 @@ to say beatthedobie3:			[high-lust cop player victory]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you help her up and lead her back to the library.";
 		now HP of Alexandra is 1;
 		now battleground is "void";
@@ -503,8 +503,8 @@ When Play begins:
 	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson colored[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "your head shifts and then pops and then finally melts down into a point giving you a Doberman-like face while your ears push straight up onto your head and your eyes turn chocolate brown in color"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your muscles suddenly balloon outwards while your bones and muscles pop and contort inside of your body starting from your neck going all the way down to your thighs, calves and feet. Back arching, spine tingling you have just enough time to appreciate the fact that the heels of your feet are pulling back to give you a digitigrade stance before you sigh as your body finishes its transmogrification"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
-	now skin change entry is "short, dark brown and black fur pushes out from the pores of your skin making you itch all over."; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
-	now ass change entry is "your butt expands outwards and then suddenly pulls inwards as your spine lengths with the onset of you growing tail. The fact that your glutes now look like the stereotypical 'bubble butt' only works to heighten the cuteness of your new appendage."; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now skin change entry is "short, dark brown and black fur pushes out from the pores of your skin making you itch all over"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "your butt expands outwards and then suddenly pulls inwards as your spine lengths with the onset of you growing tail. The fact that your glutes now look like the stereotypical 'bubble butt' only works to heighten the cuteness of your new appendage"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "the mass grows and then tapers off to a point while becoming crimson in color. The small bulb at the end of your rod is the only indication that you possess a canine's knot"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 14; [ These are now the creature's stats... ]
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]

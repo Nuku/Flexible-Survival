@@ -34,7 +34,7 @@ to say beatthedragontaur:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			if player is female:
 				say "     Deciding that you might indeed want to have some fun with the dragon, but on your own terms, you push the fallen taur over onto his side and grab his cock. While it had been softening and receding after his defeat, it quickly rises back to its full glory as you stroke it. He tries to rise so he can mount you, but you push him back down firmly and instead straddle him. With his rear turned over and the rest of him on his side you're able to position yourself overtop of his cock and guide it into your wet cunt. His tapered glans slips easily into you, spreading you open for his thickening length below it.";
 				say "     You run your hands over his scaly hide as you sink more and more of his ridged shaft into you. Each of those ridges provide delightful pleasure to you as they slide across your pussy lips and inner walls. His hips try to buck and thrust into you, but to little avail. You're the one setting the pace this time and, having gotten very aroused by this point, intent to make the most of it. You vary your pace and position several times, riding through several small orgasms while always building yourself higher and not letting the dragon get off. And when your massive orgasm finally comes crashing over your in waves of ecstasy, you ride him hard and fast, pushing the dragon over the edge as well. He roars loudly and cums hard, blasting thick dragoncum deep inside you, filling your womb with his virile seed.[ovichance]";

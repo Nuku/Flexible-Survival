@@ -28,7 +28,7 @@ when play begins:
 Instead of resolving Injured Felinoid:
 	if felinoidrescued is 2:
 		say "     Traveling through the park trails, keeping a wary eye out for any more strange glades, you notice a small damp red spot on the ground ahead. Moving forward carefully to look at it, you realize with some surprise that it is somethings blood! Looking around you see several other spots of blood leaving a trail heading deeper into the underbrush, whatever went that way was definitely injured pretty badly and might need some help... Do you investigate?";
-		If player consents:
+		if player consents:
 			say "     Your curiosity getting the better of you, you slowly follow the trail of blood through the trees, the sound of soft trickling water beginning to fill your ears as the trail grows fresher. Eventually you emerge into a small secluded glade, a small natural spring surrounded by large flat rocks trickling happily away in the center of the glade. Your attention is immediately drawn however, to the wounded Felinoid hauling itself to its feet painfully as you approach, the wounded beast obviously still willing to put up a fight as it limps forward to attack.";
 			challenge "Felinoid";
 			if lost is 0:
@@ -188,7 +188,7 @@ to say KlauzTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You back away from the Klauz, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -227,7 +227,7 @@ to say sexwithfelinoidpet:
 				say "[felinoidpet_puref]";
 			else:
 				say "     You aren't sure if you should submit to his advances. Should you?";
-				if the player consents:
+				if player consents:
 					say "     Well, what could the harm be? Besides, it's all for a little bit of fun, right?";
 					say "[felinoidpet_puref]";
 				else:
@@ -237,7 +237,7 @@ to say sexwithfelinoidpet:
 			say "     The great feline beside you gently nudges against you a few times, then nuzzles upwards into your groin, teasing at a [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to get up under spines and tease the sensitive flesh under the head of the feline cock";
 			if libido of player < 50:
 				say ". Do you really have time to spend indulging the cat's lusts? Well that does feel really damn nice. Maybe...(y/n)";
-				if the player consents:
+				if player consents:
 					say "[felinoidpet_purem]";
 				else:
 					say "     You carefully extract yourself from your companion's eager mouth and push him back. Not right now! He looks a little disappointed at your reaction, but doesn't push the matter, at least for the moment.";
@@ -247,7 +247,7 @@ to say sexwithfelinoidpet:
 				say "[felinoidpet_purem]";
 		else: [ the player is neuter, omg]
 			say "     You almost trip, stumbling across a furry blockade to your path. Your feline companion is on his back, paws in the air and pawing in your direction. Between his hind legs, his shaft is flagged in the air, hard and ready. Your sexual urges feel a bit muted without the usual organs to express them, but you don't want to disappoint your companion, do you? Shall you play with the needy kitty?";
-			if the player consents:
+			if player consents:
 				say "[felinoidpet_puren]";
 			else:
 				say "     You step over the cat and continue on your way. He rolls back to his feet and is soon following again, if disappointed.";

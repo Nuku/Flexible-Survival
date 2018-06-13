@@ -2416,7 +2416,7 @@ carry out allburninating something (called x):
 		say "You don't seem to be holding any.";
 	else:
 		say "Do you wish to permanently trash all of the '[x]' you have?";
-		if the player consents:
+		if player consents:
 			if x is journal:
 				say "You really don't think that's a good idea.";
 			else if x is an armament:
@@ -2889,7 +2889,7 @@ To Infect:
 		if x is 5:
 			say "Genital infection imminent";
 		say ", Allow?";
-		if the player consents:
+		if player consents:
 			say "Ok.";
 		else:
 			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
@@ -2970,7 +2970,7 @@ To Infect:
 			if x is 5:
 				say "Genital infection imminent";
 			say ", Allow?";
-			if the player consents:
+			if player consents:
 				say "Ok.";
 			else:
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
@@ -3417,7 +3417,7 @@ To fight:
 		prepforfight;
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
-			if the player consents:
+			if player consents:
 				now combat abort is 1;
 				say "You slip away before [name entry] can begin their assault.";
 		if combat abort is 1:
@@ -4392,7 +4392,7 @@ This is the location choice rule:
 	else if title entry is "Researcher":
 		say "You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
 	say "Continue?";
-	if the player consents:
+	if player consents:
 		now looknow is 0;
 	else:
 		the rule fails;
@@ -4436,7 +4436,7 @@ This is the location choice rule:
 			now levelwindow is 99999;
 		if hardmode is false:
 			say "Would you like to play hard mode?";
-			if the player consents:
+			if player consents:
 				now hardmode is true;
 				now levelwindow is 99999;
 				say "Hardmode activated!";
@@ -4593,42 +4593,42 @@ This is the finish stats rule:
 	if Current menu selection is 1:
 		say "Your strength is your specialty.";
 		say "Are you sure?";
-		if the player consents:
+		if player consents:
 			increase strength of player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 2:
 		say "Your dexterity is your specialty.";
 		say "Are you sure?";
-		if the player consents:
+		if player consents:
 			increase dexterity of player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 3:
 		say "Your stamina is your specialty.";
 		say "Are you sure?";
-		if the player consents:
+		if player consents:
 			increase stamina of player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 4:
 		say "Your charisma is your specialty.";
 		say "Are you sure?";
-		if the player consents:
+		if player consents:
 			increase charisma of player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 5:
 		say "Your perception is your specialty.";
 		say "Are you sure?";
-		if the player consents:
+		if player consents:
 			increase perception of player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 6:
 		say "Your intelligence is your specialty.";
 		say "Are you sure?";
-		if the player consents:
+		if player consents:
 			increase intelligence of player by 5;
 		else:
 			rule fails;
@@ -5792,7 +5792,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 				choose row current menu selection from the table of gainable feats;
 				say "[title entry]: [description entry][line break]";
 				say "Is this what you want?";
-				if the player consents:
+				if player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
 				break; [if featqualified is 0, ]
@@ -5823,7 +5823,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 				choose row current menu selection from the table of gainable feats;
 				say "[title entry]: [description entry][line break]";
 				say "Is this what you want?";
-				if the player consents:
+				if player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
 				break; [if featqualified is 0, ]

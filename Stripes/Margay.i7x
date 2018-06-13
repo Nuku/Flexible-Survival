@@ -68,7 +68,7 @@ to say beatthemargay:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Eat her out.";
 		say "     ([link]N[as]n[end link]) - Leave.";
-		if the player consents:
+		if player consents:
 			say "     You crawl between her legs and start nuzzling and licking at your large, luscious lips. Her pussies are quite huge, easily able to take much more than your arm with ease, as you prove by soon fisting her to get her mewling and even more. Your tongue travels all along those plump lips before diving into lick deeper. As you continue licking, you are urged to push deeper and delve further with your tongue, pressing your head into her to lick along those deliciously wet vaginal walls. ";
 			if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 				let tempmon be monster;

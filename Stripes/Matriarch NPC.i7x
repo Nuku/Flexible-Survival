@@ -59,7 +59,7 @@ to say sexwithMatriarch:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Put you in your place as the gang slut.";
 			say "     ([link]N[as]n[end link]) - Demote you to hyena food again.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     [HyenaMatSexScenes]";
 			else:

@@ -67,7 +67,7 @@ to say beatthebluechaffinch:
 				say "     Something about seeing the small bird preparing to fly away sends shivers through your infected body and you start to give chase. Shall you [link]unleash (Y)[as]y[end link] or [link]rein in (N)[as]n[end link] these predatory instincts?";
 			else:
 				say "     A rush of excitement for the hunt fills your predatory body again and you start to give chase before you even realize it. Shall you [link]unleash (Y)[as]y[end link] or [link]rein in (N)[as]n[end link] these wild instincts?";
-			if the player consents:
+			if player consents:
 				say "[bluecf_catching]";
 				now nobluechaffinchsex is 0;
 			else:
@@ -81,7 +81,7 @@ to say beatthebluechaffinch:
 				say "     Something about seeing the small bird preparing to fly away sends shivers through your infected body and you crouch down, hips twitching with a need to pounce. Shall you [link]unleash (Y)[as]y[end link] or [link]rein in (N)[as]n[end link] these predatory instincts?";
 			else:
 				say "     A rush of excitement for the hunt fills your feline body again and you start to give chase before you even realize it. Shall you [link]unleash (Y)[as]y[end link] or [link]rein in (N)[as]n[end link] these wild instincts?";
-			if the player consents:
+			if player consents:
 				say "[bluecf_pouncing]";
 				now nobluechaffinchsex is 0;
 			else:
@@ -140,7 +140,7 @@ to say bluechaffcaught:
 	say "     Steady, hard thrusts into your rather willing victim has him panting and chirping with growing excitement. You make sure to tease him some more when he reaches back to stroke his own cock, calling him your birdie bitch and your songbird slut. He blushes at these names but doesn't stop, if anything, his anus squeezing and milking at your cock all the more. As you feel yourself getting closer, you pick up the pace, digging your talons in harder and taking his thin leg in your beak, pulling him sharply upwards onto your impaling rod. After a few hard tugs that have him moaning and chirping even as red runs down his leg, your feel your balls tighten and your shaft pulse as you start feeding your hot, [cum load size of player] load into his ass[if cock width of player > 35]. Your [cum load size of player] output causes the blue passerine's belly to swell and bloat until he's a rounded ball of feathers with excess cum leaking from his beak as he moans and cums in delight[else if cock width of player > 25]. Your [cum load size of player] output causes the blue passerine's belly to swell and bloat until he's a rounded ball of feathers as he moans and cums in delight[else if cock width of player > 15]. Your [cum load size of player] output causes the blue passerine's belly to bulge a little as he moans and cums in delight[else]. The feel of your [cum load size of player] output pumping into him causes the blue passerine to moan and cum in delight[end if].";
 	WaitLineBreak;
 	say "     Releasing his leg from your beak and pulling out, you let him drop to the ground and chuckle at what a fine prey slut he's become and add that you just might want to keep him[if cock width of player > 25]. Rolling over[else]. Falling over[end if] onto his side, he moans softly and struggles to get up. 'W-were you serious about that? A-about really... keeping me?' he says with a mix of trepidation and anticipation in his voice. How shall you respond?";
-	if the player consents:
+	if player consents:
 		say "     Moving your [bodytype of player] body over his, you nip at his neck and grope his ass. 'Maybe. I might want a [']snack['] later,' you tease, pushing a few fingers into his creamy hole. He blushes and nods, his hips trembling. 'A-alright then... you've caught me, you sexy hunter,' he says with nervous excitement[if cock width of player > 25]. After letting him drain, you[else]. You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
 		now battleground is "void";
 		increase score by 20;
@@ -202,7 +202,7 @@ to say bluechaffpounced:
 	say "     Steady, hard thrusts into your rather willing victim has him panting and chirping with growing excitement. You make sure to tease him some more when he reaches back to stroke his own cock, calling him your birdie bitch and your songbird slut. He blushes at these names but doesn't stop, if anything, his anus squeezing and milking at your cock all the more. As you feel yourself getting closer, you pick up the pace, digging your claws in harder and taking his thin leg in your muzzle, pulling him sharply upwards onto your impaling rod. After a few hard tugs that have him moaning and chirping even as red runs down his leg, your feel your balls tighten and your shaft pulse as you start feeding your hot, [cum load size of player] load into his ass[if cock width of player > 35]. Your [cum load size of player] output causes the blue passerine's belly to swell and bloat until he's a rounded ball of feathers with excess cum leaking from his beak as he moans and cums in delight[else if cock width of player > 25]. Your [cum load size of player] output causes the blue passerine's belly to swell and bloat until he's a rounded ball of feathers as he moans and cums in delight[else if cock width of player > 15]. Your [cum load size of player] output causes the blue passerine's belly to bulge a little as he moans and cums in delight[else]. The feel of your [cum load size of player] output pumping into him causes the blue passerine to moan and cum in delight[end if].";
 	WaitLineBreak;
 	say "     Releasing his leg from your beak and pulling out, you let him drop to the ground and chuckle at what a fine prey slut he's become and add that you just might want to keep him[if cock width of player > 25]. Rolling over[else]. Falling over[end if] onto his side, he moans softly and struggles to get up. 'W-were you serious about that? A-about really... keeping me?' he says with a mix of trepidation and anticipation in his voice. How shall you respond?";
-	if the player consents:
+	if player consents:
 		say "     Moving your [bodytype of player] body over his, you nip at his neck and grope his ass. 'Maybe. I might want a [']scratching post['] later,' you tease, pushing a few fingers into his creamy hole. He blushes and nods, his hips trembling. 'A-alright then... you've caught me, you sexy cat,' he says with nervous excitement[if cock width of player > 25]. After letting him drain, you[else]. You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
 		now battleground is "void";
 		increase score by 20;

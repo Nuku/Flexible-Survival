@@ -172,7 +172,7 @@ To Say slutratdenscene:
 			increase visittimes of slutrat den by 1;
 			say "     The defeated rat withdraws into the den, scurrying beneath one of the pillows with a sullen expression. Her sisters laugh at the sight, and one of them rises to her feet in a hop, breasts wobbling enticingly as she approaches you, 'What a good bitch you are,' she croons, 'You just want some love, not fighting, am I right?'";
 			say "Agree?";
-			if the player consents:
+			if player consents:
 				increase slutratsub by 1;
 				if slutratsub > 10, now slutratsub is 10;
 				say "[ratslutwelcome]";
@@ -232,7 +232,7 @@ To Say ratslutwelcome:
 		say "     Her nimble paws drift down between your legs, slipping between your thighs and parting them easily. Her fingers slide over your pussy, teasing your sensitive folds and getting you wet[if cunts of player > 1]. Finding more than one pussy tucked down there, she switches between them a few times before settling on one[end if]. She eases a finger into you, probing your pussy and stroking your inner walls. 'And just how accommodating is our new bitch,' she giggles as she slips second finger into you and then another. She spreads her fingers and stretches you open, seeing how roomy your cunny is. You moan and shiver at this sensual inspection, blushing a little as the other girls are clearly watching.";
 		if cunt length of player < 10 or cunt width of player < 6:
 			say "     She humphs, 'Still quite tight, but we can fix that,' she assures you with a nibble at your ear. Soon your head is being tipped back as a cup with something sickly sweet pressed to your lips. The rat grinds her bulging crotch against you thigh as she continues fingering you. 'Drink it down,' she beckons with a smile. Allow her?";
-			if the player consents:
+			if player consents:
 				say "     The rat smiles as the sweet liquid is poured down your throat, making your groin tingle powerfully. Your female genitals begin to expand while her fingers continue to probe and stroke inside you, making you quiver in delight. Soon enough, you're moaning and panting as she displays your growing cunt for the others, who snicker and giggle as they watch the arousing show. Turned on by the display, you can see several of them groping themselves or one another. Soon, it becomes too much and you cum, soaking the rat's paw in your female juices. She grins and licks her paw clean, giving your rear a swat. 'Good little bitch,' she says with a chuckle. 'Go have fun, slut.'";
 				increase cunt length of player by 4;
 				increase cunt width of player by 3;
@@ -326,7 +326,7 @@ check ratdarts:
 	if visittimes of slutrat den < 1:
 		say "The rats scowl at you when you approach the dart board. Perhaps you should reconsider.";
 		say "Continue?";
-		if the player consents:
+		if player consents:
 			say "One of the rats hops to her feet and rushes at you angrily.";
 			now inasituation is true;
 			Challenge "Slut Rat";
@@ -363,7 +363,7 @@ Carry out ratdarts:
 		if total is:
 			-- 0:
 				say "Your dart goes drastically wide, almost hitting one of the lounging rats. With a loud annoyed sound, she moves to tackle you to the ground. Do you let her?";
-				if the player consents:
+				if player consents:
 					increase slutratsub by 1;
 					if slutratsub > 10, now slutratsub is 10;
 					say "[slutratsubsex]";
@@ -393,7 +393,7 @@ Carry out ratdarts:
 				if slutratsub < 0, now slutratsub is 0;
 				increase score by 5;
 				say "     One of the rats seems interested in you as a result of your athleticism. Do you wish to approach her?";
-				if the player consents:
+				if player consents:
 					say "[slutratdomsex]";
 		if remainder after dividing ratdartcount by 3 is 0, now lastratdartthrow is turns - 1; [max three darts before a delay is imposed]
 		follow the turnpass rule;
@@ -561,7 +561,7 @@ instead of conversing the Pool Table:
 	if T is 2, now targetnum is 6;
 	if T is 3, now targetnum is 10 + a random number between 1 and 3 + ( level of player / 10 );
 	if T is 4, now targetnum is 12 + a random number between 1 and 3 + ( level of player / 10 );
-	if the player consents:
+	if player consents:
 		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: vs [targetnum].";

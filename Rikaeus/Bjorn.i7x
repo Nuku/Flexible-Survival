@@ -104,7 +104,7 @@ to say BjornTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, which creates a confused look on Bjorn's face before he shrugs.";
 				wait for any key;
@@ -207,7 +207,7 @@ to say BjornSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step away from the viking who gives you a disappointed and frustrated look. It appears he really wanted sex.";
 				wait for any key;

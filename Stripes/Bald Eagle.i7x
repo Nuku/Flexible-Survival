@@ -51,7 +51,7 @@ to say beattheeagle:
 		increase eagledefeatnum by 1;
 	else:
 		say "     After dealing that last blow to him, the eagle staggers back. You notice him preparing to fly away like the others have before. Shall you grab him for some fun before he can escape?";
-		if the player consents:
+		if player consents:
 			now noeaglesex is 0;
 			if player is female:
 				say "     As the eagle prepares to take off, you pounce upon him, bearing him to the ground. He is briefly stunned, giving you an opportunity to roll him onto his back and grab onto that foot-long cock of his. You stroke it to full erection and clamber atop him, sinking your juicy pussy down over it with a low moan of satisfaction. As he's starting to come out of it, you keep his shoulders pinned and ride the eagle's cock [if cunt length of player < 8]as hard and as fast as you can given its large size[else]hard and fast[end if]. He makes no attempt to resist or escape, now bucking his hips to thrust up into you until you both reach a loud, crashing orgasm. Once he's spent and you've taken what you've wanted from him, you slide off, moaning softly as you enjoy the warm feeling of his semen inside you.[ovichance]";

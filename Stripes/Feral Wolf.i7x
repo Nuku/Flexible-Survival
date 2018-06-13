@@ -73,7 +73,7 @@ to say beatferalwolf:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if player is herm:
@@ -82,7 +82,7 @@ to say beatferalwolf:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the wolf.";
 					say "     ([link]N[as]n[end link]) - Ride his cock.";
-					if the player consents:
+					if player consents:
 						LineBreak;
 						say "[feralwolfmalesex]";
 					else:
@@ -128,12 +128,12 @@ to say FeralWolfVictorySex:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		if player is male:
 			if player is female:
 				LineBreak;
 				say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. Being a herm, you could easily roll him over and ride his thick canine shaft, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
-				if the player consents:
+				if player consents:
 					say "     You lick your lips and smile, striding over to the wolf, your cock[smn] getting nice and hard, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
 					say "     After a few minutes of teasing the poor wolf, you take hold of his throbbing cock and line it up with [if cunts of player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur, your own cock[smn] twitching and leaking pre onto the wolf's belly.";
 					say "     You start to ride his canine cock, slowly at first but quickly picking up speed. By now the wolf has gained some of his strength back and is eagerly bucking up into your snatch, his cock throbbing and spurting pre into your depths. You shiver and groan, looking down at the wolf beneath you, seeing that he clearly isn't going to last much longer, and you don't think you will either.";
@@ -203,7 +203,7 @@ When Play begins:
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "rough black fur spreads rapidly over your form, leaving you more capable to endure the elements."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "rough black fur spreads rapidly over your form, leaving you more capable to endure the elements"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length turning pitch black"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;

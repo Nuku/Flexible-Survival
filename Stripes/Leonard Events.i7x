@@ -347,7 +347,7 @@ to say leosupplyscene:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Receive oral.";
 			say "     ([link]N[as]n[end link]) - Give oral.";
-			if the player consents:
+			if player consents:
 				say "[leosupplyoral1]";
 			else:
 				say "[leosupplyoral2]";

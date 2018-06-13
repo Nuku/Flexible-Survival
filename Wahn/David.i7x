@@ -397,7 +397,7 @@ Instead of fucking David:
 					WaitLineBreak;
 			else if calcnumber is 100:
 				say "Break off?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;
@@ -495,7 +495,7 @@ instead of conversing David:
 					now lastfuck of David is turns;
 			else if calcnumber is 100:
 				say "Break off?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;

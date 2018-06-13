@@ -218,7 +218,7 @@ instead of fucking the François:
 		say "     Looking over at the oddly attractive hybrid, you smile and suggest taking a break to have a little fun together. He smiles at your offer and moves up against you, running his paws over your [bodydesc of player] body. He nuzzles at your chest as he helps you out of your clothes and gear[if breast size of player is 0]. He licks across your manly pecs, teasing your nipples with his tongue[end if]. As you run a hand through his fur and feathers, you wonder exactly what you'd like to do with him.";
 		if libido of François is 2:
 			say "     Shall you request to [link]mount him (Y)[as]y[end link] or shall you ask him to [link]suck you off (N)[as]n[end link] again?";
-			if the player consents:
+			if player consents:
 				say "[françoissex2]";
 			else:
 				say "[françoissex1]";
@@ -487,7 +487,7 @@ carry out françoisbaking:
 			say "     After looking over everything you've brought him, François decides none of your potential combinations of ingredients would make a good dish.";
 	if françoisbaked is not 1 and Francois_Discovered is not empty:
 		say "     Would you like to have François bake a dish you've already discovered? (Y/N)";
-		if the player consents:
+		if player consents:
 			say "[FrançoisBakingMenu]";
 
 to say FrançoisBakingMenu:
@@ -736,7 +736,7 @@ to say FrançoisHint:
 
 to say BoysenberryBlossomGet:
 	say "     'Ah! Oui! These will do wonderfully!' François says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small dish of fruity-smelling pastries. 'I will call them boysenberry blossoms,' François says with obvious excitement. 'Please, be the first to taste one, mon ami[if player is purefemale]e[end if]!' Would you like to taste it right now? (Y/N)";
-	if the player consents:
+	if player consents:
 		say "[boysenberry blossom Use]";
 		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and player is female ):
 			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
@@ -748,7 +748,7 @@ to say BoysenberryBlossomGet:
 
 to say MuffinMuffinGet:
 	say "     'What a lovely combination of flavors,' François says as he tastes the pink gel and Awesomer Fruit. 'I must test their potential further!' After collecting a few other things from behind the counter, François quickly heads to his kitchen to get started. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
-	if the player consents:
+	if player consents:
 		say "[muffin muffin Use]";
 		if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and player is male ):
 			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
@@ -760,7 +760,7 @@ to say MuffinMuffinGet:
 
 to say bleuettonneGet:
 	say "     After tasting the blue gel, François takes it and the chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates. 'A simple but effective technique. You must try one,' François says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
-	if the player consents:
+	if player consents:
 		say "[bleuettonne Use]";
 		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and player is female ):
 			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
@@ -772,7 +772,7 @@ to say bleuettonneGet:
 
 to say CrèmeAbondanteGet:
 	say "     After tasting the pink gel and distilled milk, François quickly pours both into an empty bowl and starts mixing before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this,' you hear him say to himself as you watch his tail disappear around the corner. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)";
-	if the player consents:
+	if player consents:
 		say "[crème abondante Use]";
 		if "Male Preferred" is listed in feats of player or "Passing Grade Chest" is listed in feats of player or "One Pair" is listed in feats of player:
 			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
@@ -784,7 +784,7 @@ to say CrèmeAbondanteGet:
 
 to say lollicockGet:
 	say "     'What an unusual herb,' François says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' François trails off as he spots the honeycomb, before inspiration strikes. François quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually François returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
-	if the player consents:
+	if player consents:
 		let lollicockCheck be 0;
 		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
 		if a random chance of 1 in 4 succeeds:
@@ -831,7 +831,7 @@ to say vin-coeurGet:
 
 to say gingerbreadGet:
 	say "     After taking a quick shot of the egg nog, François scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the egg nog, he eagerly rushes off to his kitchen to get started. The warm scent of ginger and cinnamon fills the bakery as François works, making your mouth water in anticipations until he returns with a tray of small cookies. François places a couple of them on a dish in front of you with a smile. Would you like to test them now? (Y/N)";
-	if the player consents:
+	if player consents:
 		say "[gingerbread Use]";
 		say "'Oh là!' François exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
 	else:
@@ -840,7 +840,7 @@ to say gingerbreadGet:
 
 to say cheesecakeGet:
 	say "     François['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it. 'This will do wonderfully, C'est magnifique!' François exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)";
-	if the player consents:
+	if player consents:
 		now carried of cheesecake is 2;
 		say "[cheesecake Use]";
 		now carried of cheesecake is 0;
@@ -963,7 +963,7 @@ to say lollicock Use:
 	let lollicockDildo be 0;
 	if player is female:
 		say "     Eying up the cute cock-shaped treat, you are just about to wrap your lips around it before another, naughtier idea pops into your head. Would you like to 'play' with your food before enjoying the snack? (Y/N)";
-		if the player consents:
+		if player consents:
 			say "     Stripping your gear and finding a comfortable place to stop and really enjoy this treat, you slowly lick along the length of the candy cock, wetting its surface while you begin teasing you womanly folds with your free hand. Once both you and the treat are sufficiently lubricated, you take one last taste of the sweet and salty candy before plunging it into your drooling cunt. You moan loudly as you drive the rigid length into yourself, your quivering pussy leaking a sticky mixture of sugar and your own feminine juices as you fuck yourself to a powerful climax.";
 			say "     Sliding the sticky candy cock out of yourself with a wet slurp, you bask in your afterglow as you wrap your lips around the sugary treat, savoring the musky flavor of your own cum mingling with its sweet and salty taste.";
 			now lollicockDildo is 1;
@@ -1087,7 +1087,7 @@ the scent of cheesecake is "The cheesecake has a rich, sweet scent of strawberry
 to say cheesecake Use:
 	if carried of cheesecake > 1:
 		say "     As you dig the cheesecake out of your bag, you notice the second slice stashed away next to the first and your tummy rumbles hungrily. Will you indulge and eat both slices now?";
-		if the player consents:
+		if player consents:
 			say "     Pulling both slices of cheesecake from your bag, you quickly unwrap both before gorging yourself with the rich strawberry cake.";
 			cheesecakeinfect;
 			cheesecakeinfect;

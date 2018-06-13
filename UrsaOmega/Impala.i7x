@@ -62,7 +62,7 @@ to say beatimpalagirl:
 	say "     The impala woman slumps to the ground, submitting to your superior strength.";
 	if libido of player > 20:
 		say "     Your libido gets the better of you and you find yourself considering having some fun with her. Do you want to?";
-		if the player consents:
+		if player consents:
 			if player is male:							[male+herm]
 				if a random chance of 1 in 2 succeeds:
 					say "     The impala woman collapses before you. 'Oooh, you're so...' - she stops to pant, then swoon - '...Strong! You'd make a worthy mate!'. Well, if she wants it so bad... Taking off your gear, you lie back, stroking your hardening cock with one hand and beckoning her over with the other. She's on top of you in a flash, positioning her needy entrance over your [cock size desc of player] erection. Putting your hands on her hips, you guide her down your cock, relishing the exquisite feeling of her tight, hot passage wrapped around you. She uses her powerful legs to propel her slender body up and down your shaft, moaning as your organ fills her completely. After what feels like an hour of riding you, the impala cries out as she orgasms, the resulting vaginal muscle contractions milking your cock and driving you to a powerful orgasm yourself. With her womb filled with your cum, the impala collapses on top of you. When the afterglow fades, she leans down to give your cheek a peck before getting up. 'Next time you're in rut, come and find me, stud!' she says with a coy smile before heading off. When you manage to gather your strength, you get up and dressed.";

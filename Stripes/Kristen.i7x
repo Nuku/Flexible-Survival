@@ -19,7 +19,7 @@ Instead of resolving FindingKristen:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     Moving quickly, you follow after the pair. Fortunately, you catch up to them as they reach a dead end. The woman's struggling to climb over a wooden barrier at the end of alleyway. The ewe's got the back of her jeans and is trying to pull her down by them. You're momentarily distracted by the glimpse you get of her pantied ass, but shake it off when the girl slips down a foot and the sheep grabs her by the ponytail. The woman cries out and she starts to lose her grip, so you rush in to deal with the horny ewe.";
 			say "     Grabbing the ewe, you try to pull her back, but end up dragging down the woman as well. She drops onto some cardboard boxes with her pants half off. At this point, the lustful sheep turns to face you, knowing she's got to deal with you before she can claim her intended prize. You also can hear the sounds of growing activity as more mutants are attracted to the sounds of her lustful baaing.";
 			challenge "Ewe";
@@ -174,7 +174,7 @@ Instead of conversing the Kristen:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[Kristen-giveblouse]";
 		else:
 			say "     Deciding against it for now, you keep it tucked away in your pack. Should you change your mind, you'll need to [bold type]give Janice's blouse to Kristen[roman type].";

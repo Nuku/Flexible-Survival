@@ -64,7 +64,7 @@ to say RichardTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, causing a confused look to form on Richard's face. He shrugs before getting back to work on his essay.";
 				wait for any key;
@@ -150,7 +150,7 @@ to say RichardSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and decide against sexing up the satyr boy.";
 				wait for any key;

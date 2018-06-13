@@ -41,7 +41,7 @@ to say attemptsexwithbrian:
 			say "     Brian hesitates for a moment as he eyes your rhino features, clearly tempting the hard-headed mutant. Even as he moves back into charging position, he glances back at you and is uneven of the mark. Seeing your opportunity, your instincts kick in and you rush after him. A few paces behind, you end up tackling him down while he's dazed after running into the wall. Pinning him beneath you, you give him an aggressive kiss while getting into position";
 			if player is male:
 				say ". And which position is that going to be? Shall you [link]fuck him (y)[as]y[end link] or [link]ride him (n)[as]n[end link]?";
-				if the player consents:
+				if player consents:
 					say "[sexwithbrian00f]";
 					now XP of Brian is 2;
 				else:

@@ -101,7 +101,7 @@ to say beatthebeaver:
 				increase nobeaversex by 1;
 		else:
 			say "     Would you like to have him [link]eat you out (Y)[as]y[end link] or just [link]let him go (N)[as]n[end link]?";
-			if the player consents:
+			if player consents:
 				say "[beaver_pvsex3]"; [f-oral]
 			else if bodyname of player is "Beaver":	[no sex - Beaver]
 				say "     Resisting the urge to give into your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";

@@ -75,7 +75,7 @@ to say GordonTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
 				wait for any key;
@@ -196,7 +196,7 @@ to say GordonSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step away from the enslaved monkey, who oddly looks a bit disappointed.";
 				wait for any key;

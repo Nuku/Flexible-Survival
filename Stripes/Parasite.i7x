@@ -24,7 +24,7 @@ Instead of resolving a Insect Hive:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     Deciding that fortune favors the bold, you continue forward. As you proceed, the passage becomes more constricted with a gray, fibrous mass covering the walls of the buildings. There's still more than enough room to pass, so you proceed. There is a strange, sweet scent in the air that you want to follow, allaying any concerns you may have about the stuff covering the building walls.";
 		say "     You emerge into what was once a back loading area behind the buildings to see that it has been greatly changed. The gray mass continues here, spread across the rear of these buildings. In some places, the windows have been broken out and covered in the fibrous material to form circular holes. One of the loading bays remains open and is encrusted in gray as well. There is more of this stuff across the ground in mounds, possibly covering vehicles or simply forming shelters for more of the clusters of orbs.";

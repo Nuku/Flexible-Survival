@@ -60,7 +60,7 @@ To say Harpy loses:
 		stop the action; [text taken care of at the source]
 	if harpyfight is not 3 and player is male and libido of player > 40 and a random chance of 1 in 3 succeeds:
 		say "     Your final blow sends the harpy tumbling to the ground momentarily. You have a brief moment to decide if you'll take advantage of her while you can. Shall you fuck the harpy?";
-		if the player consents:
+		if player consents:
 			say "     You jump atop the harpy, pinning her down before she can take to the air again. She shrieks, but is too weak to fight you off as you get your cock lined up and thrust into her. Despite her resistance, she moans in pleasure as you start pounding into her wet pussy. As her lust builds, you relax your grip so you can fondle her breasts as well. After an enjoyable ride, you drive deep into her and release your hot seed, making her shriek in delight. You pump your hot load into her before letting her get up and leave.";
 			if harpyconsent > 0:
 				say "     When you release her, she slashes at your face angrily with your claws. 'You terrible wretch! It would have been so wonderful, but you had to turn out to be so horrible,' she shrieks angrily. You realize that it was the same harpy who made your heart all a flutter before, but she's left you now. There is a strange sadness in your heart even as the strange spell she had over you fades away.";
@@ -92,7 +92,7 @@ When Play begins:
 	now victory entry is "[Harpy wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[HarpyDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "young woman with large, elfin ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in color. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready."; [ Body Description, format as "Your Body is (your text)"]
+	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in color. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "smooth and flawless"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Above your pert ass is a fan of brown feathers that curve upwards."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock]

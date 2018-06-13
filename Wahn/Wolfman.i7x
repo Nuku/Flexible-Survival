@@ -396,7 +396,7 @@ to say JenniferTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -585,7 +585,7 @@ to say JenniferSexMenu:
 				now lastfuck of Jennifer is turns;
 		else if calcnumber is 100:
 			say "Change your mind?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -852,7 +852,7 @@ Instead of fucking Septus:
 					now lastfuck of Septus is turns;
 			else if calcnumber is 100:
 				say "Break off the conversation?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the wolfman, shaking your head slightly as he gives a questioning look.";
 					wait for any key;

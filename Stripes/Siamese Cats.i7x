@@ -212,14 +212,14 @@ to say beatthesiamesecat:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			decrease libido of player by 10;
 			say "[line break]     Deciding to have some quick fun, you start to pull off your clothes.";
 			say "     [bold type] Now which one would you like, the male or the female?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
-			if the player consents:								[CHOSE MALE KITTY]
+			if player consents:								[CHOSE MALE KITTY]
 				if player is purefemale:		[FEMALE PLAYER]
 					say "[line break][siamsex1]";
 				else if player is puremale:	[MALE PLAYER]
@@ -230,7 +230,7 @@ to say beatthesiamesecat:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get fucked.";
 					say "     ([link]N[as]n[end link]) - Fuck the kitty.";
-					if the player consents:
+					if player consents:
 						say "[line break][siamsex1]";
 					else:
 						say "[line break][siamsex2]";
@@ -246,7 +246,7 @@ to say beatthesiamesecat:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the kitty.";
 					say "     ([link]N[as]n[end link]) - Oral.";
-					if the player consents:
+					if player consents:
 						say "[line break][siamsex4]";
 					else:
 						say "[line break][siamsex3]";

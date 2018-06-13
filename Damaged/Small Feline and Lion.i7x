@@ -178,11 +178,11 @@ to say lion def:
 		say ". Knocked down and beaten, the leonine man is lying on the ground, his cock still mostly hard after being denied release. Eyeing it, you find yourself wondering if you could risk having a little fun with that feline meat[if player is male and Feline_meow < 8] or even that tawny ass[end if] now that he's subdued. Do you want to have some fun with him?";
 		now z is 1;
 	if z is 1:
-		if the player consents:
+		if player consents:
 			now tempnum is 0;
 			if player is male and Feline_meow < 8:
 				say "     Looking over the defeated lion, you wonder if you'd prefer to stuff his furry ass (Y) or have a ride on that feline cock. (N)";
-				if the player consents:
+				if player consents:
 					now tempnum is 1;
 					decrease Feline_meow by 1;
 					say "     Deciding to take this opportunity to turn the tables on the lion man, you shove the big kitty onto his front. He tries to struggle, thinking you intend to keep fighting, but you grab his wrists and keep him pinned down. Once you start grinding your [cock size desc of player] [cock of player] erection against his ass, he whimpers and attempts to pull away, but you keep your grip[if HP of Leonard >= 15 and HP of Leonard < 100], rumbling that he needs to learn to properly respect Leonard's pride and his mate[end if]. Lining up your cock under his tail, you press your glans against his tailstar and sink slowly into his tight, unyielding hole. His initial mrowl of discomfort soon turns to rumbles of pleasure as you pound into him, stuffing his golden-furred ass with your meat. Soon enough, he's pushing back into your thrusts and mewling needfully like a lustful kitty.";

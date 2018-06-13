@@ -358,7 +358,7 @@ to say Frank_MM_seduction:
 	else if frankmalesex is 2:
 		if "Dominant" is listed in feats of player:
 			say "     Given how your earlier show drew his attention, you think he's ready to coaxed into some guy on guy action. The only question remains if you'd prefer to try [link]topping him (Y)[as]y[end link] or just seduce your way into [link]riding his cock (N)[as]n[end link].";
-			if the player consents:
+			if player consents:
 				say "[Frank_MM_fbottom_00]";
 			else:
 				say "[Frank_MM_ftop_00]";

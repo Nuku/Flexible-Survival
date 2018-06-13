@@ -59,7 +59,7 @@ Instead of resolving a Centaur Gangbang:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch them take him.";
 	say "     ([link]N[as]n[end link]) - Step in and fight the centaurs.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     Bringing a hand down to your [if player is male]cock[else if player is female]cunt[else]genderless crotch[end if] you start stroking yourself, ready to enjoy the show. And what a show it is - Raul keeps fucking the black man with deep thrusts and soon he gives a lust-filled shout as he fills the human's ass with creamy centaur cum. Almost as soon as he pulls out, the third stallion moves up and plunges his shaft in and starts thrusting...";
 		LineBreak;
@@ -294,7 +294,7 @@ to say ThomasTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -677,7 +677,7 @@ to say ThomasSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

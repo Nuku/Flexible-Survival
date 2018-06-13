@@ -130,7 +130,7 @@ to say JeromeTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro shark, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -431,7 +431,7 @@ to say ShagShackSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind after all and go out?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     As you pass Jerome on the way out, he gives you a look with one raised eyebrow, then says, 'No refunds.'";
 				wait for any key;
@@ -573,7 +573,7 @@ to say SashaSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the tied-up mink, shaking your head slightly as she gives a disappointed look.";
 				wait for any key;
@@ -996,7 +996,7 @@ to say CliveSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the swing and tell the goblin you're not interested right now.";
 				wait for any key;
@@ -1167,7 +1167,7 @@ to say AlyonaSexMenu:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from Alyona, shaking your head as she gives you a questioning look.";
 				wait for any key;

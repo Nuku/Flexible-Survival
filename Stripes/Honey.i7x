@@ -34,7 +34,7 @@ Instead of resolving a Smashed Hive:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Help the bee girl.";
 			say "     ([link]N[as]n[end link]) - Grab some honey and run.";
-			if the player consents:
+			if player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl. She buzzes angrily at you, but stumbles and cannot remain upright. Using your medkit, you try your best to patch her up, feeling sorry for this lone survivor";
 				if ( "Expert Medic" is not listed in feats of player and a random chance of 1 in 10 succeeds ) or ( "Expert Medic" is listed in feats of player and a random chance of 8 in 100 succeeds ):
 					say ". This uses up the last of that medkit, so you hope it turns out to be worth it.";
@@ -54,7 +54,7 @@ Instead of resolving a Smashed Hive:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Help the poor bee girl.";
 			say "     ([link]N[as]n[end link]) - Grab the honey and run.";
-			if the player consents:
+			if player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl. She buzzes angrily at you, but stumbles and cannot remain upright. Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
 				delete healing booster;
 				say "[beegirlsaved]";
@@ -78,7 +78,7 @@ Instead of resolving a Smashed Hive:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "     Patting Honey's head and telling her you'll take care of it, you point towards the bear's path. She buzzes nervously, worry showing on her face. 'You'd face it for me? But it's so big and scary. Please be careful.' Taking her little hand in yours, you go head to the path and start following the tracks.";
 				let bonus be ( perception of player minus 10 ) divided by 2;
 				let featbonus be 0;
@@ -263,7 +263,7 @@ to say HoneyTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -365,7 +365,7 @@ to say HoneySexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
 				wait for any key;

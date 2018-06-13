@@ -25,7 +25,7 @@ carry out givingup:
 		now quitter is 1;
 	else:
 		say "Do you want to take control of your desires again, or not?";
-		if the player consents:
+		if player consents:
 			say "You pull your mind back together.";
 			now givingupton is 0;
 			now quitter is 0;

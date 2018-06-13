@@ -45,7 +45,7 @@ Instead of resolving a Challenge of the Alphas:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Run.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "Something inside of you makes you stay right where you are. This... this savagery can't continue. But what should you do? Getting in between one another might get you torn limb from limb.";
 		say "     [bold type] Should you pick sides?[roman type][line break]";

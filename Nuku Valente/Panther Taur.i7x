@@ -98,7 +98,7 @@ To say panthertaur tempt: [player wins]
 					wait for any key;
 			else if calcnumber is 100:
 				say "Resist your urges and reject her offer?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     As you turn her down, the cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
 					wait for any key;

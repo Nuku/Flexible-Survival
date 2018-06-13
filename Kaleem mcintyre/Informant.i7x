@@ -193,26 +193,26 @@ Check Homarusearching:
 	If Homaru is not visible, say "If you're going to look for Kenaz's companions then you're going to need to ask Homaru for help." instead;
 
 Carry out Homarusearching:
-	If Homarusearch is 0:
-		Say "It might be best to wait to speak to Homaru first before trying this action.";
+	if Homarusearch is 0:
+		say "It might be best to wait to speak to Homaru first before trying this action.";
 	else if Homarusearch is 1:
-		Say "[findfirefighter1]";
+		say "[findfirefighter1]";
 	else if Homarusearch is 2:
-		Say "[findfirefighter2]";
+		say "[findfirefighter2]";
 	else if Homarusearch is 3:
-		Say "[findfirefighter3]";
+		say "[findfirefighter3]";
 	else if Homarusearch is 4:
-		Say "[findfirefighter4]";
+		say "[findfirefighter4]";
 	else if Homarusearch is 5:
-		Say "[findfirefighter5]";
+		say "[findfirefighter5]";
 	else if Homarusearch is 6:
-		Say "[findfirefighter6]";
+		say "[findfirefighter6]";
 	else if Homarusearch is 70:
-		Say "Sorry, but this quest-line is impossible for you to finish as of now.";
+		say "Sorry, but this quest-line is impossible for you to finish as of now.";
 
 
-To say findfirefighter1:
-	Say "'Remember, Birch is going to be within the Gloomy Warehouse down at the [bold type]Warehouse[roman type] District. He should be a part of the [bold type]DogHouse[roman type], if what my information tells me is correct. Make sure you find him before the military rolls in or else you'll never be able to,' Homaru says somewhat direly.";
+to say findfirefighter1:
+	say "'Remember, Birch is going to be within the Gloomy Warehouse down at the [bold type]Warehouse[roman type] District. He should be a part of the [bold type]DogHouse[roman type], if what my information tells me is correct. Make sure you find him before the military rolls in or else you'll never be able to,' Homaru says somewhat direly.";
 
 to say findfirefighter2:
 	say "'Welcome back!' Homaru chirps from where he is busy eating something that both looks and smells like lettuce and ham on rye. 'Glad to know that everything worked out okay for you.' Putting down his [if daytimer is day]after meal snack[else]midnight snack[end if] and then wiping his lips off with a napkin Homaru shakes his head before smiling at you. 'So how did it work out with Birch?'[line break]";

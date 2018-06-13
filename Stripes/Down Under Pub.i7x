@@ -94,7 +94,7 @@ to say down under pub scene:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go to the down under.";
 			say "     ([link]N[as]n[end link]) - Meet with gillian.";
-			if the player consents:
+			if player consents:
 				say "[downunderpubvisit]";
 			else:
 				now battleground is "void";
@@ -200,7 +200,7 @@ to say roopubsex2:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oral.";
 	say "     ([link]N[as]n[end link]) - Anal.";
-	if the player consents:
+	if player consents:
 		say "     Rubbing a paw through his long, curly headfur, you gently guide the roo's muzzle down to your throbbing cock. As his lips slide around it and his tongue sets to work, you are quite pleased with your decision. Clearly not unfamiliar with the act, he starts giving you a fine blowjob. His tongue slides along the underside and over your glans repeatedly while his muzzle bobs over your [cockname of player] shaft. You rub his head and shoulders as you lean back to enjoy the slow, sensual sucking. Feeling his paws on one of your large, roo feet, he caresses your paw and brings it to press against his cock, moaning softly as he slides his leaking member against it. After a long and enjoyable blowjob, you pull the roo's head down over your cock and send your hot seed down his throat. He's set off as well, spraying his load onto your long paw, though he's good enough to lick it all clean afterwards, forcing you to stifle your giggles as his tongue plays between your toes while the others around tease you and crack jokes.";
 	else:
 		say "     Grabbing the little guy, you grin as you grab his tail and fondle his bottom. [if HP of Gillian < 4]The serving girl[else]Gillian[end if] winks to you as she clears a spot on the table, making room for you to bend the girly young boomer over it. You spread his cheeks and look at his tight, pink pucker, ready and waiting for you. Lining up your [cockname of player] cock with his tailhole, you dribble pre onto it as he moans in anticipation. After a little teasing, you press forward, slipping into his bottom rather easily, clearly a well-practiced roo at bending over for the big boomers. With a few thrusts, you sink your shaft into him and start fucking him while the others around the table watch the show. Reaching around, you take the roo's throbbing cock in hand and pump it firmly. You go for a nice, slow ride to get him good and worked up before finishing with a few hard thrusts that make him blast his load into an empty stein someone holds out. Watching the girly young male beneath you guzzle down his own cum when the mug's handed to him, you push hard into him one last time and paint his bowels with your seed. Giving him a little swat on the ass, you withdraw and take your seat again, laughing as he's pulled into the lap of another for sloppy seconds.";
@@ -212,7 +212,7 @@ to say roopubsex3:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tit-fuck.";
 	say "     ([link]N[as]n[end link]) - Sex.";
-	if the player consents:
+	if player consents:
 		say "     Deciding you want those fuzzy globes around your shaft, you give her breasts a teasing squeeze and tell her you'd love to see your meat between her lovely breasts. Beaming as you compliment her rack, she quickly gets down on her knees and presses her softly furred tits around your shaft. She squeezes those soft globes against your flesh, licking and kissing your glans as she rubs them along your penis. You rumble in pleasure and lean back, enjoying the attention. The sight of her furry mounds around your cock is very nice indeed. As you get close, you let her know you're about to blow and she works all her breasts against your meat all the more firmly until finally you blow, blasting your load across her face and bosom. She then grins and gets up, not bothering to clean herself off at all, instead leaving your semen on to show what a slutty girl she is. And given the calls for attention she gets from others in the room, it clearly works to get her another lover right away.";
 	else:
 		say "     Pulling her into your lap, you sit her facing you so you can bury your face in her lovely globes even as you bury your cock in her furry mound. She moans happily and rides in your lap, bouncing on her muscled roo legs. You lick, kiss and suck at her nipples while running your hands over her softly furred flesh. The ride is hard and fast, soon getting you to blow your load into her eager pussy. Your cries of orgasm are muffled by her large bosom, pulling your face between those big breasts as she cries out in pleasure as well. As soon as you're done, she's up and off from your lap, looking for another lover with a giggle and a swish of her tail.";

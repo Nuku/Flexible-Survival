@@ -509,7 +509,7 @@ instead of fucking the grant:
 		if player is herm and matriarchowned is 1:		[herm matriarch]
 			say ". The biker runs his paws along your body, shifting between your cock and pussy while licking and nibbling along your neck. 'And what can I do to serve my matriarch today?' he rumbles softly in your ear.";
 			say "     (Y=to be fucked, N=to fuck him)";
-			if the player consents:
+			if player consents:
 				say "[grantfsex]";
 			else:
 				say "[grantmbottom]";

@@ -49,7 +49,7 @@ Instead of resolving a Paratrooper:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     'Thanks for the help. I'm glad I ran into you,' she says, eying you appreciatively. 'It looks like we'll have some time to get to know each other better.' When you notice her slip a hand down to rub her groin, a part of you can't help but smile at the prospect of having some fun with the changing soldier.";
 		move Vanessa to Back Of The Library;
 		move player to Back Of The Library;
@@ -204,7 +204,7 @@ to say sexwithVanessa:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "     Taking out the hair sample, you pass them to her. She takes them and looks them over briefly, then takes a sniff. Smelling the scent of equine mare on it, she smiles and gets a little glassy-eyed again. She places the lock of hair at the back of her head where it bonds into her existing hair and turns black to match it. Her mane grows out further, becoming thick like horsehair. She moans and runs her hand over her body as other changes start. Her heavy boots start to stretch, the leather eventually splitting at the seams as she shakes her hoofed feet free. Black fur rings her fetlocks, though traces of white go up a few more inches before it returns to more human-like legs and skin.";
 				say "     Just as she's stabilizing herself on these new hooves of hers, she groans and clutches her belly, her pregnancy rushing forwards to round her belly by several more inches. Forced to open her jacket or lose that as well, you catch sight of her lovely breasts as her nipples enlarge and darken. But the most surprising change starts as two small bumps at the underside of her rounded belly. These bulge her skin and shift around, as if seeking a way out. Eventually they manage to stretch forward and form the beginnings of another pair of horse legs. They're only a few inches long and undersized, but are clearly intended to become her second pair of legs once she's fully transformed. And with that, the nanite infection comes to a halt, leaving her further transformed but by no means a centaur.";
 				say "     Vanessa pants and rubs her wet panties, having orgasmed at some point during her transformation. After a few moments to regain her composure, she looks herself over. 'Well, that didn't really help at all with my foal problem,' she says, rubbing her enlarged belly. 'Still, getting closer. And I have such lovely hooves and legs on the way. I should make for a pretty hot mare, don't you think?' she says with a giggle before trotting off to try out her half-equine legs, giving you a nice peek at that sexy round bottom of hers.";
@@ -222,7 +222,7 @@ to say sexwithVanessa:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "     Taking out the hair sample, you pass it to her. She takes the horsehair quickly and gives it a quick, inquisitive sniff. Smelling the scent of equine mare on it, she smiles and again places the lock of hair at the back of her head. As it bonds into her existing hair, it turns black to match hers and her mane grows out further, turning what was once a short military cut into long, flowing hair. The fur on her transformed legs spreads further as well, white climbing up from the black of her fetlocks.";
 				say "     Vanessa moans and runs her hands down her body, then takes hold of her stumpy equine legs. She gives some cries of pleasure as she tugs on them, each pull stretching them out another couple of inches. As they approach becoming fully formed, her hips stretch and distort, her original pair of legs moving back as she gains the centaur body she's desired. Her pregnancy slips down into it, held in her equine womb. It is still quite visible, but rests much more nicely within her new lower body. The white fur has spread across to cover it, making her look quite lovely with her ivory coat accented by her black mane, tail and socks.";
 				say "     Rubbing her hands over her flattened human tummy, she smiles at you and shifts around on her four hooves. She seems quite pleased with her new form and takes to it quite well. 'Oooo! That felt so good. It's such a relief to be carrying my foal on four legs. Mmmm... how about we celebrate a little?' she says with a grin[if player is male]. 'I mean, it's not like you can knock me up more[else]. 'You'd certainly be better able to deal with that needy pussy of mine than I can now[end if].' It seems lust has gotten her to forget or ignore her orders against sex, and just having witnessed her transformation, you're eager to get close to her sexy new body.";

@@ -42,7 +42,7 @@ Instead of resolving a Paleontology Professor:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. You land in the arms of a middle-aged man.";
 					say "     The office is a mess and his clothes are horribly torn, but he appears to be quite human. It seems he was lucky enough to make it to safety before anything could infect him. Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Noticing your gaze, he wrings his hands nervously.";
@@ -66,7 +66,7 @@ Instead of resolving a Paleontology Professor:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. You land in the arms of a middle-aged woman.";
 					say "     The office is a mess and her clothes are horribly torn, but she appears quite human. It seems she was lucky enough to make it to safety before anything could infect her. Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Noticing your gaze, she wrings her hands nervously.";
@@ -96,7 +96,7 @@ Instead of resolving a Paleontology Professor:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. As the door gives way, you tumble into a destroyed office containing not a person as you'd expected, but a reptilian creature with a sinister grin on its face.";
 					challenge "Wereraptor";
@@ -126,7 +126,7 @@ Instead of resolving a Paleontology Professor:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. As the door gives way, you tumble into a destroyed office containing not a person as you'd expected, but a reptilian creature with a sinister grin on its face.";
 					challenge "Wereraptor";
@@ -263,7 +263,7 @@ to say beatthewereraptor:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			if wrmode is 1:
 				if player is male:
@@ -287,13 +287,13 @@ to say beatthewereraptor:
 						say "[wrvict3]";
 				else if player is herm:
 					say "     Your dual-gendered nature has you at odds on how to satisfy your lusts. Shall you [link]ride (Y)[as]y[end link] the male's cock or [link]blow one another (N)[as]n[end link]?";
-					if the player consents:
+					if player consents:
 						say "[wrvict1]";
 					else:
 						say "[wrvict3]";
 				else if player is male and anallevel > 1:
 					say "     As your loosen the reins on your wereraptor lusts, shall you show your dominance and [link]mount him (Y)[as]y[end link] or [link]blow one another (N)[as]n[end link]?";
-					if the player consents:
+					if player consents:
 						say "[wrvict2]";
 					else:
 						say "[wrvict3]";
@@ -440,7 +440,7 @@ this is the wereraptor curse rule:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Accept its arrival.";
 				say "     ([link]N[as]n[end link]) - Resist.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     Welcoming the power of your lycanthropic form, you stop resisting it and let it burst free.";
 					increase hunger of player by 10;
@@ -827,7 +827,7 @@ Instead of resolving Dinosaur Skeleton:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Cure.";
 		say "     ([link]N[as]n[end link]) - Accept his offer.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "[wrcureattempt]";
 		else:

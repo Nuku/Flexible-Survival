@@ -140,7 +140,7 @@ to say StewartTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, which prompts a confused look from him but he shrugs and returns to what he was doing.";
 				wait for any key;
@@ -238,7 +238,7 @@ to say StewartSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step away from Stewart who sends you a frustrated look. You're not sure if it's because you interrupted his reading or because you didn't commit.";
 				wait for any key;

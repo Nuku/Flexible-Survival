@@ -79,7 +79,7 @@ to say ZekeTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -196,7 +196,7 @@ to say ZekeSexMenu1: [Cooperative]
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -252,7 +252,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
 				WaitLineBreak;
@@ -299,7 +299,7 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
 				WaitLineBreak;

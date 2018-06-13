@@ -94,7 +94,7 @@ to say losetotigress:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Penis.";
 				say "     ([link]N[as]n[end link]) - Vagina.";
-				if the player consents:						[Yes = wants cock, fucked by kitty]
+				if player consents:						[Yes = wants cock, fucked by kitty]
 					say "[line break]     With a soft moan, you spread your legs and hold your pussy lips open for hir, moaning as you eye hir waiting cock. 'Do me,' you say with a lustful rumble in your voice. 'I want more, kitty.' More than happy to give hir client what shi wants, the tigress smiles lustfully back at you.";
 					say "     Moving atop you, shi lines up hir cock with your wet folds and starts to sink hir barbed shaft into you. After the long session preparing you, shi has little trouble sliding hirself into you and sets to pounding at your already soaked [bodyname of player] pussy. Shi plants hir left paw beside you, gripping the mattress firmly in hir claws for support as shi drives hir throbbing member into again and again. Hir right paw strokes your [if cocks of player is 1]cock [else]cocks, each in turn, [end if]as shi pounds you lustfully.";
 					say "     Rubbing hir body against yours, soft striped fur running along your [skin of player] form, shi moves to licking and nibbling along your neck while sandwiching your [if cocks of player is 1]cock [else]cocks [end if]between you. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you another orgasm that sends your hot seed to soak your chests.[impregchance]";
@@ -294,7 +294,7 @@ to say beattigress:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:									[Decides to fuck tigress]
+	if player consents:									[Decides to fuck tigress]
 		LineBreak;
 		if player is herm:				[Yes = HERM Identified!]
 			increase libido of player by 10; [Oral submission increases Libido]
@@ -318,7 +318,7 @@ to say beattigress:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Penis.";
 				say "     ([link]N[as]n[end link]) - Vagina.";
-				if the player consents:						[Yes = wants cock, get fucked]
+				if player consents:						[Yes = wants cock, get fucked]
 					LineBreak;
 					say "     Deciding you want to try riding that sexy feline cock, you shift yourself around, straddling the tigress's hips. You rub your [if cunts of player is 1]pussy[else]pussies[end if] down onto hir cock with a moan of desire. Never having given it a chance to get soft, you coax hir cock back to full hardness quickly and slowly sink yourself down onto it. The tigress mrowls in pleasure as shi feels you taking hir feline member in. As it sinks into you, your [if cocks of player is 1]cock throbs, [else]cocks throb, [end if]rising back to full hardness.";
 					say "     You run your hands over hir body as you start riding up and down. With you on top, you set the pace and ride hir nice and slow to begin, growing faster and faster as you go. Stroking through the soft white fur on hir chest, you knead hir breasts and tease hir nipples. The tigress brings hir paws to your [if cocks of player is 1]cock[else]cocks[end if], stroking your meat in return.";

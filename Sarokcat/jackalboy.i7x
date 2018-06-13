@@ -1,6 +1,6 @@
-jackalboy by Sarokcat begins here.
+Jackalboy by Sarokcat begins here.
 
-"Adds a jackalboy to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Jackalboy to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 
 Section 1 - Monster Responses
@@ -98,4 +98,4 @@ when play ends:
 			else:
 				say "Rescued from the city with your mind intact, you still feel somewhat alone and lonely even as you try to fit back into normal society. Most nights your thoughts are filled with worry as you think of the lovely Jackal woman back in the city who made you her helper, and find yourself wondering how she is getting along without you there to help see to her needs. You do ask the military if any of them have come across your one time mistress, only to find that none of them even managed to come across her store no matter how hard they looked. Feeling somewhat despondent, much like a pet without an owner or a servant without a master, you try to fill the time with work, finding pleasure in serving someone, even if it isn't anywhere near as much pleasure as serving your mistress brought you. You wander through many jobs, a number of people enjoying your servile attitude as you do whatever they want, your heart growing heavier with every day as you long for a proper master or mistress to serve again. Eventually while on a task for your current employer, you pass by a familiar looking shop door in the local mall, you immediately stop what you are doing, and abandon your task as you happily step into a very familiar shop and find your mistress looking up at you with a grin from across the counter. Your heart sings with joy as you realize that somehow, even after being taken out of the city, you have found your way back to the place you now belong...";
 
-jackalboy ends here.
+Jackalboy ends here.

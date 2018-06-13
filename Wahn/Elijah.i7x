@@ -195,7 +195,7 @@ instead of conversing the Elijah:
 		project the figure of Elijah_good_face_icon;
 	if (HP of Elijah is 0): [chained up in the chapel]
 		say "     The angel isn't really in the shape to communicate much right now. He's drifting in and out of consciousness, and there was only a short moment when his eyes were open and focusing, giving you a pleading look. Do you want to try to free him?[line break]";
-		if the player consents: [freeing him - should lead to a demon orgy scene (see section 4) if you get beaten]
+		if player consents: [freeing him - should lead to a demon orgy scene (see section 4) if you get beaten]
 			say "     The chains are too sturdy for you to break or damage, but luckily you find the key for the manacles not too far away - lying in a puddle of caustic hellhound urine. Dragging it out with a piece of wood (that immediately starts smoking), you wipe it off with a shred of the altar-cloth and take it. Then you unlock the shackles holding the angel, carefully supporting him so he doesn't fall down.";
 			say "     You manage that well, but don't have another hand free to take hold of the chain, so it noisily clatters against the wall and other chains as it falls away from the angel's arm. Oh-oh, you hear some growls, then spot glowing red eyes open up in the darkness behind several doorways on the sides of the chapel.";
 			now inasituation is true;
@@ -385,7 +385,7 @@ to say ElijahTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the handsome angel, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -1307,7 +1307,7 @@ Instead of fucking the Elijah:
 				say "     You pull the blanket off the angel's bunk, revealing his naked and very inviting body to your lewd gaze.";
 				if player is herm: [herms may choose]
 					say "     Which part of your versatile sex do you want to use to deflower your little angel? (Y for cock, N for pussy)[line break]";
-					if the player consents:
+					if player consents:
 						say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [cock of player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
 						say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
 						say "     You start pumping in and out of your defenseless partner, delighted how each movement makes him gasp and moan, and run a hand over a tightly muscled chest down to his slowly hardening cock. Giving the angel's balls a playful squeeze, you then grab his cock, pumping up and down on its shaft in rhythm with your own thrusts.";
@@ -1530,7 +1530,7 @@ to say ElijahSexMenu:
 				now lastfuck of Elijah is turns;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the angel, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

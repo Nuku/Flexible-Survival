@@ -38,7 +38,7 @@ to say pimp attack:
 To say pimp loss:
 	if player is male and twpimpbeaten > 2:
 		say "     Having beaten another of these twisted pimps, you pull him from his band of slutty whores before they can drag him to safety. With him in your clutches, shall you turn the tables on him and make him your bitch for a while?";
-		if the player consents:
+		if player consents:
 			say "[twpimpbeaten_01]";
 		else:
 			say "     Not wanting to waste any more of your time on this wretched bastard, you give him a few extra slaps across the face and toss him to the ground, leaving his collection of women to carry him away once you've safely left.";
@@ -70,11 +70,11 @@ When Play begins:
 	now skin entry is "[one of]soft[or]soft human[or]slightly animalistic[or]pearlescent[or]lightly furred[at random]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a short nub of a tail, which isn't directly obvious until someone examines your fine ass closely. Your tail almost seems to change shape and length slightly the more you are around certain types of beasts, almost as if inviting them to come use your sexy ass."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]twisted[or]pimp like[or]unusual[or]long[or]reptilian[or]changeable[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face seems to soften and smooth out, your mouth growing more sensitive and your tongue more flexible, even as your mind seeming to fog over with lust as your face is replaced by one much more suitable for a proper whore."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it seems to shift and change, becoming thinner and sexier by the second, small bestial traits appearing on your new humanlike form, which only seem to make you look sexier and more exotic as your body finishes changing."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now face change entry is "your face seems to soften and smooth out, your mouth growing more sensitive and your tongue more flexible, even as your mind seeming to fog over with lust as your face is replaced by one much more suitable for a proper whore"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it seems to shift and change, becoming thinner and sexier by the second, small bestial traits appearing on your new humanlike form, which only seem to make you look sexier and more exotic as your body finishes changing"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it seems to shift and change, smoothing out into soft and sensitive human skin, but still seeming slightly bestial, as your body hair takes on the appearance of soft fur, and a few small patches of shimmering white scales catch the light teasingly"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your ass seems to tighten and grow rather tighter behind you, and you moan in pleasure as you can feel a small tail pushing out of your spine, looking back you can see the small nub of your tail wiggling just over your rear happily, seemingly almost like an open invitation for someone to bend you over and use your rear in any way they want"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it shifts and changes, growing slightly longer, but never seeming to settle on a proper shape as it seems to continue to shift, and soon you realize you have some control over its shape, making you grin as you realize that your cock can change to be a better and kinkier match for whatever partners you happen to find."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it shifts and changes, growing slightly longer, but never seeming to settle on a proper shape as it seems to continue to shift, and soon you realize you have some control over its shape, making you grin as you realize that your cock can change to be a better and kinkier match for whatever partners you happen to find"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 13;
@@ -123,7 +123,7 @@ before using a grab object (called x):
 		LineBreak;
 		if player is male:
 			say "As you move to slip the pill in your mouth, you feel an uneasy twinge run through your cock[smn]. Are you sure to still want to use it?";
-			if the player consents:
+			if player consents:
 				if "Male Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 					say "Your feat will not allow this to work.";
 					stop the action;

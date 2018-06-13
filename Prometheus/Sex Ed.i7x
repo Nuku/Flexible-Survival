@@ -124,7 +124,7 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You excuse yourself and leave after earning a disapproving glance for wasting the registrar's time.";
 				WaitLineBreak;

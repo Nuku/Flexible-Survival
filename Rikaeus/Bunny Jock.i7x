@@ -56,7 +56,7 @@ to say beatthebunnyjock:
 				say "     Resisting the urge, you turn away and head off before you are tempted further.";
 		else:
 			say "     Do you want to stroke and suck him off?";
-			if the player consents:
+			if player consents:
 				say "[bjockvicsex02]";
 			else:
 				increase bunnyjocknosex by 1;

@@ -238,7 +238,7 @@ When Play begins:
 	now face change entry is "it becomes thinner and much more womanly. Your scalp feels odd as two furry feline ears pop out of your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "a sudden weight is lifted from your shoulders. Looking down, you notice you have become much thinner, and your muscles have a much smoother tone to them"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "luxurious blue fur begins growing over your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
-	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance."; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its color shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 15;
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]

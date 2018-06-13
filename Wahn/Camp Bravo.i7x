@@ -109,7 +109,7 @@ Instead of resolving a Back at the Camp:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -343,7 +343,7 @@ instead of conversing Major Padgett:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the human soldier, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -546,7 +546,7 @@ to say CampBravoElaineTalk:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the soldier, shaking your head slightly as she gives a questioning look.";
 				WaitLineBreak;
@@ -774,7 +774,7 @@ to say AdamSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the half-minotaur, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
@@ -954,7 +954,7 @@ instead of conversing Sergeant Alexander:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;

@@ -34,7 +34,7 @@ to say losetocandycoon:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Anal.";
 		say "     ([link]N[as]n[end link]) - Oral.";
-		if the player consents:
+		if player consents:
 			say "     Having decided to accept your fate, you pause and allow the cotton candy coon to move in behind you, lining up his cock with your butt. After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you. His paws move around to play with your [if cocks of player > 1]cocks[else]cock[end if] while he pounds away at your ass with soft moans and squeals of pleasure. His hot-pink cock sinks into you again and again with practiced strokes. The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws. Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon. True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels. His paws work at your cock frantically, coaxing you to climax moments later.[mimpregchance]";
 			say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
 		else:
@@ -68,7 +68,7 @@ to say beatthecandycoon:
 		say "     You manage to knock the fight out of the coon boytoy. He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts.";
 	else:
 		say "     You manage to knock the fight out of the coon boytoy. He moans and plays with himself, rolling over to expose his bottom to you. You lick your lips, finding yourself quite tempted to have your way with him and use him like your own pink plaything for a bit.";
-		if the player consents:
+		if player consents:
 			now nocandycoonsex is 0;
 			if player is male:
 				say "     You step over to him and grab his cute bottom, giving it a squeeze. He moans and wiggles his rear back against your hands as you line up your cock with that tight pucker. His back door spreads open for you rather easily, though still squeezes quite nicely around your cock as you mount him. You grip his shoulders firmly and pound into him, making the girly boi moan in delight again and again. The coon's cock, hot pink in color and six inches in length, twitches between his legs, dripping precum onto the ground beneath him as he's fucked. Eventually, your excitement becomes too great and you climax, shooting your hot seed deep inside the effeminate coon boi, much to his delight. As the pink raccoon sprays his pink seed onto the ground, the air fills with the scent of cotton candy. Done with him, you leave him there, moaning and panting in pleasure.";

@@ -25,7 +25,7 @@ Instead of resolving Strange Serpent:
 			else:
 				say "     'Oh, but what would be the fun in that, I really must ask?' He's clearly intent on dancing around the topic, coaxing you to try and get a more appropriate answer. You ask if he means your pack, or under your clothing, 'Oh, something like that wouldn't nearly be as uncomfortable as what I require, but what I require more than that is your consent; I am nothing if not polite.'";
 				say "     You're not going to get a straight answer out of this creature, you could agree to his request (Y) or decline it outright (N).";
-			if the player consents:
+			if player consents:
 				now lastfuck of Velos is turns;
 				say "     Deciding to agree in taking him with you, he seems a little taken off guard by this.";
 				say "     '--Oh, huh, what a pleasant surprise! Well then, your job is quite simple; could you turn around for me? Yeah, like that, facing the other wall...' A bit unsure of what he exactly plans to do, but you slowly oblige. You're not sure what you're supposed to be waiting for before his plans are made blatantly obvious.";
@@ -70,7 +70,7 @@ Instead of resolving Strange Serpent:
 							now area entry is "nowhere";
 							now non-infectious entry is true; [Wasps locked again]
 							break;
-				if the player consents:
+				if player consents:
 					say "     Quickly, you grab a hold of him, much to his surprise, and start trying to pull him free of you. Sadly, his form is too slick for you to get a good grip, and even when it seems you might even have some grip he doesn't budge, instead eliciting jolts of twisted pleasure across your form, until you inevitably relent.";
 					say "     'Ach, don't do that! I don't like this arrangement any more than you do, so let's please refrain from such ill-treatment. Maybe we should start on better footing, my name is Velos. Think of this as a great opportunity to make a new friend! ...Else I fear this arrangement might end up less comfortable than it could be.'";
 					increase libido of player by 15;

@@ -113,7 +113,7 @@ Instead of fucking Kitsune:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Cock.";
 				say "     ([link]N[as]n[end link]) - Cunt.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					now pick is 1;
 				else:
@@ -156,7 +156,7 @@ Instead of fucking Kitsune:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Cunt.";
 				say "     ([link]N[as]n[end link]) - Ass.";
-				if the player consents, now pick is 1;
+				if player consents, now pick is 1;
 			if pick is 1:
 				LineBreak;
 				say "Bashfully asking Kitsune to fill your wet cunt, you get a surprise when not only does the Kitsune nod to show his acceptance of your request but then backs himself away from you to get down onto all fours. Your eyes are slightly mesmerized as you watch the form of the silver fox-man melt and then shift until -- once again -- the Kitsune takes on the animal-like form you remember seeing that one time before. Standing as rigid and proud as he had on that day you blush warmly as you slowly strip off your clothes and then reveal to the Great Dane sized fox your juicy box. Gaping slightly in readiness for your lover, Kitsune doesn't waste any time as he bumps his canid head into your legs, telling you without words to get down onto your knees. Complying with what your mate wishes, you find yourself getting into the classic doggy position just in time to feel something warm and wet caressing itself onto the sides of your female folds.";

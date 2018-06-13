@@ -72,7 +72,7 @@ Instead of resolving Dragonian Trial:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Run.";
 	say "     ([link]N[as]n[end link]) - Wait.";
-	If player consents:
+	if player consents:
 		say "     Turning to run you bolt as though the hounds of hell themselves are after you. Damn it being a good idea or not, it's now time to go! You don't think as the need to...escape...flee...run...screams through your veins as your blood rushes rapidly throughout your body. You don't stop to take notice of how the dragon is looking at you with a contemptible look in its golden eyes, or how the creature's clawed hands are slacking open as a sense of ire rises within the beast. The elegantly scaled creature seems to narrow its eyes as it watches your departure before huffing and then flying away, back probably to some place you could only ever dream about.";
 	else:
 		say "     Knowing that this is it you decide to do the only thing you can. Sticking out your chest and standing straight in front of the reptilian creature you await its judgment without fail. There's really nothing else you can do since the beach is too wide open to find cover to run at. And strangely enough you have a feeling the thing can swim rather well with that serpentine body it possesses so diving into the ocean is out. Standing up and giving the dragon your most ferocious stare you let the other make the next move.";

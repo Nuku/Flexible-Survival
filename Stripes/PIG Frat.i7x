@@ -40,7 +40,7 @@ to say phiiotagammadesc:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Join up.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if the player consents:
+			if player consents:
 				say "     In the hopes of gaining access, you tell him that you're interested in joining. He snorts at this and gives you a light shove back. 'Like I said, members and guests only. If you want to join the mighty Phi Iota Gamma...' There is a pause for a cacophony of snorting comes from he and all the pigs within earshot, even those clearly dead drunk. '...you've got to find a member willing to sponsor you[if player is female]. Given how things are these days, we're not so picky about it being guys only, but you[else]You[end if] need a senior frat brother in good standing to vouch for you. Until then, shove off, you mooch.'";
 				say "     Since trying to force your way in will likely bring the whole frat down upon you, you decide to leave for now. You try to think if anyone you've met might be a member of the fraternity.";
 				now piginitiation is 2;
@@ -53,7 +53,7 @@ to say phiiotagammadesc:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Join up.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if the player consents:
+			if player consents:
 				say "     In the hopes of gaining access, you tell him that you're interested in joining. 'Well, you might fit in here with a little help, but like I said, it's members and guests only. If you want to join the mighty Phi Iota Gamma...' There is a pause for a cacophony of snorting comes from he and all the pigs within earshot, even those clearly dead drunk. '...you've got to find a member willing to sponsor you[if player is female]. Given how things are these days, we're not so picky about it being guys only, but you[else]You[end if] need a senior frat brother in good standing to vouch for you. When you do, I'll be happy to help with your initiation.'";
 				say "     Since trying to force your way in will likely bring the whole frat down upon you, you decide to leave for now. You try to think if anyone you've met might be a member of the fraternity.";
 				now piginitiation is 2;
@@ -68,7 +68,7 @@ to say phiiotagammadesc:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ask to join the frat.";
 		say "     ([link]N[as]n[end link]) - Take the hint and leave.";
-		if the player consents:
+		if player consents:
 			if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy" and facename of player is not "Messy Pig" and facename of player is not "Piggy":
 				say "     In the hopes of gaining access this time, you tell him that you're interested in joining. He snorts at this and gives you a light shove back. 'Like I said, members and guests only. If you want to join the mighty Phi Iota Gamma...' There is a pause for a cacophony of snorting comes from he and all the pigs within earshot, even those clearly dead drunk. '...you've got to find a member willing to sponsor you[if player is female]. Given how things are these days, we're not so picky about it being guys only, but you[else]You[end if] need a senior frat brother in good standing to vouch for you. Until then, shove off, you mooch.'";
 				say "     Since trying to force your way in will likely bring the whole frat down upon you, you decide to leave for now. You try to think if anyone you've met might be a member of the fraternity.";

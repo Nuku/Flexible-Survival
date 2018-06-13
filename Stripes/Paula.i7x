@@ -26,7 +26,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - The doctor.";
 	say "     ([link]N[as]n[end link]) - The nurses.";
-	if the player consents:
+	if player consents:
 		say "     Moving past the doberwoman, you charge at the doctor while telling her to help the prisoner. You can see her heading towards the vixens, one of them leaving the patient to deal with the interruption while the other continues to ride her face. But you've got your own problems to deal with in the form of the horny doctor.";
 		now hdmode is 3;
 		challenge "Horny Doctor";

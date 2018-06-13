@@ -246,7 +246,7 @@ to say joannaoffer:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "[joannaseeded]";
 	else:
@@ -261,7 +261,7 @@ to say joannaoffer2:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "[joannaseeded]";
 	else:
@@ -455,7 +455,7 @@ This is the joannasexy rule:
 				infect "Parasitic Plant";
 			else if "Microwaved" is listed in feats of player:
 				say "WARNING: Sex shifting nanites detected! Allow?";
-				if the player consents:
+				if player consents:
 					say "Ok.";
 					now skipcockchange is true;
 					follow the sex change rule;
@@ -471,7 +471,7 @@ This is the joannasexy rule:
 			LineBreak;
 			if "Microwaved" is listed in feats of player:
 				say "WARNING: Sex shifting nanites detected! Allow?";
-				if the player consents:
+				if player consents:
 					say "Ok.";
 					now skipcockchange is true;
 					follow the sex change rule;

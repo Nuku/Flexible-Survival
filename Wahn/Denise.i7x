@@ -66,7 +66,7 @@ instead of conversing the Denise:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
 				WaitLineBreak;
@@ -175,7 +175,7 @@ Instead of fucking the Denise:
 					now lastfuck of Denise is turns;
 			else if calcnumber is 100:
 				say "Break off?";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
 					WaitLineBreak;

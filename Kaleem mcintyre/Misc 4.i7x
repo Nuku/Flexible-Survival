@@ -121,7 +121,7 @@ Instead of resolving Spiritual Love:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		If player consents:
+		if player consents:
 			LineBreak;
 			now Spiritual love is resolved;
 			now humanity of player is 0;

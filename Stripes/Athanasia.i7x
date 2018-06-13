@@ -18,7 +18,7 @@ Instead of resolving a Captured Bird:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     Charging across the street, you rush to attack the nearest of the felines, trying to subdue it before the others can come to assist it.";
 		challenge "Panther Taur";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -362,7 +362,7 @@ to say athanasiasex05b:		[basalt dildo - male/neuter]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		say "     The fiery bird lays down on her back with her wings spread and you climb atop her hot, downy feathers and resume scritching her. You can feel her legs fumble around, eventually grabbing the rocky toy and lining it up to plunge into her pussy. After several thrusts that make her moan and chirp in delight, the stone spire is slid out of her hot hole and repositioned to push into you. You moan softly and try to relax as that hard, heated dildo probes at your back door. Coated in her juices, it eases its passage into you, slowly working to stuff your tight ass. The warmth of her fiery body flows into you, increasing the intensity of your lust. She takes her time fucking you with her toy while her fiery wings hold you close, letting their heat suffuse you[if player is male] and flow into your groin[end if]. Eventually, the pounding of the basalt rod into your anus[if player is male], grinding against your prostate, becomes too much and you cry out loudly in lustful release, cumming hard across your avian lover's crimson feathers. As you orgasm, she nuzzles and nips at your neck and shoulders, moaning and chirping happily[end if] as she climaxes hard in lustful release. Dropping the well-used toy, she sags back with a sigh of satisfaction, draping her wings across her lover's back.";
 	else:
 		say "     You take a moment to [if HP of Athanasia is 7]explain to her that hole isn't commonly used for sex (though you do have to add that it's certainly becoming more common these days)[else]remind her that hole isn't most people's first choice for sex (especially with something of that size)[end if], but add that you'd be happy to help her use it on herself. Pleased with that solution, she lays down on her back with her wings spread and you climb atop her hot, downy feathers facing her groin. You watch as her legs fumble around a little before eventually grabbing the rocky toy and lining it up to plunge into her pussy. As the basalt toy plunges into her stretched cunt again and again, you tease her wet folds and start licking at her clit, lapping up her delicious juices[if player is male]. As you're doing this, she returns the favor by bringing her beak to your crotch to lick and suck your throbbing cock[end if].";
@@ -394,7 +394,7 @@ to say athanasiasex06c:		[volcano - basalt dildo]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     You move into position, rubbing your [bodytype of player] body down onto hers, nuzzling against her crimson feathers as her taloned feet get a good grip on the rock dildo and sinks it into herself for a few thrusts before switching it over to you. Feeling that heated, glowing rod against you is more intense than before, but still only feels wonderful to you. Despite the heat, it remains coated in her juices and this lets it be eased into your tight ass. The warmth of her fiery body flows into you, heated to even greater intensity by the volcano. This only increases the intensity of your lust and you start pushing yourself back onto the basalt rod.";
 			say "     As you feel that red-hot prick pumping inside you, you moan loudly and grip her feathers tightly so you can push yourself back onto it harder. Your anus feels so hot and so needy that you begin to whimper each time the toy slips out of you. Your cock feels as hard as the rocky dildo filling you, dribbling a steady stream of precum onto her crimson feathers. Laying spread eagle across the lava pool, she basks in the twin pleasures of soaking in the intense heat of the volcano and the intense satisfaction of giving you such physical delight.";
 			say "     Eventually, it all becomes too much for you and a particularly firm thrust of the hard, heated toy into you pushes you over the edge. Your cock throbs and blasts your hot load across your lover's flaming feathers. She pounds the toy into you good and hard, giving you an intense climax that leaves you winded. She nuzzles and nips at you in return, moaning and chirping as happily as she cums hard in lustful release. You both are left moaning and panting as you float lazily atop her in the lava. After you've both had some time to recover, she takes you in her talons, along with her toy and flies you back up to the cave.";
@@ -443,7 +443,7 @@ to say salamanderraid:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Bring her inside.";
 				say "     ([link]N[as]n[end link]) - Toss her over the rim.";
-				if the player consents:
+				if player consents:
 					say "     The phoenix is displeased with your decision, but allows you to bring the dazed salamander into the cave. At first, she gives you both the cold shoulder, but soon her warm disposition returns. Coming over to check on the girl, she nuzzles her cheek with her beak and coos softly. 'Aw! The poor thing. She fought so hard for her friends and they just left her,' she says with a tenderness in her voice.";
 					say "     Enfolding the fiery amphibian in her wings, she lets her flames grow to heat her. And to warm her up further, Athanasia also brushes her wingtip between the salamander's legs, caressing her pussy. Smiling at the corner of her beak as the girl releases some hisses of pleasure, the phoenix brings her over to the molten pool in which her egg incubated. Sitting her on the edge and dipping the girl's legs into the pool, Athanasia takes her basalt dildo in one taloned foot, dips it into the hot magma and guides it into the salamander's hot cunny.";
 					say "     The salamander girl moans with pleasure as the phoenix works the stone sex-toy faster. As she starts to come to, she's still quite dazed and doesn't quite know what's going on beyond the warmth and pleasure she's feeling. Nuzzled and nipped by Athanasia, she rocks her hips onto the hot toy's thrusts.";

@@ -53,7 +53,7 @@ Instead of resolving Adventurer:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "     Deciding not to miss out on this chance, you agree to the new vulpogryph's offer and she grins happily. Moving over to the small bedroll she's set up here, she shucks her top and shorts quickly, spreading her intriguing body out for you to see. Her lovely breasts are covered in soft, black feathers and her nipples are silvery spots half-hidden beneath that soft down. Looking lower, the feathers transition back to fur at her slender waist. As your eyes travel further, she spreads her legs and teases her wet pussy with a moan. The soft, gray fur of her muff parts to show the dark lips of her waiting sex. She grins at the corners of her beak, crooking a finger for you to approach and get your [']reward['].";
 				say "     Drawn in by her alluring body, you move between her legs, kissing along one thigh until you reach her wet folds. You slide your tongue along it, lapping at her pussy. 'Mmm... I should really have let myself have some fun earlier. Though it'll be much nicer now that I've waited for someone special,' she says as she runs her avian talons over your head.";
 				WaitLineBreak;

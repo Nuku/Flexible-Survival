@@ -87,7 +87,7 @@ to say beattheMonkeyKing:
 			say "     He lays on the ground, his ripped clothes exposing his nude body. [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Time for some monkey business!";
 			say "     ([link]N[as]n[end link]) - He is not worth your time.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				if acquaintedWithWukong is 2:
 					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Fair game,' he says, relaxing a little. [bold type] How will you claim him?[roman type][line break]";

@@ -18,7 +18,7 @@ Instead of resolving Meeting the corgi:
 		challenge "Male Dominator";
 		say "[line break]Before the dominator can get very far, a small furry missile rams into him and begins to beat the life out of him.";
 		say "Do you attack the [']small furry missile['] while it's distracted?";
-		if the player consents:
+		if player consents:
 			say "Deciding that such an aggressive creature could become a problem later on, you try to knock it out from behind.[line break]The now-relieved corgi blocks your attacks with ease and glares at you. 'And here I thought you weren't stupid. Guess I was wrong!' Before you can do anything else, the corgi slams a fist into your jaw, knocking you out, leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
@@ -35,7 +35,7 @@ The sarea of pendant hunting is "Outside".
 Instead of resolving pendant hunting:
 	if maxq is 1:
 		say "As you continue to search the city you find yourself looking at a group of three hyenas, one of which is wearing the pendant Max was looking for. Do you try to get it back?";
-		if the player consents:
+		if player consents:
 			say "As you approach, the hyenas catch sight of you and charge towards you!";
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
@@ -63,9 +63,9 @@ The conversation of Max is { "Stuff!" }.
 instead of conversing the Max:
 	if location of player is Old Lounge:
 		say "'Do you want to fight the master? (y) or get out of here (n)?'";
-		if the player consents:
+		if player consents:
 			say "'You sure you're ready to fight?'";
-			if the player consents:
+			if player consents:
 				say "Nodding, the corgi begins walking towards the sound of moaning, and you quickly follow behind him.";
 				now corgihelp is 1;
 				challenge "The Mistress";
@@ -74,7 +74,7 @@ instead of conversing the Max:
 			stop the action;
 		else:
 			say "'You sure you're ready to go?'";
-			if the player consents:
+			if player consents:
 				say "'Although you do run into a lot of enemies along the way, you do eventually get out of the demented place and to the relative safety of the mall.'";
 				move Max to Mall Atrium;
 				move player to Mall Atrium;
@@ -86,7 +86,7 @@ instead of conversing the Max:
 		say "'Hey, glad we got out of there[if Mistresswon is 1] and got rid of that demented creature too[end if]!'";
 		if Mistresswon is 0:
 			say "'If you want, we can go back and try to attack those sluts and dominatrices again?'";
-			if the player consents:
+			if player consents:
 				say "'Let's go then, shall we?'";
 				move player to Old Lounge;
 			else:
@@ -206,7 +206,7 @@ instead of conversing the Miles:
 			stop the action;
 		else if maxq is 3:
 			say "When you approach the kitsune, you find he is crouched over a pair of swords, when you inquire about them he tells you there for a quest that's not finished but if you want he'll give you them now... with a warning.[line break]The bloody sword drains health each turn, and while slightly stronger, the demonic sword drains sanity. In the future there will be a way to change the effects, but for now...good luck[line break]n for bloody, y for demonic";
-			if the player consents:
+			if player consents:
 				add "demonic sword" to invent of player;
 				now maxq is 4;
 				stop the action;

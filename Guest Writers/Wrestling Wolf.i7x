@@ -25,7 +25,7 @@ to say wrestlingwolfattack:
 			if player is not female:
 				if "Microwaved" is listed in feats of player:
 					say "WARNING: Sex shifting nanites detected! Allow?";
-					if the player consents:
+					if player consents:
 						say "Ok.";
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now cunts of player is 1;
@@ -96,7 +96,7 @@ to say beatthewrwolf:
 		say "     'HAHAHA! Now that was a fight!' he shouts between hysterical laughter while lying on the ground in defeat. 'You're not too shabby there,' he says as he springs right back up, almost as if he wasn't hurt at all. 'Heh, maybe next time I won't have ta hold back on ya. So make sure ta come back when you're ready ta have another go,' he call out to you as you walk away from the ring.";
 	else:
 		say "     Seeing your muscular foe stagger a little, you can sense victory fast approaching. Moving in, you need to decide how to end your match against the wrestler. Shall you go for a submission hold (Y-sex) or pin him to the mat (N) and get it over with?";
-		if the player consents:
+		if player consents:
 			say "     Throwing him into a [one of]full nelson[or]hammerlock[or]figure four[or]camel clutch[or]Boston crab[or]sleeper hold[at random], you grapple the muscular wolf. He tries to fight his way free, so you tighten the hold and try to bring him down. You find it difficult to hold the skilled wrestler down, but he's worn from the match. It takes a while, but eventually you have him on the mat beneath you. He's worn to the point that he cannot resist and must submit to you.";
 			increase wrwolfanal by 1;
 			say "     Caught up in the exhilaration of your success, you laugh mockingly like a victorious heel and grab the back of the wolf's trunks, pulling them down to bare his toned ass. He gives a weak growl and tries to pull free, but you've taken the fight out of him and are easily able to get your cock lined up with his crinkled hole. After giving yourself a few strokes to leak some precum onto it, you push that tight hole open with a soft moan, which he echoes with [if wrwolfanal > 2]his own[else]another growl[end if]. [if wrwolfanal is 1]The wolf's tailhole is virginally tight and a delight to feel around[else if wrwolfanal < 4]The wolf's tailhole is quite tight and a delight to feel around[else]Becoming used to this kind of treatment, the wolf's tight tailhole relaxes to allow you entrance before squeezing down with its strong muscles to work over[end if] your throbbing manhood.";

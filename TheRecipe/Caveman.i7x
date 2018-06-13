@@ -38,7 +38,7 @@ to say losetocaveman:
 
 to say beatthecaveman:
 	say "     You defeat the caveman, who collapses to the ground after dropping his club with a sad grunt. The big muscular brute looks strangely inviting lying on the ground nursing his wounds, being more human than many of those you've encountered around lately. Do you take advantage of the defeated caveman?";
-	if the player consents:
+	if player consents:
 		say "     You smile down at the caveman and tease him with a grunt of your own before having your way with him.";
 		if player is female:
 			say "     You rip off the devolved man's loincloth, exposing his throbbing meat, over a foot of caveman cock for you to ride. He gives out a questioning grunt, unsure of your intentions.";

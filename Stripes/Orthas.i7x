@@ -53,13 +53,13 @@ after going down from 2F Trevor Labs when the HP of doctor matt > 2 and HP of Or
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     'I worked here before the outbreak,' she begins. 'I was a security guard then, too, a big fella. Yeah, I was male before this all started -- I've gotten used to being female and dragon-y. Anyway, after the outbreak, most of the people in the lab panicked. But Doctor Matt stayed here, and so I decided to stay and protect him. Since the Doctor is doing his part by staying in the city and learning what he can about... whatever is causing this -- I don't pretend to know half of what comes out of his mouth -- I decided to stay and keep an eye out for him.'";
 		WaitLineBreak;
 		say "     'More than a few of the more... feral creatures out there have broken into the lab. So it was one of them that got a better hold of me than I would have liked, and that's what triggered me changing into... this form. On the other hand, I found that switching genders and gaining some scales -- and claws -- have definitely not made my job any harder.' ";
 		say "     She looks at you thoughtfully. 'You know, you look like you can handle yourself in a fight. Can I ask you a favor? I'd like you to guard the doctor for a while, while I take care of something in the basement.' (Y/N?)";
-		if the player consents:
+		if player consents:
 			say "     As soon as the door closes behind the dragoness entering the basement, the front door of the lab is forced open by one of the creatures from outside!";
 			now battleground is "Outside";
 			fight;
@@ -67,7 +67,7 @@ after going down from 2F Trevor Labs when the HP of doctor matt > 2 and HP of Or
 			fight;
 			say "     After a while, the surrounding area around the lab seems to calm down. It doesn't take too long for Orthas to return from downstairs -- but she looks disheveled, lost, and confused. Quickly rushing to her aid, you help her over to the lounge area where she spends much of her time. As she looks up at you, you begin to realize that she is flushed and looking at you with what you can only assume is lust. It is somewhat similar to the lust-addled looks you've gotten from other infected creatures out in the city. She licks her lips and eyes you closely, looking over your body, and sniffing closely at you, and you're not totally sure why.";
 			say "     'Mmm... you smell really good,' she says, her eyes looking at you with a gaze positively filled with lust. 'I know I'm not looking my best... but you don't want to have a romp with me, do you?' She smiles at you widely -- you can practically smell the heat coming off of her. (Y/N?)";
-			if the player consents:
+			if player consents:
 				say "     She lets out a toothy grin, as she reaches up with strong arms and pulls you down into a kiss. Her long tongue wraps around yours, as her other hand rubs over your body, which already has begun to respond to her actions. She pulls off the kiss after a moment, and rips off the rest of her clothes, what's left after her visit to the basement. Her body is toned and athletic, looking practically amazonian to your own lust-filled eye. Her hands caress every part of your body for a moment, before assisting you out of your own clothes.";
 				now the icon of Orthas is figure of Orthas_icon;
 				project the icon of Orthas;
@@ -109,7 +109,7 @@ after going down from 2F Trevor Labs when the HP of doctor matt > 2 and HP of Or
 					say "     As your mind goes blank in pleasure, you can hear her moaning in pleasure as she fucks you, and she too seems to be enjoying herself. Eventually, she brings you to a mind-altering climax, her shifting member driving you wild as she ejects lubrication into you with her orgasm, moaning out in pure pleasure as she does.";
 					WaitLineBreak;
 					say "     After a while, you come back to reality, and Orthas is sitting next to you, looking completely female again. She looks apologetically at you as you pant and your mind tries to register what happened. 'I'm sorry... something happened with the thing down there... it gave me this, and I'm not sure what it's for. But in the heat of the moment, I could feel it aching to go inside you, and it seemed so right...' she looks confused, cautious, and hurt, but after some calming words from you, she calms down, and nods to herself. 'I'm going to have to figure out what this thing is for,' she says, and she seems to be considering going up to ask Dr. Matt. She asks you if you want to find out, as well.";
-					if the player consents:
+					if player consents:
 						say "     After some brief instruction from Dr. Matt, it becomes clear to both of you that what Orthas has gained is an ovipositor. If she is impregnated by a male or herm, she will start swelling up with eggs, and she will be able to use it to push those eggs into willing or unwilling partners. She gets a devilish look in her eye and smiles. 'Hmm... now to find a dick...' she mutters. You leave the lab a little bit more wary, but definitely feeling energized from the sex.";
 						now HP of Orthas is 3;
 [						stop the action;]
@@ -269,11 +269,11 @@ to say orthasfuck:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Help.";
 			say "     ([link]N[as]n[end link]) - Don't break.";
-			if the player consents:
+			if player consents:
 				let oraltemp be 1;
 				if player is mpreg_ok:
 					say "     You are about to start stroking and licking her cock-like ovipositor when you feel a stirring in your lower belly, causing you to moan. Remembering your hidden womb, you could take her egg in another manner. Shall you ride her and get that egg deposited inside you?";
-					if the player consents:
+					if player consents:
 						now oraltemp is 0;
 						say "     Heeding your kinky desire, you climb onto the dragoness's lap. 'What are y...' she starts to ask before you get her slick ovipositor lined up with your pucker and you start sinking yourself down onto it. She moans in surprise and pleasure as you sink yourself down onto her 'shaft' and start riding eagerly. It doesn't take Orthas long to get to the point where her egg is pushing up her 'shaft', and you can feel it pressing hard at your anal opening, and somehow, the egg finds its way past your tight anal ring, passing further up her shaft. After a few more tense moments of mixed pain and pleasure, the egg finishes its journey up there, and pops out of her shaft and slides into your womb from its back entrance. You moan in kinky pleasure at having taken her egg in such a manner.";
 						if the gestation of the child > 0:
@@ -374,7 +374,7 @@ to say orthasfuck:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Cunt.";
 			say "     ([link]N[as]n[end link]) - Ass.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. With your hand to guide it, you aim it towards your slit and moan as it wriggles into you. It worms its way into you with delightful pulses. Soon it's nudging at your cervix, working to tease that final barrier loose. With her tentacle [']cock['] rubbing through the full length of your vagina, she's able to drive you to another orgasm, a female-centric one this time, just as her egg is nudging its way past your pussy lips. traveling through her rippling [']member['], it passes through your spasming tunnel and - with a few mind-numbingly pleasurable pushes - pops past your cervix to be deposited in your womb.";

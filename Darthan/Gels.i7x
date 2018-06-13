@@ -53,7 +53,7 @@ to say beatthepinkgel: [Victory over Pink Gel.]
 		say "     Defeated, the Pink Gel falls to the ground. Apparently aroused by the fight, she spreads her legs and begins playing with herself.";
 		if libido of player > 40:
 			say "     You are quite horny. Will you accept the pink girl's offer?";
-			if the player consents:
+			if player consents:
 				say "     Unable to contain your lust, you strip off your clothing and approach the prone girl.";
 				if player is female:
 					if player is male: [Herm Player]
@@ -126,7 +126,7 @@ to say beatthebluegel: [Victory over Blue Gel.]
 		say "     Defeated, the Blue Gel falls to the ground. Apparently aroused by the fight, he spreads his legs and begins playing with himself.";
 		if libido of player > 40:
 			say "     You are quite horny. Will you accept the blue man's offer?";
-			if the player consents:
+			if player consents:
 				say "     Unable to contain your lust, you strip off your clothing and approach the prone man.";
 				if player is female:
 					if player is male: [Herm Character]
@@ -191,7 +191,7 @@ to say beatthepurplegel: [Victory over Purple Gel.]
 		say "     Defeated, the Purple Gel falls to the ground. Apparently aroused by the fight, she spreads her legs and begins playing with herself.";
 		if libido of player > 40:
 			say "     You are quite horny. Will you accept the purple girl's offer?";
-			if the player consents:
+			if player consents:
 				say "     Unable to contain your lust, you strip off your clothing and approach the prone girl.";
 				if player is female:
 					if player is male: [Herm Character]

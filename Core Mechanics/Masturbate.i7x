@@ -34,7 +34,7 @@ instead of using porn collection:
 		say "[simplemast]";
 	else:
 		say "     Pulling out your porn collection, you look over the assorted magazines in search of something of interest. Shall you have a quick session to relieve a little pressure (Y) or do you want to draw it out and really let off some steam (N)?";
-		if the player consents:
+		if player consents:
 			say "[simplemast]";
 		else:
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the hard core magazines and begin playing with yourself[if breast size of player > 8]. You start by rubbing over your [bodyname of player] body and playing with your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if breast size of player > 5]. You start by rubbing over your [bodyname of player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if breast size of player > 2]. You start by rubbing over your [bodyname of player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else]. You start by rubbing over your [bodyname of player] body and teasing your nipples[end if][if breasts of player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";

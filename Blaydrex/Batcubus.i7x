@@ -25,7 +25,7 @@ to say Batcubus attack:
 
 to say beatthebatcubus:
 	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give into these urges?";
-	if the player consents:
+	if player consents:
 		if player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";
 			if cock length of player > 17 or cock width of player > 9:

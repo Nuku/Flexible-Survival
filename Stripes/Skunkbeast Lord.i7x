@@ -20,7 +20,7 @@ Instead of resolving a Skunkbeast Battle:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		now skunkbeaststatus is 3;
 		say "     You jump from the bushes, making a dash for the rifle, but as you're picking it up, the giant beast is there and knocks it from your hands. The enormous skunk growls menacingly and tries to bash you with its paw, but narrowly dodge out of the way. You and the beast end up in a circle of the other skunks, locked in a match to grab or destroy the gun.";

@@ -297,7 +297,7 @@ to say Leonardsex_newkitty:		[Brought Leonard a new kitty]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Bring the feline to join.";
 	say "     ([link]N[as]n[end link]) - No thanks.";
-	if the player consents:
+	if player consents:
 		say "     Smiling and nodding to Leonard as you suddenly feel quite turned on by this idea, you run your hand along the kitty's back, scritching her ears. She rumbles in pleasure as she is roused from the nap she was taking to resume nursing from your bosom. Heading towards the back of the cave with Leonard right behind you, he strokes your sides and rear as he guides you towards the four-poster bed. There your feline lover strips you down and has you lie back on the bed, still cradling the other feline to your chest. She gives a soft mewl of inquiry, unsure what's going on, but you press her muzzle back to your nipple and she settles down to enjoy her feeding.";
 		say "     Leonard moves onto the bed slowly with feline grace and stealth, padding slowly overtop of you. His paw moves in to replace your stroking hand at the feline's back, eventually drifting lower. When his fingers move to her wet pussy, she mewls again, but you make sure she continues suckling peacefully. The kitty in your arms starts rumbling and purring excitedly, raising her tail and wiggling her ass. Leonard smiles at this and bring his cock into position, slowly sinking it into the smaller female's body. She releases a yowl of pleasure, briefly sinking her claws into you.";
 		if player is female:
@@ -451,7 +451,7 @@ to say Leonardmate_newkitty:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Welcome her to the pride.";
 	say "     ([link]N[as]n[end link]) - Watch.";
-	if the player consents:
+	if player consents:
 		say "     Looking forward to helping Leonard bring another feline into the pride, you scritch the kitty's ears and nuzzle her, rousing her from the nap she was taking to resume nursing from your bosom. As your mate helps you strip down, you purr soothingly to the kitty about how she'll love being part of the pride and that it's where she belongs. She mewls softly and kneads her paws, your maternal milk making her susceptible to your invitation.";
 		say "     Leonard moves onto the bed slowly with feline grace and stealth, padding slowly overtop of you. His paw moves in to replace your stroking hand at the feline's back, eventually drifting lower. When his fingers move to her wet pussy, she mewls again, but you make sure she continues suckling peacefully as you purr affectionately to her. The kitty in your arms starts rumbling and purring excitedly, raising her tail and wiggling her ass. Leonard smiles at this and bring his cock into position, slowly sinking it into the smaller female's body. She releases a yowl of pleasure, briefly sinking her claws into you, sending shivers of delight through you as you are reminded of [one of]your first time the with the sexy lion[or]all the other pretty kitties you've helped join the pride[or]the wonderful bond you've formed with the other girls in the pride[in random order].";
 		if player is female:

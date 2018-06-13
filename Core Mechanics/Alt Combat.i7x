@@ -1197,7 +1197,7 @@ to win:
 	else if voreprompted is true:
 		if vorechoice is 0:
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you. Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry]. Shall you give into this desire to [link]consume[as]y[end link] them?";
-			if the player consents:
+			if player consents:
 				now ok is 0;
 				vorebyplayer; [See Alt Vore file]
 				now fightoutcome is 13; [player vored foe]
@@ -1211,7 +1211,7 @@ to win:
 	else if ubprompted is true:
 		if ubchoice is 0:
 			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb. Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away. Shall you give into this desire and [link]unbirth[as]y[end link] them?";
-			if the player consents:
+			if player consents:
 				now ok is 0;
 				ubbyplayer; [See Alt Vore file]
 				now fightoutcome is 14; [player ub'ed foe]
@@ -1232,7 +1232,7 @@ to win:
 		if HP of player > maxHP of player, now HP of player is maxHP of player;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
-		if the player consents:
+		if player consents:
 			now ok is 1;
 		else:
 			now ok is 0;

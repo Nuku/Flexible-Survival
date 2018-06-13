@@ -277,7 +277,7 @@ to say SatyrFratSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You change your mind, and tell Talov that you only wanted to see how they were doing, then excuse yourself and leave the somewhat disappointed satyr standing at the bar. Making your way back to the entrance, you leave the crowd of young adults and the beat of their music behind and get back to the center of the campus. You step back from the satyr, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

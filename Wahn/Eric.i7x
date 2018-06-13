@@ -128,7 +128,7 @@ Instead of resolving a Barricaded Lockerroom:
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the door-handle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another bite out of me!'";
 	LineBreak;
 	say "     Do you want to try to talk the guy into letting you in? (Y/N)";
-	if the player consents:
+	if player consents:
 		let bonus be (( charisma of player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:[line break]";
@@ -245,7 +245,7 @@ instead of conversing the Eric:
 	if (HP of Eric is 0): [starting state]
 		say "     Eric tells you what happened to him when the plague hit - with people shifting all around and his best friend taking a bite out of his arm, he moved in here and barricaded himself in. Since then, he's only left a few times, sneaking outside at night when most creatures are sleeping to gather some supplies. You in turn tell him of all the things you've seen and witnessed out in the city, making him go pale as he listens.";
 		say "     When you finish, Eric asks you 'You're a pretty resilient person from your stories... could you maybe help me save Stacy, my girlfriend? Well, ex-girlfriend I guess - she broke up with me a day before the plague hit... but that doesn't matter now. I've tried to find her and bring her here, but there was a massive green creature moving around her dorm building every time I checked. I just couldn't fight something that big, so I sneaked away before it noticed me. Please, help me save her from there!'";
-		if the player consents: [going on a rescue mission]
+		if player consents: [going on a rescue mission]
 			say "     Eric arms himself with a baseball bat and you move out together, mostly staying behind buildings and sneaking through the bushes. It goes pretty well, until you arrive at one of the main thoroughfare of the campus and have to step onto a large open area to move on. You almost make it, then hear a female voice behind you. Turning around, you see a succubus and incubus stand there, eying you like pieces of meat.";
 			say "     'It's just like you promised Aidan - a whole campus of pretty young things ripe for the plucking. How about you take that one,' she says with a nod to you, '- and I ride the redhead.'";
 			challenge "Incubus";
@@ -263,7 +263,7 @@ instead of conversing the Eric:
 			say "     A scowl on her face, the former Stacy steps over your prone body and grabs Eric by the neck, holding him up in front of her face. 'Now listen you little - I know exactly...' suddenly she stops and sniffs the air, then lowers her head to Eric's crotch. 'Wait a minute - what's this? You're a girl now? Then I do know a way you can make it up to me - I'll take your virginity and forget about you and that bitch.' You see her cock lengthen and fill out a bit from below. Laying Eric down on the bed, Stacy just rips off his clothing, revealing his lean physique - and a pussy where his cock and balls should be. She holds him down with one hand, the other rubbing his pussy lips, making him moan at the unfamiliar sensations.";
 			WaitLineBreak;
 			say "     Your head clears a bit and the stars in front of your eyes vanish. With Stacy the cheerleader hulk distracted, now would be a good time to take her on and save Eric from the tender mercies of the girlfriend he intended to rescue. Or you could just stay right here and watch - on the floor right behind Stacy, you got a ringside seat for the action. Her cock is long enough that you could reach out and touch it, and you got a nice sight of Eric's pussy at the edge of the bed from here. (Y = save him; N = watch them) ";
-			if the player consents: [save him]
+			if player consents: [save him]
 				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
 				if CheerleaderFirstEncounter is 0:
 					now CheerleaderFirstEncounter is 2;
@@ -289,7 +289,7 @@ instead of conversing the Eric:
 					remove Eric from play;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him) ";
-					if the player consents: [take advantage and take him to the bunker]
+					if player consents: [take advantage and take him to the bunker]
 						LineBreak;
 						say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
 						if player is male:
@@ -431,7 +431,7 @@ to say EricTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young man, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -494,13 +494,13 @@ to say EricTalk4:
 			say "     Undecided about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. If you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
 	else if centaur cum is owned:
 		say "     Remembering that you have found some centaur cum which might provide a possible cure for Eric's condition, shall you offer it to him?";
-		if the player consents:
+		if player consents:
 			say "[centaurcum_Eric]";
 		else:
 			say "     Uncertain about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. You recall considering finding some satyrs as well. Perhaps they might have something. Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
 	else if Satyr Wine is owned:
 		say "     Remembering that you have found some satyr wine which might provide a possible cure for Eric's condition, shall you offer it to him?";
-		if the player consents:
+		if player consents:
 			say "[satyrwine_Eric]";
 		else:
 			say "     Uncertain about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. You recall considering finding some centaurs as well. Perhaps they might have something. Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
@@ -1080,7 +1080,7 @@ to say EricSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young man, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -2521,7 +2521,7 @@ to say EricCarlThreesome Sex Menu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the two of them, saying that you just remembered something important you absolutely have to do. They give you questioning looks, then shrug and look at each other. As you hurry off, the two of them start making out, apparently determined to have fun with or without you.";
 				wait for any key;

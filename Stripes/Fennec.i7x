@@ -94,7 +94,7 @@ to say beatthefennec:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the fox.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
-			if the player consents:
+			if player consents:
 				say "[fennecvicsex2]";
 			else:
 				say "     Deciding you'd rather find relief elsewhere than from this random fox, you give him a hard push with your foot and send him scrambling away with a yip.";
@@ -103,7 +103,7 @@ to say beatthefennec:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride his rod.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
-			if the player consents:
+			if player consents:
 				say "[fennecvicsex1]";
 			else:
 				say "     Deciding you'd rather find relief elsewhere than from this random fox, you give him a hard push with your foot and send him scrambling away with a yip.";

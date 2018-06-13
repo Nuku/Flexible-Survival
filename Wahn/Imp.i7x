@@ -99,7 +99,7 @@ to say Imp Sex Menu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "[bold type]Just leave instead?[roman type][line break]";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind.";
 				wait for any key;

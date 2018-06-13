@@ -21,7 +21,7 @@ Instead of resolving a Giant's Frozen Yogurt:
 		WaitLineBreak;
 		say "     Looking around, you can see that a couple of fissures and lava streams come together around the parking lot of the trendy yogurt stand, effectively encircling it in flowing magma. While some spots are narrow enough that she might jump across them, that's too deadly a risk. Should the ground break on either side or her strength and speed waver in the heat, she'd end up in the lava.";
 		say "     You do spot a damaged section of wall near a narrower section of the molten moat. If you could knock it down, Aurora might be able to cross there. But should you even try? It won't be easy and the giantess certainly looks powerful. If she turns on you or becomes a rampaging sex monster like the others around, that would be a definite problem. It might be safer for everyone to leave her here until the military can deal with her. Shall you make the attempt?";
-		if the player consents:
+		if player consents:
 			say "[freeing_aurora]";
 		else:
 			say "     You take a few steps back from the moat of lava and tell her that you don't know how to get her across. You tell her to go back into the yogurt shop and wait for the military rescue. She nods, seeming a little cheered to hear that a rescue will come. She thanks you for trying and staggers her way back inside. You wipe your sweaty brow, glad you've managed to avoid possible trouble.";
@@ -173,7 +173,7 @@ to say AuroraTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
 				wait for any key;

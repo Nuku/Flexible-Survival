@@ -151,7 +151,7 @@ to say WhiptailVanquishedSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You stand up and walk away, shaking your head at the thought of what you almost did.";
 				wait for any key;

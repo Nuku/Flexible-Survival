@@ -19,7 +19,7 @@ Instead of resolving a Shipping Container:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		if guy is banned and girl is banned:
 			say "     You pull and pry at the handles to the steel container, but you can't get it to open. Frustrated, you bang the clipboard against the door a few times. You then notice a note written on next page of the shipping manifest stating: [']Contents locked by simultaneous use of both guy and girl flags.['] You're not quite sure what that means, but it seems the container's locked. Maybe some other time.";
 		else:

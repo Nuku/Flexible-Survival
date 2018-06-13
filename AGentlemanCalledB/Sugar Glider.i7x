@@ -74,7 +74,7 @@ to say beattheSugarGlider:
 		say ", but you have little interest in the ditzy marsupial. As with the others of her kind before her, you shake your head and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	else if player is not neuter and ( libido of player > 40 or bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" or bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider" ):
 		say " and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider? (Y/N)";
-		if the player consents:
+		if player consents:
 			now nosugarglidersex is 0;
 			say "     Deciding to have some fun with the eager glider, you drop your gear and move towards her[run paragraph on]";
 			if player is male and a random chance of 1 in 3 succeeds:	[fellatio]

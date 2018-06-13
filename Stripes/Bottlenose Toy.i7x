@@ -79,7 +79,7 @@ to say losetodolphinflatable:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				let x be a random number between 1 and 3;
 				if x is 1:
 					say "     As she tries to move the head portion overtop of your face, you manage to push the mouthpiece from your lips. You try your best to act like you're enjoying her strange fun and try to tempt her into a kiss with sweet words. ";
@@ -267,7 +267,7 @@ to say beatthedolphinflatable:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				if player is male:
 					say "     Climbing atop the toy, you pin it on its back on the sandy beach beneath you and rub your body against it, grinding your maleness along its smooth, plastic skin. As your cock stiffens, it giggles happily that you've decided to play with it after all. Pressing yourself down onto its inflatable body, you deform it slightly as you drive your throbbing shaft between those slick folds. It trills in squeaky delight as you mount it. Its PVC pussy is pleasantly warm and slick with lubricant, resizing itself to grip your [cock size desc of player] [cock of player] cock perfectly. You hold the playfully squirming pooltoy down by its handles as you pound into it, the creature's inflated body shifting and deforming a little under your weight while supporting you softly. There's just something about its smooth skin and pliable body that excites you more the longer you touch it. Knowing you can't hurt its stretchy body, you pound away at it good and hard, making the green dolphin squeak and trill in delight. After a nice, satisfying ride atop its smooth body, you push into the dolphin toy one last time and unleash your hot load, spilling a pool of your hot cum inside it[if daytimer is day]. Under the bright sun, you can see the darker streaks and the puddle your semen makes against her inner skin[end if]. Finished, you get up and the inflatable toy back up and it floats slowly back up into the air, weighed down a little by the tiring fight and your load. It slips its dark green towel back on and dives into the water to frolic and play in the waves.";
 				else:

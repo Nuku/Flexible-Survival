@@ -305,7 +305,7 @@ instead of entering the Confession Booth:
 				wait for any key;
 		else if calcnumber is 100:
 			say "     Leave the confessional?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
 				wait for any key;

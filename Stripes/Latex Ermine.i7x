@@ -79,7 +79,7 @@ to say beatthelatexermine:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun.";
 		say "     ([link]N[as]n[end link]) - Send her packing.";
-		if the player consents:
+		if player consents:
 			now nolatexerminesex is 0;
 			if player is male:
 				if a random chance of 2 in 3 succeeds:

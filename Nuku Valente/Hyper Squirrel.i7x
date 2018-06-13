@@ -44,10 +44,10 @@ Instead of Resolving a Hyper Squirrel Girl:
 				stop the action;
 			say "She sits and talks with you for a short time, explaining who she is, 'I'm Snow. I was a nice normal student before it all went down... Could be worse though. Most of the varmints around here are pretty braindead if you know what I mean. The huskies are kind of fun, but banging pure sluts gets old. Say, you seem like you have something between your ears.' She reaches and rubs the top of your head lightly, 'What say I come with you? I promise to not leave the toilet up and clean up after myself. It will be fun!";
 			say "Do you permit her to come?";
-			if the player consents:
+			if player consents:
 				say "'Wait. I need something first. My breasts are too small,' she complains, though you have reason to doubt the truth of this statement, watching her mammaries jiggle about. 'You have something to fix that?'";
 				say "Give her something?";
-				if the player consents:
+				if player consents:
 					if the distilled milk is owned:
 						decrease carried of distilled milk by 1;
 						say "'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
@@ -176,7 +176,7 @@ to say sexwithsnow00:
 		else:				[Met Wild Squirrels again since seeing Snow last]
 			now squirrelspot is HP of Snow;
 			say "     Snow buries her face in your thick, white fur again, taking in the squirrel scent with a deep, longing moan. 'Oh, you found them again. I can still smell them on you. Mmm... so sexy!' She wraps her arms around you tightly, kissing you fiercely as she rubs her throbbing cock against you. 'Oh, that smell makes me want to go out and find them again. I know we shouldn't, but my body keeps wanting to do it.' Shall you help Snow resist or give in along with her? (Y=resist, N=give in)";
-			if the player consents:
+			if player consents:
 				say "     You take Snow's cock in hand and stroke it, telling her that you're here for her and that she can satisfy herself with you as much as she needs. Kissing you passionately again, she moans her thanks and grinds her throbbing meat against you. 'Oh, I really need to get off. Let's have some fun.'";
 				say "[snowsexmenu]";
 			else:
@@ -282,7 +282,7 @@ to say sexwithsnow01:	[Vaginal on Snow]
 
 to say sexwithsnow02:	[Anal on Snow]
 	say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants. She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle. 'Mmm.. I'm in the mood for something different, hon? How about you take the back door and stuff my tight nut hole?' she asks with a grin. 'What's the problem? Can't a girl-boy want something a little kinkier?' She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening. Will you take her up on her offer?";
-	if the player consents:
+	if player consents:
 		say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench. Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready. As you sink your throbbing shaft into her, you grip her hips and press yourself to her back. 'Ohhh... that's so [if cock length of player < 10]nice[else]big[end if]. Do me, baby! Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of player] [cock of player] cock before pushing herself further onto it. Needing no more encouragement, you start pounding away at the eager herm.";
 		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [cockname of player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
 		now wild squirrels is not resolved;
@@ -332,7 +332,7 @@ to say sexwithsnow05:	[Dommed and fucked]
 to say sexwithsnow06:	[Fellatio]
 	say "     'I feel like these need a work out,' she says, reaching below her legs to slowly rub over her distended balls through her pants. She gives off a soft chittering sigh as soft churning is heard, her cum factories ramping up production even as she leers at you lustfully. 'You are going to pucker up and give me a big ole kiss where it counts,' she insists, undoing her pants and letting her huge pink member bob into the air, demanding attention.";
 	say "     Give her what she wants?";
-	if the player consents:
+	if player consents:
 		say "     You help Snow up onto a counter where she leans back against a pile of books and runs her hands down her form, cupping her large member and caressing along it before she directs it up at you. You run your fingers along the excited member, drawing a soft, appreciative chitter from Snow as she half lids her eyes. Your tongue flicks over the sensitive tool, lapping up the precum as it flows. It is strangely sweet across your tongue with a tangy hit almost hidden in it. You wrap your [facename of player] lips around it and begin to suckle softly at the head, letting your tongue taste of the prefluids as they flow more powerfully with every touch.";
 		say "     Your fingertips find her bulging veins, tracing them as you lightly stroke the member, feeling its heat and angry throbbing. Snow is moaning and cooing with delight at the attention, her breath short and rapid as she watches you fellate her with gusto. As you sink down along the tool, she suddenly grabs at you, yelping, then shrieking. You can see her balls lurch visibly, then your mouth is flooded with huge blasts of cum, pouring in salty sprays into your waiting gullet as she rocks her hips into you, trying to bury as much of her tool into you as she can, left panting and exhausted, but with a happy smile on her face.";
 	else:
@@ -404,13 +404,13 @@ Instead of resolving a wild squirrels:
 	increase diceroll by bonus;
 	if diceroll > 17:
 		say "     You notice some chittering nearby. A moment later, you catch sight of a blur of white movement. Shall you turn and flee or continue on to see how this plays out?";
-		if the player consents:
+		if player consents:
 			say "     Rather than wait for the trap to be sprung, you turn and flee the area. You can hear some loud chitters from behind you as you make your escape.";
 			say "     Phew. Close call.";
 			stop the action;
 	say "     A crushing weight descends on you from behind as a beast tackles you. Its teeth nip at your ear as great soft paws grab at your front and belly, rubbing you quite affectionately. It feels very curvy, with the exception of a very stiff erection that shoves rudely against your backside as it molests you eagerly. Just as you start to struggle against the beast, another grabs you at the face, paws at your cheeks as it guides you up to look at it. It looks like Snow, but isn't, no intelligence in those eyes as it chitters soothingly and leans in to kiss you firmly, bestial lips to yours.";
 	say "Resist?";
-	if the player consents:
+	if player consents:
 		let bonus be (( the Strength of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";

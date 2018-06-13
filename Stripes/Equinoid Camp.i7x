@@ -6,7 +6,7 @@ Section 1 - Contact
 
 to say equinoidcampinvite:
 	say "     As you prepare to leave, the equinoid moans for you to wait. 'Stop, mighty hunter. Perhaps you are worthy to join us after all. A few of the others have spoken of the defeats you have given them. We are a herd of powerful warriors and the herd could use others like you. I'm sure you would find our companionship most enjoyable,' she adds, running her hands over her body sexily. Shall you take her up on her offer and meet with her herd?";
-	if the player consents:
+	if player consents:
 		now equinoidstatus is 6;
 		say "     Deciding this might at least be worth looking into, you help the fallen equinoid to her feet. You order her to lead the way, telling her that you'll at least go to meet with them. She smiles and nods, confident in her tribe's greatness to convince you. She takes you deeper into the park along a path you'd not noticed before. In time, you reach a barricade of wooden stakes with a stern looking horse herm guarding the gate.";
 		say "     'Halt, Amaryllis! Who is this outsider you bring to the herd? You were warned, Amaryllis. No more strays.' The large equine plants the base of her spear firmly in the ground and glares at the equinoid with you.";
@@ -51,7 +51,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 		say "     'I see that you have returned. I was uncertain if you would, even when I'd heard you'd dealt with several of the wolves. I have spoken with the other leaders and, while several are uncertain of your right to join us,' she says, looking at Bryony, 'they have accepted to welcome you in peace while within our walls if you join our great tribe. The enemy of our enemy has the right to prove themselves our friend.'";
 		say "     Speaking softer to just you now, she adds. 'They are a good people though, and will accept you in time if you accept them. I expect you will still have trouble with some outside the camp though. Show them your strength and they will respect you in time.'";
 		say "     She raises her voice again, so all assembled may here. 'You will need to undergo the purification ritual to truly become one of us. To accept to join us is to accept this. Shall you do so?";
-		if the player consents:
+		if player consents:
 			say "     Speaking aloud for the others to hear, you tell her that you are ready to join the tribe and become one of them. The reaction among the group is mixed, but it seems most are willing to accept this. Some though, as you were warned, seem displeased but hold their tongues. Amaryllis, for her part, is elated and grabs your hand, leading you through the gate as Bryony grudgingly opens it. Amaryllis sticks her tongue out at her while the other black equinoid glares at her.";
 			say "     You are followed by several others through the trees and into the camp of the equinoids. It's a rather primitive community, with wooden huts and barns that make little use of scavenged materials. They clearly expect you to seem impressed by it, so you do your best to appear that way. Amaryllis leads you to one of the larger halls and you enter with the others. There, a scented bath is prepared as well as several of the equinoids.";
 			if player is male:

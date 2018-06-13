@@ -91,7 +91,7 @@ to say BeatenElkBullSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You just walk away after checking him over for loot.";
 				WaitLineBreak;
@@ -291,7 +291,7 @@ to say BeatenElkCowSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You just walk away after checking her over for loot.";
 				WaitLineBreak;
@@ -489,7 +489,7 @@ to say BeatenElkHermSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You just walk away after checking her over for loot.";
 				WaitLineBreak;
@@ -686,7 +686,7 @@ to say BeatenElkTransBullSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You just walk away after checking him over for loot.";
 				WaitLineBreak;
@@ -886,7 +886,7 @@ to say BeatenElkTransCowSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Just leave him?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You just walk away after checking her over for loot.";
 				WaitLineBreak;

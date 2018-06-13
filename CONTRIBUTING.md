@@ -48,7 +48,7 @@ Package Keyboard Shortcuts:
 `CTRL+ALT+O`: Toggle whether the panel appears.
 
 ### e. install the Atom packages `linter`, `linter-flexible-survival` and their dependencies
-Start by adding the linter plugin. It'll ask you to install some dependenciesas well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors. 
+Start by adding the linter plugin. It'll ask you to install some dependencies as well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors. 
 
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.

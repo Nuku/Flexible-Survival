@@ -28,7 +28,7 @@ The conversation of Tyr is { "Battle is the Key to Success!" }.
 Tyr is in Tyr's Club.
 
 Instead of sniffing Tyr:
-	Say "Tyr smells like a hardworking Dobie who has a couple of secrets he's not willing to share. Oh, and he also smells like a good fight!";
+	say "Tyr smells like a hardworking Dobie who has a couple of secrets he's not willing to share. Oh, and he also smells like a good fight!";
 
 Instead of conversing the Tyr:
 	if Tyrtalk is 0:
@@ -72,7 +72,7 @@ Instead of fucking the Tyr:
 			if player is male:
 				if player is female:
 					say "Having defeated Tyr you find yourself looking over the handsome, if not slightly bleeding form of the other and growing almost painfully aroused. At his words you wonder how best to slake your lusts with the beast of a Doberman? (Y=Cunt, N=Ass)[line break]";
-					if the player consents:
+					if player consents:
 						say "[TyrLost_Vaginal]";
 					else:
 						say "[TyrLost_Anal]";
@@ -222,7 +222,7 @@ to TyrSexMenu:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the Tyr, shaking your head as he gives you a questioning look.";
 				wait for any key;
@@ -345,7 +345,7 @@ to say TyrLost_GiveOral:	[only available through multiple victory menu]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Keep blowing him.";
 	say "     ([link]N[as]n[end link]) - Pull off.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     Gripping his knot firmly in one hand, you rub and squeeze it while sucking down firmly on his manhood. His canine instincts, feeling the [']tie['], drive him to hump your face in short, fast thrusts. He cums with a howl of pleasure soon after, the first of several powerful blasts of cum shooting down your throat and into your belly. As he continues to cum, your belly is filled with his seed and his semen overflows from your mouth as you can't swallow it down fast enough. The taste is strong, musky and distinctly canine - and quite delicious to your sex-addled mind. Wanting more and more of it, you keep nursing at his cock and rubbing his ballsack until the last dribbles of cum finally end.";
 		say "     Once his cock's done feeding you its seed, you ease it from your lips. You lick and kiss along that impressive rod, getting the last dregs of that tasty load from it. With his cock cleaned, Tyr chuckles and rubs your head, thanking you for remembering to do the clean-up. You get back on your feet, wipe the overflowed cum from your face and suck it from your fingers in a teasing show, grinning at the lustful look the big dog gives you.";
@@ -477,7 +477,7 @@ Section 3 - Fight Pit
 FightPit is a room.
 
 Instead of sniffing FightPit:
-	Say "The fighting pit smells of blood, sweat, exertion mixed in with canine musk, spooge and female honey.";
+	say "The fighting pit smells of blood, sweat, exertion mixed in with canine musk, spooge and female honey.";
 
 The description of FightPit is "The fighting is a giant cage area with a chain link fence surrounding it. The large arena has several different spaces where different fighter are either sparring or working out together to practice their different forms and the like. A small boy seems to be looking over the area from atop a desk off to the side of the entryway of the arena. Should he be here? Walking inside of the pit several you find several mutants looking at you with differentiating masks of emotions covering their faces. Some seem really eager to see you, others... well they look happy, but in the same way a dog does when looking at a new chew bone. Be careful, it looks like trouble may start here!".
 Receptionist is in FightPit.
@@ -534,7 +534,7 @@ Carry out PitBattle:
 		say "     I'm sorry, but you've been fighting in the arena a lot. The other competitors want to use the arena and the crowd's getting tired of seeing you. We've got to keep it exciting for them, too. Give it a break for a while before you come back.";
 	else if gestation of child > 0 or larvaegg is 2:		[preggers or parasite eggs]
 		say "I'm sorry, but I'm afraid that you'll have to withdraw any thoughts of fighting in the arena for now, with you being pregnant and all.' Kris shakes his head sadly at you before blinking bright gold eyes up into your [facename of player] face. 'In consolation, want me to tell you about my day?' At the heart-melting smile the pup shines up at you, you find yourself nodding, though not because you really want to.";
-		Say "'Ok, so where to start?! [one of]Oh yeah, did you know that Tyr likes to[or]I usually start my day of by[or]I have the most fun when I[or]All of the pit fighters seem to like me, but[or]When I grow up I'm going to[or]I really wish Va and Bra would get along better[or]I hope that Shimi is doing well. She usually[at random]...' An hour later Kris has just finished his tale and you suddenly feel as though you've learned a lot about how to handle puppies. Maybe this will make you a better parent?";
+		say "'Ok, so where to start?! [one of]Oh yeah, did you know that Tyr likes to[or]I usually start my day of by[or]I have the most fun when I[or]All of the pit fighters seem to like me, but[or]When I grow up I'm going to[or]I really wish Va and Bra would get along better[or]I hope that Shimi is doing well. She usually[at random]...' An hour later Kris has just finished his tale and you suddenly feel as though you've learned a lot about how to handle puppies. Maybe this will make you a better parent?";
 		Decrease libido of player by 10;
 		If libido of player < 0, now libido of player is 0;
 		follow the turnpass rule;
@@ -617,7 +617,7 @@ to say ArenaFightCheck:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";

@@ -187,7 +187,7 @@ to say SizeEnvyMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the group of young men and simply walk out of their temporary home.";
 				now SizeEnvyTracker is 100; [just left]

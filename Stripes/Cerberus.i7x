@@ -66,7 +66,7 @@ to say beatthecerberus:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			now godoggygo is 1;
 		else:
 			say "     You manage to fight down your lustful urges and decide to leave while you safely can";
@@ -78,7 +78,7 @@ to say beatthecerberus:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "[cerberus3oral]";
 				continue the action;
 			else:
@@ -89,7 +89,7 @@ to say beatthecerberus:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
-			if the player consents:
+			if player consents:
 				say "[cerberusfuck]";
 			else:
 				say "[cerberusride]";
@@ -99,7 +99,7 @@ to say beatthecerberus:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
-			if the player consents:
+			if player consents:
 				say "[cerberusfuck]";
 			else:
 				say "[cerberusride]";
@@ -109,7 +109,7 @@ to say beatthecerberus:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Get licked.";
 			say "     ([link]N[as]n[end link]) - Get fucked.";
-			if the player consents:
+			if player consents:
 				say "[cerberusfemmeoral]";
 			else:
 				say "[cerberusride]";

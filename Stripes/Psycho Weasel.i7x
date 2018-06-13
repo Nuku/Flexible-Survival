@@ -36,7 +36,7 @@ to say losetopsychoweasel:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Suck his cock.";
 		say "     ([link]N[as]n[end link]) - Let him mount you.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You grab a hold of his cock and slide your mouth down over it, licking and sucking him before he can fuck you. Distracted by the blow job, he rubs his fabric-covered paws over your head and groans in pleasure. His pre leaks onto your tongue and his balls are firm and heavy, and soon you're growing excited by what you're doing. Instead of sucking him to keep him from fucking you, you start to do it because you want to, longing for that cock in your mouth as you give into the crazed creature's lustful urges. His pace is frantic and erratic, sometimes slow and sensual, but often frenetic as he pounds into you while spouting off about [one of]brain-sucking mice[or]space chickens[or]government fluoride[or]mind control chemicals in condoms[or]microwave sterilized semen[or]sewer sheep[or]alligators living in the sewers[or]rats after pirate treasure[or]smuggling root beer across state lines in your socks[at random]. You do your best to ignore it, but his words seem to leak into your mind even as his precum leaks down your throat.";
 			say "     The crazed weasel continues to thrust into your mouth as you suck his cock hungrily. Gripping you firmly, he buries your face in his groin and blasts his hot load down your throat. You moan around your mouthful of pulsing cock, swallowing down the sticky cum. You rub at his ballsack, feeling the heavy orbs inside twitch as his semen is pumped out quickly, some overflowing and running down your chin and neck. As you gulp down as much of the potent fluid as you can, you find yourself wishing you'd allowed him to mount you instead.";
@@ -62,7 +62,7 @@ to say beatthepsychoweasel:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     With your decision made, you move quickly up to the weasel and run your hands over his head, then down to his arms. He whimpers a little, but seems to calm down as you start securing his straightjacket. Restrained, he whimpers more, but now clearly at his inability to reach his throbbing cock, which has gotten even harder and is dripping with precum. When you take his erection in hand and stroke it, he moans softly and settles down, mumbling about [one of]rainbows and pretty, horny fairies[or]sunrises and vixen nurses[or]sponge baths and happy pills[or]fluffy owl down pillows[in random order].";
 			if player is male:
@@ -71,7 +71,7 @@ to say beatthepsychoweasel:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Fuck the horny weasel.";
 				say "     ([link]N[as]n[end link]) - Ride his hard cock.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     Pushing him to lean over a nearby gurney, you grab his tail and hold it up, exposing his waiting tailhole. He wiggles his rear even as he keeps squirming, as if the struggle is all part of the fun. Deciding to just get to the action instead of further pondering the motivations of the clearly crazy creature, you press your [cock size desc of player] [cock of player] cock to his backside and sink your shaft into him. He moans lustfully and starts to mutter something about [one of]raccoons with sticky fingers[or]busty skunk women[or]pushy jaguars[or]cold thermometers[or]lubricated sigmoidoscopes[as decreasingly likely outcomes], so you wrap your hand around his muzzle to silence his insane ramblings. He pushes back into each thrust you make, panting and moaning as you hold his muzzle in one hand and stroke his cock in the other. You pound away at the bound weasel's ass until you fill him with your hot cream and he spurts his load onto the gurney. Once your balls are drained, you bind his straightjacket to the railings and leave him like that, slumped onto the white sheets and leaking cum from his ass. Maybe someone else will come along to take care of him... in one way or another.";
 				else if player is female:

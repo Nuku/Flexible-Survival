@@ -127,7 +127,7 @@ instead of resolving a Trickster:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Run.";
-	if the player consents:
+	if player consents:
 		say "     You dash up to the soldiers and pull out your weapon. Knowing your luck, trouble's on the way. You run up to the soldier left holding the bag. Your sudden appearance after the coyote's keeps him off guard long enough to pull the sack from him, finding it stuffed with gray fur inside. You barely have a chance to look up when a large pack of wolves come running around the corner, slamming into the unexpected team of soldiers. Several of the men are knocked down immediately.";
 		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
@@ -510,7 +510,7 @@ Instead of resolving a PeachTree:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     Deciding to risk it, you get ready and approach the tree. As you near the trunk, the seed inside you stirs again, stimulated by the scent of the other plant nearby until it cannot help but push its vine out and burrow into the soil. The vines from the canopy take this opportunity to make a grab for you, but you are ready for them and prevent them from latching onto you by surprise.";
 			challenge "Parasitic Plant";
 			if lost is 0:
@@ -587,7 +587,7 @@ Instead of resolving a Concession Stand:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     As you take the strange salesman's hand, you can feel a tingle run up through your arm. The guy grins and hops onto his counter, sitting in front of you as he unzips his pants. He whips out his cock, and like the rest of him, it is difficult to discern its features. At times, you think it more feline, others more equine. Even as you wrap your lips around it and start sucking, the feel and taste on your tongue changes over and over again. You momentarily find yourself wondering when you started sucking his cock and why, but your mind can't hold onto it and instead you start puzzling over the form of his cock again. You felt a knot there for a few bobs of your head, but now it seems more like a pair of hemipenises instead. You keep sucking at his shifting cock, your hazy mind focused on its ever-changing shape and taste. Eventually, he grips your head and holds you down into his lap as his cock gets quite long and is stuffed down your throat, unleashing a thick rush of cum into your belly.";
 			say "     The vendor releases you and flips back behind the counter. With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda. You head off, still in a bit of a daze, licking your lips as you try to figure out the flavor of cum you just guzzled down.";
 			randominfect; [first one picks a valid critter while infecting]
@@ -608,7 +608,7 @@ Instead of resolving a Concession Stand:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			if foodvendor is 1:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it. You don't say a word as he whips out his cock again. Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it. He chuckles softly and rubs your head, pumping into your mouth. You run your tongue over some feline barbs, then across a pointed, canine glans. It is thick, then long, then almost human, then unnaturally ridged. These changes continue as you try to figure out each new one, loving the ever-changing delight more and more. You put a hand to his ballsack and find it changing as well. The orbs inside always remain quite large and heavy, though their shape shifts subtly. But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum. This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth. When the knot fades away as if never there, you pull your mouth back and swallow down the semen. You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
 				randominfect; [first one picks a valid critter while infecting]

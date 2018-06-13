@@ -73,7 +73,7 @@ Instead of Resolving Domincounter:
 		stop the action;
 	if sc is 2:
 		say "Hearing the sounds of a large fight going on nearby, you decide to check it out. What you find, however, is not what you were expecting. The corgi from before[if corgitalk > 1], Max,[end if] is surrounded by a group of twenty sluts and dominators. While it looks like he's handling himself pretty well, you could help?[line break](NOTE: Consenting can lead to an end of game situation if you are on the corgi's bad side.)[line break]";
-		if the player consents:
+		if player consents:
 			say "Deciding to help the corgi out, you ram a dominator that was trying to sneak behind the corgi, knocking it to the floor. [if corgitalk > 1]Max flashes you a grin[else]the corgi flashes you a suspicious look but gives you a quick nod[end if] before slamming his fist into a rabbit's gut. Turning back to your own opponent, you find a very ticked off dominator staring back at you.[line break]";
 			now massdomfightwin is 1;
 			challenge "Male Dominator";
@@ -168,7 +168,7 @@ to say Mistressdesc:
 
 to say collarcommandlist:
 	say "do you want to get rid of the dominators and sluts? (Note if you want to get rid of only one say no)";
-	if the player consents:
+	if player consents:
 		say "The collar screams in agony as you give your command, after a few seconds the collar gives one final screech before falling apart, however the your command has been fulfilled and the dominators and sluts now cease to be ";
 		repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...] [both sluts and dom]
 			choose row y in table of random critters;
@@ -191,7 +191,7 @@ to say collarcommandlist:
 		say "[wondamistressfight]";
 	else:
 		say "Do you want to get rid of the dominators?"; [doms ]
-		if the player consents:
+		if player consents:
 			say "the collar realizes a pulse of energy and the dominators now cease to be";
 			repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...]
 				choose row y in table of random critters;
@@ -200,7 +200,7 @@ to say collarcommandlist:
 					break;
 			now area entry is "Nowhere";
 			say "Do you want to get rid of the sluts?";
-			if the player consents: [doms and sluts]
+			if player consents: [doms and sluts]
 				say "the collar realizes a pulse of energy and the sluts now cease to be";
 				repeat with y running from 1 to number of filled rows in table of random critters:	[puts Female slut as lead monster...]
 					choose row y in table of random critters;
@@ -218,7 +218,7 @@ to say collarcommandlist:
 				say "[wondamistressfight]";
 		else:
 			say "Do you want to get rid of the sluts?"; [only sluts]
-			if the player consents:
+			if player consents:
 				say "the collar realizes a pulse of energy and the sluts now cease to be";
 				repeat with y running from 1 to number of filled rows in table of random critters:	[puts female slut as lead monster...]
 					choose row y in table of random critters;
@@ -236,7 +236,7 @@ to say collarcommandlist:
 				say "[wondamistressfight]";
 			else:
 				say "the collar whispers temptation into your mind telling you how powerful you could be as its master";
-				if the player consents:
+				if player consents:
 					say "the collar sinks into your skin and re-fixes itself around your neck, granting you power over the sluts, dominators and maybe a little bit more.";
 					add "controlcollar" to feats of player;
 					now slutmaster is 1;

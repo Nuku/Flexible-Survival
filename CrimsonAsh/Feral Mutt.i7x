@@ -100,7 +100,7 @@ to say BeatTheFeralMutt:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, screw that pooch.";
 	say "     ([link]N[as]n[end link]) - No, no thank you.";
-	if the player consents: [Decides to fuck feral dog]
+	if player consents: [Decides to fuck feral dog]
 		LineBreak;
 		say "[FeralDogSexMenu]";
 	else:
@@ -160,7 +160,7 @@ to say FeralDogSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
 				wait for any key;

@@ -91,7 +91,7 @@ to say JulianTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You stand up, indicating an end to the conversation. Julian bids you farewell, before looking out the window.";
 				WaitLineBreak;
@@ -171,7 +171,7 @@ to say JulianSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;

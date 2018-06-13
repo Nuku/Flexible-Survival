@@ -105,7 +105,7 @@ Instead of fucking Urik:
 					now lastfuck of Urik is turns;
 			else if calcnumber is 100:
 				say "[bold type]Break off?[roman type][line break]";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
@@ -223,7 +223,7 @@ instead of conversing Urik:
 				now lastfuck of Urik is turns;
 		else if calcnumber is 100:
 			say "Break off?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the orc warrior, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

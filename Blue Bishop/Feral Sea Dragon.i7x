@@ -117,7 +117,7 @@ to say fsdm attack:
 						say ". A sea dragoness is before you, looking at her somewhat tired and lust-addled form, it's clear that she happened upon your egg and was compelled to use it for her own sexual gratification--much to your expense.";
 						if ((player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
 							say "     Looking at her now, she doesn't appear fully satisfied, and looks as though she might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
-							If the player consents:
+							if player consents:
 								let bonus be ( dexterity of player - 10 ) / 2;
 								let target be 14;
 								if player is submissive, increase target by 1;
@@ -141,7 +141,7 @@ to say fsdm attack:
 						say ". Another sea dragon is before you, [one of]though you instinctively know that it's[or]fairly certain that it's not[at random] the same one that first trapped you. Looking at his somewhat tired and lust-addled form, it's clear that he was compelled to use your egg for his own sexual gratification--much to your expense.";
 						if ((player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
 							say "     Looking at him now, he doesn't appear fully satisfied, and looks as though he might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
-							If player consents:
+							if player consents:
 								let bonus be ( dexterity of player - 10 ) / 2;
 								let target be 14;
 								if player is submissive, increase target by 1;

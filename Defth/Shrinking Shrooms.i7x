@@ -14,7 +14,7 @@ Instead of resolving a Mushroom cave:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
-		if the player consents:
+		if player consents:
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
 			increase carried of glowing mushroom by 3;
 			now MushroomCaveVisited is 1;
@@ -70,7 +70,7 @@ Instead of resolving a Hungry dog:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Face the beast.";
 		say "     ([link]N[as]n[end link]) - RUN!";
-		if the player consents:
+		if player consents:
 			if glowing mushroom is owned:
 				say "     Coming from inside the dark alley, the German Shepherd finally steps into the light, giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appear to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs, there is a huge sheath, and from the looks of it, an even bigger knotted penis. Even without it leaving the sheath, you can see it pressing against the skin, making it bulge, especially where the knot should be. Right below there are two orbs the size of tennis balls that appear to be full of the monster's seed.";
 				say "     The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile. He rams into you, making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt, making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Licking his lips, he holds you by the neck and says, 'Looks like I found my next meal.'";
@@ -82,7 +82,7 @@ Instead of resolving a Hungry dog:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the huge beast eat you without trying to fight.";
 				say "     ([link]N[as]n[end link]) - It isn't supposed to end like this. You will fight to the end.";
-				if the player consents:
+				if player consents:
 					say "     Not willing to fight back, you accept your fate. Even if you wanted to escape, the beast's grip is too strong on your body. He is pushing your muscles, limbs, and organs to a state of almost being crushed, making the world turn black for a moment. Your mouth is agape as you teeter at the brink of losing consciousness for good. But that smile, even wider than before and showing full well those pearly-white teeth, snags your mind back together with the horror of what is about to come. The shepherd opens his mouth fully, showing you the void that is about to be your future. You can't escape, and you can't even think about what will happen in a moment. There is only terror in your mind, knowing all too well that this is the end.";
 					say "     Before entering his mouth, the beast holds you with its long tongue. The slick texture of the monster's saliva and tongue are a weird yet strangely pleasurable sensation, and you can't help but feel some arousal despite the situation. [if player is male]It makes your member hard against that texture, making you leak pre[else if player is female]Your pussy gets wet as it is rubbed against that texture[end if]. Your oxygen-deprived mind can't tell the difference between the liquid created by your own arousal or the beast's saliva that lubricate your descent. Your arousal isn't unnoticed by your captor. The giant dog takes this opportunity to play with your body inside his mouth, licking you and throwing you around inside his mouth.";
 					WaitLineBreak;
@@ -111,7 +111,7 @@ Instead of resolving a Hungry dog:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the beast do what he wants with you.";
 				say "     ([link]N[as]n[end link]) - You can't possibly win against him. Your only hope is to flee.";
-				if the player consents:
+				if player consents:
 					now battleground is "void";
 					say "     Laughing at you now, his grip tightens. As you vainly try to gasp for air, you flail around as your mind melts into a stupor. Your lungs start to burn and wheeze, and drool drips from your gaping mouth, showing the state of your consciousness. When you are close to fainting, the shepherd tosses you inside the alley, making you crash against the wall with bone-shattering force. This brings your mind back to its alerted state, but it almost makes you throw up with the whiplash. Trying to get up on your feet, you're hit again with amazing force. Without enough time to react to his animalistic movements, you are stripped of your clothes, showing your [bodyname of player] body in all of its almost broken glory.";
 					say "     The dog is quick with his movements, holding your shoulders in place so that you can have a better view of what is about to come. Opening his mouth, with almost sexual joy, you see it. Dripping with his saliva, the mouth almost looked like a wet pussy, with a nice, pink shade and a dark abyss at the end. If it wasn't for the pearly-white teeth adorning it, reminding you of what is really about to happen with you, you would almost find the sight strangely erotic. You are pulled inside, feeling the slickness of his touch.";
@@ -179,7 +179,7 @@ Instead of resolving Little trouble:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Just give up on that";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     Giving up on the idea of exploring this weird place, you go on your merry way";
 				wait for any key;
@@ -267,7 +267,7 @@ to say LittleShroom:
 				wait for any key;
 		else if calcnumber is 100:
 			say "You give up on your curiosity and go back home";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You give up and go back the way you came. It's not worth it";
 				wait for any key;
@@ -375,7 +375,7 @@ to say ChineseTrouble:
 					wait for any key;
 			else if calcnumber is 100:
 				say "Wait for your timely demise.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
 					now battleground is "void";
@@ -431,7 +431,7 @@ to say ChineseTrouble:
 					wait for any key;
 			else if calcnumber is 100:
 				say "It's hopeless anyway, just wait for your end.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
 					now battleground is "void";

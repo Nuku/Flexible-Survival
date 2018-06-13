@@ -47,7 +47,7 @@ Instead of resolving a Poor Kitty:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give her the cup.";
 		say "     ([link]N[as]n[end link]) - Throw it away.";
-		if the player consents:
+		if player consents:
 			say "     She looks up at you and slowly reaches out to take the cup into her muzzle. Her smooth, rubbery mouth doesn't so much bite into it as absorb the portion her lips touch. Her tongue slides the melting red and white plastic around in her mouth before swallowing it down[if skinname of player is listed in infections of Latexlist]. Seeing her do this is a little disconcerting, given your current nature, but she is careful to only take the cup into her mouth when she goes for the second bite[else]. She takes rest of the cup into her mouth and it soon follows the first bite[end if].";
 			say "     After swallowing the last of it down, she nuzzles against your leg and purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears for a bit. After petting her head for a while, you move to back off while she watches you go.";
 			increase score by 5;
@@ -62,7 +62,7 @@ Instead of resolving a Poor Kitty:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Offer her another treat.";
 		say "     ([link]N[as]n[end link]) - Drive her off.";
-		if the player consents:
+		if player consents:
 			say "     Continuing to walk along, you take some string you found and an empty water bottle out of your pack. Keeping this out of sight, you tie the string around the neck of the bottle. The next time you go around a corner, you hurry ahead and drop the bottle. As your rubbery stalker comes around the corner, you tug at the string, making the bottle skitter a little. She hunkers down and starts purring, her tail swishing as she shifts her weight before pouncing. You tug the bottle a little further back, making her pursue it with soft swats of her padded paws. Soon enough, you have her rolling on her back beside you, juggling the bottle on her paws as she purrs happily. She plays with her toy for a while like this before biting down on it, eating the plastic in gooey bites.";
 			say "     After swallowing the last of it down, she spits out the loop of string and nuzzles at your leg. She purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears. She nuzzles against your touch, purring all the louder.";
 			say "     'You're just a big kitty, aren't you?' you say to her, getting another mew from her. 'You're certainly a strange rubber tigress,' you muse. 'What can I call you?' She can only reply with a mewl. 'Hmm... rubber tigress... RT... Artie? No, Artemis. How about Artemis, kitty? Roman goddess of the hunt, wilderness and... uhhh... virginity.' She seems pleased with this choice, giving a happy, squeaking mew and purring all the louder. Having received a name from you, Artemis purrs and nuzzles at you happily. It seems you've made a friend. With her following, you go back to the concession stand where you first found her, gather up a stack of cups for her and put them in your pack.";
@@ -180,7 +180,7 @@ to say ArtemisDesc:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			attempttoclearhyper;
 			artemismodding;
 
@@ -249,7 +249,7 @@ to say ArtemisTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -357,7 +357,7 @@ to say ArtemisSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
@@ -1081,7 +1081,7 @@ to say artemispostmod:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Pussy.";
 			say "     ([link]N[as]n[end link]) - Cock.";
-			if the player consents:
+			if player consents:
 				say "[artemis_pm1]";
 			else:
 				say "[artemis_pm2]";
@@ -1110,7 +1110,7 @@ to say artemispostmod:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Bend over.";
 		say "     ([link]N[as]n[end link]) - Suck her new cock.";
-		if the player consents:
+		if player consents:
 			say "[artemis_pm2]";
 		else:
 			say "     With a grin on your face, you run your hands over the tigress's hips before letting your fingers slide to her new manhood. She mewls with need and, not wanting to tease your needy pet now that she's finally got a throbbing cock of her very own, you lower yourself to the ground beside her. Leaning in closer, you give her feline shaft a slow lick, running your tongue over those soft, stimulating barbs, shivers of pleasure running through you as they brush across your tongue. You lap up the faintly rubbery lubricant dripping from her cock's tip and find it has a pleasant taste. You moan softly around her pulsing rod as she moves forward, thrusting her latex shaft into your mouth for you to suck on. Gripping her yielding, rubbery ass, you bury your face in her crotch, accepting the full length of her nine inches into you as she starts humping your face with rumbles of delight.";
@@ -1133,7 +1133,7 @@ to say artemispostmod:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Bend over.";
 		say "     ([link]N[as]n[end link]) - Kinky kiss.";
-		if the player consents:
+		if player consents:
 			say "[artemis_pm4]";
 		else:
 			say "     Smiling down at the sextoy tigress, you lower yourself to your knees and pull her muzzle to your face in a strange, sexy kiss. You part your lips and welcome her phallic, dildo tongue into your mouth, delighting in the soft rumble of pleasure coming from her as you do. Her softly-barbed tongue throbs against yours, leaking lubricating precum which you swallow down between licks. You stroke her smooth head as you kiss, tongue wrestle and suck her off all at once. She is eager and responsive to your kiss, taking delight in the pleasures her transformed tongue can provide. The feel of those soft barbs rubbing against your tongue makes you long to have them thrust into an even more intimate hole. You are eventually treated to a rush of her slick load spilling into your mouth for you to greedily gulp down. It has a faintly rubbery taste, but not one that you find displeasing in your own lustful excitement. You both have fun while you lick and suck the last drops of cum from her penile tongue and clean it, though it does leave her cocktongue dribbling precum again. Eventually, you've both had enough fellatio kissing for now and move apart to recover.";
@@ -1148,7 +1148,7 @@ to say artemispostmod:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Bend over.";
 		say "     ([link]N[as]n[end link]) - Suck her cock.";
-		if the player consents:
+		if player consents:
 			say "[artemis_pm5]";
 		else:
 			say "     Smiling down at the sextoy tigress, you lower yourself to your knees and take her tail in hand, bringing it to your mouth to give a sexy kiss. You part your lips and welcome her phallic, dildo tailtip into your mouth, delighting in the soft rumble of pleasure coming from her as you do. Her softly-barbed tailcock throbs against your tongue, leaking lubricating precum which you swallow down between licks. You stroke her tail while sucking on it, fellating its penile end enthusiastically. The feel of those soft barbs rubbing against your tongue makes you long to have them thrust into an even more intimate hole. You are eventually treated to a rush of her slick load spilling into your mouth for you to greedily gulp down. It has a faintly rubbery taste, but not one that you find displeasing in your own lustful excitement. You both have fun while you lick and suck the last drops of cum from her dildo tail attachment and clean it. Eventually, you've both had enough fellatio fun for now and move apart to recover.";

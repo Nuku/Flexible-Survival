@@ -323,7 +323,7 @@ understand "remove cover" as RevealAmuran.
 
 carry out RevealAmuran:
 	say "     Looking at the sarcophagus across the water, do you want to try and open the golden casket?";
-	if the player consents: [Smut, more interactions and quest to come soon]
+	if player consents: [Smut, more interactions and quest to come soon]
 		say "     In the end, you decide to go against your better judgment, wanting to reveal whatever it is that lies inside the sarcophagus. Walking around the pool of water and up to the shining coffin, the sarcophagus is even more glorious up close. While it looked made of plain gold from afar, the sarcophagus is actually inlaid with multitudes of precious gemstones, many of which you're unable to name. Alongside the gemstones, you're able to tell that the sarcophagus is not made of just gold; strings of different-colored metals run beautifully across the coffin's surface; it looks as if the metals are actually flowing. You can't begin to comprehend how much money this thing is worth to the right person; selling it would make you exceedingly rich.";
 		say "     Unfortunately for you, there probably isn't a buyer in the city right now, considering the condition it's in. You still let yourself make a mental reminder to pick this up when everything blows over; if it blows over, that is. Checking delicately along the seal of the sarcophagus, it seems that the lid is latched on at a few points around the coffin; it would be a (somewhat) simple matter to unseal this sarcophagus. You're soon able to pop out a latch, releasing with a loud, grating screech. Soon enough, the cover of the sarcophagus is unlatched; all you have to do is push the lid aside.";
 		say "     Once again pushing with all your might, the lid of the sarcophagus falls before you, screeching aside and falling to the ground with a massive [']THUMP[']. Taking a deep breath, you step in front of the open coffin, waiting for the worst to happen. It takes a moment for light to filter into the dark sarcophagus, but once you see what's in there, you're unable to hold back a gasp of surprise.";
@@ -355,7 +355,7 @@ instead of conversing Amuran:
 		WaitLineBreak;
 		say "     A deep, sorrowful sigh meets your questioning. 'My duty within this plagued city, ordained by my lord Horus, is to... locate an object that was... misplaced. An object that, luckily, was revealed by the chaos caused the scourge now rampaging throughout your homestead. That, in and of itself, would not be a difficult task; but the complexity of my order has deepened considerably. We divine servants, along with our natural abilities, are afforded conduits of energy, through which we channel our deities' will; the same conduits which I falsely accused you of plundering. Mine, however, were displaced in my expedition to this place.' Amuran once again sighs deeply, visibly distressed at the situation. 'Without them, I am not within my full powers; I cannot leave this mystic sanctuary, either. The doors you so easily crossed keep me locked within, and without divine interference, I am trapped here.'";
 		say "     'And that, young one, is both who I am and what my task is. How long my undertaking shall last, I do not know. Intervention from my lord is needed for me to continue, but' Amuran pauses for a moment 'the gods are... flighty. Beseeching my lord will take time, but so do all things.' Taking a more postured and regal stance, Amuran crosses his arms across his chest and bows to you, apparently thanking you. 'I am grateful to you for the conversation, young one. As simple and self-pitying as it was, millennia have elapsed since I last spoke to a mortal. It has been invigorating.' Seemingly done speaking for now, Amuran ambles over to a spot in front of the glimmering pool, subsequently sitting down and assuming a meditative stance; if you had to guess, he's trying to talk to someone high up. Mulling the entire situation over in your head, you consider offering your help to the divine servant. Do you?";
-		if the player consents:
+		if player consents:
 			say "[AmuranQuestAccept]";
 			now AmuranAwoken is 2;
 			now Finding Winged Orb is unresolved;
@@ -364,7 +364,7 @@ instead of conversing Amuran:
 			now AmuranAwoken is 3;
 	else if AmuranAwoken is 3:
 		say "     Finding Amuran once again deep in meditation, it seems that he has not done anything but meditate since you've last seen him. Thinking back to your last conversation, the offer to help him in his quest once again comes to the forefront of your thoughts. Do you bring up the offer to the divine insect-man?";
-		if the player consents:
+		if player consents:
 			say "[AmuranQuestAccept]";
 		else:
 			say "[AmuranQuestReject]";
@@ -394,7 +394,7 @@ instead of conversing Amuran:
 		say "     'Simply locate it and return it to my lord Horus, mortal. It will still take some time, unfortunately; while my gifts of seering have strengthened with the return of Horus's seals, the prevalence of untamed magic amongst this city has blocked much of my sight. I only know that it is located in a place of fire and smoke; a rampaging inferno amongst the ruins of civilization. I must find my way through this maze of stone and metal you call a city, in order to find this burning conflagration and complete my task.'";
 		WaitLineBreak;
 		say "     Having explored parts of the city, you could say that you are somewhat proficient in navigating the 'maze of stone and metal'. The opportunity to one again assist Amuran presents itself; do you want to help him complete his charge, or let him finish his task alone?";
-		if the player consents:
+		if player consents:
 			if Approaching the Capitol Building is known:
 				say "     As Amuran prepares to head out into the city, you once again grab his attention; you inform him that you (probably) know right where the relic is. In all of your explorations, there's only one place that you've found that matches what he described; the area around the Capitol building. Telling Amuran that it would be no problem to show him where it is, he stops and stares at you unwaveringly.";
 				say "     After a few seconds of Amuran glaring holes into your head, it seems that you may have offended him somehow. As you begin to apologize for your apparent slight, he rears his head back and starts laughing. After a few (more) seconds, he calms down, looking at you with the insectoid equivalent of a smile.";

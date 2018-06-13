@@ -43,7 +43,7 @@ to say losetoocelot_bt:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Big kitty.";
 		say "     ([link]N[as]n[end link]) - Little kitty.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now ocelotchoice is 2;
 			now cock length entry is 10;
@@ -152,7 +152,7 @@ to say losetoocelot_ld:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Big kitty.";
 		say "     ([link]N[as]n[end link]) - Little kitty.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now ocelotchoice is 2;
 			now cock length entry is 10;
@@ -213,7 +213,7 @@ to say beattheocelot_bt:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Leave.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now noocelotbtsex is 0;
 			if ocelotchoice is 0:
@@ -222,7 +222,7 @@ to say beattheocelot_bt:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Big kitty.";
 				say "     ([link]N[as]n[end link]) - Little kitty.";
-				if the player consents:
+				if player consents:
 					LineBreak;
 					say "     'Purrrrr... [if player is ocelotbodied]a big, dom kitty to have his way with me for being a bad kitty[else]There it is. I smell a big, dom kitty inside you, eager to have his way with me for being a bad kitty[end if],' he purrs, rubbing a paw over your crotch even as you move atop him. You press him to the ground beneath you and rub your hands over his body, grinning as you watch him squirm in delight.";
 					now ocelotchoice is 2;
@@ -266,7 +266,7 @@ to say beattheocelot_bt:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Yes.";
 					say "     ([link]N[as]n[end link]) - No.";
-					if the player consents:
+					if player consents:
 						LineBreak;
 						say "     Having done his job quite well, you decide he deserves a little reward to go with his punishment. Pushing him away suddenly, he falls on his ass. He mewls softly in surprise only to have you pounce atop him, pressing your [cunt size desc of player] pussy down onto his stiff, unattended cock. Pressing his body to yours, you start riding up and down in his lap in heavy thumps. His face, damp with your juices, nuzzles against ";
 						if breast size of player > 1 and breasts of player > 0:

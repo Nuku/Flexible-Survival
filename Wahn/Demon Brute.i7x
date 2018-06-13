@@ -712,7 +712,7 @@ to say DBRelationshipTalkMenu:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				if companion of player is demon brute:
 					say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";

@@ -618,7 +618,7 @@ to say Larissaisnow-panda:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -661,7 +661,7 @@ to say Larissaisnow-alphahusky:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -710,7 +710,7 @@ to say Larissaisnow-GSDmale:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -758,7 +758,7 @@ to say Larissaisnow-tighooker:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -801,7 +801,7 @@ to say Larissaisnow-teddybear:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -844,7 +844,7 @@ to say Larissaisnow-latexmistress:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -887,7 +887,7 @@ to say Larissaisnow-naga:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -930,7 +930,7 @@ to say Larissaisnow-mammoth:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -973,7 +973,7 @@ to say Larissaisnow-redkangaroo:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -1019,7 +1019,7 @@ to say Larissaisnow-panthertaur:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -1062,7 +1062,7 @@ to say Larissaisnow-baldeagle:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -1110,7 +1110,7 @@ to say Larissaisnow-darkelf:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -1153,7 +1153,7 @@ to say Larissaisnow-succubus:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -1196,7 +1196,7 @@ to say Larissaisnow-googirl:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;
@@ -1239,7 +1239,7 @@ to say Larissaisnow-centaurmare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			let goahead be 1;
 		else:
 			let goahead be 0;

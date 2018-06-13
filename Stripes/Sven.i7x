@@ -97,7 +97,7 @@ instead of conversing the Sven:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				now lastSvendrink is turns;
@@ -119,7 +119,7 @@ instead of conversing the Sven:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				decrease carried of water bottle by 1;
@@ -136,7 +136,7 @@ instead of conversing the Sven:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				decrease carried of water bottle by 1;
@@ -158,7 +158,7 @@ instead of conversing the Sven:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight on your own.";
 		say "     ([link]N[as]n[end link]) - Convince Sven to fight back.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "[SvenRescueFight]";
 		else:
@@ -182,7 +182,7 @@ instead of conversing the Sven:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get the pinned kitty to [if player is male]suck you off[else]eat you out[end if].";
 					say "     ([link]N[as]n[end link]) - Watch the show.";
-					if the player consents:
+					if player consents:
 						LineBreak;
 						now xx is 1;
 						if player is male:
@@ -255,7 +255,7 @@ to say SvenRescueFight:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     You make the suggestion to him, saying you have a friend who's hiding in a store much closer to here. 'A store near here? That doesn't sound too bad. And I'll be safe there?' You tell him that your mouse friend hasn't had any trouble. 'A... mouse? I... I think I could cope with a mouse. That wouldn't be too scary.' With that decided and a little prompting from you, Sven gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is. The trek is short and thankfully uneventful.";
 				now HP of Sven is 50;
@@ -357,7 +357,7 @@ to say SexWithSven:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Leave him be.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now HP of Sven is 5;
 			now lastfuck of Sven is turns;
@@ -408,7 +408,7 @@ to say SexWithSven:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Top him.";
 			say "     ([link]N[as]n[end link]) - Ride him.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[CollarFuck]";
 			else:
@@ -422,7 +422,7 @@ to say SexWithSven:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes (WS).";
 		say "     ([link]N[as]n[end link]) - No way.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			now lust of Sven is 2;
 			if player is male:
@@ -651,7 +651,7 @@ to say SvenTrio:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck them both.";
 			say "     ([link]N[as]n[end link]) - Coon sex.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[SvenTrio2fuck]";
 			else:
@@ -671,7 +671,7 @@ to say SvenTrio2fuck:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sven.";
 	say "     ([link]N[as]n[end link]) - Candy.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "     Deciding on Sven, you drive your cock into him one last time and start pounding away at him hard and fast. You bury your fingers in his soft fur to grip his cute ass tightly. He mrowls and mewls loudly, knowing what's coming and longing for it. Candy, now free to move, slides around quickly and stuffs Sven's large cock into his muzzle. His paws scritches the kitty's ears and gets him to return the favor for the excited coon. You are barely able to hold back long enough to get their 69 going before you moan loudly and drive your cock hard into the snowmeow, unleashing your hot load into him[if cock width of player > 15]. Your hefty balls blast their seed out from your cock, over-stuffing his tummy so much it swells from your huge load[else if cock width of player > 8]. Your big balls pump their seed out from your cock, stuffing his ass fully with your ample load[else]. Your balls throb and your cock pumps out your seed, spraying your seed into his eager bottom[end if]. You can hear the delicious sounds of their wet moans as they swallow down each other's semen. Once your climax passes and you all bask in the afterglow, you snuggle and kiss on the cot for a while before you get up and head off, leaving them to snuggle while you tend to other matters.";
 	else:
@@ -871,7 +871,7 @@ to say SexWithSvetlana:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "[SvetlanaTrio]";
 			else:

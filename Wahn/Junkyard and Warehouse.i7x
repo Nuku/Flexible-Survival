@@ -132,7 +132,7 @@ Instead of going south from the Abandoned Lot:
 					if soda is owned:
 						LineBreak;
 						say "     Do you give him a bottle of soda?";
-						if the player consents:
+						if player consents:
 							LineBreak;
 							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly clloses the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
 							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
@@ -315,7 +315,7 @@ to say sexwithSteven:
 				say "You hug him from behind and take off his trousers, exposing his cock. His black, 7-inch horse cock.";
 				say "'I was working at the station when I heard the sirens,' he says. 'I ran straight to my apartment, and everything was on fire. I tried to find Danny. All I found was my Father's Day gift, there on the bookshelf. As I was running back, I ran into this horse thing. It must've squirted me, or something, because after I arrived here, my dick looked like this. Every day, I feel like this thing is trying to control me. But I have to suppress everything. If I go the slightest thing loose, I'll lose everything. The job I have here, the... friends I've made, my people...'";
 				say "Do you want to continue fucking him?";
-				if the player consents:
+				if player consents:
 					say "'You've had some painful memories,' you say, as you walk over to him, and lean over to whisper in his ear. 'But I can help you forget.'";
 					StevenFuck;
 				else:
@@ -325,7 +325,7 @@ to say sexwithSteven:
 			else:
 				say "You look at Steven, and he looks back. He backs up against the bookshelf, fearing the lust in your eyes. 'I know what you're thinking,' he says, backing towards the bookshelf. 'Please, don't. It's hard enough on my own. If you try to seduce me... well, I'll throw you, is what I'll do.' He turns away, shaking fearfully. 'I don't want to lose what I have...'";
 				say "Do you still want to fuck him?";
-				if the player consents:
+				if player consents:
 					say "You walk up to him, slowly, and place your hand on his shoulder. He shivers. You put your other hand on his shoulder. You can feel the muscles underneath build up with tension. You lean over and whisper, 'You've got someone who loves you. What else matters?'";
 					StevenFuck;
 				else:
@@ -399,7 +399,7 @@ To Stevenjunkfuck:
 		if player is male:
 			if player is female:
 				say ". While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him. Being a herm, you could easily climb up on top of him and ride him, or you could give him a some [']oral['] attention. (Y=Ride, N=Suck) ";
-				if the player consents:
+				if player consents:
 					say "[Stevenride]";
 				else:
 					say "[Stevensuck]";
@@ -417,7 +417,7 @@ To Stevenjunkfuck:
 					say "[Stevenonbottom]";
 			else:
 				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him. While he doesn't seem interested in being mounted, perhaps he'd consent to fucking your ass. Otherwise, you might give him some [']oral['] attention. (Y=Ride, N=Suck) ";
-				if the player consents:
+				if player consents:
 					say "[Stevenanal]";
 				else:
 					say "[Stevensuck]";

@@ -101,7 +101,7 @@ Instead of resolving a Ambulance Dock:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		if a random chance of 2 in 3 succeeds:
 			LineBreak;
 			say "     You have a little luck while searching, managing to find a partially salvageable medkit from the mess. It's only partially complete and will need some more parts to be usable. Maybe someone could put them together? Your search did unfortunately get quite a bit of that cum on you though.";
@@ -602,7 +602,7 @@ instead of going to Primary Lab while hospquest is 2:			[Searching the main lab]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     As you explain to Dr Matt about the strange state of the hospital and the mouse doctor working away deep inside, Dr Matt listens with increasing attention and some concern. 'This is quite unexpected. You have found another person in the city searching into the mysteries of the nanite infection, but through a different avenue of research. And using the infected as test subjected is...' he coughs as he notices the stern look you [if susan is visible]and Susan [end if]give him. 'That is, possibly using them as unwilling test subjects in such surgical experiments. Most disturbing and unethical, even in such a crisis.'";
 			say "     'I suggest you take that device to this Dr Mouse individual. It will further ingratiate you to him and allow you to find out more about what's going on at the hospital. Hopefully, I am wrong about my concerns and this doctor may be of help to us. As well, we do need to know if his concerns about the nanites are valid.";
@@ -769,7 +769,7 @@ to say hospquestpt9:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject him.";
 		say "     ([link]N[as]n[end link]) - Take him as-is.";
-		if the player consents:
+		if player consents:
 			increase score by 10;
 			decrease humanity of player by 5;
 			now coonstatus is 101;
@@ -808,7 +808,7 @@ to say hospquestpt10:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     'Excellent! I knew I could rely on you,' the mouse says. 'I shall provide you with a radio to signal the helicopter once you have located it, so it can be transported here.' The mouse gives you a pat on the back and drags his stool back over to his worktable, intent on resuming his work. The orderlies grunt and motion for you to get on your way[if coonstatus is 1]. You take the coon's paw in yours, leading him out of the room and giving him directions back to the bunker, where he'll be safe until you return[end if].";
 			now hospquest is 11;
@@ -824,7 +824,7 @@ to say hospquestpt10:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     'Excellent! I knew I could rely on you,' the mouse says as he passes you the syringe. 'I shall provide you with a radio to signal the helicopter once you have secured the device, so it can be transported here.' The mouse gives you a pat on the back and drags his stool back over to his worktable, intent on resuming his work. The orderlies grunt and motion for you to get on your way[if coonstatus is 1]. You take the coon's paw in yours, leading him out of the room and giving him directions back to the bunker, where he'll be safe until you return[end if].";
 			now hospquest is 11;
@@ -884,7 +884,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject.";
 		say "     ([link]N[as]n[end link]) - Talk.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "[tlabsbigfight]";
 		else:
@@ -1271,7 +1271,7 @@ to say tlvictory:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Use Dr. Matt.";
 		say "     ([link]N[as]n[end link]) - Lock her up.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You glance over at Orthas and decide not to leave her out of the action. Grabbing the little slut, you pull her off the table and over to the dragoness. Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
 			say "     'No, doctor. Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her. She whimpers a little, but arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
@@ -1465,7 +1465,7 @@ to say smellingthelavalamp:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[line break]     Following the strange compulsion, you lick the lava lamp a few times, tasting the saurian's female juices on it, finding them quite arousing. For a moment there, it's almost as if you can hear music.";
 			now lavalamplick is 1;
 			increase libido of player by 10;
@@ -1485,7 +1485,7 @@ instead of using lava lamp:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[line break]     Following the strange compulsion, you lick the lava lamp a few times, tasting the saurian's female juices on it, finding them quite arousing. For a moment there, it's almost as if you can hear music.";
 			now lavalamplick is 1;
 			increase libido of player by 10;
@@ -1641,7 +1641,7 @@ to say hospquestpt12:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		say "[ec_activation]";
 	else:

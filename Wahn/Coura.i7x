@@ -243,7 +243,7 @@ to say MTFRatSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100: [cancel sex menu]
 			say "Just let Cole/Coura off scot free for now?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				if libido of Danny < 16: [regular Cole is transformed back and let go]
 					say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Intoning a few tongue-breaking words, she waves her hand over the mall rat, instantly making her features become somewhat more masculine and the small bumps of Coura's breasts disappear from where they were bulging out the t-shirt a tiny bit. 'T-Thank you!' Cole calls out and tries to run outside, only to be stopped short by Nermine's hand tight around his arm. 'The rodent should not think that this matter is over,' she hisses into his large ear, then lets go and glares after him as he flees the store. Nermine whirls around as soon as he is gone, vanishing into the back room to compose herself, clearly pissed off that the anticipation was for naught.";

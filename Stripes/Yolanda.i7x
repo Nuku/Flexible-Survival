@@ -103,7 +103,7 @@ to say movingYolanda:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		if icaruscheck is true and the number of bunkered people + the number of booked people > 3:
 			say "     You [if HP of Yolanda is 5]again [end if]pitch that Yolanda move to the library as being a safer place for her and her collection since the place draws little interest from the other creatures roaming around. She's skeptical at first, suspecting that you only want her there so you can perv on her without having to come see her. She does start to gain interest when you mention [if HP of Icarus < 50]that there's a subby bird boy there already[else]that there's a dommy bird guy already there[end if] along with several others.";
 			say "     'Well, that sounds like quite the harem you're building up,' she teases. 'It'd be nice to have some company, so I guess I can come along and check it out with you, see if it's really like you've said[if HP of Icarus < 50]. Having a subby songbird around sounds like it could be fun. I'm sure a perv like you wouldn't mind sharing a little[else]. Having another dommy bird around sounds like it could be fun. I'm sure a perv like you wouldn't mind being shared around a little[end if]. You just better not be making it all up so you can get me all alone at your sex den; I'll peck out your eyes if you are.'";
@@ -360,7 +360,7 @@ to say yolandasex04:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Choose the butt plug.";
 		say "     ([link]N[as]n[end link]) - Object.";
-		if the player consents:
+		if player consents:
 			say "[yolandasex04_A]";
 		else:
 			say "[yolandasex04_default]";
@@ -370,7 +370,7 @@ to say yolandasex04:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - The toys.";
 		say "     ([link]N[as]n[end link]) - Something more her usual speed.";
-		if the player consents:
+		if player consents:
 			say "[yolandasex04_B]";
 		else:
 			say "[yolandasex04_default]";
@@ -380,7 +380,7 @@ to say yolandasex04:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Use the doggy dong.";
 		say "     ([link]N[as]n[end link]) - Something a little less wild.";
-		if the player consents:
+		if player consents:
 			say "[yolandasex04_C]";
 		else:
 			say "[yolandasex04_default]";
@@ -390,7 +390,7 @@ to say yolandasex04:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[yolandasex04_D]";
 		else:
 			say "[yolandasex04_default]";
@@ -601,7 +601,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Libr
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Leave.";
-	if the player consents:
+	if player consents:
 		move player to Darkened Alcove;
 		let avpred be false;
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
@@ -629,7 +629,7 @@ an everyturn rule:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay.";
 		say "     ([link]N[as]n[end link]) - Escape back to the bunker.";
-		if the player consents:
+		if player consents:
 			say "     Finding yourself in the mood for some fun and wondering just what the duo have in mind, you set your pack aside and pose in a provocative manner. Icarus gives a chirping wolf-whistle and the pair come down, moving to either side of you. It's then that you notice that Yolanda has a small satchel of what appears to be some choice pieces from her kink collection in her talons. You look between them as they move in closer and coquettishly ask them what's on their minds while leaning back against the table behind you.";
 			if player is female:
 				say "     Icarus's response is to push you back onto the table[if avpred is true] roughly[end if]. 'Well, Yolanda and I'd been discussing what to do about you, seeing how neither of us is much interested in being bottom for the other,' the little passarine says as he fondles you between the legs as he strips you down.";

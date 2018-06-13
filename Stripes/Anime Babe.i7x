@@ -137,7 +137,7 @@ to say beattheanimebabe:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			now noanimebabesex is 0;
 			say "     Following your baser instincts, you leap onto the sexy girl and pull up her skirt. She squirms and gives a squeal of 'Ecchi', but also giggles and [']accidentally['] pops open her shirt, exposing her shapely melons and perky pink nipples. With such an invitation, you grin and grab her breasts, squeezing them and lean down, licking at her nipples. She bites her lip, trying to hold back a moan, but eventually failing and crying out as you suck hard on one of them.";
 			if a random chance of 2 in 5 succeeds:
@@ -149,7 +149,7 @@ to say beattheanimebabe:
 			increase noanimebabesex by 1;
 	else if player is female:
 		say "     You look over the youthful anime babe, feeling quite tempted to go all yuri on her. Shall you do so?";
-		if the player consents:
+		if player consents:
 			now noanimebabesex is 0;
 			say "     Following your baser instincts, you leap onto the sexy girl and pull up her skirt. She squirms and gives a squeal of 'Ecchi', but also giggles and [']accidentally['] pops open her shirt, exposing her shapely melons and perky pink nipples. With such an invitation, you grin and grab her breasts, squeezing them and lean down, licking at her nipples. She bites her lip, trying to hold back a moan, but eventually failing and crying out as you suck hard on one of them.";
 			say "     Your hand dives under her skirt, flipping it up again and yanking down her [one of]pink[or]white[or]blue[or]kitty[at random] panties this time, exposing her tight, hairless little cunt. Already very wet, your fingers slip easily into her, making her moan and squeal delightfully. You continue these lecherous actions while grinding your pussy down across her smooth, glossy leg before grabbing one of her hands and guiding it to your pussy so she can finger you as you play with her. She does so eagerly and you both enjoy several wet, sticky climaxes that leave you satisfied, at least for the moment. When you get up, she continues to play with herself, licking your juices from her fingers while rubbing her clit.";

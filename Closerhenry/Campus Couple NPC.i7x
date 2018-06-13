@@ -99,7 +99,7 @@ to say JadakoTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
 				wait for any key;
@@ -170,7 +170,7 @@ to say JosephTalkMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
 				wait for any key;
@@ -252,7 +252,7 @@ to say CampusCoupleSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
 				wait for any key;

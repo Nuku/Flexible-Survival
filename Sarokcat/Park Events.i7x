@@ -13,7 +13,7 @@ when play begins:
 
 Instead of Resolving a Poppies field:
 	say "Traveling through the park you stumble into a less used area, where some strange flowers appear to have taken root, looking closer at the brilliant blooms, you feel a sense of peace and tranquility wash over you, for some reason you feel like stopping to relax here for a while, do you take a rest?";
-	If player consents:
+	if player consents:
 		say "Yawning, you stop to sit in the field of flowers for a minute, and find your eyes drifting shut, you aren't sure just how much time has passed, when all of a sudden something knocks you awake! Shaking off the damage and some plants that strangely seem to have settled on you, you begin to fight!.";
 		decrease HP of player by 10;
 		fight;
@@ -46,7 +46,7 @@ when play begins:
 
 Instead of Resolving a fallen tree:
 	say "While traveling along one of the hiking paths in the park, you note a tree seems to have fallen across the path, it isn't in the best location for just going around either, as the thick undergrowth could conceal just about anything. You can continue onwards if you choose, but something seems slightly suspicious about this, maybe it would be safer to head back... Do you go on?";
-	If player consents:
+	if player consents:
 		say "Moving through the thick underbrush, you find you have played right into someones hands, or paws as the case may be, as no sooner are you entangled than the beasts attack!";
 		challenge "Cute Chinchilla Woman";
 		challenge "Cute Chinchilla Woman";

@@ -168,8 +168,9 @@ fucked and filled
 p-victory possibilities:
 - ride drake (if maxed out or Twisted Capacity)
 - fuck drake
-- force oral -- male, suck cock eagerly
-             -- female, 'disappointingly mundane' but still does it
+- force oral
+	- male, suck cock eagerly
+	- female, 'disappointingly mundane' but still does it
 - made to suck self?
 - use staff's dildo end on drake
 - taunt w/maxed out booty denied her

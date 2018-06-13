@@ -120,7 +120,7 @@ Instead of resolving a Technical Assistance:
 				now bookfind is 1;
 			else:
 				say "Searching over and under you can't seem to find anything remotely useful to your needs. Grunting you begin to feel somewhat annoyed, but before you can you sigh and realize that you need to look a little harder. Maybe you should try a little harder to find the material you need?";
-				if the player consents:
+				if player consents:
 					say "You find yourself looking around the room, though as quietly as you can so as not to alert more trouble.";
 					follow the turnpass rule;
 					wait for any key;
@@ -236,7 +236,7 @@ This is the doorcheck rule:
 	if title entry is "Left Door":
 		if ldoor is 0:
 			say "Looking at the door with the yellowish stains covering its front you bolster your courage and chose that door to walk in through. Grabbing the knob, while trying very hard not to touch any of slime covering the wood frame, you twist the handle and then push open the door. It's jammed!! Now this is a slight problem. On the one hand, this could be a sign to leave well enough alone. On the other it could mean that you need to use some force to open the stubborn barrier. What should you do? (Y=Go in, N=Don't)";
-			If player consents:
+			if player consents:
 				now doorsearch is 0;
 				while doorsearch is 0:
 					let bonus be (( the Strength of the player minus 10 ) divided by 2);
@@ -474,8 +474,8 @@ Section 6 - Sanctuary
 Sanctuary is a situation.
 
 Instead of resolving a Sanctuary:
-	If waterworks is 1:
-		Say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [facename of player] face and [bodyname of player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
+	if waterworks is 1:
+		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [facename of player] face and [bodyname of player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
 		Extend game by -16;
 
 
@@ -489,7 +489,7 @@ It is part of the player.
 It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
 
 Instead of sniffing icicle knives:
-	Say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
+	say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
 
 
 

@@ -84,7 +84,7 @@ to say beattheorca:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
-			if the player consents:
+			if player consents:
 				say "[orcavicsex1]";
 			else:
 				say "[orcavicsex2]";

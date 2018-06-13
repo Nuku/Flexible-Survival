@@ -49,7 +49,7 @@ Instead of Resolving a Lusty Skunk:
 	if skrp is -1:
 		say "You notice a crudely drawn sign, posted in the grass. 'Beware Double Skunks. If you cherish your privacy, turn away now.'";
 		say "Do you want to proceed?";
-		if the player consents:
+		if player consents:
 			now skrp is 0;
 		else:
 			now lusty skunk is resolved;

@@ -118,7 +118,7 @@ to say DiegoTalkMenu:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro coyote woman, shaking your head slightly as [if DiegoChanged is 0]he[else]she[end if] gives a questioning look.";
 				WaitLineBreak;
@@ -433,7 +433,7 @@ to say DiegoSexMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[else]he[end if] gives a questioning look.";
 				WaitLineBreak;

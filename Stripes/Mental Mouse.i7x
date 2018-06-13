@@ -105,7 +105,7 @@ to say beatthemouse:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				say "[mouseyvicsex]";
 			else:
 				say "     Deciding against sticking around, you get your mind back on what you were doing and prepare to get moving.";

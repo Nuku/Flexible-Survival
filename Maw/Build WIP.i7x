@@ -42,7 +42,7 @@ Check constructing:
 Carry out constructing:
 	say "[description of noun]";
 	say "[line break]Construct?";
-	if the player consents:
+	if player consents:
 		now current2 of blueprints is noun;
 		now lolcation is second noun;
 		say "Your builders begin constructing [noun] in the [second noun].";

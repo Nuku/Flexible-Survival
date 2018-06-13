@@ -59,7 +59,7 @@ to say BeatTheFrostDrake:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, show him whose boss.";
 	say "     ([link]N[as]n[end link]) - No, not gonna happen.";
-	if the player consents: [Decides to fuck Frost Drake]
+	if player consents: [Decides to fuck Frost Drake]
 		LineBreak;
 		say "[FrostDrakeSexMenu]";
 	else:
@@ -112,7 +112,7 @@ to say FrostDrakeSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You back away and shake your head.";
 				wait for any key;

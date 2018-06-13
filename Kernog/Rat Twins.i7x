@@ -108,7 +108,7 @@ to say ErinSexMenu:
 			infect "Slut Rat";
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You inform Erin of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
 				WaitLineBreak;
@@ -293,7 +293,7 @@ to say VioletSexMenu:
 			infect "Slut Rat";
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You inform Violet of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
 				WaitLineBreak;
@@ -423,7 +423,7 @@ Instead of resolving a Pirate Standoff:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Aye. Time to make new friends.";
 	say "     ([link]N[as]n[end link]) - They put themselves into trouble, now they have to face the consequences.";
-	if the player consents:
+	if player consents:
 		now HP of Erin is 1;
 		say "     You get back on your feet and, from the top of the dune, shout the first moderately witty insult that comes to mind - something about them being cheap Jack Sparrow knock-offs. Three sharks turn in your direction, and the siblings use the opportunity to charge the pirate captain. Ducking under her grasping arms, the two rodents are past the captain in a flash and run with their tails between their legs in direction of the public beach.";
 		say "     'Aaarg! After them, ye pea-brained bastards!' the leader of the sharks shouts angrily. Her goons obey, and run after the young rats, while the captain turns her ire towards yourself. ";
@@ -520,7 +520,7 @@ The sarea of Strange Island is "Nowhere".
 to say strangeIsland:
 	move player to Restaurant;
 	if level of Erin is 0:
-		say "     As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. ' Do you know about Vohr Island?'[line break]After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.[line break]'With all the mayhem going on, we totally forgot about the place as well,' Erin said. 'But then, now that we had time to settle a little, we remembered the rumors about this place.'[line break]'You remember them too, right?' Violet asks. 'That place is basically the local Zone 51. And with this infection apocalypse going on, me and Bro wonder if the place had something to do with it.'";
+		say "     As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. 'Do you know about Vohr Island?'[line break]After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.[line break]'With all the mayhem going on, we totally forgot about the place as well,' Erin said. 'But then, now that we had time to settle a little, we remembered the rumors about this place.'[line break]'You remember them too, right?' Violet asks. 'That place is basically the local Zone 51. And with this infection apocalypse going on, me and Bro wonder if the place had something to do with it.'";
 		say "'We won't ask much of you,' Erin said in reassurance. 'We would feel safer with you going forward and scouting the area, but for now, we would simply ask if you had found a boat during your exploring.'";
 	else:
 		say "'What about the island?' the rat replies. 'Did you find us a boat?'";

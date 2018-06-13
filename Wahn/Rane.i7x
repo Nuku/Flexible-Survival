@@ -385,7 +385,7 @@ instead of conversing the Rane:
 				wait for any key;
 		else if calcnumber is 100:
 			say "[bold type]Break off the conversation?[roman type][line break]";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
@@ -545,7 +545,7 @@ Instead of fucking Rane:
 					now lastfuck of Rane is turns;
 			else if calcnumber is 100:
 				say "[bold type]Break off?[roman type][line break]";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
 					wait for any key;

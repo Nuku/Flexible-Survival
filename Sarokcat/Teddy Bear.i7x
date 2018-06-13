@@ -52,7 +52,7 @@ To say teddy bear loss:
 				increase noteddybearsex by 1;
 		else:
 			say "     Would you like to go for a 69 (y) or [link]leave her be (n)[as]n[end link]?";
-			if the player consents:
+			if player consents:
 				say "[teddybear69]";
 			else:
 				say "     Deciding against taking advantage of the poor bear, you leave her where she is. You return to what you were doing before she got in your way.";
@@ -77,7 +77,7 @@ to say teddybear69:
 	say "     As she works her muzzle and tongue over your genitals, you take a moment to examine hers. At her crotch, her stitching opens a hole in her funfur skin that connects to a smooth, velvety passage. Exploring with a finger, you find it soft and very pleasant to the touch, as well as warm and surprisingly animated. It squeezed around your finger much like a real pussy would. Pushing a second digit into her, you fingerfuck her strategically placed hole, much to her obvious enjoyment. Amused and intrigued, you lick along the stitching and into the velvet hole, exciting her further.";
 	say "     Playing with her hot tunnel with your tongue and fingers gets her really worked up and she runs her tongue all over your loins in response. With her soft whiskers tickling your thighs, her padded muzzle [if player is male]squeezes and sucks on your cock until you're pushed to orgasm, shooting your [cum load size of player] load down her throat to fill her plush tummy[else]presses against your wet folds and her tongue laps into your cunt until you're pushed to orgasm, covering her plush face in your feminine juices[end if].";
 	say "     After your powerful orgasm, you're left feeling fuzzy-headed and content. As you're recovering from your orgasm, you feel the bear's plush paws move to your feet and guide them to her muzzle. She gives them a few licks before opening her muzzle and slipping them into her maw. Shall you let her continue?";
-	if the player consents:
+	if player consents:
 		say "     Feeling too happy to take notice of what's going on, you are content to enjoy the licking and the soft feel of the bear's muzzle around your feet and ankles. As she continues to sit up, the pleasant sensation moves up to envelop more of your legs. When she reaches your hips, you start to wonder what's going on, but those thoughts are pushed aside when her tongue finds its way to your crotch again. The feel of it across your [if player is herm]cock[smn] and cunt[sfn][else if player is male]cock[smn][else if player is female]cunt[sfn][end if] causes you to moan and grow aroused once again.";
 		say "     While it takes a little longer to get you off this time, it is no less pleasant an experience - perhaps even better from the added sensation of her soft muzzle and throat squeezing and rubbing along your lower body. As she gets you to cum for the second time, she opens her mouth wider and raises you up. She lowers you down into her plush maw, swallowing down your [bodytype of player] body even as she's swallowing down your sexual fluids. It is only as she ursine muzzle is closing around your head before your very eyes that you realize what's happening all too late. But you're also too fuzzy-headed and awash in pleasure to even think of resisting. You curl up happily in the warm embrace of the plush bear's belly, drifting off into a peaceful sleep.";
 		teddybearvored;

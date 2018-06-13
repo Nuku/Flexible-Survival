@@ -150,7 +150,7 @@ Instead of conversing the Hayato:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     Hoping that you're ready for this, you give the big guy's shoulder a firm shake, telling him to get up. As he starts to rise, he asks you what the rush is and you tell him that you're going back to deal with the oni lair and that he's coming with you. He staggers back at this and starts to protest, but you emphasize that the problem's only going to get worse if something isn't done about it soon. And if he doesn't confront his fear of the oni, he'll also fear himself and never fully feel he's in control of his new self.";
 			say "     Reluctantly forced to agree, he takes a deep breath, summons up his courage and heads out with you into the city again, this time returning to the Capitol District where you first found him.";
@@ -378,7 +378,7 @@ instead of resolving Noh Mask:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			now HP of Hayato is 12;
 			say "[nohmaskninja]";
 	else if HP of Hayato is 12:
@@ -388,7 +388,7 @@ instead of resolving Noh Mask:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "[nohmaskninja]";
 		else:
 			say "     You decide to postpone getting the mask, at least for now. Hayato will have to wait a little longer.";
@@ -503,7 +503,7 @@ to say onilairassault:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			if player is male:
 				LineBreak;
 				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be force-fed your [cock of player] cock. Grabbing him by the horns, you pull his face to your crotch. When a particularly hard thrust from Hayato has him cry out, you thrust your [cock size desc of player] shaft into his mouth[if cock length of player > 9] and down his throat. Your would-be assailant sets himself to licking and sucking your [cock of player] rod right away, though he continues to growl and struggle. And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";

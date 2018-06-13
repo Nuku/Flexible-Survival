@@ -38,7 +38,7 @@ Instead of resolving Disorganization:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "Not wanting to leave a fellow human in the grips of the madness that is this viral outbreak, you look around for something to use on the Alpha Husky. A malicious grin spreads across your face when you spy a piece of lumber right next to the rutting couple. Running over, with only a simple plan in mind, you know you have to act fast if you want to save the soldier from his horrific, yet erotic fate. Picking up the piece of wood in your right hand, you swing your makeshift weapon directly at the back of the Alpha Husky's head with all the force you can muster. An audible crack rents throughout the air and the thrusts of the mutant canine quickly stop.";
 			say "Pulling your hand back to ready your weapon once again you find that you don't need to do anything as the canine-mutant falls over onto its side, knocked completely out cold. You miss the popping sound of the canid's long shaft slipping out from the well fucked hole of the man-dog soldier, however, you don't miss the quiet 'thanks' that comes from the male as he shakily turns to look at you.";

@@ -193,7 +193,7 @@ to say briansexmenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			if the player consents:
+			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the rhino, shaking your head slightly as he gives a questioning look.";
 				wait for any key;

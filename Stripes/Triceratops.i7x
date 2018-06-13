@@ -46,7 +46,7 @@ to say beatthetric:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You stride over to her and pull out your cock, which has gotten quite hard as you watched her tease herself. She takes it in one paw and starts licking at it with her broad tongue. You let her suck on it a little before pulling back and guiding her to lay on her back. She slides out of the rest of her funky dress with a sensual wiggle, exposing her large, wet pussy for you.";
 			say "     You line yourself up and sink down into her and start thrusting. You pound away at her, making her moan and wiggle beneath you. She moves to a beat that you can't hear and that you can't quite follow. Her inner walls squeeze and tug at your cock with her motions, coaxing a hot load of your cum from you after a good, long fuck. She moans in climax as well, but seems a little unsatisfied. But you are, so you leave the dinosaur to continue on your way.";

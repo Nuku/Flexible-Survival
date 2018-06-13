@@ -119,7 +119,7 @@ the sarea of strange bell is "Park".
 instead of resolving a strange bell:
 	if ktp is 6:
 		say "You come across a star bell glowing dimly along the bushes of the ground. A feeling of both elation and wonder comes across you as you kneel next to the softly tinkling item. Shall you take it?";
-		if the player consents:
+		if player consents:
 			say "You pick up the unusual bell, tucking it away in your pack.";
 			increase carried of star bell by 1;
 			now strange bell is resolved;

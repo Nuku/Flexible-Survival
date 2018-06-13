@@ -76,7 +76,7 @@ to say beattheincubus:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck him.";
 			say "     ([link]N[as]n[end link]) - Refuse.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     You move atop him eagerly, bringing your throbbing cock to his dark pucker. He moans lustfully and pushes back, spearing himself onto your [cock size desc of player] shaft with the ease of one who's been taken by the cocks of numerous demonic creatures before. The feel of his gripping, squeezing walls around your cock is exquisite, filling you with such sinful pleasure at buggering that hot hole. His anus is like a hot vice around your shaft and almost seems to suck on it with its lustful need for your seed. You let your hand roam over his muscled body, then move it down to stroke over that perfect cock of his.";
 				say "     When you finally cum, painting his inner walls with your semen, he cums as well with a loud cry of sexual pleasure. He holds a cupped hand into the spurting blasts, gathering a palmful of his tainted load. He laps up some of it and, when he offers you some as well, you are too lost in your lustful pleasure to even consider refusing. You lap up the rest and even suck his fingers clean. After withdrawing, you both rise and he gives you a passionate French kiss while running his hands over your body. 'I look forward to you joining our ranks more fully so we may continue to share in the pleasures of the flesh,' he whispers while nibbling your ear before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. You watch him go while his tainted seed sends warm tingles through your body.";
@@ -96,7 +96,7 @@ to say beattheincubus:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Get blown.";
 		say "     ([link]N[as]n[end link]) - Refuse.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     Wanting a go at the sex demon's hot mouth, you grab his head and pull him forward onto your cock. He moans softly as you thrust between his soft, wet lips and starts sucking expertly. His hands roam across your ballsack, your thighs and your ass as he works eagerly to blow you. Your infernal lover is very good at it, working his whole mouth to build you up to the biggest climax he can. With a talent brought from centuries of such depravities, the demon's mouth offers such a sinful delight.";
 			WaitLineBreak;
