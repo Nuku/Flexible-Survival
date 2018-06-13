@@ -565,14 +565,14 @@ When Play begins:
 	now desc entry is " ";
 	now face entry is "elongated and reptilian, with a tooth-filled mouth and only slits on your snout as a nose. A spined crest runs over the top of your head and down the long neck, ending at the shoulders and giving you a dashing appearance";
 	now body entry is "that of a very large lizard, at least as big as a horse. It's muscular, but sleek, promising agility and speed on your four legs";
-	now skin entry is "scaled, sand-colored";[ format as the text "You have (your text) skin"]
-	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance.";[ write a whole Sentence or leave blank. ]
-	now cock entry is "ridged, reptilian";[ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into the elongated shape of a lizard, complete with snout and tooth-filled maw. Instead of hair, a spined crest forms on the top of your head, running down the back of your neck and ending between your shoulders"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "small scales form to cover all of it, giving you a sand-colored, reptilian skin"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a long flexible tail grows out of your tailbone. After a few moments, it stops feeling strange and you start using the tail for balance as if you had been born with it"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes more reptilian, a sheath forming inside your body to allow it to completely vanish inside as long as its soft"; [ format as "Your cock feels funny as (your text)" ]
+	now skin entry is "scaled, sand-colored"; [ format as "You have (your text) skin"]
+	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance."; [ write a whole Sentence or leave blank. ]
+	now cock entry is "ridged, reptilian"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it shapes itself into the elongated shape of a lizard, complete with snout and tooth-filled maw. Instead of hair, a spined crest forms on the top of your head, running down the back of your neck and ending between your shoulders"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "small scales form to cover all of it, giving you a sand-colored, reptilian skin"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a long flexible tail grows out of your tailbone. After a few moments, it stops feeling strange and you start using the tail for balance as if you had been born with it"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes more reptilian, a sheath forming inside your body to allow it to completely vanish inside as long as its soft"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 14;
@@ -589,7 +589,7 @@ When Play begins:
 	now cock width entry is 5;          [ Size of balls ]
 	now breasts entry is 0;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 0;
 	now cunt width entry is 0;

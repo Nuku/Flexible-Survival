@@ -130,13 +130,13 @@ to say JulianSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive Fellatio";
 		now sortorder entry is 1;
 		now description entry is "Ask Julian to give you a blowjob";
 	[]
-	if cunts of player > 0: [only females and herms can be eaten out.]
+	if player is female: [only females and herms can be eaten out.]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive Cunnilingus";
 		now sortorder entry is 2;
@@ -190,7 +190,7 @@ to say JulianSex2: [Be eaten out]
 	say "     Withdrawing his fingers from your cunt, Julian licks the juices off of them, noisily smacking his lips. 'Time for this wolf to eat the kitty,' he jokes before diving between your legs, showing more enthusiasm than skill in lapping at the folds of your slit. Gripping his ears, you grind against his snout, his cool nose pressed against your clitoris, heightening the pleasure of the action. Eager to see what you really taste like, the wolf spears your pussy with his tongue, juices running over his muzzle. You press him even tighter against you, making him focus on moving his tongue rather than his whole head. He adapts quickly, using the flat, pink organ like a penis, thrusting it in and out instead of running it up and down. Shuddering, your orgasm breaks, fem-cum spraying into his maw and across his snout. As you relax, he eases his head out of your hands and looks at you, wet patches speckled across his face. 'Tart,' he says standing up and wiping his face. 'Definitely worth repeating.'";
 
 to say JulianSex3: [Give him a blowjob]
-	say "     Noticing your glances at his tip peeping from the sheath, Julian surmises your desire and walks across to you. 'If you could kneel on all fours please,' he requests, cradling his hardening shaft in his hand. You comply, stripping, before looking up at him, waiting. His carmine cock hangs in front of your face, twitching with a bead of fluid on the tip. He presses it against your lips, crouching slightly to improve the angle. [if player is submissive]The wolf's display of dominance sends tingles down your spine, his confidence heightening the thrill. [else if player is dominant]While part of you resents being in such a submissive position, you concede that some variety could be beneficial too. [end if]You gaze up at him, catching his eye as you push your mouth forward, his shaft disappearing into your cosy maw. He aids you, shuffling forward until his furry scrotum is against your chin, and your nose is pressed into his groin, smelling his pleasant canine scent.";
+	say "     Noticing your glances at his tip peeping from the sheath, Julian surmises your desire and walks across to you. 'If you could kneel on all fours please,' he requests, cradling his hardening shaft in his hand. You comply, stripping, before looking up at him, waiting. His carmine cock hangs in front of your face, twitching with a bead of fluid on the tip. He presses it against your lips, crouching slightly to improve the angle. [if player is submissive]The wolf's display of dominance sends tingles down your spine, his confidence heightening the thrill. [else if player is dominant]While part of you resents being in such a submissive position, you concede that some variety could be beneficial too. [end if]You gaze up at him, catching his eye as you push your mouth forward, his shaft disappearing into your cozy maw. He aids you, shuffling forward until his furry scrotum is against your chin, and your nose is pressed into his groin, smelling his pleasant canine scent.";
 	say "     Julian begins thrusting, holding your shoulders for support. Wet squelching and slapping noises fill the room to such an extent that you wonder how many other people in the dorm can hear you. A low growl rumbles in the wolf's throat, though it sounds more like a groan of pleasure than hostility. A knot begins to develop at the base of his penis as the wet warmth of your mouth excites him. The developing bulge squeezes past your lips, luckily avoiding any contact with your teeth. Deciding that knotting your mouth isn't a good idea, Julian reduces the depth of his thrusts but increases the tempo to compensate. As he nears climax, your lupine lover firmly grips the side of your head, hilting up to his knot, which brushes your nose, saliva still smeared on it. Fighting back a howl, Julian releases a torrent of cum into your mouth, the copious fluid dribbling out of the corners as you fail to swallow quickly enough. Once he is content that you have swallowed his load, the wolf pulls out, his cock hanging down stiffly between his legs still twitching.";
 
 

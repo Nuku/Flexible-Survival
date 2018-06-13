@@ -21,11 +21,11 @@ to say hermaphrodite latex vixen desc:
 
 to say hermaphrodite latex vixen defeat:
 	say "     Defeated, your would be attacker kneels at your feet, pointing her brilliant white and red ass towards you. She raises her bushy red tail to expose her drooling sex. 'I guess I'm at your mercy,' she chuckles. You get the feeling she will be able to take pretty much anything you can dish out";
-	if cocks of player > 0 or cunts of player > 0:
+	if player is not neuter:
 		say ". Shall you take her up on her offer and celebrate your success? And if so, what did you have in mind?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her pussy";
 			now sortorder entry is 1;
@@ -38,7 +38,7 @@ to say hermaphrodite latex vixen defeat:
 			now title entry is "Receive fellatio";
 			now sortorder entry is 10;
 			now description entry is "stuff that smug muzzle of hers with your cock"; ]
-		if cunts of player > 0:
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked";
 			now sortorder entry is 6;
@@ -125,7 +125,7 @@ to say hermlatexvix_13:
 hermlvconsent is a number that varies.
 
 to say hermaphrodite latex vixen victory:
-	if cocks of player > 0: [she prefers to get fucked as she likes to make more latex foxes]
+	if player is male: [she prefers to get fucked as she likes to make more latex foxes]
 		say "     [if HP of player > 0]'So he wants to play with Mama? Good boy...' the red vixen purrs[else]You slump to the ground, too tired and sore to keep fighting. The fox bends over bringing her mouth right up to your ear and whispers 'Perhaps next time we can do this without all that unnecessary violence'[end if].[line break]'Now,' she says, slowly removing your clothes, 'let's see what we have to play with today.' Pulling your pants off reveals your [if cocks of player > 1]multiple [cock size desc of player] [cock of player] cocks[else][cock size desc of player] [cock of player] cock[end if].";
 		if cocks of player > 2:
 			say "     'Ohh those look tasty!' she says while slowly licking her lips. She lowers her face to the first of your [cock of player] shafts and her tongue dances around the tip. 'Oooooh,' she moans, 'that's nice, but Mama wants more.' She gently lays you on your back, your throbbing cocks sticking straight up. Standing proud, the six foot Vixen lifts one digitigrade leg and steps over you, straddling your waist. She leans over, the lower pair of her massive jiggling tits pressing against your [breast size desc of player] chest and with both jet black hands she grabs all but one of your cocks and roughly shoves them up her warm squeaky pussy. 'Oh God that feels good!' she squeals as her latex skin easily stretches to accommodate you multiple manhoods. She reaches back and grabs your remaining [cock size desc of player] rod and slowly starts to feed it into her puckered ass. 'Mmpf, can't let a good hole go to waste now can we?' she grunts as your remaining cock slowly works its way up her tight butthole. With you fully inside her, your latex lover starts to pump up and down on your shafts. Her pitch black balls slap against your stomach with every thrust, the apple sized orbs shuddering on impact.";

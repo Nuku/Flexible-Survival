@@ -52,7 +52,7 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 
 To say magic word:
 	if wrcursestatus is 5:
-		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
+		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}[serial number]_[SavewordVersion]}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[NESProgress]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[HP of Susan]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
 	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]}[HP of Macadamia]}[HP of Yolanda]}[SarahCured]}[libido of chris]}[dexterity of chris]";
@@ -63,19 +63,19 @@ To say magic word:
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
 	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
-[	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
+[	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]"; ]
 	savetrix;
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
-		wrcursesave;	[puts player back to complete wereraptor form]
+		wrcursesave; [puts player back to complete wereraptor form]
 
 
 To reciting2:
 	choose row monster from table of random critters;
 	say "One moment... processing...";
-[	say "Current restoration string: [trixsavetext1][line break]";	]
+[	say "Current restoration string: [trixsavetext1][line break]"; ]
 	replace the text " " in trixsavetext1 with "`";
-[	say "Altered restoration string: [trixsavetext1][line break]";	]
+[	say "Altered restoration string: [trixsavetext1][line break]"; ]
 	let lev be the level of the player;
 	repeat with z running from 1 to number of words in "[trixsavetext1]":
 		let b be word number z in "[trixsavetext1]";
@@ -116,7 +116,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now the HP of doctor matt is the number understood;
 			-- 12:	[Body infection]
-[				say "Searching for body = [b].";	]
+[				say "Searching for body = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -129,7 +129,7 @@ To reciting2:
 							attributeinfect;
 							break;
 			-- 13:	[Face infection]
-[				say "Searching for face = [b].";	]
+[				say "Searching for face = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -140,7 +140,7 @@ To reciting2:
 							now facename of player is name entry;
 							break;
 			-- 14:	[Skin infection]
-[				say "Searching for skin = [b].";	]
+[				say "Searching for skin = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -151,7 +151,7 @@ To reciting2:
 							now skinname of player is name entry;
 							break;
 			-- 15:	[Tail infection]
-[				say "Searching for tail = [b].";	]
+[				say "Searching for tail = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -162,7 +162,7 @@ To reciting2:
 							now tailname of player is name entry;
 							break;
 			-- 16:	[Cock infection]
-[				say "Searching for cock = [b].";	]
+[				say "Searching for cock = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -227,7 +227,7 @@ To reciting2:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
 			-- 31:	[Version Reporting - (Dummy, no actions)]
-				now tempnum is 0;		[#31 is only exported, not restored.]
+				now tempnum is 0; [#31 is only exported, not restored.]
 			-- 32:	[Coleen]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
@@ -314,11 +314,11 @@ To reciting2:
 			-- 59:	[Hospital Quest]
 				if the player's command matches "[number]":
 					now mattcollection is the number understood;
-	restorepart1;	[adjust based on loaded values above: 1 - 59]
-[	say "One moment... processing stage 2...";	]
-[	say "Current restoration string: [trixsavetext2][line break]";	]
+	restorepart1; [adjust based on loaded values above: 1 - 59]
+[	say "One moment... processing stage 2..."; ]
+[	say "Current restoration string: [trixsavetext2][line break]"; ]
 	replace the text " " in trixsavetext2 with "`";
-[	say "Altered restoration string: [trixsavetext2][line break]";	]
+[	say "Altered restoration string: [trixsavetext2][line break]"; ]
 	repeat with z running from 1 to number of words in "[trixsavetext2]":
 		let b be ( word number z in "[trixsavetext2]" );
 		replace the text "`" in b with " ";
@@ -350,7 +350,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now SarahPups is the number understood;
 			-- 67:	[-nothing-]
-				now tempnum is 0;		[Duplicate removed]
+				now tempnum is 0; [Duplicate removed]
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
@@ -462,13 +462,13 @@ To reciting2:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
 							now area entry is "High";
-							now non-infectious entry is false;	[Wasps unlocked]
+							now non-infectious entry is false; [Wasps unlocked]
 				else:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
 							now area entry is "nowhere";
-							now non-infectious entry is true;	[Wasps locked]
+							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
 				if the player's command matches "[number]":
@@ -580,7 +580,7 @@ To reciting2:
 					now HP of François is the number understood;
 			-- 125:	[François]
 				if the player's command matches "[number]":
-					now libido of François is the number understood;		[placeholder for second part to come]
+					now libido of François is the number understood; [placeholder for second part to come]
 			-- 126:	[Alexandra + Fang]
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
@@ -689,11 +689,11 @@ To reciting2:
 			-- 161: [thirst of Amy]
 				if the player's command matches "[number]":
 					now thirst of Amy is the number understood;
-	restorepart2;	[adjust based on loaded values above: 60 - 161]
-[	say "One moment... processing stage 3...";	]
-[	say "Current restoration string: [trixsavetext3][line break]";	]
+	restorepart2; [adjust based on loaded values above: 60 - 161]
+[	say "One moment... processing stage 3..."; ]
+[	say "Current restoration string: [trixsavetext3][line break]"; ]
 	replace the text " " in trixsavetext3 with "`";
-[	say "Altered restoration string: [trixsavetext3][line break]";	]
+[	say "Altered restoration string: [trixsavetext3][line break]"; ]
 	repeat with z running from 1 to number of words in "[trixsavetext3]":
 		let b be ( word number z in "[trixsavetext3]" );
 		replace the text "`" in b with " ";
@@ -767,13 +767,13 @@ To reciting2:
 					now HP of Newt is the number understood;
 			-- 182:	[Megakitty]			[temporarily closed for diagnosis]
 				if the player's command matches "[number]":
-					now tempnum is 0;	[do-nothing command]
+					now tempnum is 0; [do-nothing command]
 [					if the number understood is 1 and girl is not banned and furry is not banned:
 						setmonster "Megakitty";
 						choose row monster from the table of random critters;
 						if name entry is "Megakitty":
 							now MKunleashed is true;
-							now area entry is "Midway";		]
+							now area entry is "Midway"; ]
 			-- 183:	[Phi Iota Gamma]
 				if the player's command matches "[number]":
 					now piginitiation is the number understood;
@@ -784,7 +784,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now HP of Stella is the number understood;
 			-- 186:	[Stella threesome code - placeholder]
-				now StellaNPCInt is "AAAAAAAAAAAA";	[do nothing]
+				now StellaNPCInt is "AAAAAAAAAAAA"; [do nothing]
 			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
 					now OrcSlaverStatus is the number understood;
@@ -812,7 +812,7 @@ To reciting2:
 			-- 195: [HP of Chris]
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
-					if the HP of chris > 0 and the HP of chris < 100, move chris to Grey Abbey 2F;
+					if the HP of chris > 0 and the HP of chris < 100, move chris to Sitting Area;
 			-- 196: [HP of Vanessa - status]
 				if the player's command matches "[number]":
 					now HP of Vanessa is the number understood;
@@ -904,8 +904,8 @@ To reciting2:
 			-- 226:	[dexterity of chris]
 				if the player's command matches "[number]":
 					now dexterity of chris is the number understood;
-	restorepart3;	[adjust based on loaded values above: 162 - 224]
-	restorepart-final;	[other adjustments based on overall results]
+	restorepart3; [adjust based on loaded values above: 162 - 224]
+	restorepart-final; [other adjustments based on overall results]
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 5 is 0:
 			funfeatget;
@@ -990,9 +990,9 @@ Check reciting:
 Carry out reciting:
 	let x be indexed text;
 	let x be the topic understood;
-[	say "Current restoration string: [X][line break]";	]
+[	say "Current restoration string: [X][line break]"; ]
 	replace the text " " in X with "`";
-[	say "Current restoration string: [X][line break]";	]
+[	say "Current restoration string: [X][line break]"; ]
 	let lev be the level of the player;
 	let upit be 0;
 	let zeta be 0;
@@ -1049,7 +1049,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now the HP of doctor matt is the number understood;
 			-- 12:	[Body infection]
-[				say "Searching for body = [b].";	]
+[				say "Searching for body = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -1062,7 +1062,7 @@ Carry out reciting:
 							attributeinfect;
 							break;
 			-- 13:	[Face infection]
-[				say "Searching for face = [b].";	]
+[				say "Searching for face = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -1073,7 +1073,7 @@ Carry out reciting:
 							now facename of player is name entry;
 							break;
 			-- 14:	[Skin infection]
-[				say "Searching for skin = [b].";	]
+[				say "Searching for skin = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -1084,7 +1084,7 @@ Carry out reciting:
 							now skinname of player is name entry;
 							break;
 			-- 15:	[Tail infection]
-[				say "Searching for tail = [b].";	]
+[				say "Searching for tail = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -1095,7 +1095,7 @@ Carry out reciting:
 							now tailname of player is name entry;
 							break;
 			-- 16:	[Cock infection]
-[				say "Searching for cock = [b].";	]
+[				say "Searching for cock = [b]."; ]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -1160,7 +1160,7 @@ Carry out reciting:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
 			-- 31:	[redundant - removed]
-				now tempnum is 0;		[Duplicate removed]
+				now tempnum is 0; [Duplicate removed]
 			-- 32:	[Coleen]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
@@ -1269,7 +1269,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now SarahPups is the number understood;
 			-- 67:	[-nothing-]
-				now tempnum is 0;		[Duplicate removed]
+				now tempnum is 0; [Duplicate removed]
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
@@ -1381,13 +1381,13 @@ Carry out reciting:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
 							now area entry is "High";
-							now non-infectious entry is false;	[Wasps unlocked]
+							now non-infectious entry is false; [Wasps unlocked]
 				else:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
 							now area entry is "nowhere";
-							now non-infectious entry is true;	[Wasps locked]
+							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
 				if the player's command matches "[number]":
@@ -1499,7 +1499,7 @@ Carry out reciting:
 					now HP of François is the number understood;
 			-- 125:	[François]
 				if the player's command matches "[number]":
-					now libido of François is the number understood;		[placeholder for second part to come]
+					now libido of François is the number understood; [placeholder for second part to come]
 			-- 126:	[Alexandra + Fang]
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
@@ -1673,13 +1673,13 @@ Carry out reciting:
 					now HP of Newt is the number understood;
 			-- 182:	[Megakitty]			[temporarily closed for diagnosis]
 				if the player's command matches "[number]":
-					now tempnum is 0;	[do-nothing command]
+					now tempnum is 0; [do-nothing command]
 [					if the number understood is 1 and girl is not banned and furry is not banned:
 						setmonster "Megakitty";
 						choose row monster from the table of random critters;
 						if name entry is "Megakitty":
 							now MKunleashed is true;
-							now area entry is "Midway";		]
+							now area entry is "Midway"; ]
 			-- 183:	[Phi Iota Gamma]
 				if the player's command matches "[number]":
 					now piginitiation is the number understood;
@@ -1690,7 +1690,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now HP of Stella is the number understood;
 			-- 186:	[Stella threesome code - placeholder]
-				now StellaNPCInt is "AAAAAAAAAAAA";	[do nothing]
+				now StellaNPCInt is "AAAAAAAAAAAA"; [do nothing]
 			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
 					now OrcSlaverStatus is the number understood;
@@ -1805,10 +1805,10 @@ Carry out reciting:
 					now SarahCured is the number understood;
 		if upit is 1, decrease zeta by 58;
 		if upit is 2, decrease zeta by 160;
-	restorepart1;	[adjust based on loaded values above: 1 - 59]
-	restorepart2;	[adjust based on loaded values above: 60 - 161]
-	restorepart3;	[adjust based on loaded values above: 162 - 224]
-	restorepart-final;	[other adjustments based on overall results]
+	restorepart1; [adjust based on loaded values above: 1 - 59]
+	restorepart2; [adjust based on loaded values above: 60 - 161]
+	restorepart3; [adjust based on loaded values above: 162 - 224]
+	restorepart-final; [other adjustments based on overall results]
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 5 is 0:
 			funfeatget;
@@ -1846,7 +1846,7 @@ to restorepart1:	[values 1 - 59]
 		now foodneed is 6;
 		now waterneed is 6;
 	if HP of doctor matt >= 16 and HP of doctor matt < 100:
-		increase freecred by 100 + ( 2 * number of fasttravel rooms );	[awards to minimum 50%]
+		increase freecred by 100 + ( 2 * number of fasttravel rooms ); [awards to minimum 50%]
 		now Zephyr Lobby is known;
 	if HP of doctor matt is 17:
 		now carried of nanite density monitor is 1;
@@ -1941,7 +1941,7 @@ to restorepart1:	[values 1 - 59]
 		now New Ewe Storeroom is known;
 		now New Ewe Store is resolved;
 	if NESProgress is 5:
-		if "Three Bags Full" is not listed in feats of player, add "Three Bags Full" to feats of the player;
+		if "Three Bags Full" is not listed in feats of player, add "Three Bags Full" to feats of player;
 [51:	[Lisa]]
 	if mtrp is 1:
 		now Porn Store is known;
@@ -2024,7 +2024,7 @@ to restorepart2:	[values 60 - 161]
 [65:	[Sarah]]
 [66:	[Sarah]]
 [67:	[-nothing-]]
-	now tempnum is 0;		[Duplicate removed]
+	now tempnum is 0; [Duplicate removed]
 [68:	[Brunch w/Alex]]
 	if alexbrunch >= 4:
 		now the icon of Alex is Figure of Alex_icon;
@@ -2051,7 +2051,7 @@ to restorepart2:	[values 60 - 161]
 		now needy rabbit girl is not resolved;
 		now rabbit den is unknown;
 [72:	[Frank - M/M top/bottom/switch]]
-	if libido of Frank > 3, now libido of Frank is 3;		[***temporary fix]
+	if libido of Frank > 3, now libido of Frank is 3; [***temporary fix]
 	if frankmalesex is 0, now libido of Frank is 0;
 [73:	[Fang]]
 	if HP of Fang is 0 or HP of Fang is 100:
@@ -2072,7 +2072,7 @@ to restorepart2:	[values 60 - 161]
 		now Hungry Piggy is resolved;
 		now HBMR is 1;
 	if pigfed is 3:
-		now Philip is in the bunker;
+		now Philip is in the Large Shed;
 		now Pig Pen is not fasttravel;
 [76:	[Philip - sex]]
 [77:	[cute crab - pet]]
@@ -2199,7 +2199,7 @@ to restorepart2:	[values 60 - 161]
 	if HP of Solstice is 3 or HP of Solstice is 4:
 		now lastfuck of Solstice is turns;
 	if HP of Solstice > 4:
-		move Solstice to Grey Abbey Library;
+		move Solstice to Makeshift Rec Room;
 [92:	[Ronda the Slut Rat]]
 	now carried of lizard juice is 0;
 	now Art Collector is resolved;
@@ -2257,14 +2257,14 @@ to restorepart2:	[values 60 - 161]
 			if name entry is "Skunk":
 				now monster is y;
 				break;
-		now non-infectious entry is true;		[reg. Skunk infection closed]
+		now non-infectious entry is true; [reg. Skunk infection closed]
 		[puts Skunkbeast Lord as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Skunkbeast Lord":
 				now monster is y;
 				break;
-		now non-infectious entry is false;		[Skunkbeast Lord infection now open]
+		now non-infectious entry is false; [Skunkbeast Lord infection now open]
 		now the strain of skunk goo is "Skunkbeast Lord";
 		if tailname of player is "Skunk":
 			now tailname of player is "Skunkbeast Lord";
@@ -2315,38 +2315,38 @@ to restorepart2:	[values 60 - 161]
 	if tattoohunter >= 5:
 		now Haroldaroused is 1;
 [98:	[Kara's tattoos]]
-	remove { "Hyena Tattoo", "Dragon Tattoo", "Feline Tattoo", "Wolf Tattoo", "Unicorn Tattoo", "Gryphon Tattoo" } from feats of the player, if present;
+	remove { "Hyena Tattoo", "Dragon Tattoo", "Feline Tattoo", "Wolf Tattoo", "Unicorn Tattoo", "Gryphon Tattoo" } from feats of player, if present;
 	if tatsave is 0:
 		now tatstatus is 0;
 	else:
 		now tatstatus is 1;
 	if tatsave is 1:
-		add "Hyena Tattoo" to feats of the player;
+		add "Hyena Tattoo" to feats of player;
 	if tatsave is 2:
-		add "Dragon Tattoo" to feats of the player;
+		add "Dragon Tattoo" to feats of player;
 	if tatsave is 3:
-		add "Feline Tattoo" to feats of the player;
+		add "Feline Tattoo" to feats of player;
 	if tatsave is 4:
-		add "Wolf Tattoo" to feats of the player;
+		add "Wolf Tattoo" to feats of player;
 	if tatsave is 5:
-		add "Unicorn Tattoo" to feats of the player;
+		add "Unicorn Tattoo" to feats of player;
 	if tatsave is 6:
-		add "Gryphon Tattoo" to feats of the player;
+		add "Gryphon Tattoo" to feats of player;
 	else:		[error or unlisted tattoo]
 		now tatstatus is 0;
 		now tatsave is 0;
 [99:	[Kara's piercings]]
-	remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch Piercing" } from feats of the player, if present;
+	remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch Piercing" } from feats of player, if present;
 	if piercesave is 0:
 		now piercestatus is 0;
 	else:
 		now piercestatus is 1;
 	if piercesave is 1:
-		add "Matriarch Piercing" to feats of the player;
+		add "Matriarch Piercing" to feats of player;
 	if piercesave is 2:
-		add "Nipple Piercing" to feats of the player;
+		add "Nipple Piercing" to feats of player;
 	if piercesave is 3:
-		add "NippleandChain Piercing" to feats of the player;
+		add "NippleandChain Piercing" to feats of player;
 	if piercesave is 4:
 		add "Hyenastyle Piercings" to feats of player;
 [100:	[Diego]]
@@ -2401,7 +2401,7 @@ to restorepart2:	[values 60 - 161]
 [103:	[Christy: Slutty Dragoness / Horny Dragon]]
 [104:	[Christy: fucked while trapped?]]
 [105:	[Dr. Medea]]
-	if HP of Doctor medea > 6, now HP of Doctor Medea is 0;	[reset for save bug]
+	if HP of Doctor medea > 6, now HP of Doctor Medea is 0; [reset for save bug]
 	if HP of Doctor Medea > 0:
 		now Pediatrics Lobby is known;
 	if HP of Doctor Medea is 3:
@@ -2509,9 +2509,9 @@ to restorepart2:	[values 60 - 161]
 		else:
 			now Microchip Factory is resolved;
 	if HP of Alexandra is 3 or HP of Alexandra is 5:
-		now lust of Alexandra is 1;	[reset to start of pregnancy]
+		now lust of Alexandra is 1; [reset to start of pregnancy]
 	if HP of Alexandra is 4 or HP of Alexandra is 5:
-		now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
+		now libido of Alexandra is a random number between 2 and 4; [minimum children restored]
 [113:	[Larissa (Multiform NPC)]]
 	if HP of Larissa > 3, now HP of Larissa is 3;
 	if HP of Larissa > 1, nanitecoll_discount;
@@ -2526,7 +2526,7 @@ to restorepart2:	[values 60 - 161]
 	if HP of Sam <= 4:
 		now Sam is in Mini-Lab;
 	else if HP of Sam < 70:
-		now Sam is in Bunker;
+		now Sam is in Large Shed;
 	else:
 		remove Sam from play;
 	if HP of Sam is 16 or HP of Sam is 98, dragontaur_active;
@@ -2588,7 +2588,7 @@ to restorepart2:	[values 60 - 161]
 				repeat with itx running from 1 to iterations:
 					increase libido of Doctor Utah by a random number between 2 and 4;
 			else:
-				now fionacarlstatus is fionacarlstatus;	[do nothing action]
+				now fionacarlstatus is fionacarlstatus; [do nothing action]
 	if weapon object of player is silver knife and silver knife is not owned, now weapon object of player is journal;
 [118:	[Mike]]
 	if HP of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
@@ -2684,7 +2684,7 @@ to restorepart2:	[values 60 - 161]
 [128: [Thomas Libido]]
 	now ThomasSaved is turns;
 	now SandySaved is turns;
-	now FelixSaved is turns;	[for Felix stalker quest]
+	now FelixSaved is turns; [for Felix stalker quest]
 	if HP of Thomas is 0, now libido of Thomas is 0;
 [129: [Thomas Lust]]
 	if HP of Thomas is 0, now lust of Thomas is 0;
@@ -2738,7 +2738,7 @@ to restorepart2:	[values 60 - 161]
 		now Tristbrother is unresolved;
 	else if HP of Tristian is 8:
 		now HP of Tristian is 7;
-	if HP of Tristian is 10 or HP of Tristian is 12, now HP of Tristian is 7;	[***former values]
+	if HP of Tristian is 10 or HP of Tristian is 12, now HP of Tristian is 7; [***former values]
 	if HP of Tristian is 99 or HP of Tristian is 100, now HP of Tristian is 7;
 	if HP of Tristian is 11:
 		move Lance to Palomino;
@@ -2750,15 +2750,15 @@ to restorepart2:	[values 60 - 161]
 			setmonster "Blue Chaffinch";
 			choose row monster from the table of random critters;
 			now area entry is "nowhere";
-			now Icarus is in Grey Abbey Library;
+			now Icarus is in Garden View;
 	if HP of Icarus is 5 or HP of Icarus is 6:
-		now HP of Icarus is 4;	[dialed back for sex]
+		now HP of Icarus is 4; [dialed back for sex]
 	if HP of Icarus is 7:
 		remove Icarus from play;
 		now ttIcarus is turns;
 		now tti_scene is 0;
 	if HP of Icarus is 9:
-		now HP of Icarus is 8;	[Icarus waiting for more]
+		now HP of Icarus is 8; [Icarus waiting for more]
 [137: [HP of Joanna]]
 	move Joanna to Flower Garden;
 	now joannatalk is 0;
@@ -2897,7 +2897,7 @@ to restorepart3:	[values 162 - 223]
 	if HP of Nadia > 0:
 		now Bird Troubles is resolved;
 	if HP of Nadia > 0 and HP of Nadia < 99:
-		move Nadia to Grey Abbey 2F;
+		move Nadia to Garden View;
 	if HP of Nadia is 5:
 		increase carried of feathered cloak by 1;
 [163: [NadiaFertilityCounter]]
@@ -2918,7 +2918,7 @@ to restorepart3:	[values 162 - 223]
 		remove Ares from play;
 [173: [HP of Hayato]]
 	if HP of Hayato > 15:
-		move Hayato to Grey Abbey 2F;
+		move Hayato to Darkened Alcove;
 	else:
 		move Hayato to Disused Garage;
 	if HP of Hayato > 5:
@@ -2991,7 +2991,7 @@ to restorepart3:	[values 162 - 223]
 	else:
 		now Bouncy Castle is unknown;
 	if HP of Bubble > 3 and HP of Bubble < 99:
-		move Bubble to Grey Abbey 2F;
+		move Bubble to Makeshift Rec Room;
 [181:	[HP of Newt]]
 	if HP of Athanasia < 11, now HP of Newt is 0;
 	if HP of Newt >= 4:
@@ -3030,7 +3030,7 @@ to restorepart3:	[values 162 - 223]
 		now the Cell Door 2 is unlocked;
 [189: [Onyx]]
 	if XP of Onyx >= 6 and XP of Onyx <= 29:
-		move Onyx to Grey Abbey Library;
+		move Onyx to Back Of The Library;
 	else if XP of Onyx >= 30 and XP of Onyx <= 49:
 		move Onyx to Palomino;
 	else:
@@ -3053,14 +3053,14 @@ to restorepart3:	[values 162 - 223]
 	if OrcSlaverStatus > 0 and SlaveRaidEncounters is 0: [security clause for those who load an old saveword]
 		now SlaveRaidEncounters is 2; [enslaved]
 		now ValPregnancy is 48; [knocked up]
-		now thirst of Val is 1;					[...by an orc]
+		now thirst of Val is 1; [...by an orc]
 	if SlaveRaidEncounters < 2:
 		remove Val from play;
 	else:
 		move Val to Slave Cell 1;
 [195: [HP of Chris]]
 	if HP of Chris is 1:
-		move Chris to Grey Abbey 2F;
+		move Chris to Sitting Area;
 	else:
 		remove Chris from play;
 [196: [HP of Vanessa - status]]
@@ -3072,7 +3072,7 @@ to restorepart3:	[values 162 - 223]
 	else if HP of Vanessa >= 50:
 		remove Vanessa from play;
 	else:
-		move Vanessa to Bunker;
+		move Vanessa to Back Of The Library;
 	now lust of Vanessa is 0;
 [197: [XP of Vanessa - # of kids]]
 	if HP of Vanessa is 0 or HP of Vanessa >= 50, now XP of Vanessa is 0;
@@ -3081,7 +3081,7 @@ to restorepart3:	[values 162 - 223]
 	if HP of Meredith is 0 or HP of Meredith >= 100:
 		remove Meredith from play;
 	else:
-		move Meredith to Bunker;
+		move Meredith to Back Of The Library;
 	if HP of Meredith >= 9 and HP of Meredith < 100, now libido of Meredith is 1;
 	now XP of Meredith is 0;
 [199: [level of Meredith - # of kids]]
@@ -3089,7 +3089,7 @@ to restorepart3:	[values 162 - 223]
 [200: [HP of Gwen - status & Gwen UB]]
 	if Meredith is not bunkered, now HP of Gwen is 0;
 	if HP of Gwen > 2 and HP of Gwen <= 60:
-		move Gwen to Bunker;
+		move Gwen to Back Of The Library;
 		if HP of Gwen <= 20:
 			now HP of Gwen is 3;
 		else if HP of Gwen <= 35:
@@ -3105,7 +3105,7 @@ to restorepart3:	[values 162 - 223]
 	else if HP of Rane is 6:
 		move Rane to shrine;
 	else if HP of Rane is 7:
-		move Rane to Grey Abbey 2F;
+		move Rane to Sitting Area;
 	if HP of Rane is 5:
 		now The blue Oni is unresolved;
 	else:
@@ -3165,7 +3165,7 @@ to restorepart3:	[values 162 - 223]
 		move Hadiya to Hyena Shack;
 		now icon of Hadiya is Figure of Hadiya_0_icon;
 	else:
-		move Hadiya to Grey Abbey 2F;
+		move Hadiya to Sitting Area;
 	if HP of Hadiya > 0:
 		now Annoyed Hyena is resolved;
 		now Hyena Shack is known;
@@ -3183,7 +3183,7 @@ to restorepart3:	[values 162 - 223]
 		now HP of Gobby is 0;
 		remove Gobby from play;
 	else:
-		move Gobby to Grey Abbey 2F;
+		move Gobby to Sitting Area;
 [216:	[HP of Sidney - NPC overall status]]
 	now Meeting Sidney is unresolved;
 	remove Sidney from play;
@@ -3191,7 +3191,7 @@ to restorepart3:	[values 162 - 223]
 	now sa_otteress is false;
 	now sa_wusky is false;
 	if HP of Sidney >= 3 and HP of Sidney < 99:
-		move Sidney to Grey Abbey 2F;
+		move Sidney to Breakroom;
 	if HP of Sidney >= 3:
 		now Meeting Sidney is resolved;
 [217:	[level of Sidney - forms]]
@@ -3231,12 +3231,12 @@ to restorepart3:	[values 162 - 223]
 	if HP of Macadamia < 13:
 		move Macadamia to Nutso Factory;
 	else:
-		move Macadamia to Bunker;
+		move Macadamia to Breakroom;
 [223:	[HP of Yolanda]]
 	if HP of Yolanda < 6:
 		move Yolanda to Raven Nest;
 	else if HP of Yolanda < 100:
-		move Yolanda to Grey Abbey 2F;
+		move Yolanda to Darkened Alcove;
 	else:
 		remove Yolanda from play;
 
@@ -3250,12 +3250,12 @@ to restorepart-final:
 		now Finding a Way in is unresolved;
 	else:
 		now Finding a Way in is resolved;
-	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of the player;
-	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of the player;
+	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of player;
+	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of player;
 	if hospquest is 8, now nerminepackage is 1;
-	if hospquest > 9, add "Rapid Healing" to feats of the player;
+	if hospquest > 9, add "Rapid Healing" to feats of player;
 	if hospquest > 13:
-		add "Physical Booster" to the feats of the player;
+		add "Physical Booster" to the feats of player;
 		now infection terminal is in Hidden Lab;
 	if hospquest > 13 and HP of Susan is 2:
 		 move Susan to Hidden Lab;
@@ -3283,7 +3283,7 @@ to restorepart-final:
 		choose row monster from the table of random critters;
 		if name entry is "Mismatched Chimera":
 			now area entry is "Hospital";
-	if HP of doctor matt > 11 and HP of doctor matt < 100, add "Mental Booster" to the feats of the player;
+	if HP of doctor matt > 11 and HP of doctor matt < 100, add "Mental Booster" to the feats of player;
 	now Candy is in dark basement;
 	if coonstatus > 100:
 		now pink raccoon is tamed;

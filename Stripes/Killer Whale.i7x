@@ -29,7 +29,7 @@ to say losetoorca:
 		say "     Overwhelmed by lust, you shame your better senses as you engulf the emergent tip of the whale's cock within the confines of your [bodytype of player] lips, your olfactories flooded with the salty musk of the aquatic beast's arousal.";
 	else:
 		say "     You look reluctant to comply with such an order, and--perceiving this immediately--the orcaman grabs you by your head, carefully prying your [bodytype of player] maw loose so that he may so occupy this new void with his emergent cock, forcing you to taste his writhing, thick meat.";
-	if cunts of player > 0:
+	if player is female:
 		if anallevel is 3 and a random chance of 1 in 5 succeeds:
 			say "[orcadefeatsex1]";
 		else if a random chance of 3 in 5 succeeds:
@@ -77,7 +77,7 @@ to say orcadefeatsex4:		[oral sex]
 
 
 to say beattheorca:
-	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and ( cocks of player > 0 or cunts of player > 0 ):
+	if ( libido of player - humanity of player > 15 ) and bodyname of player is "Killer Whale" and player is not neuter:
 		if player is herm and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 			say "     [bold type] Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
@@ -88,9 +88,9 @@ to say beattheorca:
 				say "[orcavicsex1]";
 			else:
 				say "[orcavicsex2]";
-		else if cocks of player > 0 and anallevel > 1:
+		else if player is male and anallevel > 1:
 			say "[orcavicsex1]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "[orcavicsex2]";
 		else:
 			say "     Defeating the orca, you leave his exhausted form floating on the water. You're sure he'll be fine, but you feel ill-inclined to be around when he does recover.";
@@ -126,7 +126,7 @@ When Play begins:
 	now victory entry is "[losetoorca]";
 	now desc entry is "[orcadesc]";
 	now face entry is "sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca. Your mouth is filled with small, sharp teeth. The blow hole on the top of your head occasionally opens to take a breath";
-	now body entry is "large and heavily muscled, but with the sleek shape of a swimmer. You stand almost ten feet tall now. The large dorsal fin projecting from your back extends nearly a foot behind you, making it hard to comfortably rest your backpack. Your arms are dense with sleek muscle, and your hands have a thick webbing between your fingers. Your legs are humanoid in appearance, thick with powerful muscle as well[if cocks of player > 0]. A slit between the legs conceals your manhood[end if]";
+	now body entry is "large and heavily muscled, but with the sleek shape of a swimmer. You stand almost ten feet tall now. The large dorsal fin projecting from your back extends nearly a foot behind you, making it hard to comfortably rest your backpack. Your arms are dense with sleek muscle, and your hands have a thick webbing between your fingers. Your legs are humanoid in appearance, thick with powerful muscle as well[if player is male]. A slit between the legs conceals your manhood[end if]";
 	now skin entry is "the distinctive patterning of an orca on thick, sleek";
 	now tail entry is "Your ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes.";
 	now cock entry is "sleek and curving cetacean";
@@ -173,13 +173,13 @@ when play ends:
 	if bodyname of player is "Killer Whale":
 		if humanity of player < 10:			[SUCCUMB]
 			say "     As the last of your humanity is washed away as a sand castle by the waves of the ocean, you are drawn back to the beachside. You join the other beachgoers and lose yourself in the enjoyment of the beachfront area. You swim among the other creatures, strong and powerful. You are not troubled by the other predators often and happily satisfy your urges on the others swimming in the area. ";
-			if orcadom < 4 and cocks of player > 0:
+			if orcadom < 4 and player is male:
 				say "     The only difficulties you have are with the other male orcas in the area, as you fight with them over the territory and to defend the breeding females of your pod.";
-			else if cocks of player > 0:
+			else if player is male:
 				say "     Having driven away several of the other muscled orcamen from the area, the territory is yours and you have little trouble driving away the other weaker males. With the territory near the city claimed as yours, you build up a large pod of females to breed. Those killer whales who do venture into your waters are quickly beaten and dominated as you did the others before them.";
-			else if orcafdom < 4 and cunts of player > 0:
+			else if orcafdom < 4 and player is female:
 				say "     You find a powerful male among the other killer whales swimming in the waters around the city and join his pod, relishing the feel of him atop you. He breeds you, and the other females of the pod, often, to add to his mates. The males, when mature, are driven off to find pods of their own. You miss them a little, but there will always me more young ones, as your mate is strong and virile.";
-			else if cunts of player > 0:
+			else if player is female:
 				say "     Doubtlessly unprepared for such a reign as yours, you wrangle together a number of males and females for your own pod, wherein the males are subjugated to your whims and to those of the females whom you matron over. Rarely do you find a consort to sufficiently placate your desires, but when you do you make considerable use of them, regardless of their compliance.";
 			else:
 				say "     Lacking a gender of your own, you instead delight in turning others into orcas stroking theirs or rubbing their pussies, making them cum repeatedly as you transform them. You take particular amusement in watching them sate their new instinctual lusts for the first time.";

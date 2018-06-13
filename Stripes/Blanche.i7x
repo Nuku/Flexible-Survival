@@ -26,7 +26,7 @@ Instead of resolving Wolfrape:
 			say "     Having defeated the formidable creature and driven it back into hiding, you rush over to the female wolf. She is still quite dazed from her assault, but mumbles some thanks as you help her to her feet. You consider taking her back with you, but are unsure how safe this unknown wolf could turn out to be. You are spared from the decision as she starts indicating directions for you to follow. She leads you to a partially ruined office building just a few blocks away. The entrance is buried in rubble, but there's a concealed back entrance to the five-story building which she unlocks.";
 			move player to Office Den;
 			now Office Den is known;
-			attempttowait;
+			WaitLineBreak;
 			project the figure of Blanche2_icon;
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you. As if suddenly realizing what she's done, she takes a step back, blushing at her ears. 'Oh, I'm sorry. It's this... infection thing. I'm sure you know what it does to you. I am really thankful though for your help.' She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase. She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands. 'Please take this. I'd give you more, really, but it's about all I can spare right now. You were really brave to try and help me against that monster. I don't like going out there much because there are so many of them. You could... if you need somewhere safe to hide that is... maybe stay here... with me.' She speaks softly, but with obvious longing in her voice. Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
@@ -175,10 +175,10 @@ to say sexwithBlanche:
 	else if HP of Blanche < 7:
 		now lastfuck of Blanche is turns;
 		if HP of Blanche is 2:
-			say "     Blanche blushes a little at your offer, but presses herself to you, kissing you passionately. 'Oh, I was so hoping you'd stay to [if cocks of player > 0]breed me[else]keep me company[end if]. My body's been needing it so bad lately. I think that's how that beast found me.' She hugs you tighter, shuddering a little. 'But now you're here to help me with [if cocks of player > 0]my heat[else]it[end if].'";
+			say "     Blanche blushes a little at your offer, but presses herself to you, kissing you passionately. 'Oh, I was so hoping you'd stay to [if player is male]breed me[else]keep me company[end if]. My body's been needing it so bad lately. I think that's how that beast found me.' She hugs you tighter, shuddering a little. 'But now you're here to help me with [if player is male]my heat[else]it[end if].'";
 		else if HP of Blanche > 2:
 			say "     Blanche smiles and kisses you passionately, clearly eager for more fun. 'I'm so glad you've come back for more. I just need it so bad,' she moans, running her paws over your body. She nuzzles along your neck, licking and nibbling softly.";
-		if cocks of player > 0:
+		if player is male:
 			if HP of Blanche < 4 or a random chance of 2 in 3 succeeds:
 				say "[sexwithBlanche01]"; [vaginal]
 				if HP of Blanche < 4, now HP of Blanche is 4;
@@ -204,12 +204,12 @@ to say sexwithBlanche:
 to blanchesexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if cocks of player > 0 and Blanche is not gravid:
+	if player is male and Blanche is not gravid:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary position";
 		now sortorder entry is 1;
 		now description entry is "screw the sexy wolfess";
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy style position";
 		now sortorder entry is 2;
@@ -227,7 +227,7 @@ to blanchesexmenu:
 		now title entry is "Titty fuck";
 		now sortorder entry is 6;
 		now description entry is "nestle your cock between those ivory tits and have fun";
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual cunnilingus";
 		now sortorder entry is 7;
@@ -323,12 +323,12 @@ to say sexwithBlanche04:
 
 to say sexwithBlanche05:
 	say "     The wolf femme [if Blanche is gravid]beckons you[else]leads you quickly[end if] over to her [if HP of Blanche < 7]sleeping mat[else if HP of Blanche < 11]mattress[else]small bed[end if], slipping your pack and clothes off before stretching out on it. She spreads her legs and runs her paws down her body, playing with her tits before stroking her wet pussy in a rather wanton display[if HP of Blanche is 2]. 'Oh, I've been feeling so horny ever since I changed. I just need some relief.' She blushes a bit at her words, but fingers herself while eyeing you lustfully[else]. 'I've been feeling so horny again lately. I just need some relief again.' She smiles and licks her lips, driving a pair of fingers into her cunt in lustful anticipation[end if]. 'Mmm... come claim your prize bitch, my sexy hero.'";
-	say "     Needing no more invitation, you hop onto the [if HP of Blanche < 7]mat[else if HP of Blanche < 11]mattress[else]bed[end if] and move alongside the wanton wolf in a 69 position, running your hands over her hips and thighs as you nuzzle and kiss between them[if Blanche is gravid]. Her large belly presses against you and you have to bend a bit to get past it to the juicy prize you desire[end if]. She brings her lupine muzzle to your hot pussy as well and takes in your scent with a soft moan before lapping her long tongue across your sensitive folds. After this brief foreplay, you get right to it, diving your tongues into one another and eating each other out. Lips kiss, tongues slide, fingers tease and juices flow as the scent of your combined arousal grows thick in the air. You lavish attention on the [if HP of Blanche > 7]MILF's needy[else]needy, heat-filled[end if] pussy before you with increasingly loud moans of lustful pleasure as you are treated in kind by her long, lupine tongue[if cocks of player > 0]. She licks and sucks at your cock[smn] as well, but her attention is primarily on eating out your dripping snatch[end if]. When you reach your peak and cum, Blanche is not far behind and you are both left panting and soaked at the crotch with your release, your faces covered in delicious pussy juices.";
+	say "     Needing no more invitation, you hop onto the [if HP of Blanche < 7]mat[else if HP of Blanche < 11]mattress[else]bed[end if] and move alongside the wanton wolf in a 69 position, running your hands over her hips and thighs as you nuzzle and kiss between them[if Blanche is gravid]. Her large belly presses against you and you have to bend a bit to get past it to the juicy prize you desire[end if]. She brings her lupine muzzle to your hot pussy as well and takes in your scent with a soft moan before lapping her long tongue across your sensitive folds. After this brief foreplay, you get right to it, diving your tongues into one another and eating each other out. Lips kiss, tongues slide, fingers tease and juices flow as the scent of your combined arousal grows thick in the air. You lavish attention on the [if HP of Blanche > 7]MILF's needy[else]needy, heat-filled[end if] pussy before you with increasingly loud moans of lustful pleasure as you are treated in kind by her long, lupine tongue[if player is male]. She licks and sucks at your cock[smn] as well, but her attention is primarily on eating out your dripping snatch[end if]. When you reach your peak and cum, Blanche is not far behind and you are both left panting and soaked at the crotch with your release, your faces covered in delicious pussy juices.";
 	say "     After your orgasms, you lie back on the [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if] side by side, panting softly in the afterglow of your release. Taking your hand in hers, she smiles. 'Mmm... thank you for that. I really needed to let off some relief[if HP of Blanche < 11]. My body just wants a proper fucking so bad[end if].' She rubs her other paw over her sticky folds.";
 
 to say sexwithBlanche06:
 	say "     The wolf femme [if Blanche is gravid]beckons you[else]leads you quickly[end if] over to her [if HP of Blanche < 7]sleeping mat[else if HP of Blanche < 11]mattress[else]small bed[end if], slipping your pack and clothes off before stretching out on it. She spreads her legs and runs her paws down her body, playing with her tits before stroking her wet pussy in a rather wanton display[if HP of Blanche is 2]. 'Oh, I've been feeling so horny ever since I changed. I just need some relief.' She blushes a bit at her words, but fingers herself while eyeing you lustfully[else]. 'I've been feeling so horny again lately. I just need some relief again.' She smiles and licks her lips, driving a pair of fingers into her cunt in lustful anticipation[end if]. 'Mmm... come claim your prize bitch, my sexy hero.'";
-	say "     Needing no more invitation, you hop onto the [if HP of Blanche < 7]mat[else if HP of Blanche < 11]mattress[else]bed[end if] and move atop the wanton wolf, running your hands over her body and breasts as she wrap her arms around your waist and hugs you close. You kiss one another as your bodies rub together, hands and paws drifting between thighs to caress the wet folds found there[if Blanche is gravid]. You caress her pregnant belly before reaching around it to get at the precious prize you desire[end if]. You slide a couple of fingers into [if HP of Blanche > 7]the MILFy wolf's[else]her[end if] juicy cunt as she does the same for you. You lick, kiss and finger one another with increasingly loud moans of lustful pleasure[if cocks of player > 0]. She plays with your cock[smn] briefly as well, but her focus is on satisfying your dripping snatch[end if]. The air in the room grows thick with the scent of your combined arousal. When you reach your peak and cum, Blanche is not far behind and you are both left panting and soaked at the crotch with your release.";
+	say "     Needing no more invitation, you hop onto the [if HP of Blanche < 7]mat[else if HP of Blanche < 11]mattress[else]bed[end if] and move atop the wanton wolf, running your hands over her body and breasts as she wrap her arms around your waist and hugs you close. You kiss one another as your bodies rub together, hands and paws drifting between thighs to caress the wet folds found there[if Blanche is gravid]. You caress her pregnant belly before reaching around it to get at the precious prize you desire[end if]. You slide a couple of fingers into [if HP of Blanche > 7]the MILFy wolf's[else]her[end if] juicy cunt as she does the same for you. You lick, kiss and finger one another with increasingly loud moans of lustful pleasure[if player is male]. She plays with your cock[smn] briefly as well, but her focus is on satisfying your dripping snatch[end if]. The air in the room grows thick with the scent of your combined arousal. When you reach your peak and cum, Blanche is not far behind and you are both left panting and soaked at the crotch with your release.";
 	say "     After your orgasms, you lie back on the [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if] side by side, panting softly in the afterglow of your release. Taking your hand in hers, she smiles. 'Mmm... thank you for that. I really needed to let off some relief[if HP of Blanche < 11]. My body just wants a proper fucking so bad[end if].' She rubs her other paw over her sticky folds.";
 
 

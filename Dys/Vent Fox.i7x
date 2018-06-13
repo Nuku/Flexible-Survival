@@ -145,7 +145,7 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 		say "     You rap your knuckles against the vent cover lightly, hoping for some sort of response. Nothing makes a noise in response, and you're left to wonder if things could've gone differently.";
 	else if VentFoxRelationship is 2:[met, helped twice.]
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
-		now VentFoxRelationship is 3;[vent known]
+		now VentFoxRelationship is 3; [vent known]
 	else if VentFoxRelationship is 3:[vent known]
 		if VentFoxContentLevel is 3:
 			say "     You bring you fist up to knock on the cover, but you pause at the last second, remembering that Vent has since moved from this location. [bold type]Vent can be found in the Maintenance Garage north of here..[roman type].";
@@ -305,9 +305,9 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     [link](0)[as]0[end link] - Do nothing.";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
-				say "Choice? (0-[if LoganCommand is 2 and cocks of player > 0]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
+				say "Choice? (0-[if LoganCommand is 2 and player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
 				get a number;
-				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and cocks of player > 0):
+				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and player is male):
 					break;
 				else if calcnumber is 1 or calcnumber is 0:
 					break;
@@ -327,7 +327,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
-	if cocks of player > 0 and cunts of player is 0:
+	if player is puremale:
 		say "     What kind of sex do you want to have?";
 		choose row monster from table of random critters;
 		now sextablerun is 0;

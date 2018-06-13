@@ -78,7 +78,7 @@ carry out shifting:
 	if shiftable is 0 or shiftable is 1:
 		say "You do not know how to do that!";
 		stop the action;
-	if the humanity of the player < 50:
+	if the humanity of player < 50:
 		say "Your feral impulses prevent you from concentrating hard enough to change.";
 		stop the action;
 	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
@@ -165,7 +165,7 @@ To transform:
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
-		if cocks of player > 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+		if player is male, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 		now cockname of player is name entry;
 		now cock of player is cock entry;
 	if strength of player < str entry:
@@ -195,7 +195,7 @@ To transform:
 
 when play ends:
 	if shiftable is 2:
-		if the humanity of the player > 50:
+		if the humanity of player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";

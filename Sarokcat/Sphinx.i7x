@@ -26,15 +26,15 @@ When Play begins:
 	now victory entry is "[Sphinx Wins]";
 	now desc entry is "[mongendernum 4]     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back you thief!' She cries out with a roar as she leaps at you!";
 	now face entry is "Mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your face"; [You have a (your text) face."]
-	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinguishable from those of a great cat, though your arms are still more human than beast, with clawed fingers instead of paws. Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]soft leonine furred[or]tan furred[or]soft lion furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long, leonine tail lashing happily over your tight, feral-shaped hindquarters.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]feline[or]sphinx[or]lion-like[or]barbed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it seems to shift and change slightly, the features gaining a soft feline cast to them as your eyes gain the slitted pupils of a cat, the rest of your seems to shiver and shift, as any imperfections are smoothed away from your beautiful features"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it seems to stretch and lengthen, growing out into a more feral leonine form, you stumble and fall forward as your rear legs shift and tighten underneath you, becoming fully leonine as they change into a fully animalistic form, and your arms seem to shorten slightly, with the palms of your hands toughening up as the muscles shift to be better able to support you in your new quadrupedal stance. Almost as an afterthought your shoulders bunch and itch, as soft wings slowly push their way out of your body, stretching out once or twice, before folding up and settling naturally against your long lion like flanks"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "soft lion fur begins to grow out of your skin, your skin seeming to itch from within as it pushes itself out to cover your entire lower body"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it tightens and powerful muscles shift around underneath the skin, and your rear seems to lengthen as a long leonine tail presses its way out of your body, causing you to shiver in pleasure at the feel of the air over your new appendage as it lashes behind you eagerly"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it tapers and draws to a point, soft barbs appearing along its length as it takes on a more leonine appearance, the skin shifting around near your groin to wrap it in a proper feline sheath and draw it up close to your body, where it can wait eagerly until an opportunity to use it presents itself"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinguishable from those of a great cat, though your arms are still more human than beast, with clawed fingers instead of paws. Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]soft leonine furred[or]tan furred[or]soft lion furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a long, leonine tail lashing happily over your tight, feral-shaped hindquarters."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]feline[or]sphinx[or]lion-like[or]barbed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it seems to shift and change slightly, the features gaining a soft feline cast to them as your eyes gain the slitted pupils of a cat, the rest of your seems to shiver and shift, as any imperfections are smoothed away from your beautiful features"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it seems to stretch and lengthen, growing out into a more feral leonine form, you stumble and fall forward as your rear legs shift and tighten underneath you, becoming fully leonine as they change into a fully animalistic form, and your arms seem to shorten slightly, with the palms of your hands toughening up as the muscles shift to be better able to support you in your new quadrupedal stance. Almost as an afterthought your shoulders bunch and itch, as soft wings slowly push their way out of your body, stretching out once or twice, before folding up and settling naturally against your long lion like flanks"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "soft lion fur begins to grow out of your skin, your skin seeming to itch from within as it pushes itself out to cover your entire lower body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it tightens and powerful muscles shift around underneath the skin, and your rear seems to lengthen as a long leonine tail presses its way out of your body, causing you to shiver in pleasure at the feel of the air over your new appendage as it lashes behind you eagerly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it tapers and draws to a point, soft barbs appearing along its length as it takes on a more leonine appearance, the skin shifting around near your groin to wrap it in a proper feline sheath and draw it up close to your body, where it can wait eagerly until an opportunity to use it presents itself"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 22;
 	now sta entry is 12;
@@ -43,26 +43,25 @@ When Play begins:
 	now cha entry is 15;
 	now sex entry is "Male"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 160;
-	now lev entry is 20;							[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 18;							[ Amount of Damage monster Does when attacking.]
+	now lev entry is 20; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 18; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Foyer";  [ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;							[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9;  [ Length infection will make cock grow to if cocks]
 	now cock width entry is 4;  [ Size of balls ]
-	now breasts entry is 2;						[ Number of Breasts infection will give you. ]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 4;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;							[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 0;
 	now cunt width entry is 0;
-	now libido entry is 30;						[ Amount player Libido will go up if defeated ]
-	now loot entry is "";							[ Loot monster drops, ]
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;							[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]winged[or]quadrupedal[as decreasingly likely outcomes]";
 	now type entry is "[one of]leonine[or]feline[or]sphinx[or]mythological[at random]";
-	now magic entry is true;					[ Is this a magic creature? true/false (normally false) ]
+	now magic entry is true; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -71,7 +70,7 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Sphinx":
 		if humanity of player < 10:
-			if cocks of player > 0:
+			if player is male:
 				if riddlewin > 6:
 					say "Your mind finally succumbing to the instincts growing within it, you soon find yourself returning to the museum where Valerie is waiting for you. Unable to restrain your urges, you quickly pin down your mate, and silence her protests with your feline cock as you thrust it into her body. You take your mate again and again, making her moan underneath you as you wring climax after climax out of her leonine body, fucking her until her mind is as lost to the feral urges of the infection as yours is, and she gives herself to you completely. Pleased at your actions, and already smelling the fertile results of your seeding on your mate, you soon look for a more appropriate location for you to expand your pride and her to bear your young. Leaving the city, you soon find an appropriately out of the way location, and settle Valerie down to hunt and bear your sphinx-like offspring, while you stalk the nearby hills to add to your pride, swooping down on helpless travelers, wrecking their vehicles and forcing them to answer your riddles. The few who can answer even one of your pointed questions with you staring at them hungrily the entire time you let go, the rest are quickly shown their place under their new pride leader, as you mate them into feral subservience to your needs. Several times the military and other groups try to find you, but you retain more than enough cunning and intelligence, even if it is governed by your strong instinctive desires, to easily avoid their clumsy attempts. Your pride growing ever larger, as you add new breeding sphinxes to the fold, and the ones you have already mastered bear you more and more cunning children. Perhaps in a few generations, the world will be dominated by a new intelligent species, but until then, you look forward to spreading your seed as widely as possible...";
 				else:
@@ -80,7 +79,7 @@ when play ends:
 			else:
 				say "Finally succumbing to the infection, you prowl the city, hunting desperately for something you can hardly understand anymore. You run across numerous infected, their primal actions boring you and seeming inadequate, soon you abandon the city in disgust, your wings having grown large and powerful enough to carry your feline body. You visit several different locations, stalking your prey and catching them alone, before barraging them with riddles, few can even manage to answer even one riddle right, sending you into a fury as you send them back to their cities much the worse for wear, your needs still unmet. On occasion a lucky few will manage to answer a riddle or two correctly, and these you reward for their efforts by allowing them to sate your ever present need with their changing bodies, leaving behind a trail of rather intelligent male lions behind you as you travel. While none manage to answer all your riddles, you keep searching in hopes of someday finding a true mate to conquer and dominate you, both in mind, body, and spirit. In the mean time, maybe soon one of your temporary mates will manage to give you some nice cubs to tutor and teach...";
 		else:
-			if cocks of player > 0:
+			if player is male:
 				say "When the rescue finally arrives, both you and your lovely sphinx mate are waiting for the military when they burst into the museum expecting a fight. You both surprise the soldiers however by pointing out the damage their guns could do to several of the priceless historical pieces of art in the museum, and shame them into politely helping the two of you remove several of the most important pieces for shipment to safer museums. You and Valerie are both amused at how easy it is to get the military minded troops to obey the voice of reason, and soon return to their camp with a large amount of the most important artifacts and artwork already boxed up and ready for shipment. While several of the officers at camp try to object, few care to press the subject once you have verbally displayed their intellectual shortcomings for all to see, vastly amusing your brilliant mate. Working your way through the ranks, soon you have the general in charge of the rescue apologizing to you both profoundly for their slow actions in response to rescuing you from the city, and transport to any place you choose.[line break]";
 				say "You both find the military's attitude amusing, as you head out together in search of a challenge for two intellectuals of your caliber, amusing yourself by visiting several academic institutions and museums and confounding the professors with your pointed questions, and riddles. Unfortunately while you are quickly recognized as several of the brightest around, and are asked to guest lecture or tutor at many different places of learning, you both have a somewhat feline temperament, and tend to grow bored easily with those who cannot keep you intellectually stimulated. This leads you to rarely stay in one place for long, always searching out the next new mental challenge, while keeping each other satisfied with both riddles and the wonderful sexual antics that usually follow. Eventually you manage to find several young minds of an interesting enough caliber that you pause long enough to tutor them, slowly guiding them through the annals of learning as both their bodies and minds become more sphinx-like themselves. Eventually they too are soon joining you and Valerie in your nightly bouts of riddles, and presenting their excited feline openings to you for you to fill with your seed once you prove your mental dominance. While those who can match your mental prowess for even a minute are few and far between, you find yourself having great hopes for the next generation, which your happy sphinx mates are already growing large with...";
 			else:

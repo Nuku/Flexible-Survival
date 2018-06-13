@@ -77,7 +77,7 @@ the fuckscene of Zigor is "[sexwithZigor]".
 to say sexwithZigor:
 	if HP of Zigor < 2:
 		say "     You should probably get to know him a little before making such an offer.";
-	else if cocks of player is 0:
+	else if player is not male:
 		say "     'I apologize. I thought I mentioned this, but my collection is only available to those of a more masculine persuasion at the moment,' he says with regret. 'Surely you can find someone out there who can help you with that,' he adds.";
 		say "[bracket]Only M/M content at present - The Mgmt.[close bracket][line break]";
 	else if lastfuck of Zigor - turns < 8:

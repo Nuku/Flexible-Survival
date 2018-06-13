@@ -57,7 +57,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 	if LockerroomTrioRelationship is 0: [first time]
 		say "     While wandering the mall you notice that an inconspicuous door with a sign 'Employees Only' standing open a little, just leaned-to. This door had always been closed (and presumably locked) in your visits to the place before all this chaos - which draws you closer in curiosity. The fact that sounds - multiple voices, murmuring and laughing - are coming from beyond does increase your interest further, and so you reach for it and pull the door open as soon as you reach it. On the other side, you are met with the sight of one of the mall's multiple employee locker rooms. Lockers are lined all along the wall on both sides - but those actually aren't what caches your attention right away.";
 		say "     No, the most interesting thing to see in the room are a number of sleeping bags stretched out on the floor, and currently occupied by a mall-rat plus an anthro wolf and feline, sitting cross-legged on the fabric. That is an interesting trio of people right there. Seems that they've moved in and made camp in this room - as have many other refugees from the city that fled to the mall, taking up stores, rooms and sometimes even the hallways themselves as their new quarters. Although, it appears that there are more occupants as there are more sleeping bags lined up against the walls. Even so, the sounds that you heard must have come from these guys, as the trio is embroiled in a game of cards, with the mall-rat obviously losing. The whole scene makes you smile as it serves as proof that the entire world hasn't gone completely crazy yet, if these three can enjoy a simple card game. Not wanting to interrupt their friendly banter and play, you quietly close the door after watching for a little while and head on your way.";
-		say "     [line break]";
+		LineBreak;
 		say "     It might be worth checking back here sometime later, maybe you can get to know the inhabitants or join them for a game or other interesting past-times...";
 		now LockerroomTrioRelationship is 1; [met the trio once]
 	else if LockerroomTrioRelationship is 1: [second time]
@@ -142,17 +142,17 @@ to say ANewFriend:
 		WaitLineBreak;
 		say "     You tell him it's fine before picking up yours as well and taking a bite out of it. The hamburger's pretty good, better than eating just chips at least. While you two are eating a conversation takes off. 'So... I'm really grateful that you agreed to be my friend,' he admits out loud. You tell him that it seriously wasn't a problem before joking that you couldn't resist such a cute goat boy like him. That appears to shock him if the fact he starts to choke on a fry says anything. You chuckle at the response, enjoying it a lot. Soon though he manages to recover, but by now a rather sad look is on his face. 'You know, I was pretty lonely before you came along,' Scotty says quietly. You tell him that you know this, that it's because he just moved here. The goat boy shakes his head in disagreement. 'That's not it, even back in Britain I didn't have many friends,' he murmurs sadly.";
 		say "     [bold type]Do you put your hand on his and comfort him?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Of course! You can't stand seeing an adorable goat boy sad.";
 		say "     ([link]Y[as]y[end link]) - No, that might be going a bit too far.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     With a gentle movement, you lay your hand upon Scotty's, surprising him and causing the guy to look at you in confusion. You give him a nice warm smile and tell him that it doesn't matter now, that he has you as a friend now, doesn't he? The goat boy's face appears to brighten up quickly as a matching smile shows up on his face. 'You're right, I do have you now,' he says, turning his hand over to grasp a hold of yours. He squeezes your hand softly, as if to confirm that you're there, that you're real. You don't really know exactly how lonely Scotty must have been back in Britain, but you're here for him now. Shortly after you two finish eating and head back to the lockerroom, the both of you holding hands the entire time. You tell him that you two should do something else next time, spice it up. 'Sure! That'd be fun,' he says with a happy smile. You then say your goodbyes and leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
 			PlayerEat 30;
 			move player to Mall West Wing;
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     You mentally shake your head, deciding against it. So instead you two sit there quietly, the mood suddenly somber with nothing to talk about. Scotty and you eat your food and then clean up, heading back to the lockerroom shortly after. There he gives you a soft smile and apologizes. 'I'm sorry that our lunch date became a bit awkward,' the goat boy says. You tell him it's fine and say that you should do it again some day. That appears to brighten his smile up as he nods his head. 'Yeah that would be great,' he says before you leave shortly after.";
 			now ScottyRelationship is 2; [met, went on lunch date]
 			PlayerEat 30;
@@ -160,17 +160,17 @@ to say ANewFriend:
 	else if ScottyRelationship is 2: [met, went on lunch date, repeatable]
 		say "     Deciding now would be a good time to ask Scotty for that lunch date, you enter the lockerroom. The goat boy is in his spot, seemingly reading a book in his pajamas. When you approach him he turns towards you with a smile. 'Hey there, what brings you here?' he asks. You ask him if he's up for a lunch date which prompts him to smile at you and nod eagerly. 'Sure! Just let me get ready,' the guy says, moving to go behind the lockers with clothes in hand to change. Two to three minutes later he returns, dressed in a shirt and jeans. The two of you then head off to the food court where you both get what you had last time. While eating, you notice the same sad smile on Scotty's face from before.";
 		say "     [bold type]Do you comfort the goat boy?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You do feel a bit sorry about not doing so last time, so yes.";
 		say "     ([link]Y[as]y[end link]) - No, you don't think it's your place to do so.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     You promptly grab a hold of Scotty's hand and squeeze it softly. This surprises him for a second, him turning a confused look at you. You elaborate, saying that he shouldn't feel sad, after all he has you for a friend. The transition on his face is rather instantaneous. The sad smile instantly vanishes, replaced by a blissful, happy one. '...Thanks for that,' Scotty says warmly. Instead of saying anything, you just smile and nod at him. The two of you sit like that, eating you food and just enjoying the warmth that both of you feel in your chests. When you finish and leave, the two of you can be seen holding hands on your way back to the lockerroom. Once there, the goat boy turns to you, a smile that you're coming to like on his face. 'Maybe next time we could do something different?' he asks you tentatively. You tell him that you'd love to, which appears to make his eyes brighten up in even more joy. The two of you say your goodbyes to each other before you leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
 			PlayerEat 30;
 			move player to Mall West Wing;
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     You once more decide against it and much like last time, the entire date is filled with and awkward silence and a somber mood. The two of you finish your food and clean up, heading back to the lockeroom when you're done. Scotty once more gives you an apologetic look. 'I'm really sorry that the same thing happened on this date. I just can't stop thinking about what I'd do if I didn't have you,' he murmurs. You don't really know what to say so instead you tell him it's okay. The goat boy just nods and you say goodbye before leaving the lockerroom.";
 			move player to Mall West Wing;
 			PlayerEat 30;
@@ -186,90 +186,90 @@ to say SheepShaving:
 		else if SonnyRelationship is 100: [meeting him again after refusing to help earlier]
 			say "     Entering the lockerroom, you spot Sonny up at the mirror, just like last time. Once again he's trying to shave his back and struggling quite badly. You feel pity pooling in your stomach at seeing such a sad display. The sheep seems to notice you in the mirror and turns around with a nervous look on his face. 'Could you please help me this time. I'm begging you, it's already hard enough shaving my front,' he asks desperately, pleading for you to shave him. With a click he turns of the electric razor and holds out to you, giving you a very extremely hopeful look.";
 		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, you're not into shaving other people.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     Informing the sheep that you're happy to help brings a bright smile to his face. Sonny cheerfully hands you the razor and turns around, presenting his back to you. With the electric razor in hand you take it to the sheep's back, carefully removing the large amount of wool that forms a thick layer there, revealing his actually pretty trim and muscular back. Getting rid of all the extra weight and warmth cheers the male up quite a bit, and you can hear him hum contently as you go along. Minutes go by and more and more wool piles up on the floor, making it look a bit like someone ripped up a pillow. However, soon enough you reach the bottom of the back, just above his pants. You can see that he has a lot of wool on his ass too, if the amount sticking out of his pants says anything. Seeing this, a thought comes up.";
 			say "     [bold type]Do you ask him to drop trousers?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Of course! You don't want to do shoddy work after all.";
 			say "     ([link]Y[as]y[end link]) - Nah, doing his back is fine enough.";
 			if player consents:
-				say "     [line break]";
+				LineBreak;
 				if graphics is true:
 					project the figure of Sonny_shaved_nude_icon;
 				say "     You look to the sheep and speak up, asking him to drop his pants and underwear. 'W-w-what?!' Sonny stammers out, giving you a weird look. You then decide to explain that you want to shave his ass. 'O-oh... alright,' he says before fiddling with his pants, causing them to fall, his underwear joining the pants seconds later. Your sight is met with a very fluffy set of ass-cheeks and in the mirror an average-sized cock. With as much diligence as before, you take the electric razor to his butt. It doesn't take long for you to free the man of the excess wool. While you do so, you hold on to his hip and also have to touch him a little bit to get a nice and close shave... which doesn't fail to have an effect on the sheep. His earlier hum lead over to quiet moans in pleasure - at being shaved and... maybe also standing bare-ass naked in front of someone he just met. Could this sheep be a little bit of an exhibitionist? Leaning your head to the side a little, you glance over at his mirror and see that Sonny is indeed sporting an erection! That ends up giving you an idea...";
 				say "     [bold type]Do you wish to grope his ass?[roman type][line break]";
-				say "     [line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Why not? You've already went this far.";
 				say "     ([link]N[as]n[end link]) - No, shaving his ass is enough for you.";
 				if player consents:
-					say "     [line break]";
+					LineBreak;
 					say "     With a grin, you set the razor on the floor and grab a hold of both of his cheeks. Then with a medium amount of pressure, you squeeze. This appears to set Sonny off as he lets out a loud bleat - followed by breathless grunts as rope after rope of cum shoot from his cock and onto the mirror. When the intensity of the orgasm dies off and he stops cumming, the sheep is panting heavily. Shortly after when he breaks out his haze he lets out a yelp of shock. 'A-A-ah! I'm so sorry!' He apologizes. You are sure that if he could blush he would be heavily right now. You wave him off saying it's okay, as you were the one that set him off. 'T-that is true but I should have told you that shaving my ass makes me horny,' he says, putting his underwear and pants on and turning to you. You pick up the razor and then stand up, handing the it to him. With a shy smile, he thanks you for shaving... and taking care of him, bowing his head to you. To avoid prolonging his awkwardness, you head on your way out of the lockerroom - but not without off-handedly saying that you'd be happy to help again if he needs it.";
 					now SonnyRelationship is 3; [met, below the belt shave + groping]
 					move player to Mall West Wing;
 				else:
-					say "     [line break]";
+					LineBreak;
 					say "     You decide against it, not wanting to make the entire situation even more awkward. Instead you set stand up with the razor in hand and tell him that you're done. Sonny then quickly bends down and pulls both his underwear and pants up, buttoning his trousers. He turns to face you and accepts the razor when you hand it to him. The man thanks you profusely as he puts the device in one of the lockers and shuts it again. You tell him that it's okay and if he ever needs help again just look for you. He smiles and quickly cleans up before leaving himself, walking out into the wide-open mall hallway eager to enjoy himself without a thick pelt of wool for once.";
 					now SonnyRelationship is 2; [met, below the belt shave]
 					move player to Mall Lockerroom;
 			else:
-				say "     [line break]";
+				LineBreak;
 				say "     You mentally shake your head and instead ask Sonny to turn around. The sheep does so, and you hand him the razor. 'Thanks a lot for helping me, it's always irritating to shave. Especially since I usually have to shave once a day,' he says, shaking his head in exasperation. You tell him that it was no problem, and that if he ever needs it, you can help once more. Sonny smiles at you and thanks you once more, saying that he'll keep that in mind. 'Can you leave so I can shave the rest?' he asks shyly. You nod and say you don't mind, making your way out of the lockerroom.";
 				now SonnyRelationship is 1; [met, above the belt shave]
 				move player to Mall West Wing;
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     You shake your head, and the sheep gives you a disappointed look, then goes back to contorting himself as he struggles pitifully to shave his back. Your help would really have been a boon, if it was given. Deciding that you don't want to watch this any longer, you make your way out of the lockerroom, leaving the struggling man behind.";
 			now SonnyRelationship is 100; [met, refused to help]
 			move player to Mall West Wing;
 	else if SonnyRelationship is 2: [repeat shaving, butt-shave before]
 		say "     You enter the lockerroom, hoping that someone's in there. Thankfully there is, a familiar sheep standing in front of the mirror just like before. He's trying to shave his back, waving the razor around, attempting to get at his back. Feeling that Sonny's liable to end up cutting himself if he keeps doing that, you make your way further in. Sonny notices you via the mirror and turns around with a happy look on his face. The sheep clicks off the razor and speaks. 'Can you help me shave again?' he asks kindly and hopefully. Mulling around the idea before deciding, you open your mouth to reply.";
 		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, you just don't have the time right now.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			if graphics is true:
 				project the figure of Sonny_halfwool_nude_icon;
 			say "     When you give your assent to the sheep, he smiles widely at you before handing the razor to you and dropping his trousers and underwear right away. It appears that after having shaved his ass before, he feels quite comfortable with being naked in front of you. That doesn't mean he waves his dick around in front of you though, first covering it with a hand, then turning to keep the front of his body hidden. Of course, this does little to hide his manhood from you, as Sonny is standing in front of a full-length mirror. Seems he has forgotten that, as he looks over his shoulder and smiles at you. Shaking your head, you quickly get to work, turning the razor back on and taking it to his back. Just like the time previously, it doesn't take long before you're done with his back and move on to his ass. The moaning makes a return, as Sonny appears to thoroughly enjoy your work. After a minute, you're finished with his ass but a thought pops up in your head.";
 			say "     [bold type]Do you wish to grope his ass?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Why not? You've already went this far.";
 			say "     ([link]N[as]n[end link]) - No, shaving his ass is enough for you.";
 			if player consents:
-				say "     [line break]";
+				LineBreak;
 				say "     Putting down the razor, you bring up both of your hands and move them to his ass. Sonny's face in the mirror gains a confused look before it changes into a look of utter bliss as you squeeze his ass-cheeks firmly. This results in him orgasming rather strongly, several ropes of cum spurting out of his cock and splattering the mirror. It takes some time for the sheep to come down from his orgasm, Sonny's tongue lolling out of his mouth all the while. When he does, his eyes widens and he turns, his dick coming right to in front of your eyes, some of the cum flying off and hitting your face. The sheep sees this and starts apologizing rapidly, clearly embarrassed by the action. You wipe the cum off and use some of the wool to clean your hands before telling him it's alright. It was a consequence of groping him after all. He [']oh[']s before quickly getting dressed. Once he is, he tells you he needs to go, rapidly moving out of the lockerroom.";
 				now SonnyRelationship is 3; [met, below the belt shave + groping]
 				move player to Mall Lockerroom;
 			else: [just the shave, nothing more]
-				say "     [line break]";
+				LineBreak;
 				say "     When you're done shaving him you stand up, as you had been kneeling to shave his ass. The sheep this time sees that you've stood and understands that you're done. Sonny bends down and puts on his clothing. Once dressed, he stands up and gives you another smile, accepting the razor back. 'Thanks for helping me again! I really do appreciate it,' he says happily. You tell him that it was no problem at all and like you said before, would be happy to help again. 'I'll hold you to that,' he says with a friendly smile before admitting that he has to leave. Heading out of the room, thus leaving you in the lockerroom.";
 				move player to Mall Lockerroom;
 		else: [no shave this time]
-			say "     [line break]";
+			LineBreak;
 			say "     You shake your head, and the sheep gives you a disappointed look, then goes back to contorting himself as he struggles pitifully to shave his back. Your help would really have been a boon, if it was given. Deciding that you don't want to watch this any longer, you make your way out of the lockerroom, leaving the struggling man behind.";
 			move player to Mall West Wing;
 	else if SonnyRelationship is 3: [repeat shaving, groped before]
 		say "     Upon entrance to the lockerroom you spot Sonny in his usual place, right at the mirror. Like last time, he has his razor in hand and is trying desperately to shave his back. As soon as you appear in his mirror, his eyes brighten up and he immediately turns to face you, a smile on the sheep's face. 'Do you mind helping me once more?' Sonny asks, holding out the razor in hope. It appears that the guy really liked you shaving him last time, if the eagerness proves anything. Nevertheless, the idea around before soon coming to a decision.";
 		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, not this time, you're a bit busy.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			if graphics is true:
 				project the figure of Sonny_halfwool_nude_icon;
 			say "     Immediately after you say yes, the sheep happily drops his pants and underwear, wiggling his ass at you in an attempt to be seductive. Shaking your head, you chuckle inwardly before getting to work at shaving him. During the process you make sure that the shaving is thorough as shoddy work would probably get you a sad look from the adorable sheep boy. So, the meticulous shaving of Sonny's back takes a while before you're done, the area free of excess wool. When you reach his ass Sonny looks at you with a nervous smile. 'I... uh... I liked what you did last time,' he says, touching his hard cock for emphasis. As warmth pools throughout your body, you get a thought in your head.";
 			say "     [bold type]Do you wish to go even further with the sheep?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Why not? He liked the groping, so he'll love what you want to do next...";
 			say "     ([link]N[as]n[end link]) - No, just shave his butt this time.";
 			if player consents:
-				say "     [line break]";
+				LineBreak;
 				say "     The idea ends up becoming too much and you agree to it. Quickly you turn the sheep boy towards you, his dick hitting you in the face, causing him to eep in surprise. Before Sonny can say anything you catch the tip of his hard cock in your mouth, swirling your tongue at the head. 'Ooooh that feels nice...' he murmurs out, his hands now threaded in your hair. While you're dick on his tongue you also make sure to shave his ass, being careful to not mess up just because you have a cock in your mouth. The sensations from both the shaving of his ass and his cock being sucked appears to drive him into blissful state, unaware of the world around him. Taking advantage of this, you swallow Sonny's manhood whole, deepthroating it before going back to the tip.";
 				say "     You repeat this for a while, bobbing your head up and down the sheep's hard cock as you shave his butt. Soon enough, you're finished shaving his ass, so you place the razor down and move your hands to his ass. With a thorough squeeze after pulling back, your mouth is filled with ropes of cum. It appears to be a large amount so you try your best to swallow it all. Of course, despite your best efforts some ends up trickling out of the side of your mouth. When you know Sonny's done cumming you pull off and gulp down the cum once more before smacking your lips. By then the sheep has come out of his daze and is staring at you in shock, unable to believe that you just sucked him off. 'D-d-did you just suck my cock?' he asks. You point at the cum still on your face as proof and it causes the sheep to stutter.";
 				WaitLineBreak;
@@ -279,11 +279,11 @@ to say SheepShaving:
 				now HP of Sonny is 1;
 				move player to Mall West Wing;
 			else: [just the butt-shave]
-				say "     [line break]";
+				LineBreak;
 				say "     Your thought seems a bit much for the shy sheep. Instead you dutifully take the razor to his ass, listening along to his pleasurable moans. Though, this isn't the only thing that Sonny's doing. With a brief look in the mirror you can see in utter surprise that he has his hard cock in hand, masturbating himself as you shave his ass! Mentally you shake your head, as it should be expected since he did cum last time from you groping his ass. So he more than likely feels comfortable with you seeing him do this. Anyhow, by the time you finish shaving his ass, Sonny's masturbating comes to a climax as he lets out a loud bleat and starts cumming hard. His cum goes flying and hits the mirror, staining its reflective surface with his baby batter. You calmly wait for him to come down from his orgasmic bliss and when he does he quickly gets dressed. After that he turns to you and thanks you again for shaving him. You tell him it was no problem before getting up to leave the young sheep to clean up his wool.";
 				move player to Mall Lockerroom;
 		else: [no shave this time]
-			say "     [line break]";
+			LineBreak;
 			say "     You shake your head, and the sheep gives you a disappointed look, then goes back to contorting himself as he struggles pitifully to shave his back. Your help would really have been a boon, if it was given. Deciding that you don't want to watch this any longer, you make your way out of the lockerroom, leaving the struggling man behind.";
 			move player to Mall West Wing;
 	else if SonnyRelationship is 4: [finding wool - always available random scene]
@@ -302,11 +302,11 @@ to say SatyrSonMall:
 to say WolfHorseMallSex:
 	say "     Directing your steps towards the employee lockerroom now turned temporary quarters of numerous refugees, you pass the usual scenes of a lively mall. Or well, as normal as a post-apocalyptic shopping center could be, with countless types of different species strolling the corridors, talking, playing, eating and doing who knows what. As you start to come close to the door marked 'Employees Only', some noises from a place down a short side corridor do make you listen up. A leaned-to door reading 'Storage' seems to be the source. Given everything that you have lived through in this city already, you easily recognize them as the sounds of an intimate encounter. Despite the fact that sex is everywhere these days, you can't deny that it peaks your curiosity to see who might be there...";
 	say "     [bold type]Do you want to investigate the sounds coming from the room?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, why not?";
 	say "     ([link]N[as]n[end link]) - No, better not interrupt the persons in there. They found a semi-private place for a reason.";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
@@ -320,7 +320,7 @@ to say WolfHorseMallSex:
 		wait for any key;
 		move player to Mall Lockerroom;
 	else:
-		say "     [line break]";
+		LineBreak;
 		say "     With a shrug, you keep going, soon drawing open the door to the lockerroom where you had intended to go. The room is empty of people right now, seems like everyone is out right of this moment.";
 		move player to Mall Lockerroom;
 

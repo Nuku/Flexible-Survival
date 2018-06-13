@@ -41,12 +41,12 @@ to say knightdesc:
 	if kpstatus is 1:				[player is Knight]
 		if player is herm:
 			say "     'Greetings. [']Tis surprising to see a noble knight and beautiful lady in one, but these are strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
-		else if cunts of player > 0:
+		else if player is female:
 			say "     'Greetings, lady knight. It seems even the beautiful maidens may become knights in these strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 		else:
 			say "     'Greetings, sir knight. It does my heart good to see another noble knight in these strange times. Let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 	else if kpstatus is 2:		[player is Squire]
-		say "     '[if cunts of player > 0 and cocks of player is 0]Lass[else]Lad[end if]. You have taken the colors of another. Come, let me prove myself the better knight and you may follow me. O, the adventures we shall have. Let the training begin,' he says, fondling the bulging crotch of his breeches.";
+		say "     '[if player is purefemale]Lass[else]Lad[end if]. You have taken the colors of another. Come, let me prove myself the better knight and you may follow me. O, the adventures we shall have. Let the training begin,' he says, fondling the bulging crotch of his breeches.";
 	else if kpstatus is 3:		[player is human-like]
 		say " as he sees you looking at him. 'I saw your expression, peasant. A noble knight such as I cannot abide such insolence from a lowly churl such as you. I shall teach you a lesson you won't soon forget,' he says, fondling the bulging crotch of his breeches.";
 	else:						[player is somehow non-human = monster!]
@@ -105,7 +105,7 @@ to say losetoknight:
 			say "     You lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and drop to one knee before the knight. He smiles as you yield to him and moves closer. 'I would have enjoyed seeing our fight through to the end, but I can see you are eager to enjoy the festivities afterwards.' Sheathing his blade, he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
 		else:
 			say "     The knight's final blow, turned at the last moment to the flat of the blade, knocks you to your knees. You groan and [if weapon object of player is journal]lower your fists[else]drop your weapon[end if], unable to keep fighting. 'Another noble victory for me,' he says, posing with his sword held high before sheathing it. 'And now to celebrate our glorious duel, my fellow knight.' He opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
-		if cunts of player > 0:
+		if player is female:
 			say "[knightwins_vaginal]";
 		else:
 			say "[knightwins_anal]";
@@ -116,10 +116,10 @@ to say losetoknight:
 			say "     You lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and drop to one knee before the knight. He smiles as you yield to him and moves closer. '[one of]You must recognize my greatness[or]It is clear that I have impressed you[at random]. Come follow me instead and I shall show you true glory. Here, let me show you...' Sheathing his blade, he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
 		else:
 			say "     The knight's final blow, turned at the last moment to the flat of the blade, knocks you to your knees. You groan and [if weapon object of player is journal]lower your fists[else]drop your weapon[end if], unable to keep fighting. 'You are a brave one, but no squire can best a trained knight,' he says with as he sheathes his sword. 'But a noble knight must have a brave squire and you should become mine.' He opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
-		if cunts of player > 0 and cocks of player is 0:
+		if player is purefemale:
 			say "     As he divests you of your gear and any clothing, he pauses to run his fingers across your wet mount. '[']Tis not unheard of for a maiden to pose as a squire? And these are strange times with many strange customs. But no worries, I'll still accept you as my squire. Come! You may start by [']polishing my sword['],' he says, fingering your pussy meaningfully.";
 			say "[knightwins_vaginal]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "     After divesting you of your gear and any clothing, runs his hands over your dual-gendered groin. 'Ahhh, and my new squire comes with a scabbard as well as a sword,' he teases, fingering your wet cunny. 'Well then, now that our swordplay is done, I shall test your sheath.'";
 			say "[knightwins_vaginal]";
 		else:
@@ -131,10 +131,10 @@ to say losetoknight:
 		choose row monster from the table of random critters;
 	else if kpstatus is 3:
 		if HP of player > 0:
-			say "     Rather than resist the armored knight, you lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and give up. He smiles as you relent, giving you a final swat with the flat of his blade before sheathing his sword. 'It is right that you yield to me, peasant. I am a noble hero and I have great deeds to perform. Come [if cunts of player > 0]damsel[else]peasant[end if], tend to me and you may tell the other commoners of how you worked in service of a brave knight,' he says, pushing you down to the ground beneath him.";
+			say "     Rather than resist the armored knight, you lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and give up. He smiles as you relent, giving you a final swat with the flat of his blade before sheathing his sword. 'It is right that you yield to me, peasant. I am a noble hero and I have great deeds to perform. Come [if player is female]damsel[else]peasant[end if], tend to me and you may tell the other commoners of how you worked in service of a brave knight,' he says, pushing you down to the ground beneath him.";
 		else:
-			say "     The knight's final blow, turned at the last moment to the flat of the blade, knocks you to your knees. He then pushes you down the rest of the way with his booted foot. You groan and [if weapon object of player is journal]fall to the ground[else]drop your weapon[end if], unable to keep fighting. 'You are an upstart peasant and nothing more, remember that,' he says as he sheathes his sword while keeping his boot on you. 'I hope I have taught you your place. I am a noble knight with great deeds to perform and I should not be wasting my time dealing with [if cunts of player > 0]common maids[else]commoners[end if]. Though I do think one final lesson to properly teach you your place is in order,' he adds as he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
-		if cunts of player > 0:
+			say "     The knight's final blow, turned at the last moment to the flat of the blade, knocks you to your knees. He then pushes you down the rest of the way with his booted foot. You groan and [if weapon object of player is journal]fall to the ground[else]drop your weapon[end if], unable to keep fighting. 'You are an upstart peasant and nothing more, remember that,' he says as he sheathes his sword while keeping his boot on you. 'I hope I have taught you your place. I am a noble knight with great deeds to perform and I should not be wasting my time dealing with [if player is female]common maids[else]commoners[end if]. Though I do think one final lesson to properly teach you your place is in order,' he adds as he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
+		if player is female:
 			say "     Reaching into his breeches, he pulls out his noble manhood. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard. He then removes your gear and any clothing, leaving you bare before him. 'A common lass such as yourself should welcome the opportunity to bed a knight. Perhaps your child will be as brave and noble as I,' he says proudly as he fingers your dampening pussy.";
 			say "[knightwins_vaginal]";
 		else:
@@ -149,7 +149,7 @@ to say losetoknight:
 			say "     Rather than fight further, you submit to the armored knight. Flourishing his sword, he strikes a pose with a smile. 'It seems even monsters such as you have heard of my great deeds. And so you must also have heard of my other greatness,' he adds, lowering his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
 		else:
 			say "     His last blow strikes you hard, knocking you to the ground with a pained groan. And while the hardworking nanites quickly seal the wounds, you're still quite hurt and unable to keep fighting. '[one of]I have slain the monster[or]And again I have proven my heroism against yon monstrous foe[or]Another act of heroism against a monstrous beast[or]Another evil beast defeated in the name of honor[at random],' the knight declares with a flourish of his sword. Looking down at you, he sees you still alive and breathing. 'Ah, the beast still lives? An opportunity to celebrate my noble victory,' he declares, pulling down his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
-		if cunts of player > 0:
+		if player is female:
 			say "[knightwins_vaginal]";
 		else:
 			say "[knightwins_anal]";
@@ -168,7 +168,7 @@ to say knightwins_vaginal:
 		say "     'How fortunate for you, as a mere commoner, to be able to aid a noble knight such as I,' ";
 	else:
 		say "     'So you see, O beast, the might and vigor of a noble knight,' ";
-	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of player] body in a mix of groping and caressing	[if kpstatus < 3 and cocks of player > 0]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his impressive manhood gliding in and out of you, rubbing across your slick vaginal walls has you grinding back against him with growing yearning. The knight holds a steady pace, his balls slapping against your thighs and crotch as he fucks the [if kpstatus is 1]noble maiden[else if kpstatus is 2]lass-in-training[else if kpstatus is 3]female peasant[else]defeated she-monster[end if] beneath him.";
+	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of player] body in a mix of groping and caressing	[if kpstatus < 3 and player is male]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his impressive manhood gliding in and out of you, rubbing across your slick vaginal walls has you grinding back against him with growing yearning. The knight holds a steady pace, his balls slapping against your thighs and crotch as he fucks the [if kpstatus is 1]noble maiden[else if kpstatus is 2]lass-in-training[else if kpstatus is 3]female peasant[else]defeated she-monster[end if] beneath him.";
 	say "     You have a couple of quick orgasms as the victorious knight fucks you by the time he quickens his pace with a lustful groan. Soon after, he grabs your ass and drives hard into you, groaning his release as he sends gooey blasts of his semen into your quivering cunny. You cry out in carnal delight, climaxing hard as you feel the strong knight's virile seed shooting into you, boldly seeking to fill your womb and impregnate you. Once done, the knight slips his slick cock from your creamy pussy and [if kpstatus > 2]wipes his [']sword['] across your buttocks before resheathing it in his breeches and departing[else]moves around to have you suck it clean before resheathing it in his breeches and departing[end if].[impregchance]";
 
 to say knightwins_anal:
@@ -181,7 +181,7 @@ to say knightwins_anal:
 		say "     'How fortunate for you, as a mere commoner, to be able to aid a noble knight such as I,' ";
 	else:
 		say "     'So you see, O beast, the might and vigor of a noble knight,' ";
-	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of player] body in a mix of groping and caressing[if kpstatus < 3 and cocks of player > 0]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his enlarged manhood gliding in and out of you[if cocks of player > 0], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Seeing your need, he quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if cocks of player > 0]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches and departing.[mimpregchance]";
+	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of player] body in a mix of groping and caressing[if kpstatus < 3 and player is male]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his enlarged manhood gliding in and out of you[if player is male], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Seeing your need, he quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if player is male]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches and departing.[mimpregchance]";
 
 to say beattheknight:
 	say "     You are victorious over the knight, forcing him to yield and withdraw. ";
@@ -206,18 +206,18 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Knight"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Knight"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The knight[or]Your armored foe[or]The noble knight[or]The brave warrior[at random] [one of]slashes you with his sword[or]thrusts his sword at you[or]swings his heavy sword in a measured strike[or]bashes you with the hilt of his sword[or]makes a jab with his blade[at random]!";
-	now defeated entry is "[beattheknight]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoknight]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattheknight]"; [ Text when monster loses. ]
+	now victory entry is "[losetoknight]"; [ Text when monster wins. ]
 	now desc entry is "[knightdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "beautiful, but strong, having a well-formed nose and [if cunts of player > 0]lovely features[else]a square jaw[end if]. With its flowing locks, it is very attractive and even looks quite noble";
-	now body entry is "that of a tall and fit [if cunts of player > 0]woman[else]man[end if]. Your body is toned and muscled without being unattractively so. Across your torso is a loose tunic with an emblem stitched into it of a cock ejaculating in a fleur-de-lis pattern";
+	now face entry is "beautiful, but strong, having a well-formed nose and [if player is female]lovely features[else]a square jaw[end if]. With its flowing locks, it is very attractive and even looks quite noble";
+	now body entry is "that of a tall and fit [if player is female]woman[else]man[end if]. Your body is toned and muscled without being unattractively so. Across your torso is a loose tunic with an emblem stitched into it of a cock ejaculating in a fleur-de-lis pattern";
 	now skin entry is "smooth, lightly-tanned";
 	now tail entry is "";
 	now cock entry is "human";
-	now face change entry is "the bones of your head shift with the occasional pop or crack that makes you wince. As these changes progress, your face becomes similar to your old one, but more noble and lovely in appearance [if cunts of player > 0]with added strength and beauty in its altered shape[else]with a square jaw and increased attractiveness[end if]";
-	now body change entry is "changes spread through it. Your muscles tense and flex and your body reshapes itself, in time becoming that of a tall and fit [if cunts of player > 0]woman[else]man[end if]. Your body is toned and muscled, looking and feeling like that of a trained warrior. As you look down at your chest, a loose tunic forms across your torso. In bright blue, pink and white, it bears the crest of a cock ejaculating in a fleur-de-lis pattern at its center. Any attempt to cover or remove this has it return in short order[playercrestzeroed]";
+	now face change entry is "the bones of your head shift with the occasional pop or crack that makes you wince. As these changes progress, your face becomes similar to your old one, but more noble and lovely in appearance [if player is female]with added strength and beauty in its altered shape[else]with a square jaw and increased attractiveness[end if]";
+	now body change entry is "changes spread through it. Your muscles tense and flex and your body reshapes itself, in time becoming that of a tall and fit [if player is female]woman[else]man[end if]. Your body is toned and muscled, looking and feeling like that of a trained warrior. As you look down at your chest, a loose tunic forms across your torso. In bright blue, pink and white, it bears the crest of a cock ejaculating in a fleur-de-lis pattern at its center. Any attempt to cover or remove this has it return in short order[playercrestzeroed]";
 	now skin change entry is "exciting tingles run all over your [bodydesc of player] body. Your flesh shifts and changes, subtly at first, until eventually becoming smooth, lightly tanned and quite human in appearance. Your right hand shows callouses from wielding something heavy and feels somehow empty without it. A few scars form, showing marks of past battles fought";
 	now ass change entry is "your buttocks muscles firm up, fit for riding (or being ridden)";
 	now cock change entry is "it pulses and throbs in arousal. Precum dribbles out with each pulse and your cockflesh changes as well. By the time you orgasm from the transformation, you're left with a very human-looking cock";
@@ -236,7 +236,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 10; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -281,7 +281,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

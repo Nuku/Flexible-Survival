@@ -71,14 +71,14 @@ after going down from 2F Trevor Labs when the HP of doctor matt > 2 and HP of Or
 				say "     She lets out a toothy grin, as she reaches up with strong arms and pulls you down into a kiss. Her long tongue wraps around yours, as her other hand rubs over your body, which already has begun to respond to her actions. She pulls off the kiss after a moment, and rips off the rest of her clothes, what's left after her visit to the basement. Her body is toned and athletic, looking practically amazonian to your own lust-filled eye. Her hands caress every part of your body for a moment, before assisting you out of your own clothes.";
 				now the icon of Orthas is figure of Orthas_icon;
 				project the icon of Orthas;
-				if cocks of player > 0:
+				if player is male:
 					say "     'Ooooh... you're quite the stud!' she says, getting a good gander at your manhood, already reaching past half-erect just from the arousal of the moment and the sight of your body. It doesn't take her long to get into a position for you to take her -- laying on her back on the seat cushions, in fact. 'Mmm! Come on big boy, give me what you can provide!' An idle thought passes through your mind about whether dragonesses would lay eggs or have live young, but all thoughts thereof are lost on you as you push into her sweltering depths.";
 					WaitLineBreak;
 					say "     In a matter of moments, your hips are firing roughly into hers and your maleness is stretching her walls, the dragoness's muscles stretching and contracting to become a perfect fit over your member. She herself has her tongue lolling out of her mouth, and her hands squeeze at her hefty bosom while you ride her. Her pussy muscles seem to be working overdrive on your member, and she is practically roaring in pleasure so loud that you're certain the Doctor on the floor above can hear her loud and clear.";
 					WaitLineBreak;
 					say "     Before long, you realize that your pleasure is reaching its peak before you had even begun to realize it, her pussy walls clamping down on your cock in such a way that they seem to be practically milking it for your cum -- which, in fact, they are. But they prove successful, and you paint the deepest depths of her cunt with gouts of your seed, and her own slit gushes her femcum over your writhing member and balls.";
 					WaitLineBreak;
-					if cunts of player is 0:
+					if player is not female:
 						say "     Orthas blinks and moans out in lust. With a shock, you both realize that her belly has begun to swell out into what obviously must be pregnancy, but with vastly more speed than you have ever seen. At the same time, your member is slowly pushed out of her sex by... something. She is blushing a deep red when she sees that it is a lengthy, tapered... almost tentacle-like, really, phallic thing. Thinking quickly, you help her up and hustle up to Dr. Matt.";
 						say "     'What are you -- oh my!' Dr. Matt immediately rushes into action and starts examining Orthas, both her expanding belly and the odd pink organ sprouted from her sex. 'Well, I think I know what's happened. Orthas, you have an ovipositor. What that means is, when you are inseminated, you will be able to... implant eggs into willing or unwilling subjects.'";
 						WaitLineBreak;
@@ -101,7 +101,7 @@ after going down from 2F Trevor Labs when the HP of doctor matt > 2 and HP of Or
 						Impregnate with "Dragon";
 						now HP of Orthas is 4;
 [						stop the action;]
-				else if cunts of player > 0:
+				else if player is female:
 					say "     She smiles warmly, and she licks down your body using her skilled tongue. Before long, after playing her tongue over your soft breasts and hard nipples, she trails her tongue over your belly button and drifts down to your heated vent. It doesn't take her very long to have her long tongue playing deep inside your slit, your thighs tightly clasped around her head in pleasure. She is working wonders with her tongue, as you lay back, your eyes closed. Your slit leaks your fluid all over the char she has you leaned back in, before she pulls back for a moment. Then, you are treated to a curious surprise.";
 					WaitLineBreak;
 					say "     Orthas leans back and furiously masturbates, her fingers pushing deeper and deeper, before she pulls them out.... pulling something else out with them! She rubs at the pink tendril -- appearing appendage, which leaks a thick white fluid that appears to be quite different from cum. And before you have time to react, she has used her surprising speed to push the writhing appendage, almost tentacle-like in appearance, at your slit -- which she then pushes inside. Before you can even complain, her hips are pumping and the appendage -- that you still aren't even sure what it is -- is wiggling inside of you.";
@@ -175,18 +175,18 @@ to say orthas_task2_done:
 	say "     'That was all years ago,' she says setting the photos upside down. 'I resigned my commission and eventually ended up doing security here. Since this place is military affiliated, an old commander of mine put in a good word and pulled a few strings for me. Besides,' she says tapping her medals['] case, 'spec ops training looks real good when applying for this sort of job.'";
 	say "     She tosses the stuff back into the box and closes it up. 'Look, I didn't get much of a chance to prove myself as a parent or husband, but I know I can do it.' She wraps her tail around you, pulling and turning you into a hug from behind with her hands on your [if gestation of child > 0]pregnant [end if]belly and her wings around you. 'My old life ain't really worth remembering, but I don't want to forgot to do better this time around. Now, I can't promise to be around all the time - the doc's work's important and someone's got to protect him. But I figure someone like you'll understand that a bit better as sometimes there's things you've got to take care of too. Once we're out of this mess, I'll be around for you and the eggs when you need me.'";
 	WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cock size desc of player] cock as her touches become more erotic. After fondling you to erection, she nuzzles down your side and gets you to turn back around so she can sink your [cock of player] manhood into her muzzle. Her maw is hot and her long tongue twines around your shaft, getting you to moan as pre drools from your cumslit. She works her mouth over you, careful of her teeth, and gives you quite the blow job.";
 		say "     Once she's gotten you good and horny, she lays herself back across her security desk, wantonly spreading her legs. With a tantalizing grin, she fingers her dripping snatch before spreading her folds invitingly. 'Come on, lover,' she purrs sensually and you can hardly resist such an invitation. Tossing aside your gear and moving into position, you grab her legs and drive your throbbing cock into her cunny, causing the dragoness to cry out lustfully. You pound away at her, giving her the thorough breeding she desires.";
 		say "     The dragoness's strong inner muscles, capable of dealing with pushing out her eggs, squeeze and massage around your thrusting member, increasing the pleasure for both of you. The thought of dumping your load in her and there being an egg produced right away makes you feel like a virile stud, eager to knock up this fecund scaled beauty. Nuzzling her bosom, you lick and kiss her nipples, telling her how sexy she looks and how you're looking forward to putting an egg in her. To this she grins and licks your cheek with her draconic tongue, rumbling how she's looking forward to putting her egg in you.";
 		say "     Before you can respond to this, the squeezing and milking of her vaginal walls intensifies as her orgasm begins with a roar. Under the powerful stimulation her quivering cunny provides, you don't hold out much longer and are soon blasting your gooey seed into her womb. By the time you're done emptying your load into her, she's already sitting up and rolling you over onto your back. Pulling off your spent shaft, she lets her emerging ovipositor slap wetly against it with a lustful grin. ";
 		now calcnumber is 0;
-		if cunts of player > 0:
+		if player is female:
 			say "     Knowing what she's after, shall you let her pop that egg [link]into your womb (1)[as]1[end link], [link]into your ass (2)[as]2[end link] or [link]onto your belly (3)[as]3[end link]?";
 		else:
 			say "     Knowing what she's after, shall you let her pop that egg [link]into your ass (2)[as]2[end link] or [link]onto your belly (3)[as]3[end link]?";
 		while ( cunts of player is 0 and calcnumber is 1 ) or ( calcnumber < 1 or calcnumber > 3 ):
-			say "Choice? ([if cunts of player > 0]1[else]2[end if]-3)>";
+			say "Choice? ([if player is female]1[else]2[end if]-3)>";
 			get a number;
 		if calcnumber is 1:
 			say "     Orthas rumbles sexily as you guide her dripping ovipositor to your pussy. You moan as that cock-like member penetrates you, pushing past your juicy folds and diving into your depths after only a few thrusts. Wrapping your legs around her waist, you goad her to fuck you, not that she needs any encouragement on that score. Her pulsating rod drives into you again and again as it leaks slick lubrication to prepare you for what's to come. And seeing her belly swelling up, you know it's coming soon.";
@@ -218,7 +218,7 @@ to say orthas_task2_done:
 		else:
 			say "     While she seems a little disappointed that she's not going to be putting her egg in you, she does moan happily as you take her cock-like member in both hands and start pumping it. Lubricating fluid from it drools out onto your belly as you pump the pulsating flesh. As her excitement builds and her belly swells up, you stroke faster, pressing her ovipositor alongside your cock so they're being stroked together.";
 			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support. Her ovipositor throbs against your manhood as you can see the bulge of the egg moving into the external portion of her pseudo-shaft. With your helpful stroking, the ovoid makes its journey through and out, plopping out onto your tummy with a gooey splatter of lubricating fluids. It gets further messy with a sticky blast of your semen as you climax again, aroused to orgasm by the strangely erotic experience.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cunt size desc of player] pussy as her touches become more erotic. As her caresses get you wet, she nuzzles down your side and gets you to turn back around so she can lip at your juicy folds. Her breath is hot and her long tongue glides into your cunny, getting you to moan as she drinks of your honeyed waters. She delicately teases your clit, getting you all the more worked up.";
 		say "     Once she's gotten you good and horny, she strips off your gear and lays you back across her security desk. 'Come lover, I want to be inside you again,' she rumbles. You spread your legs as you eye her drooling ovipositor, now emerged from her slit, with a lustful hunger. Grabbing your ankles, she raises your legs into a V-shape and moves into position. Her tentacular-shaft brushes across your sensitive folds before sliding into you with a wet slurp. With a grin, she has it wriggle and ripple inside you, causing you to moan again.";
 		say "     Showing more proficiency with her phallic tentacle than when she'd first used it on you, she has it ripple and wriggle inside you in unusual, but thoroughly pleasing ways. You can't help but moan as it works its way deeper, probing to your very depths to kiss at your cervix. Having no egg to deposit, she contents herself with merely brushing against the entrance to your womb while moaning that she hopes to put another one in there soon. With the image of that in her mind, she roars out in orgasmic delight, sending a gush of lubricating fluids into your cunt. Feeling those waves of fluid being pumped into you sends you over the edge and your cry of release joins hers.";
@@ -260,7 +260,7 @@ to say orthasfuck:
 		say "     'Even I need a moment to breathe, hon, you come back later.'";
 	else:
 		now lastfuck of Orthas is turns;
-		if cocks of player > 0 and cunts of player < 1: [ male player ]
+		if player is male and cunts of player < 1: [ male player ]
 			say "     'Well, fine, but be sure to come by later if you get somewhere for me to plant them,' she says, remembering last time. She disrobes, revealing her toned, athletic body once again, unveiling her good sized breasts -- that seemed to grow a bit after her first pregnancy -- and runs her hands over your tight, sexy male form as well, waiting to get at what she knows is down in your drawers.";
 			say "     And before long, she's got it! The sultry dragoness is on her knees between your legs, her lovely bosom wrapped around your cock, and the tip of the member poking through her cleavage is firmly embedded in her mouth. Her long draconic tongue is running circles around your member, teasing you all the way to full erection. She leans over the couch, and lifts her long, muscular tail, exposing her tight pussy lips. You know what lies hidden there, but it doesn't deter you in the least, making you smile as you grip her hips and stab your member home.";
 			WaitLineBreak;
@@ -290,7 +290,7 @@ to say orthasfuck:
 					say "     After two more, she lifts you up and gives you a big sloppy kiss. 'Aaaah... you're wonderful, you know that?'";
 			else:
 				say "     'Awww!' She giggles. 'And here I thought I was going to get you to suck them out,' she says.";
-		else if cunts of player > 0 and cocks of player < 1: [ female player]
+		else if player is female and cocks of player < 1: [ female player]
 			let seed be 0;
 			blank out the whole of table of itemselection;
 			repeat with Q running through owned cum grab objects:
@@ -452,54 +452,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Dragon"; [Name of your new Monster]
-   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]";
-   now defeated entry is "[beatorthas]";
-   now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "draconic head"; [ Face description, format as the text "You have a (your text)."]
-   now body entry is "that of a well-muscled anthro dragon"; [ Body Description, format as the text "Your Body is (your text)."]
-   now skin entry is "dark scaled"; [ skin Description, format as the text "You have (your text) skin."]
-   now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts and reforms into a dragon's head"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "your body shifts and alters itself, becoming that of a humanoid dragon"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "hard scales form on your skin, covering your entire body in a tough, but flexible hide"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a slender, draconic tail forms behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it changes shape, gaining firm ridges along its length to stimulate your partner"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 20;
-   now dex entry is 24;
-   now sta entry is 20;
-   now per entry is 15;
-   now int entry is 12;
-   now cha entry is 15;
-   now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
-   now HP entry is 150;
-   now lev entry is 12; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-   now wdam entry is 10; [Amount of Damage monster Does when attacking.]
-   now area entry is "nowhere"; [ Location of monster, in this case nowhere]
-   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2; [ Number of Breasts infection will give you. ]
-   now breast size entry is 3; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 5;
-   now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is ""; [ Dropped item. Key will be used later ]
-   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-   [ These represent the new additions to the table of random critters ]
-   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
-   now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is true;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Dragon"; [Name of your new Monster]
+	now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]";
+	now defeated entry is "[beatorthas]";
+	now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "draconic head"; [ Face description, format as "You have a (your text)."]
+	now body entry is "that of a well-muscled anthro dragon"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "dark scaled"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts and reforms into a dragon's head"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your body shifts and alters itself, becoming that of a humanoid dragon"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "hard scales form on your skin, covering your entire body in a tough, but flexible hide"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a slender, draconic tail forms behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it changes shape, gaining firm ridges along its length to stimulate your partner"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 20;
+	now dex entry is 24;
+	now sta entry is 20;
+	now per entry is 15;
+	now int entry is 12;
+	now cha entry is 15;
+	now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
+	now HP entry is 150;
+	now lev entry is 12; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
+	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 5;
+	now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
+	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 7 - Endings

@@ -19,7 +19,7 @@ when play begins:
 
 to say losetoLiquidshifter:
 	say "     The sticky, glue like substance of the liquidshifter swamps over your feet, its cold slime slipping into every crack and crevice of your soles - you struggle, your strength seeming to just stretch out thick strands of the substance. You sink into the slime, coating over your digits and thoroughly binding them to the floor of which the creature chose to keep you. Slowly the liquidshifter would grow closer, the slimy, slow-but ever-so substantial movements begin to climb up to your waist.";
-	if cocks of player > 0:
+	if player is male:
 		say "     With time, the goo began to coat over your hard member, the twitching arousal being sent into overdrive as the creature teases its cold liquid over your length. It pushes against your tip, the liquid seeming to push into your urethra, the feeling of being filled in such a way so foreign to you. Of course, the pleasure was building up, the impromptu sound having blocked any cum from coming out, to your torture. The slime slid further over your member, the slime seeming to endlessly tease you, before it grips over the length tight, squeezing in a pulse, only enough to get you writhing in need for orgasm. 'This is mine, now. Not yours,' the dominant creature somehow whispered directly into your mind.";
 		WaitLineBreak;
 		say "     Suddenly, a phallic form shoves its way forcefully into your ass, the dildo-shaped, gluey form plugging you completely, turning your face into that of complete bliss. The wide grin on the face of the draconic-looking liquidshifter in front of you, eyes watching over your squirming form - the sight of having a new submissive toy to play with getting its own member to harden in front of you - its enjoyment of the situation obvious to you, even as your eyes roll to the back of your head in extreme pleasure. And so, you lay there, in a trap of complete bliss - the stickiness of the slime that covers you keeping you in your place - unable to move an inch as the liquidshifter does as he wants to your helpless body.";
@@ -41,7 +41,7 @@ to say beattheLiquidshifter:
 	say "     ([link]N[as]n[end link]) - Leave him.";
 	if player consents:
 		say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of its gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
-		if cunts of player > 0:
+		if player is female:
 			say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. It pulses and pumps, slowly pushing into your pussy, filling you out, much like earlier. Its intense vibrations get you off, forcing writhes of pleasure to rupture through your body, before you spurt your femcum into the pile of goo - combining fluids with the liquidshifter.";
 		else:
 			say "     You enjoy the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it. Before long, you spurt your seed into the goo, combining the fluids.";
@@ -63,16 +63,16 @@ When Play begins:
 	now defeated entry is "[beattheLiquidshifter]"; [ Text when monster loses. Change 'Liquidshifter' as above. ]
 	now victory entry is "[losetoLiquidshifter]"; [ Text when monster wins. Change 'Liquidshifter' as above. ]
 	now desc entry is "[Liquidshifterdesc]";
-	now face entry is "rubbery, constantly secreting a layer of slime"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "rubbery, constantly secreting a layer of slime"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "muscular, but seemingly ever-changing, the slime rumbling within you despite the constant draconic form you put on";
-	now skin entry is "slimy, thick, rubbery golden"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now skin entry is "slimy, thick, rubbery golden"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "Your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "glue-covered";
-	now face change entry is "it changes out into a snout, the twitching on your nose making you sneeze - the feeling weird, as the slime from your nostrils spurts out onto your hands. Golden goo, shiny, and sticky. You manage to remove it from your hands, but it seems the goo has already changed your face, and head"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "it changes out into a snout, the twitching on your nose making you sneeze - the feeling weird, as the slime from your nostrils spurts out onto your hands. Golden goo, shiny, and sticky. You manage to remove it from your hands, but it seems the goo has already changed your face, and head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "slime encases its form, taking it and changing it, slime seeming to secrete out of your every pore - before you feel those aforementioned pores being turned into goopy rubber";
 	now skin change entry is "you gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you";
-	now ass change entry is "your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it begins to change - the gooey, sticky member twitching as it shows off its new draconic length"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it begins to change - the gooey, sticky member twitching as it shows off its new draconic length"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12;
 	now dex entry is 12;
 	now sta entry is 12; [ These values may be used as part of alternate combat. ]
@@ -87,7 +87,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

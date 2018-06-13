@@ -22,8 +22,8 @@ Section - Event handling
 A glulx hyperlink rule (this is the default inline hyperlink handling rule):
 	now the current hyperlink ID is the link number of the selected hyperlink;
 	unless the current hyperlink ID is 0:
-		cancel glulx hyperlink request in main window;[just to be safe]
-		cancel glulx hyperlink request in status window;[just to be safe]
+		cancel glulx hyperlink request in main window; [just to be safe]
+		cancel glulx hyperlink request in status window; [just to be safe]
 		follow the hyperlink processing rules;
 	if the status window is the hyperlink source:
 		request glulx hyperlink event in status window;

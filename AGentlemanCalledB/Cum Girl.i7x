@@ -20,7 +20,7 @@ to say losetoCumGirl:
 	let cumgrowth be cumgirlfed / 5;
 	if cumgrowth > 10, now cumgrowth is 10;
 	say "     Unable to resist the cum girl's attacks, you stumble back and fall to the ground. The cum girl strides over to your fallen form, quickly freeing your groin of any obstructions as she kneels before you.";
-	if cocks of player > 0:
+	if player is male:
 		if a random chance of 1 in 2 succeeds:
 			say "     A smile creeps across her blank face as she strokes you to full erection before she sinks to the ground, her legs and lower torso melting into a shapeless mass as she leans forward, allowing her to bury your cock in her wet, slimy mouth. Her entire face undulates and pulses as her malleable flesh sucks and milks your member. You rapidly approach climax under her expert ministrations, your hands sinking into the back of her head as you try and grip her, causing her form to further deform into a pulsing mass of cum engulfing your groin. You climax powerfully, blowing your [cum load size of player] load into the shapeless mass as it continues milking you for all it can. Once you're finally spent, the creature pulls off your groin with a sickening slurp, reshaping itself into a feminine form once again. She licks her lips as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]belly[or]form[at random] seems [if cock width of player > 20]significantly [else if cock width of player < 11]slightly [end if]larger thanks to your contribution.";
 		else:
@@ -41,14 +41,14 @@ to say losetoCumGirl:
 			say "     Your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorge[or]swell[or]throb[at random]s as it gains[else][one of]cock[or]penise[or]shaft[or]malenesse[at random]s [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
 		if CGFB is 1:
 			say "     Your [one of]ball[or]orb[or]cum factorie[at random]s [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your flesh growing taught with the expansion, leaving you with [ball size].";
-	   else if cunts of player > 0:
+	   else if player is female:
 		say "     A faint smile crosses the cum girl's usually expressionless face as she strokes a pair of fingers across your outer folds, sending shivers of delight through you. Without hesitation she slips a pair of fingers inside you, then a third, and soon her entire slick hand is pumping into your body. With each thrust her limb loses more and more definition, soon little more than a warm, gooey mass that continues to surge into your cunt, working its way deeper inside you until you feel her pooling in your womb.";
 		say "     Eventually the stimulation from the warm, pulsating mass filling your body becomes too much and you are struck by a powerful orgasm. None of your feminine honey is allowed to escape, instead drawn into the mass of living cum filling your inner passages. The cum girl licks her lips contently as she pulls out of your body with a wet slurp. She stands up slowly before leaving your drained form without a second glance, wandering off in search of her next meal, the long, tendril-like appendage dragging behind her as it slowly shifts back to its original feminine form. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]tummy[or]form[at random] seems slightly larger thanks to your contribution.";
 		increase CumGirlFed by 2;
 	else:
 		say "     An expression of disappointment slowly creeps across the cum girl's usually emotionless face as she discovers your bare groin, and without a second glance she rises to her feet and sets off in search of a proper victim.";
 	if cumgirlfed > 35: [Temporary fission scene, to be built as a pre-combat event in later versions.]
-		attempttowait;
+		WaitLineBreak;
 		say "     You watch her take a few more steps before stumbling again and falling to the ground with an uncharacteristic moan. You observe with morbid fascination as the cum girl pants and groans, her shifting fluid form pulsating violently as she sinks to the ground, melting away into a large, shapeless mass.";
 		say "     Suddenly a limb surges out of the gooey mass, rapidly taking on a human-like form as it pulls its way out of the sticky goop. Then another limb emerges, followed quickly by several more. Two distinct forms begin to take shape as the bodiless limbs work to drag themselves out of the mass from which they emerged. Soon you realize there are two smaller cum girls forming from the pile of bodily fluids. Pulling themselves apart with one final sickening slurp, the twin cum girls take a few moments to caress each other before they wander off in opposite directions with a parting kiss. While the prospect of more of the insatiable creatures wandering around down here is a troubling one, at least the giant cum creature you were facing a few short minutes ago is no longer a concern.";
 		now cumgirlfed is 0;
@@ -99,53 +99,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Cum Girl";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The cum girl's arm quickly elongates as she strikes at you with a whip-like motion[or]The cum girl pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]The cum girl's arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or]The cum girl lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheCumGirl]";				[ Text when monster loses. Change 'Cum Girl' as above. ]
-	now victory entry is "[losetoCumGirl]";					[ Text when monster wins. Change 'Cum Girl' as above. ]
-	now desc entry is "[CumGirldesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "N/A - Non-infectious";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "N/A - Non-infectious";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "N/A - Non-infectious";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "N/A - Non-infectious";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "N/A - Non-infectious";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "N/A - Non-infectious";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "N/A - Non-infectious";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "N/A - Non-infectious";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "N/A - Non-infectious";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "N/A - Non-infectious";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now name entry is "Cum Girl"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The cum girl's arm quickly elongates as she strikes at you with a whip-like motion[or]The cum girl pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]The cum girl's arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or]The cum girl lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!"; [ Successful attack message ]
+	now defeated entry is "[beattheCumGirl]"; [ Text when monster loses. Change 'Cum Girl' as above. ]
+	now victory entry is "[losetoCumGirl]"; [ Text when monster wins. Change 'Cum Girl' as above. ]
+	now desc entry is "[CumGirldesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "N/A - Non-infectious"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "N/A - Non-infectious"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "N/A - Non-infectious"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "N/A - Non-infectious"; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "N/A - Non-infectious"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "N/A - Non-infectious"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "N/A - Non-infectious"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "N/A - Non-infectious"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "N/A - Non-infectious"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "N/A - Non-infectious"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "No change";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 24;			[ The monster's starting HP. ]
-	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 3;			[ Monster's average damage when attacking. ]
-	now area entry is "Sealed";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 8;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "conceptual";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "No change"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 24; [ The monster's starting HP. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 3; [ Monster's average damage when attacking. ]
+	now area entry is "Sealed"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 8; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "erudite"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "conceptual"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 
@@ -157,7 +156,7 @@ when play ends:
 			say "     You succumb to your Cum Girl infection.";
 		else:
 			say "     You survive, but were infected by the Cum Girl.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

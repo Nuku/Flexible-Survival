@@ -95,7 +95,7 @@ Instead of resolving a Smashed Hive:
 					challenge "Bear";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     The bear gives another sad moan of 'Oh bother' as she staggers back. She trips over a log and ends up tumbling end over end and around, coming to a crashing halt as she falls face first between the rocks. Her pudgy body gets stuck in the rocks and, despite her struggles, she cannot pull herself free. Honey laughs and gives the bear's furry brown bottom a hard smack. 'That'll teach you to steal from bees,' she yells at the bear. While this is going on, your eyes are drawn to the bear's big backside and her honeyed slit.";
-						if cocks of player > 0:
+						if player is male:
 							say "     In the mood to celebrate, you take hold of your [cock size desc of player] [cock of player] cock and line it up with her pussy. Feeling you there, she moans and tries to squirm her way free, but she's thoroughly stuck and at your mercy. With a firm grip on her rear, you thrust into the bad bruin, pounding away at her juicy cunt. She moans and groans in pleasure as you have your way with her, unable to stop you. Though from the sounds of it, she probably wouldn't want you to, instead crying for more. You both cry out loudly as you cum, pumping your hot seed into her[if cock width of player >= 20]. Your excessive load only plumps her up further, ensuring she'll be stuck there even longer[end if].";
 						else:
 							say "     In the mood to celebrate, you give her ass a firm push, making sure she's good and stuck before burying your face between her legs. Feeling you there, she moans and tries to squirm her way free, but she's thoroughly stuck and at your mercy. You bring your mouth to her juicy cunt and start eating out the bad bruin, lapping up her hot juices and thrusting a few fingers into her pussy. She moans and groans in pleasure as you have your way with her, unable to stop you. Though from the sounds of it, she probably wouldn't want you to, instead crying for more. Your rough attention soon drives her to a loud orgasm that delivers more of her delicious juices onto your tongue.";
@@ -103,8 +103,8 @@ Instead of resolving a Smashed Hive:
 						say "     Stepping back, you are hugged by the bee girl. She's sticky with some of the honey, having been messily eating it while you had your fun with the bear. You're treated to a sweet, sticky kiss from her, complete with eager groping. 'Oh, you were so brave and strong to face that mean bear. Come, I want to reward you.' She smiles sweetly and leads you back to the hive's clearing, proudly carrying the bear's last honey jar. Back beneath the hive's tree, she holds up the crock for you. On your knees, you start by pouring a small taste of it into your mouth, but as Honey buries her face in your crotch and starts licking, you keep going, wanting mouthful after mouthful.";
 						say "     By the time you've emptied the remainder of the jar down your throat and down your front, your [if player is neuter]body[else]groin[end if] is hot with excitement and you long for something more. The bee girl, as if expecting this, pulls something she's kept hidden under the honey in her little bag. It is some purple jelly that smells delicious, your mouth watering the moment you see it. 'You'll make a wonderful queen; one who's kind, strong, brave and sexy,' she says as you gobble down the hormone- and nanite-rich royal jelly, hardly hearing her as that heat you're feeling surges higher.";
 						WaitLineBreak;
-						say "     You push the cute bee girl to the ground and bury your face between her legs, lapping at her pussy to get at her honeyed juices. She moans and pants as you excitedly eat her out, your body demanding more. As she's driven to orgasm again and again, the effects of the royal jelly take hold. Your skin becomes smooth and lovely with a golden-bronze tan as your body reshapes itself. You become tall, slender and sexy, with a narrow waist, curved hips and flat stomach. Your face shifts into one of great, feminine beauty and framed by a full head of black and yellow hair. While your body and face are ones that many a model would envy, they are further enhanced by bee-like features. Chitin forms in the likeness of elbow length gloves, knee high boots and a skimpy [if cunts of player is 0 and cocks of player > 0]speedo[else]bikini[end if] at your waist. The plating at your torso accents your [if breast size of player > 0]bosom[else]flat chest[end if] while an orange puff of fur around your neck looks like the collar to an elegant coat or robe, adding to your sexy look. You grow a second pair of arms, small and handy for little tasks and holding like those of the bee girl. But the greatest pleasure comes as your antennae and bee abdomen grows in, the latter being plump and beautiful with a sharp stinger at the end.";
-						say "     As the transformation comes to an end, leaving you as a sexy and [if cunts of player > 0]womanly[else]effeminate[end if] queen bee, you can't help but feel a stronger love for Honey. She is no longer simply a companion or someone to protect, but also a beautiful and cherished member of your hive. This altered mindset does not alarm you, your thoughts changed to accept it just as your body has. Buzzing happily, you walk off together, leaving the ruins of the old hive behind.";
+						say "     You push the cute bee girl to the ground and bury your face between her legs, lapping at her pussy to get at her honeyed juices. She moans and pants as you excitedly eat her out, your body demanding more. As she's driven to orgasm again and again, the effects of the royal jelly take hold. Your skin becomes smooth and lovely with a golden-bronze tan as your body reshapes itself. You become tall, slender and sexy, with a narrow waist, curved hips and flat stomach. Your face shifts into one of great, feminine beauty and framed by a full head of black and yellow hair. While your body and face are ones that many a model would envy, they are further enhanced by bee-like features. Chitin forms in the likeness of elbow length gloves, knee high boots and a skimpy [if player is not female and player is male]speedo[else]bikini[end if] at your waist. The plating at your torso accents your [if breast size of player > 0]bosom[else]flat chest[end if] while an orange puff of fur around your neck looks like the collar to an elegant coat or robe, adding to your sexy look. You grow a second pair of arms, small and handy for little tasks and holding like those of the bee girl. But the greatest pleasure comes as your antennae and bee abdomen grows in, the latter being plump and beautiful with a sharp stinger at the end.";
+						say "     As the transformation comes to an end, leaving you as a sexy and [if player is female]womanly[else]effeminate[end if] queen bee, you can't help but feel a stronger love for Honey. She is no longer simply a companion or someone to protect, but also a beautiful and cherished member of your hive. This altered mindset does not alarm you, your thoughts changed to accept it just as your body has. Buzzing happily, you walk off together, leaving the ruins of the old hive behind.";
 						WaitLineBreak;
 						project the Figure of QueenBee_icon;
 						say "     The queen is dead. Long live the queen.";
@@ -306,25 +306,25 @@ to say HoneySexMenu:
 	now sortorder entry is 1;
 	now description entry is "Use your tongue to pleasure Honey";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get eaten out by Honey";
 		now sortorder entry is 2;
 		now description entry is "Have Honey eat you out";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Get Blown by Honey";
 		now sortorder entry is 3;
 		now description entry is "Have Honey suck your cock";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fingered by Honey";
 		now sortorder entry is 4;
 		now description entry is "Have Honey finger your pussy";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Honey";
 		now sortorder entry is 5;
@@ -396,11 +396,11 @@ to say HoneySex5: [player fucks Honey]
 	if HP of bee girl >= 5, infect "Queen Bee";
 
 to say HoneySex6: [Queen bee fun with Honey]
-	if cocks of player > 0:
+	if player is male:
 		say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [cock of player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [ball size] as she pushes you closer to orgasm.";
 		say "     Some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole. 'I am yours to claim, my queen,' she says with a playful smile. Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body. Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder. The feel of that honeyed hole around your [cock of player] penis is great. As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind. After pumping your [cum load size of player] load into her, you pull out and share several kisses with her before continuing on your way.";
 		infect "Queen Bee";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     Finding your attention drawn to the cute bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she brushes her fingertips across your wet folds. Taking a seat, you spread your legs invitingly and have her move between them. She buries her face in your crotch, fingering your pussy before diving in and lapping up your [if player is queenbeecocked]honeyed [end if]juices like delicious nectar. As you cum, thoughts of finding a hive to breed many more such pretty and loyal bee girls play across your mind, turning you on greatly. Once she's done licking you clean, you caress her head softly and thank her for her fine service.";
 		infect "Queen Bee";
 
@@ -408,7 +408,7 @@ Section 3 - Sexxxings
 
 An everyturn rule:
 	if companion of player is bee girl and skipturnblocker is 0:
-		if cocks of player > 0 or cunts of player > 0:
+		if player is not neuter:
 			increase libido of player by 6;
 			let diceroll be a random number from 35 to 200; [lust check vs 200, player libido 35 or less auto-wins]
 			if diceroll < libido of player and lastfuck of bee girl - turns >= 4:
@@ -427,7 +427,7 @@ to say SexWithHoney:
 		let T be a random number between 1 and 5;
 		if HP of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
 			say "[beesexqueen]";
-		else if cocks of player > 0:
+		else if player is male:
 			if T is 1 or T is 2:
 				say "[beesexmale1]";
 			if T is 3 or T is 4:
@@ -468,7 +468,7 @@ to say beesexhoneypot:
 	increase thirst of player by 1;
 
 to say beesexqueen:
-	if cunts of player is 0 or a random chance of 2 in 3 succeeds:
+	if player is not female or a random chance of 2 in 3 succeeds:
 		if a random chance of 2 in 5 succeeds:
 			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [cock of player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [ball size] as she pushes you to orgasm. You drain your [cum load size of player] load down the horny girl's throat with thoughts of a hive full of such talented servants to tend to your needs. Honey buzzes happily as she enjoys the tasty reward for her duty fulfilled.";
 			now libido of player is ( libido of player + 1 ) / 2;

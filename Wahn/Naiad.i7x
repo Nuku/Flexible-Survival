@@ -11,7 +11,7 @@ when play begins:
 to say Naiad Wins:
 	say "     The last of your resistance melts away and you stand dazedly in front of the naiad. She pulls your mouth to hers for a kiss that takes your breath away for a moment, then leads you off towards the nearby building holding the athletic swimming pools. Soon you're standing on the ceramic tiles next to the pool, your eyes glued to your captor's naked form as she does an expert dive and glides through the water.";
 	say "     'Come in, I'm waiting...' she calls as she surfaces again, prompting you to almost rip your clothes off. You jump in with moderately big splash, then start to swim towar- hm, where is she? That question immediately answers itself as you feel the beautiful female's hands stroke the insides of your legs as she moves them upwards towards your crotch.";
-	if cocks of player > 0:[male+herm]
+	if player is male:[male+herm]
 		say "     The naiad grabs hold of your cock and balls, stroking up and down on your shaft until you're hard as you can get. Then you feel her lips touch the tip of your manhood in a small kiss, followed by her sliding it into her mouth and bobbing up and down on it. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good blowjob.";
 		say "     Then suddenly, she pulls off your cock and surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and wraps her legs around your hips, pulling herself tight against you. Reaching down with one hand, she guides your cock into her vagina, giving a pleased moan as she sinks down on the hard shaft. Then she starts fucking herself on your manhood, grinding her hips against yours and panting in lust.";
 		LineBreak;
@@ -20,7 +20,7 @@ to say Naiad Wins:
 		say "     Going at it with deep thrusts, fondling and sucking on her nipples, it doesn't take much longer until your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms, clutching your body tightly against hers. Having sex with this supernatural beauty and getting her to come gives your arousal quite a boost, which makes the need to cum rise quickly inside you. You manage another two, three thrusts, then slam forward and sink all of your hard shaft inside her as you start shooting long strings of cum. Breathing hard, you press your lips to hers and make out while your balls pump more and more cum into her womb.";
 		LineBreak;
 		say "     After enjoying some more time in the pool with her, getting down from your orgasm high and enjoying the view of her naked form, you gather your clothes and step back out onto the wild college campus.";
-	else if cunts of player > 0:[female]
+	else if player is female:[female]
 		say "     The naiad strokes your sensitive pussy lips, rubbing her fingers up and down over them. Then you feel her lips touch your pubic mound, giving you a few small kisses, followed by her tongue pushing in between your nether lips. She gives you a few licks, then pushes in a finger, then two, fondling your hole before she goes back to licking it. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good oral experience.";
 		say "     Then suddenly she surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and pushes down on your shoulders. Willing to return the favor, you duck underwater and go for her crotch, fondling and licking her. Seems like you're well received, as she writhes in pleasure and lowers her arms to hold you against her and stroke your head and shoulders. If only she wouldn't hold on so tight... you're getting a bit short on oxygen and only when you struggle does she let go. With a desperate kick you push yourself up to the surface, gasping for air. The naiad comments with one a bit shame-reddened face 'Oh yes, you need to breathe... sorry, I forgot.' With a sigh, she darts towards the edge of the pool and pulls herself up on it, giving you a nice view of her back and pert ass. Turning around she sits on the edge, then waves for you to come over before she leans back on her elbows and spreads her legs a bit.";
 		say "     Eager to continue, you swim over and join her, your legs feet searching out the ledge down on the pool wall to stand on. Stroking her sides, then sliding your hands further up, you caress the naiad's breasts, feeling and caressing their round shapes. Then you bring them back down again to stroke her pussy lips and hold them open as you lick her, making your supernatural beauty gasp and pant in lust. You spend some time pleasing her with your tongue, then start inserting first one, then multiple fingers into her vagina. Being a woman yourself, you know exactly how to fondle her love channel and get her more and more aroused. Before long, your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms and femcum starts running over your fingers to drip into the water.";
@@ -59,13 +59,13 @@ to say NaiadSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Take the Naiad's back door for a ride with your [cock of player] shaft";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Get some oral service from her";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Make her blow you off";
 		now sortorder entry is 4;
@@ -173,7 +173,7 @@ When Play begins:
 	now cock width entry is 0;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 8;
 	now cunt width entry is 6;

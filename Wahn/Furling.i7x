@@ -31,7 +31,7 @@ to say Furling wins:
 		say "     Then suddenly, the maned head pulls up to look down into your face. 'Fuck - now!' an order is given, and the furling gets up to stand over you, pulling aside his loincloth to reveal a moist and dripping pussy between his legs. Then the large beast lowers himself onto your rigidly standing erection, his pussy enveloping your manhood in a warm and tight cave. What follows is a pretty wild and unrestrained coupling, mostly on the part of your former opponent, who aggressively fucks himself on your pole. Though that doesn't mean you don't get off on this too and thrust up against your dominating partner's pussy.";
 		say "     The thrusting and grinding gets harder and faster until you just can't hold out any more. Grunting in satisfaction, you thrust up one last time, then start blowing your load, with spurt after spurt of fertile seed shooting into your larger partner's womb. Then suddenly you hear a crunching sound left and right of your head. Looking over, you realize it's the furling's claws digging into the concrete floor as he holds on too tight when he joins you in his own mind-blowing orgasm. He stays like that for a moment to catch his breath, your hard shaft still inside his pussy. Then the muscled cuntboy pulls off and stands up. Giving you a last look [if scalevalue of player < 4]from high above[end if], he says, 'Felt good. Nice guy.' Then he stalks off, leaving you lying there.";
 	else: [female + neuter]
-		say "     Pulling off your clothes with barely any regard for not ripping them, the furling exposes your crotch. Looking at your [if cunts of player is 0]nonexistent [end if]genitals, he growls, 'Useless!' Then he gives you a shove, landing you prone on the ground. With an annoyed grunt, the large creature stalks off.";
+		say "     Pulling off your clothes with barely any regard for not ripping them, the furling exposes your crotch. Looking at your [if player is not female]nonexistent [end if]genitals, he growls, 'Useless!' Then he gives you a shove, landing you prone on the ground. With an annoyed grunt, the large creature stalks off.";
 
 To say Furling loses:
 	say "     Rather roughed up, the furry beast takes a reeling step towards you... and then falls over backwards. He lies in front of you on his back for a moment, silently moaning, then shakes his head and starts taking account of all his bruises, gingerly touching them. Given your current position and the way it came to lie when he fell, you can see up the furling's loose loincloth - showing you that even though 'he' is otherwise looking male, there's a moist and swollen pussy between his legs. Its up to you to decide what to do next...";
@@ -118,7 +118,7 @@ to say FurlingSex2:
 	say "     After lying there with you against his chest for a while longer, the furling takes hold of you and rolls over so you're on the bottom now, then gently pulls himself off your shaft and stands up. With an affectionate croon he says, 'Later,' and walks away.";
 
 to say FurlingSex3:
-	if cunts of player > 0 and cocks of player is 0:
+	if player is purefemale:
 		say "     Kneeling between your furry opponent's legs, you pull up his loincloth to expose his ready and dripping pussy. As you bring your hand to it, stroking and spreading the sensitive pussy lips, the large creature raises its head to look at you and gives a needful croon.";
 		say "     Without any more hesitation, you put two fingers against the wet opening between his pussy lips and push them into his inner passage. The furling immediately starts moaning loudly as you finger him, and between the gasps and moans you think you heard him say, 'More.' So you add another finger. It's a strangely arousing feeling to have three fingers in the tight, warm and very wet pussy of this large furry beast. Stimulating him a bit more and seeing him take three, then four fingers without any problems, you wonder if you could...";
 		say "     You can, as it turns out - your whole hand slips into the furling's pussy with a wet slurp, kicking your furry partner's gasps and moans into a whole new gear. Stroking and fondling the inner passage of your former opponent with all of your fingers, it doesn't take long until you drive him over the edge. Trembling and moaning, the large creature orgasms, his femcum running down your arm to create a small puddle on the ground. A strange scraping noise has you look up for a second, but it turns out only to be the furling's claws digging shallow lines into the concrete below as he holds on to it too tightly.";
@@ -152,9 +152,9 @@ When Play begins:
 	now face entry is "that of a young man, though with brightly orange slitted eyes and an impressive set of sharp predator's teeth and long fangs. A thick mane of orange-red fur covers your head down to your shoulders, with two pointy fox-like ears poking out of it at the top";
 	now body entry is "large, about ten feet tall and with a wide, powerful build. You have long arms bulging with muscles, ending in large clawed hands. A loose loincloth that looks like it once was a football shirt covers your crotch";
 	now skin entry is "[one of]densely furred[or]orange-red furred[at random]";
-	now tail entry is "You have a firm, muscular butt.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a firm, muscular butt.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "uncut, human";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the features of a young man. Your hair grows out till it covers your head in a thick mane of orange-red fur. Carefully exploring your mouth with your tongue, you realize you now have quite sharp teeth - including long fangs"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the features of a young man. Your hair grows out till it covers your head in a thick mane of orange-red fur. Carefully exploring your mouth with your tongue, you realize you now have quite sharp teeth - including long fangs"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a tall form with a wide, powerful build. Your arms grow longer and more muscular, with your hands and feet acquiring sharp claws. An improvised loincloth coalesces out of a cloud of nanites around your hips";
 	now skin change entry is "it sprouts thick orange-red fur all over";
 	now ass change entry is "it tightens up into a firm, muscled shape";
@@ -173,9 +173,9 @@ When Play begins:
 	now cocks entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;        [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8;          [ Width of female sex the infection will try to give a player. ]
@@ -196,12 +196,12 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Furling":
 		if humanity of player < 10:
-			if cunts of player > 0:
+			if player is female:
 				if "Sterile" is not listed in feats of player:
 					say "     As you succumb to the infection, the deep cravings inside you take the upper hand. Roaming the campus, you search out suitable males and overpower them, making sure your needy pussy is filled often. Some time later, when a soldier comes along to scout the area, you take a shine to him and carry him off to your lair. Keeping him as yours alone, you make the man fuck you several times a day and soon your belly starts to bulge with his offspring...";
 				else:
 					say "     As you succumb to the infection, the deep cravings inside you take the upper hand. Roaming the campus, you search out suitable males and overpower them, making sure your needy pussy is filled often. Some time later, when a soldier comes along to scout the area, you take a shine to him and carry him off to your lair. Keeping him as yours alone, you make the man fuck you several times a day. Sadly, being sterile, your urge for a bellyful of little furlings is never fulfilled.";
-			else if cocks of player > 0:
+			else if player is male:
 				if player is mpreg_ok and "Sterile" is not listed in feats of player:
 					say "     As you succumb to the infection, the deep cravings inside you take the upper hand. Roaming the campus, you search out suitable males and overpower them. At that point, your animal mind usually has real problems fitting together your lack of female genitalia with the drive to be bred - you often grind your crotch and erect cock against your current mate's maleness before remembering that there is another way to your womb and sinking your asshole down on their cocks. Some time later, when a soldier comes along to scout the area, you take a shine to him and carry him off to your lair. Keeping him as yours alone, you make the man fuck you several times a day and soon your belly starts to bulge with his offspring...";
 				else:

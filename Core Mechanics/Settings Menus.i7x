@@ -77,11 +77,11 @@ carry out trixiecheating:
 				repeat with Q running through fasttravel not private rooms:
 					now Q is known;
 				Now Approaching the Capitol Building is known;
-				Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
+				Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 				Now Plant Overview is known;
-				now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+				now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 				now College Campus is known;
-				now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
+				now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		else if calcnumber is 4:
 			if "Lil Better" is listed in feats of player:
 				remove "Lil Better" from feats of player;

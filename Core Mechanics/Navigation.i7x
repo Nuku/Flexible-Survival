@@ -107,7 +107,7 @@ carry out destinationcheck:
 		if Power Lines is known:
 			say "| [link][bracket]Power Lines[close bracket][as]nav Power Lines[end link] ";
 [		if Reservoir is known:
-			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";	]
+			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] "; ]
 		LineBreak;
 	[start of the fairgrounds area]
 	if State Fair is known or Sweet Tooth is known:
@@ -300,7 +300,7 @@ carry out navigating:
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	if HP of Velos > 2, move Velos to the noun;
-	move the player to the noun;
+	move player to the noun;
 	follow the ngraphics_blank rule;
 	follow turnpass rule;
 

@@ -98,13 +98,13 @@ to say Stag loses:
 	now sortorder entry is 2;
 	now description entry is "Blow him.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck you off.";
 		now sortorder entry is 3;
 		now description entry is "Get a blow-job.";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock with your pussy.";
 		now sortorder entry is 4;
@@ -203,14 +203,14 @@ When Play begins:
 	now desc entry is "[StagDesc]";
 	now face entry is "covered in short brown fur and has the striking angular features of a proud stag. Crowning your head are two impressive multiple-pointed antlers";
 	now body entry is "that of a humanoid male, trim and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
-	now skin entry is "brown furred";[ format as the text "You have (your text) skin"]
-	now tail entry is "Your butt has a deer's tail over it, [skin of player] on the top, soft cream along the underside. The rest of your ass is quite curvy and [skin of player], hiding nothing.";[ write a whole Sentence or leave blank. ]
-	now cock entry is "pitch black human";[ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. A tickling sensation accompanies sprouting short fur over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "your limbs become very masculine, long and strong. Your nails reform to cover your finger- and toe-tips in protective hooves"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "soft tingles spread in waves over it and fur sprouts in odd patterns across you, slowly settling into brown fur over most of your body, with lighter cream coloring starting at your navel and running down to your groin and the insides of your legs"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a short, upturned, and furry tail sprouts into being over its now deliciously round [skin of player] shape"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your cock darkens until it is entirely black, but human shaped in form"; [ format as "Your cock feels funny as (your text)" ]
+	now skin entry is "brown furred"; [ format as "You have (your text) skin"]
+	now tail entry is "Your butt has a deer's tail over it, [skin of player] on the top, soft cream along the underside. The rest of your ass is quite curvy and [skin of player], hiding nothing."; [ write a whole Sentence or leave blank. ]
+	now cock entry is "pitch black human"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. A tickling sensation accompanies sprouting short fur over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "your limbs become very masculine, long and strong. Your nails reform to cover your finger- and toe-tips in protective hooves"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "soft tingles spread in waves over it and fur sprouts in odd patterns across you, slowly settling into brown fur over most of your body, with lighter cream coloring starting at your navel and running down to your groin and the insides of your legs"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a short, upturned, and furry tail sprouts into being over its now deliciously round [skin of player] shape"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your cock darkens until it is entirely black, but human shaped in form"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 22;
 	now sta entry is 13;
@@ -421,14 +421,14 @@ to say MikeSex4: [player ass fucked]
 		say "     Spreading his jeans flat on the ground, the stag sits on them, then lies back. His proudly standing erection looks pretty inviting to you and you quickly strip off your own clothes. Moving to stand over the stag, you crouch down and take hold of his manhood, then slowly lower yourself deeper. Rubbing the tip of his cock up and down your crack, you make him moan in building arousal, then gasp as you push his cock-head into your asshole and sink down on it. His cock spreading your tight tunnel gives you a pleasant sensation of fullness, getting stronger and stronger until he bottoms out inside you and you feel his fur against your cheeks.";
 		say "     Looking down at your dominated partner, now held by lust instead of force, you smile, then start sliding up and down his hard shaft. Riding the stag's erection with abandon, you make good use of his length and girth, grinding your ass against him so he hits all the right spots inside you. With your wild ride on his cock, it's not too long before he suddenly shouts 'I'm coming!' and starts to shoot strings of cum deep inside you, filling your tight ass with fertile seed.[mimpregchance]";
 		LineBreak;
-		say "     You wait until he stops twitching and the last spurt of semen leaves his cock, then pull off his shaft with a *plop* and move to kneel over his face. Saying 'Eat me out' in a commanding tone, you pull his head up against your cum-dripping asshole and after a moment's hesitation he starts licking you. Quite talented with his tongue, this stag - his oral attentions quickly bring you the rest of the way to your own orgasm, [if cocks of player > 0]with your [cock of player] cock shooting long strings of cum all over your partner's chest[else if cunts of player > 0]making your folds drip with femcum[end if].";
-		say "     Thoroughly satisfied, you grin down at the stag[if cocks of player > 0] and his cum-splattered fur[end if] as you stand up and walk away, leaving him lying there on the ground.";
+		say "     You wait until he stops twitching and the last spurt of semen leaves his cock, then pull off his shaft with a *plop* and move to kneel over his face. Saying 'Eat me out' in a commanding tone, you pull his head up against your cum-dripping asshole and after a moment's hesitation he starts licking you. Quite talented with his tongue, this stag - his oral attentions quickly bring you the rest of the way to your own orgasm, [if player is male]with your [cock of player] cock shooting long strings of cum all over your partner's chest[else if player is female]making your folds drip with femcum[end if].";
+		say "     Thoroughly satisfied, you grin down at the stag[if player is male] and his cum-splattered fur[end if] as you stand up and walk away, leaving him lying there on the ground.";
 	else: [post-quest, friendly]
 		say "     You step closer to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down his pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Reaching down to stroke him until he's fully hard, your lips find his for another kiss. Moaning 'I want you inside me', you step back and quickly take off your clothes.";
 		WaitLineBreak;
 		say "     Mike strokes his cock as he watches you strip, then lets himself be led to the bed. You get onto it on all fours, sticking out your ass and wiggling it invitingly. Your aroused stag grabs the bottle of lube from the ground, then applies a good amount to your hole and fingers it a bit. He kneels behind you and starts rubbing his manhood up and down between your cheeks. Then you feel the tip of his cock push against your sphincter, slowly increasing the pressure until it yields and Mike's hard cock slides into you. It just feels amazing to have his shaft rub your sensitive insides. Soon he's bottomed out all the way inside you and rests there for a moment, pulling your upper body close and giving you a deep kiss.";
-		say "     Then he starts thrusting in and out with hard and deep strokes, making you both moan in lust. Slapping noises from when his hips hit your ass fill the room and are soon joined by barks from the kennels that seem to be cheering you on to fuck. Mike proves himself to be a virile stag, with enough endurance to satisfy a whole herd of does, as he couples with you for quite a while, driving you to one orgasm and another. [if cocks of player > 0]Your cock sprays two huge loads all over the sheets, as Mike just continues to fuck you until you're hard again and ready for a second cum-shot. [else if cunts of player > 0]Your pussy literally drips with femcum, making it trickle down your legs and soak into the sheets under you. [end if]Then his restraint breaks down and you hear him grunt 'I'm gonna cum!' seconds before his body stiffens, shudders running through it as burst after burst of his seed blast deep into your ass.[mimpregchance]";
+		say "     Then he starts thrusting in and out with hard and deep strokes, making you both moan in lust. Slapping noises from when his hips hit your ass fill the room and are soon joined by barks from the kennels that seem to be cheering you on to fuck. Mike proves himself to be a virile stag, with enough endurance to satisfy a whole herd of does, as he couples with you for quite a while, driving you to one orgasm and another. [if player is male]Your cock sprays two huge loads all over the sheets, as Mike just continues to fuck you until you're hard again and ready for a second cum-shot. [else if player is female]Your pussy literally drips with femcum, making it trickle down your legs and soak into the sheets under you. [end if]Then his restraint breaks down and you hear him grunt 'I'm gonna cum!' seconds before his body stiffens, shudders running through it as burst after burst of his seed blast deep into your ass.[mimpregchance]";
 		LineBreak;
 		say "     Mike stays kneeling behind you as his manhood keeps pulsing with each shot of cum, breathing heavily and holding on to your body. After the last spurt of semen leaves his cock, he gives you a kiss on the neck, then hugs you close and pulls you down so you lie together on your sides on a mostly dry spot of the bed. You two just stay like that for a while, as he spoons you with his slowly softening cock still in your ass, getting some rest before you have to return to the problem of everyday survival in the city.";
 
@@ -590,7 +590,7 @@ Instead of fucking Xerxes:
 		say "     Xerxes still seems a bit worn out from the last fun-time. Let him rest a bit more...";
 	else if lust of Xerxes is 3:
 		say "[AwesomeXerxesSex0]";
-	else if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and (cocks of player > 0 or cunts of player > 0):
+	else if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and player is not neuter:
 		say "[AwesomeXerxesSex1]";
 	else:
 		now sextablerun is 0;
@@ -607,7 +607,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
 		[]
-		if (cocks of player > 0 or cunts of player > 0):
+		if player is not neuter:
 			choose a blank row in table of fucking options;
 			now title entry is "69 with Xerxes";
 			now sortorder entry is 3;
@@ -630,31 +630,31 @@ Instead of fucking Xerxes:
 			now sortorder entry is 6;
 			now description entry is "Fill the human dog's ass with your cock.";
 		[]
-		if (cocks of player > 0 and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
+		if (player is male and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Klauz";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (player is male and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
 		[]
-		if (cunts of player > 0 and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
+		if (player is female and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Klauz";
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (player is female and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
 		[]
-		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and HP of Kara > 0:
+		if player is not neuter and lust of Xerxes is 6 and HP of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Xerxes a tattoo";
 			now sortorder entry is 11;
@@ -754,8 +754,8 @@ to say XerxesSex3: [player pussy fucked]
 	WaitLineBreak;
 	say "     Quickly stripping off your clothes, you get on the cot yourself and assume a position on all fours in front of Xerxes. You wiggle your ass at him and reach down to spread your folds invitingly. Already hot and ready from your earlier stroking, your human dog doesn't hesitate a second before he mounts you from behind in typical doggie-style, hugging your chest as his hips grind against you. His hard shaft quickly finds your moist opening and plunges deep into your body.";
 	if lust of Xerxes >= 4:
-		say "     Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut with you hard and fast for a while, taking the time to run his hands over your [one of][bodytype of player][or][if cocks of player > 0]herm[else]female[end if][as decreasingly likely outcomes] body as he takes slower thrusts at first, enjoying the feel of your hot, wet hole around his pulsing shaft. His hands roam over you[if lust of Xerxes < 7] almost as if he were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. He nuzzles at the back of your neck, panting with a growing excitement that has his pace quicken in response. As he thrusts harder, you moan what a good boy he is.";
-	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm that moistens Xerxes cock with even more slippery femcum[if cocks of player > 0] and makes your cock spray your own load all over the sheets below[end if]. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling your womb with his human seed.[fimpregchance]";
+		say "     Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut with you hard and fast for a while, taking the time to run his hands over your [one of][bodytype of player][or][if player is male]herm[else]female[end if][as decreasingly likely outcomes] body as he takes slower thrusts at first, enjoying the feel of your hot, wet hole around his pulsing shaft. His hands roam over you[if lust of Xerxes < 7] almost as if he were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. He nuzzles at the back of your neck, panting with a growing excitement that has his pace quicken in response. As he thrusts harder, you moan what a good boy he is.";
+	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm that moistens Xerxes cock with even more slippery femcum[if player is male] and makes your cock spray your own load all over the sheets below[end if]. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling your womb with his human seed.[fimpregchance]";
 	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms[if lust of Xerxes >= 4]. 'Mmm... Master good fuck,' he mumbles softly, snuggling up to you lovingly[end if].";
 
 to say XerxesSex4: [player ass fucked]
@@ -766,8 +766,8 @@ to say XerxesSex4: [player ass fucked]
 	WaitLineBreak;
 	say "     Quickly stripping off your clothes, you grab the bottle Mike gave you and apply a generous amount of lube to your hole, then get on the cot and assume a position on all fours in front of Xerxes. You wiggle your ass at him and reach back to spread your cheeks invitingly. Already hot and ready from your earlier stroking, your human dog doesn't hesitate a second before he mounts you from behind in typical doggie-style, hugging your chest as his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in against you. As your pucker yields to Xerxes['] invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
 	if lust of Xerxes >= 4:
-		say "     Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut with you hard and fast for a while, taking the time to run his hands over your [one of][bodytype of player][or][if player is herm]herm[else if cocks of player > 0]male[else if cunts of player > 0]female[else]genderless[end if][as decreasingly likely outcomes] body as he takes slower thrusts at first, enjoying the feel of your hot, tight hole around his pulsing shaft. His hands roam over you[if lust of Xerxes < 7] almost as if he were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. He nuzzles at the back of your neck, panting with a growing excitement that has his pace quicken in response. As he thrusts harder, you moan what a good boy he is.";
-	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the sheets below[else if cunts of player > 0] that makes your pussy drip with femcum[end if]. Your anal muscles twitching around his cock obviously excites Xerxes, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
+		say "     Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut with you hard and fast for a while, taking the time to run his hands over your [one of][bodytype of player][or][if player is herm]herm[else if player is male]male[else if player is female]female[else]genderless[end if][as decreasingly likely outcomes] body as he takes slower thrusts at first, enjoying the feel of your hot, tight hole around his pulsing shaft. His hands roam over you[if lust of Xerxes < 7] almost as if he were petting you[else], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. He nuzzles at the back of your neck, panting with a growing excitement that has his pace quicken in response. As he thrusts harder, you moan what a good boy he is.";
+	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm[if player is male] that makes you shoot long streams of cum all over the sheets below[else if player is female] that makes your pussy drip with femcum[end if]. Your anal muscles twitching around his cock obviously excites Xerxes, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
 	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms[if lust of Xerxes >= 4]. 'Mmm... Master good fuck,' he mumbles softly, snuggling up to you lovingly[end if].";
 
 to say XerxesSex5: [Xerxes ass fucked]
@@ -992,11 +992,11 @@ to say XerxesSex10: [69 with Xerxes]
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	WaitLineBreak;
 	say "     Moving onto the cot alongside him, you get him to raise his thigh and give you clear access to his ready erection. Smiling, you run your fingers lightly across his pulsing shaft, causing him to shiver and yip in pleasure. Seeing more precum leaking from his stiff rod, you dive onto it, sliding your lips over his erect member and running your tongue along it. He pulses and throbs with excitement, his enlarged shaft wonderfully responsive to your oral attentions. You tease [if anallevel is 3 and a random chance of 3 in 5 succeeds]a lubed finger across his anus before sliding it into him, drawing a low moan of pleasure from the young man[else]your fingertips across his ballsack before cupping his heavy orbs and rubbing them firmly[end if].";
-	if cocks of player > 0:
+	if player is male:
 		say "     With your erect shaft in front of his face, he knows what to do and sets himself to licking and kissing at it. His soft lips and playful tongue are a delight across your sensitive manhood, quickly coaxing dribbles of precum from it. Seeing this, he plunges his mouth over your shaft and sucks greedily at your cock, his well-trained mouth working hard to please his loving master. His hands [if lust of Xerxes >= 7]glide across[else]grope at[end if] your thighs and ballsack, [if lust of Xerxes >= 7]pawing at[else]rubbing[end if] your orbs as they prepare to give him the tasty treat he so desires.";
 	else:
 		say "     With your wet pussy in front of his face, he knows what to do and sets himself to licking and kissing at it. His soft lips and playful tongue are a delight across your sensitive folds, quickly getting you wet and dripping as well. Seeing this, he plunges his tongue into your cunt and laps away, his well-trained mouth working hard to please his loving master. His hands [if lust of Xerxes >= 7]glide across[else]grope at[end if] your thighs and stroke your folds, finding your clit and [if lust of Xerxes >= 7]returning[else]trying his best to return[end if] the pleasure you're giving him in kind.";
-	say "     With your human doggy pleasuring you orally while you're enjoying that thick, pulsing rod in your mouth, it is not too long before you feel your excitement building out of control. You cum with a loud groan and suck down hard onto him, lapping across his shaft and glans as he orgasms in response[if cocks of player > 0]. You pump your [cum load size of player] load into the young man's mouth, feeding your seed to him[else]. Your sweet waters soak his face, which he laps up and drinks down with lustful eagerness[end if]. When you're both done cumming, he turns around on the cot, snuggles up with you. He licks and kisses at your face, sharing your taste with his[if libido of Xerxes >= 4]. 'Mmm... tasty Master. Xerxes love.'[else].[end if]";
+	say "     With your human doggy pleasuring you orally while you're enjoying that thick, pulsing rod in your mouth, it is not too long before you feel your excitement building out of control. You cum with a loud groan and suck down hard onto him, lapping across his shaft and glans as he orgasms in response[if player is male]. You pump your [cum load size of player] load into the young man's mouth, feeding your seed to him[else]. Your sweet waters soak his face, which he laps up and drinks down with lustful eagerness[end if]. When you're both done cumming, he turns around on the cot, snuggles up with you. He licks and kisses at your face, sharing your taste with his[if libido of Xerxes >= 4]. 'Mmm... tasty Master. Xerxes love.'[else].[end if]";
 
 
 Chapter 4 - Xerxes + Fang/Felinoid
@@ -1059,13 +1059,13 @@ to say AwesomeXerxesSex0:
 	say "     In the mood to have some more fun with your human dog, you take a quick look around the room but don't spot him. Calling out to him, he barks happily from somewhere off among the shelves before running over to you on all fours. As he comes over, you can see he's got a book in his mouth. Worried that he might be damaging it, you take it from him and he looks up with a human smile on his handsome face.";
 	say "     Looking at the book you're taken, you see that it's a children's book on dogs. He barks excitedly and you try to steady yourself. 'Were you... reading this?' you finally manage to ask, to which he nods excitedly - another human mannerism. He then slaps one of his hands on the picture of a dog on the book's cover before pressing that hand to his chest. In your surprise, you drop the book and Xerxes whines softly at your reaction. Taking your hand in his, he presses it onto his head. Scritching the concerned young man's head, you kneel down and pull him into a hug. 'Such a clever boy you are,' you say and he barks happily to have pleased you.";
 	say "     Running your hands over his body, your excitement leads you to stroke over his stiffening member. 'I think you deserve a reward for being such a clever boy.' He gives a happy bark and kisses you, giving you a mix of slobbery doggy licks and human kisses while fumbling his hands across your body";
-	if cocks of player > 0:
+	if player is male:
 		say ". Reaching down, he puts a hand on your hard shaft and rubs it in return. He tries to imitate your motions, but is a little rough at first. With a little prompting from you, he lightens his touch. And while he's a little clumsy with his hands, he is very eager and does his best to copy what you're doing.";
 		WaitLineBreak;
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him. Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well. His shaft is quite lovely, smooth and perfectly proportioned. It is a very delectable sight and you are eager to enjoy it. You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans. You then slowly lower your lips down around the hot man-meat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, your cock is in front of his face and he grins happily. This is a trick he knows well and he quickly sets to licking and then sucking at his master's cock in return. Well-trained at this task, he works his mouth and tongue over your pulsing shaft in an effort to please you. Without prompting, he even ventures to put a hand on your ballsack and gently rubs at it.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue. Even the taste of it seems better, rich and flavorful without any harshness to it. Having that delicious load fill your mouth is enough to set you off, pumping your hot seed into his waiting mouth before he swallows it down, not releasing your shaft until you're spent.";
-	else if cunts of player > 0:
+	else if player is female:
 		say ". Reaching down, he puts a hand between your legs and rubs your pussy in return. He is a little rough at first, but with a little prompting from you, he lightens his touch and does much better. He listens attentively to your instructions and tries his best to follow them. And while he's a little clumsy with his hands, he is very eager to please you.";
 		WaitLineBreak;
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him. Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well. His shaft is quite lovely, smooth and perfectly proportioned. It is a very delectable sight and you are eager to enjoy it. You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans. You then slowly lower your lips down around the hot man-meat so you can suck your clever, loyal pet off.";
@@ -1086,11 +1086,11 @@ to say AwesomeXerxesSex1:
 	say "     You're a little surprised to see that it is an art book focused on tattooing. It is filled with numerous photos of body art of all kinds, from simple pieces to body-wide works of grand detail. He stares in fascination at the colorful photos as you flip through several pages of the book while petting the young man.";
 	say "     Seeing how looking at the images has gotten him quite hard, you reach over and stroke his cock with your free hand. 'Do you like those, boy? Did you want one?'";
 	say "     He barks happily and licks your cheek. 'Xerxes want.' When you flip to photos of tattooing being done, you tell him that it does hurt and ask him again. 'Xerxes want,' he asserts again. 'Good boy sit,' he adds with a grin, pointing to the person receiving the tattoo. Unable not to smile at his eagerness, you ruffle his hair and scritch his ears, telling him you'll see about getting him a tattoo once you find an opportunity to do so[if tattoo parlor is unknown], adding that it may have to wait until you leave the city[end if]. He gives you another rush of licks and kisses. 'Good Master. Love Master.'";
-	if cocks of player > 0:
-		say "     Once the bout of kisses ends, he nuzzles between your legs and goes eagerly for your cock, licking and sucking at it. He's gotten better at using his hands by this point, stroking and rubbing your stiff maleness[if cunts of player > 0] and damp pussy[end if], very eager to show you how happy he is with you. The young man listens attentively as you give him instructions to improve his technique, gradually getting better at using those fingers of his to further please you while his mouth sucks you off.";
+	if player is male:
+		say "     Once the bout of kisses ends, he nuzzles between your legs and goes eagerly for your cock, licking and sucking at it. He's gotten better at using his hands by this point, stroking and rubbing your stiff maleness[if player is female] and damp pussy[end if], very eager to show you how happy he is with you. The young man listens attentively as you give him instructions to improve his technique, gradually getting better at using those fingers of his to further please you while his mouth sucks you off.";
 		say "     You stroke his head and scritch his ears, telling him what a good boy he is. Though that's not all you're stroking. Still having your hand on his cock, you've set aside the book and are now pumping at his throbbing manhood, much to your pet's delight. You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong orgasm that pumps your [cum load size of player] load into his mouth and down his throat by the time you're finally done. After having finished you off, he bends around, shamelessly taking his own cock in his mouth like a dog licking himself and finishes himself off while you watch to get another warm load of cum to gobble down.";
 		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to fill his tummy, he stretches out on his back and rubs his [if cock width of player > 30]bloated[else if cock width of player > 20]stuffed[else]full[end if] belly with a happy grin on his handsome face.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     Once the bout of kisses ends, he nuzzles between your legs and goes eagerly for your pussy, licking excitedly at it. He's gotten better at using his hands by this point, stroking and rubbing your sensitive folds, very eager to show you how happy he is with you. The young man listens attentively as you give him instructions to improve his technique, gradually getting better at using those fingers of his to further please you while eating you out.";
 		say "     You stroke his head and scritch his ears, telling him what a good boy he is. Though that's not all you're stroking. Still having your hand on his cock, you've set aside the book and are now pumping at his throbbing manhood, much to your pet's delight. You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong series orgasm that soaks his face in your juices by the time you're finally done. After having finished you off, he bends around, shamelessly taking his own cock in his mouth like a dog licking himself and finishes himself off while you watch to get another warm load of cum to gobble down.";
 		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to enjoy, he stretches out on his back and licks his lips, rubbing a hand to gather up your female cum so he can suck it from his fingers as well.";
@@ -1218,7 +1218,7 @@ Instead of fucking Helen:
 		say "     Helen still seems a bit worn out from the last fun-time. Let her rest a bit more...";
 	else if lust of Helen is 3:
 		say "[AwesomerHelenSex0]";
-	else if lust of Helen is 5 and a random chance of 3 in 5 succeeds and (cocks of player > 0 or cunts of player > 0):
+	else if lust of Helen is 5 and a random chance of 3 in 5 succeeds and player is not neuter:
 		say "[AwesomerHelenSex1]";
 	else:
 		now sextablerun is 0;
@@ -1235,7 +1235,7 @@ Instead of fucking Helen:
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
 		[]
-		if (cocks of player > 0 or cunts of player > 0) and lust of Helen >= 4:
+		if player is not neuter and lust of Helen >= 4:
 			choose a blank row in table of fucking options;
 			now title entry is "69 with Helen";
 			now sortorder entry is 3;
@@ -1247,31 +1247,31 @@ Instead of fucking Helen:
 			now sortorder entry is 4;
 			now description entry is "Fill the human dog's pussy with your cock.";
 		[]
-		if (cocks of player > 0 and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
+		if (player is male and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Klauz";
 			now sortorder entry is 5;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (player is male and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
 			now sortorder entry is 6;
 			now description entry is "Hot sex with Fang fucking Helen.";
 		[]
-		if (cunts of player > 0 and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
+		if (player is female and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Klauz";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (player is female and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Helen.";
 		[]
-		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and HP of Kara > 0:
+		if player is not neuter and lust of Helen is 6 and HP of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Helen a tattoo";
 			now sortorder entry is 10;
@@ -1598,11 +1598,11 @@ to say HelenSex8: [69 with Helen]
 	say "     'Good dog' you say as you crouch down beside her, patting her head and stroking her shoulders. Your hands stray lower and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them before moving on to her moist pussy. Helen gives you a pleased yip, dripping female juices over your fingers as you spread her lips. Patting the cot, you tell her 'Up here, girl' and reward her with some more stroking as she obeys.";
 	WaitLineBreak;
 	say "     Moving onto the cot alongside her, you get her to raise her thigh and expose her ready pussy to you. Smiling, you brush your fingers lightly across her folds, causing her to shiver and yip in pleasure. Seeing more juices leaking from her ready cunt, you dive in, pressing your lips to her nether-lips and pushing your tongue into her. She tastes delightfully juicy, her feminine cum rich and flavorful with a pleasant sweetness to it, making you eager for more. You tease a finger across her clit and work your tongue to please your good girl.";
-	if cocks of player > 0:
+	if player is male:
 		say "     With your erect shaft in front of her face, she knows what to do and sets herself to licking and kissing at it. Her soft lips and playful tongue are a delight across your sensitive manhood, quickly coaxing dribbles of precum from it. Seeing this, she plunges her mouth over your shaft and sucks greedily at your cock, her well-trained mouth working hard to please her loving master. Her hands [if lust of Helen >= 7]glide across[else]grope at[end if] your thighs and ballsack, [if lust of Helen >= 7]pawing at[else]rubbing[end if] your orbs as they prepare to give her the tasty treat she so desires.";
 	else:
 		say "     With your wet pussy in front of her face, she knows what to do and sets herself to licking and kissing at it. Her soft lips and playful tongue are a delight across your sensitive folds, quickly getting you wet and dripping as well. Seeing this, she plunges her tongue into your cunt and laps away, her well-trained mouth working hard to please her loving master. Her hands [if lust of Helen >= 7]glide across[else]grope at[end if] your thighs and stroke your folds, finding your clit and [if lust of Helen >= 7]returning[else]trying her best to return[end if] the attention you're giving hers.";
-	say "     With your human doggy pleasuring you orally while you're enjoying that sweet, delicious taste of her cunt, it is not too long before you feel your excitement building out of control. You cum with a loud groan and dive your tongue deep into her, lapping up her juices as she orgasms in response[if cocks of player > 0]. You pump your [cum load size of player] load into the young woman's mouth, feeding your seed to her[else]. Your sweet waters soak her face, which she laps up and drinks down with lustful eagerness[end if]. When you're both done cumming, she turns around on the cot, snuggles up with you. She licks and kisses at your face, sharing your taste with hers[if libido of Helen >= 4]. 'Mmm... tasty Master. Helen love.'[else].[end if]";
+	say "     With your human doggy pleasuring you orally while you're enjoying that sweet, delicious taste of her cunt, it is not too long before you feel your excitement building out of control. You cum with a loud groan and dive your tongue deep into her, lapping up her juices as she orgasms in response[if player is male]. You pump your [cum load size of player] load into the young woman's mouth, feeding your seed to her[else]. Your sweet waters soak her face, which she laps up and drinks down with lustful eagerness[end if]. When you're both done cumming, she turns around on the cot, snuggles up with you. She licks and kisses at your face, sharing your taste with hers[if libido of Helen >= 4]. 'Mmm... tasty Master. Helen love.'[else].[end if]";
 
 to say HelenBeachWalk:
 	say "     You glance over to Helen and see her slumped on the ground in a corner, a bored look on her face. Deciding that she has been a good pet who deserves a reward, you call her over to you. Hearing the voice of her master, the young woman's head perks up and she eagerly rushes over to you on all fours. You lean forward to greet the human dog as she barks in greeting and licks your hands, then ask if she wants to go for a walk. Helen's body trembles with unspent energy as she hears those words and the canine turned human-dog skips and bounces around your feet eagerly, barking and whining in anticipation[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. 'Master walk!' she exclaims with a beaming grin[end if]. After patting her head and giving the naked body of your pet a stroke or two, you leave the library with your pet in tow.";
@@ -1649,8 +1649,8 @@ to say HelenBeachWalk:
 			now HelenPregnant is 1;             [pregnancy timer]
 	else:
 		say "     With his attention focused on Helen, the sandman is too distracted to notice you. Irritated that the sand-yellow Casanova would try something like this to your pet, you deliver a fierce blow to the back of his head. Stunned by this attack the smooth-talker and stealth fucker is easily pushed away from your startled pet. Delivering a couple more strikes to the stupefied hunk, you are able to chase him off easily, with him grumbling while readjusting his speedo. Wanting to make sure the sandman didn't do any harm to the youthful human canine, you take her over to a nearby abandoned umbrella. Based on the pink beach towels, feminine sunglasses, and the lime green dildo inside one of the beach bags, it seems like a couple of ladies set out for an extra fun day at the beach.";
-		say "     Examining Helen, you see no damage done to her. However, your beautiful pet seems incredibly turned on. She pants in an erotic manner, lowering her front and raising her ass, wiggling it towards you while whimpering for a good fucking. Moving backwards a little, she soon is rubbing up against your crotch. [if cocks of player > 0]Your cock starts to harden with each rocking motion[else]Your crotch is quite sensitive to Helen's rocking motions[end if]. Stripping off any gear, you then encourage Helen to keep going, your libido inflamed by the sexy pet's antics.";
-		if cocks of player > 0: [male/herm]
+		say "     Examining Helen, you see no damage done to her. However, your beautiful pet seems incredibly turned on. She pants in an erotic manner, lowering her front and raising her ass, wiggling it towards you while whimpering for a good fucking. Moving backwards a little, she soon is rubbing up against your crotch. [if player is male]Your cock starts to harden with each rocking motion[else]Your crotch is quite sensitive to Helen's rocking motions[end if]. Stripping off any gear, you then encourage Helen to keep going, your libido inflamed by the sexy pet's antics.";
+		if player is male: [male/herm]
 			say "     Once you are fully erect, you begin to insert your cock into your pet's needy cunt. She moans softly as her pussy tightly grips your shaft. One thing's for sure - you are glad to be the one feeling this instead of the sandman. Grunting in lust, you begin to thrust into your human dog. The thrusts are aided by a healthy amount of femcum that she is producing. Once you bottom out inside her, she bucks her hips, showing how eager she is to get pounded. Not wanting to let your pet's expectations down you continue to push your dick as deep as you can with every thrust. Leaning forward you grab the black haired beauty's shapely breasts and softy circle the nipples. Spasms rock Helen's legs as she feels this new sensation, yipping happily.";
 			say "     Speeding up the pace of your thrusts you ask her if this feels good. With a loud bark[if lust of Helen >= 4] and a swift utterance of 'Yes!'[end if] it seems you have your reply. The sensation of Helen's pussy clenching around your manhood as you hammer into her encourages you to pick up the pace. Soon both you and your slender companion are on the verge of orgasming. Placing your hands on her hips, you slide into her all the way and grind against the young woman's body, stimulating her with eager attention. This quickly pushes Helen over the edge and she comes with a happy bark, covering your dick in her juices. The sensation of her inner muscles trembling around your shaft is too good to resist and just a few heartbeats later, your balls twitch as you unleash a heavy load deep within your trained pet's tight cunt.";
 			WaitLineBreak;
@@ -1735,13 +1735,13 @@ to say AwesomerHelenSex0:
 	say "     In the mood to have some more fun with your human dog, you take a quick look around the room but don't spot her. Calling out to her, she barks happily from somewhere off among the shelves before running over to you on all fours. As she comes over, you can see she's got a book in her mouth. Worried that she might be damaging it, you take it from her and she looks up with a human smile on her pretty face.";
 	say "     Looking at the book you're taken, you see that it's a children's book on dogs. She barks excitedly and you try to steady yourself. 'Were you... reading this?' you finally manage to ask, to which she nods excitedly - another human mannerism. She then slaps one of her hands on the picture of a dog on the book's cover before pressing that hand to her chest. In your surprise, you drop the book and Helen whines softly at your reaction. Taking your hand in hers, she presses it onto her head. Scritching the concerned young woman's head, you kneel down and pull her into a hug. 'Such a clever girl you are,' you say and she barks happily to have pleased you.";
 	say "     Running your hands over her body, your excitement leads you to caressing her lovely bosom before dipping down to rub her wet cunt. 'I think you deserves a reward for being such a clever girl.' She gives a happy bark and kisses you, giving you a mix of slobbery doggy licks and human kisses while fumbling her hands across your body";
-	if cocks of player > 0:
+	if player is male:
 		say ". Reaching down, she puts a hand on your hard shaft and rubs it in return. She is a little rough at first, but with a little prompting from you, she lightens her touch and does much better. She listens attentively to your instructions and tries her best to follow them. And while she's a little clumsy with her hands, she is very eager to please you.";
 		WaitLineBreak;
 		say "     Once you're both good and worked up, you get the young woman to lie down and you move alongside her. Now that you're in a position to get a good look at it, you can see that her pussy lips have indeed grown larger and puffier, with a very enticing scent. Her wet folds are very lovely and inviting. It is a very delectable sight and you are eager to enjoy it. You run your tongue slowly from bottom to top before swirling it over her clit. You then slowly lower your lips against her nether-lips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, your cock is in front of her face and she grins happily. This is a trick she knows well and she quickly sets to licking and then sucking at her master's cock in return. Well-trained at this task, she works her mouth and tongue over your pulsing shaft in an effort to please you. Without prompting, she even ventures to put a hand on your ballsack and gently rubs at it.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue. Even the taste of it seems better, rich and flavorful with a pleasant sweetness to it. Lapping up that delicious honey is enough to set you off, pumping your hot seed into her waiting mouth before she swallows it down, not releasing your shaft until you're spent.";
-	else if cunts of player > 0:
+	else if player is female:
 		say ". Reaching down, she puts a hand between your legs and rubs your pussy in return. She tries to imitate your motions, but is a little rough at first. With a little prompting from you, she lightens her touch. And while she's a little clumsy with her hands, she is very eager and does her best to copy what you're doing.";
 		WaitLineBreak;
 		say "     Once you're both wet and dripping between your legs, you get the young woman to lie down and you move alongside her. Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent. Her wet folds are very lovely and inviting. It is a very delectable sight and you are eager to enjoy it. You run your tongue slowly from bottom to top before swirling it over her clit. You then slowly lower your lips against her nether-lips and dive your tongue in so you can eat out your clever, loyal pet.";
@@ -1763,11 +1763,11 @@ to say AwesomerHelenSex1:
 	say "     You're a little surprised to see that it is an art book focused on tattooing. It is filled with numerous photos of body art of all kinds, from simple pieces to body-wide works of grand detail. She stares in fascination at the colorful photos as you flip through several pages of the book while petting the young woman.";
 	say "     Seeing how looking at the images has gotten her quite wet, you reach over and finger her pussy with your free hand. 'Do you like those, girl? Did you want one?'";
 	say "     She barks happily and licks your cheek. 'Helen want.' When you flip to photos of tattooing being done, you tell her that it does hurt and ask her again. 'Helen want,' she asserts again. 'Good girl sit,' she adds with a grin, pointing to the person receiving the tattoo. Unable not to smile at her eagerness, you ruffle her hair and scritch her ears, telling her you'll see about getting her once you find an opportunity to do so[if tattoo parlor is unknown], adding that it may have to wait until you leave the city[end if]. She gives you another rush of licks and kisses. 'Good Master. Love Master.'";
-	if cocks of player > 0:
-		say "     Once the bout of kisses ends, she nuzzles between your legs and goes eagerly for your cock, licking and sucking at it. She's gotten better at using her hands by this point, stroking and rubbing your stiff maleness[if cunts of player > 0] and damp pussy[end if], very eager to show you how happy she is with you. The young woman listens attentively as you give her instructions to improve her technique, gradually getting better at using those fingers of hers to further please you while her mouth sucks you off.";
+	if player is male:
+		say "     Once the bout of kisses ends, she nuzzles between your legs and goes eagerly for your cock, licking and sucking at it. She's gotten better at using her hands by this point, stroking and rubbing your stiff maleness[if player is female] and damp pussy[end if], very eager to show you how happy she is with you. The young woman listens attentively as you give her instructions to improve her technique, gradually getting better at using those fingers of hers to further please you while her mouth sucks you off.";
 		say "     You stroke her head and scritch her ears, telling her what a good girl she is. Though that's not all you're stroking. Still having your hand on between her legs, you've set aside the book and are now pumping a pair of fingers into her cunny, much to your pet's delight. You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong orgasm that pumps your [cum load size of player] load into her mouth and down her throat by the time you're finally done. After having finished you off, she bends around and shamelessly licks herself like a dog while you watch her tongue herself to orgasm.";
 		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to fill her tummy, she stretches out on her back and rubs her [if cock width of player > 30]bloated[else if cock width of player > 20]stuffed[else]full[end if] belly with a happy grin on her beautiful face.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     Once the bout of kisses ends, she nuzzles between your legs and goes eagerly for your pussy, licking excitedly at it. She's gotten better at using her hands by this point, stroking and rubbing your sensitive folds, very eager to show you how happy she is with you. The young woman listens attentively as you give her instructions to improve her technique, gradually getting better at using those fingers of her to further please you while eating you out.";
 		say "     You stroke her head and scritch her ears, telling her what a good girl she is. Though that's not all you're stroking. Still having your hand on between her legs, you've set aside the book and are now pumping a pair of fingers into her cunny, much to your pet's delight. You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong series orgasm that soaks her face in your juices by the time you're finally done. After having finished you off, she bends around and shamelessly licks herself like a dog while you watch her tongue herself to orgasm.";
 		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to enjoy, she stretches out on her back and licks her lips, rubbing a hand to gather up the sticky mix of your female cum and hers so she can suck it from his fingers as well.";
@@ -1808,7 +1808,7 @@ when play ends:
 	if bodyname of player is "Stag":
 		if humanity of player < 10:
 			if HP of Mike > 0 and HP of Mike < 99: [player met and talked with Mike]
-				say "As you succumb to the infection, you drift aimlessly through the city for a while until you run into Mike by chance. A bit sad to see someone he knew reduced to such a state, he takes you along and cares for you, putting you in a spacious kennel with his human dogs[if cocks of player > 0]. Randy creature that you are, you impregnate several of the females, becoming the progenitor of a very successful breed of pet humans in the changed world[end if][if cunts of player > 0]. The male transformed dogs find you irresistible and are constantly eager to mount you, which results in more than one litter of human puppies[end if].";
+				say "As you succumb to the infection, you drift aimlessly through the city for a while until you run into Mike by chance. A bit sad to see someone he knew reduced to such a state, he takes you along and cares for you, putting you in a spacious kennel with his human dogs[if player is male]. Randy creature that you are, you impregnate several of the females, becoming the progenitor of a very successful breed of pet humans in the changed world[end if][if player is female]. The male transformed dogs find you irresistible and are constantly eager to mount you, which results in more than one litter of human puppies[end if].";
 			else: [only had unfriendly contact with Mike]
 				say "As you succumb to the infection, you drift aimlessly through the city for a while, having sex with anyone you come across. After a while, there's a whole herd of willing does and a few stags following you. You lead them to the park to live among the trees, unconcerned about what's going on outside of it.";
 		else:

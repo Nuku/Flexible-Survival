@@ -19,7 +19,7 @@ instead of resolving a Hidden Grate:
 		increase dice by bonus;
 		if dice > 15:
 			say "You manage to lift the grate out of the way, and descend into the gloomy light below.";
-			move the player to South Sewer Tunnel;
+			move player to South Sewer Tunnel;
 		else:
 			say "The grate just refuses to budge. Oh well.";
 	else:
@@ -68,8 +68,8 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 		now battleground is "Mall";
 	say "You wade into the shallower region of the river in search of food and water.";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Survivalist" is listed in feats of the player, increase bonus by 4;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Survivalist" is listed in feats of player, increase bonus by 4;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus > 7:

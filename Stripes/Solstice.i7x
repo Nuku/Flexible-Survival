@@ -57,7 +57,7 @@ Instead of resolving Adventurer:
 				say "     Deciding not to miss out on this chance, you agree to the new vulpogryph's offer and she grins happily. Moving over to the small bedroll she's set up here, she shucks her top and shorts quickly, spreading her intriguing body out for you to see. Her lovely breasts are covered in soft, black feathers and her nipples are silvery spots half-hidden beneath that soft down. Looking lower, the feathers transition back to fur at her slender waist. As your eyes travel further, she spreads her legs and teases her wet pussy with a moan. The soft, gray fur of her muff parts to show the dark lips of her waiting sex. She grins at the corners of her beak, crooking a finger for you to approach and get your [']reward['].";
 				say "     Drawn in by her alluring body, you move between her legs, kissing along one thigh until you reach her wet folds. You slide your tongue along it, lapping at her pussy. 'Mmm... I should really have let myself have some fun earlier. Though it'll be much nicer now that I've waited for someone special,' she says as she runs her avian talons over your head.";
 				WaitLineBreak;
-				if cocks of player > 0:
+				if player is male:
 					say "     She slides her paws to your shoulders and tugs on them lightly, urging you to move atop her. You nuzzle up to her bosom, lick those nipples and then move up to kiss at the corner of her beak. Her feathered body rubs against you as your cock brushes across her furry, vixen pussy before sinking into her, making her moan lustfully. You run your hands over her, enjoying the sensual way her body moves against your as you thrust into her. Her vulpine cunt squeezes and milks at you until you can take no more and thrust deep inside her to unleash your hot load, making her caw in orgasmic release.";
 				else:
 					say "     She slides her paws along your back and tugs on them lightly, urging you to turn around atop her. You turn around, bringing your pussy over her head while you continue to delve your tongue into her. It takes her a bit of work to get her beak into a position to please you comfortably, but her tongue darts out to lap at your folds while her taloned paws stroke you and slide into your cunt. You dive your tongue in deeper while she fingers you, licking up what flowing juices she can get. You both continue like this until you both cry out in orgasmic pleasure, Solstice cawing loudly in release. Her vulpine cunt squeezes and milks at your tongue as you drive it into her quickly and she pumps her fingers hard and fast into your quivering hole until you both collapse, panting for breath and wet with female juices.";
@@ -222,7 +222,7 @@ to say sexwithSolstice0:
 		say "[solsticesex]";
 
 to say solsticesex:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Solstice runs her paws between your legs and walks her fingers across your wet folds. She seems a little disappointed that you don't have a penis to fill her, but continues to snuggle up to her chosen mate";
 		if solsticefsex is even:
 			say ". The vulpogryph lowers you onto your back and slips [if cunt width of player is 1]a finger[else if cunt width of player < 4]a pair of fingers[else if cunt width of player < 6]a trio of fingers[else]a trio of fingers and eventually her whole hand[end if] into your wet cunt. Meanwhile, you play with her feathered breasts, teasing her nipples as you kiss and nuzzle at her beak. She fingers herself with her other paw, but occasionally switches between them, spreading her hot juices onto you and rubbing your pussy juices onto hers. You feel a warm, pleasant tingle every time she does this, as if part of her is flowing into you. She pays particular attention to your clit, perhaps rubbing it in the hopes it will grow into a lovely cock for her.";
@@ -260,35 +260,35 @@ to say solsticesex:
 Section 5 - Definitions
 
 Definition: a person is vgfaced:
-	if the facename of the player is "Vulpogryph", yes;
+	if facename of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgskinned:
-	if the skinname of the player is "Vulpogryph", yes;
+	if skinname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgbodied:
-	if the bodyname of the player is "Vulpogryph", yes;
+	if bodyname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgcocked:
-	if the cockname of the player is "Vulpogryph", yes;
+	if cockname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgtailed:
-	if the tailname of the player is "Vulpogryph", yes;
+	if tailname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is partvg:
-	if the facename of the player is "Vulpogryph", yes;
-	if the skinname of the player is "Vulpogryph", yes;
-	if the bodyname of the player is "Vulpogryph", yes;
-	if the cockname of the player is "Vulpogryph", yes;
-	if the tailname of the player is "Vulpogryph", yes;
+	if facename of player is "Vulpogryph", yes;
+	if skinname of player is "Vulpogryph", yes;
+	if bodyname of player is "Vulpogryph", yes;
+	if cockname of player is "Vulpogryph", yes;
+	if tailname of player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is fullyvg:
-	if the facename of the player is "Vulpogryph" and the skinname of the player is "Vulpogryph" and the bodyname of the player is "Vulpogryph" and the cockname of the player is "Vulpogryph" and the tailname of the player is "Vulpogryph", yes;
+	if facename of player is "Vulpogryph" and skinname of player is "Vulpogryph" and bodyname of player is "Vulpogryph" and cockname of player is "Vulpogryph" and tailname of player is "Vulpogryph", yes;
 	no;
 
 
@@ -298,7 +298,7 @@ when play ends:
 	if HP of Solstice >= 5:
 		if bodyname of player is "Vulpogryph":
 			if humanity of player < 10:
-				if cocks of player > 0:
+				if player is male:
 					say "     As you give in to your new, vulpogryph instincts, Solstice is there for you. She runs her paws over your body and leads you off with her in search of adventure in the wild, changing world. It all soon becomes clear to you. She is your special mate, the one you were meant to be with. Using her knowledge of ancient ruins, you travel to a Mayan temple and make it your new home, intent on nesting there.";
 					say "     You are also in luck, able to capture an archeological team that was there before the outbreak struck. Watching for a few days from the jungle, make your plans. Such ideas come easily to you both, being a mix of clever corvid and sly fox. You trick and infect the others through judicious application of infectious feathers and fluids. You end up starting your nest of vulpogryphs with a big team of sexy hybrids eager to raise a healthy brood of vulpogryph pups with their mates... between expeditions to search for more relics and set up new nests in ancient cities and temples. But that is a story for another day.";
 				else:
@@ -306,7 +306,7 @@ when play ends:
 					say "     You are also in luck, able to capture an archeological team that was there before the outbreak struck. Watching for a few days from the jungle, you each pick one from the supply of unchanged humans and make your plans. After snagging your chosen males one night to make into your mates, you trick and infect the others through judicious application of infectious feathers and fluids. You end up starting your nest of vulpogryphs with a big team of sexy hybrids eager to raise a healthy brood of vulpogryph pups with their mates... between expeditions to search for more relics and set up new nests in ancient cities and temples. But that is a story for another day.";
 			else:
 				say "     As the soldiers are moving into the city to rescue those they can, Solstice comes up and tells you that she'll need to split for a bit and meet up with you later. As an 'adventurer', she explains, some people in authority may not take to kindly to her track record with certain international governments or legal technicalities. She flashes you the contents of her backpack, filled with so many shinies that your half-corvid heart flutters with excitement. With that, she gives you a loving kiss and a grope, promising to get in touch with you once you're released.";
-				if cocks of player > 0:
+				if player is male:
 					say "     After you're cleared by the military and given a treatment that you can already feel fading against your magically-enhanced infection, you set yourself up in a temporary household, knowing that your mate will be coming once the heat's died down. And true enough, she ends up at your doorstep a few weeks later. After some lustful lovemaking to celebrate your happy reunion, you start making plans and move into Solstice's lovely home. While not quite a mansion, it's certainly quite luxurious and has plenty of space for her new mate to move in, as well as any guests you may wish to have over to enjoy your company.";
 				else:
 					say "     After you're cleared by the military and given a treatment that you can already feel fading against your magically-enhanced infection, you set yourself up in a temporary household, knowing that your friend will be coming once the heat's died down. And true enough, she ends up at your doorstep a few weeks later. After some lustful lovemaking to celebrate your happy reunion, you start making plans and move into Solstice's lovely home. While not quite a mansion, it's certainly quite luxurious and has plenty of space for her new friend, as well as the two cute researchers you manage to snag from a university. These are made into your mates, sexy vulpogryphs with throbbing cocks to fill your needy bodies.";

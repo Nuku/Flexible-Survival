@@ -33,7 +33,7 @@ to say ElfWins:
 		say ", she briefly steps off of you, repositioning yourself to expose your behind for her. Setting herself down before it and wrapping her arm around, she slings her large bow along your rump[if scalevalue of player > 3], a feat not particularly easy given your size[end if]. Slowly drawing the string back, she unleashes it to loudly smack against your back, making you visibly twitch and cry out from the harsh sensation, much to her amusement.";
 		say "     She continues this hard ritual, reveling in each protesting twitch and writhe with each loud snap. Overwhelmed by such rough treatment, you can't help but become aroused by it, [if player is male]unattended cock[smn] dripping onto the ground[else if player is female]unattended cunt[sfn] dripping onto the ground[else]though you lack a proper outlet to vent your rising lusts[end if][if player is not neuter and HP of player < 1] in spite of your better judgment[end if].";
 		say "     '[if HP of player < 1][one of]Oh, all the amusing ways you writhe[or]Maybe this will teach my new toy to watch where they wander[or]The Hunt has been generous to me[at random][else][one of]Just like the wanton beast, to take so well to their punishment[or]I bet I could do anything to you and you'd take it like a slut[or]Oh, you at least suffice as an amusing toy[at random][end if]...!' Laughing at the pitiful state she's placed you in, ";
-		if player is male or player is female:
+		if player is not neuter:
 			say "she nonetheless teases your apparent arousal, fingers tracing along the length of [if cocks of player > 1]one of your [cock size desc of player] cocks[else if player is male]your [cock size desc of player] cock[else if cunts of player > 1]one of your [cunt size desc of player] pussies[else]your [cunt size desc of player] pussy[end if], a meager balm that she's eager to undermine with another lashing.";
 		else:
 			say "she teases your apparent arousal, fingers tracing along your [bodytype of player] thighs since you lack anything of real interest to her for the elf to play with. It's a meager balm that she's eager to undermine with another lashing.";
@@ -106,17 +106,17 @@ When Play begins:
 	now attack entry is "[one of]The Elf[or]She[at random] [one of]fires an arrow to pin you to the earth by a bit of your attire, pulling close as you try to free yourself to knock you onto your ass [if scalevalue of player > 3]- a feat particularly impressive for a lady of her size - [end if]before pulling out of range[or]slings a peculiar arrow and fires it directly into your face, it's apparently cloth end puffing out a gust of strange dust to fill your lungs, leaving you fairly disoriented[or]pulls in close to trip you with the end of her bow, laughing and taunting you as you scramble back to your feet[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[ElfLoses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[ElfWins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[ElfDesc]";[ Description of the creature when you encounter it.]
-	now face entry is "otherwise human-looking, except the set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so.";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "largely slender and agile, with long arms and slim fingers. Your legs are shapely and athletic";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a large, firm buttocks, waiting to be grabbed.";[ Tail description, write a whole Sentence or leave blank. ]
+	now desc entry is "[ElfDesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "otherwise human-looking, except the set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so."; [ Face description, format as "Your face is (your text)."]
+	now body entry is "largely slender and agile, with long arms and slim fingers. Your legs are shapely and athletic"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "smooth and flawless"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a large, firm buttocks, waiting to be grabbed."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]human[or]normal-looking[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "a strange warping ripple runs across the flesh of your cheeks as your face changes and smooths out to new, elfin, proportions, but otherwise appears human"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "waves of heat run through your altering form. Appearing human, your figure nonetheless becomes lithe and slender and your fingers lengthen to agile digits"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth, but otherwise seems fairly normal"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your rump begins to swell, along with your lust, leaving you breathing hard as you gain a large, grabbable, ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it thrums with an alien pleasure. Checking things out, [if cocks of player > 1]they look[else]it looks[end if] perfectly human"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "a strange warping ripple runs across the flesh of your cheeks as your face changes and smooths out to new, elfin, proportions, but otherwise appears human"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "waves of heat run through your altering form. Appearing human, your figure nonetheless becomes lithe and slender and your fingers lengthen to agile digits"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth, but otherwise seems fairly normal"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your rump begins to swell, along with your lust, leaving you breathing hard as you gain a large, grabbable, ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it thrums with an alien pleasure. Checking things out, [if cocks of player > 1]they look[else]it looks[end if] perfectly human"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 12;

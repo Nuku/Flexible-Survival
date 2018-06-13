@@ -28,7 +28,7 @@ Instead of resolving a Central Library:
 		now centrallib is 1;
 		say "     You find your way to the city's Central Library, once an impressive stone building that has been suffering due to neglect by the city. And the recent crisis has not helped at all. You can see signs of a fire on one side, blackened with soot. As you get closer, about to cross the street to approach the entrance, you spot a burly security guard on the steps between the stone lions. A large, muscled fellow covered in dark fur and battered jacket. It is one of those crazed wolverines you've seen in the area guarding with manic obsession and great violence.";
 		project the figure of James_icon;
-		attempttowait;
+		WaitLineBreak;
 		say "     Spotting you, the wolverine does not immediately attack, but seems to be struggling with himself. He seems not to have fully succumbed to the viciousness that the others like him possess. 'Just... just stay back,' he calls over, warning you off. 'This place is sealed. Just go away and I won't have to hurt you.'";
 		say "     Keeping your distance, you manage to talk to him. It seems he's done a good job keeping the area clear, so you're able to talk to him from across the street without worry about attracting attention. 'My name is... James. It's James, dammit,' he growls, struggling to hang onto it. 'I live nearby and walked over to come on duty early in the morning. I guess I didn't notice what was happening in the city since it was so early and the sun hadn't come up yet. Or maybe I was already changing and was too focused on getting to work. I remember being really gung-ho about guarding the library from the moment I put on my coat and went out the door. Didn't matter that it wasn't even 5 a.m. that morning.' He paces up and down the steps, looking down both sides of the deserted street and takes a deep breath to relax and refocus, letting you cross the street to join him on the steps.";
 		say "     'Well, I started changing once I got here, slowly turning into the burly creature I am now. I... it probably should have upset me, but I help feeling that it would only help me guard the library better. And now I'm so young and strong. Only problem's been that I can't leave my post because my replacement hasn't come to take his shift. Can't leave it unguarded. So many crazy creatures around now,' he says, growling a little in his throat. 'Gotta keep watch. There's been no chance to sleep and only what little food the librarians might give me while I'm patrolling inside the library. It's been getting harder and harder to keep it together. Haven't slept since that morning. Can't. Gotta protect the library. Gotta...' he trails off.";
@@ -37,7 +37,7 @@ Instead of resolving a Central Library:
 		project the figure of James_icon;
 		say "     Finding yourself in the vicinity of the Central Library, you approach again, being cautious to let the wolverine guard notice you at a distance. He's initially put on edge, but when you reassure him that it's just you returning, he relaxes and lets you approach. 'It's nice to see you again. Good to have someone who hasn't gone completely over the edge yet to talk to.'";
 		say "     It seems that the library is still safe thanks to his unending vigil. You find yourself wondering what you could find within to help you and ponder ways to get past the guard.";
-	attempttowait;
+	WaitLineBreak;
 	say "[libraryentrance]";
 
 
@@ -74,7 +74,7 @@ to say libraryentrance:
 	now title entry is "Fight!";
 	now sortorder entry is 3;
 	now description entry is "Do you fight your way past him";
-	if jamessex is 0 or ( jamessex is 1 and cunts of player > 0 ) or ( jamessex is 2 and bodyname of player is "Wolverine Guard" ):
+	if jamessex is 0 or ( jamessex is 1 and player is female ) or ( jamessex is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Sex him up";
 		now sortorder entry is 4;
@@ -285,7 +285,7 @@ to say libguard3:
 
 to say libguard4:
 	setmonster "Wolverine Guard";
-	if cunts of player is 0:
+	if player is not female:
 		say "     James seems a little flustered by your offer. 'Uh... well, not that I'm not flattered, but despite this big, young body, I'm an old-fashioned man with old-fashioned values. Ain't nothing wrong with it, mind you. It's just not for me.' He wrings his big paws and looks around a little, then seems to realize he should be on duty and snaps back to attention. 'Umm... you should maybe be moving along. You can stop by again. Having someone to chat with helps me keep my head on straight - Ah! Didn't mean nothing by that! - I mean, against this crazy animal thing.' It seems you've startled the poor wolverine back into guard mode and you'd best be moving along for now. Perhaps the fairer sex would have more luck with him.";
 		now jamessex is 1;
 		WaitLineBreak;
@@ -297,7 +297,7 @@ to say libguard4:
 	else:
 		now jamessex is 3;
 		say "     James is clearly tempted by the offer. Quite torn between his animal urges and his strong duty to guard this place. You slide up beside him and run a big paw down his body to give his groin a squeeze. You nibble his ear and suggest he take you right here, on the steps, part of you succumbing to the urge to mate this big, strong, devoted male. You whisper that he can guard the access while screwing you. Growling in his throat, he throws you down roughly and jumps atop you. Within moments, you have your clothes and pack off while the wolverine growls and nips at your neck and shoulder. You growl loudly in response and push him back, rolling onto all fours. He pounces back atop your wolverine body and grinds his throbbing cock against you.";
-		say "     'Oh, I haven't felt this horny in years,' he growls as he drives his throbbing cock into you, making you growl and claw at the stone beneath you. His large cock throbs inside you, pulsing with virility as he thrusts it into you again and again. He fucks you like a wild animal and you revel in it, just what your wolverine body needs. He nips and bites at you, only exciting you further. Bracing yourself, you support his weight atop you while his big paws fondle your breasts[if cocks of player > 0] and even make a few strokes at your cock[end if] while his large balls slap against you. He pumps hard and fast into you, driving himself in deep before unleashing his hot load into you with a triumphant roar. You roar as well as you feel his semen pumping into you, flowing into your womb and overflowing around his thick shaft.[impregchance]";
+		say "     'Oh, I haven't felt this horny in years,' he growls as he drives his throbbing cock into you, making you growl and claw at the stone beneath you. His large cock throbs inside you, pulsing with virility as he thrusts it into you again and again. He fucks you like a wild animal and you revel in it, just what your wolverine body needs. He nips and bites at you, only exciting you further. Bracing yourself, you support his weight atop you while his big paws fondle your breasts[if player is male] and even make a few strokes at your cock[end if] while his large balls slap against you. He pumps hard and fast into you, driving himself in deep before unleashing his hot load into you with a triumphant roar. You roar as well as you feel his semen pumping into you, flowing into your womb and overflowing around his thick shaft.[impregchance]";
 		say "     But it doesn't stop there, the big wolverine rolls you onto your back and climbs atop you again. After licking and kissing at your breasts for a while and playing with your pussy, he climbs atop you and starts mating again. It is another wild, animalistic romp after another until you both collapse panting on the steps, reeking of sex and thoroughly satisfied. You are so wonderfully full to the point of overflowing with this strong, diligent wolverine's cum and your new instincts love it.[impregchance]";
 		infect "Wolverine Guard";
 		decrease humanity of player by 20;
@@ -343,7 +343,7 @@ Section 3 - Inside the Central Library
 
 to say libraryexplore:
 	say "     Inside the library, you start looking around quickly, passing through the stacks. You spot a few signs of transformed victims - clothes and cum stains mostly - but not many. Clearly only a few people were here when the outbreak started. You scan through the stacks, looking for anything that might be helpful to your situation.";
-	attempttowait;
+	WaitLineBreak;
 	let randomlist be a list of numbers;
 	if 1 is not listed in bookcollection, add 1 to randomlist;
 	if 2 is not listed in bookcollection, add 2 to randomlist;
@@ -383,7 +383,7 @@ to say libraryexplore:
 	else if entry 1 of randomlist is 7:
 		say "[libbook7]"; [animal handling]
 		now bookfound is 7;
-	attempttowait;
+	WaitLineBreak;
 	if XP of player > ( level of player plus one ) times 10:
 		level up;
 	else if "Fast Learner" is listed in feats of player and XP of player > ( level of player plus one ) times 8:
@@ -419,7 +419,7 @@ to say libraryexplore:
 				now Central Library is resolved;
 	if harpyfight is 2:
 		say "     The harpies swoop in around you and grab you, carrying you aloft in their talons. With each of your limbs gripped in their strong talons, you cannot struggle, especially as they fly up several stories in the large, central area. James, drawn by the commotion, comes running in and spots you being carried off[if centrallib is 4 or jamesfed is 2 or jamessex is 3]. He shakes his fist at the harpies and growls. 'I told you not to upset them. I'm sorry, but they won't let me up there.' With no hope of rescue from him, you[else]. He growls and shakes his fist. 'Serves you right! I told you this library is closed!' You[end if] are carried up to the top floor and dropped onto a large nest made of books. Looking to the stairwell for an exit, you see that this is where the fire occurred and that several bookshelves have been knocked over to bury the only way down. You are trapped with them and at their mercy.";
-		say "     The librarian harpies lick, kiss, claw and fondle you incessantly, playing with your body with quiet whispers of pleasure. You are made to nurse from the breasts of those heavy with eggs while a young and sultry librarian plays with you, [if cocks of player > 0]licking and sucking at your cock[else]licking at your pussy while fingering you with her taloned hand[end if]. Trapped as you are in there nest, there is no escape from it and they make use of your body as they please until you are fully transformed and lose yourself to become one of them.";
+		say "     The librarian harpies lick, kiss, claw and fondle you incessantly, playing with your body with quiet whispers of pleasure. You are made to nurse from the breasts of those heavy with eggs while a young and sultry librarian plays with you, [if player is male]licking and sucking at your cock[else]licking at your pussy while fingering you with her taloned hand[end if]. Trapped as you are in there nest, there is no escape from it and they make use of your body as they please until you are fully transformed and lose yourself to become one of them.";
 		[puts harpy as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -443,12 +443,12 @@ to say libraryexplore:
 				now cock length of player is 0;
 				now cock width of player is 0;
 			if "Male Preferred" is not listed in feats of player:
-				if cunts of player is 0, now cunts of player is 1;
+				if player is not female, now cunts of player is 1;
 				if cunt length of player < 6, now cunt length of player is 6;
 				if cunt width of player < 4, now cunt width of player is 4;
 				if breasts of player is 0, now breasts of player is 2;
 				if breast size of player < 3, now breast size of player is 3;
-		attempttowait;
+		WaitLineBreak;
 		if libido of player < 60, now libido of player is 60;
 		now humanity of player is 0;
 		end the story saying "You have joined the librarian harpies in their home at the Central Library.";

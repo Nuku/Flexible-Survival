@@ -27,12 +27,12 @@ to say losetoplatypus:
 		say "     You fall to your knees under the platypus's assault. He goes and kneels beside you, his hand going quickly to your belly. As he rubs it for a moment, he looks you in the eyes. 'You should take better care of yourself, especially in your condition.' He holds you for a moment longer, rubbing your belly and staring at it as if lost in thought. Then he shakes his head as if to clear it, then smiles. 'Well, if you're ever up for another litter when you're done with this one, you're always welcome to find me. I'm sure you know how.' Then he walks off into the ocean, waving with his tail lifted high.";
 	else:
 		say "     You fall to your knees under the platypus's assault. He grins and rubs his belly as he stands over you. [if player is impreg_ok]'Soon enough you'll have a clutch of your own to take care of. But until then, how's about you and I have a little fun?'[else]'Now now... don't let the belly fool you. I can make you feel just as good as any guy out there.'[end if] A few glances up and down your body, a few rubs over his taut belly, and his dark shaft starts peeking out of its sheath, growing erect.";
-		if cocks of player > 0:
+		if player is male:
 			say "     He smiles as he nudges you onto your back, sliding off your clothes. Looking over your bare rump a few moments, he smiles. 'It's a good start. But I think you'll look so much better with a big belly full of eggs.' Leaning in, he kisses at your ass, then gives a long lick between your cheeks. Suddenly he shifts and grabs you by the feet and hoists your hips to his, his cock throbbing hotly between your legs.";
 			say "     After a few moments of prodding, his precum has created enough lubrication to push his cock into you slowly, letting out a moan of relief. 'You're such a nice lay after so long...' He grunts as he starts thrusting with vigor, grabbing your legs for extra leverage. With his belly pressed against your groin, teasing your cock and balls more and more from each thrust, you soon become fully aroused, leaking your precum into his fur.";
 			say "     The rythmic rocking pleasure builds into a small eternity. He tenses up, holding your hips to his, twitching as he cums into you. By then you can no longer take the sensations of his fur rubbing up and down your shaft. Leaning in, he starts to lick and nip at your neck, his hands exploring your body sensually, especially your belly. The hot sticky cum tingles inside you strongly, arousing you further.";
 			say "     Giving into bliss, you cum hard, coating his fur with your seed. The platypus flops onto his back, pulling his cock out of your rump making a wet 'schluck' sound. 'Wow. I haven't had sex like that in days. I'll have to find you again sometime.' He grunts and stands, staggering a moment with the weight of his egg-filled belly, brushing the sand off of his fur, then starts walking off into the ocean to clean your cum off of his fur.[ovichance]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "     He smiles as he nudges you onto your back, sliding off your clothes. Looking over your body, he frowns. 'This won't do at all. I can't get more eggs from that.' With a gesture to your pussy, he sighs. 'Well, I guess we can fix that, and a little... [']Personal['] problem I've been having. You look between the creature's legs and watch as he grows swiftly erect. He slowly crawls over your body, his belly dragging over yours.";
 			say "     Soon, his cock presses at your slit and starts to push in. Moaning in relief, he whispers in your ear 'You're such a nice lay after so long...' He grunts as he starts thrusting into you with vigor, grabbing your legs for extra leverage. His belly pressed against yours, he starts to thrust in deeper. His heavy womb presses down on your belly.";
 			say "     The rythmic rocking pleasure builds into a small eternity. His muzzle gets close to your neck and you feel his hot breath on it. A few moans escape his lips as he builds up speed, driving deep. He tenses up, holding your hips to his, keeping his dick deeply pressed into you as he cums hard. With each twitch of his cock, you feel his warm seed begin to flood you. The heat of his potent seed sends you over the edge, your hips twitching and your hands grasping at the sand beneath you.";
@@ -42,7 +42,7 @@ to say losetoplatypus:
 			say "     After a few moments of prodding, he finally has enough lubrication to push his cock into you slowly, letting out a moan of relief. 'You're such a nice lay after so long...' He grunts as he starts thrusting with vigor, grabbing your legs for extra leverage. His belly pressed against yours, he starts to thrust in deeper. His heavy womb presses down on your belly.";
 			say "     The rythmic rocking pleasure builds into a small eternity. He tenses up, holding your hips to his, twitching as he cums into you. With each twitch of his cock, you feel his warm seed begin to flood you. The heat of his potent seed sends you over the edge, your hips twitching and your hands grasping at the sand beneath you.";
 			say "     Giving into bliss, you hit orgasm, your sphincter squeezing his shaft tightly, holding onto as much hot cum as you can. The platypus flops onto his back, pulling his cock out of your tight sphincter. 'Wow. I haven't had sex like that in days. I'll have to find you again sometime.' He grunts and stands, staggering a moment with the weight of his egg-filled belly, then starts walking off into the ocean to clean off his fur. [ovichance]";
-	if bodyname of player is "Platypus" and player is pure and player is not mpreg_ok and cocks of player > 0 and cunts of player is 0:
+	if bodyname of player is "Platypus" and player is pure and player is not mpreg_ok and player is puremale:
 		LineBreak;
 		say "     You feel something tingling in your belly as it grows warm and put your hands on it in concern. Then a thought clicks suddenly into your head: You can now become pregnant through anal sex, much like the platypus who did this to you. [line break]     [']MPreg['] has been added to your list of feats.";
 		add "MPreg" to feats of player;
@@ -51,11 +51,11 @@ to say losetoplatypus:
 to say beattheplatypus:
 	say "     The platypus grabs his belly and falls back, raising a hand up in surrender. He looks up at you with his brown eyes and says, 'Just... whatever you do, just leave my clutch alone.' Gazing at and holding his gravid womb, he patiently awaits your decision.";
 	if libido of player > 40:
-		if cunts of player > 0 or cocks of player > 0:
+		if player is not neuter:
 			say "     As you look over the platypus, you realize that fun with the pregnant male could be exactly what you need, and the stirring in your groin seems to agree with your assessment.[line break][line break]Do you have some fun with the poor man?";
 			if the player consents:
 				say "     You hush the platypus and kiss him firmly on his bill. You whisper in his ear some reassurances, stroking his fur, your hands going down to his belly. A gentle push rocks him gently back into the sand, the soft beach forming a makeshift bed. As you smile and disrobe, the male seems to relax, realizing you don't intend to hurt him.";
-				if cocks of player > 0:
+				if player is male:
 					say "     Moving yourself closer to the prone and nude male, you grin, sliding your form over his. Your hands start roaming his belly, feeling the firm eggs shift within, to which the platypus shudders, starting to grow erect, aroused by the feeling of the eggs stretching his belly taut. Squirming underneath of you, his hand starts going to your groin, starting to stroke your shaft lightly, trying to get you as aroused as he is.";
 					say "     Soon enough, your erect shaft starts to throb under his attentions, starting to leak a little precum. He smiles and shifts in the sand, spreading his legs a little to give you a good view of his cheeks and the tight hole that lays between them. You understand his meaning and nod, carefully lining up your shaft to his pucker, pressing at it slowly. He moans a little, his asshole accepting your rod and squeezing it tightly.";
 					say "     Slowly, but with increasing vigor, you start to thrust in and out of him, using your pre to lube up his passage. His passage is nice and tight with the added weight of his belly pressing down on your cock. With each thrust, your pleasure mounts, and you feel the need to share with your temporary lover. You start to stroke his shaft with your spare hand, gripping it tightly as you pound his tunnel.";
@@ -87,16 +87,16 @@ When Play begins:
 	now defeated entry is "[beattheplatypus]";
 	now victory entry is "[losetoplatypus]";
 	now desc entry is "[platypusdesc]";
-	now face entry is "now sporting a long black bill, just like a fuzzy duck"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a curvy platypus with a little bit of a belly and wide child-bearing hips"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "short course brown fur that hides your"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "A broad, flat tail sprouts from above your butt, going down to your calves."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "dark"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your lips and nose pinch forward, darkening and hardening as it grows into a bill, course creamy fur sprouting from the rest of your face. Your ears recede into your head, making you dizzy for a moment, but you soon regain your bearings"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel a tingling in your gut. You quickly put on a little weight as your body gets a little chubbier, fur growing all over. Your hips push out, making your body look pear-shaped, almost as if getting ready for children"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your body starts to tingle while rough brown fur covers your skin"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you stumble, your spine elongating. A thin tail growing from above your ass, and as it settles in, it begins to flatten out and grow wider, much like a beaver's"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it tingles, becoming darker. The skin around the base of your cock pinches up into a sheath, growing soft brown fur. The tingling intensifies as you whimper, unable to stop yourself from cumming where you stand"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "now sporting a long black bill, just like a fuzzy duck"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a curvy platypus with a little bit of a belly and wide child-bearing hips"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "short course brown fur that hides your"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "A broad, flat tail sprouts from above your butt, going down to your calves."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "dark"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "your lips and nose pinch forward, darkening and hardening as it grows into a bill, course creamy fur sprouting from the rest of your face. Your ears recede into your head, making you dizzy for a moment, but you soon regain your bearings"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you feel a tingling in your gut. You quickly put on a little weight as your body gets a little chubbier, fur growing all over. Your hips push out, making your body look pear-shaped, almost as if getting ready for children"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "your body starts to tingle while rough brown fur covers your skin"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you stumble, your spine elongating. A thin tail growing from above your ass, and as it settles in, it begins to flatten out and grow wider, much like a beaver's"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it tingles, becoming darker. The skin around the base of your cock pinches up into a sheath, growing soft brown fur. The tingling intensifies as you whimper, unable to stop yourself from cumming where you stand"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 17;
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
@@ -111,7 +111,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -139,7 +139,7 @@ when play ends:
 			say "     You and your mate swim out into deeper waters, avoiding the boats of the soldiers moving in to cleanse the city of the infection. A few days of travel gives you plenty of time to talk with your mate, have some food, and engage in plenty of sex. Eventually you find yourself up on a strange beach. After a bit of discussion, and your mate rubbing his belly full of eggs ready to be laid, you decide that this is the place where you will set up your nest and live out the rest of your days.";
 		else:
 			say "     The soldiers arrive in the city, and for a moment you panic, wondering if they're going to believe that you're not one of the sex-crazed beasts around you. As you try to decide whether to run or give yourself up, you hear a call go out over a loudspeaker for any willing victims to present themselves to the medical tent for examination. You eagerly come out of hiding, and hand yourself in for the doctors to pass you as clean and give you a shot to make you non-infectious.";
-			if cocks of player > 0:      [MALE/HERM]
+			if player is male:      [MALE/HERM]
 				say "     The doctors give you all the usual exams: they take some blood for testing, they get the cheek swab for your DNA, and they give your [if player is mpreg_able]male womb[else]prostate[end if] a quick examination. A few hours later, they come back with the results of your test. At first, the doctor doesn't say much of anything, he just reads the papers on his clipboard, when you ask what's wrong, he laughs and shakes his head. 'Nothing my dear boy. I just thought it would be funny to keep you waiting.'";
 				if player is mpreg_able and cunts of player is 0:
 					say "     He wraps an arm around your shoulders and smiles. 'The only news I have is that we can't do anything about your womb without some serious surgery, and we can't promise that any surgery we do would stay, with those nanites in your system. There is a pill we are going to give you to make you non-infectious, but there's nothing we can do about the changes that you've already had.'";

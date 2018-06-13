@@ -24,7 +24,7 @@ Instead of resolving a Hang Ten:
 	WaitLineBreak;
 	say "     When she's in shallow water, the surfer dismounts the board, walks close to you on the beach, and sets her board upright. Then she gives you a playful smile and says flirtatiously, 'I'm Ione by the way. Like what you saw?' You nod and ask how she got so good. The blonde haired lady explains, 'I was born and raised here in the city, my family used to come out to this beach all the time when I was a kid. Spent most of my spring and summer weekends out here in the waves, got pretty good at swimming and riding a surfboard. After high school I joined Tenvale College's swimming team, on P-day all of us got transformed into water nymphs. It seems like the call of the sea changed me, unlike the rest of them, I got turned into a nereid. I don't mind the change.' Cupping her ample breasts, she says amusedly, 'Grew a couple of cup sizes. I used to be flat as my board.' Eyeing you with a lustful look in her eye, 'So was my skill with the board the only thing that caught your eye... or was there something more?' she asks.";
 	say "     [bold type]Are you interested in her body or is it just her skills with the board that got your notice?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Want to see more of her body.";
 	say "     ([link]N[as]n[end link]) - Not interested.";
 	if player consents:
@@ -45,7 +45,7 @@ Instead of resolving Parasol nap:
 	say "     Giving one last quick gaze around, the rat has a mischievous grin as looks over the curvaceous napper. He pulls down his shorts to reveal a rapidly hardening cock. The veiny human-like dick is a solid eight inches long. The horny rodent runs a finger along the head of his rod, while his other hand cradles his above average sized balls. Once his rod is fully erect, the voyeuristic rodent pumps his shaft with fast motions, hoping to finish before anyone notices. While jerking his penis, the male lets out a small grunt and murmurs, 'Damn this bitch is hot.' The sleeping canine's body begins to stir. Hearing animalistic moans coming from close by, the dog-like woman turns her head to see the leering beach boy with precum leaking from the tip. At that very moment, the anthro rat unleashes his load, coating the golden furred woman's left thigh with his seed. The lady lets out a startled scream as the pervy rat begins to bolt - running in your direction, possibly giving you a chance to tackle him.";
 	WaitLineBreak;
 	say "     [bold type]Are you going to take any action in this situation?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tackle the rat.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if player consents:

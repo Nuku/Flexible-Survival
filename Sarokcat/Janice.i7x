@@ -77,10 +77,10 @@ instead of conversing the Janice:
 		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift? I do so miss her and want her to know that I'm safe and happy. She must be so worried. Please do that for me, sweety,' she purrs with alluring smile.";
 	else if HP of Kristen is 11:
 		say "     'Oh, so you've given Kristen my gift? Wonderful. Simply wonderful. You're such an eager, helpful friend. You deserve a special reward for your willingness to help a poor, lonely vixen.' She puts her arms around you and pulls you down onto her divan while licking slowly across her muzzle as she eyes you lustfully.";
-		if cocks of player > 0:
+		if player is male:
 			say "     Soon her paw finds its way to your manhood, stroking your cock to erection and getting it dribbling with pre. As she strokes your [cock size desc of player] cock, she nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of player] body. Her touch is sensual and her scent is intense with arousal. The hand job eventually has you cum hard, emptying your [cum load size of player] load across your chest and hers. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as licks her paw clean, then moves on to grooming her fluffy fur.";
 			say "     Something about the vixen's words make you uneasy. You should probably go check on Kristen.";
-		else if cunts of player > 0:
+		else if player is female:
 			say "     Soon her paw finds its way to your pussy, stroking your juicy folds and getting if dripping wet. As she fingers your [cunt size desc of player] pussy, she nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of player] body. Her touch is sensual and her scent is intense with arousal. The fingering eventually has you cum hard, soaking her paw and your crotch with your femme juices. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as licks her paw clean, then moves on to grooming her fluffy fur.";
 			say "     Something about the vixen's words make you uneasy. You should probably go check on Kristen.";
 		else:
@@ -164,7 +164,7 @@ to say sexwithjanice:
 	if lastfuck of Janice - turns < 6:
 		say "     'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon to be fox, haven't you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
 	else if Janicearoused > 0:
-		if cocks of player > 0:
+		if player is male:
 			if cockname of player is "Arctic fox":
 				if a random chance of 1 in 3 succeeds:
 					say "[janiceoral]";

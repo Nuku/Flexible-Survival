@@ -32,16 +32,16 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Blob"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Blob"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[Blobattack]";
-	now defeated entry is "[beattheBlob]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoBlob]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattheBlob]"; [ Text when monster loses. ]
+	now victory entry is "[losetoBlob]"; [ Text when monster wins. ]
 	now desc entry is "[Blobdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "";
 	now body entry is "";
 	now skin entry is "";
 	now tail entry is "";
-	now cock entry is ""; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now cock entry is ""; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "";
 	now body change entry is "";
 	now skin change entry is "";
@@ -61,7 +61,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

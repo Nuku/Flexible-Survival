@@ -72,6 +72,6 @@ to say OrcPillCaseUse:
 		say "     The first light touch of your opening leads to an immediate orgasm, with you flopping around like a beached fish, spilling your juices and whimpering in pleasure. Losing all ability of self-control, you jam your fingers inside of your asshole, pistoning them in and out to try and ride the high of unspeakable lust and heat that you are feeling. During one of the inward thrusts, you feel your fingers graze against a second opening at the back of your rectum. Trying to regain at least a little bit of your faculties, you focus your wild masturbation along the lines of finding out what happened there. As your exploring finger pushes against, then through, a ring-muscle, you feel a cavity beyond. That must be the pills intended effect. While your gender hasn't changed and have not sprouted any orc features, you have gained a womb within your backside!";
 		WaitLineBreak;
 		say "     After a minute or two, you begin to rise on shaking legs, then stumble around to gather up your clothes and get dressed again. Wiping the sweat off of your brow, you can't help but wonder what it would feel like to have one of those virile males atop you, knocking you up with their offspring.";
-		add "MPreg" to feats of the player;
+		add "MPreg" to feats of player;
 
 Orc Researcher ends here.

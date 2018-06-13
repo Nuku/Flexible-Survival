@@ -25,9 +25,9 @@ to say Plush Lion attack:
 			say "     You are knocked to the ground by a padded pounce from the plush feline";
 		say ". With you on the ground, the stuffed lion runs its felt tongue across its muzzle in a slow lick. Realizing too late that the hunger in its glassy eyes isn't a lustful one, it lunges forward and engulfs your head in its padded maw. Feeling like an unlucky lion tamer, your head is stuck in the big cat's mouth while his soft tongue slides softly across your face. Even as you try unsuccessfully to pull free, you are drawn steadily deeper into the plush predator.";
 		say "     As the soft lining of its throat rubs across your face and your body as you're pulled in, it feels strangely pleasant, even erotic. That and the hot, steamy air makes you confused and lightheaded, dulling your urge to struggle against this potentially dire fate. And when your crotch reaches the lion's muzzle and your hips are pulled in, your [if player is herm]cock[smn] and cunt[sfn] are[else if cocks of player > 1]cocks are[else if cocks of player is 1]cock is[else if cunts of player > 1]cunts are[else if cunts of player is 1]cunt is[else]bare groin[end if] subject to the lion's velvety tongue, further adding to your pleasure and distracting you from escape.";
-		say "     After its naughty tonguework [if cocks of player > 0 or cunts of player > 0]gets you to cum, satisfying[else]has satisfied[end if] its feline urge to play with its meal, you are swallows down in a few more large gulps. You end up in the warm, padded softness of its belly, lightheaded and sleepy from lack of oxygen. It squeezes down around you, wrapping you up snug and warm inside it as the lion lays down on its side, both of you drifting off into slumber.";
+		say "     After its naughty tonguework [if player is not neuter]gets you to cum, satisfying[else]has satisfied[end if] its feline urge to play with its meal, you are swallows down in a few more large gulps. You end up in the warm, padded softness of its belly, lightheaded and sleepy from lack of oxygen. It squeezes down around you, wrapping you up snug and warm inside it as the lion lays down on its side, both of you drifting off into slumber.";
 		plushlionvored;
-	else if cunts of player > 0:
+	else if player is female:
 		now plushleoloss is 0;
 		say "     Defeated you stumble backwards, helpless before the onslaught of the mighty plush lion, before you can recover the beast has moved behind you, and you feel his paw on your back pressing you down. Unable to fight any longer, you allow yourself to be forced down onto all fours, as the lion lets out a rumbling purr as he prepares to claim you as his carnival prize. You gasp as the soft fabric fur of the beasts underbelly rubs against your back as he crawls on top of you, his soft fuzzy mane rubbing up against you erotically as he positions himself. You can feel his rough tongue along your neck as he licks you several times, before gripping your neck in his mouth, his soft teeth holding you in place without breaking the skin, yet still enforcing his strong leonine dominance. You find yourself moaning subserviently like a good little lioness, as his thick cock slips up between your legs, its soft warm barbs rubbing up against the inside of your thighs, before it finds its way to your warm opening.[line break]";
 		say "     He buries himself within you with a rough growl, the wonderful feeling of his warm living lion cock, causing you to moan wantonly as he thrusts into you roughly. Mating you in short swift bursts of activity like he would any member of his pride, shooting his hot seed into your body again and again with only short pauses to readjust his position. You feel your mind fading with pleasure as you orgasm underneath him again and again, as he treats you like a lioness, making you moan in desire, in your mind you quickly find yourself reacting to him just like a lioness would, becoming a lioness, more importantly becoming HIS lioness. His to use, his to breed, his pet plush lioness to keep and own and fill full of his wonderful lion seed. You roar along with him as your mind submits itself to his shaping, becoming little more than a pet to your pride leader as he uses your all to willing body again and again without stopping. Eventually the mating ends far too soon for your lust addled mind, and he pulls himself out of your well used cunt, his barbs scraping pleasantly as they finally exit your body, the strong plush lion then pads away on his fluffy paws, leaving you lying there with his fertile seed still leaking out of your body, and a strong desire to follow him and beg him to take you again...[impregchance][impregchance]";
@@ -53,7 +53,7 @@ to plushlionvored:
 	decrease humanity of player by 6;
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
-	attempttowait;
+	WaitLineBreak;
 	if humanity of player >= 10 or inasituation is true:
 		say "     When you start to come to, you find yourself buried in a thick wad of plushy stuffing. Pushing yourself free of it, you find that you've been deposited [one of]behind the counter of one of the carnival stands[or]in an out of the way corner[or]against a waste bin[or]behind one of the prize booths[at random]. You feel a little weak and drained after your ordeal and it takes some effort to stand. As you head back towards the relative safety of the entrance, you try to brush the clinging fiberfill from yourself, not noticing as some of the bits of fluff sink into you.";
 		infect;  [Added infection from being vored]
@@ -80,7 +80,7 @@ to plushlionvored:
 		now humanity of player is 0;
 		now battleground is "void";
 		now combat abort is 1;
-		attempttowait;
+		WaitLineBreak;
 		end the story saying "Having been consumed by the plush lion, you've been turned into another of the stuffed felines roaming the fairgrounds.";
 		stop the action;
 
@@ -95,7 +95,7 @@ To say Plush Lion loss:
 		say "     The strange plush lion is knocked back on its furry haunches by your attacks. Seeing it turn and move to saunter off down the midway as if it intended to do so all along, you realize you have an opportunity to catch it before it makes its escape. With it weakened and torn at one seam, you could turn the tables on it and take this opportunity to take some [if libido of player < 50]soft[else]much-needed[end if] relief from the padded pussycat.";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck it";
 			now sortorder entry is 1;
@@ -104,11 +104,11 @@ To say Plush Lion loss:
 			now title entry is "Muzzle-fuck";
 			now sortorder entry is 4;
 			now description entry is "get a plush blow job";
-		if cunts of player > 0:
+		if player is female:
 [			choose a blank row in table of fucking options;
 			now title entry is "Ride it (vaginal)";
 			now sortorder entry is 2;
-			now description entry is "get your cunt stuffed";		]
+			now description entry is "get your cunt stuffed"; ]
 			choose a blank row in table of fucking options;
 			now title entry is "Pussy-licking";
 			now sortorder entry is 5;
@@ -116,7 +116,7 @@ To say Plush Lion loss:
 [		choose a blank row in table of fucking options;
 		now title entry is "Ride it (anal)";
 		now sortorder entry is 3;
-		now description entry is "get your ass stuffed";	]
+		now description entry is "get your ass stuffed"; ]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -182,16 +182,16 @@ When Play begins:
 	now defeated entry is "[Plush Lion loss]";
 	now victory entry is "[Plush Lion attack]";
 	now desc entry is "[mongendernum 3]     A life size plush lion toy approaches down the midway, its furry body seeming both cute and threatening. It's large leonine brown mane sticks out dramatically from around its yellow furred neck, making it seem larger and more impressive, and definitely leaving no doubt as to the gender of the stuffed toy. Not that you could have much doubt after you caught a glimpse of its stiff cock, hanging out of its furry sheath beneath its belly, leaving no doubt as to the creatures intentions as it focuses its stuffed leonine eyes on you.";
-	now face entry is "soft lioness muzzle with overlarge lion eyes and cute fluffy ears set above your changed";[ Face description, format as the text "Your face is (your text)."]
+	now face entry is "soft lioness muzzle with overlarge lion eyes and cute fluffy ears set above your changed"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "sleek and soft. Like that of a soft plush lioness, its sleek enticing lines advertising your readiness to one and all, your arms and legs are more paw-like and leonine than human at this point, and walking on two legs can only be accomplished with some effort. For some reason, that seems okay though as being on all fours seems to excite you and make you feel even more like a submissive lioness"; [Your Body is (your text)"]
-	now skin entry is "[one of]golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long, plush lioness tail swaying behind you, with a soft tuft of fake fur tufted at the end. Your tail swings wide every now and then, showing its submissive tendencies by exposing your attributes for anyone to use.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]thick feline[or]leonine[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "you feel it push forward into a soft lioness muzzle, you can feel your thoughts grow fuzzy as your head and face fill up with soft fluff, most of your remaining thoughts focused on seeing the strong male lion toy again"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it shifts and changes, your insides churning as they become mostly unnecessary as your body fills up with soft stuffing. Your legs drawing up under your body even as your hands seem to flatten out into large plush paws, making you realize you would feel almost more comfortable on four feet now than on two feet, just like a proper lioness should be."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin entry is "[one of]golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a long, plush lioness tail swaying behind you, with a soft tuft of fake fur tufted at the end. Your tail swings wide every now and then, showing its submissive tendencies by exposing your attributes for anyone to use."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]thick feline[or]leonine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "you feel it push forward into a soft lioness muzzle, you can feel your thoughts grow fuzzy as your head and face fill up with soft fluff, most of your remaining thoughts focused on seeing the strong male lion toy again"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it shifts and changes, your insides churning as they become mostly unnecessary as your body fills up with soft stuffing. Your legs drawing up under your body even as your hands seem to flatten out into large plush paws, making you realize you would feel almost more comfortable on four feet now than on two feet, just like a proper lioness should be."; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your flesh tingles as it is covered in soft golden fabric fur. "; [Your skin feels funny as (your text)" ]
-	now ass change entry is "a long lioness tail slowly extends from your rear, the strange pleasant sensations of the new limb causing you to lash it back and forth as it grows in, moaning a bit at the feel of a soft tuft of fur growing at the end signals your new fabric attachment is complete"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it shifts and seems draw up closer to your belly as a sheath attaches itself to your body, drawing your new barbed cock up into it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now ass change entry is "a long lioness tail slowly extends from your rear, the strange pleasant sensations of the new limb causing you to lash it back and forth as it grows in, moaning a bit at the feel of a soft tuft of fur growing at the end signals your new fabric attachment is complete"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it shifts and seems draw up closer to your belly as a sheath attaches itself to your body, drawing your new barbed cock up into it"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 17;
 	now sta entry is 15;
@@ -234,7 +234,7 @@ when play ends:
 					say "     Candy is not idle during these times, chasing after the lovely skiers on the slopes and dignified gentry in the towns, skillfully enticing them into some fun with the pink coon. He spends many a night cuddling up to you, describing his exploits of the day, telling you of every quick blowjob or fuck in a shadowy corner he's had in graphic detail and fully rated against the others. You get to enjoy particularly good shows when he manages to bring a few guys back to the room to play with the sexy, colorful raccoon and snowmeow. The three of you live a wonderfully decadent lifestyle of sex and privilege, spreading your three infections across Europe as countless travelers and hotel workers are infected and turned into more sexy lovers.";
 			else if HP of Sven >= 30 and HP of Sven < 50:
 				say "***confident sven result.";
-			else if cunts of player > 0:
+			else if player is female:
 				say "     Finally your mind snaps, and you find yourself giving in to what you know is just so right. You quickly run off into the night, and before you know it you have found your way back to the stuffed lion who changed your life with his magnificent dominance. You are worried at first, finding him surrounded by several other stuffed lionesses, but your worries are soon put to rest as he welcomes you into his plush pride, taking you in front of the others and filling your belly with his offspring immediately. You are happy to be accepted, and soon realize that any plush beast this magnificent obviously needs a large pride to serve his every need and slake his powerful lusts, and as one of his lionesses it is obviously your job to help him acquire it. So once he has led you safety outside the city, you and the other lionesses go about ensuring that his pride grows ever larger, ambushing unsuspecting people and dragging them off to your pride leader for induction into the plush pride. During your time in the pride you soon become one of the wonderful lions favorites, and you bear him many plush little children, the females joining the pride eventually. While the males are sent out while they are still small, cute, and fluffy to grow up with human children as their toy companions, and to eventually start prides of their own with their former human companions turned into submissive plush lionesses.";
 			else:
 				say "     Finally your mind snaps, and you roam the streets of the city, hunting for unwary targets to convert into lionesses for your pride, eventually the military come and drive you out of the city, and you end up in the wilderness, where your plush body doesn't fare so well amongst all the sharp branches and thorns, and you are soon lying there wounded missing most of your stuffing when a traveler comes across you. Pretending to be just an abandoned toy, she takes pity on you and takes you back to her camper to fix you up, imagine her surprise when afterwards you proceed to thank her most thoroughly by making her your new lioness. After she gets over the shock, she embraces her new life enthusiastically, and with her help you manage to acquire a small pride of eager lionesses to serve your every need, and keep you stitched up when needed.";

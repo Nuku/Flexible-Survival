@@ -60,11 +60,11 @@ fellforward is a number that varies.
 instead of resolving sword nest:
 	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
-	if the humanity of the player < 60: [falling to the nanites]
+	if the humanity of player < 60: [falling to the nanites]
 		say "     Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if the player consents:
 			say "     You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
-			decrease the humanity of the player by 15;
+			decrease the humanity of player by 15;
 			weakrandominfect; [most of first set don't affect researcher]
 			weakrandominfect;
 			weakrandominfect;
@@ -80,7 +80,7 @@ instead of resolving sword nest:
 			say "     You feel another desire rear its head, to drink from the giant puddle.";
 			say "     Do you submit?";
 			if the player consents:
-				decrease the humanity of the player by 15;
+				decrease the humanity of player by 15;
 				say "     You dip your [face of player] head into the slime and suck greedily. It sates your hunger and thirst.";
 				weakrandominfect; [more from second batch affect researcher]
 				weakrandominfect;
@@ -109,7 +109,7 @@ instead of resolving sword nest:
 					repeat with T running from one to 15:
 						randominfect;
 					wait for any key;
-					now the humanity of the player is 0;
+					now the humanity of player is 0;
 					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
 					wait for any key;
@@ -185,7 +185,7 @@ gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
-	if the humanity of the player < 50:
+	if the humanity of player < 50:
 		say "     Do you want to drink from the puddles?";
 		if the player consents:
 			infect "Black Equinoid";

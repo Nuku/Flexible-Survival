@@ -32,22 +32,22 @@ to say losetodarkelf:
 				say "     She kneels over you, stilling your struggles with his thighs, as she thrusts her forearm length cock between your [if Breast Size of player < 6]breasts, barely large enough to surround her massive cock[else if Breast Size of player < 9][breast size desc of player] breasts, mashing them together as she thrusts into the soft valley of your love pillows[else][breast size desc of player] tits, her hands roving over their sides as she smiles with malicious delight[end if]. She begins to thrust, the head of her cock thrusting up over your chest and into your chin. Her strong hands rove over your breasts, bringing you to an [if HP of player > 0]unwilling[else]overpowering[end if] arousal. The night skinned elf notices this, and seems to take great pleasure in your uncontrolled enjoyment of her pleasuring of herself. It's not long before she cums, splattering her fluids over your chest and face, with some of the bitter fluid landing in your nose and mouth, making you thrash and sputter on the ground.";
 			else:
 				say "     She grabs your head around the chin and forces your mouth open. She shoves your mouth over her massive cock and begins to thrust. You gag as she shoves her cock down your throat, and it's all you can do to get enough breath in through your nose. You struggle and gag as she fucks your face, until eventually, after what seems like hours, she reaches climax, her bitter fluid surging into your mouth, down your throat, and out of your overflowing mouth, making you gag and choke on the tidal wave of sticky fluid. You collapse, thrashing, as she releases your head, coughing up excess semen while she laughs.";
-		if cunts of player > 0 and cocks of player > 0:		[herm]
+		if player is herm:		[herm]
 			if a random chance of 2 in 3 succeeds:
 				say "[darkelfM]";
 			else:
 				say "[darkelfF]";
-		else if cocks of player > 0:				[male]
+		else if player is male:				[male]
 			if ( anallevel > 1 and a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ): [Might seem redundant at first, but the second half of this conditional increases the chance of anal occurring at anallevel 3]
 				say "[darkelfM]";
 			else:
 				say "[darkelfF]";
-		else if cunts of player > 0:				[female]
+		else if player is female:				[female]
 			if a random chance of 3 in 4 succeeds:
 				say "[darkelfM]";
 
 to say darkelfM:
-	if cunts of player > 0:
+	if player is female:
 		say "     She looks at your wet cunt and her smile grows even more malicious. She grabs your hips and swiftly buries her massive cock in your [if cunt length of player < 15] overly tight cunt, causing you to moan in pain at the sudden intrusion. This seems to spur her on as she begins to thrust. You'd swear that the head of her cock is actually inside of your womb, as she thrusts into your over and over. Strangely, something about what she's doing, or perhaps the nanites themselves, twists things, and soon you find your arousal building, despite the excruciating pain[else] cunt and begins to thrust. You grunt in violation as she screws you without mercy, fucking you with no regard for you, but somehow you seem to become aroused from the treatment, your pleasure building even as your degradation intensifies[end if].";
 		say "     She penetrates you repeatedly, and your own unwilling climax builds, until you can no longer contain it and you scream out in unwanted pleasure. Your coal skinned tormentor laughs, not even stopping in her violation of you, and says, 'Let's see just how much you like it, eh?' She fucks you repeatedly, pounding into you. She gives you no time to recover between your orgasms, as she pounds you over and over, and your traitorous body thrashes in orgasm after orgasm. Eventually, she cums, flooding your snatch with her seed, filling your womb, and having it spill over onto your thighs. She pulls out, and lets you fall into a pool of your own fluids mixed with her spooge leaking out of your violated cunt.[impregchance]";
 	else:
@@ -57,18 +57,18 @@ to say darkelfM:
 
 
 to say darkelfF:
-	if cunts of player > 0:
+	if player is female:
 		say "     Stooping over your prone form, the shadowy elf examines your [if cunts of player > 1]multiple cunts[else]cunt[end if] and smiles lewdly. With a practized motion, she swiftly runs one of her hands into your depths and begins thrusting her [if cunt length of player < 6]fingers[else if cunt length of player < 12]hand[else]entire forearm[end if] inside of you, expertly hitting both your clit and your internal G-spot. Dimly, you are aware that the dark elf is also fingering her own breasts and seems to be on the verge of orgasm. Then you crash over into an incredible orgasm.";
-	if cocks of player > 0:
+	if player is male:
 		say "     The dark elf looks at your [if cocks of player > 1]multiple cocks[else]cock[end if] and [if cock length of player < 10]says '...pitiful.' She sniffs in disdain at your apparently inadequate endowment. Her smile grows wicked. 'But it will have to do.' She mounts your inadequate manhood, your insignificant prick drowning in the vastness of her gaping snatch[else if cock length of player < 16]says, 'Acceptable.' She seems satisfied with the size of your endowment, but is obviously used to larger tools. She mounts your cock, her slick wetness seeming loose inside of her hungry slit[else if cock length of player < 21]smiles in a way that seems to bode you no good. 'How nice to finally find an outsider with adequate endowment.' She slips herself upon your manhood, the tight confines of her pussy gripping and clenching at your erect tool[else]smile in a way that seems to bode you no good. 'Ohhh. A challenge. How nice.' She slides her wet, tight pussy over your cock, and you feel the head of your tool stretch her to her limits. She gasps in pleasure as you bottom out, her cervix tight against the head of your cock.";
 		say "     Then she begins to buck, and ride you like your were a sex toy. Her powerful downward thrusts smash your hips against the ground, and she grasps her breasts and pulsing cock. This sends her into a powerful, screaming, female orgasm that has her cunt squeeze and quiver around your tool. She continues this, cumming many more times before you cannot resist the involuntary pleasure of what she is doing to you, and cum yourself, sending your ejaculate up into her waiting womb while she splatters her hot, bitter seed across your face and body. Spent, you collapse as she rises from your softening member.";
 	else:
 		say "     Before you can recover, she has moved to straddle you and begins to scissor her legs with yours. She grinds her pussy against yours, sending waves and waves of pleasure through you, and rocking you into orgasm after orgasm, till it seems you might go mad from the pleasure. You lose count of the number of times you cum, and you cannot even begin to tell how many times she takes her pleasure from you. Eventually she is satisfied and sprays her hot cum across your body even as you're collapsing into exhaustion.";
-	say "     As blackness descends upon you from the vicious fucking you just received, you see your violator sauntering away. Her juices [If cocks of player > 0]mixed with your cum [end if]drip down her thighs as she strides with a satisfied sway to her hips. You hear her call back to you over her shoulder as you lose consciousness. 'That was fun. Come back again sometime and we'll try it again. My sisters and I would be more than happy to play with you again,' she cackles.";
+	say "     As blackness descends upon you from the vicious fucking you just received, you see your violator sauntering away. Her juices [if player is male]mixed with your cum [end if]drip down her thighs as she strides with a satisfied sway to her hips. You hear her call back to you over her shoulder as you lose consciousness. 'That was fun. Come back again sometime and we'll try it again. My sisters and I would be more than happy to play with you again,' she cackles.";
 
 
 to say beatthedarkelf:
-	if cocks of player > 0 and libido of player > 20:
+	if player is male and libido of player > 20:
 		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and oversized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
 		say "     [bold type]Shall you give into this impulse?[roman type][line break]";
 		LineBreak;
@@ -91,10 +91,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dark Elf"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthedarkelf]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetodarkelf]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Dark Elf"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [ Successful attack message ]
+	now defeated entry is "[beatthedarkelf]"; [ Text when monster loses. ]
+	now victory entry is "[losetodarkelf]"; [ Text when monster wins. ]
 	now desc entry is "[darkelfdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "feminine and exotically beautiful with wide, canted and vertically slit eyes. Your lips are plump and kissable and your ears are pointed and elven";
 	now body entry is "slender and agile with a very feminine set of curves. While a little below average in height, your arms and legs seem long and lithesome, giving you a slightly otherworldly appearance that isn't quite human. Your hands have long, slender fingers ending in sharp, inch-long nails";
@@ -120,7 +120,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 18; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 7; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -148,7 +148,7 @@ when play ends:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

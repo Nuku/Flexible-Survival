@@ -16,8 +16,8 @@ to say mathteacherdesc:
 
 
 to say losetomathteacher:
-	if cunts of player > 0:
-		if cocks of player > 0:
+	if player is female:
+		if player is male:
 			say "     The math teacher stands with her spine perfectly straight and glares at you sternly. 'You,' she says, 'have been a very naughty student. Turn around.' You cannot help but comply, intimidated and oddly unable to get the fear of your old high school principal out of your head. The math teacher raises her ruler and slaps your ass - hard. She slaps again and again, pausing occasionally to squeeze one of your cheeks. Finally, after you feel your ass MUST be in more pain than possible, the creature pushes you to all fours.";
 		else:
 			say "     The teacher glares at you through her spectacles. 'Young lady,' she barks, 'you need to be taught a lesson about disrespecting mathematics.' She pushes you to the ground and exposes your bottom. You cannot help but comply, cursing yourself for not having paid more attention during [one of]Calc III[or]Algebra 101[or]trigonometry[at random]. The math teacher raises her ruler and slaps your ass - hard. She takes her ruler and smacks it against your rear, eliciting from you pained gasps as your ass turns pink from the abuse. She only pauses occasionally to squeeze one of your cheeks.";
@@ -25,7 +25,7 @@ to say losetomathteacher:
 			say "     You hear the faint sound of clothing crumpling to the floor. With the clacking of heels against the ground, the teacher walks in front of you. With her skirt and panties gone, you are treated to the sight of her eight-inch penis bobbing erect in front of your face. 'Now, you need to make up for interrupting the class,' she barks. You obediently take the cock into your mouth and start to bob your head, still wincing from your spanking. After a few moments, the cock suddenly is pulled from your mouth and paints your face white with her spunk. 'Now, go clean yourself up and [one of]finish your homework next time[or]don't be late for class again[or]don't let me catch you cheating again[at random].' With that, the deluded teacher walks away, a slight annoyance evident in her pace.";
 		else:
 			say "     You hear the faint sound of clothing crumpling to the floor shortly before you feel something hard pressing against your tender bottom. 'Well, I guess [one of]you need to be taught to pay more attention in class[or]I'll need to perform some long division between your legs[or]I will have to show you how to properly use a slide rule[at random],' she says before thrusting her cock into you without further delay. You moan at the sudden penetration and the slap of her thighs against your tender ass. Soon she's pounding away at you while making very precise comments about the size of your cunt and its viscosity as well as the frequency of her thrusts. After a fucking that leaves your head dizzy with numbers, she thrusts fully into you and cums hard, pumping her hot load into you. After she pulls out, she orders you to report back for remedial lessons before heading off, heels clacking as she goes.[impregchance]";
-	else if cocks of player > 0:
+	else if player is male:
 		if anallevel > 1 and ( a random chance of anallevel in 5 succeeds ):
 			say "     The math teacher glares at you through her glasses. 'You have been a very disruptive young man.' She shoves you to all fours and exposes your bottom. She takes the long ruler in her hand and slaps it against your ass. After your ass is nice and tender, she gives your sore cheeks a firm squeeze.";
 			say "     You hear the faint sound of clothing crumpling to the floor shortly before you feel something hard pressing against your tender bottom and pressing at your pucker. 'Well, I guess [one of]you need to be taught not forget your pencil case[or]I'll need to perform some complex derivation on this tight problem of yours[or]I will have to show you how to properly use a slide rule[at random],' she says before thrusting her cock into you without further delay. You groan at the sudden intrusion and the slap of her thighs against your tender ass. Soon she's pounding away at you while reminding you to bring the proper equipment to your next class. After a fucking that leaves your head dizzy with numbers, she thrusts fully into you and cums hard, pumping her hot load deep inside you. After she pulls out, she orders you to report back for remedial lessons before heading off, heels clacking as she goes.[mimpregchance]";
@@ -57,7 +57,7 @@ to say beatthemathteacher:
 			say "[mathteachsex2]";
 		else:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
-	else if cocks of player > 0:
+	else if player is male:
 		say "     [bold type]Shall you have some fun with her? You could fuck her or just let her go.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
@@ -66,7 +66,7 @@ to say beatthemathteacher:
 			say "[mathteachsex1]";
 		else:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     ";
 		say "     [bold type]Shall you have some more fun with her? You could ride her cock or let her go.[roman type][line break]";
 		LineBreak;

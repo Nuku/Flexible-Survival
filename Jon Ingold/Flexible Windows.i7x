@@ -586,7 +586,7 @@ After constructing when the type of the pending g-window is g-graphics (this is 
 	set the background color of the pending g-window;
 
 To set the background text-color of (g - a g-window):
-(-	SetBTcol({g});	-).
+(-	SetBTcol({g}); -).
 
 To reset the background text-color of (g - a g-window):
 (-	if ({g} has g_present) glk_window_clear({g}.ref_number);
@@ -648,7 +648,7 @@ Include
 					rfalse;
 				}
 			GG_STATUSWIN_ROCK:
-				if (USE_NO_STATUS_LINE == 1) rtrue;		! - Aaron Reed
+				if (USE_NO_STATUS_LINE == 1) rtrue; ! - Aaron Reed
 		}
 
 		rfalse;
@@ -660,8 +660,8 @@ Include
 
 Section - Reverse-coloring windows
 
-To set-reverse: 	(-	SetReverse(1);	-);
-To unset-reverse: 	(-	SetReverse(0);	-);
+To set-reverse: 	(-	SetReverse(1); -);
+To unset-reverse: 	(-	SetReverse(0); -);
 
 Include (-
 
@@ -857,7 +857,7 @@ A glulx hyperlink rule (this is the default hyperlink handling rule):
 		now the current hyperlink window is the window with the reference of the window in which the event occurred;
 	now the current hyperlink ID is the link number of the selected hyperlink;
 	unless the current hyperlink ID is 0:
-		cancel glulx hyperlink request in the current hyperlink window;[just to be safe]
+		cancel glulx hyperlink request in the current hyperlink window; [just to be safe]
 		follow the hyperlink processing rules;
 	if the status window is the hyperlink source:
 		request glulx hyperlink event in status window;

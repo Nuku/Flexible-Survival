@@ -15,7 +15,7 @@ Section 1 - Monster Responses
 
 to say FeralFoxDefeat:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -26,7 +26,7 @@ to say FeralFoxVictory:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
 		if the player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";

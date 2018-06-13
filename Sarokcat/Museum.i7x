@@ -104,7 +104,7 @@ instead of fucking Valerie:
 			say "     'Mmm sorry hun, unlike some people I still need some recovery time,' she says with a sly wink. 'Why don't you come back later and we can play?'";
 		else if player is neuter:
 			say "     Lacking any gender of your own, you have little to offer the sphinx as a sexual partner right now.";
-		else if cocks of player > 0:
+		else if player is male:
 			now lastfuck of Valerie is turns;
 			say "     'Mmm finally, I thought you would never get to the good part,' Valerie says with an aroused look on her face, nimbly leaping down to the ground in front of you. Her wings spread out somewhat before settling up against her long leonine body as she stretches herself out in front of you, her tail lashing excitedly as she positions her feline rear facing you. 'I don't know about you, but after finally being outmatched, I just can't help but need you on top of me so badly,' Valerie murrs as she lifts her hindquarters up slightly, exposing her winking feline passage for you to see. 'While we can try another position if you want, I really want you on top of me...' she asks you with a coy look as she looks at you over her shoulders.";
 			if player consents:
@@ -121,7 +121,7 @@ instead of fucking Valerie:
 					say "     Her tongue feels slightly raspy like a feline, but also human in shape. Her exotically beautiful face looks up at you with a lustful hunger that is quite exciting. You run your hands through her mane-like hair and caress her lovely features while her eager mouth works over your [cock size desc of player] [cock of player] shaft.";
 					say "     While the sultry sphinx blows you, her hands run along your legs and grip your ass tightly, sharp claws digging into your tender flesh as she sucks you even harder, causing you to moan. When her hands move again, one goes to cup your balls. These she thankfully treats more tenderly and rubs tenderly while her other hand delves between her legs to finger her juicy cunt. Grinning up at you, she spreads her legs wider, giving you an exciting view of her frigging her leonine pussy while sucking on you hard and fast. Sent over the edge by this wanton display, you groan loudly and cum hard in the sphinx's mouth and over her lovely face. She grins and cleans her face in an exaggerated, feline manner with slow, deliberate wipes and slow licks that she makes seem as sensual as possible.";
 					Infect "Sphinx";
-		else if cunts of player > 0:
+		else if player is female:
 			now lastfuck of Valerie is turns;
 			say "     'What an interesting offer. And it's true that while we are both female, perhaps we can still help each other out a bit with our desires,' Valerie says, an interested look on her face as she eyes you speculatively. After a long, lustful gaze over your [bodytype of player] body, she lowers herself off the counter, her soft wings flapping open at her sides for a moment as she prowls towards you. 'Yes, I think we creative types can have some fun with just the two of us,' the sphinx purrs as she reaches you, her forepaws reaching up to grip your hips, as she gently pushes you down onto your back.";
 			if a random chance of 3 in 5 succeeds:

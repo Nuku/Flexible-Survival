@@ -152,18 +152,18 @@ to say NadiaEggBirth: [time to give birth]
 			WaitLineBreak;
 			say "     [NadiaMultiPregBirthing]";
 			now NadiaPregCounter1 is NadiaPregCounter2; [pregnancy progress of the 2nd pregnancy transferred to 1st as it's the next one to pop out]
-			now NadiaPregCounter2 is 0;[clearing the variable]
+			now NadiaPregCounter2 is 0; [clearing the variable]
 		if NadiaPregCounter3 > 0: [third running pregnancy becomes second]
 			now NadiaPregCounter2 is NadiaPregCounter3; [pregnancy progress of the 3nd pregnancy transferred to 2st as it's second in line]
-			now NadiaPregCounter3 is 0;[clearing the variable]
+			now NadiaPregCounter3 is 0; [clearing the variable]
 	else:
 		say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the library and check with Nadia.";
 		if NadiaPregCounter2 > 0: [second running pregnancy becomes first]
 			now NadiaPregCounter1 is NadiaPregCounter2; [pregnancy progress of the 2nd pregnancy transferred to 1st as it's the next one to pop out]
-			now NadiaPregCounter2 is 0;[clearing the variable]
+			now NadiaPregCounter2 is 0; [clearing the variable]
 		if NadiaPregCounter3 > 0: [third running pregnancy becomes second]
 			now NadiaPregCounter2 is NadiaPregCounter3; [pregnancy progress of the 3nd pregnancy transferred to 2st as it's second in line]
-			now NadiaPregCounter3 is 0;[clearing the variable]
+			now NadiaPregCounter3 is 0; [clearing the variable]
 	increase NadiaChickCounter by 1;
 	increase NadiaFertilityCounter by 1;
 	if NadiaDescription < 6:  [she's not reached Goddess stage yet]
@@ -323,7 +323,7 @@ Instead of fucking the Nadia:
 	else:
 		if (lastfuck of Nadia - turns < 6):
 			say "     'Give me a moment, please,' Nadia says from within the confines of her nest, panting slightly. 'As much as I'd like to be bred again, I need some time to recover.'";
-		else if cocks of player is 0:
+		else if player is not male:
 			say "     Nadia looks askance, crestfallen. 'As much as I'm indebted to you, I can't do that. Not that I have anything against it, but I just don't swing that way.'";
 			say "     It seems that breeding is more important to Nadia than fucking is - she'll probably be far more receptive to your advances if you do possess a cock.";
 		else:
@@ -357,7 +357,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock.";
 		now toggle entry is NadiaSex rule;
-	if (cocks of player > 0 and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and Char-I of Nadia is "1"):
+	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and Char-I of Nadia is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;
@@ -710,7 +710,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
 	move player to Garden View;
-	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cosying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
+	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cozying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
 	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
 	now Char-H of Nadia is "1";
 	say "[npcNadiaintUpdate]";
@@ -736,7 +736,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and H
 	say "     Stepping up to the library's second floor, you're greeted by the familiar sight of Nadia's nest - and the unfamiliar sight of her not in it. Instead, she's leaning against one of the open windows, singing a few notes every now and then into the city, her voice carrying out amongst the buildings. It's as if she's looking for something, but although she hurriedly waves you over the moment she sees you, you're clearly not the source of her agitation.";
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
 	say "     Admittedly, it's a little hard to remember just which of Nadia's chicks is which, especially when the broody bird keeps on adding to their number, but it shouldn't be too hard to find one of them when avians, especially ones as colorful as birds of paradise, aren't exactly a common sight on the campus. You agree to keep an eye out for her lost chick when you're in the area; Nadia nods and turns back to the window, calling out every now and then in the hope that her lost daughter will return to her.";
-	now Lost Chick is unresolved;[event open now]
+	now Lost Chick is unresolved; [event open now]
 	now HP of Nadia is 2;   [quest given]
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):

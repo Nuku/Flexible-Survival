@@ -14,9 +14,9 @@ to say spidergirl attack:
 		say "[spidergirl_oral]";
 	if player is herm and a random chance of 1 in 2 succeeds:
 		say "[spidergirl_male]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "[spidergirl_female]";
-	else if cocks of player > 0:
+	else if player is male:
 		say "[spidergirl_male]";
 	else:
 		say "[spidergirl_neuter]";
@@ -31,7 +31,7 @@ to say spidergirl_male:
 		say "     The softness engulfs your sensitive member, making you groan. The spider girl lets out a screech of pleasure and she begins to rock her torso; you can feel internal muscles massaging and teasing your shaft, pulling you deeply into the spider girl, until your shaft is completely surrounded by her quivering tunnel, able to take in even your massive length. The pleasure is intense, building quickly to a peak-your member tenses and suddenly jerks with orgasm. You can't help writhing in your bonds as you helplessly pump your seed into the spider girl's waiting womb. She purrs and gently rocks atop you, milking your organ until you're completely dry. Then she pulls off with a soft pop, and her sex disappears behind the armored plates again. Smiling, she turns and walks off into the shadows.";
 		say "After a few minutes the webbing turns brittle, letting you free.";
 	else: [ male-ish scene, small penis; oral ]
-		if cunts of player > 0: [ player also has pussy ]
+		if player is female: [ player also has pussy ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls and reaches out to play with your member. Her touches quickly bring your body to full arousal, but she still seems unsatisfied. Finally she leans down and slips your cock into her mouth.";
 			say "     You can't help but groan as the arachnid female bobs her head, sucking relentlessly. Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm... Then she increases the stimulation by pushing a couple of fingers into your pussy! The spider girl moans around your cock, fingering and sucking you relentlessly. Finally you can take no more-you buck your hips and spray your cum into her mouth. She swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss and rubs your pussy one more time, then she turns and scurries off. Your member is so swollen with attention, it even appears to be growing...";
 		else: [ no pussy ]
@@ -48,7 +48,7 @@ to say spidergirl_female:
 	else: [ Vagina too small ]
 		if a random chance of 1 in 2 succeeds: [ random choice of two scenes ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. ";
-			if cocks of player > 0:
+			if player is male:
 				say "Seeming uninterested in your male member, she pokes down below at your pussy lips, ";
 			else:
 				say "Leaning down, she strokes at your wet pussy lips, ";
@@ -59,7 +59,7 @@ to say spidergirl_female:
 				increase cunt length of player by 1;
 		else: [ second female small-vagina scene ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. ";
-			if cocks of player > 0:
+			if player is male:
 				say "She positions your male member up and out of the way, focusing her attention on your pussy lips. ";
 			say "Finally she steps up to place her hips against yours; you see the armored plates between her legs part, revealing both a feminine slit and a pulsing masculine organ. The purple shaft swells and stretches down toward you... swelling to an impossible thickness! Despite the mismatch, the spider girl jabs herself against you, making you whimper with pain as she tries to mount you. Finally she pushes hard... setting herself... and it pops in! Her shriek of delight mingles with your gasp of pain, but there's no stopping her now as she bucks her torso with abandon, pounding into your cunt. Warm fluid slops from her organ to lubricate her way, dulling the pain slightly, but it's still hard to take. Finally the spider girl lets out a screech and sprays your womb with her arachnid seed. After your tunnel is painted with her cum, she pulls out and sprays the rest over your helpless body. With a growl of satisfaction, the arachnid creature turns and walks off into the city.[ovichance]";
 			increase cunt length of player by 1;
@@ -73,7 +73,7 @@ to say spidergirl_neuter:
 
 to say spidergirl defeat:
 	say "The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp.";
-	if cocks of player > 0 and cock length of player >= 8: [ If player has cock, spidergirl tempts them ]
+	if player is male and cock length of player >= 8: [ If player has cock, spidergirl tempts them ]
 		say " She looks up at you and blinks pitifully; then you see the armor plates between her front pair of legs slide apart, exposing the soft pink folds of a very human-like pussy.[line break]Do you give her what she wants?";
 		if player consents:
 			say "You can feel your cock swell mightily as the spider creature presents herself to you. You push her down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; your lust is already taking you over, your body nestling against hers, your hips pounding against her lower body. The spider's inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can--before your orgasm swells up and bursts into her, pumping the spider's pussy full of your hot cum. You groan and finally pull out of her; she lays there, exposed and used, her human skin sweaty and flushed and her cunny trickling fluid. Suddenly her skin and face redden, and she quickly gets to her feet and scurries off, looking almost shy.";

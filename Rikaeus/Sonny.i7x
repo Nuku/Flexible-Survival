@@ -177,7 +177,7 @@ to say SonnySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -188,19 +188,19 @@ to say SonnySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the sheep boy's ovine shaft";
 	][]
-	if cocks of player > 0 and libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
+	if player is male and libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the friendly sheep into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take Sonny's ass for a ride";
 	[
-	if cocks of player > 0 and libido of Sonny is 1: [only males and herms can fuck him, also just for Sonny who isn't a virgin]
+	if player is male and libido of Sonny is 1: [only males and herms can fuck him, also just for Sonny who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the friendly sheep";
 		now sortorder entry is 4;
 		now description entry is "Take Sonny's ass for a ride";
 	][
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Sonny's shaft in your pussy";
 		now sortorder entry is 5;

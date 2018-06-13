@@ -739,7 +739,7 @@ to say hospquestpt8:
 		say "     Coming back to you, Dr Mouse smiles and opens a sample fridge, taking out another injection. 'As I promised, I have something special for you. I have made progress in analyzing the nanites['] method of healing and have a formula which will increase your healing rate.' As he starts to prepare your arm for the injection, he continues, 'It will increase your recovery over time. It will also give you a little more effectiveness from any field medicine you practice. It won't measure up to proper medical training,' the white mouse doctor says, 'but it's still an improvement.'";
 		say "     Before you let the mouse inject you, you ask about the jaguars and if you should expect anything like that to happen. Dr Mouse is briefly puzzled by your question. 'Oh, you mean the fangs? Those are just the result of a test I did on them. I needed to see how adjustments to the nanites would propagate through the population. This one was more effective than the first attempt with the vixens. Besides, the creatures out in the city are starting to form into factions and they need to be able to keep the hospital secure. But don't worry. This is just an increase to their healing protocols.' Feeling reassured about the injection if not the jaguars, you allow him to inject you.";
 		say "     You have gained the [']Rapid Healing['] feat.";
-		add "Rapid Healing" to the feats of the player;
+		add "Rapid Healing" to the feats of player;
 		waitlinebreak;
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting. 'Oh, I wasn't too upset about the news. It's just harder to understand them now that they've got those big teeth. There's a little pest running around the hospital, distracting the other staff at times. Nothing you need concern yourself with, though. They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable. 'I have to get back to things now. I don't think I'll have anything for you for at least a few days. Please give me some time to process all of these results.'";
@@ -775,11 +775,11 @@ to say hospquestpt9:
 			now coonstatus is 101;
 			LineBreak;
 			say "     With a nod to Dr Mouse, he injects the raccoon, who releases one last whimper before growing quiet. After a few moments, he looks up at you, eyes filled with adoration, but little intelligence. He moans softly and nuzzles your chest as his paws run along your sides and down to your hips.";
-			if cunts of player > 0 and cocks of player is 0:		[FEMALE]
+			if player is purefemale:		[FEMALE]
 				say "     The raccoon slides a paw between your legs to play with your pussy. His fingers stroke and tease you as he lowers himself to his knees. He gives the briefest of shivers, so faint you barely notice it, before he buries his muzzle between your thighs and starts licking you. You moan softly and stroke his ears. He may lack in experience, but there is no lack of zeal in the coon, eager to please his new mistress.";
 				say "     His playful tongue teases your labia, lapping up your juices obediently. His pink cock is quite hard, leaking pre onto the floor. Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your pussy quivers and your hot juices flow, soaking his muzzle. He laps them up from you like a good little pet, churring happily.";
-			else if cunts of player is 0 and cocks of player > 0:	[MALE]
+			else if player is not female and player is male:	[MALE]
 				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He opens his muzzle and takes your cock in happily. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blow job and is eager to please his new master.";
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it. His pink cock is quite hard, leaking pre onto the floor. Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle. He swallows it all down and licks you clean like a good little pet, churring happily.";
@@ -1086,7 +1086,7 @@ to say hosptfscene:
 	follow the sex change rule;
 	LineBreak;
 	waitlinebreak;
-	if cocks of player > 0:
+	if player is male:
 		while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
 			sort table of random critters in random order;
 			now monster is 1;
@@ -1097,7 +1097,7 @@ to say hosptfscene:
 		now cock of player is cock entry;
 		follow the sex change rule;
 		waitlinebreak;
-		if cocks of player is 0:	[now female]
+		if player is not male:	[now female]
 			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs. He teases your wet folds and turns to the audience. 'It seems I was mistaken. There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself. His other paw is at his groin, stroking his stiffening cock back to erection. Many in the audience cheer or laugh at that.";
 			wait for any key;
 			say "[drmousesex]";
@@ -1227,7 +1227,7 @@ to say tlloss:
 
 
 to say tlvictory:
-	if cocks of player > 0:
+	if player is male:
 		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body. 'No, I need... mustn't give... but so good. Why did I ever... ngg... but my work...' Deciding to make the decision for her, you push the horny hybrid onto one of the tables and tease her six breasts. The transformed doctor releases a soft yip and pants, reaching for your stiff penis despite the conflict in her failing mind.";
 		say "     Happy to oblige, you line up your cock her pussy, then slowly slide it into her. Dr Matt arches her back and moans loudly, spraying cum from her canine cock across her ample bosom as her virginity is taken. 'Oh my god, yes!' she cries in ecstasy. The lustful huskybunny's pussy squeezes and tugs at your cock eagerly, the slutty body responding automatically to a hard shaft filling it. You grunt as the herm's vagina works you over so eagerly, starting to thrust hard and fast into her.";
 		WaitLineBreak;
@@ -1242,7 +1242,7 @@ to say tlvictory:
 		say "     Hearing some soft moans behind you, you glance over to find Susan has gotten in on the action and is driving her cock into Orthas. The black dragoness moans weakly, still largely incapacitated from her fight with you. The smaller doe pounds away at the dragon's cunt aggressively. 'I've seen you eyeing my mate. He's mine, you slut. Take my fucking cum instead, you black bitch.'";
 		say "     You have never known Susan to show any interest in using her cock before, so the sight of her pounding away at the dragon is quite surprising and arousing. She pinches and squeezes the dragoness's huge breasts, teasing her nipples. Orthas moans and starts rocking her hips up to meet each thrust, responding to the aggressive mating she's getting from the smaller doe herm.";
 		WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times. You wrap a hand around her large, throbbing cock and focus on seeding her properly. The feel of the new hybrid's pussy around you is so good. Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
 		WaitLineBreak;
 		say "     With a final, hard thrust into her, you push your cock as deep as you can and unleash your hot load. Your cum spurts deep inside her and her body responds instantly, tugging and milking at your shaft for all you'll give and pulling it up into her womb. Pulling your spent shaft free, you wipe it clean on one of her big, fuzzy rabbit feet.";
@@ -1385,7 +1385,7 @@ to say posttlscene:
 	now hospquest is 14;
 	say "     'Now, as a reward for your continued service,' he says, turning back to you. 'I have prepared an injection to boost your physical abilities. It should result in increased physical strength, agility and endurance, as well as a more athletic body. It will also work to keep you physically fit against weaker infections. This should further obscure your identity should you not change species before being found.'";
 	say "     With the promise of being stronger and better able to deal with the hardships of the infected city, you hold out your arm for the injection. There is a shiver of activity inside you as the nanites go to work, bulking up your muscles and improving your physique as a whole. You become a more rugged version of yourself[if susan is visible]. Susan seems quite impressed by this improved version of you[end if].";
-	add "Physical Booster" to the feats of the player;
+	add "Physical Booster" to the feats of player;
 	increase strength of player by 2;
 	increase dexterity of player by 2;
 	increase stamina of player by 2;
@@ -1673,7 +1673,7 @@ to say ec_activation:
 	setmonster "Enhanced Chimera";
 	choose row monster from the table of random critters;
 	say "     Receiving a dose of the activator from Doctor Mouse, you feel a rush of energy run through you. It's as if you can feel the excitement of the dormant infection inside you rushing into action. An aching warmth spreads across your body, making you tingle from head to food. Your head throbs and your vision goes blurry as the process goes on. You can feel a myriad of shifts and changes going on all over you, so many it's hard to focus on any one of them at a time. It's almost as if several different transformations are all taking place together or in sequence, building you up through several successive infections.";
-	if the remainder after dividing ec_fullcount by 4 is 0 and cocks of player > 0:
+	if the remainder after dividing ec_fullcount by 4 is 0 and player is male:
 		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if cocks of player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if cock length of player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if cock width of player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if cock width of player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
 	else if the remainder after dividing ec_fullcount by 4 is 2:
 		say "     Placing your hands on your head this time, you can feel it transform several times. It is difficult to monitor its transformation as your hands are also changing even as you try to use them. The first change has your head shift to that of a proud stag with a solid square jaw. The start of a pointed horn on your nose and the nubs of your new antlers grow in shortly afterwards. Even as they're growing, your muzzle shifts, adding some sharper teeth to your ruminant dentition. Touching your ears, you feel them first shift to those of a deer before later becoming more pointed at the tip, having adding a bit of wolf to them. You can feel increased fur at the back of your head and neck, soon filling out into a blend of flowing hair and a leonine mane.";
@@ -1692,7 +1692,7 @@ to say ec_activation:
 	now skin of player is skin entry;
 	now body of player is body entry;
 	now cock of player is cock entry;
-	if cocks of player > 0:
+	if player is male:
 		if cock length of player < 16:
 			increase cock length of player by 3;
 			if cock length of player > 16:
@@ -1701,7 +1701,7 @@ to say ec_activation:
 			increase cock width of player by 2;
 			if cock width of player > 10:
 				now cock width of player is 10;
-	if cunts of player > 0:
+	if player is female:
 		if cunt length of player < 16:
 			increase cunt length of player by 3;
 			if cunt length of player > 16:

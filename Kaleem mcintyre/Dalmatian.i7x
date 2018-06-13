@@ -14,7 +14,7 @@ when play begins:
 
 to say losetoDalmatian:
 	say "";
-	if cocks of player > 0:
+	if player is male:
 		say " ";
 	else:
 		say "";
@@ -25,7 +25,7 @@ to say beattheDalmatian:
 		say "";
 		if the player consents:
 			say "";
-			if cunts of player > 0:
+			if player is female:
 				say "";
 			else:
 				say "";
@@ -46,8 +46,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dalmatian"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The Dalmatian attacks you in some abstract manner![or]The Dalmatian leaves you greater understanding, thereby lowering your resistance to it![or]The Dalmatian batters you with examples![or]The Dalmatian firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
+	now name entry is "Dalmatian"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The Dalmatian attacks you in some abstract manner![or]The Dalmatian leaves you greater understanding, thereby lowering your resistance to it![or]The Dalmatian batters you with examples![or]The Dalmatian firmly makes its point![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheDalmatian]"; [ Text when monster loses. Change 'Dalmatian' as above. ]
 	now victory entry is "[losetoDalmatian]"; [ Text when monster wins. Change 'Dalmatian' as above. ]
 	now desc entry is "[Dalmatiandesc]"; [ Description of the creature when you encounter it. ]
@@ -75,7 +75,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -95,7 +95,7 @@ When Play begins:
 
 
 Definition: a person is dalskinned:
-	if the skinname of the player is "Dalmatian", yes;
+	if skinname of player is "Dalmatian", yes;
 	no;
 
 

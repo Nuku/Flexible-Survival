@@ -63,7 +63,7 @@ Instead of sniffing Homaru:
 say "The information dealer smells like unsolved puzzles and mysterious best left kept in the dark... as well a turkey and ham on whole wheat.";
 
 Instead of fucking Homaru:
-	say "'Whoa! Whoa, there friend!' The brown haired man quickly throws out his hand as you advance on him. 'You're [if cunts of player > 0]cute in all[else]a nice guy[end if] but I don't want or need to have this infection getting any worse on me. So please, for me and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if cocks of player > 0]cock[else]sexy self[end if] at least five feet away from me!";
+	say "'Whoa! Whoa, there friend!' The brown haired man quickly throws out his hand as you advance on him. 'You're [if player is female]cute in all[else]a nice guy[end if] but I don't want or need to have this infection getting any worse on me. So please, for me and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if player is male]cock[else]sexy self[end if] at least five feet away from me!";
 
 instead of linkactioning Homaru when Homarutalk > 0:
 	say "Possible Actions: [link]talk[as]talk Homaru[end link], [link]smell[as]smell Homaru[end link], [link]fuck[as]fuck Homaru[end link], [link]delay[as]delay military[end link], [link]find firefighters[as]find[end link][line break]";

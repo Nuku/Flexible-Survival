@@ -12,7 +12,7 @@ when play begins:
 
 to say losetoqueenbee:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -23,7 +23,7 @@ to say beatthequeenbee:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
 		if the player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -44,18 +44,18 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Queen Bee"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "No fighting"; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthequeenbee]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoqueenbee]"; [ Text when monster wins. Change 'template' as above. ]
+	now name entry is "Queen Bee"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "No fighting"; [ Successful attack message ]
+	now defeated entry is "[beatthequeenbee]"; [ Text when monster loses. ]
+	now victory entry is "[losetoqueenbee]"; [ Text when monster wins. ]
 	now desc entry is "[queenbeedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, beautiful and regal in appearance, with large, dark eyes and lips as sweet and golden as honey. Your flowing hair is yellow and black and has a pair of long antennae rising from them";
-	now body entry is "slender and [if cunts of player > 0]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[else]effeminate with its slender waist and curving hips. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak. All in all, you look very much the sexy [']queen['] bee[end if]";
+	now body entry is "slender and [if player is female]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[else]effeminate with its slender waist and curving hips. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak. All in all, you look very much the sexy [']queen['] bee[end if]";
 	now skin entry is "a mixture of chitin plates and golden-bronze tanned";
 	now tail entry is "Resting lightly against your rear is a large, striped bee abdomen, complete with a stinger.";
 	now cock entry is "[one of]armor-protected[or]honeyed[or]golden[at random]";
 	now face change entry is "your vision blurs. Something in your eyes change and colors seem more vibrant, standing out against the duller browns and grays of the city. As your marvelling at what you see, your face shifts form, becoming beautiful and feminine. Long, thick flowing hair of bright yellow and deep black sprouts from your head and washes down to your shoulders in seconds. A tingle runs through your mind as insectile antennae are added";
-	now body change entry is "you are transformed to once-again become the sexy [if cunts of player is 0][']queen['][else]queen[end if] bee. Your figure is tall and [if cunts of player > 0]womanly[else]effeminate[end if], with a slender waist and curved hips that draw the eye to your beautiful form. As the transformation spreads up, you form a furred collar and your shimmering wings to be your regal cloak";
+	now body change entry is "you are transformed to once-again become the sexy [if player is not female][']queen['][else]queen[end if] bee. Your figure is tall and [if player is female]womanly[else]effeminate[end if], with a slender waist and curved hips that draw the eye to your beautiful form. As the transformation spreads up, you form a furred collar and your shimmering wings to be your regal cloak";
 	now skin change entry is "your skin becomes at first quite human with a golden-bronze tan. But as the transformation continues, chitinous plates form over your forearms and lower legs as well as your midriff and groin";
 	now ass change entry is "a bulge forms at the base of your spine. You are filled with pleasure and a strange sense of promise for the future as it grows and becomes a bee abdomen. There is an orgasmic joy as its stinger grows out";
 	now cock change entry is "it turns a golden yellow and smells richly of sweet honeyed cum. Your genitals change and move inwards behind protective plates of chitin, emerging when aroused";
@@ -73,7 +73,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 6; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -83,7 +83,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of][if cunts of player > 0]feminine[else]effeminate[end if][or]slender[or]idealized[or]elegant[or][if cunts of player > 0]womanly[else]effeminate[end if][or]sexy[or]beautiful[or]regal[cycling]";
+	now body descriptor entry is "[one of][if player is female]feminine[else]effeminate[end if][or]slender[or]idealized[or]elegant[or][if player is female]womanly[else]effeminate[end if][or]sexy[or]beautiful[or]regal[cycling]";
 	now type entry is "[one of]apian[or]bee-like[or]insectile[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false;
@@ -95,7 +95,7 @@ When Play begins:
 Section 3 - Definitions
 
 Definition: a person is queenbeecocked:
-	if the cockname of the player is "Queen Bee", yes;
+	if cockname of player is "Queen Bee", yes;
 	no;
 
 

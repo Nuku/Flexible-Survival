@@ -35,7 +35,7 @@ to say losetobluechaffinch:
 	choose row monster from the table of random critters;
 	now nobluechaffinchsex is 0;
 	say "     [if HP of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger. ";
-	if cunts of player > 0:
+	if player is female:
 		say "     The victorious male pushes you over roughly and gets his stiff cock lined up with your pussy with little preamble. His taloned hangs grip your [if scalevalue of player > 4]hips[else if scalevalue of player is 4]sides[else]shoulders[end if] and pulls you back onto his avian rod. The slick, tapered cock pushes into you easily, causing you to moan in pleasure despite yourself. Soon the feathered fellow is drilling into you, chirping occasionally as he does.";
 		say "     You grow increasingly aroused as the mating continues, his soft feathers rubbing against your hips, thighs and pussy lips as he thrusts into you[if HP of player > 0]. As you're not resisting his advances[else]. As you're no longer resisting his advances[end if], he lets his taloned hands roam over your [bodytype of player] body and leans gently overtop you, letting his fluffy chest rub against your back. Between the soft feathers rubbing against you and the hard cock pumping inside you until finally you both cum loudly[if facename of player is name entry], your mating song joining in with his[else] with him chirping and moaning[end if] as his hot seed pumps into your cunt and flows into your womb.[ovichance]";
 		say "     When he's done, he dismounts, gives your ass a swat with one of his wings and a chuckle and flies off. You are left lying there with his cum leaking from your stuffed pussy and trying to recover your strength.";
@@ -55,8 +55,8 @@ to say beatthebluechaffinch:
 		now formcheck is 1;
 	else if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
 		now formcheck is 2;
-	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if cocks of player > 0 and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape. ";
-	if cocks of player > 0 and formcheck is 1:	[avian pred]
+	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if player is male and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape. ";
+	if player is male and formcheck is 1:	[avian pred]
 		if nobluechaffinchsex > 2:
 			if facename of player is "Fluffy Owl":
 				say "     As before, you rein in your predatory owl instincts and let the braggart go, opting to instead shake your fist at him and warning him that you'll be ready, as always, to send him packing. You hope he'll eventually learn to leave you alone, but you don't expect that'll happen anytime soon, given how fixated most infected people become.";
@@ -73,7 +73,7 @@ to say beatthebluechaffinch:
 			else:
 				say "     Regaining control of yourself, you slow to a halt and let the defeated songbird take flight. You content yourself by screeching back that you'll send him packing again if he comes back.";
 				increase nobluechaffinchsex by 1;
-	else if cocks of player > 0 and formcheck is 2:	[feline]
+	else if player is male and formcheck is 2:	[feline]
 		if nobluechaffinchsex > 2:
 			say "     As before, you rein in your feline instincts and let the braggart go, opting to instead shake your fist at him and warning him that you'll be ready, as always, to send him packing. You hope he'll eventually learn to leave you alone, but you don't expect that'll happen anytime soon, given how fixated most infected people become.";
 		else:
@@ -223,19 +223,19 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Blue Chaffinch"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Blue Chaffinch"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "The [one of]blue chaffinch[or]energetic avian[or]blue songbird[or]passerine male[or]male songbird[at random] [one of]snaps at your with his pointed beak[or]buffets you with his wings[or]flaps up a few feet and slashes at you with his foot claws[or]claws at you with his taloned hand[at random]!";
 	now defeated entry is "[beatthebluechaffinch]";
 	now victory entry is "[losetobluechaffinch]";
 	now desc entry is "[bluechaffinchdesc]";
 	now face entry is "obviously avian, with a thick, pointed beak for a mouth. Your head is rounded and shaped similar to that of a chaffinch. Your eyes are dark beads of black with a touch of white feathers just above and below them";
 	now body entry is "avian in form, with a pair of broad wings at your back and sides. Thankfully, you've still got your arms, though they're thin and taloned like a bird's legs. Much like your arms, your legs have the same spindly, songbird shape. On the whole, you feel much lighter, your bones hollowed for flight you can't quite achieve";
-	now skin entry is "[if cocks of player > 0]blue feathered[else]gray-brown feathered[end if]";
-	now tail entry is "You have a feathery tail extending from your backside. It is long and somewhat slender when not fanned with [if cocks of player > 0]rich blue[else]gray-brown[end if] feathers near the base before the midnight blue flight feathers extend outwards. The underside has downy white feathers to rest against your ass.";
+	now skin entry is "[if player is male]blue feathered[else]gray-brown feathered[end if]";
+	now tail entry is "You have a feathery tail extending from your backside. It is long and somewhat slender when not fanned with [if player is male]rich blue[else]gray-brown[end if] feathers near the base before the midnight blue flight feathers extend outwards. The underside has downy white feathers to rest against your ass.";
 	now cock entry is "[one of]avian[or]slender[or]bird-like[at random]";
 	now face change entry is "it throbs painfully. Your jaw aches and stretches forward, reshaping itself as you grow a thick, pointed beak. It resembles that of a finch, but is thicker and has a gray-blue color to it. As the changes continue and your vision blurs for a minute, your head changes to become avian to match your bill";
 	now body change entry is "feels increasingly lighter as an odd sensation runs through your whole body. You quickly realize that this is focused on your bones as they hollow out. Just as this strange experience is coming to a close, there's a sharp pulse at your shoulder blades, the bone matter having been transferred there to build the wings that are starting to form. As this change is going on, you become smaller than a normal person and your arms and legs turn into slender, taloned limbs like those of a small bird to match your new, songbird body";
-	now skin change entry is "prickles spread out all over you. As this feeling grows more intense, feathers of [if cocks of player > 0]rich blue[else]brown-gray with a faint tint of blue[end if] start to form. Your coloring is uniform over most of your body, only turning to white at your lower belly and thighs[if bodyname of player is listed in infections of Avianlist] and midnight blue at your flight feathers[end if]";
+	now skin change entry is "prickles spread out all over you. As this feeling grows more intense, feathers of [if player is male]rich blue[else]brown-gray with a faint tint of blue[end if] start to form. Your coloring is uniform over most of your body, only turning to white at your lower belly and thighs[if bodyname of player is listed in infections of Avianlist] and midnight blue at your flight feathers[end if]";
 	now ass change entry is "hips throb and ache. Your spine pops and your hips shift slightly as a feathery tail forms over your ass";
 	now cock change entry is "pulses and spurts cum. With each throbbing shot, it changes a little more until it's got a decidedly avian shape";
 	now str entry is 12; [ These are now the creature's stats... ]
@@ -252,7 +252,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 2; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -280,7 +280,7 @@ when play ends:
 			say "     You succumb to your bluechaffinch infection.";
 		else:
 			say "     You survive, but were infected by the bluechaffinch.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

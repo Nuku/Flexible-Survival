@@ -3,41 +3,36 @@ Version 2 of Mouse Taur by Nuku Valente begins here.
 
 "Adds a situation to Flexible Survival with a mouse taur living in a porn store."
 
+mtrp is a number that varies.
 
 Section 1 - The Situations	[two ways to meet Lisa now]
 
-Mouse Taur is a situation.
-The sarea of Mouse Taur is "Red".
-mtrp is a number that varies.
+Mouse Taur Encounter is a situation.
+The sarea of Mouse Taur Encounter is "Red".
 When play begins:
-	add Mouse Taur to badspots of furry;
-	add Mouse Taur to badspots of girl;
+	add Mouse Taur Encounter to badspots of furry;
+	add Mouse Taur Encounter to badspots of girl;
 
-After resolving a Mouse Taur, try looking;
+After resolving a Mouse Taur Encounter, try looking;
 
-Instead of Resolving a Mouse Taur:
+Instead of Resolving a Mouse Taur Encounter:
 	if mtrp is 0:
-		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.'";
-		WaitLineBreak;
-		if cunts of player > 0 and cocks of player > 0:
-			say "     'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression. 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
-		else if cocks of player > 0:
-			say "     She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I was hoping for something a little more...' she trails off, then shakes her head. 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand. 'Lisa. You are?'";
-		else if cunts of player > 0:
-			say "     She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment. 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
+		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.' ";
+		if player is herm:
+			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression. 'Glad to run into someone who can talk. My name is Lisa. What's your name?'";
+		else if player is male:
+			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I was hoping for something a little more...' she trails off, then shakes her head. 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand. 'Lisa. You are?'";
+		else if player is female:
+			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment. 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		else:
-			say "     She sniffs the air lightly and looks at you with some confusion. 'You must have had such a hard time of it,' she says with some sympathy. 'I am Lisa, nice to meet you.'";
-		WaitLineBreak;
-		say "     You give your name and begin idly chatting about time before everything went bad. You settle with her and she pulls out some snacks, sharing with you as you talk with her. She was a recently graduated major in education, 'I planned to be a teacher,' she explained, 'Grade school, but then this happened.' It seems that some mice that lived in her house became infected.";
-		say "     'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'";
-		say "     Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
+			say "She sniffs the air lightly and looks at you with some confusion. 'You must have had such a hard time of it,' she says with some sympathy. 'I am Lisa, nice to meet you.'";
+		say "     You give your name and begin idly chatting about time before everything went bad. You settle with her and Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found a safe place to stay, relatively nearby to where you are right now. 'You're welcome to come by and visit me anytime too. Just look for a porn store in the western boundary street.' Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off down the street, long furry tail swaying behind her.";
 		increase mtrp by 1;
 		PlayerEat 20;
 		now Porn Store is known;
-		now mouse taur is resolved;
-		now find porn store is resolved;
+		now Mouse Taur Encounter is resolved;
+		now Find Porn Store is resolved;
 
-[ New event added by Shadowwolf94]
 Find Porn Store is a situation. The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red".
 When play begins:
@@ -45,27 +40,79 @@ When play begins:
 	add Find Porn Store to badspots of girl;
 	add Find Porn Store to badspots of hermaphrodite;
 
-After resolving a Find Porn Store, try looking;
-
 Instead of Resolving a Find Porn Store:
+	FindPornStore;
+
+instead of going northwest from Boundary Street West while mtrp < 2:
+	FindPornStore;
+
+instead of going northwest from Boundary Street West while mtrp is 100:
+	say "     Something tells you that you wouldn't be very welcome in the store, after how the last run-in with the mouse taur living there went.";
+
+to FindPornStore:
 	if mtrp is 0:
-		say "     You come across an odd looking store that still seems intact. After checking the exterior, you figure out that it's some sort of pornographic material based store. You walk over to the door and grab hold of the handle, twisting it and turning it in an attempt to open it. Scowling at your failure, you back up and get ready to ram the door.";
-		say "     As you dash forward the door swings open and a large mouse taur steps out. Unable to slow down in time you ram into the taur, sending you both crashing to the floor. Your head a little dizzy, you stand up and lean against a wall to recover. Hearing the mouse taur shift, you look over as she gets up. Shaking her head clear she looks over and glares at you.";
-		say "     'What the hell were you thinking, you idiot? Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell do you think you are?' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she'll have none of your excuses. Unknown to the both of you, it seems that the crash and your loud argument have attracted some attention from one of the locals.";
-		challenge "Tigress Hooker";
-		say "     After the encounter with the tigress in the alley, the mouse taur comes out with a long pole and squirt gun filled with foul liquid, chasing off the tigress with angry yells about staying away from her store. You turn around and begin profusely apologizing to the mouse taur before you get the same treatment. She eventually just sighs and accepts that you really didn't mean any harm.";
-		say "     'Well, I guess I might as well introduce myself then, I'm Lisa, I live here. I suppose you can come and visit sometimes, if you want. Maybe the two of us could roll around on the floor for fun next time, he?' she adds with a wink.";
-		increase mtrp by 1;
-		move the player to the Porn Store;
-		now battleground is "void";
+		say "     Approaching the miraculously intact store, you check its exterior and see that it is some sort of porn shop. Its intact display window is mostly hidden behind a metal grid, seemingly never opened and pulled back since before the outbreak, which means that this place likely hasn't been looted. Examining the door, you find it closed and locked too.";
+		LineBreak;
+		say "     [bold type]How do you want to proceed?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Break in. There could be some good stuff in there!";
+		say "     [link](2)[as]2[end link] - Knock on the door. Who knows, someone might be in.";
+		say "     [link](3)[as]3[end link] - Leave for now.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to A, [link]2[end link] to B or [link]3[end link] to C.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Putting on a determined expression, you back up and get ready to ram the door. Yet just as you dash forward, it swings open a little to allow a large mouse taur to look out. Unable to slow down in time you ram into the door, smacking it against the shoulder and side of the taur, sending you both crashing to the floor right behind the doorstep. A little dizzy drom the impact, you stand up and lean against a wall to recover, still blinking away stars as you hear the mouse taur get up. Shaking her head clear she glares at you. 'What the hell were you thinking, you idiot? Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell are you?' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she'll have none of your excuses abd you start out in an angry argument.";
+			say "     [bold type]Sadly, all the noise attracts the attention of one of the more hands-on locals.[roman type]";
+			challenge "Tigress Hooker";
+			if fightoutcome < 20: [player won]
+				say "     By the time you have beaten off the overeager tigress hooker and she is swaying on her feet from your last blow, the mouse taur has retrieved what looks like a sturdy quarterstaff and a squirt gun from inside the store. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away from her store. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. She listens to you for a little while, then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
+				say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
+				now mtrp is 2; [player knows Lisa, was in the store]
+				move player to the Porn Store;
+				now Porn Store is known;
+				now Mouse Taur Encounter is resolved;
+				now Find Porn Store is resolved;
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "     Just as you are about to be defeated by the overeager tigress, swaying on your feet from her last blow, the mouse taur reappears from the inside of the store, holding what looks like a sturdy quarterstaff and a squirt gun. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. Listening to you for a little while, the woman then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
+				say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
+				now mtrp is 2; [player knows Lisa, was in the store]
+				move player to the Porn Store;
+				now Porn Store is known;
+				now Mouse Taur Encounter is resolved;
+				now Find Porn Store is resolved;
+			else if fightoutcome is 30: [fled]
+				say "     Running off, you leave the mouse taur to deal with the tigress on her own. While this means that it isn't all that hard to get away, it also will leave a bad impression on the porn store inhabitant. You doubt she'll want to see you again after such a bad first encounter.";
+				now mtrp is 100; [player got a bad rep with Lisa now]
+				now Mouse Taur Encounter is resolved;
+				now Find Porn Store is resolved;
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Deciding just to try the simple idea of knocking, you rap the door several times and wait. At first, it seems like no one is home, but then you can hear movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the face of a female mouse taur looking out warily. 'Well, hello there. You don't seem to be one of the usual types that roam the streets these days. They'd be trying to break down the door by now and all that. So, come on in. We can talk, one sane survivor to another.' With that, she waves you into the store, then closes the door behind you two.";
+			now mtrp is 2; [player knows Lisa, was in the store]
+			move player to the Porn Store;
+			now Porn Store is known;
+			now Mouse Taur Encounter is resolved;
+			now Find Porn Store is resolved;
+		else: 
+			LineBreak;
+			say "     You shrug and turn away for now, making a mental note that you should return here sometime and check it out.";
+	else if mtrp is 1:
+		say "     Recognizing the location that Lisa the moustaur described, you walk up to the door and knock. It doesn't take long before you can hear some movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the woman looking out warily. As she recognizes you, a smile spreads over her face and she waves you inside.";
+		move player to the Porn Store;
+		now mtrp is 2; [player knows Lisa, was in the store]
 		now Porn Store is known;
-		now mouse taur is resolved;
-		now find porn store is resolved;
+		now Find Porn Store is resolved;
 
 
 Section 2 - Porn Store and Lisa
 
-Porn Store is a room. It is fasttravel. It is private.
+Porn Store is a room. It is fasttravel. It is sleepsafe. It is private.
 The description of Porn Store is "[pornstoredesc]".
 
 Lisa is a person. Lisa is in Porn Store.
@@ -165,8 +212,8 @@ To mousefuck:
 	let response1 be "";
 	say "Lisa looks you over a moment before lifting her shoulders. 'I live in a porn shop. A little play isn't new, right?' She moves up to you and runs soft hands across your front and sides, 'Come with me into the back, and be naked when you do it.' She saunters off into her private backroom, through a curtain of hanging beads that softly clack with the sound of jostled wood behind her. ";
 	if a random number from 1 to 2 is 1: [ Aggressive]
-		if cunts of player is 0: [ oral ]
-			if cocks of player is 0: [You are not ready]
+		if player is not female: [ oral ]
+			if player is not male: [You are not ready]
 				say "When you push through the curtains, ready, she looks at you a bit oddly, 'No offense,' she starts, 'But you seem to be missing parts to play with.' She brushes alongside you back towards the front, 'You come right back when you feel more... capable.'";
 				now lastfuck of Lisa is turns plus 12;
 				stop the action;
@@ -226,11 +273,11 @@ To mousefuck:
 		say "Continue?";
 		if the player consents:
 			increase mousefucked by 1;
-			if cunts of player is 0: [ Have player eat her out ]
+			if player is not female: [ Have player eat her out ]
 				say "'There you are, well, see anything you would like?' the mouse asks you over her shoulder. In the middle of a pile of pillows she sits, coyly looking over her shoulder, her rear prominently on display for you. Eyes wide at the sight, you pad forward, one paw reaching instinctively to rub at that perfect, mousy, rear. 'Have a taste, it won't bite,' she says, breaking you of your trance, making you smile as you lean down. The smell reaches you and, feeling little light headed, you snake out your tongue as you lean into her, lapping at her outer lips.[line break][line break]'Oh yes, that's wonderful dear, right, right, oh yes right there,' she murmurs delightfully as you warm to the task. Working your fingers around her you hold her open as you begin to work your tongue deeper and deeper, delving for the source of the amazingly flavored honey that greets your sense of taste at every lick. As you continue, you find the little places that seem to make her quiver, taking stock of them as it were. Without warning the mouse you begin to play at each of them, changing the order, again and again. All too soon a mousy scream can be heard and your whole face becomes damp with her discharge. 'Oh... oh yes dear, come, let me clean you up,' she urges, helping you into a cuddle as she turns, lapping at your face, 'Let me take good care of you,' she adds with a smile, tongue pausing for just a moment to speak.[line break][line break]";
 			else: [ Have her eat out player ]
 				say "'Well aren't you just a cutie?' the mouse exclaims, seeing you sway slowly into the room. The mouse-taur is watching you from a big pile of pillows in one corner, seeing you notice her she smiles widely, 'Well? Come on over, I don't bite unless you ask nicely,' she says, beckoning you over. An urge, a need, compels you to disrobe for her and in moments every last stitch of clothing is on the floor.[line break][line break]";
-				if cocks of player is 0:
+				if player is not male:
 					say "'Perfect,' the mouse utters, one paw raised and reaching for your own hand, seeming to draw your own up, meeting it, taking it.[line break][line break]";
 				else:
 					say "The mouse wrinkles her nose a little at the sight of your [cock of player] [if cocks of player is 1]member[else]members[end if] but, spying the honey pot below, beckons you closer with an outstretched arm.[line break][line break]";
@@ -250,7 +297,7 @@ To mousefuck:
 Section 4 - Endings
 
 When play ends:
-	if mousefucked > 1 and humanity of the player > 9:
+	if mousefucked > 1 and humanity of player > 9:
 		increase score by 5;
 		say "     You receive an occasional letter or call from Lisa. It turns out she made it through alright and has joined up with a group called the [']Prometheans[']. It sounds like some kind of weird cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
 		if mousespot > 0:
@@ -259,7 +306,7 @@ When play ends:
 		else:
 			say ".";
 	if HP of Sven is 54 and humanity of player > 9:		[Svetlana endings]
-		if cocks of player > 0:
+		if player is male:
 			say "     Svetlana keeps in touch with you[if mousefucked > 1] as well[end if], even coming to visit you at times when her mistress permits it. It seems Lisa's quite busy with her duties (which are never really elaborated upon), which keeps her from accompanying her pet. Burly guards keep the pink snowmeow safe on these journeys, making you feel that Lisa has become someone of import. You consider asking the pink kitty at times, but her lustful appetite for your attention during these visits always distracts you. You have long, energetic breeding sessions with the kitty, making sure she's well and truly knocked up before letting her leave. She and Lisa won't allow anyone else to breed the pink snowmeow but her brave hero, so you always make sure to do your duty as best and as often as you can during these rare visits.";
 		else:
 			say "     Svetlana keeps in touch with you[if mousefucked > 1] as well[end if], even coming to visit you at times when her mistress permits it. It seems Lisa's quite busy with her duties (which are never really elaborated upon), which keeps her from accompanying her pet. Burly guards keep the pink snowmeow safe on these journeys, making you feel that Lisa has become someone of import. You consider asking the pink kitty at times, but her lustful appetite for your attention during these visits always distracts you. You have long, lustful romps with the kitty, soaking up all the lavish pleasures she's learned on how to please the female body from her mistress during these rare visits.";

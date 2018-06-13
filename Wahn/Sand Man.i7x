@@ -11,15 +11,15 @@ when play begins:
 Section 1 - Monster Responses
 
 to say sandman wins:
-	say "     Defeated, you stop struggling and the sand man pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if cocks of player > 0]Dude[else]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand, then pulls off your clothes and lowers you on it to lie on your back.";
-	if cocks of player > 0:[male + herm]
+	say "     Defeated, you stop struggling and the sand man pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if player is male]Dude[else]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand, then pulls off your clothes and lowers you on it to lie on your back.";
+	if player is male:[male + herm]
 		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. Then he leans in to lick over your nipples and kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your asshole and starts pushing in against your pucker, slowly but surely until his cockhead pops in. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world' his charming voice tells you, then he starts grinding his hips against your crotch. Thrusting in and out, the feeling of his slightly rough member rubbing your insides has you gasping in lust in no time, grabbing the towel with both hands to hold on to something as you writhe around. Your sandy beach lover has quite some technique, often changing the angle in which he slides into you to rub sensitive spots you barely knew you had. Fucking you with deep thrusts, then pausing for a while and just caressing your body as you get too close to orgasm, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for now.";
 		say "     Then, after you don't know how long, he takes out all the stops, pulling out till only the tip of his cock remains inside you and slamming it all the way in again, followed by quick and hard thrusts that quickly drive you over the edge. You shout in pleasure as your balls tighten and long strings of cum shoot from your [cock of player] shaft all over your stomach and chest. The sand man stud isn't far behind with his own orgasm, burying his whole cock deep inside you a final time and pumping a huge load of his seed deep into your asshole.[mimpregchance]";
 		WaitLineBreak;
 		say "     He rests a moment to catch his breath with his slowly softening cock still inside you, then leans over you and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, you feel the sand man pull out of you carefully, then see him walk off along the beach looking for new conquests as you doze off.";
-	else if cunts of player > 0:[female]
+	else if player is female:[female]
 		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. Then he leans in to lick over your nipples and kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your pussy lips and rubs it against them, then slowly but surely pushes his cockhead into your moist hole. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world' his charming voice tells you, then he starts grinding his hips against your crotch. Thrusting in and out, the feeling of his slightly rough member rubbing your insides has you gasping in lust in no time, grabbing the towel with both hands to hold on to something as you writhe around. Your sandy beach lover has quite some technique, often changing the angle in which he slides into you to rub sensitive spots you barely knew you had. Fucking you with deep thrusts, then pausing for a while and just caressing your body as you get too close to orgasm, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for now.";
@@ -36,7 +36,7 @@ to say sandman wins:
 
 to say sandman loses:
 	say "     The sand man takes a step back and raises his hands in a pacifying gesture. 'Ok, ok - I give up. You can be on top when I fuck you.' Judging from the hard bulge in his speedos, it doesn't even seem to occur to him that your fight might have been anything other than a sex game for dominance. He's pretty single-minded in his expectation of getting sex with anyone on the beach.";
-	if cocks of player > 0:
+	if player is male:
 		LineBreak;
 		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], try to teach him a painful lesson to leave you alone in the future [link](3)[as]3[end link] or just go [link](4)[as]4[end link].";
 		now calcnumber is 0;
@@ -64,8 +64,8 @@ to say sandman loses:
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 
 to say sandman ride:
-	say "     As you agree to taking a ride on the beach stud's manhood, he smiles and pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if cocks of player > 0]Dude[else]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand and pulls off your clothes followed by his own speedo.";
-	if cocks of player > 0:[male + herm]
+	say "     As you agree to taking a ride on the beach stud's manhood, he smiles and pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if player is male]Dude[else]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand and pulls off your clothes followed by his own speedo.";
+	if player is male:[male + herm]
 		say "     Lying down on the towel, he leans back on his elbows and spreads his legs, showing off his proudly standing erection. Then he reaches for it with one hand and strokes its shaft, saying 'I'm all ready for you baby. Can't wait to feel you around me.' Eager for a good fucking, you kneel over him with your legs on both sides of his hips, then lower yourself till the tip of his cock touches your pucker.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world' his charming voice tells you as he puts his hands on your hips and softly pulls you downwards. Doing your best to relax, you nevertheless give a small gasp as the tip of his manhood pops into your body and a pleasant feeling of fullness comes upon you. You keep going, sinking further and further onto his magnificent shaft, until your hips touch and you feel his slightly rough skin against your cheeks.";
@@ -75,7 +75,7 @@ to say sandman ride:
 		say "     Then finally, you just can't hold back any more, pulling out till only the tip of his cock remains inside you and slamming down on it all the way again, followed by quick and hard bouncing up and down on his shaft. It doesn't take long till that drives you over the edge, shouting in pleasure as your balls tighten and long strings of cum shoot from your [cock of player] shaft all over your partner's stomach and chest. The sand man stud isn't far behind with his own orgasm, pulling you down against his hips, his cock pumping a huge load of his seed deep into your asshole.[mimpregchance]";
 		WaitLineBreak;
 		say "     As you rest a moment to catch your breath, his slowly softening maleness still inside you, he leans up and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, the sand man embraces you again and rolls the both of you over so you're lying on the towel now. Pulling out of you carefully, he gives you a seductive smile, then walks off along the beach looking for new conquests. You just stay there on the towel for a while and doze off for a nap.";
-	else if cunts of player > 0:[female]
+	else if player is female:[female]
 		say "     Lying down on the towel, he leans back on his elbows and spreads his legs, showing off his proudly standing erection. Then he reaches for it with one hand and strokes its shaft, saying 'I'm all ready for you baby. Can't wait to feel you around me.' Eager for a good fucking, you kneel over him with your legs on both sides of his hips, then lower yourself till the tip of his cock touches your nether lips.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world' his charming voice tells you as he puts his hands on your hips and softly pulls you downwards. You give a small gasp as feel the tip of his rock-hard manhood spread your lips and enter your body. You keep going, sinking further and further onto his magnificent shaft, until your hips touch and you feel his slightly rough skin against your cheeks.";
@@ -131,14 +131,14 @@ When Play begins:
 	now desc entry is "[sandmanDesc]";
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
 	now body entry is "that of an idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "fine white sand, making up your body and";[ format as the text "You have (your text) skin"]
-	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws others['] looks to it.";[ write a whole Sentence or leave blank. ]
-	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "it is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it takes on the texture of very fine sand, formed into shape like normal skin and covering your whole body without blemishes or hair"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt. A black speedo coalesces out of a swirl of dust around your hips, covering your curves"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your manhood becomes human-shaped"; [ format as "Your cock feels funny as (your text)" ]
+	now skin entry is "fine white sand, making up your body and"; [ format as "You have (your text) skin"]
+	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws others['] looks to it."; [ write a whole Sentence or leave blank. ]
+	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it takes on the texture of very fine sand, formed into shape like normal skin and covering your whole body without blemishes or hair"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt. A black speedo coalesces out of a swirl of dust around your hips, covering your curves"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your manhood becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 16;
 	now sta entry is 18;
@@ -155,7 +155,7 @@ When Play begins:
 	now cock width entry is 5;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 0;
 	now cunt width entry is 0;

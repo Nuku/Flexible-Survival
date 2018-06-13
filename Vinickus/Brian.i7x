@@ -92,12 +92,12 @@ to say attemptsexwithbrian:
 	else if lastfuck of Brian - turns < 3: [He got fucked within the last 9 hours]
 		say "     '[one of]Mmmm... that sounds kinda tempting, but this wall ain't gonna knock itself down[or]Sure. Lemme just finish up with this first. Shouldn't be much longer[or]Not tonight. I've got a headache, honey[or]Just a few more hits first[or]Not today, wall!' he growls, pointing angrily at it and seemingly ignoring you. 'You're goin['] down[in random order],' he says as he lines up for another charge at the wall.";
 	else if BrianRelationship >= 2 and XP of Brian is 0: [He has been talked to at the very least]
-		if cunts of player > 0 and breast size of player > 2:
+		if player is female and breast size of player > 2:
 			say "     'Oh, hello there pretty lady,' the rhino almost whistles out. After he finishes talking, the big muscled man then turns to drink in your feminine form, one of his hooved feet scraping lightly across the ground. 'I'm glad to see you back, but how I didn't notice how fine you were before, I'll never.' Brian just glares at you as his hoof scrapes across the ground faster and faster, his cock soon joining as another obvious sign of arousal. Content with his displays of need, you walk over to him, his big, meaty hands helping you out of your gear, while his naked form rubs and grinds at your own throughout. With great speed the clothing is thrown off to the side, leaving you grinding into each others' bodies, both groping and kneading at each other as time goes on. Your eyes meet after several minutes of exploration, his hands gripping at your breasts as you begin to wonder about the main course.";
 			say "[briansexmenu]";
 		else:
 			say "     'Sorry dude, but I only like to fuck the ladies. Well... I think anyways, it can be hard to remember sometimes,' Brian says in an absentminded manner as he stares at the wall. Brian hesitates for a moment as he eyes you though, clearly tempting the hard-headed mutant. Even as he moves back into charging position, he glances back at you and is uneven of the mark. Seeing your opportunity, you rush after him. A few paces behind, you end up tackling him down while he's dazed after running into the wall. Pinning him beneath you, you give him an aggressive kiss while getting into position atop him.";
-			if cocks of player > 0:
+			if player is male:
 				say "     [bold type]What do you want to do with the rhino now?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Fuck him!";
@@ -138,7 +138,7 @@ to say briansexmenu:
 		now sortorder entry is 2;
 		now description entry is "Press his cock between your jugs";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked - vaginal";
 		now sortorder entry is 3;
@@ -149,7 +149,7 @@ to say briansexmenu:
 		now sortorder entry is 4;
 		now description entry is "Have the rhino pound your ass";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
 		now sortorder entry is 5;
@@ -211,7 +211,7 @@ to say sexwithbrian00f:		[initial sex w/Brian - fuck him]
 	say "     'Now, that wasn't half-bad. Certainly feels lighter in there,' he adds, rubbing his balls. 'I should be able to get a good head of speed up now,' he says as he starts to rise. Before he can go charging off, you hold him back for a brief while with a passionate kiss followed by some licking to help get the worst of the sticky mess off his face and horn.";
 
 to say sexwithbrian00r:		[initial sex w/Brian - ride him]
-	say "     Wanting the muscly rhino's cock in you, you grab it and grind down onto it. Clearly pent up, it feels as hard as the wall he's been hitting. With a [if cunts of player > 0 or the player is twistcapped]moan of pleasure [else]groan of difficulty[end if], you pop the dark gray shaft into your [if cunts of player > 0]juicy[else]tight[end if] hole. It is thick and filling, forcing your inner walls to stretch and shift to take it all. Better hung than the other rhino men in the zoo, he's got quite the large horn to take. Releasing a throaty moan, you bounce up and down in his lap, doing your best to get it all.";
+	say "     Wanting the muscly rhino's cock in you, you grab it and grind down onto it. Clearly pent up, it feels as hard as the wall he's been hitting. With a [if player is female or the player is twistcapped]moan of pleasure [else]groan of difficulty[end if], you pop the dark gray shaft into your [if player is female]juicy[else]tight[end if] hole. It is thick and filling, forcing your inner walls to stretch and shift to take it all. Better hung than the other rhino men in the zoo, he's got quite the large horn to take. Releasing a throaty moan, you bounce up and down in his lap, doing your best to get it all.";
 	say "     As you expected, now that he's found himself with a horny rhino on his cock, he's more than willing to enjoy it. His meaty hands grab your hips and his shaft throbs inside you. Brian fucks you with the same single-minded enthusiasm as he did with battering the wall. Leaning in, you give him another kiss, this one more passionate, and grind your hips over his rock-hard pillar.";
 	WaitLineBreak;
 	say "     With the overloaded state of his balls, the ride is a little shorter than you may have liked, though that is counterbalanced by Brian's zeal. And needing that release more than he realized, his load is a massive one when it comes - thick and heavy blasts going on for a minute or more. You're left rounded in the belly even though much of it's leaked out of your overstuffed hole. Grunting and panting, the buff rhino makes a few last thrusts even after his orgasm has finally stopped. He gives you a little while to recover before helping you off his virile rod. Helping you away from the wall, he turns back to his foe and attacks it again with a fresh charge.[impregchance][impregchance]";
@@ -223,7 +223,7 @@ to say sexwithBrian01:		[oral on Brian]
 		WaitLineBreak;
 		say "     Brian pants and grunts happily, his strong hands surprisingly tender as he caresses your head. As his moans of pleasure rise, you can tell he's getting close and begin fervently bobbing your head back and forth around his shaft, working your tongue along its entirety while doing so. This soon brings him over the edge and you're treated to blast after blast of his gooey load. You swallow down as much as you can of the rich spunk, but it comes too fast and too thick to consume completely. You end up with a sticky mess overflowing from your mouth and down your chest.";
 		say "     Once spent, Brian breathes a happy sigh of relief and rubs his balls. Lighter for having been drained, at least for the moment, they weigh a little less heavily in his hand. The rhino smiles happily, then thanks you with a big kiss, not minding that it's flavored with his own spunk. After the kiss though, his break is over and he returns to his attempts to batter through the wall with his head.";
-	else if BrianOral is 0 and cocks of player > 0 and cunts of player is 0 and breast size of player < 3: [Initial oral on Brian that opens gay storyline]
+	else if BrianOral is 0 and player is puremale and breast size of player < 3: [Initial oral on Brian that opens gay storyline]
 		say "     With an excited snort, the rhino puts a hand around his meaty rod and points it to your mouth as you kneel down. You place a hand on his plump orbs and rub them as you start licking along his thick shaft. Twirling your tongue over his glans, you gather up the gooey pre that wells up from it, and discover his rich and musky taste. You get a noseful of Brian's strong musky scent as well, your nose close enough to his virile manhood to pick up his manly smell. Add to that the growing scent of his exertion, and you find your mind fully submitting to this muscular stud: his smell overriding any thought of stopping your ministrations.";
 		say "     Even as aroused as you are, it takes some effort to get his impressive cock into your mouth and down your throat, but your horny dedication eliminates any thought of giving up or slowing down. Eventually, your face is buried in Brian's crotch and his heavy balls are tapping against your chest. Having succeeded in taking all of the intoxicatingly masculine cock into your mouth and throat, you slowly pull back and forward again, gradually increasing the pace as you bob over the gray pillar of meat.";
 		WaitLineBreak;
@@ -241,7 +241,7 @@ to say sexwithBrian03:		[vaginal on player]
 	say "     You get into proper position beneath him, letting the horny rhino line up his throbbing member with your wet cunt. Wanting to savor it [if cunt length of player < 10]and take it easy on you[end if], he starts by teasing his glans across your folds and lightly prodding at your vaginal opening. Able to feel the throb of his meat, you can tell he's quite excited by the prospect of stuffing your pussy. You grind back against him with a wiggle of your rear, inviting the big stud in. And when he does mount you properly, popping that thick cock of his a few inches into your heated and dripping cunny, you can't help but moan in pleasure.";
 	say "     Brian works his shaft into you with steadily deeper thrusts, letting you enjoy every new inch of pulsing rhino-meat he plows into you. Reaching around, he [if breast size of player > 1]fondles your breasts, his touch remarkably tender for someone with such meaty hands. He teases your nipples and[else]caresses your [bodydesc of player]body, his touch remarkably tender for someone with such meaty hands. Sensually stroking your [bodytype of player]form, he [end if]gets you moaning beneath him as you enjoy the pleasurable attention you're receiving. Your cunt tugs wantonly at his cock, encouraging the randy rhino to drive further into you. His copious precum adds to your own juices so that a musky mess runs down your thighs with each slurping motion. By the time he's fully inside you, Brian fucks you with the same single-minded enthusiasm as he did with battering the wall - and your body loves it.";
 	WaitLineBreak;
-	say "     Your rhino stud pants and grunts as his excitement builds and builds. You can feel the heavy slap of his overfull balls and the throb of his triple-sized cock inside you as his climax approaches. And like before, it is a powerful one when it arrives, one thick and potent blast after another until your womb is stuffed and his excess semen overflows around his softening shaft. Somewhere during this heavy breeding, your own orgasm is reached[if cocks of player > 0]; you cry out in orgasmic bliss as your cunt milks his manhood for its virile seed and you empty your load onto the grass [else]and you cry out in orgasmic bliss as your cunt milks his manhood for its virile seed[end if]. A spunky mess drools from your well-stuffed cunny once that gray cork is removed, though you're still left feeling deliciously warm and gooey inside from the sheer amount of it he's deposited in you.[fimpregchance]";
+	say "     Your rhino stud pants and grunts as his excitement builds and builds. You can feel the heavy slap of his overfull balls and the throb of his triple-sized cock inside you as his climax approaches. And like before, it is a powerful one when it arrives, one thick and potent blast after another until your womb is stuffed and his excess semen overflows around his softening shaft. Somewhere during this heavy breeding, your own orgasm is reached[if player is male]; you cry out in orgasmic bliss as your cunt milks his manhood for its virile seed and you empty your load onto the grass [else]and you cry out in orgasmic bliss as your cunt milks his manhood for its virile seed[end if]. A spunky mess drools from your well-stuffed cunny once that gray cork is removed, though you're still left feeling deliciously warm and gooey inside from the sheer amount of it he's deposited in you.[fimpregchance]";
 
 to say sexwithBrian04:		[anal on player]
 	say "     You get into proper position beneath him, letting the horny rhino line up his throbbing member with your waiting asshole. Wanting to start easy on you, he simply presses his broad glans against your back door and prods lightly against it. Able to feel the throb of his meat and the drooling precum from it, you can tell he's quite excited by the prospect of mounting your ass. You grind back against him as you relax your pucker, inviting the big stud in. And when he does penetrate you properly, popping that thick cock of his a few inches into your backside, you can't help but [if scalevalue of player > 3 or player is twistcapped]moan in pleasure[else]whimper a bit at first[end if].";
@@ -271,9 +271,9 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 		WaitLineBreak;
 		say "[sexwithBrian05]";
 	else:
-		say "     Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if cunts of player > 0]juicy pussy[else]crinkled hole [end if]to him.";
+		say "     Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if player is female]juicy pussy[else]crinkled hole [end if]to him.";
 		WaitLineBreak;
-		if cunts of player > 0:
+		if player is female:
 			say "[sexwithBrian03]";
 		else:
 			say "[sexwithBrian04]";

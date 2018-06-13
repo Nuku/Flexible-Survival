@@ -60,7 +60,7 @@ to say Otter attack:
 		choose row monster from the table of random critters;
 		now sex entry is "Both";
 		say "     As the otters swim around you excitedly, they seem to sense something about you and back off as a group, letting a lone member of the raft move up to you. You notice immediately that this member is special, being both male and female in one. Around hir neck is a short pendant with pink and periwinkle colored scallop shells. Hir small bosom, dainty handfuls, seem perfect on hir swimmer's frame, letting hir move through the water with grace. Shi moves up to you, running hir paws across your chest as hir smooth body swims around you, examining you intently.";
-		if ( cocks of player > 0 and cunts of player is 0 ) or ( cocks of player > 0 and a random chance of 1 in 2 succeeds ):
+		if ( player is puremale ) or ( player is male and a random chance of 1 in 2 succeeds ):
 			say "     Shi runs hir paws down your body, taking your cock in hir webbed paws and starts deftly strokes your cock to get you hard. Hir soft touch gets you hard faster than any vigorous stroking ever has, your body responding to hir immediately. Shi seems to smile and cups your balls in one paw and you moan, feeling them grow heavy and churn with the need to release the seed you can feel filling them.";
 			WaitLineBreak;
 			say "     Sensing your readiness, shi presses hir chest to yours, rubbing her bosom and hard prick against you. But it is not hir cock that needs attention, but hir pussy, which shi brings into position over your shaft before sinking down onto it. Feeling hir pussy sliding over you, you can't help but moan loudly. With hir arms around your chest, shi starts riding your cock slowly, letting you enjoy every sensual moment.";
@@ -99,7 +99,7 @@ to say Otter attack:
 			let randomog be 1; [male]
 			if guy is banned or ( girl is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2; [female]
 			say "     An otter swims up behind you and nuzzles at your rear, tickling at your bottom with [if randomog is 1]his[else]her[end if] whiskered face. [if randomog is 1]He[else]She[end if] nuzzles between your cheeks and starts licking at your pucker, making you squirm in response. Soon [if randomog is 1]his[else]her[end if] tongue's pressing past your anal ring and sliding into your through your back door. [if randomog is 1]His[else]Her[end if] webbed paws knead at your bottom as the playful lutrine licks your asshole, a sensation that grows increasingly pleasant as [if randomog is 1]he[else]she[end if] and the other otters play with you.";
-		if guy is not banned and cunts of player > 0 and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
+		if guy is not banned and player is female and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
 			say "     An otter nuzzles into your throat as he presses himself against your front a moment. He grabs for your hips, then leans back, pressing his eager pointed tool against your nethers, easing it into you with a few sharp thrusts. He begins to piston against you like a machine, eyes closed and chest heaving with heavy gulps of air as he makes wild love. The rough loving is painful only for the first moment, giving way to erotic waves of tingling pleasure that run up and down your belly, centered on your ecstatic cunt, trembling tightly around the penetrating pole of that eager creature.";
 			say "     The playful otter strokes his webbed paws across your hips as he thrusts into you before finally emptying his load into your trembling pussy. Sated, he moves back, only to be replaced by another. They continue to take turns with you, seeding you again and again.[impregchance]";
 			WaitLineBreak;
@@ -110,7 +110,7 @@ to say Otter attack:
 				say "     Soft pricks are felt as otter paws grab you and pull you down. Narrowly avoiding plunging you, an otter scales you and perches on your head with a happy bark, his balls draping over your face to obscure your vision a moment before he laughs and moves a bit";
 			say ". The otter on your head leans back a little, balancing quite well as they begin to pleasure themselves with throaty groans and loud barks, sharing in the pleasure of the moment.";
 			WaitLineBreak;
-		if cocks of player > 0 and girl is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and guy is banned ) ):
+		if player is male and girl is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and guy is banned ) ):
 			if cock length of player > 12:
 				say "     Too large for her to ride the traditional way, one of the females goes for the alternative, grabbing at your huge length and grinding her entire front along it, stroking it with her slender breasts and thick waterproofed hide. Her arms warp around it as she works you closer to climax.";
 				if cocks of player > 1:
@@ -121,7 +121,7 @@ to say Otter attack:
 				if cocks of player > 1:
 					say "     Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
 				WaitLineBreak;
-		else if cocks of player > 0 and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and anallevel > 1:
+		else if player is male and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and anallevel > 1:
 			say "     You can feel the soft, webbed paws of one of the otter's on your cock and you glance down to see a slender, young male grabbing and stroking your cock. He seems to almost grin as he nuzzles his softly-furred face against it";
 			if cock length of player > 12:
 				say ". Too large for him to take, he continues to work his paws over your big cock. His digits move to fondle your balls as well as he worships your impressive member. His brown eyes are locked on it, staring at it lustfully";
@@ -158,17 +158,17 @@ When Play begins:
 	now attack entry is "[otterstrike]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[otterdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "otter";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face reforms as you gain a short otterish snout and round [skin of player] ears"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a thick limb bursts from your back end, forcing you to lean back a moment as [skin of player] flesh covers it. You peek over your shoulder to see it slowly swaying, your sense of balance returning"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink color as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now desc entry is "[otterdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "blunt nose of an otter, with small round ears set over your cute face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "otter"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "your face reforms as you gain a short otterish snout and round [skin of player] ears"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a thick limb bursts from your back end, forcing you to lean back a moment as [skin of player] flesh covers it. You peek over your shoulder to see it slowly swaying, your sense of balance returning"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink color as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 16;

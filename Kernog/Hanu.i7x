@@ -134,16 +134,16 @@ When Play begins:
 	now defeated entry is "[beatWukongThugs]";
 	now victory entry is "[losetoWukongThugs]";
 	now desc entry is "[WukongThugsdesc]";
-	now face entry is "like a monkey, with a small muzzle, big laughing eyes and a mane of fur around it"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "lithe and human-like. It is also very flexible, and you can do any kind of acrobatics with ease. Your feet are prehensile, meaning you can hold various objects and do many things with them as if they were hands"; [ Body Description, format as the text "Your body is (your text)" ]
-	now skin entry is "short, golden fur which recovers your entire"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, prehensile tail that wiggles behind you every time you move."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "human-like"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "you feel your hair grow and surround it. Your nose and your mouth changes, forming a small muzzle"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body loses mass and becomes lither. Your feet tingle as they change form, gaining an opposable thumb and becoming prehensile"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "a short but thick fur, as gold as the sun, grows on your whole body, from head to toe"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a long, prehensile tail grows from your buttocks"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it morphs. Once the transformation is over, you look down and see your cock is like a human's"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "like a monkey, with a small muzzle, big laughing eyes and a mane of fur around it"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "lithe and human-like. It is also very flexible, and you can do any kind of acrobatics with ease. Your feet are prehensile, meaning you can hold various objects and do many things with them as if they were hands"; [ Body Description, format as "Your body is (your text)" ]
+	now skin entry is "short, golden fur which recovers your entire"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a long, prehensile tail that wiggles behind you every time you move."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "human-like"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "you feel your hair grow and surround it. Your nose and your mouth changes, forming a small muzzle"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "your body loses mass and becomes lither. Your feet tingle as they change form, gaining an opposable thumb and becoming prehensile"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "a short but thick fur, as gold as the sun, grows on your whole body, from head to toe"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "a long, prehensile tail grows from your buttocks"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it morphs. Once the transformation is over, you look down and see your cock is like a human's"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 16;
 	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
@@ -158,7 +158,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -191,7 +191,7 @@ to say beatWukongThugs:
 		say "     Your lust surges up as the adrenaline of the fight goes away. Stupid two-bit thugs, spoiling your day with their antics. [bold type]You consider taking one of them to take care of your libido[roman type].";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Use a hole";
 			now sortorder entry is 1;
@@ -302,7 +302,7 @@ to say beatWukongThugs_useACock:
 	[add impreg chance?]
 
 to say beatWukongThugs_worship:
-	say "     You grab each of the thugs by the air, and pull them in a small pile. They look at you, some of them asking for forgiveness, some evening offering you their clothes and their jewelry as compensation. You refuse all of this, and explain to them that all this scuffle made you sweaty. As you offer them your naked body, you give a simple order: lick; and a simple threat: if you feel the mere tip of a cock or a finger graze your orifice[if cunts of player > 0]s[end if], you will mess them so bad that golden dentures might be a good idea for their next jewelry shopping. They seem to understand as they surround you, some kneeling, some standing, and start servicing you.";
+	say "     You grab each of the thugs by the air, and pull them in a small pile. They look at you, some of them asking for forgiveness, some evening offering you their clothes and their jewelry as compensation. You refuse all of this, and explain to them that all this scuffle made you sweaty. As you offer them your naked body, you give a simple order: lick; and a simple threat: if you feel the mere tip of a cock or a finger graze your orifice[if player is female]s[end if], you will mess them so bad that golden dentures might be a good idea for their next jewelry shopping. They seem to understand as they surround you, some kneeling, some standing, and start servicing you.";
 	say "     You feel tongues and fingers slip against your [bodyname of player] body. Your arms, your legs, your torso, every place is taken care off. And those monkeys are not half-bad at it. You encourage some of them at exploring every nook and cranny, by crossing your arms at the back of your head. As you had predicted, the monkey were slowly emboldened by the situation, and soon you feel too soft noses digging at your armpits, followed by tongues. You sigh in pleasure, especially when the simians start to take interest in your sexy bits. They are hesitant at first, and you do watch what they are doing, but you are soon rewarded by many tongues and fingers exploring under your legs. True to your demand, the fingers simply caress and pinch, but it is more than enough. Everything is tended to, from [if player is herm]the tip of your cock to the base of your shaft and your balls, to your now dripping pussy and clit[else if player is male]the tip of your cock to the base of your shaft and your balls[else]your aching clit to the inner side of your labia[end if]. Several of them share each of your [breast size desc] breasts, flicking their tongues over your nipples. You even feel a tongue probe around your anus, but by now you are comfortable enough to let it explore your taint.";
 	WaitLineBreak;
 	say "     Their gender does not matter. Male, female, in between, you do not care at all as they do an excellent job. They bring you slowly to a powerful orgasm, yet it is one of the softest you had yet experienced. Instead of a big wave of pleasure crashing into you, it feels like a vase slowly overflowing with intense it. Mouths press to take everything you have to give down there, while you grab the nearest piece of monkey fur you can find and hold it as if your life depended on it. Eventually, your orgasm subsides, and you take your leave from the gang, after having them promise that you would not catch them at doing mischief again. A part of you doubt they will actually listen, and another part actually does not mind.";
@@ -318,7 +318,7 @@ to say losetoWukongThugs:
 	if anallevel > 1:
 		say "     Your ass is suddenly stretched, as the monkey under you pushed his member inside your ass and does not waste time slapping his pelvis against your butt with short, fast thrusts.";
 		WaitLineBreak;
-	if cunts of player > 0:
+	if player is female:
 		let randomnumber be a random number between 1 and 3;
 		if randomnumber is 1:
 			say "     Another monkey takes advantage of the confusion and plunges his shaft inside your [cunt size desc of player] pussy, jackhammering your cervix with his member. ";
@@ -329,7 +329,7 @@ to say losetoWukongThugs:
 		if cunts of player > 1:
 			say "Your other pussies are not forgotten, and get fingered in an almost sadistic manner.";
 		WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		let randomnumber be a random number between 1 and 2;
 		if randomnumber is 1:
 			say "     You feel something tight pushing around your cock, signaling that a monkey has lined up [one of]his ass[or]her pussy[at random] with your [cock size desc of player] cock, and swallows it down the tight, warm hole. Your hear wet noises coming from your groin, as crotch meets crotch with increasing speed.";

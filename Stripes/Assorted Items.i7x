@@ -19,7 +19,7 @@ the usedesc of nullo wafers is "[nullo wafers use]";
 
 to say nullo wafers use:
 	say "     Pulling out the box of cookies, you start by planning on having just a few, but something about their bland crunchiness has you keep eating until you end up polishing off the whole box. Maybe you were hungrier than you thought. Your tummy gives a bit of an upset rumble and a wave of cool tingles wash through you that flows down to your loins.";
-	if cunts of player > 0 and cocks of player > 0:		[HERM]
+	if player is herm:		[HERM]
 		let cockgone be false;
 		let cuntgone be false;
 		let cockcountdown be false;

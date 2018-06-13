@@ -216,7 +216,7 @@ To say afsm:
 	else:
 		If survfeat is 1:
 			say "     Feeling that you're ready for another go at the Army field survival manual, you pick it up and continue right where you left off. After awhile of reading your eyelids begin to grow heavy, and just as you had about enough of even more of the military acronyms, you reach the end of it. While rubbing your eyes, you sigh in relief and close the book. As you put the manual back onto the pile you found it on, you feel that you gained enough understanding of how you can best to survive in the much changed city.";
-			Add "Survivalist" to feats of the player;
+			Add "Survivalist" to feats of player;
 			Follow the turnpass rule;
 		else:
 			say "     Going to one corner of the store, you search through a pile of books stacked on a table and find an old Army field survival manual. Finding it promising, you grab an unoccupied chair, sit down, and start to look through it. After reading for a spell, your mind begins to ache dully from all the complicated jargon. With your head swimming with so many military acronyms you decide to give it a rest for now and let your head clear. You get up and put the book back on the table where you found it before wandering off to another part of the bookstore.";
@@ -231,7 +231,7 @@ To say thab:
 	else:
 		If huntfeat is 1:
 			say "     You figure you're ready for another go at [bold type]The Hunter's Almanac[roman type] and decide to skip to the chapter about following your quarry's tracks to read the finer ways of tracking. Even though you intended to just skim it, you find that there's a lot of good points made and find an unoccupied chair to relax in and read. When you're done reading the chapter you snap the book close with a smile, optimistic that whatever you're looking for will now be easier to find.";
-			Add "Expert Hunter" to feats of the player;
+			Add "Expert Hunter" to feats of player;
 			Follow the turnpass rule;
 		else:
 			say "     Walking by a table, a book titled [bold type]The Hunter's Almanac[roman type] catches your eye. Stopping to read the cover, you grin and chuckle softly at the last names of the authors Dewey, Ketchum, and Howe. Thinking it's a humorous look at hunting, you decide to thumb through it, and find that it's actually a book discussing the finer points of being a hunter with humor sprinkled throughout. Leaning against a wall, you quickly peruse through the table of contents, skipping the chapters about gun and ammo selection, field dressing your catch, and anything else that wouldn't be of great help. The chapter discussing setting up a proper deer stand piquing your interest, you decide to start there. After some time though, you eventually lose interest and decide you will come back later to read the chapter on following your quarry's tracks.";
@@ -246,7 +246,7 @@ To say myse:
 	else:
 		If purfeat is 1:
 			say "     You head back to the self-improvement section to pull the self-help book off the shelf, find an unoccupied chair to sit in, and pick up where you left off. Only when Beverly comes over to check on you do you look up. After blinking a couple times, you chuckle quietly and tell her you're ok. Spending a little more time with the book, you gleam as much info as you can from it until you feel that you have more of a mental grip of your current situation.";
-			Add "Strong Psyche" to feats of the player;
+			Add "Strong Psyche" to feats of player;
 			Follow the turnpass rule;
 		else:
 			say "     You wander the store for a few minutes until you come across the self-improvement section. Shrugging your shoulders, you peruse the titles until one seems promising, simply titled [bold type]Maintaining your Self-esteem[roman type]. Pulling it off the shelf, you begin to leaf through it, and though informative, find it quickly getting dull. Putting it back on the shelf, you promise to yourself that you'll make an effort to finish it.";
@@ -261,7 +261,7 @@ To say hfgb:
 	else:
 		If hagfeat is 1:
 			say "     Deciding that you want to get further into [bold type]How to Find a Good Bargain[roman type], you head back to the shelf to grab it then sit down to read. Before you even realize it, you're finished with the book. Having found it quite informative, you go back to re-read some of the finer points of bargaining. When you are done you put the book back on the shelf, confident that you are able to easily wheel and deal with anyone you come across.";
-			Add "Haggler" to feats of the player;
+			Add "Haggler" to feats of player;
 			Follow the turnpass rule;
 		else:
 			say "     Wandering over to the business and money section on a whim, you start to look through the books on the shelves. Not finding anything of interest, you are just about to move on when a book titled [bold type]How to Find a Good Bargain[roman type] catches your eye. Pulling it out and thumbing through a few pages, you decide to give it a read. Finding an unoccupied chair nearby, you sit down and begin to peruse your new find. After just a few chapters you feel you are only able to just grasp the basics of wheeling and dealing. Getting up and shelving it for now, you decide to come back to it later.";

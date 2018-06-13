@@ -173,7 +173,7 @@ to say MoreauPartSale:
 	now sortorder entry is 4;
 	now description entry is "Sell him your back end. You barely look at it anyways, right";
 	[]
-	if cocks of player > 0 or cunts of player > 0:
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Your Genitals";
 		now sortorder entry is 5;
@@ -256,7 +256,7 @@ to say MoreauBodySale:
 				say "     Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
 				now body of player is body entry;
-				attributeinfect;			[sets the new attributes]
+				attributeinfect; [sets the new attributes]
 			if "Body Shop Guarantee - Body" is listed in feats of player:
 				remove "Body Shop Guarantee - Body" from feats of player;
 			say "[line break][MoreauSaleSuccessful]";
@@ -671,7 +671,7 @@ to say MoreauBodyBuyPayment:
 			now bodyname of player is name entry;
 			now body of player is body entry;
 			now BodyShopGuaranteedBody is name entry;
-			attributeinfect;			[sets the new attributes]
+			attributeinfect; [sets the new attributes]
 			if "Body Shop Guarantee - Body" is not listed in feats of player:
 				add "Body Shop Guarantee - Body" to feats of player;
 		say "[line break][MoreauBuySuccessful]";
@@ -1016,7 +1016,7 @@ to say MoreauCrotchBuyPayment:
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		follow the sex change rule;
-		if cockname of player is not name entry and cocks of player > 0:
+		if cockname of player is not name entry and player is male:
 			say "     Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now cockname of player is name entry;
 			now cock of player is cock entry;
@@ -1133,7 +1133,7 @@ An everyturn rule:
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
-			attributeinfect;			[sets the new attributes]
+			attributeinfect; [sets the new attributes]
 	if "Body Shop Guarantee - Skin" is listed in feats of player:
 		if (skinname of player is "Jackalman" or skinname of player is "Jackalboy" or skinname of player is "Nightmare" or skinname of player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";

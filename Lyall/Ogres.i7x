@@ -36,7 +36,7 @@ Instead of resolving a Ogre Encounter:
 			now inasituation is false; [reset]
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20: [player won]
-			if cocks of player > 0:
+			if player is male:
 				say "     The last of the three creatures has been bested in combat and falls down flat on his face with a loud thud. You stand there with your hands on your hips and chest puffed out, happy with your work. One of the creatures whimpers on the ground and crawls towards who you assume is the leader of their group, then whispers something into his ear. Your start to wonder what you should do with the helpless creatures. Looking down at the smallest one and see his little, curly tail begin to twitch. At the same time, the other two both roll over and sit up, giving you a concerned glance before quickly looking at each other and whispering amongst themselves. Their leader in the fur coat finally speaks up, 'I am shocked. You have bested my brothers and myself in combat. You do as you please with any one of us. All I ask of you is to leave the most undesirable punishments to me as I have failed to live up to my duties as a leader.' You nod and look over the three creatures and carefully examine both their bulges and their rears.";
 				LineBreak;
 				say "     [bold type]What do you want to do with them now?[roman type][line break]";
@@ -83,7 +83,7 @@ Instead of resolving a Ogre Encounter:
 				say "     <WIP: Sorry, we currently do not have scenes for female and herm characters in this event>";
 				now Ogre Encounter is resolved; [for now]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
-			if cocks of player > 0:
+			if player is male:
 				say "     You fall to your knees, exhausted from the fight. The large creatures walk up to you, towering over you with smiles plastered across their faces. 'What should we do with them?' one asks. 'We should kill it,' another one says. 'Shit up, both of you!' the leader barks. 'He doesn't have a bounty, so there's no use killing him, and he didn't put up a fight as another bounty hunter would. I say that we have a little fun with him.' The leader licks his lips and stares down at you. The other two laugh and agree with him. Done arguing over what they want to do with you, the leader removes his jacket and sets it on the ground. You can't help but look over in awe at his powerful, gray legs and his cute, little tail. The other two stand there, waiting for their leader. Once his jacket is neatly placed on the ground, he removes his briefs and turns towards you.";
 				say "     His thick, though not long, cock begins to harden, becoming even thicker. He walks up to you, and the closer he gets, the stronger his musk becomes. He stands only inches from you, and you look up to see his now hard eight-inch cock above. The other two walk behind you, having already removed their gear, and rest their cocks upon each of your shoulders. 'I'm Gurke, and these are my partners, Grogs and kKogs,' the leader informs. 'And you are now our pet, you understand?' You nod in agreement with Gurke's statement. 'Good. Now get on all fours,' Gurke commands. Given the situation, you have no choice but to do as they say. You fall forward, bracing yourself with your hands, and raise your ass for your new masters. Gurke steps towards your ass, moving his partners away.";
 				WaitLineBreak;

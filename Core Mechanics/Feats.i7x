@@ -192,7 +192,7 @@ instead of addfeating the fun feats:
 		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
-[	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";	]
+[	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!"; ]
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it. It can occasionally open new, kinkier sex scenes.";
 	if "Dominant" is not listed in feats of player:
@@ -201,7 +201,7 @@ instead of addfeating the fun feats:
 		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or XP boost from it. It may occasionally open new, dominant scene variations.";
 	if Strange Serpent is resolved or scenario is "Forgotten":
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
-	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical. move elsewhere if so desired.]
+	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type]."; [put next to submissive because that seemed logical. move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale.";
 	if "Strong Psyche" is not listed in feats of player, addfeat "Weak Psyche" with "Having a higher mental succeptibility to corruption by the nanites, you have a weaker grip on your human identity.";
@@ -298,7 +298,7 @@ instead of addfeating the basic feats:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
 	if level of player > 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
-[	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";	]
+[	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern."; ]
 	if HP of doctor matt > 4 or scenario is "Forgotten":
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
@@ -320,7 +320,7 @@ This is the gainfeat rule:
 	if autofeatloading is true or player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
-[		decrease menu depth by 1;			]
+[		decrease menu depth by 1; ]
 		increase featgained of player by 1;
 		if nam is "Automatic Survival":
 			decrease featgained of player by 1;
@@ -355,11 +355,11 @@ to say bestowcitymapfeat:
 	now City Hospital is known;
 	Now State fair is known;
 	Now Approaching the Capitol Building is known;
-	Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
+	Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 	Now Plant Overview is known;
-	now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+	now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 	now College Campus is known;
-	now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
+	now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 	Now Entrance to the Red Light District is known;
 	Now Entrance to the High Rise District is known;
 	Now Zoo entrance is known;

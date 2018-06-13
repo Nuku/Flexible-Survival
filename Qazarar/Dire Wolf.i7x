@@ -8,7 +8,7 @@ to say DireWolfLoss: [IN PROGRESS]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
 		say "     You collapse to the ground, defeated by the massive canine. The beast stands over you, growling loudly, the expression clearly demanding that you submit to him. At the mercy of the powerful wolf, you have no choice but to roll over and let him decide what to do with you.";
-		[if cunts of player > 0 and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)):
+		[if player is female and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)):
 			say "     <vaginal scene>";
 		else if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or ("Mpreg" is listed in feats of player and a random chance of 1 in 5 succeeds)):
 			say "     <anal scene>";
@@ -35,10 +35,10 @@ to say DireWolfVictorySex:
 	say "     ([link]Y[as]y[end link]) - Have fun with the dire wolf.";
 	say "     ([link]N[as]n[end link]) - Leave it be.";
 	if the player consents:
-		if cocks of player > 0:
+		if player is male:
 			say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. You could easily roll him over and ride[if cunts of player < 1] one of[end if] his pair of thick canine shafts, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
 			if player consents:
-				if cunts of player > 0: [herm ride]
+				if player is female: [herm ride]
 					say "     The massive wolf doesn't resist as you roll him onto his back, leaving his twin members standing firmly in the open. You waste no time preparing yourself, and soon you stand above the beast, ready to lower yourself onto his shafts. Before you do, the creature begins to whimper slightly, clearly as eager for what comes next as you are. Unwilling to disappoint him, you start to drop yourself slowly, using one hand to hold the shafts in place. The tapered shape of his cocks lets the tips of each one slide into you easily, one in your cunt and the other in your ass. From there, you start to slide further down, and then back up, slowly increasing in speed until you're bouncing on his twin two canine shafts, the feeling of having two dicks inside you at once causing a rapidly building sense of pleasure..";
 					say "     You soon increase the rate of your riding, feeling the massive dicks spearing you again and again, with the knots bumping against both of your entrances each time you bottom out. Finally, you can tell that the wolf is almost about to peak from the throbbing of the shafts, and you slam down with even more force than before, finally popping both of the knots into you simultaneously, filling you completely. That final thrust causes the beast to go overboard, both cocks erupting, filling you and coating you in his thick seed. The both of you are panting in exertion from the experience, but you feel a warm glow of satisfaction within you as you manage to climb off of the dire wolf. You leave the creature there, and finally leave, having shown it it's place.";
 				else: [male ride]
@@ -47,7 +47,7 @@ to say DireWolfVictorySex:
 			else: [fucking the wolf]
 				say "     Having the wolf's puckered ring waiting for you invitingly is too much to pass up, so you press right up against him without waiting. Your [cock of player] rod is straining with excitement, the tip pressed against the dire wolf's opening. It only keeps that position for a split second before you proceed to thrust in, the warm tightness of the canine passage gripping your cock, stroking you and pleasuring you. The sensation of taking this mighty predator and making him yours is intoxicating, only adding to the pleasure of taking his tight hole for your own. Soon your thrusting into the beast starts to bear fruit, as you feel the ever-increasing sensations start to approach a peak. When it arrives, your [cock of player] shaft releases a torrent of seed into the wolf's rear, claiming him as yours. Soon enough you clean up, and leave the dire wolf lying there, content to know that your semen will remain inside him for quite a while.";
 		else:
-			if cunts of player > 0: [female ride]
+			if player is female: [female ride]
 				say "     The massive wolf doesn't resist as you roll him onto his back, leaving his twin members standing firmly in the open. You waste no time preparing yourself, and soon you stand above the beast, ready to lower yourself onto his shafts. Before you do, the creature begins to whimper slightly, clearly as eager for what comes next as you are. Unwilling to disappoint him, you start to drop yourself slowly, using one hand to hold the shafts in place. The tapered shape of his cocks lets the tips of each one slide into you easily, one in your cunt and the other in your ass. From there, you start to slide further down, and then back up, slowly increasing in speed until you're bouncing on his twin two canine shafts, the feeling of having two dicks inside you at once causing a rapidly building sense of pleasure..";
 				say "     You soon increase the rate of your riding, feeling the massive dicks spearing you again and again, with the knots bumping against both of your entrances each time you bottom out. Finally, you can tell that the wolf is almost about to peak from the throbbing of the shafts, and you slam down with even more force than before, finally popping both of the knots into you simultaneously, filling you completely. That final thrust causes the beast to go overboard, both cocks erupting, filling you and coating you in his thick seed. The both of you are panting in exertion from the experience, but you feel a warm glow of satisfaction within you as you manage to climb off of the dire wolf. You leave the creature there, and finally leave, having shown it it's place.";
 			else: [neuter ride]
@@ -79,16 +79,16 @@ When Play begins:
 	now defeated entry is "[DireWolfVictory]";
 	now victory entry is "[DireWolfLoss]";
 	now desc entry is "[DireWolfDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "dire wolf face, with a long canine snout filled with the sharp teeth of a powerful predator"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "dire wolf face, with a long canine snout filled with the sharp teeth of a powerful predator"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]dire wolf[or]lupine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a dire wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "coarse dark fur spreads rapidly over your form, leaving you more capable of enduring the elements."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length taking on an intense reddish color"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a dire wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "coarse dark fur spreads rapidly over your form, leaving you more capable of enduring the elements."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length taking on an intense reddish color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 19;
 	now dex entry is 14;
 	now sta entry is 18;

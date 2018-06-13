@@ -10,7 +10,7 @@ The sarea of Mysterious Stranger is "Outside".
 Instead of resolving a Mysterious Stranger:
 	Say "'Hey, you over there with the [facename of player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
 	WaitLineBreak;
-	Say "'Say you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if cocks of player > 0]him[else]them up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
+	Say "'Say you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if player is male]him[else]them up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
 	WaitLineBreak;
 	Say "'Don't worry. It's not dope or anything like that - though something stronger than a gin and tonic might be a necessity in these strange times - let's just call these little joys...[italic type]stamina boosters[roman type] and leave it like that.' The man chuckles at you from underneath the shade of the black detective hat that he has draped onto his head before picking up his pack and then slinging it over his shoulder. 'Be seeing you around.' And with that the other is gone. Not sure you blink as you watch the other go off about his way before shaking your head as you realize just where you are at the moment.";
 	WaitLineBreak;
@@ -87,7 +87,7 @@ Instead of resolving a Magical Girl:
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		now carried of Sailor Outfit is 1;
 		now battleground is "void";
-		Move the player to the Bunker;
+		move player to the Bunker;
 		Now Magical Girl is resolved;
 		Increase score by 1;
 	else:

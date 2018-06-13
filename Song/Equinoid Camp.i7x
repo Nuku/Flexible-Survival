@@ -61,11 +61,11 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			LineBreak;
 			say "     Speaking aloud for the others to hear, you tell her that you are ready to join the tribe and become one of them. The reaction among the group is mixed, but it seems most are willing to accept this. Some though, as you were warned, seem displeased but hold their tongues. Amaryllis, for her part, is elated and grabs your hand, leading you through the gate as Bryony grudgingly opens it. Amaryllis sticks her tongue out while the other black equinoid glares at her.";
 			say "     You are followed by several others through the trees and into the camp of the equinoids. It's a rather primitive community, with wooden huts and barns that make little use of scavenged materials. They clearly expect you to seem impressed by it, so you do your best to appear that way. Amaryllis leads you to one of the larger halls and you enter with the others. There, a scented bath is prepared as well as several of the equinoids.";
-			if cocks of player > 0:
+			if player is male:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she strokes your cock to erection, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
 				say "     But you are given little opportunity to notice that, as Amaryllis is now moving atop your erect shaft and sinking down onto it with a soft nicker of pleasure. She's straddled your hips facing you and begins riding your [cock of player] cock while running her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight. You can feel the equinoid seed soaking into you even as you seek to breed the lovely one riding you.";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
-			else if cunts of player > 0:
+			else if player is female:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she fingers your pussy, you can see her equine cock at the ready. At this time, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight as your lover pumps her hot seed into you. You can feel the equinoid seed soaking into you even as you're being bred by the lovely one you're riding.[impregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
@@ -141,7 +141,7 @@ instead of sniffing Nakoma's Tent:
 	say "Nakoma's tent smells of herbs, scented oil, fur and a hint of equine arousal.";
 
 Definition: a person is blequinoidbodied: [Determines if the player is fully black equinoid]
-	if the bodyname of the player is "Black Equinoid" and player is pure, yes;
+	if bodyname of player is "Black Equinoid" and player is pure, yes;
 	no;
 
 Equinoid Camp ends here.

@@ -30,7 +30,7 @@ to say ebgatorvic:
 		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ deep inside you one last time";
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your ring, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your ring, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your bowels.";
-			say "     Still high from the throes of bliss -- and perhaps ensuring the orb is planted deep within you -- he still continues to fuck you senselessly, forcing a weak, [if scalevalue of player > 3]slightly[else]substantially[end if] strained orgasm, [if cocks of player > 0]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if cunts of player > 0]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss -- and perhaps ensuring the orb is planted deep within you -- he still continues to fuck you senselessly, forcing a weak, [if scalevalue of player > 3]slightly[else]substantially[end if] strained orgasm, [if player is male]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type]";
 			if ebgatord < 2, now ebgatord is 2;
 			now mpreghijack is true;
@@ -38,9 +38,9 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
-			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if cocks of player > 0]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if cunts of player > 0]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if player is male]your unattended cock[smn] staining the ground with your [cum load size of player] load[else if player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of player > 4 or player is twistcapped] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[mimpregchance]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against[if cunts of player > 1] one of[end if] your cunt[sfn]";
 		if ebgatord is 0:
 			say ", you're given a glimpse of the thing even as it's being forced past your[if cunt length of player < 12] tight[end if] lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool and overly wide and flat girth, making you groan [if HP of player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
@@ -51,7 +51,7 @@ to say ebgatorvic:
 		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ deep inside you one last time";
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your lips, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your lips, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your womb.";
-			say "     Still high from the throes of bliss -- and perhaps ensuring the orb is planted deep within you -- he still continues to fuck you senselessly, forcing a weak, [if cunt length of player < 12]slightly[else]substantially[end if] strained orgasm, your [if cocks of player > 0]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if cunt length of player > 11] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss -- and perhaps ensuring the orb is planted deep within you -- he still continues to fuck you senselessly, forcing a weak, [if cunt length of player < 12]slightly[else]substantially[end if] strained orgasm, your [if player is male]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if cunt length of player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type]";
 			if ebgatord < 2, now ebgatord is 2;
 			now preghijack is true;
@@ -59,7 +59,7 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
-			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if cocks of player > 0]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if cunt length of player > 11] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss -- and its motion further lubricated by its glowing seed -- it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if player is male]unattended cock[smn] staining the ground with your [cum load size of player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if cunt length of player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[impregchance]";
 	else:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your face";
@@ -81,7 +81,7 @@ to say ebgatordesc:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	now impregnatevalid is false;
-	if cunts of player > 0 and ebneuterswitch is false:
+	if player is female and ebneuterswitch is false:
 		if player is fem_vacant:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;

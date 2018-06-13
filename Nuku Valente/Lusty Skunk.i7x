@@ -57,7 +57,7 @@ Instead of Resolving a Lusty Skunk:
 	if skrp is 1:
 		say "You happen across another skunk hybrid. A shapely female human form perched on a skunk lower frame, two faces both smiling at you. Without a word, they prance up and embrace you. Any desire you had to avoid them fades like mist before the morning sun as their hands eagerly explore your form. Your body grows warm and tingly as it remembers the form they want, reaffirming your strange, new, nature with gentle coos of affection and familial bond.";
 		skunkform;
-		if cocks of player > 0:
+		if player is male:
 			if cock length of player < 9:
 				say "Her hands roam you as she circles around you, reaching behind your hind legs to caress your [cock size desc of player] manhood gently, 'Too small for me,' she chides, 'I want to feel it, but bigger.' She leans in behind you, kissing your [short ball size] balls and nuzzling into your sensitive loins a moment before she comes back around you, her shapely ass waving temptingly, denied though it is.";
 			else if cock length of player > 19:
@@ -93,7 +93,7 @@ Instead of Resolving a Lusty Skunk:
 
 to say doubleskunk:		[separated to edit and remove 'stop the action']
 	if 0 is 0:		[yes]
-		if cocks of player > 0:
+		if player is male:
 			say "Her soft paws stray down between your thighs to grasp at your [cock size desc of player] [cock of player] shaft and gently stroke it to its full length as she slowly pivots beneath you. Her huge tail drapes up over her back, exposing her ass and pouting nethers to you. Thin streams of honey leak from those thick pouting lips, running down her thighs as she slowly shakes her rump back and forth invitingly. The smell is overpowering in her heat, repulsing and attracting at once in a powerful, if confusing, clash of instincts.";
 			WaitLineBreak;
 			if cocks of player > 1:

@@ -102,7 +102,7 @@ Instead of resolving a Rooftop Rumble:
 			LineBreak;
 			challenge "Human Gangmember";
 			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-				say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if cunts of player > 0 and cocks of player is 0]her[else]him[end if] down good!'";
+				say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if player is purefemale]her[else]him[end if] down good!'";
 				say "     With all your effort you lash out kicking, squirming and even trying to bite your holders, but to no avail. As the blade draws down, you close your eyes to spare yourself the final sight of being cut open. You feel a pool of blood splash on your skin...";
 				WaitLineBreak;
 				say "     ...wait, that didn't hurt. You suddenly become aware of many different sounds, in addition to the restraining weights being lifted off of your body. Opening your eyes you try and stand up, but disorientation keeps you down and out of it. Man, that last blow to the head at the end of the fight really left an expression - your eyes cross and you have trouble focusing on anything. In the blurry haze before your eyes, you vaguely make out several of the goons moving about chaotically, while at the same time you clearly see a streak of blue bouncing about from one to another.";
@@ -117,7 +117,7 @@ Instead of resolving a Rooftop Rumble:
 				say "     One attacker falls before you, only to be instantly replaced by another.";
 				challenge "Human Gangmember";
 				if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-					say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if cunts of player > 0 and cocks of player is 0]her[else]him[end if] down good!'";
+					say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if player is purefemale]her[else]him[end if] down good!'";
 					say "     With all your effort you lash out kicking, squirming and even trying to bite your holders, but to no avail. As the blade draws down, you close your eyes to spare yourself the final sight of being cut open. You feel a pool of blood splash on your skin...";
 					WaitLineBreak;
 					say "     ...wait, that didn't hurt. You suddenly become aware of many different sounds, in addition to the restraining weights being lifted off of your body. Opening your eyes you try and stand up, but disorientation keeps you down and out of it. Man, that last blow to the head at the end of the fight really left an expression - your eyes cross and you have trouble focusing on anything. In the blurry haze before your eyes, you vaguely make out several of the goons moving about chaotically, while at the same time you clearly see a streak of blue bouncing about from one to another.";
@@ -206,7 +206,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Human Gangmember";[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Human Gangmember"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The young man gives you a kick.[or]He smacks his baton into your side.[or]You get hit in the face by the human's elbow.[or]He tries to knee you in the groin - even though you manage to turn in the last moment, it still smarts as his knee hits your leg.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
@@ -234,7 +234,7 @@ When Play begins:
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8;        [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -259,7 +259,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Blue Oni";[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Blue Oni"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "<should not fight>";
 	now defeated entry is "<should not fight>";
 	now victory entry is "<should not fight>";
@@ -287,7 +287,7 @@ When Play begins:
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

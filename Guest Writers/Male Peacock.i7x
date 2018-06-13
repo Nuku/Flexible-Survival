@@ -42,16 +42,16 @@ to say peacockattack:
 to say peacockvictory:
 	now peacockcontrol is 0;
 	choose row monster from the table of random critters;
-	if cunts of player > 0:
+	if player is female:
 		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
 		say "     You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened. You don't think you would be able to actually oppose what is about to happen, though...";
 		say "     He motions towards the bed in the middle of the room. You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit. He slides over your [bodydesc of player] body... it feels like a light, warm blanket. You think that maybe this won't be SO bad after all...";
-		attempttowait;
+		WaitLineBreak;
 		say "     After you don't know how much pleasant time, you find yourself back in the city, no idea how or when. The time you shared with the strange bird is a hazy, yet blissful, blur. You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
 	else:
 		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him; you have no choice but to walk with him into the alleyway.";
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue and palate until finally rewarded with a hot, sticky mess as the bird groans in orgasmic release.";
-		attempttowait;
+		WaitLineBreak;
 		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colorful tail. He gives it a mesmerizing wave and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
 		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
@@ -72,16 +72,16 @@ When Play begins:
 	now defeated entry is "The last hit knocks the blue bird on the ground; he gets up quickly and flees away, is pride completely stomped."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
-	now face entry is "bird-like head. You pass quite a bit of your time admiring your";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[peacockskin]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "[peacocktail]";[ Tail description, write a whole Sentence or leave blank. ]
+	now face entry is "bird-like head. You pass quite a bit of your time admiring your"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[peacockskin]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "[peacocktail]"; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]thin red[or]undulated[or]avian-like[at random]";
-	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can't fly, though"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes slim and undulated. It retracts into a new, just formed, slit. Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can't fly, though"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes slim and undulated. It retracts into a new, just formed, slit. Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 6;
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]

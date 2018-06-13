@@ -22,7 +22,7 @@ to say wrestlingwolfattack:
 		say "     Still in pain from his last attack, you try to crawl away, only to have yourself pinned under the pawed foot of the Wrestling Wolf. 'Ah ah ah! No going off without your reward,' he says as he continues to pump his shaft harder and faster.";
 		say "     With a howl the Wrestler Wolf unloads his load all over your [bodyname of player] body. The wrestler grins in satisfaction as he watches some of his cum seep through your [skinname of player] hide. 'This will make finding you a lot easier,' the wrestler says pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'Next time you're definitely gonna give me a workout. One way or another,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 		if "Male Preferred" is not listed in feats of player:
-			if cunts of player is 0:
+			if player is not female:
 				if "Microwaved" is listed in feats of player:
 					say "WARNING: Sex shifting nanites detected! Allow?";
 					if the player consents:
@@ -44,12 +44,12 @@ to say wrestlingwolfattack:
 		now wrestlingwolfdefeat is 1;
 	else if ( wrestlingwolfdefeat is 2 or wrestlingwolfdefeat is 3 ) and cunts of player is 0:		[now open for M/M]
 		say "     Pinned down by the lupine wrestler, he gives you a growling skronk. 'Another bad showing. Come on, I'm starting tah think that yur losing on purpose or somethin['],' he growls. 'Always losing and not getting no pussy for me. Picked a little pansy tah fight,' he jibes, giving you a poke in the side to show he's just ribbing you. 'Guess I'm gonna have tah treat ya to another dose of deep wolf action,' he rumbles, lining up his big cock with your backside again.";
-		say "His large, lupine cock pushes into your [if scalevalue of player < 4]smaller [bodytype of player] body slowly, entering with somewhat more ease this time as he's more used to it and you're better prepared for[else]large [bodytype of player] body with relative ease, the big wolf more used to it and you're better prepared to take[end if] him. He nips at your shoulders as he starts pounding into you, driving himself into you again and again with increasing force. You moan and pant beneath him, soon howling like one of his fans as he buggers you deep with his thick cock[if wrestlingwolfdefeat is 3 and cocks of player > 0]. The wolf's paw slides underneath you to take a hold of your cock and stroke it[else if cocks of player > 0]. The wolf's paw moves tentatively beneath you, and after some brief hesitation, wraps around your cock. He pauses for a moment as he grows used to the idea before resuming his thrusts and stroking your penis in time to his motions[end if][if cocks of player > 0]. All of this soon becomes too much for you and you cum hard, splattering your seed across the floor of the ring as he[else], then[end if] [if scalevalue of player < 4]grinds his knot against your pucker[else]pops his thick knot into you[end if] and blasts a heavy load of lupine seed inside you once again.[mimpregchance]";
+		say "His large, lupine cock pushes into your [if scalevalue of player < 4]smaller [bodytype of player] body slowly, entering with somewhat more ease this time as he's more used to it and you're better prepared for[else]large [bodytype of player] body with relative ease, the big wolf more used to it and you're better prepared to take[end if] him. He nips at your shoulders as he starts pounding into you, driving himself into you again and again with increasing force. You moan and pant beneath him, soon howling like one of his fans as he buggers you deep with his thick cock[if wrestlingwolfdefeat is 3 and player is male]. The wolf's paw slides underneath you to take a hold of your cock and stroke it[else if player is male]. The wolf's paw moves tentatively beneath you, and after some brief hesitation, wraps around your cock. He pauses for a moment as he grows used to the idea before resuming his thrusts and stroking your penis in time to his motions[end if][if player is male]. All of this soon becomes too much for you and you cum hard, splattering your seed across the floor of the ring as he[else], then[end if] [if scalevalue of player < 4]grinds his knot against your pucker[else]pops his thick knot into you[end if] and blasts a heavy load of lupine seed inside you once again.[mimpregchance]";
 		say "     As his erection comes down, he pulls out of you and wipes it against your bottom. 'Mmm... not too bad, but I still want ya to try trainin['] up to put up a better fight next time, ya hear?' he says with a chuckle, giving your ass a hard spank as you're grabbing your stuff to flee the ring.";
 		now wrestlingwolfdefeat is 3;
 	else:
 		if a random chance of 1 in 3 succeeds: 	[impatient - rough fuck]
-			if cunts of player > 0:
+			if player is female:
 				if cunt length of player < 20 or cunt width of player < 15:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. 'Tch, I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his wrestling briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.'";
 					say "     'So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' he roars as he stuffs his briefs down your throat. You gag as you get a taste of his masculine musk stained into his briefs. You don't have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm. 'Just how strong was this guy' you wonder as he begins to finger your [cunt size desc of player] folds with his free paw. 'You're a tight little bitch, aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met. 'Now this is gonna hurt,' he says, placing both of his pawed hands on your shoulders. 'A lot.' And just like that he pushes you down, forcing his entire length into you until you hit the rim of his gigantic knot, your stomach stretching from his [one of]gigantic[or]enormous[at random] length. You start to scream, only to have your shouts muffled by the Wrestling Wolf's balled up briefs that you're still gagging on.";
@@ -67,10 +67,10 @@ to say wrestlingwolfattack:
 			else:
 				now wrestlingwolfdefeat is 2;
 				say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. 'Jeez ya haven't improved at all have ya?' he says with a disappointed look. He pushes you onto your back and places his pawed foot onto your stomach. 'Tch, looks like ya haven't the right type of equipment for this,' he sighs, pulling down his wrestling briefs and revealing his erect shaft. 'Guess the last time wasn't enough,' he says as he begins to rub his shaft above you. 'Guess I'm going to have to try something a little more... in depth...' he says ominously. Suspecting what he's got in mind, you try to struggle, but the powerful wrestler puts you into a firm shoulder lock that pins you to the mat.";
-				say "     Lining up his large, throbbing rod with your rear, he presses his leaking cock against your back door. You groan in pain as he pushes the tip of his pointed, canine cock into your anus, spreading you open. He pants heavily, drooling onto your back as he pushes into you. 'Nnggg... some of the other guys were into this, but I never went for it. Mmm... I can see why they liked it,' he rumbles as he keeps pounding you. 'It ain't no juicy cunt, but it's still a fun ride,' he adds. Your [if scalevalue of player < 4]smaller [bodytype of player] body has trouble taking the wolf's huge cock, but he's persistent, pushing as much of it into you as he can over the course of a long, slow fucking that soon has you panting and moaning beneath him[else]large [bodytype of player] body has some difficulty accepting the wolf's huge cock at first, but soon stretches to accommodate him, letting him push the whole thing into you to eventually bury his knot in your ass[end if]. He howls loudly, blasting a heavy load of his thick cream deep into your bowels, flooding you with lupine semen[if cocks of player > 0]. You cum hard in response as well, soaking the mat beneath you with your seed[end if].[mimpregchance]";
+				say "     Lining up his large, throbbing rod with your rear, he presses his leaking cock against your back door. You groan in pain as he pushes the tip of his pointed, canine cock into your anus, spreading you open. He pants heavily, drooling onto your back as he pushes into you. 'Nnggg... some of the other guys were into this, but I never went for it. Mmm... I can see why they liked it,' he rumbles as he keeps pounding you. 'It ain't no juicy cunt, but it's still a fun ride,' he adds. Your [if scalevalue of player < 4]smaller [bodytype of player] body has trouble taking the wolf's huge cock, but he's persistent, pushing as much of it into you as he can over the course of a long, slow fucking that soon has you panting and moaning beneath him[else]large [bodytype of player] body has some difficulty accepting the wolf's huge cock at first, but soon stretches to accommodate him, letting him push the whole thing into you to eventually bury his knot in your ass[end if]. He howls loudly, blasting a heavy load of his thick cream deep into your bowels, flooding you with lupine semen[if player is male]. You cum hard in response as well, soaking the mat beneath you with your seed[end if].[mimpregchance]";
 				say "     Pulling his spent and sticky shaft from your rear, he wipes it on your ass and tucks it back into his trunks. 'Now I want you to put up a better fight in our next match or you'll get more of the same,' he growls. 'And reconsider getting that pussy too,' he says with a chuckle while you grab your stuff and run off before he decides he wants a rematch or decides to skip it and go right back to pinning you to the mat.";
 		else:
-			if cunts of player > 0:
+			if player is female:
 				if cunt length of player < 20 or cunt width of player < 15:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. Before you, the Wrestling Wolf is covered in sweat and panting quite a bit. 'Not bad! I mean you lost, but at least ya put up more of a fight than last time,' he says as he approaches you. His sweaty masculine scent washes over you, fueling your arousal. The Wolf catches the scent of your arousal and smiles. 'Heh, smells like someone could use a little attention,' he saes as he squats down in front of you. He pushes you onto your back and pulls off your clothes.";
 					say "     'I think I can help ya with that,' he says, burying his wolf-like muzzle between your legs. He pokes around a bit before finding your already wet pussy and sticking his tongue inside, sending waves of pleasure throughout your body. 'This is probably for the best. I don't think you could handle my equipment just yet,' he says before returning to your pussy. He continues to work his tongue inside you. You can hold back no longer as you finally reach your orgasm, covering the Wrestling Wolf's muzzle in you juices. He pulls back his head and helps you up. 'That sure was something, huh!' he says with a smile. 'Now if you'll excuse me, I have ta find a bitch with a big enough pussy for this,' he says, patting the bulge in his tight wrestling briefs. You both leave the ring to go your separate ways. As you walk away, you can't help but wish you had what it takes to sate his needs.";
@@ -83,7 +83,7 @@ to say wrestlingwolfattack:
 				say "     'Tch, looks like ya haven't the right type of equipment for this,' he sighs, pulling down his Wrestling Briefs and revealing his erect shaft. 'Guess the last time wasn't enough,' he says as he began to rub his shaft above you. 'Ya see, I've noticed that whenever my seed gets onto or into someone, they grow a nice little pussy for me to use,' he says, pumping his shaft even harder. With a howl, the Wrestling Wolf unloads his load all over your [bodyname of player] body. The wrestler grins in satisfaction as he watches ome of his cum seep through your [skinname of player].";
 				say "     'There we go. Maybe now you'll grow a nice little pussy for me,' the wrestler says before pulling his briefs back up. He picks you up and tosses you out of his makeshift ring. 'I'll be expecting a little something from ya the next time we fight,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 				if "Male Preferred" is not listed in feats of player:
-					if cunts of player is 0:
+					if player is not female:
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now cunts of player is 1;
 						now cunt width of player is 1;
@@ -124,53 +124,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Wrestling Wolf"; [Name of your new Monster]
-   now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
-   now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[wrwolfdesc]";
-   now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth";[ Face description, format as the text "Your face is (your text)"]
-   now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human";[ Body Description, format as the text "Your Body is (your text)"]
-   now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a thick canine tail wagging happily behind you.";[ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "[one of]canine[or]wolf[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)" ]
-   now body change entry is "your feet and hands become paw like, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)" ]
-   now skin change entry is "thick, rugged black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-   now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-   now cock change entry is "your member grows thicker, the top of it tapering to a sharp point while a large canine knot forms at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-   now str entry is 24;
-   now dex entry is 17;
-   now sta entry is 19;
-   now per entry is 13;
-   now int entry is 9;
-   now cha entry is 14;
-   now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 150;
-   now lev entry is 15; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-   now wdam entry is 18; [Amount of Damage monster Does when attacking.]
-   now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive]
-   now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2; [ Number of Breasts infection will give you. ]
-   now breast size entry is 10; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 20; [ Length of female sex infection will attempt to give you. ]
-   now cunt width entry is 15; [ Width of female sex infection will try and give you ]
-   now libido entry is 35; [ Amount player Libido will go up if defeated ]
-   now loot entry is "";
-   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefy[at random]";
-   now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "wrwolf";[ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Wrestling Wolf"; [Name of your new Monster]
+	now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[wrwolfdesc]";
+	now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth"; [ Face description, format as "Your face is (your text)"]
+	now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a thick canine tail wagging happily behind you."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your feet and hands become paw like, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "thick, rugged black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your member grows thicker, the top of it tapering to a sharp point while a large canine knot forms at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 24;
+	now dex entry is 17;
+	now sta entry is 19;
+	now per entry is 13;
+	now int entry is 9;
+	now cha entry is 14;
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 150;
+	now lev entry is 15; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 18; [Amount of Damage monster Does when attacking.]
+	now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 10; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 20; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 15; [ Width of female sex infection will try and give you ]
+	now libido entry is 35; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefy[at random]";
+	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "wrwolf"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)
@@ -184,7 +184,7 @@ this is the wrestlew rule:
 	else if a random chance of 1 in 5 succeeds:
 		now chargeup is 1;
 		say "[one of]The wolf gets on the turnbuckles and howls, shaking his fists in the air as he eggs on the non-existent crowd.[or]The wrestler rushes from side to side in the ring, bouncing himself off the ropes, passing up opportunities to try hitting you.[or]The giant wolf growls and flexes, then mimes listening to the cheering crowd with exaggerated sweeps of his muscled arms.[at random]";
-		attempttowait;
+		WaitLineBreak;
 	else:
 		retaliate; [follows the advanced model if alternate]
 

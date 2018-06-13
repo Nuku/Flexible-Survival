@@ -63,7 +63,7 @@ To say Dolphin loses:
 		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
-	if cunts of player > 0: [prefer male action]
+	if player is female: [prefer male action]
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of player > 3:
 			say "She eagerly slams her cock into your cunt. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. She continues to ram your eager hole. You can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. Up to her hilt, she can only just barely tickle your cervix. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. 'I should be - unf - enjoying this. It's - urgh - rare for someone - Ah! - to handle me so well...' she trails off. You get the impression that while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
@@ -79,7 +79,7 @@ to say dolphin fuck:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you. ";
 		if cunt length of player < 10:[won't go in far, must extend you]
 			say "She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. ";
-			if the humanity of the player < 60:
+			if the humanity of player < 60:
 				say "You wince and hope that your infected body can repair the damage she, no, it, is doing so that you may have children.";
 			else:
 				say "You wince and hope that the damage can be fixed if you wish not to miscarry.";
@@ -138,17 +138,17 @@ When Play begins:
 	now attack entry is "The dolphin takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Dolphin loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Dolphin wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
-	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphin's. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "blubber forms. It twists and reforms into the snout of a dolphin. Your hair retracts and disappears, leaving a hole in its place"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you swell with the appearance of muscles under your flesh, and a nice-looking dorsal fin sprouts out of your back"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft as blubber forms, and it turns gray and silver"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your legs feel odd as they seem to change in shape. Your ass pinches with pain as it extends into what looks like the top-half of a dolphin tail. The rest appears to be your legs. You could place all three of your appendages together to make what looks to be a dolphin's tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. Your anus also moves forward as your ass cheeks disappear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphin's. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "blubber forms. It twists and reforms into the snout of a dolphin. Your hair retracts and disappears, leaving a hole in its place"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you swell with the appearance of muscles under your flesh, and a nice-looking dorsal fin sprouts out of your back"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft as blubber forms, and it turns gray and silver"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your legs feel odd as they seem to change in shape. Your ass pinches with pain as it extends into what looks like the top-half of a dolphin tail. The rest appears to be your legs. You could place all three of your appendages together to make what looks to be a dolphin's tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. Your anus also moves forward as your ass cheeks disappear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 23;
 	now dex entry is 26;
 	now sta entry is 24;
@@ -208,10 +208,10 @@ this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 		now attack entry is "The dolphin takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
 		now wdam entry is 14;
 	else if tempnum is 6:		[was closed in the original version, left closed]
-		if cocks of player > 0:
+		if player is male:
 			now attack entry is "The dolphin darts down to your nethers, grabs your cock, and TWISTS IT OMG THAT HURT!";
 			now wdam entry is 18;
-		else if cunts of player > 0:
+		else if player is female:
 			now attack entry is "The dolphin darts down to your nethers and chomps on your clit. YOWCH.";
 			now wdam entry is 10;
 		else:
