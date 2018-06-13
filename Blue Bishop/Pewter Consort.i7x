@@ -704,7 +704,7 @@ When Play begins:
 	now face change entry is "[consortfacechange]";
 	now body change entry is "the infection takes hold. Tensing up, your body shifts and adjusts to take on the structure of a feral beast, lean and agile. Looking at your forehands, this strain at least gives you fully articulate digits";
 	now skin change entry is "[consortskinchange]";
-	now ass change entry is "a long tail sprouts from it. Fairly strong and prehensile, it sings as it's lashed through the air.";
+	now ass change entry is "a long tail sprouts from it. Fairly strong and prehensile, it sings as it's lashed through the air";
 	now cock change entry is "it tingles with a strange sensation. Checking it out, it appears to be strangely human, but the change compels it to slightly ooze from its uncut head, your seed taking on a silvery appearance";
 	now str entry is 14; [14]
 	now dex entry is 17; [17]

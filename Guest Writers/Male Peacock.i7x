@@ -21,9 +21,9 @@ to say peacockskin:
 
 to say peacocktail:
 	if cock length of player > cunt length of player:
-		say "You have a beautiful fan of feathers for tail. They are decorated with hypnotic eyes.";
+		say "You have a beautiful fan of feathers for tail. They are decorated with hypnotic eyes";
 	else:
-		say "A feathered tail encircles decorates your rear, like half of a long skirt.";
+		say "A feathered tail encircles decorates your rear, like half of a long skirt";
 
 to say peacockasschange:
 	if cock length of player > cunt length of player:
@@ -75,7 +75,7 @@ When Play begins:
 	now face entry is "bird-like head. You pass quite a bit of your time admiring your"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[peacockskin]"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is "[peacocktail]"; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "[peacocktail]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]thin red[or]undulated[or]avian-like[at random]";
 	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can't fly, though"; [ body change text. format as "Your body feels funny as (your text)." ]

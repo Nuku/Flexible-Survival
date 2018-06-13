@@ -114,7 +114,7 @@ When Play begins:
 	now face entry is "NA";
 	now body entry is "NA";
 	now skin entry is "NA";
-	now tail entry is "NA";
+	now tail entry is "NA.";
 	now cock entry is "NA";
 	now face change entry is "NA";
 	now body change entry is "NA";
@@ -189,7 +189,7 @@ to ebwhelphijackroutine:
 			now mpreghijack is false;
 		now ebwhelphijack is 0;
 		now birthedwhelp is true;
-		if waiterhater is 0, wait for any key;
+		WaitLineBreak;
 		challenge "Ebonflame Whelp";
 		now birthedwhelp is false;
 		now tempnum is 0;

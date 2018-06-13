@@ -70,5 +70,5 @@ An everyturn rule:
 		increase intelligence of player by 2;
 		increase perception of player by 2;
 		WellRestedTimer is now 6;]
-			
+
 Sleeptimer ends here.

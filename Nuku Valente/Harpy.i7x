@@ -96,11 +96,11 @@ When Play begins:
 	now skin entry is "smooth and flawless"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Above your pert ass is a fan of brown feathers that curve upwards."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "a soft warmth flows through your head as it dwindles and rounds to nymph like appeal. Your ears stretch a little to the sides as hair shifts in hue."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "light brown feathers spread rapidly, covering your shoulders and back. Brown feathers spread over your legs, from the hips down towards your shin where it fades towards yellow scaly skin. Your feet become powerful looking bird talons with wicked claws. Even as you consider reaching to touch, wing fins burst from your arms with new feathers."; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now face change entry is "a soft warmth flows through your head as it dwindles and rounds to nymph like appeal. Your ears stretch a little to the sides as hair shifts in hue"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "light brown feathers spread rapidly, covering your shoulders and back. Brown feathers spread over your legs, from the hips down towards your shin where it fades towards yellow scaly skin. Your feet become powerful looking bird talons with wicked claws. Even as you consider reaching to touch, wing fins burst from your arms with new feathers"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel your [skin of player] rump rounding. Feathers burst free from it and form a tail fin, upturned and in a fan spread"; [ ass/tail change text. format as "Your ass tingles as (your text)." ]
-	now cock change entry is "it thrums with an alien pleasure."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it thrums with an alien pleasure"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 16;

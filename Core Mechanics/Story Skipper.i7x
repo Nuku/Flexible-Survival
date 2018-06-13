@@ -16,17 +16,17 @@ storsavetext is an indexed text that varies. invsavetext is usually "no save fil
 SavewordVersion is a number that varies. SavewordVersion is 223. [Saveword version to be outputted in part1. Update this number whenever there's an update to the saveword.]
 
 To savetrix:
-	 write "[trixsavetext1]" to the File of Trixsave;
-	 write "[trixsavetext2]" to the File of Trixsave2;
-	 write "[trixsavetext3]" to the File of Trixsave3;
-	 write "Soda|1}" to the File of invsave;
-	 write "Soda|1}" to the File of storsave;
-	 repeat with x running from 1 to the number of rows in the table of game objects:
+	write "[trixsavetext1]" to the File of Trixsave;
+	write "[trixsavetext2]" to the File of Trixsave2;
+	write "[trixsavetext3]" to the File of Trixsave3;
+	write "Soda|1}" to the File of invsave;
+	write "Soda|1}" to the File of storsave;
+	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is owned:
 			let num be carried of object entry;
 			append "[name entry]|[num]}" to the File of invsave;
-	 repeat with x running from 1 to the number of rows in the table of game objects:
+	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is stored:
 			let num be stashed of object entry;
@@ -2532,12 +2532,12 @@ to restorepart2:	[values 60 - 161]
 	if HP of Sam is 16 or HP of Sam is 98, dragontaur_active;
 	if HP of Sam is 36 or HP of Sam is 99, vixentaur_active;
 	if HP of Sam is 55 or HP of Sam is 56, tripletaur_active;
- 	if HP of Sam >= 30 and HP of Sam <= 49:
- 		now icon of Sam is figure of Vixentaur_icon;
- 	else if HP of Sam >= 50 and HP of Sam <= 69:
- 		now icon of Sam is figure of Dracovixentaur_icon;
- 	else:
- 		now icon of Sam is figure of pixel;
+	if HP of Sam >= 30 and HP of Sam <= 49:
+		now icon of Sam is figure of Vixentaur_icon;
+	else if HP of Sam >= 50 and HP of Sam <= 69:
+		now icon of Sam is figure of Dracovixentaur_icon;
+	else:
+		now icon of Sam is figure of pixel;
 [115:	[Wereraptor curse]]
 [116:	[Wereraptor cure quest]]
 [117:	[Dr. Utah]]
@@ -3258,8 +3258,8 @@ to restorepart-final:
 		add "Physical Booster" to the feats of player;
 		now infection terminal is in Hidden Lab;
 	if hospquest > 13 and HP of Susan is 2:
-		 move Susan to Hidden Lab;
-		 now HP of Susan is 50;
+		move Susan to Hidden Lab;
+		now HP of Susan is 50;
 	if hospquest >= 19 or ( HP of Doctor Matt >= 19 and HP of Doctor Matt < 100 ):
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;

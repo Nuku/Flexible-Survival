@@ -41,7 +41,7 @@ to say losetofireelemental:
 			say "     As you grow aroused, she moves beneath you, bringing her cunt beneath your face. Grabbing your head, she pulls your face to her cunt, pressing your lips against it while her own buries itself in your crotch, her hot, deft tongue and supple lips working over your [if cunts of player is 2]pair of cunts[else if cunts of player > 2]many cunts[else]cunt[end if] with plenty of zeal, sending hot waves of pleasure through you. 'Come, taste of me, you fiery beast,' she moans. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
 		else:
 			say "     A little disappointed to find you bare there, she kneels in front of you and takes a hold of your head. She gently pushes it between her thighs, pressing your lips to her cunt while her hands run over your body, spreading her flames with yours. 'Come, taste of me, you fiery beast,' she moans. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
-	 else if bodyname of player is "Fire Sprite" and the player is fireskinned:
+	else if bodyname of player is "Fire Sprite" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now. She kneels beside you, running a flaming hand down your back. 'Come, little spark, let me show you that there is more to the flame then mischief and destruction, let me show you the passion of the true fire.' As you begin to lean against the fiery woman, basking in the warmth of her flame, she scoops your smaller form into her arms, cradling you against her bosom as she carries you to the nearest safe place.";
 		say "     Pressing your lips to her warm nipple, you feel a pleasant liquid heat leaking into your mouth, and she gives a sigh of contentment as you soon begin suckling for more. 'See? Isn't this so much nicer then all that needless destruction? You have the potential to be so much more, my little spark,' she says, idly stroking your head before her hands begin to drift down your body[if breast size of player > 2], pausing to tease your breasts momentarily before moving lower[end if]. Her deft fingers leave a trail of flame across your body which slowly spreads over you, wrapping you in her warmth as [if player is herm]she begins teasing your stiffing cock[smn] and drooling puss[yfn][else if player is male]she begins teasing your stiffing cock[smn][else if player is female]she begins teasing your drooling puss[yfn][else]stroking your barren groin[end if]. ";
 		if player is herm:
@@ -125,7 +125,7 @@ When Play begins:
 	now libido entry is 80; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
- 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sensual[or]lithe[at random]";
 	now type entry is "[one of]elemental[or]humanoid[at random]";
 	now magic entry is true;

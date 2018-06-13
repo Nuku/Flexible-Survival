@@ -58,8 +58,8 @@ Figure of Incubus_clothed_icon is the file "Incubus_clothed.jpg".
 Figure of Incubus_naked_icon is the file "Incubus_naked.jpg".
 Figure of Kangaroo_icon is the file "Red Kangaroo.jpg".
 Figure of Lamia_icon is the file "FSTF_Lamia.jpg".
-Figure of LatexErmine_icon is the file "latexermine_ig.jpg".	[creature loss variant]
-Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg".	[color variants]
+Figure of LatexErmine_icon is the file "latexermine_ig.jpg". [creature loss variant]
+Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg". [color variants]
 Figure of LatexErmineGreen_icon is the file "FSTF_LatexErmineGreen_ig.jpg".
 Figure of LatexErmineIndigo_icon is the file "FSTF_LatexErmineIndigo_ig.jpg".
 Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
@@ -307,28 +307,28 @@ Figure of Zigor_icon is the file "Zigor_ig.jpg".
 
 [scene icons]
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
-Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg".	[Encased by Bottlenose Toy]
-Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attraction' ending only.]
+Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg". [Encased by Bottlenose Toy]
+Figure of Christyend_icon is the file "christyend_ig.jpg". [for 'Tourist Attraction' ending only.]
 Figure of Corbin_Felinoid_icon is the file "Corbin_Felinoid.jpg". [riding the cat]
-Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke scene.]
-Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
+Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg". [Shawn topping Duke scene.]
+Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg". [The Down Under Pub's floor show.]
 Figure of EricRidingRane_icon is the file "Rane&Eric3.jpg". [make-up sex]
 Figure of Eric_Urik_naked_icon is the file "Eric_Urik_naked.jpg".
 Figure of Boy_To_Fox_Shampoo1_icon is the file "Boy_To_Fox_Shampoo1.jpg".
 Figure of Boy_To_Fox_Shampoo2_icon is the file "Boy_To_Fox_Shampoo2.jpg".
-Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy scene.]
+Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg". [Fang topping Candy scene.]
 Figure of Malakhi_Barnabas_icon is the file "Malakhi_Barnabas.jpg".
 Figure of Malakhi_Kano_icon is the file "Malakhi_Kano.jpg".
-Figure of Mammoth_CV1_icon is the file "Mammoth_CV1.jpg".	[Mammoth cock-vore scene 1.]
-Figure of Mammoth_CV2_icon is the file "Mammoth_CV2.jpg".	[Mammoth cock-vore scene 2.]
-Figure of Mammoth_CV3_icon is the file "Mammoth_CV3.jpg".	[Mammoth cock-vore scene 3.]
-Figure of Mammoth_CV4_icon is the file "Mammoth_CV4.jpg".	[Mammoth cock-vore scene 4.]
-Figure of Mammoth_CV5_icon is the file "Mammoth_CV5.jpg".	[Mammoth cock-vore scene 5.]
-Figure of Mammoth_CVF_icon is the file "Mammoth_CVF.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
+Figure of Mammoth_CV1_icon is the file "Mammoth_CV1.jpg". [Mammoth cock-vore scene 1.]
+Figure of Mammoth_CV2_icon is the file "Mammoth_CV2.jpg". [Mammoth cock-vore scene 2.]
+Figure of Mammoth_CV3_icon is the file "Mammoth_CV3.jpg". [Mammoth cock-vore scene 3.]
+Figure of Mammoth_CV4_icon is the file "Mammoth_CV4.jpg". [Mammoth cock-vore scene 4.]
+Figure of Mammoth_CV5_icon is the file "Mammoth_CV5.jpg". [Mammoth cock-vore scene 5.]
+Figure of Mammoth_CVF_icon is the file "Mammoth_CVF.jpg". [Mammoth pure succumb ending - bonus CV pic.]
 Figure of Parasol_Nap_icon is the file "Parasol_Nap.jpg". [female canine lying on the beach]
-Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
+Figure of SamBadEnd_icon is the file "sambadend_ig.jpg". [Sam's Bad End to assault and infection.]
 Figure of Shy_Vixen_icon is the file "Shy_Vixen.jpg".
-Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
+Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg". [Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg". [mid-sex scene graphic.]
 Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg". [satyrs with barrel]
 Figure of Talov_Kerr_Party_icon is the file "Talov_Kerr_Party.jpg". [satyrs in the frat party]

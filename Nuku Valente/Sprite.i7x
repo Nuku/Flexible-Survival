@@ -88,11 +88,11 @@ When Play begins:
 	now skin entry is "flawless human"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]human[or]uncut[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your ears become long and elfin. As the changes progress, your face becomes pudgy and youthful, you could almost pass for human."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "you shrink dramatically and swiftly. Your form becomes more female looking as curves develop. Behind you, dragonfly like wings extend outwards, buzzing excitedly for a moment before folding neatly against your reduced form."; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it becomes soft and supple, perfect human flesh."; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your rump becomes round and grabbable."; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes human like, uncut and dangling between your thighs."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now face change entry is "your ears become long and elfin. As the changes progress, your face becomes pudgy and youthful, you could almost pass for human"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you shrink dramatically and swiftly. Your form becomes more female looking as curves develop. Behind you, dragonfly like wings extend outwards, buzzing excitedly for a moment before folding neatly against your reduced form"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it becomes soft and supple, perfect human flesh"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your rump becomes round and grabbable"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes human like, uncut and dangling between your thighs"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 18;
 	now sta entry is 10;

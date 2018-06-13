@@ -135,7 +135,7 @@ to snakecoresex:
 			if cocks of player > 1 and cock length of player > 20:
 				say "its exposed brother[if cocks of player > 2]s[end if]";
 			else:
-				 say "their exposed brother[if cocks of player > 3]s[end if]";
+				say "their exposed brother[if cocks of player > 3]s[end if]";
 		if cock width of player > 19:
 			say ". Very quickly, the beast visibly bloats to contain your load, each successive jism flooding its depths more and more, until it can abide not a drop more.";
 		else:

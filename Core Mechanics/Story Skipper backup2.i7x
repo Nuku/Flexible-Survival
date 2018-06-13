@@ -12,11 +12,11 @@ trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save 
 invsavetext is an indexed text that varies. invsavetext is usually "no save file found".
 
 To savetrix:
-	 write "[trixsavetext1]" to the File of Trixsave;
-	 write "[trixsavetext2]" to the File of Trixsave2;
-	 write "[trixsavetext3]" to the File of Trixsave3;
-	 write "Soda|1}" to the File of invsave;
-	 repeat with x running from 1 to the number of rows in the table of game objects:
+	write "[trixsavetext1]" to the File of Trixsave;
+	write "[trixsavetext2]" to the File of Trixsave2;
+	write "[trixsavetext3]" to the File of Trixsave3;
+	write "Soda|1}" to the File of invsave;
+	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is owned:
 			let number be carried of object entry;
@@ -2045,7 +2045,7 @@ To reciting2:
 		add "Physical Booster" to the feats of player;
 		now infection terminal is in Hidden Lab;
 	if hospquest > 13 and deerhappy is 2:
-		 move Susan to Hidden Lab;
+	move Susan to Hidden Lab;
 	if HP of doctor matt > 11 and HP of doctor matt < 100, add "Mental Booster" to the feats of player;
 	now Candy is in dark basement;
 	if coonstatus > 100:
@@ -4131,7 +4131,7 @@ Carry out reciting:
 		add "Physical Booster" to the feats of player;
 		now infection terminal is in Hidden Lab;
 	if hospquest > 13 and deerhappy is 2:
-		 move Susan to Hidden Lab;
+		move Susan to Hidden Lab;
 	if HP of doctor matt > 11 and HP of doctor matt < 100, add "Mental Booster" to the feats of player;
 	now Candy is in dark basement;
 	if coonstatus > 100:

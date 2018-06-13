@@ -205,9 +205,7 @@ instead of resolving a Prank Aftermath:
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if libido of player > 100, now libido of player is 100;
-	LineBreak;
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+	WaitLineBreak;
 	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears. She is pushed into the arms of two of her former teammates. Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth. As they fuck her, all three continue to change until they are full puma herms, fucking with mrowls of lustful delight. The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum. Watching this arousing show, you can't help but get turned on and start masturbating. As you climax, you groan loudly and cum hard, unable to stop yourself. But this doesn't go unheard and several of the powerful felines come after you. Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
 	LineBreak;
 	challenge "Cougar";
@@ -254,8 +252,7 @@ Instead of resolving a Lovers Bench:
 		say "     Returning to the area around the lovers['] bench, you decide to search around it again. Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items. Sadly, you are unable to locate anything new or of any use.";
 	if loversbench is 2 and companion of player is not listed in lbcomplist and player is not neuter:
 		if companion of player is pink raccoon:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			setmonster "Raccoon";
 			if player is male:
 				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr. He smiles and kneels on the bench, flagging his tail up to uncover his tight rump. He makes a needful moan. It seems your pet wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You stand behind him and give his rump a squeeze, spreading his cheeks and lining up your cock with his pink pucker. You dribble pre onto it, then slowly ease into him, enjoying the sound of his soft moan as you penetrate him.";
@@ -274,8 +271,7 @@ Instead of resolving a Lovers Bench:
 			increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is Gryphoness:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Hermaphrodite Gryphon":
@@ -297,8 +293,7 @@ Instead of resolving a Lovers Bench:
 			increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is Felinoid companion:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Felinoid":
@@ -321,8 +316,7 @@ Instead of resolving a Lovers Bench:
 			increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is bee girl:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...' She pauses, remembering her lost sisters. 'But I have you now[if HP of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
 			if player is male:
 				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you. The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you. The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy. She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savor this moment. Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting. Her wings buzz frantically and her abdomen twitches in your arms. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
@@ -339,8 +333,7 @@ Instead of resolving a Lovers Bench:
 			increase XP of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is mouse girl:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Mental Mouse":
@@ -394,8 +387,7 @@ Instead of resolving a Lovers Bench:
 			increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
 			increase score by 20;
 		else if companion of player is demon brute and DBCaptureQuestVar > 5:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Demon Brute":
@@ -640,17 +632,14 @@ Instead of resolving a Concession Stand:
 				increase foodvendor by 1;
 			else if foodvendor is 3:
 				say "     Your friend the vendor smiles very happily as you come over again. He doesn't bother to put out any food this time and hops fully over the counter. Putting his shifting hands (paws?) on you, he leans you over the counter and unzip his fly. Feeling him move to grope your ass, you moan softly and get your clothes and gear off. He runs his fingers (talons?) down your back and rubs his throbbing shaft against your rear, making you moan again.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+				WaitLineBreak;
 				if player is female:
 					say "     The vendor lines up his cock to your pussy, then sinks it into you while it is small and murine in form. It then shifts and becomes thick and equine, filling you deeply. This sudden change leaves you gasping in pleasure, writhing over his meat. It changes inside you again and again as he pounds away at you. His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously. It rubs your vaginal folds with draconic ridges, then pushes past your cervix as a slimy tendril[if cocks of player > 1]. His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[else if cocks of player is 1]. His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if]. You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				else:
 					say "     The vendor lines up his cock to your tight asshole, then sinks it into you while it is small and murine in form. It then shifts and becomes thick and equine, filling you deeply. This sudden change leaves you gasping in pleasure, writhing over his meat. It changes inside you again and again as he pounds away at you. His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously. It rubs against your spread anus with draconic ridges, then pushes deep into your bowels as a slimy tendril[if cocks of player > 1]. His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[else]. His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if]. You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+				WaitLineBreak;
 				say "     'You love that, don't you?' he says in a soft, alluringly feline voice as ear while pounding a new cock into you with each thrust. You respond by nodding your head eagerly. 'Of course, you'll want it again and again, won't you?' You can only nod all the more, agreeing with his virile, lapine tone. 'You want to stay here and be my slutty pet to get it all the time. Just think of it, being my slut, changing into different creatures for me to fuck. Always new pleasures to be had. You want that, don't you?' he rumbles in your ear, sounding strong and lupine now. Lost in the haze of his enthralling power, you can't help but nod vigorously, agreeing to become his, wanting to be used like this over and over again.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+				WaitLineBreak;
 				say "     Having given in to him, you can feel the last of your will draining away, succumbing to being your master's slutty pet. His to change. His to fuck[if player is female]. His to breed[end if]. And he rewards you by driving his cock deep inside you, feeling like an equine's, but so much larger, perhaps an elephant? With his giant cock thrust deep inside you, he blasts his hot load into you, filling your [if player is female]womb[else]ass[end if] with his virile seed. You moan and pant in delight as its volume bloats your tummy a little, making you feel so full and happy with so much of your new master's cum inside you.";
 				wait for any key;
 				now humanity of player is 9;

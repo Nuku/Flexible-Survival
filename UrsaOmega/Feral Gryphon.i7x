@@ -22,17 +22,14 @@ to say Gryphondesc:
 to say losetoGryphon:
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
 	say "     Finally, you're naked before the beast. He clearly enjoyed the show, as his cock is slipping out of his furry sheath as he looks your body over approvingly.";
-	if waiterhater is 0, wait for any key;
-	LineBreak;
+	WaitLineBreak;
 	if a random chance of 3 in 4 succeeds: [Mounted by gryphon]
 		say "     The gryphon pushes you over onto your belly with a powerful swipe. You push yourself up on all fours to try to get away, but his bulk is over you in an instant. [if scalevalue of player < 4]He puts his forelegs on either side of you, trapping you beneath him,[else]He mounts your [bodydesc of player] rear, wrapping his powerful forelegs around your hips[end if] and hunches his hips. You can feel something hot, wet, and rough probe your backside, looking for your [if player is female]feminine cleft[else]asshole[end if].";
 		say "     Suddenly, you feel his pointed tip lodge between your [if player is female]labia[else]ass cheeks[end if] and you gasp as he thrusts inward, spreading you around the first few inches of his cock. What you suspect to be leonine barbs on the head of his penis add a strange, rough texture to his maleness. Your suspicion is confirmed as he pulls back a bit, and they drag against the walls of your [if player is female]vagina[else]rectum[end if] in a not-altogether-unpleasant scraping sensation. He quickly works his cock into your passage fully, his copious precum lubricating you thoroughly.";
-		LineBreak;
-		if waiterhater is 0, wait for any key;
+		WaitLineBreak;
 		if player is impreg_able:
 			say "     The gryphon's barbs are having a strange effect on your body; an unusual warmth forms in your womb and you find yourself clenching down his cock and pushing back into his thrusts. Thoughts of your belly swelling with the male's clutch cross your mind unbidden; you moan as you imagine laying the eggs, stretching you as you push them out one by one.";
-		if waiterhater is 0, wait for any key;
-		LineBreak;
+		WaitLineBreak;
 		say "     He breeds you roughly, his cock pistoning in and out of your [if player is female]cunt[else]back passage[end if] with an animalistic ferocity. [if player is male]You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust. [end if]The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if player is female]vagina[else]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
 		if ( player is female and cunt width of player < 7 ) or ( cunts of player is 0 and scalevalue of player < 3 and player is not twistcapped ):
 			say " He grinds it against your [if player is female]cunt-lips[else]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
@@ -41,11 +38,9 @@ to say losetoGryphon:
 		say "     He screeches in victory as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if player is male]. You reach your own climax, your [cock size desc of player] cock[smn] shooting your own cum over the ground[end if]. The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his cock. He dismounts you, his softening maleness slipping from you with a soft plopping sound. You feel his cum drip from your rear as he spreads his wings and leaves you to clean yourself up.[impregchance]";
 	else: [oral]
 		say "     The gryphon moves his bulk over you until his cock moves in front of your [facename of player] face. You can see it has fully extended from his sheath now; it has a thick base that tapers dramatically to a pointy tip; the glans of his cock seems to be covered in rough barbs, betraying his leonine heritage. The gryphon presses his back half against your upper body, pinning you while his erection rubs against your cheeks, searching for your mouth.";
-		if waiterhater is 0, wait for any key;
-		LineBreak;
+		WaitLineBreak;
 		say "     Realizing there is only one way out of this situation, you reach up and grab the probing gryphon-hood, guiding it to your puckered lips. You slip your mouth over his length, but you can only fit the upper part of his length in your mouth; however, this seems to be satisfactory for the gryphon, who starts thrusting his cock in and out of you. It's obvious he wants to slip down your throat, but from this angle it's impossible. You settle for suckling on his length as he tries to face-fuck you, your mouth quickly filling with his precum. You swallow as much as you can, but some of it drips messily down your chin.";
-		if waiterhater is 0, wait for any key;
-		LineBreak;
+		WaitLineBreak;
 		say "     The gryphon is taking his sweet time in reaching his climax - perhaps he's not getting enough stimulation? Your eyes fix on the now-bulging knot at the base of his penis; eager to end this, you reach up and clamp your hand behind it. This simulated tie sends the gryphon over the edge almost immediately; you feel his cock twitch in your mouth as he unloads the first spurt of thick gryphon cum into your mouth. You try to swallow as much of his load as possible, but the copious volume causes you to choke at pull back off his maleness; this in turn causes his last few ropes of seed to paint your face white.";
 		LineBreak;
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";

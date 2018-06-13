@@ -213,8 +213,7 @@ to say losetodolphinflatable:
 				now humanity of player is 0;
 				now battleground is "void";
 				now combat abort is 1;
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+				WaitLineBreak;
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 				stop the action;
 ]

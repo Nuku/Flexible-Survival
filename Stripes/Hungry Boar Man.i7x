@@ -300,7 +300,7 @@ to say sexwithphilip:
 		now lastfuck of Sandra is turns;
 		continue the action;
 	else:
-		say "     'I knew you couldn't resist my -OINK!- studly physique,' Philip says as he jiggles his fat gut for emphasise while a grin spreads across his pig like face. 'Now, what should we do first?' He takes a moment to look over your body, before he makes a decision.";
+		say "     'I knew you couldn't resist my -OINK!- studly physique,' Philip says as he jiggles his fat gut for emphasis while a grin spreads across his pig like face. 'Now, what should we do first?' He takes a moment to look over your body, before he makes a decision.";
 	let piggymalefun be 8;
 	if player is submissive, increase piggymalefun by 2;
 	if player is mpreg_ok, increase piggymalefun by 2;

@@ -115,7 +115,7 @@ West of Catwalk Door is Cat Walk.
 to say catwalkstuff:
 	if fixedgens is 1:
 		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		WaitLineBreak;
 		now fixedgens is 2;
 		if findwires is 2:
 			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";

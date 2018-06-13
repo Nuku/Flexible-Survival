@@ -217,7 +217,7 @@ to say CampusCoupleSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Get spitroasted by the couple";
 	[]
-	 if player is not neuter:
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Spitroast Jadako";
 		now sortorder entry is 2;

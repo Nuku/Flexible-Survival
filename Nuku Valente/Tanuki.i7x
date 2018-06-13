@@ -218,11 +218,11 @@ When Play begins:
 	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]"; [- Cock Description, format as you have a "size" (your text) cock-]
-	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki."; [- body change text. format as "Your body feels funny as (your text)." -]
-	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)." -]
-	now ass change entry is "a thick and fluffy looking tail emerges from your bottom."; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
-	now cock change entry is "it grows a [skin of player] sheath."; [- cock change text. format as "Your cock feels funny as (your text)." -]
+	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki"; [- body change text. format as "Your body feels funny as (your text)." -]
+	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling"; [- skin change text. format as "Your skin feels funny as (your text)." -]
+	now ass change entry is "a thick and fluffy looking tail emerges from your bottom"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
+	now cock change entry is "it grows a [skin of player] sheath"; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 14;

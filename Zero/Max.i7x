@@ -94,15 +94,15 @@ instead of conversing the Max:
 		else:
 			if maxq is 2:
 				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack. 'That should be better than what your currently using and there's a few items in there that should help you out.'";
-				Add "durable backpack" to invent of player;
-				Add "water bottle" to invent of player;
-				Add "strange gem" to invent of player;
-				Add "water bottle" to invent of player;
-				Add "food" to invent of player;
-				Add "food" to invent of player;
-				Add "protein shake" to invent of player;
-				Add "protein shake" to invent of player;
-				Add "kunai" to invent of player;
+				add "durable backpack" to invent of player;
+				add "water bottle" to invent of player;
+				add "strange gem" to invent of player;
+				add "water bottle" to invent of player;
+				add "food" to invent of player;
+				add "food" to invent of player;
+				add "protein shake" to invent of player;
+				add "protein shake" to invent of player;
+				add "kunai" to invent of player;
 				say "'Now then since I have finally got this back, I can go home, feel free to drop by when you have the chance, it's that big apartment complex next to the gym.'";
 				now GYM is known;
 				now Complex is known;
@@ -139,51 +139,51 @@ carry out corgigiving:
 		delete water bottle;
 		let Z be a random number between 1 and 11;
 		if Z is 1:
-			Say "nothing... absolutely nothing... even the bag is useless!";
+			say "nothing... absolutely nothing... even the bag is useless!";
 		else if Z is 2:
 			say "a bottle of water and some food. Seems you got what you paid for, after all";
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
+			add "food" to invent of player;
+			add "water bottle" to invent of player;
 		else if Z is 3:
 			say "a lot of food and water. This is definitely a good goody bag";
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
+			add "food" to invent of player;
+			add "water bottle" to invent of player;
+			add "food" to invent of player;
+			add "water bottle" to invent of player;
+			add "food" to invent of player;
+			add "water bottle" to invent of player;
 		else if Z is 4:
-			Say "a strange gem![line break]";
-			Add "strange gem" to invent of player;
+			say "a strange gem![line break]";
+			add "strange gem" to invent of player;
 		else if Z is 5:
-			Say "a protein shake";
-			Add "protein shake" to invent of player;
+			say "a protein shake";
+			add "protein shake" to invent of player;
 		else if Z is 6:
 			say "two protein shakes";
-			Add "protein shake" to invent of player;
-			Add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
 		else if Z is 7:
 			say "a lot of protein shakes";
-			Add "protein shake" to invent of player;
-			Add "protein shake" to invent of player;
-			Add "protein shake" to invent of player;
-			Add "protein shake" to invent of player;
-			Add "protein shake" to invent of player;
-			Add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
+			add "protein shake" to invent of player;
 		else if Z is 8:
 			say "junk food";
-			Add "chips" to invent of player;
-			Add "soda" to invent of player;
+			add "chips" to invent of player;
+			add "soda" to invent of player;
 		else if Z is 9:
-			Say "dirty water";
-			Add "dirty water" to invent of player;
-			Add "dirty water" to invent of player;
+			say "dirty water";
+			add "dirty water" to invent of player;
+			add "dirty water" to invent of player;
 		else if Z is 10:
-			Say "a can of soda";
-			Add "soda" to invent of player;
+			say "a can of soda";
+			add "soda" to invent of player;
 		else if Z is 11:
-			Say "a pack of chips";
-			Add "chips" to invent of player;
+			say "a pack of chips";
+			add "chips" to invent of player;
 	else:
 		say "Sorting through your pack, you realize you don't actually have the food and water to trade";
 

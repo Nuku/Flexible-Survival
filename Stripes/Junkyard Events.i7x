@@ -104,7 +104,7 @@ when play begins:
 
 Instead of resolving a Scattered Trash:
 	say "     You come across a mess of garbage scattered here, sprawling across the path between the junk mounds here. From the looks of it, it seems this stuff has been rummaged through and possibly even rolled around in. As it is just tossed around, there are clear spots to walk while you move through it. You decide to keep your eyes open in case you spot anything of interest while making your way through the trash.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	WaitLineBreak;
 	let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";

@@ -5,9 +5,9 @@ Hermaid by Xenophiliac begins here.
 Section 1 - Monster Responses
 
 when play begins:
-   add { "Hermaid" } to infections of hermaphrodite;
-   add { "Hermaid" } to infections of Tailweapon;
-   add { "Hermaid" } to infections of Internallist;
+	add { "Hermaid" } to infections of hermaphrodite;
+	add { "Hermaid" } to infections of Tailweapon;
+	add { "Hermaid" } to infections of Internallist;
 
 HermaidSub is a number that varies.
 
@@ -18,15 +18,15 @@ to say losetoHermaid:
 		say "     Your attacker lures you into throwing a hit, but quickly counters and lands a punch across your head, sending your head spinning and stopping you from thinking for a few moments. As you recover yourself, you find that the beautiful creature has you wrapped in her arms, stopping you from escaping.";
 	WaitLineBreak;
 	if player is puremale:
-		say "     [HermaidMaleLoss]";
+		say "[HermaidMaleLoss]";
 	else if player is purefemale:
-		say "     [HermaidFemLoss]";
+		say "[HermaidFemLoss]";
 	else if player is herm:
 		say "     The seafaring herm looks at you thoughtfully, as if considering what to do with you. After a moment, she nods to herself and smiles.";
 		LineBreak;
-		say "     [one of][HermaidFemLoss][or][HermaidMaleLoss][at random]";
+		say "[one of][HermaidFemLoss][or][HermaidMaleLoss][at random]";
 	else:
-		say "     [HermaidNeutLoss]";
+		say "[HermaidNeutLoss]";
 
 to say beattheHermaid:
 	say "     You land one last hit on the creature, sending her reeling backwards, and stunning her temporarily. She flounders around, trying to get back into fighting condition.";
@@ -37,17 +37,17 @@ to say beattheHermaid:
 			say "     You wrap your arms around the beautiful creature, holding her tightly, and blocking off any chance of escape. She jumps at the sudden contact and looks at you in fear. When she notes the lustful look in your eyes, however, she smiles seductively at you, and runs her hands sensually over your body.";
 			WaitLineBreak;
 			if player is purefemale:
-				say "	[HermaidFemVic]";
+				say "[HermaidFemVic]";
 			else if player is not female and player is male:
-				say "	[HermaidMaleVic]";
+				say "[HermaidMaleVic]";
 			else if player is herm:
-				say "	You can use either your cock or cunt for this scene. Which one do you want to use? (Y for cock, N for pussy)";
-				if the player consents:
-					say "     [HermaidMaleVic]";
+				say "You can use either your cock or cunt for this scene. Which one do you want to use? (Y for cock, N for pussy)";
+				if player consents:
+					say "[HermaidMaleVic]";
 				else:
-					say "     [HermaidFemVic]";
+					say "[HermaidFemVic]";
 			else:
-				say "     [HermaidNeutVic]";
+				say "[HermaidNeutVic]";
 		else:
 			say "     You consider having some extracurricular fun with the beautiful herm, but you decide against it. You quickly climb back onto the docks and continue onwards, as you hear the Hermaid dive back into the water.";
 	else:
@@ -79,7 +79,7 @@ to say HermaidMaleVic:
 
 to say HermaidNeutVic:
 	say "     You pull the Hermaid against your [bodydesc of player] body, and begin to roam your hands sensually across her substantial chest and slim stomach, causing her to quietly gasp. Your hands begin to roam lower, causing her gasps to become low, pleasured moans. You find that your sensual roaming has begun to arouse the Hermaid, as her cock emerged from its slit, waving slowly in the lapping water. Leaving one hand to massage one of her supple breasts, your other hand encircles her aquatic cock, slowly jerking her off and causing her to tense up and release a long, pleasured moan. This continues for a few moments, causing her to become fully erect and devolve into moans and gasps. Figuring that she's ready for the main course, you pull her close to you, and line her tapered cock up with your rear entrance, and slowly lower yourself down, her member slowly spearing your ass open.";
-	say "     [if player is dominant]You stop as soon as you've taken the tip of her cock in your backside, doing your best to tighten your ass around her tapered cock. She groans in both pleasure and anger as you stop her from thrusting within you, letting you take over. Beginning to oh-so-slowly descend on her rock-hard rod, you make her feel every inch, every centimeter of your descent, grinning lustfully as your techniques have dissolved your partner into nothing more than a lust-addled brain-dead state. Unable to make any move, the herm looks pleadingly at you as your rear slowly envelops her tapered cock. She can do little more than look helplessly as you begin to slowly move up and down on her cock, biting her lip to suppress her moans of pleasure[else]	You groan loudly as you feel her cock open your bowels, and she begins to wantonly thrust forward, lost in lust. You start meeting her thrusts, slamming yourself down as both of you lose yourself to your lust. You feel the Hermaid's expert hands caressing your back lovingly, enhancing the sensations you're feeling from your stuffed ass[end if]. You both quickly start panting in lust and thrusting into each other haphazardly, enveloped in the delightful feelings you're both experiencing. All too soon however, you feel a warmth spreading through your bowels as the Hermaid silently cums, blasting her large load against your walls. This in turn causes you to climax, involuntarily clamping your ass down on the invading member. You both sag backwards, laying in the water.";
+	say "     [if player is dominant]You stop as soon as you've taken the tip of her cock in your backside, doing your best to tighten your ass around her tapered cock. She groans in both pleasure and anger as you stop her from thrusting within you, letting you take over. Beginning to oh-so-slowly descend on her rock-hard rod, you make her feel every inch, every centimeter of your descent, grinning lustfully as your techniques have dissolved your partner into nothing more than a lust-addled brain-dead state. Unable to make any move, the herm looks pleadingly at you as your rear slowly envelops her tapered cock. She can do little more than look helplessly as you begin to slowly move up and down on her cock, biting her lip to suppress her moans of pleasure[else]You groan loudly as you feel her cock open your bowels, and she begins to wantonly thrust forward, lost in lust. You start meeting her thrusts, slamming yourself down as both of you lose yourself to your lust. You feel the Hermaid's expert hands caressing your back lovingly, enhancing the sensations you're feeling from your stuffed ass[end if]. You both quickly start panting in lust and thrusting into each other haphazardly, enveloped in the delightful feelings you're both experiencing. All too soon however, you feel a warmth spreading through your bowels as the Hermaid silently cums, blasting her large load against your walls. This in turn causes you to climax, involuntarily clamping your ass down on the invading member. You both sag backwards, laying in the water.";
 	now libido of player is 0;
 	LineBreak;
 	say "     You soon feel the Hermaid withdraw herself, and she rubs your thighs gently before quietly diving beneath the waves. You gather yourself and swim to the nearby dock, hoisting yourself onto the worn platforms. You slowly stretch, and prepare yourself to continue onwards, wishing to return and visit the lovely maiden again.";
@@ -93,14 +93,15 @@ to say HermaidFemLoss:
 
 to say HermaidMaleLoss:
 	if anallevel < 3 or a random chance of 1 in 2 succeeds:
-		say "     The herm kisses you lustfully, her hands running quickly across your body as she explores all you have to offer. Her hands sneak under your clothes, caressing your skin masterfully as your lust continues to mount. One of her silken hands continues to tingle across your chest, sending pleasurable tingles through your body. Her other hand roams lower, running down your chest to your groin, lustfully groping your [cock of player] rod roughly, causing a gasp of pleasure to escape your lips. Continuing to massage your [cock of player] cock and balls, and continuing to elicit gasps of pleasure from you, the Hermaid runs her other hand down your chest to your pelvis and removing your pants, letting them sink down to your feet. She slowly moves herself to the front of you, taking pleasure in the fact that she has caused you to become so aroused. Smiling happily, she lines up her inviting slit with your [cock of player] cock, tantalizing you with her hands and silken vice while her twelve inches of maleness bobs between the two of you.[WaitLineBreak]It can't come soon enough, but you finally feel the Hermaid begin to descend on your stiff [cock of player] rod, slowly bringing your maleness into her folds. You groan loudly at the sudden entrance as you try desperately to bury yourself fully into the lovely creature, but she holds you back, and smiles all the wider. Slowly, ever so slowly, she sinks onto your cock, all while her maleness bounces off your stomach, leaving smears of her precum across it. She coos delightedly at the sensations she feels, while the only thing you can do is thrust helplessly forward and groan in pleasure[if player is submissive] Your mind begins to drift, awash in a sea of pleasure. You imagine yourself living below the ocean, being a loving mate to the beautiful creature. Imaging the wonderful life you would lead below the waves and all the beautiful children you would sire causes your cock to thicken and jump, causing your playmate to coo happily[else]. You're almost unable to handle the sensations emanating from your [cock of player] maleness that the alluring herm is triggering within you. Seeing the love-drunk look on your face, the Hermaid smiles joyfully as she continues down your cock[end if]. She stops the slow descent onto your throbbing cock, taking all that she wants to take, and raises herself up off of you, leaving only your tip within her. She slams herself down, taking most of your length and causing you both to yelp in pleasure simultaneously. She begins to bounce atop your cock, reducing you to nothing more than a rutting beast as she speeds up. Soon after, she slams herself down one last time as she cums, her cunt spasming around your [cock of player] prick. You moan loudly to the sky as you finally cum, blasting her cunt with your [cum load size of player] load of cum just as her seed blasts from her tapered cock and rains down upon the both of you.";
+		say "     The herm kisses you lustfully, her hands running quickly across your body as she explores all you have to offer. Her hands sneak under your clothes, caressing your skin masterfully as your lust continues to mount. One of her silken hands continues to tingle across your chest, sending pleasurable tingles through your body. Her other hand roams lower, running down your chest to your groin, lustfully groping your [cock of player] rod roughly, causing a gasp of pleasure to escape your lips. Continuing to massage your [cock of player] cock and balls, and continuing to elicit gasps of pleasure from you, the Hermaid runs her other hand down your chest to your pelvis and removing your pants, letting them sink down to your feet. She slowly moves herself to the front of you, taking pleasure in the fact that she has caused you to become so aroused. Smiling happily, she lines up her inviting slit with your [cock of player] cock, tantalizing you with her hands and silken vice while her twelve inches of maleness bobs between the two of you.";
+		say "It can't come soon enough, but you finally feel the Hermaid begin to descend on your stiff [cock of player] rod, slowly bringing your maleness into her folds. You groan loudly at the sudden entrance as you try desperately to bury yourself fully into the lovely creature, but she holds you back, and smiles all the wider. Slowly, ever so slowly, she sinks onto your cock, all while her maleness bounces off your stomach, leaving smears of her precum across it. She coos delightedly at the sensations she feels, while the only thing you can do is thrust helplessly forward and groan in pleasure[if player is submissive] Your mind begins to drift, awash in a sea of pleasure. You imagine yourself living below the ocean, being a loving mate to the beautiful creature. Imaging the wonderful life you would lead below the waves and all the beautiful children you would sire causes your cock to thicken and jump, causing your playmate to coo happily[else]. You're almost unable to handle the sensations emanating from your [cock of player] maleness that the alluring herm is triggering within you. Seeing the love-drunk look on your face, the Hermaid smiles joyfully as she continues down your cock[end if]. She stops the slow descent onto your throbbing cock, taking all that she wants to take, and raises herself up off of you, leaving only your tip within her. She slams herself down, taking most of your length and causing you both to yelp in pleasure simultaneously. She begins to bounce atop your cock, reducing you to nothing more than a rutting beast as she speeds up. Soon after, she slams herself down one last time as she cums, her cunt spasming around your [cock of player] prick. You moan loudly to the sky as you finally cum, blasting her cunt with your [cum load size of player] load of cum just as her seed blasts from her tapered cock and rains down upon the both of you.";
 		now libido of player is 0;
 		WaitLineBreak;
 		say "     With a contented sigh, the Hermaid draws herself off of you, giving your face an affectionate rub before darting beneath the waves. You soon gather your strength, and swim to the nearby dock and heave yourself onto the platform. Recovering your gear (and yourself), you continue onwards, not entirely sorry that you lost the fight to the lovely herm.";
 	else:
-		say "	Out of the corner of your eye you think you see the herm smiling mischievously. She forcefully spins you so that you find yourself with your back against her, but escape is still beyond your reach as she continues to hold you confidently in her grasp. Too weak to fight back, she begins to undress you. Her fingers masterfully pulling off each article as they fall to the water, floating, next to you. Only once you are fully nude does she take the liberty of running her hands slyly against your [bodydesc of player] body, paying extra attention to each of your nipples and nibbling your ears seductively. Thoughts of what might be to come quickly coalesce on a single thought as her cock prods against your backside impatiently. As you start to panic the herm pulls her head next to your ear and hums a soothing tune in your ear while stroking your hair. As she ends her song, one of her hands moves out of sight and she begins nibbling and kissing your neck. Her unseen hand has finally made it to your backdoor. As unwilling as you may or may not be, her digits break through and she slowly starts making circles in your ass, making you shiver each time they pass over your prostate. You feel an orgasm building, surging from your depths, but unfortunately the Hermaid notices as well, and retracts her hand from your behind. As you whimper from being denied while so close, she chuckles softly and grabs you strongly. With a decisive motion, she lifts you up and brings you down so that your asshole is now directly above her cock, waiting to be penetrated.";
+		say "     Out of the corner of your eye you think you see the herm smiling mischievously. She forcefully spins you so that you find yourself with your back against her, but escape is still beyond your reach as she continues to hold you confidently in her grasp. Too weak to fight back, she begins to undress you. Her fingers masterfully pulling off each article as they fall to the water, floating, next to you. Only once you are fully nude does she take the liberty of running her hands slyly against your [bodydesc of player] body, paying extra attention to each of your nipples and nibbling your ears seductively. Thoughts of what might be to come quickly coalesce on a single thought as her cock prods against your backside impatiently. As you start to panic the herm pulls her head next to your ear and hums a soothing tune in your ear while stroking your hair. As she ends her song, one of her hands moves out of sight and she begins nibbling and kissing your neck. Her unseen hand has finally made it to your backdoor. As unwilling as you may or may not be, her digits break through and she slowly starts making circles in your ass, making you shiver each time they pass over your prostate. You feel an orgasm building, surging from your depths, but unfortunately the Hermaid notices as well, and retracts her hand from your behind. As you whimper from being denied while so close, she chuckles softly and grabs you strongly. With a decisive motion, she lifts you up and brings you down so that your asshole is now directly above her cock, waiting to be penetrated.";
 		WaitLineBreak;
-		say "After what feels an eternity you feel her tapered tip push into your ass. The penetration is euphoric and you cry out in pleasure as each inch of her foot-long cock enters you. On and on you fall, feeling like each inch is a mile, her cock a thousand, until your cheeks finally rest upon her lap and you shiver from the fullness. The beautiful siren releases your arms and rubs your stomach with one hand, while tilting your head and drawing you into a lustful kiss. She begins to lean backward, her cock still snuggly in your hole, as she pulls you back onto her chest, her bosom cushioning your back as she keeps you afloat in the water. She kisses the back of your neck and grasps your [cock of player] cock, slowly running her fingers over the tip. Slowly her phallus begins to extricate itself from your bowels, only to soon replace itself again, rubbing every inch of it against your sensitive interior and prostate. She thrusts again and again, with the question of how she can maintain this floating being pushed out every time she lunges with her beautiful prick. With her strokes now timed with her thrusts you moan lewdly,[if player is submissive] you begin to lose yourself in the pleasures of the lovely sea siren, and your mind drifts to how delightful it would be to remain with her forever, to be her lover and submit to her embrace forever; you can't think of anything better[else] she slowly thrusts into you for a while, and you quickly lose track of time, and all you can focus on is the sensation of the sea maiden slamming herself into you from below[end if]. As her thrusts become more and more erratic her dick surges and a torrent of cum fills your backside. You both groan as her sperm soaks your innards and the new pressure on your prostate makes your [cock of player] dick spew it's own up into the air, coating yourself with your [cum load size of player] load.";
+		say "     After what feels an eternity you feel her tapered tip push into your ass. The penetration is euphoric and you cry out in pleasure as each inch of her foot-long cock enters you. On and on you fall, feeling like each inch is a mile, her cock a thousand, until your cheeks finally rest upon her lap and you shiver from the fullness. The beautiful siren releases your arms and rubs your stomach with one hand, while tilting your head and drawing you into a lustful kiss. She begins to lean backward, her cock still snuggly in your hole, as she pulls you back onto her chest, her bosom cushioning your back as she keeps you afloat in the water. She kisses the back of your neck and grasps your [cock of player] cock, slowly running her fingers over the tip. Slowly her phallus begins to extricate itself from your bowels, only to soon replace itself again, rubbing every inch of it against your sensitive interior and prostate. She thrusts again and again, with the question of how she can maintain this floating being pushed out every time she lunges with her beautiful prick. With her strokes now timed with her thrusts you moan lewdly,[if player is submissive] you begin to lose yourself in the pleasures of the lovely sea siren, and your mind drifts to how delightful it would be to remain with her forever, to be her lover and submit to her embrace forever; you can't think of anything better[else] she slowly thrusts into you for a while, and you quickly lose track of time, and all you can focus on is the sensation of the sea maiden slamming herself into you from below[end if]. As her thrusts become more and more erratic her dick surges and a torrent of cum fills your backside. You both groan as her sperm soaks your innards and the new pressure on your prostate makes your [cock of player] dick spew it's own up into the air, coating yourself with your [cum load size of player] load.";
 		now libido of player is 0;
 		WaitLineBreak;
 		say "     With a quiet sigh, the Hermaid lazily pulls out of your cum-stuffed belly, nuzzling the nape of your neck tenderly before plunging inaudibly under the waves. You float on the surface of the waves for some time, reclaiming your senses. You swim slowly to the nearest dock, and haul yourself onto the wooden deck. Hoisting yourself onto your feet and trudging back into the city, there's a part of you that wishes you could remain with the beautiful Hermaid.";
@@ -130,62 +131,62 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-  Choose a blank row from Table of random critters;
-  now name entry is "Hermaid";
-  now attack entry is "[one of]The Hermaid lungs unexpectedly at you, breaking past your guard and dragging long, bloody streaks across your face and down your chest with her razor-like claws.[or]She dives underwater, and you soon lose track of her. Seconds later, you're dragged underwater and held down, slowly drowning. As you are about to pass out, you break free and surface, coughing up water and much more exhausted than before.[or]The Hermaid snaps at your legs, gouging large chunks out of your limbs.[or]She kicks at you wildly with her webbed feet, landing a few nasty hits across your body.[at random]";
-  now defeated entry is "[beattheHermaid]";
-  now victory entry is "[losetoHermaid]";
-  now desc entry is "[Hermaiddesc]";
-  now face entry is "that of a human woman, with beauty only before captured in the greatest of artworks. Deep, solid [one of]green[or]blue[or]purple[sticky random] eyes complement the flowing, dark blue hair that hangs to your shoulders, while your sculpted face could knock anyone off their feet";
-  now body entry is "one that even a professional model would be jealous of. Your lithe, curvy form is one that artists can only dream of, while your hips and chest could give plastic surgeons a run for their money. Your finned arms and webbed hands seem out of place compared to the rest of your body, but are well-suited for swimming through the depths of the sea. Even your finned legs have morphed into a form more suitable for swimming, with your webbed feet allowing you to swim gracefully through the seas";
-  now skin entry is "light-blue, moist";
-  now tail entry is "Sprouting from your backside is a dolphin's tail, complete with dual tail flukes.";
-  now cock entry is "[one of]tapered[or]dolphin-esque[or]cetacean[sticky random]";
-  now face change entry is "your skull cracks and reforms, shifting beneath your skin. Pain wracks your body as this occurs, and you can feel the shifting bones rearranging. Thankfully, the pain soon subsides, and you're able to recover. You find a mirror and look at yourself, and are shocked at the changes in your appearance. Your face now resembles that of a beautiful human woman, and is stunningly picturesque. Dark, beautiful eyes peer out of perfectly sculpted sockets, with dark-blue hair waving gracefully in the wind as your features reshape to suit the appearance of a Hermaid";
-  now body change entry is "your chest and hips protrude out a small amount, and your stomach slims down, giving yourself a superstar look, while also incurring a great deal of pain in the process. Your hands and arms tingle as one long fin grows down your arm, stopping at your wrist. Your fingers and hands reshape, becoming more claw-like and fully webbed as, finally, these changes cease, and you observe your sleek hermaid body";
-  now skin change entry is "it turns a light shade of blue, and begins to feel moist to the touch as a layer of moisture forms on your skin";
-  now ass change entry is "a fleshy bulb forms at the base of your spine, as the entirety of your backside shifts and reshapes. The bulb begins to expand outwards and assume a distinctly tail-like shape. At the end of this endeavor, you wave your new dolphin tail around, and figure that you can swim much faster now";
-  now cock change entry is "the tip of your cock tapers into a point, while your shaft smooths out and turns a pinkish hue. Your new dolphin-esque cock recedes into a genital slit as these changes stop";
-  now str entry is 14;
-  now dex entry is 17;
-  now sta entry is 14;          [Mebbe balance?]
-  now per entry is 13;
-  now int entry is 12;
-  now cha entry is 17;
-  now sex entry is "Both";
-  now HP entry is 65;
-  now lev entry is 9;
-  now wdam entry is 9;
-  now area entry is "Warehouse";
-  now cocks entry is 1;
-  now cock length entry is 12;
-  now cock width entry is 4;
-  now breasts entry is 2;
-  now breast size entry is 3;
-  now male breast size entry is 0;
-  now cunts entry is 1;
-  now cunt length entry is 12;
-  now cunt width entry is 6;
-  now libido entry is 40;
-  now loot entry is "hermaid kelp";
-  now lootchance entry is 40;
-  now scale entry is 3;
-  now body descriptor entry is "[one of]slender[or]curvy[or]mesmerizing[or]hypnotic[at random]";
-  now type entry is "aquatic";
-  now magic entry is false;
-  now resbypass entry is false;
-  now non-infectious entry is false;
-  blank out the nocturnal entry;
-  now altcombat entry is "default";
+	Choose a blank row from Table of random critters;
+	now name entry is "Hermaid";
+	now attack entry is "[one of]The Hermaid lungs unexpectedly at you, breaking past your guard and dragging long, bloody streaks across your face and down your chest with her razor-like claws.[or]She dives underwater, and you soon lose track of her. Seconds later, you're dragged underwater and held down, slowly drowning. As you are about to pass out, you break free and surface, coughing up water and much more exhausted than before.[or]The Hermaid snaps at your legs, gouging large chunks out of your limbs.[or]She kicks at you wildly with her webbed feet, landing a few nasty hits across your body.[at random]";
+	now defeated entry is "[beattheHermaid]";
+	now victory entry is "[losetoHermaid]";
+	now desc entry is "[Hermaiddesc]";
+	now face entry is "that of a human woman, with beauty only before captured in the greatest of artworks. Deep, solid [one of]green[or]blue[or]purple[sticky random] eyes complement the flowing, dark blue hair that hangs to your shoulders, while your sculpted face could knock anyone off their feet";
+	now body entry is "one that even a professional model would be jealous of. Your lithe, curvy form is one that artists can only dream of, while your hips and chest could give plastic surgeons a run for their money. Your finned arms and webbed hands seem out of place compared to the rest of your body, but are well-suited for swimming through the depths of the sea. Even your finned legs have morphed into a form more suitable for swimming, with your webbed feet allowing you to swim gracefully through the seas";
+	now skin entry is "light-blue, moist";
+	now tail entry is "Sprouting from your backside is a dolphin's tail, complete with dual tail flukes.";
+	now cock entry is "[one of]tapered[or]dolphin-esque[or]cetacean[sticky random]";
+	now face change entry is "your skull cracks and reforms, shifting beneath your skin. Pain wracks your body as this occurs, and you can feel the shifting bones rearranging. Thankfully, the pain soon subsides, and you're able to recover. You find a mirror and look at yourself, and are shocked at the changes in your appearance. Your face now resembles that of a beautiful human woman, and is stunningly picturesque. Dark, beautiful eyes peer out of perfectly sculpted sockets, with dark-blue hair waving gracefully in the wind as your features reshape to suit the appearance of a Hermaid";
+	now body change entry is "your chest and hips protrude out a small amount, and your stomach slims down, giving yourself a superstar look, while also incurring a great deal of pain in the process. Your hands and arms tingle as one long fin grows down your arm, stopping at your wrist. Your fingers and hands reshape, becoming more claw-like and fully webbed as, finally, these changes cease, and you observe your sleek hermaid body";
+	now skin change entry is "it turns a light shade of blue, and begins to feel moist to the touch as a layer of moisture forms on your skin";
+	now ass change entry is "a fleshy bulb forms at the base of your spine, as the entirety of your backside shifts and reshapes. The bulb begins to expand outwards and assume a distinctly tail-like shape. At the end of this endeavor, you wave your new dolphin tail around, and figure that you can swim much faster now";
+	now cock change entry is "the tip of your cock tapers into a point, while your shaft smooths out and turns a pinkish hue. Your new dolphin-esque cock recedes into a genital slit as these changes stop";
+	now str entry is 14;
+	now dex entry is 17;
+	now sta entry is 14;          [Mebbe balance?]
+	now per entry is 13;
+	now int entry is 12;
+	now cha entry is 17;
+	now sex entry is "Both";
+	now HP entry is 65;
+	now lev entry is 9;
+	now wdam entry is 9;
+	now area entry is "Warehouse";
+	now cocks entry is 1;
+	now cock length entry is 12;
+	now cock width entry is 4;
+	now breasts entry is 2;
+	now breast size entry is 3;
+	now male breast size entry is 0;
+	now cunts entry is 1;
+	now cunt length entry is 12;
+	now cunt width entry is 6;
+	now libido entry is 40;
+	now loot entry is "hermaid kelp";
+	now lootchance entry is 40;
+	now scale entry is 3;
+	now body descriptor entry is "[one of]slender[or]curvy[or]mesmerizing[or]hypnotic[at random]";
+	now type entry is "aquatic";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry;
+	now altcombat entry is "default";
 
 Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Hermaid":
 		if humanity of player < 10:
-			say "	Unable and unwilling to resist the call you hear, you soon find yourself on the shores of the Warehouse District, where you first met your Hermaid companions. The sounds and scents of the water is music to your ears; the lapping waves, the caws of the sea birds, the smell of salt water that permeates the air. The call of the sea is even stronger here, and you know that it is time to answer that call. Wading into the water, your legs finally merge into one long tail as you begin swimming out to sea, never again to step foot on land. Your new sisters come to meet you, taking you deep into the depths of the sea, to your new life.";
+			say "     Unable and unwilling to resist the call you hear, you soon find yourself on the shores of the Warehouse District, where you first met your Hermaid companions. The sounds and scents of the water is music to your ears; the lapping waves, the caws of the sea birds, the smell of salt water that permeates the air. The call of the sea is even stronger here, and you know that it is time to answer that call. Wading into the water, your legs finally merge into one long tail as you begin swimming out to sea, never again to step foot on land. Your new sisters come to meet you, taking you deep into the depths of the sea, to your new life.";
 		else:
-			say "	Soon enough, the military rolls through in an attempt to contain the situation that has arisen. You present yourself to the military patrols, and after a few tense moments with guns pointed in your direction, you eventually convince the soldiers that you are not feral, and are led through quarantine. You pass through quarantine after multitudes of tests, and emerge back into sane society. Quickly putting your picturesque body to use, you find yourself a job as a professional model, and you soon become the newest craze, with people across the world lining up to see you, and millions of people wanting to be you. You live out the remainder of your long live in luxury, happy as you could be.";
+			say "     Soon enough, the military rolls through in an attempt to contain the situation that has arisen. You present yourself to the military patrols, and after a few tense moments with guns pointed in your direction, you eventually convince the soldiers that you are not feral, and are led through quarantine. You pass through quarantine after multitudes of tests, and emerge back into sane society. Quickly putting your picturesque body to use, you find yourself a job as a professional model, and you soon become the newest craze, with people across the world lining up to see you, and millions of people wanting to be you. You live out the remainder of your long live in luxury, happy as you could be.";
 
 Section 4 - Items
 

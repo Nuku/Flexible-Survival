@@ -79,7 +79,4 @@ When Play begins:
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
-
- [ Edit this to have the correct creature name as well]
-
 Blob ends here.

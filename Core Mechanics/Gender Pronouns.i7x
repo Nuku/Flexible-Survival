@@ -4,7 +4,7 @@ Version 3 of Gender Pronouns by Core Mechanics begins here.
 Section 1 - Blue Bishop's Variables and Routines
 
 ghis is text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
-ghe is text that varies. ghe is usually "it".	[Gender text nodule, entails he/she/it]
+ghe is text that varies. ghe is usually "it". [Gender text nodule, entails he/she/it]
 ghim is text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
 ghishers is text that varies. ghishers is usually "theirs". [Gender text nodule, entails his/hers/theirs]
 gchis is text that varies. ghis is usually "Their". [Capitalized Versions]

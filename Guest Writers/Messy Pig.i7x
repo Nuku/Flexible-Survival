@@ -139,8 +139,7 @@ this is the pigpussy rule:
 	let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 	say "     The pig creature makes a grab at you and manages to knock you over briefly. Before you can get back up, she's atop you, grinding her wet, messy pussy down onto your face. Her juices run across your face, and her heavy scent is strong and strangely alluring. You take [special-style-2][dam][roman type] damage as those juices arouse you further and weaken your efforts to keep fighting!";
 	decrease HP of player by dam;
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+	WaitLineBreak;
 	increase libido of player by a random number between 3 and 5;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
@@ -158,8 +157,7 @@ this is the pigpussy rule:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "     You take [special-style-2][dam][roman type] damage and grow more aroused!";
 		decrease HP of player by dam;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 	if messypigcaught is 1:															[still caught, aroused]
 		increase libido of player by a random number between 4 and 6;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
@@ -178,8 +176,7 @@ this is the pigpussy rule:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		say "     You take another [special-style-2][dam][roman type] damage as your lustful longing for her grows higher!";
 		decrease HP of player by dam;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 	if messypigcaught is 1:															[still caught, aroused]
 		increase libido of player by a random number between 5 and 8;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 2;
@@ -198,8 +195,7 @@ this is the pigpussy rule:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 90; [111% dmg this round]
 		say "     You take another [special-style-2][dam][roman type] damage as your arousal continues to climb as does hers!";
 		decrease HP of player by dam;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 	if messypigcaught is 1:															[still caught, aroused]
 		decrease humanity of player by a random number between 1 and 3;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -235,8 +231,7 @@ this is the pigpussy rule:
 		choose row monstercom from the table of critter combat;
 		now alt1chance entry is 0;
 		now messypigaltorgasm is true;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
+		WaitLineBreak;
 
 
 Section 5 - Bound State

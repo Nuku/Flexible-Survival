@@ -37,7 +37,7 @@ instead of resolving a loaded catapult:
 			if "Iron Stomach" is not listed in feats of player:
 				weakrandominfect;
 				weakrandominfect;
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			WaitLineBreak;
 		else:
 			say "You leave the bag where it is.";
 	else:

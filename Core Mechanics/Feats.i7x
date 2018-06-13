@@ -79,7 +79,7 @@ featgrabbing is an action applying to one topic.
 
 understand "featgrab [text]" as featgrabbing.
 
- Check featgrabbing:
+Check featgrabbing:
 	if featqualified is 0:
 		say "You are not ready to learn a new feat." instead;
 
@@ -101,7 +101,7 @@ To FunFeatget:
 	decrease featgained of player by 1;
 ]
 
- To FunFeatget:
+To FunFeatget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
 		try addfeating x;

@@ -31,7 +31,7 @@ instead of resolving an intact fountain:
 			if "Iron Stomach" is not listed in feats of player:
 				if a random chance of 1 in 3 succeeds:
 					randominfect;
-		 		else:
+				else:
 					weakrandominfect;
 			break;
 		if "Iron Stomach" is not listed in feats of player:

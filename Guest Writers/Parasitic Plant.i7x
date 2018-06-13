@@ -145,7 +145,7 @@ When Play begins:
 	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body before sinking into your skin turning your entire body a dark plant-like green color!"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 16;
 	now sta entry is 14;
@@ -224,7 +224,7 @@ this is the ppattack rule:
 		let dam be ( ( wdam entry times a random number from 80 to ( 120 + lev entry ) ) / 100 );
 		if hardmode is true and a random chance of 1 in 10 succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The plant pulses and writhes energetically - Critical Hit![line break]";
+			say "The plant pulses and writhes energetically - Critical Hit!";
 		say "[didnotsubmit][one of]The bulb inside of you inflates suddenly, causing your belly to expand due to its size[or]The vine inside you wriggles and squirms in an arousing manner[or]The knot inside you pulses as the plant spurts a mind numbing fluid that makes you more aroused[at random]! You take [special-style-2][dam][roman type] damage and grow more aroused!";
 		now damagein is dam;
 		say "[noarmorabsorbancy]"; [natural defense only]
@@ -325,7 +325,7 @@ to say parasiticlust:
 				say "As you pant and feverishly massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rush to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
 			else:
 				say "As you pant and feverishly finger your [if player is planttailed]vaginal [end if]asshole, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rush to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			WaitLineBreak;
 			if skinname of player is "Parasitic Plant", now keepskin is 1;
 			if facename of player is "Parasitic Plant", now keepface is 1;
 			if tailname of player is "Parasitic Plant", now keeptail is 1;
@@ -346,7 +346,7 @@ to say parasiticlust:
 					now monster is Z;
 					break;
 				choose row monster from the table of random critters;
-				say "[line break][line break]";
+				LineBreak;
 				say "[one of]Your lustful urges lead you to a [name entry]. Immediately upon seeing the infected monster, you offer yourself to it in the hopes of satisfying some of your seed's hunger.[or]An enticing scent leads to a [name entry]. Hoping to slake your thirst for sexual juices, you immediately submit in the hopes of satisfying your body's carnal hungers.[or]A [name entry] encounters you while you wander in your lustful haze. You submit to it with no reservations, needing to satisfy your deep, internal hunger.[or]A [name entry] crosses your wandering path as you seek out the scents to slake your inner needs. You offer yourself to it, lustful for any sexual satisfaction you may get from it.[or]When your lustful meandering leads to a [name entry], you submit and offer yourself to it.[or]Wandering through the city with no aim greater than lustful self-satisfaction, you come across a [name entry] and give in to it immediately.[in random order]";
 				follow the cock descr rule;
 				follow the cunt descr rule;
@@ -354,9 +354,8 @@ to say parasiticlust:
 				now didsubmit is 1;
 				say "[victory entry]";
 				infect;
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			say "[line break][line break]";
-			say "The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes. You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired. It seeps through your infected body, reclaiming your altered flesh and spreading further.[line break]";
+			WaitLineBreak;
+			say "The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes. You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired. It seeps through your infected body, reclaiming your altered flesh and spreading further.";
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Parasitic Plant":
@@ -391,7 +390,7 @@ to say parasiticlust:
 				now libido of player is 0;
 		else if libido of player > 90:
 			increase timetillrampage by 1;
-			say "The sexual urges caused by the seed are harder and harder to suppress.[line break]";
+			say "The sexual urges caused by the seed are harder and harder to suppress.";
 		else:
 			now timetillrampage is 0;
 

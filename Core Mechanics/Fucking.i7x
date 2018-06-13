@@ -67,9 +67,9 @@ to say testerbotdesc:				[Description]
 instead of conversing the Testerbot:	[Talking]
 	say "[one of]'Why was I programmed to feel pain?'[or]'You organic creatures are disgusting.'[or]'Why do you lifeforms make so many fluids?'[or]'Why must you use me to satisfy your squishy, biological urges?'[or]'I am unfortunately programmed to submit to your repulsive, animal desires,'[at random] the robot complains.";
 
-the scent of Testerbot is "Testerbot reeks of sex, as that's what it's used for. What a sad, sad life it leads.".	[Smell]
+the scent of Testerbot is "Testerbot reeks of sex, as that's what it's used for. What a sad, sad life it leads.". [Smell]
 
-the fuckscene of Testerbot is "[sexwithTesterbot]".		[Fucking]
+the fuckscene of Testerbot is "[sexwithTesterbot]". [Fucking]
 
 to say sexwithTesterbot:
 	if lastfuck of Testerbot - turns < 4:

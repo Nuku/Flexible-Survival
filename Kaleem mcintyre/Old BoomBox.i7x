@@ -10,7 +10,7 @@ name	desc	weight	object
 old boombox is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing old boombox:
- say "     The faint scent of good old times seems to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
+	say "     The faint scent of good old times seems to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
 
 Instead of using the old boombox:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
@@ -47,7 +47,7 @@ Instead of Resolving a Old Record Store:
 		if player consents:
 			LineBreak;
 			say "     Deciding to bite the bullet just one more time, you go for the backroom to check to see if someone is in there. There's no way this place can be totally empty; that would defy the most basic form of logic there is -- cause and effect -- as somebody had to have opened the front door to the store for you to get in here. Marching forward, with your shoulders pushed out in front of you and your chest puffed up like a preening bird, you convince yourself that you're going to straighten out whatever practical joker is trying to be funny with you! What you find when you shoulder the door to the backroom open is... nothing.";
- 			WaitLineBreak;
+			WaitLineBreak;
 			say "     Well not exactly nothing, per say. Taking a look around the room, your eyes see that the surrounding area is littered with albums and CD's and... lo and behold... tapes! You don't think you've actually seen a cassette tape in the last five or ten years! Your eyes nearly bulge out of your head as you realize the treasure trove that you've stumbled upon. Whoever has left this place unattended is really doing himself a disservice as s/he's got so much to steal in here that it barely makes any sense.";
 			say "     Shutting the door behind you and then walking around in awe, your mind slowly begins to ramble through your somewhat foggy memories as you try and recall all of the hit artists that are collected here in this place. Most have long since faded from stardom, but more than a few continue to shine brightly, even in the dimly lit room with the fifty watt bulb flickering on above you.";
 			say "     The whispers, which you can still hear, despite them being somewhat muffled by the closed door, slowly grow louder as you place your fingers over and across the casings of many of the cassettes. Not really sure why you do it, you find your fingers tracing over two cassettes out of the hundreds present. Both tapes bear the vocals of a particular male and female artist, respectively, that you remembered being enamored with a long time ago.";
@@ -85,7 +85,7 @@ It is fixed in place.
 The description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?".
 
 instead of sniffing BoomBox:
- say "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
+	say "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
 
 Instead of using BoomBox:
 	say "[bold type]Play[roman type]";
@@ -199,7 +199,7 @@ to say tangofriends:
 [		else:
 			say "     ***confident Sven.";]
 	if felinoid companion is tamed:
-		 say "     Klauz seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before Klauz soon tires and then goes off to rest.";
+		say "     Klauz seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before Klauz soon tires and then goes off to rest.";
 	if Candy is in the bunker:
 		say "     Candy seems to enjoy the tango music and soon begins to bounce around the bunker like a rubber ball, despite the melody not having the right rhythm for such energetic movements. This, however, does not stop Candy from doing as he wishes, especially when you join in with him, though more for trying to calm him down than anything else.";
 	if Alexandra is booked:

@@ -133,11 +133,11 @@ to say BakeryChocLab:
 			say "     Having dealt with your second opponent, you quickly scan the room for the third and final lab.";
 			challenge "Chocolate Lab";
 
-	to say BakeryRetriever:
-	   challenge "Retriever";
-	   if fightoutcome >= 10 and fightoutcome <= 19:
-		  say "     With the first of the two golden-furred canines defeated, your attention is quickly drawn to the second as she barks happily before rushing towards you.";
-		  challenge "Retriever";
+to say BakeryRetriever:
+	challenge "Retriever";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     With the first of the two golden-furred canines defeated, your attention is quickly drawn to the second as she barks happily before rushing towards you.";
+		challenge "Retriever";
 
 Section 2 - Location
 
@@ -486,7 +486,7 @@ carry out françoisbaking:
 		if françoisbaked is not 1:
 			say "     After looking over everything you've brought him, François decides none of your potential combinations of ingredients would make a good dish.";
 	if françoisbaked is not 1 and Francois_Discovered is not empty:
-		say "	Would you like to have François bake a dish you've already discovered? (Y/N)";
+		say "     Would you like to have François bake a dish you've already discovered? (Y/N)";
 		if the player consents:
 			say "[FrançoisBakingMenu]";
 
@@ -579,7 +579,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "boysenberry blossom":
 					if blue gel is owned and Awesome Fruit is owned:
 						now sextablerun is 1;
-						say "	 François takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of fruit-filled pastries, offering one to you as he places the rest into one of his displays.";
+						say "     François takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of fruit-filled pastries, offering one to you as he places the rest into one of his displays.";
 						decrease carried of blue gel by 1;
 						decrease carried of Awesome Fruit by 1;
 						increase carried of boysenberry blossom by 1;
@@ -588,7 +588,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "Muffin muffin":
 					if pink gel is owned and Awesomer Fruit is owned:
 						now sextablerun is 1;
-						say "	 François takes the pink gel and Awesomer Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins, offering one to you as he places the rest into one of his displays.";
+						say "     François takes the pink gel and Awesomer Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins, offering one to you as he places the rest into one of his displays.";
 						decrease carried of pink gel by 1;
 						decrease carried of Awesomer Fruit by 1;
 						increase carried of Muffin muffin by 1;
@@ -597,7 +597,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "lollicock":
 					if honeycomb is owned and musky cock flower is owned:
 						now sextablerun is 1;
-						say "	 François takes the honeycomb and musky cock flower from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of red candy cocks, offering one to you as he places the rest into one of his displays.";
+						say "     François takes the honeycomb and musky cock flower from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of red candy cocks, offering one to you as he places the rest into one of his displays.";
 						decrease carried of honeycomb by 1;
 						decrease carried of musky cock flower by 1;
 						increase carried of lollicock by 1;
@@ -606,7 +606,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
-						say "	 François takes the dark scale, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
+						say "     François takes the dark scale, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
 						decrease carried of ebonflame scale by 1;
 						decrease carried of glowing ember by 1;
 						decrease carried of chocolate milk by 1;
@@ -616,7 +616,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "	 François takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. Rather than the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
+						say "     François takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. Rather than the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
 						decrease carried of pony cider by 1;
 						decrease carried of soda by 1;
 						decrease carried of crushed candies by 1;
@@ -626,7 +626,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "	 François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
+						say "     François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
 						decrease carried of wyvern goop by 1;
 						decrease carried of soda by 1;
 						decrease carried of Satyr wine by 1;
@@ -636,7 +636,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
-						say "	 François takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
+						say "     François takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
 						decrease carried of egg nog by 1;
 						decrease carried of pixie dust by 1;
 						decrease carried of blue gel by 1;
@@ -646,7 +646,7 @@ to say FrançoisBakingMenu:
 				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
-						say "	 François takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
+						say "     François takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
 						decrease carried of cheese by 1;
 						decrease carried of pixie dust by 1;
 						decrease carried of pink gel by 1;
@@ -735,55 +735,55 @@ to say FrançoisHint:
 
 
 to say BoysenberryBlossomGet:
-	say "	'Ah! Oui! These will do wonderfully!' François says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small dish of fruity-smelling pastries. 'I will call them boysenberry blossoms,' François says with obvious excitement. 'Please, be the first to taste one, mon ami[if player is purefemale]e[end if]!' Would you like to taste it right now? (Y/N)";
+	say "     'Ah! Oui! These will do wonderfully!' François says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small dish of fruity-smelling pastries. 'I will call them boysenberry blossoms,' François says with obvious excitement. 'Please, be the first to taste one, mon ami[if player is purefemale]e[end if]!' Would you like to taste it right now? (Y/N)";
 	if the player consents:
 		say "[boysenberry blossom Use]";
 		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and player is female ):
 			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
-			say "	François licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect. I cannot wait to start selling these.'";
+			say "     François licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect. I cannot wait to start selling these.'";
 	else:
 		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of boysenberry blossom by 1;
 
 to say MuffinMuffinGet:
-	say "	'What a lovely combination of flavors,' François says as he tastes the pink gel and Awesomer Fruit. 'I must test their potential further!' After collecting a few other things from behind the counter, François quickly heads to his kitchen to get started. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
+	say "     'What a lovely combination of flavors,' François says as he tastes the pink gel and Awesomer Fruit. 'I must test their potential further!' After collecting a few other things from behind the counter, François quickly heads to his kitchen to get started. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
 	if the player consents:
 		say "[muffin muffin Use]";
 		if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and player is male ):
-			say "	When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
-			say "	'Not my first choice, but an interesting result nonetheless,' François says as he watches your hand drift down towards your groin. 'I am certain it will be popular.'";
+			say "     'Not my first choice, but an interesting result nonetheless,' François says as he watches your hand drift down towards your groin. 'I am certain it will be popular.'";
 	else:
-		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of muffin muffin by 1;
 
 to say bleuettonneGet:
-	say "	After tasting the blue gel, François takes it and the chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates. 'A simple but effective technique. You must try one,' François says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
+	say "     After tasting the blue gel, François takes it and the chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates. 'A simple but effective technique. You must try one,' François says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
 	if the player consents:
 		say "[bleuettonne Use]";
 		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and player is female ):
-			say "	When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
-			say "	'Oh my, what a magnifique result,' François says with a grin as he watches your groin change.";
+			say "     'Oh my, what a magnifique result,' François says with a grin as he watches your groin change.";
 	else:
-		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of bleuettonne by 1;
 
 to say CrèmeAbondanteGet:
-	say "	After tasting the pink gel and distilled milk, François quickly pours both into an empty bowl and starts mixing before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this,' you hear him say to himself as you watch his tail disappear around the corner. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)";
+	say "     After tasting the pink gel and distilled milk, François quickly pours both into an empty bowl and starts mixing before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this,' you hear him say to himself as you watch his tail disappear around the corner. The warm, sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)";
 	if the player consents:
 		say "[crème abondante Use]";
 		if "Male Preferred" is listed in feats of player or "Passing Grade Chest" is listed in feats of player or "One Pair" is listed in feats of player:
-			say "	When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     François cocks his head to the side as he watches your chest swell. 'I have a feeling this will be a popular dish among les femmes,' he says while eyeing your growing mammaries. 'I am glad I was not the first to test it though.'";
 	else:
-		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of crème abondante by 1;
 
 to say lollicockGet:
-	say "	'What an unusual herb,' François says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' François trails off as he spots the honeycomb, before inspiration strikes. François quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually François returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
+	say "     'What an unusual herb,' François says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' François trails off as he spots the honeycomb, before inspiration strikes. François quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually François returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
 	if the player consents:
 		let lollicockCheck be 0;
 		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
@@ -808,11 +808,11 @@ to say lollicockGet:
 		decrease hunger of player by 5;
 		if hunger of player < 0, now hunger of player is 0;
 		if lollicockCheck is 0:
-			say "	When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "'Mon dieu! What an unexpected result!' François says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk.";
 	else:
-		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of lollicock by 1;
 
 to say dragonmoelleuxGet:

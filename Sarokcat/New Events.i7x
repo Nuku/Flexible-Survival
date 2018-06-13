@@ -84,7 +84,7 @@ Instead of Resolving a Hyena Gang:
 		say "Traveling along the empty streets of the city, a large patch of graffiti catches your eye. Pausing for a minute to decipher the large markings, you realize that it appears to advertise that you are coming up on some hyena pack's territory, and they appear looking for more people to join...";
 		Increase hyg by 1;
 	else if hyg is 1:
-		Say "Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of Hyenas is spreading rapidly, all of a sudden you feel like someone is watching you intently. Glancing around you don't see anyone near by, but the uneasy feeling of being watched won't leave you alone. Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.";
+		say "Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of Hyenas is spreading rapidly, all of a sudden you feel like someone is watching you intently. Glancing around you don't see anyone near by, but the uneasy feeling of being watched won't leave you alone. Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.";
 		Increase hyg by 1;
 	else if hyg is 2:
 		say "As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area. Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you, and quickly prepare for a fight, only to realize it doesn't show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.[line break]'Hey don't worry,' the hyena says as she draws closer, making you nervous, 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' he says with a gesture at the graffiti, 'So I thought I'd come over and offer you a chance to join on up,";
@@ -178,7 +178,7 @@ Broken fountain is a situation.
 The sarea of Broken fountain is "Park".
 
 Instead of Resolving a Broken fountain:
-	Say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. Following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area. Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
+	say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. Following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area. Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
 	increase carried of dirty water by 1;
 	Now Broken fountain is resolved;
 
@@ -192,7 +192,7 @@ The sarea of Scenic View is "Park".
 
 
 Instead of Resolving a Scenic View:
-	Say "Wandering through the park trails you come across a beautiful view of nature, almost unimpeded by the skyline of abandoned buildings. You pause in your searching for a minute to take in the view, and relax before you have to head back into the city, feeling much better about yourself.";
+	say "Wandering through the park trails you come across a beautiful view of nature, almost unimpeded by the skyline of abandoned buildings. You pause in your searching for a minute to take in the view, and relax before you have to head back into the city, feeling much better about yourself.";
 	Increase Humanity of player by 10;
 	Now Scenic View is resolved;
 

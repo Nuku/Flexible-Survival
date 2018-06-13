@@ -103,7 +103,7 @@ to say borisquestforcock:
 				if player consents:
 					say "[christy_ending]";
 				else:
-					Say "'Well, now you're just teasing me,' Boris says as once more puts the costume up, sighing. 'And I was so looking forward to having some fun too,' the costumed lion says as he rubs his newly acquired package with a large paw.";
+					say "'Well, now you're just teasing me,' Boris says as once more puts the costume up, sighing. 'And I was so looking forward to having some fun too,' the costumed lion says as he rubs his newly acquired package with a large paw.";
 		else:
 			if borismate is 0:
 				say "'I figured you would come by and ask me about that sometime soon,' Boris says with a grin as he leans back against the ticket booth, his new member peeking temptingly out of its fresh sheath. 'I didn't think someone would go to such great lengths to help me get my little problem fixed, and not stop by to try it out themselves,' Boris says with a rather smug smile on his very leonine face. 'Of course I'm rather looking forward to trying it out for a bit myself too, so what do you say we have some fun together?' Boris says as he reaches out and rubs one of his large paw-like hands along the side of your face, while his other paw slowly strokes his sheath. You find yourself nodding absently at his suggestion, your eyes fixed on the lovely pink lion cock slowly emerging from Boris's new sheath, both shocked and fascinated by the changes to the Catlike sex toy.[line break]";

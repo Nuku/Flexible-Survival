@@ -342,11 +342,11 @@ When Play begins:
 	now skin entry is "pale and slime covered"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "slime covered, prehensile"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "everything seems to get brighter, your eyes beginning to glow red and adjusting for much dimmer environments, while your hair falls out and is replaced by a hundreds of slimy, prehensile tendrils."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "as random portions all over feel an indescribable pressure build beneath your skin. Finally something gives way and you sprout at least 20 prehensile phallic, slime covered tentacle appendages, all of which are foot longer than your cock."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now face change entry is "everything seems to get brighter, your eyes beginning to glow red and adjusting for much dimmer environments, while your hair falls out and is replaced by a hundreds of slimy, prehensile tendrils"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "as random portions all over feel an indescribable pressure build beneath your skin. Finally something gives way and you sprout at least 20 prehensile phallic, slime covered tentacle appendages, all of which are foot longer than your cock"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "you grow paler and your pores begin to leak slime that doubles as a potent aphrodisiac"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "something thick and heavy shifts inside you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it grows erect. You reach for it, and before your hand reaches it, your cock moves up into your hand. You wipe your hand on your sleeve as your cock has now started a slow, constant leak of unidentifiable goo. Your arm underneath your sleeve tingles and you make a mental note not to wipe the goo on your clothing again..."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it grows erect. You reach for it, and before your hand reaches it, your cock moves up into your hand. You wipe your hand on your sleeve as your cock has now started a slow, constant leak of unidentifiable goo. Your arm underneath your sleeve tingles and you make a mental note not to wipe the goo on your clothing again"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 20;
 	now sta entry is 20;

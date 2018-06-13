@@ -168,7 +168,7 @@ When Play begins:
 	now body change entry is "your legs meld into one, elongating into the body of a snake, with your torso being that of a human's. It takes a while to adjust to moving with these powerful coils, but you eventually get the hang of it";    [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "your torso tingles, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales";    [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel something settle in your lower torso, but nothing physically changes that you can see";    [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "it succumbs to some transformative effect. Checking yourself, it appears distinctly human-looking.";        [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now cock change entry is "it succumbs to some transformative effect. Checking yourself, it appears distinctly human-looking";        [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 15; [ These values may be used as part of alternate combat. ]

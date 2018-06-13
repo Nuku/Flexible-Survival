@@ -101,7 +101,7 @@ when play begins:
 
 Instead of resolving a Hunting Party:
 	say "     Walking along a broken up patch of roadway, you hear loud clopping coming your way from over the small hillock beside you. Getting ready for a fight, you spot a female centaur galloping down the slope towards you, but then she charges right past you. It's then that you notice that her hooves are not the only ones you hear as several horsemen come running over the hill. They are wearing cowboy hats and a few of them have lassos at the ready. Most thankfully run past you, continuing their pursuit of the escaping centauress, but a pair stop to deal with you.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	WaitLineBreak;
 	if Nightmaremastery is 1:
 		say "     Recognizing you as their leader, they nod respectfully and start giving you a report on their activity out here. While they had been hopeful that the equine centaurs could be encouraged to join the staff at the Stables, they seem quite reluctant, and even violent, about the prospect. Not taking no for an answer, the horsemen have been trying to capture some of the female centaurs to [']encourage['] them to come along. Squirming under your gaze as you keep questioning them, they report that they haven't yet been successful, as the four-legged centaurs are much faster than them. You order them back to their task and warn them that you expect results or you'll be seeing them in your office. Taking a mental note of their names, you find yourself equally looking forward to either their success or their failure, as either will get you some new mares to fuck.";
 		increase score by 10;

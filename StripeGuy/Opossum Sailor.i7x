@@ -14,8 +14,8 @@ when play begins:
 
 to say Opossum Sailor wins:
 	if HP of player > 0:
-     		say "[Opossum Sailor Submit]";
-     	else:
+		say "[Opossum Sailor Submit]";
+	else:
 		if player is male: [male + herm]
 			say "The opossum sailor tips back her hat, showing off an array of gold-capped teeth in joy at victory over you. She need no words as she strides closer, lifting one booted foot and resting it on your chest, heaving in an effort to catch a breath after being so thoroughly defeated. 'I see that you'll belay those struggles.' A shove sends to tumbling onto your back, and before your weakened limbs can even begin the task of righting yourself, the salty sailor is upon you. Her weight presses against your middle, hot sex-juices splashing from her sopping cunt to soak into your skin. The scent overpowers your restraint, [cock of player] cock surging to full hardness as she grinds teasingly. 'Stand before the mast they say, but I rather to sit on it.' She laughs at her own weak joke, ample tits bouncing out of the gold-trimmed jacket, achingly just beyond the reach of your lips or hands. Unlike you, weakened from lust and defeat, this sea-faring tart is free to grope your [bodytype of player] body as she likes! Her nimble pink fingers pinch at your nipples while her prehensile tail just wraps around your [cock size desc of player] dick like an anaconda. The marsupial teases you until your labored breathes are moans of desire, wordless adulation and need for the female straddling you!";
 			LineBreak;

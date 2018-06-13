@@ -51,7 +51,7 @@ to say beatthecaveman:
 		else:
 			say "     You can't pass up the throbbing dick barely contained by the loincloth. You rip it off and go down on the caveman, greedily licking and sucking the huge meat, your moans drowned out only by the moans of the cromagnon man. Soon you are rewarded with a powerful blast of caveman cum in your mouth and you swallow down the gift before moving on.";
 	else:
-		 say "     You leave the caveman on the ground, having no interest in the brute.";
+		say "     You leave the caveman on the ground, having no interest in the brute.";
 
 Section 2 - Monster Insertion
 

@@ -14,18 +14,18 @@ Instead of examining the The Pretty Kitty entrance:
 The description of The Pretty Kitty is "[PKDesc]".
 to say PKDesc:
 	if thirst of Andromeda is 0:
-		say "	Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens is 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
+		say "     Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens is 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
 		LineBreak; [There for first description clarification]
-		say "'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
+		say "'     Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
 		now thirst of Andromeda is 1;
 	else:
-		say "	You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens is 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
+		say "     You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens is 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
 		if libido of Andromeda >= 2:
-			say "	Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
+			say "     Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
 			LineBreak;
-			say "Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
+			say "     Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
 		else:
-			say "	'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
+			say "     'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
 
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
@@ -85,7 +85,7 @@ instead of conversing Andromeda:
 		say "     You mention that your just surprised that she'd be carrying such... odd items for sale. Doesn't seem like something that'd be carried in a normal clothing store...";
 		say "     Drilling holes in your head with her angered gaze, she puts her hands to her hips with a loud [']Humph['], Andromeda swishes her tail furiously as she talks. 'Well you're one to talk! You went and got one, and I got paid for it, business at work! Now get outta here before I grab my broom!' Batting her tail at you, you have no choice but to skip out of the store, escaping the all-powerful tail wielded by the embarrassed proprietor.";
 	else:
-		say "	[one of]'Business has been good lately. Sure, payment is in the form of food and milk right now, but it works!'[or]Andromeda is sitting on the counter, batting at her own tail. She absent-mindedly waves at you, instead concentrating on pinning down the offending tail.[or]'That mouse girl in the bookstore looks sooo delectable. I could just eat her up.'[or]'Buy something or get the heck out!' she yells at you, obviously putting on a joking tough guy impression.[or]You and Andromeda idly chat, just enjoying the pleasure of sane company.[or]Andromeda looks around, making sure nobody is paying attention, and brings a paw up behind her ear, scratching furiously. A look of serenity crosses her face, which soon changes to embarrassment when she sees you looking her way. She deftly removes her paw from her ear and looks away, but you're pretty sure she's blushing under all that fur.[or]Currently involved in moving a customer through checkout, Andromeda quickly waves at you before going back to the task at hand.[at random]";
+		say "     [one of]'Business has been good lately. Sure, payment is in the form of food and milk right now, but it works!'[or]Andromeda is sitting on the counter, batting at her own tail. She absent-mindedly waves at you, instead concentrating on pinning down the offending tail.[or]'That mouse girl in the bookstore looks sooo delectable. I could just eat her up.'[or]'Buy something or get the heck out!' she yells at you, obviously putting on a joking tough guy impression.[or]You and Andromeda idly chat, just enjoying the pleasure of sane company.[or]Andromeda looks around, making sure nobody is paying attention, and brings a paw up behind her ear, scratching furiously. A look of serenity crosses her face, which soon changes to embarrassment when she sees you looking her way. She deftly removes her paw from her ear and looks away, but you're pretty sure she's blushing under all that fur.[or]Currently involved in moving a customer through checkout, Andromeda quickly waves at you before going back to the task at hand.[at random]";
 
 [Fucking with NPC]
 instead of fucking Andromeda:
@@ -211,9 +211,9 @@ carry out TshirtObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
-			say "	Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+		if player consents:
+			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -302,7 +302,7 @@ carry out TuxedoObtain:
 					delete gryphon milk;
 					increase carried of tuxedo by 1;
 				else if dolphin milk is owned:
-					say "	Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
+					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
 					delete dolphin milk;
 					increase carried of tuxedo by 1;
 				else if distilled milk is owned:

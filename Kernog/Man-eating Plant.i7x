@@ -33,7 +33,7 @@ When Play begins:
 	now face entry is "face entry goes here"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "body entry goes here"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "skin entry goes here"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is "tail entry goes here"; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "tail entry goes here."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "cock entry goes here"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "new face change"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "new body change"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -142,7 +142,7 @@ to say ManEatingPlantVoreScene:
 		say "     Vines coil around your knocked-out body and pushes you into the plant's gullet, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
 	if fightoutcome is 22:
 		say "     You let the vines coil around you, and throw you legs-first into the plant's gullet. The vegetal swallows you, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. A small voice in your brain urges you to get out of this dangerous situation.";
-	if waiterhater is 0, wait for any key;
+	WaitLineBreak;
 	manEatingPlantVore;
 
 to manEatingPlantVore:

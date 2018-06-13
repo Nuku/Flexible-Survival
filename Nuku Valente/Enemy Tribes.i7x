@@ -38,7 +38,7 @@ to rival menu:
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
 
- This is the rival select rule:
+This is the rival select rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
 	if nam is "Random":

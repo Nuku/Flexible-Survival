@@ -126,7 +126,7 @@ when play ends:
 				say "The asynchronous buggering has you blow your load and squirt all over the ground twice over before the shemale ";
 			else if player is male:
 				say "The asynchronous buggering has you blow your load twice over before the shemale ";
- 			else if player is female:
+			else if player is female:
 				say "The asynchronous buggering has you squirt all over the ground twice over before the shemale ";
 			else:
 				say "Although neuter, you still derive a certain sinful enjoyment from the asynchronous buggering, pleasing your gorgeous mistress until she ";

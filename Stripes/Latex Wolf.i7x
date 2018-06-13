@@ -18,11 +18,11 @@ To say latex wolf loses:
 
 to say RegularLatexWolfLoses:
 	if libido of player <= 50:
-		Say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
+		say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
 	if libido of player > 50 and player is male:
-		Say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
+		say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
 	if libido of player > 50 and cocks of player is 0 and player is female:
-		Say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
+		say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
 	if HP of Bradford is 3:
 		if bradfordbounty > 0:
 			LineBreak;

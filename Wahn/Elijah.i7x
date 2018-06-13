@@ -144,20 +144,20 @@ Elijah is a man. The HP of Elijah is normally 0.
 The description of Elijah is "[Elijahdesc]".
 The conversation of Elijah is { "Mew!" }.
 NPCintCounter is a number that varies. NPCintCounter is normally 555.
-npcEint is an indexed text that varies. npcEint is normally "0000000000000N".	[SAVING]
-Elijah has a text called Char-A. Char-A of Elijah is normally "0".	[Candy]
-Elijah has a text called Char-B. Char-B of Elijah is normally "0".	[Sarah]
-Elijah has a text called Char-C. Char-C of Elijah is normally "0".	[Sven]
-Elijah has a text called Char-D. Char-D of Elijah is normally "0".	[Felinoid]
-Elijah has a text called Char-E. Char-E of Elijah is normally "0".	[Helper Dog]
-Elijah has a text called Char-F. Char-F of Elijah is normally "0".	[Little Fox]
-Elijah has a text called Char-G. Char-G of Elijah is normally "0".	[Gryphoness]
-Elijah has a text called Char-H. Char-H of Elijah is normally "0".	[Cute Crab]
-Elijah has a text called Char-I. Char-I of Elijah is normally "0".	[Fang]
-Elijah has a text called Char-J. Char-J of Elijah is normally "0".	[Honey]
-Elijah has a text called Char-K. Char-K of Elijah is normally "0".	[unassigned]
-Elijah has a text called Char-L. Char-L of Elijah is normally "0".	[unassigned]
-Elijah has a text called Char-M. Char-M of Elijah is normally "0".	[unassigned]
+npcEint is an indexed text that varies. npcEint is normally "0000000000000N". [SAVING]
+Elijah has a text called Char-A. Char-A of Elijah is normally "0". [Candy]
+Elijah has a text called Char-B. Char-B of Elijah is normally "0". [Sarah]
+Elijah has a text called Char-C. Char-C of Elijah is normally "0". [Sven]
+Elijah has a text called Char-D. Char-D of Elijah is normally "0". [Felinoid]
+Elijah has a text called Char-E. Char-E of Elijah is normally "0". [Helper Dog]
+Elijah has a text called Char-F. Char-F of Elijah is normally "0". [Little Fox]
+Elijah has a text called Char-G. Char-G of Elijah is normally "0". [Gryphoness]
+Elijah has a text called Char-H. Char-H of Elijah is normally "0". [Cute Crab]
+Elijah has a text called Char-I. Char-I of Elijah is normally "0". [Fang]
+Elijah has a text called Char-J. Char-J of Elijah is normally "0". [Honey]
+Elijah has a text called Char-K. Char-K of Elijah is normally "0". [unassigned]
+Elijah has a text called Char-L. Char-L of Elijah is normally "0". [unassigned]
+Elijah has a text called Char-M. Char-M of Elijah is normally "0". [unassigned]
 honeygiven is a truth state that varies. honeygiven is normally false.
 
 instead of sniffing Elijah:

@@ -339,7 +339,7 @@ to say sexwithCandy:
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Raccoon":
- 				now monster is y;
+				now monster is y;
 				break;
 		if player is male:
 			say "     You decide to take up Candy on his offer for a little fun. As you walk over to him, his eyes light up, as if sensing what you want. His paws are all over you in moments, pulling your clothes off. He nuzzles and nibbles at your neck, churring softly while rubbing his body against yours.";

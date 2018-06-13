@@ -314,7 +314,7 @@ to say KoballoonSexBadEnd:
 		say "[if breast size of player > 0]perfect[else]similar[end if] rubber counterpart to the nine-foot tall drake that you've met in the city, complete with ";
 	else:
 		say "twisted facsimile of a nine-foot tall drake, your ";
- 	say "[if breast size of player > 0]heavy, swollen breasts and [end if]ample curves wrapped in a flawless expanse of jade-green rubber. ";
+	say "[if breast size of player > 0]heavy, swollen breasts and [end if]ample curves wrapped in a flawless expanse of jade-green rubber. ";
 	if "Herm Preferred" is listed in feats of player:
 		say "Your [if cocks of player > 1]cocks have[else]cock has[end if] become truly monstrous, [if cocks of player > 1]sleek green pillars that give several hard, slow throbs as they leak[else]a sleek green pillar that gives several hard, slow throbs as it leaks[end if] lube-like pre onto the ground below. Your [if cunts of player > 1]cunts constantly drool[else]cunt constantly drools[end if] a warm, odorless lubricant, the runny liquid trickling down your inner thighs.";
 	else if "Female Preferred" is listed in feats of player:

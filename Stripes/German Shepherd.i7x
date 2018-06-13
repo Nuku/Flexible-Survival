@@ -54,14 +54,14 @@ to say gsd_desc:
 			now gsd_pet is 1;
 		else if gsd_pet is 4:
 			if KorvinSubmitCounter > 4: [new auto submit + fight]
- 				let randomnumber be a random number from 1 to 3;
- 				if randomnumber is:
- 					-- 1:
- 						say "[KorvinOrcFight]";
- 					-- 2:
- 						say "[KorvinTenrecFight]";
- 					-- 3:
- 						say "[KorvinCentaurFight]";
+				let randomnumber be a random number from 1 to 3;
+				if randomnumber is:
+					-- 1:
+						say "[KorvinOrcFight]";
+					-- 2:
+						say "[KorvinTenrecFight]";
+					-- 3:
+						say "[KorvinCentaurFight]";
 				now combat abort is 1;
 			else: [current auto submit]
 				if a random chance of 2 in 3 succeeds:
@@ -163,7 +163,7 @@ to say KorvinTenrecFight:
 			remove "Korvin's Pet - Spiked Collar" from feats of player;
 			add "Korvin's Pet - Pink Collar" to feats of player;
 		else:
-			Say "     Once in the store, your Alpha leads you over to the collar section where you instantly picks out a glittery pink collar with the word 'Bitch' on it. Such a thing, at least to you, is an odd sight in a pet store. Nevertheless, he unleashes you and clips the humiliating neck accessory onto you. 'You disappointed me by losing, but that doesn't mean I'm mad at you,' he says, easing your fear. He pets your head, rubbing the cum into your hair. He then hooks the leash onto your new collar and begins to lead you back to where you ran into him. Once there he turns to face you, after unleashing you. 'If you manage to do good next time, then I'll see about you getting a worthier collar,' he says. You eagerly nodd at this, happy to please your Alpha before you head off, hoping to revisit him soon.";
+			say "     Once in the store, your Alpha leads you over to the collar section where you instantly picks out a glittery pink collar with the word 'Bitch' on it. Such a thing, at least to you, is an odd sight in a pet store. Nevertheless, he unleashes you and clips the humiliating neck accessory onto you. 'You disappointed me by losing, but that doesn't mean I'm mad at you,' he says, easing your fear. He pets your head, rubbing the cum into your hair. He then hooks the leash onto your new collar and begins to lead you back to where you ran into him. Once there he turns to face you, after unleashing you. 'If you manage to do good next time, then I'll see about you getting a worthier collar,' he says. You eagerly nod at this, happy to please your Alpha before you head off, hoping to revisit him soon.";
 			add "Korvin's Pet - Pink Collar" to feats of player;
 	else if fightoutcome >= 30:[fled]
 		say "     Terrified, you turn tail and run. Mentally you realize it was a bad idea as your Alpha starts chasing after you, yelling for you to get back. When your master does corner you, he slaps you for fleeing. 'I knew you were a bitch, but I didn't know you were a coward too,' he says darkly, the tone causing you to flinch. With a shake of his head, the dog yanks you by your leash and leads you back to where the two of you ran into each other. When you get there he sees your hurt look, causing him to sigh and pat your head. 'You ran, so you aren't getting anything this time. Next time actually fight. I won't be mad if you lose. Disappointed, yes, but not mad,' he says. That causes you to smile happily at him before he unleashes you and tells you to visit him again soon.";

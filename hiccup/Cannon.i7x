@@ -84,11 +84,11 @@ When Play begins:
 	now skin entry is "vein covered"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Your ass has several long and curly hairs on it. The skin on your rear is also very wrinkly. The wrinkles and the hairs make your butt cheeks look like a giant ballsack."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "body length"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it turns purple. Your head swells out until it is shaped like the head of a mushroom. Your eyes, nose, and mouth disappear, leaving you momentarily blind and unable to breathe. A moment later, a large slit opens up on the top of your head and you're able to see and breathe through it."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it thickens and loses all of its curves and features until it looks like the shaft of a penis."; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it becomes more sensitive to the slightest touch and large veins become visible beneath the skin."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now face change entry is "it turns purple. Your head swells out until it is shaped like the head of a mushroom. Your eyes, nose, and mouth disappear, leaving you momentarily blind and unable to breathe. A moment later, a large slit opens up on the top of your head and you're able to see and breathe through it"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it thickens and loses all of its curves and features until it looks like the shaft of a penis"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it becomes more sensitive to the slightest touch and large veins become visible beneath the skin"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it plumps up and sags down a little, while long and curly pubic hairs grow over it. It makes your butt cheeks look like a giant ballsack"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it gets absorbed into and replaced by your body."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it gets absorbed into and replaced by your body"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 10;
 	now sta entry is 14;

@@ -74,7 +74,7 @@ The description of Bunny House is "[bunnyhousedesc]".
 the scent of Bunny House is "Micaela's scents of arousal, rabbits and candy hang in the air here.";
 
 to say bunnyhousedesc:
-     say "     The pastel blue house is more intact than the others in the area. The damage to this two-story home is largely confined to the garage, driveway and yard. Inside, the living room is fairly clear of dirt and junk, though the carpet and furniture all show signs of recent wet stains. Micaela, the Easter bunny herm, is seated in one of those chairs, rubbing her [if XP of Micaela > 8]egg-laded [else if XP of Micaela > 0]growing [end if]tummy with a happy smile on her cute face.";
+	say "     The pastel blue house is more intact than the others in the area. The damage to this two-story home is largely confined to the garage, driveway and yard. Inside, the living room is fairly clear of dirt and junk, though the carpet and furniture all show signs of recent wet stains. Micaela, the Easter bunny herm, is seated in one of those chairs, rubbing her [if XP of Micaela > 8]egg-laded [else if XP of Micaela > 0]growing [end if]tummy with a happy smile on her cute face.";
 
 
 Section 3 - Micaela

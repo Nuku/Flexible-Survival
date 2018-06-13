@@ -137,7 +137,7 @@ to say WYVVIC:
 			say "     Approaching you, his tongue briefly assesses your [bodytype of player] form, its slick, writhing affection bathing you in his heated breath and saliva. Afflicted with a twisted compulsion, he pulls away before he begins to make a loud, deliberate hacking sound, his maw quickly flooding with the strange fluid, scaled lips clenched only slightly to let it ooze down over you.";
 			say "     Thick, warm goo slowly beginning to envelope you, [if HP of player < 1 and player is not submissive]you're instinctively driven to try and pull yourself free with little success[else]compelling you to writhe and twist against its touch[end if], acrid substance soon clinging to your every inch before you feel it gradually harden, encasing you entirely. Your confines are quickly pulled upright and moved around, the wyvern apparently fussing over its shape before he relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[else]night's lights[end if] becomes eclipsed by utter darkness, an overwhelming heat enveloping you before you black out.";
 			infect;
-			if waiterhater is 0, wait for any key;
+			WaitLineBreak;
 			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
@@ -151,7 +151,7 @@ to say WYVVIC:
 			[say "     The beast approaches his new captive, thick tongue exposed by his gaping maw; hungry look in his eye, it's very clear what fate it has in store for you. Slick organ moving to caress your exposed body, [if HP of player < 1 and player is not submissive]you endeavor to free yourself once more of your primal bindings, to little avail[else]accepting your troubling circumstance, you're forced to gaze into the fleshy abyss before you, massive portal begging that you might abide it[end if]. Showered by his hot, acrid breath, his saliva appears to dissolve the peculiar material, but this liberation is a false one, as it's quickly traded with his scaled lips.";
 			say "     Light slitted through his only slightly agape mouth, it's closure prevented by your lower, engulfed half, he offers you the smallest mercy by not subjecting you to his savage teeth, for what good it might merit. You must contend with the embrace of these slick walls; such fleshy confines eager to accept your imposed occupancy, he merely raises his head, letting gravity set your destination, until only slick heat and darkness remains.";
 			say "     Descent hastened by this slippery prison, you are eventually pushed into the belly of this beast. [if HP of player < 1 and player is not submissive]Desperate struggles lost in the wake of your fading consciousness[else]As your vision begins to fade[end if], you can feel yourself tussled about, the wyvern no doubt taking flight again, satisfied with its [if scalevalue of player is 3]meal[else]snack[end if].";
-			if waiterhater is 0, wait for any key;
+			WaitLineBreak;
 			say "     Eventually you come to, finding yourself back outside, in the city, covered in a mess of saliva and goop. Though your captor's intent might have been more infectious, you can't help but feel considerably drained by the encounter. You eventually clean yourself off and find where you are exactly before returning from whence you came.";
 			increase hunger of player by 7;
 			increase thirst of player by 5;]
@@ -189,7 +189,7 @@ to say WYVVIC:
 			say "     Thick, coarse scales abrasively grinding against your bound, [bodytype of player] form, he's quite intent on getting the massive thing all the way in there, inch after successive inch reaming itself into your overwhelmingly strained hole. It's not long before he gets what he wants, scaled crotch firmly against your ass, slicked by errant spurts of pre sputtering from you[if scalevalue of player < 4], body visibly bulging with the dick's outline[end if] before he spares you a moment of slight reprieve when it's inched out, only to be pounded back in.";
 			say "     Utterly wrecked by the behemoth tool[if scalevalue of player < 4], tears streaming from your eyes[end if], ";
 			if lust of player > 30 and player is not neuter:
-				 say "it's not long before you cry out in orgasm, [if cocks of player > 1]cocks smearing their [cum load size of player] load against both your torsos[else if player is male]cock smearing its [cum load size of player] load across both your torsos[else]neglected cunt[sfn] oozing down onto the invading organ[end if]. He doesn't seem to even notice this, relentlessly eager to rail for a seemingly endless length of time before the wyvern finally lets out ear-splitting screech. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole.";
+				say "it's not long before you cry out in orgasm, [if cocks of player > 1]cocks smearing their [cum load size of player] load against both your torsos[else if player is male]cock smearing its [cum load size of player] load across both your torsos[else]neglected cunt[sfn] oozing down onto the invading organ[end if]. He doesn't seem to even notice this, relentlessly eager to rail for a seemingly endless length of time before the wyvern finally lets out ear-splitting screech. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole.";
 			else:
 				say "you're railed by the relentlessly eager wyvern for what seems like forever, finally letting out an ear-splitting screech in bliss. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole";
 				if player is not neuter:
@@ -258,7 +258,7 @@ to say WYVVIC:
 			say "     Approaching you, her tongue briefly assesses your [bodytype of player] form, its slick, writhing affection bathing you in her heated breath and saliva. Seemingly satisfied with her catch, she pulls away before she begins to make a loud, deliberate hacking sound, her maw quickly flooding with the strange fluid, scaled lips clenched only slightly to let it ooze down over you.";
 			say "     Thick, warm goo slowly beginning to envelope you, [if HP of player < 1 and player is not submissive]you're instinctively driven to try and pull yourself free with little success[else]compelling you to writhe and twist against its touch[end if], acrid substance soon clinging to your every inch before you feel it gradually harden, encasing you entirely. Your confines are quickly pulled upright and moved around, the wyvern apparently fussing over its shape before she relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[else]night's lights[end if] becomes eclipsed by utter darkness, an overwhelming heat enveloping you before you black out.";
 			infect;
-			if waiterhater is 0, wait for any key;
+			WaitLineBreak;
 			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
@@ -704,7 +704,7 @@ to say wyvorescene:
 	else:
 		say ". Not putting up a fight, even as you're now liberated from your prior bondage, all it takes is one final, powerful gulp to squeeze you past that final portal to [ghis] stomach. Surrounded by supple, saliva-slicked walls, you begin to feel yourself slowly being drained. You don't imagine you'll last long in here...";
 		now boundsegment is 0;
-	if waiterhater is 0, wait for any key;
+	WaitLineBreak;
 	wyvore;
 
 to wyvore:
@@ -1748,7 +1748,7 @@ tempnum2 is a number that varies.
 to wyvernmatron:
 	if a random chance of tempnum2 in 14 succeeds:
 		say "     [bold type]The [if WYVGEN is 0]'Matron'[else]Matron[end if] returns![roman type] [if WYVGEN is 0]His[else]Her[end if] bestial offspring now have their attention split between [ghim] and you, eager to see what their parent has in store...";
-		if waiterhater is 0, wait for any key;
+		WaitLineBreak;
 		if wyvkinocc < 2:
 			say "     Not paying much heed to your current predicament, the massive wyvern screeches loudly before squatting down, body trembling as you're made to watch on, white, crudely shaped egg gradually forcing its way out from between [ghis] powerful legs. It doesn't take long, but the air is filled with the monster's screeching and growling until the white orb softly falls to the ground.";
 			say "     The wyvern turns to inspect the egg as [ghe] catches [ghis] breath. From what you can tell, the drop was enough to stir the occupant from its prior slumber. Helping it break free of the tough shell, the air is eventually filled with the noise of another wyvern kin emerging into this world, tumbling from its prison. You're not rightly sure if this is the beast's legitimate offspring or someone who succumbed to a similar fate to you[if WYVGEN is 0], probably the latter[end if].";
@@ -1815,7 +1815,7 @@ to wyvernmatron:
 				now wyvkinocc is 1;
 		else:
 			say "     As you can imagine, the wyvern has little interest in adding more to an already fairly crowded nest, and instead is here to check up on [ghis] children. Now giving your situation [ghis] proper attention, [ghis] appears to feel that you haven't fully succumbed to your new circumstance, and screeches at [ghis] other children until they pull free of you. Though they still pin you down, you're now exposed and left at the mercy of larger beast, eager to have some fun with you...";
-			if waiterhater is 0, wait for any key;
+			WaitLineBreak;
 			say "[WYVVIC]";
 			if bodyname of player is "Wyvern" and player is pure:
 				if a random chance of 1 in 4 succeeds:

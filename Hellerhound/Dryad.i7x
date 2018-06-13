@@ -90,7 +90,7 @@ When Play begins:
 	now name entry is "Dryad"; [Name of your new Monster]
 	now attack entry is "The dryad [one of]punches your face solidly with a fist that feels like bark[or]kicks your face, exposing her cute pussy[or]whips the tree's branches at you[or]causes tentacle-like vines to rise out of the ground and slap you[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[dryad defeat]";
-	 [ Text or say command used when Monster is defeated.]
+	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
 	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees. You can see the signs of many having had sex nearby. One tree seems normal enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches and the pinkish tinge to its bark. As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears"; [ Face description, format as "Your face is (your text)"]

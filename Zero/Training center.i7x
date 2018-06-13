@@ -63,16 +63,16 @@ massdomfightwin is a number that varies. massdomfightwin is usually 0.
 
 Instead of Resolving Domincounter:
 	if sc is 0:
-		Say "While wandering the city you come across a group of dominators talking adamantly among themselves, deciding it would be a bad idea to be caught, you quickly dart behind a nearby upturned car.[line break]After a while they move off and you come out of hiding contemplating what the dominators were talking about, it appears that a small dog keeps giving them the slip and their master wants it brought to them, you don't blame that dog those dominators are bad news, who knows what their master is like.[line break]";
+		say "While wandering the city you come across a group of dominators talking adamantly among themselves, deciding it would be a bad idea to be caught, you quickly dart behind a nearby upturned car.[line break]After a while they move off and you come out of hiding contemplating what the dominators were talking about, it appears that a small dog keeps giving them the slip and their master wants it brought to them, you don't blame that dog those dominators are bad news, who knows what their master is like.[line break]";
 		Increase sc by 1;
 		stop the action;
 	if sc is 1:
-		Say "As you're walking around the city, a load bang catches your attention. Deciding to investigate you find a short corgi dusting off his hands while walking out of alley. After the corgi is gone, you have a quick look and find, much to your amazement, a very familiar group of dominators sprawled out on the alley floor, all of which are suffering from some pretty intense injuries. Heading off before they wake up, you can't help but wonder what the corgi did to those dominators and if that was the small dog those dominators were talking about.[line break]";
+		say "As you're walking around the city, a load bang catches your attention. Deciding to investigate you find a short corgi dusting off his hands while walking out of alley. After the corgi is gone, you have a quick look and find, much to your amazement, a very familiar group of dominators sprawled out on the alley floor, all of which are suffering from some pretty intense injuries. Heading off before they wake up, you can't help but wonder what the corgi did to those dominators and if that was the small dog those dominators were talking about.[line break]";
 		Increase sc by 1;
 		now corgitalk is 1;
 		stop the action;
 	if sc is 2:
-		Say "Hearing the sounds of a large fight going on nearby, you decide to check it out. What you find, however, is not what you were expecting. The corgi from before[if corgitalk > 1], Max,[end if] is surrounded by a group of twenty sluts and dominators. While it looks like he's handling himself pretty well, you could help?[line break](NOTE: Consenting can lead to an end of game situation if you are on the corgi's bad side.)[line break]";
+		say "Hearing the sounds of a large fight going on nearby, you decide to check it out. What you find, however, is not what you were expecting. The corgi from before[if corgitalk > 1], Max,[end if] is surrounded by a group of twenty sluts and dominators. While it looks like he's handling himself pretty well, you could help?[line break](NOTE: Consenting can lead to an end of game situation if you are on the corgi's bad side.)[line break]";
 		if the player consents:
 			say "Deciding to help the corgi out, you ram a dominator that was trying to sneak behind the corgi, knocking it to the floor. [if corgitalk > 1]Max flashes you a grin[else]the corgi flashes you a suspicious look but gives you a quick nod[end if] before slamming his fist into a rabbit's gut. Turning back to your own opponent, you find a very ticked off dominator staring back at you.[line break]";
 			now massdomfightwin is 1;

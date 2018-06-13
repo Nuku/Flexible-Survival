@@ -104,11 +104,11 @@ When Play begins:
 	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You fairly long tail which fluffs out quite a bit."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws. While your hands and arms shrink, as very small claws sprout from your new paw tips."; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "gray fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws. While your hands and arms shrink, as very small claws sprout from your new paw tips"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "gray fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "A long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes."; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 20;
 	now sta entry is 10;

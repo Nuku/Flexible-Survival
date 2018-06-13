@@ -73,8 +73,7 @@ to say Yamato Dragoness vic:
 				say "finally she cries out in orgasm, the [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, pulled into the depths of her voracious portal in the wake of this bliss.";
 			say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you're finally granted the mercy of her comparatively less overbearing womb, only given a few seconds to appreciate the relief before thought fades from you entirely. Outwardly, [if scalevalue of player > 3]the dragoness would no doubt look somewhat pregnant with your impressive form, though perhaps this serpentine creature perceives this as a mere trophy, signifying her[else]your captivity would be imperceivable, further punctuating this dragoness's[end if] complete and utter dominance over you.";
 			infect;
-			if waiterhater is 0, wait for any key;
-			LineBreak;
+			WaitLineBreak;
 			if (player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
 				say "     You're gradually roused from unconsciousness by the feel of something slick and scaled writhing against your [bodytype of player] form. Quickly realizing you're walled off within the translucent confines of an egg, the immediate and much more apparent issue is quickly brought to your attention. Another, much closer to your size, ";
 				if a random chance of 1 in 2 succeeds and guy is not banned:

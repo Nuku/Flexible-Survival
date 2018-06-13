@@ -86,7 +86,7 @@ When Play begins:
 	now cock entry is "[one of]feral canine[or]dire wolf[or]lupine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a dire wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "coarse dark fur spreads rapidly over your form, leaving you more capable of enduring the elements."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "coarse dark fur spreads rapidly over your form, leaving you more capable of enduring the elements"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length taking on an intense reddish color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 19;

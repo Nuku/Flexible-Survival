@@ -1444,7 +1444,7 @@ When Play begins:
 	now face entry is "very inhuman, with a pair of slits for nostrils, sharp teeth, and yellow eyes with red slitted pupils. The top of your head is crowned by three matching pairs of horns, curved and getting smaller front to back";  [ Face description, format as "Your face is (your text)"]
 	now body entry is "now large and muscle-bound, any body-builder would be proud to have it";  [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "deep purple";
-	now tail entry is "You have a long demon tail that sways back and forth behind you, equipped with a spaded tip and everything!";
+	now tail entry is "You have a long demon tail that sways back and forth behind you, equipped with a spaded tip and everything.";
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]";
 	now face change entry is "you begin to feel your skull reshaping under your skin. Your nose disappears, leaving a pair of slits. A strange feeling in your mouth heralds your teeth changing, sharpening and becoming longer to give you a monstrous smile. Finally three pairs of horns grow out of the top of your head, with the front pair the largest, the others getting smaller towards the back. Even your eyes have changed, the white parts now yellow and around red, slitted pupils"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your arms and legs begin to grow longer and more muscular. Your chest widens as well.";

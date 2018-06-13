@@ -143,7 +143,7 @@ The description of Argos Antiques is "[argosantdesc]".
 the scent of Argos Antiques is "The antique store smells of aged wood and soft fragrances.".
 
 to say argosantdesc:
-	say "	  The peacock's antique store is in surprising well-kept condition. With the exception of the barricaded windows and front door, everything else seems to be neatly organized. A suit of medieval steel armor, colored black and wielding a halberd, guards the entrance. Display cases show a veritable cornucopia of antique and valuable items. On a weapon rack hanging on the wall are various arms from the nineteenth century like repeaters, pistols, nunchucks, and sabers. Dmitri stands close by, eyeing your form with a fond look in his eye.";
+	say "     The peacock's antique store is in surprising well-kept condition. With the exception of the barricaded windows and front door, everything else seems to be neatly organized. A suit of medieval steel armor, colored black and wielding a halberd, guards the entrance. Display cases show a veritable cornucopia of antique and valuable items. On a weapon rack hanging on the wall are various arms from the nineteenth century like repeaters, pistols, nunchucks, and sabers. Dmitri stands close by, eyeing your form with a fond look in his eye.";
 
 Dmitri is a person. Dmitri is in Argos Antiques.
 The description of Dmitri is "[dmitridesc]".

@@ -341,12 +341,12 @@ to say LilithPregCheck:
 		else:
 			say "     'Getting cold feet? Now, of all times?' Lilith sighs, then drains the chalice, licking the last of the milk off her lips. 'Not very reliable, my mortal lover. Well, at least you came through for me - or rather into me - when it did count.' She rubs her stomach, bulging with your child, and lies on the bed to stroke her pussy a bit.";
 
-instead of going northeast from Burned-Out Chapel while HP of Lilith is 0:[first meeting]
+instead of going northeast from Burned-Out Chapel while HP of Lilith is 0: [first meeting]
 	move player to Sacristy;
 	project the Figure of Lilith_naked_icon;
 	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveler. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you little touches and caresses, inevitably heightening your arousal a bit.";
 	increase libido of player by 5;
-	now HP of Lilith is 1;   [has met the player, not the demon brute yet]
+	now HP of Lilith is 1; [has met the player, not the demon brute yet]
 
 instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not the first meeting]
 	if LilithPregnancy is 4:
@@ -364,8 +364,8 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 			say "     She saunters over to your demon brute, stroking her hand over his muscled form and grabbing his balls. Brutus stands there, calmly accepting her touching him, only giving a small whimper as the succubus squeezes him a bit too tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too...'";
 			LineBreak;
 			say "     Telling the succubus you'll have to think about it, you go back to the main chapel itself, followed by your demon companion. When you're far enough away from Lilith's room to be out of earshot, you ask Brutus what he thinks about her offer. The demon hesitates just a second, then bows his horned head to you. 'Anything for you, master. If you want to change me for your pleasure, do so.' Keeping that in mind, you walk back into the sacristy.";
-		now HP of Lilith is 2;   [met the demon brute pet]
-	else if HP of Elijah is 99 and lastfuck of Elijah - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
+		now HP of Lilith is 2; [met the demon brute pet]
+	else if HP of Elijah is 99 and lastfuck of Elijah - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds: [Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
 		move player to Sacristy;
 		project the Figure of Elijah_evil_naked_icon;
 		if Dexterity of Lilith is 0:
@@ -391,7 +391,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 						WaitLineBreak;
 						say "     After a little kiss on your dickhead, the demoness then softly pushes you aside and turns her attention back to the fallen angel under her. Looking down on Elijah, you clearly see the urgent need to cum written in his face - no wonder, with him being balls-deep in Lilith's hot cave all this time and her keeping him just at the edge of sweet release. Lazily circling her hips on his pole, she asks 'Do you want to cum, my sweet little angel?' - and when Elijah immediately groans out 'Yes!' ...she just stops. 'Beg for it' Lilith demands, relishing in the power she has over yet another male, getting him to whimper and call her mistress before she finally starts rocking back and forth again and allows him to climax. Elijah shakes and twitches as his load blasts up into the female demon's womb, and he moans loudly while his hands tightly grip the sheets of the bed.";
 						say "     When the exhausted dark angel finishes coming, Lilith pulls off his shaft and flops down on the bed herself. Lying on her back, she smiles up at you while her hand moves down to her crotch, a finger running through the slow trickle of angelic cum leaking out of her pussy. Bringing it to her mouth and tasting Elijah's seed, Lilith gives a content sigh and says 'Wasn't that fun, boys? We'll have to do it again... often.'";
-					else:    [males]
+					else: [males]
 						say "     Lilith really knows all the tricks in pleasing a man with her mouth and fingers, driving you to ever new heights as she bobs up and down on your shaft, teasing it with her tongue while fondling your balls. Her expert ministrations keep you at the edge of orgasm for you don't know - or care - how long, your mind lost in a lust-filled haze. Then finally, she goes for the finish line, taking out all the stops. Within moments, you feel the urge to cum rise past the point of no return, long blasts of your seed starting to fill the succubus mouth. Her lips stay tight around the head of your cock so she doesn't lose a drop, then after the last spurt, she demonstratively swallows it all and croons 'Nice and tasty, lover-boy.'";
 						WaitLineBreak;
 						say "     After a little kiss on your dickhead, the demoness then softly pushes you aside and turns her attention back to the fallen angel under her. Looking down on Elijah, you clearly see the urgent need to cum written in his face - no wonder, with him being balls-deep in Lilith's hot cave all this time and her keeping him just at the edge of sweet release. Lazily circling her hips on his pole, she asks 'Do you want to cum, my sweet little angel?' - and when Elijah immediately groans out 'Yes!' ...she just stops. 'Beg for it' Lilith demands, relishing in the power she has over yet another male, getting him to whimper and call her mistress before she finally starts rocking back and forth again and allows him to climax. Elijah shakes and twitches as his load blasts up into the female demon's womb, and he moans loudly while his hands tightly grip the sheets of the bed.";

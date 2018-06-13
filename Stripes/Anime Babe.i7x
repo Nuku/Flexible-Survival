@@ -171,7 +171,7 @@ When Play begins:
 	now defeated entry is "[beattheanimebabe]";
 	now victory entry is "[losetoanimebabe]";
 	now desc entry is "[animebabedesc]";
-	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes."; [ Face description, format as "Your face is (your text)."]
+	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "rail thin, without any visible body fat or apparent room for most of your vital organs. When at rest, no part of you seems to move at all, saving on animation. Your arms are exceptionally scrawny, almost skeletal. Your elbows are extremely angular, and your hands are quite dainty. Your legs are disproportionately lengthy, making up a full two thirds of your height. Each is extremely slender, tapering down to feet so small it's a wonder they can stand. Your body has grown a school girl's outfit to tantalizingly cover your overly sexualized body";
 	now skin entry is "smooth, pink"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";

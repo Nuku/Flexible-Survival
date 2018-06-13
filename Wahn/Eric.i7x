@@ -574,7 +574,7 @@ to say EricTalk7:
 			LineBreak;
 			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
 	else if TomeFound is 3: [after a tentacle fucking that the player didn't see]
- 		say "     Eric nods and smiles as you bring up the book he found. 'It is a really interesting read. I mean... I can't really understand the symbols, but... somehow it feels like I'm really close. And the pictures in there are something else entirely. I've even been having dreams about them... Really intense dreams.' With a somewhat far-away expression, he glances over to his bed, where you see the thick leather-bound volume lie halfway under his pillow. That's... an odd choice for bedside literature, you can't help but think. Maybe you should take the book for now and have a closer look yourself first. Eric seems oddly interested in the thing.";
+		say "     Eric nods and smiles as you bring up the book he found. 'It is a really interesting read. I mean... I can't really understand the symbols, but... somehow it feels like I'm really close. And the pictures in there are something else entirely. I've even been having dreams about them... Really intense dreams.' With a somewhat far-away expression, he glances over to his bed, where you see the thick leather-bound volume lie halfway under his pillow. That's... an odd choice for bedside literature, you can't help but think. Maybe you should take the book for now and have a closer look yourself first. Eric seems oddly interested in the thing.";
 		say "     [bold type]Do you want to convince Eric to hand the old tome over to you?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah, better confiscate that thing for now.";
@@ -590,7 +590,7 @@ to say EricTalk7:
 			LineBreak;
 			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
 	else if TomeFound is 4: [player took the book after watching Eric be tentacle-fucked]
- 		say "     Eric's eyebrows draw together in thought and he asks, 'Have you seen my book, actually? I know I had it not too long ago, but not it isn't here. The last time I saw it was before I had...' He blushes prettily and is silent for a few seconds, then adds silently, '...uhm, you know. A sex dream. I can't remember it really, but... it was really amazing and I think there even was something in it from the illustrations in the book...'";
+		say "     Eric's eyebrows draw together in thought and he asks, 'Have you seen my book, actually? I know I had it not too long ago, but not it isn't here. The last time I saw it was before I had...' He blushes prettily and is silent for a few seconds, then adds silently, '...uhm, you know. A sex dream. I can't remember it really, but... it was really amazing and I think there even was something in it from the illustrations in the book...'";
 		say "     [bold type]Do you want to tell Eric about the things that happened to him while he was asleep?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah, he should know.";
@@ -607,7 +607,7 @@ to say EricTalk7:
 			now TomeFound is 24; [player told tentacle fucked Eric he doesn't have the book]
 			now lastTomeInteraction is turns;
 	else if TomeFound is 20: [player took the book after Eric was almost tentacle-fucked]
- 		say "     Eric's eyebrows draw together in thought and he asks, 'Have you seen my book, actually? I know I had it not too long ago, but not it isn't here. The last time I saw it was before I had...' He blushes prettily and is silent for a few seconds, then adds silently, '...uhm, you know. A sex dream. I can't remember it really, but... it was pretty good for a while and I think there even was something in it from the illustrations in the book...'";
+		say "     Eric's eyebrows draw together in thought and he asks, 'Have you seen my book, actually? I know I had it not too long ago, but not it isn't here. The last time I saw it was before I had...' He blushes prettily and is silent for a few seconds, then adds silently, '...uhm, you know. A sex dream. I can't remember it really, but... it was pretty good for a while and I think there even was something in it from the illustrations in the book...'";
 		say "     [bold type]Do you want to tell Eric about the things that happened to him while he was asleep?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah, he should know.";

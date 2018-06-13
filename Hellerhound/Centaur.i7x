@@ -69,11 +69,11 @@ Section 4 - Monster Responses
 
 To say centaur defeat:
 	if libido of player < 50:
-		Say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
+		say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
 		increase carried of fresh apple by 1;
 	if libido of player > 50 and player is male:
-		Say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
+		WaitLineBreak;
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
 		if the humanity of player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
@@ -168,7 +168,7 @@ To say centaur attack:
 		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
 		[male fury, centaur wants mate, not a companion!]
 	if player is female:
-		Say "[centaur rape female]";
+		say "[centaur rape female]";
 	if player is neuter and "Male Preferred" is not listed in feats of player:
 		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now cunts of player is 1;

@@ -384,7 +384,7 @@ carry out oviadjusting:
 		if ovipregalways is true:
 			say "You are now set to bear eggs always.";
 			now ovipreglevel is 3;
-	 	else:
+		else:
 			say "You are not able to choose this option without alteration to your character's pregnancy abilities.";
 	else:
 		say "Exiting menu.";

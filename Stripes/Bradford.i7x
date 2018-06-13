@@ -46,7 +46,7 @@ The description of Bradford's Camp is "[bradfordcampdesc]".
 the scent of Bradford's Camp is "The former accountant's office turned temporary stakeout camp smells of Bradford and wood chips overlaid on that of paperwork.".
 
 to say bradfordcampdesc:
-     say "	   Tucked away upstairs in a second-story accountant's office is [if HP of Bradford is 0]the bull man's[else]Bradford's[end if] temporary camp. From the scattered supplies, camping stove and sleeping bag, he's been camped out here for at least a few days. Through the lowered blinds, the window gives a good view up and down the street and of the bar across the street. There's a clump of wood shavings piled on the floor near the window. While by no means neat, the place isn't dirty in a disgusting way, just untidy. The bull man typically sits keeping an eye out through the slats of the blinds, binoculars at the ready.";
+	say "     Tucked away upstairs in a second-story accountant's office is [if HP of Bradford is 0]the bull man's[else]Bradford's[end if] temporary camp. From the scattered supplies, camping stove and sleeping bag, he's been camped out here for at least a few days. Through the lowered blinds, the window gives a good view up and down the street and of the bar across the street. There's a clump of wood shavings piled on the floor near the window. While by no means neat, the place isn't dirty in a disgusting way, just untidy. The bull man typically sits keeping an eye out through the slats of the blinds, binoculars at the ready.";
 
 
 Section 3 - Bradford

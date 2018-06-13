@@ -159,7 +159,7 @@ Instead of resolving a Old rail system:
 		say "Unfortunately, the noise seems to have alerted something to your location!";
 		fight;
 		say "Recovering from the unexpected encounter, you continue through the now open door.";
-	Say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of an old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
+	say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of an old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
 	Now Old rail system is resolved;
 
 

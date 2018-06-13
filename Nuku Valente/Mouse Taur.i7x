@@ -99,7 +99,7 @@ to FindPornStore:
 			now Porn Store is known;
 			now Mouse Taur Encounter is resolved;
 			now Find Porn Store is resolved;
-		else: 
+		else:
 			LineBreak;
 			say "     You shrug and turn away for now, making a mental note that you should return here sometime and check it out.";
 	else if mtrp is 1:

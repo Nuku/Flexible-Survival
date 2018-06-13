@@ -162,7 +162,7 @@ instead of going to Mall Atrium while progress of alex is 2:		[now works for get
 	if Ronda is in Mall Atrium:
 		say "     You arrive in the atrium of the mall and approach Ronda, Rod's girlfriend. 'Yeah, I know where he is. Darrell, c'mere!' Another mall rat approaches, and it shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. He arrives and asks her 'What's up?' She explains the situation, and he nods, facing you. After some brief explanation, the white rat nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	else:
-		 say "     You arrive in the atrium of the mall and approach one of the various mall rats there. After going back and forth between a few of them, eventually you come to Darrell. It shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. 'What's up?' the white rat asks. After some brief explanation, he nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
+		say "     You arrive in the atrium of the mall and approach one of the various mall rats there. After going back and forth between a few of them, eventually you come to Darrell. It shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. 'What's up?' the white rat asks. After some brief explanation, he nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	now progress of alex is 3;
 
 
@@ -211,7 +211,7 @@ Instead of going west from dirty sheds:
 				let dice be a random number from 1 to 20;
 				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
 				if dice + bonus > 21:
-					 say "[line break]     'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
+					say "[line break]     'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
 					now success is 1;
 				else:
 					say "[line break]     You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";

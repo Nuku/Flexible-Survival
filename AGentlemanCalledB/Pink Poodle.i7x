@@ -119,7 +119,7 @@ To say beatthePinkPoodle:
 			if the player consents:
 				say "[pinkpoodleoral]";
 			else:
-				say "	 Deciding against taking advantage of the whining poodle, you leave her where she is.";
+				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
 				increase nopoodlesex by 1;
 	else:
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but since you lack any gender of your own, you leave her be and continue on your way.";
@@ -168,7 +168,7 @@ When Play begins:
 	now tail entry is "You have a thin shaven poodle tail, with a large pink pompon at its tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]bright pink[or]knotted[or]canine[or]pointed[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "a bout of dizziness comes over you. You try to shake your head clear but quickly stop when something pink and fluffy strikes you in the face. As you gently stroke your new pink poodle ears, you watch a slim canine muzzle form before your eyes, while the thick pink fur spreads from your ears up your head, forming a large bouffant hairstyle"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
-	now body change entry is "changes begin to roll through you. You watch with fascination as your hand shifts to a dainty, paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you develop an elegant and well-proportioned canine figure."; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now body change entry is "changes begin to roll through you. You watch with fascination as your hand shifts to a dainty, paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you develop an elegant and well-proportioned canine figure"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "your chest grows tight. A thick coat of curly pink fur forms over your shoulders and chest, forming a large puff-ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, leaving you with large, fashionable pompons covering your forearms and calves"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at its tip"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue[ppheatreset]"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]

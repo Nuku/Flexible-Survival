@@ -253,7 +253,7 @@ Instead of examining the Church Notice Board:
 lastconfession is a number that varies. lastconfession is 248.
 
 instead of examining the confession booth:
-	Say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
+	say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
 
 instead of sniffing the confession booth:
 	say "It smells faintly of incense and arousal from the various creatures who have been within it.";

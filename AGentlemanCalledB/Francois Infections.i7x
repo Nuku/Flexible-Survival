@@ -48,7 +48,7 @@ When Play begins:
 	now face entry is "soft and delicate, with plump strawberry red lips and whipped cream hair"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "[CheesecakeBodyDesc]"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "smooth, creamy, white and rosy red"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
-	now tail entry is "[if cheesecakemode is 1]Your petite ass is tight and attractive, yet still soft and grabbable.[else]You have a luscious, plump booty.[end if]"; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now tail entry is "[if cheesecakemode is 1]Your petite ass is tight and attractive, yet still soft and grabbable[else]You have a luscious, plump booty[end if]."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "strawberry red human"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "it becomes soft and delicate. Your lips become plump and full as they shift to a deep red and thick billows of whipped cream form from the top of your head, framing your face nicely as it descends past your shoulders"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "[CheesecakeBodyTF]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
