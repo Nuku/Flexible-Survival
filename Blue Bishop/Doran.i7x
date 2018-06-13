@@ -2096,8 +2096,8 @@ to say DoranSub_SuckCock: [Oral Giving] [BODY MODDED]
 				say ". [if DoranRoleIntensity is 4 and DoranBallModStatus is 0]Substantial though [ghis] load is, [ghe]'s trained enough restrained to not overwhelm you, allowing your diminutive form to down the thick, potent seed with little difficulty[else if DoranBallModStatus > 0]Given how diminutive your form is, [ghis] excessive release is simply too much for you to handle, the potent seed almost immediately sputtering from your hole[else]Given how diminutive your form is, you can barely keep up with all of it, [ghis] thick, potent seed quickly sputtering from your hole[end if]";
 			else if DoranBallModStatus > 0:
 				say ". Even as large as you are, it's a challenge to keep up with [ghis] excessive load[if DoranRoleIntensity is 4], though the obedient [gdragon] manages to muster enough restraint to let you savor [ghis] thick, potent seed[else], the [gdragon]'s thick, potent seed soon sputtering from your lips[end if].";
-				else:
-					say ". You gulp down [ghis] load with little difficulty[if DoranRoleIntensity is 4], aided by the obedient [gdragon] managing some measure of restraint[end if], allowing you to savor [ghis] thick, potent seed";
+			else:
+				say ". You gulp down [ghis] load with little difficulty[if DoranRoleIntensity is 4], aided by the obedient [gdragon] managing some measure of restraint[end if], allowing you to savor [ghis] thick, potent seed";
 		else:
 			say "     [if tempnum is 2]Substantive balls churning against your touch[else if DoranRP_var1 is 1]Delighting in [ghis] oozing cock[else]Continuing to watch from a distance[end if], it's not long before your continued [if DoranRP_var2 is 1]milking[else]pumping[end if] makes the beast roar out weakly, [ghis] dick[if DoranRP_var2 is 1] and anal ring[end if] throbbing against your hands, spending gout after successive[if DoranBallModStatus > 0], overwhelming[end if] gout against [ghis] face and torso[if DoranSelfBlueballing > 0], its volume exacerbated from [ghis] prior neglect[end if]";
 		say ". Eventually, you pull free of the [gdragon], now a spent and panting mess.";
