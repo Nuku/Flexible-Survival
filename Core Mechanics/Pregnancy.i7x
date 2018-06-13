@@ -42,12 +42,12 @@ Definition: A person (called x) is total_vacant: [If BOTH male AND female vacant
 [Female/vaginal-particular]
 Definition: A person (called x) is fpreg_ok: [Can the player become pregnant in general. Female]
 	if "Sterile" is listed in feats of player, no;
-	if cunts of player > 0, yes;
+	if player is female, yes;
 	no;
 
 Definition: A person (called x) is fpreg_able: [Can the player be impregnated RIGHT NOW. Female]
 	if "Sterile" is listed in feats of player, no;
-	if cunts of player is 0, no;
+	if player is not female, no;
 	if gestation of child > 0 or child is born, no;
 	if preghijack is true, no;
 	if insectlarva is true and larvaegg is 2, no;
@@ -58,7 +58,7 @@ Definition: A person (called x) is fpreg_now: [Is the player currently pregnant.
 	no;
 
 Definition: A person (called x) is fem_vacant: [Disregarding fertility, is the player's cunt occupied by something]
-	if cunts of player is 0, no;
+	if player is not female, no;
 	if (gestation of child > 0 and pregtype is 1) or child is born, no;
 	if preghijack is true, no;
 	if insectlarva is true and larvaegg is 2, no;
@@ -117,8 +117,8 @@ to pregprotocol:
 				if a random chance of 1 in 10 succeeds and ( breast size of player > 0 ): [cut the cunt requirement for cuntboys, breast size is enough]
 					increase breast size of player by 1;
 					follow breast descr rule;
-					if cunts of player is 0:
-						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[else]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body. Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
+					if player is not female:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if player is male]male[else]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body. Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly. Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 			else if gestation of child < 15:
@@ -126,8 +126,8 @@ to pregprotocol:
 				if a random chance of 1 in 20 succeeds and ( breast size of player > 0 ):
 					increase breast size of player by 1;
 					follow breast descr rule;
-					if cunts of player is 0:
-						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[else]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
+					if player is not female:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if player is male]male[else]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
 			else if gestation of child < 30 or (gestation of child > 0 and a random chance of 1 in 3 succeeds):
@@ -135,11 +135,11 @@ to pregprotocol:
 				if a random chance of 1 in 30 succeeds and ( breast size of player > 0 ):
 					increase breast size of player by 1;
 					follow breast descr rule;
-					if cunts of player is 0:
-						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[else]neuter[end if], now [breast size desc of player] breasts.";
+					if player is not female:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if player is male]male[else]neuter[end if], now [breast size desc of player] breasts.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-			if gestation of child < 1 and ( cunts of player > 0 or player is mpreg_ok ) and skipturnblocker is 0:
+			if gestation of child < 1 and ( player is female or player is mpreg_ok ) and skipturnblocker is 0:
 				if pregtype is 1 and cunts of player is 0:
 					now pregtype is 2;
 				say "[detailbirth]";
@@ -160,24 +160,24 @@ to pregprotocol:
 						increase z by 1;
 					if a random chance of fer in 100 succeeds:
 						increase z by 1;
-					if z > 4, now z is 4;		[extra chance, still limited to 4]
+					if z > 4, now z is 4; [extra chance, still limited to 4]
 					if ubpreg is not "false":
 						now z is 1;
 					if "Chase's Breeder" is listed in feats of player and ChaseOffspring is 0: [override for Chase's first kids]
 						now z is 2;
 					if z is 2:
 						say "Twins![line break]";
-						if pregtype is 2, increase mpregcount by 1;	[more mpreg practice]
+						if pregtype is 2, increase mpregcount by 1; [more mpreg practice]
 					else if z is 3:
 						say "Triplets![line break]";
-						if pregtype is 2, increase mpregcount by 2;	[more mpreg practice]
+						if pregtype is 2, increase mpregcount by 2; [more mpreg practice]
 					else if z is 4:
 						say "Quadruplets![line break]";
-						if pregtype is 2, increase mpregcount by 3;	[more mpreg practice]
+						if pregtype is 2, increase mpregcount by 3; [more mpreg practice]
 					repeat with y running from 1 to z:
 						now child is born;
 						Birth;
-					increase score by 15;		[15 base +5/child]
+					increase score by 15; [15 base +5/child]
 					extend game by 4;
 					now pregtype is 0;
 					if "Chris's Breeder Slut" is listed in feats of player:
@@ -204,17 +204,17 @@ to say detailpregnancy:
 to detailpregnancy:
 	LineBreak;
 	if gestation of child < 5:
-		if cunts of player is 0:
-			say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[else]neuter[end if] pregnancy, full with [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+		if player is not female:
+			say "Your [bodytype of player] belly protrudes in a firm dome from your [if player is male]male[else]neuter[end if] pregnancy, full with [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 		else:				[MPreg]
 			say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else if ovipregnant is true]the growing egg[else]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 	else if gestation of child < 10:
-		if cunts of player is 0:
+		if player is not female:
 			say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy. It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 		else:
 			say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[else]your oncoming pregnancy[end if]. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 	else if gestation of child > 0:
-		if cunts of player is 0:
+		if player is not female:
 			say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random].";
 		else:
 			say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random][if ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
@@ -224,12 +224,12 @@ to say detailbirth:
 
 to detailbirth:
 	LineBreak;
-	if cunts of player > 0 and pregtype < 2:
+	if player is female and pregtype < 2:
 		say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you. You settle without much choice, breathing quickly as your body spasms in readiness.";
 	else:
 		say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 	follow cunt descr rule;
-	if cunts of player > 0 and pregtype < 2:
+	if player is female and pregtype < 2:
 		if playercanub is true and ubpreg is not "false":
 			say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if]. You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it. Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
 		else if "All-Mother's Blessing" is listed in feats of player:
@@ -258,11 +258,11 @@ to detailbirth:
 			decrease morale of player by 10;
 			increase mpregcount by 1;
 		else if mpregcount < 6:		[Next few times, struggle]
-			say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labour, working to nudge the large egg onwards, working to expell it from your anus. It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
+			say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labor, working to nudge the large egg onwards, working to expell it from your anus. It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if player is male]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
 			increase morale of player by 5;
 			increase mpregcount by 1;
 		else:					[After that, easy]
-			say "     Your well-practiced body has little trouble with the shifting and releasing of the egg within you. You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if cocks of player > 0], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if]. As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[else if cocks of player > 0]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
+			say "     Your well-practiced body has little trouble with the shifting and releasing of the egg within you. You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if player is male], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if]. As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[else if player is male]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
 			increase morale of player by 5;
 			increase mpregcount by 1;
 
@@ -322,7 +322,7 @@ To Birth:
 	if (playercanub is true and ubpreg is not "false") or snakehijack > 0:
 		let wwvar be 0;
 		if "Wild Womb" is listed in feats of player, let wwvar be 1;
-		if cunts of player > 0 and pregtype < 2:
+		if player is female and pregtype < 2:
 			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you[if wwvar is 1]. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[else]. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		else if breasts of player > 0:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you[if wwvar is 1]. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[else]. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
@@ -343,7 +343,7 @@ To Birth:
 		else:
 			say "     As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth. Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
 	else if "Wild Womb" is listed in feats of player:
-		if cunts of player > 0 and pregtype < 2:
+		if player is female and pregtype < 2:
 			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		else if breasts of player > 0:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
@@ -351,7 +351,7 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		say "     As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
 	else:
-		if cunts of player > 0 and pregtype < 2:
+		if player is female and pregtype < 2:
 			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		else if breasts of player > 0:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
@@ -376,7 +376,7 @@ To Birth:
 	else:
 		increase FeralBirths by 1;
 		decrease humanity of player by 5;
-	increase score by 5;		[15 base +5/child]
+	increase score by 5; [15 base +5/child]
 	now child is not born;
 	now gestation of child is 0;
 	now ubpreg is "false";
@@ -387,7 +387,7 @@ Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 To impregnate with (x - text):
 	if child is born or gestation of child > 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and player is not mpreg_ok ):
 		stop the action;
-	if cunts of player is 0 and "MPreg" is listed in feats of player and ( level of Velos is 1 and HP of Velos > 2 ):
+	if player is not female and "MPreg" is listed in feats of player and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;
 	if "Cheerbreeder" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
@@ -473,7 +473,7 @@ To impregnate with (x - text):
 		else:
 			now infection is facename of player;
 		now facename of child is infection;
-	if cunts of player is 0:
+	if player is not female:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 1;
 	else:
@@ -548,7 +548,7 @@ to say selfimpregchance:
 
 to selfimpregchance:
 	if player is mpreg_able or player is fpreg_able:
-		let target be 12;		[tougher check]
+		let target be 12; [tougher check]
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
 		if "Fertile" is listed in feats of player, decrease target by 3;
@@ -572,7 +572,7 @@ to selfimpregchance:
 to selfimpregnate:
 	if player is not mpreg_able and player is not fpreg_able:
 		stop the action;
-	[if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and HP of Velos > 2:
+	[if player is not female and "MPreg" is listed in feats of player and level of Velos is 1 and HP of Velos > 2:
 		stop the action;]
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be self-impregnated?";

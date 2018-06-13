@@ -11,13 +11,13 @@ when play begins:
 	add One flew into the Cuckoos Nest to badspots of girl;
 
 Instead of resolving a One flew into the Cuckoos Nest:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     Moving through the woods, you reach a small clearing that seems rather peaceful. All around, some remains of the buildings from before the forest took over are visible between the trunks, and it seems like people are actually living here. There are a few tents and improvised shelters here and there. One spot in the middle of it might have been a bus stop - with two benches side by side, that looks like the perfect spot to rest a little after your tiring work of exploring.";
 	say "     While walking towards the bench, you pass by a small tent with a male and female cuckoo inside... and can't help but throw a look inside at them. Based on the affectionate ways the two are talking and holding each other, you think that they are probably a couple. With a smile on your lips, you move on and sit down on the nearby bench. Sitting down relieves your aching muscles and re-energizes your body. A short while later, the male cuckoo steps out of the tent and calls back to his mate that he is going to hunt for supplies, then leaves into the woods.";
 	WaitLineBreak;
 	say "     He is barely out of sight before a burly white-coated bull strolls over to the tent and glances inside, then asks, 'Is he gone?' Stepping out to meet him, the female anthro bird nods and starts kissing the tall bovine. They vanish inside the tent together, and from the muted grunts and moans coming out of it, you can guess what's going on in there now. Chuckling at the antics of these people, you get up from the bench eventually and move back out into the woods to continue your exploration. A couple of minutes down a narrow footpath between the trees, you cross paths with the male cuckoo from before - on his way back towards the settlement.";
 	say "     [bold type]Remembering what is happening in his tent, part of you wants to give the man a little warning before he walks in on his partner having an affair.[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Warn the guy.";
 	say "     ([link]N[as]n[end link]) - Don't say anything.";
 	if player consents:
@@ -41,7 +41,7 @@ when play begins:
 	add Two crash into the Cuckoos Nest to badspots of girl;
 
 Instead of resolving a Two crash into the Cuckoos Nest:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While traveling through the woods you decide to see what the cuckoo couple you encountered before is up to. Walking back to the small community of transformed people in one of the less dangerous sections of the forest, what you find seems a little larger than what you remember. There is a new little shack or two and additional hammocks in places that used to be vacant. In the midst of it all is a large crackling campfire, around which two infected individuals sit and chat while toasting some marshmallows for s'mores. One of them is an anthro squirrel, who laughs amusedly as his fox-morph companion bites into his sweet treat and soon has a glob of gooey marshmallow dangling from his lips. A little embarrassed, the fox wipes the goop off his mouth, then smiles as he is handed another fresh marshmallow.";
 	say "     You continue on your way to the tent of the cuckoo couple location. Approaching from a different angle than you had previously you see a couple of things that you hadn't seen last time. Behind the tent there appears to be a sizable pile of clothing. ";
 	if CuckooWatched is 100: [ignored them]
@@ -55,7 +55,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 	say "     Gray starts cleaning the inside of the tent, sweeping out any dirt or trash. He fluffs up a couple of pillows that lay inside. Content with the condition of the interior, the male sits inside the tent and takes a couple of deep breaths. He closes his eyes and start to murmur something. After listening a little harder you discover he is imagining Izzy getting fucked by someone with a massive cock. Still with his eyes closed, the imaginative male starts to play with his cock. His quickly erect penis is a little on the small size at five inches and avian in shape, which means large at the base and tapering off towards the tip. Rubbing the top of the pointed tip the bird says a little louder, 'Take that bull's dick... get a cream-pie as white as his coat...'";
 	say "     It seems like the scene playing in his memory is based on the event that occurred the last time you were here. A wild idea crosses your mind as you watch the small cocked cuckoo. Wouldn't it be fun to step into the tent yourself and start fooling around with the boy, making Izzy the voyeur for once.";
 	say "     [bold type]Do you want to head into the tent and switch things up for the couple?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Head inside.";
 	say "     ([link]N[as]n[end link]) - Don't go inside.";
 	if player consents:
@@ -101,7 +101,7 @@ Instead of resolving a Avian Tent:
 	WaitLineBreak;
 	say "     Stripping off the pilot's jumpsuit, the adulterous lady guides the anthro osprey to lie on a bedroll, and then starts to kiss down his toned abs and the tip of his 10 inch long avian cock. She then sits on the raptor's lap and starts tease Gray by softly stroking her foot-talons across his face. The blindfolded male quietly moans. Grinning Izzy asks, 'You don't mind if we have some company? I made a bet with my partner here that if he doesn't climax before I cum I'll find a sexy woman to have a threesome.' With a mild chuckle the bird of prey says, 'This ain't my first time at this type of rodeo, you would be surprised just how many couples have thing for a man in uniform. I'm gonna fuck you so hard it's going to be impossible for him to win the bet.";
 	say "     [bold type]Do you want to watch while the osprey hooks up with the cuckooess?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Don't watch.";
 	if player consents:
@@ -126,7 +126,7 @@ Sandwich Shop is a situation.
 The sarea of Sandwich Shop is "Forest".
 
 Instead of resolving a Sandwich Shop:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say	"     While walking through the woods you cross the ruins of a small mini-mall. Trees seem to have sprouted throughout many of the stores and one of the light-posts in front of the building has fallen on a sedan, with the wreck now covered in heavily grown foliage on the outside and inside of the car. Another light-post is leaning sharply and on the verge of falling over. There are three stores within the building complex - the closest by is a liquor store, shards of glass from broken bottles cover its floor. It appears that anything drinkable is gone, all the shelves long looted.";
 	say "     The next closest store is a mattress store. Its door has a slogan stating 'Sleep... with us!' (the word 'better' is scratched off). All of the beds inside have been completely ruined, their mattresses covered in claw-marks and cum-stains. You see a couple of broken bottles on the floor too - seems like the looters must have decided to start a party in there. Last is a sandwich shop that's part of a small corporate chain. Its inside is a mess with all the tables tipped over, onion peels and shredded lettuce littering the floor and blots of crusted marinara sauce splattered over the walls and menu board.";
 	WaitLineBreak;
@@ -135,7 +135,7 @@ Instead of resolving a Sandwich Shop:
 	WaitLineBreak;
 	say "     You look around the area and sense no current danger. Even though the restaurant is ruined, some small instinctual part of you feels like there has to be some food around here that hasn't been ruined or purloined. The metal support beams inside the store creak and groan enough to give you some pause to worry about being trapped if the building collapses.";
 	say "     [bold type]What do you want to do now?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Scavenge inside the store.";
 	say "     ([link]N[as]n[end link]) - Leave the store.";
 	if player consents:
@@ -162,7 +162,7 @@ when play begins:
 	add Thief's Punishment to badspots of girl;
 
 instead of resolving Thief's Punishment:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods you come across a small campsite that is next to a collapsed gym. A blue tent has been set up next to it, in front of which a small campfire merrily burns, shining firelight on a workout bench and couple of barbells that must have been salvaged from the ruin. Sitting on the ground right next to the fire is a can of beans and a six-pack of water bottles. While you're still trying to decide what to do now, you hear the sound of a zipper from the tent, then its entrance is pulled open from the inside and a burly anthro tigress comes out.";
 	say "     To say she does a bit of weightlifting would be the understatement of the century - her seven foot tall body is covered in large bulging muscles, washboard abs, and what must be twenty inch biceps when she flexes. She's wearing a black sports bra to cover her D cup breasts, and tight black Lycra shorts whose fabric seems to be strained to their limit by her massive thighs and toned buttocks. The tigress is quick to notice your presence so close to her camp and she smiles, then waves at you, calling out to come over and share her fire. She seems sane enough and fairly friendly so you walk closer and begin to chat with her.";
 	WaitLineBreak;
@@ -173,7 +173,7 @@ instead of resolving Thief's Punishment:
 	say "     The cat-like weightlifter laughs and says teasingly, 'I could eat a shrimp like you for a post workout snack. But you look a little too lean to taste any good. You'll have to be punished another way. What's your name, anyways? Shrimp seems accurate for how you look but I doubt your momma named you that.' Squirming in her grasp, the mouse stutters, 'My name i... is... ppp... Powell.' The tigress bodybuilder listens to him with a toothy grin, but does little to acknowledge him, instead looking over towards you. 'Feel free to watch if you want, I'm going to make mousy here work for his atonement.'";
 	WaitLineBreak;
 	say "     [bold type]It's only fair that thieves get punished, and it doesn't look she plans on doing any real harm to him...[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch the thief get punished.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if player consents:
@@ -201,7 +201,7 @@ when play begins:
 	add Thief's Reformation to badspots of girl;
 
 instead of resolving Thief's Reformation:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods, you once again find yourself near the fitness studio ruin and are reminded of the muscled tigress you encountered there earlier. Curious about how she is doing now you decide to head over. Soon stepping out into the little clearing, you see that the campsite is a little different than the first time. A fair bit of rubble from the front of the collapsed gym has been removed, forming a large mound a little off to the side. This now allows a glimpse into the inside of the building - or at least what's left of it, squished between the floor and low-sagging ceiling.";
 	say "     Looks like all that is holding the roof up at least a little are the countless smashed exercise machines, bent and broken from the collapse. Parts of broken mirrors still hang up on some of the small portions of the walls that are still upright, with the rest covering the floor in shards and splinters. But not everywhere, at a second glance - there is actually a path into the mess of a ruin which has been swept free of glass and stone shards, weaving around and sometimes through the tangles of broken machines. Must be a tight squeeze to get through in some places. Doesn't look like Bridget would fit.";
 	WaitLineBreak;
@@ -221,7 +221,7 @@ instead of resolving Thief's Reformation:
 	say "     Your awkward conversation is interrupted by the sounds of a rowdy gang of six infected beings strutting out of the forest and into the clearing. They're all lizard-based infected, showing scaly skin and tails on their bodies. A large monitor lizard seems to be the one in charge, stepping forward and calling out, 'Hey look - it's a bitch and a pussy, but I don't know which one is which!' His goons burst into laughter. Continuing his statement he says, 'If you don't want to get hurt hand over all your water and supplies. You know how this goes, don't you mousy boy.' Powell glares at the intruders and replies, 'Go away I don't want to hurt you.' Stepping up besides her companion, Bridget flexes her muscles and growls, 'But I do.' Looking over her shoulder, she says to you in a more civil tone, 'You don't have to stick around if you don't like to. This is our fight, we can handle ourselves.'";
 	WaitLineBreak;
 	say "     [bold type]No matter what she says, the two of them are outnumbered pretty fiercely. Do you maybe want to stick around and help them fight off the gang of lizards?[roman type][line break]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Fight.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if player consents:

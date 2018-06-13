@@ -238,7 +238,7 @@ to say collarcommandlist:
 				say "the collar whispers temptation into your mind telling you how powerful you could be as its master";
 				if the player consents:
 					say "the collar sinks into your skin and re-fixes itself around your neck, granting you power over the sluts, dominators and maybe a little bit more.";
-					add "controlcollar" to feats of the player;
+					add "controlcollar" to feats of player;
 					now slutmaster is 1;
 					say "[wondamistressfight]";
 
@@ -256,10 +256,10 @@ When Play begins:
 	now defeated entry is "[beattheMistress]";
 	now victory entry is "[losetoMistress]";
 	now desc entry is "[Mistressdesc]";
-	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
-	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."]
-	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
+	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself"; [ Face description, format as "You have a (your text)."]
+	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your"; [ skin Description, format as "You have (your text)."]
+	now tail entry is "You have a short and fluffy rabbit tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "constantly dribbling bunny";
 	now face change entry is "it stretches out into a rabbit's muzzle, two long rabbit ears sprouting from the top of your head a second later. A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you rapidly loses fat, your body becoming that of a sexy bunny"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -280,9 +280,9 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 0; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]

@@ -87,8 +87,8 @@ Check searching a person (called corpse) (this is the search a corpse rule):
 if the corpse is dead, say "You search [corpse][if the number of things carried by corpse is 0] but find nothing[else] and find [the list of things carried by corpse][end if]." instead.
 
 Instead of taking inventory (this is the new inventory listing rule):
-if the number of things enclosed by the player is 0, say "You don't seem to have anything at the moment.[line break](Health: [present health of the player]/[max health of the player])[line break]" instead;
-say "You are carrying: [line break]"; list the contents of the player, with newlines, indented; say "(Health: [present health of the player]/[max health of the player])[line break]";
+if the number of things enclosed by the player is 0, say "You don't seem to have anything at the moment.[line break](Health: [present health of player]/[max health of player])[line break]" instead;
+say "You are carrying: [line break]"; list the contents of the player, with newlines, indented; say "(Health: [present health of player]/[max health of player])[line break]";
 
 Report examining a person (called victim) (this is the check NPC health rule):
 	if the person is not dead, say "(Health: [present health of victim]/[max health of victim])[line break]".
@@ -97,7 +97,7 @@ Check examining a dead person (called corpse) (this is the examining a corpse ru
 	say "[Corpse] is a gruesome sight." instead;
 
 Check examining the player (this is the report health rule):
-	say "You [status of the player]. (Health: [the present health of the player]/[the max health of the player])[line break]" instead;
+	say "You [status of player]. (Health: [the present health of player]/[the max health of player])[line break]" instead;
 
 To say status of/for (P - a person):
 	let x be the present health of P;
@@ -223,7 +223,7 @@ Report someone shooting something (called the target) with something (called the
 			say "[The person asked] shoots, and [the target] jerks back from the impact. ([The target][']s health: [present health of the target])[line break]";
 		end if;
 		if the target is the player begin;
-			say "[The person asked] shoots you! (Health: [present health of the player])[line break]";
+			say "[The person asked] shoots you! (Health: [present health of player])[line break]";
 		end if;
 	end if.
 
@@ -323,7 +323,7 @@ Report someone stabbing something (called the target) with something (called the
 			say "[The person asked] thrusts the [pigsticker] into [the target], who screams out in pain. ([The target][']s health: [present health of the target])[line break]";
 		end if;
 		if the target is the player begin;
-			say "[The person asked] stabs you! (Health: [present health of the player])[line break]";
+			say "[The person asked] stabs you! (Health: [present health of player])[line break]";
 		end if;
 	end if.
 
@@ -423,7 +423,7 @@ Report someone clubbing something (called the target) with something (called the
 			say "[The person asked] smashes the [cudgel] into [the target], who screams out in pain. ([The target][']s health: [present health of the target])[line break]";
 		end if;
 		if the target is the player begin;
-			say "[The person asked] clubs you! (Health: [present health of the player])[line break]";
+			say "[The person asked] clubs you! (Health: [present health of player])[line break]";
 		end if;
 	end if.
 
@@ -580,7 +580,7 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 				change the present health of the player to the present health of the player + 15;
 				remove elixir from play;
 			else;
-				say "Drinking the potion while your health is [present health of the player] will do you no good. Save it for when you need it.";
+				say "Drinking the potion while your health is [present health of player] will do you no good. Save it for when you need it.";
 			end if.
 
 		A troll is a kind of person. The max health of a troll is usually 40. A troll is usually hostile. Every troll carries one sharpened bone.

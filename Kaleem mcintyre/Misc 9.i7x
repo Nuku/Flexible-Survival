@@ -127,7 +127,7 @@ Instead of resolving a Fashion Statement:
 			say "With that little pest out of the way you return to searching for your possible treasures in peace...";
 			let dice be a random number from 1 to 20;
 			let the bonus be (( the perception of the player minus 8 ) divided by 2);
-			if "Scavenger" is listed in feats of the player:
+			if "Scavenger" is listed in feats of player:
 				increase bonus by 4;
 			say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
 			if dice + bonus > 15:

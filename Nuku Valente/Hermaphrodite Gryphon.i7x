@@ -24,7 +24,7 @@ To say losetohgryphon:
 		if player is mpreg_ok, increase analchance by 2;
 		if anallevel is 2, now analchance is ( 2 * analchance ) / 3;
 		if anallevel is 1, now analchance is 0;
-		if cunts of player > 0 and cocks of player > 0:
+		if player is herm:
 			if a random chance of 2 in 3 succeeds:	[fucking the player]
 				if cunt length of player >= 12:
 					say "[gryphonfuck1]"; [player herm pussy fuck]
@@ -36,7 +36,7 @@ To say losetohgryphon:
 				say "[gryphonfuck3]";
 			else:
 				say "[gryphonfuck2]";
-		else if cocks of player > 0:
+		else if player is male:
 			if a random chance of analchance in 15 succeeds:
 				if player is mpreg_able:
 					say "[gryphonfuck8]";
@@ -46,7 +46,7 @@ To say losetohgryphon:
 				say "[gryphonfuck3]";
 			else:
 				say "[gryphonfuck2]";
-		else if cunts of player > 0:
+		else if player is female:
 			if a random chance of analchance in 20 succeeds:
 				say "[gryphonfuck7]";
 			else if cunt length of player >= 12:
@@ -83,7 +83,7 @@ to say gryphonfuck6:
 	say "     The gryphon is surprised to find you rather lacking and nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the large member as it forces its way into your bowels. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck7:
-	say "     The gryphon[if player is neuter] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched [if scalevalue of the player < 4]painfully [end if]by the large member as it forces its way into your bowels[if cunts of player > 0]. Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of player] pussy she could instead be using[end if][if cocks of player > 0]. She takes a hold of your [cock size desc of player] [cock of player] shaft and pumps at it while thrusting into you[end if]. After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
+	say "     The gryphon[if player is neuter] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched [if scalevalue of the player < 4]painfully [end if]by the large member as it forces its way into your bowels[if player is female]. Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of player] pussy she could instead be using[end if][if player is male]. She takes a hold of your [cock size desc of player] [cock of player] shaft and pumps at it while thrusting into you[end if]. After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck8:	[MPreg special]
 	say "     When the victorious gryphon pushes you to the ground, your body automatically moves onto all fours with your ass raised. You feel a warm of excitement in your lower belly, like an empty need you hope to be filled. Like an animal in heat, your hidden male womb's decided it wants to be bred. The gryphon grins as you present yourself so easily and rubs her taloned hands over your rear, massaging your butt as it moves into position. With a little spit added, a taloned finger dips into your waiting pucker and wriggles around, drawing a moan from you.";
@@ -113,27 +113,27 @@ To say beatthehgryphon:
 			say "     [if a random chance of 1 in 2 succeeds]Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation[else]Driven back by you, the herm gryphon whimpers with unsatisfied need. She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust[end if]. The sight of her like this is quite a tempting one. Perhaps you might have some fun now that you've taken the fight out of her[if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false]. You're also reminded that you have a bottle of Garrett's special gryphon cum milk. It probably wouldn't take much coaxing to tempt her into drinking some[end if].";
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
-			if cocks of player > 0:
+			if player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Fuck her";
 				now sortorder entry is 1;
 				now description entry is "screw the defeated gryphon";
-			if cunts of player > 0:
+			if player is female:
 				choose a blank row in table of fucking options;
 				now title entry is "Ride her";
 				now sortorder entry is 2;
 				now description entry is "get that knotted cock in your pussy";
-	[		if cunts of player is 0:
+	[		if player is not female:
 				choose a blank row in table of fucking options;
 				now title entry is "Anal ride";
 				now sortorder entry is 3;
 				now description entry is "get that knotted cock in your ass"; ]
-			if cocks of player > 0 and cock length of player > 7 and cunts of player > 0 and cunt length of player > 5:
+			if player is male and cock length of player > 7 and player is female and cunt length of player > 5:
 				choose a blank row in table of fucking options;
 				now title entry is "Titty fuck + ride";
 				now sortorder entry is 4;
 				now description entry is "get a titty fuck while riding her cock";
-	[		if cocks of player > 0:
+	[		if player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Blow job";
 				now sortorder entry is 5;
@@ -265,21 +265,21 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Hermaphrodite Gryphon"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Hermaphrodite Gryphon"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random].";
 	now defeated entry is "[beatthehgryphon]";
 	now victory entry is "[losetohgryphon]";
 	now desc entry is "[HermGryphonDesc]";
-	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a thin, leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your ears are drawn upwards to the top of your head and a wicked beak pushes forward"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "a flush of arousal stirs through you, a dense carpet of blue fur engulfing you in its warm, encouraging presence"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you feel a new weight. A glance shows a long, [skin of player] tube growing over your ass. The end blossoms out into a blue, furry tuft. You have a tail"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your cock deepens to a midnight black, a large, swollen knot forming towards the base and a soft, blue, furry sheath overtaking the very base of it"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a thin, leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "your ears are drawn upwards to the top of your head and a wicked beak pushes forward"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "a flush of arousal stirs through you, a dense carpet of blue fur engulfing you in its warm, encouraging presence"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you feel a new weight. A glance shows a long, [skin of player] tube growing over your ass. The end blossoms out into a blue, furry tuft. You have a tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "your cock deepens to a midnight black, a large, swollen knot forming towards the base and a soft, blue, furry sheath overtaking the very base of it"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
@@ -294,7 +294,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 13; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

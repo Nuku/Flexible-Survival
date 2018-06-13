@@ -112,7 +112,7 @@ Section 1 - Dialog
 
 to say KorvinTalk:
 	if gsd_pet < 16:
-		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
+		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if player is female]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
 	else if gsd_pet is 16:
 		if player is neuter:
 			say "     You consider giving Korvin his new collar, but without a gender of your own, you won't really be able to [']enjoy['] the moment.";
@@ -133,7 +133,7 @@ to say KorvinTalk:
 			say "     [one of]'What do you need, [masterormistress]?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [masterormistress]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'How about we go beat up some mutants to... uhh... keep them from making trouble around here?'[or]'What're you planning next, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, chief.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6] or fuck[end if].'[or]Taking his tug rope toy, [if facename of player is listed in infections of caninelist]the two of you enjoy a good, canine tug-o-war over it, using your jaws to pull on each end[else]he enjoys a good, canine tug-o-war with you, pulling on it with his muzzle while you hold and yank on the other end[end if].[at random]";
 
 to say masterormistress:
-	say "[if cunts of player > 0]Mistress[else]Master[end if]";
+	say "[if player is female]Mistress[else]Master[end if]";
 
 
 Section 2 - Sexy Times
@@ -144,9 +144,9 @@ to say korvinsexmenu:
 	else if lastfuck of gshep - turns < 6:
 		say "     You fooled around not too long ago with the German Shepherd. Perhaps you should give him a bit of a break before having sex with him again.";
 	else if gsd_pet is 12:
-		say "     Your gaze shifts to the German Shepherd and you feel a growing arousal. You run your eyes up and down the buff male. Deciding he should provide some relief for the state of arousal he's put you in, you call him over and tell him to put his muzzle to work [if cocks of player > 0]sucking you off[else]eating you out[end if].";
-		say "     He pauses and looks at you. 'So that's how it's going to be, is it?' he says before kneeling and nosing into your crotch. Despite that bit of grumbling, he sets himself to task with enthusiasm. His tongue lashes across [if player is herm]your cock[smn] and cunt[sfn][else if cocks of player > 0]your cock[smn][else]your cunt[sfn][end if] several times before [if cocks of player > 0]taking your manhood into his warm maw[else]wriggling that doggy tongue into your cunny[end if]. You place a hand on his head, petting him lightly. He growls a bit at this and dips his ears, but doesn't stop - also wagging his tail a bit at the touch.";
-		if cocks of player > 0:
+		say "     Your gaze shifts to the German Shepherd and you feel a growing arousal. You run your eyes up and down the buff male. Deciding he should provide some relief for the state of arousal he's put you in, you call him over and tell him to put his muzzle to work [if player is male]sucking you off[else]eating you out[end if].";
+		say "     He pauses and looks at you. 'So that's how it's going to be, is it?' he says before kneeling and nosing into your crotch. Despite that bit of grumbling, he sets himself to task with enthusiasm. His tongue lashes across [if player is herm]your cock[smn] and cunt[sfn][else if player is male]your cock[smn][else]your cunt[sfn][end if] several times before [if player is male]taking your manhood into his warm maw[else]wriggling that doggy tongue into your cunny[end if]. You place a hand on his head, petting him lightly. He growls a bit at this and dips his ears, but doesn't stop - also wagging his tail a bit at the touch.";
+		if player is male:
 			say "     You let him go to town on your cock[smn] for a while[if cocks of player > 1], enjoying it as he swaps between them periodically[end if]. His slathering tongue and sucking muzzle are very nice, building your arousal higher. Eventually though, as your climax approaches, you're ready to set the pace. Grabbing his head with both hands now, you hold it steady and start thrusting. You rock your hips with increasing speed. Your [cock of player] manhood throbs in his [if cock length of player > 24]stretched muzzle and throat[else if cock length of player > 12]muzzle and throat[else]muzzle[end if] as precum leaks messily from your shaft. With a groan of release, your shaft is driven fully in and your [cum load size of player] load is [if cock width of player > 16]blasted[else if cock width of player > 8]shot[else]spurted[end if] into him[if cocks of player > 2]. Your additional cocks splatter semen onto him as well[else if cocks of player is 2]. Your additional cock splatters semen onto him as well[end if]. Once he's been fed your seed, you pull out and wipe your cock across his muzzle. He seems a bit grumpy about the rough treatment, but licks his dripping muzzle and wags his tail all the same.";
 		else:
 			say "     You let him go to town at your snatch[esfn] for a while[if cunts of player > 1], enjoying it as he swaps between them periodically[end if]. That lapping tongue of his is very enjoyable, building your arousal higher. Eventually though, as your climax is approaching, you're ready to set the pace and direct his actions. Pushing him back onto the ground, you kneel over his head and ride his face, grinding firmly. Your hot juices leak messily onto his muzzle as you tell him to lick deeper, or harder, or over your clit, as your quivering cunn[yfn] demand[sfv]. With a moan of release, you cum hard, soaking his lapping tongue and canine muzzle with your feminine fluids. Once he's been made to lick you clean, you climb off of him. He seems a bit grumpy about the rough treatment, but licks his wet muzzle and wags his tail all the same.";
@@ -182,7 +182,7 @@ to say gshep_postfightargue:		[Post-fight argument]
 	say "     ([link]N[as]n[end link]) - Take his feedback seriously.";
 	if player consents:
 		LineBreak;
-		say "     Deciding you don't want to take more of his backtalk, you surprise him by grappling his arm and pinning it behind his back. Within moments, he's face first on the ground. 'How's that for sloppy fighting, you cur? You've got to get it in that thick head of yours that I'm the alpha, I'm in charge and if anyone's got to adjust their fighting style, it's you to work with mine. I beat the stuffing out of you plenty, so you'd best pull your head out of your ass before I shove my [if cocks of player > 0]cock[smn] it[else]boot[end if] in there beside it.'";
+		say "     Deciding you don't want to take more of his backtalk, you surprise him by grappling his arm and pinning it behind his back. Within moments, he's face first on the ground. 'How's that for sloppy fighting, you cur? You've got to get it in that thick head of yours that I'm the alpha, I'm in charge and if anyone's got to adjust their fighting style, it's you to work with mine. I beat the stuffing out of you plenty, so you'd best pull your head out of your ass before I shove my [if player is male]cock[smn] it[else]boot[end if] in there beside it.'";
 		say "     He struggles at first, but has to relent as you keep the dog pinned. Eventually you let the cowed dog up. Taking advantage of having him intimidated, you decide to give him some training of your own. He's right that the two of you should be able to better coordinate, but he'll be taking his queues from you. In addition to drilling several signals and fighting patterns into him, you add in more mundane dog obedience. He's demeaned as you make him sit, beg, roll over, bark or fetch on command. And while he clearly rankles at this, he cannot object lest he face harsher punishment from you. Only once you're satisfied that he understands and will follow your instructions, as well as his doggy training, do you end the session. Having made sure he'll coordinate with you, Korvin will now be able to work more effectively with you in combat.";
 		increase lastfuck of gshep by 2;
 		now gshep_postfight is 2;
@@ -200,18 +200,18 @@ to say gshep_postfightargue:		[Post-fight argument]
 	WaitLineBreak;
 
 to say gshep_sexargue:				[Sex role argument]
-	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it. You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is Bunker or location of player is Grey Abbey Library or location of player is Grey Abbey 2F]a chair[else]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if cocks of player > 0]fine muzzle[else]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
-	say "     'Why don't you try and make me, jerkface? I'm not just some silly lapdog to [if cocks of player > 0]suck you off[else]lick your snatch[end if] whenever you want. What am I getting out of it and when do I get my turn? I got plenty of tail out there on my own!' he responds even as he strides towards you.";
+	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it. You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is Bunker or location of player is Grey Abbey Library or location of player is Grey Abbey 2F]a chair[else]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if player is male]fine muzzle[else]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
+	say "     'Why don't you try and make me, jerkface? I'm not just some silly lapdog to [if player is male]suck you off[else]lick your snatch[end if] whenever you want. What am I getting out of it and when do I get my turn? I got plenty of tail out there on my own!' he responds even as he strides towards you.";
 	say "     [bold type]How shall you react to this insubordination from him?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Put him in his place!";
 	say "     ([link]N[as]n[end link]) - Have some mutual fun.";
 	if player consents:
 		LineBreak;
-		say "     Rather than tolerate his lip, you step off your perch and advance on him. He makes a grab for you, but you've fought him enough to see it coming. Grabbing his arm as he swings it, you [if cocks of player > 0]trip him down to the ground[else]flip him onto his back[end if] - hard. Briefly stunned by the hard fall you pin him down and snag his collar. Twisting the rope in you grip tightens it, keeping him down.";
-		say "     'I'm the [if cocks of player > 0]master[else]mistress[end if], the alpha, the boss here. You'll get your turn when I say you'll get it and not before.' You speak firmly to him as you hold him down. At first he remains defiant, but soon enough he dips his ears with a doggy whimper of submission. 'That's better.'";
+		say "     Rather than tolerate his lip, you step off your perch and advance on him. He makes a grab for you, but you've fought him enough to see it coming. Grabbing his arm as he swings it, you [if player is male]trip him down to the ground[else]flip him onto his back[end if] - hard. Briefly stunned by the hard fall you pin him down and snag his collar. Twisting the rope in you grip tightens it, keeping him down.";
+		say "     'I'm the [if player is male]master[else]mistress[end if], the alpha, the boss here. You'll get your turn when I say you'll get it and not before.' You speak firmly to him as you hold him down. At first he remains defiant, but soon enough he dips his ears with a doggy whimper of submission. 'That's better.'";
 		WaitLineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     With him pinned beneath you like this, you decide you'd prefer to take advantage of the situation and grind your crotch against his butt. He gives another whimper, but his rear raises what little it can and his doggy tail flips up. Having already freed your cock, you grind it against his rear a few times before lining it up with that crinkled hole of his. You prod it a few times, allowing your pre to leak out to slicken it up. As it relaxes, you work it open a little more until you're able to thrust into the buff dog's ass.";
 			say "     As you begin thrusting into him, he starts to pant with arousal even as he tries to stay tough. You spot one of Korvin's paws moves toward his crotch. You push it away even as you shove your hips hard against his own, drilling your cock firmly against his prostate. 'None of that, dog. You're being punished for talking back to your alpha.'";
 			WaitLineBreak;
@@ -229,17 +229,17 @@ to say gshep_sexargue:				[Sex role argument]
 		now gshep_sexscene is 2;
 	else:
 		LineBreak;
-		say "     Rather than wait for him, you step off your perch and advance on him. When you meet, you derail his attempt to start a fight with a kiss. The two of you lock lips and soon you're groping and fondling one another. It's not long after that before you end up on the floor together. Still lusting for that [if cocks of player > 0]muzzle[else]tongue[end if] of his, you shift around to bring your crotch to his face. This comes with the added perk of putting his rising cock right within reach of your mouth.";
+		say "     Rather than wait for him, you step off your perch and advance on him. When you meet, you derail his attempt to start a fight with a kiss. The two of you lock lips and soon you're groping and fondling one another. It's not long after that before you end up on the floor together. Still lusting for that [if player is male]muzzle[else]tongue[end if] of his, you shift around to bring your crotch to his face. This comes with the added perk of putting his rising cock right within reach of your mouth.";
 		say "     'You're right. I think you deserve a bit of a treat in return for your service.' You give his dick a slow lick. 'Just be more respectful of your alpha next time, or I won't be so forgiving.' You then envelop his hard meat in your mouth and start sucking on it.";
-		say "     Korvin gives a soft moan. 'Yes, [if cocks of player > 0]master[else]mistress[end if],' he replies before setting his muzzle to task licking your waiting loins. His long tongue slides over you, slathering your crotch with doggy drool.";
+		say "     Korvin gives a soft moan. 'Yes, [if player is male]master[else]mistress[end if],' he replies before setting his muzzle to task licking your waiting loins. His long tongue slides over you, slathering your crotch with doggy drool.";
 		WaitLineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     The dog's tongue plays across your [cock size desc of player] shaft, working it over with increasing eagerness. And when he takes it into his muzzle to blow you, you reach down and the dog an ear scritch and suck his cock harder in return. The two of you go at it, blowing each other with growing vigor.";
 			say "     In addition to how good it feels to have that tongue and muzzle of his working you over, sucking him off reminds of just how fine of a cock he's got. You lap up his precum, savoring the taste of his musky pre before swallowing it down. You do your best to get the shepherd off, working to get a nice, big load from him as he does the same to you in return[if cocks of player > 2]. He even makes sure to swap occasionally between your shafts, sucking one while using his paw on the others[else if cocks of player is 2]. He even makes sure to swap occasionally between your shafts, sucking one while using his paw on the other[end if][if cunts of player > 1]. Your cunts aren't left out either, getting fingered by the lustful canine[else if cunts of player is 1]. Your cunt isn't left out either, getting fingered by the lustful canine[end if].";
 			WaitLineBreak;
 			say "     After working each other over for quite a while, you're both about ready to pop. Sucking firmly on his meat, you fondle his balls, urging him to feed you his hot load. His rod pulses in your mouth before sending spurt after spurt of gooey seed across your tongue. The taste of the musky treat is that last bit you need to get yourself off and you pump your [cum load size of player] load down his throat in return.";
 			say "     You lick each other's cock clean before separating and getting up. You give the g-shep's ass a light swat and his tail gives a happy wag, sending him on his way. You take your time gathering up your clothes and equipment, enjoying the blissful afterglow.";
-		else if cunts of player > 0:
+		else if player is female:
 			say "     The dog's tongue plays across your juicy snatch, working it over with obvious eagerness. Bending one leg to better spread your thighs allows him to dive deeper and wriggle that slobbery tongue into your cunt. As reward, you reach down and the dog an ear scritch and suck his cock harder in return. The two of you go at it, both orally pleasing the other with growing vigor.";
 			say "     In addition to how good it feels to have that tongue lashing about inside you, sucking him off reminds of just how fine of a cock he's got. You lap up his precum, savoring the taste of his musky pre before swallowing it down. You do your best to get the shepherd off, working to get a nice, big load from him as he pushes you to several small climaxes in return[if cunts of player > 2]. He even makes sure to swap occasionally between your cunts, lapping into one while using his paw on the others[else if cocks of player is 2]. He even makes sure to swap occasionally between your cunts, lapping into one while using his paw on the other[end if].";
 			WaitLineBreak;
@@ -250,7 +250,7 @@ to say gshep_sexargue:				[Sex role argument]
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
-instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
+instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and player is not neuter and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
 	move player to bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Korvin scene on bunker entry - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";
@@ -272,7 +272,7 @@ to say gshep_bedcrumbs:
 	if player consents:
 		LineBreak;
 		say "     As you stomp over to your bunk, he tries to remain nonchalant, but you can see his ears dip. Grabbing him by the rope collar, you yank him off the bed and push him down to the floor. His box of dog treats spills and, as he reaches for one of them, you just stomp on it.";
-		say "     'Bad dog!' you growl. 'You're not allowed up on my bed unless I say so... and that's only so I can fuck you.' Through this, you've kept a tight grip on his collar, preventing him from raising his head off the ground. 'Is that what you're really looking for?' He glances away, ashamed to meet your gaze. 'You naughty pup,' you laugh. 'Well, too bad. You've been a bad dog, so no [if cocks of player > 0]bone[else]boning[end if] for you.'";
+		say "     'Bad dog!' you growl. 'You're not allowed up on my bed unless I say so... and that's only so I can fuck you.' Through this, you've kept a tight grip on his collar, preventing him from raising his head off the ground. 'Is that what you're really looking for?' He glances away, ashamed to meet your gaze. 'You naughty pup,' you laugh. 'Well, too bad. You've been a bad dog, so no [if player is male]bone[else]boning[end if] for you.'";
 		say "     [bold type]What form shall his disciplining take?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Foot licking!";
@@ -280,15 +280,15 @@ to say gshep_bedcrumbs:
 		if player consents:
 			LineBreak;
 			say "     Removing any covering from it, you very deliberately grind your bare foot down onto the dog treat fragments on the floor. You then press your crumb-encrusted foot upon his muzzle. 'Look at this mess you've made. And now I've stepped on some of them, too. Someone's going to have to clean up this mess.' You press your foot to his muzzle again, reinforcing which of them you mean for him to clean.";
-			say "     His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your foot. His long, slobbery tongue slides all over, chasing after those biscuit fragments. As his tongue cleans you, you casually [if cocks of player > 0]stroke your cock[smn][else]finger your puss[yfn][end if]. His eyes are drawn to this and his tongue gets wetter with drool at the appetizing sight, but you keep him licking at your foot until you're ready to cum. Taking your well-licked foot away, you ";
-			if cocks of player > 0:
+			say "     His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your foot. His long, slobbery tongue slides all over, chasing after those biscuit fragments. As his tongue cleans you, you casually [if player is male]stroke your cock[smn][else]finger your puss[yfn][end if]. His eyes are drawn to this and his tongue gets wetter with drool at the appetizing sight, but you keep him licking at your foot until you're ready to cum. Taking your well-licked foot away, you ";
+			if player is male:
 				say "aim your cock[smn] down at him and [if cock width of player > 24]hose him down with your copious seed[else if cock width of player > 12]spray your load across his head and upper body[else]spray your load across his face and muzzle[end if]. He's left on the messy floor, sticking with your cum and littered with spilt dog treats - several of which have now been flavored by your semen.";
 			else:
 				say "pull his head closer as you cum. Your puss[yfn] squirt[sfv], spraying musky femcum across his muzzle. He's left on the messy floor, sticky with your juices and littered with spilt dog treats - several of which have now been flavored by your splattered juices.";
 		else:
 			LineBreak;
-			say "     Stripping any obstructing coverings from it, you bare your crotch and take a seat at the edge of the bed. With a firm hand on his rope collar, you pull his muzzle between your legs and order him to lick you like the dog he is. His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your [if player is herm]dick[smn] and cunt[sfn][else if cocks of player > 0]cock[smn][else]cunt[sfn][end if] with an eagerness that makes you wonder just how much the tough dog is enjoying being put in his place. But you don't have a chance to dwell on that further as his tonguework quickly gets you [if player is herm]hard and wet[else if cocks of player > 0]hard[else]wet[end if]. Keeping a firm hold on him, you have him lick you until you're ready to cum before ";
-			if cocks of player > 0:
+			say "     Stripping any obstructing coverings from it, you bare your crotch and take a seat at the edge of the bed. With a firm hand on his rope collar, you pull his muzzle between your legs and order him to lick you like the dog he is. His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your [if player is herm]dick[smn] and cunt[sfn][else if player is male]cock[smn][else]cunt[sfn][end if] with an eagerness that makes you wonder just how much the tough dog is enjoying being put in his place. But you don't have a chance to dwell on that further as his tonguework quickly gets you [if player is herm]hard and wet[else if player is male]hard[else]wet[end if]. Keeping a firm hold on him, you have him lick you until you're ready to cum before ";
+			if player is male:
 				say "pushing him back with your foot. You aim your cock[smn] down at him and [if cock width of player > 24]hose him down with your copious seed[else if cock width of player > 12]spray your load across his head and upper body[else]spray your load across his face and muzzle[end if]. He's left on the messy floor, sticking with your cum and littered with spilt dog treats - several of which have now been flavored by your semen.";
 			else:
 				say "tug his head back a few inches from his prize while fingering yourself quickly to finish. Your puss[yfn] squirt[sfv], spraying musky femcum across his muzzle. He's left on the messy floor, sticky with your juices and littered with spilt dog treats - several of which have now been flavored by your splattered juices.";
@@ -299,7 +299,7 @@ to say gshep_bedcrumbs:
 		say "     Korvin meets your glare with one of his own. 'Why don't you make me?' he says, exaggeratedly chomping on another dog treat while leaning back.";
 		say "     Seeing how it's going to be, you shove him back onto the bunk and hold him down. This knocks the box of dog biscuits from his hand, spilling several on the floor. He gives a little growl at his. 'Oh. It. is. on!' he states and pushes you off of him. Soon the two of you are wrestling and play-fighting on and around your bed with the occasional snarl and snap from the defiant canine.";
 		WaitLineBreak;
-		if cocks of player > 0:
+		if player is male:
 			say "     You've proven yourself his better in the past and now is no different. In the end, he can't beat you and ends up pinned face down beneath you. You hold him with one hand on his shoulder and the other around that snapping muzzle. During the playful struggle, your gear and clothes have ended up being removed as well, leaving you free to grind your now stiff cock against his rear. With the excitement of the mock-fight to get his blood pumping, his tail raises out of the way as your dick prods his rear and even wags a little.";
 			say "     You can't help but grin at the moan the tough dog tries to muffle as your [cock of player] cock sinks into his butt. 'I think the naughty doggy likes that. I'd almost think this is what you wanted in the first place.' His ears dip at the teasing, blushing and unable to meet your gaze. And with your hand clamped around his muzzle, he can't bluster or deny it either. 'Yeah. I can tell this is the dog bone you really wanted,' you tease, grinding your hips to his as you bury your cock in him, eliciting another needy moan.";
 			WaitLineBreak;
@@ -369,13 +369,13 @@ to say gsd_collar_scene:
 		WaitLineBreak;
 		if graphics is true:
 			project the figure of Korvin_pinkcollar_face_icon;
-		if cocks of player > 0:
+		if player is male:
 			say "     After running him through a few dog tricks, you finish it with 'Raise tail'. The once-obstinate dog moves obediently onto all fours and presents his ass to you. He looks back at you, blushing at the ears, but those ears are raised and his tail wags with obvious eagerness as well. You are quite pleased with his training and how he's come to accept his submissive position beneath you - in more ways than one.";
 			say "     It doesn't take long for Korvin to start panting and moaning after you've mounted him and are thrusting into his toned butt. Despite his past protestations, you know the dog's a slut for a good ass-fucking and it's time he accept that fact. You thrust into him, varying from slow and sensual to fast and hard, making his body quiver all the while, but never quite enough to get him off.";
 			WaitLineBreak;
 			say "     'You like that, don't you? You love having your alpha's cock in your ass. Admit it, my slutty puppy, and I'll give you what you need.' You tease him with such words throughout the fuck session, keeping a firm grip on his leash all the while. In the past, he might have tried struggling to get you to get on top or at least get you to angry-fuck him to finish, but the obedience training holds. His arrogant nature has him resist the final admission, but eventually he has to give in, begging for you to fuck him until he cums.";
 			say "     'And what are you?' you ask, groping his balls while grinding your cock [if cock length of player > 12]deep[else]fully[end if] inside him.";
-			say "     'I'm your subby puppy,' he moans. 'Please fuck your puppy, [if cunts of player > 0]Mistress[else]Master[end if].'";
+			say "     'I'm your subby puppy,' he moans. 'Please fuck your puppy, [if player is female]Mistress[else]Master[end if].'";
 			say "     'Good boy,' you say with a victorious smile. 'And good boys get to cum.' Taking his cock in hand, you pump it while pounding him. You're both pushed to a powerful orgasm that leaves him [if cock width of player > 30]bloated with an outpouring of his virile alpha's seed[else if cock width of player > 20]stuffed and leaking his alpha's plentiful seed[else]gooey with his alpha's seed slowly leaking from his rear[end if].";
 		else:
 			say "     After running him through a few dog tricks, you finish it with 'Roll over'. The once-obstinate dog moves obediently onto his back, baring his belly to you. He looks back at you, blushing at the ears as you pet his tummy like a common dog, but his ears are raised and his tail wags with obvious eagerness as well. You are quite pleased with his training and how he's come to accept his submissive position beneath you - in more ways than one.";
@@ -383,7 +383,7 @@ to say gsd_collar_scene:
 			WaitLineBreak;
 			say "     'You want that, don't you? You'd love to bury your bone in your alpha's hot, needy snatch for her. Admit that your body's mine to play with, my slutty puppy, and I'll consider it.' You tease him with such words throughout the tantalizing foreplay, keeping a firm grip on his leash all the while. In the past, he might have tried thrusting into you, but the obedience training holds. His arrogant nature has him resist the admission, but eventually he has to give in, begging for you to ride and use him.";
 			say "     'And what are you?' you ask, reaching back to grope his balls while grinding down onto his meaty shaft with your [if cunt width of player > 18]ample[else if cunt width of player > 6]wet[else]tight[end if] snatch.";
-			say "     'I'm your subby puppy,' he moans. 'Please fuck your puppy, [if cunts of player > 0]Mistress[else]Master[end if].'";
+			say "     'I'm your subby puppy,' he moans. 'Please fuck your puppy, [if player is female]Mistress[else]Master[end if].'";
 			say "     'Good boy,' you say with a victorious smile. 'And good boys get to fuck.' Taking his cock in hand, you angle it up before sinking down onto it. Finally allowed entry into your hot depths, it's wonderfully hard and thick. You both want it bad at this point and so you ride him fast. You're both pushed to a powerful orgasm that has him fill your womb with so much of his gooey canine seed. It, along with plenty of your own juices, pours out across his knot and balls as you rise up off of his spent shaft.[impregchance]";
 		WaitLineBreak;
 		say "     After taking a few moments to catch your breath after that long-delayed release, you notice the chew bone you'd gotten for him. You give it a few squeezes, making it squeak in front of his face. His ears perk up and his muzzle follows it around as you wave it in front of him. Giving it a toss, you tell him to go fetch it. He scrambles onto all fours and chases after it, snatching the little thing up in his muzzle and returning it. He's blushing at the ears with embarrassment at his actions, but he obediently drops the toy into your hand. Since you're both worn from the sex, you don't play long, but his tail's wagging strongly. This'll be a fun way to both tease the big dog and to let him burn off some of that excess energy when not going into the city.";
@@ -395,7 +395,7 @@ to say gsd_collar_scene:
 		if graphics is true:
 			project the figure of Korvin_blackcollar_face_icon;
 		say "     'Except by you, right, Alpha?' he asks, trying to sound gruff about it, but there's a bit of eagerness in his tone that he can't quite hide. Your response is to attach the leash with one hand and fondle him with the other. His sheath grows firm and his cock quickly starts to emerge";
-		if cocks of player > 0:
+		if player is male:
 			say ". It only takes a casual tug on his leash to get him to move onto all fours. Knowing what's being asked of him, he raises his tail and sets his paws firmly.";
 			say "     Despite the fuss he sometimes makes, you know the butch dog likes having your cock in his ass, so you don't keep him waiting beyond a few light prods at his back door[if cock length of player > 24]. As you push your [cock size desc of player] meat into him, you give those firm buns of his a squeeze. 'You're a tough dog; you can take it,' you reassure him as you work to fully slide your large pole into him[else]. As you ease your [cock of player] cock into him, you give those firm buns of his a squeeze. 'That's my good dog,' you tell him as you bury your pole into him[end if]. He nods, accepting the praise and tightens those firm glutes, clenching around your shaft for a moment before releasing.";
 			WaitLineBreak;
@@ -422,7 +422,7 @@ to say conf_Korvin_sexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him doggy style";
 		now sortorder entry is 1;
@@ -438,7 +438,7 @@ to say conf_Korvin_sexmenu:
 		now sortorder entry is 8;
 		now description entry is "Have him put that muzzle of his to use on your cock";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride that doggy pole (vaginal)";
 		now sortorder entry is 4;
@@ -523,7 +523,7 @@ to say conf_Korvin_sex09:
 Section 5 - Subby Korvin Sex
 
 to say subby_Korvin_sexmenu:
-	if cocks of player > 0:
+	if player is male:
 		say "     You call over your pet German shepherd and point at your crotch. Knowing what's expected of him, the dog gets on his knees and starts licking and sucking your cock. He blushes a bit and is initially a little reluctant, but soon enough the cock-slut going at it with enthusiasm. You make sure to scritch his ears and call him your good, cock-sucking puppy.";
 		say "     After you feel his muzzle's gotten you good and ready, you tell him to get on all fours and present himself. The G-Shep shows none of his earlier arrogance or defiance and obediently raises his tail for his master. You tease your saliva-slick dick against his asshole before pushing into him. He gives a needy moan, his well-trained body knowing what it wants and knowing to give you what you need. His tight pucker yields to you, drawing a slutty moan from the buff dog. YOu grin at this and give his firm ass a swat, getting a second from him and also getting a satisfying squeeze from his [if cock length of player > 24]over-[else if cock length of player > 12]well [else if cock length of player < 6]lightly [end if]stuffed hole.";
 		WaitLineBreak;

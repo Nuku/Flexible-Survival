@@ -31,13 +31,13 @@ instead of conversing the Denise:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Her human self";
 		now sortorder entry is 1;
 		now description entry is "Ask the gryphoness about her past";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Being a gryphon";
 		now sortorder entry is 2;
@@ -109,13 +109,13 @@ Instead of fucking the Denise:
 		project Figure of BlueGryphon_icon;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Get a blowjob from Denise";
 			now sortorder entry is 1;
 			now description entry is "Let the gryphoness suck you off";
 		[]
-		if cunts of player > 0:
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Denise lick your pussy";
 			now sortorder entry is 2;
@@ -131,13 +131,13 @@ Instead of fucking the Denise:
 		now sortorder entry is 4;
 		now description entry is "Go down on the gryphoness";
 		[]
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Denise's pussy";
 			now sortorder entry is 5;
 			now description entry is "Pound your dick into the sexy gryphoness";
 		[]
-		if cunts of player > 0:
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Denise fuck your pussy";
 			now sortorder entry is 6;

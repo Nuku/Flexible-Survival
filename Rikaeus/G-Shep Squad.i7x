@@ -9,7 +9,7 @@ Canine Patrol is a situation.
 The sarea of Canine Patrol is "Red".
 when play begins:
 	add Canine Patrol to badspots of guy;
-[	add Canine Patrol to badspots of girl;		]
+[	add Canine Patrol to badspots of girl; ]
 	add Canine Patrol to badspots of furry;
 
 gshepsquad is a number that varies.
@@ -55,7 +55,7 @@ Instead of resolving a Canine Patrol:
 		say "     From somewhere up ahead of you, you hear some commotion. Approaching cautiously, you slip into a nearby alleyway and check out what's going on at a distance. The noise seems to be coming from a jewelry store that's been broken into, which is confirmed as a hyena is tossed out the open door into the street. It scrambles to try and get up, but is grabbed by a German shepherd in a police uniform. He slams the herm against the wall, kicking her legs apart with her hands against the brick building. He's soon followed out by his partner, who's dragging out another hyena by the scruff of her neck while carrying a satchel of loot in his other paw. The second hyena's forced to join her cohort against the wall. A couple of other canine cops appear, searching the building and documenting evidence.";
 		WaitLineBreak;
 [		if facename of player is "Herm Hyena" or bodyname of player is "Herm Hyena":
-			say "***";	[hyena = special negative]		]
+			say "***"; [hyena = special negative]		]
 		say "     One of the canines exchanges a few quick words with another before motioning in your direction. This second shepherd heads your way after barking some orders to the others. You consider leaving while you can, but don't want to risk setting the whole squad after you. The G-shep looks you over [if catdogstate is 2]with a friendly wag of his tail[else if catdogstate is 1]casually[else]with a cold stare[end if]. He's a different one from the pair you'd seen before, his coat being of a richer brown. He's wearing a policeman's vest and hat as his only gear, leaving his canine junk on display. He [if catdogstate is 2]starts off with a few friendly questions for you, checking to see if you live in the area and if you know anything about the looters they've caught[else if catdogstate is 1]starts off with a few simple questions for you, checking to see if you live in the area and if you know anything about the looters they've caught[else]grills you for a bit, asking if you live in the area and if you have anything to do with the looters they've caught[end if]. You respond with the truth that you're just passing through and that you only came over when you heard the commotion[if hyg > 3]. You wisely leave out mention being part of the hyena gang, of which these two could very well be members[end if].";
 		say "     'Now, it seems my dogs have been seeing you around quite a bit lately[if catdogstate is 2]. It's good to see citizens taking an interest in police work[else if catdogstate is 1]. Now, I can't help feeling that isn't just coincidence[else]. You can see how that makes me a little suspicious[end if].' You start to explain that you're just a survivor trying to get by in the city and were hoping that his squad cou- and what the heck is going on over there?";
 		WaitLineBreak;
@@ -65,7 +65,7 @@ Instead of resolving a Canine Patrol:
 		now gshepsquad is 4;
 		now K9 Vans is known;
 		increase score by 5;
-		now Canine Patrol is resolved;		[for now]
+		now Canine Patrol is resolved; [for now]
 
 
 Section 2 - K9 Vans
@@ -149,7 +149,7 @@ to say bustersexmenu:
 	now sextablerun is 0;
 	say "     Approaching Buster with an offer of sex gets the German shepherd's ears to perk up. '[if catdogstate is 2]Alright recruit. I could use a break. You're a good dog for offering,' he says with a doggy grin and wagging tail[else if catdogstate is 1]Sounds good, recruit. Let's have another go at training you up to be a good dog, eh?' he says with a doggy grin and a wag of his tail[else]I'd say another round of doggy training is in order. Let's see if we can't clear up this feline mess and get you looking like a good, canine citizen,' he says assertively[end if]. While the canine officer divests you of your pack and gear, he [one of]slathers your face with sloppy doggy kisses[or]French kisses you, sliding his long, slobbery tongue past your lips[or]fondles himself with one paw, coaxing his stiffening shaft to rise from his sheath[or]makes a show of groping your ass for the other German shepherds around. They've seen (and participated in) this sort of thing plenty of times before, so it doesn't really faze them too much, though there are a few barks and whistles[or]playfully humps your leg with his stiffening cock[in random order]. As things are heating up, you try to decide what you might like to do with the sexy canine stud.";
 	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if player is male:
 		if catdogstate is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him";
@@ -161,7 +161,7 @@ to say bustersexmenu:
 			now sortorder entry is 10;
 			now description entry is "let him suck you off";
 	choose a blank row in table of fucking options;
-	if cunts of player > 0:
+	if player is female:
 		now title entry is "Get fucked - vaginal";
 	else:
 		now title entry is "Get fucked - anal";
@@ -220,7 +220,7 @@ to say bustersexmenu:
 to say bustersex00:
 	if HP of Buster is 0:		[***first time - until separate oral is created]
 		say "     '[if catdogstate is 2]I'm always up for helping out a good dog feel better,' he says with a happy grin and wagging tail[else if catdogstate is 1]Sounds good to me. I had a feeling you'd understand and agree to join up. Let's get you on the path to being a good doggy,' he says with a friendly smile and a wag of the tail[else]Alright. We can see about clearing up this feline taint you've gotten and put you on the path to being a good doggy,' he says with friendly concern[end if]. Using one paw to help you out of your gear, he rubs his fuzzy sheath with the other, coaxing his canine cock to rise from it. When you're ready so is he, his member dripping with precum.";
-	say "     With a paw at your shoulder, he pushes you down on your knees and his doggy dong into your mouth. The taste of the K9 cop's cock fills your mouth and you lick the sticky precum from its warm flesh. This gets him to moan softly, rubbing his hand atop your head as if petting you[if catdogstate is 2 and cocks of player > 0]. 'Mmm... that's it. Lick that bone like a good dog[else if catdogstate is 2]. 'Mmm... that's it. Lick that bone like a good bitch[else if catdogstate is 1]. 'Alright, now work that tongue. Lick it like a good dog[else]. 'Yeah, lick it you naughty kitty. Lick that dog bone. We'll make a horny pup out of you yet[end if],' he moans. His encouragement has you work your tongue all over his throbbing canine penis, getting him to pant with growing pleasure. Drool drips from his dangling tongue onto your head, but you hardly mind at this point, too into sucking on the delicious treat in your mouth.";
+	say "     With a paw at your shoulder, he pushes you down on your knees and his doggy dong into your mouth. The taste of the K9 cop's cock fills your mouth and you lick the sticky precum from its warm flesh. This gets him to moan softly, rubbing his hand atop your head as if petting you[if catdogstate is 2 and player is male]. 'Mmm... that's it. Lick that bone like a good dog[else if catdogstate is 2]. 'Mmm... that's it. Lick that bone like a good bitch[else if catdogstate is 1]. 'Alright, now work that tongue. Lick it like a good dog[else]. 'Yeah, lick it you naughty kitty. Lick that dog bone. We'll make a horny pup out of you yet[end if],' he moans. His encouragement has you work your tongue all over his throbbing canine penis, getting him to pant with growing pleasure. Drool drips from his dangling tongue onto your head, but you hardly mind at this point, too into sucking on the delicious treat in your mouth.";
 	WaitLineBreak;
 	say "     Noticing the knot at the base of his cock swelling up, you know he's getting close. Placing one hand on that growing bulge and the other on his ballsack, you grope and fondle the German shepherd while sucking all the harder. Pushing your mouth forward, you take his full length to the top of his knot and work your tongue and palate over it. Your hand kneads his hard knot in imitation of tying a tight, twitching hole. This last effort is enough to finally set the virile dog off and he cums with a happy bark, blasting several gooey shots of canine semen into your sucking mouth, which you swallow down immediately to make room for more. The taste is sharp and strong, but also virile and exciting, so you work his balls to coax more from him. As he's finishing up, he pushes you back, letting the last few shots splatter across your face and body, marking you with his seed.";
 	say "     'Oh yeah, you're going to be a fine recruit,' he says, leaning back against his impromptu desk for support after his powerful release. You can't help but smile up at him, some part of you feeling the growing canine urges inside you, making you eager to be a good dog - or at least a naughty one - to please him. You rub the cum still clinging to you into your skin, feeling it soak into your [bodydesc of player] body, helping you to change.";
@@ -261,10 +261,10 @@ to say bustersex05:		[Get a blow job]
 
 to say bustersex06:		[Orgy]
 	say "     When you mention wanting to have fun with all of the German shepards, Buster smiles widely at you. [if catdogstate is 0]'Oh, the little kitty wants all of the dog cock?'[else]'Sounds like a fun time, let's call them over,'[end if] he says, wagging his tail happily. Quickly after that he gets the attention of the other canines who hurry over, their manhoods already starting to show. 'Hey boys, looks like our friend here wants to be the star of an orgy,' he informs all of them. The dogs start talking amongst themselves, some of them starting to masturbate their cocks. In a swift movement, the chief canine removes any clothing you're wearing and presents you with his cock, asking you to open up.";
-	say "     Eagerly you open your mouth and let the male push his dick in, savoring the taste that pools in your mouth from his precum. While this is happening, the other guys are roaming their paws all over your body before one pair finds purchase at your ass. What happens next makes it hard for you to focus on the cock in your mouth as you feel something wet push into your hole, seconds later realizing it is one of the German shepards' tongues. You moan lewdly on the dick in your mouth, writhing in pleasure at feeling the fleshy organ move around in your hole.[if cocks of player > 0] Your manhood is rock hard, precum leaking from the tip and falling onto the ground.[else if cunts of player > 0] Your pussy is already dripping due to the sensations.[end if]";
+	say "     Eagerly you open your mouth and let the male push his dick in, savoring the taste that pools in your mouth from his precum. While this is happening, the other guys are roaming their paws all over your body before one pair finds purchase at your ass. What happens next makes it hard for you to focus on the cock in your mouth as you feel something wet push into your hole, seconds later realizing it is one of the German shepards' tongues. You moan lewdly on the dick in your mouth, writhing in pleasure at feeling the fleshy organ move around in your hole.[if player is male] Your manhood is rock hard, precum leaking from the tip and falling onto the ground.[else if player is female] Your pussy is already dripping due to the sensations.[end if]";
 	WaitLineBreak;
 	say "     Sadly the tongue in your ass doesn't remain for long but it is quickly replaced by something better. Seconds later, you feel a blunt tip at your entrance that is slowly pushed in, spreading your hole wide. At the same time, Buster grabs a hold of your head and starts to face fuck you, barking in pleasure as his cock rams in and out of your throat. When the dick in your ass bottoms out it is quickly pulled out to the tip before slamming back in, something that makes you moan wantonly, a sound that is muffled by the cock in your mouth. It appears the two canines are out of sync as the canine chief reaches his orgasm quickly, pulling out of your mouth to shoot his cum all over your face. Right after that another dick takes his place, thrusting deep into your mouth. It is when this happens that the manhood in your ass dumps its sperm deep into you, thankfully without knotting. The warm feeling fills your hole, making you moan out loud.";
-	say "     This pattern continues for the next hour or so, with the German shepards taking turns at your hole and your mouth, either dumping their cum in you or all over you. You let yourself fall into the bliss of being fucked repeatedly, moaning like a whore the entire time. [if cunts of player > 0]Your pussy is quite drenched by now, having orgasmed multiple times during that time period. [else if cocks of player > 0]You end up orgasming yourself quite a few times, a large pool of your sperm now formed under you. [end if]By the time everyone is done, all of you are laying on the ground somewhere, some of them cuddling and others simply asleep. Buster walks up to you, smiling before he speaks. 'That was brilliant my friend, [if catdogstate is 0]you'll be one of us in no time kitty[else]I'm sure they enjoyed their treat[end if].' You nod with a blissed-out smile on your face before you groan and stand up. Surprisingly the dog chief helps clean you up before getting you on your way, asking you to come back some time later.";
+	say "     This pattern continues for the next hour or so, with the German shepards taking turns at your hole and your mouth, either dumping their cum in you or all over you. You let yourself fall into the bliss of being fucked repeatedly, moaning like a whore the entire time. [if player is female]Your pussy is quite drenched by now, having orgasmed multiple times during that time period. [else if player is male]You end up orgasming yourself quite a few times, a large pool of your sperm now formed under you. [end if]By the time everyone is done, all of you are laying on the ground somewhere, some of them cuddling and others simply asleep. Buster walks up to you, smiling before he speaks. 'That was brilliant my friend, [if catdogstate is 0]you'll be one of us in no time kitty[else]I'm sure they enjoyed their treat[end if].' You nod with a blissed-out smile on your face before you groan and stand up. Surprisingly the dog chief helps clean you up before getting you on your way, asking you to come back some time later.";
 
 
 Section 99 - Subroutines
@@ -281,11 +281,11 @@ to gsquadinfect:
 to catdogstatecheck:
 	now catdogstate is 0;
 	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now catdogstate is 2;		[dog = positive]
+		now catdogstate is 2; [dog = positive]
 	else if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now catdogstate is 0;		[feline = negative]
+		now catdogstate is 0; [feline = negative]
 	else:
-		now catdogstate is 1;		[neutral]
+		now catdogstate is 1; [neutral]
 
 
 Section 100 - Notes

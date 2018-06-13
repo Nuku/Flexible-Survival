@@ -23,49 +23,49 @@ to say bovine desc:
 	if hardmode is true and level of player > 6, let debit be level of player - 6;
 	choose row monster from the table of random critters;
 	if a random number from 1 to 10 > 3:	[Anthro Cow]
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		say "[cow desc]";
 		now Bovine_type is 1;
-		now wdam entry is 5 + ( debit / 4 );	[Amount of Damage cow Does when attacking.]
+		now wdam entry is 5 + ( debit / 4 ); [Amount of Damage cow Does when attacking.]
 		now lootchance entry is 20;
 	[else if BullMaster is 1:		[Anthro Bull - You fed the feral bull orc cum]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 2;		[Anthro Bull - You fed the feral bull gryphon milk]
-		setmongender 5;		[creature is a full herm]
+	else if BullMaster is 2; [Anthro Bull - You fed the feral bull gryphon milk]
+		setmongender 5; [creature is a full herm]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 3;		[Anthro Bull - You fed the feral bull cow milk]
-		setmongender 6;		[creature is a trans female]
+	else if BullMaster is 3; [Anthro Bull - You fed the feral bull cow milk]
+		setmongender 6; [creature is a trans female]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 4;		[Anthro Bull - You fed the feral bull dog milk]
-		setmongender 7;		[creature is a male herm]
+	else if BullMaster is 4; [Anthro Bull - You fed the feral bull dog milk]
+		setmongender 7; [creature is a male herm]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;
-	else if BullMaster is 5;		[Anthro Bull - You splashed cow milk across the feral bull's crotch]
-		setmongender 8;		[creature is a trans male]
+	else if BullMaster is 5; [Anthro Bull - You splashed cow milk across the feral bull's crotch]
+		setmongender 8; [creature is a trans male]
 		say "[anthro bull desc]";
 		now Bovine_type is 3;
 		now wdam entry is 22;
 		now lootchance entry is 20;]
 	else:						[Feral Bull]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "[feral bull desc]";
 		now Bovine_type is 2;
 		if CowBully is 0:
-			now wdam entry is 0;			[Passive bull is 0, even in hard mode]
+			now wdam entry is 0; [Passive bull is 0, even in hard mode]
 		else:
-			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
+			now wdam entry is 28 + ( ( 2 * debit ) / 5 ); [Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
 		now lootchance entry is 20;
 
 to say losetobovine:
@@ -100,7 +100,7 @@ to say LoseToFeralBull:
 	if Mooing > 15:
 		now antimoo is 1;
 	if CowBully > 0:
-		if cunts of player > 0:
+		if player is female:
 			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if cunt length of player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy, unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
 			infect "Bovine";
 			now CowBully is 0;
@@ -130,13 +130,13 @@ to say LoseToFeralBull:
 		if Mooing < 1:
 			say "     The bull seems to lose interest in you and wanders off to find some grass to eat.";
 		else:
-			if cunts of player > 0:
+			if player is female:
 				say "     Lifting his nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat. Pacing over to you he sniffs at your rear and you feel yourself rising to all fours and presenting your pussy to the beast. His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your cleft. Suddenly nothing seems to matter but having him within you. [if cunt length of player < 28]His bellowing thrusts are softened by your attempts to buck forward with him, trying to avoid being impaled by his gigantic rod. Suddenly his breeding tool seems to swell even bigger, stretching your already taxed snatch to the breaking point, and explodes with his orgasm, painting every inch of your insides white[else]His bellowing thrusts are countered by your own as you rock your hips back against his motion, feeling him deep within you. Suddenly his breeding tool seems to swell even larger, somehow making even your gigantic cunt feel full, and explodes with his orgasm, painting every inch of your insides white[end if]. Dismounting, he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
 				fimpregchance;
 				fimpregchance;
 				fimpregchance;
 				infect "Bovine";
-				now mooing is mooing / 2;	[increasing milk thirst]
+				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
 			else if player is mpreg_ok:
 				say "     Lifting his nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat, even if you're not the average cow. Pacing over to you he sniffs at your rear and you feel yourself rising to all fours and presenting your ass to the beast. His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your hole. Suddenly nothing seems to matter but having him within you. [if scalevalue of player < 5 or player is not twistcapped]His bellowing thrusts are softened by your attempts to buck forward with him, trying to avoid being impaled by his gigantic rod. Suddenly his breeding tool seems to swell even bigger, stretching your already taxed snatch to the breaking point, and explodes with his orgasm, painting every inch of your insides white[else]His bellowing thrusts are countered by your own as you rock your hips back against his motion, feeling him deep within you. Suddenly his breeding tool seems to swell even larger, somehow making even your gigantic hole feel full, and explodes with his orgasm, painting every inch of your insides white[end if]. Dismounting, he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
@@ -144,7 +144,7 @@ to say LoseToFeralBull:
 				mimpregchance;
 				mimpregchance;
 				infect "Bovine";
-				now mooing is mooing / 2;	[increasing milk thirst]
+				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
 			else:
 				say "     The bull licks at you a few times but loses interest and wanders off to find some grass to munch on.";
@@ -159,7 +159,7 @@ to say BeatTheBovine:
 		if the player consents:
 			say "You take the defeated cow's hands and remove them from your waist, telling her to present herself. She lets out a lustful moo and drops to all fours, turning quickly around. As she does so, her breasts start to leak more of her milk, the sight making you rather thirsty. A thought comes to mind and you realize that you could not only satisfy your sexual urges, but you could also quench your thirst. (Y=Drink+Sex, N=Just Sex)";
 			if the player consents:
-				if cocks of player > 0:
+				if player is male:
 					say "     You grin and tell the cow you've got a slight change of plans. Ordering her onto her back, you lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and her chest heaves as she begs you to fuck her. Still sucking, you shift position on top of her so that your now hard cock is resting against her folds. You pull your hips back, lining the tip of your [cock of player] cock up with her wet lips and then slamming into her, groaning in pleasure. [if cock length of player < 28]As you pound away at the cow girl's cunt, she slowly gets more and more into it, her legs wrapping around you, drawing you deeper into her. Soon enough you feel your climax building, your balls swelling with cum. With one final thrust, you bury your [cock size desc of player] length as deep as you can[else]As you pound away at the cow girl's cunt, she screams her pleasure, her large hands firmly on your ass, making sure you fuck her fully with each stroke. Soon enough you feel your climax building, your balls swelling with cum. With one final thrust, you bury your [cock size desc of player] length in her, knowing you are filling her utterly[end if], [if cock width of player < 14]giving her your fertile seed[else]flooding her womb with your fertile seed, excess cum leaking out around your dick[end if]. You nearly black out when she reaches her peak, her snatch squeezing your rod tightly and the two of you squirm in ecstasy.";
 					say "     After you pump the last of your cum into her, you lie atop the cow girl, nursing from her breast, a warm feeling radiating out from your stomach. The two of you doze briefly in your post-orgasmic stupor, but after a while you get up to head out. As you do, the bovine woman calls out after you, 'That was fun but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
 					say "[Mooplus]";
@@ -167,7 +167,7 @@ to say BeatTheBovine:
 					PlayerDrink 10;
 					infect "Bovine";
 					increase CowBully by 1;
-				else if cunts of player > 0:
+				else if player is female:
 					say "     You grin and tell the cow you've got a slight change of plans. Ordering her onto her back, you lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and her chest heaves as she begs you to fuck her. Still sucking, you slide your hand down between her legs and begin to stroke her wet pussy. The cow girl shivers and groans as you play with her cunt, first stroking it and then slowly sliding a finger or four into her. Soon enough, the cow girl returns the favor, her large fingers finding your own tender folds, expertly locating your g-spot and working you up to climax rather quickly. You continue on like this for a while, suckling on the cow girl's tits while the two of you fingerblast each other, until she is finally pushed over the edge and into orgasm, cunt clamping down on your fingers, her body shaking in pleasure.";
 					say "     Your own orgasm isn't far behind and you collapse onto the cow as she relentlessly fingers you through your climax. The two of you doze briefly in your post-orgasmic stupor, but you rouse yourself, rubbing your belly, a warm tingle coming from your stomach full of milk. As you stand up to leave, the bovine woman calls out after you, 'That was fun but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
 					say "[Mooplus]";
@@ -184,12 +184,12 @@ to say BeatTheBovine:
 					infect "Bovine";
 					increase CowBully by 1;
 			else:
-				if cocks of player > 0:
+				if player is male:
 					say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you pull yourself up against her, your [cock of player] cock grinding against her wet snatch. You line yourself up and thrust in, [if cock length of player < 28]ramming your length as deep inside her as you can manage. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and begs, 'Please fuck me deeper! I need more!' Annoyed that she seems unfazed by your efforts so far, you hilt yourself in one go to try and satisfy her. She grunts a little, but she says, 'I need more, please, I'm so empty'. You start bucking harder and faster into her, hoping to make up for your size with your passion[else]ramming your length deep inside her. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and sayss, 'Oh yeah, just like that! I want everything you've got!' Pleased that she's loving your efforts so far, you hilt yourself in one go to push her over. She grunts and lets out a loud moo, unable to articulate her approval. You start bucking harder and faster into her[end if], feeling your climax building. You lean forward and wrap your arms underneath her body, your hands taking hold of her shoulders.";
 					say "     With one last hard thrust, you bury your [cock size desc of player] shaft in her depths and cum hard, [if cock width of player < 14]dumping your seed into this cow girl, as she moos her orgasm[else]filling this cow girl up with every last bit of fertile seed you've got, making her moo loudly in orgasm[end if]. When you're finished with her, you get up and wipe your cock off on her ass, a few last spurts of cum splattering on her back. You take a bit of perverse pride at the state you've left the cow in and gather your things before heading back along the path. As you do, the bovine woman calls out after you, 'That was fun but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
 					increase CowBully by 1;
 				else:
-					if cunts of player > 0:
+					if player is female:
 						say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you walk towards her front, drawing your hand along your flank as you do, and shoving your cunt right in her face. You order the cow to lick your snatch, to make you happy, just like she wanted. Her eyes are half-lidded in lust and she quickly begins licking at your pussy, doing her best to try and get you off. You groan and push your cunt back against her muzzle, grinding it up and down. You feel her moan, the cow taking pleasure in your control of the situation, and she falters for a second before resuming her attention on your pussy. Soon enough, she has you on the edge, but you hold her back, waiting until you're ready to orgasm. A 12-foot cow woman is hard to stop however, and you cry out as your femcum covers her face. You hold her to your pussy, and she slurps up as much of your juices as she can get.";
 						say "     You step back and stretch a little before gathering your things and heading back along the path, leaving the cow to finish herself off. As you do, the bovine woman calls out after you, 'That was fun but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
 						increase CowBully by 1;
@@ -211,7 +211,7 @@ to say BeatTheBovine:
 				say "     ([link]N[as]n[end link]) - Leave the bull alone.";
 				if the player consents:
 					LineBreak;
-					if cunts of player > 0:
+					if player is female:
 						say "     You groan as you feel a heat between your legs grow, quickly becoming a fiery need. You shiver and drop to your knees, quickly stripping down and crawling up to the bull creature. [if Mooing > 0]Your eyes lock onto the bull's massive shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]Your eyes lock onto the bull's massive balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You shiver and moan at his scent, your pussy dripping with need. You climb up on top of the large bull and lower your cunt onto his thick shaft, grinding up and down its length.";
 						say "     This makes the bull creature beneath you squirm and groan, bucking his hips as much as his weakened body will let him. You whimper and moo a little, unable to hold back any longer. You grab his shaft and line it up with your pussy before pushing back hard and sliding it deeply into your [bodytype of player] body. You gasp and groan at the size of it, the way it spreads you wide open and fills you up. It takes some effort to get it in, but the bull beneath you moans out loud, bucking up into you and forcing his shaft in deeper. You gasp and let out a loud moo, quickly recovering from the initial thrust and beginning to ride this bull's huge length. The size of his shaft plus how horny and needy his scent is making you means you won't last long, and soon enough you're cumming hard. This in turn sets of the bull's own massive orgasm. His shaft pulses with each blast of thick fertile cum he pumps into you, emptying his massive balls into your cunt.";
 						WaitLineBreak;
@@ -338,7 +338,7 @@ to say feral bull attack:
 			say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[combat abort]";
 		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you.[or]Looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal.[at random]";
 		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
-			increase monsterHP by 9 + ( HP entry / 5 );	[ +25 HP for regular play ]
+			increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
 		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.";
 
 Section 2 - Monster Insertion
@@ -353,12 +353,12 @@ When Play begins:
 	now attack entry is "[bovine attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[BeatTheBovine]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[LoseToBovine]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[bovine desc]";[ Description of the creature when you encounter it.]
-	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like Holstein Friesian cattle over a thick[else] black and white splotched, furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seeming to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "bovine";[ Cock Description, format as you have a 'size' (your text) cock]
+	now desc entry is "[bovine desc]"; [ Description of the creature when you encounter it.]
+	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like Holstein Friesian cattle over a thick[else] black and white splotched, furred[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seeming to be to scare flies away."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "bovine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it draws forward, flowing into a large blunt muzzle even as your ears migrate up your head and stretching out to have a very bovine appearance. Slow thoughts begin to slowly push away your present needs. You find yourself mooing softly under your breath"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "grows and stretches, bones growing hugely into the frame of an anthro cow, forcing your muscles and posture to follow"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it thickens and sprouts a pattern of black and white hair, slowly merging together into a very cow-like appearance"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -371,31 +371,30 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 80;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 2;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Park";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 28;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 14;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 4;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 9;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 28;		[ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex infection will try and give you ]
-	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "cow milk";			[ Loot monster drops, ]
-	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[if cunts of player > 0]maternal[else]beefy[end if]";
-	now type entry is "bovine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now HP entry is 80; [ How many HP has the monster got? ]
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 2; [Amount of Damage monster Does when attacking.]
+	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 28; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 14; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 4; [ Number of Breasts infection will give you. ]
+	now breast size entry is 9; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 28; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 8; [ Width of female sex infection will try and give you ]
+	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now loot entry is "cow milk"; [ Loot monster drops, ]
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[if player is female]maternal[else]beefy[end if]";
+	now type entry is "bovine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Monster Heat
 
@@ -421,13 +420,13 @@ To say CowMilkAddict:			[Getting a direct hit feeds you. This seems like a lot o
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Bovine";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
-	now heat duration entry is 400;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now infect name entry is "Bovine"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 400; [ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
-	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
-	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat..]
-	now heat end entry is "";		[this is the same as heat start only it's for ending the cycle.]
+	now description text entry is ""; [ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
+	now heat start entry is ""; [this is a to say block that causes things to happen when the player enters heat..]
+	now heat end entry is ""; [this is the same as heat start only it's for ending the cycle.]
 	now inheat entry is "[bovineheat]";
 	now fheat entry is true;
 	now mpregheat entry is true;

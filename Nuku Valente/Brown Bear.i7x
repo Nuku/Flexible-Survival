@@ -56,7 +56,7 @@ to say UrsineWins:
 			say "     The bear towers over your fallen form. Her shaggy thighs are already damp with arousal, and her long, hard nipples peek through her fur. 'I feel naughty. Help me.' She hesitates for a moment before kneeling over your head. Her warm juices drip over your face before your whole world grows dark and your vision is filled with slavering bear snatch. With surprising delicacy, she begins to grind your face into her pussy, filling your breath with her nectar's potent aroma.";
 			say "     Unable to break free, you drive your tongue deep into her sweet, inviting cleft in the hope you can make her cum and let you go. After a few desperate, breathless minutes of orally worshipping your ursine captor, you feel her shudder in orgasm atop you, her thick honeys drenching your face in her delicious, sticky essence. After her climax, she rests atop you for several long minutes, her breathing somewhat troubled as aftershocks of pleasure ripple through her form. The moment she rolls off, you scramble to your feet and run away, fleeing before she can catch you again. You continue to lick your lips long after her abuse, her lingering flavor as distracting as it is enjoyable.";
 		if "Microwaved" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
-			if cunts of player is 0:
+			if player is not female:
 				now cunts of player is 1;
 				say "     You feel a wetness between your legs as the bear woman's honey creates a new, juicy cunt between your legs. You release a hazy moan as pleasure radiates from your newly formed slit, the bliss of its first orgasm washing over you.";
 				now cunt length of player is 1;
@@ -76,11 +76,11 @@ to say UrsineWins:
 		increase HP of player by 5;
 		if HP of player > maxHP of player, now HP of player is maxHP of player;
 		if libido of player < 0, now libido of player is 0;
-	else if a random chance of 2 in 3 succeeds and ( cocks of player > 0 or cunts of player > 0 ):
-		if cocks of player > 0 and ( cunts of player is 0 or a random chance of 2 in 5 succeeds ):
+	else if a random chance of 2 in 3 succeeds and player is not neuter:
+		if player is male and ( cunts of player is 0 or a random chance of 2 in 5 succeeds ):
 			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she spots your hardening maleness. 'Oh. I guess we all have needs, now. Let me help you with that.' With that, she kneels down and wraps her huge mouth around your almost painfully swollen cock. You stay motionless as you see her lethal teeth not inches from your straining member, but the fear is soon forgotten as her skillful lips and tongue work you to an orgasm that has you [one of]spurting until your balls ache[or]moaning in pleasure[or]fighting unsuccessfully to avoid cumming over and over[at random]. After an age of being pleasured until your straining cock relaxes, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Hotshot[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
 		else:
-			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she licks her lips at scent of your wet pussy. 'Oh. I guess you just miss me and need some more attention. Mmm... let me help you with that, [one of]sweetie[or]honey[at random].' With that, she pushes you down onto the grass and brings her bruin muzzle to your juicy slit, wet and dripping with arousal. Her big, broad tongue slathers attention on your pussy, lapping up your juices before diving in to you to make you moan loudly through a series of increasingly powerful female orgasms[if cocks of player > 0]. One of her large bear paws strokes and pumps at your cock throughout this, getting you to blast your load onto yourself repeatedly as well[end if]. The bear licks it all up lustfully, clearly enjoying the taste of your drenched folds. After an age of being pleasured until you're about to pass out, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Sweetie[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
+			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she licks her lips at scent of your wet pussy. 'Oh. I guess you just miss me and need some more attention. Mmm... let me help you with that, [one of]sweetie[or]honey[at random].' With that, she pushes you down onto the grass and brings her bruin muzzle to your juicy slit, wet and dripping with arousal. Her big, broad tongue slathers attention on your pussy, lapping up your juices before diving in to you to make you moan loudly through a series of increasingly powerful female orgasms[if player is male]. One of her large bear paws strokes and pumps at your cock throughout this, getting you to blast your load onto yourself repeatedly as well[end if]. The bear licks it all up lustfully, clearly enjoying the taste of your drenched folds. After an age of being pleasured until you're about to pass out, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Sweetie[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
 		now UrsineDefeatCount is 3;
 		increase morale of player by 2;
 		decrease libido of player by 6;
@@ -117,17 +117,17 @@ When Play begins:
 	now attack entry is "[UrsineAttack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[UrsineLoses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[UrsineWins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[UrsineDesc]";[ Description of the creature when you encounter it.]
-	now face entry is "that of a bear, with an elongated snout and big bear teeth set in what is definitely not a teddy bear";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]furry, honey-scented[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a short black tail hidden mostly by the sheer size of you.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your nose changes and darkens as your face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you swell with the sudden appearance of more muscles and height, growing taller and heavier by the moment."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "coarse, shaggy, dark brown fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "the forming of your stubby tail almost goes unnoticed."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your cock is surrounded by a woolly sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now desc entry is "[UrsineDesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "that of a bear, with an elongated snout and big bear teeth set in what is definitely not a teddy bear"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]furry, honey-scented[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a short black tail hidden mostly by the sheer size of you."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "your nose changes and darkens as your face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position."; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you swell with the sudden appearance of more muscles and height, growing taller and heavier by the moment."; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "coarse, shaggy, dark brown fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "the forming of your stubby tail almost goes unnoticed."; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your cock is surrounded by a woolly sheath."; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 25; [a big strong bear]
 	now dex entry is 10; [not so limber]
 	now sta entry is 11; [not too much stamina -a lot of bear to lug about.]

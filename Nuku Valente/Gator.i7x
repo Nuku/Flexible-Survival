@@ -104,7 +104,7 @@ When Play begins:
 	now body entry is "full-bodied, with wide hips and a narrow waist. Your form feels full of strength and tough to boot. Peeking behind you reveals that you have two sets of bony ridges running down towards your ass";
 	now skin entry is "[one of]green-scaled[or]softly scaled[or]thick-scaled[at random]";
 	now tail entry is "You have a broad, reptilian tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step.";
-	now cock entry is "[one of]reptilian[or]gator[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
+	now cock entry is "[one of]reptilian[or]gator[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as it draws forward into a long gator snout";
 	now body change entry is "you swell with the appearance of muscles and height. Large scaly patterns appear over most of your body as ridges grow along your spine";
 	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft";

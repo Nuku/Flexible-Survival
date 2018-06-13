@@ -30,13 +30,13 @@ to say corotadesc:
 to say losetocorota:
 	choose row monster from the table of random critters;
 	if a random chance of 3 in 5 succeeds:
-		if cocks of player > 0:
+		if player is male:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can. 'Yes, strong mate. Deserving mate,' she hisses, going between your legs and working your length with her forked tongue. Whether it turns you on or you merely struggle, suddenly there is a painful sensation in the base of your cock as the corota appears to have bitten into you with their fangs. Bringing their head up to smile at you, again with that feral look, you can see a venom of a different color than normal dripping from their fangs.";
 			say "     You don't have long to consider what they did before your length explodes to full, veins bulging as it's forced to be ready for the serpent creature. Too weak to crawl away, too tired to push them off, you're forced to watch as they spread their lower lips before spearing themselves on your cock[if cock length of player > 12], your head forced rapidly past their cervix into their waiting womb[end if]. Bouncing up and down on you pole, 'poison' no longer necessary to keep you readied, you are stuck for some time with nothing but the wet squelching noises and the corota's impassioned hisses to distract you.";
 			say "     Eventually, body's betrayal complete, you give the corota their much desired seed, balls swollen by the venom forcing them into crazed overproduction along with your regular load amount. The milking goes on for almost five minutes, and you don't want to consider how much of your mass was [']recycled['] for their pleasure while you watch their belly slowly bloat wider and wider. When the flow finally comes to a halt, you feel more spent than you have ever felt before. The corota doesn't even seem to give you a cursory look as they waddle off, their footfalls followed by the sound of an occasional wet impact as thick wads of spunk fall between their legs.";
 			increase thirst of player by 5;
 			infect;
-		else if cunts of player > 0:
+		else if player is female:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can. 'Thirsty from fight,' they hiss, diving between your legs greedily. In seconds, your labia and hips are covered in a mass of nonvenomous bites, the corota's many hands slapping at your hips as they seem to forget that you aren't a giant jug of fluid. Whether they beat you until terrified beyond control, or the rough abuse is one of your special buttons, you eventually give the corota their much desired drink. Not even bothering to give so much as a 'Thanks,' the serpent creature stomps away from you to slake the rest of their thirst elsewhere.";
 		else:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Failing to see anything that catches their interest, the corota gives a snarl and turns around, raising both their tails high to bring down on you. Raising your arms to shield your face, you barely have the time to sigh in relief as each miss your arms and head by scant inches. You were so weak, for it to be seemingly beneath the serpent creature to even bother to make sure they've finished the job. The corota flaps their large wings to take to the skies, leaving you coated in a small layer of their dust.";
@@ -166,7 +166,7 @@ when play ends:
 			say "     You succumb to your corota infection.";
 		else:
 			say "     You survive, but were infected by the corota.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

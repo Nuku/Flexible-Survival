@@ -22,12 +22,12 @@ to say VixenFemNurseFacesitting:
 	say "     The vixen nurse rubs your bare groin several times. 'Oh, you definitely need some special treatment, my dear,' she says. Pushing you gently to the ground, she straddles your face and presses her hot, dripping pussy to your mouth. With her juices running across your lips, you can't help but start lapping across her folds. After a few tentative licks, your lust grows as your self-restraint fades and soon you're worming your tongue into her quivery cunny in search of more. 'Yes! Yes! Drink up and you'll feel so much better in no time,' she pants, grinding down onto your tongue until she climaxes in a rush of musky fluids. You're left panting and a little dazed as your head spins and colors dance in your eyes. As you try to recover from this, she gives you a blanket makes sure your comfortable before leaving you there.";
 
 to say VixenHermNursePussyFuck:
-	say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if cocks of player > 0]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
+	say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if player is male]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
 	impregchance;
 	say "     She holds you tightly to her for a minute fox cum still flowing into you while her knot holds. Eventually she is able to pull out a flood of cum flowing from your pussy as she moves on to let you recover.";
 
 to say VixenHermNurseAssFuck:
-	say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your ass, making you groan in pain. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused and as it becomes more and more pleasurable[if cocks of player > 0], especially once she reaches around to stroke your pulsing shaft in return[end if]. You are soon pushing back into her thrusts trying to get her deeper inside of you. She gives you a few slaps on the rear with her clipboard, then drives her knot deep inside you, unleashing her hot seed[if cocks of player > 0]. This pushes you over the edge and causes you to cum as well[end if].";
+	say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your ass, making you groan in pain. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused and as it becomes more and more pleasurable[if player is male], especially once she reaches around to stroke your pulsing shaft in return[end if]. You are soon pushing back into her thrusts trying to get her deeper inside of you. She gives you a few slaps on the rear with her clipboard, then drives her knot deep inside you, unleashing her hot seed[if player is male]. This pushes you over the edge and causes you to cum as well[end if].";
 	mimpregchance;
 	say "     Held to you by her knot she holds herself on top of you for a minute cum flowing deep inside you. Eventually she is able to pull free and leaves you to rest and recover ass still leaking cum from her intensive care-taking.";
 
@@ -40,7 +40,7 @@ to say VixenNursePussyFuck:
 to say VixenNursePlayWithHer:
 	say "     Not wanting to waste such a fine prize, you shove her forward and force her to bend over one of the patient's beds. You run a hand over her skirted bottom, giving it a squeeze before pulling it up to reveal her tight rump[if vixgender is 1], her dripping puss and her ballsack[else] and her dripping puss[end if] to you. Keeping one on her back to keep her in place, you slide the other over her rear, then between her legs to tease her wet slit. She moans and wiggles her rear invitingly.";
 	say "     You push a pair of fingers into her slit, making her release a deliciously cute set of moans and yips. You pump those fingers into her again and again and she starts pushing back to meet them[if vixgender is 1]. You place your other hand on her cock, stroking over the herm's shaft, making her drip on the floor[end if]. Taking your time, you move your fingers over her sensitive flesh, teasing and caressing her.";
-	say "     You keep it up for quite some time, getting her good and riled up until finally she is driven over the edge. Her pussy clamps down around your fingers and her inner walls quiver as her juices soak your hand and her thighs[if vixgender is 1]. Her cock throbs in your hand, unleashing its load onto the floor as you stroke her off[end if]. [if cunts of player > 0]Your free hand is meanwhile rubbing her tail between your legs, teasing your female slit until you cum as well and soak the soft fur in your juices [end if]. Quite pleased with yourself when you finish, you leave her passed out with her skirt up, showing any who pass what a state you've left the silver vixen in.";
+	say "     You keep it up for quite some time, getting her good and riled up until finally she is driven over the edge. Her pussy clamps down around your fingers and her inner walls quiver as her juices soak your hand and her thighs[if vixgender is 1]. Her cock throbs in your hand, unleashing its load onto the floor as you stroke her off[end if]. [if player is female]Your free hand is meanwhile rubbing her tail between your legs, teasing your female slit until you cum as well and soak the soft fur in your juices [end if]. Quite pleased with yourself when you finish, you leave her passed out with her skirt up, showing any who pass what a state you've left the silver vixen in.";
 	decrease libido of player by 5;
 
 to say VixenHermNurseRideHer:
@@ -60,28 +60,28 @@ to say LoseToVixenNurse:
 				say "[VixenFemNurseMaleScene]";
 			else:
 				say "[VixenFemNurseFemaleScene]";
-		else if cocks of player > 0:
+		else if player is male:
 			say "[VixenFemNurseMaleScene]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "[VixenFemNurseFemaleScene]";
 		else:
 			say "[VixenFemNurseFacesitting]";
 	else if vixgender is 1:
 		say "     The silver-furred vixen grins at you as she looks over her [if fightoutcome is 22]willing [end if]patient. Moving in close, she rubs her sexy body against yours, grinding her throbbing knotted erection against you even as she grabs your ass meaningfully. Knowing you're going to be mounted shortly by the horny vixen if you don't do anything, you consider trying to suck her off to satisfy her instead. Shall you attempt an [link]oral distraction (Y)[as]y[end link] or simply accept to let the herm [link]fuck you (N)[as]n[end link]?";
 		if the player consents:
-			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [if cunts of player > 0]her[else if cocks of player > 0]his[else]their[end if] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsack with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
+			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [if player is female]her[else if player is male]his[else]their[end if] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsack with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
 			let x be libido of player;
 			if fightoutcome is 22, increase x by 15; [submitted]
-			if cunts of player > 0, increase x by 15; [F/H]
+			if player is female, increase x by 15; [F/H]
 			if a random chance of x in 200 succeeds:
-				attempttowait;
+				WaitLineBreak;
 				say "     The vixen nurse, panting a little from her orgasm, takes in the scent of your arousal and smiles. Reminded of her initial plan, her cock starts to rise again. Getting hard in your mouth again. Lost in your lust, you help her along, licking and sucking it to restore her erection. With some help from you, soon she's up and ready to go again, which you are far more eager for than before.";
 				if player is herm:
 					if a random chance of 1 in 2 succeeds:
 						say "[VixenHermNurseAssFuck]";
 					else:
 						say "[VixenHermNursePussyFuck]";
-				else if cunts of player > 0:
+				else if player is female:
 					say "[VixenHermNursePussyFuck]";
 				else:
 					say "[VixenHermNurseAssFuck]";
@@ -91,12 +91,12 @@ to say LoseToVixenNurse:
 				say "     The vixen nurse, panting a little from her orgasm, pushes you off her spent shaft and straightens her uniform and grins as she places her clipboard in front of the bulge in her skirt. She grins and heads off, perhaps to find another vict... ah... patient in need of her special brand of TLC.";
 				increase libido of player by 15;
 				if libido of player > 100, now libido of player is 100;
-		else if cunts of player > 0:
-			say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if cocks of player > 0]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
+		else if player is female:
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if player is male]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
 			impregchance;
 			say "     She holds you tightly to her for a minute fox cum still flowing into you while her knot holds. Eventually she is able to pull out a flood of cum flowing from your pussy as she moves on to let you recover.";
 		else:
-			say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your ass, making you groan in pain. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused and as it becomes more and more pleasurable[if cocks of player > 0], especially once she reaches around to stroke your pulsing shaft in return[end if]. You are soon pushing back into her thrusts trying to get her deeper inside of you. She gives you a few slaps on the rear with her clipboard, then drives her knot deep inside you, unleashing her hot seed[if cocks of player > 0]. This pushes you over the edge and causes you to cum as well[end if].";
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your ass, making you groan in pain. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused and as it becomes more and more pleasurable[if player is male], especially once she reaches around to stroke your pulsing shaft in return[end if]. You are soon pushing back into her thrusts trying to get her deeper inside of you. She gives you a few slaps on the rear with her clipboard, then drives her knot deep inside you, unleashing her hot seed[if player is male]. This pushes you over the edge and causes you to cum as well[end if].";
 			mimpregchance;
 			say "     Held to you by her knot she holds herself on top of you for a minute cum flowing deep inside you. Eventually she is able to pull free and leaves you to rest and recover ass still leaking cum from her intensive care-taking.";
 	[value reset]
@@ -108,7 +108,7 @@ to say BeatTheVixenNurse:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 1;
@@ -119,13 +119,13 @@ to say BeatTheVixenNurse:
 	now sortorder entry is 2;
 	now description entry is "Play with her using your hand";
 	[
-	if cunts of player > 0 and vixgender is 1:
+	if player is female and vixgender is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride her cock";
 		now sortorder entry is 3;
 		now description entry is "Take her knotted cock on your own terms?";
 	[]
-	if cunts of player > 0 and vixgender is 1:
+	if player is female and vixgender is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her fuck your pussy";
 		now sortorder entry is 4;
@@ -215,54 +215,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Vixen Nurse"; [Name of your new Monster]
-   now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
-   now defeated entry is "[BeatTheVixenNurse]";
-   now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as the text "Your body is (your text)."]
-   now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]
-   now cock entry is "steely-gray vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Silvery fur covers his muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it becomes a slender and seductively curved one. You can feel your butt shift as it becomes a taut bubble butt, ripe for mounting. Your hands become paw-like, with little black claws at the tips of your fingers. You can hear cracks and pops as your ankle and foot changes, becoming digitigrade paws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it grows a soft, fluffy layer of silvery fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a floofy fox tail extends from your spine. It is covered in soft, silvery fur"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it takes on a steely-gray color. Changing shape, it becomes pointed at the glans with a knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 12;
-   now dex entry is 14;
-   now sta entry is 10;
-   now per entry is 12;
-   now int entry is 15;
-   now cha entry is 18;
-   now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now HP entry is 36;
-   now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-   now wdam entry is 5; [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
-   now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-   now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 4; [ Number of Breasts infection will give you. ]
-   now breast size entry is 4; [Size of breasts infection will try to attain ]
-   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;
-   now cunt width entry is 5;
-   now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
-   now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
-   [ These represent the new additions to the table of random critters ]
-   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-   now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
-   now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is false;
-   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "vixennurse"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Vixen Nurse"; [Name of your new Monster]
+	now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
+	now defeated entry is "[BeatTheVixenNurse]";
+	now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as "Your body is (your text)."]
+	now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "steely-gray vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Silvery fur covers his muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes a slender and seductively curved one. You can feel your butt shift as it becomes a taut bubble butt, ripe for mounting. Your hands become paw-like, with little black claws at the tips of your fingers. You can hear cracks and pops as your ankle and foot changes, becoming digitigrade paws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it grows a soft, fluffy layer of silvery fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a floofy fox tail extends from your spine. It is covered in soft, silvery fur"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it takes on a steely-gray color. Changing shape, it becomes pointed at the glans with a knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 12;
+	now dex entry is 14;
+	now sta entry is 10;
+	now per entry is 12;
+	now int entry is 15;
+	now cha entry is 18;
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 36;
+	now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
+	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 4; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 5;
+	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
+	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "vixennurse"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)
@@ -299,24 +298,24 @@ when play ends:
 		if humanity of player < 10:
 			say "     Falling to the instincts and reprogramming of the infection, you drift off into the city and eventual come to the city hospital. There you are taken in by the silvery vixen nurses of the hospital staff, feeling the urge to work alongside them. They welcome you happily, and lustfully, as do the other denizens of the large medical facility.";
 			if hospquest < 2:
-				if "Sterile" is not listed in feats of player and cunts of player > 0:
+				if "Sterile" is not listed in feats of player and player is female:
 					say "     After a particularly energetic romp with one of the jaguar orderlies, you become pregnant and are transferred to the maternity ward. There you tend to the hospital's cubs, adding your own litter to them and feeding the cute cubs from your bosom.";
-				else if cocks of player > 0:
+				else if player is male:
 					say "     Being a rare vulpine in their midst with a cock, you are quite popular with the female vixens and mate with many of them, adding many more cubs to the maternity ward to grow and add to the hospital's population.";
 				else:
 					say "     Between the strange, medical duties you and the others perform, you enjoy many an evening with the muscled jaguars that populate the hospital, never tiring of the feel of their cocks pounding into your hyper-sexualized body.";
 			else if hospquest < 13:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of one of his exploratory teams, letting you order around the jaguar orderlies as they capture new [']volunteers['] for his experiments.";
-				if cunts of player > 0:
+				if player is female:
 					say "     On a trip to the beach, you are ambushed by a crew of pirate sharks after the helicopter. Successfully boarding the craft, they disable the pilot and manage to deal with the orderlies only by sheer numbers. They are all dumped overboard into the sea while you are kept as booty. The sharks celebrate that evening with drink, song and sex, all eager to take a turn with you. Being treated by the good doctor for your duties, you resist physically transforming to become another shark, but your mind unravels again. You are remade into a vixen pirate, lover to this band of air pirates.";
 				else:
 					say "     During a mission to an old hotel on the outskirts of the red light district, your team is assaulted by a herd of powerful equines. The ferocious orderlies manage to hold their own, but you are dragged off. The horses spend many weeks trying to turn you into another equine slave for their brothel, but the treatment given to you by the mouse doctor holds enough to keep your body intact. But your mind does not fare as well and succumbs to the constant training they give you, turning you into a slutty, silver fox. You act as their medical staff, helping them with their conversions when needed and the rare injuries that are too much for the nanites. When not performing these infrequent duties, you are there to provide a change of pace to anyone looking for something a little different from the otherwise equine whorehouse.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Driven by your new instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember the experiences that lead you to know him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
-				if "Sterile" is not listed in feats of player and cunts of player > 0:
+				if "Sterile" is not listed in feats of player and player is female:
 					say ". You birth many bizarre, hybrid creatures from these matings";
 				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower";
-				if cunts of player > 0:
+				if player is female:
 					say ". It hurts you the most any time he takes you as a lover to slake his lust upon you. He is particularly cruel at these times, but you want it so badly from him and love it so much when your master fills you with his seed";
 				say ".";
 			else if hospquest is 13 and HP of doctor mouse is 2:
@@ -331,7 +330,7 @@ when play ends:
 			else:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of monitoring his test subjects with a pair of jaguars to act as your muscle. Obediently, you follow the mad doctor's orders, watching his [']volunteers['] and often using them as play-toys when he's done with them before sending them downstairs to the hospital proper to be assimilated into the staff[if Susan is in hidden lab]. Susan, as his assistant, is there with him to help you and reward you with lustful sex[end if].";
 				say "     When the time comes to leave the city, Dr Mouse takes you[if Susan is in hidden lab], Susan[end if] and several other of the staff to escape through the service tunnels under the hospital. Meanwhile the main body of the staff hold the hospital against the army with the helicopter running as an added diversion. You all escape out of the city and Dr Mouse sets up a new lab in secret. He begins selling off the fruits of his research to foreign powers and the growing factions of transformed creatures that form. He has you continue to monitor his test subjects for his ongoing experiments";
-				if cunts of player > 0:
+				if player is female:
 					say ". You also are honored with being the little mouse's personal sex-toy when he needs to unwind after a particularly exciting procedure";
 					if "Sterile" is not listed in feats of player:
 						say ". You are very proud when your belly grows full, swelling with his young";

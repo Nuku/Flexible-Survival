@@ -54,7 +54,7 @@ instead of resolving a pure pool:
 		say "Do you check out the situation?";
 		if player consents:
 			say "You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
-			if cocks of player > 0 and libido of player > 50:
+			if player is male and libido of player > 50:
 				if cockname of player is "Wyvern":
 					say "You could help resolve the situation by corrupting the pond yourself. Do you wish to?";
 					if the player consents:

@@ -37,10 +37,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Vulpogryph"; [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Vulpogryph"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "<***>";
-	now defeated entry is "[beatthevulpogryph]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetovulpogryph]"; [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beatthevulpogryph]"; [ Text when monster loses. ]
+	now victory entry is "[losetovulpogryph]"; [ Text when monster wins. ]
 	now desc entry is "[vulpogryphdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a crow. You have a black beak and sharp eyes, but a pair of vulpine ears as well";
 	now body entry is "an unusual amalgamation of corvid and vulpine. Your upper body is predominantly avian, with large wings at your back, taloned hands like a bird. Meanwhile, your lower body is more vulpine, with fox-like legs and footpaws";
@@ -66,7 +66,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]

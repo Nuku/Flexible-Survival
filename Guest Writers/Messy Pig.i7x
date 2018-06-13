@@ -22,9 +22,9 @@ to say messypigattack:
 	if anallevel is 3 or (anallevel is 2 and a random chance of 1 in 2 succeeds):
 		say "     The pig girl charges at you, and in your weakened state, you fall backwards, landing painfully on your butt. Before you can get up, the pig turns around and launches her fat ass right into your face, knocking you onto your back as her buttcheeks envelope your senses. Thick rolls of piggy fat squish into your face as she uses her heavy weight to keep you pinned down underneath her. You try to push the porker off, but your struggles are absorbed by the layers of meat, your captor oinking happily as she enjoys your struggles and the unintended rubbing. The repugnant aroma of the pig's sloppy living and her musk is all that you can smell, and the scent only grows stronger when the female swine grinds on your face. After a few moments of the pig mashing her sphincter into your mouth, you figure out what she wants, and with you unable to push the hefty animal away, you slowly stick your tongue into the puckered hole.";
 		say "     The horny female squeals in delight from your penetration, and she soon starts bouncing her thick butt to try and drive your tongue deeper into her. Your face is battered by her plump posterior, but thankfully, her fat ass hardly inflicts any pain and instead feels like being smothered by soft, but smelly, pillows. The unpleasant fragrance of the pig continues to permeate your senses, and although the stench remains unpleasant, her musk grows stronger and stokes your libido. It's hard to tell if her odor is making you horny or if you're getting desperate for fresh air, but you end up grabbing her flabby buttcheeks as you thrust your tongue as far as you can into her rear to try and hasten her release. Eventually, your rimjob brings the sow to her climax, and with a loud squeal, her backdoor squeezes your tongue as she splatters her femcum over your body.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     The pig girl charges at you one last time, and in your weakened state you fall backwards, landing painfully on your butt. The pig quickly pins you down with her heavy body. She turns, and your vision is filled with large, fat pig butt. Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out! Clearly, this creature has an appetite for your sex! She digs her snout deep as she laps at it greedily. You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face. Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell. After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.";
-	else if cocks of player > 0:
+	else if player is male:
 		say "     The pig girl charges at you one last time, and in your weakened state you fall backwards, landing painfully on your butt. The pig quickly pins you down with her heavy body. She turns, and your vision is filled with large, fat pig butt. Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about sucking your [cock of player] cock! Clearly, this creature has an appetite for your sex! She bobs her snout over your throbbing meat as she laps at it greedily. You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face. Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell. After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.";
 	else:
 		say "     The pig girl looks you over and huffs angrily at your bare groin. She gives you a hard bite on the hip and a kick with one of her cloven hooves. Apparently, you're not quite what she wants! She turns around, giving you an ample view of her large behind before she kicks some dirt and mud into your face. You cough and sneeze, only to be body-slammed by the hefty sow, crushing the air from your lungs and filling your vision with spots.";
@@ -40,7 +40,7 @@ to say messypigattack:
 
 
 to say beatthepig:
-	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and cocks of player > 0:
+	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and player is male:
 		say "     The pig, when realizing that the encounter is not going well, turns to make a run for it, but as you catch a glimpse of her wet pussy as she turns away, your porcine cock throbs with need.";
 		say "     [bold type]Do you have your way with the female swine?[roman type][line break]";
 		LineBreak;
@@ -69,12 +69,12 @@ When Play begins:
 	now attack entry is "[one of]The pig creature charges at you, slamming forcefully into your stomach and knocking the wind out of you![or]Chomp! The pig bites your arm. Perhaps disappointed in your taste, she backs off and prepares for another attack.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthepig]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[messypigattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[messypigdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "pudgy with a large pig's snout and two floppy ears";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "large, with copious amounts of heavy fat. Some would probably like your rotund figure, if it weren't for the wretched stench that it emits";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "a pinkish hue";[ skin Description]
-	now tail entry is "Your ass has reshaped to a ridiculous degree, with each plush cheek rivaling your own head. Last time you checked, you did have a tail, but with your now titanic tush, it's not such an easy task to get even a glimpse of your corkscrew piggy tail.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "";[ Cock Description, format as you have a 'size' (your text) cock]
+	now desc entry is "[messypigdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "pudgy with a large pig's snout and two floppy ears"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "large, with copious amounts of heavy fat. Some would probably like your rotund figure, if it weren't for the wretched stench that it emits"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "a pinkish hue"; [ skin Description]
+	now tail entry is "Your ass has reshaped to a ridiculous degree, with each plush cheek rivaling your own head. Last time you checked, you did have a tail, but with your now titanic tush, it's not such an easy task to get even a glimpse of your corkscrew piggy tail."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is ""; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel an odd feeling against your nose, as if invisible hands are molding and shaping it, as well as stretching it. Right before your eyes, you see your nose deform, becoming large and snout-like, perfectly matching that of a pig. Your ears can also be felt, changing into large and floppy versions of their former selves"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your stomach gurgles, and your body quickly starts to put on fat! Your frame billows with sudden and heavy fat, completely ruining your figure. There is a mildly unpleasant smell in the air after the change as well, and it does not take long to realize that it's you"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it tingles all over, its color shifting mildly. The change isn't too obvious at first, but you quickly realize that you're much pinker then you used to be"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -251,7 +251,7 @@ to MessyPigBind:
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
-			say "     Despite the tight, smelly space that you're trapped in, lust overwhelms you, and you [if cocks of player > 0]jerk yourself off[else if cunts of player > 0]play with your clit[else]rub your crotch[end if]. Eventually, your body quivers when you reach your climax[if cocks of player > 0], your cum adding to the messy confines[else if cunts of player > 0], your femcum adding to the messy confines[end if]. As you come down from your high, you can't help but shake the feeling that even though your lust had been satisfied, it's also harder to resist the pig's stomach.[line break]";
+			say "     Despite the tight, smelly space that you're trapped in, lust overwhelms you, and you [if player is male]jerk yourself off[else if player is female]play with your clit[else]rub your crotch[end if]. Eventually, your body quivers when you reach your climax[if player is male], your cum adding to the messy confines[else if player is female], your femcum adding to the messy confines[end if]. As you come down from your high, you can't help but shake the feeling that even though your lust had been satisfied, it's also harder to resist the pig's stomach.[line break]";
 			infect;
 			LineBreak;
 			now struggleatt is 0;

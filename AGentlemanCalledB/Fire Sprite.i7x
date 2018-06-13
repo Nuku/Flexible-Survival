@@ -147,7 +147,7 @@ to say beatFireSpritegirl:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
 		now description entry is "have the sprite eat you out";
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
@@ -246,8 +246,8 @@ to say FireSpritedesc:
 		say "     The sprite before you is not much more than two feet tall, with bright orange flesh and slim features. While his exposed six inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] hair seems to shimmer as he moves, flickering like a fire.";
 		say "     Small wisps of flame occasionally flare from his exposed flesh, increasing in frequency as they seem to run down his arm, pooling in his palm as a ball of flame, which he raises threateningly as he approaches you with a maniacal grin.";
 	now sex entry is "Female";
-	if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
-	if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+	if "Male Preferred" is listed in the feats of player, now sex entry is "Male";
+	if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";
 
 Section 2 - Monster Insertion
 
@@ -257,53 +257,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Fire Sprite";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The fire sprite [one of]prances about wildly, distracting you long enough to sneak in a quick strike[or]strikes you with a fiery fist[or]kicks you in the shin with a flaming foot[or]weaves under your defenses, landing a sharp blow[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheFireSprite]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoFireSprite]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[FireSpritedesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire.";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a small, energetic sprite";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed";	[ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "glowing orange human-like";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it fills with a strange, unnatural heat. [if scalevalue of player > 1]The world seems to grow around you and you[else]You[end if] take on a slim, human-like shape";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you begin sweating, heat seeming to radiate off you as your flesh takes on a smooth orange appearance";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it becomes tight and firm";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it begins to radiate with warmth, taking on a warm orange hue";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 10;					[ These are now the creature's stats... ]
-	now dex entry is 17;					[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;					[ These values may be used as part of alternate combat.]
+	now name entry is "Fire Sprite"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "The fire sprite [one of]prances about wildly, distracting you long enough to sneak in a quick strike[or]strikes you with a fiery fist[or]kicks you in the shin with a flaming foot[or]weaves under your defenses, landing a sharp blow[at random]!"; [ Successful attack message ]
+	now defeated entry is "[beattheFireSprite]"; [ Text when monster loses. ]
+	now victory entry is "[losetoFireSprite]"; [ Text when monster wins. ]
+	now desc entry is "[FireSpritedesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire."; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a small, energetic sprite"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "glowing orange human-like"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it fills with a strange, unnatural heat. [if scalevalue of player > 1]The world seems to grow around you and you[else]You[end if] take on a slim, human-like shape"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "you begin sweating, heat seeming to radiate off you as your flesh takes on a smooth orange appearance"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "it becomes tight and firm"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it begins to radiate with warmth, taking on a warm orange hue"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 15;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 30;						[ The monster's starting HP. ]
-	now lev entry is 3;					[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;					[ Monster's average damage when attacking. ]
-	now area entry is "Capitol";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;					[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 6;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 3;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;				[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;					[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 9;	[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 50;				[ Target libido the infection will rise towards. ]
-	now loot entry is "glowing ember";					[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 1;					[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slim[or]lithe[or]small[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "elfin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "FireSprite";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 30; [ The monster's starting HP. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Capitol"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 3; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 9; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 50; [ Target libido the infection will rise towards. ]
+	now loot entry is "glowing ember"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]slim[or]lithe[or]small[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "elfin"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "FireSprite"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -344,7 +343,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		now P is 1;
 		follow the player injury rule;
 		say "You are [descr].";
-		attempttowait;
+		WaitLineBreak;
 
 Section 4 - Glowing Ember
 
@@ -358,7 +357,7 @@ The usedesc of glowing ember is "[glowingemberuse]";
 
 to say glowingemberuse:
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
-	attempttowait;
+	WaitLineBreak;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 
 the scent of glowing ember is "The small ember smells faintly smoky.".
@@ -369,7 +368,7 @@ when play ends:
 	if bodyname of player is "Fire Sprite":
 		if humanity of player < 10:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
-			if cocks of player > 0:
+			if player is male:
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
 			if ( player is female and "Sterile" is not listed in feats of player ) or player is mpreg_ok:
 				say "     Eventually you happen upon an excited male sprite who is diligently working to set a large structure aflame. After a short time the structure is ablaze around you, and he is atop you, filling your needy body with his hot seed, his thrusts imbued with a burning passion that easily matches the inferno around you.";

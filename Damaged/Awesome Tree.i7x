@@ -73,7 +73,7 @@ to say awesome vict:
 	say "As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
 
 to say awesome desc:
-	setmongender 0;		[creature is neuter-X]
+	setmongender 0; [creature is neuter-X]
 	now Awesome_boredom is 0;
 	choose row monster from the table of random critters;
 	if Awesome_forcesex is 0:
@@ -99,17 +99,17 @@ When Play begins:
 	now attack entry is "[awesome attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[awesome defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[awesome vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[awesome desc]";[ Description of the creature when you encounter it.]
-	now face entry is "completely human";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "human-looking";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock.]
+	now desc entry is "[awesome desc]"; [ Description of the creature when you encounter it.]
+	now face entry is "completely human"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "human-looking"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "[if awesome_sex is 2]your hips seem to return to human male normal[else]your rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;
 	now dex entry is 15;
 	now sta entry is 15;
@@ -117,31 +117,30 @@ When Play begins:
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 60;			[ How many HP has the monster got? ]
-	now lev entry is 7;			[ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 3;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 2;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10;		[ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 2;		[ Width of female sex infection will try and give you ]
-	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "awesomest fruit";			[ Loot monster drops, ]
-	now lootchance entry is 100;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now HP entry is 60; [ How many HP has the monster got? ]
+	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
+	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 2; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 2; [ Width of female sex infection will try and give you ]
+	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now loot entry is "awesomest fruit"; [ Loot monster drops, ]
+	now lootchance entry is 100; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]perfect[or][if player is female]lovely[else]handsome[end if][at random]";
-	now type entry is "human";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Monster Heat

@@ -55,7 +55,7 @@ an everyturn rule:
 				now withdrawel is 0;
 				now addicted is 0;
 				increase the strength of the player by 7;
-				increase the dexterity of the player by 5;[leaves you worse off]
+				increase the dexterity of the player by 5; [leaves you worse off]
 				say "You have recovered from the drug.";
 
 

@@ -55,7 +55,7 @@ to say fsdf attack:
 		if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
 			if player is submissive:
 				if a random chance of fsddom in 9 succeeds:
-					if cocks of player > 0 and a random chance of 1 in 2 succeeds:
+					if player is male and a random chance of 1 in 2 succeeds:
 						say "     She seems particularly affectionate to one of her own kind, nipping you playfully before she moves to prepare you. No doubt this dragoness has been the subject of your submissive needs before. She forces you onto your side -- to which you comply -- before you watch as her thick tongue caresses[if cocks of player > 1] one of[end if] your emergent, [cock size desc of player] cock[smn].";
 						say "     Like clockworks, the beast's wanton affection arouses you with little difficulty, much to her cooing approval. She continues to suck on your [cock size desc of player] rod for a brief while longer before she moves on. Having gotten the hang of this, she uses her tail to aim[if cocks of player > 1] one of[end if] your dick[smn] into the needy hole, resting partially on you as she slowly pushes its head into her soft cunt, [if cock length of player >= 18]faintly churring in pleasure before she acclimates to your size[else]cooing softly in approval as it descends into the folds of her flesh[end if].";
 						say "     From here, she makes an earnest effort to use you, rocking her large body against your[if cock length of player > 15] thick[end if] meat with an increasingly reckless fervor, occasionally nipping you an aggressive show of passion before she sings deeply into the open air, climaxing against your hard organ. Much to the whim of your mistress's body, her pleasure pushes you to your own ecstasy, [if cocks of player > 2]causing your exposed members to unload against both your frames as you pump[else if cocks of player is 2]causing your exposed member to unload against both your frames as you pump[else]pumping[end if] her voracious hole full with your [cum load size of player] load.";
@@ -63,12 +63,12 @@ to say fsdf attack:
 					   else:
 						say "     Briefly sharing affection with one of her kind, she seems inclined to nip and tease you, [one of]no doubt this being one who's had fun using you before[or]eager to abuse you already[stopping]. Firmly, she pins you to the ground with her body, shoving her exposed cunt against your head and very insistent on having you satisfy her.";
 						say "     Driven by your submissive inclinations, you eagerly comply with the dragoness's command, your thick tongue teasing the portal's soft entrance. Rumbling softly, she revels in subjecting you to the lowly task of attending her tainted need.";
-						say "     Tightly presses her hole against you, you're immediately your explore her depths with your slick organ, its soft folds parting to accommodate your writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, [if cunts of player > 0]aching cunt[sfn] left unattended[else if cocks of player > 0]throbbing, [cock size desc of player] dick[smn] left unattended[else]body aching with insatiable need[end if]. All the while the beast groans and mocks you for your embarrassing need, often nipping you into working harder, until the rate of your slippery affections rise to a feverish pace, singing lowly as you're driven by an overwhelming desire to pleasure this aquatic mistress.";
+						say "     Tightly presses her hole against you, you're immediately your explore her depths with your slick organ, its soft folds parting to accommodate your writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, [if player is female]aching cunt[sfn] left unattended[else if player is male]throbbing, [cock size desc of player] dick[smn] left unattended[else]body aching with insatiable need[end if]. All the while the beast groans and mocks you for your embarrassing need, often nipping you into working harder, until the rate of your slippery affections rise to a feverish pace, singing lowly as you're driven by an overwhelming desire to pleasure this aquatic mistress.";
 						say "     Much to your blind fervor's joy, you're rewarded with your endeavors when you feel her sexual fluids flood your maw, beast's passage tightening around your tongue as she roars out in orgasm, leaving you to simply writhe in unattended need.";
 						say "     Eventually, she crawls off you, satisfied with your offering, she gives you a cheeky nip before she turns to dive back into the waters. As you recover before setting off, you remind yourself of the now-apparent, long-term implications of forcing such a normally submissive creature into a more dominant role...";
 						increase libido of player by 1;
 				else:
-					if cocks of player > 0:
+					if player is male:
 						say "     She seems particularly affectionate to one of her own kind, and inevitably pulls away. Facing away from you, you hear her softly sing, offering you to overtake her, a plea that is completely lost on you. Try as she might she can't compel you to mount her, an apparently mental quirk preventing you from fulfilling such a dominant role on a creature who [if HP of player > 0]you've submitted to outright[else]has bested you[end if]. This doubtlessly flusters the dragoness, and she's forced to take affairs into her own flippers. Returning, she forces you onto your side -- to which you comply -- before you watch as her thick tongue caresses[if cocks of player > 1] one of[end if] your emergent, [cock size desc of player] cock[smn].";
 						say "     Her lewd endeavors need only be brief to bring you to full arousal, continuing to suck on your [cock size desc of player] rod for a while longer before she relents. Clearly not used to this, she awkwardly uses her tail to aim [if cocks of player > 1]one of your dicks[else]your dick[end if] into the needy hole, resting partially on you as she slowly pushes its head into her soft cunt, [if cock length of player >= 18]faintly churring in pleasure before she acclimates to your size[else]cooing softly in approval as it descends into the folds of her flesh[end if].";
 						say "     From here, she makes an earnest effort to use you, rocking her large body against your[if cock length of player > 15] thick[end if] meat with an increasingly reckless fervor, occasionally nipping you an aggressive show of passion before she sings out loudly, climaxing against your hard organ. Oddly, her song's pitch is knocked down an octave, and its powerful influence tied with the clenching of her stuffed portal is more than enough to force you into climaxing yourself, regardless of how far along you may have been, [if cocks of player > 2]and causing your exposed members to unload against both your frames as you pump[else if cocks of player is 2]and causing your exposed member to unload against both your frames as you pump[else]pumping[end if] her voracious hole full with your [cum load size of player] load.";
@@ -76,22 +76,22 @@ to say fsdf attack:
 					else:
 						say "     Briefly sharing affection with one of her kind, she sniffs you over before finally relenting. Gently, she pins you to the ground with her body, facing her exposed cunt against your head; what she intends to have you do quite apparent.";
 						say "     Driven by your submissive inclinations, you comply with such gusto that it takes the dragoness aback, your thick tongue teasing the portal's soft entrance. Cooing softly, she seems to rather enjoy having her need be attended to in such an eager manner, moreso than you imagine she thought she would...";
-						say "     She presses her hole more firmly against you, coaxing your explore her depths with your slick organ, its soft folds parting to accommodate your writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, [if cunts of player > 0]aching cunt[sfn] left unattended[else]body aching with insatiable need[end if]. All the while the beast grows more and more aggressive in asserting her need, occasionally nipping you into working harder, until the rate of your slippery affections rise to a feverish pace, singing as you're driven by an overwhelming desire to pleasure this aquatic mistress.";
+						say "     She presses her hole more firmly against you, coaxing your explore her depths with your slick organ, its soft folds parting to accommodate your writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, [if player is female]aching cunt[sfn] left unattended[else]body aching with insatiable need[end if]. All the while the beast grows more and more aggressive in asserting her need, occasionally nipping you into working harder, until the rate of your slippery affections rise to a feverish pace, singing as you're driven by an overwhelming desire to pleasure this aquatic mistress.";
 						say "     Much to your blind fervor's joy, you're rewarded with your endeavors when you feel her sexual fluids flood your maw, her passage tightening around your tongue as she cries out in orgasm, leaving you to simply writhe in unattended need.";
 						say "     Eventually, she crawls off you, satisfied with your offering, she gives you a cheeky nip before she turns to dive back into the waters. As you recover before setting off, you contemplate the dragoness's strange change in demeanor, and the long-term implications of forcing such a normally submissive creature into a more dominant role...";
 						increase libido of player by 1;
 				  fsdfdomshift;
 			else: [Non-Submissive Conventional]
-				if cocks of player > 0:
-					say "     She seems particularly affectionate to one of her own kind, and inevitably pulls away. Facing away from you, you hear her softly sing, coaxing you into overtaking her. Driven by your increasingly feral mind[if HP of player < 1] and too exhausted to fight for control[end if], you slowly pull yourself on top of dragoness, much to the beast's cooing approval. You thrust impotently against her scaled haunch before you're sufficiently hard, carefully moving to guide[if cocks of player > 0] one of[end if] your [cock size desc of player] cock[smn] into her hungry cunt.";
+				if player is male:
+					say "     She seems particularly affectionate to one of her own kind, and inevitably pulls away. Facing away from you, you hear her softly sing, coaxing you into overtaking her. Driven by your increasingly feral mind[if HP of player < 1] and too exhausted to fight for control[end if], you slowly pull yourself on top of dragoness, much to the beast's cooing approval. You thrust impotently against her scaled haunch before you're sufficiently hard, carefully moving to guide[if player is male] one of[end if] your [cock size desc of player] cock[smn] into her hungry cunt.";
 					say "     [one of]You're initially gentle in forcing it in, the dragoness cooing softly as your rod slowly descends[or]Flared by a tinge of feral-charged aggression, you show your dominion by thrusting into her with sudden and reckless abandon, she wails softly in such abrasive pleasure as your drill your rod deep[at random] into the folds of her flesh. Your pace rapidly ascends as you fuck the dragoness, each thrust forcing and ecstatic wail out from the beast's lips, eager hole squeezing tightly around your[if cock length of player > 15] substantial,[end if] throbbing organ.";
 					say "     Very suddenly, she cries out, reveling in being rammed [if HP of player > 0]underneath a virile beast such as you[else]by someone regardless of having bested them in combat[end if]. The sound of her voice, along with her clenching hole, is enough to make quick work of you, forcing you to roar out in pleasure as you finally fire off your [cum load size of player] load into the dragoness.";
 					say "     This is more than enough to trigger her own climax, her greedy hole milking every last drop of seed you have to offer her[if cock width of player > 20], even as she visibly bloats to abide it[end if]. Eventually, you manage to pull yourself free of her, the dragoness turning to offer you some soft affections before she descends back into the depths of the ocean. As you recover and regain your clarity, you see her look back at you from within the water, perhaps hoping to see you again.";
 				else:
 					say "     Briefly sharing affection with one of her kind, she sniffs you over before finally relenting. Gently, she pins you to the ground with her body, facing her exposed cunt against your head; what she intends to have you do quite apparent.";
 					say "     [if HP of player > 0]Sheepishly, you compel yourself[else]Hard-pressed to oblige her, her persistent smearing eventually compels you[end if] into obliging the dragoness's need, your thick tongue teasing the portal's soft entrance. Cooing softly, she writhes and trembles with anticipation, eager for her need to be attended to.";
-					say "     Eventually, you drive yourself to explore her depths with your slick organ, its soft folds parting to accommodate the writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, and you soon feel her own tongue [if cunts of player > 0]sampling your taste, the appendage showing no restraint in reciprocating your attendance[else]caresses your side, doing little to assuage your insatiable need[end if]. As your pace picks up, so too does her affection, until the rate of your slippery affections rise to a feverish pace, singing as you're driven by an overwhelming desire to satisfy your wanton desire.";
-					say "     Much to your blind fervor's joy, you're rewarded with your endeavors when you feel her sexual fluids flood your maw, her passage tightening around your tongue as she cries out in orgasm, [if cunts of player > 0]your own cunt[sfn] aching with bliss as this is enough to push you over the edge as well[else]leaving you to simply writhe in unattended need[end if].";
+					say "     Eventually, you drive yourself to explore her depths with your slick organ, its soft folds parting to accommodate the writhing intrusion. Tasting her emergent juices, you too can't help but be aroused, and you soon feel her own tongue [if player is female]sampling your taste, the appendage showing no restraint in reciprocating your attendance[else]caresses your side, doing little to assuage your insatiable need[end if]. As your pace picks up, so too does her affection, until the rate of your slippery affections rise to a feverish pace, singing as you're driven by an overwhelming desire to satisfy your wanton desire.";
+					say "     Much to your blind fervor's joy, you're rewarded with your endeavors when you feel her sexual fluids flood your maw, her passage tightening around your tongue as she cries out in orgasm, [if player is female]your own cunt[sfn] aching with bliss as this is enough to push you over the edge as well[else]leaving you to simply writhe in unattended need[end if].";
 					say "     Eventually, she crawls off you, her tainted need satisfied for now. Briefly attending to you, she eventually turns to dive back into the waters. It takes you a while to recover from the whole ordeal, before setting off once more.";
 		else:
 			say "     Carefully, she forces you onto your back by her snout, pinning you down in a same manner. She gives you a cute and affectionate look, much-maligned by her paradoxically bestial form[if intelligence of player > 14]. You wager she's trying to sway you into compliance by appearing non-threatening, to little success[else]. Uncertain of her intent, you remain cautious and wait[end if].";
@@ -99,15 +99,15 @@ to say fsdf attack:
 				If FFSDUBM is false:
 					say "     Suddenly, she appears to become confused about these circumstances, some otherworldly influence throwing her off-kilter, going so far that she almost seems to have lost track of where she is; however, this absent-mindedness is only momentary before she snaps back to attention, feral eyes aglint with a new, twisted intent. Her affections become more fervent and insistent. Slick, dripping tongue absolutely drenching your smaller form with her salty saliva before she finally relents.";
 					say "     By now, you're clearly aroused from these tainted fluids, but she doesn't even remotely seem interested in that. Rather, she would instead pull herself over you, soft underbelly grinding against your lubricated, [bodydesc of player] frame before she stops, showing no desire to spare you of her massive weight, her reasoning by now very clear as you feel yourself pushed past the lips of her aquatic vent.";
-					say "     Unable to contest her new desires, she begins to grind herself against the sand, her portal tightening against your wholly engulfed frame, pulling you deeper into her slick depths. This overwhelming heat; this hungry, demanding tunnel, it[if cocks of player > 0 or cunts of player > 0]'s more than enough to set you off, almost immediately, sealing your fate when this is all that this dragoness needs to find bliss herself[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form...";
+					say "     Unable to contest her new desires, she begins to grind herself against the sand, her portal tightening against your wholly engulfed frame, pulling you deeper into her slick depths. This overwhelming heat; this hungry, demanding tunnel, it[if player is not neuter]'s more than enough to set you off, almost immediately, sealing your fate when this is all that this dragoness needs to find bliss herself[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form...";
 					now FFSDUBM is true;
 				else:
 					say "     You see into her eyes and you know of her twisted intent. [if HP of player is 0 and player is not submissive]Your better judgment drives you to try and flee, but her hold on you is absolute; you will be subject to her tainted verdict regardless. In spite of her assertion, she offers what she doubtlessly now perceives as her offspring plenty of affection, though her thick, fish-smelling tongue's endeavors are dual in purpose, preparing you for what is to follow[else]Overwhelmed by her maternal pull, she need only turn sideways, exposing her body's inviting lips to you, to compel you to them. Your tongue slathering this hole with affection as she reciprocates across your [bodydesc of player] frame, now doubtlessly perceiving you as her offspring. What better judgment you might of had is deflected by the reality of your lack of choice[end if].";
 					say "     Blatantly aroused as you are, her satisfaction is met, [if HP of player is 0 and player is not submissive]forcing herself down on you once more, her body's inviting lips embracing your smaller form before you disappear entirely under her[else]compelling you to enter her hungering portal, though you might only comply with your head and torso before she returns upright once more, engulfing the remainder of you with ease[end if].";
-					say "     Wailing songs of her perverse need muffled within these confines, her portal tightens against your wholly engulfed frame, pulling you deeper into her slick depths as she seeks her wanton reprieve. This overwhelming heat; this hungry, demanding tunnel, now all-too familiar to you, it[if cocks of player > 0 or cunts of player > 0]'s but a moment before it elicits your orgasm, sealing your fate when this is all that this dragoness needs to find bliss[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form, and doubtlessly happy that you are hers...";
-				attempttowait;
+					say "     Wailing songs of her perverse need muffled within these confines, her portal tightens against your wholly engulfed frame, pulling you deeper into her slick depths as she seeks her wanton reprieve. This overwhelming heat; this hungry, demanding tunnel, now all-too familiar to you, it[if player is not neuter]'s but a moment before it elicits your orgasm, sealing your fate when this is all that this dragoness needs to find bliss[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form, and doubtlessly happy that you are hers...";
+				WaitLineBreak;
 				if (player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds:
-					Say "     In due time you come to, the thick, hard walls of an egg surrounding you; however, you feel yourself slightly tumbling and shifting about, and when you attempt to break free of the egg you find yourself unable to. The heat is overwhelming, [if cocks of player > 0 or cunts of player > 0]your arousal quickly rising once more, driving you to pleasure yourself uncontrollably within these confines, making a further mess of yourself[else]your arousal quickly rising once more, forced to abide the torment of these demented confines[end if].";
+					Say "     In due time you come to, the thick, hard walls of an egg surrounding you; however, you feel yourself slightly tumbling and shifting about, and when you attempt to break free of the egg you find yourself unable to. The heat is overwhelming, [if player is not neuter]your arousal quickly rising once more, driving you to pleasure yourself uncontrollably within these confines, making a further mess of yourself[else]your arousal quickly rising once more, forced to abide the torment of these demented confines[end if].";
 					infect;
 					infect;
 					say "     After what seems like forever, you can see the familiar light of the outside coming through the translucent walls of your prison, compelling you to finally break free, and once you acclimate to the open air it's made very clear -why- you were forced within those confines longer than natural";
@@ -162,7 +162,7 @@ to say fsdf attack:
 				else:
 					say "     In due time you come to, greeted by the thick and hard confines of an egg, light from the outside spilling through the translucent surface and compelling you to break yourself free. Exposed to the salty air once more, you were thankfully left on the beach, and you clean yourself off before gathering your belongings as they are, strewn across the beach.";
 					infect;
-			else if cocks of player > 0 and cock length of player > 15 and a random chance of 3 in 4 succeeds:
+			else if player is male and cock length of player > 15 and a random chance of 3 in 4 succeeds:
 				say "     You are pushed onto your back, exposing your [if cocks of player > 2]numerous, [cock size desc of player] cock[else if cocks of player is 2]dual, [cock size desc of player] cocks[else][cock size desc of player] cock[end if] to the beast. [if scalevalue of player < 4]She chirps at you, the tone of which would infer that your oddly disproportionate anatomy amuses her, though not in a manner to suggest it's not to her liking, indicated when her tongue meets to caress along the length of your impressive rod[smn], her strangely arousing saliva almost immediately drawing you to attention[else]She draws out her tongue to caress along the length of your partially aroused rod[smn], its strangely arousing saliva almost immediately rendering you hard.[run paragraph on] She seems happy to encounter a creature even remotely close to her physical size, and if her infectious state didn't so readily betray her you'd say she prefer the variety, given her eagerness to make use of you[end if].";
 				say "     Satisfied, her tongue retreats from your dick[smn]. Illustrating a clear intent to mount you, she carefully moves to crawl over your [bodytype of player] form. [if scalevalue of player < 4]Soft underbelly caressed along your diminutive frame, she at least shows enough care to not put a significant amount of weight on you, lest you find yourself crushed under her immense mass[else]Soft underbelly grinding across your form as she positions herself, you find that -- even with your size remotely in her league -- she's extremely heavy.[run paragraph on] Your immediate discomfort quickly made apparent to the dragoness, she makes some effort to shift some weight off you.[run paragraph on] In any case, at least the sand softens the pressure, if only by a bit[end if].";
 				say "     Your vision is obviously obscured by the beast's expansive girth, though your sense of touch is more that sufficient a guide as you feel her cunt descend upon [if cocks of player > 1]one of your [cock size desc of player], throbbing tools[else]your [cock size desc of player], throbbing tool[end if], an act that barely seems to phase her as she manages to envelope the impressive thing with little to no effort. Cooing softly in a show of approval [if scalevalue of player < 4]down to[else]towards[end if] you, she relents only briefly before her massive form slowly begins to bob against its length.";
@@ -170,7 +170,7 @@ to say fsdf attack:
 				say "     She's not done with you yet, however; as she milks you dry -- driven by her own, still-persisting need -- you feel her underside strike your beleaguered form with greater zeal, after every descent. The light of your lust reignited in the midst of this feral wildfire, and you are forced to climax again and again until the dragoness finally finds ecstasy, her song's pitch peaking along with her, [if scalevalue of player < 4], the intensity enough to knock you out[else]the intensity of which nearly knocking you out[end if].";
 				say "     [if scalevalue of player < 4]When you come to, you find the sea dragoness long gone and yourself half-buried in the epicenter of an embarrassing crater of sand.[run paragraph on] It[else]Eventually, she relinquishes her body's hold on you.[run paragraph on] She chirps happily at you, not really regarding the fact that you're partially buried in the sand from her weight, before she dives back into the water.[run paragraph on] You're still disoriented from the whole thing so it[end if] takes you awhile to pry yourself from the ground, find your things, and limp off back from whence you came.";
 			else if a random chance of 2 in 3 succeeds or lastfsdfeeding - turns < 8:
-				if cocks of player > 0:
+				if player is male:
 					say "     With a soft chirp, you watch as her thick tongue moves to caress your exposed, [cock size desc of player] dick[smn]. The slick, writing appendage finding little difficulty in coaxing you into arousal, she promptly engulfs [if cocks of player > 1]one of them[else]it[end if] within the depths of her eager maw [if cock length of player < 14]immediately, your member wholly consumed lost in her depths[else]with only marginal difficulty, her elongated neck illustrating a lewd practicality by hilting your impressive member inside her voracious hole[end if].";
 					say "     You can't help but be overwhelmed by the sensation of her intense attendance, saliva[one of] strangely[or][stopping] potent in its ability to arouse you. [if cock length of player < 10]No doubt as a result of this, combined with the fact that her maw is simply too large to articulately pleasure someone of your diminutive size, she often disengaged from her oral fixation to drag her slippery appendage across your torso and face before it returns back to your member[else]Her slippery appendage firmly wrapped around your sizeable tool, she bobs against the organ with fervent determination, her muffled songs of approval beckoned from her massive form strangely adept at eliciting further pleasure[end if]. [if scalevalue of player < 4]Compelled by feral greed, her maw remains agape around your lower torso, which by now is absolutely drenched by her drool, her heated breath shielding you from the cold of the open, ocean air[else]The force of her avaricious maw often pushes your similarly sizeable form along the sand, clearly not intent on relinquishing your cock until it sates her tainted hunger[end if].";
 					if cock width of player > 20:
@@ -178,7 +178,7 @@ to say fsdf attack:
 					else:
 						say "     The effect of both her carnal affections and infectious influence drive you into a blinding lust frenzy, until you're lost in a furious haze of blissful release, the greedy dragoness eager to drain you of every last drop of your [cum load size of player] load[if cocks of player > 2], her tongue occasionally moving to lick up what seed might emerge from your neglected members[else if cocks of player is 2], her tongue occasionally moving to lick up what seed might emerge from your neglected member[end if].";
 					say "     Satisfied with milking her victim dry. She sets you off before retreating back into the waters. After all that, you might have figured yourself as coming out on top if it were not at the expense being a saliva-smeared, fish-smelling, and lust-addled mess afterwards.";
-				else if cunts of player > 0:
+				else if player is female:
 					say "     She regards you with a soft rumble before you see her tongue move to caress [if cunts of player > 1]one of your [bodytype of player] cunts[else]your [bodytype of player] cunt[end if]. The thick organ sends shivers down your spine as it leaves a trail of saliva across the vulnerable portal. [if cunt length of player < 5]Its initial probing makes it abundantly clear that the oversized appendage isn't going to fit no matter how hard she might try, and you take reprieve in knowing that she isn't going to challenge that fact. She instead opts to stimulate you externally by grinding her tongue's slimy surface against your exposed hole[else]She is at least gentle as the saliva-slicked appendage probes the soft folds of your exposed hole, the dragoness slow and drawn out in its motion as her tongue gradually floods the depths of your vaginal passage. Writhing in uncontrollable pleasure, the beast no doubt finds your display rather amusing to her[end if].";
 					say "     [if scalevalue of player < 4]Driven to so readily violate you, the massive creature partially engulfs your pelvic region within her moist maw, her heated breath wafting up to wash over you as she makes a complete mess of your lower torso[else]Maintaining her irreverent assault, you frequently feel her draconic snout grind itself against your vulnerable form in the midst of her lewd affections, firmly enough to start pushing you deeper into the sand underneath you[end if]. The touch of her tainted saliva exasperating the sensation of her tongue's continued attendance, it's more than enough to very rapidly bring you to climax against the worming appendage. [if cunt length of player < 5]Greedily, she licks up your sexual fluids, her scaled lips gently sucking against the [bodytype of player] portal to coax you into offering her more. This voracious attitude, mixed with your heightened libido, is more than enough to cause you to orgasm a second time, and then a third; the dragoness relentless in cleaning you out[else]The taste of your sexual fluids only encourages her to ram you with the slick organ harder, bringing in its wake a chain of orgasms, the next more blindingly intense than the other. You nearly pass out before she finally relents[end if].";
 					say "     Satisfied with sucking you dry -- stained with the beast's saliva notwithstanding -- she pulls herself from you. She noses you off in teasing affection before she crawls back into the ocean's depths from whence she came. You're so disoriented from the occurrence that it takes you awhile to gather your mind and stand back up, running off.";
@@ -216,12 +216,12 @@ to say fsdfeeding:
 		say "     Complying, you open your mouth as she descends upon you, promptly meeting it with a rush of the fish matter, offering faint chirps of approval as she feeds you. Happy that you don't cause her any trouble this time, she nuzzles you affectionately after she finishes, her tongue cleaning up any mess of fish from your face--not to much benefit as it's merely replaced with an excessive heaping of her saliva. Inevitably, she departs, letting you return to your prior endeavors.";
 	decrease hunger of player by a random number between 10 and 24;
 	now lastfsdfeeding is turns;
-	infect;	[additional infection]
+	infect; [additional infection]
 
 
 To say fsdf loss:
-	if player is not submissive and ( libido of player - humanity of player > 45 or ( libido of player - humanity of player > 60 and "Dominant" is listed in feats of player ) ) and ( bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness" ) and cocks of player > 0:
-		say "     Just as you drive the dragoness back, the creature lets out a powerful cry that compels your twisted psyche to yield. Turning away from you, you hear her softly sing, coaxing you into overtaking her. Driven by your increasingly feral mind you slowly pull yourself on top of dragoness, much to the beast's cooing approval. You thrust impotently against her scaled haunch before you're sufficiently hard, carefully moving to guide[if cocks of player > 0] one of[end if] your [cock size desc of player] cock[smn] into her hungry cunt.";
+	if player is not submissive and ( libido of player - humanity of player > 45 or ( libido of player - humanity of player > 60 and "Dominant" is listed in feats of player ) ) and ( bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness" ) and player is male:
+		say "     Just as you drive the dragoness back, the creature lets out a powerful cry that compels your twisted psyche to yield. Turning away from you, you hear her softly sing, coaxing you into overtaking her. Driven by your increasingly feral mind you slowly pull yourself on top of dragoness, much to the beast's cooing approval. You thrust impotently against her scaled haunch before you're sufficiently hard, carefully moving to guide[if player is male] one of[end if] your [cock size desc of player] cock[smn] into her hungry cunt.";
 		say "     [one of]You're initially gentle in forcing it in, the dragoness cooing softly as your rod slowly descends[or]Flared by a tinge of feral-charged aggression, you show your dominion by thrusting into her with sudden and reckless abandon, she wails softly in such abrasive pleasure as your drill your rod deep[at random] into the folds of her flesh. Your pace rapidly ascends as you fuck the dragoness, each thrust forcing and ecstatic wail out from the beast's lips, eager hole squeezing tightly around your[if cock length of player > 15] substantial,[end if] throbbing organ.";
 		say "     Very suddenly, she cries out, reveling in being rammed underneath a virile beast such as you. The sound of her voice, along with her clenching hole, is enough to make quick work of you, forcing you to roar out in pleasure as you finally fire off your [cum load size of player] load into the dragoness.";
 		say "     This is more than enough to trigger her own climax, her greedy hole milking every last drop of seed you have to offer her[if cock width of player > 20], even as she visibly bloats to abide it[end if]. Eventually, you manage to pull yourself free of her, the dragoness turning to offer you some soft affections before she descends back into the depths of the ocean. As you recover and regain your clarity, you see her look back at you from within the water, perhaps hoping to see you again...";
@@ -239,7 +239,7 @@ To say fsdf loss:
 				say "     You choose to leave the dragoness with her need unsated, going about your business once more.";
 
 to say fsdf desc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	psycheeval;
 	libidoeval;
 	now FSDOPEN is 0;
@@ -264,10 +264,10 @@ to fsdfvicmenu:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
-		say "(1) [if cocks of player > 0][link]Mount her[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(2) [if cocks of player > 0][link]Mount her anally[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
+		say "(1) [if player is male][link]Mount her[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(2) [if player is male][link]Mount her anally[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(3) [if player is male][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(4) [if player is female][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Eat her out[as]5[end link][line break]";
 		LineBreak;
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
@@ -279,7 +279,7 @@ to fsdfvicmenu:
 			else:
 				say "Invalid Choice.";
 		if calcnumber is 1:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[FSDF_1]"; [Cunt Pitching]
@@ -287,7 +287,7 @@ to fsdfvicmenu:
 				fsdbiasshift;
 				now trixieexit is 1;
 		else if calcnumber is 2:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[FSDF_2]"; [Anal Pitching]
@@ -295,7 +295,7 @@ to fsdfvicmenu:
 				fsdbiasshift;
 				now trixieexit is 1;
 		else if calcnumber is 3:
-			if cocks of player is 0:
+			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[FSDF_3]"; [Oral Receiving Cock]
@@ -303,7 +303,7 @@ to fsdfvicmenu:
 				fsdbiasshift;
 				now trixieexit is 1;
 		else if calcnumber is 4:
-			if cunts of player is 0:
+			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[FSDF_4]"; [Oral Receiving Cunt]
@@ -462,7 +462,7 @@ to say FSDF_4: [Oral Receiving Cunt]
 		now tempnum is 0;
 	say "     [if tempnum is 1]Eager to begin[else if tempnum is 2]Eager and drooling to begin[else]With little effort[end if], she obliges your need, scaled lips parting to envelop [if cocks of player > 1]one of your pussies[else]your pussy[end if] within its embrace. Thick tongue slathering along its supple entrance, [if cunt length of player > 17]she easily thrusts the slick, writhing organ into your pliable depths[else]she thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of her saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against her snout, the dragoness churring in approval.";
 	say "     Writhing against the beast's touch, happily making you twitch and gasp with each motion of her worming appendage, you find it difficult to keep a clear head as you rapidly approach ecstasy";
-	if cocks of player > 0:
+	if player is male:
 		say ". You don't think you'll be able to hold back for any longer, dick[smn] drooling against the open air. Shall you pull out at the last second and shame the sea dragoness with your cum? Otherwise you'll spare her the humiliation.";
 		if player consents:
 			say "     Immediately, you wrench yourself free of her tongue, strings of saliva trailing from the creature's maw following the organ's loud departure. A couple seconds of grinding your throbbing, [cock size desc of player] cock[smn] against her snout and you finally cry out, unleashing your [cum load size of player] against the beast's obliging and lust-hazed visage. Whining softly, the beast idly licks at its face as he's shamed like this.";
@@ -490,20 +490,20 @@ to say FSDF_5: [Oral Giving Cunt]
 	else:
 		now tempnum is 0;
 	say "     Your continued attention quickly picks up in pace, fueled by your own[if player is neuter], insatiable[end if] lust";
-	if cocks of player > 0 or cunts of player > 0:
+	if player is not neuter:
 		say ". Driven by her submissive instinct, the beast moves her head down to meet your crotch, intent on attending you in turn. Shall you oblige her offering?";
 		if player consents:
 			say "     Eagerly, the sea dragoness's thick tongue [if cocks of player > 1]wraps around one of your dicks, throbbing[else if cocks of player is 1]wraps around your dick, throbbing[else if cunts of player > 1]caresses one of your cunts, aching[else]caresses your cunt, aching[end if] needily against the slick, writhing organ's touch";
 			now tempnum2 is 1;
 		else:
-			say "     Swatting the sea dragoness away, she's left to be the only one on the receiving end of any affection, [if cocks of player > 1]your own, unattended dicks throbbing against the open air[else if cocks of player > 0]your own, unattended dick throbbing against the open air[else if cunts of player > 1]your unattended cunts aching against the open air[else if cunts of player > 0]your unattended cunt aching against the open air[end if]";
+			say "     Swatting the sea dragoness away, she's left to be the only one on the receiving end of any affection, [if cocks of player > 1]your own, unattended dicks throbbing against the open air[else if player is male]your own, unattended dick throbbing against the open air[else if cunts of player > 1]your unattended cunts aching against the open air[else if player is female]your unattended cunt aching against the open air[end if]";
 			now tempnum2 is 0;
 	else:
 		now tempnum2 is 0;
 	say ". The dragoness's breath becomes increasingly shallow, [if tempnum2 is 1]crotch awash in her hot breath[else]body trembling[end if] with each powerful exhale, [if tempnum is 1]hole now slick with a mix of saliva and sex[else if tempnum is 2]her stuffed holes aching against you[else]her hole's oozing becoming more substantial with each passing second[end if], indicating his imminent bliss.";
 	say "     Continuing to work on her, you eventually manage to set the beast off, air filled with the sound of his loud singing as her [if tempnum is 2]twin holes tighten around your intrusions[else]her cunt tightens around your intrusion[end if]. [if tempnum is 1]Your maw is quickly flooded with, quickly overwhelming you[else]Your hands are rapidly drenched in[end if] her juices";
 	if tempnum2 is 1:
-		say ". The whole [if boundsegment is 1]ordeal[else]sight[end if], combined with the sea dragoness's own attendance, is more that enough to set you off, your [if cocks of player > 0][cum load size of player] load flooding her maw as it encircles your tool[else] cunt aching against her tongue's slathering affection[end if].";
+		say ". The whole [if boundsegment is 1]ordeal[else]sight[end if], combined with the sea dragoness's own attendance, is more that enough to set you off, your [if player is male][cum load size of player] load flooding her maw as it encircles your tool[else] cunt aching against her tongue's slathering affection[end if].";
 	else:
 		say ".";
 	say "     Once everything dies down, you pull yourself free of the monster, a spent and exhausted mess, too weakened and lost in a haze of lingering need to really do anything but lay there now. Satisfied with your work, you choose to leave here[if tempnum2 is 0], a fair bit lust-addled though you may be[end if].";
@@ -524,15 +524,15 @@ When Play begins:
 	now defeated entry is "[fsdf loss]";
 	now victory entry is "[fsdf attack]";
 	now desc entry is "[fsdf desc]";
-	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth. Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]light blue, smoothly scaled[or]light blue, softly scaled[or]light blue, delicately scaled[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long, somewhat bulky tail, top adorned with a sail-like fin.";[ Tail description, write a whole Sentence or leave blank. ]
+	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth. Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]light blue, smoothly scaled[or]light blue, softly scaled[or]light blue, delicately scaled[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a long, somewhat bulky tail, top adorned with a sail-like fin."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]spade-tipped and tapered[or]dark blue[at random]";
-	now face change entry is "you undergo the effects of this infectious strain. Your face draws forward, narrowing into a distinctly draconic muzzle, the features of which are subtly feminine and finned for aquatic travel, and you nearly fall over as you find your neck suddenly elongated"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you undergo the effects of this infectious strain. Your features become increasingly rounded to appeal to a more aquatic--though distinctly draconic--lifestyle, though thankfully your limbs retain their articulation and mobility so that you fare on land with minimal difficult"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it toughens. Dark, though subtly glittering, scales sprout from your flesh to cover the whole of your body. Curiously, it feels better suited for aquatic life than one on land"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "you undergo the effects of this infectious strain. You nearly lose balance as a long, large--though relatively lightweight--tail explodes from your behind. It's distinguished with a fin across its top, inferring its more aquatic application"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now face change entry is "you undergo the effects of this infectious strain. Your face draws forward, narrowing into a distinctly draconic muzzle, the features of which are subtly feminine and finned for aquatic travel, and you nearly fall over as you find your neck suddenly elongated"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you undergo the effects of this infectious strain. Your features become increasingly rounded to appeal to a more aquatic--though distinctly draconic--lifestyle, though thankfully your limbs retain their articulation and mobility so that you fare on land with minimal difficult"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it toughens. Dark, though subtly glittering, scales sprout from your flesh to cover the whole of your body. Curiously, it feels better suited for aquatic life than one on land"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "you undergo the effects of this infectious strain. You nearly lose balance as a long, large--though relatively lightweight--tail explodes from your behind. It's distinguished with a fin across its top, inferring its more aquatic application"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your cock turns a dark, dark blue, gradually tapering towards the tip, the flair spreading to give it a distinctly spade shape";
 	now str entry is 20;
 	now dex entry is 16;
@@ -557,14 +557,14 @@ When Play begins:
 	now libido entry is 45;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]bulky[or]aquatic[or]muscled[at random]";
-	now type entry is "[one of]draconic[or]reptilian[purely at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "[one of]draconic[or]reptilian[purely at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Vore Bound State
 
@@ -578,7 +578,7 @@ to fsdfvore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if cocks of player > 0]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if cocks of player > 0]unloading your [cum load size of player] load against the supple flesh[else if cunts of player > 0]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if player is male and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
@@ -832,9 +832,9 @@ When Play begins:
 	now heat duration entry is 3;
 	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.";
 	now description text entry is "";
-	now heat start entry is "[fsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[fsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
-	now inheat entry is "[fsdinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[fsdinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need. You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your rhythmically clenching and relaxing as it becoming full and engorged in preparation for your body's need to be bred. With this realization, it is clear that you've gone into some strange heat.";
@@ -846,9 +846,9 @@ When Play begins:
 	now heat duration entry is 3;
 	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.";
 	now description text entry is "";
-	now heat start entry is "[fsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[fsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
-	now inheat entry is "[fsdinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[fsdinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need. You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your rhythmically clenching and relaxing as it becoming full and engorged in preparation for your body's need to be bred. With this realization, it is clear that you've gone into some strange heat.";
@@ -889,19 +889,19 @@ to say fsdinheat:
 		if a random chance of fsdchance in 250 succeeds:
 			if location of player is fasttravel and location of player is not Beach Plaza and location of player is not Bouncy Castle:
 				say "Your heat-filled mind calls you towards the waterfront, wanting to swim in the ocean and find a sexy aquatic lover to satisfy your heat. Before you can regain your senses, you head back to the beach.";
-				move the player to Beach Plaza;
+				move player to Beach Plaza;
 				now Beach Plaza is known;
 				now heatturnskipper is true;
 				follow the turnpass rule;
 			else if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Area:
-				say "Catching the breeze of the sea in the air, your [if cunts of player > 0]puss[yfn] quiver[sfv][else if cocks of player > 0]dick[smn] throb[smv][else]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
-				move the player to Beach Plaza;
+				say "Catching the breeze of the sea in the air, your [if player is female]puss[yfn] quiver[sfv][else if player is male]dick[smn] throb[smv][else]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
+				move player to Beach Plaza;
 			else if location of player is Public Beach:
-				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water. Perhaps its cool waters will soothe your heat. Your [if cunts of player > 0]puss[yfn] quiver[sfv][else if cocks of player > 0]dick[smn] throb[smv][else]body trembles[end if] with each wave rolling onto the beach, making you feel all the more like you belong out there.";
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water. Perhaps its cool waters will soothe your heat. Your [if player is female]puss[yfn] quiver[sfv][else if player is male]dick[smn] throb[smv][else]body trembles[end if] with each wave rolling onto the beach, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
 			else if location of player is Bouncy Castle:
-				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here. Perhaps its cool waters will soothe your heat. Your [if cunts of player > 0]puss[yfn] quiver[sfv][else if cocks of player > 0]dick[smn] throb[smv][else]body trembles[end if] with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here. Perhaps its cool waters will soothe your heat. Your [if player is female]puss[yfn] quiver[sfv][else if player is male]dick[smn] throb[smv][else]body trembles[end if] with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
 			else if location of player is BeachEnd or location of player is Rock Arch or location of player is Sunken Ship:
@@ -909,9 +909,9 @@ to say fsdinheat:
 				decrease humanity of player by 5;
 				decrease libido of player by 20;
 			else:
-				if cunts of player > 0:
+				if player is female:
 					say "Your puss[yfn] quiver[sfv] and clenches in waves as your heat continues unabated. Mmm... waves washing over you... lapping at your wet folds... cool, soothing waves... Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
-				else if cocks of player > 0:
+				else if player is male:
 					say "Your dick[smn] throb[smv] and spurts in waves as your heat continues unabated. Mmm... waves washing over you... lapping at your slick, [cock size desc of player] cock[smn]... cool, soothing waves... Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
 				else:
 					say "Your body trembles in waves as your heat continues unabated. Mmm... waves washing over you... lapping at your slick undercarriage... cool, soothing waves... Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";

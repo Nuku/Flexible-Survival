@@ -17,11 +17,11 @@ to say losetoHermaid:
 	else:
 		say "     Your attacker lures you into throwing a hit, but quickly counters and lands a punch across your head, sending your head spinning and stopping you from thinking for a few moments. As you recover yourself, you find that the beautiful creature has you wrapped in her arms, stopping you from escaping.";
 	WaitLineBreak;
-	if cocks of player > 0 and cunts of player is 0:
+	if player is puremale:
 		say "     [HermaidMaleLoss]";
-	else if cunts of player > 0 and cocks of player is 0:
+	else if player is purefemale:
 		say "     [HermaidFemLoss]";
-	else if cunts of player > 0 and cocks of player > 0:
+	else if player is herm:
 		say "     The seafaring herm looks at you thoughtfully, as if considering what to do with you. After a moment, she nods to herself and smiles.";
 		LineBreak;
 		say "     [one of][HermaidFemLoss][or][HermaidMaleLoss][at random]";
@@ -36,11 +36,11 @@ to say beattheHermaid:
 		if the player consents:
 			say "     You wrap your arms around the beautiful creature, holding her tightly, and blocking off any chance of escape. She jumps at the sudden contact and looks at you in fear. When she notes the lustful look in your eyes, however, she smiles seductively at you, and runs her hands sensually over your body.";
 			WaitLineBreak;
-			if cunts of player > 0 and cocks of player is 0:
+			if player is purefemale:
 				say "	[HermaidFemVic]";
-			else if cunts of player is 0 and cocks of player > 0:
+			else if player is not female and player is male:
 				say "	[HermaidMaleVic]";
-			else if cunts of player > 0 and cocks of player > 0:
+			else if player is herm:
 				say "	You can use either your cock or cunt for this scene. Which one do you want to use? (Y for cock, N for pussy)";
 				if the player consents:
 					say "     [HermaidMaleVic]";
@@ -130,53 +130,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Hermaid";
-   now attack entry is "[one of]The Hermaid lungs unexpectedly at you, breaking past your guard and dragging long, bloody streaks across your face and down your chest with her razor-like claws.[or]She dives underwater, and you soon lose track of her. Seconds later, you're dragged underwater and held down, slowly drowning. As you are about to pass out, you break free and surface, coughing up water and much more exhausted than before.[or]The Hermaid snaps at your legs, gouging large chunks out of your limbs.[or]She kicks at you wildly with her webbed feet, landing a few nasty hits across your body.[at random]";
-   now defeated entry is "[beattheHermaid]";
-   now victory entry is "[losetoHermaid]";
-   now desc entry is "[Hermaiddesc]";
-   now face entry is "that of a human woman, with beauty only before captured in the greatest of artworks. Deep, solid [one of]green[or]blue[or]purple[sticky random] eyes complement the flowing, dark blue hair that hangs to your shoulders, while your sculpted face could knock anyone off their feet";
-   now body entry is "one that even a professional model would be jealous of. Your lithe, curvy form is one that artists can only dream of, while your hips and chest could give plastic surgeons a run for their money. Your finned arms and webbed hands seem out of place compared to the rest of your body, but are well-suited for swimming through the depths of the sea. Even your finned legs have morphed into a form more suitable for swimming, with your webbed feet allowing you to swim gracefully through the seas";
-   now skin entry is "light-blue, moist";
-   now tail entry is "Sprouting from your backside is a dolphin's tail, complete with dual tail flukes.";
-   now cock entry is "[one of]tapered[or]dolphin-esque[or]cetacean[sticky random]";
-   now face change entry is "your skull cracks and reforms, shifting beneath your skin. Pain wracks your body as this occurs, and you can feel the shifting bones rearranging. Thankfully, the pain soon subsides, and you're able to recover. You find a mirror and look at yourself, and are shocked at the changes in your appearance. Your face now resembles that of a beautiful human woman, and is stunningly picturesque. Dark, beautiful eyes peer out of perfectly sculpted sockets, with dark-blue hair waving gracefully in the wind as your features reshape to suit the appearance of a Hermaid";
-   now body change entry is "your chest and hips protrude out a small amount, and your stomach slims down, giving yourself a superstar look, while also incurring a great deal of pain in the process. Your hands and arms tingle as one long fin grows down your arm, stopping at your wrist. Your fingers and hands reshape, becoming more claw-like and fully webbed as, finally, these changes cease, and you observe your sleek hermaid body";
-   now skin change entry is "it turns a light shade of blue, and begins to feel moist to the touch as a layer of moisture forms on your skin";
-   now ass change entry is "a fleshy bulb forms at the base of your spine, as the entirety of your backside shifts and reshapes. The bulb begins to expand outwards and assume a distinctly tail-like shape. At the end of this endeavor, you wave your new dolphin tail around, and figure that you can swim much faster now";
-   now cock change entry is "the tip of your cock tapers into a point, while your shaft smooths out and turns a pinkish hue. Your new dolphin-esque cock recedes into a genital slit as these changes stop";
-   now str entry is 14;
-   now dex entry is 17;
-   now sta entry is 14;          [Mebbe balance?]
-   now per entry is 13;
-   now int entry is 12;
-   now cha entry is 17;
-   now sex entry is "Both";
-   now HP entry is 65;
-   now lev entry is 9;
-   now wdam entry is 9;
-   now area entry is "Warehouse";
-   now cocks entry is 1;
-   now cock length entry is 12;
-   now cock width entry is 4;
-   now breasts entry is 2;
-   now breast size entry is 3;
-   now male breast size entry is 0;
-   now cunts entry is 1;
-   now cunt length entry is 12;
-   now cunt width entry is 6;
-   now libido entry is 40;
-   now loot entry is "hermaid kelp";
-   now lootchance entry is 40;
-   now scale entry is 3;
-   now body descriptor entry is "[one of]slender[or]curvy[or]mesmerizing[or]hypnotic[at random]";
-   now type entry is "aquatic";
-   now magic entry is false;
-   now resbypass entry is false;
-   now non-infectious entry is false;
-   blank out the nocturnal entry;
-   now altcombat entry is "default";
+  Choose a blank row from Table of random critters;
+  now name entry is "Hermaid";
+  now attack entry is "[one of]The Hermaid lungs unexpectedly at you, breaking past your guard and dragging long, bloody streaks across your face and down your chest with her razor-like claws.[or]She dives underwater, and you soon lose track of her. Seconds later, you're dragged underwater and held down, slowly drowning. As you are about to pass out, you break free and surface, coughing up water and much more exhausted than before.[or]The Hermaid snaps at your legs, gouging large chunks out of your limbs.[or]She kicks at you wildly with her webbed feet, landing a few nasty hits across your body.[at random]";
+  now defeated entry is "[beattheHermaid]";
+  now victory entry is "[losetoHermaid]";
+  now desc entry is "[Hermaiddesc]";
+  now face entry is "that of a human woman, with beauty only before captured in the greatest of artworks. Deep, solid [one of]green[or]blue[or]purple[sticky random] eyes complement the flowing, dark blue hair that hangs to your shoulders, while your sculpted face could knock anyone off their feet";
+  now body entry is "one that even a professional model would be jealous of. Your lithe, curvy form is one that artists can only dream of, while your hips and chest could give plastic surgeons a run for their money. Your finned arms and webbed hands seem out of place compared to the rest of your body, but are well-suited for swimming through the depths of the sea. Even your finned legs have morphed into a form more suitable for swimming, with your webbed feet allowing you to swim gracefully through the seas";
+  now skin entry is "light-blue, moist";
+  now tail entry is "Sprouting from your backside is a dolphin's tail, complete with dual tail flukes.";
+  now cock entry is "[one of]tapered[or]dolphin-esque[or]cetacean[sticky random]";
+  now face change entry is "your skull cracks and reforms, shifting beneath your skin. Pain wracks your body as this occurs, and you can feel the shifting bones rearranging. Thankfully, the pain soon subsides, and you're able to recover. You find a mirror and look at yourself, and are shocked at the changes in your appearance. Your face now resembles that of a beautiful human woman, and is stunningly picturesque. Dark, beautiful eyes peer out of perfectly sculpted sockets, with dark-blue hair waving gracefully in the wind as your features reshape to suit the appearance of a Hermaid";
+  now body change entry is "your chest and hips protrude out a small amount, and your stomach slims down, giving yourself a superstar look, while also incurring a great deal of pain in the process. Your hands and arms tingle as one long fin grows down your arm, stopping at your wrist. Your fingers and hands reshape, becoming more claw-like and fully webbed as, finally, these changes cease, and you observe your sleek hermaid body";
+  now skin change entry is "it turns a light shade of blue, and begins to feel moist to the touch as a layer of moisture forms on your skin";
+  now ass change entry is "a fleshy bulb forms at the base of your spine, as the entirety of your backside shifts and reshapes. The bulb begins to expand outwards and assume a distinctly tail-like shape. At the end of this endeavor, you wave your new dolphin tail around, and figure that you can swim much faster now";
+  now cock change entry is "the tip of your cock tapers into a point, while your shaft smooths out and turns a pinkish hue. Your new dolphin-esque cock recedes into a genital slit as these changes stop";
+  now str entry is 14;
+  now dex entry is 17;
+  now sta entry is 14;          [Mebbe balance?]
+  now per entry is 13;
+  now int entry is 12;
+  now cha entry is 17;
+  now sex entry is "Both";
+  now HP entry is 65;
+  now lev entry is 9;
+  now wdam entry is 9;
+  now area entry is "Warehouse";
+  now cocks entry is 1;
+  now cock length entry is 12;
+  now cock width entry is 4;
+  now breasts entry is 2;
+  now breast size entry is 3;
+  now male breast size entry is 0;
+  now cunts entry is 1;
+  now cunt length entry is 12;
+  now cunt width entry is 6;
+  now libido entry is 40;
+  now loot entry is "hermaid kelp";
+  now lootchance entry is 40;
+  now scale entry is 3;
+  now body descriptor entry is "[one of]slender[or]curvy[or]mesmerizing[or]hypnotic[at random]";
+  now type entry is "aquatic";
+  now magic entry is false;
+  now resbypass entry is false;
+  now non-infectious entry is false;
+  blank out the nocturnal entry;
+  now altcombat entry is "default";
 
 Section 3 - Endings
 

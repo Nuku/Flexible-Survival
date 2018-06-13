@@ -249,7 +249,7 @@ Instead of conversing the doctor matt:
 	if hospquest is 13 and "Mental Booster" is not listed in feats of player:
 		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on. Trying to deal with the infected city can be mentally harrowing as well as physically harrowing. It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess. As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others. This treatment will also strive to keep these mental faculties strong after mentally debilitating infections.'";
 		say "     The doctor injects you with the nanite adjustment. At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily. You don't suddenly know more information, but you can better process all that you have learned to make more out of it. You also feel a little more confident in dealing with the world because of it.";
-		add "Mental Booster" to the feats of the player;
+		add "Mental Booster" to the feats of player;
 		increase intelligence of player by 2;
 		increase perception of player by 2;
 		increase charisma of player by 2;
@@ -343,13 +343,13 @@ Instead of conversing the doctor matt:
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			say "     You tell the doctor that you are of course willing to get your humanity back. The doctor smiles and nods, opening up a drawer and pulling out a rat's nest of wires and bio-sensors. 'Okay. Strip down so I can get you hooked up. This sort of thing isn't my usual area of expertise, but thankfully another of my former associates was doing bio-research, so I can use their equipment. She won't be needing it now that she's a feral mutant.'";
-			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if breasts of player > 0]. Some are even placed directly over your nipples[end if][if cocks of player > 0]. One is placed upon your [cock of player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if cocks of player > 0 and player is not internal]. A linked pair are attached upon your balls[end if][if cunts of player > 0]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
+			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if breasts of player > 0]. Some are even placed directly over your nipples[end if][if player is male]. One is placed upon your [cock of player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if player is male and player is not internal]. A linked pair are attached upon your balls[end if][if player is female]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
 			WaitLineBreak;
 			say "     With a final smack, the doctor adheres a large suction cup to your forehead. The thin wires from all of these separate sensors are wound together into one larger cable which is then plugged into a monitoring device. It starts up, showing blips and waveforms on its screens while outputting a constant stream of ticker tape.";
 			say "     'Alright, we're ready to go,' the doctor says with enthusiasm. The prospect of science has brightened his mood and he quickly snatches up the spray can[if susan is visible]. Susan, while clearly concerned about you, takes several large steps back to avoid getting hit[end if]. The doctor starts spraying you all over, spreading the mist of strange antiseptic-smelling liquid all over you. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 			WaitLineBreak;
-			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if cunts of player > 0]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
-			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if cocks of player > 0]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
+			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if player is female]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
+			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if player is male]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
 			setmonster "human";
 			choose row monster from the table of random critters;
 			now tailname of player is "human";
@@ -435,12 +435,12 @@ to monitor:
 	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
 	say "Head status: [facename of player]     Body status: [bodyname of player][line break]";
 	say "Skin status: [skinname of player]     Tail status: [tailname of player][line break]";
-	if cocks of player > 0:
-		if cunts of player > 0:
+	if player is male:
+		if player is female:
 			say "Cock status: [cockname of player]     Gender: Herm[line break]";
 		else:
 			say "Cock status: [cockname of player]     Gender: Male[line break]";
-	else if cunts of player > 0:
+	else if player is female:
 		say "Groin status: [cockname of player]     Gender: Female[line break]";
 	else:
 		say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
@@ -448,11 +448,11 @@ to monitor:
 		let defaultheat be true;
 		let heatname be "Default";
 		choose row 1 in table of infection heat;
-		if the cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
+		if cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
 			choose a row with a infect name of (cockname of player) in Table of infection heat;
-			if cunts of player > 0 and fheat entry is false:	[no female heat for that form]
+			if player is female and fheat entry is false:	[no female heat for that form]
 				choose row 1 in table of infection heat;
-			else if cunts of player is 0 and mpregheat entry is false:		[no mpreg-heat for that form]
+			else if player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
 				choose row 1 in table of infection heat;
 			else:
 				now defaultheat is false;
@@ -461,7 +461,7 @@ to monitor:
 		now heatname is infect name entry;
 		if "Sterile" is listed in feats of player:
 			say "Pregnancy Status: Sterile[line break]";
-		else if cunts of player is 0 and player is not mpreg_ok:
+		else if player is not female and player is not mpreg_ok:
 			now score is score;
 		else if player is impreg_now:
 			say "Pregnancy Status: Pregnant     ";

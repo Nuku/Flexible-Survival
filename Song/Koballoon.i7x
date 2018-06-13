@@ -70,7 +70,7 @@ to say LoseToKoballoon:
 		if player is female:
 			say "Your [if cunts of player > 1]needy cunts are stuffed with more of their colossal kobold cocks, distending your body further with every pulsing length until you're physically unable to take more of them[else]needy cunt is stuffed with another colossal kobold cock, distending your body further with its smooth and intensely pleasurable presence[end if]. ";
 		say "Each koballoon seems to find their own niche in assaulting your hovering body, asynchronous jolts of pleasure leaving you sharply attentive to their every teasing touch.";
-		say "     Soon, any pretense of foreplay is tossed aside in favor of taking turns brutalizing your hungry holes. Feverish thrusts pound into your throat, that towering pillar pushing aside internal organs to make room for its conquest, the dull thud of bouncy balls slapping against your chin as demeaning as it is exciting in your hyper-aroused state. The reptilian tongue charting your ass is replaced by a second dribbling dick, your inflated rear double-fucked by those ludicrously large lengths[if player is male or player is female] while you cum repeatedly across the ground beneath you[end if]. You're surprised that you can take those monstrous members with as much ease as you are, but the logistics of your reaming are of little concern to you now as you drool around copious rubber cockflesh, only faintly aware of your surroundings in your sex-induced daze. You're stuffed with load after load of thick, musky seed while the creatures take turns ravaging your helpless form, a cock occasionally replaced with an elongated tongue or dexterous digits to probe your insides, gauging your elasticity in practiced motions that draw moans and giggles from their air-headed catch.";
+		say "     Soon, any pretense of foreplay is tossed aside in favor of taking turns brutalizing your hungry holes. Feverish thrusts pound into your throat, that towering pillar pushing aside internal organs to make room for its conquest, the dull thud of bouncy balls slapping against your chin as demeaning as it is exciting in your hyper-aroused state. The reptilian tongue charting your ass is replaced by a second dribbling dick, your inflated rear double-fucked by those ludicrously large lengths[if player is not neuter] while you cum repeatedly across the ground beneath you[end if]. You're surprised that you can take those monstrous members with as much ease as you are, but the logistics of your reaming are of little concern to you now as you drool around copious rubber cockflesh, only faintly aware of your surroundings in your sex-induced daze. You're stuffed with load after load of thick, musky seed while the creatures take turns ravaging your helpless form, a cock occasionally replaced with an elongated tongue or dexterous digits to probe your insides, gauging your elasticity in practiced motions that draw moans and giggles from their air-headed catch.";
 		WaitLineBreak;
 		say "     Eventually, the seemingly unending attack on your senses becomes too much for your weary form to handle. ";
 		if player is herm:
@@ -112,7 +112,7 @@ to say LoseToKoballoon:
 			else:
 				say "your gripping anus relaxes enough to allow him deeper entry, sinking all the way to the shoulder inside your colon to stroke across those hard-to-reach nerves with practiced expertise.";
 			say "     [if player is neuter]As the wild sex continues, you forget about your old self[else]When that wonderful high comes to an end, you can't help but feel somewhat dazed, drooling around the hot, slick dick stuffing your throat in absent reverie. You've forgotten your old self, your recent climax having extinguished the last flickering light of your humanity in a cool deluge of cum[end if], overwhelmed by the lustful urges that infect your every thought. Relaxing your throat, you swallow down each rubbery blast fed to you. Reaching back to spread your asshole, you wring that cum-stuffed chasm around every length that throbs and pulses in your accommodating backside. What follows is a haze of cycling partners, filling your [if player is female]every yearning orifice[else]ass and mouth[end if] until it all blurs into the natural order of things, breaking you fully into your role as the shared receptacle for their seed, no more than a moaning, pleading onahole to fuck and stuff to your limits.";
-			say "     Once the gang of koballoons has had their fill reaming you, your body is left to slide to the ground in a sore, oversexed heap. Shakily, you push your fist into your gaping sphincter, your knuckles effortlessly sliding past the rim. You swirl it around in the seemingly bottomless, cum-stuffed chasm that is your ass, marveling at just how tender and sensitive every inch of your ravaged colon feels. [if player is male]You roughly drag your knuckles against your thrumming prostate, twitching and throbbing hard with every shiver-inducing rasp, milking thick gobs of pre from your swollen, churning orbs. [end if][if player is male or player is female]Soon, another messy orgasm overtakes you, and you realize with a horny giggle that your refractory period has all but vanished, leaving you lusting to be fucked at all times. [end if]You draw your cum-slathered hand out before plunging it back in again, over and over, tirelessly fisting yourself to slake this new, burning need that has become your whole word until you finally black out in exhaustion.";
+			say "     Once the gang of koballoons has had their fill reaming you, your body is left to slide to the ground in a sore, oversexed heap. Shakily, you push your fist into your gaping sphincter, your knuckles effortlessly sliding past the rim. You swirl it around in the seemingly bottomless, cum-stuffed chasm that is your ass, marveling at just how tender and sensitive every inch of your ravaged colon feels. [if player is male]You roughly drag your knuckles against your thrumming prostate, twitching and throbbing hard with every shiver-inducing rasp, milking thick gobs of pre from your swollen, churning orbs. [end if][if player is not neuter]Soon, another messy orgasm overtakes you, and you realize with a horny giggle that your refractory period has all but vanished, leaving you lusting to be fucked at all times. [end if]You draw your cum-slathered hand out before plunging it back in again, over and over, tirelessly fisting yourself to slake this new, burning need that has become your whole word until you finally black out in exhaustion.";
 			WaitLineBreak;
 			say "[KoballoonSexBadEnd]";
 		else: [Standard end]
@@ -371,8 +371,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Koballoon"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
+	now name entry is "Koballoon"; [ Infection/Creature name. Capitalized. ]
+	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
 	now defeated entry is "[BeatTheKoballoon]";
 	now victory entry is "[LoseToKoballoon]";
 	now desc entry is "[KoballoonDesc]";
@@ -400,7 +400,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 10; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 10; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -409,7 +409,6 @@ When Play begins:
 	now libido entry is 65; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;
 	now body descriptor entry is "[one of]plump[or]pudgy[or]rubbery[or]inflatable[or]curvaceous[or]girly[or]feminine[at random]";
 	now type entry is "[one of]draconic[or]inflatable[or]kobold[at random]";

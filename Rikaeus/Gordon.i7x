@@ -89,7 +89,7 @@ to say GordonFurEvidence:
 	if GordonFurSuspicion is 0: [never talked about it]
 		say "     You take out the fur and set it onto the table before proceeding to tell the monkey that this was found in the victim's hand. 'What are you showing me this for? Is this your way of saying you want to bed me?' he asks, wagging his eyebrows. You shake your head at his horny response and tell him that you'd figure that you'd ask if it was his. 'Ahahah! It's obviously not mine as I do have black fur here,' Gordon says, gesturing to his fur. However, that isn't all the guy says as the lewd look returns to his face. 'Of course... you could always check down below with your mouth,' the monkey says.";
 		say "     [bold type]Do you want to blow him or take him by his word?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
 		say "     ([link]N[as]n[end link]) - No, you'll take him by his word.";
 		if player consents:
@@ -104,7 +104,7 @@ to say GordonFurEvidence:
 	if GordonFurSuspicion is 1: [Says it's not his due to it being brown]
 		say "     You once more take out the fur and ask him about it. This appears to create a look of excitement on his face as the lewd smile returns. 'Ohoho! Have you thought about my offer?' Gordon says, once more wagging his eyebrows suggestively at you. You sigh and ask him if he wouldn't just let you check his whole body to see that it truly is black fur. The monkey shakes his head at you. 'Nope! It's not as fun this way! At least my way I'd get a blowjob,' he says, causing you to inwardly groan. You guess it's time for you to decide if you'd blow him or not.";
 		say "     [bold type]Do you want to blow him or take him by his word?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
 		say "     ([link]N[as]n[end link]) - No, you'll take him by his word.";
 		if player consents:
@@ -140,7 +140,7 @@ to say GordonSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -151,13 +151,13 @@ to say GordonSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the monkey's hard shaft";
 	][
-	if cocks of player > 0: [only males and herms can fuck him]
+	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the unrepentent monkey";
 		now sortorder entry is 3;
 		now description entry is "Take Gordon's ass for a ride";
 	][
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Gordon's shaft in your pussy";
 		now sortorder entry is 4;

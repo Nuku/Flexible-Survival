@@ -35,7 +35,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 	say "     The flicking of Bastet's tail shows clearly how displeased she is to hear these words, so Nermine quickly continues, 'This jackal is very apologetic about this. However, she can offer a deal that will likely satisfy both sides. An item of equal worth will be a fitting trade for what Bastet seeks and so Nermine suggests she retrieve the sash of dreams, long-sought by Nermine and in this very city right now. The wealthy collector Kurgan McNally living in a penthouse in the inner city recently acquired it. As a gesture of goodwill, the storekeeper will even provide an advance to the avatar, one item out of the set, to be hers to keep until the complete exchange is made.' Strolling over to the chest, Nermine paints a glowing symbol on the lid with her finger, then flicks that aside in a cloud of glowing fog, opening the lid to retrieve a pair of golden bracers, clearly of Egyptian design.";
 	say "     Holding the bracers in her paw-hands, Nermine walks over to Bastet and shows them to her, though not without keeping her fingers tightly locked around the priceless artifacts. It is clear how dearly the lioness wants them, as her hands twitch slightly, as if to snatch them from Nermine's grasp. Waiting a few seconds more, the jackalwoman then asks, 'So, is this deal acceptable, my dear goddess?' Almost immediately, Bastet replies, 'Yes, yes. Fine. We will get you that bauble you want. Now give me my bracers.' With a bow, Nermine hands the silver and gold bracers over, a faint smile playing over her lips. 'As you wish, dear visitor. May we see each other again soon,' the jackaless adds calling after Bastet as the lioness rushes out of the store, followed by her fennec servant.";
 	WaitLineBreak;
-	say "     When the two of them are out of sight, Nermine saunters over to you, pressing her shapely breasts against your chest as she leans in to kiss you and gently takes your hand to set it on her bare rump. When she comes up for air after the long kiss, the sexy jackaless half moans half whispers to you, 'Did you enjoy the looks of Bastet's avatar, my lovely [master]? The deal that Nermine offered her has the opportunity of great profit - and pleasure, with the lioness. Should Nermine's dearest wish, she could tell [if cunts of player > 0 and cocks of player is 0]her[else]him[end if] just where the sash of dreams currently resides. Retrieving it before Bastet and Anktepi can locate the artifact would be very advantageous...'";
+	say "     When the two of them are out of sight, Nermine saunters over to you, pressing her shapely breasts against your chest as she leans in to kiss you and gently takes your hand to set it on her bare rump. When she comes up for air after the long kiss, the sexy jackaless half moans half whispers to you, 'Did you enjoy the looks of Bastet's avatar, my lovely [master]? The deal that Nermine offered her has the opportunity of great profit - and pleasure, with the lioness. Should Nermine's dearest wish, she could tell [if player is purefemale]her[else]him[end if] just where the sash of dreams currently resides. Retrieving it before Bastet and Anktepi can locate the artifact would be very advantageous...'";
 	say "     The eager glint in Nermine's eyes tells you that the cunning jackaless would like you to play into her plans oh so very much. She belongs to you now, but being what she is, the storekeeper just can't stop scheming away, even if that includes letting you do the work for it. It is your decision if you want to go along, so make up your mind now - do you tell her to give you the location (Y), or refuse to get involved (N)?";
 	if player consents:
 		LineBreak;
@@ -45,7 +45,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 	else:
 		say "     Shaking your head and saying you're not interested, you see a slight frown cross her features, only to be quickly smoothed away as she remembers that you're her [master] after all. Still - maybe it'd be a good idea to drive that really home once again and to fuck her right away?";
 		if player consents:
-			if cocks of player > 0:
+			if player is male:
 				LineBreak;
 				say "     Nermine grins eagerly as she pulls aside the dark curtains leading into the back room. You find your own muzzle stretching in a grin as you watch how eager she is to please you now, and step forward to look into the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it.";
 				say "     Your examination of the room is interrupted, by Nermine stepping in the room behind you, her soft breasts pressing up against your back as she runs the tips of her claws through your fur teasingly, 'Does Nermine's master like?' The sexy jackal whispers lustily into your ears as she rubs her body up against your back, her hands reaching around to stroke your chest, even as they slowly trail down your body to trace over your stiff canine member teasingly. 'Nermine wishes her master would make himself right at home in Nermine's house, everything Nermine owns is her masters after all - including Nermine herself.' The eager jackal pants in your ear, obviously getting even more excited as she breathes in your strong dominant scent. You find yourself panting as well, from the jackal-woman's soft experienced touches, as she strokes her hands needily over your body. Your lust rising, it is all you can do to lead your eager little pet jackal over to the large comfy chair, feeling the need to sit for a minute.";
@@ -54,7 +54,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 				say "     Nermine grins happily at your sign of pleasure as she presses the soft fur of her breasts around your cock, moaning as she moves herself up and down, her long tongue licking the tip of your pointed canine cock whenever it comes in reach. You find yourself yipping in pleasure as the submissive jackal-woman lavishes her attention on your rod, her hand occasionally teasing your knot as it swells with arousal, even as the feel of her silken soft fur on your sensitive cock makes you shudder with excitement. Unable to hold yourself back, your jackal-like howl of pleasure soon echoes through the back room, as your seed spills out over your pets breasts, the sticky white liquid coating her face even as she eagerly licks at your spurting cock.";
 				WaitLineBreak;
 				say "     Eventually you relax back in the chair, as your pet sits back on her haunches, panting happily, her lust fogged eyes staring up at you adoringly even as your seed begins to dry on her breasts. Grinning you reach forward and pet her on the head a couple times and let her know what a good little pet she is being, which makes her smile as her tail wags eagerly behind her. You stroke her head for a while, until you feel recovered enough to head back out to the store, your new pet following along behind with your seed still adorning her breasts, making you grin at how proud she seems to be to have your cum displayed so prominently on her body, as she begins to go about her tasks in the store. The jackalman was definitely right about just how much this would change the lovely shopkeepers point of view, you find yourself thinking idly as you watch her move around the area happily, a grin spreading across your muzzle as you realize just how much better she looks as a lusty little pet for you to play with.";
-			else if cunts of player > 0:
+			else if player is female:
 				say "     Nermine grins eagerly as she pulls aside the dark curtains leading into the back room. You find your own muzzle stretching in a grin as you watch how eager she is to please you now, and step forward to look into the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it.";
 				say "     Your examination of the room is interrupted, by Nermine stepping in the room behind you, her soft breasts pressing up against your back as she runs the tips of her claws through your fur teasingly, 'Does Nermine's mistress like?' The sexy jackal whispers lustily into your ears as she rubs her body up against your back, her hands reaching around to stroke and tease your own soft nipples as she does so. 'Nermine wishes her mistress to make herself right at home in Nermine's house, everything she owns is her mistress's after all, including Nermine herself...' she pants in your ear, obviously getting even more excited as she breathes in your strong dominant scent. You find yourself panting as well, from the jackal-woman's soft experienced touches, as she strokes her hands needily over your body. Your lust rising, it is all you can do to lead your eager little pet jackal over to the mattress, where you can sprawl out comfortably. ";
 				WaitLineBreak;
@@ -193,7 +193,7 @@ Instead of resolving a Restaurateur's Office:
 			say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun...";
 		LineBreak;
 		say "     Pulling back a little from the sexy lioness, you quickly get busy removing your gear and clothes, throwing most of it simply aside as fast as possible as you set a new record for stripping down. And then, as soon as you are as naked as your feline partner, Bastet goes into the offensive, almost pouncing on you in her eagerness to win your little contest and reclaim her artifacts from Nermine. Though given the foreplay you've been through already, there is a definite edge of bodily need to her actions as well, which makes sharing hungry kisses with her all the more delicious. Wrapping herself around you in a tight embrace, the cat goddess aggressively makes out with you, giving lusty little growls as her nipples brush against your chest.";
-		if cocks of player > 0:
+		if player is male:
 			say "     With your pointy jackalman shaft standing rock-hard and ready, poking Bastet in the stomach as she presses against you, the next level of escalation she chooses is to grab your shoulders to brace herself, then swing a very flexible leg up and hook it around your hips - so she can slide herself down on your erection. You moan a satisfied grunt into her mouth as the lioness's slick and warm passage envelops your member deeper and deeper, then finally all the way and your balls press against her crotch. The two of you grind against each other for several moments while standing, gasping out shared moans as you get used to feeling the other inside - or around - you, then ";
 			if BastetSexBattleCount > 2 or (BastetSexBattleCount is 2 and a random chance of 1 in 2 succeeds): [player won]
 				say "you grab Bastet's furry butt with one hand, hooking the other under the lioness's still standing leg to pull her into your arms fully. The cat goddess gives a needy mrowl as you pick her up, grinding her crotch tightly against your own in the progress. A series of aroused little meows follow as you carry her over to the store counter, your hard shaft rubbing her insides in new and exciting ways with each step you take, then gently lay her down on top of it, giving the sexy feline a long kiss as you do.";
@@ -298,13 +298,13 @@ to say BastetTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Herself";
 		now sortorder entry is 1;
 		now description entry is "Ask the lioness about herself";
 	]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Sexuality";
 		now sortorder entry is 2;
@@ -406,7 +406,7 @@ to say BastetSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Please Bastet with your tongue";
 		[]
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Let her suck your dick";
 			now sortorder entry is 3;
@@ -417,7 +417,7 @@ to say BastetSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Shove your fingers up the lioness's pussy";
 		[]
-		if cocks of player > 0:
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her pussy";
 			now sortorder entry is 5;
@@ -643,7 +643,7 @@ to say BastetSexBattleRepeats:
 		say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun...";
 	LineBreak;
 	say "     Pulling back a little from the sexy lioness, you quickly get busy removing your gear and clothes, throwing most of it simply aside as fast as possible as you set a new record for stripping down. And then, as soon as you are as naked as your feline partner, Bastet goes into the offensive, almost pouncing on you in her eagerness to win your little contest and reclaim her artifacts from Nermine. Though given the foreplay you've been through already, there is a definite edge of bodily need to her actions as well, which makes sharing hungry kisses with her all the more delicious. Wrapping herself around you in a tight embrace, the cat goddess aggressively makes out with you, giving lusty little growls as her nipples brush against your chest.";
-	if cocks of player > 0:
+	if player is male:
 		say "     With your pointy jackalman shaft standing rock-hard and ready, poking Bastet in the stomach as she presses against you, the next level of escalation she chooses is to grab your shoulders to brace herself, then swing a very flexible leg up and hook it around your hips - so she can slide herself down on your erection. You moan a satisfied grunt into her mouth as the lioness's slick and warm passage envelops your member deeper and deeper, then finally all the way and your balls press against her crotch. The two of you grind against each other for several moments while standing, gasping out shared moans as you get used to feeling the other inside - or around - you, then ";
 		if BastetSexBattleCount > 2 or (BastetSexBattleCount is 2 and a random chance of 1 in 2 succeeds): [player won]
 			say "you grab Bastet's furry butt with one hand, hooking the other under the lioness's still standing leg to pull her into your arms fully. The cat goddess gives a needy mrowl as you pick her up, grinding her crotch tightly against your own in the progress. A series of aroused little meows follow as you carry her over to the store counter, your hard shaft rubbing her insides in new and exciting ways with each step you take, then gently lay her down on top of it, giving the sexy feline a long kiss as you do.";
