@@ -224,7 +224,7 @@ to say Stellasexmenu:
 					say "[stellasex5]";
 				else if nam is "Dominant doggy":
 					say "[stellasex6]";
-				else if nam is "Oral thresome with Jimmy":
+				else if nam is "Oral threesome with Jimmy":
 					say "[stellajimmy01]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";

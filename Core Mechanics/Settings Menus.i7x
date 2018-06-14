@@ -384,7 +384,7 @@ carry out oviadjusting:
 		if ovipregalways is true:
 			say "You are now set to bear eggs always.";
 			now ovipreglevel is 3;
-		else:
+	 	else:
 			say "You are not able to choose this option without alteration to your character's pregnancy abilities.";
 	else:
 		say "Exiting menu.";
@@ -445,13 +445,12 @@ understand "huntinglist" as huntinglisting.
 check huntinglisting:
 	if "Unerring Hunter" is not listed in feats of player:
 		say "You do not currently have this ability." instead;
-	if there is no dangerous door in the location of the player:
+	if earea of location of player is "void":
 		say "I don't see any good hunting grounds around here." instead;
 
 carry out huntinglisting:
 	sort table of random critters in lev order;
-	let y be a random dangerous door in the location of the player;
-	now battleground is the marea of y;
+	now battleground is the earea of location of player;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;

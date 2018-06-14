@@ -10,19 +10,10 @@ The description of Entrance to the Red Light District is "[RedLightDesc]".
 
 to say RedLightDesc:
 	say "     This street corner marks the beginning of the city's Red Light District. Normal buildings, stores and offices give way to an area that seems old, grimy and somewhat abandoned, given that the colorful neon lights of numerous adult establishments hang dark and powerless on their buildings. Caution seems advised hereabouts, as the area is an obvious hive of perverts and sex addicts, with the infection outbreak just having pushed things to new extremes.";
-	say "     To the south, you could wander back out into the surrounding city and possibly find a safer place to be. Alternatively, the way east and west along the boundary road seems relatively safe - or you could explore the twisting streets of this old part of the city by going straight north, with all the dangers that may hold.";
-
-Investigate Red Light is a door. "". It is dangerous. Investigate Red Light is north of Entrance to the Red Light District.
-the marea of Investigate Red Light is "Red".
+	say "     To the south, you could wander back out into the surrounding city and possibly find a safer place to be. Alternatively, the way east and west along the boundary road seems relatively safe - or you could [bold type][link]explore[as]explore[end link][roman type] the twisting streets of this old part of the city that lie north of where you stand, with all the dangers that may hold.";
 
 instead of smelling Entrance to the Red Light District:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
-
-Leave Red Light is a door. "". It is dangerous. Leave Red Light is south of Entrance to the Red Light District.
-the marea of Leave Red Light is "Outside".
-
-[This is the location that you encounter the unique red light district creatures from. i.e. "explore", "hunt", and "scavenge"]
-Red Light District is a room.
 
 East of Entrance to the Red Light District is Boundary Street East.
 The earea of Boundary Street East is "Red".

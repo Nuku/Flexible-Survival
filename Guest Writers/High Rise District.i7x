@@ -7,6 +7,7 @@ Section 1 - Locations
 
 [This is the location you discover while exploring the city.]
 Entrance to the High Rise District is a room. It is fasttravel.
+The earea of Entrance to the High Rise District is "High".
 The description of Entrance to the High Rise District is "Squeezing between a few cars and around an empty bus, the High Rise district comes into view. The tall building gleaming in the sunlight, tons of alleyways to hide in from the multitude of flying creature around.".
 Skyscrapers is a door. "The tall buildings look intimidating to enter, but a few of the ground floor offices and businesses might be worth looking into. There are big financial buildings, office towers and condos intermixed with scattered smaller businesses in aging buildings clustered among the rising cityscape. They are all potential areas to explore to the [bold type]north[roman type].". It is dangerous. Skyscrapers is south of Financial Sector and north of Entrance to the High Rise District.
 the marea of Skyscrapers is "High".

@@ -618,7 +618,7 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 	say "     The animalistic coupling of the felinoid and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Klauz drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going down from Grey Abbey Library while (Level of Erica > 0 and Level of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-FELINOID-SEX WALKIN [line break]";
@@ -1214,7 +1214,7 @@ instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP o
 	say "     The animalistic coupling of Fang and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Fang drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, Fang isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
-instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
+instead of going down from Grey Abbey Library while (XP of Erica > 0 and XP of Erica < 4 and Erica is in Bunker and HP of Erica < 99):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERICA POST-Fang-SEX WALKIN [line break]";

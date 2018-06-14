@@ -314,7 +314,7 @@ to say HoneySexMenu:
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Get Blown by Honey";
+		now title entry is "Get blown by Honey";
 		now sortorder entry is 3;
 		now description entry is "Have Honey suck your cock";
 	[]
