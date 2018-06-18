@@ -147,7 +147,7 @@ to say LilianaSexRandomizer:
 		add 3 to qq;
 	if player is female, add 4 to qq;
 	if player is male and anallevel is 3, add 5 to qq;
-	if (player is female and anallevel is 3) or (player is not female and anallevel > 1), add 6 to qq;
+	if (player is neuter and anallevel > 1) or (player is female and anallevel is 3 and (player is not male or player is submissive)) or (player is not female and anallevel > 1 and (player is submissive or player is mpreg_able)), add 6 to qq;
 	if location of player is Equinoid Camp, add 7 to qq;
 	sort qq in random order;
 	if entry 1 of qq is 1, say "[eqwarsex1]";
