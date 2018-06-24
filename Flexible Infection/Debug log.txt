@@ -1,0 +1,238 @@
+Debugging log of Inform 7
+Inform called as: C:\Program Files (x86)\Inform 7\Compilers\ni -internal C:\Program Files (x86)\Inform 7\Internal -project C:\Users\Nuku\Documents\Inform\Projects\Flexible Infection.inform -format=ulx
+Found language bundle 'English' (built in)
+Found language bundle 'French' (built in)
+Found language bundle 'German' (built in)
+Found language bundle 'Italian' (built in)
+Found language bundle 'Spanish' (built in)
+Found language bundle 'Swedish' (built in)
+Reading language definition from <C:\Program Files (x86)\Inform 7\Internal\Languages\English\Syntax.preform>
+720 declarations read (14183 words)
+
+
+-----------------------------------------------------
+Phase I ... Lexical analysis
+-----------------------------------------------------
+
+I've now read your source text, which is 119603 words long.
+
+
+-----------------------------------------------------
+Phase II ... Semantic analysis Ia
+-----------------------------------------------------
+
+I've also read Standard Rules by Graham Nelson, which is 42655 words long.
+I've also read English Language by Graham Nelson, which is 2297 words long.
+I've also read Basic Screen Effects by Emily Short, which is 2218 words long.
+I've also read Dragon Babe by Nuku Valente, which is 1350 words long.
+I've also read Fox Taur by Nuku Valente, which is 2021 words long.
+
+
+-----------------------------------------------------
+Phase III ... Initialise language semantics
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase IV ... Semantic analysis Ib
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase V ... Semantic analysis II
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VI ... Semantic analysis III
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VII ... First pass through assertions
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VIII ... Second pass through assertions
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase IX ... Making the model world
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase X ... Tables and grammar
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase XI ... Phrases and rules
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase XII ... Code generation
+-----------------------------------------------------
+
+
+
+==== Phase XII.1 ... Compiling the storage for the model world ====
+
+
+
+==== Phase XII.2 ... Compiling the tables ====
+
+
+
+==== Phase XII.3 ... Compiling the equations ====
+
+
+
+==== Phase XII.4 ... Compiling the named action patterns ====
+
+
+
+==== Phase XII.5 ... Compiling the action routines ====
+
+
+
+==== Phase XII.6 ... Compiling first block of phrases ====
+
+Regional: CONSTANT_VNT'apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+Regional: CONSTANT_VNT'the apartments'-region(I336_apartments)(I227'apartments')
+ == region
+                                            Fail: person (~) number = nothing
+                                                        Fail: person (~) number = nothing
+                                                                                        Fail: person (~) number = nothing
+                                                                        Fail: room (~) number = nothing
+                                                                                        Fail: person (~) number = nothing
+                                                                        Fail: room (~) number = nothing
+                                                        Fail: person (~) number = nothing
+                                                                                        Fail: person (~) number = nothing
+                                                                        Fail: room (~) number = nothing
+                                                                                        Fail: person (~) number = nothing
+                                                                        Fail: room (~) number = nothing
+                    0 = texts valued property. 1 = text
+                    0 = texts valued property. 1 = text
+                    0 = texts valued property. 1 = text
+                    0 = texts valued property. 1 = text
+                    0 = texts valued property. 1 = text
+
+
+==== Phase XII.7 ... Compiling the rulebooks ====
+
+
+
+==== Phase XII.8 ... Compiling scene details ====
+
+
+
+==== Phase XII.9 ... CTNL ====
+
+
+
+==== Phase XII.10 ... Slashing grammar (G1) ====
+
+
+
+==== Phase XII.11 ... Determining grammar (G2) ====
+
+
+
+==== Phase XII.12 ... Compiling GPR tokens for parsing various kinds of value ====
+
+
+
+==== Phase XII.13 ... Compiling second block of phrases ====
+
+                                            Fail: body part (~) number = nothing
+
+
+==== Phase XII.14 ... Compiling noun and scope filter tokens ====
+
+
+
+==== Phase XII.15 ... Compiling chronology ====
+
+
+
+==== Phase XII.16 ... Compiling I6 Verb directives ====
+
+
+
+==== Phase XII.17 ... Slashing grammar (G1) ====
+
+
+
+==== Phase XII.18 ... Determining grammar (G2) ====
+
+
+
+==== Phase XII.19 ... Sorting and compiling non-value grammar (G3, G4) ====
+
+
+
+==== Phase XII.20 ... Compiling noun and scope filter tokens ====
+
+
+
+==== Phase XII.21 ... Compiling routines from predicate calculus ====
+
+Providing for a total heap of 16384, given requirement of 9216
+
+
+-----------------------------------------------------
+Phase XIII ... Compilation now complete
+-----------------------------------------------------
+
+Total of 195 files written as streams.
+CPU time: 1450 centiseconds
+
+
+That concludes the debugging log from this run of Inform.
+Its contents were as follows, and can be changed by placing
+text like 'Include property creations in the debugging log.'
+or 'Omit everything from the debugging log.' in the source.
+
+Included:
+  debugging log contents  debugging log inclusions
+Omitted:
+  action creations   action pattern compilation  action pattern parsing  assemblies    assertions    case insensitive filehandling
+  conditions    constructed past participles  constructed plurals   description compilation   excerpt meanings   excerpt parsing 
+  expressions    extensions census   figure creations   grammar    grammar construction   headings  
+  implications    inferences    kind changes   kind checking   kind creations   lexical output 
+  local variables   matching    meaning list allocation  memory allocation   noun resolution   object compilation 
+  object creations   object tree   phrase comparisons   phrase compilation   phrase creations   phrase registration 
+  phrase usage   predicate calculus   predicate calculus workings  pronouns    property creations   property provision 
+  property translations   relation definitions   rule attachments   rulebook compilation   spatial map   spatial map workings
+  specification permissions   specification usage   specificities    table construction   template reading   text substitutions 
+  time periods   variable creations   verifications    vocabulary  
