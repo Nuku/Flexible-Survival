@@ -3351,7 +3351,7 @@ every turn:
 			if the pregnant of N is not 0 and ctype of n is not sterile:
 				increase the pregnant of N by a random number from 1 to 3;
 				if the pregnant of N is greater than 30 and the ctype of N is semifertile and N is not fertilized, now the pregnant of N is 30;
-				if the pregnant of N is greater than 30:
+				if the pregnant of N is greater than 30 and there are off-stage persons:
 					now the pregnant of N is 0;
 					now N is not fertilized;
 					if N is visible, say "[The N] sinks to the ground and spreads her legs wide, huffing and panting for breath before a small creature spills from her distended sex onto the ground.";
@@ -5296,6 +5296,7 @@ Part - Game Outcome
 when play ends:
 	if totalwin is 1:
 		resume the story;
+	now totalwin is 1;
 	if altending is 0:
 		say "[bold type]";
 	if the mother of the player is greater than 0:
