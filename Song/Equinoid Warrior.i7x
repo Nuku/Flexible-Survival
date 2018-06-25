@@ -2,6 +2,7 @@ Version 2 of Equinoid Warrior by Song begins here.
 [ Version 1.0 - Initial sex and transformation scenes - Stripes                 ]
 [ Version 2.0 - Refactoring and additional sex scenes - Song                    ]
 [ Version 2.1 - Liliana has become an NPC - Luneth                              ]
+[ Version 2.2 - Extra sex scene and bugfix - Song                               ]
 
 Section 1 - Establishing NPC, pet object, Conversation, and Combat
 
@@ -130,20 +131,24 @@ Section 2 - Sex scene mechanics
 
 to say LilianaSexRandomizer:
 	setmonster "Black Equinoid";
-	[ Meeting the subsequent conditionals appends values to the end of the qq list. Afterwards, the list shuffled and a random number is selected. Values and meanings:
+	[ Meeting the subsequent conditionals appends values to the end of the qq list. Afterwards, the list is shuffled and a random number is selected. Values and meanings:
 		1 = player giving oral
 		2 = player receiving oral
 		3 = player fucking vaginally
 		4 = player being fucked vaginally
-		5 = player being fucked anally
-		6 = player is led to the bath to have intimate sex
+		5 = player fucking anally
+		6 = player being fucked anally
+		7 = player is led to the bath to have intimate sex
 	]
 	say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body. She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further.";
-	let qq be { 1, 2 };
-	if player is female, add 3 to qq;
-	if player is male, add 4 to qq;
-	if (cunts of player is 0 and anallevel > 1 and player is submissive) or (anallevel is 3 and player is submissive), add 5 to qq;
-	if location of player is Equinoid Camp, add 6 to qq;
+	let qq be { 1 };
+	if player is male:
+		add 2 to qq;
+		add 3 to qq;
+	if player is female, add 4 to qq;
+	if player is male and anallevel is 3, add 5 to qq;
+	if (player is neuter and anallevel > 1) or (player is female and anallevel is 3 and (player is not male or player is submissive)) or (player is not female and anallevel > 1 and (player is mpreg_ok or player is submissive)), add 6 to qq;
+	if location of player is Equinoid Camp, add 7 to qq;
 	sort qq in random order;
 	if entry 1 of qq is 1, say "[eqwarsex1]";
 	if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -151,6 +156,7 @@ to say LilianaSexRandomizer:
 	if entry 1 of qq is 4, say "[eqwarsex4]";
 	if entry 1 of qq is 5, say "[eqwarsex5]";
 	if entry 1 of qq is 6, say "[eqwarsex6]";
+	if entry 1 of qq is 7, say "[eqwarsex7]";
 	now libido of equinoid warrior is 0;
 	if libido of player < 30, now libido of player is 30;
 	infect "Black Equinoid";
@@ -214,13 +220,16 @@ to say eqwarsex4: [Liliana fucks player vaginally]
 	say "     Her hoofed hands slide over your body and soon guide you to lie down. She moves atop you, sliding her equine shaft into your juicy cunt so she may fuck you. You kiss and caress one another as she youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your womb. After some snuggling, you both get back up and prepare to continue your journey together.[impregchance]";
 	now libido of player is libido of player / 2;
 
-to say eqwarsex5: [Liliana fucks player anally]
+to say eqwarsex5: [Player fucks Liliana anally]
+	say "     Her hoofed hands slide over your body and downwards. As they wrap around your cock, you know what she wants and you have her lie down. Moving atop her, you tease her equine sex for a moment before aligning your flare with her puckered hole. Liliana whickers as you push inside of her, thick length spearing open the warm, tight channel of her ass. You kiss and nip at the youthful equinoid as you thrust into her, and it's not long until you both cum hard, her spurting length marring her fur as you paint her bowels with your seed. After some snuggling, you both get back up and prepare to continue your journey together.";
+
+to say eqwarsex6: [Liliana fucks player anally]
 	[puts black equinoid as lead monster in case of impregnation]
 	setmonster "Black Equinoid";
 	say "     Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze. Knowing what she needs of you, you move onto all fours and raise your tail. She presses her cock to your tight pucker and pushes it into you with a soft nicker. The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if player is male]. You cannot help but cum in response, spraying your submissive seed onto the ground[end if]. After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
 	now libido of player is libido of player / 2;
 
-to say eqwarsex6: [Bath sex scene when standing in Equinoid Camp]
+to say eqwarsex7: [Bath sex scene when standing in Equinoid Camp]
 	[puts black equinoid as lead monster in case of impregnation]
 	setmonster "Black Equinoid";
 	say "     Your companion takes your hand and leads you back to the large hall where you were initiated into the tribe. The bath near the center has been cleaned since [if lilianabathsex is 1]your last romp together[else]the ceremony[end if], now as clear as a pristine mountain lake. With a pleased little sigh, the herm lowers herself into the warm, soothing water, sinking to her shoulders beneath its subtly rippling surface. 'Come, don't be shy. The water's perfect,' Liliana teases, the sultry look in her eyes inviting you closer. [if player is herm]Your stiffening length[smn] and a trickle of wetness between your thighs urge[else if player is male]Your stiffening length[smn] urge[smv][else if player is female]A trickle of wetness between your thighs urges[else]A tingle in your rear urges[end if] you to abide the horse's offer, and you follow after her unthinkingly.";
