@@ -1699,9 +1699,18 @@ Reverting is an action applying to one visible thing.
 
 carry out Reverting:
 	say "You zap [noun] with your nano tuner and they begin changing rapidly!";
-	now the ctype of the noun is normal man;
-	now the tf table of the noun is table 0;
-	tf noun;
+	if the noun is the player:
+		repeat with J running through visible body parts:
+			choose row with Segment of the tag of the J in the TF table of normal man;	
+			if there is a shift text entry, say "[shift text entry][line break]";
+			now the ctype of J is normal man;
+			now the tf table of J is the tf table of normal man;
+		now the player is pacified;
+	otherwise:
+		now the ctype of the noun is normal man;
+		now the tf table of the noun is table 0;
+		tf noun;
+		say "[noun] is restored to their humanity!";
  
 Part - Flaring
 
@@ -2321,7 +2330,6 @@ To TF (subject - a person): [transforms people into monsters]
 	if n is nothing:
 		say "I found no valid infection, oops.";
 		stop the action;
-	say "[n].";
 	if n is rare, now n is a random selected infection model;
 	now the ctype of subject is n;
 	now all infection models are not selected;
