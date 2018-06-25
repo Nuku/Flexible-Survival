@@ -1684,11 +1684,15 @@ carry out TFing:
 		say "That's odd. Something is interfering with the gun.";
 		stop the action;
 	if the noun is the player:
-		repeat with J running through visible body parts:
-			choose row with Segment of the tag of the J in the TF table of the second noun;	
+		repeat with N running from 1 to number of rows in the tf table of the second noun:
+			let part be the Segment in row N of the tf table of the second noun;
+			let expart be a random body part;
+			repeat with J running through visible body parts:
+				if the printed name of J is part, now expart is J;
+			choose row N in the tf table of the second noun;
 			if there is a shift text entry, say "[shift text entry][line break]";
-			now the ctype of J is the second noun;
-			now the tf table of J is the tf table of the second noun;
+			now the ctype of expart is the second noun;
+			now the tf table of expart is the tf table of the second noun;
 		now the player is pacified;
 	otherwise:
 		now the tf table of noun is the tf table of second noun;
@@ -5290,6 +5294,8 @@ Every turn while the head is infected: [end game conditions]
 Part - Game Outcome
 
 when play ends:
+	if totalwin is 1:
+		resume the story;
 	if altending is 0:
 		say "[bold type]";
 	if the mother of the player is greater than 0:
@@ -5532,6 +5538,7 @@ when play ends:
 	if the player consents:
 		say "Let the game continue!";
 		now the player is pacified;
+		now totalwin is 1;
 		resume the story;
 
 
