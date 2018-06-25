@@ -3343,6 +3343,7 @@ Section - Sex/Felinoid
 every turn:
 	if a not out of play person is heavy:
 		repeat with N running through heavy person:
+			if N is the player, next;
 			if the pregnant of N is not 0 and ctype of n is not sterile:
 				increase the pregnant of N by a random number from 1 to 3;
 				if the pregnant of N is greater than 30 and the ctype of N is semifertile and N is not fertilized, now the pregnant of N is 30;
@@ -3351,7 +3352,6 @@ every turn:
 					now N is not fertilized;
 					if N is visible, say "[The N] sinks to the ground and spreads her legs wide, huffing and panting for breath before a small creature spills from her distended sex onto the ground.";
 					now N is not pacified;
-	[				now The description of N is "This strange creature  looks like a cross between a human and a feline, clearly female with huge bouncing breasts  and thick exposed vaginal lips. She is on the prowl for a mate, and you might make a good  candidate.";]
 					increase the mother of N by 1;
 					if there are off-stage persons:
 						let z be a random off-stage person;
@@ -3416,13 +3416,17 @@ every turn:
 
 Part - Items
 
-every turn:
+totalwin is a number that varies. Totalwin is usually 0.
+
+every turn while totalwin is 0:
 	let n be the number of on-stage monster persons;
 	let i be 0;
 	if an infectitem thing is not out of play:
 		now i is 1;
 	if n is 0 and i is 0:
-		end the story saying "You have cleared the city of infection against all odds! When you are found, it is as a successful survivor. The quarantine on the city is lifted and you are permitted to join polite society, not only as a free citizen but as a hero, celebrated for your achievement.";
+		say "You have cleared the city of infection against all odds! When you are found, it is as a successful survivor. The quarantine on the city is lifted and you are permitted to join polite society, not only as a free citizen but as a hero, celebrated for your achievement.";
+		now totalwin is 1;
+		end the story;
 
 A thing is either infectitem or not infectitem.  A thing is usually not infectitem.
 
