@@ -1271,9 +1271,9 @@ Section - Otters
 Table Otter - Otter Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"A fierce itch runs up along your cheeks. Scratching produces sharp spikes of unexpected pleasure as your face draws forward and sleek ears pop into being, your skull forming into a streamlined and brown pelted head of an otter. Soft urges of swimming nag at your thoughts."	"Your expression has been submerged under the amused expression of a brown furred otter."	"A soft cramping is felt as your otterish head is stripped from you. Everything feels so dry all of a sudden."
-"chest"	"Your chest experiences a rushing itching sensation.[if the destined femininity of the player is 1] You grasp at it just in time for two soft swells to push out against your questing fingers.[otherwise] Your chest grows a thick pelt of brown fur.[end if] You gain the sleek swimmer's torso of an otter, slinky and athletic."	"You have the athletic swimming chest of an otter.[if the destined femininity of the player is 1] You have B cup sized breasts that fit your streamlined upper torso.[end if]"	"Your sleek otter's chest begins to shed fur rapidly as it changes."
+"chest"	"Your chest experiences a rushing itching sensation. You grasp at it just in time for two soft swells to push out against your questing fingers. Your chest grows a thick pelt of brown fur. You gain the sleek swimmer's torso of an otter, slinky and athletic."	"You have the athletic swimming chest of an otter.[if the destined femininity of the player is 1] You have B cup sized breasts that fit your streamlined upper torso.[end if]"	"Your sleek otter's chest begins to shed fur rapidly as it changes."
 "gut"	"Previous fat melts away as you gain the powerful swimming abdominals of an otter, covered in a thick layer of water proofed brown fur."	"You have a brown furred belly of an otter, sleek and powerful."	"You momentarily lose definition as your swimmer's belly fades away."
-"pelvis"	"The brown fur begins to sweep across your hips and down into your groin in a surge of unasked for pleasure. You groan with delight as changes rock your sensitive regions.[if the destined femininity of the player is 1] Curious fingers begin to rub across your newly formed vulva, exploring the furry cleft as your body quakes.[end if][if the destined masculinity of the player is 1] You bring a hand to your cock as it grows longer and firmer, a sheath forming at the base as your swelling balls pump it full of seed to spray in a wide arc in front of you.[end if]"	"[if the destined femininity of the player is 1]You have a brown furred vagina of an otter, pouting and ready.[end if][if the destined masculinity of the player is 1] Your cock has never been so hard, extending from a brown furred sheath and achingly ready.[end if]"	"You give a sudden squeal as your otter loins shift and warp."
+"pelvis"	"The brown fur begins to sweep across your hips and down into your groin in a surge of unasked for pleasure. You groan with delight as changes rock your sensitive regions. Curious fingers begin to rub across your newly formed vulva, exploring the furry cleft as your body quakes. You bring a hand to your cock as it grows longer and firmer, a sheath forming at the base as your swelling balls pump it full of seed to spray in a wide arc in front of you."	"You have a brown furred vagina of an otter, pouting and ready. Your cock has never been so hard, extending from a brown furred sheath and achingly ready."	"You give a sudden squeal as your otter loins shift and warp."
 "left upper arm"	"Thick brown fur spreads smoothly across your left upper arm"	"You have the upper left arm of an otter."	"Your otter like left arm changes."
 "left forearm"	"Your arm feels strange as new found power flows into it along with a layer of brown fur."	"Your left forearm is covered in brown fur and feels powerful."	"Your otter like left forearm changes."
 "left hand"	"You get a sudden urge to clench your left hand, muscles locking hard and painfully as new claws dig into the flesh of your palm. Pads form, defraying the pain somewhat as your fingers flow together in light webbing, and thick brown fur sweeps across the hand."	"Your left hand is more suited to an otter than a human, but seems prehensile enough."	"A wet splitting sound is heard as the webbing between your fingers break."
@@ -1287,7 +1287,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Brown fur sweeps down over your lower right leg, bending as it goes, looking otterish."	"Your lower right leg is covered in brown fur and looks fit for an animal."	"The brown fur falls free of your right lower leg as it changes."
 "right foot"	"Your toes throb with a strange sensation as they clench together, coming apart only after brown fur has swept over them and webbing spread between them. New claws dig into the ground lightly."	"You have a webbed brown furred right foot with small black claws."	"There is a feeling of released tension as the webbing of your foot breaks and it changes."
 "rear" 	"As fur rushes over your ass, a thick otter's tail blossoms into place, like a rudder behind you, sinuous and powerful. You can't help but sway your new limb testingly."	"You have a long otter's tail behind you."	"Your thick otter's tail absorbs back into your rump as it changes."
-"full" 	"otter"	"You are a short and lithe otter, with a swimmer's body and sleek, water proofed brown fur.[if The destined femininity of the player is 1]Your B cupped breasts bounce only slightly with your movements, held firmly to keep your form sleek in the water.[end if][if the destined masculinity of the player is 1]Your new otter cock pokes free of its sheath, eager to find a new home in some other willing, or perhaps not, creature.[end if] Behind you, a thick rudder of a tail sways to and fro as playful energy echoes through you."	--
+"full" 	"otter"	"You are a short and lithe otter, with a swimmer's body and sleek, water proofed brown fur. Your B cupped breasts bounce only slightly with your movements, held firmly to keep your form sleek in the water. Your new otter cock pokes free of its sheath, eager to find a new home in some other willing, or perhaps not, creature. Behind you, a thick rudder of a tail sways to and fro as playful energy echoes through you."	--
 
 Section - Goblin
 
@@ -2182,7 +2182,7 @@ To infect (subject - a body part) with (infector - a thing):
 				now the tf table of J is the tf table of the infector;
 			stop the action;
 	if the tf table of subject is the tf table of infector:
-		say "Your [subject] already has this infection.";
+		say "";
 	otherwise:
 		if subject is secret and a random chance of 1 in 3 succeeds:
 			say "Your clothing prevents infection!";
@@ -2778,50 +2778,50 @@ Definition: A thing (called N) is heavy if the pregnant of N is not 0.
 Definition: A thing (called N) is matronly if the mother of N is not 0.
 Definition: A thing is compatible if their tf table is the tf table of pelvis.
 Definition: A thing is femme:
-if the fennec torso is a part of the rear, yes;
-if the centauress torso is a part of the rear, yes;
-if the tf table of the pelvis is table 1, yes;
-if the tf table of the pelvis is table gryphon, yes;
-if the tf table of the pelvis is table phoenix, yes;
-if the tf table of the pelvis is table uber fox, yes;
-if the tf table of the pelvis is table 4, yes;
-if the tf table of the pelvis is table 22, yes;
-if the tf table of the pelvis is table huge dragoness, yes;
-if the tf table of the pelvis is table 55, yes;
-if the tf table of the pelvis is table hyena, yes;
-if the tf table of the pelvis is table dragon babe, yes;
-if the tf table of the pelvis is table sheep, yes;
-if the tf table of the pelvis is table 21, yes;
-if the tf table of the pelvis is table 14, yes;
-if the tf table of the pelvis is table bee, yes;
-if the tf table of the pelvis is table horse mare, yes;
-if the tf table of the pelvis is table deer, yes;
-if the tf table of the pelvis is table collie, yes;
-if the tf table of the pelvis is table furry deer, yes;
-if the tf table of the pelvis is table ferret, yes;
-if the tf table of the pelvis is table slutrat, yes;
-if the tf table of the pelvis is table harpy, yes;
-if the tf table of the pelvis is table wyvern, yes;
-if the tf table of the pelvis is table feral dragoness, yes;
-if the tf table of the pelvis is table rogue, yes;
-if the tf table of the pelvis is table vixen, yes;
-if the tf table of the pelvis is table icat, yes;
-if the tf table of the pelvis is table elf, yes;
-if the tf table of the pelvis is table echoen, yes;
-if the tf table of the pelvis is table husky, yes;
-if the tf table of the pelvis is table demonic mouse, yes;
-if the tf table of the pelvis is table kangaroo, yes;
-if the tf table of the pelvis is table were fennec, yes;
-if the tf table of the pelvis is table 0 and playerfemale is 1, yes;
-if the rabbit vagina is touchable, yes;
-if the feline torso is a part of the rear, yes;
-if the tf table of the pelvis is table otter and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table latex fox and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
-if the tf table of rear is table fox taur, yes;
-no;
+	if the fennec torso is a part of the rear, yes;
+	if the centauress torso is a part of the rear, yes;
+	if the tf table of the pelvis is table 1, yes;
+	if the tf table of the pelvis is table gryphon, yes;
+	if the tf table of the pelvis is table phoenix, yes;
+	if the tf table of the pelvis is table uber fox, yes;
+	if the tf table of the pelvis is table 4, yes;
+	if the tf table of the pelvis is table 22, yes;
+	if the tf table of the pelvis is table huge dragoness, yes;
+	if the tf table of the pelvis is table 55, yes;
+	if the tf table of the pelvis is table hyena, yes;
+	if the tf table of the pelvis is table dragon babe, yes;
+	if the tf table of the pelvis is table sheep, yes;
+	if the tf table of the pelvis is table 21, yes;
+	if the tf table of the pelvis is table 14, yes;
+	if the tf table of the pelvis is table bee, yes;
+	if the tf table of the pelvis is table horse mare, yes;
+	if the tf table of the pelvis is table deer, yes;
+	if the tf table of the pelvis is table collie, yes;
+	if the tf table of the pelvis is table furry deer, yes;
+	if the tf table of the pelvis is table ferret, yes;
+	if the tf table of the pelvis is table slutrat, yes;
+	if the tf table of the pelvis is table harpy, yes;
+	if the tf table of the pelvis is table wyvern, yes;
+	if the tf table of the pelvis is table feral dragoness, yes;
+	if the tf table of the pelvis is table rogue, yes;
+	if the tf table of the pelvis is table vixen, yes;
+	if the tf table of the pelvis is table icat, yes;
+	if the tf table of the pelvis is table elf, yes;
+	if the tf table of the pelvis is table echoen, yes;
+	if the tf table of the pelvis is table husky, yes;
+	if the tf table of the pelvis is table demonic mouse, yes;
+	if the tf table of the pelvis is table otter, yes;
+	if the tf table of the pelvis is table kangaroo, yes;
+	if the tf table of the pelvis is table were fennec, yes;
+	if the tf table of the pelvis is table 0 and playerfemale is 1, yes;
+	if the rabbit vagina is touchable, yes;
+	if the feline torso is a part of the rear, yes;
+	if the tf table of the pelvis is table latex fox and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
+	if the tf table of rear is table fox taur, yes;
+	no;
 
 Definition: A person (called N) is catty:
 if the tf table of ctype of n is table 20, yes;
@@ -2897,7 +2897,7 @@ if the tf table of the pelvis is table 0 and playerfemale is 1, no;
 if the tf table of the pelvis is table tree, no;
 if the tf table of the pelvis is table demonic mouse, no;
 if the tf table of the pelvis is table feral dragoness, no;
-if the tf table of the pelvis is table otter and the destined masculinity of the player is 0, no;
+if the tf table of the pelvis is table otter, yes;
 if the tf table of the pelvis is table latex fox and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table minotaur and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table goblin and the destined masculinity of the player is 0, no;
@@ -2998,7 +2998,7 @@ every turn:
 		otherwise if the pregnant of the player is greater than 20 and u is not greater than 20:
 			if the tf table of chest is not the tf table of pelvis and the player is femme, infect chest with pelvis;
 			say "Your breasts swell and become a little sore as your body prepares for eventual birth. Your belly feels large and round, so full of life. You can't help but gently rub over it once in a while, thinking of your future child.";
-		otherwise if the pregnant of the player is greater than 30 and the player is femme:
+		otherwise if the pregnant of the player is greater than 30 and the player is femme and there are off-stage monster persons:
 			say "A sudden stab runs through your abdomen as you get the urge to crouch in place. Your senses full under powerful waves of pleasure that have you panting for breath as life emerges from within you. You are soon a mother.";
 			now the pregnant of the player is 0;
 			now the player is not fertilized;
@@ -3429,7 +3429,6 @@ every turn while totalwin is 0:
 		now i is 1;
 	if n is 0 and i is 0:
 		say "You have cleared the city of infection against all odds! When you are found, it is as a successful survivor. The quarantine on the city is lifted and you are permitted to join polite society, not only as a free citizen but as a hero, celebrated for your achievement.";
-		now totalwin is 1;
 		end the story;
 
 A thing is either infectitem or not infectitem.  A thing is usually not infectitem.
@@ -4704,10 +4703,16 @@ Part - Demonic Mouse Corruption
 
 instead of opening the stable doors for the first time:
 	say "You reach to open the doors when suddenly a horse sails over the top and goes galloping towards the city like a bolt of lightning. What was that all about?";
-	let z be a random on-stage npc person;
-	now the tf table of z is table horse mare;
+	if there is an on-stage npc person:
+		let z be a random on-stage npc person;
+		now the tf table of z is table horse mare;
+		tf z;
+	otherwise:
+		let q be a random off-stage person;
+		move q to a random visited room;
+		now tf table of q is table horse mare;
+		tf q;
 	now prometheus is in the stables;
-	tf z;
 
 instead of opening the pasture door for the first time:
 	now the pasture door is open;
@@ -5296,6 +5301,7 @@ Part - Game Outcome
 when play ends:
 	if totalwin is 1:
 		resume the story;
+		continue the action;
 	now totalwin is 1;
 	if altending is 0:
 		say "[bold type]";
@@ -5597,9 +5603,15 @@ Ferret Cage is a kind of container. It is closed. Understand "Cage" as a ferret 
 
 Instead of opening a ferret cage for the first time:
 	say "Woah! Something small and slinky just ran right out of the cage and went scurrying out of the area in a blur of brown fur.";
-	let z be a random unchanged on-stage person;
-	now the tf table of z is table ferret;
-	tf z;
+	if there is an on-stage npc person:
+		let z be a random on-stage npc person;
+		now the tf table of z is table ferret;
+		tf z;
+	otherwise:
+		let q be a random off-stage person;
+		move q to a random visited room;
+		now tf table of q is table ferret;
+		tf q;
 	stop the action;
 
 Instead of opening a ferret cage:
