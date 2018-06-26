@@ -41,7 +41,7 @@ A person can be stunned. A person is usually not stunned.
 normal man is a human.
 Normal man is fearful.
 PC is a human.
-The description of human is "Just a regular human being. But for how long?".
+The description of human is "Just a regular human being. But for how long?[if the noun is a man] He nods in your direction.[end if][if the noun is female] She looks busy.[end if]".
 Centaur is an infection model.
 Centaur is male.
 The tf table of human is table 0.
@@ -1686,9 +1686,13 @@ carry out TFing:
 	if the noun is the player:
 		repeat with N running from 1 to number of rows in the tf table of the second noun:
 			let part be the Segment in row N of the tf table of the second noun;
+			let foundit be 0;
 			let expart be a random body part;
 			repeat with J running through visible body parts:
-				if the printed name of J is part, now expart is J;
+				if the printed name of J is part:
+					now expart is J;
+					now foundit is 1;
+			if foundit is 0, next;
 			choose row N in the tf table of the second noun;
 			if there is a shift text entry, say "[shift text entry][line break]";
 			now the ctype of expart is the second noun;
@@ -1704,11 +1708,20 @@ Reverting is an action applying to one visible thing.
 carry out Reverting:
 	say "You zap [noun] with your nano tuner and they begin changing rapidly!";
 	if the noun is the player:
-		repeat with J running through visible body parts:
-			choose row with Segment of the tag of the J in the TF table of normal man;	
+		repeat with N running from 1 to number of rows in the tf table of normal man:
+			let part be the Segment in row N of the tf table of normal man;
+			let foundit be 0;
+			let expart be a random body part;
+			repeat with J running through visible body parts:
+				if the printed name of J is part:
+					now expart is J;
+					now foundit is 1;
+			if foundit is 0, next;
+			choose row N in the tf table of the normal man;
 			if there is a shift text entry, say "[shift text entry][line break]";
-			now the ctype of J is normal man;
-			now the tf table of J is the tf table of normal man;
+			now the ctype of expart is the normal man;
+			now the tf table of expart is the tf table of normal man;
+		say "You return to being human!";
 		now the player is pacified;
 	otherwise:
 		now the ctype of the noun is normal man;
@@ -3487,6 +3500,9 @@ before wearing the stomach pouch:
 	stop the action;
 	
 before wearing something: [makes sure your not already wearing something there and if so stops]
+	if noun is not clothing:
+		say "[The noun] does not appear to be clothing. Why are you trying to wear it?";
+		stop the action;
 	let x be clothing type of noun;
 	if clothing type of noun is "shirt":
 		if shirt of player is 1:
