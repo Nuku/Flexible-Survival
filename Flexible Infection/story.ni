@@ -1271,7 +1271,7 @@ Section - Otters
 Table Otter - Otter Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"A fierce itch runs up along your cheeks. Scratching produces sharp spikes of unexpected pleasure as your face draws forward and sleek ears pop into being, your skull forming into a streamlined and brown pelted head of an otter. Soft urges of swimming nag at your thoughts."	"Your expression has been submerged under the amused expression of a brown furred otter."	"A soft cramping is felt as your otterish head is stripped from you. Everything feels so dry all of a sudden."
-"chest"	"Your chest experiences a rushing itching sensation. You grasp at it just in time for two soft swells to push out against your questing fingers. Your chest grows a thick pelt of brown fur. You gain the sleek swimmer's torso of an otter, slinky and athletic."	"You have the athletic swimming chest of an otter.[if the destined femininity of the player is 1] You have B cup sized breasts that fit your streamlined upper torso.[end if]"	"Your sleek otter's chest begins to shed fur rapidly as it changes."
+"chest"	"Your chest experiences a rushing itching sensation. You grasp at it just in time for two soft swells to push out against your questing fingers. Your chest grows a thick pelt of brown fur. You gain the sleek swimmer's torso of an otter, slinky and athletic."	"You have the athletic swimming chest of an otter. You have B cup sized breasts that fit your streamlined upper torso."	"Your sleek otter's chest begins to shed fur rapidly as it changes."
 "gut"	"Previous fat melts away as you gain the powerful swimming abdominals of an otter, covered in a thick layer of water proofed brown fur."	"You have a brown furred belly of an otter, sleek and powerful."	"You momentarily lose definition as your swimmer's belly fades away."
 "pelvis"	"The brown fur begins to sweep across your hips and down into your groin in a surge of unasked for pleasure. You groan with delight as changes rock your sensitive regions. Curious fingers begin to rub across your newly formed vulva, exploring the furry cleft as your body quakes. You bring a hand to your cock as it grows longer and firmer, a sheath forming at the base as your swelling balls pump it full of seed to spray in a wide arc in front of you."	"You have a brown furred vagina of an otter, pouting and ready. Your cock has never been so hard, extending from a brown furred sheath and achingly ready."	"You give a sudden squeal as your otter loins shift and warp."
 "left upper arm"	"Thick brown fur spreads smoothly across your left upper arm"	"You have the upper left arm of an otter."	"Your otter like left arm changes."
@@ -3105,15 +3105,12 @@ instead of kissing something(called noun):
 	let zoidberg be 0;
 	if ( the noun is male or the noun is neuter ) and the player is femme and a random chance of 1 in 2 succeeds, now zoidberg is 1;
 	if ( the noun is female or the noun is neuter ) and zoidberg is 0:
-	[	if pregnant of the noun is not 0:
-			say "She looks unsure a moment before she presses her round pregnant belly against you, welcoming your advance. ";
-		
-		say "     [Noun] leans in against the kisses, feeling over your body eagerly[if the player is femme], brushing against your pussy eagerly[end if][if the player is butch], grinding herself against your cock wantonly[end if].";]
 		if the pelvis is secret:
 			say "She notices that you have something covering your groin and she can do little more than paw at you wantingly.";
 			if the tf table of pelvis is not the tf table of the noun and ( tf table of pelvis is table 0 or tf table of pelvis is table female human), infect pelvis with noun;
 			stop the action;
 		let zeptoid be 1;
+		say "Do we even get this far?";
 		if the player is femme:
 			if the player is butch and a random chance of 1 in 2 succeeds, now zeptoid is 0;
 		if the player is butch and zeptoid is 1:
@@ -3156,47 +3153,47 @@ instead of kissing something(called noun):
 			otherwise:
 				say "[female sex of ctype of pelvis]";
 		stop the action;
-		if the noun is male or the noun is neuter:
-			if corruption is 5 and the noun is not a monster:
-				say "You take the helpless mortal and taunt him with the sinful appeals of your new body. As his hand grab clumsily over your furry form, you move  to disrobe him, whispering sweet nothings even as demonic energy builds within you. When he has lost all control, and is rutting with you wildly, you draw upon him, snatching his vital force to flow rapidly into your body. Your senses go white as the curse is sealed within you, and your patron whispers into your large ears, calling for you to return to the netherworlds.";
-				increase corruption by 1;
-				now altending is 1;
-				end the story saying "As the victim of your urges squirms in torment, the earth splits asunder beneath you, drawing you down through lava forged caverns. Scrambling against the sides that batter against your form does little to slow your descent, landing heavily in an ornate pentagram. Your mistress stands just outside it, taller than the other mice, more a rat, tall and wicked. She reaches through the circle and grabs you by the back of your neck before you can recover and affixes a sold gold collar around your neck.[line break][line break]'You, my newest pet, will serve me well. Fear not, I am a benign prince, as demons go. If you bring me souls of the human kind, I will reward you and treasure you.'[line break][line break]Her words are sweet and soothing, the pain of the fall fading away as she pets over you slowly, rekindling the sinful flames of your lust. You are soon sent back to the mortal world, visiting dreams, or on lucky occasions, answering the call of naive sorcerers. Each mortal you seduce wins favor of your mistress. There are worse jobs to have.";
-				stop the action;
-			if corruption is 6, stop the action;
-		if the player is butch:
-	[		if the noun is not neuter, say "You push [the noun] back as you kiss across his chest and grab at his hips. You swivel him around to present his rump towards you as you move into position, feeling steely hard and anxious.";]
-			if the pelvis is secret:
-				say "You realize at the last moment that your cock is covered with clothes and grunt with frustration.";
-				stop the action;
+	if the noun is male or the noun is neuter:
+		if corruption is 5 and the noun is not a monster:
+			say "You take the helpless mortal and taunt him with the sinful appeals of your new body. As his hand grab clumsily over your furry form, you move  to disrobe him, whispering sweet nothings even as demonic energy builds within you. When he has lost all control, and is rutting with you wildly, you draw upon him, snatching his vital force to flow rapidly into your body. Your senses go white as the curse is sealed within you, and your patron whispers into your large ears, calling for you to return to the netherworlds.";
+			increase corruption by 1;
+			now altending is 1;
+			end the story saying "As the victim of your urges squirms in torment, the earth splits asunder beneath you, drawing you down through lava forged caverns. Scrambling against the sides that batter against your form does little to slow your descent, landing heavily in an ornate pentagram. Your mistress stands just outside it, taller than the other mice, more a rat, tall and wicked. She reaches through the circle and grabs you by the back of your neck before you can recover and affixes a sold gold collar around your neck.[line break][line break]'You, my newest pet, will serve me well. Fear not, I am a benign prince, as demons go. If you bring me souls of the human kind, I will reward you and treasure you.'[line break][line break]Her words are sweet and soothing, the pain of the fall fading away as she pets over you slowly, rekindling the sinful flames of your lust. You are soon sent back to the mortal world, visiting dreams, or on lucky occasions, answering the call of naive sorcerers. Each mortal you seduce wins favor of your mistress. There are worse jobs to have.";
+			stop the action;
+		if corruption is 6, stop the action;
+	if the player is butch:
+[		if the noun is not neuter, say "You push [the noun] back as you kiss across his chest and grab at his hips. You swivel him around to present his rump towards you as you move into position, feeling steely hard and anxious.";]
+		if the pelvis is secret:
+			say "You realize at the last moment that your cock is covered with clothes and grunt with frustration.";
+			stop the action;
+		say "[male sex of ctype of pelvis]";
+		if the TF table of pelvis is not tf table of noun:
+			if Z is not nothing and tf table of pelvis is not table 0:
+				infect Z with the noun;
+		if the player is not femme, stop the action;
+[		if the tf table of noun is table 0 and not a random chance of willpower of the noun in 10 succeeds:
+			say "As if in a trance, they act against their higher will, obeying base urges instead.";]
+		if the pregnant of the player is 0 and a random chance of 1 in 3 succeeds and the player is femme and ctype of pelvis is not semifertile:
+			increase the pregnant of the player by 1;
+		if the pregnant of the player is 1, say "The seed rushes up into your body with a shuddering explosion of pleasure as your belly swells forward.";
+		now the player is fertilized;
+	otherwise:
+		if the player is femme and a random chance of one in 3 succeeds:
 			say "[male sex of ctype of pelvis]";
-			if the TF table of pelvis is not tf table of noun:
-				if Z is not nothing and tf table of pelvis is not table 0:
-					infect Z with the noun;
-			if the player is not femme, stop the action;
-	[		if the tf table of noun is table 0 and not a random chance of willpower of the noun in 10 succeeds:
-				say "As if in a trance, they act against their higher will, obeying base urges instead.";]
-			if the pregnant of the player is 0 and a random chance of 1 in 3 succeeds and the player is femme and ctype of pelvis is not semifertile:
+			if the TF table of pelvis is not tf table of noun and a random chance of 1 in 3 succeeds:
+				if Z is not nothing and tf table of noun is not table 0 and tf table of pelvis is table 0, infect pelvis with the noun;
+			if the pregnant of the player is 0 and the ctype of pelvis is not semifertile and the ctype of pelvis is not sterile:
 				increase the pregnant of the player by 1;
-			if the pregnant of the player is 1, say "The seed rushes up into your body with a shuddering explosion of pleasure as your belly swells forward.";
+				say "Your belly swells round as the seed tingles inside of you with ominous warning.";
 			now the player is fertilized;
 		otherwise:
-			if the player is femme and a random chance of one in 3 succeeds:
-				say "[male sex of ctype of pelvis]";
-				if the TF table of pelvis is not tf table of noun and a random chance of 1 in 3 succeeds:
-					if Z is not nothing and tf table of noun is not table 0 and tf table of pelvis is table 0, infect pelvis with the noun;
-				if the pregnant of the player is 0 and the ctype of pelvis is not semifertile and the ctype of pelvis is not sterile:
-					increase the pregnant of the player by 1;
-					say "Your belly swells round as the seed tingles inside of you with ominous warning.";
-				now the player is fertilized;
-			otherwise:
-				say "You kneel before the [printed name of noun] and take his throbbing member into your mouth, suckling loudly and lewdly at him, stroking at him as you work your mouth back and forth along the excited pole. All too soon, they're exploding across lips and face, leaving you streaked with their salty deposit.";
-				if the TF table of head is not tf table of noun:
-					if Z is not nothing and tf table of noun is not table 0, infect head with the noun;
-			if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and the destined masculinity of the player is 0:
-				now the prickpreg is 1;
-		if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0:
-			infect the noun with pelvis;
+			say "You kneel before the [printed name of noun] and take his throbbing member into your mouth, suckling loudly and lewdly at him, stroking at him as you work your mouth back and forth along the excited pole. All too soon, they're exploding across lips and face, leaving you streaked with their salty deposit.";
+			if the TF table of head is not tf table of noun:
+				if Z is not nothing and tf table of noun is not table 0, infect head with the noun;
+		if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and the destined masculinity of the player is 0:
+			now the prickpreg is 1;
+	if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0:
+		infect the noun with pelvis;
 
  
 [kiss/sex with cat girl]
@@ -6628,6 +6625,13 @@ Rule for writing a paragraph about a rope (called the coil):
 			say "[The coil] snakes across the floor [way] towards [the next room].";
 	otherwise:
 		say "There is [a coil] here[if the coil is stuck to a visible nonrope thing], tied to [the list of nonrope visible things which are stuck to the coil][end if]."
+
+understand "wear rope" as fashion styling.
+fashion styling is an action applying to nothing.
+
+carry out fashion styling:
+	say "You consider the style a moment... nah, not working for you.";
+	stop the action;
 
 To decide what room is the home of (item - a thing):
 	let next room be an object;
