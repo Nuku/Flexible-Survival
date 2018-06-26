@@ -17,4 +17,10 @@ Definition: A person (called x) is equalsized with player:
 	if scalevalue of x is scalevalue of player, yes;
 	no;
 
+[State checks]
+
+Definition: A person (called x) is breasted:
+	if breasts of x > 0 and breast size of x > 0, yes;
+	no;
+
 Definitions ends here.
