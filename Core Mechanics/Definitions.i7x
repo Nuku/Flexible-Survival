@@ -18,7 +18,7 @@ Definition: A person (called x) is equalsized with player:
 	no;
 
 [State checks]
-
+[Does the person have boobs?]
 Definition: A person (called x) is breasted:
 	if breasts of x > 0 and breast size of x > 0, yes;
 	no;
