@@ -3,6 +3,28 @@ Version 2 of Andrew by Stripes begins here.
 
 "Adds a primarily M/M Wolf NPC named Andrew to the Flexible Survival game."
 
+[ HP of Andrew                      ]
+[ 0 = Nothing                       ]
+[ 1 = Talked w/him                  ]
+[ 2 = Received oral                 ]
+[ 3 = Had sex once                  ]
+[ 4 = Had sex again                 ]
+[ 5 = Gave oral                     ]
+[ 6 = Had sex again                 ]
+[ 7 = Covered in wolf cum           ]
+[ 8 = Had sex again                 ]
+[ 9 = Bukkake special               ]
+[ 10 = Player tops w/ onlookers     ]
+
+[ lust of Andrew                    ]
+[ Andrew + Demon Brute pet          ]
+[ 0 = no interaction                ]
+[ 1 = plan rejected                 ]
+[ 2 = demon sex show                ]
+[ 3 = post demon-show talk          ]
+[ 4 = redeemed demon sex show       ]
+[ 5 = post redeemed demon sex show  ]
+[ 100 = demon show ending           ]
 
 Section 1 - Private Booths
 
@@ -14,7 +36,7 @@ the scent of Private Booths is "The booths smell strongly of male lust of numero
 Section 2 - Andrew
 
 Andrew is a man. Andrew is in Private Booths.
-The description of Andrew is "     [one of]S[or]Adjusting the sizable bulge in his pants while s[or]Watching the guys on the dance floor while s[or]Sipping idly at a drink while s[or]Rubbing the large bulge in his black cargo pants as a particularly sexy ass walks past him while he's s[or]S[as decreasingly likely outcomes]itting in the cornermost booth, this black furred wolf bobs his head to the beat. The fellow is of average height and build, but has a considerably lupine body. His arms end in paw-like hands and his legs have become digitigrade, though his wolf tail seems longer than those of others you've seen. He's going topless, wearing only a pair of black cargo pants held up by a rainbow belt. Below that brightly colored belt is a very sizable bulge that draws your eyes before you notice you're staring and look back up at his face. Having noticed your glance, his mischievous violet eyes look you over through his shaggy headfur as his ears perk in your direction and he gives you a lupine smile while twirling a fingertip in one of the messy splatters of white goo on the table at this particularly sticky booth.".
+The description of Andrew is "     [one of]Sitting[or]Adjusting the sizable bulge in his pants while sitting[or]Watching the guys on the dance floor while sitting[or]Sipping idly at a drink while sitting[or]Rubbing the large bulge in his black cargo pants as a particularly sexy ass walks past him while he's sitting[as decreasingly likely outcomes] in the cornermost booth, this black furred wolf bobs his head to the beat. The fellow is of average height and build, but has a considerably lupine body. His arms end in paw-like hands and his legs have become digitigrade, though his wolf tail seems longer than those of others you've seen. He's going topless, wearing only a pair of black cargo pants held up by a rainbow belt. Below that brightly colored belt is a very sizable bulge that draws your eyes before you notice you're staring and look back up at his face. Having noticed your glance, his mischievous violet eyes look you over through his shaggy headfur as his ears perk in your direction and he gives you a lupine smile while twirling a fingertip in one of the messy splatters of white goo on the table at this particularly sticky booth.".
 The conversation of Andrew is { "Sex?" }.
 the icon of Andrew is figure of Andrew_icon;
 
@@ -96,7 +118,7 @@ to say sexwithAndrew:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that [if player is male]you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package[else]he should probably stick to the playing with the regular club patrons for his fun. He sighs, but nods in agreement[end if].";
 			now lust of Andrew is 1;
 	else if HP of Andrew is 4 or ( HP of Andrew > 4 and a random chance of 1 in 6 succeeds):	[special - give oral]
-		say "     Andrew grins at your offer and runs a paw down to the bulge in his pants. 'Mmm... How does a tasty treat sound, hot stuff? I've got something nice and sticky for you all saved up,' he says while hopping up to sit at the edge of the table. He unzips his fly and pulls out his swelling cock, running his fingers fingers over the throbbing, lupine cock. A little precum dribbles down his pointed shaft as he slips his pants down completely. The scent of aroused wolf grows stronger and you lick your lips, longing to get a taste of that thick meat.";
+		say "     Andrew grins at your offer and runs a paw down to the bulge in his pants. 'Mmm... How does a tasty treat sound, hot stuff? I've got something nice and sticky for you all saved up,' he says while hopping up to sit at the edge of the table. He unzips his fly and pulls out his swelling cock, running his fingers over the throbbing, lupine cock. A little precum dribbles down his pointed shaft as he slips his pants down completely. The scent of aroused wolf grows stronger and you lick your lips, longing to get a taste of that thick meat.";
 		say "     Unable to resist the tantalizing offer, you bring your lips to his thick shaft and start licking and kissing at it. He moans softly and rubs his hands over your head, gently coaxing you to take it into your mouth. As he stuffs your mouth with his cock and starts thrusting into it, you work your tongue over him, excited by the taste of his precum and musky meat. You grope his heavy, enlarged balls with one hand, longing to taste their contents soon. 'Mmm... good work. Keep that up,' he says in his soft, girlish voice. 'You love this, don't you? Putting on a show for everyone with how much you love cock?'";
 		say "     Awash in your own arousal, you'd agree with him if your mouth weren't stuffed with delicious wolf-cock, wanting to be as much a man-whore as the sexy wolf you're blowing. You're quite certain there's others around watching the show, probably having some fun of their own. Imagining all those different, sexy penises around you, being stroked, rubbing together, filling slick holes, turns you on all the more. You wiggle your rear and suck all the harder, which stimulates his cock to increase its flow of delicious precum. Grabbing his ass with your free hand, you slip a pair of fingers into his tailhole and prod at his prostate. This gets the wolf to howl in lustful release as he cums hard, blasting his thick seed into your mouth. His prodigious flow forces its way down your throat and stuffs your belly with hot semen. Just as your tummy's starting to feel full, he pushes your head back, letting the rest of his load spray onto your face, coating your head in his delicious, musky cum.";
 		say "     A little dazed, but greatly aroused after your tasty meal of wolf cum, you're pushed up onto the table by Andrew. As you use your hands to wipe his seed into your mouth, he takes a hold of your throbbing [cock size desc of player] erection[smn] and strokes you quickly. Soon enough you moan and cum as well, spraying your hot load across yourself for everyone around to see what a horny cock slut you are as your [ball size] are drained.";
@@ -176,7 +198,7 @@ to say sexwithAndrew:
 		say "     'Up for more fun, are we? Hmmm... I'm pretty busy,' he says with some seriousness as he rises from his seat. 'But for you, I'm sure I can squeeze you into my tight schedule,' he adds with a grin as he slips down his cargo pants and bends over the messy table, putting his crinkled hole on tantalizing display. Reaching back, he slips a pair of digits into his back door and spreads it open with ease. 'See. I can be very accommodating,' he giggles teasingly.";
 		say "     With such an offer before you, your manhood gets harder still. Grabbing that offered ass, you run your fingers through its black fur as you get your cock lined up. As you start sliding into him, he moves his paw to instead [if cockname of player is listed in infections of internallist]cup your balls[else]steady himself on the table[end if][if cock length of player > 24]. Grunting a little at your sheer size, he snatches up a half-full stein of beer and downs it. 'Ahhh- that's better. A little extra libation to help me cope with that impressive piece of yours[else]. Releasing a satisfying moan as you penetrate him, he takes a half-finished beer and drains it in a few gulps. 'Ahhh- [one of]my two favorite vices - fine drink and fine men[or]I so enjoy the pleasure of fine drink while in the company of a fine gentleman[at random][end if].'";
 		say "     With your cock stuffed in the wolf's ass, you can feel his squeeze and tighten around you, milking at your cock now that it's adjusted to your presence. With a firm grip on his buttocks, you thrust firmly, drawing a soft moan from the lustful gay lupine. Knowing he can take it, you increase your pace, drilling harder and deeper into him. And true to form, he raises his ass a little higher and pushes back into every thrust.";
-		say "     As the sticky sounds and moans of your fucking increase, the attention of the neighboring booths is drawn. Soon you have a few spectators admiring the show. Even while getting fucked hard and deep, the wolf is able to negotiate rendez-vous with a few of the horny guys asking for a shot at his ass next. You get a few offers as well, which is quite tempting, but too much of your focus is on plowing the fine wolf you're buried in right now.";
+		say "     As the sticky sounds and moans of your fucking increase, the attention of the neighboring booths is drawn. Soon you have a few spectators admiring the show. Even while getting fucked hard and deep, the wolf is able to negotiate rendezvous with a few of the horny guys asking for a shot at his ass next. You get a few offers as well, which is quite tempting, but too much of your focus is on plowing the fine wolf you're buried in right now.";
 		say "     After a good, long pounding, you feel your climax approaching. Sensing this as well, Andrew works that experienced ass with firm squeezes on your already aching cock. This sends you past your peak and you cum hard and long into his welcoming bowels. You drain your balls into him, emptying a [cum load size of player] load into him while he moans in satisfaction.";
 		say "     When you're finished and have pulled out, Andrew rolls over and sits up on the table, jerking himself off quickly. He blasts his load into one of the empty beer mugs, nearly filling it. He then guzzles down his load and gives you a very sloppy and cum-filled kiss while those around watch on, many catcalling at this last show.";
 		now lastfuck of Andrew is turns;
@@ -368,30 +390,5 @@ Section 9 - Endings
 when play ends:
 	if lust of Andrew is 100:
 		say "     The wild debauchery at the Palomino goes on and on, the safe haven falling into a den for the demonic orgy. It becomes a nexus of infection that spreads out and corrupts the surrounding area. During the wild sex, the demon takes the amulet from you and drapes it around Andrew's neck with a sinister grin. Your last order to the demon had been to obey Andrew, to fuck him hard and to not harm him, all of which he's done, in a dark and twisted way. Having screwed the wolf into a wild lust, Andrew is no more than a puppet for the demon, his only desire now is for the demon to keep fucking him. And remaining unharmed by the harsh pounding, the demon can screw the wolf for hours on end before he passes out. Whenever the wolf is unconscious, the demon simply switches to fucking a few of the horny supplicants in the crowd to keep the scent of infernal lust heavy in the air so the orgy never ends. The Palomino Club, briefly a safe haven from the menace of feral mutants, has become a source of them that cannot be stopped.";
-
-
-[ HP of Andrew                      ]
-[ 0 = Nothing                       ]
-[ 1 = Talked w/him                  ]
-[ 2 = Received oral                 ]
-[ 3 = Had sex once                  ]
-[ 4 = Had sex again                 ]
-[ 5 = Gave oral                     ]
-[ 6 = Had sex again                 ]
-[ 7 = Covered in wolf cum           ]
-[ 8 = Had sex again                 ]
-[ 9 = Bukkake special               ]
-[ 10 = Player tops w/ onlookers     ]
-
-[ lust of Andrew                    ]
-[ Andrew + Demon Brute pet          ]
-[ 0 = no interaction                ]
-[ 1 = plan rejected                 ]
-[ 2 = demon sex show                ]
-[ 3 = post demon-show talk          ]
-[ 4 = redeemed demon sex show       ]
-[ 5 = post redeemed demon sex show  ]
-[ 100 = demon show ending           ]
-
 
 Andrew ends here.
