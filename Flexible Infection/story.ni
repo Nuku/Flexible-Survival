@@ -3076,7 +3076,10 @@ before kissing something(called N):
 		say "It's not even alive...";
 		stop the action;
 
- 
+
+instead of kissing something(called noun) when the ctype of pelvis is demonic mouse:
+	 try attacking the noun;
+
 instead of kissing something(called noun):
 	if the noun is the player:
 		let P be a random not infected body part;
@@ -5739,7 +5742,47 @@ after taking off the lucky paw for the first time:
 
 Stomach Pouch is a kind of clothing. Understand "pouch" as a stomach pouch. The description of stomach pouch is "A pouch designed to be worn under other clothes, to conceal money and other valuables.". The clothing type of Jeans is "pants". The tf table of stomach pouch is table kangaroo. stomach pouch is infectitem.
 
-There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. The description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back.".
+There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. The description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back. ".
+A Button is an object.
+There is a Button in the dresser. The description of the button is "So shiny and red, maybe you should push it? Maybe not...". It is fixed in place.
+
+instead of pushing the button:
+	say "You feel the world rewrite itself around you. The infection has progressed to the terminal stage, with everyone changed in radical ways! Your pentagram explodes in a wave of foul-smelling brimstone, consuming itself as evil energy flows into you, perverting your form.";
+	repeat with J running through on-stage persons:
+		if J is the player, next;
+		if the tf table of J is table 0:
+			let Q be a random infection model;
+			now the tf table of J is the tf table of Q;
+			tf J;
+	repeat with J running through on-stage infectitem:
+		let Q be a random person in the location of J;
+		if Q is not nothing and Q is not the player:
+			now the tf table of Q is the tf table of J;
+			tf Q;
+		remove J from play;
+	let Q be a random pentagram;
+	remove Q from play;
+	now Q is a random ferret cage;
+	let K be a random person in the location of Q;
+	if K is not nothing and K is not the player:
+		now the tf table of k is  table ferret;
+		tf K;
+	remove Q from play;
+	repeat with N running from 1 to number of rows in the tf table of demonic mouse:
+		let part be the Segment in row N of the tf table of demonic mouse;
+		let foundit be 0;
+		let expart be a random body part;
+		repeat with J running through visible body parts:
+			if the printed name of J is part:
+				now expart is J;
+				now foundit is 1;
+		if foundit is 0, next;
+		choose row N in the tf table of demonic mouse;
+		if there is a shift text entry, say "[shift text entry][line break]";
+		now the ctype of expart is demonic mouse;
+		now the tf table of expart is the tf table of demonic mouse;
+	try examining player;
+
 
 Pair of latex wolf paws is a kind of clothing. [Pair of latex wolf paws is edible.]  understand "paws" as a pair of latex wolf paws. understand "latex paws" as a pair of latex wolf paws. understand "wolf paws" as a pair of latex wolf paws. The printed plural name of pair of latex wolf paws is "pairs of latex wolf paws". The description of pair of latex wolf paws is "Slippers made out of a shiny black material. They are styled to look identical to a pair of wolf paws." The clothing type of pair of latex wolf paws is "shoes". The TF table of pair of latex wolf paws is table 54. Pair of latex wolf paws is infectitem.
 
@@ -5977,9 +6020,9 @@ Darrell is a man in Johnson Park Entrance. He has a male name "Darrell". He has 
 Understand "Darna" as Darrell.
 1 Mephit Perfume is in Johnson State Park.
 [3 people are in Lewis Pond.] [1 latex frog is in Lewis Pond.]
-Petey is a person in lewis pond. He has a male name "Petey". He has a female name "Petra". He has a tf table table otter. He is neuter. He has a ctype Otter.
+Petey is a man in lewis pond. He has a male name "Petey". He has a female name "Petra". He has a tf table table otter. He has a ctype Otter.
 Understand "Petra" as Petey.
-Longtail is a person in lewis pond. She has a male name "Longtail". She has a female name "Longtail". She has a tf table table otter. She is neuter. She has a ctype Otter.
+Longtail is a woman in lewis pond. She has a male name "Longtail". She has a female name "Longtail". She has a tf table table otter. She has a ctype Otter.
 1 Infection Scanner is in Radioshack.
 Jazmine is a woman in Food court. She has a male name "Jacob". She has a female name "Jazmine".
 Understand "Jacob" as Jazmine.
