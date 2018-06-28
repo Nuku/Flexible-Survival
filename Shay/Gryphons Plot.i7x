@@ -1,4 +1,5 @@
 ﻿Version 2 of Gryphons Plot by Shay begins here.
+
 [ Original Event idea by Hellerhound ]
 [ Version 1 - Ideas for expansion by Wahn]
 [ Version 2 - Complete rewrite by Shay ]
@@ -323,13 +324,13 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		[]
 		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Pound a soldier-gryphon's ass.";
+			now title entry is "Pound a soldier-gryphon's ass";
 			now sortorder entry is 2;
 			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
 		if player is female: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Ride a soldier-gryphon's cock.";
+			now title entry is "Ride a soldier-gryphon's cock";
 			now sortorder entry is 3;
 			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]
@@ -384,13 +385,13 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		[]
 		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Pound a soldier-gryphon's ass.";
+			now title entry is "Pound a soldier-gryphon's ass";
 			now sortorder entry is 2;
 			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
 		if player is female: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Ride a soldier-gryphon's cock.";
+			now title entry is "Ride a soldier-gryphon's cock";
 			now sortorder entry is 3;
 			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]

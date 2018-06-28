@@ -41,7 +41,7 @@ A person can be stunned. A person is usually not stunned.
 normal man is a human.
 Normal man is fearful.
 PC is a human.
-The description of human is "Just a regular human being. But for how long?".
+The description of human is "Just a regular human being. But for how long?[if the noun is a man] He nods in your direction.[end if][if the noun is female] She looks busy.[end if]".
 Centaur is an infection model.
 Centaur is male.
 The tf table of human is table 0.
@@ -1271,9 +1271,9 @@ Section - Otters
 Table Otter - Otter Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"A fierce itch runs up along your cheeks. Scratching produces sharp spikes of unexpected pleasure as your face draws forward and sleek ears pop into being, your skull forming into a streamlined and brown pelted head of an otter. Soft urges of swimming nag at your thoughts."	"Your expression has been submerged under the amused expression of a brown furred otter."	"A soft cramping is felt as your otterish head is stripped from you. Everything feels so dry all of a sudden."
-"chest"	"Your chest experiences a rushing itching sensation.[if the destined femininity of the player is 1] You grasp at it just in time for two soft swells to push out against your questing fingers.[otherwise] Your chest grows a thick pelt of brown fur.[end if] You gain the sleek swimmer's torso of an otter, slinky and athletic."	"You have the athletic swimming chest of an otter.[if the destined femininity of the player is 1] You have B cup sized breasts that fit your streamlined upper torso.[end if]"	"Your sleek otter's chest begins to shed fur rapidly as it changes."
+"chest"	"Your chest experiences a rushing itching sensation. You grasp at it just in time for two soft swells to push out against your questing fingers. Your chest grows a thick pelt of brown fur. You gain the sleek swimmer's torso of an otter, slinky and athletic."	"You have the athletic swimming chest of an otter. You have B cup sized breasts that fit your streamlined upper torso."	"Your sleek otter's chest begins to shed fur rapidly as it changes."
 "gut"	"Previous fat melts away as you gain the powerful swimming abdominals of an otter, covered in a thick layer of water proofed brown fur."	"You have a brown furred belly of an otter, sleek and powerful."	"You momentarily lose definition as your swimmer's belly fades away."
-"pelvis"	"The brown fur begins to sweep across your hips and down into your groin in a surge of unasked for pleasure. You groan with delight as changes rock your sensitive regions.[if the destined femininity of the player is 1] Curious fingers begin to rub across your newly formed vulva, exploring the furry cleft as your body quakes.[end if][if the destined masculinity of the player is 1] You bring a hand to your cock as it grows longer and firmer, a sheath forming at the base as your swelling balls pump it full of seed to spray in a wide arc in front of you.[end if]"	"[if the destined femininity of the player is 1]You have a brown furred vagina of an otter, pouting and ready.[end if][if the destined masculinity of the player is 1] Your cock has never been so hard, extending from a brown furred sheath and achingly ready.[end if]"	"You give a sudden squeal as your otter loins shift and warp."
+"pelvis"	"The brown fur begins to sweep across your hips and down into your groin in a surge of unasked for pleasure. You groan with delight as changes rock your sensitive regions. Curious fingers begin to rub across your newly formed vulva, exploring the furry cleft as your body quakes. You bring a hand to your cock as it grows longer and firmer, a sheath forming at the base as your swelling balls pump it full of seed to spray in a wide arc in front of you."	"You have a brown furred vagina of an otter, pouting and ready. Your cock has never been so hard, extending from a brown furred sheath and achingly ready."	"You give a sudden squeal as your otter loins shift and warp."
 "left upper arm"	"Thick brown fur spreads smoothly across your left upper arm"	"You have the upper left arm of an otter."	"Your otter like left arm changes."
 "left forearm"	"Your arm feels strange as new found power flows into it along with a layer of brown fur."	"Your left forearm is covered in brown fur and feels powerful."	"Your otter like left forearm changes."
 "left hand"	"You get a sudden urge to clench your left hand, muscles locking hard and painfully as new claws dig into the flesh of your palm. Pads form, defraying the pain somewhat as your fingers flow together in light webbing, and thick brown fur sweeps across the hand."	"Your left hand is more suited to an otter than a human, but seems prehensile enough."	"A wet splitting sound is heard as the webbing between your fingers break."
@@ -1287,7 +1287,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Brown fur sweeps down over your lower right leg, bending as it goes, looking otterish."	"Your lower right leg is covered in brown fur and looks fit for an animal."	"The brown fur falls free of your right lower leg as it changes."
 "right foot"	"Your toes throb with a strange sensation as they clench together, coming apart only after brown fur has swept over them and webbing spread between them. New claws dig into the ground lightly."	"You have a webbed brown furred right foot with small black claws."	"There is a feeling of released tension as the webbing of your foot breaks and it changes."
 "rear" 	"As fur rushes over your ass, a thick otter's tail blossoms into place, like a rudder behind you, sinuous and powerful. You can't help but sway your new limb testingly."	"You have a long otter's tail behind you."	"Your thick otter's tail absorbs back into your rump as it changes."
-"full" 	"otter"	"You are a short and lithe otter, with a swimmer's body and sleek, water proofed brown fur.[if The destined femininity of the player is 1]Your B cupped breasts bounce only slightly with your movements, held firmly to keep your form sleek in the water.[end if][if the destined masculinity of the player is 1]Your new otter cock pokes free of its sheath, eager to find a new home in some other willing, or perhaps not, creature.[end if] Behind you, a thick rudder of a tail sways to and fro as playful energy echoes through you."	--
+"full" 	"otter"	"You are a short and lithe otter, with a swimmer's body and sleek, water proofed brown fur. Your B cupped breasts bounce only slightly with your movements, held firmly to keep your form sleek in the water. Your new otter cock pokes free of its sheath, eager to find a new home in some other willing, or perhaps not, creature. Behind you, a thick rudder of a tail sways to and fro as playful energy echoes through you."	--
 
 Section - Goblin
 
@@ -1684,11 +1684,19 @@ carry out TFing:
 		say "That's odd. Something is interfering with the gun.";
 		stop the action;
 	if the noun is the player:
-		repeat with J running through visible body parts:
-			choose row with Segment of the tag of the J in the TF table of the second noun;	
+		repeat with N running from 1 to number of rows in the tf table of the second noun:
+			let part be the Segment in row N of the tf table of the second noun;
+			let foundit be 0;
+			let expart be a random body part;
+			repeat with J running through visible body parts:
+				if the printed name of J is part:
+					now expart is J;
+					now foundit is 1;
+			if foundit is 0, next;
+			choose row N in the tf table of the second noun;
 			if there is a shift text entry, say "[shift text entry][line break]";
-			now the ctype of J is the second noun;
-			now the tf table of J is the tf table of the second noun;
+			now the ctype of expart is the second noun;
+			now the tf table of expart is the tf table of the second noun;
 		now the player is pacified;
 	otherwise:
 		now the tf table of noun is the tf table of second noun;
@@ -1700,11 +1708,20 @@ Reverting is an action applying to one visible thing.
 carry out Reverting:
 	say "You zap [noun] with your nano tuner and they begin changing rapidly!";
 	if the noun is the player:
-		repeat with J running through visible body parts:
-			choose row with Segment of the tag of the J in the TF table of normal man;	
+		repeat with N running from 1 to number of rows in the tf table of normal man:
+			let part be the Segment in row N of the tf table of normal man;
+			let foundit be 0;
+			let expart be a random body part;
+			repeat with J running through visible body parts:
+				if the printed name of J is part:
+					now expart is J;
+					now foundit is 1;
+			if foundit is 0, next;
+			choose row N in the tf table of the normal man;
 			if there is a shift text entry, say "[shift text entry][line break]";
-			now the ctype of J is normal man;
-			now the tf table of J is the tf table of normal man;
+			now the ctype of expart is the normal man;
+			now the tf table of expart is the tf table of normal man;
+		say "You return to being human!";
 		now the player is pacified;
 	otherwise:
 		now the ctype of the noun is normal man;
@@ -2178,7 +2195,7 @@ To infect (subject - a body part) with (infector - a thing):
 				now the tf table of J is the tf table of the infector;
 			stop the action;
 	if the tf table of subject is the tf table of infector:
-		say "Your [subject] already has this infection.";
+		say "";
 	otherwise:
 		if subject is secret and a random chance of 1 in 3 succeeds:
 			say "Your clothing prevents infection!";
@@ -2774,50 +2791,50 @@ Definition: A thing (called N) is heavy if the pregnant of N is not 0.
 Definition: A thing (called N) is matronly if the mother of N is not 0.
 Definition: A thing is compatible if their tf table is the tf table of pelvis.
 Definition: A thing is femme:
-if the fennec torso is a part of the rear, yes;
-if the centauress torso is a part of the rear, yes;
-if the tf table of the pelvis is table 1, yes;
-if the tf table of the pelvis is table gryphon, yes;
-if the tf table of the pelvis is table phoenix, yes;
-if the tf table of the pelvis is table uber fox, yes;
-if the tf table of the pelvis is table 4, yes;
-if the tf table of the pelvis is table 22, yes;
-if the tf table of the pelvis is table huge dragoness, yes;
-if the tf table of the pelvis is table 55, yes;
-if the tf table of the pelvis is table hyena, yes;
-if the tf table of the pelvis is table dragon babe, yes;
-if the tf table of the pelvis is table sheep, yes;
-if the tf table of the pelvis is table 21, yes;
-if the tf table of the pelvis is table 14, yes;
-if the tf table of the pelvis is table bee, yes;
-if the tf table of the pelvis is table horse mare, yes;
-if the tf table of the pelvis is table deer, yes;
-if the tf table of the pelvis is table collie, yes;
-if the tf table of the pelvis is table furry deer, yes;
-if the tf table of the pelvis is table ferret, yes;
-if the tf table of the pelvis is table slutrat, yes;
-if the tf table of the pelvis is table harpy, yes;
-if the tf table of the pelvis is table wyvern, yes;
-if the tf table of the pelvis is table feral dragoness, yes;
-if the tf table of the pelvis is table rogue, yes;
-if the tf table of the pelvis is table vixen, yes;
-if the tf table of the pelvis is table icat, yes;
-if the tf table of the pelvis is table elf, yes;
-if the tf table of the pelvis is table echoen, yes;
-if the tf table of the pelvis is table husky, yes;
-if the tf table of the pelvis is table demonic mouse, yes;
-if the tf table of the pelvis is table kangaroo, yes;
-if the tf table of the pelvis is table were fennec, yes;
-if the tf table of the pelvis is table 0 and playerfemale is 1, yes;
-if the rabbit vagina is touchable, yes;
-if the feline torso is a part of the rear, yes;
-if the tf table of the pelvis is table otter and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table latex fox and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
-if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
-if the tf table of rear is table fox taur, yes;
-no;
+	if the fennec torso is a part of the rear, yes;
+	if the centauress torso is a part of the rear, yes;
+	if the tf table of the pelvis is table 1, yes;
+	if the tf table of the pelvis is table gryphon, yes;
+	if the tf table of the pelvis is table phoenix, yes;
+	if the tf table of the pelvis is table uber fox, yes;
+	if the tf table of the pelvis is table 4, yes;
+	if the tf table of the pelvis is table 22, yes;
+	if the tf table of the pelvis is table huge dragoness, yes;
+	if the tf table of the pelvis is table 55, yes;
+	if the tf table of the pelvis is table hyena, yes;
+	if the tf table of the pelvis is table dragon babe, yes;
+	if the tf table of the pelvis is table sheep, yes;
+	if the tf table of the pelvis is table 21, yes;
+	if the tf table of the pelvis is table 14, yes;
+	if the tf table of the pelvis is table bee, yes;
+	if the tf table of the pelvis is table horse mare, yes;
+	if the tf table of the pelvis is table deer, yes;
+	if the tf table of the pelvis is table collie, yes;
+	if the tf table of the pelvis is table furry deer, yes;
+	if the tf table of the pelvis is table ferret, yes;
+	if the tf table of the pelvis is table slutrat, yes;
+	if the tf table of the pelvis is table harpy, yes;
+	if the tf table of the pelvis is table wyvern, yes;
+	if the tf table of the pelvis is table feral dragoness, yes;
+	if the tf table of the pelvis is table rogue, yes;
+	if the tf table of the pelvis is table vixen, yes;
+	if the tf table of the pelvis is table icat, yes;
+	if the tf table of the pelvis is table elf, yes;
+	if the tf table of the pelvis is table echoen, yes;
+	if the tf table of the pelvis is table husky, yes;
+	if the tf table of the pelvis is table demonic mouse, yes;
+	if the tf table of the pelvis is table otter, yes;
+	if the tf table of the pelvis is table kangaroo, yes;
+	if the tf table of the pelvis is table were fennec, yes;
+	if the tf table of the pelvis is table 0 and playerfemale is 1, yes;
+	if the rabbit vagina is touchable, yes;
+	if the feline torso is a part of the rear, yes;
+	if the tf table of the pelvis is table latex fox and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
+	if the tf table of rear is table fox taur, yes;
+	no;
 
 Definition: A person (called N) is catty:
 if the tf table of ctype of n is table 20, yes;
@@ -2893,7 +2910,7 @@ if the tf table of the pelvis is table 0 and playerfemale is 1, no;
 if the tf table of the pelvis is table tree, no;
 if the tf table of the pelvis is table demonic mouse, no;
 if the tf table of the pelvis is table feral dragoness, no;
-if the tf table of the pelvis is table otter and the destined masculinity of the player is 0, no;
+if the tf table of the pelvis is table otter, yes;
 if the tf table of the pelvis is table latex fox and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table minotaur and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table goblin and the destined masculinity of the player is 0, no;
@@ -2994,7 +3011,7 @@ every turn:
 		otherwise if the pregnant of the player is greater than 20 and u is not greater than 20:
 			if the tf table of chest is not the tf table of pelvis and the player is femme, infect chest with pelvis;
 			say "Your breasts swell and become a little sore as your body prepares for eventual birth. Your belly feels large and round, so full of life. You can't help but gently rub over it once in a while, thinking of your future child.";
-		otherwise if the pregnant of the player is greater than 30 and the player is femme:
+		otherwise if the pregnant of the player is greater than 30 and the player is femme and there are off-stage monster persons:
 			say "A sudden stab runs through your abdomen as you get the urge to crouch in place. Your senses full under powerful waves of pleasure that have you panting for breath as life emerges from within you. You are soon a mother.";
 			now the pregnant of the player is 0;
 			now the player is not fertilized;
@@ -3059,7 +3076,10 @@ before kissing something(called N):
 		say "It's not even alive...";
 		stop the action;
 
- 
+
+instead of kissing something(called noun) when the ctype of pelvis is demonic mouse:
+	 try attacking the noun;
+
 instead of kissing something(called noun):
 	if the noun is the player:
 		let P be a random not infected body part;
@@ -3101,15 +3121,12 @@ instead of kissing something(called noun):
 	let zoidberg be 0;
 	if ( the noun is male or the noun is neuter ) and the player is femme and a random chance of 1 in 2 succeeds, now zoidberg is 1;
 	if ( the noun is female or the noun is neuter ) and zoidberg is 0:
-	[	if pregnant of the noun is not 0:
-			say "She looks unsure a moment before she presses her round pregnant belly against you, welcoming your advance. ";
-		
-		say "     [Noun] leans in against the kisses, feeling over your body eagerly[if the player is femme], brushing against your pussy eagerly[end if][if the player is butch], grinding herself against your cock wantonly[end if].";]
 		if the pelvis is secret:
 			say "She notices that you have something covering your groin and she can do little more than paw at you wantingly.";
 			if the tf table of pelvis is not the tf table of the noun and ( tf table of pelvis is table 0 or tf table of pelvis is table female human), infect pelvis with noun;
 			stop the action;
 		let zeptoid be 1;
+		say "Do we even get this far?";
 		if the player is femme:
 			if the player is butch and a random chance of 1 in 2 succeeds, now zeptoid is 0;
 		if the player is butch and zeptoid is 1:
@@ -3152,47 +3169,47 @@ instead of kissing something(called noun):
 			otherwise:
 				say "[female sex of ctype of pelvis]";
 		stop the action;
-		if the noun is male or the noun is neuter:
-			if corruption is 5 and the noun is not a monster:
-				say "You take the helpless mortal and taunt him with the sinful appeals of your new body. As his hand grab clumsily over your furry form, you move  to disrobe him, whispering sweet nothings even as demonic energy builds within you. When he has lost all control, and is rutting with you wildly, you draw upon him, snatching his vital force to flow rapidly into your body. Your senses go white as the curse is sealed within you, and your patron whispers into your large ears, calling for you to return to the netherworlds.";
-				increase corruption by 1;
-				now altending is 1;
-				end the story saying "As the victim of your urges squirms in torment, the earth splits asunder beneath you, drawing you down through lava forged caverns. Scrambling against the sides that batter against your form does little to slow your descent, landing heavily in an ornate pentagram. Your mistress stands just outside it, taller than the other mice, more a rat, tall and wicked. She reaches through the circle and grabs you by the back of your neck before you can recover and affixes a sold gold collar around your neck.[line break][line break]'You, my newest pet, will serve me well. Fear not, I am a benign prince, as demons go. If you bring me souls of the human kind, I will reward you and treasure you.'[line break][line break]Her words are sweet and soothing, the pain of the fall fading away as she pets over you slowly, rekindling the sinful flames of your lust. You are soon sent back to the mortal world, visiting dreams, or on lucky occasions, answering the call of naive sorcerers. Each mortal you seduce wins favor of your mistress. There are worse jobs to have.";
-				stop the action;
-			if corruption is 6, stop the action;
-		if the player is butch:
-	[		if the noun is not neuter, say "You push [the noun] back as you kiss across his chest and grab at his hips. You swivel him around to present his rump towards you as you move into position, feeling steely hard and anxious.";]
-			if the pelvis is secret:
-				say "You realize at the last moment that your cock is covered with clothes and grunt with frustration.";
-				stop the action;
+	if the noun is male or the noun is neuter:
+		if corruption is 5 and the noun is not a monster:
+			say "You take the helpless mortal and taunt him with the sinful appeals of your new body. As his hand grab clumsily over your furry form, you move  to disrobe him, whispering sweet nothings even as demonic energy builds within you. When he has lost all control, and is rutting with you wildly, you draw upon him, snatching his vital force to flow rapidly into your body. Your senses go white as the curse is sealed within you, and your patron whispers into your large ears, calling for you to return to the netherworlds.";
+			increase corruption by 1;
+			now altending is 1;
+			end the story saying "As the victim of your urges squirms in torment, the earth splits asunder beneath you, drawing you down through lava forged caverns. Scrambling against the sides that batter against your form does little to slow your descent, landing heavily in an ornate pentagram. Your mistress stands just outside it, taller than the other mice, more a rat, tall and wicked. She reaches through the circle and grabs you by the back of your neck before you can recover and affixes a sold gold collar around your neck.[line break][line break]'You, my newest pet, will serve me well. Fear not, I am a benign prince, as demons go. If you bring me souls of the human kind, I will reward you and treasure you.'[line break][line break]Her words are sweet and soothing, the pain of the fall fading away as she pets over you slowly, rekindling the sinful flames of your lust. You are soon sent back to the mortal world, visiting dreams, or on lucky occasions, answering the call of naive sorcerers. Each mortal you seduce wins favor of your mistress. There are worse jobs to have.";
+			stop the action;
+		if corruption is 6, stop the action;
+	if the player is butch:
+[		if the noun is not neuter, say "You push [the noun] back as you kiss across his chest and grab at his hips. You swivel him around to present his rump towards you as you move into position, feeling steely hard and anxious.";]
+		if the pelvis is secret:
+			say "You realize at the last moment that your cock is covered with clothes and grunt with frustration.";
+			stop the action;
+		say "[male sex of ctype of pelvis]";
+		if the TF table of pelvis is not tf table of noun:
+			if Z is not nothing and tf table of pelvis is not table 0:
+				infect Z with the noun;
+		if the player is not femme, stop the action;
+[		if the tf table of noun is table 0 and not a random chance of willpower of the noun in 10 succeeds:
+			say "As if in a trance, they act against their higher will, obeying base urges instead.";]
+		if the pregnant of the player is 0 and a random chance of 1 in 3 succeeds and the player is femme and ctype of pelvis is not semifertile:
+			increase the pregnant of the player by 1;
+		if the pregnant of the player is 1, say "The seed rushes up into your body with a shuddering explosion of pleasure as your belly swells forward.";
+		now the player is fertilized;
+	otherwise:
+		if the player is femme and a random chance of one in 3 succeeds:
 			say "[male sex of ctype of pelvis]";
-			if the TF table of pelvis is not tf table of noun:
-				if Z is not nothing and tf table of pelvis is not table 0:
-					infect Z with the noun;
-			if the player is not femme, stop the action;
-	[		if the tf table of noun is table 0 and not a random chance of willpower of the noun in 10 succeeds:
-				say "As if in a trance, they act against their higher will, obeying base urges instead.";]
-			if the pregnant of the player is 0 and a random chance of 1 in 3 succeeds and the player is femme and ctype of pelvis is not semifertile:
+			if the TF table of pelvis is not tf table of noun and a random chance of 1 in 3 succeeds:
+				if Z is not nothing and tf table of noun is not table 0 and tf table of pelvis is table 0, infect pelvis with the noun;
+			if the pregnant of the player is 0 and the ctype of pelvis is not semifertile and the ctype of pelvis is not sterile:
 				increase the pregnant of the player by 1;
-			if the pregnant of the player is 1, say "The seed rushes up into your body with a shuddering explosion of pleasure as your belly swells forward.";
+				say "Your belly swells round as the seed tingles inside of you with ominous warning.";
 			now the player is fertilized;
 		otherwise:
-			if the player is femme and a random chance of one in 3 succeeds:
-				say "[male sex of ctype of pelvis]";
-				if the TF table of pelvis is not tf table of noun and a random chance of 1 in 3 succeeds:
-					if Z is not nothing and tf table of noun is not table 0 and tf table of pelvis is table 0, infect pelvis with the noun;
-				if the pregnant of the player is 0 and the ctype of pelvis is not semifertile and the ctype of pelvis is not sterile:
-					increase the pregnant of the player by 1;
-					say "Your belly swells round as the seed tingles inside of you with ominous warning.";
-				now the player is fertilized;
-			otherwise:
-				say "You kneel before the [printed name of noun] and take his throbbing member into your mouth, suckling loudly and lewdly at him, stroking at him as you work your mouth back and forth along the excited pole. All too soon, they're exploding across lips and face, leaving you streaked with their salty deposit.";
-				if the TF table of head is not tf table of noun:
-					if Z is not nothing and tf table of noun is not table 0, infect head with the noun;
-			if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and the destined masculinity of the player is 0:
-				now the prickpreg is 1;
-		if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0:
-			infect the noun with pelvis;
+			say "You kneel before the [printed name of noun] and take his throbbing member into your mouth, suckling loudly and lewdly at him, stroking at him as you work your mouth back and forth along the excited pole. All too soon, they're exploding across lips and face, leaving you streaked with their salty deposit.";
+			if the TF table of head is not tf table of noun:
+				if Z is not nothing and tf table of noun is not table 0, infect head with the noun;
+		if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and the destined masculinity of the player is 0:
+			now the prickpreg is 1;
+	if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0:
+		infect the noun with pelvis;
 
  
 [kiss/sex with cat girl]
@@ -3347,7 +3364,7 @@ every turn:
 			if the pregnant of N is not 0 and ctype of n is not sterile:
 				increase the pregnant of N by a random number from 1 to 3;
 				if the pregnant of N is greater than 30 and the ctype of N is semifertile and N is not fertilized, now the pregnant of N is 30;
-				if the pregnant of N is greater than 30:
+				if the pregnant of N is greater than 30 and there are off-stage persons:
 					now the pregnant of N is 0;
 					now N is not fertilized;
 					if N is visible, say "[The N] sinks to the ground and spreads her legs wide, huffing and panting for breath before a small creature spills from her distended sex onto the ground.";
@@ -3425,7 +3442,6 @@ every turn while totalwin is 0:
 		now i is 1;
 	if n is 0 and i is 0:
 		say "You have cleared the city of infection against all odds! When you are found, it is as a successful survivor. The quarantine on the city is lifted and you are permitted to join polite society, not only as a free citizen but as a hero, celebrated for your achievement.";
-		now totalwin is 1;
 		end the story;
 
 A thing is either infectitem or not infectitem.  A thing is usually not infectitem.
@@ -3487,6 +3503,9 @@ before wearing the stomach pouch:
 	stop the action;
 	
 before wearing something: [makes sure your not already wearing something there and if so stops]
+	if noun is not clothing:
+		say "[The noun] does not appear to be clothing. Why are you trying to wear it?";
+		stop the action;
 	let x be clothing type of noun;
 	if clothing type of noun is "shirt":
 		if shirt of player is 1:
@@ -4700,10 +4719,16 @@ Part - Demonic Mouse Corruption
 
 instead of opening the stable doors for the first time:
 	say "You reach to open the doors when suddenly a horse sails over the top and goes galloping towards the city like a bolt of lightning. What was that all about?";
-	let z be a random on-stage npc person;
-	now the tf table of z is table horse mare;
+	if there is an on-stage npc person:
+		let z be a random on-stage npc person;
+		now the tf table of z is table horse mare;
+		tf z;
+	otherwise:
+		let q be a random off-stage person;
+		move q to a random visited room;
+		now tf table of q is table horse mare;
+		tf q;
 	now prometheus is in the stables;
-	tf z;
 
 instead of opening the pasture door for the first time:
 	now the pasture door is open;
@@ -5290,6 +5315,10 @@ Every turn while the head is infected: [end game conditions]
 Part - Game Outcome
 
 when play ends:
+	if totalwin is 1:
+		resume the story;
+		continue the action;
+	now totalwin is 1;
 	if altending is 0:
 		say "[bold type]";
 	if the mother of the player is greater than 0:
@@ -5532,6 +5561,7 @@ when play ends:
 	if the player consents:
 		say "Let the game continue!";
 		now the player is pacified;
+		now totalwin is 1;
 		resume the story;
 
 
@@ -5589,9 +5619,15 @@ Ferret Cage is a kind of container. It is closed. Understand "Cage" as a ferret 
 
 Instead of opening a ferret cage for the first time:
 	say "Woah! Something small and slinky just ran right out of the cage and went scurrying out of the area in a blur of brown fur.";
-	let z be a random unchanged on-stage person;
-	now the tf table of z is table ferret;
-	tf z;
+	if there is an on-stage npc person:
+		let z be a random on-stage npc person;
+		now the tf table of z is table ferret;
+		tf z;
+	otherwise:
+		let q be a random off-stage person;
+		move q to a random visited room;
+		now tf table of q is table ferret;
+		tf q;
 	stop the action;
 
 Instead of opening a ferret cage:
@@ -5706,7 +5742,47 @@ after taking off the lucky paw for the first time:
 
 Stomach Pouch is a kind of clothing. Understand "pouch" as a stomach pouch. The description of stomach pouch is "A pouch designed to be worn under other clothes, to conceal money and other valuables.". The clothing type of Jeans is "pants". The tf table of stomach pouch is table kangaroo. stomach pouch is infectitem.
 
-There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. The description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back.".
+There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. The description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back. ".
+A Button is an object.
+There is a Button in the dresser. The description of the button is "So shiny and red, maybe you should push it? Maybe not...". It is fixed in place.
+
+instead of pushing the button:
+	say "You feel the world rewrite itself around you. The infection has progressed to the terminal stage, with everyone changed in radical ways! Your pentagram explodes in a wave of foul-smelling brimstone, consuming itself as evil energy flows into you, perverting your form.";
+	repeat with J running through on-stage persons:
+		if J is the player, next;
+		if the tf table of J is table 0:
+			let Q be a random infection model;
+			now the tf table of J is the tf table of Q;
+			tf J;
+	repeat with J running through on-stage infectitem:
+		let Q be a random person in the location of J;
+		if Q is not nothing and Q is not the player:
+			now the tf table of Q is the tf table of J;
+			tf Q;
+		remove J from play;
+	let Q be a random pentagram;
+	remove Q from play;
+	now Q is a random ferret cage;
+	let K be a random person in the location of Q;
+	if K is not nothing and K is not the player:
+		now the tf table of k is  table ferret;
+		tf K;
+	remove Q from play;
+	repeat with N running from 1 to number of rows in the tf table of demonic mouse:
+		let part be the Segment in row N of the tf table of demonic mouse;
+		let foundit be 0;
+		let expart be a random body part;
+		repeat with J running through visible body parts:
+			if the printed name of J is part:
+				now expart is J;
+				now foundit is 1;
+		if foundit is 0, next;
+		choose row N in the tf table of demonic mouse;
+		if there is a shift text entry, say "[shift text entry][line break]";
+		now the ctype of expart is demonic mouse;
+		now the tf table of expart is the tf table of demonic mouse;
+	try examining player;
+
 
 Pair of latex wolf paws is a kind of clothing. [Pair of latex wolf paws is edible.]  understand "paws" as a pair of latex wolf paws. understand "latex paws" as a pair of latex wolf paws. understand "wolf paws" as a pair of latex wolf paws. The printed plural name of pair of latex wolf paws is "pairs of latex wolf paws". The description of pair of latex wolf paws is "Slippers made out of a shiny black material. They are styled to look identical to a pair of wolf paws." The clothing type of pair of latex wolf paws is "shoes". The TF table of pair of latex wolf paws is table 54. Pair of latex wolf paws is infectitem.
 
@@ -5944,9 +6020,9 @@ Darrell is a man in Johnson Park Entrance. He has a male name "Darrell". He has 
 Understand "Darna" as Darrell.
 1 Mephit Perfume is in Johnson State Park.
 [3 people are in Lewis Pond.] [1 latex frog is in Lewis Pond.]
-Petey is a person in lewis pond. He has a male name "Petey". He has a female name "Petra". He has a tf table table otter. He is neuter. He has a ctype Otter.
+Petey is a man in lewis pond. He has a male name "Petey". He has a female name "Petra". He has a tf table table otter. He has a ctype Otter.
 Understand "Petra" as Petey.
-Longtail is a person in lewis pond. She has a male name "Longtail". She has a female name "Longtail". She has a tf table table otter. She is neuter. She has a ctype Otter.
+Longtail is a woman in lewis pond. She has a male name "Longtail". She has a female name "Longtail". She has a tf table table otter. She has a ctype Otter.
 1 Infection Scanner is in Radioshack.
 Jazmine is a woman in Food court. She has a male name "Jacob". She has a female name "Jazmine".
 Understand "Jacob" as Jazmine.
@@ -6608,6 +6684,13 @@ Rule for writing a paragraph about a rope (called the coil):
 			say "[The coil] snakes across the floor [way] towards [the next room].";
 	otherwise:
 		say "There is [a coil] here[if the coil is stuck to a visible nonrope thing], tied to [the list of nonrope visible things which are stuck to the coil][end if]."
+
+understand "wear rope" as fashion styling.
+fashion styling is an action applying to nothing.
+
+carry out fashion styling:
+	say "You consider the style a moment... nah, not working for you.";
+	stop the action;
 
 To decide what room is the home of (item - a thing):
 	let next room be an object;

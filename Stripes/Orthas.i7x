@@ -156,11 +156,11 @@ instead of resolving Orthas's House:
 	else:
 		say "     Wandering the residential side-streets around the sexually charged neighborhood, you manage to find the street name on Orthas's note. Following the numbers, you come to what was probably once a very nice two-story home with a white picket fence around the yard. Like most of the homes on this street, the place has already been broken into and raided by scavengers and/or horny mutants. But the current state of the place seems to be more than that, looking like it's been poorly maintained for some time.";
 		say "     Moving cautiously, you step inside. For a home of this size, it feels surprisingly cold and empty. There's only a few pieces of furniture, no family photos, only one coat and pair of shoes by the door. After taking a peek in the kitchen to find it picked clean by earlier looters, you head upstairs to get the dragon's old stuff. The feeling of emptiness is even stronger there with the two smaller bedrooms being unused save to store a few boxes. The few furnishings of the master bedroom includes only a small bed and dresser.";
-		say "     As instructed, you open the bedroom closet and take out the footlocker from inside. Picking it up, you find it like the rest of the house - mostly empty. While a little cumbersome and a little heavy, you can carry it easily enough. Digging a little further into the closet, behind some suit bags and a military dress uniform, you find something more useful to you - a crossbow and quarrels. You grab it and, finding the mechanism still works, head off to find something to use for target practize.";
+		say "     As instructed, you open the bedroom closet and take out the footlocker from inside. Picking it up, you find it like the rest of the house - mostly empty. While a little cumbersome and a little heavy, you can carry it easily enough. Digging a little further into the closet, behind some suit bags and a military dress uniform, you find something more useful to you - a crossbow and quarrels. You grab it and, finding the mechanism still works, head off to find something to use for target practice.";
 		say "     Hoping for more useful stuff, or at least useful targets, you move on to searching the rest of the house. Unfortunately, the noise of your rummaging around draws the attention of some nearby creature. You have to toss aside your new toy, having shot all its quarrels, and turn to face the kangaroo woman who's burst into the room.";
 		challenge "Red Kangaroo";
 		if fightoutcome <= 29:
-			say "     Your encounter with the randy female over, you decide to just make your escape, having had no luck since your initial find aside from the collection of Elvis collector plates you'd been using for crossbow practize. While you suspect the noise of that was the source of your troubles, it was quite a bit of fun. Regardless, you leave the place with the footlocker in tow and your new toy slung to your pack.";
+			say "     Your encounter with the randy female over, you decide to just make your escape, having had no luck since your initial find aside from the collection of Elvis collector plates you'd been using for crossbow practice. While you suspect the noise of that was the source of your troubles, it was quite a bit of fun. Regardless, you leave the place with the footlocker in tow and your new toy slung to your pack.";
 			now carried of crossbow is 1;
 		else:
 			say "     Making your escape from the house and the randy roo, you grab the footlocker you came here for, but have to abandon the crossbow and its spent quarrels. Maybe it wasn't such a good idea to use those Elvis collector plates for target practice.";
@@ -231,7 +231,7 @@ to say orthas_task2_done:
 Table of Game Objects (continued)
 name	desc	weight	object
 "footlocker"	"     The small footlocker you've retrieved from Orthas's house. It's bulky, but thankfully nowhere near full."	15	footlocker
-"crossbow"	"A sporting crossbow. More for target practize than actual hunting, but still a fine and intimidating weapon. There's a good sized set of quarrels to go along with it as well."	8	crossbow
+"crossbow"	"A sporting crossbow. More for target practice than actual hunting, but still a fine and intimidating weapon. There's a good sized set of quarrels to go along with it as well."	8	crossbow
 
 footlocker is a grab object.
 it is part of the player.
