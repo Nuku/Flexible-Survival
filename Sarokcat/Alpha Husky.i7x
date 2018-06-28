@@ -1,7 +1,11 @@
-Version 2 of Alpha Husky by Sarokcat begins here.
-[Version 2.1 - Minor scene tweak and humanity loss curbed]
+Version 3 of Alpha Husky by Sarokcat begins here.
+[ Version 1.0 - Original content - Sarokcat                          ]
+[ Version 1.1 - Alpha Husky male dom scene + ending - Nuku           ]
+[ Version 2.0 - Alpha Husky packs - Nuku                             ]
+[ Version 3.0 - Latex Husky mode - Stripes                           ]
+[ Version 3.1 - Minor scene tweak and humanity loss curbed - Stripes ]
 
-"Adds a Alpha Husky to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds an Alpha Husky to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 
@@ -13,7 +17,7 @@ to say Alpha Husky Desc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
-		say "     You blink in surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. '[one of]You look like you will make a fine bitch for me...[or]Let's see if you know how to submit to an alpha[or]Another soon to be husky bitch for me I see![or]Hello, my lovely little bitch. Time to get fucked![or]You look like you need a pack to belong to. Let me help you with that...[or]It doesn't look like you have embraced your inner slut yet. Here let me help you with that...[or]C'mere, Bitch![or]Let's see now, do you want to do it the hard way, or the doggy style way...[or]I can't wait to get my paws on you![or]Time to show you what an alpha can do![at random]' the horny husky says as he rubs his paws together. His thick, erect canine cock bobs with excitement, and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
+		say "     You blink in surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. [one of]'You look like you will make a fine bitch for me...' [or]'Let's see if you know how to submit to an alpha,' [or]'Another soon-to-be husky bitch for me, I see!' [or]'Hello, my lovely little bitch. Time to get fucked!' [or]'You look like you need a pack to belong to. Let me help you with that...' [or]'It doesn't look like you have embraced your inner slut yet. Here, let me help you with that...' [or]'C'mere, Bitch!' [or]'Let's see now, do you want to do it the hard way, or the doggy style way...' [or]'I can't wait to get my paws on you!' [or]'Time to show you what an alpha can do!' [at random]the horny husky says as he rubs his paws together. His thick, erect canine cock bobs with excitement, and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
 
 to say Alpha Husky attack:
 	if inasituation is true:
