@@ -3601,6 +3601,25 @@ To Rest:
 	else:		[accessible only when events induce resting]
 		if num1 <= num2, increase HP of player by num1; [lowest value chosen]
 		if num2 < num1, increase HP of player by num2;
+	if Sleeptimercount is >= 10: [Player is on the brink of collapse, sleeping for just one turn isnt going to fix them]
+		if silk hammock is owned or silk hammock is present:
+			decrease Sleeptimercount by 6;
+		else:
+			decrease Sleeptimercount by 5;
+	else if Sleeptimercount is <= 9: [Player is tired, and will wake up refreshed with the well rested feat.]
+		if silk hammock is owned or silk hammock is present:
+			Sleeptimercount is now -1;
+		else:
+			Sleeptimercount is now 0;
+		FeatGain "Well Rested";'
+		say "     Well Rested - All stats increased by 2!";
+		increase strength of player by 2;
+		increase dexterity of player by 2;
+		increase stamina of player by 2;
+		increase charisma of player by 2;
+		increase intelligence of player by 2;
+		increase perception of player by 2;
+		WellRestedTimer is now 6;
 
 
 This is the explore rule:
