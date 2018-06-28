@@ -69,7 +69,7 @@ to say Azari_Intro:
 	LineBreak;
 	if player consents:
 		now Azari_Met is true;
-		say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here."
+		say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here.";
 		say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes";

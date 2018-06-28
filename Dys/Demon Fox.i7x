@@ -7,14 +7,15 @@ Version 1 of Demon Fox by Dys begins here.
 [ DemonFoxRead indicates whether or not the player has read about the       ]
 [ demon fox                                                                 ]
 
-DemonFox_PlayerDefeated is a truth state that varies. It is usually false.
-DemonFox_PlayerSubmitted is a truth state that varies. It is usually false.
-DemonFox_PlayerFled is a truth state that varies. It is usually false.
-DemonFox_PlayerWon is a truth state that varies. It is usually false.
-DemonFox_PlayerWon_Fucked is a truth state that varies. It is usually false.
-DemonFox_Encountered is a truth state that varies. It is usually false.
-DemonFox_Apologized is a truth state that varies. It is usually false.
+DemonFox_PlayerDefeated is a truth state that varies. DemonFox_PlayerDefeated is usually false.
+DemonFox_PlayerSubmitted is a truth state that varies. DemonFox_PlayerSubmitted is usually false.
+DemonFox_PlayerFled is a truth state that varies. DemonFox_PlayerFled is usually false.
+DemonFox_PlayerWon is a truth state that varies. DemonFox_PlayerWon is usually false.
+DemonFox_PlayerWon_Fucked is a truth state that varies. DemonFox_PlayerWon_Fucked is usually false.
+DemonFox_Encountered is a truth state that varies. DemonFox_Encountered is usually false.
+DemonFox_Apologized is a truth state that varies. DemonFox_Apologized is usually false.
 DemonFoxInteractions is a number that varies. DemonFoxInteractions is usually 0.
+DemonFoxStatus is a number that varies.
 DemonFoxRead is a truth state that varies. DemonFoxRead is usually false.
 
 Section 0 - Flags
