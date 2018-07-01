@@ -187,6 +187,10 @@ to say PizzaCarDashcamVid:
 Dressing Room Spycam is a situation.
 The sarea of Dressing Room Spycam is "High".
 
+when play begins:
+	add Dressing Room Spycam to badspots of Hermaphrodite;
+
+
 instead of resolving a Dressing Room Spycam:
 	say "     Checking out one of the more upscale boutiques that dot the streets of the High Rise District, you find yourself standing in the midst of empty clothing racks and displays. Apparently, someone had decided to clean out not only the little fridge for complimentary drinks and snacks, but also all of the designer garments. It's funny how people can prioritize the strangest things even in the midst of an apocalypse. Strolling through the empty shop, you see a few items left here or there, but they have all been stained or torn somehow. Just as you are about to leave, you spot something inside one of the dressing booths that catches your attention. The tiny, enclosed room is thoroughly splattered in dried cum, but the aftermath of a gang-bang isn't actually all that surprising these days. What is, on the other hand, is that one of the ceiling panels above has been opened, and you can see a camera that has been positioned up there.";
 	say "     Looking up at the device, you see a fiber-optics attachment to its lens, suggesting that it was supposed to be hidden from sight - and likely would have remained that way if the panel to obscure it had been replaced. Curiosity pushes you to collect a few of the ruined garments from the rest of the store and throw them down on the sticky mess inside of the dressing room, allowing you to enter and climb up to reach the camera. Checking the small device out, you find that it doesn't respond to your inputs as you press the buttons on the sides. Only the spring-loaded eject button for the tape works, at least giving you access to what the camera recorded last. Apparently, it ran out of power after being left on for too long. Since there's no sign at any kind of loading cable, and electricity is hard to come by these days anyways, you discard the camera and just keep hold of the tape. Who knows, it might contain some explanation what happened here.";
@@ -214,6 +218,9 @@ to say DressingRoomSpycamVid:
 
 Drone Wreckage is a situation.
 The sarea of Drone Wreckage is "High".
+
+when play begins:
+	add Drone Wreckage to badspots of guy;
 
 instead of resolving a Drone Wreckage:
 	say "     Looking around while exploring the High Rise District, you walk into one of the side alleys behind a number of looted stores. As you turn the corner, a scraping noise can be heard from somewhere ahead, alerting you to the presence of someone or something. Warily moving forward, you edge your way sideways to look behind a big dumpster standing a little distance down the alley and find a small-ish latex fox there, gnawing on a severely mangled technological device. From the looks of it, the creature must have dragged it here to feast on the rubber and plastic components in peace. As soon as the fox spots you, it lets out a frightened screech and flees, sprinting to a nearby storm drain. With a squeak of deforming latex, it then forces its flexible body through the narrow opening into the drain and vanishes into the underground passage.";
@@ -270,6 +277,9 @@ to say DariusHannahVid2: [Note: This is a post infection video of Darius fucking
 Lost Explorer is a situation.
 The sarea of Lost Explorer is "Warehouse".
 
+when play begins:
+	add Lost Explorer to badspots of feral;
+
 instead of resolving a Lost Explorer:
 	say "     Roaming the expansive warehouse district in search of anything that might aid your survival in this fallen city, your exploration leads you into a section that has been largely abandoned. Wrecked buildings and long-dead factories dominate your surroundings, creating a fairly creepy ambiance. On top of that, the area seems eerily quiet, missing the usual groans and grunts of creatures rutting in the distance. Maybe there just isn't anything interesting here to attract the post-human denizens of the city, or maybe something is lurking and waiting? You dispel those concerns and soldier on, determined to find some salvage while you're here. Crumbling walls, rusted metal, and countless spray-paint tags are everywhere you look, and [if daytimer is day]even in daylight, the whole area seems tailor-made for a horror movie[else]in the dim moonlight, the whole area appears tailor-made for a horror movie[end if].";
 	say "     Your sense of hopeful exploration wears thinner and thinner as you check out yet another empty building after at least an hour of searching the area. Not even homeless people have occupied these places, and whatever may once have been here has long been looted or willfully destroyed. But just as you are about to give up on this endeavor, a glimpse of crimson draws your attention to an old factory building across the cracked and rubble-covered road. Stepping out of the disappointing ruin, you look up at the factory and see a helmet dangling crookedly from an exposed piece of rebar that sticks out sideways from a landing on the second floor. It looks fairly modern and new, the material still gleaming under the light, and a compact helmet cam has been attached at the front. Letting your gaze wander down, you notice scattered shreds of clothing littering the ground below. Looks like the owner of that helmet didn't fare too well.";
@@ -314,6 +324,20 @@ to say UrbanExplorerVid1:
 	WaitLineBreak;
 	say "     As Mason is revealed to your view completely, you realize that he passed out in exhaustion from the combined transformation and orgasm. While he did transform, this was far from a total conversion to match his feral partner. He may be feline and match the beast in black fur and some bio-luminescent patches, but the young man is still anthro in appearance, with recognizable arms and legs meant for bipedal locomotion. None of this seems to matter much to the urban explorer's sated captor, and the large beast bends its head down to groom Mason's chest, where his fur is a sticky mess from his own load and the pre leaked on him earlier. After a thorough cat-wash of his new convert, the tentacled cat lifts the dozing young anthro with his surprisingly strong appendages and slings him across his back, carrying his freshly fucked plaything to parts unknown.";
 	say "     The rest of the video is filled with several more hours of the same view, with nothing more interesting happening than a rat eventually dashing past, so you rewind after fast-forwarding through it and eject the tape.";
+
+Abandoned Fitness Dojo is a situation.
+The sarea of Abandoned Fitness Dojo is "High".
+
+when play begins:
+	add Abandoned Fitness Dojo to badspots of guy;
+
+instead of resolving a Abandoned Fitness Dojo:
+	say "     Checking out one of the more recreational areas of the High Rise District, you come upon a fitness dojo. Looks like martial artists came here to train and have small tournaments. The place clearly hasn't been untouched since the outbreak of the nanite infection, as you can see that the front door has had its glass panes shattered, apparently when someone kicked it open. Checking further into the building, you see that the path of destruction extends further into the building too. In the [']fitness studio['] part of the building with its rows of excercize machines, one of the mirrors on the wall has been damanged severely, cracks radiating out from the impact site of what must have been a significantly large fist. In another spot, the metal disk of a weightlifting set is sticking out of a brick wall, with fragments of shattered bricks on the ground before it. Looks like a fight or something happened in here.";
+	say "     Checking over the further rooms of the building, you find that they are less damaged, though that doesn't mean that others haven't been here before you either. All of the lockers have been rifled through by scavengers, who already made off with everything of value. Well, except possibly what you find in one of the staff only side rooms. Looks like the place had a security camera setup and there still is a tape in the recorder. With any luck, that might contain some some explanation what happened here. It is a little bit of a task to pry the tape out of the recorder without power, but you eventually manage it and pocket the thing.";
+	LineBreak;
+	say "[bold type]'Fitness Studio Security Vid' has been added to your tape inventory![roman type][line break]";
+	add "Fitness Studio Security Vid Vid" to tapes of player;
+	now Abandoned Fitness Dojo is resolved;
 
 to say FitnessStudioVid:
 	say "     You quickly slide the tape into the camera, pushing down on the side panel until it locks into place with a *Click*. Then you fold out the small screen of the device, pressing 'Play' and looking at it expectantly. The video starts with a view of a fitness studio's expansive training room, with numerous exercise machines lined up next to each other. A date and time display in the corner of the image declares the video to be from one of the first few days of the outbreak, before total chaos spread throughout the city. It shows that the tape starts at 7 AM, most likely due to an automatic system turning on when the studio was opened. The room doesn't stay empty for long, as a fit and well-muscled Asian man walks into sight soon after, dressed in a pair of red shorts and with quite a flashy upwards-styled hairdo. From his movements and fitness, you'd guess he is a martial artist, possibly a kick-boxer or something.";

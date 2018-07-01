@@ -91,6 +91,7 @@ instead of conversing the Doctor Medea:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague. Maybe I could help if you were a female?'";
 				say "     She pauses and ponders for a moment. 'There is another possibility as well. With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I had just started to look into those possibilities. Perhaps you might be interested in becoming my test subject for this. To accomplish this, I would first need you to obtain some medical supplies I would need. The delivery truck was supposed to arrive the day of the outbreak, so you may be able to locate it. Here is a list of what I need. I would need those supplies regardless if you choose to undergo this procedure or if you find a means to become female.' She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
 				now medeaget is 1;
+				now Abandoned Truck is not resolved;
 				now HP of doctor medea is 2;
 			else if medeaget is 1:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague. Maybe I could help if you were a female?'";
@@ -641,11 +642,11 @@ Abandoned truck is a situation.
 the sarea of abandoned truck is "Outside".
 
 instead of resolving an abandoned truck:
-	say "You come across an abandoned truck, filled with medical supplies. The drivers cab is filled with some sort of goo that covers all the entrances. Maybe some of the supplies can be of use?";
+	say "     You come across an abandoned truck, filled with medical supplies. The drivers cab is filled with some sort of goo that covers all the entrances. Maybe some of the supplies can be of use?";
 	if medeaget is 1:
-		say "This must be the truck Medea sent you after!";
+		say "     This must be the truck Medea sent you after! Ruffling through it, you gather up the things that she requested.";
 		now medeaget is 2;
-		say "As you ruffle through the truck, you bring back the parts she requested.";
+		now Abandoned Truck is resolved;
 	else:
 		say "     [bold type]Maybe you could find a medkit. Do you wish to try?[roman type][line break]";
 		LineBreak;
@@ -662,6 +663,7 @@ instead of resolving an abandoned truck:
 		else:
 			LineBreak;
 			say "You leave the abandoned truck behind and walk on.";
+		now Abandoned Truck is resolved;
 
 
 Obstetrics Department is a situation. Obstetrics Department is resolved.
