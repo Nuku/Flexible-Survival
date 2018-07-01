@@ -3577,6 +3577,37 @@ check resting:
 				say "...and you thankfully complete your nap in peace.";
 		else if roughing is true:
 			say "You are thankfully able to complete your nap in peace.";
+to Rest:
+	let num1 be maxHP of the player divided by 4;
+	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
+	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
+		if num1 >= num2, increase HP of player by num1; [best value chosen]
+		if num2 > num1, increase HP of player by num2;
+	else if "Roughing It" is listed in feats of player:
+		increase HP of player by ( num1 + num2 ) / 2; [average value chosen]
+	else:		[accessible only when events induce resting]
+		if num1 <= num2, increase HP of player by num1; [lowest value chosen]
+		if num2 < num1, increase HP of player by num2;
+	if Terminatorsleep is false:
+		if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isnt going to fix them]
+			if silk hammock is owned or silk hammock is present:
+				decrease Sleeptimercount by 6;
+			else:
+				decrease Sleeptimercount by 5;
+		else if Sleeptimercount <= 9: [Player is tired, and will wake up refreshed with the well rested feat.]
+			if silk hammock is owned or silk hammock is present:
+				now Sleeptimercount is -2;
+			else: [Turnpass rule fires immediately after this and adds 1 to each, so it becomes -1 and 0.]
+				now Sleeptimercount is -1;
+			FeatGain "Well Rested";
+			say "     Well Rested - All stats increased by 2!";
+			increase strength of player by 2;
+			increase dexterity of player by 2;
+			increase stamina of player by 2;
+			increase charisma of player by 2;
+			increase intelligence of player by 2;
+			increase perception of player by 2;
+			now WellRestedTimer is 6;
 
 carry out resting:
 	if companion of player is rubber tigress:
@@ -3589,40 +3620,6 @@ carry out resting:
 	follow the turnpass rule;
 	follow the player injury rule;
 	say "You are [descr]([HP of player]/[maxHP of player]).";
-
-sleeptimercount is a number that varies.
-
-To Rest:
-	let num1 be maxHP of the player divided by 4;
-	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
-	if cot is owned or cot is present or the player is in the Bunker or silk hammock is owned or silk hammock is present:
-		if num1 >= num2, increase HP of player by num1; [best value chosen]
-		if num2 > num1, increase HP of player by num2;
-	else if "Roughing It" is listed in feats of player:
-		increase HP of player by ( num1 + num2 ) / 2; [average value chosen]
-	else:		[accessible only when events induce resting]
-		if num1 <= num2, increase HP of player by num1; [lowest value chosen]
-		if num2 < num1, increase HP of player by num2;
-	if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isnt going to fix them]
-		if silk hammock is owned or silk hammock is present:
-			decrease Sleeptimercount by 6;
-		else:
-			decrease Sleeptimercount by 5;
-	else if Sleeptimercount <= 9: [Player is tired, and will wake up refreshed with the well rested feat.]
-		if silk hammock is owned or silk hammock is present:
-			now Sleeptimercount is -1;
-		else:
-			now Sleeptimercount is 0;
-		FeatGain "Well Rested";
-		say "     Well Rested - All stats increased by 2!";
-		increase strength of player by 2;
-		increase dexterity of player by 2;
-		increase stamina of player by 2;
-		increase charisma of player by 2;
-		increase intelligence of player by 2;
-		increase perception of player by 2;
-[		now WellRestedTimer is 6;] [What?]
-
 
 This is the explore rule:
 	let something be 0;
@@ -4981,6 +4978,7 @@ Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
 Include Presets by Core Mechanics.
 Include Status View by Core Mechanics.
+Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
 

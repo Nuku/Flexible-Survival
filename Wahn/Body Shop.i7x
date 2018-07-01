@@ -104,15 +104,20 @@ to say MoreauTalkMenu:
 				if nam is:
 				-- "Ask about the mannequins":
 					say "[MoreauTalk1]";
+					WaitLineBreak;
+					say "[MoreauTalkMenu]";
 				-- "Ask for the truth about the mannequins":
 					say "[MoreauTalk2]";
+					WaitLineBreak;
+					say "[MoreauTalkMenu]";
 				-- "Ask if buying body parts is really worth it":
 					say "[MoreauTalk3]";
+					WaitLineBreak;
+					say "[MoreauTalkMenu]";
 				-- "Sell something":
 					say "[MoreauPartSale]";
 				-- "Buy something":
 					say "[MoreauPartBuy]";
-				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if player consents:

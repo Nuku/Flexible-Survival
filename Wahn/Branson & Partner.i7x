@@ -26,7 +26,7 @@ the scent of Melanie is "The young woman smells pretty nice - a fresh furry scen
 To say MelanieDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Melanie: [HP of Melanie], libido of Melanie: [libido of Melanie] <- DEBUG[line break]";
-	say "     Melanie is a young anthro deer-woman, dressed in a pristine white shirt with her name on a little tag - the very image of a receptionist or executive assistant. She is pretty, with a well-sized pair of assets bulging out the top of her shirt. Two interesting little bumps in the white fabric tell you that she isn't wearing a bra either. While the fur on her body is a mixture of light brown and cream at the front (down from her muzzle over her neck and you assume all the way to her hooves), the anthro furry has shoulder-length black hair, pulled into a ponytail behind her head.";
+	say "     Melanie is a young anthro deer-woman, dressed in a short skirt and pristine white shirt with her name on a little tag - the very image of a receptionist or executive assistant. She is pretty, with a well-sized pair of assets bulging out the top of her shirt. Two interesting little bumps in the white fabric tell you that she isn't wearing a bra either. While the fur on her body is a mixture of light brown and cream at the front (down from her muzzle over her neck and you assume all the way to her hooves), the anthro furry has shoulder-length black hair, pulled into a ponytail behind her head.";
 
 instead of going north from Smith Haven Mall Lot North while HP of Melanie is 0:
 	move player to Branson & Partner Reception;
@@ -169,11 +169,9 @@ to say MelanieTalk3: [ask to meet Mr. B]
 		else:
 			say "you really should swing by the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] sometime soon. The businessman tells you openly that you're not the only interested party in becoming his business partner, and it'd be a shame if someone else snagged the prize before you.";
 		if HP of Melanie is 3 and findwires is 2 and fixedgens is 2:
-			say "     With everything taken care of for implementing his plans, Branson gives you a companionable smack on the shoulder. 'Well done, my friend. I knew we could count on you. This will be a very lucrative operation. I'll tell Melanie that you have the run of the building now - including the offices in the first floor. Of course, my office girls still have some work to do, so don't overdo it, alright?'";
-[
+			say "     With everything taken care of for implementing his plans, Branson gives you a companionable smack on the shoulder. 'Well done, my friend. I knew we could count on you. This will be a very lucrative operation. I'll tell Melanie that you have the run of the building now - including the offices in the first floor. The entrance is just past her desk. Of course, my office girls still have some work to do, so don't overdo it, alright?'";
 			change the north exit of Branson & Partner Reception to B&P Company Offices;
 			change the south exit of B&P Company Offices to Branson & Partner Reception;
-]
 			now HP of Melanie is 4; [player got free reign in the building now]
 	else if HP of Melanie is 4: [post quest visits to the boss]
 		say "     'Of course - please go on up,' the receptionist tells you with a smile and you ride the elevator up to Mr. Branson's office. Strolling along the short corridor decorated with potted plants and modern art, you enter his office shortly after. The large crocodile is amiable enough towards his business partner, chatting a bit and offering you a drink too. After a little while, he throws back the last of his glass of whiskey, then ";
@@ -231,8 +229,36 @@ to say DataStoreUse:
 	LineBreak;
 	say "     There isn't much you can straight out do with the thing. It would make a passable doorstop, but what's really the main point is the data saved on it. Better give it to someone who has an interest in that.";
 
-after going to B&P Company Offices while (HP of Melanie is 4):
-	say "     ";
+instead of going north from Branson & Partner Reception while (HP of Melanie is 4):
+	say "     As you walk towards the door to the company offices, Melanie stands up from behind her desk and approaches with a smile on her face. 'Let me get that for you, [if player is female]Ma'am[else]Sir[end if].' She looks quite enticing in her secretary outfit, especially with the way she sways her hips with every step. Given the fact that she has slender hooves, there is not even a need for any high heels on the young woman, she just naturally walks with her chest and breasts pushed out in a way that would draw anyone's eye. While thoughts about this are still chasing each other in your head, the smiling doe reaches the frosted glass door in the back wall and pulls it open, inviting you to step right in. Beyond lies an office with six desks in a similar style as Melanie's, most of which are occupied right now by other women.";
+	say "     The office girls look up at your sudden entrance, then glance to Melanie for explanation of what is going on. She responds with a little wave, indicating for them all to step up to meet 'Mr Branson's new business partner'. The first one who does so gets introduced to you as Bella; an eye-catching tigress that steps forward on silent paws. The usual uniform of white skirt plus a darker skirt is lightly changed on her, with multiple buttons undone, revealing some glimpses of side-boob. Next up, a friendly Labrador girl steps into line and gets introduced as Elise. Seeing her makes it clear that Mr Branson definitively picked his workers by their looks, as she also is fairly slender, but well-set in the breasts department. The young woman's tail beats in a steady rhythm as she looks at you with interest.";
+	WaitLineBreak;
+	say "     'And then there are Lola and Layla,' Melanie goes on to say and waves her hand a little to draw your attention away from Elise's looks. For a second, you think you're seeing double as you look at the persons who step up, as it is literally the same woman twice over. Only when the snow-white bunny twins with their white-blond long hair come to a stop next to their colleagues do the differences become apparent. While the first one (Lola) looks you straight in the eye and sets her hands on her hips in a confident stance, her sister Layla appears somewhat more demurely, hands held relaxed behind her back. All four of them - or five, including Melanie - stand at attention, looking at you with interest in their eyes.";
+	LineBreak;
+	say "     [bold type]How do you want to introduce yourself to them?[roman type][line break]"; [Note: Just some flavour choices for player amusement, no story forks attached to any choice]
+	say "     [link](1)[as]1[end link] - Show em who's boss and get in a few gropes. They'll be used to it from Branson.";
+	say "     [link](2)[as]2[end link] - Give them a confident, business-like greeting.";
+	say "     [link](3)[as]3[end link] - Be friendly and joke around a little as you greet them.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to get groping, [link]2[end link] to be all business or [link]3[end link] to be friendly.";
+	if calcnumber is 1: [grope]
+		LineBreak;
+		say "     Putting in a serious expression, you introduce yourself[if player is not defaultnamed] as [name of player][end if], then stride along the line of the young women, inspecting each one in turn. As expected, they take it in stride as your hand strays forward several times to stroke some curves and give a grope or two. The smiles on their faces never go away, but you can't help but think that they seem a little bit less genuine as you get in your touches of their bodies. Eventually, your inspection tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr Branson is expecting those documents by tomorrow.' Then she gives you a respectful nod and walks back out to the reception.";
+	else if calcnumber is 2: [business]
+		LineBreak;
+		say "     Putting in a serious expression, you introduce yourself[if player is not defaultnamed] as [name of player][end if], then stride along the line of the young women. Giving each one in turn a handshake, you say that you look forward to working with them, now that you've become a silent partner of their boss. They react with genuine smiles and friendly comments, seeming surprised at the everyday business-like tone you're maintaining right now. After you shake her hand, you notice Lola glancing at something on one of the desks, a spot where someone apparently didn't quite get all of a splash of cum when cleaning up. Seems like the young woman are quite familiar with a different kind of treatment. Eventually, your introduction tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr Branson is expecting those documents by tomorrow.' Then she gives you a respectful nod and walks back out to the reception.";
+	else: [friendly]
+		LineBreak;
+		say "     Getting past the slight tension of introductions by making a joke that seems to inspire genuine chuckles from the pretty young women, you step forward with a friendly expression on your face and move to shake each of the office girl's hands in turn. They react with beaming smiles and come together to chat with you as a group after introductions, everyone being curious about what is going on outside of their workplace refuge. As you tell some stories and learn that neither of them had any family or close friends in the city (somehow all having been hired some distance away and moved here for their jobs), you notice Lola glancing at something on one of the desks thoughtfully before she joins back in on the conversation. Looks like a white streak, by your guess being a spot where someone apparently didn't quite get all of a splash of cum when cleaning up. Seems like the young woman are quite familiar with a different kind of treatment.";
+		say "     Eventually, your introduction tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr Branson is expecting those documents by tomorrow.' Then she gives you a respectful nod and walks back out to the reception.";
+	wait for any key;
+	move player to B&P Company Offices;
 	now HP of Melanie is 5;
 
 [

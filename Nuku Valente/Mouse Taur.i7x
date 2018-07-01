@@ -72,7 +72,7 @@ to FindPornStore:
 			challenge "Tigress Hooker";
 			if fightoutcome < 20: [player won]
 				say "     By the time you have beaten off the overeager tigress hooker and she is swaying on her feet from your last blow, the mouse taur has retrieved what looks like a sturdy quarterstaff and a squirt gun from inside the store. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away from her store. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. She listens to you for a little while, then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
-				say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
+				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
 				move player to the Porn Store;
 				now Porn Store is known;
@@ -80,7 +80,7 @@ to FindPornStore:
 				now Find Porn Store is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Just as you are about to be defeated by the overeager tigress, swaying on your feet from her last blow, the mouse taur reappears from the inside of the store, holding what looks like a sturdy quarterstaff and a squirt gun. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. Listening to you for a little while, the woman then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
-				say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
+				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
 				move player to the Porn Store;
 				now Porn Store is known;
@@ -94,6 +94,7 @@ to FindPornStore:
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Deciding just to try the simple idea of knocking, you rap the door several times and wait. At first, it seems like no one is home, but then you can hear movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the face of a female mouse taur looking out warily. 'Well, hello there. You don't seem to be one of the usual types that roam the streets these days. They'd be trying to break down the door by now and all that. So, come on in. We can talk, one sane survivor to another.' With that, she waves you into the store, then closes the door behind you two.";
+			say "[LisaIntroTalk]";
 			now mtrp is 2; [player knows Lisa, was in the store]
 			move player to the Porn Store;
 			now Porn Store is known;
@@ -109,6 +110,8 @@ to FindPornStore:
 		now Porn Store is known;
 		now Find Porn Store is resolved;
 
+to say LisaIntroTalk:
+	say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
 
 Section 2 - Porn Store and Lisa
 

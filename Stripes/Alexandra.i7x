@@ -113,6 +113,11 @@ dobieanal is a truth state that varies. dobieanal is usually false.
 lastdobiemess is a number that varies.
 lastAlexandraPast is a number that varies. lastAlexandraPast is usually 255.
 AlexandraPupDaddy is a number that varies. [who knocked her up]
+AlexandraPlayerPups is a number that varies.
+AlexandraFangPups is a number that varies.
+AlexandraKorvinPups is a number that varies.
+AlexandraCarlPups is a number that varies.
+AlexandraBrutusPups is a number that varies.
 
 to say AlexandraPupDaddyName: [to use in text]
 	if AlexandraPupDaddy is 1:
@@ -772,16 +777,49 @@ Section 5 - Everyturn Rule (pregnancy and Fang)
 
 an everyturn rule:
 	if Alexandra is booked and HP of Alexandra < 50:
-		if lust of Alexandra > 0:
-			increase lust of Alexandra by 1;
-			if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1;
-			if lust of Alexandra >= 24 and skipturnblocker is 0:
-				say "Your thoughts wander back to Alexandra and you feel a need to go check in on her.";
-				if libido of Alexandra is 0:
-					now libido of Alexandra is a random number between 2 and 4;
-				else:
-					increase libido of Alexandra by a random number between 1 and 4;
-					if level of Alexandra is 1 or level of Alexandra is 2, increase libido of Alexandra by a random number between 0 and 1;
+		if lust of Alexandra > 0: [Alexandra is pregnant]
+			increase lust of Alexandra by 1; [counting up towards 24]
+			if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1; [pregnancy speed boost from player/Fang feats]
+			if lust of Alexandra >= 24 and skipturnblocker is 0: [birthing time]
+				let NewPups be a random number between 2 and 4; [2-4 pups each time]
+				if Alexandra is not visible: [player isn't anywhere near her]
+					say "     Your thoughts wander back to Alexandra and you feel a need to go check in on her.";
+				else: [player is next to Alexandra]
+					say "     From one moment to the next, the expression on your doberwoman bitch's face changes and she brings a hand to her bulging stomach. 'Nnghh! Someone's definitively getting unruly in there. That was quite a kick!' The former cop opens her muzzle to say something more, but the next thing that comes out of it is just a strangled groan. A glance down makes it fairly obvious what's going on, as Alexandra's jeans suddenly develop a large wet patch that keeps spreading down the insides of her legs: Her water just broke! ";
+					if libido of Alexandra is 0: [first time puppies]
+						say "'Damn! I guess this is happening. Right here, right now!' she curses between panted breaths and ";
+					else if libido of Alexandra > 10:
+						say "'My pups are coming! Time for the pack to grow even more,' she calls out between panted breaths and ";
+					else if libido of Alexandra > 4:
+						say "'Here we go again! Gah, it feels weird to be leaking this much,' she grunts out between panted breaths and ";
+					say "you quickly rush to her side and help the canine woman to lie down in a halfway comfortable position. Her pants weren't buttoned, not with the bulge of her belly in the way for that, so you thankfully don't have too hard of a time peeling them off her stretched-out form.";
+					say "     Flinging the soaked garment aside, you turn back to Alexandra a second later. She is panting rapidly by now, her hands clawing at the ground as a fairly strong contraction hits. While pregnancy and birth may be a lot quicker these days, it doesn't look like they are all that much easier than before. The curve of the pregnant woman's belly heaves with another contraction, followed by a breathless groan from her, and you can see the nether lips of your bitch spread a little in preparation of what is to come. Without a second thought in the heat of this moment, you rush forward and take position between her legs, hands outstretched. It only takes another moment before the next contraction hits, this time bringing with it a curled-up bundle of wet puppy, looking terribly cute in its demi-human form, even though it may be dripping with Alexandra's fluids.";
+					WaitLineBreak;
+					say "      The tiny humanoid dog lets out a whimper at finding itself in a strange new world outside of the fluid-filled home it came from, then starts to weakly move its limbs as if to try them out for the first time. Focused on the miracle of life in your hands, you are only shaken out of watching the first pup when Alexandra lets out a shout of '[one of]Goddamn![or]Motherfucker![or]Fuuuck![at random]' as another really strong followup contraction hits. She mutters something about punching 'the next bastard who wants to fuck her' in the balls, then takes a deep gasp of air. You barely have time to gently lower the first pup to catch number two, who is no less cute and innocent than the first. The two of them stretch their tiny limbs and sniff blindly at each other as you put number two down next to its sibling.";
+					if NewPups < 3:
+						say "     Ready for more pups, you wait for further contractions, yet somehow they seem less and less intense with every further twitch of Alexandra's body. Then something else slides out of the doberwoman... the afterbirth. It is a fleshy-looking thing that connects to the two puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to desintegrate befrore your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the two tiny doggies left, which you pick up and hand to their mother one by one.";
+					else if NewPups is 3:
+						say "     Ready for more pups, you wait for further contractions and soon welcome a third into the world. After this one the twitches of Alexandra's body seem to become much less intense. Then something else slides out of the doberwoman... the afterbirth. It is a fleshy-looking thing that connects to the three puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to desintegrate befrore your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the three tiny doggies left, which you pick up and hand to their mother one by one.";
+					else if NewPups is 4:
+						say "     Ready for more pups, you wait for further contractions and soon welcome a third into the world, followed by a fourth. After this one the twitches of Alexandra's body seem to become much less intense. Then something else slides out of the doberwoman... the afterbirth. It is a fleshy-looking thing that connects to the four puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to desintegrate befrore your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the four tiny doggies left, which you pick up and hand to their mother one by one.";
+					WaitLineBreak;
+					say "     Visibly exhausted, yet also as happy as she can be, Alexandra cradles her little ones to her chest, guiding tiny puppy muzzles to her nipples and smiling in fulfillment as their lips clamp on her breasts and start to suckle greedily. [if Newpups > 2]Given that she only has two breasts, there is a bit of competition and whining between her offspring, but the anthro canine does her best to switch off between the pups, giving each an equal share of the milk they crave. [end if]As the little dogs greedily gulp down what they can drink from their mother, they grow visibly with each further moment. Tiny as the puppies may have been, they seem in a rush to catch up now, growing so fast that they seem to skip right past the size of a human baby or toddler and reach the stage of a young child in moments. Then the burst of development stops and they stabilize in the shape of quite active and rambucious little dobermen.";
+					if AlexandraPupDaddy is 1: [player pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of yourself in them. They definitively still are dobermen through and through, but there just is something about the way they look and act that makes it more than clear in your mind that they're yours. Soon having finished with their drinking from Alexandra, first one then another of the little ones decides to investigate the person who greeted them into the world, and you find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. They seem to recognize something in your scent, making them feel perfectly safe and happy to be with you.";
+						increase AlexandraPlayerPups by NewPups;
+					else if AlexandraPupDaddy is 2: [Fang pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Fang in them. They definitively still are dobermen through and through, but there just is something about the way they look and act that makes it more than clear in your mind that the wolf fathered them. Maybe it's something about the shape of their ears and muzzles, or the markings of their fur, it's hard to say. Soon having finished with their drinking from Alexandra, first one then another of the little ones decides to investigate the person who greeted them into the world, and you find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the wild spirit of their father, making them happily pad your way without fear.";
+						increase AlexandraFangPups by NewPups;
+					else if AlexandraPupDaddy is 3: [Korvin pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Korvin in them. They definitively still are dobermen through and through, but there just is something about the way they look and act that makes it more than clear in your mind that the German shepherd fathered them. Maybe it's something about the shape of their ears and muzzles, or the markings of their fur, it's hard to say. Soon having finished with their drinking from Alexandra, first one then another of the little ones decides to investigate the person who greeted them into the world, and you find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the cocky spirit of their father, making them happily pad your way without fear.";
+						increase AlexandraKorvinPups by NewPups;
+					else if AlexandraPupDaddy is 4: [Carl pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Carl in them. They definitively still are dobermen through and through, but there just is something about the way they look and act that makes it more than clear in your mind that the husky fathered them. Maybe it's something about the shape of their ears and muzzles, or the markings of their fur, it's hard to say. Soon having finished with their drinking from Alexandra, first one then another of the little ones decides to investigate the person who greeted them into the world, and you find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the bravery of their father, making them happily pad your way without fear.";
+						increase AlexandraCarlPups by NewPups;
+					else if AlexandraPupDaddy is 5: [Brutus pups]
+						say "     Now that the little dogs have grown a little, you do recognize a bit of Brutus in them. They definitively still are dobermen through and through, but there just is something about the way they look and act that makes it more than clear in your mind that the demon brute fathered them. You could swear that for a moment, one of the puppies eyes glowed purple, and their teeth and claws do seem oddly sharp. Soon having finished with their drinking from Alexandra, first one then another of the little ones decides to investigate the person who greeted them into the world, and you find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited part of the bond between their father and yourself, making them happily pad your way without fear.";
+						increase AlexandraBrutusPups by NewPups;
+				increase libido of Alexandra by NewPups;
 				now lust of Alexandra is 0;
 				now HP of Alexandra is 4;
 		else if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
