@@ -5069,6 +5069,7 @@ Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include giving in by Core Mechanics.
+Include Greek Mythos by Prometheus.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include High Rise Events by Wahn.
@@ -5102,6 +5103,7 @@ Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
 Include Museum Rounds by Stripes.
+Include Nemean Lion by Prometheus.
 Include New Events by Sarokcat.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.

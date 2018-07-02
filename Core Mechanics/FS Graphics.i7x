@@ -258,6 +258,7 @@ Figure of Micaela_icon is the file "micaela_ig.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
 Figure of Orthas_icon is the file "orthas.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
+Figure of Penny_icon is the file "Penny.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
 Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
@@ -712,6 +713,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orthas"	Figure of Orthas_icon	"The_Negative"	g-white	"normal"
 "Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-black	"normal"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"	g-white	"normal"
+"Penny"	Figure of Penny_icon	"Little Wax Raven"	g-white	"normal"
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-white	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
@@ -1000,6 +1002,7 @@ carry out artistcredits:
 	say "     Orbul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
+	say "     Penny by Little Wax Raven @ ?[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
 	say "     Rane Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Rod by The_Negative @ furaffinity.net[line break]";
@@ -1073,7 +1076,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Little Wax Raven", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "Sinealas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
