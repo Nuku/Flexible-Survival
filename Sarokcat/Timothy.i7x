@@ -26,7 +26,12 @@ LastTimothymilked is a number that varies. LastTimothymilked is usually 250.
 Timothyfucked is a number that varies. Timothyfucked is usually 0.
 
 Timothy is a man.
-The description of Timothy is "Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphon's distended belly, and the rather large and obviously well used passage resting between the gryphon's leonine thighs. Its leonine tail twitches where it is lying between her slightly spread legs, as the hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'".
+The description of Timothy is "[TimothyDesc]".
+
+to say TimothyDesc:
+	project the Figure of Timothy_icon;
+	say "     Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphon's distended belly, and the rather large and obviously well used passage resting between the gryphon's leonine thighs. Its leonine tail twitches where it is lying between her slightly spread legs, as the hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'";
+	
 the conversation of Timothy is { "EggsEggsEggs!" }.
 
 instead of linkactioning Timothy when HP of timothy > 0:
