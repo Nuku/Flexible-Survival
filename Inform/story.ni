@@ -3599,14 +3599,15 @@ to Rest:
 				now Sleeptimercount is -2;
 			else: [Turnpass rule fires immediately after this and adds 1 to each, so it becomes -1 and 0.]
 				now Sleeptimercount is -1;
-			FeatGain "Well Rested";
-			say "     Well Rested - All stats increased by 2!";
-			increase strength of player by 2;
-			increase dexterity of player by 2;
-			increase stamina of player by 2;
-			increase charisma of player by 2;
-			increase intelligence of player by 2;
-			increase perception of player by 2;
+			if "Well Rested" is not listed in feats of player:
+				FeatGain "Well Rested";
+				say "     Well Rested - All stats increased by 2!";
+				increase strength of player by 2;
+				increase dexterity of player by 2;
+				increase stamina of player by 2;
+				increase charisma of player by 2;
+				increase intelligence of player by 2;
+				increase perception of player by 2;
 			now WellRestedTimer is 6;
 
 carry out resting:
