@@ -1,8 +1,7 @@
 Version 2 of Koballoon by Song begins here.
-[ Version 1 - Creature basis and defeat scenes - Stripes]
-[ Version 2 - Expanded defeat scenes, victory scenes, and bad ends - Song]
-[ Version 2.1 - Removed extraneous LatexList check - Song]
-[ - This creature was originally created by Stripes and has since been relocated to Song's folder after substantial overhauls - ]
+[ Version 1.0 - Creature basis and defeat scenes - Stripes                  ]
+[ Version 2.0 - Expanded defeat scenes, victory scenes, and bad ends - Song ]
+[ Version 2.1 - Removed extraneous LatexList check - Song                   ]
 
 "Adds a Koballoon creature to Flexible Survival's Wandering Monsters table"
 
