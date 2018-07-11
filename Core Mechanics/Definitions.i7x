@@ -1,5 +1,5 @@
 Version 1 of Definitions by Core Mechanics begins here.
-[Version 1 - by Dys, adds Definitions for checking the sizes of NPCs and the ] [            player.                                                         ]
+[Version 1 - by Dys, adds Definitions for checking the sizes of NPCs and the player]
 
 [Size check functions]
 [Is x smaller than y?]

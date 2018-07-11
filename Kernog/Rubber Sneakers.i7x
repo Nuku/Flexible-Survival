@@ -21,7 +21,7 @@ The size of rubber sneakers is 0.
 The AC of rubber sneakers is 0.
 The effectiveness of rubber sneakers is 0.
 The placement of rubber sneakers is "feet".
-The descmod of rubber sneakers is "You wear dark blue rubbery sport shoes. Each step you take sends a small tingle throughout your body.".
+The descmod of rubber sneakers is "You wear rubbery, dark blue sport shoes. Each step you take sends a small tingle throughout your body.".
 The slot of rubber sneakers is "feet".
 
 the scent of rubber sneakers is "The rubber sneakers smell mostly of rubber, with a faint hint of sweat.".
@@ -41,7 +41,7 @@ Instead of using the rubber sneakers:
 	if the rubber sneakers are equipped:
 		if Doctor Matt is visible:
 			say "     Doctor Matt stares at your shoes. 'This is a rather uncommon infection', he finally says, after studying your body extensively. 'It seems that the nanites infecting these shoes have integrated a defense mechanism, which explains why removing them is so difficult. Talking to me about it was a good call. Matt fetches a small pot filled with a yellow-green powder. 'You will make geiger counters scream for a few days, but your nanites will protect you from any lasting effect. I think. Anyway, try removing your shoes, now.'";
-			say "     You do as asked, and grit your teeth, expecting another painful backlash. However, this time, the sneakers remove themselves, like an ordinary pair of shoes. 'Your current infection marks remain, but, with their source gone, they will behave like any other strain, and disappear when the next strain takes over,' the scientist explains. 'Just don't try and put these shoes again. Not mistakingly, at least.'";
+			say "     You do as asked, and grit your teeth, expecting another painful backlash. However, this time, the sneakers remove themselves, like an ordinary pair of shoes. 'Your current infection marks remain, but with their source gone, they will behave like any other strain and disappear when the next strain takes over,' the scientist explains. 'Just don't try and put on these shoes again.'";
 			now the rubber sneakers are not equipped;
 		else if Doctor Mouse is visible:
 			say "     'Where did you find that?' Mouse asks excitedly, as soon as you bring the issue. 'This is quite mysterious. And exciting. Is a nanite colony living [italic type]in[roman type] the shoes? Is it a living species so infected it has transformed into shoes? A new parasitic species brought from the spread of the nanites. Oh, dear, so many things to...' The deadpan look you give the doctor makes him stop his monologue. 'I think I know what they need. Bear with me a moment.' Doctor Mouse prepares a syringe, and plants it into each of your feet. You wince as you feel the syringe prick you, despite the shoe. 'And done. Wait for a couple minutes, then try to remove them again.'";
@@ -56,7 +56,7 @@ Instead of using the rubber sneakers:
 			say "     Nermine's hands reach your feet. She massages your feet through the rubber, tracing forms between your toes and on your soles. You close your mind in content, when... 'Done.' You open your eyes in surprise. Nermine was indeed done, holding your sneakers in her hands with a soft smile. Your eyes go from the shoes to your now naked feet, in amazement. 'They simply needed some encouragement,' was her only answer, as she gives you back the shoes.";
 			now the rubber sneakers are not equipped;
 		else:
-			say "     You reach down to your shoes and attempt to remove them. An intense burning sensation makes you stop right away, and repeats with every new try. You realize that you are in trouble, and will need help in order to remove these shoes. [bold type]You need to go to a medical doctor, or a person knowledgable in this kind of items, and try to remove these rubber sneakers with them around[roman type].";
+			say "     You reach down to your shoes and attempt to remove them. An intense burning sensation makes you stop right away, and it repeats with every new attempt. You realize that you are in trouble and will need help in order to remove these shoes. [bold type]You need to go to a medical doctor, or a person knowledgeable in these kinds of items, and try to remove these rubber sneakers with them around[roman type].";
 	else:
 		repeat with z running through equipped equipment:
 			if slot of z is "feet":
@@ -67,8 +67,8 @@ Instead of using the rubber sneakers:
 			continue the action;
 		else:
 			say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
-			say "     ([link]Yes[as]y[end link]) - What's the worst that could happen?";
-			say "     ([link]No[as]n[end link]) - Better listen to your instinct.";
+			say "     ([link]Y[as]y[end link]) - What's the worst that could happen?";
+			say "     ([link]N[as]n[end link]) - Better listen to your instinct.";
 			if player consents:
 				say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fill with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
 				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type]";
@@ -82,29 +82,29 @@ an everyturn rule:
 			say "     The tingles coming from your rubber shoes, which you got used to until now, suddenly peak. You get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [skinname of player] skin.";
 			now skinname of player is "Rubber Puma";
 		else if cockname of player is not "Rubber Puma":
-			say "     A sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed.[if player is male] Your [cockname of player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a shiny smooth latex sheath.[end if][if player is female]A quick prodding of your cunt[sfn] indicates you that the rubber slipped inside, covering your entire vagina with very sensitive latex[end if].";
+			say "     A sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed[if player is male]. Your [cockname of player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a smooth and shiny latex sheath[end if][if player is female]. A quick prodding of your cunt[sfn] indicates you that the rubber slipped inside, covering your entire vagina with very sensitive latex[end if].";
 			now cockname of player is "Rubber Puma";
 			if cocks of player > 1:
 				now cocks of player is 1;
 			if cocks of player is 1:
-				now cock length of player  is 7;
+				now cock length of player is 7;
 				now cock width of player is 5;
 		else if tailname of player is not "Rubber Puma":
-			say "     This time, the tingles focus on the small of your back, then your cocccyx. A long blue tail sprouts out. A flexible rubbery tube, which feels like a natural part of your body, as the elecritc tingles running back to your brain tell you, as soon as you grab it.";
+			say "     This time, the tingles focus on the small of your back, then your coccyx. A long blue tail sprouts out. A flexible rubbery tube, which feels like a natural part of your body, as the electric tingles running back to your brain tell you as soon as you grab it.";
 			now tailname of player is "Rubber Puma";
 		else if bodyname of player is not "Rubber Puma":
-			say "     Your body shifts and changes. You feel your body become a little smaller, and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance.";
+			say "     Your body shifts and changes. You feel your body become a little smaller and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance.";
 			now bodyname of player is "Rubber Puma";
 		else if facename of player is not "Rubber Puma":
 			say "     The rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind.";
-			now bodyname of player is "Rubber Puma";
-		say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
+			now facename of player is "Rubber Puma";
+		say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind and sexually stimulates you. [bold type]Your libido increases.[roman type]";
 		if player is pure:
 			increase libido of player by 20;
 		else:
 			increase libido of player by 10;
 		if libido of player > 100:
-			say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [smv][else]cunt[sfn] [sfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconcisously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
+			say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
 			decrease humanity of player by 15;
 			now libido of player is 20;
 
@@ -113,7 +113,7 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Rubber Puma":
 		if humanity of player < 10:
-			say "     Having never found a way to remove the infected sneakers (or tried to), you succomb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [subjpro_cap of player] outruns you; [subjpro of player] always do. Then, [subjpro of player] molests you all night, before  leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
+			say "     Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [subjpro_cap of player] outruns you; [subjpro of player] always do. Then, [subjpro of player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
 		else:
 			say "     The infected rubber sneakers forced you to remain trapped in the form of a Rubber Puma. Fortunately, you managed to remain in control of your sanity, thanks to a careful planning of your physical efforts, convincing the military to let you go, under surveillance. During a particularly intense session on your treadmill, you discover that your rubber body begins to exude pools of latex which quickly reforms as new pairs of sport shoes. This gives you a great idea, and you rush to your phone, to make some calls to your bank. Several months later, 'Rubber Pumas' become the new fashion among youngsters and sportsmen alike. Most of your sells comes from your microwaved line, which presents no risk of infection, but you let slip, from time to time, 'original' versions, which sell for gold on the black market, ensuring that your company a steady flow of money from 'thankful' investors.";
 

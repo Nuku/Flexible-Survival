@@ -3094,9 +3094,9 @@ To Infect:
 		increase libido of player by 1;
 		increase libido of player by ( libido entry minus libido of player ) divided by 3;
 		if oldlib < 80 and libido of player > 79:
-			say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][else if cocks of player > 1]  Your cocks are fully erect constantly and drool precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][else if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
+			say "You now have trouble thinking of anything but sexual satisfaction![no line break][if player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
 		else if oldlib < 50 and libido of player > 49:
-			say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][else if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][else if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+			say "Your thoughts have sunk to almost constant depravity![no line break][if player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if player is female] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 
 
 to attributeinfect:		[sets the player values from the new attributes]
@@ -3112,7 +3112,7 @@ to attributeinfect:		[sets the player values from the new attributes]
 			repeat with z running through equipped equipment:
 				if size of z > 0: [size restricted equipment]
 					if (scalevalue of player - size of z > 1):
-						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
+						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of player - size of z is 1):
 						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
@@ -3174,7 +3174,7 @@ To Vialchance (x - a text):
 			now vcoll is 0;
 
 
-predestiny is a number that varies.		[use unknown]
+predestiny is a number that varies. [use unknown]
 
 calcnumber is a number that varies.
 
@@ -3344,7 +3344,7 @@ To fight:
 		say "     DEBUG: Random Monster Choosing Started[line break]";
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
-	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
+	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed: [hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry exactly matches the text "Mental Mouse", case insensitively:
@@ -3356,7 +3356,7 @@ To fight:
 					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
 						add y to q;
 				break;
-	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
+	if insectlarva is true and larvaegg is 1 and gestation of child is 0: [hunted by wasp hive anywhere outdoors]
 		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -3491,7 +3491,7 @@ To challenge:
 		pet level up;
 	rule succeeds;
 
-to hardmodeboost:			[Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
+to hardmodeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
 	let debit be 0;
 	choose row monster from the table of random critters;
 	if lev entry < level of player and hardmode is true:
@@ -3585,11 +3585,11 @@ to Rest:
 		if num2 > num1, increase HP of player by num2;
 	else if "Roughing It" is listed in feats of player:
 		increase HP of player by ( num1 + num2 ) / 2; [average value chosen]
-	else:		[accessible only when events induce resting]
+	else: [accessible only when events induce resting]
 		if num1 <= num2, increase HP of player by num1; [lowest value chosen]
 		if num2 < num1, increase HP of player by num2;
 	if Terminatorsleep is false:
-		if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isnt going to fix them]
+		if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isn't going to fix them]
 			if silk hammock is owned or silk hammock is present:
 				decrease Sleeptimercount by 6;
 			else:
@@ -3751,9 +3751,9 @@ This is the turnpass rule:
 	if libido of player > 20 and "Cold Fish" is listed in feats of player and libido of player < 100:
 		decrease libido of player by square root of ( libido of player - 15 );
 	if oldlib < 80 and libido of player > 79:
-		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][else if cocks of player > 1]  Your cocks are fully erect constantly and drool precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][else if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
+		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
 	else if oldlib < 50 and libido of player > 49:
-		say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][else if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][else if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+		say "Your thoughts have sunk to almost constant depravity![no line break][if player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 	if hunger of player < 0, now hunger of player is 0;
 	if thirst of player < 0, now thirst of player is 0;
 	if the HP of the player < the maxHP of the player and nohealmode is false:
@@ -3786,7 +3786,7 @@ This is the turnpass rule:
 			now z is z;
 		else:
 			now z is 1;
-		if bodyname of player is "human" or ( shiftable is 2 and humanity of player > 49 ):		[blocked for humans and active shifters]
+		if bodyname of player is "human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -4178,15 +4178,15 @@ This is the cunt descr rule:
 	rule succeeds;
 
 to say body size of ( x - a person ):
-	if scalevalue of x is 1:			[~3 ft in height or less]
+	if scalevalue of x is 1: [~3 ft in height or less]
 		say "tiny";
-	else if scalevalue of x is 2:		[4-5 ft in height]
+	else if scalevalue of x is 2: [4-5 ft in height]
 		say "small";
-	else if scalevalue of x is 3:		[5-7 ft in height]
+	else if scalevalue of x is 3: [5-7 ft in height]
 		say "average";
-	else if scalevalue of x is 4:		[8-12 ft in height]
+	else if scalevalue of x is 4: [8-12 ft in height]
 		say "large";
-	else:						[12+ ft in height]
+	else: [12+ ft in height]
 		say "huge";
 
 looknow is a number that varies.
@@ -4755,12 +4755,12 @@ To Infect (x - text):
 				now non-infectious entry is true;
 			break;
 
-to randominfect:				[bypasses researcher protection]
+to randominfect: [bypasses researcher protection]
 	now researchbypass is 1;
 	weakrandominfect;
 	now researchbypass is 0;
 
-to weakrandominfect:			[does not bypass researcher protection]
+to weakrandominfect: [does not bypass researcher protection]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -4772,7 +4772,7 @@ to weakrandominfect:			[does not bypass researcher protection]
 		break;
 	infect;
 
-to setmonster ( x - text ):		[puts an infection (named x) as lead monster for later use]
+to setmonster ( x - text ): [puts an infection (named x) as lead monster for later use]
 	let found be 0;
 	choose row monster in the table of random critters;
 	if name entry exactly matches the text x, case insensitively:
@@ -4791,7 +4791,7 @@ to setmonster ( x - text ):		[puts an infection (named x) as lead monster for la
 
 Section x - Debug Commands - Not for release
 
-[ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
+[Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
 Spawnmonster is an action applying to one topic.
 
