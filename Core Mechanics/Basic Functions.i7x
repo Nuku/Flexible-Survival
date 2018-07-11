@@ -44,7 +44,7 @@ Instead of sniffing something (called x):
 
 To wait for any key:
 	if hypernull is 0:
-		say "[link]more[as] [end link][run paragraph on]";
+		say "[link]more[as] [end link][run paragraph on][line break]";
 	keypause;
 	if hypernull is 0:
 		LineBreak;
@@ -66,6 +66,11 @@ to WaitLineBreak: [little bit of often used code]
 to LineBreak:
 	say "[line break]";
 
+to HungerReset:
+	LineBreak;
+	say "[bold type]Your hunger is gone![roman type][line break]";
+	now hunger of player is 0;
+
 to PlayerEat (N - number):
 	LineBreak;
 	say "[bold type]Your hunger is reduced by [N]![roman type][line break]";
@@ -80,6 +85,11 @@ to PlayerHunger (N - number):
 	if hunger of player < 0:
 		now hunger of player is 0;
 
+to ThirstReset:
+	LineBreak;
+	say "[bold type]Your thirst is gone![roman type][line break]";
+	now thirst of player is 0;
+
 to PlayerDrink (N - number):
 	LineBreak;
 	say "[bold type]Your thirst is reduced by [N]![roman type][line break]";
@@ -91,6 +101,11 @@ to PlayerThirst (N - number):
 	LineBreak;
 	say "[bold type]Your thirst has increased by [N]![roman type][line break]";
 	increase thirst of player by N;
+
+to PlayerMaxHeal:
+	LineBreak;
+	say "[bold type]Your hitpoints are completely restored![roman type][line break]";
+	now HP of player is maxHP of player;
 
 to PlayerHealed (N - number):
 	LineBreak;
@@ -118,6 +133,11 @@ to SanBoost (N - number):
 	if humanity of player > 100:
 		now humanity of player is 100;
 
+to SanReset:
+	LineBreak;
+	say "[bold type]Your sanity is completely restored![roman type][line break]";
+	now humanity of player is 100;
+
 to LibidoLoss (N - number):
 	LineBreak;
 	say "[bold type]Your libido has decreased by [N]![roman type][line break]";
@@ -131,6 +151,11 @@ to LibidoBoost (N - number):
 	increase libido of player by N;
 	if libido of player > 100:
 		now libido of player is 100;
+
+to LibidoReset:
+	LineBreak;
+	say "[bold type]Your libido is completely gone![roman type][line break]";
+	now libido of player is 0;
 
 to ScoreLoss (N - number):
 	LineBreak;
