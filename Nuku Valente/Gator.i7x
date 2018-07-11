@@ -2,6 +2,7 @@ Version 2 of Gator by Nuku Valente begins here.
 [ Version 2.0 - Grammar/code cleanup. Added victory facesitting scenes and vore scenes - Kurainyx    ]
 [ Version 2.1 - Add being able to trigger vore scene from her den - Kurainyx                         ]
 [ Version 2.2 - Additional twistcapped scene, multi-genital support, code and writing cleanup - Song ]
+[ Version 2.3 - Victory facesitting scene can be viewed in Gator Den. Made Gator into an actual npc so player no longer automatically goes back to Grey Abbey from Gator Den - Kurainyx]
 
 "Adds a gator to Flexible Survival's Wandering Monsters table, with impreg chance"
 
@@ -39,6 +40,7 @@ to say GatorLoses:
 		say "     Successfully subduing the great green beast, you stand over her as she pants and heaves. 'You put up a good fight,' she says, smiling with her sharp teeth. 'Kind of turns me on... I could use a nice, strong partner.' She slowly gets to her feet, but makes no immediate motion to resume the battle. Her reptilian dick wags under her at half mast as she stretches out. 'We could have so much fun.' She approaches you slowly and leans in, whispering the location of her den, then slipping her arms around you. You can feel the warm, soft curves of her front pressed against you even as her cock nudges against a thigh. [if player is male]Your own member[smn] stiffen[smv] unconsciously, responding to the obvious signals of readiness this beast is sending. [end if]'We don't have to fight. I can be very accommodating.'";
 		say "     You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick-looking scales, the gator is soft to the touch, and quite round. If you close your eyes, you can imagine her as nothing but a full-bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws. 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
 		now gator den is known;
+		move Sewer Gator to gator den;
 	else if gator den is known:
 		say "     With one final blow, you manage to knock the gator onto her back. The scaly herm soon starts laughing heartily as she lays on the ground. Instead of resuming her attack when she gets back on her feet, she gives you a satisfied grin. 'Now that's what I like!' she bellows. 'Good to see that you haven't gone soft on me.' Her grin turns lascivious as one of her hand reaches down to her cunt and starts fingering it. 'Nothing is hotter than a strong mate, and that battle really got my blood pumping. I won't rail you since you're the winner, but I'm still horny as fuck, so how about you give me a quickie with that tongue of yours instead?'";
 		say "     [bold type]Do you want to service the gator?[roman type][line break]";
@@ -173,9 +175,31 @@ to gatorfy:
 	infect;
 	infect;
 
+Section 3 - Gator Den
+
+Sewer Gator is a woman. The HP of Sewer Gator is normally 0.
+The description of Sewer Gator is "[GatorDesc]".
+The conversation of Sewer Gator is { "Gator stuff" }.
+The scent of the Sewer Gator is "The gator smells strongly of sex and the sewers.";
+
+to say GatorDesc:
+	say "     The gator is a formidable sight, covered in green scales and plenty of muscle to back them up. She has no problem showing off her thick cock to you, as well as giving you glimpses of her cunt while she seductivelly shakes her wide hips. As you continue to look her over, she flashes you a smirk as she eyes you with a hungry gaze.";
+
+instead of conversing the Gator:
+	say "[gator den repeat]";
+
+instead of fucking the Gator:
+	say "[gator den repeat]";
+
+to say gator den entrance:
+	say "     As you enter the den, you give a quick look around. It's dry and clean, with a large bed propped in a corner. It looks like someone grabbed a bed and dragged it down here, but it is also clean and soft-looking. Laying across it is the gator. She's smiling at you, laying on her belly, breasts gently compressed beneath her. She gazes at you with her head on her hands. Her tail sways slowly behind her wide, round hips. [one of]'I am so glad that you took some time to visit, lover. We have so much to talk about, to do..[or]'I feel as horny as anything. You are just in time to keep me company[or]'You have no idea how happy you just made me, visiting me. It gets so lonely down here[at random].'";
+	say "[gator den scene]";
+
+to say gator den repeat:
+	say "     'Mmm, that was so hot,' the gator says, quickly regaining her stamina after your romp with her. ' Want to go for another round?'";
+	say "[gator den scene]";
 
 to say gator den scene:
-	say "     As you enter the den, you give a quick look around. It's dry and clean, with a large bed propped in a corner. It looks like someone grabbed a bed and dragged it down here, but it is also clean and soft-looking. Laying across it is the gator. She's smiling at you, laying on her belly, breasts gently compressed beneath her. She gazes at you with her head on her hands. Her tail sways slowly behind her wide, round hips. [one of]'I am so glad that you took some time to visit, lover. We have so much to talk about, to do...[or]'I feel as horny as anything. You are just in time to keep me company.[or]'You have no idea how happy you just made me, visiting me. It gets so lonely down here.[at random]'";
 	say "     Do you want to stay with the gator?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -190,6 +214,11 @@ to say gator den scene:
 		now title entry is "Feed the gator";
 		now sortorder entry is 2;
 		now description entry is "Offer yourself as a meal for the predator";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Service the gator";
+	now sortorder entry is 3;
+	now description entry is "Give some oral attention to the gator's rear";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -211,6 +240,8 @@ to say gator den scene:
 					say "[GatorDenSex]";
 				if nam is "Feed the gator":
 					say "[GatorDenVore]";
+				if nam is "Service the gator":
+					say "[GatorDenFaceSit]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -236,7 +267,8 @@ to say GatorDenSex:
 	WaitLineBreak;
 	say "     Seemingly satisfied, at least for the moment, she rolls up on top of you with a smile, 'Now what to do...'";
 	if a random chance of 1 in 3 succeeds: [She just talks]
-		say "     'I want to talk, get to know you,' she says, leaning in and snuggling against your front. She chats with you quietly as she gropes and fondles you, drawing out your name and your old job, and telling you about her old life as a bus driver. She confides that she loves her new body. 'I just want someone to share it with,' she says, nuzzling you with her great snout as she speaks. 'We can be together, have little alligatorettes. It would be nice...' she assures in a sultry whisper. Her words seem to wriggle insidiously in your mind, feeling like a better idea by the moment. Though she does not change your body any further in the long chat, your mind feels a bit bent, and you look forward to your next visit all the more for it.";
+		say "     'I want to talk, get to know you,' she says, leaning in and snuggling against your front. She chats with you quietly as she gropes and fondles you, drawing out your name and your old job, and telling you about her old life as a bus driver. She confides that she loves her new body. 'I just want someone to share it with,' she says, nuzzling you with her great snout as she speaks. 'We can be together, have little alligatorettes. It would be nice...' she assures in a sultry whisper. Her words seem to wriggle insidiously in your mind, feeling like a better idea by the moment. Though she does not change your body any further in the long chat, your mind feels a bit bent.";
+		[Though she does not change your body any further in the long chat, your mind feels a bit bent, and you look forward to your next visit all the more for it.]
 		decrease humanity of player by a random number from 5 to 20;
 	else: [Sex]
 		if a random chance of 1 in 2 succeeds and player is male: [She wants to be fucked]
@@ -290,8 +322,8 @@ to say GatorDenSex:
 	decrease humanity of player by 5;
 	if humanity of player < 10:
 		end the story saying "You decide against leaving after all.";
-	else:
-		say "     You head home afterwards.";
+	[else:
+		say "     You head home afterwards.";]
 
 to say GatorDenVore:
 	say "     'What?' is all the gator asks when you tell her that you're willing to offer yourself to help with her hunger. The reptile's brow arches upward in equal parts amusement and curiosity. 'Seriously? You actually want me to eat you?' She shrugs and strides up to you, her thick hips swaying seductively. 'Whatever floats your boat, I guess, but fair warning; [one of]don't expect me to spit you out without a fight[or]don't expect me to spit you out. I'm famished[or]I won't mind if you make me spit you out, but if you're too weak to resist my stomach, don't be surprised if I let you become gator food[at random]. I'm only interested in hanging out with the strong,' she says in a low rumble, [one of]licking her lips[or]smacking her lips[at random] and eyeing you ravenously.";
@@ -300,16 +332,35 @@ to say GatorDenVore:
 	WaitLineBreak;
 	GatorBind;
 
-Gator Den is a room. "[gator den scene]". It is unknown. It is fasttravel. It is private.
+to say GatorDenFaceSit:
+	if anallevel is 3 and a random chance of 1 in 2 succeeds:
+		say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but every breath you take also gives you a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. [one of]'Seems like you're really enjoying my butt down there, so let's change things up. Instead of my cunt, you're going to give my ass a good licking,' the gator commands, grinding her butt into your face[or]'Ahh, I had you pegged for an ass muncher, good,' the croc coos and grinds her hole against your nose momentarily. 'Go on. Eat. It. Out,' she bellows lustfully[at random].";
+		say "     Obeying the demanding herm, you work your tongue around the edge of her sphincter, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. However, after a few moments of the rimjob, the female's legs and buttcheeks squeeze down on your head. '[one of]Stop pussying around down there!' the reptile barks. 'I want your tongue in my ass, not around it!'[or]Get in there,' she groans impatiently, smothering you with her puckered hole[at random]. You dutifully accommodate her command and thrust your tongue into the horny female. You are rewarded with a satisfied groan from the gator, and after a moment, you feel her fingers [if player is male]wrap around your cock[smn][else if player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words, you sink your tongue into her ass as far as you can, earning you a gasp from the gator.";
+		WaitLineBreak;
+		say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks while her both her cunt and cock spurt all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. Soon after, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] what I like in a mate,' she says while she effortlessly pulls you up.";
+		if vorelevel is 3:
+			say "     While you had just serviced the gator's ass, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
+			say "[GatorVoreOffer]";
+	else:
+		say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but with your nose and mouth being mashed into the her cunt, every breath you take is a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. 'Much as I like you giving my ass a nice rub, it's not doing much in getting me off. Get your tongue in there,' the gator commands, grinding her cunt into your mouth.";
+		say "     Obeying the demanding herm, you thrust your tongue into her pussy, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. The taste of her leaking cunt is slightly bitter, but not unpleasant, and you lap up her juices with gusto while your hands try to pull the scaly behind even more into your face. As you continue to explore the horny female's depths, you feel her fingers [if player is male]wrap around your cock[smn][else if player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words and your aching loins, you sink your tongue into her cunt as far as you can, earning you a gasp from the gator.";
+		WaitLineBreak;
+		say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks, her juices spraying onto your face while her cock spurts her cum all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. After a few moments of basking in the heady odor of the gator's juices, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] what I like in a mate,' she says while she effortlessly pulls you up.";
+		if vorelevel is 3:
+			say "     While you had just serviced the gator's cunt, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
+			say "[GatorVoreOffer]";
 
-After navigating gator den:
+Gator Den is a room. "[gator den entrance]". It is unknown. It is fasttravel. It is private.
+
+[Turned off automatically going back to Grey Abbey after any den scene]
+[After navigating gator den:
 	if humanity of player > 9:
 		move player to Grey Abbey Library;
-		follow the turnpass rule;
+		follow the turnpass rule;]
 
 [ Edit this to have the correct name as well]
 
-Section 3 - Bound State
+Section 4 - Bound State
 
 to GatorBind:
 	now lustatt is libido of player;

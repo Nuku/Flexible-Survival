@@ -73,6 +73,8 @@ carry out tapeing:
 			say "[TrafficDrone#006Vid]";
 		-- "Urban Explorer Helmet Cam Vid #1": [Source: Wahn/Recordings.i7x]
 			say "[UrbanExplorerVid1]";
+		-- "Fitness Studio Security Vid Vid":
+			say "[FitnessStudioVid]";
 [ Template to fill for new tapes ]
 [
 		-- "TAPE NAME":

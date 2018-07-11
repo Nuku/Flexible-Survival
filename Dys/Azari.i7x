@@ -48,7 +48,6 @@ to say Azari_Start:
 	setmonster "Latex Fox";
 	choose row monster from the table of random critters;
 	if Azari_Met is false:
-		now Azari_Met is true;
 		say "[Azari_Intro]";
 [	else:
 		if Azari_Corruption is:
@@ -59,29 +58,45 @@ to say Azari_Start:
 			--4: [Final stage.]]
 
 to say Azari_Intro:
-	say "     <is ded for now.>";
-	say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
+	say "     As you look around the area, your eyes fall upon a door marked [']Staff Only['] against the rear wall of the store. A piece of paper is taped just below that, a scribbled warning talking about a feral latex fox. Curiosity piqued, you step towards the door, passing several of the shack's patrons and workers. The closer you get, the more you feel like people are watching you. Sure enough, a cursory glance reveals that a fair few people have stopped what they're doing to observe you. Just as you're about to open the door, you hear someone loudly clear their throat. 'I'd be wary of going into Azari's room.'";
+	LineBreak;
+	say "     Turning around, you see Jerome approaching you, a grimace on his face. 'That's what we call him - Azari. He's been there longer than we've been open, and we've only ever had one patron go in there. You should've seen the look on their face when they bolted.' You give a nod at the shark's words and reconsider your course of action.";
+	say "     [bold type]Do you proceed anyway?[roman type]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes";
+	LineBreak;
 	say "     ([link]N[as]n[end link]) - No";
 	LineBreak;
 	if player consents:
+		now Azari_Met is true;
+		say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here.";
+		say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type]";
 		LineBreak;
-		if scalevalue of player < 3:
-			say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [Azari_Sex_SmallPlayer]";
-		else if scalevalue of player is 3:
-			say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. [Azari_Sex_AveragePlayer]";
-		else if scalevalue of player > 3:
-			say "     Using your [if scalevalue of player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
-			say "     Making your way out of the Shack, you pass Jerome, who simple raises a brow at your sudden departure and says, 'No refunds'.";
+		say "     ([link]Y[as]y[end link]) - Yes";
+		LineBreak;
+		say "     ([link]N[as]n[end link]) - No";
+		LineBreak;
+		if player consents:
+			LineBreak;
+			if scalevalue of player < 3:
+				say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [Azari_Sex_SmallPlayer]";
+			else if scalevalue of player is 3:
+				say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. [Azari_Sex_AveragePlayer]";
+			else if scalevalue of player > 3:
+				say "     Using your [if scalevalue of player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
+				say "     Making your way out of the Shack, you pass Jerome, who simple raises a brow at your sudden departure and says, 'No refunds'.";
+		else:
+			LineBreak;
+			if scalevalue of player < 3:
+				say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [Azari_Sex_SmallPlayer]";
+			else if scalevalue of player is 3:
+				say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [Azari_Sex_AveragePlayer]";
+			else if scalevalue of player > 3:
+				say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
 	else:
-		LineBreak;
-		if scalevalue of player < 3:
-			say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [Azari_Sex_SmallPlayer]";
-		else if scalevalue of player is 3:
-			say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [Azari_Sex_AveragePlayer]";
-		else if scalevalue of player > 3:
-			say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
+		say "     You nod at the shark, heeding his warning. Entering a tiny room with a crazed feral probably isn't the best idea, anyway.";
+		WaitLineBreak;
+		say "[ShagShackSexMenu]";
 
 to say Azari_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
 	if player is kinky:

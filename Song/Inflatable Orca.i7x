@@ -257,7 +257,7 @@ to orcabindorgasm: [Orgasm description. Progresses to next bound segment.]
 	if orcaintense is 1:
 		say "     Finally overtaken by bliss, you ";
 		if cocks of player > 1:
-			say "buck up against the orca, filling her depths with your [cum load size of player] load while your extra length[if cocks of player > 2]s splatter[else] splatters[end if] your fore in sticky cum.";
+			say "buck up against the orca, filling her depths with your [cum load size of player] load while your extra [if cocks of player > 2]lengths splatter[else]length splatters[end if] your fore in sticky cum.";
 		else if player is male:
 			say "buck up against the orca, filling her depths with your [cum load size of player] load.";
 		else:
@@ -269,11 +269,11 @@ to orcabindorgasm: [Orgasm description. Progresses to next bound segment.]
 		else if player is male:
 			say "cum hard into her sordid depths with a groan of lustful ecstasy, the sound muffled against her plastic exterior.";
 		else:
-			say "bury your face into that smooth and supple chalice, ravenously lapping at her walls.[if player is female] You cum, hard, further slickening your increasingly cramped confines.[end if]";
+			say "bury your face into that smooth and supple chalice, lapping ravenously at her walls[if player is female]. You cum, hard, further slickening your increasingly cramped confines[end if].";
 	else if orcaintense is 3:
 		say "     Each climax stronger than the last, you can only groan when another crashing wave of bliss overtakes you. ";
 		if cocks of player > 1:
-			say "You clumsily wrap your arms around your cetacean captor's form, filling her depths with blast after blast of sticky cum. Your cock twitches and throbs within those squeezing, milking depths, remaining perpetually hard inside her, and your untended extra length[if cocks of player > 2]s spurt[else] spurts[end if] thick ropes of seed across your chest.";
+			say "You clumsily wrap your arms around your cetacean captor's form, filling her depths with blast after blast of sticky cum. Your cock twitches and throbs within those squeezing, milking depths, remaining perpetually hard inside her, and your untended extra length[smn] spurt[smv] thick ropes of seed across your chest.";
 		else if player is male:
 			say "You clumsily wrap your arms around your cetacean captor's form, filling her depths with blast after blast of sticky cum. Your cock twitches and throbs within those squeezing, milking depths, remaining perpetually hard inside her.";
 		else:
@@ -281,7 +281,7 @@ to orcabindorgasm: [Orgasm description. Progresses to next bound segment.]
 	else if orcaintense is 4:
 		say "     Overwhelmed by pleasure, you howl your bliss against the sexy cetacean, frantically bucking against her form as climax washes over you. ";
 		if cocks of player > 1:
-			say "You cum hard into her drenched, sloppily squeezing cunt while your extra length[if cocks of player > 2]s splatter[else] splatters[end if] your fore in sticky cum, the threat of eternal captivity pushed aside for now as you bask in the powerful warmth of the afterglow.";
+			say "You cum hard into her drenched, sloppily squeezing cunt while your extra length[smn] splatter[smv] your fore in sticky cum, the threat of eternal captivity pushed aside for now as you bask in the powerful warmth of the afterglow.";
 		else if player is male:
 			say "You cum hard into her drenched, sloppily squeezing cunt, the threat of eternal captivity pushed aside for now as you bask in the powerful warmth of the afterglow.";
 		else:
@@ -289,7 +289,7 @@ to orcabindorgasm: [Orgasm description. Progresses to next bound segment.]
 	else: [Followed by bad end by virtue of being fully encased. See above in the file for the text that follows this.]
 		say "     The constant onslaught of sex and mind-altering gas growing too much for your weary psyche, you reach a powerful climax that tears the final threads of your sanity asunder. ";
 		if cocks of player > 1:
-			say "You fill the orca's depths with gout after gout of thick, sticky seed, your untended dick[if cocks of player > 2]s rippling as they further sully[else] rippling as it further sullies[end if] the space between you, only to tense all over again and stuff that rippling cetacean snatch with a double-dose of cum. Any form of refractory period withers away, and your happy, bestial trills fill the orca's maw. Pushing down against you, she milks you again and again, cementing your new lease in life as her favorite toy and plaything.";
+			say "You fill the orca's depths with gout after gout of thick, sticky seed, your untended [if cocks of player > 2]dicks rippling as they further sully[else]dick rippling as it further sullies[end if] the space between you, only to tense all over again and stuff that rippling cetacean snatch with a double-dose of cum. Any form of refractory period withers away, and your happy, bestial trills fill the orca's maw. Pushing down against you, she milks you again and again, cementing your new lease in life as her favorite toy and plaything.";
 		else if player is male:
 			say "You fill the orca's depths with gout after gout of thick, sticky seed, only to tense all over again and stuff that rippling cetacean snatch with a double-dose of cum. Any form of refractory period withers away, and your happy, bestial trills fill the orca's maw. Pushing down against you, she milks you again and again, cementing your new lease in life as her favorite toy and plaything.";
 		else:
@@ -301,9 +301,9 @@ to orcaprogress: [Displays once when entering the next bound segment. 1 does not
 	else if orcaintense is 3:
 		say "     Relishing [if player is male]your tribute[else]the bliss that radiates from you[end if], the orca trills her delight and blows harder into the bag's nozzle, inflating it further. It fills out until it forms a small basin around you, the undulating plastic rubbing sensually across your body.";
 	else if orcaintense is 4:
-		say "     Cumming again and again beneath the orca's relentless assault, you're left in too much of a daze to prevent her from inflating the bondage bag further, her powerful lungs filling it up until it's formed a U-shaped cocoon around you both.[if player is male] Her tail rubs teasingly across your orbs, urging you to fill her slavering pussy with more of your virile seed.[else if cunts of player > 1] Her tail rubs teasingly across your cunts, the supple feeling of that slickened fin bringing you to the edge of climax all over again.[else if player is female] Her tail rubs teasingly across your pussy, the supple feeling of that slickened fin bringing you to the edge of climax all over again.[end if]";
+		say "     Cumming again and again beneath the orca's relentless assault, you're left in too much of a daze to prevent her from inflating the bondage bag further, her powerful lungs filling it up until it's formed a U-shaped cocoon around you both[if player is male]. Her tail rubs teasingly across your orbs, urging you to fill her slavering pussy with more of your virile seed[else if player is female]. Her tail rubs teasingly across your cunt[sfn], the supple feeling of that slickened fin bringing you to the edge of climax all over again[end if].";
 	else:
-		say "     Dazed and aroused beyond all reason, you almost relish the sight of the orca blowing into the bag's nozzle, filling it around you until it blots out all but a vein of light at the top. With the bag fully inflated, sealing you together, the orca pulls lifts her hips from your [if cocks of player > 1]crotch, making you yearn for her touch again as your cocks throb almost painfully hard in the air[else if player is male]crotch, making you yearn for her touch again as your cock throbs almost painfully hard in the air[else]mouth, making you yearn for her touch again[end if].";
+		say "     Dazed and aroused beyond all reason, you almost relish the sight of the orca blowing into the bag's nozzle, filling it around you until it blots out all but a vein of light at the top. With the bag fully inflated, sealing you together, the orca lifts her hips from your [if player is male]crotch, making you yearn for her touch again as your cock[smn] throb[smv] almost painfully hard in the air[else]mouth, making you yearn for her touch again[end if].";
 		say "     Your need is answered by a firm, lustful kiss. The horny cetacean presses her tongue into your mouth, dexterously capturing your own in a demanding hold, and your mind empties completely at the taste of her gas-laced breath pouring into your gullet, a powerful aphrodisiac that begins rewiring your thoughts in her favor. [if cocks of player > 1]Her hips descend on another one of your lengths, rippling and squeezing around you in a slick, warm pocket of carnal delight. [else if player is male]Her hips descend on your length again, rippling and squeezing around you in a slick, warm pocket of carnal delight. [end if]You almost don't want to leave this wonderful embrace, but you suspect this is your very last chance to break free from the castle's seductive, encouraging influence.";
 
 to say orcabinddesc: [Displays at the top of the bound screen after every action. Modified by current bound segment and player genitalia.]
@@ -445,6 +445,6 @@ Section 3 - Endings
 when play ends: [Bad end to display after complete sanity loss or encasement.]
 	if bodyname of player is "OrcaSexSlave":
 		say "     You spend the rest of your life as the inflatable orca's sex slave, dutifully [if player is male]breeding her to make more inflatable servants for the castle[else]servicing her slippery cunt[end if]. Your pod is periodically filled with a heady, arousing gas that only fuels your endless lusts, each sticky climax driving you deeper into your lustful haze until you're nothing more than an air-headed parody of your former self. It's a simple existence, but your feral mind relishes every moment with your loving, demanding mistress.";
-		say "     The castle fills the void on its surface by dispensing another inflatable orca and bondage bag in the great hall. Trilling softly, the new orca is just as eager as the last to turn any unsuspecting visitor into another sex-hungry slave for the castle. You'd relish the company, if only your mind was not too far gone to appreciate it.";
+		say "     The castle fills the void on its surface by dispensing another inflatable orca and bondage bag in the great hall. Trilling softly, the new orca is just as eager as the last to turn any unsuspecting visitor into another sex-hungry slave for the castle. You'd relish the company if your mind were not too far gone to appreciate it.";
 
 Inflatable Orca ends here.

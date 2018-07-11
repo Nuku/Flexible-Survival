@@ -31,18 +31,19 @@ carry out trixiecheating:
 		say "[link](7) Weak-Willed[as]7[end link] - [if weakwilled is true]Active[else]Inactive[end if] (Bonus if activated)[line break]";
 		say "[link](8) Set Humanity[as]8[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
 		say "[link](9) Set Libido[as]9[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
+		say "[link](10) Insomniac[as]10[end link] - [if Terminatorsleep is false][bold type]Off[roman type] - You must sleep occasionally[else if Terminatorsleep is true][bold type]On[roman type] - You do not require sleep[else]Error[line break]";
 		LineBreak;
 		say "[bold type]Game settings:[roman type][line break]";
-		say "[link](10) Set anal play content level[as]10[end link] - Currently: [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Standard[else]More Anal[end if][roman type][line break]";
-		say "[link](11) Set watersports (WS) content level[as]11[end link] - Currently: [bold type][if WSlevel is 1]No WS[else if WSlevel is 2]Standard[else]Full WS[end if][roman type][line break]";
-		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[else if vorelevel is 2]Standard[else]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[else if UBlevel is 2]Standard[else]Full UB[end if][roman type][line break]";
+		say "[link](11) Set anal play content level[as]11[end link] - Currently: [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Standard[else]More Anal[end if][roman type][line break]";
+		say "[link](12) Set watersports (WS) content level[as]12[end link] - Currently: [bold type][if WSlevel is 1]No WS[else if WSlevel is 2]Standard[else]Full WS[end if][roman type][line break]";
+		say "[link](13) Access the vore menu[as]13[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[else if vorelevel is 2]Standard[else]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[else if UBlevel is 2]Standard[else]Full UB[end if][roman type][line break]";
 		if playercanvore is true:
 			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if playercanub is false]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
-		say "[link](13) Set egg-pregnancy (ovi) content level[as]13[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard[else]Always Ovi[end if][roman type][line break]";
-		say "[link](14) Adjust flags[as]14[end link] - View/change warding settings[line break]";
+		say "[link](14) Set egg-pregnancy (ovi) content level[as]14[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard[else]Always Ovi[end if][roman type][line break]";
+		say "[link](15) Adjust flags[as]15[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-14)> [run paragraph on]";
+			say "Choice? (0-15)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 14:
 				break;
@@ -160,14 +161,25 @@ carry out trixiecheating:
 			else:
 				say "Invalid choice - returning to menu.";
 		else if calcnumber is 10:
-			try analadjusting;
+			if Terminatorsleep is false:
+				now Terminatorsleep is true;
+				say "You no longer require sleep.";
+				LineBreak;
+			else if Terminatorsleep is true:
+				now Terminatorsleep is false;
+				say "You will now need to rest every now and then.";
+				LineBreak;
+			else:
+				say "Error";
 		else if calcnumber is 11:
-			try WSadjusting;
+			try analadjusting;
 		else if calcnumber is 12:
-			try voremenuing;
+			try WSadjusting;
 		else if calcnumber is 13:
-			try Oviadjusting;
+			try voremenuing;
 		else if calcnumber is 14:
+			try Oviadjusting;
+		else if calcnumber is 15:
 			new ban menu;
 		else if calcnumber is 0:
 			say "Exiting menu.";
@@ -384,7 +396,7 @@ carry out oviadjusting:
 		if ovipregalways is true:
 			say "You are now set to bear eggs always.";
 			now ovipreglevel is 3;
-	 	else:
+		else:
 			say "You are not able to choose this option without alteration to your character's pregnancy abilities.";
 	else:
 		say "Exiting menu.";

@@ -64,7 +64,7 @@ to say TomeSexMenu:
 					-- "Summon a tentacle monster":
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
-						say "[DemonFoxMenu]";
+						say "[DemonFoxSummon]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";

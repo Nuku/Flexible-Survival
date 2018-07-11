@@ -31,7 +31,7 @@ instead of conversing the Bronze Crab:
 	say "     You try to strike up a conversation with the giant crustacean, drawing the gaze of its eye-stalks. After listening to what you say for a few moments, its mandibles unfold from their normally relaxed position and you hear a series of clicks that have a metallic ring to them. After a few seconds of that, it finishes up with a sharper click and taps the street next to you with one front leg before turning its attention back towards the city approach. Feels like you just were lectured and then dismissed.";
 
 instead of fucking the Bronze Crab:
-	say "     Amorous thoughts fill your mind and you step closer to one of the giant crab's legs, to... rub ub against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
+	say "     Amorous thoughts fill your mind, and you step closer to one of the giant crab's legs to... rub up against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
 
 
 [Boardwalk]

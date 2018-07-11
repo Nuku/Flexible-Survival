@@ -46,7 +46,7 @@ to say Satyr Frat Party:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to punch him out, [link]2[end link] to talk your way through this, or [link]3[end link] to have sex with him.";
-		if calcnumber is 1:[knockout]
+		if calcnumber is 1: [knockout]
 			LineBreak;
 			let bonus be (( the Strength of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -62,15 +62,15 @@ to say Satyr Frat Party:
 			now SatyrFratPartyStage is 1;
 			now SatyrFratRichardRelationship is 99;
 			now Let's Party is not resolved;
-		if calcnumber is 2:[lying]
+		if calcnumber is 2: [lying]
 			LineBreak;
 			say "     Running up to the young human man on quick hooves, you do a bit of play-acting as if you're out of breath, then pant that you saw a group of incubi climbing over the fence behind the house. The athletic young man's eyes widen in alarm and he says 'What?! Where? And who are -' Quickly interrupting him before he can really think about anything, you tell him to come quickly and run past the garage of the frat-house, turning the corner towards the backyard. And it works - the frat party guardian follows you a moment later, leaving his post to check out your imaginary incubi.";
 			say "     Though as it turns out, they're not as imaginary as you thought - there actually are two incubi climbing over the fence! What a coincidence. Dropping down into the garden, they take up poses that show off their inhumanly perfect bodies and await you and the frat-member behind you calmly. 'Didn't I say there'd be a delicious banquet of studs in here? I'll take the left one,' one of them says to the other, then they attack...";
 			challenge "Incubus";
-			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
+			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     After the incubus finishes with you, he's suddenly punched out by the frat guy, who finished off his own attacker in the meantime. The young man helps you back to your feet, meanwhile closely watching the incubi pick themselves up and flee. When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and... er, help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 				now SatyrFratPartyStage is 4;
-			else if fightoutcome >= 30:[fled]
+			else if fightoutcome >= 30: [fled]
 				say "     Sometimes it's best to flee - this isn't really your fight after all. As you dash off, you see that the frat guy has finished off his own incubus. He lunges at yours as the demon tries to run after you, bringing both of down to sprawl on the ground, wrestling with each other. And that's the last you see of the fight, as you turn a corner and move further away. A bit of a dick move to leave the young man to fight alone, though at least you can be sure that you gave Kerr and Talov enough time to make their way into the frat house. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 				now SatyrFratPartyStage is 3;
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
@@ -78,7 +78,7 @@ to say Satyr Frat Party:
 				now SatyrFratPartyStage is 2;
 			now SatyrFratRichardRelationship is 1;
 			now Let's Party is not resolved;
-		if calcnumber is 3:[sex]
+		if calcnumber is 3: [sex]
 			LineBreak;
 			say "[SatyrFratSex]";
 			now SatyrFratRichardRelationship is 2;
@@ -95,7 +95,8 @@ to say SatyrFratSex:
 		say "     Walking up to the young human man in a relaxed, nonthreatening manner, you greet him and start a conversation. As it turns out, his name is Richard and he just started out here in Tenvale College on a sports scholarship this semester. He's a running back in the football team and joined the Phi Alpha Nu fraternity as a legacy member, just like his father before him. Nevertheless, he's still low on the totem pole - which explains why he's out here on guard duty and not enjoying himself with all the others inside. He's got a bit of a wistful look in his eye as he tells you about it, finishing 'I'd love to party with the guys... err, and all the hot chicks we've got over. Yeah, love the babes on campus. Definitively.'";
 		say "     That last bit was said a bit too hurriedly, a blurt of words only making clearer what he wanted to hide. And catching his eyes stray down your body for a second confirms it a moment later - so Richard has some interest there for both sides of the fence. Perfect, for what you're planning. Keeping him talking about what he likes in women and his past conquests, you get the football-player in a receptive mood, then smoothly compliment him on what great shape he's in. Things progress to him showing off his muscles, then you feeling and... gently stroking them, just a little bit at first, then ever bolder. Soon you're standing very close beside the young man, one hand on the growing bulge in his pants. In the most charming tone you can manage, you tell him...";
 		LineBreak;
-		say "     [link](1)[as]1[end link] That you want to give him a blowjob.[line break]     [link](2)[as]2[end link] That you want him to fuck you.";
+		say "     [link](1)[as]1[end link] That you want to give him a blowjob.";
+		say "     [link](2)[as]2[end link] That you want him to fuck you.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)>[run paragraph on]";
@@ -104,7 +105,7 @@ to say SatyrFratSex:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to blow him or [link]2[end link] to get fucked.";
-		if calcnumber is 1:[BJ]
+		if calcnumber is 1: [BJ]
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at actually being intimate with [if player is not female]another male[else]a herm[end if] for the first time and he freezes for a second, then quickly gets over his shock and happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
 			WaitLineBreak;
@@ -113,7 +114,7 @@ to say SatyrFratSex:
 			WaitLineBreak;
 			say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 			now SatyrFratPartyStage is 5;
-		else if calcnumber is 2:[Fuck]
+		else if calcnumber is 2: [Fuck]
 			setmonster "human";
 			choose row monster from the table of random critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at actually being intimate with [if player is not female]another male[else]a herm[end if] for the first time and he freezes for a second, then quickly gets over his shock and happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
@@ -128,7 +129,8 @@ to say SatyrFratSex:
 		say "     Walking up to the young human man in a relaxed, nonthreatening manner, you greet him and start a conversation. As it turns out, his name is Richard and he just started out here in Tenvale College on a sports scholarship this semester. He's a running back in the football team and joined the Phi Alpha Nu fraternity as a legacy member, just like his father before him. Nevertheless, he's still low on the totem pole - which explains why he's out here on guard duty and not enjoying himself with all the others inside. He's got a bit of a wistful look in his eye as he tells you about it, finishing 'I'd love to party with the guys... err, and all the hot chicks we've got over. Yeah, love the babes on campus. Definitively.'";
 		say "     That last bit was said a bit too hurriedly, a blurt of words only making clearer what he wanted to hide. His eyes wander down over your body and check it out, confirming that Richard has some interest there for both sides of the fence. Perfect, for what you're planning. Keeping him talking about what he likes in women and his past conquests, you get the football-player in a receptive mood, then smoothly compliment him on what great shape he's in. Things progress to him showing off his muscles, then you feeling and... gently stroking them, just a little bit at first, then ever bolder. Soon you're standing very close beside the young man, one hand on the growing bulge in his pants. In the most charming tone you can manage, you tell him...";
 		LineBreak;
-		say "     [link](1)[as]1[end link] That you want to give him a blowjob.[line break]     [link](2)[as]2[end link] That you want him to fuck you.";
+		say "     [link](1)[as]1[end link] That you want to give him a blowjob.";
+		say "     [link](2)[as]2[end link] That you want him to fuck you.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)>[run paragraph on]";
@@ -137,7 +139,7 @@ to say SatyrFratSex:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to blow him or [link]2[end link] to get fucked.";
-		if calcnumber is 1:[BJ]
+		if calcnumber is 1: [BJ]
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at the sudden intimacy and he happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
 			WaitLineBreak;
@@ -146,7 +148,7 @@ to say SatyrFratSex:
 			WaitLineBreak;
 			say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 			now SatyrFratPartyStage is 5;
-		else if calcnumber is 2:[Fuck]
+		else if calcnumber is 2: [Fuck]
 			setmonster "human";
 			choose row monster from the table of random critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at the sudden intimacy and he happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";

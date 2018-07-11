@@ -105,7 +105,7 @@ the scent of nullifying powder is "It has a very obvious, chalky scent about it.
 The usedesc of nullifying powder is "[nullpowderuse]";
 
 to say nullpowderuse:
-	say "[line break]     [one of]Upon inspection, it's not particularly infectious and most certainly inedible[or]You briefly inspect the powder[stopping]. You [one of]deduce[or]recall[stopping] that you can apply it to certain parts of your anatomy to reduce their size or remove them outright.";
+	say "     [one of]Upon inspection, it's not particularly infectious and most certainly inedible[or]You briefly inspect the powder[stopping]. You [one of]deduce[or]recall[stopping] that you can apply it to certain parts of your anatomy to reduce their size or remove them outright.";
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Diminish Anatomy:[roman type][line break]";

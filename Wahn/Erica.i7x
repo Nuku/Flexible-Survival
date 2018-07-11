@@ -841,7 +841,7 @@ to say EricaCarlScene4:
 	if HP of Carl < 11: [regular Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on her way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. It is clear that he doesn't really expect an answer, and he shakes off whatever thought was in his mind a second later, then turns his whole attention to you. 'Hey there, I wanted to ask you something. With you kinda being the landlord here, giving me a place to stay in all this chaos... would you be okay with it if I had some fun with... someone? Just hypothetically, you know. Don't worry, I don't plan to build a husky harem.'";
 		LineBreak;
-		say "     It is fairly clear who he's eluding to. What's your reply?";
+		say "     It is fairly clear who he's alluding to. What's your reply?";
 		say "     ([link]Y[as]y[end link]) - Of course you're okay with it. It's not like you're a demanding overseer who wants to control every last thing that goes on in here.";
 		say "     ([link]N[as]n[end link]) - Yes, actually. He really should focus on holding watch from his window above and keep his dick in his pants.";
 		if player consents:

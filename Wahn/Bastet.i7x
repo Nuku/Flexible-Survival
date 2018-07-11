@@ -84,22 +84,21 @@ to say NermineBastetQuestFail:
 	now libido of Nermine is 100; [Bastet quest failed]
 	now Restaurateur's Office is resolved;
 
-Restaurateur's Office is a situation.
+Restaurateur's Office is a situation. Restaurateur's Office is resolved.
 The sarea of Restaurateur's Office is "Museum".
 when play begins:
 	add Restaurateur's Office to badspots of guy;       [monkey king]
 	add Restaurateur's Office to badspots of furry;     [monkey king]
-	now Restaurateur's Office is resolved;
 
 Instead of resolving a Restaurateur's Office:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
 	say "     Almost ready to call of the search after stumbling into the Asian wing - again - for the third time, your eyes suddenly notice a doorway that wasn't there the last few times you came through here. On it, a sign says 'Restaurateur'. Eager to finally get what you are here for, you dig the small paper with the vault combination Nermine gave you out of your pocket, then take quick steps towards the door. Yet before you're more than halfway across the room, you realize that you're not alone in here...";
 	LineBreak;
 	challenge "Monkey";
-	if fightoutcome >= 20 and fightoutcome <= 29:									[lost]
+	if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 		say "     As you pick yourself up after the monkey departs, you notice that you seem to be missing something - the paper with the combination is nowhere to be found! You must have dropped it during your confrontation with the would-be king, and even with some searching, you can't find it again. Checking out the office, you do indeed find the vault that Nermine mentioned, but there's no way you could get a ten digit electronic combination lock open without the right code. Dejected, you can't do anything but leave. Maybe Nermine has written the numbers down somewhere else, and hopefully you can get back here before Bastet and her servant find the place...";
 		now libido of Nermine is 50; [failed]
-	else if fightoutcome >= 30:			[fled]
+	else if fightoutcome >= 30: [fled]
 		say "     Running off through the museum, you manage to shake the monkey tailing you after a while and stop to catch your breath. But as you do so, you notice that you seem to be missing something - the paper with the combination is nowhere to be found! You must have dropped it during your confrontation with the would-be king, or while fleeing, and even carefully backtracking through one or two rooms, you can't find it again. Dejected, you can't do anything but leave. Maybe Nermine has written the numbers down somewhere else, and hopefully you can get back here before Bastet and her servant find the place...";
 		now libido of Nermine is 50; [failed]
 	else if fightoutcome >= 10 and fightoutcome <= 19: 			[won]
@@ -252,7 +251,8 @@ Instead of resolving a Restaurateur's Office:
 				say "     As the cat goddess avatar walks away from you, Nermine on the other hand steps up, gently stroking your body then kissing you on the mouth. As she comes up for air afterwards, the jackaless says, 'Nermine is glad to see her master did enjoy himself with the visitor. Regrettable, that Bastet triumphed in the end, but Nermine is sure she can take care of him just as well herself. And should he feel a desire for another lioness nonetheless, there are... options, Nermine could arrange.' Then she proceeds to crouch down in front of you, brushing her full breasts and hard nipples against your naked body as she does so, then starts to lap the femcum from between your legs.";
 				say "     Meanwhile, Bastet gives her naked fennec servant a somewhat stern look, freezing him in mid-motion with a commanding hiss as he shyly tries to cover up. Her eyes wander over him, the still half-hard cock in his hand and the long streak of cum on the floor - and a slight smile plays over her lips before she regally says, 'Get my dress.' His paralysis broken, the slender fennec rushes over with Bastet's finely woven garment, then helps her put it back on with trembling fingers, followed by handing her what items lie in Nermine's chest. An armband, then a very large and elaborate necklace, followed by little anklets, a tail-band and then finally a golden tiara are put on by Bastet, each precious artifact bolstering the sense of raw power emanating from the lioness. 'Ah, finally,' the goddess of cats says, then adds with a glance to you and Nermine still licking you, 'Let us leave this lewd place then. Destiny awaits to be forged.' And with that, the lioness walks out of the store, closely followed by her servant.";
 				now libido of Nermine is 100;
-
+	now Restaurateur's Office is resolved;
+	
 Section 2 - NPC Declaration
 
 Bastet is a woman.

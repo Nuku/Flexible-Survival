@@ -31,6 +31,7 @@ SkarnothLibraryEntry is a number that varies. [when he was brought in]
 to say SkarnothDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Skarnoth], LEVEL: [level of Skarnoth], LIBIDO: [libido of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";
+	project the figure of Skarnoth_undies_icon;
 	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by blood-red hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything.";
 	say "     Letting your gaze stray from the flawless, reddish skin of the demon's torso, his similarity to the perfection a Greek statue does diminish a bit - as Skarnoth's otherworldly nature shows clearly on the rest of his body. Starting with a few small scales on the sides of his upper body, then larger and more solid ones on his hips and down the legs, the infernal being has overlapping, flexible scales. His feet bear sharp claws, as do the hands (if a bit smaller ones), and further scale-plates make it appear like he is wearing elaborate bracers as well as pauldrons to cover his shoulders. Also, he has a long tail with a ridge of scales running down the backside, ending in a spaded tip. A pair of large horns curving up from his head completes the image of a handsome and dangerous predator.";
 
@@ -53,6 +54,7 @@ Instead of fucking the Skarnoth:
 	say "[SkarnothSexMenu]";
 
 to say SkarnothSexMenu:
+	project the figure of Skarnoth_naked_icon;
 	setmonster "Demon Prince";
 	choose row monster from the table of random critters;
 	now sextablerun is 0;
