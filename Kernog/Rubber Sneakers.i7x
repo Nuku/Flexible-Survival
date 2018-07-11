@@ -98,25 +98,13 @@ an everyturn rule:
 		else if facename of player is not "Rubber Puma":
 			say "     The rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind.";
 			now facename of player is "Rubber Puma";
-<<<<<<< HEAD
 		else:
 			say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
 			LibidoBoost(20);
 			if libido of player > 100:
-				say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [smv][else]cunt[sfn] [sfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconcisously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
+				say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
 				SanLoss(15);
 				now libido of player is 20;
-=======
-		say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind and sexually stimulates you. [bold type]Your libido increases.[roman type]";
-		if player is pure:
-			increase libido of player by 20;
-		else:
-			increase libido of player by 10;
-		if libido of player > 100:
-			say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
-			decrease humanity of player by 15;
-			now libido of player is 20;
->>>>>>> upstream/master
 
 Section 4 - Endings
 
