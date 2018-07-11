@@ -100,10 +100,10 @@ an everyturn rule:
 			now facename of player is "Rubber Puma";
 		else:
 			say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type]";
-			LibidoBoost(20);
+			LibidoBoost 20;
 			if libido of player > 100:
 				say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly in the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop to feel the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
-				SanLoss(15);
+				SanLoss 15;
 				now libido of player is 20;
 
 Section 4 - Endings
