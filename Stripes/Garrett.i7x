@@ -26,7 +26,7 @@ when play begins:
 	add Free Milk to badspots of hermaphrodite;
 
 Instead of resolving a Free Milk:
-	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle, it has a blue silver label with the text 'QaL Dairy'. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly. You wonder where it came from - you'd have thought that with the apocalypse and all, deliveries by the milkman would stop. And are there even any cows left with these changing infections?";
+	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle. It has a blue and silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious, but there is a faint smell of something almost otherworldly. You can't help but wonder where it came from. You'd have thought that with the apocalypse and all, deliveries by the milkman would stop, and are there even any cows left with these changing infections?";
 	increase carried of gryphon milk by 1;
 	now Free Milk is resolved;
 
