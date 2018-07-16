@@ -6079,6 +6079,7 @@ To regularstart: [normal start method]
 					now clearnomore is 0;
 			-- 18:
 				if NewGraphicsInteger is 1:
+					now graphics is true; [technically not necessary, but nice to have for edge cases]
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2;
 				else if NewGraphicsInteger is 2:
@@ -6523,6 +6524,13 @@ to say silent_start:
 	else if NewGraphicsInteger is 0:
 		now graphics is false;
 		now NewGraphics is false;
+	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
+		now the graphics window proportion is NewGraphicsRatio;
+		build graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;
 	clear the screen;
 	if NewGraphics is true:
 		say "[bold type]Graphic Window Proportion[roman type][line break]";
