@@ -2344,7 +2344,7 @@ To TF (subject - a person): [transforms people into monsters]
 			if n is not unique:
 				now n is selected;
 	let n be a random selected infection model;
-	if n is nothing:
+	if n is nothing or n is not an infection model:
 		say "I found no valid infection, oops.";
 		stop the action;
 	if n is rare, now n is a random selected infection model;
