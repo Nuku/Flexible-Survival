@@ -168,9 +168,8 @@ When Play begins:
 	now type entry is "humanoid";
 	now magic entry is false;
 	now resbypass entry is false;
-	now nocturnal entry is true;
 	now non-infectious entry is false;
-	blank nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Rubber Sneakers ends here.

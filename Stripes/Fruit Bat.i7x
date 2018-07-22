@@ -148,7 +148,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Fruit Bat"; [ Infection/Creature name. Capitalized. ]
-	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your[if breast size of player > 0 and a random chance of 1 in 4 succeeds]tits[else]groin[end if][at random].";
+	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your [if player is breasted and a random chance of 1 in 4 succeeds]tits[else]groin[end if][at random].";
 	now defeated entry is "[beatthefruitbat]"; [ Text when monster loses. ]
 	now victory entry is "[losetofruitbat]"; [ Text when monster wins. ]
 	now desc entry is "[fruitbatdesc]"; [ Description of the creature when you encounter it. ]

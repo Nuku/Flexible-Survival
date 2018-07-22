@@ -648,11 +648,11 @@ Book 5 - Tables
 
 Table of Game Objects
 name	desc	weight	object	sortname (indexed text)
-"medkit"	"A small white plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
+"medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 "water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
 "food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
-"journal"	"A small leather clad book. Spending some time writing in it can help clear your thoughts and recenter your troubled mind."	2	journal
+"journal"	"A small, leather-clad book. Spending some time writing in it can help clear your thoughts and recenter your troubled mind."	2	journal
 "pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
 "chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
@@ -4403,7 +4403,7 @@ This is the location choice rule:
 	else if title entry is "Caught Outside":
 		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you. (Gain Spartan Diet)[line break]";
 	else if title entry is "Rescuer Stranded":
-		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive! (Start with no supplies, an iron man mode, can you survive?)[line break]";
+		say "You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies, an iron man mode, can you survive?)[line break]";
 	else if title entry is "Forgotten":
 		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	else if title entry is "Hard mode":
@@ -6079,6 +6079,7 @@ To regularstart: [normal start method]
 					now clearnomore is 0;
 			-- 18:
 				if NewGraphicsInteger is 1:
+					now graphics is true; [technically not necessary, but nice to have for edge cases]
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2;
 				else if NewGraphicsInteger is 2:
@@ -6243,7 +6244,7 @@ to say gsopt_3:
 		say "[bold type]Game Type:[roman type][line break]";
 		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.[bold type][if gsgt is 1]-Set[end if][roman type][line break]";
 		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you (Gain Spartan Diet).[bold type][if gsgt is 2]-Set[end if][roman type][line break]";
-		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive (Start with no supplies, an iron man mode, can you survive?)![bold type][if gsgt is 3]-Set[end if][roman type][line break]";
+		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies, an iron man mode, can you survive?)[bold type][if gsgt is 3]-Set[end if][roman type][line break]";
 		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![bold type][if gsgt is 4]-Set[end if][roman type][line break]";
 		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[bold type][if gsgt is 5]-Set[end if][roman type][line break]";
 		say "[line break]";
@@ -6523,6 +6524,13 @@ to say silent_start:
 	else if NewGraphicsInteger is 0:
 		now graphics is false;
 		now NewGraphics is false;
+	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
+		now the graphics window proportion is NewGraphicsRatio;
+		build graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;
 	clear the screen;
 	if NewGraphics is true:
 		say "[bold type]Graphic Window Proportion[roman type][line break]";
