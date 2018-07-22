@@ -6,7 +6,7 @@ Tenvale Gorillas Football Team by Kernog begins here.
 [ 2: waiting for results ]
 [ 3: member of the team]
 
-[TODO: point system for progressing in the team]
+[point system for progressing in the team]
 [ 0 - 3: laundry or water ]
 [ 4 - 8: player ]
 [ over: star player ]
@@ -20,7 +20,16 @@ GorillasMemberQuestCounter is a number that varies.
 GorillasRep is a number that varies.
 TryoutScore is a number that varies.
 
-A person can be a laundry sniffer.
+laundryProgress is a number that varies.
+
+to FootballTeamQuestLog:
+	if GorillasMember is:
+		-- 1:
+			say "[bold type]The Tenvale Gorillas[roman type]: I talked to Roman about joining the football team. He regularly organize tryout sessions, so [bold type]I should come back later and talk to him again.[roman type].";
+		-- 2:
+			say "[bold type]The Tenvale Gorillas[roman type]: Roman does not want to talk with me about it. [bold type]I should insist, or improve my charms, and try again[roman type].";
+		-- 3:
+			say "[bold type]The Tenvale Gorillas (COMPLETED)[roman type]: I am part of the team now! [if GorillasRep < 3]I am only a helper for now, but if I work enough times for the team, they may let me train with them[else if GorillasRep < 8]The team captain accepted me among the players. I may train with the team anytime[else]I managed to rise to the top. I wonder when the next match is[end if].";
 
 to say FootballTryouts:
 	say "     'Hey, you arrive just in time,' Roman tells you, a smile on his face. So, [bold type]ready to start the tryouts? Be careful, since we only got so much candidacies, you can only pass them once.[roman type][line break]";
@@ -124,7 +133,7 @@ to say GorillaLaundryService1:
 		say "     After taking one last sniff you turn to throw the jock into the cart. When you turn around, a gorilla is just strolling into the room from the showers, dripping water from his freshly washed fur. You panic a little at being caught nude and breathless from the orgasm only just ebbing off. 'Enjoy yourself?' the ape asks. You simply nod, accepting the fact that you've been caught. 'Smells good doesn't it?' the large primate says as he walks up to you, grinning widely as you nod again. Grabbing his crotch, he leans over you and whispers in your ear, 'Next time catch me before I shower, and you can smell the real thing all you want.' [if player is male]Your cock grows hard again causing the large gorilla to laugh[else if player is female]Your pussy throbs with another little spurt of femcum, dripping to the floor as the large gorilla watches and laughs[else]Your body trembles in lust as the large gorilla watches and laughs[end if]. After giving you a friendly grope, he returns to his locker and puts on normal clothing before leaving.";
 		WaitLineBreak;
 		say "     After quickly getting your clothes back on, you decide it's best to get back to work and proceed to finish cleaning the room, adding a load of wet towels to your cart too. After manoevering the by now quite heavy cart to the laundry room, you sort the stuff, then put it in several big machines in parallel, hanging it all up to air dry before making your way out. Exhausting work, but worth it for your favorite football team.";
-		now the player is a laundry sniffer; [laundry boy jock sniffer]
+		now laundryProgress is 1; [laundry boy jock sniffer]
 		increase GorillasRep by 1;
 	else:
 		LineBreak;
@@ -149,17 +158,11 @@ to say GorillaLaundryService2:
 		say "     In order to give the gorilla some pause, you run your tongue over the shaft, basking in the strong male scent when you press your face against his crotch. After this, you resume your fellatio. You keep assaulting the gorilla's glans with your tongue, amusing yourself when you feel his thick legs jiggle on each side of your head. You occasionally take the ape's dick deep in your mouth, going as far as you can, taking a whiff of football player's musk, before pulling out.";
 		say "     Suddenly, his breath accelerates, and you feel his body tense up. 'Oh shit, here it comes! Here it... Nnng!' Before you can react, the pair of thick, furry legs press on each side of your [face of player], and the big jock seems to attempt to crush you against his crotch. Your nose and windpipe blocked by the massive slab of gorilla meat, your brain overwhelmed with sweaty musk, you tremble and cum hard, while he sends several ropes of cum down your gullet.";
 		WaitLineBreak;
-		let randomnumber be a random number from 1 to 2;
-		if randomnumber is:
-		-- 1:
-			say "     After his powerful orgasm, the ape's muscles seems to turn into jelly, and you immediately pull away, gasping for air. 'D-Damn. Between you and my friend, you're definitely the best sucker,' he says. After the both of you recovered, the football player goes to fetch a bag of chips and throws it in your direction. 'As thanks.' You catch it mid-flight, making it grin. 'Nice catch. Once you build some strength, you should talk to the team captain about some promotion. You'd make a good player.' On these words, the gorilla heads for the exit. 'Good luck with the rest of the laundry,' he wishes you.";
-			say "     You say goodbye too, and go back to your duty. Meeting your new friend has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell than the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
-			add "chips" to invent of player;
-		-- 2:
-			say "     After his powerful orgasm, the ape's muscles seems to turn into jelly, and you immediately pull away, gasping for air. 'D-Damn. Between you and my friend, you're definitely the best sucker,' he says. After the both of you recovered, the football player goes to fetch a can of soda and throws it in your direction. 'As thanks.' You catch it mid-flight, making it grin. 'Nice catch. Once you build some strength, you should talk to the team captain about some promotion. You'd make a good player.' On these words, the gorilla heads for the exit. 'Good luck with the rest of the laundry,' he wishes you.";
-			say "     You say goodbye too, and go back to your duty. Meeting your new friend has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell than the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
-			add "soda" to invent of player;
+		say "     After his powerful orgasm, the ape's muscles seems to turn into jelly, and you immediately pull away, gasping for air. 'D-Damn. Between you and my friend, you're definitely the best sucker,' he says. After the both of you recovered, the football player goes to fetch a can of soda and throws it in your direction. 'As thanks.' You catch it mid-flight, making it grin. 'Nice catch. Once you build some strength, you should talk to the team captain about some promotion. You'd make a good player.' On these words, the gorilla heads for the exit. 'Good luck with the rest of the laundry,' he wishes you.";
+		say "     You say goodbye too, and go back to your duty. Meeting your new friend has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell than the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
+		add "soda" to invent of player;
 		increase GorillasRep by 2;
+		now laundryProgress is 2;
 	else:
 		LineBreak;
 		say "     You explain to the gorilla, through his big primate hand, that you do not feel up for [italic type]this[roman type] kind of fun today.";
@@ -167,6 +170,62 @@ to say GorillaLaundryService2:
 		say "     You say goodbye too, and go back to your duty. Meeting the team captain has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell than the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
 		increase GorillasRep by 1;
 
+to say GorillaLaundryService3:
+	say "     You start your new laundry shift. You pickup the dirty jockstraps and shorts one by one, and throw them in your basket. Suddenly, a large hand friendly taps your shoulder. 'How's it going, laundry [if player is male]boy[else]girl[end if]?' your laundry friend asks. You greet him back, and exchange news about each other. [one of]Apparently, he broke up with the hyena. 'Couldn't work. Wanted something more serious, [italic type]monogamous[normal type] as he said. But who can stay monogamous in that city, now, right?' The ape grins. 'So, short story is, I'm pent up like crazy. So, how about we get some fun. Who'll care if you take a little more time to put everything in the washing machine, heh?'[or]He is still swinging from partner to partner. 'You are the only acquaintance I have not fucked in a while. Come ooon! You won't spend your days picking up laundry until the rescue arrives. If it ever does. Let's [quote]catch up[quote],' he says with a wink.[stopping]";
+say "You consider his proposition. [if libido of player > 50]You are quite pent-up yourself, so this would be a good way to release some of your own tension[else if libido of player > 10]You do deserve some fun. But would it not be better to wait after you are done?[else]You do not think it would be wise, but... Free sex, right?[end if]. [bold type]'What is your answer?''[roman type]";
+	LineBreak;
+	say "     ([link]Yes[as]y[end link]) - Let's get crazy.";
+	say "     ([link]No[as]n[end link]) - This is not the moment.";
+	if player consents:
+		say "     As soon as you voice your approval, your ape friend throws himself on you, and pushes his tongue against yours. Your vigorous french kiss makes you [if player is herm]hard and wet[else if player is male]hard[else]wet[end if] in a few moments; the gorilla's cock is also hard as a rock. After a while, he steps back, and grabs a condom on a pile negligently lying in a corner. 'Let's get serious, this time.'";
+		if player is male and player is not female and anallevel is 1:
+			say "     You understand what your friend wants, and tells him that you'd prefer not to have anal with him. 'Oh, that's not your thing too,' he says. 'I would have never thought, considering how well you sucked my meat, last time. I've got an idea. Get on all fours, but trust me.' He hurriedly forms a small cushion of used underwear and jockstraps, and makes you kneel on it. The jock positions himself behind you, and you feel his cock brush against your balls. For a moment, you thought he would try to trick you, but then he makes you squeeze your thighs. 'Keep[quote]em close, and enjoy.'";
+			say "     The gorilla pushes his cock between your thighs. You feel it frot against your [cocks of player] [cock of player] cock[smn]. He starts humping vigorously, as if he was fucking your ass, letting you enjoy the sensations of anal sex without any of the inconvenients. Your partner does not forget you, and his hand grabs the top of your dick and rubs it slowly. To get you over the edge and cum with him, the ape picks up a thong from the pile, and press it against your [facename of player] nose. This had an even more potent effect than expected. The two of you reach your climax one shortly after the other, and your touching cocks pour down a rain of cum on the underwear.";
+		else if player is male and player is not female:
+			say "     You smile at your friend's proposal. 'And with a rubber, no risk of infection,' he says. 'So on all fours, my little panty sniffer.' He hurriedly forms a small cushion of used underwear and jockstraps, and makes you kneel on it. The jock positions himself behind you, and you feel his cock rub the space between your buttcheeks, while the ape coats it in a copious amount of lube. For a moment, you thought he would never do it, but then he parts your thighs apart, and press the tip of his cock against your anus. 'Enjoy.'";
+			say "     The gorilla pushes his condomed cock inside your ass. The rubber-coated shaft spreads your hole and quickly rushes in. The ape slowly pumps his hips inside of you, digging in inch by inch. Just as it was starting to get uncomfortable, the gorilla picks up a thong from the pile, and press it against your [facename of player] nose. A rush of pleasure fills your body, and you surprise the jock by pushing the last couple of inches inside of you. He grins, and starts humping vigorously. His other hand reaches for your [cocks of player][cock of player] cock[smn], and stroke [if cocks of player > 1]them[else]it[end if], taking his time in order to find and rub all the sweet spots. You do not last long, and neither does he. While he fills his condom with his cum, your [cock size desc of player] shaft[smn] pour[smv] down a rain of cum on the underwear.";
+		else if player is herm and anallevel is 3:
+			say "     You smile at your friend's proposal. 'And with a rubber, no risk of infection,' he says. 'So on all fours, my little panty sniffer.' He hurriedly forms a small cushion of used underwear and jockstraps, and makes you kneel on it. The jock positions himself behind you, and you feel his cock rub the space between your buttcheeks, while the ape coats it in a copious amount of lube. For a moment, you thought he would never do it, but then he parts your thighs apart, and press the tip of his cock against your anus. 'Enjoy.'";
+			say "     The gorilla pushes his condomed cock inside your ass. The rubber-coated shaft spreads your hole and quickly rushes in. The ape slowly pumps his hips inside of you, digging in inch by inch. Just as it was starting to get uncomfortable, the gorilla picks up a thong from the pile, and press it against your [facename of player] nose. A rush of pleasure fills your body, and you surprise the jock by pushing the last couple of inches inside of you. He grins, and starts humping vigorously. His other hand reaches for your [cocks of player] [cock of player] cock[smn], and alternate between stroking [if cocks of player > 1]them[else]it[end if] and rubbing your engorged clitoris, taking his time in order to find and rub all the sweet spots. You do not last long, and neither does he. While he fills his condom with his cum, your [cock size desc of player] shaft[smn] pour[svn] down a rain of cum on the underwear, accompanied by the vaginal fluid of your cunt[sfn].";
+		else if player is female and anallevel is 3:
+			say "     You smile at your friend's proposal. 'And with a rubber, no risk of infection,' he says. 'So on all fours, my little panty sniffer.' He hurriedly forms a small cushion of used underwear and jockstraps, and makes you kneel on it. The jock positions himself behind you, and you feel his cock rub the space between your buttcheeks, while the ape coats it in a copious amount of lube. For a moment, you thought he would never do it, but then he parts your thighs apart, and press the tip of his cock against your anus. 'Enjoy.'";
+			say "     The gorilla pushes his condomed cock inside your ass. The rubber-coated shaft spreads your hole and quickly rushes in. The ape slowly pumps his hips inside of you, digging in inch by inch. Just as it was starting to get uncomfortable, the gorilla picks up a thong from the pile, and press it against your [facename of player] nose. A rush of pleasure fills your body, and you surprise the jock by pushing the last couple of inches inside of you. He grins, and starts humping vigorously. His other hand reaches for your [cunts of player] puss[yfn], and alternate between fingering [if cunts of player > 1]them[else]it[end if] and rubbing your engorged clitoris, taking his time in order to find and rub all the sweet spots. You do not last long, and neither does he. While he fills his condom with his cum, your cunt[sfn] pour[sfv] down a rain of fem-cum on the underwear.";
+		else if player is herm:
+			say "     You smile at your friend's proposal. 'And with a rubber, no risk of infection or pregnancy,' he says. 'So on all fours, my little panty sniffer.' He hurriedly forms a small cushion of used underwear and jockstraps, and makes you kneel on it. The jock positions himself behind you, and you feel his cock rub against your pussy lips, as the ape lets his length get coated it in a copious amount of your natural lube. For a moment, you thought he would never do it, but then he parts your thighs apart, and press the tip of his cock against your cunt. 'Enjoy.'";
+			say "     The gorilla pushes his condomed cock inside your vagina. The rubber-coated shaft spreads your hole and quickly rushes in. The ape slowly pumps his hips inside of you, digging in inch by inch. Just as it was starting to get uncomfortable, the gorilla picks up a thong from the pile, and press it against your [facename of player] nose. A rush of pleasure fills your body, and you surprise the jock by pushing the last couple of inches inside of you. He grins, and starts humping vigorously. His other hand reaches for your [cocks of player] [cock of player] cock[smn], and alternate between stroking [if cocks of player > 1]them[else]it[end if] and rubbing your engorged clitoris, taking his time in order to find and rub all the sweet spots. You do not last long, and neither does he. While he fills his condom with his cum, your [cock size desc of player] shaft[smn] pour[smv] down a rain of cum on the underwear, accompanied by the vaginal fluid of your cunt[sfn].";
+		else:
+				say "     You smile at your friend's proposal. 'And with a rubber, no risk of infection or pregnancy,' he says. 'So on all fours, my little panty sniffer.' He hurriedly forms a small cushion of used underwear and jockstraps, and makes you kneel on it. The jock positions himself behind you, and you feel his cock rub against your pussy lips, as the ape lets his length get coated it in a copious amount of your natural lube. For a moment, you thought he would never do it, but then he parts your thighs apart, and press the tip of his cock against your cunt. 'Enjoy.'";
+				say "     The gorilla pushes his condomed cock inside your vagina. The rubber-coated shaft spreads your hole and quickly rushes in. The ape slowly pumps his hips inside of you, digging in inch by inch. Just as it was starting to get uncomfortable, the gorilla picks up a thong from the pile, and press it against your [facename of player] nose. A rush of pleasure fills your body, and you surprise the jock by pushing the last couple of inches inside of you. He grins, and starts humping vigorously. His other hand reaches for your engorged clitoris, pinching and stroking it to make you moan at his leasure. You do not last long, and neither does he. While he fills his condom with his cum, your cunt[sfn] pour[sfv] down a rain of fem-cum on the underwear.";
+		WaitLineBreak;
+		say "     You look at each other, tired but contented, when a loud cough interrupts you. The rest of the team is here, watching you as not only you slacked off on your job, but you used their clothes in such fashion. Roman had the both of you pick up the clothes, under the amused or annoyed eye of your teammates, then lectured you. 'I thought you were better than this, [if player is not defaultnamed][name of player][else]my friend,' Roman says to you. Then, to the other gorilla 'As for you, you seem to be a lost cause already. I will find an appropriate punishment for you.' After this, Roman lets the both of you go. Your friend walks away, an uncaring smile on his face. As for you, you realize that, while you satiated your lust, it came at the cost of alienating Ronan and the others. Time will allow you to make up for it; but you can't shake the feeling that this incident has hurt your progression into the team.";
+		if libido of player > 50:
+			decrease libido of player by 50;
+		else:
+			now libido of player is 0;
+		decrease GorillasRep by 2;
+		now laundryProgress is 3;
+	else:
+		say "     [one of]'Better off sniffing pants than getting the real deal, huh? Well, I'm not judging,' your friend says. However, he seems disappointed. 'Well, I'm gonna head out. See you around, sniffer [if player is male]boy[else]girl[end if].'[or]'Are you angry at me or something? You keep pushing me back.' The gorilla scratched his chin in annoyment. 'What's up with people like you and my ex? Have fun picking up others[quote] dirty clothes, then.'[stopping]";
+		say "     With this, the jock walked out of the locker-room and left you alone. You resume your task. You find the time to take a couple of whiffs from some nice-smelling underwear, and eventually you finish your job just in time. The rest of the team congratulates you for your good job, before the usual mayhem of the locker-room sets itself up once more.";
+		increase GorillasRep by 1;
+
+[Expansion idea: develop this character]
+to say GorillaLaundryRepeat:
+	say "     You start your new laundry shift. You pickup the dirty jockstraps and shorts one by one, and throw them in your basket. 'What's up?' a familair voice asks from the entrance. As you give him a resentful look, the jock raises his hands in the air. [one of]'Sorry, sorry. Who knew we'd get so much into things, last time, huh?' he sort-of apologized. 'Anyway, I'm just here to chat for now. And to help. Coach asked me to do laundry work for a week or face expulsion from the team.'[or]'We're on the same shift again, huh? Let me help you.'[end if]";
+	say "With the two of you picking up clothes, things go very fast, and there is still twenty minutes until the end of the training. You take the opportunity to chat with your teammate.";
+	LineBreak;
+	let randomnumber be a random number from 1 to 3;
+		if randomnumber is:
+		-- 1:
+			say "     'The Fourmont Wolves are a decent bunch, once you get to know them. Their mouths are as good for talking than for drinking. And sucking. And sucking then drinking. Fucking a muzzle changes a lot of things, y'know?'";
+		-- 2:
+			say "     'I'm screwing a lot of guys, and girls too. All you need is roam the campus and pick up the first one you fancy. Most of the time they can't resist if you [quote]insist[quote] a little, heh heh. By the way... Have we met elsewhere?'";
+		-- 3:
+			if HP of Roman is 5:
+				say "     'So captain Rohan is a girl down there? Who could have guessed! No wonder he was so prude. I've never screwed a trans guy before, maybe you could put a word for me to the cap, eh?'";
+			else:
+				say "     'Captain Rohan is a strange guy. For the leader of a pack of hornballs, he is surprisingly prude. He's never fucked anybody, and he's always changing in his own room. You should open your eye for him, next time you come here.'";
+		increase GorillasRep by 2; [Since there's nothing else for now, I give the player a little "help" to unlock the next stage, if needed]
 
 
 [Water Boy scenes]
@@ -176,22 +235,27 @@ to say GorillaWaterService:
 	say "     [bold type]Which group should you [roman type][line break]";
 	say "     [link](1)[as]1[end link] - A large, bully-looking ape, whose dirty look gives you bad vibes.";
 	say "     [link](2)[as]2[end link] - Two players who look very close to each other and with an air of family.";
+	if HP of Ronan >= 7:
+		say "     [link](3)[as]3[end link] - Isn't that Willy the orca, over there?";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 2:
-		say "Choice? (1-2)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-[if HP of Ronan >= 7]3[else]2[end if])>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or (calcnumber is 3 and HP of Ronan >= 7):
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link], [link]2[end link]or [link]3[end link] to choose an incoming group.";
+			say "Invalid choice. Type [link]1[end link], [link]2[end link][if HP of Ronan >= 7]or [link]3[end link][end if] to choose an incoming group.";
 	if calcnumber is 1:
 		LineBreak;
 		say "[GorillaWater1]";
-	else:
+	else if calcnumber is 2:
 		LineBreak;
 		say "[GorillaWater2]";
+	else:
+		LineBreak;
+		sat "[GorillaWaterWilly]";
 	say "     The team captain calls for the end of the training session. You pick up your empty bucket and put your bross and soap in it. Roman congratulates you for a job well done, with a wink. It seems that he caught what happened earlier. He gives you some freecred for you to spend.";
-	increase freecred by 30;
+	increase CreditGain 30;
 	increase GorillasRep by 2;
 
 to say GorillaWater1:
@@ -212,7 +276,7 @@ to say GorillaWater1:
 		say "     As the ape gave his final thrusts, your vision suddenly fills with stars, and a powerful orgasm overtakes your body. [if player is herm] You squeal, while your duo of genitals spasm and let out streams of sexual fluids splash out on the gorilla's tummy and on the ground. [else if player is male]You squeal, while your cock spasms several times, before launching several ropes of cum in direction of the grass, under you. [else if player is female]You squeal, while your pussy spams violently, launching several squirts of cyprine on your molestor's belly. [end if]Laughing, the sportsman pulls out, letting you roll on your side like a discarded fleshlight. 'Damn, that felt good! But now, look at that. I'm all dirty again.' You let out a tired whimper, but the jock promptly ignores you. He has already set his eyes on another water boy, and you can do nothing about it as you are, tied up, gagged and tired. Some of your teammates notice your predicament and help you out of your bondage. You can see at their looks that it is not the first time this has happened, and that they can't or won't do much about it. You barely have the time to recover that you hear the sound of a whistle.";
 
 to say GorillaWater2:
-	say " You head towards the two gorillas with your bucket. They seem to get along with each other very well, judging by the playful buttslapping and penis-pulling happening. 'Thanks,' the first one says as he fetches two bottles from the bucket. 'Big bro, catch!' [first time]Curious, you ask the first ape if the pair is related. 'Yup. We're brothers,' the player confirms. My name's Zach, and he's Mike. We were already rather close, but this mini-apocalypse got us even... Closer. If you see what I mean.' [only] You have the two brothers sit and begin to soap their black fur. Foam begins to build, and the two brothers begin to play at wiping the soap from each others face and washing the other's fur, until they cannot hold it anymore and begin to make out with passion.";
+	say "     You head towards the two gorillas with your bucket. They seem to get along with each other very well, judging by the playful buttslapping and penis-pulling happening. 'Thanks,' the first one says as he fetches two bottles from the bucket. 'Big bro, catch!' [first time]Curious, you ask the first ape if the pair is related. 'Yup. We're brothers,' the player confirms. My name's Zach, and he's Mike. We were already rather close, but this mini-apocalypse got us even... Closer. If you see what I mean.' [only] You have the two brothers sit and begin to soap their black fur. Foam begins to build, and the two brothers begin to play at wiping the soap from each others face and washing the other's fur, until they cannot hold it anymore and begin to make out with passion.";
 	say "     'Zach...' Mike moans as his brother's adventurous hand ventures down his groin. The two siblings look at each other, and you get the impression that they are thinking the same thing. Your hunch is confirmed when they look at you, at the same time, and Mike pulls you between their soap-covered bodies. 'Wouldn't be fair if you only watch, do you?' Zach and Mike cover you with kisses and caresses, which you return in kind. They playfully cover you in soap too, and you spend several minutes like this, pleasuring each other playfully. 'Should we give him a taste of our [italic type]special move[roman type], Mike?' Zach says. His brother chuckles, and you suddenly find yourself upside down, as each brother grabs one of your legs.";
 	WaitLineBreak;
 	if player is herm:
@@ -225,6 +289,42 @@ to say GorillaWater2:
 		say "[if cunts of player is 1]Mike and Zach share duties. Mike applies his mouth against your clit and give it a series of powerful sucks, and licks, while Zach explores each of your [Cunt Length] pussy with his tongue, making sure to let no square inch untouched[else]The siblings share your [cunts of player] pussies, exploring them with their dextrous tongue. They playfully try to feel each other's tongue inside of your body, which sends you all kind of sensations through your body[end if].";
 		say "     You try to return their cocks favor, but quickly turn into a quivering mess thanks to their relentless assault. They 'help' you as they can, pressing their large cocks against your lips, and frotting them with each other and the inside of your mouth. You climax first, and hard, sending simultaneously a large dose of cyprine, which each brother tries to swallow the most of; they only manage to cover their face with the stuff, but in their endeavor, they take pleasure in prolonging your orgasm as long as they can. With this out of the way, they focus on pumping their cocks in your mouth, making out and exchanging your sexual fluids as they do so. They cum not long after, painting your face white with their semen.";
 	say "     The three of you take a short rest, during which you realize that your activities had covered the three of you with various fluids. 'Guess we need another clean-up,' Mike says winking. You sigh, and Zach too. 'Don't worry, we'll keep to ourselves this time. Or at least I will.' Mike held his word, and you eventually manage to clean the two gorillas, who then take your leave after thanking you for indulging them.";
+
+to say GorillaWaterWilly:
+	say "     You head towards Willy, and greet the orca. 'Oh, hey! How's it going?' he welcomes you. He plunges his large hands into your bucket, grabbing four bottles. He crushes them together over his head, letting the water fall into his large mouth. 'Haaaah, that feels good. I needed that.' You quickly fetch the hose and cover the cetacean in more water. Willy groans of satisfaction at the pleasure. You grab your towel and the soap, and start wiping sweat and other fluids off his sleak skin. There is a rather impressive amount of it around his cock. 'Hey, careful with that,' Willy says. 'Take it slow. I'm supposed to get some rest, right? You nod, as you continue your washing job, the orca so massive that you feel like you are washing a car.";
+	let randomnumber be a random number from 1 to 3;
+	if randomnumber is:
+			-- 1:
+				say "     'Like, it does not have to be sex [italic type]all[roman type] the time, you know?' Willy suddenly says, as you are running the towel on his massive ballsack. 'Even on the beach, people are [quote]Oh, hey, nice to meet you! Let's fuck![quote] Like, I know it's the mutant apocalypse and everything. But manners, [if player is defaultnamed]man[else][name of player][end if]. Manners! [bold type]What's your opinion about this?[roman type]'[line break]";
+				say "     ([link]Y[as]y[end link]) - Things did get a little out of hand.";
+				say "     ([link]N[as]n[end link]) - Consequence-free sex is awesome.";
+				if player consents:
+					LineBreak;
+					say "     'Yeah. I mean, I dont mind, from time to time, ramming a girl or a dude, or a dude who's a girl, or, well, you know what I mean. But you can't fuck all the time,' Willy replies. 'Plus, it can't be good. Like, do you like drinking sodas. If you drink one can every ten minutes, you'd die of sugar overdose before the day ends!' [if intelligence of player >= 17]You object that the nanites would break down the sugars so, technically, you could not die that way even if you wanted it. 'Look at you, mister smartass! Less smugging, more wiping!' the orca says with a chuckle[else]You can't help but agree with Willy. 'So, the moral is, drink water, kids. A lot of water.'[end if].";
+				else:
+					LineBreak;
+					say "     'Ah, you're one of those types,' Willy replies. 'Well, it's all fun and games, as long as you're the one on top! Like, there's that group of otters, roaming the beach. They tried to pull a fast one on me, so what I did is feign to surrender. Then, I grabbed their leader by the neck as soon as he got in reach and... Well, let's just say that they won't bother any killer whale again. Still... Otters really [italic type]flexible[roman type], when I remember it.'";
+			-- 2:
+				say "     'Man, these trainings are crazy,' Willy suddenly says, as you dutifully scrub his rear. 'Every time an action is going on, it must end with two players or more screwing each other. It's fun times, but I can't help but think that we're not really playing football. Not after the first 10 minutes anyway. [bold type]I'm not the only one thinking that, am I?[roman type]'[line break]";
+				say "     ([link]Y[as]y[end link]) - This team is more of a sexual outlet than anything.";
+				say "     ([link]N[as]n[end link]) - Think of it like fantasy football.";
+				if player consents:
+					LineBreak;
+					say "     'Ah! See! I'm not the only one!' Willy replies. 'I mean, people come and go from training whenever they like, and every time it devolves into an orgy, on the field or in the lockers.' You ask the orca if he has second thoughts coming here. 'Here? Oh, no. It's not just the football team, you know? I've been to the swimming pool earlier, and I could swear that there was more cum than water in the pool.' The orca sighed. 'At least, people spend their energy on a sport. They're not scourging the streets, jumping on everyone they find.'";
+				else:
+					LineBreak;
+					say "     'Fantasy football? Like, the one with the orcs, and the lizard-men, and all that?' Willy seems to ponder your idea for a moment. 'That's actually a clever way to see things. What should we call it then? I think [quote]Cum Bowl[quote] would fit,' he says, with all the seriousness in the world. 'We're going to have a hard time exporting these rules outside the city, if we ever see the outside. I mean, poor normie boys would be unable to sit for a month after a match. Or a training session, even.'";
+			-- 3:
+				say "     'Do you think a whale mutant eating whale meat is cannibalism?' Your hands stop on the orca's shaft, as you hear his sudden question. 'It's all theorical. After all, whale meat is banned here, but just for the sake of argument. Like, there are lamb mutants, rabbit mutants, and so on. [bold type]What do you call a mutant eating meat of his own species?[roman type]'[line break]";
+				say "     ([link]Y[as]y[end link]) - When you [italic type]do[roman type] think about it...";
+				say "     ([link]N[as]n[end link]) - That's totally different!";
+				if player consents:
+					LineBreak;
+					say "     'I know, right? You behave like the human you were, you go to your supermarket (or its remnants), and you see first-choice beef in the meat section. Then, you look at yourself, at your hooved body, at the horns growing from your head, at your ginormous cock hanging down your legs. That would be so awkward.' You ponder if this nanite apocalypse would not be the occasion to have everyone try veganism. 'That would not be a bad idea,' Willy concedes. 'But what about cheese? Like, is it also awkward if a goat mutant eats goat cheese?' You are actually surprised that goat cheese is a thing. 'It is! I should go scavenge for some, if I have time. Ah, but don't tell any Satyr, right?'";
+				else:
+					LineBreak;
+					say "     'I guess. I mean, despite our mutation, we're still human after all. Or an entirely new species. I'm completely lost with this shit. But I [italic type]do[roman type] have one reservation. Vore is just wrong.' You look at Willy, puzzled. 'Yeah. Would you believe it? I met another whale like me at the beach. He tells me how he found a strange case full of vials on the streets, and that thanks to them, he does not have any hunger problem anymore. Then, he procedes to catch an otter who was passing by and then... Gulp! In one go!' Willy shudders. 'I mean, that's creepy. He's looking just like me too. Like, even [italic type]you[roman type] could be one of them, and I would not even know. You're not one of them, are you?' [if playercanvore is true]You give Willy an embarassed smile and shake your head quickly, as you were about to talk about your own situation.[else]You vehemently shake your head.[end if]";
+		say "     Willy groans and stands on his two feet. He stretches his arms, letting the powerful muscles play under the slick skin. 'Well, that felt good. Time to head back.' Willy's half-hard cock swings under your nose. When you point that to the orca, he lets out a good-hearted laugh. 'Ha! Don't worry about that. I'll take care of it later. Thanks for the conversation, [if player is defaultnamed]man[else][name of player][end if]. It was really nice to be able to sit down and chit-chat with someone. We should do it again, next time you're on water-boy duty!'";
 
 [Training scenes]
 to say GorillaTraining:
