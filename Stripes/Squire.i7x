@@ -75,6 +75,8 @@ to say stateknightcrest_new:
 Section 2 - Monster Victory
 
 to say losetosquire:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if kpstatus is 1:
 		if HP of player > 0:
 			say "     When you submit to the bold squire, he gives a nervous laugh before growing boastful once the surprise has passed. 'Not much of a knight at all, are you? You would surrender to a lowly squire? Clearly I am more a knight than you,' he adds as he stands taller and sheathes his small sword. 'It looks like you need some more training, and I'm just the brave warrior to do it,' he says, grabbing you in a surprisingly strong grip. Tugging down his breeches, he reveals his stiff member. His seven incher stands proud, hard and ready, as he pushes aside your garb, ready to finally take his turn on top.";
@@ -260,6 +262,8 @@ to say squirewins_anal_n:
 Section 3 - Player Victory
 
 to say beatthesquire:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	say "     Sending his sword skittering away and knocking him to his knees, you are victorious over the squire. He scrambles backwards and back to his feet. ";
 	if kpstatus is 1:
 		say "     'You are indeed a brave and powerful knight. Perhaps you should face off against my master in honorable combat. He would surely best even you,' he proclaims as he recovers his sword and departs quickly.";

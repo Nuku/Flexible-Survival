@@ -100,6 +100,8 @@ to say stateplayercrest:
 
 
 to say losetoknight:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if kpstatus is 1:
 		if HP of player > 0:
 			say "     You lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and drop to one knee before the knight. He smiles as you yield to him and moves closer. 'I would have enjoyed seeing our fight through to the end, but I can see you are eager to enjoy the festivities afterwards.' Sheathing his blade, he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
@@ -184,6 +186,8 @@ to say knightwins_anal:
 	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of player] body in a mix of groping and caressing[if kpstatus < 3 and player is male]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his enlarged manhood gliding in and out of you[if player is male], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Seeing your need, he quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if player is male]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [ball size] with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches and departing.[mimpregchance]";
 
 to say beattheknight:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	say "     You are victorious over the knight, forcing him to yield and withdraw. ";
 	if kpstatus is 1:
 		say "     'You are indeed a brave and powerful knight. I salute you,' he declares with a flourish of his sword before leaving.";

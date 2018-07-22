@@ -9,6 +9,8 @@ when play begins:
 Section 1 - Monster Responses
 
 to say Hunter wins:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if HP of player > 0:
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
 	else:
@@ -28,6 +30,8 @@ to say Hunter wins:
 		say "     'Not bad. With creatures like you here, we'll at least have something to keep ourselves busy with between the hunts,' he says, then vanishes into the foliage.";
 
 To say Hunter loses:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
 		say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues 'I'll allow you to live - for now, so you can spread the word to leave this world. Flee while you can - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate any of you filthy beasts they encounter.' With that, the elf silently vanishes into the forest.";
 	else:

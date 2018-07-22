@@ -16,6 +16,8 @@ to say gargoyledesc:
 	say "A flutter of wings has you ducking for cover just in time for you to find a fascinating creature dropping down from the sky to land gracefully in front of you. With beautiful gray skin strapped tight over numerous muscles you look over the bare form of this horrible monster and realize what you're dealing with. The gargoyle stands with wings spread and a menacing glare pointed in your direction[one of]. The creature warbles at you quietly, seeming to want to challenge you, though you're not sure why[or]. A hissing growl has your nerves buzzing as you see the monster snarling at you heatedly[or]. A hiss and then flap of the monster's wings has you on guard as you feel the need to fight come over you[at random].";
 
 to say gargoyle attack:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	say "A sweep of well polished claws against your chest sends you reeling back onto the ground in defeat. Seeing you lying there before it spread out prone in defeat the gargoyle smiles down at your with its beautifully monstrous face, a startling sight in and of itself since there is nothing merciful in the creature's solid black eyes. The gargoyle soon smirks at you when you try to move yourself to get up onto your feet, but both it and you know that your strength is gone right about now. Coal colored eyes shimmering down at you with an inhuman glee you suddenly feel as though you may have bitten off more than you can chew as your nose catches a slightly musky scent wafting into the air. Dropping your gaze south you whimper at the sight of the creature's powerfully flexing cock dribbling a straight line of precum down onto the ground in front of it.";
 	WaitLineBreak;
 	if player is female:
@@ -37,6 +39,8 @@ to say gargoyle attack:
 
 [ [Gargoyle loss] ]
 To say gargoyle loss:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	say "Stunned that it could be defeated by you the gargoyle kneels down on one knee and then looks up at you with both awe and respect on it beautifully monstrous face while displaying itself fully for your approval. ";
 	if player is male and libido of player > 45:
 		say "Looking over the creature, you find yourself tempted to have your way with this strange, powerful creature.";
