@@ -5480,6 +5480,7 @@ Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Erica by Wahn.
+Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Stripes.
 Include Farmhands by Wahn.
