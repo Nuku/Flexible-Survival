@@ -174,7 +174,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 	else if DiegoChanged is 0: [male Diego]
 		project the figure of Diego_face_icon;
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the milk from the canine you fought earlier. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
-		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes. 'It's just so much work tricking the man, very very thirsty work if you know what I mean,' the trickster says with a smile on his muzzle. 'Why not help a fellow out, if you know what I mean?' he says hopefully as he eyes the bottle of milk right on top of your still open backpack.";
+		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes. 'It's just so much work tricking the man. Very, very thirsty work, if you know what I mean,' the trickster says with a smile on his muzzle. 'Why not help a fellow out?' he says hopefully as he eyes the bottle of milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the changing milk?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -221,7 +221,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			say "     'Damn - what a tease,' Diego remarks as you slide the bottle back into your pack with a grin, then close the zipper and swing the backpack over one shoulder. Licking his lips thirstily, he flicks an ear in amusement as he adds, 'I taught you too damn well it seems.'";
 	else if DiegoButtSlut is 0: [straight Diego]
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the small bottle of creamy cum you milked out of an orc's thick green prick. Just looking at it reminds you of the brute's virility - especially since this wasn't even his full load, but rather just what fit in the bottle. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
-		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes. 'It's just so much work tricking the man, very very thirsty work if you know what I mean,' the trickster says with a smile on his muzzle. 'Why not help a fellow out, if you know what I mean?' he says hopefully as he eyes the bottle of what he must think is milk right on top of your still open backpack.";
+		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes. 'It's just so much work tricking the man. Very, very thirsty work, if you know what I mean,' the trickster says with a smile on his muzzle. 'Why not help a fellow out?' he says hopefully as he eyes the bottle of what he must think is milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the orc cum?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";

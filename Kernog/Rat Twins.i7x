@@ -446,7 +446,7 @@ Instead of resolving a Pirate Standoff:
 			say "     You would not have called this a scuffle. More like a beating. The poor rats are knocked around, before being pinned on the ground. The herms press the tired rodents' heads in the sand, while pulling their butts up. 'Ready ta share the loot, cap'n,' one of the pirates says.";
 			say "     'Mmm, good, good. But [']fore we share, we should check which booty is the finest. Don't ye agree, mates?'";
 			say "     And with these words, the shark captain gives each rodent a slap on the butt, making them yowl and, in the case of the girl, make her spout choice words about their captors. 'Come on, me maties! Help me.'";
-			say "     After several minutes of spanking, the siblings['] buttcheeks are stinging red under the snow-white fur. And this seems to have excited them as well: The brother's cock is rock hard, while his sister is dripping wet. 'Naughty sea rats, are ye?' the pirate shark asks. 'Bitches, give 'em a show.' The two shark goons pull each rodent into their laps, making sure that they have a nice view of their sibling's naked body, and their ass held dangerously close to a thick shark cock. At the captain's signal, the two rodents['] asses get speared by fish meat.";
+			say "     After several minutes of spanking, the siblings['] buttcheeks are stinging red under the snow-white fur. And this seems to have excited them as well: The brother's cock is rock hard, while his sister is dripping wet. 'Naughty sea rats, are ye?' the pirate shark asks. 'Bitches, give [']em a show.' The two shark goons pull each rodent into their laps, making sure that they have a nice view of their sibling's naked body, and their ass held dangerously close to a thick shark cock. At the captain's signal, the two rodents['] asses get speared by fish meat.";
 			say "'A-Ah!'";
 			say "'Ah. Such a lewd rattie. Moans even louder than his sister.'";
 			say "'N-No. Erin!'";
@@ -455,7 +455,7 @@ Instead of resolving a Pirate Standoff:
 			say "The two rats gets their asses spread apart again and again, as the sharks take their sweet time fucking them. To their delight, it seems that the sight of their sibling's fate excite them very much, and the sharks accelerate the process by masturbating them. The rats squirm almost synchronously as they cum around the shark cocks buried in their asses. 'Yar! Cumming already? We haven't even got to tha serious stuff!' the sharks laugh.";
 			say "'M-Mercy.'";
 			say "'I-I'm gonna kill you. I swear!'";
-			say "'Shut yer traps,' the pirate leader says, as he plants himself between the two forced pairs. Her hands grab each sibling's head, and press them against her two genitals. 'Use 'em properly. Get to it!' Encouraged by the sharks, the two rats submit and begin to suck the shark's oddly-shaped cock and lick her moist pussy.";
+			say "'Shut yer traps,' the pirate leader says, as he plants himself between the two forced pairs. Her hands grab each sibling's head, and press them against her two genitals. 'Use [']em properly. Get to it!' Encouraged by the sharks, the two rats submit and begin to suck the shark's oddly-shaped cock and lick her moist pussy.";
 			say "     After some more impromptu coitus, and the sharks['] collective orgasm, the gang decides to [']share the booty['] at their hideout. They tie up the two knocked-out rats, then take them away to some grim, sex-slave fate. As you watch them leave, you feel like you somehow missed an opportunity to something.";
 		now HP of Erin is 99;
 	now Pirate Standoff is resolved;

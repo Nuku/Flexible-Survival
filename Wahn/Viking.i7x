@@ -1122,25 +1122,25 @@ to say SonyaTalk1:
 	let randomnumber be a random number from 1 to 10;
 	if randomnumber is:
 		-- 1:
-			say "     Sonya says: 'Some of those blue winged beasts - gryphons - seem to be nesting up on the cliffs along the shore. Thankfully, they seem concentrate their activity on the city, but I've one or another of them come and go in the sky many times. So be careful when you're near the cliffs, my love.'";
+			say "     Sonya says, 'Some of those blue winged beasts - gryphons - seem to be nesting up on the cliffs along the shore. Thankfully, they seem to concentrate their activity on the city, but I've seen one or another of them come and go in the sky many times. So be careful when you're near the cliffs, my love.'";
 		-- 2:
-			say "     Sonya says: 'Those sand-men out there could be a real threat if they stopped just lounging around and wearing those garishly colored speedos that make em easy to spot. Some real fighter with that kind of camouflage on the beach could ambush anyone. And they're impervious to damage too - the last one that tried to touch me lost his forearm to my sword... until it just reformed out of the sand he was standing on.'";
+			say "     Sonya says, 'Those sand-men out there could be a real threat if they stopped just lounging around and wearing those garishly colored speedos that make [']em easy to spot. Some real fighter with that kind of camouflage on the beach could ambush anyone. And they're impervious to damage too - the last one that tried to touch me lost his forearm to my sword... until it just reformed out of the sand he was standing on.'";
 		-- 3:
-			say "     Sonya says: 'Some mighty sorcerer or god lives in a floating castle out in the ocean. It's tempting to raid such a place - imagine the treasures that must lie within. But there are strange, rubbery creatures roaming near it, and with such minions who knows how mighty their master is. For now, we're raiding the ripe pickings elsewhere along the coast. Most of those I see when scouting are far too busy fucking to pose any kind of real resistance.'";
+			say "     Sonya says, 'Some mighty sorcerer or god lives in a floating castle out in the ocean. It's tempting to raid such a place - imagine the treasures that must lie within. But there are strange, rubbery creatures roaming near it, and with such minions who knows how mighty their master is. For now, we're raiding the ripe pickings elsewhere along the coast. Most of those I see when scouting are far too busy fucking to pose any kind of real resistance.'";
 		-- 4:
-			say "     Sonya says: 'Beware the otters on the beach, my love. They may be relatively short and thin, but they're excellent swimmers. The little bastards overturned one of our rowing boats a while back, carrying off my cousin Thundalf... Even a young and strong warrior can fall prey to them if he gets swarmed.'";
+			say "     Sonya says, 'Beware the otters on the beach, my love. They may be relatively short and thin, but they're excellent swimmers. The little bastards overturned one of our rowing boats a while back, carrying off my cousin Thundalf... Even a young and strong warrior can fall prey to them if he gets swarmed.'";
 		-- 5:
-			say "     Sonya says: 'This is a strange land indeed. I've seen one of the mighty blackfish walk out of the ocean on legs. They've always managed to catch seals right up in the surf, but now even those who keep their distance can fall prey to them...'";
+			say "     Sonya says, 'This is a strange land indeed. I've seen one of the mighty blackfish walk out of the ocean on legs. They've always managed to catch seals right up in the surf, but now even those who keep their distance can fall prey to them...'";
 		-- 6:
-			say "     Sonya says: 'Some shark pirates tried to attack out ship a while back. Hah, as if they were a match for real Viking raiders!'";
+			say "     Sonya says, 'Some shark pirates tried to attack out ship a while back. Hah, as if they were a match for real Viking raiders!'";
 		-- 7:
-			say "     Sonya says: 'Don't listen to the siren's songs if you are unlucky enough to encounter one of them. They're known to lull and lure men and women out into the sea. Many never return.'";
+			say "     Sonya says, 'Don't listen to the siren's songs if you are unlucky enough to encounter one of them. They're known to lull and lure men and women out into the sea. Many never return.'";
 		-- 8:
-			say "     Sonya says: 'There is a large group of creatures over where stairs lead up to the beach plaza, just lounging around, playing and often copulating. They seem peaceful, but I don't trust that impression to walk through between them. Better safe than sorry and swarmed by the whole group. There's enough other, more stealthy ways to enter the city - through the dunes or climbing up the lower sections of the cliffs for example.'";
+			say "     Sonya says, 'There is a large group of creatures over where stairs lead up to the beach plaza, just lounging around, playing and often copulating. They seem peaceful, but I don't trust that impression to walk through between them. Better safe than sorry and swarmed by the whole group. There's enough other, more stealthy ways to enter the city - through the dunes or climbing up the lower sections of the cliffs for example.'";
 		-- 9:
-			say "     Sonya says: 'Legends tell of a strange tree whose fruit allows men to breathe water like a fish. With all the strange things going on in this land, it might just exist here...'";
+			say "     Sonya says, 'Legends tell of a strange tree whose fruit allows men to breathe water like a fish. With all the strange things going on in this land, it might just exist here...'";
 		-- 10:
-			say "     Sonya says in a thoughtful tone: 'Seeing many men, women and beasts enjoy themselves so wantonly all over this strange land made me curse myself for swearing my oath more than once. Even the strongest warrior finds lust difficult to resist... and it was hard, every day I was out there.' She smiles at you, embracing you and affectionately brushing her cheek against yours, then says 'Thank the gods I met you, my brave [if player is purefemale]wife[else]husband[end if]. All the waiting was worth it, for getting you in the end.'";
+			say "     Sonya says in a thoughtful tone, 'Seeing many men, women and beasts enjoy themselves so wantonly all over this strange land made me curse myself for swearing my oath more than once. Even the strongest warrior finds lust difficult to resist... and it was hard, every day I was out there.' She smiles at you, embracing you and affectionately brushing her cheek against yours, then says 'Thank the gods I met you, my brave [if player is purefemale]wife[else]husband[end if]. All the waiting was worth it, for getting you in the end.'";
 
 to say SonyaTalk2:
 	if VikingKidCounter is 1: [just one kid so far]

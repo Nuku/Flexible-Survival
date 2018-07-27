@@ -14,7 +14,7 @@ Instead of resolving a Gryphon Milkman:
 	project the figure of Garrett_icon;
 	say "     As you're out and about looking for supplies, you hear the flapping of wings overhead. Before you can do much more than look up, a gryphon lands in front of you. This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs. He's wearing only a white peaked cap and a wire carrier with several bottles.";
 	say "     'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you. Then he jumps in the air and flies away, leaving you standing there alone.";
-	say "     The milk bottle has a blue silver label with the text 'QaL Dairy'. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.";
+	say "     The milk bottle has a blue silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.";
 	increase carried of gryphon milk by 1;
 	now Gryphon Milkman is resolved;
 
@@ -39,7 +39,7 @@ when play begins:
 
 Instead of resolving a Abandoned Milk:
 	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
-	say "     On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full! Walking over to the bench, you take the bottle, it has a blue silver label with the text 'QaL Dairy'. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly. You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
+	say "     On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full! Walking over to the bench, you take the bottle, it has a blue silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly. You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
 	increase carried of gryphon milk by 1;
 	now Abandoned Milk is resolved;
 
@@ -73,6 +73,7 @@ Instead of conversing the Garrett:
 		say "     The male gryphon smiles and puts down his magazine as you come speak to him. 'Hey there. It's nice to have some company. Things have been a little quiet around here. Most of the gryphons have gone out into the city. I was out there for a while, handing out milk, but with the others gone, I'm pretty much out of stock now. Besides, I'm a little bored of the gryphons all being herms. Were there... even any other males besides me...' he adds, mostly to himself before trailing off for a bit as he tries to remember.";
 		if Gryphon Milkman is unresolved:
 			say "     'I do have a little left, if you'd like it[if nongryph is true]. I think you'd look pretty good as a sexy gryphon[end if].' Before you can even respond, he's pushing a cold bottle of milk into your hands. 'Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
+			increase carried of gryphon milk by 1;
 		else:
 			say "     'Actually, didn't I run into you in the city already. Nice to see you again. I'm sorry, but I don't really have any other samples to give you. Only one to a customer. Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
 		say "     As it stands, I was thinking it might be time to try a different kind of [']milk[']. But for that, I could use a bit of a hand,' he adds with a grin, rubbing his bulging sheath meaningfully. The tip of his thick, black penis starts to poke free of its fuzzy housing. 'How do you feel about helping a working guy work one out?'";
@@ -293,6 +294,7 @@ to say garrett_analbottom_1:
 		say ". Taste it and you'll agree,' he says, holding out his cock as it drools out the last dregs of his load. Licking your lips at the sight of it, you get on your knees and slurp up those gooey droplets. You moan softly at the taste of his virile spunk and suck every last drop, part of you eager for the tainted nature of the seed you're accepting into yourself.";
 	else:
 		say ". This'll be enough to top up the processor for another batch, so you should take another bottle. It'll help make you into a gryphon stud faster so you can help me make even more.'";
+		increase carried of gryphon cum by 1;
 		now XP of garrett is 0;
 	if HP of Garrett is 4 and a random chance of 1 in 2 succeeds, now HP of Garrett is 5;
 
@@ -310,6 +312,7 @@ to say garrett_analbottom_2:
 		say ".'";
 	else:
 		say ". This should be more than enough to top up the processor to make more of my special milk. Speaking of, you should take another bottle; I'll have more for myself once that next batch is done.'";
+		increase carried of gryphon cum by 1;
 		now XP of garrett is 0;
 	if HP of Garrett is 4, now HP of Garrett is 5;
 
@@ -321,7 +324,7 @@ to say garrett_gryphon_3some:
 	say "     Garrett pushes you into the newcomer's arms and moves in behind you. Soon the two of you are fondling one another while Garrett moves in behind you. Feeling his stiff manhood grinding at your rear, you raise your tail and grind right back against it. As the stud behind you pushes his thick rod into your ass, the [if the remainder after dividing hgryphon_TGcount by 4 is 1]horny twink[else if the remainder after dividing hgryphon_TGcount by 4 is 2]other horny male[else if the remainder after dividing hgryphon_TGcount by 4 is 3]effeminate male[else]other randy male[end if] drops to his knees and starts sucking your [cock size desc of player] cock[if cock length of player > 24]. He has some difficulty taking your big member at first, but he's nothing if not persistently eager and eventually gets it stuffed into his beak and down his throat thanks to some firm thrusting from Garrett[else]. He takes your hard member into his beak with a long moan heavy with lust[end if]. Thus you end up between the two, Garrett's thrusts into you driving your cock into the other male's sucking mouth.";
 	say "     The new male works his tongue and palate over your cock with lustful zeal. The gryphon cum he's been ingesting has definitely made him into quite the horny gay slut. Though what does that say about you if you're the one getting pounded in the ass while sucked off by another guy? You can't help but moan at the thought of all the hot gay gryphon sex you could be having, especially if you help Garrett gather a few more volunteers like this guy.";
 	WaitLineBreak;
-	say "     With two sexy males working you over so well, it's not too long before you're rumbling with pleasure. Your cock throbs in the gryphon's [if cock length of player < 8]mouth[else]throat[end if] and your ass squeezes all the harder around Garrett's pulsing rod. Moaning that you're geting close, Garrett grabs your hips all the harder and makes several sharp thrusts into you. Soon your tailhole is forced open enough to accept the stud's knot and he successfully ties with you. This added pressure against your prostate sends you over the top and you unload your [cum load size of player] load down the newcomer's throat. He swallows down every last drop he can get[if cock width of player > 36], leaving him bloated and full in the end[else if cock width of player > 24], giving him a pleasantly rounded belly in the end[end if]. Your cocksucking friend releases your spent shaft to share a long, sloppy kiss with you while waiting for Garrett's swollen knot to go down.";
+	say "     With two sexy males working you over so well, it's not too long before you're rumbling with pleasure. Your cock throbs in the gryphon's [if cock length of player < 8]mouth[else]throat[end if] and your ass squeezes all the harder around Garrett's pulsing rod. Moaning that you're getting close, Garrett grabs your hips all the harder and makes several sharp thrusts into you. Soon your tailhole is forced open enough to accept the stud's knot and he successfully ties with you. This added pressure against your prostate sends you over the top and you unload your [cum load size of player] load down the newcomer's throat. He swallows down every last drop he can get[if cock width of player > 36], leaving him bloated and full in the end[else if cock width of player > 24], giving him a pleasantly rounded belly in the end[end if]. Your cocksucking friend releases your spent shaft to share a long, sloppy kiss with you while waiting for Garrett's swollen knot to go down.";
 	if HP of Garrett is 6, now HP of Garrett is 7;
 	now lasthgryphon_TG is 255;
 

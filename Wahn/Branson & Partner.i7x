@@ -236,7 +236,7 @@ instead of going north from Branson & Partner Reception while (HP of Melanie is 
 	say "     'And then there are Lola and Layla,' Melanie goes on to say and waves her hand a little to draw your attention away from Elise's looks. For a second, you think you're seeing double as you look at the persons who step up, as it is literally the same woman twice over. Only when the snow-white bunny twins with their white-blond long hair come to a stop next to their colleagues do the differences become apparent. While the first one (Lola) looks you straight in the eye and sets her hands on her hips in a confident stance, her sister Layla appears somewhat more demurely, hands held relaxed behind her back. All four of them - or five, including Melanie - stand at attention, looking at you with interest in their eyes.";
 	LineBreak;
 	say "     [bold type]How do you want to introduce yourself to them?[roman type][line break]"; [Note: Just some flavour choices for player amusement, no story forks attached to any choice]
-	say "     [link](1)[as]1[end link] - Show em who's boss and get in a few gropes. They'll be used to it from Branson.";
+	say "     [link](1)[as]1[end link] - Show [']em who's boss and get in a few gropes. They'll be used to it from Branson.";
 	say "     [link](2)[as]2[end link] - Give them a confident, business-like greeting.";
 	say "     [link](3)[as]3[end link] - Be friendly and joke around a little as you greet them.";
 	now calcnumber is 0;

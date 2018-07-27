@@ -34,7 +34,7 @@ The Food of it is 40.
 The water of it is 20.
 The Diet of it is { "Meat"  }.
 The Perks of it is { "Hunter" }.
-The science advisor of it is "An odd looking husky, this one seems to be one of the few that aren't totally submissive. She is definitely the smart one, as she is carrying a small clipboard much like yours, with a pen.".
+The science advisor of it is "An odd-looking husky, this one seems to be one of the few that aren't totally submissive. She is definitely the smart one, as she is carrying a small clipboard much like yours, with a pen.".
 
 
 

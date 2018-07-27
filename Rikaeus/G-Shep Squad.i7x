@@ -24,7 +24,7 @@ Instead of resolving a Canine Patrol:
 		say "     While trying to move unnoticed through the city, you come across a sight not uncommon these days. Not far from you, a woman well on her way to becoming one of those vapid husky girls is being accosted by another mutant, a large feline in this case. She is pinned against the side of a car, the wind knocked out of her and her remaining scraps of clothing are being torn away. Before you can decide what if anything to do about this, you hear a chorus of barks, quickly getting louder. The noise comes from a pair of German Shepherds in partial police uniforms.";
 		say "     'Halt! Police! Unhand that woman!' they cry, switching to all fours and charging faster. The feline, startled by this, takes a couple of steps back. His would-be victim, seeing a chance for rescue, makes a break towards the police dogs. The cat takes a few steps towards her in an attempt to grab her, but then backs down as the barking dogs draw nearer. The pair motion for the dog-woman to wait and continue on, giving brief chase to ensure he's well and truly run off before going back to talk to the victim.";
 		say "     ";
-		say "     [bold type]Shall you go talk to these K9 officers or make a discrete exit while you can?[roman type][line break]";
+		say "     [bold type]Shall you go talk to these K9 officers or make a discreet exit while you can?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go and talk to them.";
 		say "     ([link]N[as]n[end link]) - Exit.";

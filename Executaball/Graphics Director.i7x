@@ -27,7 +27,7 @@ This is the ngraphics_clearcheck rule:
 			say "[bold type]DEBUG:[roman type] After looking, *Function not run* because TempClearBypass = 1 [line break]";
 	else:
 		follow the ngraphics_blank rule;
-		say "[bold type]ERROR:[roman type] You have an invald graphics clear bypass state! Please inform the FS developers in Discord. Here is an important number: [TempClearBypass] [line break]";
+		say "[bold type]ERROR:[roman type] You have an invalid graphics clear bypass state! Please inform the FS developers in Discord. Here is an important number: [TempClearBypass] [line break]";
 
 This is the ngraphics_refresh rule:
 	if graphics is true and NewGraphics is true:

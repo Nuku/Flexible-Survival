@@ -1,9 +1,9 @@
 Version 1 of Mall Expansion by Wahn begins here.
 
 [ BullTerrierSiblingsVar                               ]
-[   0: never met em                                    ]
+[   0: never met them                                  ]
 [   1: player saw them and knows they are siblings     ]
-[   2: player watched em fuck                          ]
+[   2: player watched them fuck                        ]
 
 
 lastMallInteriorScene is a number that varies. lastMallInteriorScene is usually 10000.
@@ -39,7 +39,7 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 			say "     'FFffuuuuckkk YEAH! Take it Jane!' Boomer shouts at the top of his voice, all the while still humping against her crotch, grinding his throbbing shaft even deeper. You can see the outline of that massive piece of equipment under her toned abs, pulsing with more and more cum being shot into her. Meanwhile, Korvin is frantically jerking his own doggy cock, catching up to the two of them in short notice. As his climax hits, the German shepherd stumbles a little, not quite as firm in his stance as he trembles in arousal - but you catch him and keep a hand on his shoulder. With barely suppressed grunts, he starts shooting off his own load a heartbeat, splattering the side of the sofa with his cum.";
 			WaitLineBreak;
 			say "     For a few moments, quiet fills the real estate agent's office, only interrupted by the heavy breathing of three well-sated anthro dogs. The siblings on the ground start making out, intermixed with Boomer licking at Jane's breasts, thankfully still too occupied with one another to notice yourself and your companion. After a last glance to take in their forbidden coupling, you decide to keep things from becoming awkward and take Korvin by the arm to guide him outside. You pat your trusty attack dog on the shoulder, getting a pleased lick to your hand as he tells you that he likes being yours, then stroke the warm fur on Korvin's neck and head before telling him to get going with you. Walking back to the mall atrium, you get back to what you had originally planned to do.";
-			now BullTerrierSiblingsVar is 10; [watched em fuck]
+			now BullTerrierSiblingsVar is 10; [watched them fuck]
 		else:
 			LineBreak;
 			say "     You pat your trusty attack dog on the shoulder, consoling him on the lost opportunity, then stroke the warm fur on his neck and head before telling him to get going with you. Walking back to the mall atrium, you get back to what you had originally planned to do.";
