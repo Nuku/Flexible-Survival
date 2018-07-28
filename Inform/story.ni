@@ -5481,6 +5481,7 @@ Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Erica by Wahn.
+Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Stripes.
 Include Farmhands by Wahn.
@@ -5564,6 +5565,7 @@ Include Sally by Stripes.
 Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
+Include Savina by Kurainyx.
 Include Serenity by Kurainyx.
 Include Sidney by Stripes.
 Include Skarnoth by Wahn.
