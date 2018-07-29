@@ -7,9 +7,9 @@ Astroslide Field Showers is a room.
 Astroslide Field Showers is north of Astroslide Field Locker-room.
 
 [Not used as a classic room]
-The description of Astroslide Field Shower is "".
+The description of Astroslide Field Showers is "".
 
-instead of going to Astroslide Field Locker-room:
+instead of going to Astroslide Field Showers:
 	say "[astroslideShowersStart]";
 
 to say astroslideShowersStart:
@@ -105,10 +105,10 @@ to say astroslideShowers3:
 			impregchance;
 
 to say astroslideShowerResult:
-	say "The shower refreshed you. [bold type]Your HP, your libido and your thirst recover[roman type]. However, [bold type]the water propagates the nanites in your body, [bold type]infecting you with the Gorilla strain[roman type].";
+	say "The shower refreshed you. [bold type]Your HP, your libido and your thirst recover[roman type]. However, [bold type]the water propagates the nanites in your body, [bold type]infecting you with the Football Gorilla strain[roman type].";
 	PlayerHealed 20;
 	LibidoLoss 40;
 	PlayerDrink 25;
-	infect "Gorilla";
+	infect "Football Gorilla";
 
 Astroslide Field Showers ends here.
