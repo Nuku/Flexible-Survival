@@ -193,6 +193,18 @@ to FeatGain (Featname - text):
 	else if debugactive is 1:
 		say "ERROR: Trying to add [Featname], which the player already has.";
 
+to MoraleLoss (N - number):
+	LineBreak;
+	say "[bold type]Your morale has decreased by [N]![roman type][line break]";
+	decrease morale of player by N;
+
+to MoraleBoost (N - number):
+	LineBreak;
+	say "[bold type]Your morale has increased by [N]![roman type][line break]";
+	increase morale of player by N;
+	if humanity of player > 100:
+		now morale of player is 100;
+
 
 to StatChange (Statname - a text) using (Value - a number):
 	if Value is 0:

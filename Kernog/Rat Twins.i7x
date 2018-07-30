@@ -17,6 +17,13 @@ Part A - Character Variables
 1 - Repeat
 ]
 
+to RomanQuestLog:
+	if HP of Erin is:
+		-- 1:
+			say "[bold type]The Rat Adventurers[roman type]: I helped a couple of rats who got into trouble with a gang of sharks, on the beach. They wrote a note for me. It said they would be [bold type]at the Restaurant upstairs[roman type].";
+		-- 2:
+			say "[bold type]The Rat Adventurers (COMPLETED)[roman type]: I made acquaintance with Erin and Violet, the rat twins. I should visit them from time to time.";
+
 Part B - Non-Essential
 
 isTwinHere is a number that varies. [0 no, 1 yes]
@@ -53,8 +60,6 @@ instead of conversing Erin:
 
 Part C - Sex scenes
 
-
-
 instead of fucking Erin:
 	if (lastfuck of Erin - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'Ho ho, hey, easy tiger! I'm all for going another round, but some other time. I have things to do.'";
@@ -62,6 +67,7 @@ instead of fucking Erin:
 		say "     'That's a smile I know well,' Erin says as you come up to him. While not directly looking at you, you also notice Violet's ears perking up and trying to eavesdrop your conversation. 'What are your plans this time?'";
 		WaitLineBreak;
 		say "[ErinSexMenu]";
+		LibidoLoss 50;
 
 to say ErinSexMenu:
 	LineBreak;
@@ -245,6 +251,7 @@ instead of fucking Violet:
 		say "     'Definitely. It'll help to stave off the heat. What do you propose we do?'";
 		WaitLineBreak;
 		say "[VioletSexMenu]";
+		LibidoLoss 50;
 
 to say VioletSexMenu:
 	LineBreak;
@@ -509,6 +516,7 @@ to say ratTwincest:
 		say "     They go at it in this fashion for several minutes, with Erin meekly trying to struggle under Violet as she relentlessly sucks on his member. Eventually, she lets it pop out of her muzzle, and being to polish it, making Erin jump under her. 'What's that?' she asks. 'Being embarrassed? You? What are you -uhn- embarrassed of? Of being dommed by your big sis? Of -oh- letting [if player is not defaultnamed][name of player] [else]our friend [end if]know that you have the hots for me? Is it -f...- because you are ashamed of these big, rat balls of yours?' As she asks this, she lightly squeezes the certainly oversized package of her sibling, who moans loudly in response. 'Or is it because big sis is going to make you cum -ah ahh- and -uhn- swallow it to the l-last drop?'";
 		say "     Erin howls against his twin's crotch as he hears this, and his cock begins to spurt cum in the air, like a geyser. True to her word, Violet puts the head of the male rat back in her mouth and drinks everything, sucking him further to get every last milliliter. From the audible gulps, you can tell that this is a rather consequent load. Once she is done, Violet licks her chops, and give Erin's balls another squeeze. 'You're not done yet.' Once again, you can hear the rat pleasuring his sister. He only needs half-a-minute to make Violet tense up and cream his muzzle: 'F-ffffuuuck!";
 		say "     She rolls on the side and looks at you: 'Liked the show? Give us a moment, would you?' You agree and give them some privacy. A few minutes later, both siblings come out. Erin gives his sister a big hug. 'You're a sadist, you know that?' he asks. Violet says nothing, and simply scratches his twin's chin affectionately.";
+		LibidoBoost 25;
 	else:
 		LineBreak;
 		say "     You walk away, and pass the time getting some rest and chatting with the regular patrons of the place. A dozen minutes or so later, the door to the storage room opens and Violet comes out. 'Hey, it's nice to see you again. Don't be a stranger, come here,' she says as she notices you. Erin is on her heels, and wrap his arms around her chest, but freezes as he sees you, and turn the embrace into an awkward hug.'";

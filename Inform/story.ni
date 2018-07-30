@@ -4987,6 +4987,7 @@ Include Text Capture by Eric Eve.
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astroslide Field Locker-room by Kernog.
+Include Astroslide Field Showers by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
 Include Azrael by Rikaeus.
