@@ -1,4 +1,5 @@
 Version 1 of Inflatable Orca by Song begins here.
+[ Version 1.0 - Initial bound state content - Song ]
 
 "Adds a special fight with the large Inflatable Orca toy in the Bouncy Castle, managed as a creature. It is not an infection, and losing to it results in a bound state."
 
@@ -394,7 +395,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Inflatable Orca"; [ Infection/Creature name. Capitalized. ]
-	now attack entry is "[one of]The playful cetacean bumps you every which way, making you stumble on the unsteady footing of the padded floor[or]The orca knocks you off your feet with a mighty swing of its tail[or]Trilling playfully, the orca rears up and rubs its synthetic body against your side, making you stumble[or]The large inflatable jumps at you and attempts to pin you down. You quickly weasel out from under it before it can do much else[or]The giant orca slams the ground with it tail, bouncing you up into the air before landing harmlessly on the padded floor again[or]The cetacean makes a point of rubbing against you suggestively. You strumble in your efforts to push it away[at random].";
+	now attack entry is "[one of]The playful cetacean bumps you every which way, making you stumble on the unsteady footing of the padded floor[or]The orca knocks you off your feet with a mighty swing of its tail[or]Trilling playfully, the orca rears up and rubs its synthetic body against your side, making you stumble[or]The large inflatable jumps at you and attempts to pin you down. You quickly weasel out from under it before it can do much else[or]The giant orca slams the ground with it tail, bouncing you up into the air before landing harmlessly on the padded floor again[or]The cetacean makes a point of rubbing against you suggestively. You stumble in your efforts to push it away[at random].";
 	now defeated entry is "[beattheinflatableorca]"; [ Text when monster loses. ]
 	now victory entry is "[losetoinflatableorca]"; [ Text when monster wins. ]
 	now desc entry is "     You find yourself at odds with the large, inflatable orca. The two-tone cetacean regards you as little more than a toy for its amusement, trilling playfully as it bounces around with seemingly boundless energy."; [ Description of the creature when you encounter it. ]

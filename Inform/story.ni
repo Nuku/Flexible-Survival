@@ -31,7 +31,7 @@ Use Scoring.
 		let N be 0 minus N;
 	decide on N.] [enable this to compile on older versions of inform]
 
-[ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
+[ Basic Functions moved to Basic Functions.i7x in Core Mechanics ]
 
 The release number is 65.
 The story creation year is 2010.
@@ -5507,6 +5507,7 @@ Include HypnoGeeks by Wasp.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
+Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
 Include Jay by Wahn.
