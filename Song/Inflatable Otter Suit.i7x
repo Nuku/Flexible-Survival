@@ -260,7 +260,7 @@ to InflatableOtterSuitBind:
 				if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle": [player picked struggle]
 					LineBreak;
 					increase struggleatt by 1;
-					if InflatableOtterSuitBindStage is 3 or struggleatt < boundsegment: [Determines if the cumulative "struggle attribute" < or equal to bound stage. If equal to, the player escapes. Each orgasm will remove a tick of struggleatt.]
+					if InflatableOtterSuitBindStage is 3 or struggleatt < boundsegment: [Determines if the cumulative "struggle attribute" < or equal to bound stage. If equal to, the player escapes. Each orgasm will remove struggleatt.]
 						if InflatableOtterSuitBindStage is 1:
 							say "     Alarmed by the strange suit's embrace, you reach for the zipper in an effort to pull it down. Your clumsy mittens struggle to grasp the fly, and the suit attempts to zip back up whenever your grip falters. The supple vise around your length makes it difficult to focus, stroking and squeezing distractingly as you struggle to escape.";
 						else if InflatableOtterSuitBindStage is 2:
@@ -273,7 +273,7 @@ to InflatableOtterSuitBind:
 						LineBreak;
 						InflatableOtterSuitSanityPassive;
 						InflatableOtterSuitLust;
-					else if libido of player > 79: [player would escape the bind, but lust is too high]
+					else if lustatt > 79: [player would escape the bind, but lust is too high]
 						if InflatableOtterSuitBindStage is 1:
 							say "     With some difficulty, you manage to secure a hold on the suit's finnicky zipper and overpower its resistance, pulling it down enough to start squirming free. The suit clings to your arms as you tug them out of the puffy sleeves, reaching up to tear away the hood covering your face with one while fending off its continued efforts to ensnare you with the other. Just as you're about to pry it off, your rising arousal gets the better of you and you squeal into the gag, spraying your [cum load size of player] load into the suit's rippling cocksheath.";
 							say "     Unable to ignore your forced orgasm, your focus falters until you finally cease trying to struggle altogether, simply enjoying the bliss that radiates from your cum-soaked crotch. The suit utilizes this window of weakness to resume its climb, helpfully zipping back up again and sliding the vinyl sleeves of its arms over your own. Your still-twitching cock is massaged by the shifting plastic to soothe and distract you, and you can do nothing but pant into your gag as pleasure overwhelms your senses.";
@@ -298,6 +298,7 @@ to InflatableOtterSuitBind:
 							say "     After a considerable amount of effort, you finally force enough air out of the suit to regain some semblance of control over your limbs. Uncomfortable in your current, quite vulnerable position, you rock back and forth until you gain enough momentum to roll onto your fore, then push yourself up to your knees. The suit attempts to reinflate, but it's been weakened too much by your tenacious resistance to flip you back over. Disaster averted, you reach up to seek out its zipper again, determined not to let the inflatable overpower you.";
 							now Libido of Inflatable Otter Suit is 0;
 							now InflatableOtterSuitBindStage is 1;
+							now boundsegment is 0;
 						else: [3+: Impossible to trigger]
 							say "     ERROR <OtterSuitStruggleSuccess>: This text should never appear. Please file a bug report on the FS Discord and include the above error message.";
 							now Libido of Inflatable Otter Suit is 0;
@@ -363,7 +364,7 @@ to InflatableOtterSuitBind:
 								-- 1:
 									say "     Despite the suit's arousing motions, you do your best to ignore its attempts to seduce you. You take several deep, measured breaths and close your eyes, resisting the temptation to reach below and masturbate your vinyl-coated cock. Try as you might, you struggle to block the idea from your mind, only barely catching your mitten-covered hand from straying to your crotch.";
 								-- 2:
-									say "     You such a sharp breath past the gag stuffing your mouth, the potent aroma of tainted vinyl drawn into your lungs. Despite temptation, you try to resist the suit's encouraging contact, keeping your hands at your sides to refrain from touching yourself in any way that might exacerbate your arousal.";
+									say "     You suck a sharp breath past the gag stuffing your mouth, the potent aroma of tainted vinyl drawn into your lungs. Despite temptation, you try to resist the suit's encouraging contact, keeping your hands at your sides to refrain from touching yourself in any way that might exacerbate your arousal.";
 								-- 3:
 									say "     Quieting the urge the moan, you try to stay still as the suit's cock-shaped sheath ripples around your meat. The sensation becomes increasingly pleasurable and distracting over time, making it difficult to focus on enduring - or escape.";
 						else if InflatableOtterSuitBindStage is 2:
