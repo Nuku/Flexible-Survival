@@ -289,15 +289,22 @@ to InflatableOtterSuitBind:
 						if InflatableOtterSuitBindStage is 1: [Ends bound state]
 							say "     With some difficulty, you manage to secure a hold on the suit's finnicky zipper and overpower its resistance, pulling it down enough to start squirming free. The suit clings to your arms as you tug them out of the puffy sleeves, reaching up to tear away the hood covering your face with one while fending off its continued efforts to ensnare you with the other. You seize its lapse in control to dart up and kick it away, stumbling back on the unsteady flooring as the malevolent suit falls inert once more.";
 							say "     Naked as the day you were born, you take a moment to recover after your recent exertions. The suit's persistent stimulation has left you feeling much more sensitive and vulnerable than before. The ease with which it transitioned from a benign material to an active threat has you on edge, and you cautiously move closer to gather your clothes and equipment. Once redressed, you give the suit a wide berth and resolve to be more careful in the future.";
+							now Libido of Inflatable Otter Suit is 0;
+							LineBreak;
+							cleanboundmemory;
+							now trixieexit is 1;
+							now InflatableOtterSuitBindStage is 0;
 						else if InflatableOtterSuitBindStage is 2: [Lowers stage to 1]
 							say "     After a considerable amount of effort, you finally force enough air out of the suit to regain some semblance of control over your limbs. Uncomfortable in your current, quite vulnerable position, you rock back and forth until you gain enough momentum to roll onto your fore, then push yourself up to your knees. The suit attempts to reinflate, but it's been weakened too much by your tenacious resistance to flip you back over. Disaster averted, you reach up to seek out its zipper again, determined not to let the inflatable overpower you.";
+							now Libido of Inflatable Otter Suit is 0;
+							now InflatableOtterSuitBindStage is 1;
 						else: [3+: Impossible to trigger]
 							say "     ERROR <OtterSuitStruggleSuccess>: This text should never appear. Please file a bug report on the FS Discord and include the above error message.";
-						now Libido of Inflatable Otter Suit is 0;
-						LineBreak;
-						cleanboundmemory;
-						now trixieexit is 1;
-						now InflatableOtterSuitBindStage is 0;
+							now Libido of Inflatable Otter Suit is 0;
+							LineBreak;
+							cleanboundmemory;
+							now trixieexit is 1;
+							now InflatableOtterSuitBindStage is 0;
 					WaitLineBreak;
 					next;
 				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2": [player picked oblige/abide - currently no custom text for each!]
