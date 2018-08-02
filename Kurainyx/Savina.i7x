@@ -118,7 +118,9 @@ Instead of conversing Savina:
 	say "     [one of]'Be grateful that I let you keep your wits to hunt for me instead of making you into a mindless servant.'[or]'How serendipitous that you came along to be my pet. Things were getting dull around here.'[or]Instead of speaking, Savina stares intently into your eyes, entrancing you with her hypnotic gaze. She breaks her hold on you a few moments later and chuckles mischievously at your confusion over losing your train of thought.[at random]";
 
 Instead of fucking Savina:
-	if lust of Savina < 1:
+	if (lastfuck of Savina - turns < 6): [Had sex in the last 18 hours = 6 turns]
+		say "     'My pet has quite the libido to want my caring touch so soon,' Savina comments, looking at you in amusement. 'However, I'm not in the mood. Either come back later or bring me a treat. Maybe then, I'll be more inclined to play with my pet.'";
+	else if lust of Savina < 1:
 		say "     Savina watches you with a bored look as you approach her, and when you ask to spend some time with her, she snorts derisively. 'I have given you enough attention,' the apathetic reptile chastises. 'The deal is that you [bold type]hunt for me[roman type] in return for me playing with my pet. I am not running a charity case here. Fulfill your end of the bargain, then we can talk. Now, go.'";
 	else:
 		say "     'Oh, does my pet need some attention?' Savina asks in a playful tone when you approach her. ";
@@ -140,6 +142,11 @@ to say SavinaSexMenu:
 	now sortorder entry is 1;
 	now description entry is "have Savina press her tail into your rear";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Get eaten";
+	now sortorder entry is 1;
+	now description entry is "let Savina eat you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -158,6 +165,9 @@ to say SavinaSexMenu:
 				now sextablerun is 1;
 				if nam is "Get tail-pegged":
 					say "[SavinaSexAnal]";
+				if nam is "Get tail-pegged":
+					say "[SavinaVore]";
+				now lastfuck of Savina is turns;
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -178,6 +188,15 @@ to say SavinaSexAnal:
 	say "     A mix of pain and pleasure wreaks havoc on your lust-addled mind, and it's even further overloaded when her tail starts wriggling, thoroughly rubbing every pleasurable spot along your inner walls. You moan in ecstasy as that wondrous tail continues to slowly sink deeper into you, and it is almost a relief when it finally comes to a stop, only for the tantalizing process to repeat as it pulls out, dragging along your sensitive walls. When only the very tip of the massive tail is all that remains in your ass, you barely have a moment to catch your breath or dwell on the aching void that had been left in you before Savina drives her tail back into you in one smooth motion. A primal scream escapes you from the euphoria that starts from your filled rear and rapidly spreads through you in a blissful haze, and the smirking snake holds you still as your body trembles from the overwhelming pleasure[if player is male], your cum raining down onto the forest floor[else if player is female], your juices raining down onto the forest floor[end if].";
 	say "     'What an adorable sound my pet makes,' Savina teases, listening to the moans you make while she pumps her tail in and out of your sphincter. 'I could listen to you all day, and there's nothing you can do to stop me. After all, you belong to me, and I could play with you for as long as I wish.' She punctuates her lecherous threat with a powerful thrust into your abused asshole, forcing another climax out of you. Even as you writhe in ecstasy, the lascivious serpent continues to piston her tail into you, suspending you in a cycle of unwavering bliss as she wrings climax after climax out of you. And yet, despite your exhaustion and aching behind, you cannot help but love the attention and pleasure your scaled mistress lavishes upon you. ";
 	say "     An almost sadistic smile crosses Savina's face while she relishes in your helpless squirms and squeals of delight, but eventually, her thrusting starts to slow down as she grows bored. By the time she does finally pull her tail out, you had endured more than a few orgasms, leaving you teetering on the edge of passing out from exhaustion. Unable to move and your mind still dazed by a haze of pleasure, you can only feebly twitch within the snake's grasp, your moans the only thing that can be heard in the clearing. Thankfully, Savina slowly lowers your abused body, gently relinquishing you from her coils and onto the forest floor. 'Looks like I can fit quite a bit of myself within you,' Savina taunts as you heave for air on the ground. 'Do keep up the good work, my pet, and I'll be sure to properly [italic type]reward[roman type] you again.' You nod without thinking as you shakily get back on your feet, a part of you already yearning to relive the intense, yet gratifying ordeal.";
+
+to say SavinaVore:
+	say "     'Hmm, it's been a while since I got a proper taste of my pet,' Savina says, licking her lips with her humanoid tongue. 'Perhaps I shall indulge myself, and I don't think you are opposed to the idea as well. After all, you miss the euphoria of being inside of me, to be stripped of all of your senses until all you know and feel is being a part of me.' You nod in agreement, unable to refute your mistress as you stare into her wonderful eyes. 'Good pet,' she coos. 'Just relax and let me put you in your proper place.' The coils restraining you rise up, lifting you along with them until you are right above the snake's head, and she smirks deviously before she tilts back, her mouth opening wide. It would be simple enough for her to just drop you, letting you plummet into the abyss that is her gullet, but instead, she slowly lowers you down, her humanoid tongue tickling and caressing your feet as soon as they come into range.";
+	say "     As her coils gradually slip away, her lips close around your legs, and you relish the warmth that you're being submerged in, reminding you of the bliss of being a part of your scaly mistress and making you want to delve inside of her as soon as possible. However, Savina has other ideas as she holds you in place, suckling on your helpless form like you're a lollipop. Her tongue teases your feet, but it quickly moves up to lap at your [if cocks of player > 1]cock[smn][else if cunts of player > 1]cunt[sfn][else]groin[end if]. With your lower half trapped in the warm, soft confines of her mouth, you can do nothing as her probing tongue lavishes you with sensual attention until you reach your climax, [if cocks of player > 1]spraying your cum down her throat[smn][else if cunts of player > 1]spraying your juices down her throat[sfn][else]spasming in her grip[end if]. Even after your release, Savina continues to torment you with her tongue, and you can feel the rumbles of her chuckling as you squirm helplessly, unable to budge her by even a single inch. Just as you approach your second orgasm, your mistress finally releases her grip on you, dropping the rest of you inside of her mouth.";
+	WaitLineBreak;
+	say "     Being so close to your second climax, you try and get your release by humping the snake's tongue, and your lust-filled senses hardly notice the closing mouth until you are submerged in darkness. Before you get to finish yourself off, you are abruptly pushed to the back of the living chamber, and with one audible swallow, you are pulled down the snake's throat by her powerful muscles, the inner walls welcoming you into their embrace. You moan wantonly at the familiar caress of Savina's flesh rubbing into you from every angle, inciting all of your senses, and you finally achieve your long-awaited orgasm as the pulsing flesh wrings it out of you, [if cocks of player > 1]your cum splattering against the walls[else if cunts of player > 1]your juices splattering against the walls[end if].";
+	say "     Exhausted by your back-to-back releases, you go limp, allowing yourself to be fully taken by Savina as her voice rumbles from all around you, saying, 'You are simply delectable, my pet. Far more exquisite than the common rabble that you bring me. I'm so tempted to keep you inside of me and make you mine forever, but alas, you are far more useful doing my bidding rather than serving as a one-time meal, even if you would make for a divine feast. For now though, I suggest that you get comfortable. I fully intend to savor you fully before I let you go.' You find no issue with Savina's plan, and even if you did, it's not like you can do anything about it. All you can do is feebly squirm while you are pulled through the endless tunnel of flesh. With nothing but the squelching sounds of your surroundings and the ever-present sensation of her stomach walls kneading into your weary body, you relax into your mistress's embrace until you eventually pass out in bliss.";
+	WaitLineBreak;
+	say "     When you come to, you are lying on the forest floor. You shiver from the cold, both from the spittle covering you, as well as you missing the warm confines of the snake. 'Did I tire my pet out again?' Savina teases as her head moves into your view. 'I can't help it since you're so delicious. Do come back soon, whether if you're bringing me back another treat or offering me another taste of your delectable self.' As you get up and clean yourself off, Savina watches you with a hungry gaze, and you can't help but think about being inside of the giant snake once again.";
 
 to say SavinaFeed:
 	increase lust of Savina by 4;
