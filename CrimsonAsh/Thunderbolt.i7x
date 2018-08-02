@@ -217,10 +217,10 @@ The conversation of Ariana is { "<This is nothing but a placeholder!>" }.
 The scent of Ariana is "     Ariana smells musky from a days jog, the scent underlain by a sweet smell of perfume and pheromones.".
 
 to say ArianaDesc:
-	say "     Ariana is a bipedal lioness girl standing around 6 feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her younger sister however Ariana is exceptionally more muscled and built. Ariana sports tight running shorts with a hole in them for her swishing lioness tail as well as a black tank top with her school colors strewn across them.";
+	say "     Ariana is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her younger sister however Ariana is exceptionally more muscled and built. Ariana sports tight running shorts with a hole in them for her swishing lioness tail as well as a black tank top with her school colors strewn across them.";
 
 instead of conversing the Ariana:
-	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been sweetie?' After some casual talk you eventually brooch asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion.' She says biting a finger and chuckling.";
+	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been sweetie?' After some casual talk you eventually brooch asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here, but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion,' she says, biting a finger and chuckling.";
 
 instead of fucking Ariana:
 	say "     What exactly do you plan on doing with the young lioness?";
@@ -273,7 +273,7 @@ The conversation of Eres is { "<This is nothing but a placeholder!>" }.
 The scent of Eres is "     Eres smells of evergreen grass with a hint of the innards of a book.".
 
 to say EresDesc:
-	say "     Eres is a bipedal lioness girl standing around 6 feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe from frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
+	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe from frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
 
 instead of conversing the Eres:
 	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about out past.' She gazes back down to her journal smiling fondly.";

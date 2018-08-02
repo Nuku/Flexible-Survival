@@ -56,7 +56,7 @@ Instead of resolving a Policeman:
 		if player consents:			[quest becomes active]
 			LineBreak;
 			now mqstatus is 1;
-			say "     'Good, I figured you were right for the job. Those damn pussies are on the lookout for me now, so I need someone else to help me get the rest of those keys.' He smacks his broad chest. 'I may be in much better shape now, but they're still faster than me. I want you to bring me about five more, just to make sure we've got all the rooms. You get your ass to the Red Light District, get those keys and then report back to me, good ole Sgt Marks. Then I can lay down the law.'";
+			say "     'Good, I figured you were right for the job. Those damn pussies are on the lookout for me now, so I need someone else to help me get the rest of those keys.' He smacks his broad chest. 'I may be in much better shape now, but they're still faster than me. I want you to bring me about five more, just to make sure we've got all the rooms. You get your ass to the red light district, get those keys and then report back to me, good ole Sgt Marks. Then I can lay down the law.'";
 			say "[motelkeycheck]";
 		else:					[quest refused / tiger cop now enemy]
 			LineBreak;

@@ -391,7 +391,7 @@ to say fgob_vicsex3:	[f-gob oral sex]
 
 
 to say fgob_vicsex3_m:
-	say "[if cocks of player > 1]cocks[else]cock[end if].";
+	say "cock[smn].";
 	if cock length of player >= 18:
 		say "     At first she's a bit apprehensive, clearly unsure about how she'd go about pleasuring [if cocks of player > 1]such [cock size desc of player] tools[else]such a [cock size desc of player] tool[end if], but she's inevitably coaxed into improvising with a little forceful encouragement. Grabbing [if cocks of player > 2]two of them[else if cocks of player > 1]both of them[else]the organ[end if] with both hands, her tongue moves to caress the length [if cocks of player > 1]of one of them[else]of the shaft[end if]. She's clearly quite dexterous and seems to perform fairly well in spite the circumstances, driving you into arousal with desired expedience.";
 		if cocks of player is 1:
@@ -468,7 +468,7 @@ to say mgob_vicsex3:	[m-gob oral sex]
 		say "[mgob_vicsex3_f]";
 
 to say mgob_vicsex3_m:	[m-gob oral m-player]
-	say "[if cocks of player > 1]cocks[else]cock[end if].";
+	say "cock[smn].";
 	if cock length of player >= 18:
 		say "     At first he's a bit apprehensive, clearly unsure about how he'd go about pleasuring [if cocks of player > 1]such [cock size desc of player] tools[else] such a [cock size desc of player] tool[end if], but he's inevitably coaxed into improvising with a little forceful encouragement. Grabbing [if cocks of player > 2]two of them[else if cocks of player > 1]both of them[else]the organ[end if] with both hands, his tongue moves to caress the length [if cocks of player > 1]of one of them[else]of the shaft[end if]. He's clearly quite dexterous and seems to perform fairly well in spite the circumstances, driving you into arousal with desired expedience.";
 		if cocks of player is 1:

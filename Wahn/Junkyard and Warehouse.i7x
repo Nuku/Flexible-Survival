@@ -312,7 +312,7 @@ to say sexwithSteven:
 		if Stevenremoved is 0:
 			if Steventrust is 0:
 				say "You approach Steven, and give him a long, tender kiss. He seems astonished and tries to back away, but as you keep on kissing him, he slowly starts to let loose. Just as you get into it, and start tugging his shirt, he pulls away. 'I'm sorry, I can't,' he stands in the corner, looking at his bookshelf. 'I have a responsibility now. I can't give up on it. Not yet. Not now.'";
-				say "You hug him from behind and take off his trousers, exposing his cock. His black, 7-inch horse cock.";
+				say "You hug him from behind and take off his trousers, exposing his cock. His black, seven-inch horse cock.";
 				say "'I was working at the station when I heard the sirens,' he says. 'I ran straight to my apartment, and everything was on fire. I tried to find Danny. All I found was my Father's Day gift, there on the bookshelf. As I was running back, I ran into this horse thing. It must've squirted me, or something, because after I arrived here, my dick looked like this. Every day, I feel like this thing is trying to control me. But I have to suppress everything. If I go the slightest thing loose, I'll lose everything. The job I have here, the... friends I've made, my people...'";
 				say "Do you want to continue fucking him?";
 				if player consents:

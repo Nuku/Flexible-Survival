@@ -168,7 +168,7 @@ this is the powerplay rule:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	if a random chance of 1 in 2 succeeds:
-		say "'And there was 5 seconds left on the clock in the big game and then Darrell was [']Woosh! Woosh!['] past them and SLAM DUNK!' As he's excitedly re-enacting the play, he grabs you, leaps 10 feet in the air with his powerful, rabbit legs and dunks you like a ball through an imaginary hoop. 'Dude! That game was awesome!' he yells as your head rings. You take [special-style-2][dam][roman type] damage!";
+		say "'And there was 5 seconds left on the clock in the big game and then Darrell was [']Woosh! Woosh!['] past them and SLAM DUNK!' As he's excitedly re-enacting the play, he grabs you, leaps ten feet in the air with his powerful, rabbit legs and dunks you like a ball through an imaginary hoop. 'Dude! That game was awesome!' he yells as your head rings. You take [special-style-2][dam][roman type] damage!";
 	else:
 		say "The muscular bunny grabs you roughly and grinds his throbbing package against you while his paws roam over your body. Somehow being manhandled by this big, tough jock becomes quite arousing, weakening your resolve considerably. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;

@@ -1291,7 +1291,7 @@ after going to Body Shop while (Body Poke Poke is not resolved and lastBodyShopE
 	BodyPokePokeEvent;
 
 to BodyPokePokeEvent:
-	say "     When you enter the Body Shop, you see Moreau, having not noticed you, giving small pokes to one of his mannequins' face. 'Goddamit Margaret, what's wrong with you? You can barely keep up your pose since yesterday. Could you be sick? Can you guys even [italic type]get[roman type] sick?' When he notices you, the naga lets out a forced laugh, clearly to keep up appearances more than anything, before crossing his arms with a pouty face and giving you a vexed snort. 'What? I can give them names if I want. They're MY mannequins.'";
+	say "     When you enter the Body Shop, you see Moreau, having not noticed you, giving small pokes to one of his mannequins['] faces. 'Goddamit Margaret, what's wrong with you? You can barely keep up your pose since yesterday. Could you be sick? Can you guys even [italic type]get[roman type] sick?' When he notices you, the naga lets out a forced laugh, clearly to keep up appearances more than anything, before crossing his arms with a pouty face and giving you a vexed snort. 'What? I can give them names if I want. They're MY mannequins.'";
 	now lastBodyShopEvent is turns;
 	now Body Poke Poke is resolved;
 

@@ -116,11 +116,11 @@ to say TreeAscention4_Fight:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Having defeated you, the alpha wolf pounds you, closing his jaws around your neck, not strong enough to actually harm you, but definitely strong enough to send a message. Having no choice, you drop your weapon and surrender to him, to the delight of the excited submissives who all seem overjoyed to have a new pack member.";
 		now bodyname of player is "Ascension Wolf";
-		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves' bitch. Your adventure is over.";
+		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves['] bitch. Your adventure is over.";
 	else if fightoutcome is 30: [fled]
 		say "     When you realize that you fleeing is your best chance at making it out of here, you pretend to attack the alpha wolf, before turning away at the last second and run away as fast as you can. However, you realize how terrible an idea this was when the entire pack jumps you at the same time. Visibly, seeing you try to flee like a coward washed away any fear of you the submissives had, and you can only curse yourself as they drag you back to the waiting alpha. When they offer you to him, you realize a little too late that you lost your weapon while they were dragging you back, and are left defenseless in front of the feral wolf.";
 		now bodyname of player is "Ascension Wolf";
-		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves' bitch. Your adventure is over.";
+		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves['] bitch. Your adventure is over.";
 	say "     [after successful second floor]";
 
 to say TreeAscention4_Sneak:
@@ -134,6 +134,6 @@ to say TreeAscention4_Sneak:
 	else:
 		say "     Progressing as slowly as you can, you take one step after the other, stopping each time to make sure you don't hear any of the wolves move. When you hear an unmissable sound, and realize that you messed up completely by stepping on a glass shard, you don't even have time to check if the wolves are awake before they jump you, pinning you to the ground under their weight. You feel a maw full of very sharp teeth close on your throat, not strong enough to actually harm you, but definitely strong enough to send a message. Having no choice, you drop your weapon and surrender. As another pack member drags your weapon away with their maw, the wolf threatening you releases their grip, and as you look up to them, there is no mistake that this is the pack's alpha.";
 		now bodyname of player is "Ascension Wolf";
-		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves' bitch. Your adventure is over.";
+		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves['] bitch. Your adventure is over.";
 
 Tree Ascension ends here.

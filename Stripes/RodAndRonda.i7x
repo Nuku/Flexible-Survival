@@ -12,7 +12,7 @@ The conversation of Rod Mallrat is { "empty" };
 
 to say roddesc:
 	if Rod is in Mall FoodCourt:
-		say "     Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium]. He's looking a little dishevelled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.";
+		say "     Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium]. He's looking a little disheveled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.";
 	else:
 		say "     Rod has become a sexy slut rat. She has curvy hips, a tight waist and large bosom. She has a black leather outfit like most of the other slut rats, though hers is certainly much skimpier, showing off her new breasts, cute ass and bulging crotch. She has a very feminine face, though you can still pick out a few traces that remind you of the old Rod to help you identify her. She has black fur and a long, naked rat tail. She's managed to keep some of her personality thanks to Ronda, but is thoroughly a horny slut rat now.";
 

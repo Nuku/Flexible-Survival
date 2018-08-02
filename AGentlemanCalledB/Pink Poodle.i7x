@@ -36,11 +36,11 @@ to say PinkPoodledesc:
 to say losetoPinkPoodle:
 	now nopoodlesex is 0;
 	if poodleapproved is 0:
-		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy french accent, giving you one last firm kick before turning and striding away.";
+		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy French accent, giving you one last firm kick before turning and striding away.";
 	else:
 		if HP of player > 0:
 			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
-			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
+			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined French accent as she gently pushes you to the ground.";
 			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else if player is female and a random chance of 2 in 3 succeeds:
@@ -49,7 +49,7 @@ to say losetoPinkPoodle:
 				say "[pinkpoodledefeatoral]";
 		else:
 			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. ";
-			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
+			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined French accent as she steps over your supine form.";
 			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else:
