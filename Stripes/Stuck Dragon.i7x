@@ -233,7 +233,7 @@ to say christydesc:
 	if HP of Christy is 0 or HP of Christy is 1:
 		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale. The dragoness has beautiful, scarlet-colored scales and emerald-colored eyes. There are two large wings on her back. She is laying on her front and her body is so large that it is completely stuck in the doorway with no space between her body and the doorframe. The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it. The concrete wall around the doorframe has cracked, but not given way yet.";
 	else if HP of Christy < 50:
-		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale. The dragoness has beautiful, scarlet colored scales and emerald colored eyes. There are two large wings on her back. Now that she's been freed from the doorway, you're able to see just how big she is. Her body's well over 10 feet tall and 15 feet long[if remainder after dividing lust of Christy by 3 is 1]. You can still see the cum you left in her before dripping from her well-used cunt[else if remainder after dividing lust of Christy by 3 is 2]. Christy's belly is quite full of eggs right now, making it difficult for the large dragoness to move around in her improvised lair. You smile happily at your handywork, looking forward to her laying her clutch so you can play with her again and maybe fill her all over again with eggs[end if][if lust of Christy > 2]. The red dragon can often be found snuggled around her [dragoneggs] protectively[end if].";
+		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale. The dragoness has beautiful, scarlet colored scales and emerald colored eyes. There are two large wings on her back. Now that she's been freed from the doorway, you're able to see just how big she is. Her body's well over ten feet tall and fifteen feet long[if remainder after dividing lust of Christy by 3 is 1]. You can still see the cum you left in her before dripping from her well-used cunt[else if remainder after dividing lust of Christy by 3 is 2]. Christy's belly is quite full of eggs right now, making it difficult for the large dragoness to move around in her improvised lair. You smile happily at your handiwork, looking forward to her laying her clutch so you can play with her again and maybe fill her all over again with eggs[end if][if lust of Christy > 2]. The red dragon can often be found snuggled around her [dragoneggs] protectively[end if].";
 	else:
 		say "     He looks like a dragon that was ripped straight from the pages of a fairy tale. The dragon has vibrant, scarlet-colored scales and emerald-colored eyes. There are two large wings on his back. Free of the doorway and grown larger by further transformation after the spicy treat, he's grown to well over twelve feet tall and eighteen feet long. The large pussy Christy once had is now gone, replaced by an equally impressive set of male equipment. Below his legs hangs a meaty red cock that's perpetually at least semi-hard and is roughly 30 inches in length when fully engorged. And behind this ridged pillar of dragon flesh is a large and laden ballsack holding huge testes that must be at least the size of watermelons.";
 
@@ -359,7 +359,7 @@ to say dragonchange:
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
 		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
-		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
 		now skin of player is "blue colored dragon scales covering your";
 		now cock of player is "[one of]draconic[or]azure[or]blue dragon[at random]";
@@ -435,7 +435,7 @@ to say dragonchange:
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
 		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
-		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
 		now skin of player is "blue colored dragon scales covering your";
 		now cock of player is "[one of]draconic[or]azure[or]blue dragon[at random]";
@@ -923,7 +923,7 @@ to say dragonchange2:
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
 		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
-		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
 		now skin of player is "blue colored dragon scales covering your";
 		now cock of player is "[one of]draconic[or]azure[or]blue dragon[at random]";
@@ -999,7 +999,7 @@ to say dragonchange2:
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
 		now daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
-		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
 		now skin of player is "blue colored dragon scales covering your";
 		now cock of player is "[one of]draconic[or]azure[or]blue dragon[at random]";

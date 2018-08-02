@@ -57,7 +57,7 @@ Instead of resolving a Small Cave:
 					LineBreak;
 					say "     Getting back on your feet, you turn around and run as fast as you can. Even if you're slower than when you have your normal body, there is at least one chance that it will work out. Not wanting to let her toy escape before she is done with it, the playful cat pounces at you, but it seems she misjudged the distance and ends up squishing you with her belly, leaving you in front of her sheath. Looks like the position must have fired up her instincts as she starts rubbing against your body, her feline penis poking out of her sheath and pressing you against the ground. Her nubs scratch your skin, staining you with her slick cock. Your mind goes blank with the pleasure distracting you from the hole that you are about to enter.";
 					say "     In her mad humps, that giant cock lines up with your body, making you turn in dread as you see the opening of her cock slowly swallowing your feet. You try your best to escape your conundrum, but your flailing only makes her movements faster. Her pre lubes your travel through her urethra. When you are halfway through, you try to punch her gland, but with your diminutive size, it only tickles her, forcing moans out of her mouth. The entrance to her dick keeps swallowing you, which has now reached your thorax, and her musk is all that you can smell now. The rest of your body feels bound by the canal of flesh that surrounds it. Your arms stay above your head, trying to grasp at anything that will keep your head out of there. Her cock finally gets to your neck and jaw, making her pre splash in your mouth. The salty taste attacks your tongue, and you press your arms to the sides of your head in a last attempt to make you free, but it proves useless as you are swallowed whole by her cock.";
-					Say "     You travel through her urethra bounding you with its tightness, but the lubing helps this make an almost pleasant sensation. The canal keeps pulling you with each spasm of pleasure that travels her body, and every movement you make forces her convulsions to get stronger. Her pre envelopes you, making it really hard to breathe and giving you only small pockets of air to use, the salty taste of her arousal overwhelming anything else on your tastebuds. Her movements are felt directly on your body from such an intimate moment, and right now, you are experiencing something that very few will ever savor. The mad shaking of your host pulls you more and more inside of her body and towards her balls. The horny feline trembles as your feet touches something that feels harder. Looks like you are passing by her prostate. This gives you an idea. Maybe if you can make her cum, you will be ejected from this place. Do you try this plan?";
+					say "     You travel through her urethra bounding you with its tightness, but the lubing helps this make an almost pleasant sensation. The canal keeps pulling you with each spasm of pleasure that travels her body, and every movement you make forces her convulsions to get stronger. Her pre envelopes you, making it really hard to breathe and giving you only small pockets of air to use, the salty taste of her arousal overwhelming anything else on your tastebuds. Her movements are felt directly on your body from such an intimate moment, and right now, you are experiencing something that very few will ever savor. The mad shaking of your host pulls you more and more inside of her body and towards her balls. The horny feline trembles as your feet touches something that feels harder. Looks like you are passing by her prostate. This gives you an idea. Maybe if you can make her cum, you will be ejected from this place. Do you try this plan?";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get out of here.";
 					say "     ([link]N[as]n[end link]) - Stay still and travel to her balls, even though this might be a one way trip.";
@@ -100,7 +100,7 @@ Instead of resolving a Small Cave:
 					now Small cave is resolved;
 			else:
 				LineBreak;
-				Say "     You go back the way you came. It's not worth the risk, whatever it is.";
+				say "     You go back the way you came. It's not worth the risk, whatever it is.";
 	else:
 		say "     Walking around the forest, you find what appears to be a hole in a rock. It does have sound coming from the other side, so it might be worth exploring. Unfortunately, the hole is too small for you size, so you would need to shrink before going in there. Going around the forest, never letting the rock wall out of your sights, you explore for a new opening. Finally, you find what appears to be a cave big enough for you to enter, but somebody might be living inside there. Do you still wish to go inside?";
 		LineBreak;
@@ -114,7 +114,7 @@ Instead of resolving a Small Cave:
 			now Small cave is resolved;
 		else:
 			LineBreak;
-			Say "     You go back the way you came. It's not worth the risk, whatever it is.";
+			say "     You go back the way you came. It's not worth the risk, whatever it is.";
 	now battleground is "void";
 
 Forest Events ends here.

@@ -40,7 +40,7 @@ Instead of Resolving a Equineguardpost:
 		now Equineguardpost is resolved;
 
 
-Section 3-  Stablestoreroom [onyx quest part 2]
+Section 3 - Stablestoreroom [onyx quest part 2]
 
 Stablestoreroom is a situation. Stablestoreroom is resolved.
 The sarea of Stablestoreroom is "Stable".
@@ -57,7 +57,7 @@ Instead of Resolving a Stablestoreroom:
 			now XP of Onyx is 5;
 			Now Stablestoreroom is resolved;
 		else:
-			say "     You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewellery and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren't the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";
+			say "     You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewelry and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren't the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";
 			fight;
 			say "     Looking back at the room after the fight is over, you see that all the activity has shifted the already disturbed piles around even more, and you groan as you realize that you will have to start all over again in your search for the necklace. Sighing you pull yourself up and resolve to come back again later to continue the search, as you are sure the noise of your recent encounter is sure to draw more of the equine beasts to this location soon enough, and you have no desire to deal with a large group of the beasts right now...";
 	else:
@@ -65,7 +65,7 @@ Instead of Resolving a Stablestoreroom:
 		Now Stablestoreroom is resolved;
 
 
-Section 4-  Ignored Memos
+Section 4 - Ignored Memos
 
 [Fancy intro quest]
 
@@ -294,7 +294,7 @@ to hardwarefortphase4-20plus:
 
 to hardwarefortphase4fail:
 	say "     Driven back once again by the assault of the flying creatures, the horsemen are forced to scatter and take cover. Driven from their work site again, they feel in an angry, disorganized mess. In the chaos though, you are grabbed by the team's foreman and, after being given several very powerful punches to your already abused body, you are heaved by him right back into the fray.";
-	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of player < 3]over 25 feet[else if scalevalue of player is 3]over 15 feet[else if scalevalue of player is 4]over ten feet[else]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
+	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of player < 3]over twenty-five feet[else if scalevalue of player is 3]over fifteen feet[else if scalevalue of player is 4]over ten feet[else]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
 	decrease HP of player by 20;
 	if HP of player > 0:
 		now HP of player is HP of player / 2;
@@ -367,7 +367,7 @@ instead of sniffing medium sledge:
 	say "The large sledge smells of metal and broken concrete, plaster and heads.";
 
 
-Section 7-  horsepowering[Fancy quest part 3]
+Section 7 - horsepowering (Fancy quest part 3)
 
 horsepowering is a situation.
 The sarea of horsepowering is "Stable".
@@ -410,7 +410,7 @@ after going to the Grey Abbey Library when generatorfixing is 1:
 	now generatorfixing is 2;
 	try looking;
 
-Section 8-  technicalbookstore
+Section 8 - technicalbookstore
 
 [Fancy quest part 3]
 
@@ -435,7 +435,7 @@ Instead of resolving a technicalbookstore:
 
 
 
-Section 9-  contract hyenegotiation[Fancy quest part 4]
+Section 9 - contract hyenegotiation (Fancy quest part 4)
 
 contract hyenegotiation is a situation.
 provingstallionhood is a number that varies.
@@ -488,7 +488,7 @@ to say HyenegotiationHyenaAbuse:
 	infect "Herm Hyena";
 	infect "Herm Hyena";
 
-Section 10-  Horsepitfight[Fancy quest part 4b]
+Section 10 - Horsepitfight (Fancy quest part 4b)
 
 Horsepitfight is a situation.
 The sarea of Horsepitfight is "Stable".
@@ -540,7 +540,7 @@ hellgatherquest is a number that varies.
 
 
 
-Section 11-  goldenfocushunt
+Section 11 - goldenfocushunt
 
 [Fancy quest part 5a]
 
@@ -549,13 +549,13 @@ The sarea of goldenfocushunt is "Museum".
 
 instead of resolving a goldenfocushunt:
 	if hellgatherquest is 2:
-		say "Wandering the halls of the rather large museum nervously, you finally come across a small alcove in a corner, which has several shiny golden pieces of jewellery on display, including luckily enough, the golden necklace Nermine painstakingly described to you! Feeling rather guilty you glance around you quickly, before examining the glass barrier protecting the items closely, trying to figure out just how to handle your first venture into grand larceny, although several of the pieces Nermine doesn't need should make you quite well off if you can ever get out of this place... You finally find some kind of latch towards the rear of the display you think you can manage to bash open with some effort, and you get to work. It is almost an hour of rather exhausting labor later when you finally manage to pop the bulletproof glass case open, and it crashes to the floor with a loud thud. The noise is soon joined by a loud and annoyed roar from the direction of the foyer, and you wince as you realize that either one of the silent alarms was still working, or Valerie's hearing is much more sensitive than you thought. You barely have time to swipe the item Nermine sent you for off its display, before you have to turn to face the sounds of the rapidly approaching sphinx, abandoning any hope of swiping anything else as the museum guardian rounds the corner at a run.";
+		say "Wandering the halls of the rather large museum nervously, you finally come across a small alcove in a corner, which has several shiny golden pieces of jewelry on display, including luckily enough, the golden necklace Nermine painstakingly described to you! Feeling rather guilty you glance around you quickly, before examining the glass barrier protecting the items closely, trying to figure out just how to handle your first venture into grand larceny, although several of the pieces Nermine doesn't need should make you quite well off if you can ever get out of this place... You finally find some kind of latch towards the rear of the display you think you can manage to bash open with some effort, and you get to work. It is almost an hour of rather exhausting labor later when you finally manage to pop the bulletproof glass case open, and it crashes to the floor with a loud thud. The noise is soon joined by a loud and annoyed roar from the direction of the foyer, and you wince as you realize that either one of the silent alarms was still working, or Valerie's hearing is much more sensitive than you thought. You barely have time to swipe the item Nermine sent you for off its display, before you have to turn to face the sounds of the rapidly approaching sphinx, abandoning any hope of swiping anything else as the museum guardian rounds the corner at a run.";
 		challenge "sphinx";
 		if lost is 0:
 			move player to The Mysterious Shop;
 			now hellgatherquest is 3;
 			now goldenfocushunt is resolved;
 	else:
-		say "Wandering through the halls of the deserted museum, a glint of something shiny catches your eye, and you pause for a minute to look in one of the many alcoves lining the halls of the museum. The sight of several rather stunning pieces of historical golden jewellery takes your breath away for a bit, as you admire the craftsmanship and the carvings in the sides of the pieces. Considering the circumstances, you are almost tempted to try to take some of the item with you, if it weren't for the rather strong looking glass surrounding the jewellery, that and the fact that you are pretty sure Valerie out in the foyer would probably object rather strongly and violently to any theft of museum property...";
+		say "Wandering through the halls of the deserted museum, a glint of something shiny catches your eye, and you pause for a minute to look in one of the many alcoves lining the halls of the museum. The sight of several rather stunning pieces of historical golden jewelry takes your breath away for a bit, as you admire the craftsmanship and the carvings in the sides of the pieces. Considering the circumstances, you are almost tempted to try to take some of the item with you, if it weren't for the rather strong looking glass surrounding the jewelry, that and the fact that you are pretty sure Valerie out in the foyer would probably object rather strongly and violently to any theft of museum property...";
 
 Stable Related Quests ends here.

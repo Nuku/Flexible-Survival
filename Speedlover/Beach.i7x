@@ -43,7 +43,7 @@ earea of Boardwalk2 is "Outside".
 
 to say BoardwalkDesc:
 	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
-	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a cafe that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
+	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a café that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
 
 instead of sniffing the Boardwalk2:
 	say "     The air smells fresh and salty.";
@@ -54,10 +54,10 @@ Restaurant is a Room.
 The description of Restaurant is "[RestaurantDesc]".
 
 to say RestaurantDesc:
-	say "     The restaraunt is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
+	say "     The restaurant is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
 
 instead of sniffing the Restaurant:
-	say "     The restaurant smells of hamburgers, french fries, and many other kinds of foods, something that makes your stomach rumble.";
+	say "     The restaurant smells of hamburgers, French fries, and many other kinds of foods, something that makes your stomach rumble.";
 
 Rat Twins Stash is a container. It is closed. The description of Rat Twins Stash is "[RatTwinsTapeGet]".
 

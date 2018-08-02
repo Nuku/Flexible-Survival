@@ -399,7 +399,7 @@ Section 3 - Endings
 
 [when play ends:
 	if bodyname of player is "Pink Gel":
-		if humanity of player is < 10:
+		if humanity of player < 10:
 			say "     ";
 		else:
 			if player is male:
@@ -414,7 +414,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Blue Gel":
-		if humanity of player is < 10:
+		if humanity of player < 10:
 			say "     ";
 		else:
 			if player is male:
@@ -429,7 +429,7 @@ when play ends:
 
 when play ends:
 	if bodyname of player is "Purple Gel":
-		if humanity of player is < 10:
+		if humanity of player < 10:
 			say "     ";
 		else:
 			if player is male:

@@ -170,7 +170,7 @@ when play ends:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"honeycomb"	"A red-painted tin containing a wonderfully sweet smelling slice of coarse honeycomb. From the size of the cells, you know you really don't want to find the hive."	1	honeycomb
+"honeycomb"	"A red-painted tin containing a wonderfully sweet-smelling slice of coarse honeycomb. From the size of the cells, you know you really don't want to find the hive."	1	honeycomb
 
 honeycomb is a grab object. It is part of the player. It is temporary.
 

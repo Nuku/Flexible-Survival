@@ -501,7 +501,7 @@ when play ends:
 					say ". You prove to be a little bit of a nuisance, as you're rather ill-inclined to share your adoptive parent's fleshy abode with new prospects. Your caretaker doesn't seem to mind all that much, even if it proves a bit inconvenient at times";
 				say ". In time, all your memory is a blur of the reptiles['] taut, unyielding flesh flooding and enveloping you day in and day out...";
 			else:
-				say "     Overwhelmed by your infection you eventually lose all self control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
+				say "     Overwhelmed by your infection you eventually lose all self-control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
 				say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, that your new companion succumbs as you had, eventually offering itself ";
 				if player is male and ((player is female or player is mpreg_ok) and "Sterile" is not listed in feats of player) and sierramale is false:
 					say "to sire your children";

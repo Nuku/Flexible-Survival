@@ -93,7 +93,7 @@ to say down under pub scene:
 			say "     [bold type]Which would you prefer, going to the Down Under or meeting with Gillian?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go to the down under.";
-			say "     ([link]N[as]n[end link]) - Meet with gillian.";
+			say "     ([link]N[as]n[end link]) - Meet with Gillian.";
 			if player consents:
 				say "[downunderpubvisit]";
 			else:
@@ -102,7 +102,7 @@ to say down under pub scene:
 		else:
 			say "[downunderpubvisit]";
 	if location of player is Down Under Pub:
-		say "     With your visit to the Aussie pub over, you head back to the nearby Red Light District to decide where to head next.";
+		say "     With your visit to the Aussie pub over, you head back to the nearby red light district to decide where to head next.";
 		WaitLineBreak;
 		move player to Entrance to the Red Light District;
 

@@ -1,4 +1,4 @@
-﻿Version 2 of Gryphons Plot by Shay begins here.
+Version 2 of Gryphons Plot by Shay begins here.
 [ Original Event idea by Hellerhound ]
 [ Version 1 - Ideas for expansion by Wahn]
 [ Version 2 - Complete rewrite by Shay ]

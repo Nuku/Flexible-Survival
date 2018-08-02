@@ -312,7 +312,7 @@ Red Light Detector Site is a situation. It is resolved.
 The sarea of Red Light Detector Site is "Red".
 
 Instead of resolving a Red Light Detector Site:
-	say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a 25 foot tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it";
+	say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a twenty-five feet tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it";
 	if nanite density monitor is not owned:
 		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	else:
