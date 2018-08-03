@@ -41,7 +41,7 @@ Version 2 of Vent Fox by Dys begins here.
 [ was last fed                                                       ]
 
 [ VentDomSize is the body size for Vent to take during dominant sex. ]
-[   3 = Average Latex Fox sized                                      ]
+[   3 = Average Latex Fox-sized                                      ]
 [   4 = Lion-sized                                                   ]
 [   5 = Direwolf-sized                                               ]
 
@@ -177,7 +177,7 @@ Instead of fucking the Vent:
 	say "[VentFoxSexMenu]";
 
 to say VentDescription:
-	say "     Vent is now only a bit smaller than a horse normally, however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball sized balls.";
+	say "     Vent is now only a bit smaller than a horse normally, however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball-sized balls.";
 
 to say VentScent:
 	say "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can pick up faint hints of a foxy musk as well.";
@@ -469,7 +469,7 @@ to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
 	say "     You tell him that you want him to change his size while he dominates you. He nods, and waits for you to tell him what size he should be.";
 	say "     [link](1)[as]1[end link] - Average Latex Fox size.";
 	say "     [link](2)[as]2[end link] - Lion-sized Latex Fox.";
-	say "     [link](3)[as]3[end link] - Direwolf sized Latex Fox.";
+	say "     [link](3)[as]3[end link] - Direwolf-sized Latex Fox.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
@@ -889,7 +889,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
-		if VentDomSize is 3: [Average sized Vent fuck and tie]
+		if VentDomSize is 3: [Average-sized Vent fuck and tie]
 			if scalevalue of player is 1: [Tiny player]
 				say "     You can't help but let out a startled yelp as Vent wraps his long rubber tail around your torso, hoisting your much smaller form into the air. He lays down on his back, holding you just above his erect vulpine maleness. Sensing what the vulpine has planned, you can't help but grin in eager anticipation, spreading your legs so he can more easily penetrate you. He uses his firm grip on your body to pull you downwards, the crown of his massive rubber tool prodding at your entrance. Before he really begins, however, he locks eyes with you, seemingly asking for your go ahead, which you provide readily. You gasp as he pushes you onto his shaft, the girthy length slipping into your tight hole slowly. Your body is forced down on inch after inch of his cock until you finally feel his knot pressing firmly against your entrance. You can't help but grit your teeth from the pain of being stretched so much, your belly bulging outward almost comically in the shape of his cock.";
 				say "     Your lover gives you a few moments to adjust before he begins to lift you up, his rubber cock leaving you slowly. Eventually only the tip remains inside you. Before you know it, he's dragging you back down, much faster this time, and his knot is soon pushing against you once more. He repeats this cycle of dragging you up and down for quite some time, building up the pace all the while, until he slams you down one last time, his knot stretching you painfully wide before it manages to slip inside you. It swells even wider, putting immense pressure on your [if player is male]prostate, causing you to orgasm in sheer bliss[else]walls, drawing an immensely pleasured moan out of you[end if]. Vent lets out a growl of pleasure as he reaches his peak, his shaft pulsing and throbbing inside you as he fills you with his virile seed. The flood of semen nearly instantly bloats you outwards, and by the time the flow abates, you've become decently rounded out.";
@@ -965,7 +965,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
-		if VentDomSize is 3: [Average sized Vent fuck and tie]
+		if VentDomSize is 3: [Average-sized Vent fuck and tie]
 			if scalevalue of player is 1: [Tiny player]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent manages to knot the player, stretching them further.";
@@ -1041,7 +1041,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
-		if VentDomSize is 3: [Average sized Vent fuck and tie]
+		if VentDomSize is 3: [Average-sized Vent fuck and tie]
 			if scalevalue of player is 1: [Tiny player]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent manages to knot the player, stretching them further.";
@@ -1117,7 +1117,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
-		if VentDomSize is 3: [Average sized Vent fuck and tie]
+		if VentDomSize is 3: [Average-sized Vent fuck and tie]
 			if scalevalue of player is 1: [Tiny player]
 				say "     Vent penetrates the player, stretching them a good amount.";
 				say "     Vent manages to knot the player, stretching them further.";
@@ -1183,8 +1183,8 @@ Chapter 3 - Watersports
 
 to say VentAnalWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 7 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2 succeeds):
-		if VentDomSize is 3: [Average sized Vent]
-			if scalevalue of player is 3: [Average sized player]
+		if VentDomSize is 3: [Average-sized Vent]
+			if scalevalue of player is 3: [Average-sized player]
 				if VentFluidAmount is 0: [Average levels of urine.]
 					say "     With his knot still engorged, Vent lets out a purr before you feel a hot stream of fluid entering your bowels. It takes you just a moment to realize that he's pissing inside of you, marking you as his. The hot, yellow liquid latex fills you even further, making you swell a bit larger. It's acrid scent seems to permeate from your form, the heady smell making you moan blissfully before that flow finally starts to dwindle as well. Seemingly happy with his work, your foxy friend decides he's simply going to cuddle with you for now as the two of you wait for his knot to deflate enough for him to pull out.";
 				else if VentFluidAmount is 1: [Above average levels of urine.]

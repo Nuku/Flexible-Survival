@@ -57,7 +57,7 @@ The conversation of Oliver is { "<this is nothing but a placeholder!>" }.
 The scent of Oliver is "The big kitty smells heavily of male musk as well as sex, something that makes you moan out loud, making him smirk at you.".
 
 to say OliverDesc:
-	say "     The dom kitty is a large, rotund male, with a matching big cock hidden behind a cod piece. Rather than being naked, Oliver is wearing a black leather harness that hugs rather nicely to his pudgy body. Characteristics-wise he looks much like the little ocelot, in the fact that his arms and legs are covered in black spots and a slightly dark tone of fur, whereas the body is a lighter tone. On his head is a nice looking leather cap that seems to accentuate his dominant-personality. The big cat appears to be reading a sex toy magazine catered to doms and subs. When your dom looks at you he sends a smirk your way that sends shivers of pleasure down your spine.";
+	say "     The dom kitty is a large, rotund male, with a matching big cock hidden behind a cod piece. Rather than being naked, Oliver is wearing a black leather harness that hugs rather nicely to his pudgy body. Characteristics-wise he looks much like the little ocelot, in the fact that his arms and legs are covered in black spots and a slightly dark tone of fur, whereas the body is a lighter tone. On his head is a nice-looking leather cap that seems to accentuate his dominant personality. The big cat appears to be reading a sex toy magazine catered to doms and subs. When your dom looks at you, he sends a smirk your way that sends shivers of pleasure down your spine.";
 
 Section 3 - Speaking to your dom
 

@@ -2507,7 +2507,7 @@ to say DoranPlayerTitle:
 			-- 4:
 				if player is puremale:
 					now DoranPlayerRegard is "Master";
-				else if player is not male and player is female:
+				else if player is purefemale:
 					now DoranPlayerRegard is "Mistress";
 				else:
 					now DoranPlayerRegard is "Master";

@@ -14,9 +14,12 @@ to say cannon desc:
 	now ccmiss is 0;
 	now cannonprep is 0;
 	if "Female Preferred" is listed in feats of player:
-		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must not like what it sees, because it immediately turns around and leaves.[line break]The creature won't fight you if you have the Female Preferred feat.[combat abort]";
+		say "     A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.";
+		say "     The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must not like what it sees, because it immediately turns around and leaves.";
+		say "     The creature won't fight you if you have the Female Preferred feat.[combat abort]";
 	else:
-		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must like what it sees, because it immediately starts moving it your direction.";
+		say "     A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.";
+		say "     The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must like what it sees, because it immediately starts moving it your direction.";
 
 [The Cock Cannon inflicts no damage, but the player has a limited number of turns to defeat the Cock Cannon before it fires. If it fires, the player automatically loses.]
 
@@ -25,15 +28,15 @@ to say cannon fire:		[outmoded, now uses alt-attack below]
 	if cannonprep is 0:
 		[Elevation]
 		now cannonprep is 1;
-		say "The Cock Cannon calculates the proper elevation, then lifts its mushroom shaped head up towards the sky.";
+		say "The Cock Cannon calculates the proper elevation, then lifts its mushroom-shaped head up towards the sky.";
 	else if cannonprep is 1:
 		[Wind direction]
 		now cannonprep is 2;
-		say "The Cock Cannon moves its mushroom shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction.";
+		say "The Cock Cannon moves its mushroom-shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction.";
 	else if cannonprep is 2:
 		[Masturbate]
 		now cannonprep is 3;
-		say "The Cock Cannon's arms start to stroke its penis shaped body.";
+		say "The Cock Cannon's arms start to stroke its penis-shaped body.";
 	else if cannonprep is 3:
 		[Fire]
 		now cannonprep is 0;
@@ -51,20 +54,20 @@ to say cannon attack:
 		else:
 			say "     Tilting itself forward, the penile creature aims the crown of its head at you and unloads with a powerful blast. The torrent of sticky white cum soaks your [bodytype of player] body from head to foot. The blast is so large it even as it knocks you to the ground, leaving you dazed and soaked in semen. The over-excited creature continues to ejaculate on you, firing several more blasts that batter you, dousing you in its load. It only stops once fully drained, wobbling unsteadily now that its ballast-filled balls are empty.";
 			say "     Staggering up to you, it grabs you with its hands and leans forward. As the yawning cumslit is aimed at you once again, you can do little to resist, only half aware of what's going on and too stunned by the repeated shelling. But rather than fire again, it instead pulls your head into its, stuffing you into its wide cum slit. You squirm and struggle feebly, but this seems to only encourage the strange beast as it pushes first your head and then your shoulders down into its cock-like body. It is a slow process[if scalevalue of player > 2], especially at first,[end if] but the slick load clinging to you all over helps lubricate your passage. Once your shoulders are going down, it has an easier time of it, standing back up and sliding your [bodydesc of player] form down into itself.";
-			say "     The way its cum tunnel squeezes around you and the pervasive scent and taste of semen become increasingly enjoyable for you and soon you're swallowing down as much of it as you can get even as you're consumed by the walking penis monster[if player is not neuter]. Wriggling now with pleasure as you're pulled in, you cum hard, overcome by the oddly arousing experience[end if]. Sliding further in has you deposited in its warm, heavy ballsack where you are bundled up in a gooey chamber filled with its seed. The thick, musky air makes you woozy even as you continue shovelling handfuls of its load into your mouth until you finally pass out in its testicle.";
+			say "     The way its cum tunnel squeezes around you and the pervasive scent and taste of semen become increasingly enjoyable for you and soon you're swallowing down as much of it as you can get even as you're consumed by the walking penis monster[if player is not neuter]. Wriggling now with pleasure as you're pulled in, you cum hard, overcome by the oddly arousing experience[end if]. Sliding further in has you deposited in its warm, heavy ballsack where you are bundled up in a gooey chamber filled with its seed. The thick, musky air makes you woozy even as you continue shoveling handfuls of its load into your mouth until you finally pass out in its testicle.";
 			say "     Awareness only starts to return in the form of a throbbing around you and the heavy squeezing of the sac enclosing you. Just as you're realizing your current situation, the pressure around you builds up quickly and you are ejected along with a gooey wad of the mutant's semen, launched as a cum-soaked missile at its next victim. You crash into some [one of]canine[or]feline[or]reptile[or]equine[or]bunny[or]rodent[or]humanoid[as decreasingly likely outcomes] creature, bowling it over. By the time you recover from the crash, your target has already started to change, becoming increasingly phallic and making it hard to identify who or what he or she once was. You get up quickly and make your messy escape before you have to deal with another of those penile cannons.";
 			infect;
 			infect;
 
 to say beatthecockcannon:
-	say "The Cock Cannon goes flaccid and collapses to the ground.";
+	say "     The Cock Cannon goes flaccid and collapses to the ground.";
 	if HP of Bradford is 2:
 		LineBreak;
 		if bradfordbounty > 0:
 			decrease bradfordbounty by 1;
-			say "You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denothing the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut[end if] of the reward.";
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Monster Insertion
 
@@ -79,7 +82,7 @@ When Play begins:
 	now defeated entry is "[beatthecockcannon]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[cannon attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[cannon desc]"; [ Description of the creature when you encounter it.]
-	now face entry is "purple colored, mushroom shaped head with no neck. It is devoid of any features except for a large slit at the top. You're able to see and breathe through the slit despite the lack of a mouth or eyes"; [ Face description, format as "Your have a (your text) face."]
+	now face entry is "purple colored, mushroom-shaped head with no neck. It is devoid of any features except for a large slit at the top. You're able to see and breathe through the slit despite the lack of a mouth or eyes"; [ Face description, format as "Your have a (your text) face."]
 	now body entry is "thick with no curves at all. It looks like the shaft of a penis"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "vein covered"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Your ass has several long and curly hairs on it. The skin on your rear is also very wrinkly. The wrinkles and the hairs make your butt cheeks look like a giant ballsack."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -172,18 +175,18 @@ this is the cockcannon rule:
 	if cannonprep is 0:
 		if monsterhit is true:
 			now cannonprep is 1;
-			say "[special-style-2]Hit[roman type]: The Cock Cannon pauses and seems to focus on you as it calculates the proper elevation, then lifts its mushroom shaped head up towards the sky.";
+			say "[special-style-2]Hit[roman type]: The Cock Cannon pauses and seems to focus on you as it calculates the proper elevation, then lifts its mushroom-shaped head up towards the sky.";
 		else:
 			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to focus on you, but you manage to keep evading and it has trouble targeting you.";
 	else if cannonprep is 1:
 		if monsterhit is true:
 			now cannonprep is 2;
-			say "[special-style-2]Hit[roman type]: The Cock Cannon moves its mushroom shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction and is now locked onto you.";
+			say "[special-style-2]Hit[roman type]: The Cock Cannon moves its mushroom-shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction and is now locked onto you.";
 		else:
 			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to make adjustments for the wind conditions, but your constant harassment and evasion slows it down.";
 			increase ccmiss by 1;
 			if ccmiss > 2 and cclosttarget is false:
-				say "Your continued resistance frustrates it, forcing it to reposition and reacquire targetting.";
+				say "Your continued resistance frustrates it, forcing it to reposition and reacquire targeting.";
 				now cclosttarget is true;
 				decrease cannonprep by 1;
 	else if cannonprep is 2:
@@ -222,7 +225,7 @@ this is the cockcannon rule:
 when play ends:
 	if bodyname of player is "Cock Cannon":
 		if humanity of player < 10:
-			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis shaped body as fast as you can... The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
+			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis-shaped body as fast as you can. The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
 		else:
 			say "After being rescued by the military, you have trouble fitting in with the rest of society due to the fact that your body is shaped like a giant penis. But then you discover that the infection left many women with pussies so large that nobody could fill them but you...";
 

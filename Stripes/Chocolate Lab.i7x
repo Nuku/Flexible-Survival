@@ -46,7 +46,7 @@ to say losetolab:
 				now tail of player is tail entry;
 				now face of player is face entry;
 				now skin of player is skin entry;
-				now body of player is "that of a large quadrupedal canine. Standing over six feet tall, you are a jumbo sized chocolate lab, with a flowing, shifting chocolate body. Your skin flows and runs like melting chocolate and you carry and overwhelming but alluring scent of cocoa.";
+				now body of player is "that of a large quadrupedal canine. Standing over six feet tall, you are a jumbo-sized chocolate lab, with a flowing, shifting chocolate body. Your skin flows and runs like melting chocolate and you carry an overwhelming but alluring scent of cocoa.";
 				now cock of player is cock entry;
 				now labhost is 4;
 				now humanity of player is 0;

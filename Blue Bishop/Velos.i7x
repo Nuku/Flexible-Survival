@@ -37,7 +37,7 @@ Instead of resolving Strange Serpent:
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					else:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. You can barely contain all of him, distended torso strained under such a considerable holding. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite these circumstances.";
-						say "     Bulge twitching as you must content with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see himself before you.";
+						say "     Bulge twitching as you must content with his irreverent movements, you're forced to elicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see himself before you.";
 					say "     'Quite the tight fit, if I do say so myself! But I like to think that cozy is often an attribute falsely regarded as poor.' He seems rather pleased with himself, try pulling him out?";
 				else if scalevalue of player > 3:
 					say ". Struck with twisted pleasure as his form floods your bowels, and though you're more than large enough to handle him that doesn't quite change the fact that he's got a fair amount of himself to put into you, forcing you onto your knees and, inevitably, to roll over onto your back.";
@@ -54,7 +54,7 @@ Instead of resolving Strange Serpent:
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					else:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. Even finished as he is now it's a struggle for clarity, weighty and distended torso strained to abide its occupancy. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite of these circumstances.";
-						say "     Bulge twitching with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see himself one more before you.";
+						say "     Bulge twitching with his irreverent movements, you're forced to elicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see himself one more before you.";
 					say "     'Doubtlessly you play victim to this praise all the time, but it'd be rude of me to not highlight the quality of this dwelling! What's your secret?' He seems rather pleased with himself, try pulling him out?";
 				if insectlarva is true:			[freed from parasite]
 					now insectlarva is false;
@@ -156,7 +156,7 @@ Section 3 - Dragging him Around + Effects
 Every turn while HP of Velos > 2:
 	if Velos is not in the location of the player:		[traveling w/player]
 		Now Velos is in the location of the player;
-		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels illicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
+		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels elicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
 
 
 an everyturn rule:
@@ -178,7 +178,7 @@ an everyturn rule:
 			else:
 				if a random chance of 1 in 3 succeeds:
 					say "     [one of]Quizzically, you prod your stomach, eliciting an occasional twitch from your passenger, who's probably resting right now[or]Your stomach twitches slightly with the shifting of your residence, such activity relenting as quickly as it started[or]You're forced to contend with slight discomfort as your resident twists and writhes within your confines--perhaps out of boredom--forcing you to prod him in discontent until he relents[cycling].";
-				else if scalevalue of player is 3:				[avg sized player]
+				else if scalevalue of player is 3:				[average-sized player]
 					say "     [one of]You're briefly distracted by your excessively pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your diminutive frame[or]Suddenly, you're jolted with a pangs of perverse bliss. Apparently, the serpent had to push some of itself out of you for a moment to shift positions within your tiny frame[or]You're forced to sit down for a moment, resting from the ponderous weight of your inhabitant[cycling].";
 				else if scalevalue of player < 3:		[small player]
 					say "     [one of]You're briefly distracted by your somewhat pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your form[or]You're forced to tense a bit as your distended torso twitches with a sudden jolt of movement by your residence[or]Though you can handle your inhabitant's weight far better than any normal person rightly should, you're occasionally forced to catch your breath before moving on[cycling].";
@@ -353,7 +353,7 @@ Part 5 - Brian
 the vmusings of Brian is "[brianmusing]";
 
 to say brianmusing:
-	say "     Approaching Brian, ever determined to break down that wall, you decide to conjure up Velos to illicit a discussion. Your timing is a bit off, though, as when the rhino becomes aware of what is transpiring he's already mid-charge and hits the wall at a bad angle, sending him tumbling backwards in a daze. This, undoubtedly, amuses the serpent.";
+	say "     Approaching Brian, ever determined to break down that wall, you decide to conjure up Velos to elicit a discussion. Your timing is a bit off, though, as when the rhino becomes aware of what is transpiring he's already mid-charge and hits the wall at a bad angle, sending him tumbling backwards in a daze. This, undoubtedly, amuses the serpent.";
 	say "     'Hey, big guy. What'd that wall ever do to you?'";
 	say "     'W-What...?' Still a little dizzy, he gets back to his feet, cautiously stepping close. 'What are you doing in... there?'";
 	say "     'Uh, it's a long story; matters are all weird here. Keep up.'";
@@ -438,7 +438,7 @@ Part 8 - Valerie
 the vmusings of Valerie is "[valeriemusing]";
 
 to say valeriemusing:
-	say "     You illicit Velos's attention, drawing him out before Valerie. The sphinx is briefly taken aback by this but calms down when you make it clear that there's no danger.";
+	say "     You elicit Velos's attention, drawing him out before Valerie. The sphinx is briefly taken aback by this but calms down when you make it clear that there's no danger.";
 	say "     'That would explain all that... Twitching, and I guess I shouldn't be surprised, the way things are.'";
 	say "     'That's the right attitude--Oh, I know what you are! Hit me with a riddle!'";
 	say "     'Very well... Dark attire blemished by shed fur. My acts are unseen save for ruined furniture. And though my martial prowess is impeccable, I am defeated with but a red dot. What am I?'";
@@ -531,11 +531,11 @@ the vmusings of Philip is "[philipmusing]";
 
 to say philipmusing:
 	say "     Conjuring Velos from his confines, he immediate seems to regard the situation with a measure of disdain.";
-	say "     'Uegh, what is that smell[if vmusedone of Doctor Moffatt is true]? I joked about that so-called doctor's scent but this is outright offensive to my senses.' [else]?' [end if]The pig snorts, mostly oblivious whilst he stuffs his face, which is enough to illicit a sigh from the serpent. 'Really? Is this the company you keep? Nothing good can come of this.'";
+	say "     'Uegh, what is that smell[if vmusedone of Doctor Moffatt is true]? I joked about that so-called doctor's scent but this is outright offensive to my senses.' [else]?' [end if]The pig snorts, mostly oblivious whilst he stuffs his face, which is enough to elicit a sigh from the serpent. 'Really? Is this the company you keep? Nothing good can come of this.'";
 	say "     'Who are you?' The swine finally realizes the snake's there, oinking quizzically at him.";
 	say "     'Someone wishing he was the fare of snake that could hypnotize people, because right about now I'd be ordering you to take a bath!'";
 	say "     '*Snort* You just wish you could have as much fun as I am having.'";
-	say "     'Yeah, sure. I wager setting oneself on fire would illicit all sorts of dazzling awe if one were numb to any sort of pain.'";
+	say "     'Yeah, sure. I wager setting oneself on fire would elicit all sorts of dazzling awe if one were numb to any sort of pain.'";
 	say "     'You're not very smart; I'm rolling in mud, not setting myself on fire.' This gives Velos pause, and he's appears to be sizing up Philip, perhaps determining if he's being challenged.";
 	say "     '...Okay. Would you agree that the escapist's digression into the surreal has merit only in the realm of simulacrum? This is under the impression that such digressions, when attempted in the real world, would be unhealthy at its best and morally reprehensible at its worst.'";
 	say "     'I'm hungry, [if philip is not bunkered]maybe you could get me something to eat?[else]I think I'll go find some food.[end if]'";
@@ -613,9 +613,9 @@ to say Leonardmusing:
 	say "     'I see...' Velos's appeal to him seems to put the feline at some ease. 'I suppose anything's possible here, though you can imagine that your portrayal conjures... What is the word? A measure of cognitive dissonance, I think is right.'";
 	say "     'And right you are. We don't all have the luxury of fates well-suited to our better tastes.' By now Leonard would--at least outwardly--appear fine with this peculiar revelation, a doubtless product of the serpent's eloquence, of which he seems to have ramped up for some reason.";
 	if HP of Leonard >= 4:
-		say "     'Regardless, I'm not sure this will do for me. What might it take to have you vacate my [if HP of Leonard >= 16]mate's[else if HP of Leonard >= 9]precious lover's[else]mate's[end if], er... [']premises[']?' This request is enough to illicit a slight frown from Velos.";
+		say "     'Regardless, I'm not sure this will do for me. What might it take to have you vacate my [if HP of Leonard >= 16]mate's[else if HP of Leonard >= 9]precious lover's[else]mate's[end if], er... [']premises[']?' This request is enough to elicit a slight frown from Velos.";
 	else:
-		say "     'Ultimately, I don't think this will benefit me in the long run... Might I request that you vacate your host's, er... [']Premises[']?' This request is enough to illicit a slight frown from Velos.";
+		say "     'Ultimately, I don't think this will benefit me in the long run... Might I request that you vacate your host's, er... [']Premises[']?' This request is enough to elicit a slight frown from Velos.";
 	say "     'Sadly, I can't be removed.' Velos's response, oddly enough, elicits a brief streak of confusion from the lion, before this expression is promptly obfuscated and he goes on.";
 	say "     'Hm, you are sure of this? I'm generally not one to make compromises.'";
 	say "     'I'm afraid that there is no one in these blasted lands that might replace our friend here.'";
@@ -693,7 +693,7 @@ to say svenmusing:
 	say "     'Heh, yeah, a little. And it is so hot here,' he adds, brushing his tail nervously.";
 	say "     'You lost me there; seems quite cold actually. But I digress, don't let it get to you too much. There's always somebody who's got it worse.'";
 	say "     'Like you?'";
-	say "     'I don't know what you're talking about. I don't have to walk anywhere or find my own food; I'm the luckiest guy here!' This is enough to illicit a slight grin from the feline, encouraging Velos to continue. 'Think you'll go back to school after all this is done?'";
+	say "     'I don't know what you're talking about. I don't have to walk anywhere or find my own food; I'm the luckiest guy here!' This is enough to elicit a slight grin from the feline, encouraging Velos to continue. 'Think you'll go back to school after all this is done?'";
 	say "     'I do not know. You think things can go back to normal after this[if HP of Sven >= 3]? I would not like to give up my lovely tail,' he adds, nuzzling it for comfort.[else]?'[end if]";
 	say "     'Perhaps not completely, maybe not at all. But I wonder, what dreams carried you this far from home? Quick as one may be inclined to drop them in favor of pure survival, what meaning can we impart on our lives in their absence?'";
 	say "     'I do not understand what you mean by that.'";

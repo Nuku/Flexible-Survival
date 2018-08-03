@@ -418,7 +418,7 @@ When Play begins:
 	add { "Butterfly" } to infections of girl;
 	Choose a blank row from Table of random critters;
 	now name entry is "Butterfly"; [Name of your new Monster]
-	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high-pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[butterfly defeat]";
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
@@ -892,7 +892,7 @@ to say butterfly grove scene:
 				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her.";
-	else if player is not male and player is female and ButterflyRaped is 0 and ButterflyLove is True:
+	else if player is purefemale and ButterflyRaped is 0 and ButterflyLove is True:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
 		say "Your Butterfly lover is very pleased to see you and greets you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove.";

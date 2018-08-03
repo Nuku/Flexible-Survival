@@ -189,7 +189,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 	choose row monster from table of random critters;
 	if a random chance of 1 in 6 succeeds:
-		say "The dolphin lets off a really loud pulse of high pitched clicks which weakens you ([ ( 6 + lev entry ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
+		say "The dolphin lets off a really loud pulse of high-pitched clicks which weakens you ([ ( 6 + lev entry ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
 		decrease HP of player by ( ( 6 + lev entry ) / 2 );
 	now tempnum is a random number between 1 and 5; [picks one of the attacks]
 	if tempnum is 1:

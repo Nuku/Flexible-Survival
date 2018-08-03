@@ -223,13 +223,12 @@ Instead of resolving Consolidated Events Outside CEO2:
 	if ceoutside2list is empty, now Consolidated Events Outside CEO2 is resolved;
 
 
-
 Section 10 - Cream truck (by Sarokcat)
 
 to say ceoutside10:
-	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left. Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream... You might be able to find something useful here, but it would be messy, do you try?";
+	say "An abandoned ice cream truck sits on its lonesome in the middle of the street, and you quickly investigate to see if any of the delicious treats are left. Looking in the cooler in back, you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell, you investigate further, and closer investigation determines that the sticky white stuff may not be ice cream after all, but someone or something's cream. You might be able to find something useful here, but it would be messy. Do you try?";
 	if player consents:
-		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
+		say "Carefully digging through the mess returns a few bottles of milk that don't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find that the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
 		increase carried of gryphon milk by 2;
 		gryphonify;
 	else:
@@ -241,7 +240,7 @@ to say ceoutside10:
 Section 11 - Wyvern Flight (by Sarokcat)
 
 to say ceoutside11:
-	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby. You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
+	say "You spy a small group of wyverns hauling off tables and chairs from a sidewalk café, apparently building a large nest somewhere nearby. You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
 	mallrecall;
 	remove 11 from ceoutside2list;
 
