@@ -25,18 +25,18 @@ to say snakedesc:
 		say "     Suddenly, you're assailed by";
 	say " what would be a common ring-necked snake, were it not for its great size. This serpent has grown to the size of a boa and is almost two meters in length. This one has silvery scales across its body with bright yellow-orange along the underbelly. Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside. The enlarged snake hisses at you and attacks.";
 	choose row monster from the table of random critters;
-	if "Male Preferred" is listed in feats of player:
+	if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	else if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	else if player is puremale:
-		now sex entry is "Male";
-	else if player is not male and player is female:
-		now sex entry is "Female";
 	else if player is herm:
 		now sex entry is "Both";
+	else if player is male:
+		now sex entry is "Male";
+	else if player is female:
+		now sex entry is "Female";
 	else:
 		now sex entry is "nochange";
 	[set all size values to match existing so only number of cocks/cunts may change]

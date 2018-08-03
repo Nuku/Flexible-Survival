@@ -231,7 +231,7 @@ to say orthas_task2_done:
 Table of Game Objects (continued)
 name	desc	weight	object
 "footlocker"	"     The small footlocker you've retrieved from Orthas's house. It's bulky, but thankfully nowhere near full."	15	footlocker
-"crossbow"	"A sporting crossbow. More for target practice than actual hunting, but still a fine and intimidating weapon. There's a good sized set of quarrels to go along with it as well."	8	crossbow
+"crossbow"	"A sporting crossbow. More for target practice than actual hunting, but still a fine and intimidating weapon. There's a good-sized set of quarrels to go along with it as well."	8	crossbow
 
 footlocker is a grab object.
 it is part of the player.
@@ -261,7 +261,7 @@ to say orthasfuck:
 	else:
 		now lastfuck of Orthas is turns;
 		if player is male and cunts of player < 1: [ male player ]
-			say "     'Well, fine, but be sure to come by later if you get somewhere for me to plant them,' she says, remembering last time. She disrobes, revealing her toned, athletic body once again, unveiling her good sized breasts -- that seemed to grow a bit after her first pregnancy -- and runs her hands over your tight, sexy male form as well, waiting to get at what she knows is down in your drawers.";
+			say "     'Well, fine, but be sure to come by later if you get somewhere for me to plant them,' she says, remembering last time. She disrobes, revealing her toned, athletic body once again, unveiling her good-sized breasts -- that seemed to grow a bit after her first pregnancy -- and runs her hands over your tight, sexy male form as well, waiting to get at what she knows is down in your drawers.";
 			say "     And before long, she's got it! The sultry dragoness is on her knees between your legs, her lovely bosom wrapped around your cock, and the tip of the member poking through her cleavage is firmly embedded in her mouth. Her long draconic tongue is running circles around your member, teasing you all the way to full erection. She leans over the couch, and lifts her long, muscular tail, exposing her tight pussy lips. You know what lies hidden there, but it doesn't deter you in the least, making you smile as you grip her hips and stab your member home.";
 			WaitLineBreak;
 			say "     She howls out her pleasure again, prompting Dr. Matt to stomp on the floor, as you energetically fuck her. She runs her muscular hips back into yours, pleasure rising quickly in both of your bodies as you quickly push toward climax. Nearly as soon as your massive orgasm overtakes you, you can already feel her shifting tightly, her belly beginning to inflate. She looks at you hungrily as she watches your body there, and she flips over, licking her lips. 'Mmm... hey, do you wanna help me with this?'.";

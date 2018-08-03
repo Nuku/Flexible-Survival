@@ -78,7 +78,7 @@ When Play begins:
 	now face change entry is "it stretches forward into a large, pointed muzzle. A hard, bony horn grows atop your nose. A bony frill and another pair of horns grow onto your head"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "becomes strong, yet flexible. Your hands and feet change, becoming clawed and saurian in shape, but still nimble and graceful"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "toughened scales spread across your body, richly green with soft brown accents in key spots"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is " a strong, saurian tail forms behind you, swaying rhythmically"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "a strong, saurian tail forms behind you, swaying rhythmically"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it grows sensual ridges and takes on an animalistic, saurian shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 14;

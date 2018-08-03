@@ -849,7 +849,7 @@ instead of going to Hidden Lab while hospquest > 10:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
 		if bonus + dice > 9:
-			say "     You easily block the doctor, grabbing the little mouse and shoving him back into the middle of the room. This sends him into a rage. He releases a high pitched growl and lunges at you, eyes flashing with red anger. 'Ungrateful fool! The infection is too widely spread and cannot be stopped. One can only take advantage of the power it offers.'";
+			say "     You easily block the doctor, grabbing the little mouse and shoving him back into the middle of the room. This sends him into a rage. He releases a high-pitched growl and lunges at you, eyes flashing with red anger. 'Ungrateful fool! The infection is too widely spread and cannot be stopped. One can only take advantage of the power it offers.'";
 			now HP of doctor matt is 11;
 			say "[hospbigfight2]";
 		else:

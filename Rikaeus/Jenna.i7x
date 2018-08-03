@@ -120,7 +120,7 @@ to say JennaTalkMenu:
 	clear the screen and hyperlink list;
 
 to say JennaTalk1: [Ask to go to the Lockup.]
-	say "     You tell Jenna you're ready to go visit the suspects. She nods at you and directs you to follow after her. The female wolverine leads you through a surprising amount of hallways, a rather large amount for the small cafe store. You mention this and she chuckles. 'Yeah, it was rather small when we first got this area. But me and the boys knocked down some of the walls leading into an empty store and boarded the entrance to it up,' she says. Soon though you guys reach a door that when opened shows entrance to a room filled with cells. In the cells are the four suspects, each of them doing different things. 'Let me know if you want to leave and head back out.' Jenna informs you before leaving you to your thoughts.";
+	say "     You tell Jenna you're ready to go visit the suspects. She nods at you and directs you to follow after her. The female wolverine leads you through a surprising amount of hallways, a rather large amount for the small café store. You mention this and she chuckles. 'Yeah, it was rather small when we first got this area. But me and the boys knocked down some of the walls leading into an empty store and boarded the entrance to it up,' she says. Soon though you guys reach a door that when opened shows entrance to a room filled with cells. In the cells are the four suspects, each of them doing different things. 'Let me know if you want to leave and head back out.' Jenna informs you before leaving you to your thoughts.";
 	move player to Wolverine Lockup;
 	move Jenna to Wolverine Lockup;
 	now HP of Jenna is 2;

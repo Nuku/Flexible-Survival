@@ -130,7 +130,7 @@ When Play begins:
 	now body entry is "compact and solid, yet showing off every curve to perfection, heavy compact muscles belay strength despite their small representation"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "beautiful reptilian scaled"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "Long and plump, your lizard-like tail is a solid mass of muscle."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "human shaped"; [ Cock Description, format as you have a 'size' (your text) cock.]
+	now cock entry is "human-shaped"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it draws forward a little, a reptilian muzzle forming as your teeth reshape into delicate sharp points"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you can feel the tingling radiate outwards, muscles, bones and organs shifting and rearranging"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "a wave of scales of seemingly random colors pours over you. Yet as they thicken and interlock, you notice a strangely beautiful pattern emerge"; [ skin change text. format as "Your skin feels funny as (your text)." ]

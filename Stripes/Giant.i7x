@@ -130,7 +130,7 @@ When Play begins:
 	now body change entry is "your body becomes human, but starts to grow to significantly larger size. Your body becomes muscled and strong as it changes, toughening up to support its increasing weight. You become something around fifteen feet in height";
 	now skin change entry is "it changes, reverting to your old skin tone, though with bit a rougher, thicker feel to it";
 	now ass change entry is "it pulses and throbs. I hope you like big butts, because yours is growing, and growing, and growing. That's one gigantic ass! Having gained wide, strong hips, you can feel powerful muscles beneath your impressive backside";
-	now cock change entry is "it throbs and pulses, shifting and changing shape as spurts of cum fly from it. Eventually it settles down, having returned to being a fairly typical, human shaped penis";
+	now cock change entry is "it throbs and pulses, shifting and changing shape as spurts of cum fly from it. Eventually it settles down, having returned to being a fairly typical, human-shaped penis";
 	now str entry is 36;
 	now dex entry is 9;
 	now sta entry is 20;

@@ -4072,11 +4072,11 @@ This is the breast descr rule:
 		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number breast size of player in cupsize] cup";
 		now sh-descr is "[one of]massive[or]huge[or]heavy[at random]";
 	else if breast size of player < 12:
-		now descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random] [character number breast size of player in cupsize] cup";
-		now sh-descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random]";
+		now descr is "[one of]enormous[or]giant[or]hulking[or]head-sized[or]basketball-sized[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]enormous[or]giant[or]hulking[or]head-sized[or]basketball-sized[at random]";
 	else:
-		now descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of player in cupsize] cup";
-		now sh-descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random]";
+		now descr is "[one of]gargantuan[or]beachball-sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]gargantuan[or]beachball-sized[or]mountainous[or]colossal[or]gigantic[at random]";
 	now breast size desc of player is descr;
 	now short breast size desc of player is sh-descr;
 	rule succeeds;
@@ -4087,7 +4087,7 @@ This is the cock descr rule:
 	else if cock length of player < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	else if cock length of player < 8:
-		now descr is "[one of]average in size[or]normal sized[at random]";
+		now descr is "[one of]average in size[or]normal-sized[at random]";
 	else if cock length of player < 12:
 		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
 	else if cock length of player is 12:
@@ -4147,7 +4147,7 @@ to say cum load size of ( x - a person ):
 		else if cock width of x < 6:	[3 - 5]
 			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
 		else if cock width of x < 12:	[6 - 11]
-			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
+			say "[one of]triple-dose[or]half-cup[or]cupful[or]ample[or]above-average[or]generous[or]sizable[at random]";
 		else if cock width of x < 16:	[12 - 15]
 			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
 		else if cock width of x < 20:	[16 - 19]
@@ -4165,7 +4165,7 @@ This is the cunt descr rule:
 	else if cunt length of player < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	else if cunt length of player < 8:
-		now descr is "[one of]average[or]normal sized[at random]";
+		now descr is "[one of]average[or]normal-sized[at random]";
 	else if cunt length of player < 12:
 		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if cunt length of player < 18:

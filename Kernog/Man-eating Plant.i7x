@@ -116,7 +116,7 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		let maneatingPlantnum be a random number between 10 and maneatingPlantnum;
 		say "[special-style-1][playernum - 10][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
 	if maneatingPlantcaught is 1 and playernum - 10 >= maneatingPlantnum:		[caught / escape attempt]
-		say "     In desperation, your legs kick franctically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
+		say "     In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
 		say "     The plant's body wiggles and contracts around your lower limbs, taking you further in. Soon, your waist is trapped into the plant. You feel the plant [if player is male]squeeze your cock[else]grind against your pussy[end if], involuntarily exciting you. Your time runs short.";
@@ -126,7 +126,7 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		let maneatingPlantnum be a random number between 1 and maneatingPlantnum;
 		say "[special-style-1][playernum - 20][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
 	if maneatingPlantcaught is 1 and playernum - 20 >= maneatingPlantnum:		[final escape attempt]
-		say "     In desperation, your legs kick franctically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
+		say "     In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
 		say "     With one powerful contraction, the plant swallows your torso. [if breast size of player is 0]Your flat chest quickly follows[else if breast size of player <= 3]It takes the plant another suction to squeeze your [breast size desc of player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
@@ -155,7 +155,7 @@ to manEatingPlantVore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     The silky touch of the plant's sack and the heavy pheromones in the air pushes you into a powerful climax. Your body, suspended into the vaccum-tight confines of the pod, is overtaken by several spasms, as you soak your prison with your [if player is herm]various sexual fluids[else if player is male][cum load size of player] discharge[else]vaginal juices[end if]. The fluids slowly pool down the pod, to be absorbed by the plant. You struggle to catch your breath, as you feel your sanity fade away.";
+			say "     The silky touch of the plant's sack and the heavy pheromones in the air pushes you into a powerful climax. Your body, suspended into the vacuum-tight confines of the pod, is overtaken by several spasms, as you soak your prison with your [if player is herm]various sexual fluids[else if player is male][cum load size of player] discharge[else]vaginal juices[end if]. The fluids slowly pool down the pod, to be absorbed by the plant. You struggle to catch your breath, as you feel your sanity fade away.";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if struggleatt is 1, now struggleatt is 0;
@@ -203,7 +203,7 @@ to manEatingPlantVore:
 					wyvhumanityroll; [aka humanity loss]
 					wait for any key;
 				else:
-					say "     With a loud ripping sound, the plant's skin gives way under your efforts. A gush of light and fresh air fiils your prison and your body flops outside, in a growing puddle of plant sap. Even if the plant seems to have been fatally wounded, you cautiously put as much distance as possible between it and you, and any other suspicious tree for that matter.";
+					say "     With a loud ripping sound, the plant's skin gives way under your efforts. A gush of light and fresh air fills your prison and your body flops outside, in a growing puddle of plant sap. Even if the plant seems to have been fatally wounded, you cautiously put as much distance as possible between it and you, and any other suspicious tree for that matter.";
 					cleanboundmemory;
 					now pewtergenitalcap is 0;
 					now trixieexit is 1;
@@ -230,7 +230,7 @@ to manEatingPlantVore:
 					now boundrecover is false;
 					if humanity of player > 100, now humanity of player is 100;
 				else:
-					say "     You take a moment to catch your breath, and try your best to ignore the addling effects of the pod's silky surface on your skin and the dizzling smell of the air provided to your prison.";
+					say "     You take a moment to catch your breath, and try your best to ignore the addling effects of the pod's silky surface on your skin and the dizzying smell of the air provided to your prison.";
 				LineBreak;
 				increase lustatt by 3 + lustadjust;
 				wyvhumanityroll;

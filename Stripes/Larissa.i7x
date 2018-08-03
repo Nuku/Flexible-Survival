@@ -1303,9 +1303,9 @@ This is the Larissa breastdesc rule:
 	else if breast size of Larissa < 9:
 		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number breast size of Larissa in cupsize] cup";
 	else if breast size of Larissa < 12:
-		now descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random] [character number breast size of Larissa in cupsize] cup";
+		now descr is "[one of]enormous[or]giant[or]hulking[or]head-sized[or]basketball-sized[at random] [character number breast size of Larissa in cupsize] cup";
 	else:
-		now descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of Larissa in cupsize] cup";
+		now descr is "[one of]gargantuan[or]beachball-sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of Larissa in cupsize] cup";
 	now breast size desc of Larissa is descr;
 	rule succeeds;
 
@@ -1315,7 +1315,7 @@ This is the Larissa cockdesc rule:
 	else if cock length of Larissa < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	else if cock length of Larissa < 8:
-		now descr is "[one of]average in size[or]normal sized[at random]";
+		now descr is "[one of]average in size[or]normal-sized[at random]";
 	else if cock length of Larissa < 12:
 		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
 	else if cock length of Larissa is 12:
@@ -1335,7 +1335,7 @@ This is the Larissa cuntdesc rule:
 	else if cunt length of Larissa < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	else if cunt length of Larissa < 8:
-		now descr is "[one of]average[or]normal sized[at random]";
+		now descr is "[one of]average[or]normal-sized[at random]";
 	else if cunt length of Larissa < 12:
 		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
 	else if cunt length of Larissa < 18:

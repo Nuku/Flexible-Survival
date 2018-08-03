@@ -11,7 +11,7 @@ when play begins:
 
 to say fireelementaldesc:
 	setmongender 4; [creature is female]
-	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle. She has a pair of average sized breasts. Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames. Her head is rather human-like with soft features and deep, black eyes. Her hair has, however, been turned into bright and harmless flame. Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks. She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
+	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle. She has a pair of average-sized breasts. Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames. Her head is rather human-like with soft features and deep, black eyes. Her hair has, however, been turned into bright and harmless flame. Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks. She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
 
 to say losetofireelemental:
 	if bodyname of player is "Reindeer":

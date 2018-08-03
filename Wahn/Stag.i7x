@@ -1623,7 +1623,7 @@ to say HelenBeachWalk:
 	now RandomGenNumber is a random number from 1 to 3;
 	if RandomGenNumber is:
 		-- 1:
-			say "a large anthro St. Bernard on one knee proposing to his petite Chihuahua boyfriend. The tiny canine tears up and nods his head vigorously. Smiling the large canine hugs his new tiny fiancee. Nearby infected clap and cheer to celebrate the occasion. ";
+			say "a large anthro St. Bernard on one knee proposing to his petite Chihuahua boyfriend. The tiny canine tears up and nods his head vigorously. Smiling the large canine hugs his new tiny fiancée. Nearby infected clap and cheer to celebrate the occasion. ";
 		-- 2:
 			say "a slender lagomorph male that is gleefully running over the sand with a couple of bikini tops in his hands. Some topless women are chasing after him, shouting obscenities at the fleeing swimsuit stealer, their large breasts jiggling with every step. A number of male infected cheer him on and thank him for the sight, to the chagrin of their female partners. ";
 		-- 3:

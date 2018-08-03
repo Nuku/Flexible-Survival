@@ -193,7 +193,7 @@ to say alexandradesc_bg:
 			say "The crotch of her jeans is wet with the stains of recent sex that smell strongly of wolf. ";
 	[boobs]
 	if HP of Alexandra < 3: [never been pregnant]
-		say "She has a strong, tough physique while still having a womanly figure with an average sized pair of breasts and a firm ass. ";
+		say "She has a strong, tough physique while still having a womanly figure with an average-sized pair of breasts and a firm ass. ";
 	else if HP of Alexandra is 3 or HP of Alexandra is 5: [pregnant right now]
 		say "She has a strong, tough physique while still having a womanly figure and a firm ass. Her breasts are visibly larger than when she first arrived, having swollen with her pregnancy. ";
 	else: [been pregnant before - bigger tits]
@@ -632,13 +632,13 @@ to say badAlexandraFang0:
 		if HP of Fang is 3 or HP of Fang is 4: [alpha Fang can't be stopped]
 			say "     Heading over towards the large wolf and the doberman bitch, you start to tell them to break it up, but Fang ignores you. He pounces atop the dog woman and drives his cock into her with an angry growl at you, causing you to slink back. You try to approach again, but he growls and snaps at you and you slink back from your alpha wolf, submitting to his dominance of you. Seeing you give in and backing off, he growls 'watch' at you before turning his attention back to her. It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 			say "[badAlexandraFang1]";
-		else if player is not male and player is female: [herm player]
+		else if player is female: [herm player]
 			say "[badAlexandraFang3]";
-		else if player is not male: [neuter player]
-			say "     You start to head over to the wolf and doberman, intent on showing her who she really belongs to, but you stop short after a few steps. Remembering that you have no means to properly reinforce to your bitch that she's your sex toy if you lack a sex of your own. You can only settle in to watch and accept that Alexandra'll need to get what her bitch body needs from Fang until you're better equipped to satisfy her. As you're sitting down somewhere lined up for the sexy show, Fang pounces atop your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
-			say "[badAlexandraFang1]";
-		else: [male player]
+		else if player is male: [male player]
 			say "[badAlexandraFang2]";
+		else: [female/neuter player]
+			say "     You start to head over to the wolf and doberman, intent on showing her who she really belongs to, but you stop short after a few steps, remembering that you have no means to properly reinforce to your bitch that she's your sex toy if you lack a cock of your own. You can only settle in to watch and accept that Alexandra'll need to get what her bitch body needs from Fang until you're better equipped to satisfy her. As you're sitting down somewhere lined up for the sexy show, Fang pounces atop your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
+			say "[badAlexandraFang1]";
 
 to say badAlexandraFang1: [let Fang fuck her]
 	say "     Alexandra pants and moans like a bitch in heat as the wild wolf pounds into her. As you watch, his throbbing red cock drives into her juicy canine cunt over and over again, her puffy lips stretched around that thick rod. Her breasts sway and she pants, drooling onto the ground as she gets a rough pounding like the kind she's been trained to enjoy. Between her raw cries of lust, she moans about being a bitch, a slut and an animal, and the wolf is more than happy to treat her as such.";
@@ -943,7 +943,7 @@ to say alexandrascent_gg:
 to say alexandradesc_gg:
 	if debugactive is 1:
 		say "[goodAlexandra_debug]";
-	say "     Alexandra, once a cop for the city, has been transformed into a Doberman woman by the infection. She's remained in uniform, showing her attempt to keep up her duties, wearing a light blue shirt, darker pants and a policeman's hat. She's got a rather normal, human build, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed. She has an average sized rack on her under her shirt.";
+	say "     Alexandra, once a cop for the city, has been transformed into a Doberman woman by the infection. She's remained in uniform, showing her attempt to keep up her duties, wearing a light blue shirt, darker pants and a policeman's hat. She's got a rather normal, human build, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She has an average-sized rack under her shirt.";
 
 to say alexandratalk_gg:
 	if debugactive is 1:
