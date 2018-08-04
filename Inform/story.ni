@@ -31,7 +31,7 @@ Use Scoring.
 		let N be 0 minus N;
 	decide on N.] [enable this to compile on older versions of inform]
 
-[ Basic Functions moved to Basic Functions.i7x in Core Mechanics ]
+[ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
 The release number is 65.
 The story creation year is 2010.
@@ -209,8 +209,11 @@ playon is a number that varies.
 the player has a list of text called invent.
 the player has a list of text called vials.
 the player has a list of text called tapes.
+the player has a list of text called OpenQuests.
+the player has a list of text called CompletedQuests.
 Rooms has a list of text called invent.
 The player has a list of text called feats.
+The player has a list of text called EncounteredEnemies.
 The player has a list of text called BlockList.
 A person can be a trader.
 Scenario is a text that varies.
@@ -4237,7 +4240,7 @@ To showstats (x - Person):
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
-	if the number of entries in the feats of the x > 0:
+	if the number of entries in feats of the x > 0:
 		say ", Feats: [feats of the x][line break]";
 
 This is the self examine rule:
@@ -4968,6 +4971,7 @@ include FS Graphics by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
+Include Special Merchandize by Core Mechanics.
 Include Inline Hyperlinks by Nuku Valente.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
@@ -4978,6 +4982,7 @@ Include Patron Credits by Nuku Valente.
 Include Pets by Core Mechanics.
 Include Pregnancy by Core Mechanics.
 Include Presets by Core Mechanics.
+Include Quest Log by Core Mechanics.
 Include Status View by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
@@ -5115,7 +5120,7 @@ Include Origins by Luneth.
 Include Park Events by Sarokcat.
 Include Patreon Menu by Stripes.
 Include Pepperspray by Stripes.
-Include Pet Shop Event by Stripes.
+Include Pet Shop by Wahn.
 Include Pursuit of Science by Kaleem Mcintyre.
 Include Qytat Shifters by Hellerhound.
 Include Random Events by Hiccup.
@@ -5434,7 +5439,7 @@ Include Zebra by Vervaine.
 
 [NPCs]
 Include Alex by Stripes.
-Include Alexandra by Stripes.
+Include Bad Alexandra by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Amaryllis by Song.
@@ -5466,6 +5471,7 @@ Include Corbin by Wahn.
 Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
 Include Danny by Wahn.
+Include Darius by Wahn.
 Include David by Wahn.
 Include Deer by Stripes.
 Include Denise by Wahn.
@@ -5493,6 +5499,7 @@ Include G-Shep Squad by Rikaeus.
 Include Garrett by Stripes.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
+Include Good Alexandra by Wahn.
 Include Gordon by Rikaeus.
 Include Gus by Hyliad.
 Include Gwen by Stripes.
@@ -5570,6 +5577,7 @@ Include Savina by Kurainyx.
 Include Serenity by Kurainyx.
 Include Sidney by Stripes.
 Include Skarnoth by Wahn.
+Include Skarnoth Loyalty by Luneth.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Stag by Wahn.

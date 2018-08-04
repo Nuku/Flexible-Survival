@@ -103,7 +103,7 @@ to FlorenceTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Maybe she can get you past the door guard blocking access to the Goo Refuge";
 	[]
-	if libido of Florence > 0 and player is male and cock width of player > 4 and HP of Florence > 1:
+	if player is male and cock width of player > 4 and HP of Florence > 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to donate some fluids";
 		now sortorder entry is 7;

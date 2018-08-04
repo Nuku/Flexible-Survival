@@ -1,6 +1,6 @@
 Version 1 of Nemean Lion by Prometheus begins here.
 
-"Adds a Nemean Lion creature to Flexible Survival's Wandering Monsters table"
+"Adds a Nemean Lion creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -18,8 +18,9 @@ to say losetoNemeanLion:
 to say beattheNemeanLion:
 	say "     Battered and bloody, you stand victorious over your foe. The Nemean Lion lies on its side, slipping in and out of consciousness as it tries to recover. Amazingly, despite all the punishment it has just received, its hide is still undamaged with only a few smears of dirt marring the golden fur. If the sizable feline manages to recover you aren't sure you'd be able to defeat it again as you're exhausted too. That said, you aren't sure what you are supposed to do next. Are you meant to skin the still living animal?";
 
+
 to say NemeanLiondesc:
-	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. It's fur is a dull gold, undamaged by the centaurs['] arrows. An impressive, dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
+	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. It's fur is a dull gold, undamaged by the centaurs['] arrows. An impressive dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
 
 
 Section 2 - Monster Insertion
@@ -33,8 +34,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Nemean Lion";      [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The Nemean Lion slashes at you with its claws![or]The Nemean Lion attempts to bite you![or]The Nemean Lion pounces on you![or]The Nemean Lion attempts to maul you![at random]";   [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheNemeanLion]";            [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoNemeanLion]";               [ Text when monster wins. Change 'template' as above. ]
+	now defeated entry is "[beattheNemeanLion]";            [ Text when monster loses.  Change 'template' as above. ]
+	now victory entry is "[losetoNemeanLion]";               [ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[NemeanLiondesc]";                  [ Description of the creature when you encounter it. ]
 	now face entry is "now a head described by this text";      [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a well-described new form put here";   [ Body Description, format as the text "Your body is (your text)." ]
@@ -52,9 +53,9 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 20;
 	now cha entry is 20;
-	now sex entry is "Male";                      [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male";                      [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 600;                           [ The monster's starting hit points. ]
-	now lev entry is 30;                           [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now lev entry is 30;                           [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 50;                          [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";                  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;                         [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -67,7 +68,7 @@ When Play begins:
 	now cunt length entry is 12;                   [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8;                    [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 50;                       [ Target libido the infection will rise towards. ]
-	now loot entry is "";                         [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "";                         [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;                    [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;                         [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "imposing";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

@@ -197,7 +197,7 @@ to say BlueSpeakerSexMenu:
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "[']donate['] some cum";
+		now title entry is "[']Donate['] some cum";
 		now sortorder entry is 1;
 		now description entry is "Jerk off on [ObjectPro of Blue Speaker]";
 	[]
@@ -206,7 +206,7 @@ to say BlueSpeakerSexMenu:
 		now title entry is "Fuck Blue's mouth";
 		now sortorder entry is 2;
 		now description entry is "Give the goo person a direct cum injection";
-	[
+	[]
 	if (player is male and libido of Blue Speaker is 1): [female shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's pussy";
@@ -230,7 +230,7 @@ to say BlueSpeakerSexMenu:
 		now title entry is "Let Blue fuck your pussy";
 		now sortorder entry is 6;
 		now description entry is "Let the goo person fuck your pussy";
-	]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -246,7 +246,7 @@ to say BlueSpeakerSexMenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "[']donate['] some cum":
+				if nam is "[']Donate['] some cum":
 					say "[BlueSex1]";
 				else if (nam is "Fuck Blue's mouth"):
 					say "[BlueSex2]";

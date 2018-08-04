@@ -3,14 +3,8 @@ Dalmatian by Kaleem mcintyre begins here.
 Section 1 - Monster Responses
 
 when play begins:
-[These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Dalmatian' with your creature's name entry. Case sensitive.]
 	add { "Dalmatian" } to infections of guy;
 	add { "Dalmatian" } to infections of furry;
-
-[Sample loss and victory text Dalmatians.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Dalmatian' in their names here and below to something appropriate to your creature.]
 
 to say losetoDalmatian:
 	say "";
@@ -33,9 +27,8 @@ to say beattheDalmatian:
 			say "";
 
 
-to say Dalmatiandesc:
-	say "";
-	say "";
+to say DalmatianDesc:
+	say "      <Error: This is a noncombat creature. Please report on the FS Discord how you saw this message>";
 
 
 Section 2 - Monster Insertion
@@ -47,20 +40,20 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Dalmatian"; [ Infection/Creature name. Capitalized. ]
-	now attack entry is "[one of]The Dalmatian attacks you in some abstract manner![or]The Dalmatian leaves you greater understanding, thereby lowering your resistance to it![or]The Dalmatian batters you with examples![or]The Dalmatian firmly makes its point![at random]"; [ Successful attack message ]
-	now defeated entry is "[beattheDalmatian]"; [ Text when monster loses. Change 'Dalmatian' as above. ]
-	now victory entry is "[losetoDalmatian]"; [ Text when monster wins. Change 'Dalmatian' as above. ]
-	now desc entry is "[Dalmatiandesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. Your impressive jowls come with a fat red tongue, while the eyes with which you see the world in newfound sharpness are hazel in color. A black button-nose at the end of your long muzzle completes the image of an anthro Dalmatian's head";
-	now body entry is "lean and limber with hidden muscles as your canine body hides what strength you have[if player is dalskinned] underneath the pale wisps of black spotted fur covering your body[end if]. All across your arms, legs, thighs, chest, and torso you have almost unseen muscles cropped along your wiry body as your cano-mutant form is now more suited for maximizing your newfound dexterity with extreme running, jumping, bounding and leaping rather than fighting with what strength you do possess, what with you now possessing digitigrade feet instead of the normal plantigrade ones that other mutants boast";
-	now skin entry is "short, but thick fur covered with black rosettes dotted all across your";
+	now attack entry is "[one of]The Dalmatian snaps at you with his sharp teeth![or]The spotted canine punches you![or]With an aggressive bark, the Dalmatian kicks at your legs![or]A blow to the face sends you reeling![at random]";
+	now defeated entry is "[beattheDalmatian]";
+	now victory entry is "[losetoDalmatian]";
+	now desc entry is "[DalmatianDesc]";
+	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. A black button-nose at the end of a long muzzle completes the image of an anthro Dalmatian's head";
+	now body entry is "lean and limber, its form fitting an anthro canine seemingly built for both strength and speed. Your legs end in digitigrade dog's paws, while your arms sport paw-hands as dexterous as a human's";
+	now skin entry is "short but thick fur, covered with black rosettes dotted all across your";
 	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
 	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
-	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. With your tongue stretching free from out of your mouth, giving you a perfect dog tongue, you can only whimper and whine as you feel new canine instincts overcoming your senses";
-	now body change entry is "your entire form starts to increase in length. If that wasn't odd enough when the muscles you have along your chest, arms, legs and torso quickly go to receding back into your body you feel yourself almost wanting to curl up and shiver into a tight knit ball as your body pumps all of your strength into your thickening bones, giving them extra added density needed for holding up your escalating form. You actually have to stop yourself from jumping around like mad as your heels stretch up to give you a twin pair of digitigrade feet as the raw urge to [']go play['] takes you over down to your core";
-	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body. However, the most peculiar thing to happen next is the appearance of large black spots dotting themselves across your body in no particular pattern you can figure out";
-	now ass change entry is "your butt cheeks spreads outwards, forming two perfectly bubbles just made for gripping, while your spine arches downwards with the extending expansion of your incoming tail";
-	now cock change entry is "the mass of flesh between your [bodyname of player] legs twists and then shivers before pushing up from your body. When your maleness begins to quickly narrow at the tip you find yourself smiling as you think about how you're about to have a perfect dog's cock in the next few seconds. As a thick knot swells into being at the end of your shaft, forming a perfect bulge made for locking you into whatever partner you choose to be intimate with, you let out a moan of pleasure as you think about how good that's going to feel buried into someone";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. Feeling a strange sensation in your mouth, you open it while your muzzle is still taking shape, reflexively sticking out the long floppy tongue you have also gained";
+	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro dalmatian, complete with digitigrade paws to stand on";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
+	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
 	now str entry is 15; [ These are now the creature's stats... ]
 	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]

@@ -6,12 +6,12 @@ The description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".
 Bunker is a room. The description of Bunker is "[bunker desc]".
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
-Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
-East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
+Library door is a door. "Solid oak doors lend a stately appearance to the library.".
+East of Main & 7th Street is the Library Door. 
+The description of the Library Door is "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
-The marea of library door is "Outside".
 
 to say bunker desc:
 	project the figure of Bunker_icon;
@@ -68,11 +68,53 @@ to say abbey desc:
 	else if Alexandra is booked:
 		say "     Alexandra is on guard here, watching by the door for trouble. The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
+instead of sniffing Grey Abbey Library:
+	say "     The Grey Abbey Library has a complex scent with numerous layers upon layers. Wood, or maybe rather furniture polish, is definitively one of them, probably stemming from some dutiful librarians doing their best to keep up the historic building properly.";
+	if Alexandra is present and "Horny" is listed in Traits of Alexandra:
+		say "     Recently, the strong scent of your doberwoman bitch Alexandra has joined the rest of the aromas in here. With the whiff of her femcum ever-present in your nose now, you're seriously tempted not to go over to her and strip the sexy canine naked for some fun-time.";
+
+The description of Main & 7th Street is "[7thMainDesc]".
+The earea of Main & 7th Street is "Outside".
+
+to say 7thMainDesc:
+	say "     You're at the corner of 7th Street and Main, the latter of which extends further towards the north and south, while 7th Street starts right in front of the entrance of the Grey Abbey Library and runs into the distance westwards. Glancing at the historic structure of the library, you remember hearing somewhere that the old city center was actually fairly close by in the past. But then modern developments shifted the focus on the downtown area, where enough free room was available to put up high rises and new construction. As a historical section of the city, the area encompasses both residential buildings, a few shops and public buildings, having been built long before the introduction of zoning laws.";
+	say "     The outbreak of the nanite apocalypse has had a noticable impact on the area. You can see trash and abandoned remains of clothing scattered here or there, and a burned-out car wreck is standing in the middle of the T crossing. Thankfully, the library seems not to be holding too much interest for wandering beasts, but that may change quickly as you move farther away from it and explore.";
+
+instead of sniffing Main & 7th Street:
+	say "     An unpleasant odor hangs in the air, emanating from the burned wreck standing in the middle of the road.";
+
+West of Main & 7th Street is Looted Shops.
+The earea of Looted Shops  is "Outside".
+The description of Looted Shops is "[LootedShopsDesc]".
+
+to say LootedShopsDesc:
+	say "      You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
+
+instead of sniffing Looted Shops:
+	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
+
+George's Animal Emporium is southwest of Looted Shops.
+The description of George's Animal Emporium is "[PetShopDesc]".
+
+to say PetShopDesc:
+	say "     You're in a mid-sized pet store that has been recently looted. Judging from the tracks in the dust and grime blown in through the open front door, numerous people and creatures came and went before you. Almost all of the shelves have been rifled through and some even knocked over, creating quite a mess in here. Empty bags of all sorts of pet food are scattered everywhere, sometimes lying in sticky pools of what is clearly cum. With the food gone and the sheer scale of the mess in here, there could be some interesting and useful items to find if one were to spend some time [link]sort[as]sort chaotic mess[end link]ing through the chaotic mess. Since digging up anything of worth will be rather work intensive, this would probably not be worth the time unless you had a use for it.";
+
+instead of sniffing George's Animal Emporium:
+	say "     Myriad different smells are all around you in here, wafting up from food wrappers and toys, as well as the remnants of hasty matings between previous looters and scavengers who have visited this place. Somewhere in this mess, a bag of catnip must have been torn open, its dried contents scattered all over the ground.";
+
+
 West of Half-Renovated Room is Breakroom.
 Breakroom is a room. The description of Breakroom is "[gbreakroom desc]".
 The invent of Breakroom is { "food" }.
 Library Microwave is an object. It is in Breakroom. It is fixed in place. Understand "microwave" as Library Microwave.
-The description of Library Microwave is "A black, mid-sized microwave stands on one of the countertops in the breakroom. Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!".
+The description of Library Microwave is "[LibraryMicrowaveDesc]".
+
+to say LibraryMicrowaveDesc:
+	say "     A black, mid-sized microwave stands on one of the countertops in the breakroom. ";
+	if findwires is not 2 and fixedgens is not 2:
+		say "Sadly, without power it doesn't work.";
+	else:
+		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!".
 
 to say gbreakroom desc:
 	project the figure of Library1stfloor_icon;

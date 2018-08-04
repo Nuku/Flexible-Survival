@@ -1,7 +1,6 @@
 Version 1 of Finn by Wahn begins here.
 [Version 1 - Put into its own file]
 
-
 Missing Farm Hand is a situation. The level of Missing Farm Hand is 5. Missing Farm Hand is resolved.
 The sarea of Missing Farm Hand is "Plains".
 
@@ -16,6 +15,8 @@ FinnTrackingProgress is a number that varies. FinnTrackingProgress is usually 0.
 [   5: Finn rescued, centaur fucked him                  ]
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
+
+[ Note: The quest log for this is in Wahn/Anthony.i7x    ]
 
 Section 1 - Events
 
@@ -48,11 +49,11 @@ to say FinnTracked:
 	say "     Turning to follow the newer trail, it doesn't take all that long before you hear shouts and cursing coming from somewhere ahead of you. There are fragments of partially collapsed buildings sticking out of the grassland a short distance that way, the largest one rising not quite two stories. With the ruins breaking up the sounds a bit, you hear snippets of laughter, as well as angry and amused shouting from somewhere behind.";
 	WaitLineBreak;
 	say "     Cautiously moving closer, you do your best to stay hidden and peek around a crumbling wall and see a camp between the ruins, filled with multiple creatures. Two are centaurs, a male and female, and both of them have their front legs tied together, negating the usual speed and agility of the mythical beings. Clearly, these are captives of the other inhabitants of the camp - a trio of horsemen, bearing a brand of overlapping horseshoes on their shoulders. Two of them are restraining the male centaur while number three is standing at the female's rear end, one arm around a completely naked Finn's shoulder and his hand tightly gripping the farmhand's hard equine cock.";
-	say "     'Have a taste how good it feels to follow our master!' the guy next to Finn barks out in a rough voice, smacking his manhood against the centauress's bare pussy lips, then shoving the cockhead in between her folds. There is a frightened whimper from the young woman and the male centaur tries to rear up, shouting at the height of his voice, 'Get your stinking hands off my sister, you bastards!' Meanwhile, Finn gives a deep grunt and starts pumping his hips back and forth all on his own, clearly enjoying the feel of being inside the centauress.";
+	say "     'Have a taste how good it feels to follow our master!' the guy next to Finn barks out in a rough voice, smacking the missing farmhand's manhood against the centauress's bare pussy lips, then shoving its cockhead in between her folds. There is a frightened whimper from the young woman and the male centaur tries to rear up, shouting at the height of his voice, 'Get your stinking hands off my sister, you bastards!' Meanwhile, Finn gives a deep grunt and starts pumping his hips back and forth all on his own, clearly enjoying the feel of being inside the centauress.";
 	WaitLineBreak;
 	say "     'That's it - have fun boy! Just let your instincts take over, no sense resisting anymore,' the horseman with Finn says as he gives the farmhand an encouraging slap on his bare buttocks, then turns and stares right at you. 'And who do we have here - an uninvited visitor!' There's not much point in staying hidden any longer, now that all the horsemen (except Finn, who's busy fucking) turn to look at you, so you step out into the open.";
 	if Nightmaremastery is 1:
-		say "     The reaction of the horsemen is priceless as they recognize you as the master of the stables. Hostile stares turn into wide-eyed shock and a startled jeer from one of them stops quite suddenly as he chokes it down. 'Welcome master. I - er - we were sent out from the stables to 'encourage' centaurs to join us. So far they've seemed quite reluctant and even violent about the prospect, so we're trying other ways.' Squirming under your gaze as you start questioning them, they report that they also picked up another horseman who doesn't yet have the stable's brand. 'He'll be a proper addition to the herd soon, as you can see,' the leader of the little raiding party says proudly with a nod at Finn.";
+		say "     The reaction of the horsemen is priceless as they recognize you as the master of the stables. Hostile stares turn into wide-eyed shock and a startled jeer from one of them stops quite suddenly as he chokes it down. 'Welcome master. I - er - we were sent out from the stables to 'encourage' centaurs to join us. So far they've seemed quite reluctant and even violent about the prospect, so we're trying other ways.' Squirming under your gaze as you start questioning them, they report that they also picked up another horseman who doesn't yet have the stable's brand. 'He'll be a proper addition to the herd soon, as you can see. Was a bit resistant at first, but he'll fall in line soon enough,' the leader of the little raiding party says proudly with a nod at Finn.";
 		say "     [bold type]What do you want to do with these guys now? Leave Finn to be properly 'initiated' into the stables ([link]Y[as]y[end link]) or do you put a stop to it ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents:
 			LineBreak;

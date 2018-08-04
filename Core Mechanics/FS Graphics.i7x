@@ -12,7 +12,7 @@ Figure of pixel_icon is the file "pixel.jpg".
 
 [infection icons]
 Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
-Figure of Amazon_icon is the file "Amazon.png".
+Figure of Amazon_icon is the file "Amazon.jpg".
 Figure of AnthroShaftBeast_icon is the file "AnthroSB_ig.jpg".
 Figure of Bear_icon is the file "fs_bear.jpg".
 Figure of Beaver1_icon is the file "Beaver_ig1.jpg".
@@ -287,7 +287,7 @@ Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
 Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
 Figure of Sonny_face_icon is the file "Sonny_face.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
-Figure of Timothy_icon is the file "Timothy.png".
+Figure of Timothy_icon is the file "Timothy.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
 Figure of Thomas_erect_icon is the file "Thomas_erect.jpg".

@@ -49,7 +49,7 @@ The effectiveness of ripped jeans is 0.
 The placement of ripped jeans is "waist".
 The descmod of ripped jeans is "A pair of ripped and torn jeans cover your hips and legs. Even though they have holes, wearing them gives you a somewhat protected feeling.".
 The slot of ripped jeans is "waist".
-the scent of ripped jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of ripped jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 black jeans is a grab object.
 black jeans is equipment.
@@ -62,7 +62,7 @@ The effectiveness of black jeans is 0.
 The placement of black jeans is "waist".
 The descmod of black jeans is "A pair of solid black jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
 The slot of black jeans is "waist".
-the scent of black jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of black jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 sturdy jeans is a grab object.
 sturdy jeans is equipment.
@@ -75,7 +75,7 @@ The effectiveness of sturdy jeans is 0.
 The placement of sturdy jeans is "waist".
 The descmod of sturdy jeans is "A pair of dark blue jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
 The slot of sturdy jeans is "waist".
-the scent of sturdy jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of sturdy jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 skinny jeans is a grab object.
 skinny jeans is equipment.
@@ -88,7 +88,7 @@ The effectiveness of skinny jeans is 0.
 The placement of skinny jeans is "waist".
 The descmod of skinny jeans is "A pair of dark blue jeans cover your hips and legs. They look almost painted onto you, with stretchy fabric that follows every last curve of your legs and hips.".
 The slot of skinny jeans is "waist".
-the scent of skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 hot pants is a grab object.
 hot pants is equipment.
@@ -101,7 +101,7 @@ The effectiveness of hot pants is 0.
 The placement of hot pants is "waist".
 The descmod of hot pants is "A pair of red hot pants cover your hips and legs. They are really skimpy, barely covering a third of your thighs. If they were any tighter, you could call them underwear.".
 The slot of hot pants is "waist".
-the scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 gray pants is a grab object.
 gray pants is equipment.
@@ -114,7 +114,7 @@ The effectiveness of gray pants is 0.
 The placement of gray pants is "waist".
 The descmod of gray pants is "A pair of gray pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
 The slot of gray pants is "waist".
-the scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 camo pants is a grab object.
 camo pants is equipment.
@@ -127,7 +127,7 @@ The effectiveness of camo pants is 0.
 The placement of camo pants is "waist".
 The descmod of camo pants is "A pair of camo pants covers your hips and legs. The sturdy fabric gives you a well-protected feeling.".
 The slot of camo pants is "waist".
-the scent of camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 jogging pants is a grab object.
 jogging pants is equipment.
@@ -140,7 +140,7 @@ The effectiveness of jogging pants is 0.
 The placement of jogging pants is "waist".
 The descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
 The slot of jogging pants is "waist".
-the scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 bermuda shorts is a grab object.
 bermuda shorts is equipment.
@@ -153,7 +153,7 @@ The effectiveness of bermuda shorts is 0.
 The placement of bermuda shorts is "waist".
 The descmod of bermuda shorts is "A pair of colorful bermuda shorts cover your hips and legs. With their bright and colorful patterns, they'll surely draw attention to you.".
 The slot of bermuda shorts is "waist".
-the scent of bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surelythey're clean enough to wear another week or two at least...".
+the scent of bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 black miniskirt is a grab object.
 black miniskirt is equipment.
