@@ -262,7 +262,14 @@ to say RyouseiTalkMenu:
 
 to say RyouseiTalk1:
 	say "     Ryousei looks at you with surprise on his face and strokes his furry chin. 'You want to... be like me? This strange world still surprises me, no matter how many creatures I see change before my very eyes. But if that is your custom, I am willing to help. May bringing more tiger-folk into this place lead to greater wisdom and restraint. Your native beasts certainly lack both.' With that, he curls his clawed fingers, looking at the cup of his hand in intense concentration, then suddenly presses his palm flat against your chest. 'There, that should do it from what I have observed.'";
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Royal Tiger":
+			now monster is y;
+			break;
+	now non-infectious entry is false;
 	infect "Royal Tiger";
+	now non-infectious entry is true;
 
 to say RyouseiTalk2:
 	say "     Starting a conversation about the otherworldly place Ryousei came from, you listen with rapt attention to a tale about [one of]the flying mountain of On'huang and the hawk-men that live there[or]the lush land of the middle, dominion of his overlord, the shogun Aki[or]Shir'ley, a beautiful dancer that two generals almost fought a war over[or]a gruesome red oni, eating dozens of people from a lone village before he could be stopped[or]the monks of the oblivion and their everlasting vigil to keep the bottomless abyss from consuming everything around it[or]the evil djinn Zardoz, who entrapped those who wished on his lamp[at random]. It certainly is an epic story, told in the rich, deep voice of your companion. You can picture the beautiful and terrible landscapes appearing in it from his detailed descriptions, taking you away from the dreary reality of the nanite apocalypse for a moment. With that and all the strange people and creatures appearing in it, the tale would certainly make a fitting script for a Hollywood movie.";

@@ -175,7 +175,7 @@ When Play begins:
 	now libido entry is 30;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "Satyress Wine";    [ Loot monster drops, ]
 	now lootchance entry is 30;           [ Chance of loot dropping 0-100 ]
-	now scale entry is 2;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]satyress[or]mythological[at random]";
 	now magic entry is true;
