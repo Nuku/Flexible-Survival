@@ -2,6 +2,11 @@ Version 1 of Ryousei by Wahn begins here.
 
 "Adds a Tiger NPC/pet named Ryousei to Flexible Survival's Wandering Monsters table"
 
+[ XP of Ryousei - Brushing                                                ]
+[  0: never brushed                                                       ]
+[  1: nonsexual brushing                                                  ]
+[  2: brushing & sex                                                      ]
+
 [ RyouseiXerxes - Interaction with the human dog                          ]
 [  0: never met                                                           ]
 [  1: talked with the player about him                                    ]
@@ -89,7 +94,7 @@ When Play begins:
 	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]";
 	now tail entry is "You have a long, tiger-like tail extending from just above your ass, lashing back and forth in excitement with every movement.";
 	now cock entry is "[one of]feline[or]Tiger[or]barbed[at random]";
-	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward and the muscles rearrange themselves into the powerful configuration of a tiger. Your nose twitches as it flattens out, newly discovered scents washing over you as it merges into your new muzzle. From one eye-blink to the next, your view shifts to now come though slitted cat-like pupils, and your ears finishing their adjustment to their new place on top of your head";
+	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward and the muscles rearrange themselves into the powerful configuration of a tiger. Your nose twitches as it flattens out, newly discovered scents washing over you as it merges into your new muzzle. From one eye-blink to the next, your view shifts to now come though slitted, cat-like pupils, and your ears finishing their adjustment to their new place on top of your head";
 	now body change entry is "muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner. You stumble as your legs shift underneath you, their ankles stretching upwards as your feet expand and change, shifting your balance to the balls of new paw-like feet while the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly";
 	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body";
 	now ass change entry is "it grows firm and muscled, and a long sleek tiger tail erupts outwards from your tailbone. Soon completing its growth, it starts lashing around behind you in long natural motions, almost feeling as if it had always been a part of you";
@@ -207,7 +212,7 @@ to say RyouseiTalkMenu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him about becoming a tiger";
-	now sortorder entry is 1;
+	now sortorder entry is 0;
 	now description entry is "Tell the proud tiger you want to be like him";
 	[]
 	choose a blank row in table of fucking options;
@@ -215,10 +220,16 @@ to say RyouseiTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask the tiger to tell you of his world";
 	[]
+	if carried of fur brush > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer to brush his fur";
+		now sortorder entry is 2;
+		now description entry is "Suggest grooming the proud tiger";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -233,17 +244,20 @@ to say RyouseiTalkMenu:
 					say "[RyouseiTalk1]";
 				if (nam is "Talk about the place he is from"):
 					say "[RyouseiTalk2]";
+				if (nam is "Offer to brush his fur"):
+					say "[RyouseiBrushing]";
 				wait for any key;
-		else if calcnumber is 100:
+				say "[RyouseiTalkMenu]";
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the royal tiger, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RyouseiTalk1:
@@ -253,11 +267,104 @@ to say RyouseiTalk1:
 to say RyouseiTalk2:
 	say "     Starting a conversation about the otherworldly place Ryousei came from, you listen with rapt attention to a tale about [one of]the flying mountain of On'huang and the hawk-men that live there[or]the lush land of the middle, dominion of his overlord, the shogun Aki[or]Shir'ley, a beautiful dancer that two generals almost fought a war over[or]a gruesome red oni, eating dozens of people from a lone village before he could be stopped[or]the monks of the oblivion and their everlasting vigil to keep the bottomless abyss from consuming everything around it[or]the evil djinn Zardoz, who entrapped those who wished on his lamp[at random]. It certainly is an epic story, told in the rich, deep voice of your companion. You can picture the beautiful and terrible landscapes appearing in it from his detailed descriptions, taking you away from the dreary reality of the nanite apocalypse for a moment. With that and all the strange people and creatures appearing in it, the tale would certainly make a fitting script for a Hollywood movie.";
 
+to say RyouseiBrushing:
+	if XP of Ryousei is 0: [never brushed before]
+		say "     As you pull the wooden brush from your backpack and approach Ryousei, he watches you come closer with a curious yet friendly expression on his face, followed by a chuckle as you make your offer to brush his fur. 'Your people do certainly have interesting customs, my friend,' the proud tiger says while rubbing the underside of his chin thoughtfully, the edges of his mouth curving up in amusement. 'But as the saying goes, [']If you walk the golden road of Amate'okoku, be sure to bow to the sunrise.[']' He winks at you and glances around, reflexively making sure that no threats are near, then undoes the obi of his blue kimono. Sliding the durable garment back over his shoulders, he bares his well-trained body to you, clad in nothing more than a white fundoshi beneath. Folding the blue fabric into a small-ish square, the otherworldly cat brushes a spot on the ground, then lays the kimono down on it and kneels facing away from you.";
+		say "     You can see the muscles of the skilled warrior's back flex under his short fur as he partly turns to look over his shoulder, calling out, 'I await your brush, friend.' His tail is raised in a gentle curve, the end hooked as if to form a question mark. Smiling, you step up behind Ryousei, turning the brush to its rubber-tipped wooden pegs and stroking it gently through the striped fur on his back. Little tangles of fur smooth out easily when you do, and a few loose hairs are taken up by the brush. There is something pleasant and relaxing about the simple act of stroking your friend, grooming this large and powerful warrior. Putting a hand on his shoulder to brace yourself as you work your hand down Ryousei's broad back, you feel that you're not the only one who thinks so. You can feel the beginning vibrations of an intense purr in your hand and arm even before you hear any sound come from the tiger's chest.";
+		WaitLineBreak;
+		say "     Eventually having groomed all of your otherworldly companion's back, as well as his muscled arms, you step around to work on his front, too. As your brush slowly slides over the firm contours of his pecs, the tiger lets out a pleased growling sound that makes you look up to meet his gaze. 'You know, in my world there are few instances in which people groom each other like this. Cubs obviously, and invalid battle-brothers - both of which I assume you don't think me part of.' An underlying tone of amusement tells you he's making a joke, so you join his chuckle. What remains when that ebbs off is a relatively intense gaze in your feline friend's eyes, followed by him adding the words, 'The other people who do this for each other are mates.' He looks down between you, focusing on the erection tenting out his fundoshi. 'Now, I know of course that you have a different culture and don't necessarily mean things as my people would, but try telling my body this,' Ryousei says with a wink.";
+		LineBreak;
+		say "     [bold type]How do you respond to his teasing?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Put your hand on his crotch and give him a rub.";
+		say "     [link](2)[as]2[end link] - Just being a good friend here. The fundoshi stays on.";
+		say "     [link](3)[as]3[end link] - Err, stop touching him right now.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to suggest more than grooming, [link]2[end link] to keep things platonic or [link]3[end link] to stop.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[RyouseiSexualGrooming1]";
+			now XP of Ryousei is 2; [sexual grooming before]
+		else if calcnumber is 2: [platonic stroking]
+			LineBreak;
+			say "     Giving the well-trained tiger and his bulge some respectful glances, you murmur something about just being friendly, then continue to stroke him in the same unhurried tempo. Both of you enjoy the quiet time together, but eventually you're all done and pack away the brush. Ryousei lets out a little sigh full of unfulfilled desires, then stands up and gets dressed again. 'Thank you for a pleasant time. I enjoyed spending it with you.' With that said, the tiger takes his usual place by your side once more.";
+			now XP of Ryousei is 1; [nonsexual grooming before]
+		else: [stop right away]
+			LineBreak;
+			say "     Quickly lowering the brush, you quietly tell Ryousei that maybe it'd be best if you stopped this for now. The tiger acknowledges you with a dignified look full of understanding, but you think you can detect a little note of disappointment in his eyes as he stands up to get dressed again. 'My apologies if that made you uncomfortable. As I said, our cultures clearly are quite different in some regards.' With a shrug, the tiger takes his usual place by your side once more.";
+			now XP of Ryousei is 1; [nonsexual grooming before]
+	else if XP of Ryousei is 1: [nonsexual brush before]
+		say "     As you pull the wooden brush from your backpack and approach Ryousei, he watches you come closer with an amused expression on his face, followed by a chuckle as you again make your offer to brush his fur. 'I can say that I do enjoy this custom of your people, my friend,' the proud tiger says while rubbing the underside of his chin thoughtfully, the edges of his mouth curving up. 'Just remember that such intimate touching will likely have a certain effect on me. I wouldn't want you to be disconcerted by that.' He winks at you and glances around, reflexively making sure that no threats are near, then undoes the obi of his blue kimono. Sliding the durable garment back over his shoulders, he bares his well-trained body to you, clad in nothing more than a white fundoshi beneath. Folding the blue fabric into a small-ish square, the otherworldly cat brushes a spot on the ground, then lays the kimono down on it and kneels facing away from you.";
+		say "     You can see the muscles of the skilled warrior's back flex under his short fur as he partly turns to look over his shoulder, calling out, 'I await your brush, friend.' His tail is raised in a gentle curve, the end hooked as if to form a question mark. Smiling, you step up behind Ryousei, turning the brush to its rubber-tipped wooden pegs and stroking it gently through the striped fur on his back. Little tangles of fur smooth out easily when you do, and a few loose hairs are taken up by the brush. There is something pleasant and relaxing about the simple act of stroking your friend, grooming this large and powerful warrior. Putting a hand on his shoulder to brace yourself as you work your hand down Ryousei's broad back, you feel that you're not the only one who thinks so. You can feel the beginning vibrations of an intense purr in your hand and arm even before you hear any sound come from the tiger's chest.";
+		WaitLineBreak;
+		say "     Eventually having groomed all of your otherworldly companion's back, as well as his muscled arms, you step around to work on his front, too. As your brush slowly slides over the firm contours of his pecs, the tiger lets out a pleased growling sound that makes you look up to meet his gaze. 'So, here we are again. As close together as mates would be in my world, with the expected result.' He looks down between you, focusing on the erection tenting out his fundoshi. 'By all means, continue. This is pleasant enough, even if I have to remind myself that it doesn't mean what my body expects it to,' Ryousei says with a wink.";
+		LineBreak;
+		say "     [bold type]How do you respond to his r?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Put your hand on his crotch and give him a rub.";
+		say "     [link](2)[as]2[end link] - Just being a good friend here. The fundoshi stays on.";
+		say "     [link](3)[as]3[end link] - Err, stop touching him right now.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to suggest more than grooming, [link]2[end link] to keep things platonic or [link]3[end link] to stop.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[RyouseiSexualGrooming1]";
+			now XP of Ryousei is 2; [sexual grooming before]
+		else if calcnumber is 2: [platonic stroking]
+			LineBreak;
+			say "     Giving the well-trained tiger and his bulge some respectful glances, you murmur something about just being friendly, then continue to stroke him in the same unhurried tempo. Both of you enjoy the quiet time together, but eventually you're all done and pack away the brush. Ryousei lets out a little sigh full of unfulfilled desires, then stands up and gets dressed again. 'Thank you for a pleasant time. I enjoyed spending it with you.' With that said, the tiger takes his usual place by your side once more.";
+		else: [stop right away]
+			LineBreak;
+			say "     Quickly lowering the brush, you quietly tell Ryousei that maybe it'd be best if you stopped this for now. The tiger acknowledges you, yet raises an eyebrow in surprise. 'I have to ask: What did you expect, my friend? I told you before that some things just come natural, yet you seem oddly surprised. Oh well, our different cultures clearly are at odds here. My apologies if I made you uncomfortable.' With a shrug, the tiger takes his usual place by your side once more.";
+	else if XP of Ryousei is 2: [sexual brush before]
+		say "     As you pull the wooden brush from your backpack and approach Ryousei, he watches you come closer with an amused expression on his face, followed by a chuckle as you again make your offer to brush his fur. 'I can say that I do enjoy this custom of your people, my friend,' the proud tiger says while rubbing the underside of his chin thoughtfully, the edges of his mouth curving up, 'especially if you want to give it another intimate ending. I know that this does not necessarily mean that you're my mate, but I can say that I wouldn't mind if it were true.' He winks at you and glances around, reflexively making sure that no threats are near, then undoes the obi of his blue kimono. Sliding the durable garment back over his shoulders, he bares his well-trained body to you, clad in nothing more than a white fundoshi beneath. Folding the blue fabric into a small-ish square, the otherworldly cat brushes a spot on the ground, then lays the kimono down on it and kneels facing away from you.";
+		say "     You can see the muscles of the skilled warrior's back flex under his short fur as he partly turns to look over his shoulder, calling out, 'I await your brush, friend.' His tail is raised in a gentle curve, the end hooked as if to form a question mark. Smiling, you step up behind Ryousei, turning the brush to its rubber-tipped wooden pegs and stroking it gently through the striped fur on his back. Little tangles of fur smooth out easily when you do, and a few loose hairs are taken up by the brush. There is something pleasant and relaxing about the simple act of stroking your friend, grooming this large and powerful warrior. Putting a hand on his shoulder to brace yourself as you work your hand down Ryousei's broad back, you feel that you're not the only one who thinks so. You can feel the beginning vibrations of an intense purr in your hand and arm even before you hear any sound come from the tiger's chest.";
+		WaitLineBreak;
+		say "     Eventually having groomed all of your otherworldly companion's back, as well as his muscled arms, you step around to work on his front, too. As your brush slowly slides over the firm contours of his pecs, the tiger lets out a pleased growling sound that makes you look up to meet his gaze. 'So, here we are again. As close together as mates would be in my world, with the expected result.' He looks down between you, focusing on the erection tenting out his fundoshi. Leaning forward to lick your cheek, he adds in a throaty voice, 'would you like to take this further? I very much desire to do so.'";
+		LineBreak;
+		say "     [bold type]How do you respond to his teasing?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Put your hand on his crotch and give him a rub.";
+		say "     [link](2)[as]2[end link] - Just being a good friend here. The fundoshi stays on.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to suggest more than grooming or [link]2[end link] to keep things platonic this time.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[RyouseiSexualGrooming1]";
+		else if calcnumber is 2: [platonic stroking]
+			LineBreak;
+			say "     Giving the well-trained tiger and his bulge some respectful glances, you put your hand on his shoulder and quietly explain that this time, you really only did want to be friendly. He takes your decision amicably enough, remaining in position as you continue to stroke him in the same unhurried tempo. Both of you enjoy the quiet time together, but eventually you're all done and pack away the brush. Ryousei lets out a little sigh full of unfulfilled desires, then stands up and gets dressed again. 'Thank you for a pleasant time. I enjoyed spending it with you.' With that said, the tiger takes his usual place by your side once more.";
+
+to say RyouseiSexualGrooming1:
+	say "     Lowering a hand and placing it on the bulge of your tiger-striped companion, you look into Ryousei's eyes and say that you wouldn't mind making more than just grooming out of this. His purr increases in volume and the large feline leans forward to lick your cheek, then lowers a hand to pull the fundoshi off his hips. No longer constrained by the white fabric, your otherworldly companion's erection swings upwards to proudly stand straight, aimed right at you. It is very well sized even for a large being such as Ryousei, thick and weighty above his dangling furry balls. Putting down the brush, you wrap your fingers around the purring tiger's erection. Stroking up and down his shaft, you feel the small, nubby spines along its length, which are soft but have just enough rigidity to rub someone in just the right way. Near the base, his cock bulges out just a little bit, forming something that is not quite the knot of a canine, but large enough to leave an impression as it slides in and out of someone.";
+	say "     As you handle his manhood, the naked tiger puts his arms around your body in turn, pulling you in against his broad chest and licking your neck affectionately. There is no need for words between you as you touch and feel one another, the vibrations of Ryousei's purr radiating through your entwined bodies. You can't help but feel taken up in the open affection the male tiger is sharing with you, something about the way he regards you feeling primal and intense. While he may be a proud and civilized man, Ryousei is clearly in touch with his feline urges as well and doesn't shy away from doing what feels natural. As you touch and stroke one another, you feel your own arousal grow alongside Ryousei's obvious pleasure, the big feline's throaty moans like music to your ears.";
+	WaitLineBreak;
+	say "     The tiger's lustful grunts soon gain a definite tone of urgency as you stroke and pump his length, the reactions you elicit bringing a smile to your face. Enjoying the intimacy with your feline partner, you lower your other hand to cup his full and weighty balls, gently rolling those softly furred orbs between your fingers. This coaxes a throaty sound of pleasure from the depth of his broad chest, followed by him drawing your mouth to his in a forceful kiss. Ryousei's manhood starts to throb in your grasp, the anthro feline's pre leaking liberally over your fingers, and you can feel his balls start to tighten as nears his inevitable peak.";
+	say "     Before long, the first heavy spurt of tiger cum shoots from his cock, splashing across your arm and marring your [skin of player] skin. You continue to stroke him while he climaxes, savoring the way his uniquely shaped cock throbs and pulses in time with each powerful blast. Moaning his pleasure, the tiger squeezes you tightly against his trembling form, his muzzle locking to your lips in a hungry kiss that has your tongues dance and spar. His length twitches with each thick spurt of feline seed, splattering your body in dripping webs of the virile fluid. He purrs like an idling motor as his orgasm tapers to an end, his breath still strained by the time his muzzle pulls away to look into your eyes with a great sense of loyalty and affection.";
+	WaitLineBreak;
+	say "     When the two of you eventually come down from the lustful excitement, you realize that you're now soaked in Ryousei's cum, the tiger's creamy release clinging to your body. He follows your gaze as you check yourself out, then wiggles his eyebrows and says, 'I'll take care of that. Grooming goes both ways, after all.' Chuckling softly, he pulls your arm up with gentle force and begins to clean the mess with his tongue. In a mixture of playful and dutifully thorough ministrations, the tiger doesn't let you go until you're as clean as a cat-wash can make you. Then he kisses you deeply once more, sharing the taste of his load as he explores your mouth with his tongue. When he draws back after a little while, Ryousei looks at you and smiles. 'Spending time with someone like you makes even a strange world like this more bearable. Thank you for your company[if player is not defaultnamed], [name of player][end if]. I really enjoyed every part of it, and I wouldn't mind doing more with you soon.'";
+	say "     Grabbing the fundoshi from the ground and standing up to properly wrap it around his hips, the proud tiger shakes out the folded bundle of his kimono before putting it back on again. Soon, he is as well-dressed as ever, ready to accompany you wherever you may go and share in your adventures.";
+
 to say sexwithRyousei:
 	if lastfuck of Ryousei - turns < 6:
-		say "     The proud tiger reaches out to squeeze your arm in a companionable way, but stops you as you move to embrace him. 'Sorry my friend, but one should always strive to moderation. It would not do to exhaust ourselves completely and then be surprised by some wandering beast. This city is a dangerous place, after all.' With that said, your companion lets go of you. Seems like you got to wait a bit if you want to get frisky with him...";
+		say "     The proud tiger reaches out to squeeze your arm in a companionable way, but stops you as you move to embrace him. 'Sorry my friend, but one should always strive for moderation. It would not do to exhaust ourselves completely and then be surprised by some wandering beast. This city is a dangerous place, after all.' With that said, your companion lets go of you. Seems like you've got to wait a bit if you want to get frisky with him...";
 	else:
-		say "     As you approach the proud tiger with your offer of sex, Ryousei smiles, showing his quite impressive fangs. 'So you did not just want me as your companion in fights, did you. Very well - I would be more than happy to. One takes what pleasure there is on a campaign, and I am no stranger to sharing a bed with those soldiers who earned my respect, be they male or female.' His gaze wanders up and down over your form, and the anthro tiger reaches out to caress your arm.";
+		say "     As you approach the proud tiger with your offer of sex, Ryousei smiles, showing off his rather impressive fangs. 'So you did not just want me as your companion in fights, did you? Very well - I would be more than happy to indulge you. One takes what pleasure there is on a campaign, and I am no stranger to sharing a bed with those who have earned my respect, be they male or female.' His gaze wanders up and down over your form, and the anthro tiger reaches out to caress your arm.";
 		say "[RyouseiSexMenu]";
 
 to say RyouseiSexMenu:
@@ -298,12 +405,12 @@ to say RyouseiSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer the anthro tiger a go with Xerxes";
 		now sortorder entry is 6;
-		now description entry is "Let Ryousei enjoy Xerxes rear while you make use of his front";
+		now description entry is "Let Ryousei enjoy Xerxes['] rear while you make use of his front";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -327,16 +434,16 @@ to say RyouseiSexMenu:
 				if (nam is "Offer the anthro tiger a go with Xerxes"):
 					say "[RyouseiSex6]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the royal tiger, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RyouseiSex1: [player gets fucked in the ass]
@@ -349,7 +456,7 @@ to say RyouseiSex1: [player gets fucked in the ass]
 	say "     Giving you a moment to get used to his cock, now that the initial penetration is over, the broad-shouldered tiger laps soothingly over the little marks his teeth left on your skin, 'Best to get the hard part over quick, you know.' He mrowls in lust, then kisses you full on the mouth before adding, 'Mmmh, you feel great - so warm and tight.' And with that, he pulls back a tiny bit, causing the nubby spines on his erection to brush your inner walls in an explosion of pleasure that sears through your mind, followed by another hard thrust that pushes even deeper into you. You writhe in lust and clutch the clothing under you with both hands as he works more and more of his shaft into you with sure movements, then finally the soft fur on his balls brushes against your crotch. He's all the way inside.";
 	WaitLineBreak;
 	say "     With Ryousei's mighty spear filling you out very nicely, you can feel the throb of his heartbeat pulse against your passage. It makes the many spines along his shaft's length rub you in tiny but still quite pleasant ways, increasing your arousal even while he's holding still otherwise. But that's not the only way the big feline makes your coupling a thing to remember for both of you - [if player is purefemale]his hand seeks out your pussy and caresses it, soon sinking two fingers in between your folds and rubbing your sensitive clit with his thumb. [else if player is male]his hand seeks out your own hard shaft, encircling it in a firm grip and jerking up and down in a steady pace. [else]his hand seeks out your smooth crotch, brushing over the sensitive skin in stimulating movements. [end if]Then Ryousei starts to move in and out of your back passage, fucking you with long strokes that leave you gasping and moaning with each new pull and thrust.";
-	say "     For you don't know how long, you forget all about the city, the nanites, everything that is going on - your whole world instead being the warm furry shape on top of you, the sensations of him moving against you - and inside you. Bliss fills your being as one intense touch and stimulation follows the next - the many little spines brushing your inner walls, a wet tongue lapping over your nipples, then the tiger's gentle bite and suck on them, his fingers on your crotch, ...eventually all of those combined push you past your limit, and in a wave of lust you scream out as your climax breaks and [if player is purefemale]a gush of femcum drenches your partner's rubbing fingers. He brings them up to his muzzle to suck your sweet juices off, then intensifies the movement of his hips, eager to join you in orgasm[else if player is male]the [cock of player] erection in your partner's hand pulses as spurt after spurt of cum sprays all over your chest. He swipes a good bit up with his fingers and brings them up to his muzzle, sucking your seed off and swallowing it, then intensifies the movement of his hips, eager to join you in orgasm[else]your whole body trembles in completion. He puts his hand on your chest, taking a moment to feel your movements as you come, then intensifies the movement of his hips, eager to join you in orgasm[end if].";
+	say "     For you don't know how long, you forget all about the city, the nanites, everything that is going on - your whole world instead being the warm furry shape on top of you, the sensations of him moving against you - and inside you. Bliss fills your being as one intense touch and stimulation follows the next - the many little spines brushing your inner walls, a wet tongue lapping over your nipples, then the tiger's gentle bite and suck on them, his fingers on your crotch... Eventually all of those combined push you past your limit, and in a wave of lust you scream out as your climax breaks and [if player is purefemale]a gush of femcum drenches your partner's rubbing fingers. He brings them up to his muzzle to suck your sweet juices off, then intensifies the movement of his hips, eager to join you in orgasm[else if player is male]the [cock of player] erection in your partner's hand pulses as spurt after spurt of cum sprays all over your chest. He swipes a good bit up with his fingers and brings them up to his muzzle, sucking your seed off and swallowing it, then intensifies the movement of his hips, eager to join you in orgasm[else]your whole body trembles in completion. He puts his hand on your chest, taking a moment to feel your movements as you come, then intensifies the movement of his hips, eager to join you in orgasm[end if].";
 	WaitLineBreak;
 	say "     Ryousei pounds into you hard and deep, making the virile orbs under his shaft thud against you in a rapid pace. Having brought you to completion, he takes out all the stops and fully gives in to the mating urges of a wild tiger, bellowing out possessive roars as he sinks into his willing partner again and again. No longer content to just take you as you lie under him, the tiger general even puts his arms around you, pulling you and holding you as he grinds against your hips with you on his lap. Given the furious pace of his rutting against you, it is no wonder that the anthro feline soon reaches his own climax. He drives his pointy shaft all the way into you one last time, then lets loose a massive spurt of his creamy seed, painting your insides white. And then another, and another. A deep rumbling purr starts to resound in the depth of Ryousei's chest as he rides out the orgasm, panting breathlessly as he breeds your ass.[mimpregchance]";
 	say "     With both of your lusts satisfied for now, Ryousei nevertheless keeps his arms around you and strokes your skin gently. He makes no move to withdraw his cock, keeping its slowly softening shape inside you as if to prolong your intimate moment as long as he can. Then, after giving your chest another long lick and breathing in your scent deeply, he says, 'Being your companion makes the time on this wretched world bearable, even... pleasant, at times. I want you to think about what you will do when I eventually find my way back home. Would you accompany me, leave this place? My army needs people like you - strong and dependable. There will be hardship, but also rewards...' He squeezes your shoulder with one hand, mrowling as his manhood throbs inside you again, then finally pulls out and reaches for his kimono. 'Do not answer now, it is moot until I can open a portal anyways. Just... think about it,' he says, then moves away a bit to groom his fur into its usual impeccable state and get dressed.";
@@ -379,7 +486,7 @@ to say RyouseiSex3: [player fucks Ryo]
 	project the figure of Ryousei_fundoshi_icon;
 	say "     Sliding the kimono off his shoulders with a supple and smooth movement, the tiger folds the garment once, then drops it to the ground. Muscles ripple under his short fur as he stands tall and straight after that, smiling at you with his hands on his hips. 'Wanna unwrap your companion, my warrior friend?' he says in a teasing tone and winks, waiting for you to make the next move. Eager to touch the anthro tiger, you step up to him and slide a hand down his abs, then cup his bulge and give it an appreciative squeeze. It is an easy task to tug the ends of the single strip of cloth forming the fundoshi underwear out and unravel its tie, allowing the garment to fall to the ground between Ryousei's feet.";
 	WaitLineBreak;
-	say "     Using a hand to cup the now free-swinging furry balls of your feline friend, you gleefully fondle Ryousei, making the tiger become fully erect in just a few moments. His well-sized shaft quickly pushes out of the furred sheath of his, brushing hotly against your wrist. Reddish-pink in color, with a pointy head and a number of small nubby spikes along its length, the certainly looks interesting and even has a pair of bulges near the base - not quite a full canine knot, but certainly something erection to give extra pleasure as it slides in and out of someone. You're almost tempted to feel that hot shaft inside you right now, but no - you've already got a date with this tiger's tight hole!";
+	say "     Using a hand to cup your feline friend's now free-swinging furry balls, you gleefully fondle Ryousei, helping the tiger become fully erect in just a few moments. His sizable shaft quickly pushes out of his furred sheath, brushing hotly against your wrist. Reddish-pink in color, with a pointy head and a number of small, nubby spikes along its length, it certainly looks interesting and even has a pair of bulges near the base - not quite a full canine knot, but certainly something that could provide extra pleasure as it slides in and out of someone. You're almost tempted to feel that hot shaft inside you right now, but you've already got a date with this tiger's tight hole!";
 	say "     'This will be fun,' Ryousei grunts lustily as he brushes his erection against you some more, then starts to slide his hands under your clothes and pulls them off. Eager to get naked yourself, you readily help the anthro tiger to strip you down to nakedness, then embrace him for a long moment of shared touches, gropes, kisses and licks. Eventually, he starts to lower himself bit by bit, crouching down and laying a trail of licks on your torso, then laps at your [cock of player] manhood. It certainly is a stimulating experience to feel his somewhat rough tongue brush over your privates, getting your cock slick with his spit.";
 	WaitLineBreak;
 	say "     Soon, the proud tiger gives you a last long lick, playing his tongue over your shaft, then says in a lustful tone, 'Mount me like a cavalryman does his horse!' With that, the big anthro cat turns around and takes a position on all fours, his rear stretched high for you. You're distracted for a second with what his comment suggests about the cavalry tradition of Ryousei's home plane, but the striped tail sinuously swaying in front of your nose quickly draws your attention back to the matter at hand. Crouching behind the anthro tiger, you playfully slide a hand along the length of his tail, then take hold of his buttocks and spread them, revealing the pink ring of his pucker.";
@@ -421,7 +528,7 @@ to say RyouseiSex5: [player goes down on Ryousei's dick]
 	setmonster "Royal Tiger";
 	choose row monster from the table of random critters;
 	say "     Taking the lead, you slide a hand through the soft, mid-length fur on the back of his neck and hook it behind his head, drawing the statuesque tiger to you to meet his muzzle with your mouth. A deep purr rumbles in the depth of his throat as Ryousei eagerly gives in to the kiss, opening his muzzle to let his tongue wrestle with yours. Your other arm more or less automatically slides around his side, holding on to the muscled form of the tall cat. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. The rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state. 'You are one sexy being - a shining star in this dreary place,' Ryousei grunts lustily as you draw back for a breather.";
-	say "     Eager to touch the tiger and take care of him, your hands move to his hips and pull away the cloth belt bound around them. As the knot of fabric at the front is undone, it falls to the ground, leaving Ryousei's kimono to be pulled open by you. Doing so, you reveal the muscled tiger's cream-colored front, its glorious fur short enough to let his impressive physique show clearly - muscled pecs and rock hard abs above the longer fur of his pubes, nestled around a proper feline sheath from which his rigid cock protrudes, hard and ready for you. Very well sized even for a large being such as Ryousei, the erection stands straight out, thick and weighty above his dangling furry balls. It tapers sharply near the end, coming to a point that promises many interesting sensations - as do the numerous small, nubby spines along its shaft. You can't help but want to touch it, so you do - fingers closing around the firm length and feeling over the spines, finding them pretty soft, with just enough rigidity to rub someone in a very very right way when they get fucked by Ryousei.";
+	say "     Eager to touch the tiger and take care of him, your hands move to his hips and pull away the cloth belt bound around them. As the knot of fabric at the front is undone, it falls to the ground, leaving Ryousei's kimono to be pulled open by you. Doing so, you reveal the muscled tiger's cream-colored front, its glorious fur short enough to let his impressive physique show clearly - muscled pecs and rock hard abs above the longer fur of his pubes, nestled around a proper feline sheath from which his rigid cock protrudes, hard and ready for you. Very well sized even for a large being such as Ryousei, the erection stands straight out, thick and weighty above his dangling furry balls. It tapers sharply near the end, coming to a point that promises many interesting sensations - as do the numerous small, nubby spines along its shaft. You can't help but want to touch it, so you do - fingers closing around the firm length and feeling over the spines, finding them pretty soft, with just enough rigidity to rub someone in just the right way when they get fucked by Ryousei.";
 	WaitLineBreak;
 	say "     'Do you like it?' the big tiger asks, continuing with, 'Even many denizens of my own plane get a bit frightened when they lay eyes on a tiger's manhood and... nnnngghhh!' Squeezing his cock and giving it an appreciative jerk, you tell your feline companion in an unmistakable way that you have absolutely no problem with his cock. And to follow up on that, you sink to your knees with a wide grin, then lap at the underside of his cock-head. A drawn-out mrowl comes from Ryousei and he strokes your head when you lick him a few times (with the direction of the spines, not against). Then you close your lips around his cock-head and start to suck, while both your hands are busy fondling Ryousei's balls as well as his shaft.";
 	say "     Moans and grunts fill your surroundings, underlain by purring loud enough the resemble an idling motor as you go down on your otherworldly companion. Being on the receiving end of your dedicated oral attention, Ryousei's arousal grows in leaps and bounds and before all that long, he gasps out in an urgent tone, 'You are quite good at this. I am gonna come soon.' In response, you just suck harder, and just a few moments later are rewarded with a spurt of warm and creamy cum, spurting in a tasty streak over your tongue. Then another follows, and another, prompting you to swallow his load quickly to be ready for even more cum to come. And so you gobble up every last drop of the tiger's seed, filling your stomach with the rich bounty his balls churn out. Eventually, the spurts ebb and your friend puts a restraining hand on your shoulder.";
@@ -465,7 +572,7 @@ instead of going down from Grey Abbey 2F while (companion of player is royal tig
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-to say RyouseimeetsXerxes:
+to say RyouseiMeetsXerxes:
 	say "     As you walk into the library, Xerxes immediately rushes towards you on all fours and gives happy barks. Eager to greet his master, the naked human circles you with exuberant energy, then jumps up to brace himself with both hands on your shoulder and licks you in the face, happily [if lust of Xerxes > 2]yammering, 'Master's back! Master's back! Xerxes missed Master!' [else]barking to greet you. [end if]While you deal with the very excitable dog in the body of a nineteen-year-old, drop dead gorgeous man with black hair and a charming smile, you become aware that Ryousei is watching you with a raised eyebrow, standing not too far away. As you meet his eyes, the anthro tiger clears his throat and says, 'What an interesting... pet, you have there. I was under the impression that humans usually are more, well... civilized. What's his story?'";
 	say "     Tousling your human dog's hair, you explain to Ryousei that Xerxes actually isn't a human. Or wasn't originally, at least - until the whole trouble with the nanites started and everything went to hell. By the time you proceed to explaining about Mike, the dog trainer turned anthro stag, Xerxes begins trotting over to Ryousei to check out your new friend. 'Ah - I see,' the tiger general tells you with a thoughtful nod, holding a clawed hand out for Xerxes to sniff. 'Now if you will forgive me my ignorance - what exactly is a dog? We do not have such beasts in my plane. Maybe... similar to a ahuizotl? Those are sometimes trained to infiltrate enemy lines and drown their men when they least expect it.'";
 	WaitLineBreak;
@@ -508,9 +615,9 @@ instead of going up from Grey Abbey Library while (companion of player is royal 
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";
-	say "[RyouseimeetsRane]";
+	say "[RyouseiMeetsRane]";
 
-to say RyouseimeetsRane:
+to say RyouseiMeetsRane:
 	say "     As you walk up the stairs with Ryousei in tow, you see the back of a head sticking out over the balcony railing of the upper library floor - easily identifiable as belonging to Rane by both the white hair as well as the two thin blue horns rising to sharp points. Reaching the end of the stairway, you see that the blue oni is sitting on the ground, leaning back relaxedly against the railing. He is resting his arm on one of a small pile of boxes and sacks he seems to have brought up here recently and gives you a friendly smile as he recognizes you. 'Hey hey,' the blue demon calls out cheerfully and you guide your steps his way - only to find yourself overtaken by your feline companion, who moves to stand straight in front of Rane.";
 	say "     'Konnichiwa wise one,' the anthro tiger says as he lays one of his hands upon the other and gives a little bow to the blue oni. 'It is good to see one of your people in this strange land, filled with beasts and peril as it is.' Rane's eyebrows rise a little at the tone of Ryousei's greeting and he looks the striped feline up and down. After casually letting his gaze linger on your companion's crotch for several seconds, the blue demon huffs out a little snort of amusement, then nods knowingly at Ryousei. 'Yeah, isn't it just the weirdest place, hm? Good thing that we've run into each other. But where are my manners - come on, sit down and let me offer you something to drink,' Rane adds next, waving your companion closer and pointing out a piece of free ground in front of himself.";
 	WaitLineBreak;

@@ -354,7 +354,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
@@ -364,7 +364,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men. Distancing yourself from the scene, you leave the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 				clear the screen and hyperlink list;
@@ -415,7 +415,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";

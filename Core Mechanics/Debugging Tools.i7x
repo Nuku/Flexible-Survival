@@ -111,6 +111,7 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	sort feats of player;
 	now TestingActive is true;
 
 SubDomFlip is an action applying to nothing.
@@ -264,6 +265,27 @@ carry out itemcheat:
 			increase carried of x by 1;
 			break;
 
+allitemcheat is an action applying to nothing.
+understand "allitemcheat" as allitemcheat.
+
+check allitemcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out itemcheat:
+	repeat with x running through grab objects:
+		increase carried of x by 1;
+
+ListAllItems is an action applying to nothing.
+understand "ListAllItems" as ListAllItems.
+
+check ListAllItems:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out ListAllItems:
+	repeat with x running from 1 to number of filled rows in table of game objects:
+		choose row x from the table of game objects;
+		say "[name entry]: [desc entry][line break]";
+
 [Impregnates the player with specified creature.]
 impregwith is an action applying to one topic.
 understand "impreg with [text]" as impregwith.
@@ -305,6 +327,17 @@ carry out AddRemoveKinky:
 		say "DEBUG: Kinky added.";
 		add "Kinky" to feats of player;
 
+
+ShowEncounteredEnemies is an action applying to nothing.
+
+understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
+
+carry out ShowEncounteredEnemies:
+	sort EncounteredEnemies of player;
+	say "     DEBUG: Enemies that the player encountered so far: [EncounteredEnemies of player]";
+	say "     DEBUG:";
+	let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of player;
+	say " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
 
 InfectionOverview is an action applying to nothing.
 

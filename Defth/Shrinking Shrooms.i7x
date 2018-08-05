@@ -177,14 +177,14 @@ Instead of resolving Little trouble:
 				if (nam is "Eat one of the mushrooms and enter through the hole"):
 					say "[LittleShroom]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Just give up on that";
 			if player consents:
 				now sextablerun is 1;
 				say "     Giving up on the idea of exploring this weird place, you go on your merry way";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -265,14 +265,14 @@ to say LittleShroom:
 				if (nam is "Go find where the sound is coming from"):
 					say "[ChineseTrouble]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "You give up on your curiosity and go back home";
 			if player consents:
 				now sextablerun is 1;
 				say "     You give up and go back the way you came. It's not worth it";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -373,7 +373,7 @@ to say ChineseTrouble:
 					if (nam is "Dive down and seek the other exit"):
 						say "[AlphaDive]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Wait for your timely demise.";
 				if player consents:
 					now sextablerun is 1;
@@ -387,7 +387,7 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -429,7 +429,7 @@ to say ChineseTrouble:
 					if (nam is "Dive down and seek the other exit"):
 						say "[BitchDive]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "It's hopeless anyway, just wait for your end.";
 				if player consents:
 					now sextablerun is 1;
@@ -443,7 +443,7 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

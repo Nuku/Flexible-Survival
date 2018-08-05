@@ -17,6 +17,8 @@ Version 5 of Eric by Wahn begins here.
 [  22: now with horsecock, had sex with player, in the Bunker        ]
 [  31: now with satyrcock, virgin, in the Bunker                     ]
 [  32: now with satyrcock, had sex with player, in the Bunker        ]
+[  41: now with orccock, virgin, in the Bunker                       ]
+[  42: now with orccock, had sex with player, in the Bunker          ]
 [  99: Taken advantage of -> submissive cuntboy, in the Bunker       ]
 [ 100: Stacy's girlfriend now, pregnant (no longer available)        ]
 [ 200: Transformed into Erica                                        ]
@@ -26,7 +28,14 @@ Version 5 of Eric by Wahn begins here.
 [   1: Smells male + fertile pussy                                   ]
 [  11: Smells male + pregnant pussy                                  ]
 [  21: Smells male + horse musk                                      ]
+[  22: Smells male + horse musk + heat                               ]
+[  23: Smells male + horse musk + pregnant                           ]
 [  31: Smells male + satyr musk                                      ]
+[  32: Smells male + satyr musk + heat                               ]
+[  33: Smells male + satyr musk + pregnant                           ]
+[  41: Smells male + orc musk                                        ]
+[  42: Smells male + orc musk + heat                                 ]
+[  43: Smells male + orc musk + pregnant                             ]
 
 [ Libido states of Eric (for reactions against a player furling)     ]
 [   0: Eric has never seen the player in Furling shape               ]
@@ -104,6 +113,13 @@ Version 5 of Eric by Wahn begins here.
 [   1: Eric and Ryo met                                              ]
 [   2: Eric listened to stories by Ryo                               ]
 
+Eric has a list of text called Traits.
+Eric has a number called Loyalty.
+Eric has a number called OrcPillMpreg. [able to be mpregged?]
+Eric has a text called CurrentBabyDaddy.
+Eric has a number called OffspringCount.
+Eric has a number called PregTimer. [turns counting up till birth]
+Eric has a number called PregCount. [number of previous pregnancies]
 EricVirginityTaken is a number that varies.
 EricAnalCounter is a number that varies.
 CarlEricInteraction is a number that varies.
@@ -192,14 +208,36 @@ EricFleeingCountdown is a number that varies.
 instead of sniffing Eric:
 	if thirst of Eric is 0: [Starting state]
 		say "Eric has a pretty nice, masculine smell. Although there's a slight undertone of something else.";
-	if (thirst of Eric is 1): [pussy revealed]
+	else if (thirst of Eric is 1): [pussy revealed]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a slight hint of the state of his female genitalia - fertile and ready.";
-	if (thirst of Eric is 11): [pregnant]
+	else if (thirst of Eric is 11 and PregTimer of Eric > 12): [heavily pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a slight hint of the state of his female genitalia - it's notably different than when you first met him. Of course, his round belly also gives away the fact that he is with child.";
+	else if (thirst of Eric is 11): [pregnant]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a slight hint of the state of his female genitalia - it's notably different than when you first met him. Could it be he's expecting?";
-	if (thirst of Eric is 21): [now with a horse-cock]
+	else if (thirst of Eric is 21): [now with a horse-cock]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of animal-like musk, a bit like a horse.";
-	if (thirst of Eric is 31): [now with a satyr-cock]
+	else if (thirst of Eric is 22): [now with a horse-cock + heat]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of animal-like musk, a bit like a horse. There is a stronger scent though that you are able to pick up on, it's intoxicating, with an almost wet heat behind it.";
+	else if (thirst of Eric is 23 and PregTimer of Eric > 12): [heavily pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of animal-like musk, a bit like a horse. It's different than the usual scent he carries. It's obvious just by looking at the redheads large belly that he is already with child.";
+	else if (thirst of Eric is 23): [now with a horse-cock + pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of animal-like musk, a bit like a horse. It's different than the usual scent he carries though, could he be pregnant already?";
+	else if (thirst of Eric is 31): [now with a satyr-cock]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a stronger, satyr-like musk.";
+	else if (thirst of Eric is 32): [now with a satyr-cock + heat]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a stronger, satyr-like musk. There is a stronger scent though that you are able to pick up on, it's intoxicating, with an almost wet heat behind it.";
+	else if (thirst of Eric is 33 and PregTimer of Eric > 12): [heavily pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a stronger, satyr-like musk. It's different than the usual scent he carries. It's obvious just by looking at the redheads large belly that he is already with child.";
+	else if (thirst of Eric is 33): [now with a satyr-cock + pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a stronger, satyr-like musk. It's different than the usual scent he carries though, could he be pregnant already?";
+	else if (thirst of Eric is 41): [now with a orc-cock]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a powerful, orc-like musk.";
+	else if (thirst of Eric is 42): [now with a orc-cock + heat]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a powerful, orc-like musk. There is a stronger scent though that you are able to pick up on, it's intoxicating, with an almost wet heat behind it.";
+	else if (thirst of Eric is 43 and PregTimer of Eric > 12): [heavily pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a powerful, orc-like musk. It's different than the usual scent he carries. It's obvious just by looking at the redheads large belly that he is already with child.";
+	else if (thirst of Eric is 43): [now with a orc-cock + pregnant]
+		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a powerful, orc-like musk. It's different than the usual scent he carries though, could he be pregnant already?";
 
 to say EricDesc:
 	if debugactive is 1:
@@ -224,14 +262,14 @@ to say EricDesc:
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a gray t-shirt bearing the words 'Tenvale College' and tight green shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm shows a thin oval line of redness - a fading scar from the bite that started his initial transformation. [if UrikEricInteraction > 6]Eric also bears two small healed puncture marks just above his collarbone on the right - an affectionate mark of being Urik's honorary orc breeder slut.[end if]";
 		LineBreak;
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Beside his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a seductive smile, doing some suggestive stretches before he goes on with his exercises.";
-	else if HP of Eric is 21 or HP of Eric is 31: [now with horsecock/satyrcock, in the bunker]
+	else if HP of Eric is 21 or HP of Eric is 31 or HP of Eric is 41: [now with horsecock/satyrcock/orccock, in the bunker]
 		project the figure of Eric_sofa_icon;
-		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. He looks fully human, but you know that he's packing a [if HP of Eric is 21]horse's[else if HP of Eric is 31]satyr's[end if] cock and balls inside his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a gray t-shirt bearing the words 'Tenvale College' and tight green shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
+		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. He looks fully human, but you know that he's packing a [if HP of Eric is 21]horse's[else if HP of Eric is 31]satyr's[else if HP of Eric is 41]orc's[end if] cock and balls inside his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a gray t-shirt bearing the words 'Tenvale College' and tight green shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		LineBreak;
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Beside his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a shy smile, then goes on with his exercises.";
-	else if HP of Eric is 22 or HP of Eric is 32: [now with horsecock/satyrcock, in the bunker, had sex with the player]
+	else if HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 42: [now with horsecock/satyrcock, in the bunker, had sex with the player]
 		project the figure of Eric_sofa_icon;
-		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. He looks fully human, but you know that he's packing a [if HP of Eric is 22]horse's[else if HP of Eric is 32]satyr's[end if] cock and balls inside his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a gray t-shirt bearing the words 'Tenvale College' and tight green shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
+		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. He looks fully human, but you know that he's packing a [if HP of Eric is 22]horse's[else if HP of Eric is 32]satyr's[else if HP of Eric is 42]orc's[end if] cock and balls inside his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a gray t-shirt bearing the words 'Tenvale College' and tight green shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		LineBreak;
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Beside his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a wink and a smile smile, rubbing the bulge in his pants suggestively before going on with his exercises.";
 	else if (HP of Eric is 99): [pussy revealed, in the bunker, fucked]
@@ -399,11 +437,22 @@ to say EricTalkMenu:
 		now sortorder entry is 7;
 		now description entry is "Talk about the strange tome Eric found";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer Eric an item";
+	now sortorder entry is 20;
+	now description entry is "Give Eric a gift";
+	[]
+	if (player is male and "Cocked" is listed in Traits of Eric and orc pill case is owned and OrcPillMpreg of Eric < 2):
+		choose a blank row in table of fucking options;
+		now title entry is "Talk to Eric about the orc pills";
+		now sortorder entry is 21;
+		now description entry is "Get a feel for how Eric will react to the orc pill";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -428,15 +477,19 @@ to say EricTalkMenu:
 					say "[EricTalk6]";
 				if (nam is "The old book"):
 					say "[EricTalk7]";
+				if (nam is "Offer Eric an item"):
+					say "[EricTalk20]";
+				if (nam is "Talk to Eric about the orc pills"):
+					say "[EricTalk21]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young man, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -458,6 +511,7 @@ to say EricTalk1:
 		say "ERROR-Eric-100B: He shouldn't be available to talk any longer! Please report how you got to this message.";
 	else:
 		say "ERROR - please report this on the forum, quoting Eric's HP: [HP of Eric] value for easier bug-fixing.";
+	say "[EricTalkMenu]"; [looping back into the menu]
 
 to say EricTalk2: [push sex slave Eric to have sex with David]
 	say "     You pull Eric close and kiss him aggressively. Then you tell him that it's time that he starts putting out for your friends too. David for example. Eric looks flustered, and tries to pull away, but you hold him tight. 'But - I thought it'd be only you, for letting me stay here.' Informing him that he thought wrong, you say that bitches like him are meant to be fucked by everyone - and that he can't say he doesn't like getting fucked, with how loud he moans each time. With that, you put your hand in his shorts and stick two fingers in Eric's already moist pussy. Pushing them in and out of Eric's hole and stroking his inner passage, you watch him bite his lip, then give up on that and openly moan in lust, closing his eyes as he gives in to the feelings.";
@@ -465,6 +519,7 @@ to say EricTalk2: [push sex slave Eric to have sex with David]
 	say "     Fondling Eric, you drive his arousal higher and higher until he's close to orgasm, then... stop. The cuntboy's eyes find yours and give you a pleading look as he begs, 'Please, get me off. I need it!' Having him right where you wanted now, you ask him if he'll obey and let David fuck him too. When Eric quickly nods, you resume your manual stimulation of his pussy and soon drive the hot little cuntboy over the edge to orgasm, with his femcum running down over your fingers.";
 	say "     Bringing your wet hand up to Eric's mouth to have him lick off his own juices, you explain your plan to him. As David might have some hangups about fucking him, you'll put him on a bed, blindfold him and get him all hot and ready - and then Eric will come over and mount his shaft. Eric finishes cleaning your hand, then nods submissively.";
 	now lust of Eric is 3;
+	say "[EricTalkMenu]"; [looping back into the menu]
 
 to say EricTalk3:
 	if (HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15): [accepted his pussy, had sex with player]
@@ -476,34 +531,74 @@ to say EricTalk3:
 	else:
 		say "ERROR - please report this on the forum, quoting Eric's HP: [HP of Eric] and Dexterity: [Dexterity of Eric] values for easier bug-fixing.";
 	now lust of Eric is 3;
+	say "[EricTalkMenu]"; [looping back into the menu]
 
 to say EricTalk4:
-	if centaur cum is not owned and Satyr Wine is not owned:
+	if centaur cum is not owned and Satyr Wine is not owned and Orc Brew is not owned:
 		say "     He says 'Do you think you'll have something to cure me soon? You said something about centaurs and satyrs the last time. Please hurry, I don't know how long I can hold out any more. Since that thing with Stacy, my pussy keeps getting moist and swollen all the time.'";
-	else if centaur cum is owned and Satyr Wine is owned:
-		say "     Remembering that you have found some centaur cum and some satyr wine, either of which might provide a possible cure for Eric's condition, shall you offer one of them to him? If so, which - the [link]centaur cum (1)[as]1[end link], the [link]satyr wine (2)[as]2[end link] or [link]neither (0)[as]0[end link]?";
-		now calcnumber is -1;
-		while calcnumber < 0 or calcnumber > 2:
-			say "Choice? (0-2)>[run paragraph on]";
-			get a number;
-		if calcnumber is 1:
-			say "[centaurcum_Eric]";
-		else if calcnumber is 2:
-			say "[satyrwine_Eric]";
+	else:
+		EricDickOfferingMenu;
+
+to EricDickOfferingMenu:
+	LineBreak;
+	if HP of Eric < 99:
+		project the figure of Eric_face_icon;
+	say "     What kind of item should you offer to help Eric?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if centaur cum is owned:
+		choose a blank row in table of fucking options;
+		now title entry is "Centaur Cum";
+		now sortorder entry is 1;
+		now description entry is "Offer some centaur cum to Eric";
+	[]
+	if Satyr Wine is owned:
+		choose a blank row in table of fucking options;
+		now title entry is "Satyr Wine";
+		now sortorder entry is 2;
+		now description entry is "Offer some satyr wine to Eric";
+	[]
+	if Orc Brew is owned:
+		choose a blank row in table of fucking options;
+		now title entry is "Orc Brew";
+		now sortorder entry is 3;
+		now description entry is "Offer some orc brew to Eric";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Centaur Cum"):
+					say "[centaurcum_Eric]";
+				if (nam is "Satyr Wine"):
+					say "[satyrwine_Eric]";
+				if (nam is "Orc Brew"):
+					say "[OrcBrew_Eric]";
+				wait for any key;
 		else if calcnumber is 0:
-			say "     Undecided about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. If you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-	else if centaur cum is owned:
-		say "     Remembering that you have found some centaur cum which might provide a possible cure for Eric's condition, shall you offer it to him?";
-		if player consents:
-			say "[centaurcum_Eric]";
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     Undecided about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. If you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
+				wait for any key;
+				say "[EricTalkMenu]"; [looping back into the menu]
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "     Uncertain about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. You recall considering finding some satyrs as well. Perhaps they might have something. Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-	else if Satyr Wine is owned:
-		say "     Remembering that you have found some satyr wine which might provide a possible cure for Eric's condition, shall you offer it to him?";
-		if player consents:
-			say "[satyrwine_Eric]";
-		else:
-			say "     Uncertain about trying out some infected substance, you let him know that you're still looking. He seems a little disappointed, but nods and tells you to keep looking. You recall considering finding some centaurs as well. Perhaps they might have something. Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say EricTalk5:
 	if lust of Eric is 0: [starting state]
@@ -528,6 +623,7 @@ to say EricTalk5:
 			say "     Eric smiles at you as he say, 'I sure had a nice time with David. Thank you so much for being there for him and me and allowing us to meet. I - wouldn't mind doing that again. And soon...'";
 		else if HP of Eric is 99: [sex slave Eric]
 			say "     Eric looks down at his feet, pressing his lips together before he replies, 'I - it was actually nice. With him. And...' He falls silent for a long moment and you turn away, thinking that he's done talking. Then a low whisper reaches your ear, 'I don't know how he can stand to be with someone like you...'";
+	say "[EricTalkMenu]"; [looping back into the menu]
 
 to say EricTalk6:
 	say "     As you bring up the topic of Urik, your college student friend blushes a little, remembering his last sexual encounter with the orc. He clears his throat, then says, 'He's nice. I mean... in a gruff orc way, you know. Taking care of my... er, me since you gave him that talking to. I like spending time with Urik.' Unconsciously, the cuntboy athlete licked his lips as he said that last sentence, showing signs that he is hungry for more orc cum.";
@@ -539,6 +635,7 @@ to say EricTalk6:
 	else: [let them continue]
 		LineBreak;
 		say "     Patting the shy young guy on the shoulder, you tell Eric that you're glad that he and Urik understand one another. This way he has someone to hang out with and... have fun with, in the safety of the library. With a sigh of relief, he visibly relaxes and you chat a little bit more about how strong and imposing Urik is before turning back to other things.";
+	say "[EricTalkMenu]"; [looping back into the menu]
 
 to say EricTalk7:
 	if TomeFound is 1: [Eric has the book]
@@ -729,6 +826,7 @@ to say EricTalk7:
 			else:
 				LineBreak;
 				say "     Shaking your head slowly, you get a disappointed sigh from Eric. 'Aww... thanks anyways. I hope you'll give it to me when you're done, alright?' You tell him that you'll have to see when that is and he accepts that, then talks to you about other things for a little while.";
+	say "[EricTalkMenu]"; [looping back into the menu]
 
 [ TomeFound  - Tracking variable for interaction with Eric                             ]
 [   0: not found                                                                       ]
@@ -753,6 +851,7 @@ to say centaurcum_Eric:
 	delete centaur cum;
 	now HP of Eric is 21;
 	now thirst of Eric is 21;
+	add "Cocked" to Traits of Eric;
 
 to say satyrwine_Eric:
 	say "     You hand your bottle of satyr wine to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
@@ -760,7 +859,15 @@ to say satyrwine_Eric:
 	delete Satyr Wine;
 	now HP of Eric is 31;
 	now thirst of Eric is 31;
+	add "Cocked" to Traits of Eric;
 
+to say OrcBrew_Eric:
+	say "     You hand your beer stein of orc brew to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
+	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new uncut cock and large balls. Of note is that the young man's erect shaft doesn't conform to his skin color, but rather has a vibrant green shade. At its base is a thick bush of black pubic hair. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his orc cock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.' When he grabs a used shirt from under the sheets to wipe himself clean, there is one other thing of note: his chest is now sprouting some additional chest hair that wasn't there before, and you think he's a bit more toned too. Seems like the orc brew made Eric more manly overall.";
+	delete Orc Brew;
+	now HP of Eric is 41;
+	now thirst of Eric is 41;
+	add "Cocked" to Traits of Eric;
 
 instead of trading the pomegranate seed when the current action involves the Eric:
 	if Dexterity of Erica is not 4:
@@ -944,6 +1051,9 @@ to say EricSexMenu:
 	else if HP of Eric is 31 or HP of Eric is 32:
 		setmonster "Satyr";
 		choose row monster from the table of random critters;
+	else if HP of Eric is 41 or HP of Eric is 42:
+		setmonster "Orc Warrior";
+		choose row monster from the table of random critters;
 	if HP of Eric < 20:
 		project the Figure of Eric_naked_icon;
 	now sextablerun is 0;
@@ -955,7 +1065,7 @@ to say EricSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Put your [if HP of Eric is 22 or HP of Eric is 32]horny friend's[else]pussyboy's[end if] mouth to good use";
 	[]
-	if HP of Eric is 22 or HP of Eric is 32:
+	if HP of Eric is 22 or HP of Eric is 32: [add in scene for orc cocks]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Eric's cock";
 		now sortorder entry is 2;
@@ -979,7 +1089,7 @@ to say EricSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the pussyboy with your cock";
 	[]
-	if (HP of Eric is 22 or HP of Eric is 32) and cunts of player > 0:
+	if (HP of Eric is 22 or HP of Eric is 32) and cunts of player > 0: [add in scene for orc cocks]
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
@@ -991,7 +1101,7 @@ to say EricSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Fill your [if HP of Eric is 22 or HP of Eric is 32]horny friend's[else]pussyboy's[end if] ass with your cock";
 	[]
-	if HP of Eric is 22 or HP of Eric is 32:
+	if HP of Eric is 22 or HP of Eric is 32: [add in scene for orc cocks]
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your ass";
 		now sortorder entry is 8;
@@ -1037,7 +1147,7 @@ to say EricSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -1078,14 +1188,14 @@ to say EricSexMenu:
 					say "[EricSex14]";
 				now lastfuck of Eric is turns;
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the young man, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -2491,7 +2601,7 @@ to say EricCarlThreesome Sex Menu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -2519,14 +2629,14 @@ to say EricCarlThreesome Sex Menu:
 				if (nam is "Ride Carl's cock while his face is straddled by Eric"):
 					say "[EricCarlThreesome8]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the two of them, saying that you just remembered something important you absolutely have to do. They give you questioning looks, then shrug and look at each other. As you hurry off, the two of them start making out, apparently determined to have fun with or without you.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

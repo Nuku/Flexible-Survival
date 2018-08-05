@@ -58,13 +58,13 @@ To say Sprite loss:
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions.";
 	if (libido of player > 50 or humanity of player < 30) and player is male:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
-		say "You strip off your clothes, revealing your throbbing [cock size desc of player] [cock of player] dick. You peer back into your pack, and catch three of the pixie-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
+		say "You strip off your clothes, revealing your throbbing [cock size desc of player] [cock of player] dick. You peer back into your pack, and catch three of the fairy-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
 		say "With the bag opened, the captured sprites fly out and circle around you. They coax you to sit on a nearby crate, spreading your legs for easier access to your [cock of player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if cock width of player > 0]The last two tend to your [short ball size] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can't take any more. You climax, covering the largest sprite from head to toe in your seed.";
 		say "After you recover, you open your pack and release the still-trapped sprites. One of the smaller fairies flies up to your ear as the rest fly away. 'If that was all you wanted, why didn't you just ask?' She circles your head once more before flying off.";
 	else if (libido of player > 50 or humanity of player < 30) and player is female:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
-		say "You strip off your clothes, revealing your [breast size desc of player] chest and aching pussy. You peer back into your pack, and catch three of the pixie-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
-		say "With the bag opened, the captured sprites fly out and circle around you. They coax you to sit on a nearby crate, spreading your legs for easier access to your [cockname of player] [cunt size desc of player] pussy. They flit around you, their wings teasing all your most sensitive places. As you lean against the wall behind you, the group of sprites gather at your [breast size desc of player] breasts. They caress your soft flesh, massaging your bosom, tickling you with their wings, and teasing your nipples with their little tongues. The largest is able take your whole nipple in her mouth, and she sucks on it enthusiastically. As they pass from one breast to the next, one stays to tend to each breast. The rest continue teasing their way down your chest until they reach your dripping honey pot.";
+		say "You strip off your clothes, revealing your [breast size desc of player] chest and aching pussy. You peer back into your pack, and catch three of the fairy-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
+		say "With the bag opened, the captured sprites fly out and circle around you. They coax you to sit on a nearby crate, spreading your legs for easier access to your [cockname of player] [cunt size desc of player]pussy. They flit around you, their wings teasing all your most sensitive places. As you lean against the wall behind you, the group of sprites gather at your [breast size desc of player] breasts. They caress your soft flesh, massaging your bosom, tickling you with their wings, and teasing your nipples with their little tongues. The largest is able take your whole nipple in her mouth, and she sucks on it enthusiastically. As they pass from one breast to the next, one stays to tend to each breast. The rest continue teasing their way down your chest until they reach your dripping honey pot.";
 		say "They pass it by without pause, leaving you hot and breathing heavily in anticipation. They start down at your feet, tickling and massaging them in turn. The work their way up your calves, and stop at your thighs. The sprites squeeze and caress and tickle your inner thighs, getting maddeningly close to the aching need between your legs.";
 		say "Finally, they turn their attention to your sopping wet pussy. They lick and stroke and tickle at you. One takes your clit into her mouth and sucks on it rigorously, driving you to your peak. Just as you are about to climax they stop once again. You look down at them questioningly through your lusty haze just in time to see one fly headfirst into your pussy. Stars explode into your vision as you finally climax with the sprite wiggling inside you. The other sprites start licking and stroking your cunt and massaging your breasts with their friend still squirming inside you. They make you cum and again and again in quick succession until your vision soon goes dark.";
 		say "You wake up some time later in a puddle of your own sweet love juices. The sprites are nowhere to be seen. You look for your backpack and see it lies open. Free sprites must have released the others after you passed out. You look around for your clothes and get dressed, still a bit dazed from your incredible time with the little fairies.";
@@ -114,7 +114,7 @@ When Play begins:
 	now cunt length entry is 6; [ Length of female sex infection will attempt to give you. ]
 	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
-	now loot entry is "pixie dust";
+	now loot entry is "fairy dust";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elfin[or]petite[or]winged[at random]";
@@ -126,21 +126,21 @@ When Play begins:
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Pixie Dust
+Section 3 - Fairy Dust
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pixie dust"	"A sweet-smelling powder that glistens in the light."	0	pixie dust
+"fairy dust"	"A sweet smelling powder that glistens in the light."	0	fairy dust
 
-pixie dust is a grab object. It is a part of the player. pixie dust is infectious. The strain of pixie dust is "City Sprite".
+fairy dust is a grab object. It is a part of the player. fairy dust is infectious. The strain of fairy dust is "City Sprite".
 
-The usedesc of pixie dust is "[tastepixiedust]";
+The usedesc of fairy dust is "[tastefairydust]";
 
-to say tastepixiedust:
+to say tastefairydust:
 	say "     Looking at the sparkling powder, you dab your finger into it and give it a taste. It is quite sweet on your tongue, though it also carries a faintly feminine flavor as well. As you sample more of it, there's a growing tingling sensation on your tongue and you feel a little lighter on your feet.";
 	increase libido of player by 8;
 
-the scent of pixie dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.".
+the scent of fairy dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.".
 
 
 Section 4 - Endings

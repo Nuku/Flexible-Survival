@@ -71,6 +71,10 @@ lastfightround is a number that varies.	[ Used to track the last round during wh
 
 Section 1 - Prepping for Combat
 
+when play begins:
+	if "Human" is not listed in EncounteredEnemies of player:
+		add "Human" to EncounteredEnemies of player;
+
 to prepforfight:		[Do all the pre-fight setup, reset values, and then display the image (if any) and the monster description]
 	choose row monster from table of random critters;
 	now combat abort is 0;
@@ -190,6 +194,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				break; ]
 	choose row monster from table of random critters;
 	say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+	if name entry is not listed in EncounteredEnemies of player:
+		add name entry to EncounteredEnemies of player;
 
 
 Section 2 - Combat

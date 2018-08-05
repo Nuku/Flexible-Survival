@@ -2092,7 +2092,6 @@ To reciting2:
 	if HP of Sven is 8 and Candy is in the bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
-	now Pet Shop is unresolved;
 	now SarahPregnant is 0;
 	if sarahtalk is 0 and SarahSlut is 0:
 		now Husky Pack is unresolved;
@@ -4178,7 +4177,6 @@ Carry out reciting:
 	if HP of Sven is 8 and Candy is in the bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
-	now Pet Shop is unresolved;
 	now SarahPregnant is 0;
 	if sarahtalk is 0 and SarahSlut is 0:
 		now Husky Pack is unresolved;

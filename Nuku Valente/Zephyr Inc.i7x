@@ -140,36 +140,7 @@ to say price list:
 		if rule failed:
 			next;
 		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[name entry] - [price entry] Creds[line break]";
-
-understand the command "buy" as something new.
-ZephBuying is an action applying to one thing.
-
-Understand "buy [grab object]" as zephbuying.
-
-Does the player mean zephbuying the dirty water: It is very unlikely.
-
-Carry out zephbuying:
-	if the price sign is not visible:
-		say "I see no store here.";
-		continue the action;
-	if the noun is an object listed in the table of zephyr goods:
-		say "";
-	else:
-		say "That doesn't seem to be sold here.";
-		continue the action;
-	if price entry > freecred:
-		say "You can't afford the [name entry], it costs [price entry] freecred.";
-		continue the action;
-	say "You purchase [name entry] for [price entry] creds.";
-	if name entry is "Zephyr Personal Communicator":
-		now carried of zpc is carried of zpc + 1;
-	else:
-		add name entry to invent of player;
-	if name entry is "nanite collector", now nanitemeter is 2;
-	if name entry is "pepperspray", increase pepped by 1;
-	decrease freecred by price entry;
-[	decrease score by price entry divided by 5; ]
+		say "[name entry] - [price entry] Creds";
 
 Table of Game Objects (continued)
 name	desc	weight	object

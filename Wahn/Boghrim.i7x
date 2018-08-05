@@ -128,7 +128,7 @@ instead of conversing the Boghrim:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -148,7 +148,7 @@ instead of conversing the Boghrim:
 				if (nam is "Fighting"):
 					say "[BoghrimTalk4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -158,7 +158,7 @@ instead of conversing the Boghrim:
 				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -292,7 +292,7 @@ to say BoghrimTalk3: [go hunting]
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]100 - Nevermind[as]100[end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
 			while sextablerun is 0:
 				say "Pick the corresponding number> [run paragraph on]";
 				get a number;
@@ -312,16 +312,16 @@ to say BoghrimTalk3: [go hunting]
 							if HP of Boghrim < 3:
 								say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 						WaitLineBreak;
-				else if calcnumber is 100:
+				else if calcnumber is 0:
 					say "Break off the conversation?";
 					if player consents:
 						now sextablerun is 1;
 						say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
 						WaitLineBreak;
 					else:
-						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			clear the screen and hyperlink list;
 			now HP of Boghrim is 2;
 		now BoghrimHuntingTrip is 0;
@@ -410,7 +410,7 @@ instead of fucking Boghrim:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -434,7 +434,7 @@ instead of fucking Boghrim:
 					if (nam is "Double-team Mul with Boghrim"):
 						say "[BoghrimSex6]";
 					WaitLineBreak;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off the conversation?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
@@ -444,9 +444,9 @@ instead of fucking Boghrim:
 					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;
 
 to say BoghrimFirstFuck:

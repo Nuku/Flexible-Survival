@@ -143,12 +143,7 @@ to say AlexandraBrutusCuckScene:
 		now AlexandraBrutusInteraction is 1;
 		now lastdobiemess is 89; [Brutus creamed her pussy]
 		now lastfuck of Alexandra is turns;
-		let t be 2;
-		increase t by level of Alexandra;
-		if HP of Alexandra is even and a random chance of t in 5 succeeds:
-			increase HP of Alexandra by 1;
-			now lust of Alexandra is 1;
-			now AlexandraPupDaddy	is 5; [Brutus knocked her up]
+		impregAlexandraChance with "Brutus";
 	else: [stop this - the player might not like Brutus being used this way, even if he has allowed Alexandra to get into cuck status]
 		LineBreak;
 		say "     Letting out a huff of disapproval, you throw Alexandra's leather jacket to the ground and order Brutus to let go of your bitch and step away from her. He looks over at you and lets out a confused growl, the burning need to fuck painted clearly in his expression and the towering pole standing erect between his legs. Still, his reply is, 'Yes master,' and he draws his hands back to himself, albeit clenched to fists as he has to control his strong urges to grab and pound your dobie bitch. As the demon steps back to his usual place just behind your right shoulder, you can feel the warmth radiating off his massive prick, sticking out straight to almost touch your arm.";
@@ -190,12 +185,7 @@ to say AlexandraKorvinCuckScene1:
 		now AlexandraKorvinInteraction is 1; [they fucked]
 		now lastdobiemess is 95; [Korvin creamed her pussy]
 		now lastfuck of Alexandra is turns;
-		let t be 2;
-		increase t by level of Alexandra;
-		if HP of Alexandra is even and a random chance of t in 5 succeeds:
-			increase HP of Alexandra by 1;
-			now lust of Alexandra is 1;
-			now AlexandraPupDaddy	is 3; [Korvin knocked her up]
+		impregAlexandraChance with "Korvin";
 	else: [stop this - the player might not like Korvin being used this way, even if he has allowed Alexandra to get into cuck status]
 		LineBreak;
 		say "     With a sharp snarl, you call out the German shepherd's name, making him wrench his gaze away from the swaying orbs of Alexandra's breasts to look at you. The broad grin on his face turns into half of a snarl as he sees your expression, his lips drawing back from the dog's teeth. 'Fuuuuckkk,' he groans, then looks back at Alexandra as she bends forward and strokes his erection. 'Come on boss! She's ripe for the taking. I mean... come ON!' Korvin adds after that, frustration obvious in his exclamation. But no, you're unrelenting in your decision and shout for him to come over to you.";
@@ -244,12 +234,7 @@ to say AlexandraKorvinCuckScene2:
 		say "     Giving up on the hopeless try with the book, you snap it shut and shove it back in its place, then slide a hand down to your crotch and start stroking yourself. In front of your mind's eye, the muscular German shepherd is humping into the bitch beneath him - your bitch, the doberwoman you've worked hard to fight and subdue! Almost on cue, a satisfied bark from Alexandra echoes through the library, prompting you to imagine yourself in his place, making use of the former cop as you rub your [if player is male]own erection[else if player is female]wet pussy[else]genderless crotch[end if] and build up your arousal in leaps and bounds. By the time you hear the two dogs howl in orgasm, you're ready to go yourself and make a bit of a mess,[if player is male] covering the books in the shelf in front of you with long streaks of white cum[else if player is female] dripping a few gushes of femcum all over the floor[else] knocking some books out of the shelf behind you as you twitch and stumble from the sensations of your own orgasm.";
 	now lastdobiemess is 95; [Korvin creamed her pussy]
 	now lastfuck of Alexandra is turns;
-	let t be 2;
-	increase t by level of Alexandra;
-	if HP of Alexandra is even and a random chance of t in 5 succeeds:
-		increase HP of Alexandra by 1;
-		now lust of Alexandra is 1;
-		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
+	impregAlexandraChance with "Korvin";
 
 instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and companion of player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
@@ -270,12 +255,7 @@ to say AlexandraKorvinCuckScene3:
 	say "     Shaking your head at the antics of the two of them, you stroke Korvin's head and neck, telling him he's a good dog and that he can keep fucking Alexandra as long as he stays loyal to you. Oh, and that he should really give it to her hard when he does, as Alexandra needs to be reminded who her bosses are. There is an amused snort from the bent-forward woman as you say those words, but at least she refrains from contradicting you. You just know she'll put out for him again, but this way, you can pay her back a little by having Korvin take her extra hard and at the same time bind him ever tighter to you out of loyalty to his 'generous' alpha.";
 	now lastdobiemess is 95; [Korvin creamed her pussy]
 	now lastfuck of Alexandra is turns;
-	let t be 2;
-	increase t by level of Alexandra;
-	if HP of Alexandra is even and a random chance of t in 5 succeeds:
-		increase HP of Alexandra by 1;
-		now lust of Alexandra is 1;
-		now AlexandraPupDaddy	is 3; [Korvin knocked her up]
+	impregAlexandraChance with "Korvin";
 
 instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 40 and AlexandraCarlInteraction is 0):
 	move player to Grey Abbey Library;

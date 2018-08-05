@@ -162,6 +162,18 @@ carry out trixiecheating:
 				say "Invalid choice - returning to menu.";
 		else if calcnumber is 10:
 			if Terminatorsleep is false:
+				if "Well Rested" is listed in feats of player: [They have slept recently, reduce/remove feat.]
+					FeatLoss "Well Rested";
+					say "     Due to activating [bold type]Insomniac[roman type] You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
+					decrease strength of player by 2;
+					decrease dexterity of player by 2;
+					decrease stamina of player by 2;
+					decrease charisma of player by 2;
+					decrease intelligence of player by 2;
+					decrease perception of player by 2;
+				if TerminatorSleepActivated is false:
+					now TerminatorSleepActivated is True;
+					decrease score by 100;
 				now Terminatorsleep is true;
 				say "You no longer require sleep.";
 				LineBreak;

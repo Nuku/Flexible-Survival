@@ -2,6 +2,7 @@ Version 1 of Sleeptimer by Core Mechanics begins here.
 [ Version 1.0 - Initial file - Speedlover ]
 
 Terminatorsleep is a truth state that varies. Terminatorsleep is usually false.
+TerminatorSleepActivated is a truth state that varies. TerminatorSleepActivated is usually false. [For the cheat in Settings Menus.i7x, this way you only lose score once when you toggle on/off insomniac]
 Sleeptimercount is a number that varies. Sleeptimercount is usually 0.
 WellRestedTimer is a number that varies. WellRestedTimer is usually 0.
 

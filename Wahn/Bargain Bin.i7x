@@ -616,7 +616,7 @@ name	desc	weight	object
 instead of sniffing jackal romance novels:
 	say "     Somehow, the scent of the books makes you think of hot desert sands, as well as the sea.";
 
-jackal romance novels is a grab object.
+jackal romance novels is a grab object. jackal romance novels is not temporary.
 the usedesc of jackal romance novels is "[jackal romance novels use]";
 
 to say jackal romance novels use:
