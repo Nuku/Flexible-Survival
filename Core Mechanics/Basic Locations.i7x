@@ -7,7 +7,7 @@ The earea of Grey Abbey Library is "Outside".
 Bunker is a room. The description of Bunker is "[bunker desc]".
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.".
-East of Main & 7th Street is the Library Door. 
+East of Main & 7th Street is the Library Door.
 The description of the Library Door is "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
 Bunker is below Grey Abbey Library.
@@ -88,7 +88,7 @@ The earea of Looted Shops  is "Outside".
 The description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:
-	say "      You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
+	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
 
 instead of sniffing Looted Shops:
 	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
@@ -114,7 +114,7 @@ to say LibraryMicrowaveDesc:
 	if findwires is not 2 and fixedgens is not 2:
 		say "Sadly, without power it doesn't work.";
 	else:
-		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!".
+		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!";
 
 to say gbreakroom desc:
 	project the figure of Library1stfloor_icon;

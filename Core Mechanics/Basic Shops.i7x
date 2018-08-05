@@ -8,7 +8,7 @@ Understand "buy [grab object]" as BuyingAction.
 Does the player mean BuyingAction the dirty water: It is very unlikely.
 
 Check BuyingAction:
-	if price sign is not visible and medicine case is not visible and Darius Inventory is not visible, say "Buy what from whom?" instead;
+	if price sign is not visible and medicine case is not visible and (Darius's Inventory is not visible and Darius is not visible), say "Buy what from whom?" instead;
 
 Carry out BuyingAction:
 	if the medicine case is visible: [Black Market in Zephyr Storeroom/Library Shop; see file Black Market.i7x]
@@ -40,7 +40,7 @@ Carry out BuyingAction:
 		if name entry is "nanite collector", now nanitemeter is 2;
 		if name entry is "pepperspray", increase pepped by 1;
 		decrease freecred by price entry;
-	else if Darius Inventory is visible and Darius is visible: [Darius illegal trade]
+	else if Darius's Inventory is visible and Darius is visible: [Darius illegal trade]
 		if the noun is an object listed in the table of Darius Inventory:
 			say "";
 		else:

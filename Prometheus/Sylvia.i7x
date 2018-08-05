@@ -506,8 +506,9 @@ to DespairingBiologistEvent: [Meet Sylvia]
 				LineBreak;
 				say "     Allowing the wolf to feel the attentions of the collie, you turn to leave. Sylvia pulls back from his cock momentarily and calls after you, 'I'm in room 059 of the female dormitory if you want to talk to me more. You seemed nice enough.' Noting the room in your head, you push past the branches and continue through the college.";
 				now hp of Sylvia is 1; [got room number]
-				change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
-				change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
+			add "Sylvia Quest" to OpenQuests of player;
+			change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
+			change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 		else:
 			LineBreak;
 			say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";

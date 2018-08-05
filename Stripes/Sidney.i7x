@@ -170,7 +170,7 @@ to say sidneyoptions:
 		else if calcnumber is 99:
 			say "     You make some excuse about how now is not a good time and that he should make sure he's fully prepared before such a change. He nods, saying he hopes you'll return to assist him soon.";
 			now sextablerun is 1;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "     Sidney is disappointed when you refuse to help him, telling him instead to go back to the base. He looks dejectedly at the device and nods, putting it away. 'You're right. It's not mine to use and I have a duty to the army. I'll report back to the perimeter,' he says sadly, walking off.";
 			now HP of Sidney is 100;
 			now Meeting Sidney is resolved;

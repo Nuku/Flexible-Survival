@@ -211,7 +211,7 @@ to say MTFRatSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -241,7 +241,7 @@ to say MTFRatSexMenu:
 				else if libido of Danny < 12:
 					increase libido of Danny by 1; [counting up on the transformations]
 				WaitLineBreak;
-		else if calcnumber is 100: [cancel sex menu]
+		else if calcnumber is 0: [cancel sex menu]
 			say "Just let Cole/Coura off scot free for now?";
 			if player consents:
 				now sextablerun is 1;
@@ -252,7 +252,7 @@ to say MTFRatSexMenu:
 				else: [freed Coura is sent back to work]
 					say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Turning her attention back to the mall rat standing ready before you, she barks out, 'The slut should get back to work now. Nermine wants [one of]to see the great gong polished to a mirror's shine[or]all of her canopic jars dusted[or]the third shelf sorted alphabetically[or]her living inventory fed[at random] before the mall rat leaves today.' As the jackaless goes to pull the door open once more and shoo Coura through, the mall rat rolls her eyes as soon as Nermine's back is turned, then gives you a little wave as she says goodbye and hurries after Nermine.";
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

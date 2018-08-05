@@ -369,7 +369,7 @@ to say ForcedSubtoDomSexMenu:
 				if (nam is "Doggy Fuck"):
 					say "[ForcedSubToDomSex7]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Does Dom deny you right as your reward is in reach?";
 			if player consents:
 				now sextablerun is 1;
@@ -377,9 +377,9 @@ to say ForcedSubtoDomSexMenu:
 				increase libido of player by 10;
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 Section 6 - Sex Scenes

@@ -68,6 +68,7 @@ Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
 Figure of Mammoth_icon is the file "Mammoth.jpg".
+Figure of Mareslut_icon is the file "Mareslut.jpg".
 Figure of Mannequin_icon is the file "Mannequin.jpg".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
@@ -281,6 +282,7 @@ Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
 Figure of Sidney_clothed_Icon is the file "Sidney_otteress.jpg".
 Figure of Skarnoth_undies_icon is the file "Skarnoth_undies.jpg".
 Figure of Skarnoth_naked_icon is the file "Skarnoth_naked.jpg".
+Figure of Snow_icon is the file "Snow.jpg".
 Figure of Sonny_halfwool_jeans_icon is the file "Sonny_halfwool_jeans.jpg".
 Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
@@ -684,6 +686,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "MarcOrwell"	Figure of MarcOrwell_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"	g-black	"normal"
+"Mareslut"	Figure of Mareslut_icon	"Little Wax Raven"	g-white	"normal"
 "Mason"	Figure of Mason_icon	"Abelsword"	g-black	"normal"
 "MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
@@ -750,6 +753,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-white	"normal"
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"	g-black	"normal"
+"Snow"	Figure of Snow_icon	"Little Wax Raven"	g-white	"normal"
 "Snow Bat"	Figure of SnowBat_icon	"Rosali"	g-black	"normal"
 "Snow Leopard"	Figure of SnowLeopard_icon	"Anymouse1968"	g-black	"normal"
 "Sonny_halfwool_jeans"	Figure of Sonny_halfwool_jeans_icon	"The_Negative"	g-black	"normal"
@@ -992,10 +996,12 @@ carry out artistcredits:
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
+	[say "     Logan by Rik @ https://www.furaffinity.net/user/almee/[line break]";] [WIP]
 	say "     Malakhi by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
+	say "     Mareslut by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
@@ -1024,6 +1030,7 @@ carry out artistcredits:
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
+	say "     Snow by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";

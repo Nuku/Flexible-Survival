@@ -4962,6 +4962,7 @@ Include Banning by Core Mechanics.
 Include Basic Clothing Items by Core Mechanics.
 Include Basic Functions by Core Mechanics.
 Include Basic Locations by Core Mechanics.
+Include Basic Shops by Core Mechanics.
 Include BFandI by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Debugging Tools by Core Mechanics.
@@ -4998,6 +4999,8 @@ Include Atlantis by Rikaeus.
 Include Azrael by Rikaeus.
 Include Beach by Speedlover.
 Include Bargain Bin by Wahn.
+Include Black Market by Luneth.
+Include Black Market Items by Luneth.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
@@ -5084,6 +5087,7 @@ Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
+Include Hyper Serum by Vrael.
 Include Important Research Quests by Kaleem Mcintyre.
 Include Infected Pool by Hellerhound.
 Include Inner Mall Events by Wahn.
@@ -5486,6 +5490,7 @@ Include Duke by Wahn.
 Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
 Include Eric by Wahn.
+Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
 Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.

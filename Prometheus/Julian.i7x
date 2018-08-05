@@ -235,6 +235,7 @@ to AWolfsInvitationEvent: [Room invitation from Julian]
 		LineBreak;
 		say "     He turns to you, nervously scratching a wrist. 'What you did to help Sylvia was really kind,' he mumbles, conversing with people he barely knows apparently not his strong point. 'She seems to trust you, and I trust her judgement, so... would you like to talk some more at some point? I'd like to get to know you more, especially if you're going to be one of Sylvia's friends.' He looks at you earnestly, his deep brown eyes meeting your own. 'I'll let you think about it more,' he says, standing up, 'Come and see me if you feel like it.' After giving you his room number, he walks away, his social anxiety overcoming his desire to continue talking to you. You stand up and return to the path, trying to decide whether, and if so when, you want to visit his room.";
 		now hp of Julian is 2; [Got room number]
+		add "Julian Quest" to OpenQuests of player;
 		change the northeast exit of Tenvale College Male Dorms to Julian's Room; [connecting the location to the travel room]
 		change the southwest exit of Julian's Room to Tenvale College Male Dorms; [connecting the location to the travel room]
 	else: [Go]

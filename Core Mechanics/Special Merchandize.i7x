@@ -54,6 +54,8 @@ to say PowerUpUse:
 	SanLoss 10;
 	if PowerUpDrugTrip > 0:
 		say "     Since the effects of your previous PowerUp tablet haven't worn off yet, feel a bit woozy, then [italic type]a lot woozy[roman type]. Before you know it, you're lying on the ground, wondering how you got there and register the scrapes you got from passing out all of a sudden. Your mouth tastes like used kitty litter.";
+		LineBreak;
+		say "     [bold type]Your strength has temporarily increased by 6![roman type][line break]";
 		PlayerWounded 15;
 		LibidoLoss 10;
 		PlayerThirst 30;
@@ -95,10 +97,10 @@ to say pixie dust use:
 	say "     [link](4)[as]4[end link] - Become extraordinarily tall and large.";
 	say "     [link](5)[as]5[end link] - Become as big as a delivery van.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to become very small, [link]2[end link] to become small, [link]3[end link] to become human-sized, [link]4[end link] to become much larger than human or [link]5[end link] to become as big as a delivery van.";
@@ -118,7 +120,7 @@ to say pixie dust use:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you above the level of even the tallest basketball player.";
 		now scalevalue of player is 4;
-	else: 
+	else:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on the level of a small delivery van.";
 		now scalevalue of player is 5;

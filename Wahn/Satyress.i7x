@@ -67,7 +67,7 @@ to say SatyressSexSelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -87,14 +87,14 @@ to say SatyressSexSelection:
 				if (nam is "Tell her to get on her knees and service you"):
 					say "[SatyressFuck4]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bare-breasted young woman, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -127,7 +127,7 @@ to say SatyressFuck4:
 
 to say SatyressDesc:
 	setmongender 4;
-	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from his forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?[or]Hey come join the party![or]You look like you need to lighten up![at random]' she says, dancing forward nimbly on his goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
+	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from her forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?[or]Hey come join the party![or]You look like you need to lighten up![at random]' she says, dancing forward nimbly on her goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
 
 Section 2 - Monster Insertion
 

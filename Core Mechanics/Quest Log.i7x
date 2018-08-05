@@ -30,6 +30,14 @@ To ListOpenQuests:
 				[
 				OtherDryPlainsQuestlog;
 				]
+		if "Sylvia Quest" is listed in OpenQuests of player or "Julian Quest" is listed in OpenQuests of player:
+			say "[bold type]Tenvale College Campus[roman type]:";
+			if "Sylvia Quest" is listed in OpenQuests of player:
+				say "     ";
+				SylviaQuestLog;
+			if "Julian Quest" is listed in OpenQuests of player:
+				say "     ";
+				JulianQuestLog;
 		[		
 		if "Industrial Sector Quest 1" is listed in OpenQuests of player or "Industrial Sector Quest 2" is listed in OpenQuests of player:
 			say "[bold type]Industrial Sector[roman type]:":

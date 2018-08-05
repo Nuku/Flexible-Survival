@@ -114,7 +114,7 @@ to say GusSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -140,15 +140,15 @@ to say GusSexMenu:
 				if (nam is "Receive anal"):
 					say "[GusSex6]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     The stork blinks. 'Is it something wrong with me?' he asks with a worried look, but you assure him that you just had a change of heart and don't feel like having sex at the moment. Gus doesn't seem completely convinced, but nods. 'Well, I wouldn't want you to do anything you don't wish for. Maybe next time, then.' He smiles as he wishes you farewell, but you look back at the stork resuming his reading, you can see a slightly frustrated look on his face.";
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GusSex1: [give blowjob]
