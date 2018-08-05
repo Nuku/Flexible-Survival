@@ -67,7 +67,7 @@ Section 4 - Abandonedplayer
 Abandonedplayer is a situation. The sarea of Abandonedplayer is "Warehouse".
 
 Instead of Resolving a Abandonedplayer:
-	say "     As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley.  Cautiously following it, you prepare for combat as you move closer. Gripping your makeshift weapon tightly, you duck around the corner and come face to face with... an abandoned CD player. Sighing, you lower you weapon again before looking around sheepishly. Fortunately, there was no one around to see that. Checking the music player, you decide to leave the instrument of your ridicule where it lies to spare yourself from an embarrassing reminder.";
+	say "     As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley. Cautiously following it, you prepare for combat as you move closer. Gripping your makeshift weapon tightly, you duck around the corner and come face to face with... an abandoned CD player. Sighing, you lower you weapon again before looking around sheepishly. Fortunately, there was no one around to see that. Checking the music player, you decide to leave the instrument of your ridicule where it lies to spare yourself from an embarrassing reminder.";
 	now Abandonedplayer is resolved;
 
 

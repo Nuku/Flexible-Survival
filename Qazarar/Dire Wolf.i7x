@@ -130,7 +130,7 @@ when play ends:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dire-wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: dire wolf['] is written on the side."	1	dire-wolf cum
+"dire-wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: dire wolf['] is written on the side."	1	dire-wolf cum
 
 dire-wolf cum is a grab object. dire-wolf cum is cum.
 

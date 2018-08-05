@@ -269,9 +269,9 @@ to pewterlustsate:
 		if pewtercockocc > 0:
 			if pewtercockocc > 1:
 				if pewtercockvar1 > 0 and pewtercockvar2 > 0:
-					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] of your dicks firing its [cum load size of player] load into [if pewtercockvar1 > 1]the consorts' attending maws[else]the consort's attending maw[end if], the [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] unloaded into their rider[if pewtercockvar2 > 1]s[end if]";
+					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] of your dicks firing its [cum load size of player] load into [if pewtercockvar1 > 1]the consorts['] attending maws[else]the consort's attending maw[end if], the [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] unloaded into their rider[if pewtercockvar2 > 1]s[end if]";
 				else if pewtercockvar1 > 0:
-					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] of your dicks firing its [cum load size of player] load into [if pewtercockvar1 > 1]the consorts' attending maws[else]the consort's attending maw[end if]";
+					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] of your dicks firing its [cum load size of player] load into [if pewtercockvar1 > 1]the consorts['] attending maws[else]the consort's attending maw[end if]";
 				else:
 					say "[if pewtercockvar2 is 1]one[else][pewtercockvar2][end if] of your dicks firing its [cum load size of player] load into [if pewtercockvar2 > 1]the consort's eager ass[else]the consort's eager ass[end if]";
 			else:

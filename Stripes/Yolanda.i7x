@@ -57,7 +57,7 @@ the icon of Yolanda is figure of Yolanda_icon.
 to say yolandadesc:
 	say "     Upon casual examination, Yolanda appears to be a normal raven, but enlarged to human scale and wearing some golden jewelry. Keeping to the posture of a bird most of the time, it takes a while to realize that she can take on a more human posture when she feels it's necessary and even has small, taloned hands hidden under her wings['] primary feathers. She has sharp eyes, a sharper beak and an even sharper tongue.";
 	if HP of Yolanda >= 6:
-		say "     She's set up a new nest for herself up here on the second floor of the library in an open spot near a window. She's gathered some cushions you recognize as coming from the chairs and sofa, though others seem new and may have been taken from nearby buildings. While she's protectively keeping much of her sex toys and collection of shinies protectively in the packs, she's got an assortment of each out for her to enjoy. There's also discrete signs of her having put in some new anchor points for her kinkier gear.";
+		say "     She's set up a new nest for herself up here on the second floor of the library in an open spot near a window. She's gathered some cushions you recognize as coming from the chairs and sofa, though others seem new and may have been taken from nearby buildings. While she's protectively keeping much of her sex toys and collection of shinies in the packs, she's got an assortment of each out for her to enjoy. There's also signs of her having discreetly put in some new anchor points for her kinkier gear.";
 
 the scent of Yolanda is "The raven smells of bird feathers and feminine arousal.".
 

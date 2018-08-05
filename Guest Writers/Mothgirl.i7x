@@ -79,7 +79,7 @@ When Play begins:
 	now victory entry is "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Gray[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the gray-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked."; [ Description of the creature when you encounter it.]
 	now face entry is "feminine visage looking with bright eyes"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "has been reduced down to about 5 feet tall and has a light, curvy form. You have moth that, wings with each flap, leave a trail of small dust behind you"; [ Body Description, format as "Your Body is (your text)"]
+	now body entry is "has been reduced down to about five feet tall and has a light, curvy form. You have moth that, wings with each flap, leave a trail of small dust behind you"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "glimmering gray"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]gray[or]ashen[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]

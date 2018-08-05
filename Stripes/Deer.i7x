@@ -190,7 +190,7 @@ instead of conversing the Susan:
 				say "     'I'll tuck that away for later. I'll only use a little every now and then,' the doe says, taking the food from you. 'I could still use another [foodneed] more meal(s) though.' You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if tempnum2 > waterneed:
 			if waterneed is 0:
-				say "     'Great, sweetie! A mouthful of this after every meal'll help wash the taste of that hospital gunk out of my mouth after I have to choke it down. Even the water they bring me in here tastes a little off,' she says quietly. She discretely stashes the water in her personal locker. You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+				say "     'Great, sweetie! A mouthful of this after every meal'll help wash the taste of that hospital gunk out of my mouth after I have to choke it down. Even the water they bring me in here tastes a little off,' she says quietly. She discreetly stashes the water in her personal locker. You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 			else:
 				say "     'Let me put that away for safe keeping. Every little bit helps,' the doe says, taking the water from you. 'I could still use another [waterneed] more liter(s) though.' You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if foodneed is 0 and waterneed is 0:

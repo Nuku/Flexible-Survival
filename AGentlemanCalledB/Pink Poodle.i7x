@@ -36,11 +36,11 @@ to say PinkPoodledesc:
 to say losetoPinkPoodle:
 	now nopoodlesex is 0;
 	if poodleapproved is 0:
-		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy french accent, giving you one last firm kick before turning and striding away.";
+		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy French accent, giving you one last firm kick before turning and striding away.";
 	else:
 		if HP of player > 0:
 			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
-			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined french accent as she gently pushes you to the ground.";
+			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined French accent as she gently pushes you to the ground.";
 			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else if player is female and a random chance of 2 in 3 succeeds:
@@ -49,7 +49,7 @@ to say losetoPinkPoodle:
 				say "[pinkpoodledefeatoral]";
 		else:
 			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. ";
-			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined french accent as she steps over your supine form.";
+			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined French accent as she steps over your supine form.";
 			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else:
@@ -141,7 +141,7 @@ to say pinkpoodleoral:
 
 to say pinkpoodle_dom:
 	say "     Knowing the pretty poodle would make a lovely addition to Dom's harem, you pin her from behind and set your [if player is breederslutbodied]paws[else]fingers[end if] to tantalizing her. You start by simply teasing her breasts and folds while complimenting her beauty. The [one of]permed[or]primped[or]overly groomed[or]alluring[at random] canine responds easily to your flattery and to your touch. Your canine master's scent, still clinging to you, seeps into her nose to arouse her further.";
-	say "     Over time, you intensify your fingerwork with sensual touches to her shapely body, bosom and increasingly wet folds. You continue to praise the vain femme's beauty, adding how she should have a [one of]mate[or]lover[at random] as handsome as she is lovely. You weave these words in discretely at first, but have little need for subtlety after a few quick orgasms have her really worked up. Reaching the point you've got a pair of digits pumping into her hot, pink tunnel, you tell her of the perfect stud who'll pound her far better than your fingers can provide.";
+	say "     Over time, you intensify your fingerwork with sensual touches to her shapely body, bosom and increasingly wet folds. You continue to praise the vain femme's beauty, adding how she should have a [one of]mate[or]lover[at random] as handsome as she is lovely. You weave these words in discreetly at first, but have little need for subtlety after a few quick orgasms have her really worked up. Reaching the point you've got a pair of digits pumping into her hot, pink tunnel, you tell her of the perfect stud who'll pound her far better than your fingers can provide.";
 	WaitLineBreak;
 	say "     From that point, your words shift to focusing on Dominick as the ideal stud - handsome, virile and deliciously well-hung. You pepper this with comments on how he'd be the perfect lover for one as beautiful and well-bred as she. With a nibble on her fuzzy ear, you add how he'd give her perfect puppies while caressing a [if player is breederslutbodied]paw[else]hand[end if] rubs her slender waist while the other continues to fingerfuck her as she grinds her hips hard into it. He is a top-ranked breeder, after all.";
 	say "     By this point, she's panting on the edge of a powerful release, she practically begs you to tell her where to find this perfect stud. As you drive her to a yipping orgasm, you give her directions to Dom's kennel home and tell her to go to him. You reiterate one last time how a beauty such as she deserves the perfect breeding stud and that Dominick is that handsome hunk for her. By the time her extended climax has finally waned, she's lost in an afterglow daze filled with only thoughts of seeking out this ideal lover. Releasing her, you feel quite pleased with yourself in knowing you've provided your master with another lovely breeder pet.";

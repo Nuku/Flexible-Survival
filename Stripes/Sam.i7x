@@ -160,9 +160,9 @@ Instead of conversing the Sam:
 			delete cheetah milk;
 			delete rhino cum;
 			delete rhino cum;
-			say "     Sam takes the samples you've brought and sets them on the table. 'Wonderful, [if player is female]babe[else]man[end if]. This is a big help. I'm going to get started on these tests right away. Next stuff I'm going to need is some gel from those jelly-people in the Red Light District of town. There's three different kinds of them - pink, blue and purple - and I'll need a sample from each of them. Got to analyze what makes them different. And here, take this stuff as a reward for helping me out,' he adds, handing you some dried food and another bottle of water.";
+			say "     Sam takes the samples you've brought and sets them on the table. 'Wonderful, [if player is female]babe[else]man[end if]. This is a big help. I'm going to get started on these tests right away. Next stuff I'm going to need is some gel from those jelly-people in the red light district of town. There's three different kinds of them - pink, blue and purple - and I'll need a sample from each of them. Got to analyze what makes them different. And here, take this stuff as a reward for helping me out,' he adds, handing you some dried food and another bottle of water.";
 			if Entrance to the Red Light District is unknown:
-				say "     'Since you haven't been there before - let me tell you - that place is really wild. I mean, I had lots of fun there and all gathering nanite samples, but the creatures there can be extra intense. I was really tempted to go back and visit that tigress in the alley again. She was quite the ride and well worth the milk I gave her.' He then proceeds to show you a route into the city's Red Light District.";
+				say "     'Since you haven't been there before - let me tell you - that place is really wild. I mean, I had lots of fun there and all gathering nanite samples, but the creatures there can be extra intense. I was really tempted to go back and visit that tigress in the alley again. She was quite the ride and well worth the milk I gave her.' He then proceeds to show you a route into the city's red light district.";
 				now Entrance to the Red Light District is known;
 			increase carried of food by 1;
 			increase carried of water bottle by 1;
@@ -184,7 +184,7 @@ Instead of conversing the Sam:
 			now HP of Sam is 4;
 		else:
 			if a random chance of 1 in 2 succeeds:
-				say "     'Please keep looking for those gel samples. Remember, I'll need one of each from those gelatinous people out in the Red Light District of town.";
+				say "     'Please keep looking for those gel samples. Remember, I'll need one of each from those gelatinous people out in the red light district of town.";
 			else:
 				say "     [one of]'I want to thank you for giving me a hand with this. I don't think I could finish on my own.'[or]'I've got some other tests to run, but then I've got to go right back out and find a few more critters to fill out my quota.'[or]'I wouldn't have considered messing around with a guy before this, but I must say some of those males out there can be a lot of fun.'[or]'Some of those mutants out there are actually pretty sexy. Once you learn to overlook stuff like fur or scales, you can see that there's some really hot ladies (and dudes) out there.'[or]'There's such a wild mix of creatures out there. It's getting kind of fun finding them and just having some wild sex. You should try letting a few of them win more often.'[or]'This resistance treatment's been a big help since I don't have to fight off all the creatures. Though I do have to shoo away those I've already gotten samples from or I don't have the time and energy left to have fun when I finally track down a new one I need.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 3 succeeds]herm[else if a random chance of 1 in 2 succeeds]female[else]male[end if] next time. Hopefully there's one around that I haven't already got.'[or]'It's getting harder to track down creatures I haven't already gotten enough samples from,' he says, motioning to wide array of small vials on the racks.[at random]";
 	else if HP of Sam is 4:

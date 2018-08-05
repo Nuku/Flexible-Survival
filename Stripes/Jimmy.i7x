@@ -68,7 +68,7 @@ to say jimmydesc:
 	if HP of Jimmy < 3:
 		say "ERROR-Jimmy-[HP of Jimmy]L: You should not be able to see me.";
 	else:
-		say "     Jimmy, having been transformed into a corgi, is quite short. He stands roughly 3 1/2 feet tall, mostly due to his very short legs. He is furry coat is a golden brown across most of his body, though white at his muzzle and chest. His arms, also short, end in paw-like hands covered in clean, white fur. He wears one of the police dog vests he's found and cleaned up, looking adorably cute in it. Despite, or perhaps because of, his transformation, he seems perpetually happy. He works cheerfully around the station to clean up the mess here.";
+		say "     Jimmy, having been transformed into a corgi, is quite short. He stands roughly three-and-a-half feet tall, mostly due to his very short legs. He is furry coat is a golden brown across most of his body, though white at his muzzle and chest. His arms, also short, end in paw-like hands covered in clean, white fur. He wears one of the police dog vests he's found and cleaned up, looking adorably cute in it. Despite, or perhaps because of, his transformation, he seems perpetually happy. He works cheerfully around the station to clean up the mess here.";
 
 Instead of conversing the Jimmy:
 	if HP of Jimmy < 3:

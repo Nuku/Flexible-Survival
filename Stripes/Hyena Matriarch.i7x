@@ -165,7 +165,7 @@ when play ends:
 			if humanity of player < 10:
 				say "     Your mind gone from the infection, you eventually find yourself wandering back towards the hyena's den. While at first they drive you away, on one of your visits Gina manages to recognize your changed form, and instead of driving you off they take you with them. Taking care of you is no easy task, but perhaps because of how well used you were while with them before, they find your body eventually returning to a more familiar hyenalike shape, much to Gina's delight. Soon you find yourself once more where you belong, a vital part of the large gang of hyenas as they continue to spread throughout the city, breeding the next generation of hyenas for your matriarch, much to the joy of your animalistic mind.";
 			else:
-				say "     You feel somewhat relieved to have escaped the hyena gang with your mind and body mostly intact, though you still sometimes find yourself dreaming of your time spent being the gang's breeding slut. Often waking up from dreams of being dominated and used by the entire gang, while you beg and whimper for more, only to find yourself desperately horny and needy and sadly so very very alone.";
+				say "     You feel somewhat relieved to have escaped the hyena gang with your mind and body mostly intact, though you sometimes find yourself dreaming of your time spent being the gang's breeding slut. You often wake up from dreams of being dominated and used by the entire gang while you beg and whimper for more, only to find yourself desperately horny and needy and sadly so very, very alone.";
 
 to matriarchify:
 	Infect "Hyena Matriarch";

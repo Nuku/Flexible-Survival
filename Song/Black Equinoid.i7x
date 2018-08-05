@@ -32,7 +32,7 @@ to say equine attack:
 to say beattheequinoid:
 	if player is male and cock length of player > 5 and a random number between 40 and 90 < libido of player:
 		say "     The black furred equine sinks to the ground, then slumps over, panting and defeated. The battle, having gotten your blood pumping, has left your [cock size desc of player], [cock of player] cock engorged and throbbing. Before you can even think otherwise, you jump atop her and pin down her shoulders. She groans softly and reaches up to push you off, but ends up wrapping her arms around you instead. Even as you bring your hard rod into position, she spreads her legs for you and whinnies softly in anticipation, moaning as your glans slips in under her ballsack and presses into her wet pussy[if cock length of player < 12]. Her equinoid pussy is very accommodating, letting your penis in easily, but still grips you rather nicely as she clenches down around it in need of being filled[else if cock length of player < 20]. Her equinoid pussy is very accommodating, taking in your large penis easily, but still grips you rather nicely in her need to be filled[else]. Her equinoid pussy stretches a little to take your huge member, but is quite accommodating. She moans and grips you even harder, reaching a hard and messy orgasm even as you're still pushing deeper into her thick-lipped sex[end if].";
-		say "     Her long, equine cock rests across her body, twitching and spurting precum across the underside of her huge breasts as you pound into her. Quite aroused by the sight of this once-strong warrior reduced to a horny slut beneath you, it doesn't take long for the rhythmic contractions to push you over the edge. You drive hard into her sweltering depths, blasting your hot seed into her pussy. She arches her back and cums hard as well, painting her body with equine seed as you fill her. '[one of]Oh yes, breed me you great warrior[or]Fill me with your seed[or]Put your strong colt in me[or]Breed me like your mare[or]Oh, breed me you powerful stud[at random]!' she whinnies loudly. You do your best to satisfy her request, draining your balls into her before withdrawing. As you rise to your feet, she moans softly and simply lays there, rubbing her well-filled belly with a smile on her face. You can't help but grin as you walk off, knowing another of her tribe will have to replace her on patrol if you've just knocked her up.";
+		say "     Her long, equine cock rests across her body, twitching and spurting precum across the underside of her huge breasts as you pound into her. Quite aroused by the sight of this once-strong warrior reduced to a horny slut beneath you, it doesn't take long for the rhythmic contractions to push you over the edge. You drive hard into her sweltering depths, blasting your hot seed into her pussy. She arches her back and cums hard as well, painting her body with equine seed as you fill her. '[one of]Oh yes, breed me you great warrior[or]Fill me with your seed[or]Put your strong colt in me[or]Breed me like your mare[or]Oh, breed me you powerful stud[at random]!' she whinnies loudly. You do your best to satisfy her request, draining your balls into her before withdrawing. As you rise to your feet, she moans softly and simply lays there, rubbing her well-filled belly with a smile on her face. You can't help but grin, knowing another of her tribe will have to replace her on patrol if you've just knocked her up.";
 		now equinoiddefeat is 0;
 		decrease libido of player by libido of player / 5;
 		increase morale of player by 1;
@@ -41,7 +41,19 @@ to say beattheequinoid:
 	if equinoidstatus < 4, increase equinoidstatus by 1;
 	if equinoidstatus is 4:
 		say "[equinoidcampinvite]"; [Invite to visit the black equinoid camp. See the Equinoid Camp file]
-
+	else if HP of Roman is 8: [Football team recruits quest. Lower priority than Equinoid Camp]
+		say "     [one of]As you look at the hermaphrodite, you remember Roman's request. You mention why you are here, in the hopes that this creature is the one that you are looking for. 'Gorillas? Ah, yes. They try to come around from time to time, as if they could tread on our herd lands freely. I think I wanted to join them, but my memories are all fuzzy. And who would join these weaklings anyway.'[or]You recognize the equinoid as the one Roman wants you to recruit. 'You again,' the horse says as she recognizes you too. 'Trying to convince me to quite my brethren once again?'[stopping]";
+		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		increase bonus by XP of Roman;
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
+		increase diceroll by bonus;
+		if diceroll > 16:
+			say "     You entice the equinoid with some sweet words. The Gorillas want your strength, you say. They want someone strong to teach them. Besides, this would be the occasion to pass the message that these parts are yours, and prevent further trespassing. 'Mmm. You have a point,' the horse-herm says. 'They really have no stamina at all. They could not keep up with us for even a single hour. Very well. I will ask Nakoma to be sent to your Camp, as an emissary. I will shape up these apes while I'm at it.";
+			say "     She trots away, leaving you free to report your success to Roman, at the football field.";
+			now HP of Roman is 9;
+		else:
+			say "     'Don't try to use sweet words on me!' the horse-herm says, as you try to flatter her. 'I would rather be caught dead than spend time among these weaklings, even if you beat me.' With these angry words, she stands back up and limps away. You will have to try again, and be more careful with your words next time.";
 
 Section 2 - Monster Insertion
 

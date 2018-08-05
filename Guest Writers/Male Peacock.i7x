@@ -219,7 +219,7 @@ when play ends:
 			else:
 				say "You decide to remain in the quarantined city. You become the mate of a male peacock...or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
 		else:
-			say "You decide to leave and join civilization. Your pretty look and overall self controlled behavior gives you a job in what is considered the high society. You still have your...[']teeny sins['], you could say...";
+			say "You decide to leave and join civilization. Your pretty look and overall self-controlled behavior gives you a job in what is considered the high society. You still have your...[']teeny sins['], you could say...";
 			if cunt length of player > cock length of player:
 				if intelligence of player > 18:
 					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely... and it was actually really pleasant times. Still, you make bag and baggage and set off immediately to the quarantined city. You are determined to find him, and make clear that YOU are going to be in charge now...";

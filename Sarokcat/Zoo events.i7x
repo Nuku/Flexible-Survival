@@ -7,7 +7,7 @@ Section 1- Electric shockers
 
 [Moved to E-shocker file in Stripes folder.]
 
-Section 2-  Hyena cages
+Section 2 - Hyena cages
 
 Hyena cages is a situation.
 The sarea of Hyena cages is "Zoo".
@@ -17,7 +17,7 @@ Instead of Resolving a Hyena cages:
 	Now Hyena cages is resolved;
 
 
-Section 3-  Pachyderm predicament
+Section 3 - Pachyderm predicament
 
 Pachyderm predicament is a situation.
 The sarea of Pachyderm predicament is "Zoo".
@@ -31,7 +31,7 @@ Instead of Resolving a Pachyderm predicament:
 	say "     Sadly, you really don't see any way you can reach the employee to help with anything short of a helicopter, and you certainly aren't up to taking on two large foes of that size. Shaking your head, you move off into the zoo, trying not to shudder at the soon-to-be-elephantine employee's cries.";
 	Now Pachyderm predicament is resolved;
 
-Section 4-  Snake knot
+Section 4 - Snake knot
 
 Snake knot is a situation.
 The sarea of Snake knot is "Zoo".
@@ -41,7 +41,7 @@ Instead of Resolving a Snake knot:
 	Now Snake knot is resolved;
 
 
-Section 5-  Useful pamphlet
+Section 5 - Useful pamphlet
 
 Useful pamphlet is a situation.
 The sarea of Useful pamphlet is "Zoo".
@@ -54,7 +54,7 @@ Instead of Resolving a Useful pamphlet:
 		now Useful pamphlet is resolved;
 
 
-Section 6-  Unidentified sex scene
+Section 6 - Unidentified sex scene
 
 Unidentified sex scene is a situation.
 The sarea of Unidentified sex scene is "Zoo".
@@ -66,7 +66,7 @@ Instead of Resolving a Unidentified sex scene:
 	Now Unidentified sex scene is resolved;
 
 
-Section 7-  Grizzly gone
+Section 7 - Grizzly gone
 
 Grizzly gone is a situation.
 The sarea of Grizzly gone is "Zoo".
@@ -75,12 +75,12 @@ Instead of Resolving a Grizzly gone:
 	say "     Traveling through the zoo in search of anything of use, you come across a zookeeper's hut that seems like something broke into it. Taking a chance, you look inside and see that most of the area seems to be empty and smelling of sex. About to leave, you notice several hurried notes someone left. Picking them up, you begin to leaf through them.";
 	say "     'The grizzly is gone from the enclosure this morning! No sign of it at all, and the door was left wide open! What the hell happened last night? I need to ask the night watch...'";
 	say "     'Holy shit! If anyone is reading this, I found the grizzly, and watch out, he seems to be a size larger than he was yesterday! And god if he doesn't seem to be smarter now, too! I locked him out of the shed, and I should be safe in here.'";
-	say "     'I don't know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now.. It smells kinda... good. For some reason the shack seems to be a size too small now, though...'";
+	say "     'I don't know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now. It smells kinda... good. For some reason the shack seems to be a size too small now, though...'";
 	say "     'Grizzly so good, grizzly cock sized juuust right.' The last note ends there, trailing off into an unrecognizable scrawl.";
 	Now Grizzly gone is resolved;
 
 
-Section 8-  Tasty Treats
+Section 8 - Tasty Treats
 
 Tasty Treats is a situation.
 The sarea of Tasty Treats is "Zoo".
@@ -91,11 +91,11 @@ Instead of Resolving a Tasty Treats:
 	Now Tasty Treats is resolved;
 
 
-Section 9-  AngieTrapped
+Section 9- - AngieTrapped
 
 [Moved to Angie file]
 
-Section 10-  Panda parade
+Section 10 - Panda parade
 
 Panda parade is a situation.
 The sarea of Panda parade is "Zoo".
@@ -106,7 +106,7 @@ Instead of Resolving a Panda parade:
 	Now Panda parade is resolved;
 
 
-Section 11-  Petting zoo
+Section 11 - Petting zoo
 
 Petting zoo is a situation.
 The sarea of Petting zoo is "Zoo".
@@ -118,7 +118,7 @@ Instead of Resolving a Petting zoo:
 	Now Petting zoo is resolved;
 
 
-Section 12-  Instructional video
+Section 12 - Instructional video
 
 Instructional video is a situation.
 The sarea of Instructional video is "Zoo".
@@ -129,7 +129,7 @@ Instead of Resolving a Instructional video:
 	Now Instructional video is resolved;
 
 
-Section 13- Vet supplies
+Section 13 - Vet supplies
 
 Vet supplies is a situation.
 The sarea of Vet supplies is "Zoo".
@@ -223,7 +223,7 @@ to say vetsup_hshots:
 
 
 
-Section 14- Feeding time
+Section 14 - Feeding time
 
 Feeding time is a situation. The level of feeding time is 9.
 The sarea of Feeding time is "Zoo".
@@ -250,7 +250,7 @@ Instead of Resolving a Feeding time:
 		now Feeding time is resolved;
 
 
-Section 15- Security Station
+Section 15 - Security Station
 
 Security Station is a situation.
 The sarea of Security Station is "Zoo".
@@ -266,7 +266,7 @@ Instead of Resolving a Security Station:
 	Now Security Station is resolved;
 
 
-Section 16- Broken fences
+Section 16 - Broken fences
 
 Broken fences is a situation.
 The sarea of Broken fences is "Zoo".
@@ -276,7 +276,7 @@ Instead of Resolving a Broken fences:
 	Now Broken fences is resolved;
 
 
-Section 17- Wandering beasts
+Section 17 - Wandering beasts
 
 Wandering beasts is a situation.
 The sarea of Wandering beasts is "Zoo".
@@ -287,7 +287,7 @@ Instead of Resolving a Wandering beasts:
 	Now Wandering beasts is resolved;
 
 
-Section 18- Roaming spots
+Section 18 - Roaming spots
 
 Roaming spots is a situation.
 The sarea of Roaming spots is "Zoo".
@@ -298,7 +298,7 @@ Instead of Resolving a Roaming spots:
 	now Roaming spots is resolved;
 
 
-Section 19- Picture striping
+Section 19 - Picture striping
 
 Picture striping is a situation.
 The sarea of Picture striping is "Zoo".
@@ -314,7 +314,7 @@ Instead of Resolving a Picture striping:
 	now Picture striping is resolved;
 
 
-Section 20- Lazy River		[Event by Shadowwolf94]
+Section 20 - Lazy River (Event by Shadowwolf94)
 
 Lazy River is a situation.
 The sarea of Lazy River is "Zoo".

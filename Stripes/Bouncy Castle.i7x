@@ -1,8 +1,22 @@
 Version 6 of Bouncy Castle by Stripes begins here.
-[Version 5.1 - Bound State Addition]
-[Version 5.2 - Added bound state to the large Inflatable Orca - Song]
-[Version 5.3 - Minor maintenance and character relocation - Luneth]
-[Version 6.0 - Player can now choose whether or not to cut the tether after rescuing or losing the vixen. Added additional documentation and fixed several bugs - Song]
+[ Version 1.0 - Initial content - Stripes                               ]
+[ Version 2.0 - Extended castle with simple traps - Stripes             ]
+[ Version 2.1 - Added additional traps - Stripes                        ]
+[ Version 2.2 - Anime Babe support - Stripes                            ]
+[ Version 3.0 - Great Hall and King's Chamber added - Stripes           ]
+[ Version 3.1 - Added sexual content to inflatable orca - Stripes       ]
+[ Version 3.2 - Added Upper Hall + Sea Lion and Orca Toys - Stripes     ]
+[ Version 3.3 - Added Punching Pillars room - Stripes                   ]
+[ Version 4.0 - Remodeled Bouncy Castle - Stripes                       ]
+[ Version 4.1 - Added sex chair alternate escape path - Stripes         ]
+[ Version 5.0 - Make Bubble the vixen an obtainable NPC - Stripes       ]
+[ Version 5.1 - Bound State Addition - Blue Bishop                      ]
+[ Version 5.2 - Added Flot the dolphin toy - Blue Bishop                ]
+[ Version 5.3 - Added bound state to the large Inflatable Orca - Song   ]
+[ Version 5.4 - Minor maintenance and character relocation - Luneth     ]
+[ Version 6.0 - Player can now choose whether or not to cut the tether after rescuing or losing the vixen. Added additional documentation and fixed several bugs - Song ]
+[ Version 6.1 - Added an Inflatable Otter Suit that binds male/herm players and offers sex options for female/neuter players - Song ]
+
 "Save the vixen 'princess' from the 'castle'."
 
 Section 1 - Starting Event
@@ -132,20 +146,20 @@ to say bcnavigate:
 
 Section 3 - Bouncy Castle Layout
 
-bcswordplay is a truth state that varies. bcswordplay is normally false.
-bcseenplayroom is a truth state that varies. bcseenplayroom is normally false.
-bcplayroomlast is a truth state that varies. bcplayroomlast is normally true.
-bcseenkingchair is a truth state that varies. bcseenkingchair is normally false.
-bcseenkingknight is a truth state that varies. bcseenkingknight is normally false.
-bcseenhugeorca is a truth state that varies. bcseenhugeorca is normally false.
-bcfinalchairform is a text that varies. bcfinalchairform is normally "".
-lastsealfight is a number that varies. lastsealfight is normally 255.
-lastoctofight is a number that varies. lastoctofight is normally 255.
-lastbcchair is a number that varies. lastbcchair is normally 255.
-lastbcduobeaten is a number that varies. lastbcduobeaten is normally 255.
+bcswordplay is a truth state that varies. bcswordplay is usually false.
+bcseenplayroom is a truth state that varies. bcseenplayroom is usually false.
+bcplayroomlast is a truth state that varies. bcplayroomlast is usually true.
+bcseenkingchair is a truth state that varies. bcseenkingchair is usually false.
+bcseenkingknight is a truth state that varies. bcseenkingknight is usually false.
+bcseenhugeorca is a truth state that varies. bcseenhugeorca is usually false.
+bcfinalchairform is a text that varies. bcfinalchairform is usually "".
+lastsealfight is a number that varies. lastsealfight is usually 255.
+lastoctofight is a number that varies. lastoctofight is usually 255.
+lastbcchair is a number that varies. lastbcchair is usually 255.
+lastbcduobeaten is a number that varies. lastbcduobeaten is usually 255.
 bcduofightlost is a truth state that varies. bcduofightlost is usually false.
 bcduofightfled is a truth state that varies. bcduofightfled is usually false.
-bcseenthroneroom is a truth state that varies. bcseenthroneroom is normally false.
+bcseenthroneroom is a truth state that varies. bcseenthroneroom is usually false.
 
 The Bouncy Castle is a room. Bouncy Castle is fasttravel. Bouncy Castle is unknown. Bouncy Castle is private.
 The description of Bouncy Castle is "[bcentrance]".
@@ -273,9 +287,8 @@ to say bcfencingroom:
 			if calcnumber is 1:
 				say "     You snatch at one of the swords and easily catch it by the hilt, turning and swinging it towards with others with a loud 'Aha!' The sword parries a few strikes coming at you, but others strike you from behind. Laughing, you hop to turn around and face those, fencing with them. Soon you're hopping around the room and trying to weave around the pillars to swordfight with the boffer weapons as you laugh heartily. Having fun playing with the animated weapons, you lose track of time until you are eventually left exhausted and drop to the floor, panting to regain your breath as you giggle merrily. The swords, also appearing to be tired or content with their playtime, settle back down onto the floor.";
 				increase morale of player by 2;
-				decrease humanity of player by 8;
-				decrease libido of player by 5;
-				if libido of player < 0, now libido of player is 0;
+				SanLoss 8;
+				LibidoLoss 5;
 				now bcswordplay is true;
 				follow the turnpass rule;
 			else if calcnumber is 2 or calcnumber is 3:
@@ -294,7 +307,7 @@ to say bcfencingroom:
 						move player to Bouncy Castle;
 				else:
 					say "     You try your best to move towards the door, but the unsteady footing and the wild blows from every direction send you tumbling around until you finally fall to the floor. The foam swords pound on you for a while as you squirm around, trying to get up but becoming increasingly giddy. You laugh and giggle madly as they bash you around for what seems like a couple of hours until the swords settle down and you manage to crawl into the next room.";
-					decrease humanity of player by 5;
+					SanLoss 5;
 					follow the turnpass rule;
 					if calcnumber is 2:
 						move player to Bouncing Play Room;
@@ -339,8 +352,8 @@ to say bcplayroom:
 						now facename of child is "Seal Toy";
 						now bodyname of child is "Seal Toy";
 						now skinname of child is "Seal Toy";
-					increase libido of player by 10;
-					decrease humanity of player by 10;
+					LibidoBoost 10;
+					SanLoss 10;
 					follow the turnpass rule;
 				else if anallevel is 3 and a random chance of 1 in 2 succeeds:
 					let baby be 0;
@@ -351,14 +364,14 @@ to say bcplayroom:
 						now facename of child is "Seal Toy";
 						now bodyname of child is "Seal Toy";
 						now skinname of child is "Seal Toy";
-					increase libido of player by 10;
-					decrease humanity of player by 10;
+					LibidoBoost 10;
+					SanLoss 10;
 					follow the turnpass rule;
 				else:
-					say "     You rub your hands over the cute toy's white underbelly, making it squeak happily. As the strange blowjob continues, you become a more active participant, licking and sucking at the inflated prick stuffing your mouth as it leaks a latexy precum down your throat. After a few more minutes of thrusting, he gives a happy squeak and thrusts into you one last time before unleashing spurts of gooey cum. Spent from his orgasm, he starts to deflate somewhat and waddles back to the corner to rest and reinflate.";
+					say "     You rub your hands over the cute toy's white underbelly, making it squeak happily. As the strange blowjob continues, you become a more active participant, licking and sucking at the inflated prick stuffing your mouth as it leaks latexy precum down your throat. After a few more minutes of thrusting, he gives a happy squeak and thrusts into you one last time before unleashing spurts of gooey cum. Spent from his orgasm, he starts to deflate somewhat and waddles back to the corner to rest and reinflate.";
 					say "     You stretch out on the soft floor and decide to rest for a bit, feeling happy and buoyed by the experience, losing track for a while of your intended mission.";
-					increase libido of player by 10;
-					decrease humanity of player by 8;
+					LibidoBoost 10;
+					SanLoss 8;
 					follow the turnpass rule;
 	else:
 		say "     Taking a quick glance to the northwest corner, you can see that the yellow seal is still partially deflated and isn't ready to try to play again, giving you a chance to continue undistracted. A quick glance shows two kid-sized doorways leading out of here, one to the west and other to the north. A quick glance through the hanging flaps between rooms shows the [link]north[end link] leads to the smaller room you saw earlier with the foam swords. The door to the [link]west[end link] leads to a ball pit room as big as this play room. You also notice a mesh climbing ladder at the back corner of the ball pit which heads up to the upper level.";
@@ -411,8 +424,8 @@ to say bctoyroom:
 				if lastoctofight is 255:
 					say "     You do spot a can of soda half-buried among the beach toys near you and toss it into your pack before flopping on the floor to rest and catch your breath.";]
 				now lastoctofight is turns;
-				decrease humanity of player by 3;
-				increase libido of player by 3;
+				SanLoss 3;
+				LibidoBoost 3;
 				follow the turnpass rule;
 	else:
 		say "     You glance over and notice the yellow octopus lurking among the junk, but it seems content to leave you alone for now. You can see two child-sized doors out of here. The one to the [link]east[end link] heads back to the entrance room you started in while the [link]southern[as]south[end link] one leads to a large ball pit in which you can see a mesh ladder to climb to the upper level.";
@@ -556,7 +569,7 @@ to say bckingchair:
 		if playernum >= chairnum:
 			let chairescape be true;
 		else:
-			say "     You try to keep struggling, the feel of that smooth material sliding inside you becomes increasingly pleasurable and distracting. You try to keep your mind focused, but surely it wouldn't hurt to stop and enjoy this at least for a little while. Sit, relax, catch your breath. After that, you can pull free. But why bother, if this feels so good. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure as relax into your seat to enjoy the moment.";
+			say "     You try to keep struggling, the feel of that smooth material sliding inside you becoming increasingly pleasurable and distracting. You try to keep your mind focused, but surely it wouldn't hurt to stop and enjoy this at least for a little while. Sit, relax, catch your breath. After that, you can pull free. But why bother, if this feels so good. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure as relax into your seat to enjoy the moment.";
 			say "     It is a lucky glance down that has you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. The sudden realization that this chair intends to keep you or somehow transform you as part of its fun startles you from your complacency and you make a final attempt to pull free of the alluring inflatable.";
 			increase libido of player by 8;
 			decrease humanity of player by 3;
@@ -633,10 +646,10 @@ to say bckingchair_accept:
 
 Chapter 8 - Punching Pillars
 
-bcseenpunchingpillars is a truth state that varies. bcseenpunchingpillars is normally false.
-primarycolorlist is a list of text that varies. primarycolorlist is normally {"red", "yellow", "blue"}.
-ppcolor is a text that varies. ppcolor is normally "green".
-bcfinalpillarform is a text that varies. bcfinalpillarform is normally "black knight".
+bcseenpunchingpillars is a truth state that varies. bcseenpunchingpillars is usually false.
+primarycolorlist is a list of text that varies. primarycolorlist is usually {"red", "yellow", "blue"}.
+ppcolor is a text that varies. ppcolor is usually "green".
+bcfinalpillarform is a text that varies. bcfinalpillarform is usually "black knight".
 
 to say bcpunchingpillars:
 	say "     This side room is designed as if it were a training hall, with images of training knights and straw dummies on the east wall and weapon racks between the windows on the west. The room itself has several shoulder-height pillars which seem padded for punching. These pillars come in several bright colors and have designs of wolf men, orcs, cat people and other aggressive foes. As you walk further into the room, the pillars ";
@@ -820,7 +833,7 @@ to say bcknightschambers:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"ducky swimring"	"[if ducky swimring is equipped]A child's swim ring shaped like a duck with a cute head, puffy little wings on its sides and a tuft of a tail at its back. It always seems to be sized right to fit you.[else]A child's swim ring shaped like a duck with a cute head, puffy little wings on its side and a tuft of a tail at its back when its inflated. At the moment, you've got it deflated for easier storage, though you could always put it on.[end if]"	1	ducky swimring
+"ducky swimring"	"A child's swim ring shaped like a duck with a cute head, puffy little wings on its sides and a tuft of a tail at its back[if ducky swimring is equipped]. It always seems to be sized right to fit you[else] when it's inflated. At the moment, you've got it deflated for easier storage, though you could always put it on[end if]."	1	ducky swimring
 
 ducky swimring is equipment. It is not temporary.
 The placement of ducky swimring is "waist".
@@ -842,6 +855,13 @@ Chapter 11 - Upper Tower
 
 to say bcuppertower:
 	say "     Midway up the drum tower at the back of the bouncy castle there is a floor where you can stop your climb. From here, there's three options open to you. At the [link]north[end link] wall, there is a screened archway leading into an upper hall. If you want to continue inside the tower, you can climb further [link]up[end link] the mesh ladder or take it back [link]down[end link] to the ground floor.";
+	if InflatableOtterSuitMode is 0: [Sets a permanent state depending on the parts of the player on arrival. See Inflatable Otter Suit file for more details]
+		if player is male: [Empty otter suit with bound state]
+			move Inflatable Otter Suit to Upper Hall;
+			now InflatableOtterSuitMode is 1;
+		else: [Stuffed otter suit with some sex options]
+			move Stuffed Otter Suit to Upper Hall;
+			now InflatableOtterSuitMode is 2;
 
 
 Chapter 12 - Tower Turret
@@ -966,7 +986,7 @@ to chairboundstate:
 				decrease boundcounter by 2;
 		else if boundsegment is 1:
 			if boundcounter > 1:
-				say "     A hood of latex flows around your head, cutting your vision off from the rest of your surroundings. Very soon thereafter it begins to pump a thick gas that makes you feel light-headed and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. As a protrusion swells up in the mask, it exploits your moment of weakness to slide itself into your mouth, its decidedly phallic shape forcing its way past your lips and down your throat. Dizzy in this haze, it's becoming even more difficult to stay lucid!"; [hooded]
+				say "     A hood of latex flows around your head, cutting your vision off from the rest of your surroundings. Very soon thereafter it begins to pump a thick gas that makes you feel lightheaded and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. As a protrusion swells up in the mask, it exploits your moment of weakness to slide itself into your mouth, its decidedly phallic shape forcing its way past your lips and down your throat. Dizzy in this haze, it's becoming even more difficult to stay lucid!"; [hooded]
 				now boundsegment is 2;
 				decrease boundcounter by 2;
 		else if boundsegment is 2:
@@ -987,10 +1007,10 @@ to chairboundstate:
 				say "     Too weak-willed to go on, the trap exploits this moment of weakness almost immediately";
 				if boundsegment is 0:
 					say "! Quickly sent tumbling forward, one of your hands ends up in the red spot. It sinks into it as a flesh-like orifice made from the same latex-vinyl material as the rest of this place is formed. You try to pull it out, but your free hand slips and ends up trapped as well before you notice the material at your feet inflating upwards into a pink tube that climbs up your ankles. Those at your hands begin to inflate as well, the material beneath you starting to swell up, and forming into a padded blue seat.";
-					say "     A hood of latex flows around your head, cutting your vision off from the rest of your surroundings. Very soon thereafter it begins to pump a thick gas that makes you feel light-headed and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. As a protrusion swells up in the mask, it exploits your moment of weakness to slide itself into your mouth, its decidedly phallic shape forcing its way past your lips and down your throat.";
+					say "     A hood of latex flows around your head, cutting your vision off from the rest of your surroundings. Very soon thereafter it begins to pump a thick gas that makes you feel lightheaded and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. As a protrusion swells up in the mask, it exploits your moment of weakness to slide itself into your mouth, its decidedly phallic shape forcing its way past your lips and down your throat.";
 					say "     Blatantly aroused from breathing in the aphrodisiac, the motion of the strange chair increases[if player is male]. Your stiffening, [cock size desc of player] cock[smn] slide into slick orifices which form in the seat beneath you, which squeezes and milks at your erection[smn], increasing your pleasure and making it harder to stay focused[end if][if player is female and anallevel is 3]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn] and asshole. Inflating slowly, you're filled with the pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if player is female]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn]. Inflating slowly, you're filled with the pulsing dildo[sfn] that shiver delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if][if player is not female and anallevel > 1]. You feel some of the rubbery material bulge up and push its way into your quivering asshole. Inflating slowly, you're filled with the pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if].";
 				else if boundsegment is 1:
-					say "! A hood of latex flows around your head, cutting your vision off from the rest of your surroundings. Very soon thereafter it begins to pump a thick gas that makes you feel light-headed and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. As a protrusion swells up in the mask, it exploits your moment of weakness to slide itself into your mouth, its decidedly phallic shape forcing its way past your lips and down your throat.";
+					say "! A hood of latex flows around your head, cutting your vision off from the rest of your surroundings. Very soon thereafter it begins to pump a thick gas that makes you feel lightheaded and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. As a protrusion swells up in the mask, it exploits your moment of weakness to slide itself into your mouth, its decidedly phallic shape forcing its way past your lips and down your throat.";
 					say "     Blatantly aroused from breathing in the aphrodisiac, the motion of the strange chair increases[if player is male]. Your stiffening, [cock size desc of player] cock[smn] slide into slick orifices which form in the seat beneath you, which squeezes and milks at your erection[smn], increasing your pleasure and making it harder to stay focused[end if][if player is female and anallevel is 3]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn] and asshole. Inflating slowly, you're filled with the pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if player is female]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn]. Inflating slowly, you're filled with the pulsing dildo[sfn] that shiver delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if][if player is not female and anallevel > 1]. You feel some of the rubbery material bulge up and push its way into your quivering asshole. Inflating slowly, you're filled with the pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if].";
 				else if boundsegment is 2:
 					say "! Blatantly aroused from breathing in the aphrodisiac, the motion of the strange chair increases[if player is male]. Your stiffening, [cock size desc of player] cock[smn] slide into slick orifices which form in the seat beneath you, which squeezes and milks at your erection[smn], increasing your pleasure and making it harder to stay focused[end if][if player is female and anallevel is 3]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn] and asshole. Inflating slowly, you're filled with the pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if player is female]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn]. Inflating slowly, you're filled with the pulsing dildo[sfn] that shiver delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if][if player is not female and anallevel > 1]. You feel some of the rubbery material bulge up and push its way into your quivering asshole. Inflating slowly, you're filled with the pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if].";
@@ -1157,7 +1177,7 @@ to chairpassivelosses:
 		else:
 [			say " [special-style-2]Fail[roman type].";]
 			say "     Your hands land on the rubbery floor and your attention is fixed on watching their capture. The red spots seems to morph and form into flesh-like orifices seamlessly. They are made of the same latex-vinyl material as the rest of this place. The red color fades to pink as they start to inflate, swelling up into tubes that creep slowly up your wrists and ankles trapping you further. After going up a couple of inches, the material beneath you begins to bulge upwards, forming into a blue, padded seat. This strange chair bulges up and lifts you up off the floor, your trapped hands and feet held by the tubes attached seamlessly into it. And then a hood of latex material flows over your head, cutting you off from seeing any more.";
-	say "     The bubble over your head begins to pump in a thick gas that makes you feel light-headed and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if cocks of player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if cocks of player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if cunts of player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if cunts of player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if].";
+	say "     The bubble over your head begins to pump in a thick gas that makes you feel lightheaded and aroused, as well as increasing the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if cocks of player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if cocks of player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if cunts of player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if cunts of player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if].";
 	WaitLineBreak;
 	let playernum be ( 150 + humanity of player - libido of player + ( level of player * 2 ) );
 	let playernum be a random number between 1 and playernum;
@@ -1276,7 +1296,7 @@ to chairpassivelosses:
 
 to say bcchairsubmit:
 	say "     You don't resist and let yourself fall forward, your hands landing squarely on two more large red spots. There transform immediately into flesh-like orifices made from the same latex-vinyl material as everything else here and your hands sink into them. You watch as the red spots start to inflate, stretching upwards into pink tubes that pleasantly squeeze and grip around your arms and legs as they climb up a few inches. Beneath you, the blue material starts to inflate into a large, padded seat. With this support beneath you, you rub yourself onto it. You are momentarily concerned as a sheet of it flows up over your head, covering your face in a mask, but the gas it releases causes your worries to fade as its aphrodisiac qualities kick in, getting you instantly aroused.";
-	say "     As the thick gas makes you feel light-headed and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if cocks of player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if cocks of player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if cunts of player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if cunts of player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
+	say "     As the thick gas makes you feel lightheaded and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if cocks of player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if cocks of player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if cunts of player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if cunts of player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
 	WaitLineBreak;
 	say "     Making no attempt to resist the pleasures the chair brings, you become quite aroused and respond to the stimulation with moans of pleasure. As a protrusion swells up in the mask, it slides into your mouth with a decidedly phallic shape to stuff your mouth and throat. You lick and suck at this, eager to show the chair how much you appreciate the wonderful delight it's bringing you.";
 	say "     The sex chair stimulates you without stop - its motion against you, the feel of its [if player is female]probes[else]probe[end if] throbbing inside you[if player is male], those gripping holes around your maleness[end if] - all work without tire to pleasure you[if player is male]. Your man meat pulses and throbs as the rubbery flesh squeezes and milks at you until you finally cum hard. You groan around that phallic protrusion in your mouth as your balls are drained and the pleasure of orgasm overtakes you[end if][if player is female]. Those throbbing probes inside you inflate to fill you to your limits and even a little further each time they pulse inside you, sending waves of delight through you. You soak them and seat beneath you with your juices as you climax[end if][if player is neuter]. Your body is rubbed and rocked against the seat beneath you, the smooth surface sliding wonderfully against your body while those stimulating bumps send shivers through your bare groin, making you cry out in delight[end if]. You pant and sag down atop the seat as the pleasure of your afterglow fills you.";
@@ -1778,8 +1798,7 @@ to say dolcheckB:		[free victim]
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. It takes a little time to find it, having partially melded itself shut, but you manage to start working it open. As you begin to get it open, it starts to shift and move with the struggles of someone inside. Your hopes are quickly dashed as a gray, flippered paw pushes free and the leopard seal inside starts to force its way to freedom. Pulling the breathing piece from its mouth, the anthropomorphic seal gasps for fresh air. 'Ahhh! Gimme out of here!' The inflatable suit seems to struggle against its victim's escape attempt, but can't stop him (you realize as you spot his sheath) as you aid in his escape.";
 	say "     As the seal gets out further, he starts squeezing on the inflatable dolphin, pushing the air out of it until it eventually sags to the colorful floor. You are given a kiss and a grope by the seal. 'Thanks, hon,' he rumbles. 'I'd thank you properly, but I'm not sticking around here. Mmm... too bad, too. I think you'd make a lovely seal cow. Oh well, plenty of others to find and breed,' he adds before leaping from the doorway and making a rush for the slide. As you watch, he swims quickly out to sea, probably off to find an unprotected town to infect. You are uncertain how you feel about having put others at risk by saving him. Brushing your fingertips across your lips, remembering his kiss, you can't help but find the way his form cuts through the water sexy. Certainly they'd be better off as seals than some of the other infections you've encountered.";
 	increase score by 10;
-	increase libido of player by 10;
-	if libido of player > 100, now libido of player is 100;
+	LibidoBoost 10;
 
 
 to say dolcheckC:		[mostly tf victim]
@@ -1801,7 +1820,7 @@ to say dolcheckD:		[complete tf - fight]
 			if dam < 0, now dam is 0;
 			decrease HP of player by dam;
 			if boatfound is not 2:
-				increase libido of player by 10;
+				LibidoBoost 10;
 		move player to Public Beach;
 		follow the turnpass rule;
 
@@ -1840,7 +1859,7 @@ to say dolcheckE:		[vixen]
 			say "You call out in warning and rush forward to grab her wrist again, but it is too late.";
 			say "     During your momentary lapse of focus, you fail to avoid the red spots yourself and you both end up stumbling and falling. Looking at them, you can see that the red spots have formed flesh-like orifices made of the same latex-vinyl material as the rest of this place which have now squeezed tightly down onto your wrists and ankles[if compnumber > 1]. A noise behind you alerts you to the fact that your companions are being ensnared by bands of material growing from the mesh walls[else if compnumber is 1]. A noise behind you alerts you to the fact that your companion is being ensnared by the bands of material growing from the mesh walls[end if].";
 		say "     The vixen girl giggles and squirms at this new game. You call out to her to try and pull free even as you start struggling yourself. As you watch, the red spots around her wrists and ankles start to bulge upwards, swelling out into pink tubes that slowly climb up her limbs while a padded seat forms out of the blue material underneath her to support her body. You're given a blue seat as well, rubbing against your [bodytype of player] body while helping to support you in place. As she's too unfocused to struggle for more than moments at a time before her arousal distracts her again with the growing sensations, you try your best to get out of this predicament to save her.";
-		say "     Your struggles seem to draw the attention of the floor and a red spot slides closer, pushing up towards your head. Stretching upwards into a pink tube, it forms a rubbery cup to go over your face. You try to pull away, but ropes of vinyl wrap around your head and pull it tight over your mouth and nose. As some kind of gas is pumped into it, you quickly grow light-headed and aroused. Breathing in the aphrodisiac, you can't help but become turned on by the sight of the vixen grinding herself against the strange chair that is threatening to encapsulate her. Shall you try to [link]resist (Y)[as]y[end link] this bizarre trap or shall you relax and [link]enjoy (N)[as]n[end link] watching what happens for a while?";
+		say "     Your struggles seem to draw the attention of the floor and a red spot slides closer, pushing up towards your head. Stretching upwards into a pink tube, it forms a rubbery cup to go over your face. You try to pull away, but ropes of vinyl wrap around your head and pull it tight over your mouth and nose. As some kind of gas is pumped into it, you quickly grow lightheaded and aroused. Breathing in the aphrodisiac, you can't help but become turned on by the sight of the vixen grinding herself against the strange chair that is threatening to encapsulate her. Shall you try to [link]resist (Y)[as]y[end link] this bizarre trap or shall you relax and [link]enjoy (N)[as]n[end link] watching what happens for a while?";
 		if player consents:
 			say "[bcchairfinal1]";
 		else:
@@ -2048,7 +2067,7 @@ to say bcchairfinal2:
 	say "     As those pink tubes reach the top of the seat, the sections begin to more full merge. If the vixen were even willing to struggle against the inflatable chair, there would be little chance of escape now. As you watch with increasing excitement, the material flows over her back, joining with the hood over her head and sealing her in. As it is doing so, the capsule starts to lower itself down, slowly dropping down into the floor.";
 	WaitLineBreak;
 	say "     Realizing that you won't be released for a long time, if ever, you momentarily consider struggling. This is put a stop to by a fresh wave of gas that muddles your thoughts even as the vinyl material holding your limbs starts to rise up, preparing to repeat the process on you.";
-	say "     As the thick gas makes you feel light-headed and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if cocks of player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if cocks of player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if cunts of player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if cunts of player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
+	say "     As the thick gas makes you feel lightheaded and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if cocks of player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if cocks of player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if cunts of player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if cunts of player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
 	WaitLineBreak;
 	say "     Making no attempt to resist the pleasures the chair brings, you become quite aroused and respond to the stimulation with moans of pleasure. As a protrusion swells up in the mask, it slides into your mouth with a decidedly phallic shape to stuff your mouth and throat. You lick and suck at this, eager to show the chair how much you appreciate the wonderful delight it's bringing you. In your hyper-aroused state, the moans of pleasure coming from the vixen's descending capsule are not a source for concern, but a promise of the ecstasy soon to come.";
 	say "     The sex chair stimulates you without stop - its motion against you, the feel of its [if player is female]probes[else]probe[end if] throbbing inside you[if player is male], those gripping holes around your maleness[end if] - all work without tire to pleasure you[if player is male]. Your man meat pulses and throbs as the rubbery flesh squeezes and milks at you until you finally cum hard. You groan around that phallic protrusion in your mouth as your balls are drained and the pleasure of orgasm overtakes you[end if][if player is female]. Those throbbing probes inside you inflate to fill you to your limits and even a little further each time they pulse inside you, sending waves of delight through you. You soak them and seat beneath you with your juices as you climax[end if][if player is neuter]. Your body is rubbed and rocked against the seat beneath you, the smooth surface sliding wonderfully against your body while those stimulating bumps send shivers through your bare groin, making you cry out in delight[end if]. You pant and sag down atop the seat as the pleasure of your afterglow fills you even as the vixen's rubbery bubble sinks out of sight.";

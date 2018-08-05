@@ -2150,7 +2150,6 @@
 |Kazard|Random Tentacle Horror|lasttentaclebattleoutcome|value|
 |Kazard|Random Tentacle Horror|eggplanted|value|
 |Kazard|Random Tentacle Horror|cuntsmall|value|
-|Kazard|Random Tentacle Horror|hascunt|value|
 |Kazard|Random Tentacle Horror|multicunt|value|
 |Kazard|Random Tentacle Horror|thmpregdetect|value|
 |Stripes|Mismatched Chimera|20140908213124/3122:Mon 8 September 2014 21:31|indexing|

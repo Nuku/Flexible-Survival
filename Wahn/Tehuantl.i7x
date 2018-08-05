@@ -530,7 +530,7 @@ instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turn
 			say "     [bold type]Do you want to watch?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Oh yeah!";
-			say "     ([link]N[as]n[end link]) - Nah, give em some privacy.";
+			say "     ([link]N[as]n[end link]) - Nah, give [']em some privacy.";
 			if player consents:
 				LineBreak;
 				say "     Simply staying where you are, you got a prime view of Tehuantl undoing the front of Carl's pants, pulling them open to reveal the husky's canine shaft. The feline mrowls in pleasure at the obvious sign of Carl's arousal and wraps his paw-hand around it as he turns to face the husky again. Then something unexpected happens - as Carl is done trying to hold back and instead slides his hand behind the jaguarman's head to pull him into a kiss. As their muzzles meet, the two trained men start making out with a vengeance. The cat and dog kiss and tongue-wrestle very eagerly, until Carl wraps his arms around Tehuantl and rolls both of them over, with the feline now pinned to the ground beneath him. 'Get ready for the time of your life kitty,' he barks playfully and shimmies out of his pants.";

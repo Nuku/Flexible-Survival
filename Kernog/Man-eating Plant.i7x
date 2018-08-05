@@ -27,7 +27,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Man-eating Plant"; [Name of your new Monster]
 	now attack entry is "[didnotsubmit][one of]One of the vines slap your thigh, leaving a small bruise.[or]A vine makes a downward motion on your head, clubbering you with surprising strength.[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[ManEatingPlantVoreScene]"; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[ManEatingPlantVoreScene]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[ManEatingPlantDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "face entry goes here"; [ Face description, format as "Your face is (your text)"]

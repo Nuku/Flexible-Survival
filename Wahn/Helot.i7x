@@ -92,7 +92,7 @@ to say Helot fucks:
 to say Helot loses:
 	if bodyname of player is "Helot" and facename of player is "Helot":
 		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but... you know how it is to be hungry.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-	else if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep em under control]
+	else if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
 		say "     Breathing hard, the somewhat bruised young Helot grimaces, then drops both arms to his sides and looks down. 'I'm sorry... master. I shouldn't have tried fighting you.' His hands move to undo the knots of his loincloth, letting it fall to the ground. Now the lean, muscled man stands submissively before you. 'I'm ready for your punishment. Do with me what you will.'";
 	else if bodyname of player is "Amazon" and facename of player is "Amazon": [Someone in a costume he recognizes]
 		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I was wrong about you.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as repayment? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
@@ -204,7 +204,7 @@ to say HelotDesc:
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
 	if bodyname of player is "Helot" and facename of player is "Helot": [no honor among slaves]
 		say "     'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
-	else if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep em under control]
+	else if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
 		say "     'Well, well - one of our lords and masters all alone. Are you part of the Cypteia? No matter - with no armor and no weapon, you won't be rounding any of us up. I'll give you a good trashing instead!' With a snarl, he throws himself on you.";
 	else if bodyname of player is "Amazon" and facename of player is "Amazon": [Someone in a costume he recognizes]
 		say "     'A woman as a soldier? Stop fooling yourself - come over here, wench... I'll show you a good time.' As you don't immediately jump to his orders, the young man murmurs something about showing you your place, then rushes at you.";

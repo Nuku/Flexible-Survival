@@ -31,7 +31,7 @@ Use Scoring.
 		let N be 0 minus N;
 	decide on N.] [enable this to compile on older versions of inform]
 
-[ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
+[ Basic Functions moved to Basic Functions.i7x in Core Mechanics ]
 
 The release number is 65.
 The story creation year is 2010.
@@ -4987,6 +4987,7 @@ Include Text Capture by Eric Eve.
 Include Apocalypse Store by DrGryphon.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astroslide Field Locker-room by Kernog.
+Include Astroslide Field Showers by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
 Include Azrael by Rikaeus.
@@ -5480,6 +5481,7 @@ Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Erica by Wahn.
+Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Stripes.
 Include Farmhands by Wahn.
@@ -5505,6 +5507,7 @@ Include HypnoGeeks by Wasp.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
+Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
 Include Jay by Wahn.

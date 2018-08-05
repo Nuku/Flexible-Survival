@@ -65,7 +65,7 @@ understand "try riddle" as riddlesphinxing.
 understand "answer valerie" as riddlesphinxing.
 
 check riddlesphinxing:
-	if Valerie is not visible, say "Who you are looking for is the real riddle here?" instead;
+	if Valerie is not visible, say "Who you are looking for is the real riddle here." instead;
 
 carry out riddlesphinxing:
 	If lastriddlesphinx - turns < 6:

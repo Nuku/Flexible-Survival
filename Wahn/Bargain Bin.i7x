@@ -611,7 +611,7 @@ to say plrtcl:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"jackal romance novels"	"A small stack of romance novel paperbacks, most of them depicting a dashing jackalman on their fronts, generally shirtless and in a heroic pose. They look realatively well-thumbed, seems like Nermine read them more just than a few times..."	0	jackal romance novels
+"jackal romance novels"	"A small stack of romance novel paperbacks, most of them depicting a dashing jackalman on their fronts, generally shirtless and in a heroic pose. They look relatively well-thumbed. Seems like Nermine read them more just than a few times..."	0	jackal romance novels
 
 instead of sniffing jackal romance novels:
 	say "     Somehow, the scent of the books makes you think of hot desert sands, as well as the sea.";
@@ -624,7 +624,7 @@ to say jackal romance novels use:
 	LibidoBoost 10;
 
 instead of trading the jackal romance novels when the current action involves the Nermine:
-	say "     As you offer the books to her, Nermine instantly snatches them from your grasp and quickly hides them under her counter. Then she tells you, 'The humble storekeeper is grateful for the return of her private property. As she has offered her vistior before, she will pay twice the buying price.' With a slightle embarrassed expression, she quickly hands you two packets of food and also two water bottles, then acts as if the whole deal didn't happen.";
+	say "     As you offer the books to her, Nermine instantly snatches them from your grasp and quickly hides them under her counter. Then she tells you, 'The humble storekeeper is grateful for the return of her private property. As she has offered her visitor before, she will pay twice the buying price.' With a slightly embarrassed expression, she quickly hands you two packets of food and also two water bottles, then acts as if the whole deal didn't happen.";
 	LineBreak;
 	say "[bold type]You gain 2 food![roman type][line break]";
 	increase carried of food by 2;
@@ -636,7 +636,7 @@ instead of trading the jackal romance novels when the current action involves th
 
 Section 2 - Strange Doll Companion
 
-strange doll is a pet. "The strange looking doll that you found in the bargain bin of the unusual shop, the small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still just looking at the little thing manages to bring a smile to your face.".
+strange doll is a pet. "The strange-looking doll that you found in the bargain bin of the unusual shop. The small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still, just looking at the little thing manages to bring a smile to your face.".
 strange doll is a part of the player.
 The weapon damage of strange doll is 7.
 The level of strange doll is 1.

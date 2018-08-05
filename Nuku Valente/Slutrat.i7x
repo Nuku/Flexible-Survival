@@ -586,7 +586,7 @@ instead of conversing the Pool Table:
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: vs [targetnum].";
 		if dice plus bonus < targetnum:
-			say "     You play a poor game while trying to be discrete about it. You flub a couple of simple shots, letting the other rat beat you in the end[if T is 1]. Eight-ball chuckles at your bad game and[else if T is 2]. Skeeball is elated she was able to beat you and[else]. The sexy rat[end if] pats your ass. 'And now it's time for me to claim my prize,' the busty rat says with a chuckle, rubbing her crotch. As she moves in on you, you can't help but smile, getting exactly what you wanted.";
+			say "     You play a poor game while trying to be discreet about it. You flub a couple of simple shots, letting the other rat beat you in the end[if T is 1]. Eight-ball chuckles at your bad game and[else if T is 2]. Skeeball is elated she was able to beat you and[else]. The sexy rat[end if] pats your ass. 'And now it's time for me to claim my prize,' the busty rat says with a chuckle, rubbing her crotch. As she moves in on you, you can't help but smile, getting exactly what you wanted.";
 			now lastpoolgame is turns;
 			increase morale of player by 1;
 			increase slutratsub by 1;

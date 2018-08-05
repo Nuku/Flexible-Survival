@@ -202,7 +202,7 @@ carry out Tattooplayer:
 				Remove "Gryphon Tattoo" from feats of player;
 				decrease Intelligence of player by 2;
 		else:
-			say "'Thought you would be! It definitely suits you after all, and if any of those creatures out there are smart enough to ask where ya got such a sexy tat, you send em to me, especially if they are hyenas,' Kara says with a teasing wink before going back to what she was doing.";
+			say "'Thought you would be! It definitely suits you after all, and if any of those creatures out there are smart enough to ask where ya got such a sexy tat, you send [']em to me, especially if they are hyenas,' Kara says with a teasing wink before going back to what she was doing.";
 	else if tatstatus is 2:
 		say "'Hey welcome back, sorry you didn't like your tattoo earlier, but like I said, not enough material for another one, and besides your wound will take days to heal properly from getting the last one removed anyways,' Kara says with a shrug of her spotted shoulders and a lopsided grin as she looks at you sadly.";
 

@@ -265,7 +265,7 @@ when play ends:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: wolf['] is written on the side."	1	wolf cum
+"wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf cum
 
 wolf cum is a grab object. wolf cum is cum.
 
