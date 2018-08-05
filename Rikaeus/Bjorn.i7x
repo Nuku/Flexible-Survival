@@ -1,18 +1,24 @@
 Version 1 of Bjorn by Rikaeus begins here.
 [Version 1 - New NPC + Events]
 
-[ BjornRelationship                                        ]
-[   0: Hasn't met                                           ]
-[   1: Has rescued from the Spartans                       ]
-[   2: Has sufficiently proven their strength to top him   ]
-[   3: Manage to convince to go back to Pericles           ]
-[  99: Decided against rescuing him                        ]
+[ BjornRelationship                                             ]
+[   0: Hasn't met                                               ]
+[   1: Has rescued from the Spartans                            ]
+[   2: Has sufficiently proven their strength to top him        ]
+[   3: Manage to convince him to apologize to Pericles          ]
+[   4: Failed to Defend the Campus Completely,Dissapointing him ]
+[   5: Player Helped Defend the Campus in the War Completely    ]
+[   6: Seen player best Pericles in Combat, redeeming self (WIP)]
+[  99: Decided against rescuing him                             ]
 
-[ PericlesRelationship                                     ]
-[   0: Hasn't met                                           ]
-[   1: Has met via Bjorn Event                             ]
-[   2: Has seen his second event                           ]
-[   3: Has seen his third event, now available in room     ]
+[ PericlesRelationship                                          ]
+[   0: Hasnt met                                                ]
+[   1: Has met via Bjorn Event                                  ]
+[   2: Has seen his second event                                ]
+[   3: Has seen his third event                                 ]
+[   4: Has seen his fourth event                                ]
+[   5: Has seen his fifth event, now available in room          ]
+[   6: Managed to convince Bjorn to apologize, share rooms      ]
 
 Section 1 - Declaring variables and initial event
 
@@ -44,11 +50,13 @@ instead of going North from College Campus Entrance while BjornRelationship is 0
 	now Daily Training Session is not resolved;
 
 An everyturn rule:
-	if BjornRelationship > 0 and BjornRelationship < 99:
+	if BjornRelationship > 0 and BjornRelationship < 3:
 		if daytimer is night:
 			move Bjorn to Rocky Cliff;
 		else if daytimer is day:
 			move Bjorn to Viking Ship;
+
+
 
 Section 2 - Declaring Bjorn
 
@@ -58,14 +66,32 @@ The conversation of Bjorn is { "<This is nothing but a placeholder!>" }.
 The scent of Bjorn is "He smells of the sea and sweat, the later proving that he does work out.".
 
 to say BjornDesc:
-	say "     Your viking friend has shoulder length, shaggy, dirty blonde hair that is currently tied into a ponytail and bright blue eyes. He is wearing scale-mail armor that doesn't exactly cover everything, mainly his arms which are open to the world, showing off his well-enough muscles. Pants-wise he has leather trousers that one would see on a medieval warrior. You can tell that he's not that experienced when you notice that he doesn't have any scars on his body compared to what you'd expect of a viking. When he sees you he blushes lightly and waves at you.";
+	if BjornRelationship < 3:
+		say "     Your viking friend has shoulder length, shaggy, dirty blonde hair that is currently tied into a ponytail and bright blue eyes. He is wearing scale-mail armor that doesn't exactly cover everything, mainly his arms which are open to the world, showing off his well-enough muscles. Pants-wise he has leather trousers that one would see on a medieval warrior. You can tell that he's not that experienced when you notice that he doesn't have any scars on his body compared to what you'd expect of a viking. When he sees you he blushes lightly and waves at you.";
+	if BjornRelationship is 3:
+		say "     Bjorn has undergone quite a change in the short time he's been with the Spartans. His once shaggy, shoulder length blonde hair is shortened to just below the ears, though he still has his bright blue eyes. His scale-mail armor is replaced with what looks to be a golden platebody that is missing, well the body part so only really his arms are covered. Instead of his leather trousers he's wearing armored pants that cover everything but his large cock that match the upper body. Upon noticing you looking at him he blushes at you staring and waves.";
+	if BjornRelationship > 3 and BjornRelationship < 99:
+		say "     The viking you've grown familiar with is no longer wearing the spartan outfit he was forced to before. Instead he appears to have gone... deep into the college culture. That is, as deep as he can while retaining some of his viking qualities. First and foremost, the blonde haired male is wearing a black tank top with the college's school logo emblazoned on it that heavily emphasizes his musculature. Next, instead of the leather pants he wore at the beginning of your relationship with him, he's now wearing tight leather pants that cling very tightly to his bulge, leaving no room to imagination. In his ears is a set of piercings that add to the overall look, though you swear one of them has a 'P' engraved on it. Lastly he has a large double-headed axe hanging on his back that he appears very comfortable with. Overall you are pretty damn sure that Pericles chose all of his attire for him. When your friend sees you staring he waves, causing his muscles to ripple under the tank top.";
 
 Section 3 - Talking with Bjorn
 
 instead of conversing the Bjorn:
-	say "     The viking smiles at you before asking you what you want.";
-	wait for any key;
-	say "[BjornTalkMenu]";
+	if BjornRelationship is 3:
+		say "     Although he's looking a bit tired from his training with the Spartans, Bjorn still smiles and waves at you before asking what you want to talk about.";
+		wait for any key;
+		say "[BjornTalkMenu]";
+	else if BjornRelationship > 3:
+		say "     Looking up from his textbook the viking gives you a warm smile and asks you what you want, saying that he does have to get back to studying soon.";
+		wait for any key;
+		say "[BjornTalkMenu]";
+	else if Bjorn is in Viking Ship:
+		say "     Surrounded by his fellow vikings, Bjorn gives a gruff hello before asking you what you request of him, his personality far different from how he is at the cliff.";
+		wait for any key;
+		say "[BjornTalkMenu]";
+	else if Bjorn is in Rocky Cliff:
+		say "     The viking smiles at you, pushing himself off the side of the cliff, before asking you what you want, giving you a nice warm smile.";
+		wait for any key;
+		say "[BjornTalkMenu]";
 
 to say BjornTalkMenu:
 	LineBreak;
@@ -78,11 +104,17 @@ to say BjornTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about his tribe";
 	[]
-	if player is male and Bjorn is in Rocky Cliff:
+	if cocks of player > 0 and Bjorn is in Rocky Cliff:
 		choose a blank row in table of fucking options;
 		now title entry is "Spar";
 		now sortorder entry is 2;
 		now description entry is "Spar with the Viking";
+	[]
+	if BjornRelationship is 2 and Bjorn is in Rocky Cliff:
+		choose a blank row in table of fucking options;
+		now title entry is "Pericles";
+		now sortorder entry is 3;
+		now description entry is "Convince the Viking to go apologize";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -101,6 +133,8 @@ to say BjornTalkMenu:
 					say "[BjornViking]";
 				if (nam is "Spar"):
 					say "[BjornSpar]";
+				if (nam is "Pericles"):
+					say "[BjornPericles]";
 				wait for any key;
 		else if calcnumber is 0:
 			say "Break off the conversation?";
@@ -156,15 +190,46 @@ to say BjornSpar:
 			say "     Bjorn quickly lays himself on his back on the sand and gestures to his cock, as if asking you to ride him. With a shrug of your shoulders you oblige him and position your hole above his hard dick. You lower yourself onto his manhood, wincing a bit at his big cock pushing into your entrance. Moaning, you quickly manage to have his cock balls deep in you. That action elicits a groan from your viking friend as well as a desperate thrust into your hole. You take that as a cue to begin moving up and down his thick shaft, your cock throbbing hard from the sensations, leaking copious amounts of precum which drips onto his washboard abs.";
 			say "     If someone were to happen upon the two of you, they'd see you bouncing up and down Bjorn's dick all the while moaning wantonly. By now the viking is thrusting up quickly in time with you lowering onto him and as well as matching your sounds. You reach your hand down to your own cock and begin to masturbate in time with the fucking in hopes of getting off at the same time as your friend. To your surprise, the male leans up to pull you into a kiss as you ride him, making out roughly with you. This makes even more pleasure shoot through you, something that brings you closer and closer to your own orgasm.";
 			WaitLineBreak;
-			say "     Sure enough it doesn't take long before you let out a loud grunt and shoot your load all both your stomachs. This causes you to clench your hole on the thick cock you're currently riding, driving Bjorn over the edge. With one last groan, the viking lets loose his cum deep into your ass. While riding out the bliss of your orgasms the two of you lazily swap kisses, simply enjoying each other's presence. Once you're out of your post-coitus haze you ease yourself off his softening cock and begin to clean yourself up. Once done you help him up from the sand. 'That was wonderful, maybe we could try sparing again another time?' he asks. You tell Bjorn that you'll let him know if you wish to spar again before wondering what you'll do next.";
+			say "     Sure enough it doesn't take long before you let out a loud grunt and shoot your load all both your stomachs. This causes you to clench your hole on the thick cock you're currently riding, driving Bjorn over the edge. With one last groan, the viking lets loose his cum deep into your ass. While riding out the bliss of your orgasms the two of you lazily swap kisses, simply enjoying each other's presence. Once you're out of your post-coitus haze you ease yourself off his softening cock and begin to clean yourself up. Once done you help him up from the sand. 'That was wonderful, maybe we could try sparring again another time?' he asks. You tell Bjorn that you'll let him know if you wish to spar again before wondering what you'll do next.";
+
+to say BjornPericles:
+	if PericlesRelationship < 5:
+		say "     Figuring that you're close enough with the viking to bring up this topic, and in a safe enough area, you mention the spartan that well... uh thoroughly trashed him. As soon as you speak of the male, Bjorn blushes, an action that you find rather rare and odd especially when he stutters out a response. 'A-ah him? W-what about him?' The buff warrior manages to get out without completely making a fool of himself. You give him an odd look before telling him that he should formally apologize. 'B-but I don't really know him, s-so what if I embarrass myself or he attacks me?' Bjorn says to you in a small voice. You blink owlishly at him, not really understanding this behavior from the relatively strong viking. Sadly though you cannot ease his worries either, as you do not know the spartan that well. Perhaps you should get to know him better?";
+	else if PericlesRelationship is 5:
+		say "     Figuring that you're close enough with the viking to bring up this topic, and in a safe enough area, you mention Pericles, the viking that well... uh thoroughly trashed him. As soon as you speak his name vocally Bjorn blushes but is also blinking quite curiously at you, seeming to have noticed the familiarity of the tone. 'W-wait? You know him?' He asks, stuttering, a behavior that you type as odd for the strong muscular man, though the blushing was weird too. Shrugging, deciding to ignore the actions of your friend for now you mention that you do know the sapartan, quite well actually. The look in the male's eyes changes to that of what you think to be a mix of interest and a slight bit of jealous although you're not entirely sure why. Though... you have the slightest feeling that Bjorn might be either romantically or sexually interested in Pericles. Judging by the blushing, probably the former.";
+		say "     'D-do you think that y-you could come with me to the campus to apologize?' He asks, seemingly avoiding any questions on how close you are to the spartan. Not entirely too worried about his request you shrug your shoulders, wondering how it could possibly go wrong. As soon as you give your assent the viking's demeanor changes and he gains a big smile on his face. Without even giving you time to prepare, he moves on past you telling you to hurry up. Blinking once more, this time at his rapid transition you sigh before following after him, figuring it'd be better for him to not to arrive at the campus alone. As you're pretty sure Pericles would beat him up again, believing that he was there to cause trouble.";
+		WaitLineBreak;
+		say "     Surprisingly enough it doesn't take long for you to actually reach the campus, though you guess Bjorn's buff figure disuades anyone from attacking you two. When you arrive at the entrance to the college, the two spartans keeping watch raise their weapons a little bit at the sight of the viking. To calm them, you raise your hand, catching their attention, which causes the both of the warriors to lower the swords and nod, having recognized you having been repeatedly in their leader's company. Nodding at them you head on in and guide your friend through the walkways of the educational center, his eyes lighting up in curiosity at everything.";
+		say "     You ask him when you see his interest if he's intrigued by the college and he nods eagerly. 'The only way we learned back on the ship were from our elders and the education wasn[']t that varied. Just mostly about how to provide for our lives and fight,' he says rather simply. You figure it makes sense, as vikings wouldn't have the best system for providing information for their youth. With a thoughtful hum, you ask him why doesn't he apply for classes here? Instantly as soon as you utter those words the male starts to stutter, partially out of what you suspect fear and the other part out of... embarrassment? 'I c-could[']t! My f-family would throw a fit! Plus, ah, Pericles is here.' Bjorn gets out in bits and pieces. Oh, that's the reason, family and his suspected crush. Seeing that you're approaching the dorm building you decidedly let the topic go for now.";
+		WaitLineBreak;
+		say "     Upon entering you wave to anyone you know at the dorms, some of them patting you on the back and asking if you're there to see Pericles. You nod and they tell you that he's up in his room as usual. Thanking them, you turn your attention to the stairs and head on upwards, Bjorn following behind you. When you reach the closed door leading to the Spartan-Helot leader's room you rap your knuckles against the door, the sound echoing in the empty hallway. 'Who is it!' An authorative voice rings out from behind it. You mention that it's you, causing you to hear clicks as the door opens wide a few seconds later, revealing Pericles in his normal attire. Upon seeing you he hugs you rather eagerly, speaking up as he does so. 'It[']s nice to see you comrade!' He says a grin in his tone.";
+		say "     When the muscled male pulls out of the embrace he sees the viking and his eyes narrows slightly. 'I thought I sent you running with your tail between your legs runt.' Your friend says, his more leader-like personality seeming to come forward than the friendly and sometimes awkward one you're used to by now. 'I c-came to a-apologize.' Bjorn mutters. This causes Pericles to raise a brow and turn in your direction. You offer that you had suggested that he do it, as some time had passed since the... incident. That however just prompts a scoff as a respone from the Greek warrior towards your seafaring companion. 'I don[']t want your apology if it won[']t be sincere viking,' the Spartan-Helot leader says, rolling his eyes.";
+		WaitLineBreak;
+		say "     That response from Pericles appears to get a rather passionate and strong reaction out of Bjorn as he practically shouts in your other friend's face. 'I'm sincere in my apology! I just didn[']t want my family to find out,' he says, mumbling the last bit. As soon as the viking says this the scorn in the Greek's face softens a little but he quickly speaks up. 'Then why did you come today?' He asks, his eyes still narrowed despite the loss of some of his scathing tone. Bjorn looks in your direction and gives a response to the question as you're watching this conversation bounce back and forth. 'Well... they said that they knew you very well... and, uh, I took a jump and dragged them with me,' he says, looking down at his feet.";
+		say "     Pericles lets out a sigh before giving you a withering look for putting him in this situation, after which he turns to Bjorn. 'Alright, fine I know how you can make it up to me,' the Spartan-Helot says, gesturing for you two to come on in. He heads over to one of his dresser drawers and starts shuffling in it. 'You will send a message to your family and tell them that you[']re... on an exploration or something. What will really be happening is that you[']ll be training with my army.' Pericles says, tossing a Spartan uniform at the viking's face, albeit a tad more clothed than the ones you see run around the campus.";
+		WaitLineBreak;
+		say "     You give your Greek warrior friend a look, staring at him and then at the outfit, practically asking about the nanites. Once more Pericles rolls his eyes before explaining. 'It shouldn[']t transform him, all it is, is a piece of clothing,' the male says, sounding exasperated. Bjorn however looks really happy and repeatedly thanks him for the opportunity. As your strong seafaring companion does this, your other friend sinds you a glare as if blaming you for his plight, which to be honest, it is your fault. Wanting to quickly leave before Pericles decides to stab you with his sword, and not in the fun way, you make your way out of his room, the last thing you hear being that apparently the viking is staying with the Spartan-Helot leader.";
+		move player to Second Floor Male Dorms;
+		now BjornRelationship is 3;
+		now PericlesRelationship is 6;
+		move Bjorn to Pericles' Room;
+		now VikingWar is turns;
 
 Section 4 - Having Sex With Bjorn
 
 instead of fucking Bjorn:
-	if Bjorn is in Viking Ship:
+	if BjornRelationship is 4:
+		say "     Bjorn frowns and looks in Pericles' direction. 'I[']m sorry but if we were to do anything he would be mad at me... perhaps you should prove yourself again to him somehow?' The viking says, biting his lip and speaking in a worried tone.";
+	else if Bjorn is in Viking Ship:
 		say "     He shakes his head vigorously, as if hinting that he'd rather not have sex here where his fellow tribe could see.";
 	else if (lastfuck of Bjorn - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     He chuckles at your eagerness. 'As much as I'd love to have fun with you, I need rest from last time,' he says with a smile.";
+	else if BjornRelationship > 4 and player is neuter:
+		say "     Bjorn gives an apologizing look at you as he stares at you up from his books. 'I[']m sorry but I[']d rather not exclude Pericles and he... finds it weird when there[']s not a cock to play with,' the Viking says to you. Perhaps you'd have a better chance with the couple if you were to the dominant's likes?";
+	else if BjornRelationship > 4 and cocks of player > 0 and cunts of player < 1:
+		say "     He looks up at you from his books and then over at the Spartan-Helot, who is currently working on some paperwork. 'What do you wish to do? I[']m sure me and Pericles would love to have fun with you,' he says with a sly smirk.";
+		wait for any key;
+		say "[PericlesBjornSexMenu]";
 	else:
 		say "     The male viking looks at you with interest. 'What do you have in mind my friend?' he asks you.";
 		wait for any key;

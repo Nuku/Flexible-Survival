@@ -8,6 +8,7 @@ Version 1 of Pericles by Rikaeus begins here.
 [   3: Has seen his third event                            ]
 [   4: Has seen his fourth event                           ]
 [   5: Has seen his fifth event, now available in room     ]
+[   6: Managed to convince Bjorn to apologize, share rooms ]
 
 Daily Training Session is a situation.
 Daily Training Session is resolved.
@@ -159,15 +160,23 @@ The conversation of Pericles is { "<This is nothing but a placeholder!>" }.
 The scent of Pericles is "     Pericles smells like sweat and hard work, something to be expected of the leader of the Spartans and Helots. Beyond that he smells like the pages of a book.".
 
 to say PericlesDesc:
-	say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Soon enough Pericles notices you staring at him and he smiles in your direction.";
+	if PericlesRelationship < 6:
+		say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Soon enough Pericles notices you staring at him and he smiles in your direction.";
+	else if PericlesRelationship is 6:
+		say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Pericles appears to be cautiously watching Bjorn as if expecting him to do something bad, though when he sees you looking at him he smiles half-heartedly and waves.";
+	else if PericlesRelationship > 6:
+		say "     Compared to what you've seen him wearing before, Pericles appears to be far more relaxed in both attire and attitude. First and foremost, his armor is no longer on him twenty-four-seven, having traded it for a toga-esque outfit for downtime. Although, he does keep the red cape that adorned the metal regalia he wore prior to the war and Bjorn cause he thinks it looks cool and you can't help but agree. With the helmet finally gone though, you can finally see his face and hair, revealing that he has brownish-red hair that nears an almost auburn color as well as dark green eyes. Overall he seems pretty happy and less stressed though, he doesn't look any less lethal or dominant. Especially when you catch him sending lustful looks over towards a studying Bjorn. However, those looks are also filled with a certain love that balances it out, though you don't doubt their intimate times are rough and rowdy. When he catches you looking his way he sends a confident smile and waves.";
 
 Section 2 - Talking with Pericles
 
 instead of conversing the Pericles:
 	if PericlesRelationship < 5: [should be not yet available]
 		say "     ERROR: Pericles shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [PericlesRelationship]";
-	else:
-		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' he asks, clearly happy to see you.";
+	else if PericlesRelationship > 6:
+		say "     When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' He asks, speaking in a warm tone.";
+		say "[PericlesTalkMenu]";
+	else :
+		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' He asks, clearly happy to see you.";
 		say "[PericlesTalkMenu]";
 
 to say PericlesTalkMenu:
@@ -227,8 +236,16 @@ to say PericlesCollege:
 Section 3 - Sex
 
 instead of fucking Pericles:
-	if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+	if PericlesRelationship is 7:
+		say "     The Spartan gives you a disapproving look before shaking his head. 'I[']m sorry friend but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
+	else if BjornRelationship is 3:
+		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here.' Pericles says to you, making you rather dissapointed.";
+	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
+	else if PericlesRelationship > 7 and cocks of player > 0 and cunts of player < 1:
+		say "     Pericles eyes you up and then directs his attention towards Bjorn who's studying in his corner of the room. He gives you a smirk and asks what you had in mind.";
+		wait for any key;
+		say "[PericlesBjornSexMenu]";
 	else if cunts of player > 1: [Player has a vagina]
 		say "     The buff male shakes his head at you and apologizes. 'I'm sorry but womanly parts aren't my thing, sorry.' Pericles then tells you that if you wish to have fun with him then come back as a male.";
 	else if player is neuter: [Player is genderless]
@@ -253,7 +270,7 @@ to say PericlesSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Pericles off"; [only males can suck him off]
 		now sortorder entry is 2;
-		now description entry is "Gice Pericles a good time with your lips";
+		now description entry is "Give Pericles a good time with your lips";
 	[]
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
