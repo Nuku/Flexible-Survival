@@ -6673,7 +6673,7 @@ to say promptsay:
 	say "[link][bracket]Save[close bracket][as]save[end link] ";
 	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
 	say "[link][bracket]Saveword[close bracket][as]saveword[end link] ";
-	if "Unerring Hunter" is listed in feats of player and there is a visible dangerous door:
+	if "Unerring Hunter" is listed in feats of player and (there is a visible dangerous door or earea of location of player is not "void"):
 		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
 	say "[line break]";
 	say "Exits: ";

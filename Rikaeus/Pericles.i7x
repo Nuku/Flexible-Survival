@@ -237,7 +237,7 @@ Section 3 - Sex
 
 instead of fucking Pericles:
 	if PericlesRelationship is 7:
-		say "     The Spartan gives you a disapproving look before shaking his head. 'I[']m sorry friend but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
+		say "     The Spartan gives you a disapproving look before shaking his head. 'I'm sorry friend, but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
 	else if BjornRelationship is 3:
 		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here.' Pericles says to you, making you rather dissapointed.";
 	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]

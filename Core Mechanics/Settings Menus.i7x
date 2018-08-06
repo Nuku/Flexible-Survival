@@ -45,10 +45,10 @@ carry out trixiecheating:
 		while 1 is 1:
 			say "Choice? (0-15)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 14:
+			if calcnumber >= 0 and calcnumber <= 15:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 14.";
+				say "Invalid choice. Pick from 0 to 15.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;

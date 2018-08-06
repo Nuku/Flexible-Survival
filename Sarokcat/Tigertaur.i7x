@@ -54,7 +54,7 @@ to say TigertaurDesc:
 	if inasituation is true:
 		say ""; [dealt with in the situation]
 	else:
-		say "     [if campuswanderfight is 1]Traveling through the zoo, you soon[else]You[end if] find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tigers face, sits atop the lower body of a strong four-legged tiger. You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";
+		say "     [if campuswanderfight is 1]Traveling through the zoo, you soon[else]You[end if] find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tiger's face, sits atop the lower body of a strong four-legged tiger. You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";
 
 Section 2 - Monster Insertion
 
