@@ -12,10 +12,17 @@ DariusLostItems is a number that varies.
 Section 1 - Events
 
 after going to Darius's Crib while (HP of Darius is 0 and Darius is in Darius's Crib):
+	try looking;
 	say "     Entering the apartment, you are greeted by an anthro dalmatian, who grins broadly as he sees you. 'Hey there, I'm Darius. Want a fix? I got some primo stuff laid out over here.'";
 	now HP of Darius is 1; [player knows his name]
 
-after going to Entrance to the Red Light District while (HP of Darius is 0 and Darius is in Entrance to the Red Light District):
+after going west from Boundary Street East while (HP of Darius is 0 and Darius is in Entrance to the Red Light District):
+	try looking;
+	say "     Arriving at the street corner, you see an anthro dalmatian just casually leaning against a nearby wall. He waves at you and calls out, 'Oi there! I'm Darius.' Seems like the guy is unconcerned about any hostile intent on your part. Looking at the tough guy attitude of the male dog, with his muscled upper body, heavy golden neck chain and only a sagging pair of jeans as a sole item of clothing, you can't help but feel like he can indeed take care of himself no matter what.";
+	now HP of Darius is 1; [player knows his name]
+
+after going east from Boundary Street West while (HP of Darius is 0 and Darius is in Entrance to the Red Light District):
+	try looking;	
 	say "     Arriving at the street corner, you see an anthro dalmatian just casually leaning against a nearby wall. He waves at you and calls out, 'Oi there! I'm Darius.' Seems like the guy is unconcerned about any hostile intent on your part. Looking at the tough guy attitude of the male dog, with his muscled upper body, heavy golden neck chain and only a sagging pair of jeans as a sole item of clothing, you can't help but feel like he can indeed take care of himself no matter what.";
 	now HP of Darius is 1; [player knows his name]
 
@@ -27,6 +34,7 @@ instead of navigating Entrance to the Red Light District while (HP of Darius is 
 	now HP of Darius is 1; [player knows his name]
 
 after going to Darius's Crib while (Darius is not in Darius's Crib):
+	try looking;
 	say "     Entering the apartment, you find it empty, with no trace of its occupant. There are sounds from numerous canines coming through the hole in the wall, but for now you're all alone in this room.";
 	LineBreak;
 	say "     [bold type]Do you use the opportunity to check around?[roman type][line break]";
@@ -86,7 +94,7 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 Joe Tales 1 is a situation.
 The sarea of Joe Tales 1 is "Nowhere".
 
-after going to Darius's Crib while (Joe Tales 1 is not resolved and a random chance of 1 in 3 succeeds and HP of Darius > 0):
+after going to Darius's Crib while (Joe Tales 1 is not resolved and a random chance of 1 in 3 succeeds and HP of Darius > 0 and Darius is in Darius's Crib):
 	say "     As you enter the short hallway to Darius's dingy apartment, you hear voices from ahead. Peeking into the room, it becomes clear that the dalmatian has another visitor right now. A towering doberman is standing next to Darius, sporting a ripped physique with a V shaped torso. He is dressed in little but a bandanna around his neck and a flimsy pair of shorts with a broad belt at the top. The outline of his weighty cock is very clearly visible through the fabric. Both canines are holding bottles of beer in their hands. As Darius's visitor takes a swallow from his, barks from what sounds like puppies come from the apartment next door, through the hole that has been knocked into the connecting wall. 'Man, you're one lucky dude Dar. Just grabbing yourself a bitch right from the street and having all the tail you need at home, all the time.' The spotted canine laughs and grins at his buddy, 'What can I say Tyke, you just gotta know how to pick em. Hannah is a great bitch, even if she started out as a dude. But not for long once she felt my dick of course.'";
 	say "     The doberman's eyes go wide and he makes a choking sound as his beer goes the wrong way, then coughs and gapes at Darius. 'You lucky dog! So she just switched to a babe right away? I'm still not used to how things work these days. Or maybe they don't do so for everyone. Bitches haven't been all that plentiful for myself I have to say.' Tyke is silent for a few seconds, then adds, 'For example, when things were just starting out with all this shit, an Asian dude crossed my path one morning. I thought I'd just threaten him a little bit and get his money, try out my new bod, but nope, even though he was just a human, he was ready to throw down and we tussled. Had crazy moves and all that shit, that guy. And the weirdest part was - he kept rubbing my junk as he passed me. Couldn't help but get hard from the friction. Then he kicked my paws out from under me and before I know it, the freaky faggot was ramming his ass down my dick!'";
 	WaitLineBreak;
@@ -120,7 +128,7 @@ an everyturn rule:
 	else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
 		if player is in Darius's Crib:
 			say "     Walking into the room through the broken wall of the apartment next door, Darius grins broadly as he finds you waiting for him. 'Looks like someone really needs his fix. What can I do for ya, dawg?'";
-			move Darius to Darius's Crib;
+		move Darius to Darius's Crib;
 	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 		if player is in Darius's Crib:
 			say "     The muscular dalmatian strolls into the kitchen and grabs a can-opener from a drawer, then explains, 'Gotta feed Hannah and my other little bitches.' With a grin on his face, he vanishes through the hole in the wall into the apartment next door, returning a little while later with a big can of [one of]ravioli[or]pineapple[or]peaches[or]beans[or]breakfast meat[or]sausages[or]apple sauce[at random] for himself. Grabbing some plastic cutlery from an industrial sized pack of it, the anthro canine hungrily chows down, eventually throwing the remnants of his meal into a large trashcan and belching in satisfaction.";

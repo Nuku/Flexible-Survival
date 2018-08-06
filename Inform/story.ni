@@ -5145,6 +5145,7 @@ Include Shrinking Shrooms by Defth.
 Include Smell by Core Mechanics.
 Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
+Include SpartanVikingCouple by Rikaeus.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Storage Locker by Core Mechanics.
