@@ -5,7 +5,7 @@ Section 1 - Main situation
 [Chance Meeting is a repeatable situations. It semi-randomly plays NON-REPEATABLE situations involving one or several NPCs]
 [The main goal of tis extension is to provide interaction between NPCs]
 [Please ensure that NPCs either know the player (thanks to secondary variables) or are following him as a companion with if x is companion of player]
-[If no rule is met, a low-level fight is launched, in order to provide the event a default closure]
+[if no rule is met, a low-level fight is launched, in order to provide the event a default closure]
 Chance Meeting is a situation.
 The sarea of Chance Meeting is "Outside".
 

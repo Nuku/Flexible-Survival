@@ -302,7 +302,7 @@ to say orthasfuck:
 				now seed is 0;
 			else:
 				let tappeditem be pocketknife;
-				if the number of filled rows in table of itemselection is 1: [If there is only one relevant item]
+				if the number of filled rows in table of itemselection is 1: [if there is only one relevant item]
 					choose row 1 in table of itemselection;
 					now tappeditem is object entry;
 					say "     She sniffs, and reaches into your pockets, and pulls out the little vial of [tappeditem] that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea.";

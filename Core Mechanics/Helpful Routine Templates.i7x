@@ -89,7 +89,7 @@ to itemmenue: [This template is used to create a dynamic menu that goes through 
 		say "     You lack the required object.";
 	else:
 		let tappeditem be pocketknife;
-		if the number of filled rows in table of itemselection is 1: [If there is only one relevant item]
+		if the number of filled rows in table of itemselection is 1: [if there is only one relevant item]
 			choose row 1 in table of itemselection;
 			now tappeditem is object entry;
 			say "     Having only one relevant item, you choose [tappeditem].";

@@ -247,8 +247,8 @@ to say KyrverthSex:
 		if HP of player <= 0:
 			now HP of player is 1;
 	WaitLineBreak;
-	[If player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
-	[If the players cunt length > 18, kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
+	[if player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, Kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
+	[if the players cunt length > 18, Kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
 
 to say KyrverthAnalSex: [For null and male players]
 	if scalevalue of player is:

@@ -31,11 +31,11 @@ Definition: A person (called x) is impreg_now: [Is the player currently pregnant
 	if player is fpreg_now or player is mpreg_now, yes;
 	no;
 
-Definition: A person (called x) is partial_vacant: [If EITHER male OR female vacant]
+Definition: A person (called x) is partial_vacant: [if EITHER male OR female vacant]
 	if player is fem_vacant or player is male_vacant, yes;
 	no;
 
-Definition: A person (called x) is total_vacant: [If BOTH male AND female vacant]
+Definition: A person (called x) is total_vacant: [if BOTH male AND female vacant]
 	if player is fem_vacant and player is male_vacant, yes;
 	no;
 

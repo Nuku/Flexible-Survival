@@ -36,7 +36,7 @@ To say GLAM:
 
 Chapter - ASCII map
 
-[If the player's interpreter does not support graphics, the Automap text-based map (ASCII or Unicode) will be shown instead. This map is shown by expanding the number of lines in the status window. We can set the number of lines in the text map by using this variable. The default is 12 rows.]
+[if the player's interpreter does not support graphics, the Automap text-based map (ASCII or Unicode) will be shown instead. This map is shown by expanding the number of lines in the status window. We can set the number of lines in the text map by using this variable. The default is 12 rows.]
 
 The text-map depth is a number variable. The text-map depth is usually 12.
 
@@ -91,7 +91,7 @@ First for constructing the status line (this is the bypass status line map rule)
 		reserve automap memory of (text-map depth) rows;
 		continue the action.
 
-[If you prefer that the MAP command toggle the ASCII version of the map rather than close the map window entirely, you can copy the following into your story file:
+[if you prefer that the MAP command toggle the ASCII version of the map rather than close the map window entirely, you can copy the following into your story file:
 
 Chapter - Deciding (in place of Chapter - Hacking Automap in Glimmr Automap by Erik Temple)
 
@@ -110,7 +110,7 @@ Chapter - The map-display window kind
 
 A map-display window is a kind of graphlink g-window.
 
-The map viewport is a g-window that varies. [If the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
+The map viewport is a g-window that varies. [if the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
 
 [The author may provide a maximum map size to use. This refers to the number of *tiles* to be displayed, not the maximum number of pixels, and can be used to restrict the size of the map for either performance or aesthetic reasons. For example, a fixed map size combined with a restricted number of available zoom levels can make it easier to predict the output size of the map.]
 A map-display window has a number called the maximum map width. The maximum map width of a map-display window is usually 0.

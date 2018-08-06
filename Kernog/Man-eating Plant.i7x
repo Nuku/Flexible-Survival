@@ -257,12 +257,12 @@ name	desc	weight	object
 man-eating flower seed is a grab object.
 man-eating flower seed has a usedesc "[man-eating flower seed use]".
 
-instead of sniffing musky cock flower:
-	say "As you take a sniff of the sneed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.";
+instead of sniffing man-eating flower seed:
+	say "As you take a sniff of the seed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.";
 
 to say man-eating flower seed use:
 	if playercanvore is false:
-		say "     You muster all your courage, and throw the seed in your mouth, then gulp down. A violent stomach ache makes you double over, as the seed provokes a dramatic reaction in the nanites. A mutant stumbles upon your prone form, and run away as fast as they can when they notice the deadly glare in your eyes. [Italic type]Food[Roman type] the thought crosses your mind. The next couple of minutes are fuzzy. You remember lunging at the mutant and, after knocking him out, you start putting their feet in your mouth. Your mouth grows wide, wide, wide, as the mutant slowly descends in your stomach. When you return to full consciousness, the mutant is gone, and your stomach absurdingly huge. You watch, fascinated, as you quickly digest your first prey, and your stomach returns to normal size.";
+		say "     You muster all your courage, and throw the seed in your mouth, then gulp down. A violent stomach ache makes you double over, as the seed provokes a dramatic reaction in the nanites. A mutant stumbles upon your prone form, and run away as fast as they can when they notice the deadly glare in your eyes. [italic type]Food[roman type] the thought crosses your mind. The next couple of minutes are fuzzy. You remember lunging at the mutant and, after knocking him out, you start putting their feet in your mouth. Your mouth grows wide, wide, wide, as the mutant slowly descends in your stomach. When you return to full consciousness, the mutant is gone, and your stomach absurdly huge. You watch, fascinated, as you quickly digest your first prey, and your stomach returns to normal size.";
 		HungerReset;
 		say "You gained the [bold type]Vore Predator[roman type] feat.";
 		add "Vore Predator" to feats of player;

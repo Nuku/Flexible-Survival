@@ -183,10 +183,10 @@ to say panthertaur ride cowgirl:
 		WaitLineBreak;
 		say "     With the tightness of your [cunt size desc of player] cunt and the thickness of her cock as well as those barbs teasing your walls and your clit, it doesn't look like either of you are going to be lasting long. So it's not too much longer until she shudders and arches under you, cock throbbing powerfully and blasting thick feline scene into your ready depths. Your belly feels slightly bloated for a second before much of it washes back out along her exposed length, splattering her breasts, balls, and your thighs. The sensations of it all is enough to set you off as well, your walls gripping and squeezing around her shaft ";
 		if player is male:
-			say "while your own [if cocks of player > 1]lengths twitch and spray[else]length twitches and sprays[end if] your seed across her plentiful breasts. ";
+			say "while your own length[smn] twitch[esmv] and spray[smv] your seed across her plentiful breasts. ";
 		else:
 			say "while you moan and tremble over her. ";
-		say "Once you've both recovered enough, you pull off of her (with a small gush of those fluids that hadn't already spilled out), and get cleaned up before continuing on your way.[impregchance][Line Break]";
+		say "Once you've both recovered enough, you pull off of her (with a small gush of those fluids that hadn't already spilled out), and get cleaned up before continuing on your way.[impregchance]";
 		increase cunt length of player by 2;
 		increase cunt width of player by 1;
 		now libido of player is (libido of player + libido of player + 40) / 3;
@@ -195,10 +195,10 @@ to say panthertaur ride cowgirl:
 		WaitLineBreak;
 		say "     Your gyrating hips and your hands on her breasts have the taur moaning and squirming beneath you, her hips bucking slightly every now and then to meet your motions. You find you can't quite mind it though, as every thrust brings another thrill of pleasure for you as well. Your hands squeeze onto her breasts as you feel yourself getting closer, speeding up your motions while her forepaws suddenly grip and press down on your shoulders... Making you gasp as you're hilted fully on that cock and cry out, climax hitting you hard while she grinds up hard into you. Your walls squeeze and grip that thick cock, soaking her sheath and balls with your juices";
 		if player is male:
-			say " while your own [if cocks of player > 1]lengths twitch and spray[else]length twitches and sprays[end if] your seed across her plentiful breasts.";
+			say " while your own length[smn] twitch[esmv] and spray[smv] your seed across her plentiful breasts.";
 		else:
 			say " while you moan and tremble over her.";
-		say "     The sensations of your rippling walls send her over the edge in that next moment, and her cock jerks powerfully inside of you as it unloads its potent load, feline cum surging deep inside of you and splattering out around her base as you both revel in your climaxes. You take a moment to gather your wits before giving her a smile and slowly lifting yourself off of her length, seed oozing onto her breasts and dripping onto the ground as you get cleaned up before continuing on your way.[impregchance][Line Break]";
+		say "     The sensations of your rippling walls send her over the edge in that next moment, and her cock jerks powerfully inside of you as it unloads its potent load, feline cum surging deep inside of you and splattering out around her base as you both revel in your climaxes. You take a moment to gather your wits before giving her a smile and slowly lifting yourself off of her length, seed oozing onto her breasts and dripping onto the ground as you get cleaned up before continuing on your way.[impregchance]";
 		now libido of player is (libido of player + libido of player + 40) / 3;
 
 

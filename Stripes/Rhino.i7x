@@ -91,7 +91,7 @@ to say drinkrhinocum:
 	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found. It has a strong taste to it, but you find it very exciting despite its salty flavor. ";
 	increase libido of player by 5;
 	if player is male and cock length of player < 12:
-		say "     You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[else]cock expands[end if] another inch almost immediately after you finish your drink.";
+		say "     You feel a throbbing in your groin as your cock[smn] expand[smv] another inch almost immediately after you finish your drink.";
 		increase cock length of player by 1;
 
 the scent of rhino cum is "The contents of the jar of rhino cum smell strong and musky.".

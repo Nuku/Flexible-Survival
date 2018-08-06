@@ -28,7 +28,7 @@ to say beattheDalmatian:
 
 
 to say DalmatianDesc:
-	say "      <Error: This is a noncombat creature. Please report on the FS Discord how you saw this message>";
+	say "     <Error: This is a noncombat creature. Please report on the FS Discord how you saw this message>";
 
 
 Section 2 - Monster Insertion

@@ -763,7 +763,7 @@ When Play begins:
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "Human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome male visage, the cheeks and chin covered by a short blond beard. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that"; [  format as "Your body feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it smoothes out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]

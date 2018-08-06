@@ -464,11 +464,11 @@ to CollegeLibraryBJ:
 		say "     While you catch your breath, the person under the table wipes your groin clean. 'Felt good, right? Come back anytime. I'm not the only one doing this, anyway.' You look around the reading room, and, effectively, notices several tense faces around the tables, and more-or-less-quiet moans. Once you hear the student crawl towards another visitor, you leave your seat, which is promptly taken by another person.";
 	else:
 		LineBreak;
-		say "     'Aw? Well, suits yourself. Have a fun read.' You hear the person crawl away from you. You follow the noise to your rodent table neighbor, who looks down on the table puzzled, then goes to pull his pants down, blushing. Desperately trying to read in peace, you go elsewhere.";
+		say "     'Aw? Well, suit yourself. Have a fun read.' You hear the person crawl away from you. You follow the noise to your rodent table neighbor, who looks down on the table puzzled, then goes to pull his pants down, blushing. Desperately trying to read in peace, you go elsewhere.";
 
 to BrutusLibraryEvent:
 	say "     You take advantage of being on campus to stop by the library and browse a few books. Next to you, Brutus is, funnily, quieter than usual. You turn your head, and realize that he has left, probably to wander the library on his own. You explore the alleys, letting the faint noises of sex guide you. After a couple of false leads, you eventually recognize his grunts, coming from the next alley. Judging by the nature of the noises, your demon must be busy [if DBCaptureQuestVar is 5]molesting[else]getting frisky with[end if] one of the students.";
-	say "     [bold type]Should you peep on Brutus?[Roman type][line break]";
+	say "     [bold type]Should you peep on Brutus?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You are curious. And worried. But mostly curious.";
 	say "     ([link]N[as]n[end link]) - At least he is occupied. You should go back to your browsing.";
@@ -487,7 +487,7 @@ to BrutusLibraryEvent:
 
 to RyouseiLibraryEvent:
 	say "     You take advantage of being on campus to stop by the library and browse a few books. Next to you, Ryousei is, funnily, quieter than usual. You turn your head, and realize that he has left, probably to wander the library on his own. You explore the alleys, letting the faint noises of sex guide you. After a couple of false leads, you eventually recognize his meek protests, coming from the photocopy room.";
-	say "     [bold type]Should you check on him?[Roman type][line break]";
+	say "     [bold type]Should you check on him?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You should better check if the tiger is in trouble.";
 	say "     ([link]N[as]n[end link]) - He is a big boy. He will manage.";

@@ -325,7 +325,7 @@ when play ends:
 				else if player is male:
 					say "     You take turns mounting several of them, filling their hot pussies. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you still have plenty of sex";
 				else:
-					say "     You are taken as a bitch by most of the pack, filling your hot [if cunts of player > 1]pussies[else]pussy[end if] over and over again. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you are still bred often";
+					say "     You are taken as a bitch by most of the pack, filling your hot puss[yfn] over and over again. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you are still bred often";
 				say "     The lustful, animalistic orgy goes on for a few hours before things calm down into a more regular routine of sex and searching the Museum and surrounding area. When the military moves into the city, your pack is on guard to defend the Museum from any who would seek to disturb it. Several soldiers are overpowered by you and your powerful pack-mates, brought back to the basement den and mounted until they are more Cerberus herms to breed and be bred by.";
 			else if player is herm:
 				say "     You feel as if something is missing, but you know not what nor where to find it. You wander out into the city and find your way into the park. Your powerful, canine body pounces upon one of the Painted Wolf Herms you find. After a bit of a scuffle, you two are rutting wildly, swapping places until you've both been thoroughly filled with cum. You head off together to her den and make plans for the future of the pack growing in both your wombs.";

@@ -772,7 +772,7 @@ to say butterfly grove scene:
 					now ButterflyLove is True;
 					infect "Butterfly";
 					wait for any key;
-					if player_sterile is False: [If at all possible she will get pregnant here otherwise this path is a dead end and is difficult to re-trigger]
+					if player_sterile is False: [if at all possible she will get pregnant here otherwise this path is a dead end and is difficult to re-trigger]
 						now libido of player is (libido of player) / 2;
 						impregnatebutterfly;
 					else: [No other option but to re-enable her as a random spawn]

@@ -569,7 +569,7 @@ When Play begins:
 	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "ridged, reptilian"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into the elongated shape of a lizard, complete with snout and tooth-filled maw. Instead of hair, a spined crest forms on the top of your head, running down the back of your neck and ending between your shoulders"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [  format as "Your body feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "small scales form to cover all of it, giving you a sand-colored, reptilian skin"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long flexible tail grows out of your tailbone. After a few moments, it stops feeling strange and you start using the tail for balance as if you had been born with it"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more reptilian, a sheath forming inside your body to allow it to completely vanish inside as long as its soft"; [ format as "Your cock feels funny as (your text)." ]
