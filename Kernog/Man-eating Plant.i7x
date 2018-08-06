@@ -62,7 +62,7 @@ When Play begins:
 	now cunt width entry is 5; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "man-eating flower seed";
-	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "feminine";
 	now type entry is "plant";
@@ -247,5 +247,29 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Man-eating Plant":
 		say "     Three weeks after your capture, a military expedition lands on the island. As they progress through the forest, they come upon the plant that captured you. They watch with resignation at the outline of your body, trapped inside like many other victims before and after you throughout the island, unmoving and slowly digested by the plant. Sighing, the leader of the platoon signals one of the flamethrower-wielding troopers and has him burn the plant, the tree, and your half-digested, forever unidentified corpse.";
+
+Section 6 - man-eating flower seed
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"man-eating flower seed"	"A small, round seed which rolled away from one of the man-eating flowers from Vohr Island. You can gulp it down in one go, but you are not sure its effects would be the ones you expect."	1	man-eating flower seed
+
+man-eating flower seed is a grab object.
+man-eating flower seed has a usedesc "[man-eating flower seed use]".
+
+instead of sniffing musky cock flower:
+	say "As you take a sniff of the sneed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.";
+
+to say man-eating flower seed use:
+	if playercanvore is false:
+		say "     You muster all your courage, and throw the seed in your mouth, then gulp down. A violent stomach ache makes you double over, as the seed provokes a dramatic reaction in the nanites. A mutant stumbles upon your prone form, and run away as fast as they can when they notice the deadly glare in your eyes. [Italic type]Food[Roman type] the thought crosses your mind. The next couple of minutes are fuzzy. You remember lunging at the mutant and, after knocking him out, you start putting their feet in your mouth. Your mouth grows wide, wide, wide, as the mutant slowly descends in your stomach. When you return to full consciousness, the mutant is gone, and your stomach absurdingly huge. You watch, fascinated, as you quickly digest your first prey, and your stomach returns to normal size.";
+		HungerReset;
+		say "You gained the [bold type]Vore Predator[roman type] feat.";
+		add "Vore Predator" to feats of player;
+		now playercanvore is true;
+		increase vorecount by 1;
+	else:
+		say "You gulp down the seed. It does not seem to have an effect on the present you.";
+
 
 Man-eating Plant ends here.

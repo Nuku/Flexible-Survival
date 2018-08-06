@@ -207,13 +207,15 @@ carry out destinationcheck:
 	if Beach Plaza is known or Bouncy Castle is known or Pirate Island is known or Viking Ship is known:
 		say "[bold type]Seaside[roman type]: ";
 		if Beach Plaza is known:
-			say "[link][bracket]Beach Plaza[close bracket][as]nav Beach Plaza[end link] - ";
+			say "[link][bracket]Beach Plaza[close bracket][as]nav Beach Plaza[end link] ";
 		if Bouncy Castle is known:
 			say "| [link][bracket]Bouncy Castle[close bracket][as]nav Bouncy Castle[end link] ";
 		if Pirate Island is known:
 			say "| [link][bracket]Pirate Island[close bracket][as]nav Pirate Island[end link] ";
 		if Viking Ship is known:
 			say "| [link][bracket]Viking Ship[close bracket][as]nav Viking Ship[end link] ";
+		if Island Pier is known:
+			say "| [link][bracket]Island Pier[close bracket][as]nav Island Pier[end link] ";
 		LineBreak;
 	[start of the Stables area]
 	if Stables Hotel is known or Master's Office is known:
