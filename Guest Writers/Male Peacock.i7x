@@ -1,8 +1,15 @@
 Version 2 of Male Peacock by Guest Writers begins here.
-[Version 2.2 - M/M player loss oral - Stripes]
-[- Originally Authored By: Lago Moro -]
+[ Version 1.0 - Original content - Lago Moro                             ]
+[ Version 1.1 - Formatting corrections - Stripes                         ]
+[ Version 1.2 - New data and alt combat mode - Stripes                   ]
+[ Version 1.3 - Improved alt combat mode - Stripes                       ]
+[ Version 2.0 - Peacock heat (mating call) - Stripes                     ]
+[ Version 2.1 - Updated to extended heat table (no mpreg heat) - Stripes ]
+[ Version 2.2 - M/M player loss oral - Stripes                           ]
+[ Version 2.3 - M/M player loss anal and form cleanup - Song             ]
 
 "Adds a Male Peacock to Flexible Survival's Wandering Monsters table."
+
 
 Section 1 - Monster Responses
 
@@ -52,10 +59,24 @@ to say peacockvictory:
 		say "     You are unable to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him, and you have no choice but to walk with him into the alleyway.";
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird's cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue, and palate until your efforts are finally rewarded with a hot, sticky mess. The bird groans in orgasmic release as you swallow each pulse, savoring the exotic flavor of his seed.";
 		WaitLineBreak;
-		say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
+		[I'd like to add a variant for players with anallevel > 1 here where the bird turns them over and gives them a good dicking. I think that would add a little variety for repeat submission, as well as add an opportunity to indulge in ANAL. So yeah. That's a thing that would be good IMO.]
+		if anallevel > 1 and a random chance of 1 in 2 succeeds: [EXTRA ANAL]
+			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. Enthralled by his enticing display, you don't protest when the presumably spent peafowl guides you up on unsteady footing, his scaly arms steadying your ascent. 'You thought that we were finished?' he enquires teasingly, making your knees tremble as you try to parse the meaning of his words in your sex- and hypnosis-induced haze. Chuckling softly, the resplendent bird guides you up against the coarse brick of the wall, using one of his taloned feet to spread your legs apart.";
+			say "     A moan spills past your lips as the handsome male begins to undress you, pulling down any clothes or equipment obscuring your lower half. You bury your face against the dirty red brick, your eyes fluttering closed. His talon-tipped hands glide over the curve of your rear, taking a moment to admire what's rightfully his. 'Such a fine piece of ass,' the fowl whispers into your ear, curling his thumbs to pry the dark cleft apart. The cool air of your exposure draws a shiver of delight, and you push your rear back with mounting excitement, steeling yourself for the mind-melting pleasure your experienced partner is sure to provide.";
+			WaitLineBreak;
+			say "     You feel the warm, stiff contact of his shaft against your bottom, the long and tapered organ smearing his fluids over your yearning flesh. You sigh out with pleasure as his tip teases your star, gently encircling it and lubricating your rim. By the time he pushes his wonderful rod inside of your rear, you can think of nothing but the immense pleasure of giving yourself over to this sexy, assertive bird and the bestial length spearing you open, pushing all the way to the hilt inside of your gripping asshole. Your entire body grows tense with arousal as you're enveloped in his lustrous feathers, metallic hues cradling your back and sides as he begins to pound into you.";
+			say "     The peafowl takes several slow, deep strokes to ensure his spoils['] comfort, allowing your rear to grow accustomed to the long, hard presence spreading and dragging through your bowels. The heat of his body against you and the scent of your mutual arousal further mires your thoughts in the simple bliss of submission, your moans growing ragged as he rams himself within you. As his pace increases, [if player is male]your length[smn] begin[smv] to bob and twitch, milking strained spurts of pre each time his pulsing spire grinds against your prostate[else]so does your sexless pleasure of being dominated by such a powerful male, the heat of friction leaving every nerve in your sensitive lining alight[end if]. Without thinking, you begin to join in his rising song of courtship, announcing your bliss with animalistic cries of pleasure as he pistons his length into your well-stretched holed.";
+			WaitLineBreak;
+			say "     After what feels like hours of being fucked by the tireless peacock, he finally hilts himself inside of you one last time and goes rigid in the throes of a powerful climax. Spurt after spurt of his hot, sticky seed paint your bowels in his essence, the tainted fluid splattering across your lining and filling you with a strange, intoxicating warmth. You feel yourself sagging weakly[if player is male], even as you reach your own shuddering climax that wastes your lesser cum across the coarse brick before you[else] against the wall, savoring the feeling of his cum deep inside of you[end if]. Exhausted but awash in blissful tingles, you turn your neck to kiss your feathery stud, parting his beak to play with his tongue while you bask in his confident presence.[mimpregchance]";
+			say "     Spent and satisfied, you feel any remaining tension in your body drain from you in time with the fowl's withdrawal, a cascade of warm cream flowing from your thighs and marring your legs in his essence. You cherish the feeling of what does stay within, pursing your slightly gaping rim to seal in your lover's thick, musky tribute. But as you turn back to face him, the peacock's feathers begin to shift and sway, drawing your gaze back to those mesmerizing eyes. In a matter of moments, the sweet embrace of sleep envelops your conscious mind, and just like that, you lapse into a deep and satisfying slumber.";
+			WaitLineBreak;
+			say "     When you awaken, you find yourself in the same alleyway, retaining no memories of how you got there, nor the encounter itself. All you can feel is the by-now diffused warmth of his avian seed inside of you, infecting your form from within. You shudder with a mix of revulsion and lingering arousal, somehow wishing that you could remember the details of your ravishing.";
+		else: [STANDARD]
+			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
 		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
 		if player is submissive and HP of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+
 
 Section 2 - Monster Insertion
 
@@ -114,12 +135,12 @@ When Play begins:
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "pchypno"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
+
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "pchypno"	peacockhypno rule	--	--	--	--	--	--	--	--	intstrike rule
-
 
 this is the peacockhypno rule:
 	choose row monster from table of Random Critters;
@@ -194,7 +215,6 @@ to say peacockheatend:
 Section 5 - Peacock Feather
 
 peacock feather is a grab object. It is a part of the player. It is temporary. peacock feather is infectious. The strain of peacock feather is "Peacock".
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
