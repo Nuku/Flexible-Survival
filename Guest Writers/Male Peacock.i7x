@@ -10,7 +10,8 @@ peacockcontrol is a number that varies.
 
 to say peacockdesc:
 	setmongender 3; [creature is male]
-	say "     A tall blue bird emerges from an alley. He has a pretty blue and green plumage, and he greets you by fanning its tail. He doesn't seems to be aggressive, though. Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell? You don't know why you were thinking that! Surely he must be the cause of this dizziness, you'd better end this battle quickly...";
+	say "     A tall blue bird emerges from an alley. His body is covered in an iridescent coat of blue and green plumage, and he greets you by fanning his eye-spotted tail. From what you can tell, the avian doesn't appear to be aggressive. Maybe you could just relax... and have a friendly chat. After all, his feathers are so entrancingly beautiful... and you want nothing more than to stare into those slowly swaying spots.";
+	say "     As your hazy thoughts urge you closer, a sudden cry in the distance snaps you back to reality. Wait, what the hell? You feel like you lost control of your body for a moment. His trap flung, the angered peafowl draws closer with malice in his eyes, ready to seduce you by any means necessary. You'd better end this battle quickly.";
 	now peacockcontrol is 0;
 
 to say peacockskin:
@@ -21,19 +22,19 @@ to say peacockskin:
 
 to say peacocktail:
 	if cock length of player > cunt length of player:
-		say "You have a beautiful fan of feathers for tail. They are decorated with hypnotic eyes";
+		say "You have a beautiful fan of feathers for a tail. The feathers are decorated with hypnotic eyes";
 	else:
-		say "A feathered tail encircles decorates your rear, like half of a long skirt";
+		say "A feathered tail decorates your rear, like half of a long skirt";
 
 to say peacockasschange:
 	if cock length of player > cunt length of player:
-		say "feathers emerges from it. They form a peacock tail, that you are able to fan with ease";
+		say "feathers emerge from it. They form a peacock tail that you are able to fan with ease";
 	else:
 		say "brown feathers emerge from it. They form a tail that comes down to your knees";
 
 to say peacockattack:
-	say "[one of]While you are trying to hit the feathered enemy, he trips you! You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground. Is he mocking you?[or]The bird flaps a few feet back and fans his tail wide, waving his colorful plumage.[at random]";
-	say "You take no damage.";
+	say "[one of]While you are trying to hit the feathered enemy, he trips you! You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, then hops back to the ground. Is he mocking you?[or]The bird flaps a few feet back and fans his tail wide, waving his colorful plumage.[at random]";
+	say "You take no damage, but feel your thoughts grow hazier.";
 	increase peacockcontrol by a random number between 1 and 5;
 	if peacockcontrol > intelligence of player:
 		now fightoutcome is 22;
@@ -43,16 +44,15 @@ to say peacockvictory:
 	now peacockcontrol is 0;
 	choose row monster from the table of random critters;
 	if player is female:
-		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
-		say "     You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened. You don't think you would be able to actually oppose what is about to happen, though...";
-		say "     He motions towards the bed in the middle of the room. You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit. He slides over your [bodydesc of player] body... it feels like a light, warm blanket. You think that maybe this won't be SO bad after all...";
+		say "     You are unable to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him, and you have no choice but to walk with him until you arrive at what seems to be a well-maintained apartment. You can think more clearly by now, as if the leash in your brain has been loosened. However, you doubt that you could actually oppose whatever the bird has in mind for you.";
+		say "     He motions you towards the bed in the middle of the room. You obediently lie on the mattress while he looks over your [bodydesc of player] body with unmistakable lust, his tapered cock already poking out of his slit. He slides over your [skin of player] body... it feels like a light, warm blanket. His hands explore your every curve, stroking and groping you teasingly. Your thoughts start to drift and grow dull, and when his long, sleek cock sinks into your yearning petals, any will to resist melts away in shuddering waves of pleasure. You give in completely to the alluring peafowl...[fimpregchance]";
 		WaitLineBreak;
-		say "     After you don't know how much pleasant time, you find yourself back in the city, no idea how or when. The time you shared with the strange bird is a hazy, yet blissful, blur. You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
+		say "     After an indeterminate period of time, you find yourself back in the city, no idea how or when. The time you shared with the strange bird is a hazy, yet blissful, blur. You quickly realize that finding him will be practically impossible by now, and you reminiscence about the encounter in an idle daydream. Before you can grow aroused all over again, you shake your head of these lurid thoughts and inspect your body for any changes, a part of you yearning to more closely resemble the sexy peacock who drew you under his spell.";
 	else:
-		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him; you have no choice but to walk with him into the alleyway.";
-		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue and palate until finally rewarded with a hot, sticky mess as the bird groans in orgasmic release.";
+		say "     You are unable to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him, and you have no choice but to walk with him into the alleyway.";
+		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird's cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue, and palate until your efforts are finally rewarded with a hot, sticky mess. The bird groans in orgasmic release as you swallow each pulse, savoring the exotic flavor of his seed.";
 		WaitLineBreak;
-		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colorful tail. He gives it a mesmerizing wave and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
+		say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
 		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
 		if player is submissive and HP of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
@@ -69,7 +69,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Peacock";
 	now attack entry is "[peacockattack]";
-	now defeated entry is "The last hit knocks the blue bird on the ground; he gets up quickly and flees away, is pride completely stomped."; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "The last hit knocks the blue bird on the ground. He stands up quickly and flees in a panic, his pride completely shattered."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
 	now face entry is "bird-like head. You pass quite a bit of your time admiring your"; [ Face description, format as "Your face is (your text)."]
@@ -172,14 +172,14 @@ to say peacockheattrigger:
 to say peacockinheat:
 	if there are no dangerous doors in the location of the player:
 		if a random chance of 3 in 5 succeeds:
-			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
+			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here.[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
 	else:
 		let y be a random dangerous door in the location of the player;
 		if marea of Y is "High":
-			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where[purely at random][one of]. You feel a compulsion to go out and look for a male right away[or]. Your thoughts keep wandering back to the peacock you encountered before[or]. Thoughts of finding a sexy peacock to fill you sound very satisfying[or]. The urge to go looking around the neighborhood is foremost in your mind[or]. The idea of going exploring, and maybe finding someone to mate with you, is very appealing[or]. A corner of your mind keeps calling you to go out and satisfy those urges[or]. You out across the neighborhood, you want to go out and look around[or]. You hear the soft chirping of birdsong and you want to go out to find it[purely at random].";
+			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where[purely at random][one of]. You feel a compulsion to go out and look for a male right away[or]. Your thoughts keep wandering back to the peacock you encountered before[or]. Thoughts of finding a sexy peacock to fill you sound very satisfying[or]. The urge to go looking around the neighborhood is foremost in your mind[or]. The idea of going exploring, and maybe finding someone to mate with you, is very appealing[or]. A corner of your mind keeps calling you to go out and satisfy those urges[or]. You feel a strong use to venture out in search of a sexy peacock to slake your need[or]. You hear the soft chirping of birdsong and you want to go out to find it[purely at random].";
 		else:
 			if a random chance of 3 in 5 succeeds:
-				say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
+				say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here.[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
 	increase libido of player by 3;
 
 to say peacockheatstart:
@@ -203,10 +203,10 @@ name	desc	weight	object
 the usedesc of peacock feather is "[peacock feather use]";
 
 to say peacock feather use:
-	say "You remember that many were infected and mutated by contaminated food. It seems...no, it's stupid, but you bite down the feather anyway.";
+	say "You remember that many were infected and mutated by contaminated food. It seems... no, it's stupid, but you bite down the feather anyway.";
 
 instead of sniffing peacock feather:
-	say "The long feather smells of an avian male and makes your mind foggy momentarily.";
+	say "The long feather smells of an avian male and leaves your mind momentarily foggy.";
 
 
 Section 6 - Endings
@@ -215,13 +215,13 @@ when play ends:
 	if bodyname of player is "Peacock":
 		if humanity of player < 10:
 			if cock length of player > cunt length of player:
-				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";
+				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";
 			else:
-				say "You decide to remain in the quarantined city. You become the mate of a male peacock...or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
+				say "You decide to remain in the quarantined city. You become the mate of a male peacock, or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
 		else:
-			say "You decide to leave and join civilization. Your pretty look and overall self-controlled behavior gives you a job in what is considered the high society. You still have your...[']teeny sins['], you could say...";
+			say "You decide to leave and join civilization. Your pretty look and overall self-controlled behavior lands you a job in what is considered high society. You still have your... [']teeny sins['], you could say.";
 			if cunt length of player > cock length of player:
 				if intelligence of player > 18:
-					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely... and it was actually really pleasant times. Still, you make bag and baggage and set off immediately to the quarantined city. You are determined to find him, and make clear that YOU are going to be in charge now...";
+					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely, and the memory of the event causes a stirring in your loins. You make bag and baggage and set off immediately to the quarantined city, determined to find him and make clear that YOU are going to be in charge now...";
 
 Male Peacock ends here.

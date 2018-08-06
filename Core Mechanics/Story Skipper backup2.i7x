@@ -52,7 +52,7 @@ To say magic word:
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
+	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.'";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]"; ]
 	savetrix;
 	if wrcursestatus is 5:

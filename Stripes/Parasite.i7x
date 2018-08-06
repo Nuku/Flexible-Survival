@@ -48,7 +48,7 @@ Instead of resolving a Insect Hive:
 				now non-infectious entry is false; [Wasps unlocked]
 	else:
 		LineBreak;
-		say "     Deciding discretion is the better part of valour, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
+		say "     Deciding discretion is the better part of valor, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
 	Now Insect Hive is resolved;
 
 
@@ -101,7 +101,7 @@ an everyturn rule:
 								break;
 				else:
 					if HP of player < 1, now HP of player is 1;
-					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait. Soon enough, one of the black wasps is drawn in by your scent. Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large large insect with a lustful moan.";
+					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait. Soon enough, one of the black wasps is drawn in by your scent. Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large insect with a lustful moan.";
 					say "[losetoblackwasp]";
 			else if larvacounter is odd and a random chance of 1 in 2 succeeds:
 				say "[one of]You stifle a moan of pleasure as the larva inside you squirms.[or]Your insides feel strangely warm and needy and you find your mind wandering to those black wasps.[or]You feel an emptiness inside which you long for one of those wasps to fill.[or]You feel a warm splash of more goo across your insides. This unusual sensation only arouses you further.[or]You feel a painful sting inside you that is soon replaced by the warm rush of arousal. The scent of the hive grows stronger around you.[or]The larva rubs itself against your inner walls, resulting in a strangely pleasurable sensation, but one that also makes you long for something larger to fill you.[in random order]";

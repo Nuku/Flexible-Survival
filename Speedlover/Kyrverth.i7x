@@ -413,7 +413,7 @@ Instead of resolving a Jewel Heist:
 			say "[JewelHeistFight]";
 	else:
 		LineBreak;
-		say "     Deciding that discretion is the better part of valour, you return to the library. Maybe try again later?";
+		say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
 		Let Randomsneakvar be a random number between 1 and 30;
 		if (Randomsneakvar + dexterity of player) < 25:
 			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";
@@ -440,7 +440,7 @@ to say JewelHeistSneak:
 			now SilverToken is 1;
 	else:
 		LineBreak;
-		say "     You didnt want to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";
+		say "     You didn't want to disarm the door. [bold type]Do you want to fight the wolverine, or leave?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";
@@ -449,7 +449,7 @@ to say JewelHeistSneak:
 			say "[JewelHeistFight]";
 		else:
 			LineBreak;
-			say "     Deciding that discretion is the better part of valour, you return to the library. Maybe try again later?";
+			say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
 			Let Randomsneakvar be a random number between 1 and 30;
 			if (Randomsneakvar + dexterity of player) < 25:
 				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";

@@ -39,7 +39,7 @@ Instead of resolving Unusual Creature:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Just tell her to follow you.[as]100[end link][line break]";
+	say "[link]0 - Just tell her to follow you.[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;

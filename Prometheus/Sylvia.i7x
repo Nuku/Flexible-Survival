@@ -190,7 +190,7 @@ to say SylviaTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -226,16 +226,16 @@ to say SylviaTalkMenu:
 				if (nam is "Trap Expertise"):
 					say "[SylviaTalk7]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SylviaTalk1: [Talk about her]
@@ -288,7 +288,7 @@ to say SylviaTalk6: [Samples from friends]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -306,16 +306,16 @@ to say SylviaTalk6: [Samples from friends]
 				if (nam is "Bubble"):
 					say "[BubbleSample]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
@@ -390,7 +390,7 @@ to say SylviaSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -412,16 +412,16 @@ to say SylviaSexMenu:
 				if (nam is "Tribadism"):
 					say "[SylviaSex5]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the collie girl, shaking your head slightly as she gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SylviaSex1: [Receive a blowjob]
@@ -434,7 +434,7 @@ to say SylviaSex2: [Be eaten out]
 
 to say SylviaSex3: [Eat her out]
 	say "     Feeling that the collie deserves some attention, you close the door and step up behind her, caressing her shoulders. You whisper that you'd like to taste her doggy cunt, a request that causes her tail to start wagging, signaling her desire for it. You quickly remove what little you are wearing and place them on a chair, before turning back to the canine. You admire her toned body, not overly muscular, but a form that has been worked for. She sits on the edge of her bed and opens her legs, displaying her moist pussy. You kneel and trace your fingers over her spade, slipping a digit in. Content, you bring your mouth forward and give a tentative lick, before continuing confidently, her yips of pleasure spurring you on. She strokes the back of your head, applying subtle pressures to guide your tongue to more pleasing zones in her vagina.";
-	say "     As you lick, her juices flow across your tongue, dripping onto her sheets or trickling into your mouth. Your hands grip her thighs, your thumbs rubbing around her genitals, adding extra stimulation. Realising that you have forgotten her clit, you pull your tongue from her passage and purse your lips around it, sucking. This sends her over the edge, causing her hips to spasm and thrust against your face. Her fem-cum shoots into your mouth as she caresses the back of your head, sighing and moaning in time with the contractions. Surprised at how quickly she climaxed, you sit up and look at her, allowing the last of her orgasm to drip onto the bed. She gives a weak smile and shakes her head, declining to speak further on the matter. Shrugging, you stand up and redress. She gives you a quick thank you before lying back and relaxing.";
+	say "     As you lick, her juices flow across your tongue, dripping onto her sheets or trickling into your mouth. Your hands grip her thighs, your thumbs rubbing around her genitals, adding extra stimulation. Realizing that you have forgotten her clit, you pull your tongue from her passage and purse your lips around it, sucking. This sends her over the edge, causing her hips to spasm and thrust against your face. Her fem-cum shoots into your mouth as she caresses the back of your head, sighing and moaning in time with the contractions. Surprised at how quickly she climaxed, you sit up and look at her, allowing the last of her orgasm to drip onto the bed. She gives a weak smile and shakes her head, declining to speak further on the matter. Shrugging, you stand up and redress. She gives you a quick thank you before lying back and relaxing.";
 
 to say SylviaSex4: [Anal]
 	say "     As Sylvia gazes out of the window, her backside catches your eye. Covered in fur, its soft curve causes a carnal hunger to rise in your stomach. Closing the door, you creep up behind her mischievously, hoping to convince her to sate your desire. 'I can hear you, and I don't advise grabbing me,' Sylvia warns cheerfully, turning around. Seeing your erection, she blushes slightly before stepping next to you and grazing a palm across it. Hearing your request for anal, she smiles before crouching on all fours and flagging her tail. Her tail star twitches as she awaits your touch. Remembering last time, you take the bottle of lube out of her desk and slather your penis, before kneeling behind her. Applying some to your fingers, you press them against her anus, smearing the substance around your target, slipping two fingers in to ease the internal passage as well. Ready, you align yourself behind her, a smile from her giving you consent.";
@@ -552,7 +552,7 @@ instead of going northeast from Tenvale College Female Dorms while (SylviaConv i
 
 to UnnaturalHeatEvent: [Sylvia removes skirt]
 	say "     Walking into the room, you notice that Sylvia isn't here. As you turn to leave, you notice a figure running full pelt toward you down the corridor. With a little more study, you realize that it is Sylvia, and you leap out of the way as she hurtles through the door before sliding to a halt in front of her desk, her skirt riding up to reveal an absence of undergarments. The lips of her canine cunt are puffy and engorged, with a thin trickle of liquid glistening. As she scrabbles through a drawer, you step from beside the bed and ask her what the rush is. At the sound of your voice she flinches slightly and turns her head, a needy expression that she seems to be fighting on her face.";
-	say "     'I was in the city collecting samples,' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves, but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand, so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realising that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
+	say "     'I was in the city collecting samples,' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves, but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand, so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realizing that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
 	WaitLineBreak;
 	say "     I knew that I wouldn't be able to escape the pack when they were that close, so I lay there, expecting them to leap through the window and ravage me.' For once, Sylvia doesn't seem cheerful, desperation filling her voice as she scrabbles through her belongings. 'To make matters worse, the aroma of the shop became stronger, and I realized that I had taken shelter in a sex shop, and I was getting aroused. Luckily, the building's stench covered my own smell and the scent of my growing arousal. They left fairly quickly after that, but now I'm struggling not to present myself for mounting to any male that passes my fancy. For goodness sake, where is it?!' Sylvia snaps, opening even more drawers in the futile attempt to find what she seeks. You ask her what she hopes to find, to which she replies, 'I had something to suppress arousal, should I ever need it, but I can't find it. Without it, I fear that I'll do something I will later regret.";
 	say "     [bold type]Do you let her continue searching, or check your bag to see whether you have any libido suppressant to give her?[roman type][line break]";
@@ -954,7 +954,7 @@ instead of going northeast from Tenvale College Female Dorms while (SylviaConv i
 
 to FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
 	say "     Walking into the room, you notice that Sylvia isn't here. As you turn to leave, you notice a figure running full pelt toward you down the corridor. With a little more study, you realize that it is Sylvia, and you leap out of the way as she hurtles through the door before sliding to a halt in front of her desk, her skirt riding up to reveal an absence of undergarments. The lips of her canine cunt are puffy and engorged, with a thin trickle of liquid glistening. As she scrabbles through a drawer, you step from beside the bed and ask her what the rush is. At the sound of your voice she flinches slightly and turns her head, a needy expression that she seems to be fighting on her face.";
-	say "     'I was in the city collecting samples,' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves, but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand, so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realising that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
+	say "     'I was in the city collecting samples,' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves, but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand, so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realizing that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
 	WaitLineBreak;
 	say "     I knew that I wouldn't be able to escape the pack when they were that close, so I lay there, expecting them to leap through the window and ravage me.' For once, Sylvia doesn't seem cheerful, desperation filling her voice as she scrabbles through her belongings. 'To make matters worse, the aroma of the shop became stronger, and I realized that I had taken shelter in a sex shop, and I was getting aroused. Luckily, the building's stench covered my own smell and the scent of my growing arousal. They left fairly quickly after that, but now I'm struggling not to present myself for mounting to any male that passes my fancy. For goodness sake, where is it?!' Sylvia snaps, opening even more drawers in the futile attempt to find what she seeks. You ask her what she hopes to find, to which she replies, 'I had something to suppress arousal, should I ever need it, but I can't find it. Without it, I fear that I'll do something I will later regret.";
 	say "     [bold type]Do you let her continue searching, or check your bag to see whether you have any libido suppressant to give her?[roman type][line break]";

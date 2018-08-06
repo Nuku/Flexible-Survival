@@ -161,7 +161,7 @@ Instead of resolving Little trouble:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Give up on the idea and go back[as]100[end link][line break]";
+	say "[link]0 - Give up on the idea and go back[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -247,7 +247,7 @@ to say LittleShroom:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Just go back and give up on the idea[as]100[end link][line break]";
+	say "[link]0 - Just go back and give up on the idea[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -355,7 +355,7 @@ to say ChineseTrouble:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Wait for your timely demise[as]100[end link][line break]";
+		say "[link]0 - Wait for your timely demise[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -413,7 +413,7 @@ to say ChineseTrouble:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - It's hopeless anyway, just wait for your end.[as]100[end link][line break]";
+		say "[link]0 - It's hopeless anyway, just wait for your end.[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;

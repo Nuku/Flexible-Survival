@@ -52,7 +52,7 @@ to say JulianDesc:
 		say "DEBUG -> HP: [hp of Julian] <- DEBUG[line break]";
 	else:
 		say "     Julian is a young male wolf with pitch-black fur covering his entire body. While he usually walks on two legs, you get the impression that if he wanted to, he could drop to all fours for greater speed or balance. He looks at you with curious, dark-brown eyes, feeling self-conscious as you observe him. He wears black trousers and a white shirt, hiding his body from view, though the impressive bulge in his trousers suggests an impressive organ.";
-		say "     From what Sylvia has said and the times you have met him, he seems to be a quiet student, though you have seen him being more boisterous and active. Very loyal to his friends, you seemed to have piqued his interest with your willingness to aid Sylvia. Realising that you have been almost studying him for a while, you bring your gaze back to meet his, a smile cresting his lips.";
+		say "     From what Sylvia has said and the times you have met him, he seems to be a quiet student, though you have seen him being more boisterous and active. Very loyal to his friends, you seemed to have piqued his interest with your willingness to aid Sylvia. Realizing that you have been almost studying him for a while, you bring your gaze back to meet his, a smile cresting his lips.";
 
 Section 3 - Talking
 
@@ -85,7 +85,7 @@ to say JulianTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -104,16 +104,16 @@ to say JulianTalkMenu:
 					say "[JulianTalk3]";
 				say "     Julian watches you patiently, waiting to see whether you wish to continue the conversation";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You stand up, indicating an end to the conversation. Julian bids you farewell, before looking out the window.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JulianTalk1: [Talk about him]
@@ -166,7 +166,7 @@ to say JulianSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -184,16 +184,16 @@ to say JulianSexMenu:
 				if (nam is "Give Fellatio"):
 					say "[JulianSex3]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JulianSex1: [Receive a blowjob]

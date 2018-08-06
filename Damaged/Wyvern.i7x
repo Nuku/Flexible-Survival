@@ -1047,7 +1047,7 @@ to wyvorgy:
 		wyvernlustapply;
 		if lustatt > 99:
 			now tempnum is 1;
-			say "     Overtaken by lust, you cry out in bliss[if pewterheadocc > 0], words muffled by the wyvern you're forced to attend[end if]. [if pewtercockocc > 0]Firing your [cum load size of player] into the riding beast[else if player is male]Firing your [cum load size of player] load impotently into the open air[else if pewtercuntocc is 2]Stuffed cunt squeezing against its bestial intrusions[else if pewtercuntocc is 1]Stuffed cunt squeezing against its bestial intrusion[else if pewterassocc is 2]Stuffed asshole squeezing against its bestial intrusions[else if pewterassocc is 1]Stuffed asshole squeezing against its bestial intrusion[else]Writhing weakly[end if], the oversized reptiles hiss and screech in approval, no doubt further aroused by your display, though they show no sign of relenting...";
+			say "     Overtaken by lust, you cry out in bliss[if pewterheadocc > 0], words muffled by the wyvern you're forced to attend[end if]. [if pewtercockocc > 0]Firing your [cum load size of player] load into the riding beast[else if player is male]Firing your [cum load size of player] load impotently into the open air[else if pewtercuntocc is 2]Stuffed cunt squeezing against its bestial intrusions[else if pewtercuntocc is 1]Stuffed cunt squeezing against its bestial intrusion[else if pewterassocc is 2]Stuffed asshole squeezing against its bestial intrusions[else if pewterassocc is 1]Stuffed asshole squeezing against its bestial intrusion[else]Writhing weakly[end if], the oversized reptiles hiss and screech in approval, no doubt further aroused by your display, though they show no sign of relenting...";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
@@ -1112,7 +1112,7 @@ to wyvorgy:
 				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 4:
-					say "     You struggle to free yourself of the wyvern kin atop you, [if struggleatt is 1]getting pretty much nowhere with the endeavor[else if struggleatt is 2]getting slight leverage, though not enough to free yourself just yet,[else]almost completely free of their hold[end if] and causing the wyverns to screech and nip at you, not quite intent on letting you go.";
+					say "     You struggle to free yourself of the wyvern kin atop you, [if struggleatt is 1]getting pretty much nowhere with the endeavor [else if struggleatt is 2]getting slight leverage, though not enough to free yourself just yet, [else]almost completely free of their hold [end if]and causing the wyverns to screech and nip at you, not quite intent on letting you go.";
 					now tempnum is 0;
 					wyverndisengage;
 					wyvernmatron;
@@ -1209,7 +1209,7 @@ to wyvernattendroll:
 			now pewtercockvar2 is 0;
 
 to wyvernheadapply:
-	If a random chance of 1 in 2 succeeds:
+	if a random chance of 1 in 2 succeeds:
 		if wyvkinassign is 1:
 			now wyvkin1att is 1;
 			say "     Wyvern [bold type]A[roman type]";
@@ -1690,7 +1690,7 @@ to wyvernkinlustcheck:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue watching, screeching lowly in approval towards your persisting abuse. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 
 to wyverndisengage:
-	if (wyvkin1att > 0 or wyvkin2att > 0 or wyvkin3att > 0 or wyvkin4att > 0) And a random chance of 1 in 2 succeeds:
+	if (wyvkin1att > 0 or wyvkin2att > 0 or wyvkin3att > 0 or wyvkin4att > 0) and a random chance of 1 in 2 succeeds:
 		let tempnum be 1;
 		say "     In the tussle, you manage to wrench ";
 		while tempnum is 1:
@@ -1814,7 +1814,7 @@ to wyvernmatron:
 							say "[bold type]female[roman type].";
 				now wyvkinocc is 1;
 		else:
-			say "     As you can imagine, the wyvern has little interest in adding more to an already fairly crowded nest, and instead is here to check up on [ghis] children. Now giving your situation [ghis] proper attention, [ghis] appears to feel that you haven't fully succumbed to your new circumstance, and screeches at [ghis] other children until they pull free of you. Though they still pin you down, you're now exposed and left at the mercy of larger beast, eager to have some fun with you...";
+			say "     As you can imagine, the wyvern has little interest in adding more to an already fairly crowded nest, and instead is here to check up on [ghis] children. Now giving your situation [ghis] proper attention, [ghe] appears to feel that you haven't fully succumbed to your new circumstance, and screeches at [ghis] other children until they pull free of you. Though they still pin you down, you're now exposed and left at the mercy of larger beast, eager to have some fun with you...";
 			WaitLineBreak;
 			say "[WYVVIC]";
 			if bodyname of player is "Wyvern" and player is pure:

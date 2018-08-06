@@ -337,7 +337,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -398,7 +398,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;

@@ -343,7 +343,7 @@ to say ForcedSubtoDomSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Denied[as]100[end link][line break]";
+	say "[link]0 - Denied[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
