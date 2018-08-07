@@ -43,7 +43,7 @@ Section 2 - Talking
 
 instead of conversing the Skarnoth:
 	if (HP of Skarnoth > 0):
-		say "     <This is a placeholder text for this WIP npc. Please have some patience until there is time to write more content for Skarnoth>";
+		say "[SkarnothTalkMenu]";
 	else:
 		say "ERROR-Skarnoth-[HP of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
 
@@ -96,7 +96,7 @@ to say SkarnothTalkMenu:
 	clear the screen and hyperlink list;
 
 to say SkarnothTalk1:
-	say "     ";
+	say "     <Placeholder Scene, to be filled in soon>";
 
 Section 3 - Sex
 

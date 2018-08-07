@@ -76,6 +76,9 @@ name	price	object	allowed
 "bliss tablet"	1	bliss tablet	true rule
 "powerup tablet"	2	powerup tablet	true rule
 "pixie dust"	2	pixie dust	true rule
+"dalmatian cum"	1	dalmatian cum	true rule
+"dalmatian fur"	2	dalmatian fur	true rule
+
 
 West of Entrance to the Red Light District is Boundary Street West.
 The earea of Boundary Street West is "Red".

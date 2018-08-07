@@ -22,7 +22,7 @@ after going west from Boundary Street East while (HP of Darius is 0 and Darius i
 	now HP of Darius is 1; [player knows his name]
 
 after going east from Boundary Street West while (HP of Darius is 0 and Darius is in Entrance to the Red Light District):
-	try looking;	
+	try looking;
 	say "     Arriving at the street corner, you see an anthro dalmatian just casually leaning against a nearby wall. He waves at you and calls out, 'Oi there! I'm Darius.' Seems like the guy is unconcerned about any hostile intent on your part. Looking at the tough guy attitude of the male dog, with his muscled upper body, heavy golden neck chain and only a sagging pair of jeans as a sole item of clothing, you can't help but feel like he can indeed take care of himself no matter what.";
 	now HP of Darius is 1; [player knows his name]
 
@@ -233,6 +233,7 @@ to say DariusTalk2: [red light distrct]
 
 to say DariusTalk3: [drugs]
 	say "     As you quietly ask him about the stuff he sells, Darius grins at you and says, 'The regular kinds of pick-me-ups are kinda hard to get, what with the chaos and the quarantine, but I can offer you all new products. Great stuff, definitively. You'll be surprised what people can cook up out of some of the things that grow or wander the streets these days. [']Bliss['] will really get your blood boiling, and the [']PowerUp['] tablets make you feel like you're a rhino or something. As for the baggies of [']Pixie Dust['] - they're not for snorting, no. Actual magic I got from a special little dude. Or not so little, if he wants to be. That's the effect the dust has.'";
+	say "     'I also got something for people who wanna join the best breed of dogs there is. Fur from yours truly that can make a man of anyone, or cum for the ladies. And believe me, the person who drinks it will be a bitch before long, no matter what they start out with.' Darius grins at you as he says this, followed by a boastful addition of, 'Of course, pretty girls can get that for free too, right from the tap.' He grabs his crotch demonstratively as he says this.";
 
 Section 4 - Fucking
 
@@ -322,10 +323,11 @@ to say DariusSex1: [oral]
 		WaitLineBreak;
 		say "     Your own choking noises around the thick shaft as it throbs with more blasts of cum, as well as your hands that grip his thighs in painful intensity, are barely enough to reach the horny canine in the grip of his orgasm. Looking up with pleading eyes as you struggle, you see Darius turn his head down and look at you, his expression of annoyance quickly giving way to one of shocked urgency as he barks out, 'Oh, fuck!' With that, he shoves your head away from his crotch with both hands, and after a second of feeling your lips stretch painfully wide, you're off his prick and sucking in big gulps of air while Darius's erection whips up to smack his abs, spurting out more streaks of cum to shower him, you and the immediate surroundings in white splatters.";
 		say "     Blinking away the strobing stars that lack of oxygen was beginning to give you as you limply hang in the dalmatian's grasp, the next thing you consciously hear is his amused chuckling. As you manage focus on the drug dealer, he is looking at you with a wide grin, then says, 'Dayum! That was one great load! Got a nice fuckhole, faggot! So much that I got a bit carried away, hah. Whoops, I guess.' Seems like that's the only hint of apology for being almost choked by his prick you'll get, as the next thing that Darius does is wipe off what cum landed on him and feeding it to you, pushing his goop-covered fingers into your mouth so you can suck it all off.";
+	infect "Dalmatian Bitch";
 	now lastfuck of Darius is turns;
 
 to say DariusSex2: [ask to be fucked]
-	setmonster "Dalmatian";
+	SetMonsterRandomDalOffspring;
 	if player is female: [female + herm]
 		say "     As you step up to the large canine and offer to let him fuck you, Darius lets out a hearty chuckle. 'So you wanna feel my hard shaft all the way up there babe? I'm always happy to give a girl what she needs!' Bringing one hand on the front of his jeans, the dalmatian gropes his crotch suggestively, then adds an air-thrust of his hips in your direction. 'I'm getting hard from just thinking of the fun we'll have! Better be ready to milk my cock me properly!' With that said, the big man undoes his belt-buckle in well-practiced haste, followed by the zipper and him shoving his jeans down. As he kicks the garment off, your eyes are inevitably drawn to the red shaft rapidly pushing out of his sheath, as well as the weighty balls swinging below, furry with the typical white and black dalmatian pattern.";
 		say "     'You like it, don't you,' the anthro canine says more as a statement than a question, his fingers closing around the shaft to wag it in your direction. Grinning broadly, Darius lets himself fall back on his sofa, coming to sit in a broad-legged fashion that allows open access to his erection. 'Why don't you come here and give it a good lick, sweetcheeks?' the muscular canine calls out to you, nodding down to the throbbing shaft with its pointed tip already dripping beads of pre-cum. You quickly pull off what equipment and clothes you have, dropping it all on your way over to the waiting male. As you get on your knees and see it at eye level, the drug dealer's prick stands straight and erect waiting for you, and you can't help but want to touch it. Fingers wandering over the weighty piece of man-meat and the furry orbs of his balls, you cup and fondle the large man eagerly.";
@@ -357,11 +359,10 @@ to say DariusSex2: [ask to be fucked]
 		say "     The grunts of the muscular canine do take on a bit of additional urgency as he continues to grind into your crack, interspersed with muttered words along the lines of, 'Yeah baby! Take it! Fucking hot bitch! You like the feel of my cock, don'tcha!' Soon after, things come to an explosive crescendo when Darius fingers clamp extra tight on your hips and he hammers against your ass with even greater force and his cock explodes with a geyser of cum! A heavy splurt hits the back of your head and you can feel his knot swell up between your buttocks. It rubs the sides of your asscrack with its rounded curve as Darius continues to cum, all over your back, head and even the side of the couch. The grunting canine grips your shoulder tightly as he falls forward in the grasp of his orgasm, panting with each further shot of creamy seed that paints you white.";
 		WaitLineBreak;
 		say "     When Darius's orgasm eventually winds down, the dalmatian looks down at you and comments, 'Damn, what a mess. Gotta admit that you were more fun than I'd thought, fag. That ass of yours felt like a really juicy pair of tits on my shaft.' Chuckling, he stands up and takes a few steps to the side to pick up his jeans. As Darius shakes it out and prepares to get dressed, he throws you a short glance and adds, 'Hey, you should wipe yourself off, or rub it in, or whatever you freaks do. Can't have a filthy man-slut stretched out in the middle of my place. Got a rep to maintain, ya see?' With that said, he looks away, not really interested in your naked form now that he's gotten his rocks off.";
+	infect "Dalmatian Bitch";
 	now lastfuck of Darius is turns;
 
 to say DariusSex3: [ask to fuck him]
 	say "     As you step up to the large canine and say that you want to fuck him, Darius bursts out with an amused chuckle and shakes his head in disbelief. 'Are you tripping on something, dude? I don't swing that way! Even if I did, I wouldn't just lift my tail for any horny bastard waltzing in here.' Waving his hand dismissively at you, he gives you an unimpressed stare, then raises one eyebrow. 'So, what now? I want some action, slut! And don't embarrass yourself with stupid offers again.'";
-
-
 
 Darius ends here.

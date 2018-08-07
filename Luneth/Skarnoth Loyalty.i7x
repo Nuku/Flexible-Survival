@@ -90,7 +90,7 @@ to say SkarnothOfferingTalk1:
 
 Section 2 - Skarnoth Freedom
 
-after going to Half-Renovated Room while (HP of Skarnoth > 1 and Loyalty of Skarnoth > 4 and Nala is booked and "Unchained" is not listed in Traits of Skarnoth):
+after going to Half-Renovated Room while (Skarnoth is in Half-Renovated Room and Loyalty of Skarnoth > 4 and Nala is booked and "Unchained" is not listed in Traits of Skarnoth):
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     As you make your way through the library, you hear some cackling laughter coming from the direction of the half-renovated dining room. Deciding to check it out, you enter the large doors that lead into the dreary room. Once inside, you notice Skarnoth relaxing on his [']throne['], though in all honesty, it's nothing more than a simple comfy chair that he treats like one. What surprises you the most, however, is that the muscular demon isn't alone. You can't tell who exactly is with him, except that the individual is small and zipping through the air quickly, curving past Skarnoth in teasing approaches. Curiosity raised about what's going on, you attempt to keep yourself concealed while you listen in on their conversation, hoping to gain some insight into what is going on.";

@@ -5212,7 +5212,7 @@ Include Cowboy Cuntboy by Wahn.
 Include Coyote by Darthan.
 Include Cum Girl by AGentlemanCalledB.
 Include Cute Chinchilla Girl by Guest Writers.
-Include Dalmatian by Kaleem mcintyre.
+Include Dalmatian by Wahn.
 Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
