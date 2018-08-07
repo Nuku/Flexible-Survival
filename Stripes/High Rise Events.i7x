@@ -226,7 +226,7 @@ to say doggyinfect:
 	else if tempnum is 4:
 		infect "Pit bull";
 	else if tempnum is 5:
-		infect "Ashen Breeder";
+		infect "Ember Breeder";
 	else if tempnum is 6:
 		infect "Chocolate Lab";
 	else if tempnum is 7:

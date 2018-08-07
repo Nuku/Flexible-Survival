@@ -1170,12 +1170,12 @@ to cheesecakeinfect:
 Francoismixcleaned is a truth state that varies. Francoismixcleaned is usually false.
 Francoismix is a marker.
 when play begins:
-	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Female Husky", "German Shepherd", "Pit bull", "Retriever", "Shemale Smooth Collie", "Ashen Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
+	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Female Husky", "German Shepherd", "Pit bull", "Retriever", "Shemale Smooth Collie", "Ember Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
 
 to francoisinfect:
 	if Francoismixcleaned is false:
 		if hermaphrodite is banned:
-			remove "Ashen Breeder" from infections of Francoismix, if present;
+			remove "Ember Breeder" from infections of Francoismix, if present;
 			remove "Chocolate Lab" from infections of Francoismix, if present;
 			remove "Shemale Smooth Collie" from infections of Francoismix, if present;
 		if humorous is banned:

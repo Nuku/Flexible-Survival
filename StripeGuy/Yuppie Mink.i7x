@@ -13,15 +13,15 @@ ymgmode is a number that varies. ymgmode is usually 1.
 
 to say ymgdesc:
 	choose row monster from the table of random critters;
-	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+	if (guy is banned or guy is warded) and (girl is banned or girl is warded):		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     Your wandering feet bring you close enough to see an aristocratic mink, albino or just royal white, puttering around the deck of their yacht. With a haughty sniff, they turn their nose up at you and vanish belowdecks.";
 		blank out the whole row;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now ymgmode is 0;
-	else if guy is banned:
+	else if guy is banned or guy is warded:
 		now ymgmode is 1;
-	else if girl is banned:
+	else if girl is banned or girl is warded:
 		now ymgmode is 2;
 	else if a random chance of 1 in 2 succeeds:
 		now ymgmode is 1;

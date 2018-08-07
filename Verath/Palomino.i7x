@@ -6,8 +6,8 @@ Version 2 of Palomino by Verath begins here.
 
 Section 1 - The Palomino Club
 
-The Palomino is a room. It is fasttravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
-Palomino Exit is a door. Palomino Exit is dangerous. The marea of Palomino Exit is "Outside". Palomino Exit is undescribed. Palomino Exit is southwest of The Palomino. Southwest of Palomino Exit is Outside Exploration.
+The Palomino is a room. It is fasttravel.
+The earea of The Palomino is "Outside".
 
 The description of The Palomino is "[palominodesc]".
 

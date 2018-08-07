@@ -49,7 +49,7 @@ The sarea of Flashing fair lights is "Midway".
 
 Instead of Resolving a Flashing fair lights:
 	say "Wandering through the cheerful midway of the fair, you find yourself glancing up only to stop and stare, in the dim twilight lighting the brilliant flashing of the fair lights seems to be absolutely fascinating for a minute. With the strange music of the fair playing in your head, and the lights glittering and flashing in their cheerful pattern, you find yourself falling into a trance, the lights seeming to call out to something inside you. You eventually blink, and tear your gaze away, and stagger onwards, but for some reason your brain is full of images of you staying in the fair, working one of the booths, or being the furry plushie prize for some lucky winner at one of the booths. It is hard to even remember who you are for a bit, and you once more remind yourself just how dangerous this fair is, though it could be a fun place to stay...";
-	decrease humanity of player by 20;
+	SanLoss 20;
 	Now Flashing fair lights is resolved;
 
 Section 6- Salty taffy

@@ -5,7 +5,7 @@ Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Libra
 The description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".
 Bunker is a room. The description of Bunker is "[bunker desc]".
-The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
+The invent of Bunker is { "face mask", "medkit", "medkit", "water bottle", "water bottle", "water bottle", "food", "food", "pocketknife", "cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.".
 East of Main & 7th Street is the Library Door.
 The description of the Library Door is "Solid oak doors lend a stately appearance to the library.".
@@ -78,7 +78,7 @@ The earea of Main & 7th Street is "Outside".
 
 to say 7thMainDesc:
 	say "     You're at the corner of 7th Street and Main, the latter of which extends further towards the north and south, while 7th Street starts right in front of the entrance of the Grey Abbey Library and runs into the distance westwards. Glancing at the historic structure of the library, you remember hearing somewhere that the old city center was actually fairly close by in the past. But then modern developments shifted the focus on the downtown area, where enough free room was available to put up high rises and new construction. As a historical section of the city, the area encompasses both residential buildings, a few shops and public buildings, having been built long before the introduction of zoning laws.";
-	say "     The outbreak of the nanite apocalypse has had a noticable impact on the area. You can see trash and abandoned remains of clothing scattered here or there, and a burned-out car wreck is standing in the middle of the T crossing. Thankfully, the library seems not to be holding too much interest for wandering beasts, but that may change quickly as you move farther away from it and explore.";
+	say "     The outbreak of the nanite apocalypse has had a noticeable impact on the area. You can see trash and abandoned remains of clothing scattered here or there, and a burned-out car wreck is standing in the middle of the T crossing. Thankfully, the library seems not to be holding too much interest for wandering beasts, but that may change quickly as you move farther away from it and explore.";
 
 instead of sniffing Main & 7th Street:
 	say "     An unpleasant odor hangs in the air, emanating from the burned wreck standing in the middle of the road.";
@@ -225,7 +225,7 @@ The invent of Attic is { "water bottle" }.
 
 to say tattic desc:
 	say "     The attic is exactly what you expected it to be: chilly, badly lit, and empty. The rafters here are angled, forming a point in the ceiling. There is a small window in the far back, just big enough for a person to climb through, but that's about it. The shutters covering the window are broken, making them constantly bang against the windowsill. Climbing down the hatch will take you back into the darkened alcove.";
-	if HP of icarus is 7:
+	if HP of Icarus is 7:
 		say "     The floor is still covered in a mixture of blood and feathers, looking more like the scene of a murder than anything else. Memories flood your mind of how you broke your little songbird slut in every way imaginable.";
 
 Outside Trevor Labs is a room. "     Like almost everyone else in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your west. You're not certain, but you think you can see some light in one of the windows, visible in the [time of day] light. Curious. Definitively something to investigate...".

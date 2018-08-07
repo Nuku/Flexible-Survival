@@ -223,7 +223,7 @@ to say cervix smasher upgrade use:
 		say "You groan as your cunt becomes more shallow, leaving you with a [cunt size desc of player] pussy.";
 		LibidoBoost 20;
 	else:
-		say "     You [SelfStripCrotch], then pop the tip off of the device and ready yourself to use it. Seeing as your not a female, you don't exactly have a pussy to insert the cylinder into. Apparently, the small device has some sort of timer since it starts to spew out the gel onto the ground. You can't help but feel extremely frustrated over the wasted purchase.";
+		say "     You [SelfStripCrotch], then pop the tip off of the device and ready yourself to use it. Seeing as you're not a female, you don't exactly have a pussy to insert the cylinder into. Apparently, the small device has some sort of timer since it starts to spew out the gel onto the ground. You can't help but feel extremely frustrated over the wasted purchase.";
 		LibidoLoss 10;
 
 Section 11 - Tits Inflator Pump

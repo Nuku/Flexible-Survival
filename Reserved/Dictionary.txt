@@ -1638,7 +1638,7 @@
 |Blue Bishop|Capitol Events|20140908213124/2293:Mon 8 September 2014 21:31|indexing|
 |Blue Bishop|Capitol Events|dragatorspot|situation|
 |Blue Bishop|Capitol Events|whelpspot|situation|
-|Blue Bishop|Capitol Events|Ashen Nest|situation|
+|Blue Bishop|Capitol Events|Ebonflame Nest|situation|
 |Blue Bishop|Capitol Events|Strange Meeting|situation|
 |Blue Bishop|Capitol Events|Failed Escape|situation|
 |Blue Bishop|Capitol Events|Charred Pickets|situation|
@@ -2065,9 +2065,6 @@
 |Sarokcat|Alpha Husky|husky gathering|situation|
 |Sarokcat|Alpha Husky|Alphahuskypet|value|
 |Sarokcat|Alpha Husky|losttoalphahusky|value|
-|Sweraptor|Ash Dragator|20140908213124/2687:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Dragator|ash dragon heart|Grab Object|
-|Sweraptor|Ash Dragator|dragatordefeat|value|
 |Sarokcat|Hyena Matriarch|20140908213124/6690:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Hyena Matriarch|matriarchdefeated|value|
 |Sarokcat|Hyena Matriarch|matriarchowned|value|
@@ -2164,8 +2161,6 @@
 |Stripes|Mismatched Chimera|breastdata|value|
 |Sarokcat|Rubber Tigress|20140908213124/4260:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Rubber Tigress|Tiger patch|Grab Object|
-|Sweraptor|Ash Drakenoid|20140908213124/3042:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Drakenoid|blanchefight|value|
 |Stripes|Vulpogryph|20140908213124/899:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cerberus|20140908213124/7809:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cerberus|cerbfight|value|
@@ -2417,7 +2412,7 @@
 |Kohryu|Yamato Dragoness|YDSF|value|
 |Kohryu|Yamato Dragoness|FYDTBMM|value|
 |Kohryu|Yamato Dragoness|FYDM|value|
-|Stripes|Ashen Breeder|20140908213124/5241:Mon 8 September 2014 21:31|indexing|
+|Stripes|Ember Breeder|20140908213124/5241:Mon 8 September 2014 21:31|indexing|
 |Damaged|Lizard Girl|20140908213124/3598:Mon 8 September 2014 21:31|indexing|
 |Damaged|Lizard Girl|lizgirlmarked|value|
 |Damaged|Lizard Girl|lizgirlimpreg|value|
@@ -2524,8 +2519,6 @@
 |Wahn|Spartan|pita bread|Grab Object|
 |Wahn|Helot|20140908213124/9512:Mon 8 September 2014 21:31|indexing|
 |Wahn|Helot|FuckedBySpartan|value|
-|Sweraptor|Ash Whelp|20140908213124/2452:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Whelp|whelpdefeat|value|
 |Hellerhound|Gryphons Plot|20140908213124/1552:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Gryphons Plot|Gryphons plot|situation|
 |Hellerhound|Gryphons Plot|milsave|value|

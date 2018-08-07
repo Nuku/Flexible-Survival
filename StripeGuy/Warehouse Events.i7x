@@ -54,7 +54,7 @@ Instead of Resolving a Hidden Fucknest:
 					break;
 			choose row monster from the table of random critters;
 			infect;
-			decrease humanity of player by 5;
+			SanLoss 5;
 	else:
 		say "     Thinking on it, you realize discretion is the better part of valor and just keep amblin['] along.";
 	now Hidden Fucknest is resolved;

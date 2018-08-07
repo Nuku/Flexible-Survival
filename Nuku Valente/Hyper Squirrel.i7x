@@ -17,7 +17,7 @@ when play begins:
 After resolving a Hyper Squirrel Girl, try looking;
 
 Instead of Resolving a Hyper Squirrel Girl:
-	project the figure of Snow_icon;	
+	project the figure of Snow_icon;
 	if hsrp is 0:
 		say "As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off... but you have a feeling she'll be back.";
 		increase hsrp by 1;
@@ -78,7 +78,7 @@ The description of Snow is "[SnowDesc]";
 
 to say SnowDesc:
 	project the figure of Snow_icon;
-	say "     This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.".
+	say "     This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.";
 
 Snow is in Squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.

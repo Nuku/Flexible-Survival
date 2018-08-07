@@ -918,13 +918,13 @@ to say icarussex5_dom_fel:	[rimming - feline version]
 
 to say icarussex6_dom_ap:
 	if HP of Icarus is 55:
-		say "[icarussex6_dom]"; [funnelled to combined version for both]
+		say "[icarussex6_dom]"; [funneled to combined version for both]
 	else if HP of Icarus is 57:
 		say "[one of][icarussex6a_dom][or][icarussex6b_dom][or][icarussex6c_dom_ap][in random order]";
 
 to say icarussex6_dom_fel:
 	if HP of Icarus is 55:
-		say "[icarussex6_dom]"; [funnelled to combined version for both]
+		say "[icarussex6_dom]"; [funneled to combined version for both]
 	else if HP of Icarus is 57:
 		say "[one of][icarussex6a_dom][or][icarussex6b_dom][in random order]";
 

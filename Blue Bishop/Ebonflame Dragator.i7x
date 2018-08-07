@@ -1,5 +1,5 @@
 Version 1 of Ebonflame Dragator by Blue Bishop begins here.
-[ Version 1 - Initial Replacement for Ash Dragator]
+[ Version 1.0 - Initial replacement for Ash Dragator - Blue Bishop]
 
 "Adds an Ebonflame Dragator to Flexible Survival."
 [Inspired by the Ash Dragator]
@@ -113,7 +113,7 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of guy;
 	add "Ebonflame Dragator" to infections of feral;
 	now name entry is "Ebonflame Dragator";
-	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The Ebonflame Dragator[or]It[or]He[at random] [one of]lunges forward and snaps it jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";
+	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The ebonflame dragator[or]It[or]He[at random] [one of]lunges forward and snaps it jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";
 	now defeated entry is "     With one final attack, the terrifying monster lets out a low groan and slumps onto the ground, completely spent and unable to move -- save for the occasional stirring. You decide it's probably best to move on before the gator recovers.";
 	now victory entry is "[ebgatorvic]";
 	now desc entry is "[ebgatordesc]";

@@ -14,8 +14,8 @@ This is the zephyrad rule:
 	say "- Football Wolfman and Wrestling Wolf successfully relocated to the College Campus.";
 	say "- Other creatures having migrated to the Urban Forest include the following: Awesome Tree, City Sprite, Cougar, Dryad, Elf, Elk, Elven Hunter, and several varieties of Skunk.";
 	say "- As expected with the decrease in local wolves, the Ewe and Ram numbers have risen. Expect increased sightings.";
-	say "- Ash Whelp threat level reassessed to level 2.";
 	say "- Bunny Jock threat level reassessed to level 4.";
+	say "- Ebonflame Whelp threat level reassessed to level 2.";
 	say "- Panther Taur threat level reassessed to level 4.";
 	say "- Incubus and Succubus threat levels reassessed to level 8.";
 	say "- Wrestling Wolf threat level reassessed to level 15."; ]

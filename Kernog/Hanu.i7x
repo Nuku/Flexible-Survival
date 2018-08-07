@@ -66,8 +66,8 @@ Instead of resolving Monkey Duel:
 			say "     The two monkeys engage in a spectacular brawn, filled with acrobatics and intricate martial art moves. You feel as if you have been drawn in a wuxia movie. The fight began with the two warriors evenly matched; Wukong's offensive and powerful strikes meet the fluid moves and the counter-attacks of Hanu. As the battle goes on, Hanu is slowly getting the upper hand, conserving his stamina against his brasher opponent.";
 			say "     Wukong initiates a desperate-looking series of blow, pressuring Hanu backwards. You suddenly realize that it is part of his plan, as Hanu's backwalk leads him closer and closer to a now-empty podium. [bold type]This battle can only have one winner, and it will depend on if you warn Hanu, or stay quiet and let the battle unfold. What do you do?[roman type][line break]";
 			LineBreak;
-			say "     ([link]Y[as]Warn Hanu[end link]) - 'The podium behind you! Watch out!'";
-			say "     ([link]N[as]Keep quiet[end link]) - Long live the king.";
+			say "     ([link]Y[as]y[end link]) - 'The podium behind you! Watch out!'";
+			say "     ([link]N[as]n[end link]) - Long live the king.";
 			if player consents:
 				LineBreak;
 				say "     For a moment, you fear that Hanu did not hear you. But, just as he was about to bump the furniture, he does a gracious backflip over the object, Wukong's staff missing the target by a hair's breath. Taken by his momentum, Wukong leaves his face open to a counter-strike, an opportunity that Hanu does not wastes. His own weapon bongs loudly against the other monkey's cranium, sending its own flying in the air.";

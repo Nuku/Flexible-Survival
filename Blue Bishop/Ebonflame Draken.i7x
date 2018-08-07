@@ -1,5 +1,5 @@
 Version 1 of Ebonflame Draken by Blue Bishop begins here.
-[Version 1 - Initial replacement of Ash Drakenoid]
+[ Version 1.0 - Initial replacement for Ash Drakenoid - Blue Bishop ]
 
 "Adds an Ebonflame Draken to Flexible Survival."
 [Inspired by the Ash Drakenoid]
@@ -14,11 +14,11 @@ Section 1 - Monster Responses
 
 to say ebdrakenvic:
 	if HP of player > 0:
-		say "     Some part of you questions the sanity of submitting to one of these horrors, but you do it all the same. It takes a moment for the Draken to catch on that you're offering yourself, before she breaks out in shrill laughter.";
+		say "     Some part of you questions the sanity of submitting to one of these horrors, but you do it all the same. It takes a moment for the draken to catch on that you're offering yourself, before she breaks out in shrill laughter.";
 		say "     '[one of]Oh[or]Hmpf[or]Ha[at random], [one of]you're hardly worth my energy[or]such a pitiful creature[or]you're at least an amusing piece of fuckmeat[at random]!' Immediately, she strikes you down to leave you doubled over, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish you.";
 		say "     '[one of]Before you turn, all you'll remember of your past life is agony[or]So soft, you practically ask for pain[or]Have you forgotten already?[run paragraph on] You want for every bit of this suffering[at random]";
 	else:
-		say "     Having fallen to the ground, you desperately try to crawl away from the Draken, either to flee or to try and get your footing. She seems to just cackle at you and strut alongside you until you finally can't go any further, laying there exhausted.";
+		say "     Having fallen to the ground, you desperately try to crawl away from the draken, either to flee or to try and get your footing. She seems to just cackle at you and strut alongside you until you finally can't go any further, laying there exhausted.";
 		say "     '[one of]Idiot[or]Fool[or]Whelp[at random], [one of]playtime's over[or]you will know your place, you walking piece of fuckmeat[or]was that even supposed to be a challenge?[run paragraph on] Ha[at random]!' With one hand she pulls your rear exposed into the open air, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish your failure.";
 		say "     '[one of]No amount of suffering will suffice[or]So soft, you're hardly worth the energy[or]Hmpf, I should toss you to the whelps[at random]";
 	say "!' She continues to harshly threaten you until your rear is glowing red with her constant abuse. Every time you think she might be satisfied, she lashes you again, just to watch you writhe.";
@@ -61,7 +61,7 @@ to say ebdrakenvic:
 			say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
 
 to say ebdrakendef:
-	say "     The Draken reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";
+	say "     The draken reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";
 	say "     '[one of]Nng[or]Hmpf[or]Damnit[or]Asshole[at random], [one of]this is merely a setback[or]you only delay the inevitable[or]we will inherit our birthright[or]your world will be ours[or]we will have our vengeance[or]I am only one of an infinite many[at random]!' Before you can get any closer, she climbs back to her feet and takes flight, billowing up a gust of ash and dirt in her wake as she retreats into the sky. Once the dust settles and she's no longer visible you catch your breath before going about your business once more.";
 
 to say ebdrakendesc:
@@ -89,7 +89,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ebonflame Draken";
-	now attack entry is "[one of]The Draken[or]The terrifying reptile[or]She[or]The dragoness[at random] [one of]lets out a savage howl and charges at you, raking you with one of her savage talons and sending you reeling[or]grabs your [if scalevalue of player > 4]larger, [bodytype of player] form, displaying her superior strength as she lifts you into the ground before slamming you against the ground, causing the earth to tremble under your heavy impact[else][bodytype of player] form, easily lifting you into the air before slamming you against the ground with an audible thud[end if][or]pounces you and assaults you with a barrage of tooth and claw, until you finally push her off and back away[or]manages to lash you with her powerful tail, singing through the air before assaulting you with a sharp and terrible pain[at random].";
+	now attack entry is "[one of]The draken[or]The terrifying reptile[or]She[or]The dragoness[at random] [one of]lets out a savage howl and charges at you, raking you with one of her savage talons and sending you reeling[or]grabs your [if scalevalue of player > 4]larger, [bodytype of player] form, displaying her superior strength as she lifts you into the ground before slamming you against the ground, causing the earth to tremble under your heavy impact[else][bodytype of player] form, easily lifting you into the air before slamming you against the ground with an audible thud[end if][or]pounces you and assaults you with a barrage of tooth and claw, until you finally push her off and back away[or]manages to lash you with her powerful tail, singing through the air before assaulting you with a sharp and terrible pain[at random].";
 	now defeated entry is "[ebdrakendef]";
 	now victory entry is "[ebdrakenvic]";
 	now desc entry is "[ebdrakendesc]";
@@ -98,7 +98,7 @@ When Play begins:
 	now skin entry is "an array of [one of]deep[or]abyssally[at random] dark, purple scales for";
 	now tail entry is "You have a long and powerful tail. Quite prehensile, it narrows to a sharp tip that sings as it moves through the air.";
 	now cock entry is "[one of]barbed[or]fearsome[or]intimidating[at random], [one of]draconic[or]reptilian[at random]";
-	now face change entry is "a searing pain wracks your face. You cry out as bone and skin cracks and stretches to accommodate a new shape. Once the pain subsides, your head is revealed to have taken on the reptilian form of an Ebonflame Draken, elongated snout adorned with an array of razor-sharp teeth and a pair of glowing, fire-red eyes. A long pair of horns seem to have erupted from the back of your head, curving such that the tips almost touch";
+	now face change entry is "a searing pain wracks your face. You cry out as bone and skin cracks and stretches to accommodate a new shape. Once the pain subsides, your head is revealed to have taken on the reptilian form of an ebonflame draken, elongated snout adorned with an array of razor-sharp teeth and a pair of glowing, fire-red eyes. A long pair of horns seem to have erupted from the back of your head, curving such that the tips almost touch";
 	now body change entry is "it suddenly becomes engulfed in a terrible, burning pain. Falling to your knees, you nearly pass out from the intense sensation as limbs both old and new undergo a very aggressive transformation. When you recover, you find that you taken on a tall, humanoid form, hands and feet transformed into fierce talons that take you a while to acclimate to. Additionally, you appear to have grown a set of wings on your back, but they seem under-developed and you're too inexperienced to really make much use of them";
 	now skin change entry is "it undergoes a transformation. Suddenly, you feel like you're engulfed in flames, blood boiling as you're covered in a set of deeply dark purple scales, melting away the remnants of your prior surface. As you recover, you feel as though your blood is constantly on fire, which seems to get you pumped up, but makes you anxious and impatient whenever you're not doing anything";
 	now ass change entry is "it begins to burn terribly, causing you to fall to your knees until it subsides. Checking behind you, you now accommodate a large, powerful reptilian tail. Strong enough to support your weight, the end narrows to a sharp tip, whistling as it's lashed through the air";

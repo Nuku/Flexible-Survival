@@ -64,7 +64,7 @@ instead of resolving sword nest:
 		say "     Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if player consents:
 			say "     You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
-			decrease the humanity of player by 15;
+			SanLoss 15;
 			weakrandominfect; [most of first set don't affect researcher]
 			weakrandominfect;
 			weakrandominfect;
@@ -80,7 +80,7 @@ instead of resolving sword nest:
 			say "     You feel another desire rear its head, to drink from the giant puddle.";
 			say "     Do you submit?";
 			if player consents:
-				decrease the humanity of player by 15;
+				SanLoss 15;
 				say "     You dip your [face of player] head into the slime and suck greedily. It sates your hunger and thirst.";
 				weakrandominfect; [more from second batch affect researcher]
 				weakrandominfect;

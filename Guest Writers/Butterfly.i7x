@@ -887,7 +887,7 @@ to say butterfly grove scene:
 				now libido of player is (libido of player) / 2;
 				impregnatebutterfly;
 			wait for any key;
-			decrease the humanity of player by 5;
+			SanLoss 5;
 			if the humanity of player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
@@ -913,7 +913,7 @@ to say butterfly grove scene:
 				say "The butterfly eases you down to the ground on your back and begins to play with your vagina[sfn]. She tastes the stray moisture using her mouth, never losing your gaze with her own. With your clitoris erect and covered in a layer of her clear saliva she lifts into the air hovering above you with her wings. Slowly she rotates her body lowering her rear down upon your face as she resumes pleasuring your [if cunts of player > 1]many [end if]cunt[sfn]. With her hands parting your [skin of player] thighs, her breasts bounce lively on your tummy as you suck at her petals. Feeling your lover's warm breath as she takes in your scent, you readily grasp the deep love she feels for you. Sensing the unspoken understanding her cunt quivers and tightens around your fingers once again probing her insides. Spreading and rubbing your vagina[sfn] with her fingers she explores your insides with her proboscis reaching deep into places no cock has ever seen. You climax in unison, her wings jerking with each spasm as her sticky fluids cascade over your face and she buries hers in your equally wet orifice[sfn]. Your mate lifts off, once again rotating her body, and descends down. [if breast size of player > 0]Your [breast size desc of player] breasts cushion her fall. [else]Her breasts cushion her fall. [end if]Your bodies steaming and dripping with both sweat and cum she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth you drift off to sleep.";
 			infect "Butterfly";
 			wait for any key;
-			decrease the humanity of player by 5;
+			SanLoss 5;
 			if the humanity of player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:

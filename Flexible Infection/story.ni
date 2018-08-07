@@ -3501,7 +3501,7 @@ before wearing the stomach pouch:
 	remove the noun from play;
 	stop the action;
 
-before wearing something: [makes sure your not already wearing something there and if so stops]
+before wearing something: [makes sure you're not already wearing something there and if so stops]
 	if noun is not clothing:
 		say "[The noun] does not appear to be clothing. Why are you trying to wear it?";
 		stop the action;
