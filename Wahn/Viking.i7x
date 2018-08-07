@@ -106,6 +106,7 @@ An everyturn rule:
 	if VikingUltimatum > 1:
 		decrease VikingUltimatum by 1;
 
+
 Section 1 - Monster Responses
 
 to say Viking wins:
@@ -744,6 +745,7 @@ to say VikingAttacks:
 	else:
 		say "[one of]She lands a shallow cut on you. Luckily, she's not trying to kill you, or she could have skewered you there...[or]The Viking woman slaps the broad side of her sword against your head, leaving you seeing stars for a moment.[or]A sudden kick against the side of your leg leaves you numb and weakened.[or]She slams her shield into your chest, driving the air from your lungs.[at random]";
 
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -799,20 +801,20 @@ When Play begins:
 	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 
-Section 3 - Events
 
+Section 3 - Events
 
 Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is resolved.
 The sarea of Chieftain's Challenge is "Beach".
 
 Instead of resolving a Chieftain's Challenge:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]
-		say "     Arriving at the rocky part of the beach, you find an armored gray-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander monster. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until the clan is here to witness your death. Chief Frithjof will gut you for what you did to Sonya' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
+		say "     Arriving at the rocky part of the beach, you find an armored gray-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander monster. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until the clan is here to witness your death. Chief Frithjof will gut you for what you did to Sonya,' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
 		WaitLineBreak;
 		say "     It takes several trips from and to the ship to ferry all the Vikings over (except a few watch-standers on the ship), though with lots of young blond and red-headed young men to row the boats, they're still quicker than you'd have expected. Soon there's a circle of more than thirty Vikings around you, mostly men but also some women in various age-groups. The majority looks to be about 20-30, though there are some gray-beards and still beardless youngsters too. All of them - except Sonya, who stands flanked by her two cousins - give you rather hostile looks and there's a background murmur of speculation about you. You hear them call you all kinds of names as they speculate what you used to bespell or control Sonya.";
 		say "     Everyone goes silent as a large and muscular man steps forward into the ring of people, pretty imposing in scale-mail armor. He's got the bearing of a seasoned fighter and is armed with a wickedly sharp-looking axe and a large round shield. From his scowl at you and the similar looks, this must be Sonya's father.";
 	else: [player is a human-like person]
-		say "     Arriving at the rocky part of the beach, you find an armored gray-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander bastard. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until everyone's here to witness your death. Chief Frithjof will gut you for what you did to Sonya' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
+		say "     Arriving at the rocky part of the beach, you find an armored gray-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander bastard. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until everyone's here to witness your death. Chief Frithjof will gut you for what you did to Sonya,' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
 		WaitLineBreak;
 		say "     It takes several trips from and to the ship to ferry all the Vikings over, though with lots of young blond and red-headed young men to row the boats, they're still quicker than you'd have expected. Soon there's a circle of more than thirty Vikings around you, mostly men but also some women in various age-groups. The majority looks to be about 20-30, though there are some gray-beards and still beardless youngsters too. All of them - except Sonya, who stands flanked by her two cousins - give you rather hostile looks and there's a background murmur of speculation about you. You hear them call you all kinds of names, wondering what kind of drug, poison, spell, or the like you used to control Sonya.";
 		say "     Everyone goes silent as a large and muscular man steps forward into the ring of people, pretty imposing in scale-mail armor. He's got the bearing of a seasoned fighter and is armed with a wickedly sharp-looking axe and a large round shield. From his scowl at you and the similar looks, this must be Sonya's father.";
@@ -941,6 +943,7 @@ to say VikingPublicSex:
 		WaitLineBreak;
 		say "     ...and that is where you fell asleep too, only awakening several hours later beside Sonya, on a ship full of still-dozing or already awake and hung-over Vikings. Having to get back to your efforts of surviving in this new world, you find one man who isn't quite as bad off, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 
+
 Section 4 - Viking Ship
 
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
@@ -1006,6 +1009,7 @@ instead of going down from Viking Ship:
 				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child came while you were out - she's strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but... [else]But [end if]I miss having part of you inside me, and my body tells me I'm ready again already. How about taking me for a ride in the sheets?'";
 		now VikingPregnancy is 0;  [told the player about his offspring, resetting to receptive state]
 	move player to Sonya's Cabin;
+
 
 Section 5 - NPC Sonya
 
@@ -1480,6 +1484,7 @@ to say SonyaArrivalSex2:
 		say "     Her companion speaks up after that, giving a charming smile and saying, 'We love having fun with other couples. Just think about what we could do together...' That said, both merfolk present themselves a bit, posing while they let their eyes wander over you - and they don't just have eyes for their opposite sex. You do notice Sylvie licking her lips as she glances at Sonya's breasts, while Kev lets his gaze wander over you with an intrigued expression. After a moment of mutual inspection, Sylvie says, 'We'll be in the area,' then nods towards the viking ship and continues, 'you've parked not far from where we live... so, if you want to have some fun, it shouldn't be hard to find us.' With that, the two of them give a wave and dive underwater, swimming away.";
 	now lastfuck of Sonya is turns;
 
+
 Section 6 - Drop Item
 
 Table of Game Objects (continued)
@@ -1517,6 +1522,7 @@ It has a weapon "shining steel blade". The weapon damage of viking sword is 8. T
 
 Instead of sniffing viking sword:
 	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.";
+
 
 Section 7 - Endings
 

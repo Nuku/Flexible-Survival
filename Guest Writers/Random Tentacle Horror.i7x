@@ -357,7 +357,7 @@ When Play begins:
 	now HP entry is 200;
 	now lev entry is 8; [ Level of the Monster ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-	now area entry is "Sealed"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Sealed"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 6; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]

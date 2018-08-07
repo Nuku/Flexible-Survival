@@ -71,7 +71,7 @@ to say Zebra loses:
 		if debugactive is 1:
 			say "     DEBUG: Empty scene in the file 'Zebra.i7x' - Dealing with the event outcome is taken care of at the event source[line break]";
 		stop the action;
-	say "     'Fine' the zebra stallion says in a pained voice, as he stumbles backwards in defeat. 'You win the battle for now, but I'll be back stronger than ever to make you one of the herd before you know it!' he continues, eyes moving left and right as he looks for a way of escape.";
+	say "     'Fine,' the zebra stallion says in a pained voice as he stumbles backwards in defeat. 'You win the battle for now, but I'll be back stronger than ever to make you one of the herd before you know it!' he continues, eyes moving left and right as he looks for a way of escape.";
 	LineBreak;
 	if ZebraLossCount is 0:
 		say "     With a sudden burst of speed, the zebra dashes off as fast as his hoofed legs can carry him. Caught by surprise, you don't have any realistic chance of catching him, so you just stay where you are and watch. He sure looks impressive, with the high stature and well-muscled body. Maybe next time, you can catch him before he runs off...";

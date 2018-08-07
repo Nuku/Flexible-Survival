@@ -856,7 +856,7 @@
 |Sarokcat|Museum|riddlesphinx|value|
 |Sarokcat|Museum|riddlesphinxing|action|
 |Sarokcat|Tiger Den|20140908213124/6445:Mon 8 September 2014 21:31|indexing|
-|Sarokcat|Tiger Den|Tiger den|room|
+|Sarokcat|Tiger Den|Tiger Den|room|
 |Sarokcat|Tiger Den|Chase|man|
 |Sarokcat|Tiger Den|TigerVSTaur|situation|
 |Sarokcat|Pirate Island|20140908213124/3664:Mon 8 September 2014 21:31|indexing|
@@ -1072,7 +1072,7 @@
 |Rimme|Junkyard And Warehouse|Junkyard Gate|door|
 |Rimme|Junkyard And Warehouse|Junkyard Interior|room|
 |Rimme|Junkyard And Warehouse|Junkyard digups|situation|
-|Rimme|Junkyard And Warehouse|Steven's home|room|
+|Rimme|Junkyard And Warehouse|Steven's Home|room|
 |Rimme|Junkyard And Warehouse|junkyard home|situation|
 |Rimme|Junkyard And Warehouse|unused tool|situation|
 |Rimme|Junkyard And Warehouse|crowbar|armament|
@@ -2123,7 +2123,7 @@
 |Agentlemancalledb|Sugar Glider|sugarglidertailed|adjective|
 |Agentlemancalledb|Sugar Glider|sugargliderfaced|adjective|
 |Nuku Valente|Slutrat|20140908213124/13837:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Slutrat|SlutRat Den|room|
+|Nuku Valente|Slutrat|Slut Rat Den|room|
 |Nuku Valente|Slutrat|ratdartboard|thing|
 |Nuku Valente|Slutrat|Pool Hall|situation|
 |Nuku Valente|Slutrat|Pool Table|person|

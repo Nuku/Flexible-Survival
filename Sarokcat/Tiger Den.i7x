@@ -4,11 +4,11 @@ Version 2 of Tiger Den by Sarokcat begins here.
 
 "Adds a tiger den to Flexible Survival with a few anthro tigers, and some small quests vs the tigertaurs..."
 
-Section 1- Tiger den environment
+Section 1- Tiger Den environment
 
-Tiger den is a room. It is fasttravel. Tiger Den is sleepsafe. It is private.
-the scent of Tiger den is "The enclosed basement hideout smells strongly of tigers.".
-The description of Tiger den is "[tigerden desc]".
+Tiger Den is a room. It is fasttravel. Tiger Den is sleepsafe. It is private.
+the scent of Tiger Den is "The enclosed basement hideout smells strongly of tigers.".
+The description of Tiger Den is "[tigerden desc]".
 
 to say tigerden desc:
 	say "     Sparsely furnished, this large concrete basement garage bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it. Half of the large room is however sectioned off by small movable screens someone has set up, separating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they have placed in the empty maintenance tunnels, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid and cause trouble. Heading east will take you into the tiger's washroom.";
@@ -44,10 +44,10 @@ Instead of Resolving a TigerVSTaur:
 			say "     'Thanks a ton for your help friend,' the tiger beast says in a pleasant rumbling voice. 'I was in a load of trouble there on my own, and if you hadn't come along when you did, I'm sure I would have been sprouting a new pair of paws and giving in to the infection myself,' he says, before looking around and trotting over and pulling a large pack out of some bushes where it was obviously thrown when the combat started. Hefting the rather large pack easily up on his shoulders, he turns back to you and gestures for you to follow as he starts walking down some of the zoo pathways. Taking the opportunity to introduce yourself [if player is not defaultnamed]as [name of player][end if].";
 			WaitLineBreak;
 			say "     'The name's Chase,' the tiger man says as he leads you through the mostly unused maze of paths in the animal care area of the zoo, eventually leading you to a small employee entrance into the zoo maintenance tunnels. Glancing around to be sure the coast is clear, he leads you down. 'I worked near here before this all happened, and liked to visit the zoo and the big cats on my lunch break, so when shit started getting weird I ended up heading to the zoo again. Turns out that was even more of a mess than most of the rest of the area, though most of the animals were gone at that point, still was plenty of changed around. Ended up taking shelter in the tiger's cage for while, since well, I figured most of the other creatures wouldn't look there... and hey if I actually encountered one of [']em myself, I would kind of rather end up becoming a tiger than most of the other animals around,' Chase says with a shrug as he leads you through the maze of paths, finally stopping at a large iron door.";
-			say "     'Sadly I never did actually encounter a tiger that day, but there must have been enough of whatever is causing the changes left over in their den to change me, I still don't regret it though... this body is so much better than my old one was,' he says, flashing you a grin as he opens the door, revealing a large open area that must have been used to garage the employee buggies at one time. 'And hey!' Chase says as he opens his arms clearly meaning to show off the room. Furniture is placed haphazardly all over, causing the place to look like a major battle took place here at some point. 'At least I'm not alone like this,' the tiger man says with a grin as he points out several other tiger men and tiger women who look up to see what's happening. 'Welcome to the Tiger den,' your guide says somewhat smugly as he leads you further inside.";
+			say "     'Sadly I never did actually encounter a tiger that day, but there must have been enough of whatever is causing the changes left over in their den to change me, I still don't regret it though... this body is so much better than my old one was,' he says, flashing you a grin as he opens the door, revealing a large open area that must have been used to garage the employee buggies at one time. 'And hey!' Chase says as he opens his arms clearly meaning to show off the room. Furniture is placed haphazardly all over, causing the place to look like a major battle took place here at some point. 'At least I'm not alone like this,' the tiger man says with a grin as he points out several other tiger men and tiger women who look up to see what's happening. 'Welcome to the Tiger Den,' your guide says somewhat smugly as he leads you further inside.";
 			now HP of Chase is 1;
-			move player to Tiger den;
-			now Tiger den is known;
+			move player to Tiger Den;
+			now Tiger Den is known;
 			now TigerVSTaur is resolved;
 			now battleground is "void";  [blocks a post-event fight]
 	else:

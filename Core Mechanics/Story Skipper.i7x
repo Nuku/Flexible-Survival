@@ -2214,8 +2214,8 @@ to restorepart2:	[values 60 - 161]
 		now the icon of Rod Mallrat is figure of Rod_icon;
 		now the icon of Ronda is figure of pixel;
 	if HP of Ronda is 100:
-		move Ronda Mallrat to SlutRat Den;
-		move Rod Mallrat to SlutRat Den;
+		move Ronda Mallrat to Slut Rat Den;
+		move Rod Mallrat to Slut Rat Den;
 		now the icon of Rod Mallrat is figure of pixel;
 		now the icon of Ronda is figure of RondaSR_icon;
 	if HP of Ronda > 0:
@@ -2229,7 +2229,7 @@ to restorepart2:	[values 60 - 161]
 	if HP of Ronda is 6:
 		now Art Collector is unresolved;
 	if HP of Ronda >= 8:
-		now SlutRat Den is known;
+		now Slut Rat Den is known;
 [93:	[Athanasia]]
 	now carried of phoenix egg is 0;
 	remove Athanasia from play;

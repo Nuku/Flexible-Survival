@@ -82,7 +82,7 @@ Section 1 - NPC
 Chase is a man.
 The description of Chase is "[ChaseDesc]".
 The conversation of Chase is { "mew" }.
-Chase is in Tiger den.
+Chase is in Tiger Den.
 
 The scent of Chase is "[ChaseScent]";
 

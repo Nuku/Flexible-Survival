@@ -95,7 +95,7 @@ to say slut rat victory:
 		if libido of player > 80, now libido of player is 80;
 		infect "Slut Rat";
 	else:
-		if the location of the player is slutrat den:
+		if the location of the player is Slut Rat Den:
 			say "     The rat grins as she pushes you towards the others, 'Let's remind this one how we treat bad people.' Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
 		else:
 			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged. They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
@@ -106,7 +106,7 @@ to say slut rat victory:
 			else:
 				say ".";
 		if player is female:
-			say "     The rat who [if location of player is slutrat den]beat you[else]brought you in[end if] tips you forward, pressing her massive tool against your exposed snatch and rubbing along it in slow teasing motions, considering.";
+			say "     The rat who [if location of player is Slut Rat Den]beat you[else]brought you in[end if] tips you forward, pressing her massive tool against your exposed snatch and rubbing along it in slow teasing motions, considering.";
 			if cunt length of player < 12 or cunt width of player < 7:
 				say "     She humphs, 'You will not fit, but we can fix that,' she assures in a needy whisper in your ear. Soon your head is being tipped back as something sickly sweet is poured down your throat, making your female organs tingle powerfully as they begin to expand";
 				increase cunt length of player by 4;
@@ -118,12 +118,12 @@ to say slut rat victory:
 			else:
 				say "     Your needy cunt is soon being stuffed and your body rocked as she crashes into you with practiced strokes, tickling at your most sensitive places with her rock hard member. You can feel the tool spurting thick gobs of fluid inside of you with every thrust, even though she hasn't even climaxed yet, your body tingling with pleasure.[impregchance]";
 		else:
-			say "     The rat [if location of player is slutrat den]beat you[else]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [bodydesc of player] form and coos in your ear, pistoning against your ass with increasingly eager thumps, eventually filling your ass with her thick seed.[mimpregchance]";
+			say "     The rat [if location of player is Slut Rat Den]beat you[else]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [bodydesc of player] form and coos in your ear, pistoning against your ass with increasingly eager thumps, eventually filling your ass with her thick seed.[mimpregchance]";
 		say "     A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights. [slut rat growth]";
 		say "     All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
-		if a random chance of 1 in 2 succeeds and slutrat den is unknown:
+		if a random chance of 1 in 2 succeeds and Slut Rat Den is unknown:
 			say "You remember the way back!";
-			now the Slutrat Den is known;
+			now the Slut Rat Den is known;
 
 
 To say slut rat growth:
@@ -145,21 +145,21 @@ To say slut rat growth:
 
 Section 1 - Slut Rat Den & Arrival
 
-SlutRat Den is a room. "This little slice of [']heaven['] is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky odor of the rats that dwell within it. Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements. For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them. A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slutrat Den is private. Slutrat Den is fasttravel. It has a number called visittimes. Slutrat Den has a number called pooltable.
+Slut Rat Den is a room. "This little slice of [']heaven['] is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky odor of the rats that dwell within it. Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements. For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them. A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slut Rat Den is private. Slut Rat Den is fasttravel. It has a number called visittimes. Slut Rat Den has a number called pooltable.
 
 SlutratSub is a number that varies. SlutratSub is usually 5.		[0 to 10 range, 5=neutral, higher is more a rat sub]
 Slutratcor is a number that varies.
 lastratvisit is a number that varies.
 
-the scent of the SlutRat Den is "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.".
+the scent of the Slut Rat Den is "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.".
 
 To Say slutratdenscene:
 	[puts Slut Rat as lead monster for easy use]
 	setmonster "Slut Rat";
-	if lastratvisit - turns < 8 and visittimes of slutrat den > 0:
+	if lastratvisit - turns < 8 and visittimes of Slut Rat Den > 0:
 		continue the action;
 	now lastratvisit is turns;
-	if visittimes of SlutRat Den is 0:
+	if visittimes of Slut Rat Den is 0:
 		say "     You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps.";
 		say "     Heart pounding, you start to run down the tunnel, skidding on the slimy floor and almost falling as you turn sharply and half dive into the den. The rats are there and look up at you with clear surprise.";
 		say "     'Fresh bitch just can't wait for more,' says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I'll show her how things work around here...' She advances towards you with a leer.";
@@ -170,7 +170,7 @@ To Say slutratdenscene:
 			move player to Mall FoodCourt;
 			continue the action;
 		else:
-			increase visittimes of slutrat den by 1;
+			increase visittimes of Slut Rat Den by 1;
 			say "     The defeated rat withdraws into the den, scurrying beneath one of the pillows with a sullen expression. Her sisters laugh at the sight, and one of them rises to her feet in a hop, breasts wobbling enticingly as she approaches you, 'What a good bitch you are,' she croons, 'You just want some love, not fighting, am I right?'";
 			say "Agree?";
 			if player consents:
@@ -180,11 +180,11 @@ To Say slutratdenscene:
 			else:
 				say "     She seems surprised when you refuse the offer. Despite it, she reaches to set her naked pink hands on your cheeks and draw you forward for a kiss, 'That will be fine then. Maybe you're not here to be our bitch after all.' Her tongue flicks over your face and she draws you to a pillow before flopping on it herself and leaving you standing. 'Fine then, tough guy, you can do what you want, welcome to our den.' The other rats give a brief round of applause before the celebration turns more intimate between a few pairs of them, coupling together in excited squeals that don't seem to include you for the moment.";
 			continue the action;
-	else if pooltable of slutrat den is 2:
-		increase visittimes of slutrat den by 1;
+	else if pooltable of Slut Rat Den is 2:
+		increase visittimes of Slut Rat Den by 1;
 		say "[ratstopoolhall]";
 	else:
-		increase visittimes of slutrat den by 1;
+		increase visittimes of Slut Rat Den by 1;
 	if HP of Ronda is 9 and bodyname of player is "Slut Rat":
 		say "[rondarescue]";
 
@@ -314,7 +314,7 @@ To slutratpatron:
 
 Section 3 - Dart Board
 
-There is a ratdartboard in SlutRat Den. "The dart board looks like anyone could [bold type][link]throw darts[end link][roman type] if they felt like it.".
+There is a ratdartboard in Slut Rat Den. "The dart board looks like anyone could [bold type][link]throw darts[end link][roman type] if they felt like it.".
 
 ratdarts is an action applying to nothing.
 understand "throw darts" as ratdarts.
@@ -323,8 +323,8 @@ lastratdartthrow is a number that varies. lastratdartthrow is usually 555.
 ratdartcount is a number that varies.
 
 check ratdarts:
-	if the location of the player is not Slutrat Den, say "What darts?" instead;
-	if visittimes of slutrat den < 1:
+	if the location of the player is not Slut Rat Den, say "What darts?" instead;
+	if visittimes of Slut Rat Den < 1:
 		say "The rats scowl at you when you approach the dart board. Perhaps you should reconsider.";
 		say "Continue?";
 		if player consents:
@@ -350,8 +350,8 @@ Carry out ratdarts:
 			say "     'What about pool?' another offers, coming over to play with the rat's breasts. 'Yeah, pool wouldn't be bad at all. One of those big, classy tables they got in those high-class clubs would be awesome! Newbie, you get right on that,' she orders, giggling as her nipples are licked and she becomes preoccupied with her playmates.";
 			WaitLineBreak;
 			now Pool Hall is unresolved;
-			now pooltable of slutrat den is 1;
-		if remainder after dividing ratdartcount by 4 is 0 and pooltable of slutrat den is 1:
+			now pooltable of Slut Rat Den is 1;
+		if remainder after dividing ratdartcount by 4 is 0 and pooltable of Slut Rat Den is 1:
 			say "     The same slut rat from earlier [one of]looks up from plowing another smaller rat as you approach the board again. 'Hey newbie, any luck finding us that pool table or somethin[']?' she asks, not breaking her pace. You shake your head and she grumbles, 'Bummer!' and returns to nibbling on her current lover's ear.[or]scratches in itch on her chest, making her large breasts jiggle. 'Any luck with getting us something else to do?' she bitches.[or]yawns in boredom. 'We should really have something more than darts. Go back topside and look for a classy pool table. Try the High Rise District for a fancy pool hall,' she suggests. 'Yeah, get moving!' a few of the others pipe up.[or]presses another rat's face to her dripping pussy. 'You should really head topside and find us that pool table,' she complains. 'Yeah! And look for a skeeb-' the second girl starts to say, but is cut off as the bigger rat stuffs her face back to her cunt.[in random order]";
 			WaitLineBreak;
 		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
@@ -442,16 +442,16 @@ Pool Hall is a situation. Pool Hall is resolved.
 The sarea of Pool Hall is "High".
 
 Instead of resolving a Pool Hall:
-	if pooltable of slutrat den is 1:
+	if pooltable of Slut Rat Den is 1:
 		say "     Passing down a side street between the high rises, you spot a pool hall. Recalling the request from the rats, you head on over to check the place out. It is a rather upscale looking place, probably used by business managers, bankers and lawyers working in the area. A place to go and have [']meetings['] while charging their clients. Looking inside, you find that it's been taken over by a group of pumas. They seem to have polished off most of the contents of the bar and are now playing pool or fucking on the tables. A pair of the herm cougars are even trying to do both at once, lining up a shot on the side pocket while her competitor gets ready to drive her cock into her back hole to make her scratch. Even with this kind of enthusiastic playing going on, some of the tables appear to still be in good condition. Surely the rats could find one to make off with down the subway tunnels to add to the den. The cats are too numerous for you to take on alone. You should go back to the rats and let them know about your find.";
 	now lastratvisit is turns + 8;
-	now pooltable of slutrat den is 2;
+	now pooltable of Slut Rat Den is 2;
 	now Pool Hall is resolved;
 
 to say ratstopoolhall:
 	if bodyname of player is "Slut Rat":
 		LineBreak;
-		say "     Returning to the slutrat den, you locate try to mobilize the troops against the cougars of the pool hall. The large rat who started this plan is all on board, as is the skeeball nut. Most of them are reluctant to leave their life of lustful indolence to go, so you try your best to convince them.";
+		say "     Returning to the Slut Rat Den, you locate try to mobilize the troops against the cougars of the pool hall. The large rat who started this plan is all on board, as is the skeeball nut. Most of them are reluctant to leave their life of lustful indolence to go, so you try your best to convince them.";
 		let the bonus be (( the charisma of the player minus 10 ) divided by 2);
 		if slutratsub < 5, increase bonus by ( 5 - slutratsub ); [increase for being a dominant rat]
 		if slutratsub > 5, increase bonus by ( slutratsub + 5 ); [increase for being a popular slut]
@@ -503,8 +503,8 @@ to say poolhallvictoryorgy:
 	say "     The rat orgy goes on for quite a while, with a celebration that finishes off the liquor at the bar during the orgy of sex. You swap around with lots of the rats, taking turns enjoying the transforming felines, helping them to become lovely, slutty rats. This new bitches are made to carry one of the large pool tables down into the sewers and bring it all the way back to the rat den. Space is made and the new table is set up, much to the delight of the other rats. After another bout of celebratory sex, you are left sexually satisfied and covered in rat cum and juices after having been filled every which way possible.";
 	infect "Slut Rat";
 	infect "Slut Rat";
-	move Pool Table to slutrat den;
-	now pooltable of slutrat den is 3;
+	move Pool Table to Slut Rat Den;
+	now pooltable of Slut Rat Den is 3;
 	decrease humanity of player by 15;
 	increase morale of player by 5;
 	increase score by 25;
@@ -514,7 +514,7 @@ to say poolhallvictoryorgy:
 to say poolhalldefeat:
 	say "     After being defeated and pounced by the lustful kitty, several of the rats start screaming to retreat and scramble out of the pool hall. You manage to make it out, but several of your rat sisters are not so lucky. As you ran out, you could see them pinned under the felines and becoming more like the pumas by the moment. There's little you can do for them now and you all rush back to the subway entrance and take cover back underground. You and the rats return to the den, arguing all the way. They're disappointed with how your plan turned out, with the girl who harassed you into getting a pool table in the first place bitching you out rather hard. The skeeball fan grabs her muzzle from behind to silence her, pressing the slut rat against the wall, telling her angrily to shut up as she drives her cock into the vocal rat. 'You're. The. One. Who. Ran. FIRST!' she growls, punctuating each word with a hard thrust into the slut rat's cunt. It seems like there roles have been reversed and she'll be the bitch from now on. Another couple of rats grab you, deciding to sate their frustrated lusts on you for your bad leadership as well.";
 	say "[slut rat victory]";
-	now pooltable of slutrat den is 100;
+	now pooltable of Slut Rat Den is 100;
 	decrease humanity of player by 5;
 	decrease morale of player by 5;
 	decrease score by 10;
@@ -526,7 +526,7 @@ to say poolhalldefeat:
 to say poolhallflee:
 	say "     Having had enough, you make a break for it, calling for the other rats to retreat. While most of the manage to make it out, some of them are captured and trapped inside with the horny felines. Quite certain they'll be made into more pumas, you and the others sadly return back to the den, arguing all the way. They're disappointed with your decision to turn tail and run, with the girl who harassed you into looking for a pool table in the first place bitching you out rather hard. She grabs you roughly, deciding to sate her frustrated lusts on you for your bad leadership and planning, with her skeeball loving friend moving in to share in the fun.";
 	say "[slut rat victory]";
-	now pooltable of slutrat den is 100;
+	now pooltable of Slut Rat Den is 100;
 	decrease humanity of player by 5;
 	decrease morale of player by 10;
 	decrease score by 20;
@@ -613,7 +613,7 @@ When play ends:
 			if slutratcor > 4:
 				say "     Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It's time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords have need of you both.";
 				continue the action;
-			else if visittimes of slutrat den > 0:
+			else if visittimes of Slut Rat Den > 0:
 				if slutratsub is 5:
 					say "     You are neither dominant nor submissive of your rat sisters, living as equals. This is not without its frictions, as you do not all have the same ideas, but you always managed to reach an accord, eventually. Sometimes this involves taking or being taken until someone realizes the error of their ways in a pile of sweat and other fluids, but you don't find that to be a disagreeable way to work things out.";
 				if slutratsub > 6:

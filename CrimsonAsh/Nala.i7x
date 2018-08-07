@@ -169,7 +169,7 @@ to say NalaFuck:
 
 instead of fucking the Nala:
 	if (lastfuck of Nala - turns < 6): [he got fucked in the last 18 hours = 6 turns]
-		say "     'Sorry buddy, I know I'm demonic and all but I got an agenda to keep, I'm a busy bee but maybe come find me later' She finishes with a wink.";
+		say "     'Sorry buddy, I know I'm demonic and all, but I got an agenda to keep. I'm a busy bee, but maybe come find me later,' she finishes with a wink.";
 	else: [ready for sex]
 		say "     As you walk up to Nala with your proposition she clasps her hands together 'Ooh, I thought you'd never ask sweetie.'";
 		wait for any key;
