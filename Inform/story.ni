@@ -4441,6 +4441,11 @@ This is the location choice rule:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Deer":
+					now area entry is "Park";
+					break;
 			increase score by 600;
 			extend game by 240;
 		if title entry is "Hard mode":
@@ -4452,6 +4457,11 @@ This is the location choice rule:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Deer":
+					now area entry is "Park";
+					break;
 			increase score by 900;
 			extend game by 240;
 			now hardmode is true;
@@ -6445,6 +6455,11 @@ to say gsopt_start:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Deer":
+					now area entry is "Park";
+					break;
 			increase score by 600;
 			extend game by 240;
 	if gshm is true: [Hard mode alteration]
@@ -6606,6 +6621,11 @@ to say silent_start:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Deer":
+					now area entry is "Park";
+					break;
 			increase score by 600;
 			extend game by 240;
 	if gshm is true: [Hard mode alteration]
