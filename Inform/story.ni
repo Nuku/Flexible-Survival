@@ -48,6 +48,10 @@ Include Simple Graphical Window by Emily Short.
 [New Graphics Handler]
 Include Graphics Director by Executaball.
 
+instead of wearing something:
+	try using it;
+	stop the action;
+
 Section Help Menu
 
 Table of Basic Help Options (continued)

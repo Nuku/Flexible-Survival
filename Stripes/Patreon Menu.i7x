@@ -37,14 +37,15 @@ carry out supersponsor:
 		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
 		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
 		say "[link](12) Claim all the pets![as]12[end link][line break]";
+		say "[link](13) Revel in being awesome[as]13[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-12)> ";
+			say "Choice? (0-13)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 12:
+			if calcnumber >= 0 and calcnumber <= 13:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 12.";
+				say "Invalid choice. Pick from 0 to 13.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
@@ -174,6 +175,9 @@ carry out supersponsor:
 			repeat with petget running through pets:
 				now petget is tamed;
 			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
+		else if calcnumber is 13:
+			now carried of Smug Confidence is 1;
+			say "Ah, there it is. Don't forget to use it.";
 		else:
 			now trixieexit is 1;
 		LineBreak;
@@ -197,6 +201,22 @@ to sslvl12:
 			level up;
 		increase vetcheater by 1;
 
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"smug confidence"	"As if anything could hurt you! You're one of the better ones out there."	1	smug confidence
+
+Smug Confidence is equipment.
+Smug Confidence is not temporary.
+The AC of Smug Confidence is 5.
+The effectiveness of Smug Confidence is 20.
+The placement of Smug Confidence is "face".
+The descmod of Smug Confidence is "You walk with a renewed confidence.".
+The slot of Smug Confidence is "head".
+
+Instead of smelling Smug Confidence:
+	say "It smells a bit like victory! Thanks for supporting us.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
