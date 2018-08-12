@@ -16,7 +16,7 @@ to say palominodesc:
 	say "     Stepping around the corner of the hall, the room beyond is much bigger than you expected. It has a gothic theme going on - dark, with some rough, black, wooden tables and benches along the sides of the room and smaller, private booths with lower tables secreted away in the darker corners. There are coarse tapestries draped on the walls, one of them depicting a young man resting in the arms of a well-built anthropomorphic stallion. Looking closer at the tapestry, you can see that the young man's legs have started to shift from the knees down into digitigrade horse legs and a blond tail is just starting to grow from above his ass. There is also a random scattering of dark red cushions to offset the cellar dungeon look of the place.";
 	say "     A mirror ball sparkles and sends a shimmering wave of reflected colors over the foggy dance floor, where around thirty or so people are dancing to the beat of the music. At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
 
-The invent of The Palomino is { "soda" , "soda" }.
+The invent of The Palomino is { "soda", "soda" }.
 
 instead of sniffing Palomino:
 	say "The infected dance club smells strongly of aroused males, sweat and sex. Lots of sex.";

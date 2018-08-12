@@ -136,7 +136,7 @@ When Play begins:
 	now tail entry is "You have a thick canine tail wagging happily behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your feet and hands become paw like, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now body change entry is "your feet and hands become pawlike, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "thick, rugged black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your member grows thicker, the top of it tapering to a sharp point while a large canine knot forms at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]

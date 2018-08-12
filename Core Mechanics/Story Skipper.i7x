@@ -812,7 +812,7 @@ To reciting2:
 			-- 195: [HP of Chris]
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
-					if the HP of chris > 0 and the HP of chris < 100, move chris to Sitting Area;
+					if the HP of Chris > 0 and the HP of Chris < 100, move Chris to Sitting Area;
 			-- 196: [HP of Vanessa - status]
 				if the player's command matches "[number]":
 					now HP of Vanessa is the number understood;
@@ -2310,7 +2310,7 @@ to restorepart2:	[values 60 - 161]
 		now haroldtalk is 2;
 		now Palomino is known;
 	if tattoohunter >= 4:
-		now Findingkara is resolved;
+		now findingkara is resolved;
 		now Kara is in the Tattoo Parlor;
 	if tattoohunter >= 5:
 		now Haroldaroused is 1;

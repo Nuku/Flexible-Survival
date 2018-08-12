@@ -873,7 +873,7 @@
 |Sarokcat|Tattoo Parlor|20140908213124/2043:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Tattoo Parlor|Tattoo Parlor|room|
 |Sarokcat|Tattoo Parlor|tattoonpiercing|situation|
-|Sarokcat|Tattoo Parlor|Findingkara|situation|
+|Sarokcat|Tattoo Parlor|findingkara|situation|
 |Sarokcat|Stablemasters|20140908213124/3540:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Stablemasters|Master's Office|room|
 |Sarokcat|Stablemasters|Slutslave|man|

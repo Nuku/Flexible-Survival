@@ -127,7 +127,7 @@ New Ewe Storeroom is a room. It is fasttravel. It is private.
 
 The description of New Ewe Storeroom is "This small family grocery store is now home to a small flock of sheep, though in most other respects it seems to be a relatively normal store. The shelves are mostly empty now, or full of goods that the flock themselves are using, and some of the narrow aisles have blankets and bedding laid out for the sheep to sleep on, though they have made a place for you if you need to rest (enable rest here). There is a somewhat musky and woolen odor to the place, though the smell seems more comforting and almost arousing than anything else.".
 
-The invent of New Ewe Storeroom is { "chips" , "food" , "water bottle" , "soda" }.
+The invent of New Ewe Storeroom is { "chips", "food", "water bottle", "soda" }.
 
 Leon is a man.
 The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you. You recall his name was Leon.".

@@ -34,10 +34,10 @@ Instead of resolving a Hyena Shoppers:
 				increase carried of chips by 1;
 		else:
 			LineBreak;
-			say "     You're not desperate enough to go around accepting strange deals from hyenas. Refusing the offer politely, you hope that she won't take it personally. With a shrug the hyena turns around and walks away, the other hyenas following on her heel. You take a peek into the storage room to see if they left anything behind. After a bit of poking around, you actually do manage to find a lonely can of soda in one corner. It must have rolled under the shelf there while the pack were looting the place. There is nothing left for you here so you move on, eventually finding your way back to where you started.";
+			say "     You're not desperate enough to go around accepting strange deals from hyenas. Refusing the offer politely, you hope that she won't take it personally. With a shrug, the hyena turns around and walks away, the other hyenas following on her heel. You take a peek into the storage room to see if they left anything behind. After a bit of poking around, you actually do manage to find a lonely can of soda in one corner. It must have rolled under the shelf there while the pack were looting the place. There is nothing left for you here, so you move on, eventually finding your way back to where you started.";
 			increase carried of soda by 1;
 	else:
 		LineBreak;
-		say "     Curiosity got the cat fucked and you have no interest in getting fucked tonight. Doubling your pace you put as many feet between you and who, or what ever is making the noise.";
+		say "     Curiosity got the cat fucked, and you have no interest in getting fucked tonight. Doubling your pace, you put as many feet between you and whoever or whatever is making the noise.";
 
 Hyena Shoppers ends here.

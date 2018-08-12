@@ -762,7 +762,7 @@ Carry out reciting:
 						now haroldtalk is 2;
 						now PALOMINO is known;
 					if tattoohunter >= 4:
-						now Findingkara is resolved;
+						now findingkara is resolved;
 						now Kara is in the Tattoo Parlor;
 					if tattoohunter >= 5:
 						now Haroldaroused is 1;

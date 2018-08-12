@@ -210,7 +210,7 @@ understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
 The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could surface and swim to it if you want to get back to the beach.".
 
-The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
+The invent of Sunken Ship is { "sea dragon cum", "sea dragon cum" }.
 
 the scent of Sunken Ship is "You can't smell anything while underwater.".
 

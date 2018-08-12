@@ -497,7 +497,7 @@ When Play begins:
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
 	now face entry is "that of a cunningly handsome looking Dobie"; [ Face. Format as Your face is [face of player]. ]
-	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog"; [ Body. Format as "Your body is [body of player]." ]
+	now body entry is "fit and toned without a trace of fat anywhere in sight, not to mention pecs that bulge out almost half an inch from your chest and torso with, count [']em, eight hard and cut abs. You are definitely a stud of a dog"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
 	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in color and curved upwards."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson colored[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]

@@ -77,7 +77,7 @@ The description of Stables Hotel is "     The lobby of this large sprawling buil
 Northeast of Stables Hotel is Hotel Stalls.
 West of Stables Hotel is Employee Access.
 
-The invent of The Stables Hotel is { "lucky horseshoe" , "lucky horseshoe" }.
+The invent of The Stables Hotel is { "lucky horseshoe", "lucky horseshoe" }.
 
 Stable Entry is a door. "The lobby trails off to the north where a series of elevators and large double doors can be seen.". It is dangerous.
 

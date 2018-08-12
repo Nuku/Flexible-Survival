@@ -1672,7 +1672,7 @@ to say DoranSub_AnalFuck: [Anal Catching] [BODY MODDED]
 		else:
 			say ".";
 	if DoranSelfBlueballing is 1, now DoranSelfBlueballing is 2;
-	say "     '[one of]My thanks[or]Many thanks[or]My appreciation[at random], [DoranPlayerRegard]. [if DoranRoleIntensity is 4][one of]I long for their further abuse[or]Please don't be afraid to use their [gdragon] again[or]Their treatment brings me immense pleasure[at random][else][one of]I hope they enjoyed themself[or]That was fun[or]I look forward to the next bout[at random][end if].' Yourself satisfied [ghe] goes back off on [ghis] own to clean up the devastation you've wrought.";
+	say "     '[one of]My thanks[or]Many thanks[or]My appreciation[at random], [DoranPlayerRegard]. [if DoranRoleIntensity is 4][one of]I long for their further abuse[or]Please don't be afraid to use their [gdragon] again[or]Their treatment brings me immense pleasure[at random][else][one of]I hope they enjoyed themself[or]That was fun[or]I look forward to the next bout[at random][end if].' Yourself satisfied, [ghe] goes back off on [ghis] own to clean up the devastation you've wrought.";
 
 to say DoranSub_CockOral: [Cock Oral] [BODY MODDED]
 	say "     [if DoranRoleIntensity is 4]Without having to say a word[else]A little awkwardly[end if] you set yourself down, exposing your [cock size desc of player], [cock of player] dick[smn] before the [gdragon]. [if DoranRoleIntensity is 4]Immediately, [ghe]'s upon you, easily understanding what you need of [ghim],[else]Gesturing [ghim] over [ghe] makes [ghis] way to you, clearly eager to please[end if] and looking rather excited by the offering.";
