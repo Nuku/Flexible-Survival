@@ -45,6 +45,13 @@ To say pimp loss:
 	else:
 		say "     Whimpering like the true coward the little slime is, the pimp quickly withdraws, several of his women glaring at you evilly as they cluster around their master and help him to stagger away.";
 	increase twpimpbeaten by 1;
+	if bradfordBountyNum is 2:
+		if bradfordbounty > 0:
+			LineBreak;
+			decrease bradfordbounty by 1;
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+		else:
+			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 to say twpimpbeaten_01:
 	say "     Wanting some relief and looking to give him a taste of his own medicine, you push him over onto all fours. Tearing aside his gaudy clothes, you bare his [one of]toned[or]furry[or]scaly[or]smooth-skinned[at random] ass and line your cock up with his pucker. He groans and whimpers as you force your throbbing cock into his asshole and start pounding away at him. His virgin-tight hole feels wonderful around your shaft and adds to the pleasure you're taking in breaking in the pimp's ass.";

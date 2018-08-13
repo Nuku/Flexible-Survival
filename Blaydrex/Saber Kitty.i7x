@@ -36,6 +36,13 @@ to say saber loss:
 			say "You realize she might have some ulterior motive and push her away. She frowns and sighs. 'Alright, maybe next time, love,' she says before sauntering off, leaving a trail of her dripping juices on the ground.";
 	else:
 		say "     She smiles, realizing you are not male. Something about this just doesn't seem right. 'Don't worry, love. You're already on your way to becoming a sexy saber kitty slut like me. Have fun,' she says before sauntering off leaving a trail of her dripping juices on the ground.";
+	if bradfordBountyNum is 3:
+		if bradfordbounty > 0:
+			LineBreak;
+			decrease bradfordbounty by 1;
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+		else:
+			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Monster Insertion
 

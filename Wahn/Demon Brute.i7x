@@ -227,6 +227,13 @@ to say demon brute loses:
 				say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Nermine said she doesn't have the supplies to capture another of these brutes, so you leave it where it is...";
 			else if DBCaptureQuestVar is 99:
 				say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Nermine said she only had the supplies for one try to capture one of these brutes, so you leave it where it is...";
+	if bradfordBountyNum is 1:
+		if bradfordbounty > 0:
+			LineBreak;
+			decrease bradfordbounty by 1;
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+		else:
+			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 
 to say Brutus_DBCapture:

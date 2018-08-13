@@ -215,6 +215,13 @@ To say Alpha Husky loss:
 		caughtthealphahusky;
 	else:
 		say "     The powerful male husky growls as you beat him back again, before shaking his battered head at you sadly and turning tail. The anthro canine darts off down the city streets with his tail hanging low as he runs off to hide and lick his wounds. Somehow though, you don't think that will be the last you will see of that strange alpha husky...";
+	if bradfordBountyNum is 4:
+		if bradfordbounty > 0:
+			LineBreak;
+			decrease bradfordbounty by 1;
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+		else:
+			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 
 to caughtthealphahusky:
