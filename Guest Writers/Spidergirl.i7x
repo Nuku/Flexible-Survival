@@ -84,6 +84,13 @@ to say spidergirl defeat:
 				say "You are able to control your urges, and you turn away. You can hear the spider girl scrabble to her feet and scuttle off, whimpering.";
 	else: [ Penis not big enough ]
 		say " After a few moments she drags herself to her feet and scuttles off, whimpering.";
+	if bradfordBountyNum is 6:
+		if bradfordbounty > 0:
+			LineBreak;
+			decrease bradfordbounty by 1;
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+		else:
+			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Monster Insertion [ Huh huh, insertion ]
 
@@ -118,7 +125,7 @@ When Play begins:
 	now HP entry is 35;
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
-	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
