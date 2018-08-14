@@ -20,7 +20,7 @@ to say platypusdesc:
 	else if bodyname of player is "Red Kangaroo":
 		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Nice to see another Aussie about. Pardon my lack of manners, but these eggs are weighing me down a bit.' He straightens and stretches. 'How about a little friendly sparring? Don't worry about me. I'm fit enough to keep up.'";
 	else:
-		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Just give me a second. These eggs are getting a bit heavier lately.' He pants a little longer, his belly swaying with each breath. Watching the hypnotic motions of the gravid male, he grins and says 'You'll see what I mean soon enough.' With an unexpected burst of movement, the platypus charges, leaving little time to prepare yourself for combat!";
+		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Just give me a second. These eggs are getting a bit heavier lately.' He pants a little longer, his belly swaying with each breath. Watching the hypnotic motions of the gravid male, he grins and says, 'You'll see what I mean soon enough.' With an unexpected burst of movement, the platypus charges, leaving little time to prepare yourself for combat!";
 
 to say losetoplatypus:
 	if gestation of child > 0 and gestation of child < 20:

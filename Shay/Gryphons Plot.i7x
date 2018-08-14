@@ -223,7 +223,7 @@ instead of resolving a Gryphon's Plot:
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";
 	else if GryphPlotTracking is 50: [player helped the gryphons, soldiers are transformed]
-		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get em!' Seeing no other option than to fight, you ready your weapon.";
+		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get [']em!' Seeing no other option than to fight, you ready your weapon.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times or until the player loses or flees]
