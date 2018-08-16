@@ -850,7 +850,7 @@ Instead of resolving a Hunting down Hunter:
 			LineBreak;
 			say "     You duck out of sight again and hurry back to the wall, thankfully without drawing any attention to yourself. Going up and over it, you're back on the outside soon after and hide away the ladder, then simply walk away.";
 
-to  DiegoCollarQuestGotCollar:
+to say DiegoCollarQuestGotCollar:
 	say "     After quickly shoving the collar into your backpack to make sure you don't lose it, you make your way back to the wall. With the ladder, it's easy to get up and over it, and you take care to hide it under the branches once more, just in case Diego might need it again somewhere hereabouts. Then you hurry off down the street, making a successful getaway.";
 	increase carried of diego's heirloom collar by 1;
 	say "     [bold type]You gain Diego's heirloom collar![roman type][line break]";
