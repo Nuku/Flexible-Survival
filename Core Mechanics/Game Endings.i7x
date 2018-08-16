@@ -99,6 +99,12 @@ when play ends:
 	else if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
 		stop the action;
+	else if bodyname of player is "Hunter's Bitch":
+		if player is female:
+			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
+		else: [male & neuter]
+			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine gleefully commenting about[if player is male] your cock shrinking more and more, until [end if]the moment when the flesh of your crotch forms the first folds of a new and virgin pussy. Not that you keep your cherry more than a few minutes, as he takes great pleasure to [']claim['] you fully by humping a heavy load into the virginal womb of yours. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
+		stop the action;
 	else if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;

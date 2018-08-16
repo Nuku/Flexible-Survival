@@ -251,7 +251,7 @@ to say DavidPatrolAnal:
 		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
 to say DavidPatrolVaginal:
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes and putting them down as an improvised blanket, you give him another quick kiss on the lips and lie down on it, pulling him with you by the hand so he ends up on top of you.";
@@ -1512,7 +1512,7 @@ to say DavidSex2: [he sucks the player]
 	now lust of David is 2;
 
 to say DavidSex3: [player pussy fucked]
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	if thirst of David is 0: [first time]
 		if David is in Parade Ground:
@@ -1546,7 +1546,7 @@ to say DavidSex3: [player pussy fucked]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
 
 to say DavidSex4: [player ass fucked]
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	if David is in Parade Ground:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
@@ -1603,7 +1603,7 @@ to say DavidSex5: [David ass fucked]
 		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'But even if I'm just Bi as you say - this is till cheating on Ann.'";
 
 to say DavidSex6: [Sven's ass gets fucked by David]
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the material of his pants you feel his manhood already filling out, as his body reacts to your kiss and touch. As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's urgent moans, he's ready for some action.";
 	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then whisper in his ear to look over to one of the farther-away beds in the bunker. There, your snowmeow kitty Sven is lying on his stomach, reading a book, tail waving in the air above his enticing furry butt. As wound-up as you already have David, it doesn't take much more than describing how Sven's tight and ready hole would feel around his cock to get him interested. After undoing the soldier's pants and letting them drop, you quickly get rid of your own clothes and the two of you walk over towards Sven naked.";

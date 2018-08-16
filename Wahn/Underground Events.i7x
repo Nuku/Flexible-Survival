@@ -89,7 +89,7 @@ to say cuckold choice:
 		say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
 
 to say cuckold choice male:
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	if player is male:
 		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating his changed body with more of its offspring...";

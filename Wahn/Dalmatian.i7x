@@ -322,6 +322,12 @@ the usedesc of dalmatian cum is "[dalmatian cum use]";
 
 to say dalmatian cum use:
 	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
+	if Darius is visible:
+		say "     Glancing over at you slurping down his cum, Darius lets out a hearty laugh. ";
+		if player is female:
+			say "'Yeah babe, just swallow it all! If you like that one, I've got a whole lot more here for you...' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
+		else:
+			say "'Let's hope the stuff makes something nice out of you. Wouldn't mind giving you more, if you want it that badly - as soon as you grow a juicy pussy!' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
 	PlayerDrink 6;
 	SanLoss 5;
 	infect "Dalmatian Bitch";
@@ -339,6 +345,12 @@ the usedesc of dalmatian fur is "[dalmatian fur use]";
 
 to say dalmatian fur use:
 	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";
+	if Darius is visible:
+		say "     Glancing over at you playing around with the fur you bought, Darius lets out a hearty laugh. ";
+		if player is female:
+			say "'Damn babe, are you trying to become a dude? How about you rather come here and let me show you a good time? Then you'll have a nice spotted coat too and be much more fun all around.' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
+		else:
+			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
 	SanLoss 2;
 	infect "Dalmatian Male";
 

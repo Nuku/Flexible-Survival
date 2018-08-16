@@ -50,7 +50,7 @@ when play begins:
 Instead of resolving Another Researcher:
 	say "     While passing along a narrow side street, you hear the not-uncommon sounds of rutting sex coming from somewhere nearby. Picking up something odd about the sounds, you cut across the alley and peek out into the street. There you find a canine finishing up in what appears to be an unchanged human male. The guy being pounded spots you and blushes a little, motioning for you to be quiet and wait. Expecting him to start changing soon, you prepare to back away, but even after the canine is done and gone, no infection appears. The guy gets up slowly and starts rearranging his clothes, waving you over. Confused but cautious, you approach him.";
 	WaitLineBreak;
-	if bodyname of player is "human" and the player is pure:
+	if bodyname of player is "Human" and the player is pure:
 		say "     'Hey there. I didn't think I'd come across another unchanged person out here. How are you making out? Pretty crazy out here, huh?' ";
 	else:
 		say "     'Hey there. When I first saw you, I thought you might be another creature waiting its turn, but then I realized you weren't quite at that point yet. Pretty crazy out here, huh?' ";

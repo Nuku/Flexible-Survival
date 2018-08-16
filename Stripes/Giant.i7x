@@ -123,7 +123,7 @@ When Play begins:
 	now desc entry is "[giantdesc]";
 	now face entry is "a human head with coarse, brown hair, just significantly larger";
 	now body entry is "a normal human body, just grown to gigantic proportions. You have a strong, muscled body to help support your great height. At around fifteen feet tall, it's quite difficult for you to get in and out, requiring you find (or make) alternate entrances or squirm your way through doorways and move on all fours while exploring. Probably best to stick to open areas";
-	now skin entry is "human";
+	now skin entry is "Human";
 	now tail entry is "Your ass is gigantic!";
 	now cock entry is "human";
 	now face change entry is "your head becomes human-like[if scalevalue of player is 4], but grown larger in size[else if scalevalue of player > 4], but grown to a significantly larger size[end if]. You look much like your old self, though with a bigger head";

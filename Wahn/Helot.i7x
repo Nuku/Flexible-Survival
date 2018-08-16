@@ -16,7 +16,7 @@ to say StealthHelotTransformation:
 	now skinname of player is "Helot";
 	now skin of player is "smooth, sun-bronzed";
 	now cockname of player is "Helot";
-	now cock of player is "human";
+	now cock of player is "Human";
 	now facename of player is "Helot";
 	now face of player is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now tailname of player is "Helot";

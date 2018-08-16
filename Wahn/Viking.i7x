@@ -106,7 +106,6 @@ An everyturn rule:
 	if VikingUltimatum > 1:
 		decrease VikingUltimatum by 1;
 
-
 Section 1 - Monster Responses
 
 to say Viking wins:
@@ -745,7 +744,6 @@ to say VikingAttacks:
 	else:
 		say "[one of]She lands a shallow cut on you. Luckily, she's not trying to kill you, or she could have skewered you there...[or]The Viking woman slaps the broad side of her sword against your head, leaving you seeing stars for a moment.[or]A sudden kick against the side of your leg leaves you numb and weakened.[or]She slams her shield into your chest, driving the air from your lungs.[at random]";
 
-
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -763,9 +761,9 @@ When Play begins:
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in a woolen tunic and pants, plus a pair of leather boots";
 	now skin entry is "smooth, pale"; [ format as "You have (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
-	now cock entry is "Human"; [ format as "You have a 'size' (your text) cock ]
+	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome male visage, the cheeks and chin covered by a short blond beard. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that"; [ format as "Your body feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that"; [  format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it smoothes out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
@@ -794,7 +792,7 @@ When Play begins:
 	now lootchance entry is 40;            [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Nordic"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
@@ -943,7 +941,6 @@ to say VikingPublicSex:
 		WaitLineBreak;
 		say "     ...and that is where you fell asleep too, only awakening several hours later beside Sonya, on a ship full of still-dozing or already awake and hung-over Vikings. Having to get back to your efforts of surviving in this new world, you find one man who isn't quite as bad off, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 
-
 Section 4 - Viking Ship
 
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
@@ -1009,7 +1006,6 @@ instead of going down from Viking Ship:
 				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child came while you were out - she's strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but... [else]But [end if]I miss having part of you inside me, and my body tells me I'm ready again already. How about taking me for a ride in the sheets?'";
 		now VikingPregnancy is 0;  [told the player about his offspring, resetting to receptive state]
 	move player to Sonya's Cabin;
-
 
 Section 5 - NPC Sonya
 
@@ -1484,7 +1480,6 @@ to say SonyaArrivalSex2:
 		say "     Her companion speaks up after that, giving a charming smile and saying, 'We love having fun with other couples. Just think about what we could do together...' That said, both merfolk present themselves a bit, posing while they let their eyes wander over you - and they don't just have eyes for their opposite sex. You do notice Sylvie licking her lips as she glances at Sonya's breasts, while Kev lets his gaze wander over you with an intrigued expression. After a moment of mutual inspection, Sylvie says, 'We'll be in the area,' then nods towards the viking ship and continues, 'you've parked not far from where we live... so, if you want to have some fun, it shouldn't be hard to find us.' With that, the two of them give a wave and dive underwater, swimming away.";
 	now lastfuck of Sonya is turns;
 
-
 Section 6 - Drop Item
 
 Table of Game Objects (continued)
@@ -1522,7 +1517,6 @@ It has a weapon "shining steel blade". The weapon damage of viking sword is 8. T
 
 Instead of sniffing viking sword:
 	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.";
-
 
 Section 7 - Endings
 

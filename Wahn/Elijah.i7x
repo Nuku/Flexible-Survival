@@ -2026,23 +2026,23 @@ to say ElijahSex16: [Brutus and player dominate Elijah]
 
 to say de-demonify:
 	if bodyname of player is listed in infections of hellspawn or bodyname of player is "Hellhound":
-		now bodyname of player is "human";
+		now bodyname of player is "Human";
 		now body of player is "charmingly human";
 	if skinname of player is listed in infections of hellspawn or skinname of player is "Hellhound":
-		now skinname of player is "human";
+		now skinname of player is "Human";
 		now skin of player is "smooth";
 	if cockname of player is listed in infections of hellspawn or cockname of player is "Hellhound":
-		now cockname of player is "human";
+		now cockname of player is "Human";
 		now cock of player is "";
 	if facename of player is listed in infections of hellspawn or facename of player is "Hellhound":
-		now facename of player is "human";
+		now facename of player is "Human";
 		now face of player is "charmingly human";
 	if tailname of player is listed in infections of hellspawn or tailname of player is "Hellhound":
-		now tailname of player is "human";
+		now tailname of player is "Human";
 		now tail of player is "";
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
-	now bodytype of player is "human";
+	now bodytype of player is "Human";
 	now daycycle of player is 0;
 	if isHellhound is true:
 		say "     Elijah sags onto his bunk with a sad, exhausted sigh, looking pale and tired. 'I tried, my friend, but I do not have the strength to break the pact you entered into with that fel beast. I wish I could help you further, but it is beyond my abilities now. Your reprieve from the effects of the curse will be brief. You shall have to seek proper absolution from your dark choice elsewhere.";

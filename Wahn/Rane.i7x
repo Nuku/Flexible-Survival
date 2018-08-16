@@ -325,6 +325,7 @@ instead of sniffing Rane:
 
 instead of conversing the Rane:
 	LineBreak;
+	project the Figure of Rane_face_icon;
 	say "What do you want to talk with Rane about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

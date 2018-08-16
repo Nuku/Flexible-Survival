@@ -77,6 +77,7 @@ instead of going East from Dark Hallway 2 while a random chance of 1 in 3 succee
 Section 2 - Locker Room Sex
 
 to say MulLockerroomSexMenu:
+	project the figure of Mul_naked_icon;
 	setmonster "Orc Warrior";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -311,6 +312,7 @@ to say MulLockerroomSex7: [BJ and fingering]
 Section 3 - Lair Sex
 
 to say MulFuck1:
+	project the figure of Mul_naked_icon;
 	say "     'My brothers Yatur and Koghh are busy [one of]training with each other[or]giving Orbul a good stuffing[or]outside, having gone for a hunt together[or]fucking some soldiers that are being passed around in the main hall[or]in a brawl[at random], so I guess I've got you all to myself right now.' He chuckles and grips the bulge in his loincloth, continuing with 'Time to please your master Mul, little piggy.' With that, he steps up to you, pulling off your gear and clothing without much restraint or care, just tossing everything aside until you're completely naked before him. His large orc hands grope you all over, roughly squeezing your ass and feeling you up. ";
 	if skinname of player is not "Orc Breeder" and skinname of player is not "Orc Warrior" and skinname of player is not "Hulking Cheerleader":
 		say "'Oh yes, you'll do nicely. I can't wait till you have beautiful green skin on you...'";
@@ -345,6 +347,7 @@ to say MulFuck1:
 		decrease MulAnalAcceptance by 1;
 
 to say MulFuck2: [Mul Fucks the player in the hallway]
+	project the figure of Mul_naked_icon;
 	say "     Mul chuckles and grips the bulge in his loincloth, continuing with 'Time to please your master Mul, little piggy.' With that, he steps up to you, pulling off your gear and clothing without much restraint or care, just tossing everything aside until you're completely naked before him, right there in the hallway. His large orc hands grope you all over, roughly squeezing your ass and feeling you up. ";
 	if skinname of player is not "Orc Breeder" and skinname of player is not "Orc Warrior" and skinname of player is not "Hulking Cheerleader":
 		say "'Oh yes, you'll do nicely. I can't wait till you have beautiful green skin on you...'";
@@ -379,6 +382,7 @@ to say MulFuck2: [Mul Fucks the player in the hallway]
 		decrease MulAnalAcceptance by 1;
 
 to say MulAnal:
+	project the figure of Mul_naked_icon;
 	if MulAnalAcceptance is 0:
 		say "     Kneeling down beside the downed orc, you take hold of his meaty shaft and stroke it a few times, then let your hand wander to his balls. You weigh the hairy globes in your hand and give them an appreciative fondle before you move even lower, sliding your hand between his legs and brushing over his asshole with an exploring finger. As you gently rub the skin around his opening, the Mul starts panting softly from the pleasurable touch, and you can see his manhood grow moment by moment. When you soon do push a finger in against his pucker and probe his hole, the defeated orc warrior doesn't quite realize what you're doing at first - other than that it makes him feel quite interesting.";
 		say "     Though that doesn't last long - shaking off the somewhat dazed state and the lustful haze you've put him in, the orc raises his upper body and grunts, 'Wait - no. Stop that! I'm not a breeder! You're supposed to take MY cock', then tries to get up and brush you off. It's an easy task to stop him from doing so, given that you've just kicked his ass and have a quite powerful orcish physique yourself. With one of your big hands on his chest to hold him down, you lean over the orc and growl at him with bared tusks. That show of strength - plus putting your other hand on his balls and giving them a tight warning squeeze - makes Mul surrender to your pleasure. 'Okay, you win you bastard,' he growls, then lets his head fall back to lie on the ground. Your captive's face scrunches up sullenly as you spread his legs with your hands, though he doesn't resist as you do so.";
@@ -418,6 +422,7 @@ to say MulAnal:
 			increase MulAnalAcceptance by 1;
 
 to say MulAnalRide:[Mul rides the player's cock]
+	project the figure of Mul_naked_icon;
 	say "     Mul chuckles and grips the bulge in his loincloth, continuing with 'You've only gotten me more excited with your struggles, little piggy.' Giving a furtive look up and down the hallway to look if anyone is watching, he then grabs you and drags you into the interrogation room, locking its door after you're both inside and he has switched on the lights. With a lusty grunt, he then starts to pull off your gear and clothing, without much restraint or care, just tossing everything aside until you're completely naked before him. His large orc hands grope you all over, roughly squeezing your ass and feeling you up. ";
 	if skinname of player is not "Orc Breeder" and skinname of player is not "Orc Warrior" and skinname of player is not "Hulking Cheerleader":
 		say "'Oh yes, you'll do nicely. I can't wait till you have beautiful green skin on you...'";
@@ -455,6 +460,7 @@ to say MulAnalRide:[Mul rides the player's cock]
 		increase MulAnalAcceptance by 1;
 
 to say MulBottomAnalRide:[Mul rides the player's cock, or gets fingered]
+	project the figure of Mul_naked_icon;
 	say "     Mul chuckles and grips the bulge in his loincloth, continuing with 'Told ya that you don't have a chance against a real orc. Only gotten me more excited with your struggles, little piggy.' Giving a look to the wide-open sliding door of your little fighting arena, he drags you over behind the car that was in the garage as the nanite plague hit. With a lusty grunt, he then starts to pull off your gear and clothing, without much restraint or care, just tossing everything aside until you're completely naked before him. His large orc hands grope you all over, roughly squeezing your ass and feeling you up. 'Oh, I'm gonna enjoy taking you!'";
 	if player is submissive: [sub players]
 		say "     Pulling the ragged fabric of his loincloth aside, Mul shows you his thick and meaty cock, then puts a hand on your shoulder and pushes down, making you kneel. He softly whacks his thick green shaft against your forehead and grabs your hair tightly, pulling your head against his balls. Following the barked order of 'Lick them!', you obediently lap away at his hairy globes, your pulse racing as the rough treatment plays right into your submissive nature. Doing your best to please him, you take as much as you can of one, then the other ball into your mouth your tongue, playing over them and seeking out sensitive spots - which earns you a satisfied grunt from your orc master. He even lets go of your hair and actually smiles down at you, then says 'Good, that's a proper little slave. Ready to please. Now why don't you hold them with your hands and...'";
@@ -508,12 +514,14 @@ to say MulBottomAnalRide:[Mul rides the player's cock, or gets fingered]
 		increase MulAnalAcceptance by 1;
 
 to say ObservationRoomFuckMulAnal:
+	project the figure of Orbul_naked_icon;
 	say "     Looks like just sitting around in here and waiting really does pay off - as the door to the interrogation room suddenly opens and two persons enter. The first of them reaches out and flips a switch on what you now recognize as a portable and battery-powered spotlight standing against a wall, bathing the room in light, which allows you to recognize your orc 'play-mate' Mul and a smaller, less brutish orc - a breeder slave. The mighty orc warrior throws the door shut and walks over to a couch, undoing his loincloth and then letting himself fall into it. He sits there with spread legs and grins as the other orc kneels before him and starts to worship his manhood, gently handling his thick cock and the weighty globes of his balls. Mul leans his head back, grunting and moaning loudly as his obedient slave goes down on him.";
 	say "     Letting your eyes wander through the room, you find it comfortably equipped with two leather couches along the walls, as well as another of the sturdy fuck-benches you already know from the cells - though this one sports some leather restraints at strategic places. Strewn about the room are quite a few sex toys in various shapes and sizes, and a corner holds a whole pile of lube bottles. The orcs certainly stocked their lair well - they must have ransacked more than one porn store to get all this.";
 	LineBreak;
 	say "     Do you want to watch what happens next in the interrogation room?";
 	if player consents:
 		LineBreak;
+		project the figure of Mul_naked_icon;		
 		say "     You watch the breeder slave worship Mul's cock, lapping at it and suckling on the thick head while massaging Mul's weighty balls. Even though a bit smaller in comparison to the brutish orc warrior, the green-skinned man kneeling between Mul's legs is quite a sight to behold himself - with an enviable stature and trained muscles to compliment his dashing good looks and flowing black hair. Even the 'pretty-boy' orcs are fit enough to make a good showing with the best of regular humans in a fitness studio. And his ass is simply a top's dream - presented in all its rounded, grope-able glory as he kneels, with the emerald green ring of his pucker winking in anticipation of taking a thick orc cock. A small trickle of white from the inviting hole shows that he's been fucked today already - and maybe a few times, at that.";
 		say "     Mul gets serviced expertly by his green-skinned slut, but even so you notice that he's not fully hard yet - his thick prick falling short of the raging pillar you've had in your hands before. Could it be that he's... Your thoughts are interrupted by the big orc grunting, 'Orbul! Go - go lock the door.' As the breeder raises his head from nuzzling against Mul's balls to look at him curiously, Mul reaches to his loincloth and fumbles with a knotted strap holding the key before impatiently just snapping the leather band and thrusting it into Orbul's hand. Nothing if not obedient, the smaller orc immediately goes to the entrance and locks it with a definite click, then returns to his master and gets back to kneeling on the floor, looking up at him expectantly, waiting for his next command.";
 		WaitLineBreak;
@@ -522,6 +530,7 @@ to say ObservationRoomFuckMulAnal:
 		WaitLineBreak;
 		say "     Your trip along memory lane is cut short as Orbul sucks one of Mul's balls into his mouth while rubbing against his prostate at the same time - creating another of those precum-spurts that arches up higher this time, creating a white dash on the orc warrior's left pec. Eager to slurp up the tasty treat, Orbul immediately stretches forward, bracing himself on Mul's abs and running his tongue over the firm flesh of his muscled chest. Then, just as he gets to the bigger orc's cum-streaked nipple, Orbul's own cock nudges against Mul's back door. Fearfully, Orbul looks up and meets his master's eye - but after a second or two, Mul just runs his hand through the breeder's hair and pulls tight against his chest with a lusty grunt. Lips pressed to the bigger orc's nipple, sucking on it and giving a teasing nibble, Orbul thrusts his hips forward, sinking his manhood into Mul.";
 		if a random chance of 1 in 2 succeeds:
+			project Figure of OrcWarrior_random_icon;
 			say "     You watch the two men in the other room start fucking in their unconventional pairing, getting more and more aroused yourself - until suddenly, a large hand pushes against your back, pinning you against the window, face pressed against the cool glass. As you struggle and try to turn around, your arms are quickly caught and twisted behind your back. From the corner of your eye, you see that it's a pretty big and muscled orc who holds your wrists tightly. He must have entered the observation room while you were busy watching Mul and his breeder. 'I knew I heard something from in here,' a deep voice says into your ear, then gives a snort of amusement as the green-skinned warrior looks past you. 'Hah - I knew Orbul was Mul's favorite, but... look at that. The supposedly proud orc giving it up to a slave. Who'd have thought that the moans and whimpers coming out of there were his!'";
 			WaitLineBreak;
 			say "     With that the orc grabs your head and makes you look at the two orcs in the other room again, where Orbul's full balls are rapidly whacking against another male's buttocks - an everyday occurrence in this orc lair... if it was the other way around. But no, this time one of the powerful orc brutes is taking it up the rear, moaning like a needy bitch. A sense of pride fills you as you watch Mul being fucked - and fucked hard, as the orc breeder finds his pace. You broke the mighty orc in to taking a cock up his ass, and now he's even letting his slave do him. Your captor grunts 'They do give a nice show, definitively... maybe I should introduce that big pansy to my shaft too. Wrestle Mul to the ground and pound him in the great hall like the breeder he is! He'll be my bitch and I'll be able to rake in lots of loot from the others, making them pay to fuck the biggest, baddest... bottom slut of an orc!'";
@@ -562,6 +571,7 @@ to say ObservationRoomFuckMulAnal:
 		increase MulAnalAcceptance by 1;
 
 to say ObservationRoomFuck:
+	project the Figure of Orbul_naked_icon;
 	if player is submissive: [sub players]
 		say "     Looks like just sitting around in here and waiting really does pay off - as the door to the interrogation room suddenly opens and two persons enter. The first of them reaches out and flips a switch on what you now recognize as a portable and battery-powered spotlight standing against a wall, bathing the room in light, which allows you to recognize your orc master Mul and a smaller, less brutish orc - a breeder slave. The mighty orc warrior throws the door shut and walks over to a couch, undoing his loincloth and then letting himself fall into it. He sits there with spread legs and grins as the other orc kneels before him and starts to worship his manhood, gently handling his thick cock and the weighty globes of his balls. Mul leans his head back, grunting and moaning loudly as his obedient slave goes down on him.";
 	else:
@@ -571,6 +581,7 @@ to say ObservationRoomFuck:
 	say "     Do you want to watch what happens next in the interrogation room?";
 	if player consents:
 		LineBreak;
+		project the Figure of OrcWarrior_random_icon
 		say "     You watch the two men in the other room have oral sex and listen to their moans, until suddenly - a large hand pushes against your back, pinning you against the window, face pressed against the cool glass. As you struggle and try to turn around, your arms are quickly caught and twisted behind your back. From the corner of your eye, you see that it's a pretty big and muscled orc who holds your wrists tightly. He must have entered the observation room while you were busy watching Mul and his breeder. 'I knew I heard something from in here,' a deep voice says into your ear, then continues, 'Do you enjoy watching Orbul please his master? Maybe want to be in his place?' With that the orc grabs your head and makes you look at the two orcs in the other room again, where Orbul by now has the tip of Mul's cock in his mouth and is eagerly sucking on it. Your captor grunts 'They do give a nice show, definitively...'";
 		if player is submissive: [sub players]
 			say "     A moment later, you start feeling something big press against your butt - the orc's cock, getting hard as he watches the action in the interrogation room. Lowering his hand from your head to squeeze your butt, the orc says 'Let's have some fun too then - you do want me to fuck you, don't you?' As this plays perfectly into your desires to be dominated and used by such a strong, virile male, you loudly moan yes and rub your ass against his erection. 'Such an eager little slut,' the orc chuckles, then lets go of your arms to allow you to push your pants down. Leaning forward, your shoulder against the one-way mirror, you reach back and spread your cheeks, waiting for the orc warrior to take you. ";
@@ -621,6 +632,7 @@ instead of navigating Grey Abbey Library while ((MulAnalAcceptance > 8) and (las
 		say "     You're the one who holds all the cards here, and if you don't feel like giving the brute a good pounding... he'll just have to get his rocks off somewhere else. With a somewhat cruel grin on your face, you reject the orc's offer and tell him to fuck off. Snarling, Mul stalks away, still with the dildo in his hand.";
 
 to say MulLibrarySexMenu:
+	project the Figure of Mul_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

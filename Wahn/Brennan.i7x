@@ -821,7 +821,7 @@ When Play begins:
 	now loot entry is "";              [ Loot monster drops, ]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "human";
+	now body descriptor entry is "Human";
 	now type entry is "human";
 	now magic entry is false;
 	now resbypass entry is false;

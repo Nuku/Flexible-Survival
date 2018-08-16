@@ -205,7 +205,7 @@ A person has a list of text called conversation.
 [See the BFandI extension for an explanation on these new variables.]
 A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
-The player has a text called bodytype. The bodytype is usually "human".						[broad adjective for species]
+The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
 
 freecred is a number that varies.
@@ -408,11 +408,11 @@ Definition: A person (called x) is pure:
 	no;
 
 Definition: A person (called x) is purehuman:
-	if bodyname of player is "human" or bodyname of player is "herm human":
-		if facename of player is "human" or facename of player is "herm human":
-			if tailname of player is "human" or tailname of player is "herm human":
-				if skinname of player is "human" or skinname of player is "herm human":
-					if cockname of player is "human" or cockname of player is "herm human":
+	if bodyname of player is "Human" or bodyname of player is "Herm Human":
+		if facename of player is "Human" or facename of player is "Herm Human":
+			if tailname of player is "Human" or tailname of player is "Herm Human":
+				if skinname of player is "Human" or skinname of player is "Herm Human":
+					if cockname of player is "Human" or cockname of player is "Herm Human":
 						yes;
 	no;
 
@@ -3793,7 +3793,7 @@ This is the turnpass rule:
 			now z is z;
 		else:
 			now z is 1;
-		if bodyname of player is "human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
+		if bodyname of player is "Human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -3960,11 +3960,11 @@ This is the turnpass rule:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
 			now the morale of the player is maxmorale;
 	let corruption be 0;
-	if skinname of player is not "human", increase corruption by a random number from 0 to 1;
-	if cockname of player is not "human", increase corruption by a random number from 0 to 1;
-	if bodyname of player is not "human", increase corruption by a random number from 0 to 1;
-	if tailname of player is not "human", increase corruption by a random number from 0 to 1;
-	if facename of player is not "human", increase corruption by a random number from 0 to 1;
+	if skinname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if cockname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if bodyname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if tailname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if facename of player is not "Human", increase corruption by a random number from 0 to 1;
 	if corruption > 0:
 		if "Weak Psyche" is listed in feats of player:
 			increase corruption by a random number from 0 to 1;
@@ -4033,15 +4033,15 @@ This is the brain descr rule:
 	else if humanity of player > 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
 	else if humanity of player > 30:
-		if facename of player is not "human":
+		if facename of player is not "Human":
 			now descr is "increasingly [facename of player] perspective[lusting]";
-		else if bodyname of player is not "human":
+		else if bodyname of player is not "Human":
 			now descr is "increasingly [bodyname of player] perspective[lusting]";
-		else if skinname of player is not "human":
+		else if skinname of player is not "Human":
 			now descr is "increasingly [skinname of player] perspective[lusting]";
-		else if cockname of player is not "human":
+		else if cockname of player is not "Human":
 			now descr is "increasingly [cockname of player] perspective[lusting]";
-		else if tailname of player is not "human":
+		else if tailname of player is not "Human":
 			now descr is "increasingly [tailname of player] perspective[lusting]";
 		else:
 			now descr is "increasingly corrupted perspective[lusting]";
@@ -4277,9 +4277,9 @@ This is the self examine rule:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state. ";
-		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 1 and player is impreg_able and cockname of player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat. ";
-		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 3 and player is impreg_able and cockname of player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you. ";
 	if "Angie's Mate" is listed in feats of player:
 		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
