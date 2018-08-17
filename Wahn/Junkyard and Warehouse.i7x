@@ -1,5 +1,6 @@
 Version 3 of Junkyard and Warehouse by Wahn begins here.
-[ Version 3 - Rework by Wahn]
+[ Version 3.0 - Rework - Wahn              ]
+[ Version 3.1 - Removed danger door - Song ]
 [- Originally Authored By: Rimme -]
 
 [ StevenSwayed - Soda for Steven              ]
@@ -16,19 +17,18 @@ The earea of Abandoned Lot is "Outside".
 the description of Abandoned Lot is "[LotDesc]".
 
 to say LotDesc:
-	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
-	say "A road leads east between the buildings. You can make out the entrance to a junkyard there";
+	say "     In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
+	say "     A road leads east between the buildings. You can make out the entrance to a junkyard there.";
 
-Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
+Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints - human footprints, in fact! - leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 
-Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. West of Lot Exit is Outside Exploration.
 South of Abandoned Lot is Warehouse Door.
 
 instead of sniffing Abandoned Lot:
 	say "This area smells of dry earth, old machinery and oil.";
 
 instead of sniffing Warehouse Door:
-	say "This area smells old machinery and oil, and behind that, faintly of human beings.";
+	say "This area smells of old machinery and oil, and behind that, faintly of human beings.";
 
 Section 2 - Entering the Warehouse
 
@@ -134,7 +134,7 @@ Instead of going south from the Abandoned Lot:
 						say "     Do you give him a bottle of soda?";
 						if player consents:
 							LineBreak;
-							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly clloses the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
+							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly closes the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
 							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
 							delete soda;
 							move player to Storage Room;
