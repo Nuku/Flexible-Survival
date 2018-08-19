@@ -79,12 +79,15 @@ to say beatthePegasus:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pegasus"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The pegasus rushes forward to kick you with its cloven hooves![or]The pegasus flies up into the sky and then shoots some of its needle-like feather down onto you![or]The pegasus batters you as it knocks you down with its head and then stomp viciously onto your chest![or]The pegasus flies up into the sky and then power-dives into you![or]The pegasus raises up onto its back hooves and then flaps its wings hard enough to send a gale of wind shooting at you![or]The pegasus pushes up into the sky and then folds its wings tight before spinning. Sadly in its descent it directs itself unswervingly towards you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthePegasus]"; [ Text when monster loses. Change 'Pegasus' as above. ]
 	now victory entry is "[losetoPegasus]"; [ Text when monster wins. Change 'Pegasus' as above. ]

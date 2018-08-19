@@ -38,13 +38,16 @@ to say MushroomMenFaceTF:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mushroom Men"; [ Infection/Creature name. Capitalized. ]
+	now name entry is "Mushroom Man"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "Mushroom Men";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The group cheers as several of their members run out towards you, shouting lewd comments and offers as they strikes at your lower body.[or]Several of the larger mushrooms grab one of their smaller brethren and toss him at you. [']How [']bout a kiss hun?['] shouts the flying mushroom man, just before he bounces off your face.[or]Several of the larger mushrooms grab one of the smaller members of their group and fling him at you, much to his disapproval. He makes several rude comments and gestures at his brethren as he flies through the air before bouncing off the top of your head.[or][']Why don't you let us show you a good time hot stuff?['] one of the mushrooms asks with a smirk, before several of them leap out of the pack and grab onto your legs, pinching and squeezing you wherever they can.[or]There is a sharp wolf whistle behind you, and you realize some of the group have split off to flank you. Before you have a chance to react several fungi from each group are launched into the air towards you. While most of them miss their target, one lands safely on your shoulder, grabbing your face and pulling you into a rough kiss before you can shake him off.[at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheMushroomMen]"; [ Text when monster loses. ]
 	now victory entry is "[losetoMushroomMen]"; [ Text when monster wins. ]

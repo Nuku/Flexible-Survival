@@ -10,10 +10,10 @@ koboldgangmet is a number that varies.
 koboldgangsubs is a number that varies.
 
 when play begins:
-	add { "Kobold Gang" } to infections of guy;
-	add { "Kobold Gang" } to infections of Tailweapon; [usable for Tail Strike feat]
-	add { "Kobold Gang" } to infections of Reptilelist; [list of reptile infections]
-	add { "Kobold Gang" } to infections of Internallist;
+	add { "Kobold" } to infections of guy;
+	add { "Kobold" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Kobold" } to infections of Reptilelist; [list of reptile infections]
+	add { "Kobold" } to infections of Internallist;
 
 to say koboldgangdesc:
 	if koboldgangmet is 0:
@@ -34,7 +34,7 @@ to say koboldgangdesc:
 
 to say losetokoboldgang:
 	if hp of player > 0:
-		if bodyname of player is "Kobold Gang" and player is pure:
+		if bodyname of player is "Kobold" and player is pure:
 			say "     You surrender to the group of kobolds, your submissive instincts too strong to ignore. The leader of the gang orders the others to cease fighting. 'Glad to know you see how things work around here!' he praises, walking toward you with a smirk on his muzzle. The pale blue kobold begins to undress you, making sure to sensually stroke your sensitive body with every deliberate movement. 'Why do you wear these rags? It is much better to show off your body. You have wonderful assets,' he murmurs, giving your pert rear a lecherous squeeze. You dimly realize that your tail is raising on its own accord when a light breeze tickles your rear. You know you should feel embarrassed, you know you should feel some sense of shame, but you can't help but feel pride in the fact that every kobold in the area's eyes are locked on your needy, submissive body, all of them thinking of different ways to use you.";
 			say "     The kobold gently guides you to your knees, running his claws lightly over your frame. The tips of his fingers send tingles of pleasure down your body, fogging your mind further with lust. 'Oh, yes, you turned out nicely. See what happens when you do what you're told? Yes, you're rewarded nicely...' he murmurs, as he positions himself behind you. The kobold brings his muzzle to your rear, and you feel his warm tongue lapping against your ass. His tapered tongue runs against your anus, moving around its outer edges and working its way inward. Your anus clenches, the sensitive nerves quaking in pleasure at the kobold's expert rimjob. His tongue pushes inward, probing your depths, filling you with the warmth of his tongue. His tongue explores inside of you, both teasing and preparing you. You feel the tip of his tongue reach your prostate, causing you to audibly moan in pleasure. The kobold pulls his tongue out, leaving your ass feeling hollow.";
 			say "     The kobold stands, his cock fully exposed from his genital slit. The tip of his cock pokes at your rear entrance, causing you to whine impatiently. He grips your rear, and begins inserting himself into your aching entrance. Your ass easily takes his length, stretching to accommodate him without any discomfort. His cock feels wonderful in you, as if your ass is shaped exactly to take his draconic shaft. Your sensitive nerves alight with pleasure as you are filled, and your clawed hands dig into the ground below you. Another colorful kobold approaches your front, his twitching cock leaking with pre. Your muzzle opens without effort, allowing him to stick his shaft into your waiting mouth. You close your jaw around his cock, allowing the male to thrust into your long muzzle. Being filled from both ends, you quiver in pleasure as you are fucked hard by the kobolds. Every thrust from behind tickles your prostate, and the musky taste of the cock in your mouth is delicious. You run your tongue over the smooth shaft, enjoying the flavor of his pre.";
@@ -56,7 +56,7 @@ to say losetokoboldgang:
 			WaitLineBreak;
 			say "     You eventually wake up, but find yourself not to be in the middle of the street. You are in an empty living room that has been cleared of furniture. You are still naked, and covered in slightly warm cum at every inch of your body. In the corner of the room are your clothes, gear, and a note. You quickly attempt to brush off the cum, but know the damage has already been done. You finally are mostly dry, and grab your clothes, gear, and the note. You read the note to yourself, and find it addressed to you from the apparent leader of the kobolds. He tells you that you are now marked as one of them, and that your calling is with them. He commands you to seek them out once again and to submit to their whims. You crumple up the note, thinking about how the next time you see them, you'll give them a pummeling.[movichance]";
 	else:
-		if bodyname of player is "Kobold Gang" and player is pure:
+		if bodyname of player is "Kobold" and player is pure:
 			if player is herm:
 				say "     You are struck down, unable to keep up with all of the little kobolds. You look up, as their blue-scaled leader looks down at you with scorn. 'You shouldn't resist what is natural. You are one of us now, and should act like it,' he states coldly. He looks around to the other kobolds, and waves his hand. 'Have your way with him, everyone,' he commands, as the other kobolds cheer. You gulp at his words, fearing that these impish reptiles intend to violate every part of your body. The kobolds grope and squeeze your curves with lecherous abandon, rubbing their thin hands along your skin, their claws just dull enough to avoid scratching you. While uncomfortable at first, the sensation of being manhandled by all these little creatures begins to grow increasingly enjoyable, and even pleasurable to your battle-battered mind, some small part of you lusting for their contact.";
 				say "     You feel a ticklish warmth caress your pucker. Looking down, you spot the muzzle of a teal-colored kobold dipping between your legs, a mischievous look on his muzzle. He leans in close to nip at your ring before his long, tapering tongue extends, that nimble surface sweeping wetly over your the sensitive nerves of your anus. Tender sweeps give way to lustful licking, and before long he's boring that muscle into your depths, colon clenching taut around its spit-slick intruder. Your eyes roll back into your head as that avid creature explores your deepest reaches, probing at your anal lining with ravenous enthusiasm, almost devouring your ass with wanton lascivity. You shudder when his focus narrows to your prostate, deftly rubbing and grinding along that gland with practiced precision, eroding your mind with every wanton stroke.";
@@ -156,7 +156,7 @@ to say losetokoboldgang:
 				say "     You eventually wake up, but find yourself not to be in the middle of the street. You are in an empty living room that has been cleared of furniture. You are still naked, and covered in slightly warm cum at every inch of your body. In the corner of the room are your clothes, gear, and a note. You quickly attempt to brush off the cum, but know the damage has already been done. You finally are mostly dry, and grab your clothes, gear, and the note. You read the note to yourself, and find it addressed to you from the apparent leader of the kobolds. He tells you that you are now marked as one of them, and that your calling is with them. He commands you to seek them out once again and to submit to their whims. You crumple up the note, thinking about how the next time you see them, you'll give them a pummeling.[movichance]";
 
 to say beatthekoboldgang:
-	if bodyname of player is "Kobold Gang" and player is pure and player is male:
+	if bodyname of player is "Kobold" and player is pure and player is male:
 		say "     The last kobold, the leader with the blue scales, shakes as he falls to the ground on his back. 'This is... inconceivable! We were all beaten by a whelp like... you,' he groans. An idea comes to your head, that maybe you could show their 'leader' his place by taking him right here and now.";
 		say "     [bold type]Do you fuck their leader?[roman type][line break]";
 		LineBreak;
@@ -177,13 +177,16 @@ to say beatthekoboldgang:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Kobold Gang"; [ Infection/Creature name. Capitalized. ]
+	now name entry is "Kobold"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "Kobold Gang";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]One of the kobolds beans you in the head with a nearby rock![or]One of the kobolds jumps at you from behind, clawing at you![or]The kobolds take turns battering you with rubble![or]One of the kobolds leaps at you in the air, tackling you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthekoboldgang]";
 	now victory entry is "[losetokoboldgang]";
@@ -233,7 +236,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Kobold Gang":
+	if bodyname of player is "Kobold":
 		if humanity of player < 10:
 			say "You succumb to your instincts, casting off your humanity to the infection. You abandon your clothes, seeking out your kobold brethren. They eagerly welcome you, using your body until you are just another kobold in their ranks. Eventually you forge a strong bond with your kobold family, and learn all of the tricks of the trade. When the military storms in, you all are prepared. Many soldiers enter the red light district, but you and your family ambush them time and time again, trapping the soldiers and breeding them until they are just another set of horny, submissive kobolds. As your family grows, the orgies only grow more frequent. A day doesn't roll by without you and the other lower-tiered kobolds are filled by many other kobolds, but you wouldn't have it any other way.";
 		else:

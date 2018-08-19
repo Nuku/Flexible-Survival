@@ -566,7 +566,7 @@ to say ArenaFightCheck:
 		now description entry is "a mythological monstrocity";
 	if furry is not banned and girl is not banned:
 		choose a blank row in table of fucking options;
-		now title entry is "Great Dane Rouge";
+		now title entry is "Great Dane";
 		now sortorder entry is 4;
 		now description entry is "a female canine fighter";
 	if furry is not banned and hermaphrodite is not banned:
@@ -599,9 +599,9 @@ to say ArenaFightCheck:
 				else if nam is "Minotaur":
 					say "The beefy minotaur standing off to the side with his arms cross snorts as he turns to look decisively at you.";
 					challenge "Minotaur";
-				else if nam is "Great Dane Rouge":
+				else if nam is "Great Dane":
 					say "The unfamiliar Dane mutant growls at you while popping her neck from side to side. When she lifts up her lips to show you an impressive display of canines you gulp as you wonder what the hell have you gotten yourself into.";
-					challenge "Great Dane Rouge";
+					challenge "Great Dane";
 				else if nam is "Alpha Husky":
 					say "The alpha husky growls playfully as he looks over you with expectant eyes. He seems to think you're going to outright submit to him... but he's about to be proven wrong.";
 					challenge "Alpha Husky";

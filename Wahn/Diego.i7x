@@ -1015,6 +1015,7 @@ to say DCollarUse:
 		say "     Looking at the collar, you can't help but wonder how it would feel to have it on. Surely Diego won't mind if you try it on for just a little while, right? Lifting the leather band to your neck, you fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
 		now diego's heirloom collar is equipped;
 
+[
 instead of navigating Park Entrance while (XP of Diego is 98 or XP of Diego is 3 or XP of Diego is 4):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
@@ -1059,5 +1060,6 @@ to say DiegoCollarAftermath:
 	else:
 		LineBreak;
 		say "     <Scene for choice B>";
+]
 
 Diego ends here.

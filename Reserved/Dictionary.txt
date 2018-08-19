@@ -2397,8 +2397,8 @@
 |Nuku Valente|Drone Wasp|20140908213124/1817:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Drone Wasp|dronevict|value|
 |Kaleem Mcintyre|Blob|20140908213124/1095:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|bandage|Grab Object|
+|Kaleem Mcintyre|Great Dane|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
+|Kaleem Mcintyre|Great Dane|bandage|Grab Object|
 |Stripes|Hyperskunk|20140908213124/2671:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Female Husky|20140908213124/2755:Mon 8 September 2014 21:31|indexing|
 |Kohryu|Yamato Dragon|20140908213124/15740:Mon 8 September 2014 21:31|indexing|

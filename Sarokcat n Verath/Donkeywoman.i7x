@@ -78,12 +78,15 @@ To say Donkeywoman loses:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Donkeywoman";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The sexy donkeywoman lets out a loud braying laugh as she mocks your attempt to escape, the sound making you feel surprisingly submissive.[or]She lashes out at you with her short riding crop, its stinging bite making you feel strangely more submissive with each strike.[or]She reaches out and traces the tip of her whip over your skin teasingly, the touch of the soft leather making you shudder with desire.[or]She raises her whip to strike at you, and as you duck away, her other hand lashes out at you and strikes you square in the face, knocking you back![or]She strides forward confidently, describing lovingly just what kind of strangely sexy bondage games she has in store for you, her words making you shudder slightly with a strange desire to give in to the powerful female and let her have her way with you.[or]She charges right at you and twists aside at the last second, bringing her hand around to grab at your crotch teasingly.[at random]";
 	now defeated entry is "[Donkeywoman loses]";
 	now victory entry is "[Donkeywoman wins]";

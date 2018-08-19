@@ -44,12 +44,15 @@ To say Mareslut loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mareslut";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She rubs her large sexy breasts teasingly as she slides up against you.[or]The mare reaches out and strokes her hands over your body teasingly[or]The powerful mare moves surprisingly fast as she slams one of her hoof-like fists into your body![or]The sexy mare charges forward, running right into you![or]She gives you an equine grin for a minute, confusing you slightly, as she slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show.[or]The mare reaches out with her powerful arms, and tries to pin you up against her sexy body, rubbing her soft fur all over your skin as she moans with excitement![or]She charges forward, and her hoof-like hands reach around your head, and pull you forward until your face is buried in her ample cleavage while she moans with excitement as she rubs her soft breasts up against your face.[at random]";
 	now defeated entry is "[Mareslut loss]";
 	now victory entry is "[Mareslut attack]";

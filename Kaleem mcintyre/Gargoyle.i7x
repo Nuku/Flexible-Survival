@@ -69,57 +69,60 @@ To say gargoyle loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-		Choose a blank row from Table of random critters;
-		now name entry is "Gargoyle";
-		now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A gray arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]";
-		now defeated entry is "[gargoyle loss]";
-		now victory entry is "[gargoyle attack]";
-		now desc entry is "[gargoyledesc]";
-		now face entry is "coal eyes shine inside of your head while finely cut lines shape your strong gray face into something almost ruggedly handsome in appearance";
-		now body entry is "leather wings flap at your backside, giving your tightly packed musculature some extra added mobility, while in front your precisely cut pectorals stand forward onto your chest only to trail smoothly down south to your thick six packed abs. Down a long ways further your well polished thighs, legs and digitigrade clawed feet keep you mobile as you stand rigidly in place while looking yourself over";
-		now skin entry is "[one of]shiny gray[or]marble-like[or]densely tightened, ashen gray[at random]";
-		now tail entry is "You have a dexterous and meaty serpentine tail which seems to have a mind of its own. It is covered in [skin of player] hide and whips behind you in boredom.";
-		now cock entry is "[one of]gargoyle[or]demonic[or]unyielding[at random]";
-		now face change entry is "a slight feeling of pain goes through your skull as your face reforms itself to become harder and more rigid like that of a gargoyle while turning sharp and angular in all the right places. Your eyesight seems to dim a little as coal black orbs frame your former irises";
-		now body change entry is "your insides twist subtly as your inner organs reform themselves, your muscles becoming more dense while your bones thicken as your body hardens into a mirror image of that of a gargoyle";
-		now skin change entry is "gray ashen skin covers you from head down to toe as your color seems to almost bleach itself out of your body while at the same time becoming thicker and more dense in turn";
-		now ass change entry is "a long and serpentine tail snakes itself free from your rump, curling and then straightening only to lash sharply out at the world";
-		now cock change entry is "your shaft lengthens with a slow a tedious pressure, growing full and ready to be used to hammer anyone foolish enough to try and tackle you in the mating area. The flesh soon becomes smooth in texture while at the same time gaining the force of a battering ram as it stretches down closer to your knees";
-		now str entry is 20;
-		now dex entry is 15;
-		now sta entry is 24;
-		now per entry is 12;
-		now int entry is 08;
-		now cha entry is 11;
-		now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-		now HP entry is 123;
-		now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-		now wdam entry is 12; [ Amount of Damage monster Does when attacking. ]
-		now area entry is "Outside";
-		now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-		now cock length entry is 14; [ Length infection will make cock grow to if cocks]
-		now cock width entry is 10; [ Size of balls ]
-		now breasts entry is 0; [ Number of Breasts infection will give you. ]
-		now breast size entry is 0; [Size of breasts infection will try to attain ]
-		now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-		now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-		now cunt length entry is 0;
-		now cunt width entry is 0;
-		now libido entry is 52; [ Amount player Libido will go up if defeated ]
-		now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-		now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-			now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-		now body descriptor entry is "[one of]well-built[or]muscular[or]rugged[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "muscled" "gelatinous" "slender". Use [one of] to vary ]
-		now type entry is "[one of]gargoyle[or]demonic[at random]";
-		now magic entry is false;
-		now resbypass entry is false;
-		now non-infectious entry is false;
-		blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-		now altcombat entry is "default";
+	Choose a blank row from Table of random critters;
+	now name entry is "Gargoyle";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A gray arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]";
+	now defeated entry is "[gargoyle loss]";
+	now victory entry is "[gargoyle attack]";
+	now desc entry is "[gargoyledesc]";
+	now face entry is "coal eyes shine inside of your head while finely cut lines shape your strong gray face into something almost ruggedly handsome in appearance";
+	now body entry is "leather wings flap at your backside, giving your tightly packed musculature some extra added mobility, while in front your precisely cut pectorals stand forward onto your chest only to trail smoothly down south to your thick six packed abs. Down a long ways further your well polished thighs, legs and digitigrade clawed feet keep you mobile as you stand rigidly in place while looking yourself over";
+	now skin entry is "[one of]shiny gray[or]marble-like[or]densely tightened, ashen gray[at random]";
+	now tail entry is "You have a dexterous and meaty serpentine tail which seems to have a mind of its own. It is covered in [skin of player] hide and whips behind you in boredom.";
+	now cock entry is "[one of]gargoyle[or]demonic[or]unyielding[at random]";
+	now face change entry is "a slight feeling of pain goes through your skull as your face reforms itself to become harder and more rigid like that of a gargoyle while turning sharp and angular in all the right places. Your eyesight seems to dim a little as coal black orbs frame your former irises";
+	now body change entry is "your insides twist subtly as your inner organs reform themselves, your muscles becoming more dense while your bones thicken as your body hardens into a mirror image of that of a gargoyle";
+	now skin change entry is "gray ashen skin covers you from head down to toe as your color seems to almost bleach itself out of your body while at the same time becoming thicker and more dense in turn";
+	now ass change entry is "a long and serpentine tail snakes itself free from your rump, curling and then straightening only to lash sharply out at the world";
+	now cock change entry is "your shaft lengthens with a slow a tedious pressure, growing full and ready to be used to hammer anyone foolish enough to try and tackle you in the mating area. The flesh soon becomes smooth in texture while at the same time gaining the force of a battering ram as it stretches down closer to your knees";
+	now str entry is 20;
+	now dex entry is 15;
+	now sta entry is 24;
+	now per entry is 12;
+	now int entry is 08;
+	now cha entry is 11;
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 123;
+	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 12; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Outside";
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 14; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 10; [ Size of balls ]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 52; [ Amount player Libido will go up if defeated ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]well-built[or]muscular[or]rugged[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "muscled" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "[one of]gargoyle[or]demonic[at random]";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";
 
 
 when play ends:

@@ -870,12 +870,15 @@ instead of sniffing Jason:
 Section 4 - Infection for combat purposes
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Orc Boss"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "Boghrim";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]Boghrim[or]The powerful orc[or]The green-skinned brute[or]The muscular orc[or]The brutish orc[or]The muscled brute[at random] [one of]throws himself on you, pushing you down on the mattress. You can feel his erect cock rub against your side hotly before you manage to wind your way out of his grasp.[or]gets a grip on your shoulder and pushes you down, putting you on all fours with your ass raised. When you feel one of this thick fingers brush over your asshole an eye-blink later, you barely manage to crawl away before he starts to finger-fuck you.[or]grabs you by the neck, pulling your head down against his crotch. His cock rests hotly against your cheek for a moment, leaving a string of precum when you manage to pull away.[or]gives you a light slap that dazes you for a second, then lets his large hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";
 	now defeated entry is "[line break]";
 	now victory entry is "[line break]";

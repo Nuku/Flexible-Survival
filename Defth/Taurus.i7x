@@ -6,12 +6,15 @@ to say taurusdesc:
 	say "     You spot a bull running around the plains and seemingly looking for something. His shaggy fur is coal-black, absorbing all of the colors of the [if daytimer is day]sun[else]moon[end if]. The bovine would be a giant, ebony block of muscles if it weren't for his silvery horns that almost seem to gleam with thirst for a victim. By his figure, you guess that the beast was used for breeding or exposition on some farm. His muscles - surely already plentiful even before the nanite apocalypse – have grown to an enormous bulk, making him look like a giant of his species, standing almost six foot tall on all fours. Between his legs, you can glimpse a mighty sack that was made to breed any cow with just one try, and his spear-like penis casually pokes out of his sheath, clearly hungering for a nice pussy. This bull is looking for someone to breed, and apparently, he doesn't differentiate much between candidates as he turns to you. Hitting the ground with mighty hooves, the oxen gets ready to run you down. Lowering his head to bring his horns into play, he charges a moment later, eager to beat and breed you. Looks like this fight won't be easy.";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Taurus";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The mighty bull charges at you.[or]Swinging his horns, the bull tries to impale you on their pointy ends.[or]He takes a step back, tensing his muscles, then charges at you.[or]The bull groans and moos like a mad cow before going for a frantic attack.[or]The bull's horns gleam with ecstasy as he readies his next attack, then tries to spear you with one of them, giving you a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[tauruslost]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

@@ -201,12 +201,15 @@ to say vgeckosex_06:		[oral - pussy]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Voodoo Gecko"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The voodoo shaman thrusts her voodoo doll forward and a swirling purple glow shoots from its eyes and blasts you![or]The gecko lunges forward in a spinning dance, striking you across the face with her tail with a hard slap![or]The shemale leaps onto you, pressing her oversized breasts into your face and quickly chants while smooshing you with them.[or]Pulling the needles from her doll, she jabs you in the thigh with them![or]With her chanting growing fast and low, she waves her doll in the air and darkness swirls around you. Unseen shapes in the cloud grab and grope at you, trying to pull you down even as they excite you, making your self-control wane.[or]With a twist of her body, she wriggles around behind you to grind her erection firmly against your rear.[or]Grabbing your face with her clinging hand, she chants something low and dark while drawing a pattern over your heart with cum. A chillness fills your chest even as a heat rises in your loins.[at random]";
 	now defeated entry is "[beatthevoodoogecko]";
 	now victory entry is "[losetovoodoogecko]";

@@ -355,7 +355,7 @@ carry out InfectionOverview:
 		now skin of player is the skin entry;
 		now body of player is the body entry;
 		now cock of player is the cock entry;
-		say "[bold type][name entry][roman type]:";
+		say "[bold type][y] - [name entry][roman type]:";
 		LineBreak;
 		DescriptionDisplay;
 		LineBreak;

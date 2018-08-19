@@ -141,12 +141,15 @@ to say OuterSuck:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Foul Scuttler";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]Leaping back, the Foul Scuttler releases an ear-splitting screech, the corridors of the labs funneling the entirety of the sonic wave towards you. You throw your hands to your ears, doing your best to block out the sound. You eventually recover, but not without a pounding head[or]Flinging the entirety of its muscled mass at you, the Foul Scuttler bowls you over, rending massive gashes across your chest as it drags its claws across your body[or]Sliding past your defenses, the Foul Scuttler bites down on your leg, ripping large chunks of flesh off of your leg as it withdraws[or]Lowering its head and bounding forward, the beasts slams its head into your chest, knocking the wind out of you and throwing you back a few feet[at random].";
 	now defeated entry is "[FoulS_PlayerVictory]";
 	now victory entry is "[FoulS_PlayerDefeat]";

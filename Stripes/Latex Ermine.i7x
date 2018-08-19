@@ -116,12 +116,15 @@ to say beatthelatexermine:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Ermine";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The latex ermine[or]The latex beauty[or]The curvy ermine[or]The sensual stoat[or]She[at random] [one of]gropes you before you can pull away from her eager grabbing[or]caresses her smooth hands over your [bodytype of player] body while suggesting you two have some fun together[or]manages to slide in close and rubs her sexy body against yours, tempting you to give in[or]presses her soft, tantalizing melons against you, weakening your resistance to just giving in and playing with her[or]shoves you roughly, calling you a meanie for not playing with her[or]runs her large tail across your [bodydesc of player] body. Its sensual touch feels very good, making you want to grab that sexy body of hers[at random].[le_libidoup]";
 	now defeated entry is "[beatthelatexermine]"; [ Text when monster loses. Change 'latexermine' as above. ]
 	now victory entry is "[losetolatexermine]"; [ Text when monster wins. Change 'latexermine' as above. ]

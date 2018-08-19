@@ -5,8 +5,8 @@ Version 1 of Goat Janitor by McRabid begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Goat Janitor" } to infections of guy;
-	add { "Goat Janitor" } to infections of furry;
+	add { "Anthro Goat" } to infections of guy;
+	add { "Anthro Goat" } to infections of furry;
 
 to say Goat Janitor desc:
 	setmongender 3; [creature is male]
@@ -64,12 +64,15 @@ to say BeatTheGoatJanitor:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Goat Janitor";
+	now name entry is "Anthro Goat";
+	now enemy title entry is "Goat Janitor";
+	now enemy name entry is "William";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]The janitor jabs you in the face with the wet end of his mop, soaking you in a nauseating, and exhilarating, mixture of cleaners and the many sexual fluids he's cleaned up.[or]The janitor lowers his head and, moving faster than you'd expect of an old man, charges at you and knocks you over.[or]'Back in my day...' The goat starts to drone on in that boring way only old people can. He smacks you when he realizes you've zoned out and stopped paying attention.[at random]";
 	now defeated entry is "[BeatTheGoatJanitor]";
 	now victory entry is "[LoseToGoatJanitor]";
@@ -117,7 +120,7 @@ When Play begins:
 	now altcombat entry is "default";
 
 when play ends:
-	if bodyname of player is "Goat Janitor":
+	if bodyname of player is "Anthro Goat":
 		if humanity of player < 10:
 			say "     You succumb to your Goat Janitor infection and eventually wander past the city hospital. 'You're late!' a somewhat familiar voice shouts. A glance up to the entrance you see a very angry goat in coveralls. After an hour of being berated for how young people are ruining today's economy with their laziness and loud music, you find yourself mopping one of the many hallways of the hospital in your own coveralls as your boss continues to complaints over a walkie talkie.";
 		else:
