@@ -203,29 +203,6 @@ Instead of resolving a Memories of the Mall:
 	move player to Mall Atrium;
 
 
-to mallrecall:
-	LineBreak;
-	WaitLineBreak;
-	let recallchance be 0;
-	if lastfuck of Lucy - turns >= 12:
-		if bodyname of player is "Mall Rat", increase recallchance by 15;
-		if facename of player is "Mall Rat", increase recallchance by 15;
-		if HP of Lucy >= 2:
-			now recallchance is recallchance / 2;
-			increase recallchance by 25;
-			if cockname of player is "Mall Rat", increase recallchance by 10;
-		if a random chance of recallchance in 100 succeeds:
-			if Smith Haven Mall Lot South is unknown:
-				say "     As you start heading back to safe territory after your excursion, you find yourself wandering off in a new direction. Following buried instincts, you feel drawn somewhere... safe... somewhere... cool... You eventually arrive at the southern parking lot of a large mall. While you are largely confused by this, you can't help but feel that part of you wants to call this place home. Knowing it's somehow safe, you go inside and head to the large atrium at the center of the plaza, finding lots of other rats living there already.";
-				now Smith Haven Mall Lot South is known;
-			else if HP of Lucy >= 2:
-				say "     As you start heading back to safe territory after your excursion, you find yourself thinking of Lucy and the mall, wanting to head back there to see your girlfriend again. The mall's a safe place, you remind yourself, and head back in that direction eagerly. You arrive safely and enter the shopping plaza[if the player is mallratbodied], feeling quite at home here[end if], and head to the central atrium.";
-			else:
-				say "     As you start heading back to safe territory after your excursion, you find yourself thinking of the mall, wanting to head back there to hang out. The mall's a safe place, you remind yourself, and head back in that direction eagerly. You arrive safely and enter the shopping plaza[if the player is mallratbodied], feeling quite at home here[end if], and head to the central atrium.";
-			now battleground is "void";
-			move player to Mall Atrium;
-
-
 Section 5 - Endings
 
 

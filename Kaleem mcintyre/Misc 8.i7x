@@ -1,5 +1,5 @@
 Misc 8 by Kaleem mcintyre begins here.
-[Several events transfered to CEOutside and CEPark documents in Stripes's folder.]
+[Several events transferred to Consolidated Outside Events in Song's folder and CEPark in Stripes' folder]
 
 [	[***temporarily turned off]
 
@@ -16,7 +16,6 @@ Instead of resolving a Old Tale:
 	LineBreak;
 	say "When the smaller auburn wolf stops suddenly with its nose touching the black wolf's you're take a step back in shock as you watch the smaller lupine turn around and then present [']himself['] to the larger male. The black wolf doesn't take much time to hesitate as he sniffs the upturned tail of the smaller male and then climbs up onto the submissive wolf's backside. When the black wolf begins to thrusts into the other, the hard slaps of thighs against thighs echoing loudly in your ears, you decide that now would be a good time to leave.";
 	increase score by 1;
-	mallrecall;
 	now Old Tale is resolved;
 
 

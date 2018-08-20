@@ -342,7 +342,7 @@ Instead of resolving Lost house cat:
 			say "     Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
 	else:
 		say "     Deciding that with the city in its current state, chasing small furry things down dark alleyways with no idea what you will find at the end of them is probably the height of stupidity. You put the encounter out of your mind and continue searching the city for things of use instead.";
-	if a random chance of 1 in 2 succeeds, mallrecall;
+
 
 Section 2.4 - House Cat Ending
 

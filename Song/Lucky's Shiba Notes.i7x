@@ -1,3 +1,4 @@
+Lucky's Shiba Notes by Song begins here.
 
 ## SHIBA INU CAFE - DOG CAFE
 *the player can encounter a restored coffee shop in the Outside zone*
@@ -46,3 +47,5 @@ if male, he will face fuck. if anallevel 3, he will ass fuck. if female, he will
 if (soy 3 times and female) OR (soy and groin or body is shiba inu), after sex scene, Sebastian will come up and fuck the player's pussy. shiba heat causes player to be more willing than normal anyway. if the player was just previously male he will comment on it too.
 
 after, sebastian is willing to hire the player as another shiba girl. if the player accepts, sebastian will either (male: face fuck/female: pussy fuck/)
+
+Lucky's Shiba Notes ends here.

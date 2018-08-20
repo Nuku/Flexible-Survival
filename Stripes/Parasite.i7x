@@ -189,7 +189,7 @@ When Play begins:
 	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. ]
 	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. ]
 	now desc entry is "[blackwaspdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "insectile in apperance, with large, segmented eyes and a pair of antenna on your head";
+	now face entry is "insectile in appearance, with large, segmented eyes and a pair of antenna on your head";
 	now body entry is "has become segmented like that of an insect. Your arms and legs become partially insectile, with clawed digits and inhuman joints. You also possess an additional pair of vestigial insect legs pulled up against your sides. They twitch occasionally, and you can make them move if you concentrate, but they are still too weak and hard to control for proper use yet";
 	now skin entry is "plated chitin that is quite sensitive despite its hard appearance. It has an insectile appearance, is a glossy black and covers your";
 	now tail entry is "You possess a large, insectile abdomen that's grown from the end of your spine. It is covered in chitinous plate, but quite sensitive, even arousing, to the touch.";

@@ -70,7 +70,7 @@ Instead of conversing the Dragoness:
 		say "     'Hello? Is someone back there?' the large dragoness calls out from the other side of the blocked doorway. 'Please tell me that you're not one of those mindless... sexy... beasts... here to violate me while I'm helplessly trapped here.' Her rear end wiggles, her tail arches up and her pussy drips all the more at her words, winking with need to be filled.";
 		now NoIntroduction is 1;
 	else if lust of Christy is 0 and libido of Christy is 0:
-		say "     'No offence, but I prefer to talk to people that I can see,' you hear the dragoness say from the other side of the door.";
+		say "     'No offense, but I prefer to talk to people that I can see,' you hear the dragoness say from the other side of the door.";
 	else:	[***]
 		say "     'That was great, come back and do me again sometime. Gah! I meant to say, stay away from me you evil monster!'";
 

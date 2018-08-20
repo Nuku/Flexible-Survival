@@ -1,5 +1,5 @@
 New Events by Sarokcat begins here.
-[Several events transferred to CEO1 document in Stripes's folder.]
+[Several events transferred to Consolidated Outside Events in Song's folder]
 
 "Adds a series of random events to Flexible Survival with several different outcomes."
 
@@ -49,17 +49,16 @@ Instead of Resolving a Military presence:
 		increase carried of wyvern goop by 1;
 		extend game by 8;
 		now Military presence is resolved;
-	if a random chance of 1 in 2 succeeds, mallrecall;
 
 
 Section 2 - Cream truck
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 3 - Wyvern Flight
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 4 - Abandonedplayer
@@ -306,7 +305,7 @@ Instead of resolving a ruined supplies:
 
 Section 17 - Strange preacher
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 to piggyify:

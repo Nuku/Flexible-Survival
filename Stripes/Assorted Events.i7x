@@ -90,11 +90,10 @@ Instead of resolving a Losing It:
 		if libido of player > 100, now libido of player is 100;
 	else:
 		say "     Escaping the crazed feline, you dash off into the city, deciding to search somewhere away from the newly transformed and lustful feline. Perhaps once it has sated its lusts from its transformation it will wander off and you can return to searching.";
-	mallrecall;
 	Now Losing It is resolved;
 
 
-[CatsandDogs moved to CEO1 file]
+[CatsandDogs moved to Consolidated Outside Events]
 
 
 Tour Bus is a situation. The level of Tour Bus is 6.
@@ -106,7 +105,6 @@ instead of resolving a Tour Bus:
 	say "     You hop back onto the car, then onto the ground. You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you. Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver. It growls again and hops onto the ground, coming at you quickly.";
 	challenge "Cougar";
 	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
-	mallrecall;
 	now Tour Bus is resolved;
 
 
