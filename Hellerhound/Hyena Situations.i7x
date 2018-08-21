@@ -1,14 +1,14 @@
 Hyena Situations by Hellerhound begins here.
-[Several events transfered to CEO1 document in Stripes's folder.]
+[Several events transferred to Consolidated Outside Events in Song's folder]
 
 Section 1 - Hyena Kill
 
-[Moved to CEO1 file]
+[Moved to Consolidated Outside Events]
 
 
 Section 2 - Panther Trap
 
-[Moved to CEO1 file]
+[Moved to Consolidated Outside Events]
 
 
 Section 3 - Intact Fountain

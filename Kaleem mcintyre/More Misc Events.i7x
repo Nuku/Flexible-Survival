@@ -1,7 +1,7 @@
 Version 2 of More Misc Events by Kaleem mcintyre begins here.
-[ Version 1 - Events by Kaleem]
-[ Version 1.5 - Several events transferred to CEO1 document in Stripes's folder.]
-[ Version 2 - Rework by Draegon]
+[ Version 1.0 - Events by Kaleem ]
+[ Version 1.5 - Several events transferred to Consolidated Outside Events in Song's folder ]
+[ Version 2.0 - Rework by Draegon ]
 
 "Adds a series of random events to Flexible Survival."
 
@@ -36,7 +36,7 @@ Instead of resolving a Unorthodox Sight:
 
 Section 2 - Desperation
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 3 - Family Fun

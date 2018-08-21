@@ -93,7 +93,6 @@ Instead of resolving a Magical Girl:
 	else:
 		LineBreak;
 		say "Feeling almost foolish for thinking up something so dumb you casually toss the wand to the side and then continue off on your way.";
-		mallrecall;
 		Now Magical Girl is resolved;
 
 

@@ -4733,11 +4733,11 @@ Include Candy Shop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
-Include CEOutside by Stripes.
 Include CEPark by Stripes.
 Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
+Include Consolidated Outside Events by Song.
 Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Dmitri the Peacock by Aureas Gigas.

@@ -208,7 +208,6 @@ Instead of resolving a potential resources:
 			else:
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";
 	LineBreak;
-	if battleground is "Outside" and a random chance of 1 in 6 succeeds, mallrecall;
 
 
 to say scavsex_f01:

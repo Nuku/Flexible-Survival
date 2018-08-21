@@ -1,15 +1,15 @@
 Misc Scene 5 by Kaleem mcintyre begins here.
-[Several events transfered to CEO1 document in Stripes's folder.]
+[Several events transferred to Consolidated Outside Events in Song's folder]
 
 
 Section 1 - Helping the Helpless
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 2 - The Pack
 
-[Moved to CEO1 file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 3 - Lady Surrounded by Butterflies
