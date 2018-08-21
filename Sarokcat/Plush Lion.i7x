@@ -172,12 +172,15 @@ to say plionsex_05:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Plush Lion";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The plush lion crouches down on his haunches, before springing forward to attack.[or]The strange plush creature takes a moment out of combat to rub its furry mane on you, causing you to feel strangely submissive.[or]Its large plush paws suddenly swipe at you, knocking you down.[or]All of a sudden the plush lion beast pounces on you, knocking you down and rubbing its muzzle all over you.[or]Lifting its paw up, the beast pretends to be hurt for a second, causing you to drop your guard long enough for it to get in a couple good shots.[or]Charging forward with its oversized head lowered, the plush lion creature barrels right into you![or]Opening its fuzzy mouth wide, the lion creature lets out a cute little roaring noise, while not terribly intimidating, for some reason it makes your body shiver in a primal response.[at random]";
 	now defeated entry is "[Plush Lion loss]";
 	now victory entry is "[Plush Lion attack]";

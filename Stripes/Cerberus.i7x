@@ -182,12 +182,15 @@ to say cerberuscocktf:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Cerberus"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The Cerberus herm growls and swings hir powerful arms at you, striking you with hir heavy paws![or]The Cerberus herm presses hir body to yours, leaking milk from hir many nipples across your body. The scent of that warm milk running across your body and the scent of it filling your nose weakens your resolve to keep fighting hir![or]The canine foe releases spurts of hir pre from hir tail's cock across your face. You can't help but lick it up and find yourself thirsting for more![or]As shi grapples with you, hir tailcock rubs against you, spurting precum onto your body. The scent of it excites you, making you want to cease struggling![or]Dropping briefly to all fours, the Cerberus herm pounces at you and knocks you over, hir triple heads panting and drooling as shi grinds hir wet pussy against you until you manage to push away![at random]";
 	now defeated entry is "[beatthecerberus]";
 	now victory entry is "[losetocerberus]";

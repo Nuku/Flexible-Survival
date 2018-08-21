@@ -127,17 +127,20 @@ to say SatyressFuck4:
 
 to say SatyressDesc:
 	setmongender 4;
-	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from her forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?[or]Hey come join the party![or]You look like you need to lighten up![at random]' she says, dancing forward nimbly on her goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
+	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from her forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?' [or]Hey come join the party!' [or]You look like you need to lighten up!' [at random]she says, dancing forward nimbly on her goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Satyress";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She splashes you with some wine from her cup, giggling as the red liquid trickles down over your body.[or]She grins and whirls around, showing off her body with a wiggle off her ass. Your eyes are almost hypnotically drawn to where the pale soft skin of her back leads over to a very perky pair of buttocks, covered in the blond curls of her fur.[or]Her enticing goat-like musk distracts you for a minute as she dances around you.[or]Dancing around nimbly on her goat hooves, the satyress comes up close, brushing against your body and giving you a squeeze.[or]The satyress pulls out pipes from... somewhere, and starts to play a little tune. To your surprise you can't help but dance a little along with the music.[at random]";
 	now defeated entry is "[Satyress loses]";
 	now victory entry is "[Satyress wins]";

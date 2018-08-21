@@ -152,12 +152,15 @@ to say pinkpoodle_dom:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pink Poodle"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The pink poodle [one of]strikes you sharply across the face with an open paw[or]squeezes her large breasts together tantalizingly, distracting you just long enough to get in a quick hit[or]scratches you with her well-manicured claws[or]teases you playfully as she strikes a sultry pose[at random]!"; [ Successful attack message ]
 	now defeated entry is "[beatthePinkPoodle]"; [ Text when monster loses. Change 'Pink Poodle' as above. ]
 	now victory entry is "[losetoPinkPoodle]"; [ Text when monster wins. Change 'Pink Poodle' as above. ]

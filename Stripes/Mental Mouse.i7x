@@ -168,12 +168,15 @@ to say mouseyvicsex:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mental Mouse"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "One";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]While two of the mice, a third jumps onto you, trying to pull you down![or]The mice around you take turns slapping your ass and groping you![or]The herms make a tantalizing display of their bodies, trying to tempt and arouse you with their beautiful, murine forms![or]The horny mice tackle you, trying to pull you into their welcoming arms![at random]";
 	now defeated entry is "[beatthemouse]"; [ Text when monster loses. ]
 	now victory entry is "[losetomouse]"; [ Text when monster wins. ]

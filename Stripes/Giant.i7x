@@ -111,19 +111,22 @@ to say beatthegiant:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
-	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Human Giant"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]giant[or]giant man[or]lumbering brute[or]towering creature[at random] [one of]bashes you with a massive fist[or]slaps you with an enormous backhand, knocking you back[or]grabs you in his crushing grip before throwing you to the ground[or]clobbers you with his makeshift club[or]swings his massive club into you[or]stomps a giant foot down onto you[at random]!";
 	now defeated entry is "[beatthegiant]";
 	now victory entry is "[losetogiant]";
 	now desc entry is "[giantdesc]";
 	now face entry is "a human head with coarse, brown hair, just significantly larger";
 	now body entry is "a normal human body, just grown to gigantic proportions. You have a strong, muscled body to help support your great height. At around fifteen feet tall, it's quite difficult for you to get in and out, requiring you find (or make) alternate entrances or squirm your way through doorways and move on all fours while exploring. Probably best to stick to open areas";
-	now skin entry is "human";
+	now skin entry is "Human";
 	now tail entry is "Your ass is gigantic!";
 	now cock entry is "human";
 	now face change entry is "your head becomes human-like[if scalevalue of player is 4], but grown larger in size[else if scalevalue of player > 4], but grown to a significantly larger size[end if]. You look much like your old self, though with a bigger head";

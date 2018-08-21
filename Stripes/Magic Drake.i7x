@@ -619,12 +619,15 @@ to say mdstaff_overgrown:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random]."; [ Successful attack message ]
 	now defeated entry is "[beatthemagicdrake]"; [ Text when monster loses. ]
 	now victory entry is "[losetomagicdrake]"; [ Text when monster wins. ]

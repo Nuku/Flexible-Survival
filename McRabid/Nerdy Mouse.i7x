@@ -66,12 +66,16 @@ to say beatthenerdymouse:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Nerdy Mouse"; 	now attack entry is "[one of]The mouse blocks another attack from you, while shouting 'Barrier!' by using his messenger bag as a shield. OUCH! What does he have in there anyway?[or]Seemingly recalling a self-defense class, the mouse shouts 'I don't know you! This is my purse!' as he manages to deliver a swift, and very painful, kick right to your groin.[or]'Look behind you! A three-headed monkey!' The mouse shouts, pointing behind you. You turn to look and find nothing, your pride is wounded for falling for the oldest trick in the book, further punctuated by a heady thump of his satchel bag onto your head![or]The mouse flails his balled up fists in your general direction. It would be almost comical if he wasn't actually hitting you.[or]The mouse flails his heavy bag wildly while blocking his face. '[mnfacequote]!' he squeaks with fear. The bag ends up clocking you in the side of the head with a heavy thud.[or]The nerdy mouse swings his little fists wildly with his eyes squeezed tightly shut, some of his frantic blows hitting you.[at random]";
+	now name entry is "Nerdy Mouse";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "[one of]The mouse blocks another attack from you, while shouting 'Barrier!' by using his messenger bag as a shield. OUCH! What does he have in there anyway?[or]Seemingly recalling a self-defense class, the mouse shouts 'I don't know you! This is my purse!' as he manages to deliver a swift, and very painful, kick right to your groin.[or]'Look behind you! A three-headed monkey!' The mouse shouts, pointing behind you. You turn to look and find nothing, your pride is wounded for falling for the oldest trick in the book, further punctuated by a heady thump of his satchel bag onto your head![or]The mouse flails his balled up fists in your general direction. It would be almost comical if he wasn't actually hitting you.[or]The mouse flails his heavy bag wildly while blocking his face. '[mnfacequote]!' he squeaks with fear. The bag ends up clocking you in the side of the head with a heavy thud.[or]The nerdy mouse swings his little fists wildly with his eyes squeezed tightly shut, some of his frantic blows hitting you.[at random]";
 	now defeated entry is "[beatthenerdymouse]";
 	now victory entry is "[losetonerdymouse]";
 	now desc entry is "[nerdymousedesc]";

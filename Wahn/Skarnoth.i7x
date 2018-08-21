@@ -280,12 +280,15 @@ instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 Section 5 - Infection for combat purposes
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Demon Prince";
+	now enemy title entry is "";
+	now enemy name entry is "Skarnoth";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]Skarnoth[or]The demon prince[or]The powerful demon[or]The handsome demon[at random] [one of]flashes past you in a flurry of claw-slashes with his hands, leaving behind bleeding gashes in your side.[or]jumps forward and gives you a bear hug, forcing both arms against your sides in impotent immobility. As air is being driven out of your lungs, you feel his breath hotly against your cheek, followed by his tongue licking possessively along your jawline. An eye-blink later, he lets go of you, laughing as you collapse to the ground and gasp for air.[or]throws himself on you and grabs your arm, then humps his hips forward. He is playing with you, only leaving a few scratches after making sure you feel his erect cock rub against your side.[or]gets a grip on your shoulder and throws you to the ground wish a harsh shove, which puts you on all fours with your ass raised. 'That's the proper way to await your master. Maybe you'll be an amusing pet after all.'[or]gives you a head-ringing slap that dazes you for a second, then lets his clawed hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";
 	now defeated entry is "[line break]";
 	now victory entry is "[line break]";

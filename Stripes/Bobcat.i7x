@@ -112,12 +112,15 @@ to say bobcat_pvsex03:
 Section 4 - Monster Stats and Infection Data
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bobcat"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if player is male and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if player is male and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[else]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";
 	now defeated entry is "[beatthebobcat]"; [ Text when monster loses. ]
 	now victory entry is "[losetobobcat]"; [ Text when monster wins. ]

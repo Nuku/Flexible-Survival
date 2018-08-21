@@ -202,12 +202,15 @@ to say Spidertaur_Desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Spidertaur";
+	now enemy title entry is "";
+	now enemy name entry is "Aelias";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]Sweeping one of his front legs, he leaves a long, but surprisingly shallow, slash in your flesh with the underarm-length claw at the end of it.[or]He crawls up the nearest wall, then drops down on you.[or]He leaps to one side and turns his abdomen to face you, and sticky strands spray over your form![or]He suddenly charges and knocks you down with the weight of his body, then stands over you and sprays webbing over your prone form![at random]";
 	now defeated entry is "[Spidertaur_Loses]";
 	now victory entry is "[Spidertaur_Wins]";

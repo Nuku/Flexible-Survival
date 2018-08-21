@@ -19,12 +19,15 @@ To say Nightmare loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Nightmare";
+	now enemy title entry is "Nightmare Stallion";
+	now enemy name entry is "Alp";
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]He stares at you with his blazing red eyes, the flame within seeming to tear at your mind and unbalance your sense of self.[or]He strikes out at you with one powerful hoof-tipped hand, knocking you backwards![or]The powerful musk of the stablemaster fills your nostrils, causing you to pause for a minute as a wave of submissiveness sweeps over you.[or]He lashes out at you with one of his blood red hooves, knocking the wind out of you![or]The stablemaster grabs hold of you and tries to wrestle you down to the ground![or]Your opponent strokes his cock teasingly, the sight making you pause as a strange desire sweeps through you for a minute, before you shake off the effects.[at random]";
 	now defeated entry is "[Nightmare loss]";
 	now victory entry is "[Nightmare attack]";

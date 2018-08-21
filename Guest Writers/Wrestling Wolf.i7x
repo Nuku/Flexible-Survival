@@ -120,12 +120,15 @@ to say wrwolfdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Wrestling Wolf"; [Name of your new Monster]
+	now enemy title entry is "Wrestling Wolf";
+	now enemy name entry is "Anaranjado";
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

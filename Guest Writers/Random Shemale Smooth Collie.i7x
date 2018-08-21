@@ -190,12 +190,15 @@ to say CollieDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Shemale Smooth Collie"; [Name of your new Monster]
+	now enemy title entry is "Giant Collie";
+	now enemy name entry is "Sharlene";
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]The 'bitch' charges in quickly, barking as it runs at you before biting at your shoulder and trying to overbalance you in an attempt to subdue you quickly and with minimal pain.[or]The oversized beast backs up slightly before running and leaping at you, throwing all of its weight at your stomach in an effort to knock you on your ass. She must be 90% muscle![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Shemale Smooth Collie Defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

@@ -11,6 +11,8 @@ Section 1 - NPC
 [   4: gave the player his reward for returning Wendy                          ]
 [   5: player helped Shawn & Duke and got rewarded                             ]
 [   6: player got told about the missing Finn                                  ]
+[   7: player completed the Finn quest stage                                   ]
+[   8: unused as of yet                                                        ]
 
 [ libido of Anthony                                                            ]
 [   0: no sex with the player yet                                              ]
@@ -60,6 +62,8 @@ to AnthonyQuestlog:
 				say "[bold type]Farm Quests: [roman type]I found Finn, but in the end he was taken away to the Stables Hotel. Nothing much left to do now except telling Anthony that he won't see him again.";
 		-- 7:
 			say "[bold type]Farm Quests: [roman type]I've informed Anthony about what became of Finn. Looks like that was the last quest he has right now, but there might be more things to do at the farm in the future...";
+		-- 8:
+			say "     ";
 
 Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]".
@@ -118,6 +122,9 @@ instead of conversing the Anthony:
 			LineBreak;
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if libido of Anthony > 0] - or... something more intimate, if you prefer[end if]. Just find our [bold type]missing farm hand[roman type] quickly please!'";
 			now Missing Farm Hand is not resolved;
+			now HP of Anthony is 6; [player got told about Finn]
+		else if HP of Anthony is 6:
+			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then asks, 'Thanks again for the offer. Have you found a trace of Finn yet? Please, you have to find our [bold type]missing farm hand[roman type]!'";
 		else:
 			say "     Clicking his claws together thoughtfully, he finally says 'I'll have to get back to you on that later, not sure what would be right for your skill-set at the moment. Just sending you to milk cows would be a waste of your time...' (further quests remain to be written - please have patience)";
 	else if calcnumber is 3: [break off talking]
@@ -373,12 +380,15 @@ to say AnthonySex5: [fuck Anthony]
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Giant Anteater";
+	now enemy title entry is "";
+	now enemy name entry is "Anthony";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "<This infection should not fight>";
 	now defeated entry is "<This infection should not fight>";
 	now victory entry is "<This infection should not fight>";

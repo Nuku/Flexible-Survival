@@ -120,13 +120,16 @@ to say SugarGliderdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Sugar Glider"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The Sugar Glider [one of]reaches into her pouch, withdrawing a small piece of candy. 'Catch!' she shouts, tossing the candy towards you. Distracted by the flying sweets, she quickly steps forwards, planting a sugary kiss on your cheek before you can react[or]runs towards you before stopping suddenly and spinning her body. Her long, thick tail strikes you in the face as she spins, filling your dizzy head with her sugary sweet scent[or]strikes you with her short, sharp claws[or]leaps towards you, wrapping you in her wing-like embrace, giggling happily as you struggle to push her off[or]wraps her long, soft tail around your [bodydesc of player] [bodytype of player] body, temporarily distracting you from fighting[at random]."; [ Successful attack message ]
 	now defeated entry is "[beattheSugarGlider]"; [ Text when monster loses. Change 'Sugar Glider' as above. ]
 	now victory entry is "[losetoSugarGlider]"; [ Text when monster wins. Change 'Sugar Glider' as above. ]

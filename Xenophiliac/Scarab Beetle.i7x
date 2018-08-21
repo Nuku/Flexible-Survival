@@ -12,12 +12,15 @@ when play begins:
 Section 1 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Scarab Beetle";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "Impossible - Error";
 	now defeated entry is "Impossible - Error";
 	now victory entry is "Impossible - Error";
@@ -46,8 +49,8 @@ When Play begins:
 	now cocks entry is 1;
 	now cock length entry is 14;
 	now cock width entry is 4;
-	now breasts entry is 0; [?]
-	now breast size entry is 0; [?]
+	now breasts entry is 0; 
+	now breast size entry is 0;
 	now male breast size entry is 0;
 	now cunts entry is 1;
 	now cunt length entry is 14;
@@ -58,8 +61,8 @@ When Play begins:
 	now scale entry is 3;
 	now body descriptor entry is "[one of]chitinous[or]plated[or]ovoid[or]rounded[at random]";
 	now type entry is "[one of]insectoid[or]beetle-like[at random]";
-	now magic entry is false; [?]
-	now resbypass entry is false; [?]
+	now magic entry is false; 
+	now resbypass entry is false;
 	now non-infectious entry is false;
 	blank out the nocturnal entry;
 	now altcombat entry is "default";

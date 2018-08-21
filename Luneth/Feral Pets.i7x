@@ -706,11 +706,11 @@ an everyturn rule:
 				now hobo-food-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if humanity of player <= 25 and humanity of player > 0 and journal is owned and hobo-journal - turns >= 8:
-				if bodyname of player is "human" and facename of player is "human":
+				if bodyname of player is "Human" and facename of player is "Human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";
-				else if facename of player is "human":
+				else if facename of player is "Human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as your [bodyname of player] instincts affect your mind. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";
-				else if bodyname of player is "human":
+				else if bodyname of player is "Human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as your [facename of player] instincts affect your mind. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";
 				else if bodyname of player is not facename of player:
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as a jumble of [bodyname of player] and [facename of player] instincts affect your mind. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";

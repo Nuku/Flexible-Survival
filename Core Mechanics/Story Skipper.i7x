@@ -30,7 +30,7 @@ To savetrix:
 		choose row x in the table of game objects;
 		if object entry is stored:
 			let num be stashed of object entry;
-			append "[name entry]|[num]}" to the File of invsave;
+			append "[name entry]|[num]}" to the File of storsave;
 
 
 Trixie is a person. Trixie is in Grey Abbey Library.
@@ -2310,7 +2310,7 @@ to restorepart2:	[values 60 - 161]
 		now haroldtalk is 2;
 		now Palomino is known;
 	if tattoohunter >= 4:
-		now findingkara is resolved;
+		now Findingkara is resolved;
 		now Kara is in the Tattoo Parlor;
 	if tattoohunter >= 5:
 		now Haroldaroused is 1;

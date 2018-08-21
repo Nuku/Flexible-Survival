@@ -537,7 +537,7 @@ The description of Abandoned Storefront is "     If you're seeing this, somethin
 
 instead of going to Abandoned Storefront:
 	say "     [bold type]Are you ready to go undercover as a whore for Sergeant Marks?[roman type][line break]";
-	if player consents: 
+	if player consents:
 		say "     When you enter the abandoned storefront, the first thing you see is Sergeant Marks leaning back in a chair, his feet propped up on the counter in front of him. He looks up at you, and his bored expression quickly becomes a wild grin. 'If it isn't my favorite whore. Now that you're here, it's time for you to get to work.' He slowly gets to his feet, and takes a few steps closer to you. 'I've got your [if pquest is 1]first[else]next[end if] client in the back. We shouldn't keep [if pquest is 2]them[else]him[end if] waiting. And remember, play along, or it's all for nothing.' He grins, at odds with his words, and [if pquest is 4]looks at you expectantly[else]leads you through a door into another room[end if].";
 		WaitLineBreak;
 		if pquest is 4:
@@ -556,7 +556,7 @@ instead of going to Abandoned Storefront:
 			say "[turning tricks]";
 	else:
 		say "     You decide against it for the moment, and return to the main street of the Red Light District.";
-			
+
 to say turning tricks:
 	if pquest is 1:
 		say "     When you arrive in the back room, you can clearly tell this is where you'll be working. The entire thing is set up like a scene from a love hotel, something that you realize is more accurate than not. The room seems well prepared for the task of a whore servicing their clients, with an oversized bed, shelves that are clearly packed with various sexual aids, and more besides. You briefly wonder how Sergeant Marks was able to set up this entire thing, but are interrupted by who you assume is going to be your first client. A German Shepard, though one with an ornate leather jacket, is sitting on the edge of the bed. He seems to perk up as the cop leads you into the room.";
@@ -592,7 +592,7 @@ to say turning tricks:
 		increase pquest by 1;
 	else if pquest is 5: [Eventually Random chance to see one of several plain prostitution scenes]
 		say "     You put yourself to work servicing clients for Marks once more.";
-	
+
 
 
 Section 8 - Monster Desc for Tiger Cop
@@ -694,7 +694,7 @@ To say beattigercop:
 		say "     With the tiger cop reeling from the fight, you're caught by surprise when he holds his hands out in a gesture of surrender. 'Hey, maybe we got off on the wrong foot here. Maby ewe could still work together, yeah? What do you say about helping out an officer of the law? I have somethin['] that would work a lot better with someone like you.' With you in control of the situation, you see no reason not to at least hear him out. 'You see, there's this gang of criminals we've been after for a long time, and it turns out they're still operatin['] out in the city, even after all of this. To make it worse, they're some of the ones who haven't completely lost their minds, so they're as dangerous as ever.'";
 		say "     'Somebody needs to figure out what they're up to and stop [']em, and that's me. There's no way they'd just let a cop in, so I need to go in undercover, and that means convincin['] them that I'm just their kinda lowlife. They're the kind who deal in everything, drugs, sex, the works, so I'm gonna act like I'm in the same kinds of business. And unlike most of the punks around here, these guys prefer all of their fun to be with willing partners - usually whores, which is where you come in. If you play the part of my whore, we could work our way into their plans, and shut [']em down. You'd be doing a good thing for once, punk. Are you in?'";
 		say "     [bold type]Will you volunteer to go undercover as a whore?[roman type][line break]";
-		if player consents: 
+		if player consents:
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
 			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
@@ -727,12 +727,15 @@ To say beattigercop:
 Section 9 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Tiger Cop"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]";
 	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

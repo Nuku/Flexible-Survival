@@ -389,12 +389,15 @@ to say orcastrugglebar: [Displays struggle bar. The amount of struggle turns nec
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Inflatable Orca"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The playful cetacean bumps you every which way, making you stumble on the unsteady footing of the padded floor[or]The orca knocks you off your feet with a mighty swing of its tail[or]Trilling playfully, the orca rears up and rubs its synthetic body against your side, making you stumble[or]The large inflatable jumps at you and attempts to pin you down. You quickly weasel out from under it before it can do much else[or]The giant orca slams the ground with it tail, bouncing you up into the air before landing harmlessly on the padded floor again[or]The cetacean makes a point of rubbing against you suggestively. You stumble in your efforts to push it away[at random].";
 	now defeated entry is "[beattheinflatableorca]"; [ Text when monster loses. ]
 	now victory entry is "[losetoinflatableorca]"; [ Text when monster wins. ]

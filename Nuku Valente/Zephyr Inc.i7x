@@ -319,7 +319,7 @@ Instead of resolving a High Rise Detector Site:
 		let T be a random number between 1 and 4;
 		if T is 1:
 			say ", but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
-			challenge "rabbit pack";
+			challenge "Rabbit";
 		else if T is 2:
 			say ", but run into a pair of cougars descending the stairs quietly on their padded paws.";
 			challenge "Cougar";

@@ -211,12 +211,15 @@ to say VixenNurseDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Vixen Nurse"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";
 	now defeated entry is "[BeatTheVixenNurse]";
 	now victory entry is "[LoseToVixenNurse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

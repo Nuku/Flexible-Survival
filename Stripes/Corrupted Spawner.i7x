@@ -139,12 +139,15 @@ to say beatthecorruptedvic:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Corrupted Spawner"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]corrupted woman[or]infected female[or]lustful mutant[or]horny breeder[at random] [one of]slams herself against you, groping wildly[or]presses here transformed body to yours and kisses you while grabbing your ass[or]strikes at you with her [if corrvicchange1 is 18 or corrvicchange1 is 19]clawed [end if]hands[or]clocks you in the face while flailing to knock you down[or]presses her bosom[if corrvicchange1 is 20] and their throbbing dick-nipples [end if]against you, moaning for sex[or][if corrvicchange1 < 6]wraps her surprisingly strong tail around your waist[else if corrvicchange1 is 9]lashes out at you with her tentacles[else if corrvicchange1 is 14]grabs at you with her robotic arms[else if corrvicchange2 is 16]entwines her elongated tongue around your wrist, leaving you open for a grope[else if corrvicchange2 is 18]bites down onto you with her toothy maw[else]knees you in the side while trying to throw herself onto you[end if][at random].";
 	now defeated entry is "[beatthecorruptedvic]"; [ Text when monster loses. ]
 	now victory entry is "[losetocorruptedvic]"; [ Text when monster wins. ]

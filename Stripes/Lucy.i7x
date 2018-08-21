@@ -190,20 +190,7 @@ to say lucysex7:
 	say "     You cum hard with a loud growl, with the rat girl crying out beneath you[if skrp is 1] and your lower skunk head even joining in[end if] as you climax together[if cock width of player > 24]. Your enlarged balls empty their large, beastly load into your sexy girl, stuffing her belly enough that your cum leaves her slender belly visibly rounded[else]. Your mephit balls empty their beastly load into your sexy girl[end if]. Once you're finished, you stay straddles over her and leave your skunk cock buried in her for some time, leaving you to enjoy the sensation of your cock buried in her cum-filled cunt. 'Mmm... I knew you'd be a beast in the sack when I first saw you, but that was even better than I'd imagined,' she says with a soft, teasing giggle. When you do pull out, she makes sure to lick your sticky cock clean before getting up. Her nose does wrinkle up when she notices that your musky scent is still clinging to her fur and she adds a fresh spritz of perfume to ward it off.";
 
 
-Section 4 - Mall Recall
-
-Memories of the Mall is a situation. It is resolved.
-The sarea of Memories of the Mall is "Outside".
-
-Instead of resolving a Memories of the Mall:
-	say "     As you're walking around the city, you find your mind wandering back to the mall, and more specifically, to your rat girlfriend waiting there. Little things you keep seeing remind you of her - stuff like the way that husky's breasts bounce when she runs, or the tight ass on that other mutant, or the unchanged rat you see scurrying between some trash cans. Unable to get your sexy girlfriend off your mind, you change directions and strike off towards the mall to see her again. Once you arrive, you make your way back to the atrium to see her again.";
-	if libido of player < 50, increase libido of player by 5;
-	increase lastfuck of Lucy by 6; [ready for more sex]
-	now battleground is "void";
-	move player to Mall Atrium;
-
-
-Section 5 - Endings
+Section 4 - Endings
 
 
 Lucy ends here.
