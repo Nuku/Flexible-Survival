@@ -5,7 +5,7 @@ Version 1 of Mutated Islanders by Kernog begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Mutated Islanded" } to infections of guy;
+	add { "Mutated Islander" } to infections of guy;
 
 to say mutatedIslanderDesc:
 	if inasituation is true:
@@ -45,7 +45,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mutated Islanded M";
+	now name entry is "Mutated Islander";
 	now attack entry is "[one of][or][or][or][at random]";
 	now defeated entry is "[beatMutatedIslander]";
 	now victory entry is "[loseMutatedIslander]";
