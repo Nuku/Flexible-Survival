@@ -203,7 +203,6 @@ Instead of resolving a Memories of the Mall:
 	move player to Mall Atrium;
 
 
-<<<<<<< HEAD
 to mallrecall:
 	say "";
 [
@@ -229,8 +228,6 @@ to mallrecall:
 			move player to Mall Atrium;
 ]
 
-=======
->>>>>>> a72632ce4c9e5445069c7eeaec0dbf4a39a54f85
 Section 5 - Endings
 
 
