@@ -193,7 +193,18 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				project icon entry;
 				break; ]
 	choose row monster from table of random critters;
-	say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+	if enemy type entry is 0: [non-unique enemies]
+		if enemy title entry is empty or enemy title entry is "": [no special name for the enemy]
+			say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+		else: [specially named enemies]
+			say "[bold type]You run into a [enemy title entry in lower case].[roman type][line break][desc entry][line break]";
+	else if enemy type entry is 1: [unique enemies whose name is not known]
+		if enemy title entry is empty or enemy title entry is "": [no special name for the enemy]
+			say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+		else: [specially named enemies]
+			say "[bold type]You run into a [enemy title entry in lower case].[roman type][line break][desc entry][line break]";
+	else if enemy type entry is 2: [unique enemies whose name is known]
+		say "[bold type]You run into [enemy name entry].[roman type][line break][desc entry][line break]";
 	if name entry is not listed in EncounteredEnemies of player:
 		add name entry to EncounteredEnemies of player;
 

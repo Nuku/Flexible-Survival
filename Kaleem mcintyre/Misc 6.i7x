@@ -1,5 +1,5 @@
 Misc 6 by Kaleem mcintyre begins here.
-[Several events transfered to CEOutside document in Stripes's folder.]
+[Several events transferred to Consolidated Outside Events in Song's folder]
 
 "Miscellaneous events to be added to Flexible survival."
 
@@ -9,7 +9,7 @@ Pegasus is a situation.
 The sarea of Pegasus is "Plains".
 
 Instead of resolving a Pegasus:
-	say "Walking along the dry plains you find yourself watching as a large shadow hovers over the ground above you. Not really sure what's going on you tip your head up only to find a large winged horse looking down at you. White as snow with a wingspan of about twenty feet you marvel in awe at the majestic creature as it glides above your head once and then twice in a large circle before flying off on about its way. The last you see of the mutated creature is its long azure colored tail end whipping freely behind it's wide backside.";
+	say "Walking along the dry plains you find yourself watching as a large shadow hovers over the ground above you. Not really sure what's going on you tip your head up only to find a large winged horse looking down at you. White as snow with a wingspan of about twenty feet you marvel in awe at the majestic creature as it glides above your head once and then twice in a large circle before flying off on about its way. The last you see of the mutated creature is its long azure colored tail end whipping freely behind its wide backside.";
 	now Pegasus is resolved;
 
 Section 2 - Guess that Character One
@@ -33,7 +33,7 @@ Instead of resolving a Guess that Character One:
 
 Section 3 - Guess that Character Two
 
-[Moved to CEOutside file.]
+[Moved to Consolidated Outside Events]
 
 
 Section 4 - Guess that Character Three

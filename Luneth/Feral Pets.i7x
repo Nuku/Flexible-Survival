@@ -342,7 +342,7 @@ Instead of resolving Lost house cat:
 			say "     Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
 	else:
 		say "     Deciding that with the city in its current state, chasing small furry things down dark alleyways with no idea what you will find at the end of them is probably the height of stupidity. You put the encounter out of your mind and continue searching the city for things of use instead.";
-	if a random chance of 1 in 2 succeeds, mallrecall;
+
 
 Section 2.4 - House Cat Ending
 
@@ -706,11 +706,11 @@ an everyturn rule:
 				now hobo-food-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if humanity of player <= 25 and humanity of player > 0 and journal is owned and hobo-journal - turns >= 8:
-				if bodyname of player is "human" and facename of player is "human":
+				if bodyname of player is "Human" and facename of player is "Human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";
-				else if facename of player is "human":
+				else if facename of player is "Human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as your [bodyname of player] instincts affect your mind. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";
-				else if bodyname of player is "human":
+				else if bodyname of player is "Human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as your [facename of player] instincts affect your mind. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";
 				else if bodyname of player is not facename of player:
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as a jumble of [bodyname of player] and [facename of player] instincts affect your mind. You hear a soft whine beside you before Hobo buries his nose in your pack. Thinking that he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap. Looking down at it, you pat the clever dog on the head in thanks for the reminder. You need to take better care of yourself if you want to get through this.";

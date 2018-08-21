@@ -178,9 +178,9 @@ instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chan
 		say "     'I'm sorry for that outburst back there. I'm not normally like that - despite what you may have heard. My name is actually Circe. Yes, that Circe: Daughter of Helios, wife to the prince of Colchis, evil sorceress of the Odyssey,' she rolls her eyes at that last one. 'You punish some lecherous sailors and suddenly you're villainized for eternity as a man-hater. History really is written by men, let me tell you[if player is not male], sister[end if],' she grumbles.";
 		let phumanbody be false;
 		let phumanface be false;
-		if bodyname of player is "human" or bodyname of player is "Human":
+		if bodyname of player is "Human" or bodyname of player is "Human":
 			now phumanbody is true;
-		if facename of player is "human" or facename of player is "Human":
+		if facename of player is "Human" or facename of player is "Human":
 			now phumanface is true;
 		if player is male:
 			say "     [bold type]'But despite what you may have heard, I don't hate all men. I didn't really bring you in here to talk, after all. How about, as thanks for coming to my aid, I show you just how much I can [']not hate['] a man I like?' she purrs, rubbing a hand over your crotch.[roman type][line break]";
@@ -262,11 +262,11 @@ to say sexwithcirce:
 		let phumanbody be false;
 		let phumanface be false;
 		let phumancock be false;
-		if bodyname of player is "human" or bodyname of player is "Human" or bodyname of player is "Herm Human" or bodyname of player is "herm human":
+		if bodyname of player is "Human" or bodyname of player is "Human" or bodyname of player is "Herm Human" or bodyname of player is "Herm Human":
 			now phumanbody is true;
-		if facename of player is "human" or facename of player is "Human" or facename of player is "Herm Human" or facename of player is "herm human":
+		if facename of player is "Human" or facename of player is "Human" or facename of player is "Herm Human" or facename of player is "Herm Human":
 			now phumanface is true;
-		if cockname of player is "human" or cockname of player is "Human" or cockname of player is "Herm Human" or cockname of player is "herm human":
+		if cockname of player is "Human" or cockname of player is "Human" or cockname of player is "Herm Human" or cockname of player is "Herm Human":
 			now phumancock is true;
 		say "     Circe smiles at your offer and makes a quick check of the patio. 'I think the customers are all set right now. I think I can slip away for a little fun.' She posts up her 'Back in 15 min' sign and leads you inside the snack shack. After some heavy petting while the two of you get undressed, you end up with her on the silver framed divan.";
 		if player is male and bodyname of player is listed in infections of caninelist and cockname of player is listed in infections of caninelist and a random chance of 2 in 3 succeeds:	[M/F doggy player gets doggy style]

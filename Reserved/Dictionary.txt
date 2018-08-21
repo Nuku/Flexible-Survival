@@ -1510,11 +1510,6 @@
 |Stripes|Latex Quad Husky|20140908213124/1554:Mon 8 September 2014 21:31|indexing|
 |Stripes|Latex Quad Husky|Shipping Container|situation|
 |Stripes|Latex Quad Husky|latexhuskymode|value|
-|Stripes|Ceoutside|20140908213124/6834:Mon 8 September 2014 21:31|indexing|
-|Stripes|Ceoutside|Consolidated Events Outside CEO1|situation|
-|Stripes|Ceoutside|Consolidated Events Outside CEO2|situation|
-|Stripes|Ceoutside|ceoutside1list|value|
-|Stripes|Ceoutside|ceoutside2list|value|
 |Stripes|Cepark|20140908213124/3172:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cepark|Consolidated Events Park CEP1|situation|
 |Stripes|Cepark|Consolidated Events Park CEP2|situation|
@@ -2397,8 +2392,8 @@
 |Nuku Valente|Drone Wasp|20140908213124/1817:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Drone Wasp|dronevict|value|
 |Kaleem Mcintyre|Blob|20140908213124/1095:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|bandage|Grab Object|
+|Kaleem Mcintyre|Great Dane|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
+|Kaleem Mcintyre|Great Dane|bandage|Grab Object|
 |Stripes|Hyperskunk|20140908213124/2671:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Female Husky|20140908213124/2755:Mon 8 September 2014 21:31|indexing|
 |Kohryu|Yamato Dragon|20140908213124/15740:Mon 8 September 2014 21:31|indexing|

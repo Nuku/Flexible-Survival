@@ -184,12 +184,15 @@ to say losetosbl:
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Skunkbeast Lord"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The enormous skunkbeast bats you aside with one of its large paws as you make a rush for the gun![or]Those vicious teeth dig into you![or]The skunkbeast's paw slams atop you, trying to crush you with its massive bulk![or]The skunkbeast lord slashes at you with its claws![or]As you make a move towards the gun, the beast moves quickly and knocks you aside with its charge![or]You attempt a feint and then rush for the gun, but the beast continues to turn, bringing its huge tail to block your path and push you back. As you are tossed back, you take in a heavy whiff of its strong, masculine scent and your will to keep resisting its bestial might erodes further![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthesbl]"; [ Text when monster loses. ]
 	now victory entry is "[losetosbl]"; [ Text when monster wins. ]

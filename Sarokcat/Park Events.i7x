@@ -1,5 +1,5 @@
 Park Events by Sarokcat begins here.
-[Several events transfered to CEOutside and CEPark documents in Stripes's folder.]
+[Several events transferred to Consolidated Outside Events in Song's folder and CEPark in Stripes' folder]
 
 "Adds a series of random events to Flexible Survival to enhance the park."
 

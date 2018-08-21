@@ -82,13 +82,15 @@ to say ebdrakendesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ebonflame Draken";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The draken[or]The terrifying reptile[or]She[or]The dragoness[at random] [one of]lets out a savage howl and charges at you, raking you with one of her savage talons and sending you reeling[or]grabs your [if scalevalue of player > 4]larger, [bodytype of player] form, displaying her superior strength as she lifts you into the ground before slamming you against the ground, causing the earth to tremble under your heavy impact[else][bodytype of player] form, easily lifting you into the air before slamming you against the ground with an audible thud[end if][or]pounces you and assaults you with a barrage of tooth and claw, until you finally push her off and back away[or]manages to lash you with her powerful tail, singing through the air before assaulting you with a sharp and terrible pain[at random].";
 	now defeated entry is "[ebdrakendef]";
 	now victory entry is "[ebdrakenvic]";

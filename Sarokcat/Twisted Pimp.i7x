@@ -62,12 +62,15 @@ to say twpimpbeaten_01:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Twisted Pimp";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]He snaps his fingers and you feel dizzy for a minute, almost wanting to go over to him and do what he says.[or]He reaches out quickly and backhands you across the face.[or]He grins at you, his sharp teeth glinting for a minute before the punch you never saw coming lands right in your crotch.[or]You are distracted for a minute by one of the pimps stable of strange women, letting him land a powerful hit![or]A strangely arousing scent fills your head, making you pant with need and wonder why you are fighting instead of fucking...[or]The pimp gestures, and several of the women get in your way, giving him a clear shot at you.[or]Facing the pimp, you are surprised when several of his harem mob you at once, beating you with their fists before withdrawing while the pimp laughs at you[at random]";
 	now defeated entry is "[pimp loss]";
 	now victory entry is "[pimp attack]";

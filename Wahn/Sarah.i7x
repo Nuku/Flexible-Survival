@@ -128,6 +128,7 @@ to say SarahRescue:
 	increase morale of the player by 10;
 	say "     You are about to jump forward to challenge the husky, but a member of his pack acts first and pounces on you.";
 	let GroupFightCounter be 0;
+	now fightoutcome is 0; [reset]
 	while fightoutcome < 20 and GroupFightCounter < 4: [runs for 4 times (for example) or until the player loses or flees]
 		now inasituation is true;
 		if GroupFightCounter < 3:

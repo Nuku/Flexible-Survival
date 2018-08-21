@@ -205,7 +205,7 @@ A person has a list of text called conversation.
 [See the BFandI extension for an explanation on these new variables.]
 A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
-The player has a text called bodytype. The bodytype is usually "human".						[broad adjective for species]
+The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
 
 freecred is a number that varies.
@@ -408,11 +408,11 @@ Definition: A person (called x) is pure:
 	no;
 
 Definition: A person (called x) is purehuman:
-	if bodyname of player is "human" or bodyname of player is "herm human":
-		if facename of player is "human" or facename of player is "herm human":
-			if tailname of player is "human" or tailname of player is "herm human":
-				if skinname of player is "human" or skinname of player is "herm human":
-					if cockname of player is "human" or cockname of player is "herm human":
+	if bodyname of player is "Human" or bodyname of player is "Herm Human":
+		if facename of player is "Human" or facename of player is "Herm Human":
+			if tailname of player is "Human" or tailname of player is "Herm Human":
+				if skinname of player is "Human" or skinname of player is "Herm Human":
+					if cockname of player is "Human" or cockname of player is "Herm Human":
 						yes;
 	no;
 
@@ -775,8 +775,8 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of random critters
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP (a number)	lev (a number)	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot (text)	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
-"Dragoness"	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
 
 understand the command "feed" as something new.
 
@@ -946,348 +946,9 @@ d18 is a number that varies.
 descr is text that varies.
 sh-descr is text that varies.
 cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
-battleground is a text that varies.
 Lusting is a text that varies.
 
-Hunting is an action applying to one topic.
-ishunting is a truth state that varies. ishunting is usually false.
-
-understand "hunt [text]" as hunting.
-
-check hunting:
-	if blindmode is true:
-		say "You're playing in blind-mode, so hunting is not allowed. You'll have to try exploring to find what you seek." instead;
-	else if there is a dangerous door in the location of the player: [danger door]
-		let y be a random dangerous door in the location of the player;
-		now battleground is the marea of y;
-	else if earea of location of player is not "void": [explore/hunt anywhere]
-		now battleground is earea of location of player;
-	else: [neither option available]
-		say "I don't see any good hunting grounds around here." instead;
-
-carry out hunting:
-	let Q be a list of numbers;
-	let found be 0;
-	let sitfound be 0;
-	let foundbadtime be 0;
-	let scorefound be 0;
-	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and companion of player is not mouse girl:		[hunted by the mouse collective]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry exactly matches the text "Mental Mouse", case insensitively:
-				add y to q;
-				add y to q;
-				if "Like Attracts Like" is listed in feats of player:
-					add y to q;
-				if humanity of player < 75:
-					repeat with x running from 1 to ( ( 100 - humanity of player ) / 25 ):
-						add y to q;
-				break;
-	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry exactly matches the text "Black Wasp", case insensitively:
-					add y to q;
-					if "Like Attracts Like" is listed in feats of player:
-						add y to q;
-					if libido of player > 30:
-						repeat with x running from 1 to ( libido of player / 30 ):
-							add y to q;
-					if larvacounter > 3:
-						repeat with x running from 1 to ( larvacounter / 3 ):
-							add y to q;
-					break;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
-		if there is no area entry, next;
-[		if area entry is "Everywhere":		[***]
-			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-			if name entry exactly matches the text topic understood, case insensitively:
-				say "You are almost certain you saw some [name entry] tracks...";
-				now found is 1;
-				add x to q;
-				let zed be perception of player / 4;
-				if zed > 8, now zed is 8;
-				repeat with N running from 1 to zed:
-					add x to q;
-				if "Curious" is listed in feats of player:
-					add x to q;
-				if "Expert Hunter" is listed in feats of player:
-					add x to q;
-					add x to q;
-				if "Master Baiter" is listed in feats of player:
-					repeat with N running from 1 to ( perception of player / 3 ):
-						add x to q;
-			else:
-				if there is a lev entry:
-					if lev entry > level of player plus levelwindow, next;
-				else:
-					next;
-				add x to q;
-				add x to q;
-			if "Like Attracts Like" is listed in the feats of player:
-				if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q; ]
-		if area entry exactly matches the text battleground, case insensitively:
-			if found is 1, next;
-			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					if name entry exactly matches the text topic understood, case insensitively:
-						now foundbadtime is 1;
-					next; [skips if day/night doesn't match]
-			if name entry exactly matches the text topic understood, case insensitively:
-				say "You are almost certain you saw some [name entry] tracks...";
-				now found is 1;
-				add x to q;
-				let zed be perception of player / 3;
-				if zed > 8, now zed is 8;
-				repeat with N running from 1 to zed:
-					add x to q;
-				if "Curious" is listed in feats of player:
-					add x to q;
-				if "Expert Hunter" is listed in feats of player:
-					add x to q;
-					add x to q;
-				if "Master Baiter" is listed in feats of player:
-					repeat with N running from 1 to ( perception of player / 3 ):
-						add x to q;
-			else:
-				if there is a lev entry:
-					if lev entry > level of player plus levelwindow, next;
-				else:
-					next;
-				if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
-					next;
-				let skipit be 0;
-				repeat with s running through warded flags:
-					if name entry is listed in infections of s:
-						now skipit is 1;
-						break;
-				if skipit is 1, next;
-				add x to q;
-			if "Like Attracts Like" is listed in the feats of player:
-				if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-	if found is 0:
-		repeat with X running from 1 to number of filled rows in table of random critters:
-			choose row X from the table of random critters;
-			if there is no area entry, next;
-	[		if area entry is "Everywhere":		[***]
-				if there is a nocturnal in row X of table of random critters:
-					if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-				if name entry exactly matches the text topic understood, case insensitively:
-					say "You are almost certain you saw some [name entry] tracks...";
-					now found is 1;
-					add x to q;
-					let zed be perception of player / 4;
-					if zed > 8, now zed is 8;
-					repeat with N running from 1 to zed:
-						add x to q;
-					if "Curious" is listed in feats of player:
-						add x to q;
-					if "Expert Hunter" is listed in feats of player:
-						add x to q;
-						add x to q;
-					if "Master Baiter" is listed in feats of player:
-						repeat with N running from 1 to ( perception of player / 3 ):
-							add x to q;
-				else:
-					if there is a lev entry:
-						if lev entry > level of player plus levelwindow, next;
-					else:
-						next;
-					add x to q;
-					add x to q;
-				if "Like Attracts Like" is listed in the feats of player:
-					if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q; ]
-			if area entry exactly matches the text battleground, case insensitively:
-				if there is a nocturnal in row X of table of random critters:
-					if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-						if name entry exactly matches the text topic understood, case insensitively:
-							now foundbadtime is 1;
-						next; [skips if day/night doesn't match]
-				if name entry matches the text topic understood, case insensitively:
-					say "You are almost certain you saw some [name entry] tracks...";
-					now found is 1;
-					add x to q;
-					let zed be perception of player / 3;
-					if zed > 8, now zed is 8;
-					repeat with N running from 1 to zed:
-						add x to q;
-					if "Curious" is listed in feats of player:
-						add x to q;
-					if "Expert Hunter" is listed in feats of player:
-						add x to q;
-						add x to q;
-					if "Master Baiter" is listed in feats of player:
-						repeat with N running from 1 to ( perception of player / 3 ):
-							add x to q;
-				else:
-					if there is a lev entry:
-						if lev entry > level of player plus levelwindow, next;
-					else:
-						next;
-					if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
-						next;
-					let skipit be 0;
-					repeat with s running through warded flags:
-						if name entry is listed in infections of s:
-							now skipit is 1;
-							break;
-					if skipit is 1, next;
-					add x to q;
-				if "Like Attracts Like" is listed in the feats of player:
-					if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-	if the number of entries in q is not 0 and found is 1:
-		sort Q in random order;
-		repeat with Z running through q:
-			choose row z from the table of random critters;
-			if "Unerring Hunter" is listed in the feats of player and there is a name entry:
-				if name entry matches the text topic understood, case insensitively:
-					increase score by 0;
-				else:
-					next;
-			if there is a name entry:
-				now monster is Z;
-			else:
-				next;
-			break;
-		choose row monster from the table of random critters;
-		now monsterHP is HP entry;
-		if name entry exactly matches the text topic understood, case insensitively:
-			now ishunting is true;
-		challenge;
-		now ishunting is false;
-		if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-			say "As you are trying to recover from your last encounter, another roving creature finds you.";
-			Fight;
-		follow the turnpass rule;
-	else:
-		now found is 0;
-		repeat with z running through unknown fasttravel rooms:
-			if z is private, next;
-			if printed name of z exactly matches the text topic understood, case insensitively:
-				say "It should be somewhere...";
-				now found is 1;
-				let dice be a random number from 1 to 20;
-				let the bonus be (( the perception of the player minus 10 ) divided by 2);
-				if "Curious" is listed in feats of player, increase bonus by 2;
-				increase dice by bonus;
-				if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-					say "You manage to find your way towards [z]!";
-					huntingfightchance;
-					move player to z;
-					now z is known;
-					now battleground is "void";
-				else:
-					say "Despite your searches, you fail to find it.[line break]";
-					huntingfightchance;
-					now battleground is "void";
-				break;
-		if found is 0:
-			repeat with z running through unresolved situations:
-				if z is not close:
-					if sitfound is 0:
-						if printed name of z exactly matches the text topic understood, case insensitively:
-							now sitfound is 1;
-					next;
-				if score < minscore of z:
-					if scorefound is 0:
-						if printed name of z exactly matches the text topic understood, case insensitively:
-							now scorefound is 1;
-				if printed name of z exactly matches the text topic understood, case insensitively:
-					say "It should be somewhere...";
-					now found is 1;
-					let dice be a random number from 1 to 20;
-					let the bonus be (( the perception of the player minus 10 ) divided by 2);
-					if "Curious" is listed in feats of player, increase bonus by 2;
-					increase dice by bonus;
-					if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-						now inasituation is true;
-						say "You manage to find your way to [z]!";
-						try resolving z;
-						now inasituation is false;
-					else:
-						now inasituation is false;
-						say "Despite your searches, you fail to find it.[line break]";
-						huntingfightchance;
-					break;
-		if found is 0:
-			repeat with z running through unresolved situations:
-				if z is not close:
-					if sitfound is 0:
-						if printed name of z matches the text topic understood, case insensitively:
-							now sitfound is 1;
-					next;
-				if score < minscore of z:
-					if scorefound is 0:
-						if printed name of z exactly matches the text topic understood, case insensitively:
-							now scorefound is 1;
-				if printed name of z matches the text topic understood, case insensitively:
-					say "It should be somewhere...";
-					now found is 1;
-					let dice be a random number from 1 to 20;
-					let the bonus be (( the perception of the player minus 10 ) divided by 2);
-					if "Curious" is listed in feats of player, increase bonus by 2;
-					increase dice by bonus;
-					if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-						now inasituation is true;
-						say "You manage to find your way to [z]!";
-						try resolving z;
-						now inasituation is false;
-					else:
-						now inasituation is false;
-						say "Despite your searches, you fail to find it.[line break]";
-						huntingfightchance;
-					break;
-		if found is 0:
-			repeat with z running through unknown fasttravel rooms:
-				if z is private, next;
-				if printed name of z matches the text topic understood, case insensitively:
-					say "It should be somewhere...";
-					now found is 1;
-					let dice be a random number from 1 to 20;
-					let the bonus be (( the perception of the player minus 10 ) divided by 2);
-					if "Curious" is listed in feats of player, increase bonus by 2;
-					increase dice by bonus;
-					if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-						say "You manage to find your way towards [z]!";
-						huntingfightchance;
-						move player to z;
-						now z is known;
-						now battleground is "void";
-					else:
-						say "Despite your searches, you fail to find it.[line break]";
-						huntingfightchance;
-						now battleground is "void";
-					break;
-		if found is 0:
-			if foundbadtime is 1:
-				say "[bold type]There doesn't seem to be any of them around right now...[roman type][line break]";
-			else if scorefound is 1:
-				say "[bold type]You have not accomplished enough to find this yet...[roman type][line break]";
-			else if sitfound is 0:
-				say "[bold type]You don't think what you're looking for can be found here...[roman type][line break]";
-			else if sitfound is 1:
-				say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type][line break]";
-			huntingfightchance;
-		follow the turnpass rule;
+[ Hunting moved to Hunting.i7x in Core Mechanics ]
 
 [ Fast Travel moved to Navigation.i7x in Core Mechanics ]
 
@@ -3719,18 +3380,6 @@ to randomfightchance:
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 
-to huntingfightchance:
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Stealthy" is listed in feats of player, now bonus is -1;
-	if "Curious" is listed in feats of player, increase bonus by 2;
-	if "Bad Luck" is listed in feats of player, increase bonus by 1;
-	if a random number from 1 to 20 < 7 plus bonus and battleground is not "void":
-		if there is a area of Battleground in the table of random critters:
-			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-				say "As you are trying to recover from your last encounter, another roving creature finds you.";
-				Fight;
-
 restoration is a number that varies.
 balloversize is a number that varies.
 skipturnblocker is a number that varies.
@@ -3794,7 +3443,7 @@ This is the turnpass rule:
 			now z is z;
 		else:
 			now z is 1;
-		if bodyname of player is "human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
+		if bodyname of player is "Human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -3961,11 +3610,11 @@ This is the turnpass rule:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
 			now the morale of the player is maxmorale;
 	let corruption be 0;
-	if skinname of player is not "human", increase corruption by a random number from 0 to 1;
-	if cockname of player is not "human", increase corruption by a random number from 0 to 1;
-	if bodyname of player is not "human", increase corruption by a random number from 0 to 1;
-	if tailname of player is not "human", increase corruption by a random number from 0 to 1;
-	if facename of player is not "human", increase corruption by a random number from 0 to 1;
+	if skinname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if cockname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if bodyname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if tailname of player is not "Human", increase corruption by a random number from 0 to 1;
+	if facename of player is not "Human", increase corruption by a random number from 0 to 1;
 	if corruption > 0:
 		if "Weak Psyche" is listed in feats of player:
 			increase corruption by a random number from 0 to 1;
@@ -4034,15 +3683,15 @@ This is the brain descr rule:
 	else if humanity of player > 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
 	else if humanity of player > 30:
-		if facename of player is not "human":
+		if facename of player is not "Human":
 			now descr is "increasingly [facename of player] perspective[lusting]";
-		else if bodyname of player is not "human":
+		else if bodyname of player is not "Human":
 			now descr is "increasingly [bodyname of player] perspective[lusting]";
-		else if skinname of player is not "human":
+		else if skinname of player is not "Human":
 			now descr is "increasingly [skinname of player] perspective[lusting]";
-		else if cockname of player is not "human":
+		else if cockname of player is not "Human":
 			now descr is "increasingly [cockname of player] perspective[lusting]";
-		else if tailname of player is not "human":
+		else if tailname of player is not "Human":
 			now descr is "increasingly [tailname of player] perspective[lusting]";
 		else:
 			now descr is "increasingly corrupted perspective[lusting]";
@@ -4278,9 +3927,9 @@ This is the self examine rule:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state. ";
-		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 1 and player is impreg_able and cockname of player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat. ";
-		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 3 and player is impreg_able and cockname of player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you. ";
 	if "Angie's Mate" is listed in feats of player:
 		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
@@ -4750,7 +4399,20 @@ carry out scavenging:
 To Challenge (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y from the table of random critters;
+		let TargetFound be 0;
 		if name entry exactly matches the text x, case insensitively:
+			now TargetFound is 1;
+			if debugactive is 1:
+				say "     DEBUG: Monster Found by Name: [x][line break]";
+		if enemy title entry exactly matches the text x, case insensitively:
+			now TargetFound is 1;
+			if debugactive is 1:
+				say "     DEBUG: Monster Found by Enemy Title: [x][line break]";
+		if enemy name entry exactly matches the text x, case insensitively:
+			now TargetFound is 1;
+			if debugactive is 1:
+				say "     DEBUG: Monster Found by Enemy Name: [x][line break]";
+		if TargetFound is 1:
 			now monster is y;
 			now monsterHP is HP entry;
 			challenge;
@@ -4985,6 +4647,7 @@ Include Definitions by Core Mechanics.
 Include Feats by Core Mechanics.
 include FS Graphics by Core Mechanics.
 Include Fucking by Core Mechanics.
+Include Hunting by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Special Merchandize by Core Mechanics.
@@ -5071,11 +4734,11 @@ Include Candy Shop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
-Include CEOutside by Stripes.
 Include CEPark by Stripes.
 Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
+Include Consolidated Outside Events by Song.
 Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Dmitri the Peacock by Aureas Gigas.
@@ -5281,7 +4944,7 @@ Include Goat Janitor by McRabid.
 Include Goblin by Blue Bishop.
 Include Goo Girl by Nuku Valente.
 Include Gorilla by Wahn.
-Include Great Dane Rouge by Kaleem Mcintyre.
+Include Great Dane by Kaleem Mcintyre.
 Include Greek Nymph by Sarokcat.
 Include Gray Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.

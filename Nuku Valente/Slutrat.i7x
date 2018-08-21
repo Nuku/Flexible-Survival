@@ -4,9 +4,60 @@ Version 5 of Slutrat by Nuku Valente begins here.
 Section 0 - Slut Rat Monster
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
-"Slut Rat"	"[slutratattacks]"	"[defeattheslutrat]"	"[slut rat victory]"	"[slutratdesc]"	"furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"	"bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"	"[one of]black furred[or]rat furred[or]softly furred[at random]"	"You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."	"[one of]sheathed[or]leaking[or]human like[at random]"	"your face draws forward into a long snout as hair spills to your shoulders"	"you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"	"a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"	"A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail"	"it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness"	10	16	10	10	12	10	"Both"	45	6	13	"Unknown"	1	12	10	2	10	0	1	12	7	100	"soda"	20	4	"[one of]sultry[or]alluring[or]curvaceous[at random]"	"[one of]murine[or]ratty[or]rodent[at random]"	false	false	false	--	"slutratalt"
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
+When Play begins:
+	Choose a blank row from Table of random critters;
+	now name entry is "Slut Rat"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "[slutratattacks]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[defeattheslutrat]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[slut rat victory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[slutratdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]rat furred[or]softly furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]sheathed[or]leaking[or]human like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "your face draws forward into a long snout as hair spills to your shoulders"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 10;
+	now dex entry is 16;
+	now sta entry is 10;
+	now per entry is 10;
+	now int entry is 12;
+	now cha entry is 10;
+	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 45;
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
+	now area entry is "Unknown"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 10; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 7; [ Width of female sex infection will try and give you ]
+	now libido entry is 1000; [ Amount player Libido will go up if defeated ]
+	now loot entry is "soda";
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[at random]";
+	now type entry is "[one of]murine[or]ratty[or]rodent[at random]";
+	now magic entry is false;
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "slutratalt"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)

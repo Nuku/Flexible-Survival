@@ -26,12 +26,15 @@ To say Sabretooth loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Sabretooth";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The large cat pounces at you, his large form knocking you back as he rams into you.[or]The large beast snaps its teeth at you, its signature fangs leaving bloody wounds in your side.[or]The sabretooth bats at you with one of its large paws.[or]The prehistoric cat launches itself up on its hind legs, as its front paws bat at your head.[or]The beast bounds towards you, its large body twisting and pressing on you as it tries to wrestle you to the ground.[or]You gasp in surprise as the beast turns and sprays the area with its scent, the male musk filling your open mouth and making your body twitch in response.[or]The large cat pauses for a moment, its feline eyes catching your own as you find yourself locked into a staring contest with the large beast, after several seconds you find your mind growing slightly duller, as your eyes are forced downward under the dominant cat's gaze.[at random]";
 	now defeated entry is "[Sabretooth loss]";
 	now victory entry is "[Sabretooth attack]";

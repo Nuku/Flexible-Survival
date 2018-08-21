@@ -43,7 +43,7 @@ ripped jeans is equipment.
 It is not temporary.
 The plural of ripped jeans is true.
 The taur-compatible of ripped jeans is false.
-The size of black jeans is 3.
+The size of ripped jeans is 3.
 The AC of ripped jeans is 0.
 The effectiveness of ripped jeans is 0.
 The placement of ripped jeans is "waist".

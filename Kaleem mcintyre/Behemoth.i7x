@@ -89,12 +89,15 @@ to say BeatTheBehemoth:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Behemoth"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The Behemoth attacks with a bellowing roar, all but destroying your eardrums![or]The Behemoth sweeps its massive clawed forepaw into you sending you corkscrewing across the ground![or]The Behemoth batters with a mighty charge, knocking you across the ground![or]The Behemoth spins around to strike at you with its gargantuan tail![or]The Behemoth slams it forepaws into the ground causing and earthquake to upset your balance. It then flies into you to knock you into the ground![or]The Behemoth charges at you, hitting you directly into the chest with its toughened skull![at random]"; [ Successful attack message ]
 	now defeated entry is "[BeatTheBehemoth]"; [ Text when monster loses. Change 'Behemoth' as above. ]
 	now victory entry is "[LoseToBehemoth]"; [ Text when monster wins. Change 'Behemoth' as above. ]

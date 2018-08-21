@@ -355,7 +355,7 @@ carry out InfectionOverview:
 		now skin of player is the skin entry;
 		now body of player is the body entry;
 		now cock of player is the cock entry;
-		say "[bold type][name entry][roman type]:";
+		say "[bold type][y] - [name entry][roman type]:";
 		LineBreak;
 		DescriptionDisplay;
 		LineBreak;
@@ -438,9 +438,9 @@ to DescriptionDisplay:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
-		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 1 and player is impreg_able and cockname of player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
-		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 3 and player is impreg_able and cockname of player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	now looknow is 0;
 	rule succeeds;

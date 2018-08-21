@@ -215,12 +215,15 @@ to say SeraphDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Seraphim";
+	now enemy title entry is "";
+	now enemy name entry is "Gabriel";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]The Seraphim calls out, 'Surrender! This just prolongs your pain. It will be over quickly if you do not struggle.' Then he smites you with a faintly glowing hand.[or]Your angelic opponent calls out, 'Stop fighting, foolish mortal - I only want to help you!' Then he gives you a hard punch in the face, a mixture of regret and annoyance on his face.[or]Hooking a foot behind your leg, the Seraphim pulls it out from under you. As you crash down on the ground, he calls out, 'Surrender, I do not wish to hurt you more than necessary.'[at random]";
 	now defeated entry is "[SeraphDefeated]";
 	now victory entry is "[SeraphVictorious]";

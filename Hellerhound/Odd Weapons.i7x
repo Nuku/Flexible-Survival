@@ -146,7 +146,6 @@ instead of resolving sword nest:
 			now sword nest is resolved;
 	else:
 		say "     You leave the mess behind, pondering the reason why this occurred here and nowhere else.";
-	if battleground is not "void", mallrecall;
 
 An everyturn rule:
 	if the infected sword is wielded:

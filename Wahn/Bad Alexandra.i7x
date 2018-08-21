@@ -87,6 +87,7 @@ Section 0 - Basic Structure
 
 Alexandra is a person. Alexandra is in Police Station.
 Alexandra has a list of text called Traits.
+Alexandra has a number called Loyalty.
 AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.
@@ -443,7 +444,7 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 			say "     Thanking Medea for her help, Alexandra and you leave the clinic and step out on the street. While making your way back to the library, the dobie bitch gleefully drops comments like, 'So, what's the new production goal in this puppy factory?' or 'When do you wanna start a new litter?' or 'The expression on Medea's face was just too good.' When you soon arrive, Alexandra pulls you close for a kiss, then strolls off to her usual guard post with the words, 'I'll be waiting for you.'";
 		remove "Fertility Treatment Option" from Traits of Alexandra;
 		add "Fertility Treatments" to Traits of Alexandra;
-		now Pediatrics Lobby is not known; [navpoint unlock]
+		now Pediatrics Lobby is known; [navpoint unlock]
 
 
 to say AlexandraBackstory1: [family]
