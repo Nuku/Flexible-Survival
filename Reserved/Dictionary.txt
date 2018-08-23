@@ -856,7 +856,7 @@
 |Sarokcat|Museum|riddlesphinx|value|
 |Sarokcat|Museum|riddlesphinxing|action|
 |Sarokcat|Tiger Den|20140908213124/6445:Mon 8 September 2014 21:31|indexing|
-|Sarokcat|Tiger Den|Tiger den|room|
+|Sarokcat|Tiger Den|Tiger Den|room|
 |Sarokcat|Tiger Den|Chase|man|
 |Sarokcat|Tiger Den|TigerVSTaur|situation|
 |Sarokcat|Pirate Island|20140908213124/3664:Mon 8 September 2014 21:31|indexing|
@@ -873,7 +873,7 @@
 |Sarokcat|Tattoo Parlor|20140908213124/2043:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Tattoo Parlor|Tattoo Parlor|room|
 |Sarokcat|Tattoo Parlor|tattoonpiercing|situation|
-|Sarokcat|Tattoo Parlor|Findingkara|situation|
+|Sarokcat|Tattoo Parlor|findingkara|situation|
 |Sarokcat|Stablemasters|20140908213124/3540:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Stablemasters|Master's Office|room|
 |Sarokcat|Stablemasters|Slutslave|man|
@@ -1072,7 +1072,7 @@
 |Rimme|Junkyard And Warehouse|Junkyard Gate|door|
 |Rimme|Junkyard And Warehouse|Junkyard Interior|room|
 |Rimme|Junkyard And Warehouse|Junkyard digups|situation|
-|Rimme|Junkyard And Warehouse|Steven's home|room|
+|Rimme|Junkyard And Warehouse|Steven's Home|room|
 |Rimme|Junkyard And Warehouse|junkyard home|situation|
 |Rimme|Junkyard And Warehouse|unused tool|situation|
 |Rimme|Junkyard And Warehouse|crowbar|armament|
@@ -1510,11 +1510,6 @@
 |Stripes|Latex Quad Husky|20140908213124/1554:Mon 8 September 2014 21:31|indexing|
 |Stripes|Latex Quad Husky|Shipping Container|situation|
 |Stripes|Latex Quad Husky|latexhuskymode|value|
-|Stripes|Ceoutside|20140908213124/6834:Mon 8 September 2014 21:31|indexing|
-|Stripes|Ceoutside|Consolidated Events Outside CEO1|situation|
-|Stripes|Ceoutside|Consolidated Events Outside CEO2|situation|
-|Stripes|Ceoutside|ceoutside1list|value|
-|Stripes|Ceoutside|ceoutside2list|value|
 |Stripes|Cepark|20140908213124/3172:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cepark|Consolidated Events Park CEP1|situation|
 |Stripes|Cepark|Consolidated Events Park CEP2|situation|
@@ -1638,7 +1633,7 @@
 |Blue Bishop|Capitol Events|20140908213124/2293:Mon 8 September 2014 21:31|indexing|
 |Blue Bishop|Capitol Events|dragatorspot|situation|
 |Blue Bishop|Capitol Events|whelpspot|situation|
-|Blue Bishop|Capitol Events|Ashen Nest|situation|
+|Blue Bishop|Capitol Events|Ebonflame Nest|situation|
 |Blue Bishop|Capitol Events|Strange Meeting|situation|
 |Blue Bishop|Capitol Events|Failed Escape|situation|
 |Blue Bishop|Capitol Events|Charred Pickets|situation|
@@ -2065,9 +2060,6 @@
 |Sarokcat|Alpha Husky|husky gathering|situation|
 |Sarokcat|Alpha Husky|Alphahuskypet|value|
 |Sarokcat|Alpha Husky|losttoalphahusky|value|
-|Sweraptor|Ash Dragator|20140908213124/2687:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Dragator|ash dragon heart|Grab Object|
-|Sweraptor|Ash Dragator|dragatordefeat|value|
 |Sarokcat|Hyena Matriarch|20140908213124/6690:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Hyena Matriarch|matriarchdefeated|value|
 |Sarokcat|Hyena Matriarch|matriarchowned|value|
@@ -2123,7 +2115,7 @@
 |Agentlemancalledb|Sugar Glider|sugarglidertailed|adjective|
 |Agentlemancalledb|Sugar Glider|sugargliderfaced|adjective|
 |Nuku Valente|Slutrat|20140908213124/13837:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Slutrat|SlutRat Den|room|
+|Nuku Valente|Slutrat|Slut Rat Den|room|
 |Nuku Valente|Slutrat|ratdartboard|thing|
 |Nuku Valente|Slutrat|Pool Hall|situation|
 |Nuku Valente|Slutrat|Pool Table|person|
@@ -2164,8 +2156,6 @@
 |Stripes|Mismatched Chimera|breastdata|value|
 |Sarokcat|Rubber Tigress|20140908213124/4260:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Rubber Tigress|Tiger patch|Grab Object|
-|Sweraptor|Ash Drakenoid|20140908213124/3042:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Drakenoid|blanchefight|value|
 |Stripes|Vulpogryph|20140908213124/899:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cerberus|20140908213124/7809:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cerberus|cerbfight|value|
@@ -2402,8 +2392,8 @@
 |Nuku Valente|Drone Wasp|20140908213124/1817:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Drone Wasp|dronevict|value|
 |Kaleem Mcintyre|Blob|20140908213124/1095:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|bandage|Grab Object|
+|Kaleem Mcintyre|Great Dane|20140908213124/8043:Mon 8 September 2014 21:31|indexing|
+|Kaleem Mcintyre|Great Dane|bandage|Grab Object|
 |Stripes|Hyperskunk|20140908213124/2671:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Female Husky|20140908213124/2755:Mon 8 September 2014 21:31|indexing|
 |Kohryu|Yamato Dragon|20140908213124/15740:Mon 8 September 2014 21:31|indexing|
@@ -2417,7 +2407,7 @@
 |Kohryu|Yamato Dragoness|YDSF|value|
 |Kohryu|Yamato Dragoness|FYDTBMM|value|
 |Kohryu|Yamato Dragoness|FYDM|value|
-|Stripes|Ashen Breeder|20140908213124/5241:Mon 8 September 2014 21:31|indexing|
+|Stripes|Ember Breeder|20140908213124/5241:Mon 8 September 2014 21:31|indexing|
 |Damaged|Lizard Girl|20140908213124/3598:Mon 8 September 2014 21:31|indexing|
 |Damaged|Lizard Girl|lizgirlmarked|value|
 |Damaged|Lizard Girl|lizgirlimpreg|value|
@@ -2524,8 +2514,6 @@
 |Wahn|Spartan|pita bread|Grab Object|
 |Wahn|Helot|20140908213124/9512:Mon 8 September 2014 21:31|indexing|
 |Wahn|Helot|FuckedBySpartan|value|
-|Sweraptor|Ash Whelp|20140908213124/2452:Mon 8 September 2014 21:31|indexing|
-|Sweraptor|Ash Whelp|whelpdefeat|value|
 |Hellerhound|Gryphons Plot|20140908213124/1552:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Gryphons Plot|Gryphons plot|situation|
 |Hellerhound|Gryphons Plot|milsave|value|

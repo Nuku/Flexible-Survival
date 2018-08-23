@@ -133,7 +133,7 @@ to say CollieSucking:
 	say "     Murmurs of enjoyment escape your lips around that twitching spire of meat as you suckle at its broad head. You can hear soft moans coming from the shemale collie's lips and smirk around the massive pole. Then suddenly, there is a hefty jump and swell going through the shaft in your mouth. Tonguing the salty tapered tip, you see the massive orbs between her legs tighten up and be pushed upwards by her swelling knot - which almost reaches the size of a volleyball! Setting your hands to grip against the sides of the immensely girthy length and stroke along the hard shaft, you soon see the large vein on it swell, and you ready yourself for what was about to happen.";
 	WaitLineBreak;
 	say "     The Collie lets out a howl of delight and her tail wags, lifting from her rear to point skyward in excitement. The fat slab of dick in your mouth does a powerful jerk as she orgasms, making it necessary to hold on pretty tightly so you don't lose your grip. A gargantuan rope of seed is spilled into your waiting mouth, incredibly dense and thick, more than enough to consider it a liter in just one healthy throb of that shaft. There just is no way to hold in the pressure building up in your mouth, your cheeks bulging out and thick strands of the intensely scented spunk squirting out from the between your lips and her thick shaft. Fighting to swallow down the thick cream in your mouth, your attempt is immediately foiled by another massive eruption of the collie's spooge into your still-full mouth. Loads of it just spill out, running down your chin and chest as well as splattering on the ground below.";
-	say "     The intense force of her shooting cock even forces its way down your throat and directly into your stomach, causing it to round out quite quickly with the sheer amount of sperm going into it. After several more blasts, thankfully the flood lessens, going down in volume until it's only a normal sized load - a trickle, for the collie. As she finally stops cumming, all tension goes out of the large dog-morph, the tail above you flopping down over the shemale's side. Pulling your lips off of the slowly deflating cock, you cough and splutter up some seed that had managed to force its way down your wind-pipe, then take a deep breath. Rising from the ground with shaking arms, you look down at the pool of seed below. Raising an arm and wiping off your chin and chest, you shake your head at the truly impressive amount of cum the collie produced, wondering how much it'd be if she didn't get off for a few days.";
+	say "     The intense force of her shooting cock even forces its way down your throat and directly into your stomach, causing it to round out quite quickly with the sheer amount of sperm going into it. After several more blasts, thankfully the flood lessens, going down in volume until it's only a normal-sized load - a trickle, for the collie. As she finally stops cumming, all tension goes out of the large dog-morph, the tail above you flopping down over the shemale's side. Pulling your lips off of the slowly deflating cock, you cough and splutter up some seed that had managed to force its way down your wind-pipe, then take a deep breath. Rising from the ground with shaking arms, you look down at the pool of seed below. Raising an arm and wiping off your chin and chest, you shake your head at the truly impressive amount of cum the collie produced, wondering how much it'd be if she didn't get off for a few days.";
 	WaitLineBreak;
 	say "     With the collie pleasantly passed out, and not able to answer that question, you just smirk and rub at your distended stomach. Feeling very full and with your thirst sated, you leave the shemale to her fate...";
 	decrease thirst of player by 10;
@@ -190,12 +190,15 @@ to say CollieDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Shemale Smooth Collie"; [Name of your new Monster]
+	now enemy title entry is "Giant Collie";
+	now enemy name entry is "Sharlene";
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]The 'bitch' charges in quickly, barking as it runs at you before biting at your shoulder and trying to overbalance you in an attempt to subdue you quickly and with minimal pain.[or]The oversized beast backs up slightly before running and leaping at you, throwing all of its weight at your stomach in an effort to knock you on your ass. She must be 90% muscle![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Shemale Smooth Collie Defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -223,7 +226,7 @@ When Play begins:
 	now HP entry is 50;
 	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [ Amount of Damage monster Does when attacking.]
-	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]

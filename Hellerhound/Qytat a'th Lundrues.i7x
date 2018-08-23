@@ -30,7 +30,6 @@ Section 2 - Entry Points
 
 Red Apartment is a room. "     This tall, red building has a fire escape on this side. This four story apartment building looks much like many others in the city. [redflight]". It is fasttravel.
 The earea of Red Apartment is "Outside".
-Red Apt Exit is a door. Red Apt Exit is dangerous. The marea of Red Apt Exit is "Outside". Red Apt Exit is undescribed. Red Apt Exit is south of Red Apartment. South of Red Apt Exit is Outside Exploration.
 
 to say redflight:
 	if staircaselocation is 1:

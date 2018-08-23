@@ -103,7 +103,7 @@ to FlorenceTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Maybe she can get you past the door guard blocking access to the Goo Refuge";
 	[]
-	if libido of Florence > 0 and player is male and cock width of player > 4 and HP of Florence > 1:
+	if player is male and cock width of player > 4 and HP of Florence > 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to donate some fluids";
 		now sortorder entry is 7;
@@ -119,7 +119,7 @@ to FlorenceTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -147,16 +147,16 @@ to FlorenceTalkMenu:
 				else if (nam is "Volunteer at the clinic"):
 					say "[FlorenceTalk_ClinicVolunteer]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the petite antelope, shaking your head slightly as she gives you a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FlorenceTalk_Background:
@@ -198,7 +198,7 @@ to say FlorenceTalk_Pregnancies:
 	say "     Pantomiming the shell of the mall, with people inside, Florence adds, 'Meanwhile, inside this place, the infection doesn't seem to push things to quite the extremes that happen outside. But because of the worry for the future, post-traumatic stress, and tight confines, it still is a bit of a mixed bag, so it's anyone's guess what exactly will happen if someone gets pregnant even here.' She studies your reaction to what she just said for a moment, then adds, 'Please do remember: this is just a theory. It seems to match the facts, but we just can't be sure in the end. Which is why we're doing the condom project, not stress relief classes for new mothers. Sometimes one has to stay with what works for sure.'";
 
 to say FlorenceTalk_Projects:
-	say "     Florence smiles at your interest and says, 'We've got a few more projects and initiatives going on right now. For example, there are lessons for younger residents - both those who grow at human rates, as well as the adult sized ones. Just because your parent passes on a bunch of knowledge doesn't mean that you know everything you need in life. Your mom or dad might have been totally disinterested in something critical. And the transfer isn't always complete, either. For example, Marie got a lot more medical knowledge than either Olivia or myself. That's why she leads the tiny [']clinic['] that we run to help people. Thankfully, the transformed do not stay hurt for long from most things that can happen to them. Still, humans and hybrids keep her busy, as well as people who are having problems with their new bodies.'";
+	say "     Florence smiles at your interest and says, 'We've got a few more projects and initiatives going on right now. For example, there are lessons for younger residents - both those who grow at human rates, as well as the adult-sized ones. Just because your parent passes on a bunch of knowledge doesn't mean that you know everything you need in life. Your mom or dad might have been totally disinterested in something critical. And the transfer isn't always complete, either. For example, Marie got a lot more medical knowledge than either Olivia or myself. That's why she leads the tiny [']clinic['] that we run to help people. Thankfully, the transformed do not stay hurt for long from most things that can happen to them. Still, humans and hybrids keep her busy, as well as people who are having problems with their new bodies.'";
 	say "     With that said, Florence glances over to an anthro parakeet with patchy feathers [if player is in Haven Community Center]just coming in for a check-up[else]standing in line for some condoms[end if]. Looks like hasn't quite figured out how to properly care for himself and is going through molting right now. Another thing that Florence points out next is an unobtrusive cooler box standing beside the condom handout desk. It bears the sign [']Returns['], and from time to time people come up to the box and quietly drops something inside. Looking closer the next time that this happens, you can make out that they are dropping in used condoms, filled with often quite significant deposits and tied together at the top. 'A number of our residents are quite extraordinary and do require special sustenance. Since they are wary of passing on an infection that makes people into humanoid blobs of goo, we've worked out this method of gathering the required fluids...'";
 	if HP of Florence is 1:
 		now HP of Florence is 2;

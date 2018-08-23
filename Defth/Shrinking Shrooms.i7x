@@ -9,7 +9,7 @@ MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 
 Instead of resolving a Mushroom cave:
 	if MushroomCaveVisited is 0: [first visit]
-		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecozystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly-green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
+		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecosystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly-green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
 		say "     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
@@ -161,7 +161,7 @@ Instead of resolving Little trouble:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Give up on the idea and go back[as]100[end link][line break]";
+	say "[link]0 - Give up on the idea and go back[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -177,14 +177,14 @@ Instead of resolving Little trouble:
 				if (nam is "Eat one of the mushrooms and enter through the hole"):
 					say "[LittleShroom]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Just give up on that";
 			if player consents:
 				now sextablerun is 1;
 				say "     Giving up on the idea of exploring this weird place, you go on your merry way";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -247,7 +247,7 @@ to say LittleShroom:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Just go back and give up on the idea[as]100[end link][line break]";
+	say "[link]0 - Just go back and give up on the idea[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -265,14 +265,14 @@ to say LittleShroom:
 				if (nam is "Go find where the sound is coming from"):
 					say "[ChineseTrouble]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "You give up on your curiosity and go back home";
 			if player consents:
 				now sextablerun is 1;
 				say "     You give up and go back the way you came. It's not worth it";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -355,7 +355,7 @@ to say ChineseTrouble:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Wait for your timely demise[as]100[end link][line break]";
+		say "[link]0 - Wait for your timely demise[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -373,7 +373,7 @@ to say ChineseTrouble:
 					if (nam is "Dive down and seek the other exit"):
 						say "[AlphaDive]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Wait for your timely demise.";
 				if player consents:
 					now sextablerun is 1;
@@ -387,7 +387,7 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -413,7 +413,7 @@ to say ChineseTrouble:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - It's hopeless anyway, just wait for your end.[as]100[end link][line break]";
+		say "[link]0 - It's hopeless anyway, just wait for your end.[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -429,7 +429,7 @@ to say ChineseTrouble:
 					if (nam is "Dive down and seek the other exit"):
 						say "[BitchDive]";
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "It's hopeless anyway, just wait for your end.";
 				if player consents:
 					now sextablerun is 1;
@@ -443,7 +443,7 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

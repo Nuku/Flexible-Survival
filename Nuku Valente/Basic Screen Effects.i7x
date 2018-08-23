@@ -274,7 +274,7 @@ Show the current quotation displays whatever the author has selected with "displ
 	When play begins:
 		display the boxed quotation
 		"What's this room? I've forgotten my compass.
-		Well, this'll be south-south-west parlour by living room.
+		Well, this'll be south-south-west parlor by living room.
 		-- Philadelphia Story";
 		show the current quotation;
 		pause the game.

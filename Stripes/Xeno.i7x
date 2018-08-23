@@ -61,12 +61,15 @@ to say beatthexeno:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
-	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Xeno"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The Xeno[or]The alien[or]The creature[at random] attacks using its [one of]sharpened claws[or]deadly talons[or]vicious claws[or]slashing tail[at random]!";
 	now defeated entry is "[beatthexeno]";
 	now victory entry is "[losetoxeno]";
@@ -80,7 +83,7 @@ When Play begins:
 	now body change entry is "your torso starts to ache. Looking down, you notice that your torso is growing longer and twisting its shape, your ribs and bones pushing outwards to form into an exoskeleton[if player is not xenoskinned] just beneath your taut skin[end if]. The bones in your hips crack as they expand and your animalistic body takes on subtle, female curves[if player is xenoskinned and breasts of player > 0]. Feeling strange tingles spreading from your nipples, you see green blood vessels and veins spreading towards your erect nipples[end if][if breasts of player > 0 and breast size of player > 5]. Your breasts start to leak a green, acidic milk that sizzles when it hits the ground[end if][if player is female]. You feel a growing vacancy inside lower abdomen as your insides stretch to make room for countless eggs[end if]. Your arms and legs have a dull ache as they become thinner and bend in odd places and directions. Your fingers and toes grow long, sinister claws";
 	now skin change entry is "pain erupts through your body as your skin becomes hard and fuses with your bones. You can see a strong exoskeleton forming around your arms, legs, and head. Your skin becomes black and as solid as onyx, glistening and hard";
 	now ass change entry is "a sharp pain strikes at the rear base of your back almost causing you to pass out. You feel your spinal column stretching and cracking as it bursts through your skin and becomes a long tail consisting of many vertebrae with no visible muscle whatsoever. It extends out like this, bony and hard until it ends in a pointed, bladed tip that slices through the air";
-	now cock change entry is "your cock hardens into a black, ebon spire ending in short, squirming tendrils[if player is female]. You groan in pain as it pulses and throbs, forming a thick, fleshy channel down its length with a cunt-like orifice as it mutates into an ovipositor cock. Your pain turns to pleasure as you feel the eggs inside you shifting and you find yourself eager to find a willing (or maybe even unwilling) home for them. You try to suppress this desire, but it grows increasingly tempting[else]. You feel considerable pleasure as those squirming tendrils slide across your glans and play with your cum-slit. But something doesn't feel right, like its incomplete as it is[end if]. Your balls are pulled into your body and become internalized, pressed and swollen as bulges protruding below your ebon spire";
+	now cock change entry is "your cock hardens into a black, ebon spire ending in short, squirming tendrils[if player is female]. You groan in pain as it pulses and throbs, forming a thick, fleshy channel down its length with a cunt-like orifice as it mutates into an ovipositor cock. Your pain turns to pleasure as you feel the eggs inside you shifting and you find yourself eager to find a willing (or maybe even unwilling) home for them. You try to suppress this desire, but it grows increasingly tempting[else]. You feel considerable pleasure as those squirming tendrils slide across your glans and play with your cum-slit. But something doesn't feel right, like it's incomplete as it is[end if]. Your balls are pulled into your body and become internalized, pressed and swollen as bulges protruding below your ebon spire";
 	now str entry is 16; [a big strong bear]
 	now dex entry is 20; [not so limber]
 	now sta entry is 12; [not too much stamina -a lot of bear to lug about.]
@@ -91,7 +94,7 @@ When Play begins:
 	now HP entry is 80; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

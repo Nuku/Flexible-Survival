@@ -346,6 +346,7 @@ This is the gainfeat rule:
 			now vampiric is true;
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
+	sort feats of player;
 
 to say bestowcitymapfeat:
 	now Beach Plaza is known;

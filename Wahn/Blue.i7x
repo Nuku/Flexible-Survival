@@ -110,7 +110,7 @@ to BlueSpeakerTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -136,16 +136,16 @@ to BlueSpeakerTalkMenu:
 				else if (nam is "Ask about their need for bodily fluids"):
 					say "[BlueTalk_Cum]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BlueTalk_Background:
@@ -197,7 +197,7 @@ to say BlueSpeakerSexMenu:
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "[']donate['] some cum";
+		now title entry is "[']Donate['] some cum";
 		now sortorder entry is 1;
 		now description entry is "Jerk off on [ObjectPro of Blue Speaker]";
 	[]
@@ -206,7 +206,7 @@ to say BlueSpeakerSexMenu:
 		now title entry is "Fuck Blue's mouth";
 		now sortorder entry is 2;
 		now description entry is "Give the goo person a direct cum injection";
-	[
+	[]
 	if (player is male and libido of Blue Speaker is 1): [female shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's pussy";
@@ -230,12 +230,12 @@ to say BlueSpeakerSexMenu:
 		now title entry is "Let Blue fuck your pussy";
 		now sortorder entry is 6;
 		now description entry is "Let the goo person fuck your pussy";
-	]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -246,7 +246,7 @@ to say BlueSpeakerSexMenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "[']donate['] some cum":
+				if nam is "[']Donate['] some cum":
 					say "[BlueSex1]";
 				else if (nam is "Fuck Blue's mouth"):
 					say "[BlueSex2]";
@@ -259,14 +259,14 @@ to say BlueSpeakerSexMenu:
 				else if (nam is "Let Blue fuck your pussy"):
 					say "[BlueSex6]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -438,12 +438,15 @@ Section 3 - Infection
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Blue Goo";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "<Noncombat Infection>";
 	now defeated entry is "<Noncombat Infection>";
 	now victory entry is "<Noncombat Infection>";

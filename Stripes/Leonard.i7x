@@ -640,7 +640,7 @@ violinspritefight is a truth state that varies.
 
 Instead of resolving Music Store:
 	if violinfound is 0 or violinfound is 1:
-		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store. It seems to have been largely undamaged. You quickly head over to it, failing to notice the signs of activity inside in your eagerness. Pulling the door open, you hear the buzz of little wings from inside the dark store. Suddenly on guard, there's a cry of 'Get 'em, girls!' from a small, high-pitched voice. The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
+		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store. It seems to have been largely undamaged. You quickly head over to it, failing to notice the signs of activity inside in your eagerness. Pulling the door open, you hear the buzz of little wings from inside the dark store. Suddenly on guard, there's a cry of 'Get [']em, girls!' from a small, high-pitched voice. The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
 	else if violinfound is 2 or violinfound is 3:	[returning]
 		say "     With Leonard's request lingering at the back of your mind, you find yourself back in front of the Music Store you found earlier. Longing to please the handsome lion with a gift, you ready yourself for another fight with the sprites and pull open the door. The buzz inside picks up inside as they notice the intruder. 'Back for more, eh?' one of them giggles playfully before the swarm surges towards you, forcing you back into the street to fight them.";
 	now fightstatus is 3;
@@ -652,7 +652,7 @@ Instead of resolving Music Store:
 		if violinfound is 0, now violinfound is 2;
 		if violinfound is 1, now violinfound is 3;
 	else if fightstatus is 2:
-		say "     After the sprites have had their fun, you are left deposited outside their store. 'Oh! You should come back again so we can play some more,' one of them giggles. 'Yeah! I want a turn playing with your [if player is herm][one of]cock[or]pussy[at random][else if player is male]cock[else if player is female]cunt[else]feet[end if] next time' another pipes in. 'Ooo! Dibs!' another says with a giggle. They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
+		say "     After the sprites have had their fun, you are left deposited outside their store. 'Oh! You should come back again so we can play some more,' one of them giggles. 'Yeah! I want a turn playing with your [if player is herm][one of]cock[or]pussy[at random][else if player is male]cock[else if player is female]cunt[else]feet[end if] next time,' another pipes in. 'Ooo! Dibs!' another says with a giggle. They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
 		if violinfound is 0, now violinfound is 2;
 		if violinfound is 1, now violinfound is 3;
 	else:
@@ -687,10 +687,10 @@ Instead of resolving Concert Hall:
 	else:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
 		now fightstatus is 3;
-		challenge "Rabbit Pack";
+		challenge "Rabbit";
 		if fightstatus is 1:
 			now fightstatus is 3;
-			challenge "Rabbit Pack";
+			challenge "Rabbit";
 			if fightstatus is 1:
 				say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
 				say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";
@@ -710,14 +710,14 @@ Instead of resolving Concert Hall:
 		[puts Rabbit Pack as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
-			if name entry is "rabbit pack":
+			if name entry is "Rabbit":
 				now monster is y;
 				break;
-		now tailname of player is "rabbit pack";
-		now facename of player is "rabbit pack";
-		now skinname of player is "rabbit pack";
-		now bodyname of player is "rabbit pack";
-		now cockname of player is "rabbit pack";
+		now tailname of player is "Rabbit";
+		now facename of player is "Rabbit";
+		now skinname of player is "Rabbit";
+		now bodyname of player is "Rabbit";
+		now cockname of player is "Rabbit";
 		attributeinfect;
 		now tail of player is tail entry;
 		now face of player is face entry;

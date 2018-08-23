@@ -33,7 +33,7 @@ to say ChrisDesc:
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, letting free the cock showing in a respectively sized bulge at the front. Chris's features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man.";
 		say "     As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";
 	else if libido of Chris is 1: [breeder Chris]
-		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man.";
+		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man.";
 		say "     As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
 	else if libido of Chris is 2: [warrior Chris]
 		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short, bristly black hair on his head completes the picture of an untamed orcish warrior.";
@@ -122,7 +122,7 @@ to say ChrisTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -139,14 +139,14 @@ to say ChrisTalkMenu:
 				if nam is "Sex":
 					say "[ChrisTalk2]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -215,7 +215,7 @@ Instead of fucking the Chris:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -239,14 +239,14 @@ Instead of fucking the Chris:
 						say "[ChrisSex5]";
 					WaitLineBreak;
 					now lastfuck of Chris is turns;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off?";
 				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

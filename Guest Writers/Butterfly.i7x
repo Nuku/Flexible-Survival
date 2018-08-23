@@ -9,8 +9,8 @@ Version 1 of Butterfly by Guest Writers begins here.
 Section 1 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 Section 2 - Variable and constant definitions
 
@@ -418,7 +418,10 @@ When Play begins:
 	add { "Butterfly" } to infections of girl;
 	Choose a blank row from Table of random critters;
 	now name entry is "Butterfly"; [Name of your new Monster]
-	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
+	now enemy title entry is "";
+	now enemy name entry is "Mariposa";
+	now enemy type entry is 1; [unique enemy]
+	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high-pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[butterfly defeat]";
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
@@ -443,7 +446,7 @@ When Play begins:
 	now cha entry is 14;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
-	now area entry is "High"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "High"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]
@@ -772,7 +775,7 @@ to say butterfly grove scene:
 					now ButterflyLove is True;
 					infect "Butterfly";
 					wait for any key;
-					if player_sterile is False: [If at all possible she will get pregnant here otherwise this path is a dead end and is difficult to re-trigger]
+					if player_sterile is False: [if at all possible she will get pregnant here otherwise this path is a dead end and is difficult to re-trigger]
 						now libido of player is (libido of player) / 2;
 						impregnatebutterfly;
 					else: [No other option but to re-enable her as a random spawn]
@@ -887,12 +890,12 @@ to say butterfly grove scene:
 				now libido of player is (libido of player) / 2;
 				impregnatebutterfly;
 			wait for any key;
-			decrease the humanity of player by 5;
+			SanLoss 5;
 			if the humanity of player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her.";
-	else if player is not male and player is female and ButterflyRaped is 0 and ButterflyLove is True:
+	else if player is purefemale and ButterflyRaped is 0 and ButterflyLove is True:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
 		say "Your Butterfly lover is very pleased to see you and greets you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove.";
@@ -913,7 +916,7 @@ to say butterfly grove scene:
 				say "The butterfly eases you down to the ground on your back and begins to play with your vagina[sfn]. She tastes the stray moisture using her mouth, never losing your gaze with her own. With your clitoris erect and covered in a layer of her clear saliva she lifts into the air hovering above you with her wings. Slowly she rotates her body lowering her rear down upon your face as she resumes pleasuring your [if cunts of player > 1]many [end if]cunt[sfn]. With her hands parting your [skin of player] thighs, her breasts bounce lively on your tummy as you suck at her petals. Feeling your lover's warm breath as she takes in your scent, you readily grasp the deep love she feels for you. Sensing the unspoken understanding her cunt quivers and tightens around your fingers once again probing her insides. Spreading and rubbing your vagina[sfn] with her fingers she explores your insides with her proboscis reaching deep into places no cock has ever seen. You climax in unison, her wings jerking with each spasm as her sticky fluids cascade over your face and she buries hers in your equally wet orifice[sfn]. Your mate lifts off, once again rotating her body, and descends down. [if breast size of player > 0]Your [breast size desc of player] breasts cushion her fall. [else]Her breasts cushion her fall. [end if]Your bodies steaming and dripping with both sweat and cum she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth you drift off to sleep.";
 			infect "Butterfly";
 			wait for any key;
-			decrease the humanity of player by 5;
+			SanLoss 5;
 			if the humanity of player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:

@@ -140,7 +140,7 @@ Instead of conversing Ammy:
 					now affection of Ammy is 5;
 					now 'Employees Only' Door is openable;
 				else:
-					say "     'Oooh, I see you're busy with something else' Ammy says in a sad voice, 'I think I also should get going. Talk to you again later sweetheart!'";
+					say "     'Oooh, I see you're busy with something else,' Ammy says in a sad voice. 'I think I also should get going. Talk to you again later sweetheart!'";
 			-- otherwise:
 				say "[if lastfuck of Ammy is not turns][one of]     'Ooh there you are again lovely! What are you up to? Having something 'special' in mind?' Ammy asks you with one of her eyebrows raised.[or]     The white equine falls into you, arms embracing your body while giving your forehead a kiss with her muzzle, 'Where have you been? I was missing you!'[or][ammy_idletalk][at random][else if affection of Ammy > 4][one of]     If you want me to dance for you again, you can always ask me to, sweetheart.[or][ammy_idletalk][at random][else][ammy_idletalk][end if]";
 	else:

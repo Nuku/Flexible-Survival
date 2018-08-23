@@ -8,7 +8,7 @@ Requires Basic Hyperlinks by Emily Short and Text Capture by Eric Eve."
 
 
 [Changelog:
-  -- Version 9: Updated for latest build and to be adaptive.
+	-- Version 9: Updated for latest build and to be adaptive.
 ]
 
 
@@ -59,16 +59,16 @@ A thing is either hyperlinked or hyperlinkless. A thing is usually hyperlinked. 
 Object hyperlinking something is an activity on objects.
 
 Before printing the name of a thing (called item):
-	Say "[o]";
+	say "[o]";
 
 After printing the name of a thing (called item):
-	Say "[x]";
+	say "[x]";
 
 Before printing the plural name of a thing (called item):
-	Say "[o]";
+	say "[o]";
 
 After printing the plural name of a thing (called item):
-	Say "[x]";
+	say "[x]";
 
 Section - Hyperlinks management
 
@@ -144,7 +144,7 @@ After reading a command:
 	if hyperlink clicked is false:
 		if the result of gestalt of LineInputEcho is not 0:
 			say "[the player's command]";
-	otherwise:
+	else:
 		now hyperlink clicked is false;
 
 To decide which number is the result of gestalt of LineInputEcho:
@@ -450,7 +450,7 @@ Rule for setup hyperlink emphasis (this is the setup hyperlink emphasis rule):
 	if pre-game hyperlink setting is true:
 		now pre-game hyperlink setting is false;
 		do nothing;
-	otherwise:
+	else:
 		try looking.
 
 To advance style with (kwtype - a hyperlink type):
@@ -485,7 +485,7 @@ Definition: a direction (called thataway) is viable if the room thataway from th
 Carry out listing exits (this is the Hyperlink Interface carry out listing exits rule):
 	let count of exits be the number of viable directions;
 	if the count of exits is 0, say "[It] [seem] there [are] nowhere to go." (A);
-	otherwise say "From here, [if the number of viable directions is 1]the only way out [are] to[otherwise][we] [can go] to[end if] [a list of viable directions]." (B).
+	otherwise say "From here, [if the number of viable directions is 1]the only way out [are] to[else][we] [can go] to[end if] [a list of viable directions]." (B).
 
 Section - Things
 

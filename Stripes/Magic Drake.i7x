@@ -441,26 +441,26 @@ to say beatthemagicdrake:
 									increase cock length of player by 2;
 									follow the cock descr rule;
 									increase libido of player by 5;
-									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock. This causes it to swell and grow a little larger, lengthening until it becomes a [cock size desc of player] [cock length of player]-incher. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funnelled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground. Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock. This causes it to swell and grow a little larger, lengthening until it becomes a [cock size desc of player] [cock length of player]-incher. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funneled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground. Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
 								else if mdstaffaction is 6:		[cock reduction]
 									decrease cock length of player by 2;
 									if cock length of player < 1, now cock length of player is 1;
 									follow the cock descr rule;
 									decrease libido of player by 3;
-									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock[smn]. This causes [if cocks of player > 1]them[else]it[end if] to shrink down, losing [if cock length of player > 2]a couple of inches[else]an inch[end if]. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funnelled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground[if cock length of player is 1]. As your tiny prick[smn] didn't go away completely, you doubt you'll be able to shrink yourself down any further this way[end if]. The angry dragoness growls impotently as your sexy penis[esmn] shrink[smv], leaving [if cocks of player > 1]them[else]it[end if] feeling a little more manageable for you to deal with.";
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock[smn]. This causes [if cocks of player > 1]them[else]it[end if] to shrink down, losing [if cock length of player > 2]a couple of inches[else]an inch[end if]. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funneled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground[if cock length of player is 1]. As your tiny prick[smn] didn't go away completely, you doubt you'll be able to shrink yourself down any further this way[end if]. The angry dragoness growls impotently as your sexy penis[esmn] shrink[smv], leaving [if cocks of player > 1]them[else]it[end if] feeling a little more manageable for you to deal with.";
 								else if mdstaffaction is 7:		[ball growth]
 									increase cock width of player by 1;
 									follow the cock descr rule;
 									increase libido of player by 5;
 									if the remainder after dividing the cock width of player by 3 is 0, increase cock width of player by 1;
-									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testes. They swell up a little larger, growing until they become a [short ball size] pair of draconic balls. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funnelled into your climax and you splatter a considerably larger-than-normal mess of fresh seed onto the ground. Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testes. They swell up a little larger, growing until they become a [short ball size] pair of draconic balls. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funneled into your climax and you splatter a considerably larger-than-normal mess of fresh seed onto the ground. Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
 								else if mdstaffaction is 8:		[ball reduction]
 									decrease cock width of player by 1;
 									if the remainder after dividing the cock width of player by 3 is 0, decrease cock width of player by 1;
 									if cock width of player < 1, now cock width of player is 1;
 									follow the cock descr rule;
 									decrease libido of player by 3;
-									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testes. This causes them to shrink down in your scaled scrotum. You try to keep going, but between the compression on the load already in them and the pleasure of the change itself, you're sent over the edge, moaning loudly. The remaining magical energy gets funnelled into your climax and you splatter a much larger-than-normal mess of fresh seed onto the ground[if cock width of player is 1]. As your tiny balls didn't go away completely, you doubt you'll be able to shrink them down any further this way[end if]. The angry dragoness growls impotently as your juicy nuts shrinks, leaving you with a set that feels a little more manageable for you to deal with.";
+									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testes. This causes them to shrink down in your scaled scrotum. You try to keep going, but between the compression on the load already in them and the pleasure of the change itself, you're sent over the edge, moaning loudly. The remaining magical energy gets funneled into your climax and you splatter a much larger-than-normal mess of fresh seed onto the ground[if cock width of player is 1]. As your tiny balls didn't go away completely, you doubt you'll be able to shrink them down any further this way[end if]. The angry dragoness growls impotently as your juicy nuts shrinks, leaving you with a set that feels a little more manageable for you to deal with.";
 								else if mdstaffaction is 9:		[cunt growth]
 									say "***";
 								else if mdstaffaction is 10:		[cunt reduction]
@@ -619,12 +619,15 @@ to say mdstaff_overgrown:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random]."; [ Successful attack message ]
 	now defeated entry is "[beatthemagicdrake]"; [ Text when monster loses. ]
 	now victory entry is "[losetomagicdrake]"; [ Text when monster wins. ]

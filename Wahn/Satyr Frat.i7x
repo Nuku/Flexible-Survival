@@ -115,7 +115,7 @@ to say SatyrFratSex:
 			say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 			now SatyrFratPartyStage is 5;
 		else if calcnumber is 2: [Fuck]
-			setmonster "human";
+			setmonster "Human";
 			choose row monster from the table of random critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at actually being intimate with [if player is not female]another male[else]a herm[end if] for the first time and he freezes for a second, then quickly gets over his shock and happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
@@ -149,7 +149,7 @@ to say SatyrFratSex:
 			say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 			now SatyrFratPartyStage is 5;
 		else if calcnumber is 2: [Fuck]
-			setmonster "human";
+			setmonster "Human";
 			choose row monster from the table of random critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at the sudden intimacy and he happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
@@ -250,7 +250,7 @@ to say SatyrFratSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -277,14 +277,14 @@ to say SatyrFratSexMenu:
 				if nam is "Pick up a sexy sorority girl and fuck her":
 					say "[SatyrFratSex7]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You change your mind, and tell Talov that you only wanted to see how they were doing, then excuse yourself and leave the somewhat disappointed satyr standing at the bar. Making your way back to the entrance, you leave the crowd of young adults and the beat of their music behind and get back to the center of the campus. You step back from the satyr, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -331,7 +331,7 @@ to say SatyrFratSex2:
 		else:
 			say "     After stroking your new friend's cock for a second, you take a step away from him and quickly strip, just throwing your gear and clothes aside in your eagerness to get it on with the handsome guy. And he's more than just a little willing to do so, as he is watching your naked body with a hungry gaze and his manhood stands fully erect by now. 'I don't know what's happening, but it feels great!' the jock pants loudly and steps forward, wrapping his arms around you. Your lips meet as eager hands wander over your body, then the horny college stud pulls you under the warm flow of the still-running shower. Being kissed and stroked by a handsome guy, your arousal skyrockets and soon, you moan that you want to fuck him - right here, right now, against the shower wall.";
 			WaitLineBreak;
-			say "     'I'm not gay - or... I wasn't... wait -,' the guy says with confusion in his voice as he really thinks about what you've been doing for the first time since you got him all alone. Not willing you let this handsome stud slip out of your grasp, you quickly push him against the wall and kiss him again, then let your hands wander down over the muscled curves of his body. Hooking your hands under his thighs, you lift the frat guy up, holding him with his back pressed against the tiled wall. The transforming student's lips brush against yours in a followup kiss just as your pre-cum dripping erection nudges against his asshole. An eye-blink later, you're thrusting deep into his butt and giving him an amazing kiss at the same time. The wet and wild coupling that follows is a constant assault on your senses, with his clenching hole around your shaft, those soft lips against yours and comfortably warm water spraying down over you.";
+			say "     'I'm not gay - or... I wasn't... wait -,' the guy says with confusion in his voice as he really thinks about what you've been doing for the first time since you got him all alone. Not willing you let this handsome stud slip out of your grasp, you quickly push him against the wall and kiss him again, then let your hands wander down over the muscled curves of his body. Hooking your hands under his thighs, you lift the frat guy up, holding him with his back pressed against the tiled wall. The transforming student's lips brush against yours in a follow-up kiss just as your pre-cum dripping erection nudges against his asshole. An eye-blink later, you're thrusting deep into his butt and giving him an amazing kiss at the same time. The wet and wild coupling that follows is a constant assault on your senses, with his clenching hole around your shaft, those soft lips against yours and comfortably warm water spraying down over you.";
 			say "     While the exact order of things is slightly hazy in your recollection, you clearly remember the moment as small and nubby horns push out of the athlete's forehead - with him barely even noticing - well, how could he... with his eyes rolled back as he gasps at an especially deep thrust you did. Not long after that, his legs become much more furry under your hands and you can see human feet change to hooves from the corner of your eye. Interestingly, the young man's cock is the last thing to go, the last little bit of humanity he kept to the end - until it suddenly shifts as well, re-forming into a goat's penis. The sensation of completing his transformation is what drives him over the edge, and with a breathless moan, the frat member starts shooting cum all over his own chest. You're not long after him yourself, as the student's twitching and flexing asshole gives the last little push you needed.";
 			WaitLineBreak;
 			say "     Breathing heavily as your cock pulses with blast after blast of fertile seed shooting into his insides, you hold the newly minted satyr for a while longer, then eventually give him a last kiss and lower him to stand back on his own two... hooves. 'Wow! That was am-az-ing! I - I guess I'm bi after all. Maybe I should have gone on more of these parties - who knew a handsome guy would just drag you into a room and fuck your brains out!' he tells you with a goofy grin on his face. A moment after that, his brows suddenly draw together in puzzlement and he looks down, really noticing his now furred legs for the first time. 'Wait - what's this? Hooves? Kewl! I've got to show this to Dave and Bobby, they won't believe their eyes!'";
@@ -410,7 +410,7 @@ to say SatyressShowerFingering:
 
 to say SatyrFratSex4: [Bj for Richard]
 	if SatyrFratRichardRelationship < 4: ['regular Richard']
-		setmonster "human";
+		setmonster "Human";
 		say "     Letting your eyes wander over the crowd of partying students, you spot your perfect mark - Richard, the hunk you encountered when you helped your satyr friends get in here. He's standing over near one of the sofas in the room, moving to the beat of the music. Not wanting to risk anyone else honing in on the handsome guy, you quickly grab a cup of satyr wine and make your way over to him, dodging between the frat guys and girls in between. As you suddenly step up close to Richard, his eyes go wide and cheeks go red as he remembers your last encounter, then he catches himself and readily accepts the plastic cup from you. In between taking short nips, then larger swallows from the potent drink, he says, 'Hey, thanks! Er... nice to see you again. I got bored waiting for the guy to relieve me because he never came - guess guard duty isn't all that important if no one else cares, hm?'";
 		if SatyrFratRichardRelationship is 2:
 			say "     You exchange some sentences of small talk about the party with Richard, then casually lean in against him and place your hand on his crotch, right on the noticeable bulge he's already sporting thanks to the satyr wine. He falls silent for a second, moaning quietly as you openly rub his erection through the pants. As you're not even trying to hide what you're doing, it doesn't take long before a [one of]sorority girl[or]frat guy[at random] dancing nearby calls out, 'Seems like Richard is really enjoying the party!' The muscular student turns crimson red in the face, then clears his throat and stutters to you, 'Let - let's go to my room upstairs and -' And that's how far you let him get before pulling his head to yours and giving him a deep kiss. While he's distracted with your tongue wiggling against his own, you slide your hand inside his pants and take hold of his hardon.";

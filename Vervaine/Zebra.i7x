@@ -30,7 +30,7 @@ to say Zebra wins:
 			wait for any key;
 			say "[ZebraDommingPlayerSexMenu]";
 		else if player is female:
-			say "     'Ah good! Another female for my herd!' the zebra stallion says with a self satisfied grin as he looks down on your defeated form, 'Of course, it looks like you need some [italic type]persuasion[roman type] still to join my little herd!' the beast says with a lewd grin on his muzzle as he strokes his fully erect zebra cock, leaving no doubt in your mind as to what kind of [italic type]persuasion[roman type] he intends. You can't resist in the least as he pins you down to the ground, spreading your legs out to the side and exposing your gaping pussy to him, and he whickers in amusement. Your head fogs with lust, as his strong dominant scent and actions seem to wake an almost instinctive need to submit to his strong masculine needs. 'Oh, you will make a fine mare.' The zebra grunts lustfully, as he rubs the blunt tip of his cock along the outside of your increasingly needy lips. 'Now, we just need to make sure you are MY mare!' The horny zebra draws his hips back slightly so that his cocktip presses right up against your entrance, before thrusting himself into you!";
+			say "     'Ah good! Another female for my herd!' the zebra stallion says with a self-satisfied grin as he looks down on your defeated form. 'Of course, it looks like you need some [italic type]persuasion[roman type] still to join my little herd!' the beast says with a lewd grin on his muzzle as he strokes his fully erect zebra cock, leaving no doubt in your mind as to what kind of [italic type]persuasion[roman type] he intends. You can't resist in the least as he pins you down to the ground, spreading your legs out to the side and exposing your gaping pussy to him, and he whickers in amusement. Your head fogs with lust, as his strong dominant scent and actions seem to wake an almost instinctive need to submit to his strong masculine needs. 'Oh, you will make a fine mare.' The zebra grunts lustfully, as he rubs the blunt tip of his cock along the outside of your increasingly needy lips. 'Now, we just need to make sure you are MY mare!' The horny zebra draws his hips back slightly so that his cocktip presses right up against your entrance, before thrusting himself into you!";
 			say "     You gasp as he buries his thick cock into you as far as it will go with that first powerful thrust, his hands pinning you down on the rough ground as you writhe underneath him helplessly. Your eyes glaze over in pleasure at the feel of his thick rod spearing into you as far as it can, splitting you open around him as your sex grips the stallion's hard cock in desperate need. The big zebra stallion on top of you grunts in pleasure as he thrusts himself into you roughly, making your body shake with every movement as he ruts you hard, intent on claiming your body as his own. You moan as the experienced stallion nips at you with his mouth and controls you with his hands, even as he pounds into you. His every move means to reinforce his dominant position and reduce you to nothing more than a submissive, little herd member.";
 			WaitLineBreak;
 			say "     You struggle to hang on to any scrap of yourself, as he pounds his hard rod into you, each thrust making it harder and harder to remember why you would ever want to be independent or human. After what seems like an eternity of rough pleasure, his body tenses as he shoots his thick equine seed into you, the hot, sticky semen flooding your womb with his stallion sperm and overflowing out down his cock as he pumps more and more into you, laying his mark deep into your body. You can only lie there helplessly as he pulls himself out, his seed leaking out of your well-used body as he hauls himself up and grins down at you. 'Let's see if that doesn't make a proper zebra mare out of you now,' he says in a smug tone. 'Now, I have to go check on the rest of the herd, and maybe find a few more new mares while I'm at it. You'll be sure to come back to join us soon now, won't you?' The zebra beast asks with a short laugh, as if the matter was never in doubt, as he trots away, leaving you lying there with his seed still leaking out of you.";
@@ -63,7 +63,7 @@ to say Zebra wins:
 				say "     Pulling his cock free, he gets you to lick it clean before finally pushing you away. 'It's time I go check on my herd again. When you're ready to join them as one of my mares, I'll give you the proper fucking a slut like you clearly needs.' And with that, he gives your ass a firm swat before trotting off. Meanwhile, you flop down onto your ass, rubbing your stuffed tummy, images of being part of the stud's herd and being plowed hard by him rolling around in your lust-addled mind for quite some time.";
 				increase LostToZebra by 1;
 		else:
-			say "     '[if player is male]Another male[else]A useless gelding[end if] in my territory! Well, we will see about that!' the large stallion says, as he places one of his hooves on your defeated body, pinning you down to the ground. 'Let's see you stay male after this!' The zebra beast says with a sneer, as he begins to pump his hands along his thick, black cock. He starts to moan in pleasure as a few drops of pre form while you look on in horror. The beast continues to jack himself off as he stands over your body. While you try weakly to escape, your efforts are futile, and soon, the beast lets out a loud whinnying noise as his equine cock erupts, spraying its thick seed all over your helpless body in powerful spurts. Your body tingles as he covers you in his seed. Once his cock finally empties, the panting zebra backs off and stares down at you with a self satisfied look on his face. 'Now, why don't you lie there and become a good little mare,' the zebra says with an amused snort, 'and then maybe I'll come find you and make you a real member of the herd.' The beasts turns and [if ndmhigh is 1]heads back through the door from which he came[else]trots down the zoo pathways[end if], leaving you to your changes.";
+			say "     '[if player is male]Another male[else]A useless gelding[end if] in my territory! Well, we will see about that!' the large stallion says, as he places one of his hooves on your defeated body, pinning you down to the ground. 'Let's see you stay male after this!' The zebra beast says with a sneer, as he begins to pump his hands along his thick, black cock. He starts to moan in pleasure as a few drops of pre form while you look on in horror. The beast continues to jack himself off as he stands over your body. While you try weakly to escape, your efforts are futile, and soon, the beast lets out a loud whinnying noise as his equine cock erupts, spraying its thick seed all over your helpless body in powerful spurts. Your body tingles as he covers you in his seed. Once his cock finally empties, the panting zebra backs off and stares down at you with a self-satisfied look on his face. 'Now, why don't you lie there and become a good little mare,' the zebra says with an amused snort, 'and then maybe I'll come find you and make you a real member of the herd.' The beasts turns and [if ndmhigh is 1]heads back through the door from which he came[else]trots down the zoo pathways[end if], leaving you to your changes.";
 			increase LostToZebra by 1;
 
 to say Zebra loses:
@@ -71,7 +71,7 @@ to say Zebra loses:
 		if debugactive is 1:
 			say "     DEBUG: Empty scene in the file 'Zebra.i7x' - Dealing with the event outcome is taken care of at the event source[line break]";
 		stop the action;
-	say "     'Fine' the zebra stallion says in a pained voice, as he stumbles backwards in defeat. 'You win the battle for now, but I'll be back stronger than ever to make you one of the herd before you know it!' he continues, eyes moving left and right as he looks for a way of escape.";
+	say "     'Fine,' the zebra stallion says in a pained voice as he stumbles backwards in defeat. 'You win the battle for now, but I'll be back stronger than ever to make you one of the herd before you know it!' he continues, eyes moving left and right as he looks for a way of escape.";
 	LineBreak;
 	if ZebraLossCount is 0:
 		say "     With a sudden burst of speed, the zebra dashes off as fast as his hoofed legs can carry him. Caught by surprise, you don't have any realistic chance of catching him, so you just stay where you are and watch. He sure looks impressive, with the high stature and well-muscled body. Maybe next time, you can catch him before he runs off...";
@@ -346,7 +346,7 @@ to say ZebraDommingPlayerSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Denied[as]100[end link][line break]";
+	say "[link]0 - Denied[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -366,7 +366,7 @@ to say ZebraDommingPlayerSexMenu:
 				if (nam is "Mating Rut"):
 					say "[ZebraDommingPlayerSex4]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Does the zebra not have time for his slut?";
 			if player consents:
 				now sextablerun is 1;
@@ -374,9 +374,9 @@ to say ZebraDommingPlayerSexMenu:
 				increase libido of player by 10;
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ZebraDommingPlayerSex1: [Face Fuck]
@@ -448,12 +448,15 @@ to say ZebraDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Zebra";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]He slams his large forehead right into your head, causing you to see stars![or]The large beast pauses for a minute to stroke his thick zebra cock and grins at you lewdly, the sight and his strong dominant musk sapping your will to fight![or]He lashes out at you with his strong hoof-like hands![or]He charges forward wildly, slamming his body into yours![or]The zebra stallion lowers his shoulder and rams into you, throwing you to the ground painfully![at random]";
 	now defeated entry is "[Zebra loses]";
 	now victory entry is "[Zebra wins]";

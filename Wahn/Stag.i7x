@@ -125,7 +125,7 @@ to say Stag loses:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -161,14 +161,14 @@ to say Stag loses:
 							now non-infectious entry is false;
 							break;
 					stop the action;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -187,8 +187,8 @@ to say StagDesc:
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 when play begins:
 	add { "Stag" } to infections of guy;
@@ -197,6 +197,9 @@ when play begins:
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Stag";
+	now enemy title entry is "";
+	now enemy name entry is "Mike";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]He pushes you down against the ground with strong arms and gives you a blow in the ribs.[or]You stumble and nearly fall down as he gives you a rough shove.[or]His horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection and drives the air from your lungs.[at random]";
 	now defeated entry is "[Stag loses]";
 	now victory entry is "[Stag wins]";
@@ -207,7 +210,7 @@ When Play begins:
 	now tail entry is "Your butt has a deer's tail over it, [skin of player] on the top, soft cream along the underside. The rest of your ass is quite curvy and [skin of player], hiding nothing."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "pitch black human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. A tickling sensation accompanies sprouting short fur over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "your limbs become very masculine, long and strong. Your nails reform to cover your finger- and toe-tips in protective hooves"; [  format as "Your body feels funny as (your text)." ]
+	now body change entry is "your limbs become very masculine, long and strong. Your nails reform to cover your finger- and toe-tips in protective hooves"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft tingles spread in waves over it and fur sprouts in odd patterns across you, slowly settling into brown fur over most of your body, with lighter cream coloring starting at your navel and running down to your groin and the insides of your legs"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a short, upturned, and furry tail sprouts into being over its now deliciously round [skin of player] shape"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your cock darkens until it is entirely black, but human shaped in form"; [ format as "Your cock feels funny as (your text)." ]
@@ -328,7 +331,7 @@ Instead of fucking Mike:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -353,14 +356,14 @@ Instead of fucking Mike:
 					infect "Stag";          [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
 					now lastfuck of Mike is turns;
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off the conversation?";
 				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the anthro stag, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -555,7 +558,7 @@ to say XerxesDesc:
 	if lust of Xerxes < 3:
 		say "     Originally one of Mike's dogs, Xerxes is now a young human male of about nineteen. He has short black hair and a well-developed physique, with muscular arms and legs. All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. He watches you attentively, eager to follow the commands of his master";
 		if lust of Xerxes is 2:
-			say ". You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of awesome fruit > 0][link]awesome[as]give awesome fruit to Xerxes[end link][else]awesome[end if]";
+			say ". You are quite pleased by having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of awesome fruit > 0][link]awesome[as]give awesome fruit to Xerxes[end link][else]awesome[end if]";
 		say ".";
 	else if lust of Xerxes is 3:
 		say "     Originally one of Mike's dogs, Xerxes is now a young human male of about nineteen. His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan. His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place. All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
@@ -670,7 +673,7 @@ Instead of fucking Xerxes:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -714,14 +717,14 @@ Instead of fucking Xerxes:
 						increase lust of Xerxes by 1;
 					now lastfuck of Xerxes is turns;
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off the conversation?";
 				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the human dog, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -747,7 +750,7 @@ to say XerxesSex2: [he sucks the player]
 	say "     Moaning, you grab Xerxes['] head and do a few deep thrusts with your hips, your cock deep in his throat as it starts shooting a huge load. Pumping blast after blast directly into his stomach, you hold his head against your crotch, then pull back a moment later to let him get some air. He quickly goes back to work, catching the last spurts of cum with his mouth, then puts his lips around your cock-head, softly sucking as it goes down[if lust of Xerxes >= 4]. When he finally releases your cock, he smiles a very human smile up at you. 'Master tasty,' he says, licking his lips[end if].";
 
 to say XerxesSex3: [player pussy fucked]
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	say "     You step beside the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, happy to get his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master sex?' he asks eagerly[end if].";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
@@ -759,7 +762,7 @@ to say XerxesSex3: [player pussy fucked]
 	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms[if lust of Xerxes >= 4]. 'Mmm... Master good fuck,' he mumbles softly, snuggling up to you lovingly[end if].";
 
 to say XerxesSex4: [player ass fucked]
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	say "     You step beside the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, happy to get his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master sex?' he asks eagerly[end if].";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
@@ -899,7 +902,7 @@ to say XerxesSex8: [female player and felinoid + Xerxes]
 		say "     Even though the felinoid and Xerxes are quite virile males, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and long strings of cum start to shoot from his cock onto the library's floor, his twitching anal muscles give the large cat fucking him the last nudge towards orgasm too. A deep rumble of satisfaction vibrates in Klauz's throat as he pushes his member as deep as it will go and fills Xerxes['] asshole with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Xerxes with him. Stretched out comfortably on the floor, the felinoid holds Xerxes against his warm belly fur with his front paws around him and starts licking his sweaty back. Looks as if he's actively trying to infect him, or at least wants to spread his scent over all of your human pet's body.";
 	else: [fucked by Xerxes]
-		setmonster "human";
+		setmonster "Human";
 		choose row monster from the table of random critters;
 		LineBreak;
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of Klauz, then over the smooth skin of your human dog, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes. Your human dog has a bit of a pleasantly zoned out expression on his face, panting and grunting in lust as he's fucked. His hard cock bumps against you often, every time the felinoid thrusts into his ass.";
@@ -940,7 +943,7 @@ to say XerxesSex9: [Female Player with Fang & Xerxes]
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to go down and allowing them to separate, you lay back on the cot and get comfortable.";
 		else: [fucked by Xerxes]
-			setmonster "human";
+			setmonster "Human";
 			choose row monster from the table of random critters;
 			LineBreak;
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get beside them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time Fang thrusts into his ass.";
@@ -972,7 +975,7 @@ to say XerxesSex9: [Female Player with Fang & Xerxes]
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     With the powerful wolf once again cementing his dominant position, this worked out well. He and Xerxes still stand for a while where they fucked, waiting until Fang's knot goes down and they can disengage. Satisfied and just a bit exhausted, you lay back on the cot to get a bit of rest.";
 		else: [fucked by Xerxes]
-			setmonster "human";
+			setmonster "Human";
 			choose row monster from the table of random critters;
 			LineBreak;
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get beside them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time Fang thrusts into his ass.";
@@ -1099,7 +1102,7 @@ to say AwesomeXerxesSex1:
 
 to say AwesomeXerxesSex2:
 	say "     Remembering your promise to your loyal pet, you gather your gear and stand by his cot. Calling him over, he gives a happy bark and comes up, expecting more playtime with his master, but finding you fully equipped and ready to go out into the city. He gives a little whine of disappointment, but sits down on his haunches and looks up at you obediently. After rubbing his head and giving him some scritches, you lean down and ask him if he's ready to get his tattoo. He grins happily and presses his lips to yours in a passionate kiss as his answer. Grinning down at him, you pat his head and tell him to come along and to stay right by your side the whole time.";
-	say "     While the naked human does draw some attention from the mutants around, they thankfully leave you alone. And while the activity and sexy sights of the city's red light district catch your pet's attention, he remains steadfastly by your side. Your journey to the tattoo parlour is largely uneventful save for a couple of mutants who offer to trade for your pet, but thankfully accept your refusal and move on.";
+	say "     While the naked human does draw some attention from the mutants around, they thankfully leave you alone. And while the activity and sexy sights of the city's red light district catch your pet's attention, he remains steadfastly by your side. Your journey to the tattoo parlor is largely uneventful save for a couple of mutants who offer to trade for your pet, but thankfully accept your refusal and move on.";
 	WaitLineBreak;
 	say "     When you go inside, Kara smiles and greets you before turning to the newcomer and inspecting the human dog's naked body. 'And who do we have here?' she asks you, her hyena mind quickly assessing that Xerxes is your subordinate.";
 	say "     'This here is Xerxes, my pet. He's been a good boy and so we're here to get him a tattoo,' you tell her before looking down at the object of your conversation. Xerxes is quite excited, looking all around the room and shifting around with barely contained enthusiasm. Of everything in the room, Kara draws his attention the most. Rubbing his head, he settles down momentarily. 'Xerxes, this is my friend Kara. She's going to give you your tattoo,' you say, patting his side as a signal he can go, he heads over to the hyena on all fours and looks up at her with a happy smile on his handsome face.";
@@ -1184,7 +1187,7 @@ to say HelenDesc:
 				-- 7:
 					say "Her belly shows a slight bulge, the result of her mating with that sandman on the beach.";
 		if lust of Helen is 2:
-			say "You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of awesomer fruit > 0][link]awesomer[as]give awesomer fruit to Helen[end link][else]awesomer[end if]";
+			say "You are quite pleased by having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of awesomer fruit > 0][link]awesomer[as]give awesomer fruit to Helen[end link][else]awesomer[end if]";
 		say ".";
 	else if lust of Helen is 3:
 		say "     Originally one of Mike's dogs, Helen is now a young human female of about nineteen. Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan. Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place. All in all, she's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[else if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[else if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with Klauz.[else if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session.[else if thirst of Helen is 2 and libido of Helen is 5]Her belly shows a slight bulge, the result of her mating with Ares during your walk in the park.[else if thirst of Helen is 2 and libido of Helen is 6]Her belly shows a slight bulge, the result of her previous mating with Carl here in the library.[end if]";
@@ -1292,7 +1295,7 @@ Instead of fucking Helen:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -1334,14 +1337,14 @@ Instead of fucking Helen:
 						increase lust of Helen by 1;
 					now lastfuck of Helen is turns;
 					wait for any key;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off the conversation?";
 				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the human dog, shaking your head slightly as she gives a questioning look.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -1623,7 +1626,7 @@ to say HelenBeachWalk:
 	now RandomGenNumber is a random number from 1 to 3;
 	if RandomGenNumber is:
 		-- 1:
-			say "a large anthro St. Bernard on one knee proposing to his petite Chihuahua boyfriend. The tiny canine tears up and nods his head vigorously. Smiling the large canine hugs his new tiny fiancee. Nearby infected clap and cheer to celebrate the occasion. ";
+			say "a large anthro St. Bernard on one knee proposing to his petite Chihuahua boyfriend. The tiny canine tears up and nods his head vigorously. Smiling the large canine hugs his new tiny fiancée. Nearby infected clap and cheer to celebrate the occasion. ";
 		-- 2:
 			say "a slender lagomorph male that is gleefully running over the sand with a couple of bikini tops in his hands. Some topless women are chasing after him, shouting obscenities at the fleeing swimsuit stealer, their large breasts jiggling with every step. A number of male infected cheer him on and thank him for the sight, to the chagrin of their female partners. ";
 		-- 3:
@@ -1652,9 +1655,9 @@ to say HelenBeachWalk:
 		say "     Examining Helen, you see no damage done to her. However, your beautiful pet seems incredibly turned on. She pants in an erotic manner, lowering her front and raising her ass, wiggling it towards you while whimpering for a good fucking. Moving backwards a little, she soon is rubbing up against your crotch. [if player is male]Your cock starts to harden with each rocking motion[else]Your crotch is quite sensitive to Helen's rocking motions[end if]. Stripping off any gear, you then encourage Helen to keep going, your libido inflamed by the sexy pet's antics.";
 		if player is male: [male/herm]
 			say "     Once you are fully erect, you begin to insert your cock into your pet's needy cunt. She moans softly as her pussy tightly grips your shaft. One thing's for sure - you are glad to be the one feeling this instead of the sandman. Grunting in lust, you begin to thrust into your human dog. The thrusts are aided by a healthy amount of femcum that she is producing. Once you bottom out inside her, she bucks her hips, showing how eager she is to get pounded. Not wanting to let your pet's expectations down you continue to push your dick as deep as you can with every thrust. Leaning forward you grab the black haired beauty's shapely breasts and softy circle the nipples. Spasms rock Helen's legs as she feels this new sensation, yipping happily.";
-			say "     Speeding up the pace of your thrusts you ask her if this feels good. With a loud bark[if lust of Helen >= 4] and a swift utterance of 'Yes!'[end if] it seems you have your reply. The sensation of Helen's pussy clenching around your manhood as you hammer into her encourages you to pick up the pace. Soon both you and your slender companion are on the verge of orgasming. Placing your hands on her hips, you slide into her all the way and grind against the young woman's body, stimulating her with eager attention. This quickly pushes Helen over the edge and she comes with a happy bark, covering your dick in her juices. The sensation of her inner muscles trembling around your shaft is too good to resist and just a few heartbeats later, your balls twitch as you unleash a heavy load deep within your trained pet's tight cunt.";
+			say "     Speeding up the pace of your thrusts, you ask her if this feels good. With a loud bark[if lust of Helen >= 4] and a swift utterance of 'Yes!'[end if], it seems you have your reply. The sensation of Helen's pussy clenching around your manhood as you hammer into her encourages you to pick up the pace. Soon both you and your slender companion are on the verge of orgasming. Placing your hands on her hips, you slide into her all the way and grind against the young woman's body, stimulating her with eager attention. This quickly pushes Helen over the edge and she comes with a happy bark, covering your dick in her juices. The sensation of her inner muscles trembling around your shaft is too good to resist and just a few heartbeats later, your balls twitch as you unleash a heavy load deep within your trained pet's tight cunt.";
 			WaitLineBreak;
-			say "     Painting the human dog's pussy white, you stake your claim on her body and lean over her, hands moving to caress her breasts as you do so. She hums in satisfaction at her master's touch as well as the throbbing pulse of more and more cum into her depths. Together, the two of you ride out your respective orgasms, openly panting, moaning and touching right there in the open. After a moment, you hear some chuckling and moaning from another towel not too far off - seems like you acquired some spectators who are stroking themselves as they watch. But then... who cares?! Sated, you pull your [cock of player] penis out of Helen's well stuffed hole and take a sec to just lie back and rest on the beach towels.";
+			say "     Painting the human dog's pussy white, you stake your claim on her body and lean over her, hands moving to caress her breasts as you do so. She hums in satisfaction at her master's touch as well as the throbbing pulse of more and more cum into her depths. Together, the two of you ride out your respective orgasms, openly panting, moaning and touching right there in the open. After a moment, you hear some chuckling and moaning from another towel not too far off - seems like you acquired some spectators who are stroking themselves as they watch. But then... who cares? Sated, you pull your [cock of player] penis out of Helen's well-stuffed hole and take a second to just lie back and rest on the beach towels.";
 			say "     When Helen and you seem rejuvenated enough to travel, you decide to return to the abbey. While walking back through the beach plaza you see the fox in the Bermuda shorts again, smiling he asks 'Did you two have a fun time at the beach?' Contented, your youthful pet barks a muted happy reply. Softly chuckling the fox says, 'I'll take that as a yes,' he then bids you a fond farewell as you leave the plaza. It is an uneventful walk back to the Abbey. She soon walks over to one of her common resting places, circles a couple of times, then lies down. The look on Helen's face seems very appreciative of the walk you took her on.";
 			if thirst of Helen is 0: [not pregnant]
 				now thirst of Helen is 1;           [pregnant]
@@ -1662,7 +1665,7 @@ to say HelenBeachWalk:
 				now HelenPregnant is 1;             [pregnancy timer]
 		else:
 			say "     Pulling the lime green dildo out of the bag, you place it close to Helen's face. The curious transformed canine starts sniffing the sex toy and on smelling the scent of the previous owner's female juices, she starts to lap the shaft and the tip. After a couple of laps you then begin to guide the human-like shaft between her lips. Initially Helen is a little nervous, but as you use your unoccupied hand to rub the lips of her pussy and her clit, she soon relaxes. Although initially wary, she is soon bobbing her head forwards and backwards on the sex toy, you can feel her tongue swirling around the rod. It doesn't take long before she is deep-throating the phallus.";
-			say "     When the pole seems like it is nice and wet, you pull it from your companion's maw and move around her to set it against the young woman's drippingly wet pussy. Grunting softly as you insert the decently sized sex toy inside her, Helen turns her head to look back at you, whining softly in a plea to push deeper. Happy to fulfill your obedient companion's request, you start to thrust the rod in and out of her. Moaning and yipping, she arches her back and rocks her hips to meet your movements. While thrusting the dildo you use your other hand to explore Helen's body - switching up between cupping her breasts, grabbing her firm booty, [if lust of Helen >= 7]running your fingers down the rope of her leash tattoo,[end if] and rubbing her clit.";
+			say "     When the pole seems like it is nice and wet, you pull it from your companion's maw and move around her to set it against the young woman's dripping wet pussy. Grunting softly as you insert the decently sized sex toy inside her, Helen turns her head to look back at you, whining softly in a plea to push deeper. Happy to fulfill your obedient companion's request, you start to thrust the rod in and out of her. Moaning and yipping, she arches her back and rocks her hips to meet your movements. While thrusting the dildo you use your other hand to explore Helen's body - switching up between cupping her breasts, grabbing her firm booty[if lust of Helen >= 7], running your fingers down the rope of her leash tattoo[end if], and rubbing her clit.";
 			WaitLineBreak;
 			say "     Your transformed canine companion enjoys your touch greatly by the way she moans and barks. Based on the way her eyes are closed and her tongue hangs out the corner of her mouth, it seems she is getting close to climaxing after a little while. Picking up the pace you shift the angle of your thrusting to hit a sensitive spot and go to town, using both hands to push in and out of her. A muscle spasm on her right leg is the first sign of her orgasm, then she lets out a long and satisfied moan. As you pull the dildo from her cunt, a large amount of femcum gushes forth. Feeling a little worn out you lie down on surprisingly soft towel and rest for a second. Grateful for what you did, Helen gives your hand a couple of licks before nuzzling up against your side.";
 			say "     When Helen and you seem rejuvenated enough to travel, you decide to return to the abbey. While walking back through the beach plaza you see the fox in the Bermuda shorts again, smiling he asks, 'Did you two have a fun time at the beach?' Contented, your youthful pet barks a muted happy reply. Softly chuckling the fox says, 'I'll take that as a yes,' he then bids you a fond farewell as you leave the plaza. It is an uneventful walk back to the Abbey. She soon walks over to one of her common resting places, circles a couple of times, then lies down. The look on Helen's face seems very appreciative of the walk you took her on.";
@@ -1775,7 +1778,7 @@ to say AwesomerHelenSex1:
 
 
 to say AwesomerHelenSex2:
-	say "     Remembering your promise to your loyal pet, you gather your gear and stand by her cot. Calling her over, she gives a happy bark and comes up, expecting more playtime with her master, but finding you fully equipped and ready to go out into the city. She gives a little whine of disappointment, but sits down on her haunches and looks up at you obediently. After rubbing her head and giving her some scritches, you lean down and ask her if she's ready to get her tattoo. She grins happily and presses her lips to yours in a passionate kiss as her answer. Grinning down at her, you pat her head and tell her to come along and to stay right by your side the whole time. While the naked human does draw some attention from the mutants around, they thankfully leave you alone. And while the activity and sexy sights of the city's red light district catch your pet's attention, she remains steadfastly by your side. Your journey to the tattoo parlour is largely uneventful save for a couple of mutants who offer to trade for your pet, but thankfully accept your refusal and move on.";
+	say "     Remembering your promise to your loyal pet, you gather your gear and stand by her cot. Calling her over, she gives a happy bark and comes up, expecting more playtime with her master, but finding you fully equipped and ready to go out into the city. She gives a little whine of disappointment, but sits down on her haunches and looks up at you obediently. After rubbing her head and giving her some scritches, you lean down and ask her if she's ready to get her tattoo. She grins happily and presses her lips to yours in a passionate kiss as her answer. Grinning down at her, you pat her head and tell her to come along and to stay right by your side the whole time. While the naked human does draw some attention from the mutants around, they thankfully leave you alone. And while the activity and sexy sights of the city's red light district catch your pet's attention, she remains steadfastly by your side. Your journey to the tattoo parlor is largely uneventful save for a couple of mutants who offer to trade for your pet, but thankfully accept your refusal and move on.";
 	say "     When you go inside, Kara smiles and greets you before looking over the newcomer. 'And who do we have here?' she asks you, her hyena mind quickly assessing that Helen is your subordinate. 'This here is Helen, my pet. She's been a good girl and so we're here to get her a tattoo,' you tell her before looking down at the object of your conversation. Helen is quite excited, looking all around the room and shifting around with barely contained enthusiasm. Of everything in the room, Kara draws her attention the most. Rubbing her head, she settles down momentarily. 'Helen, this is my friend Kara. She's going to give you your tattoo,' you say, patting her side as a signal she can go. She heads over to the hyena on all fours and looks up at her with a happy smile on her lovely face.";
 	WaitLineBreak;
 	say "     'Doggy friend! Helen tattoo,' she says cheerfully, nosing at Kara's crotch and starts licking her sheath. Already starting to poke out from the sight of the sexy young woman, her cock stiffens further and is soon buried in your pet's mouth. She moans softly and rubs a paw over her head. 'I'm a hyena you silly... Ngg... friendly girl, isn't she?' she adds to you and you can't help but smile.";

@@ -372,7 +372,7 @@ To StevenFuck:
 	increase libido of player by 10;
 	now Stevenremoved is 1;
 	newStevenconverse;
-	move Steven to Steven's home;
+	move Steven to Steven's Home;
 	now monster is 1;
 	say "You slowly pull yourself up, still wheezing from excitement. "; [continues into next line]
 	infect "Red Horse";
@@ -496,12 +496,15 @@ to say Stevenonbottom:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Red Horse";
+	now enemy title entry is "";
+	now enemy name entry is "Steven";
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "nothing.";
 	now defeated entry is "nothing.";
 	now victory entry is "nothing.";
@@ -587,12 +590,12 @@ Instead of resolving junkyard digups:
 	if jdigup is 3, now junkyard digups is resolved;
 
 
-Section 3 - Steven's home
+Section 3 - Steven's Home
 
-Steven's home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
-[The sarea of Steven's home is "Junkyard."]
+Steven's Home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's Home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
+[The sarea of Steven's Home is "Junkyard."]
 
-instead of sniffing Steven's home:
+instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
 
 a junkyard home is a situation.
@@ -605,8 +608,8 @@ Instead of resolving a junkyard home:
 		say "You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach.";
 		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
 		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
-		move player to Steven's home;
-		now Steven's home is known;
+		move player to Steven's Home;
+		now Steven's Home is known;
 		now junkyard home is resolved;
 
 

@@ -41,7 +41,7 @@ The scent of Brian is "     Brian smells like a man's man, masculine, musky, and
 
 after going to Border Wall while BrianRelationship is 0:
 	say "     You see an exceptionally large and sculpted rhino man, entirely consumed by one of the more unique infections running around. He's currently standing over by the massive wall next to the zoo, right in front of a large cluster of cracks arcing over the structure. The cracks shoot out over a good ten-foot radius, and you wouldn't be surprised if he was the cause of all that damage, him looking like an eight foot linebacker and all. However, he still has more muscle than a normal human could ever manage, linebacker or no. Then you remember that 'normal' is all relative now, and that's made even more obvious the longer your eyes sweep over the male.";
-	say "     His giant body, in addition to defying many standards you had for amount of muscle possible, has skin you'd never expect a person to have: gray, rough looking leathery stuff. Even more parts of him surprise you though, like his shoulders and hips, which carry what looks to be armor, but organic, almost like chitin. One thing that isn't so unexpected, however, is how unsteady he is, possibly because of the fact that he is trying to balance such a large form on just two hooved feet. Above his hooves and past his muscle packed legs, a long, thick cock hangs over his baseball sized testicles, knocking against his upper thighs with an almost audible slap of flesh on flesh. His face is like that of a rhino, stretching out into a muzzle that carries the same rough, almost armored look of the other parts of his body. Of course, he wouldn't be much of a rhino if he didn't have a bony horn protruding from right between his wide nostrils.";
+	say "     His giant body, in addition to defying many standards you had for amount of muscle possible, has skin you'd never expect a person to have: gray, rough looking leathery stuff. Even more parts of him surprise you though, like his shoulders and hips, which carry what looks to be armor, but organic, almost like chitin. One thing that isn't so unexpected, however, is how unsteady he is, possibly because of the fact that he is trying to balance such a large form on just two hooved feet. Above his hooves and past his muscle packed legs, a long, thick cock hangs over his baseball-sized testicles, knocking against his upper thighs with an almost audible slap of flesh on flesh. His face is like that of a rhino, stretching out into a muzzle that carries the same rough, almost armored look of the other parts of his body. Of course, he wouldn't be much of a rhino if he didn't have a bony horn protruding from right between his wide nostrils.";
 	LineBreak;
 	Now BrianRelationship is 1;
 	say "     As you get closer, you can see said nostrils expanding and contracting rapidly, for a reason you can't discern yet, not until you see his left hoof scrape across the ground over and over again, his muscles tensing, his head lowering, and then his body charging forward and slamming into the wall, causing rocks and debris to clatter off the slightly slanted structure.";
@@ -164,7 +164,7 @@ to say briansexmenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -191,16 +191,16 @@ to say briansexmenu:
 				else if nam is "Frottage":
 					say "[sexwithbrian06]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the rhino, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say sexwithbrian00f:		[initial sex w/Brian - fuck him]

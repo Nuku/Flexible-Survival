@@ -74,12 +74,15 @@ to say beatthewildcat:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Wildcat"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]Your ears ring after the wildcat bashes you in the head with her powerful fist![or]The giant cat grabs a rusty muffler from the pile of clubs you in the side with it![or]The feline herm tackles you with her huge body![or]The wildcat grabs your head and slams it against her armored chestplate. Clang![or]The wild feline grabs large handfuls of debris from the junkpile and hurls it at you with a growl![or]Wrapping her powerful arms around you in a bearhug, she grinds her covered crotch against you![or]Finding an old car radiator in the junk, she wields it with ease and batters you with it![or]The big feline slashes at you with her powerful claws, growling deep in her throat![or]The wildcat herm gets her paws on you, grabbing your ass and groin roughly as she fondles you with a rough chuckle![at random]";
 	now defeated entry is "[beatthewildcat]";
 	now victory entry is "[losetowildcat]";

@@ -188,7 +188,7 @@ to say subramsex:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -204,16 +204,16 @@ to say subramsex:
 				if (nam is "Have him blow you"):
 					say "[subramsex2]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     Changing your mind, [if player is dominant]you shove the ram onto the ground and tell him exactly that before ordering him to scram. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]you shrug your shoulders and tell him exactly that[end if].";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say subramsex1: [Fuck him]
@@ -259,14 +259,17 @@ to say subramsex2: [Get blown]
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Ram" to infections of guy;
 	add "Ram" to infections of furry;
 	Choose a blank row from Table of random critters;
 	now name entry is "Ram";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[if ramvar is 1][one of]He rubs his [']specially treated['] wool on you, causing you to moan at the sensitive sensation.[or]He rushes forward, knocking you back with his short horns.[or]The ram strikes out with one of his hoof-like fists, the strike sending you reeling.[or]He smirks at you before letting out a loud sheep call, the noise echoing in your head making your thoughts wooly.[or]The powerful ram strikes you with his hoof-like fist, sending you reeling.[or]The male ram grins happily as he tries to wrestle you to the ground.[at random][else][one of]The submissive ram strikes you weakly with a hoof-like fist, barely marking you.[or]The submissive ram grins coyly as he tries to wrestle you to the ground.[or]The submissive ram rubs himself against you, weakly trying to knock you over.[or]The submissive ram rushes forward, grazing you with his short horns while copping a feel of your crotch.[or]Dodging back, the submissive ram tries to distract you by wiggling his wooly rump before tossing a weak punch your way.[at random][end if] ";
 	now defeated entry is "[ram_loss]";
 	now victory entry is "[ram_attack]";

@@ -74,7 +74,7 @@ to say psychdesc:
 		say "[line break][psychfirstarrival]";
 
 to say psychfirstarrival:
-	if XP of Doctor Moffatt is 2: [If the player met Moffatt as a skunk or a permanent infection]
+	if XP of Doctor Moffatt is 2: [if the player met Moffatt as a skunk or a permanent infection]
 		say "     The doctor smiles at you as you arrive. 'Excellent. I was just thinking about you,' she says as she gets up, showing that her cock's actually mostly hard right now, raising up the front of her skirt to give an even better view of her maleness. 'I hope this means you've decided to help me with my little experiment. I simply want to observe the effects of the infection and transformation to one's psyche over time. As you seem more coherent and sane than most, you should be able to better articulate what's happening to you. Most who become infected change rather rapidly and become rather fixed in their newly obtained form.'";
 		say "     'Considering the fact that your latest physical transformations make you unsuitable for my main work, I want to work with you through hypnosis,' the doctor explains. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 		increase carried of water bottle by 1;

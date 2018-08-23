@@ -15,7 +15,7 @@ Instead of resolving a Hyena Shoppers:
 	say "     ([link]N[as]n[end link]) - Fuck that. Bolt!";
 	if player consents:
 		LineBreak;
-		say "     Curiosity might have gotten the cat fucked but you need all the resources you can get. Rounding the corner without making a sound you three hyenas standing in guard next to a steel door, baseball bats in hand prepared to try take down anyone who might attempt to take their ill-gotten loot. The steel door seem to lead into a storage room of some sorts. The sound you heard must have been from them breaking down the door. As you keep peeking on their illicit activities one more comes out from the storage room carrying a large sack filled with several can shaped lumps over her shoulder and a rather large box in hand. Seemingly they are ransacking some left-over storages that more weaker mutants weren't able to get into.";
+		say "     Curiosity might have gotten the cat fucked but you need all the resources you can get. Rounding the corner without making a sound you three hyenas standing in guard next to a steel door, baseball bats in hand prepared to try take down anyone who might attempt to take their ill-gotten loot. The steel door seem to lead into a storage room of some sorts. The sound you heard must have been from them breaking down the door. As you keep peeking on their illicit activities one more comes out from the storage room carrying a large sack filled with several can-shaped lumps over her shoulder and a rather large box in hand. Seemingly they are ransacking some left-over storages that more weaker mutants weren't able to get into.";
 		say "     As you keep looking at the hyenas who are busy looting the place, you fail to notice another one of them sneaking behind you until she pushes you forwards, calling out, 'Girls we have someone snooping around in our business.' Your eyes bolt around, looking for an escape, but before you can do anything more, one of the hyenas (probably the leader of the group) speaks up, 'Calm down girls, I'm sure that they were just looking for tonight's meal and we got a good haul today, so we might be able to spare some. Well, provided that they give us something in return.' The grin on her face and the chuckling from her sisters tells you that she's not talking about money.";
 		say "     [bold type]Do you want to provide them with whatever she is talking about? It'll likely be something sexual...[roman type][line break]";
 		LineBreak;
@@ -34,10 +34,10 @@ Instead of resolving a Hyena Shoppers:
 				increase carried of chips by 1;
 		else:
 			LineBreak;
-			say "     You're not desperate enough to go around accepting strange deals from hyenas. Refusing the offer politely, you hope that she won't take it personally. With a shrug the hyena turns around and walks away, the other hyenas following on her heel. You take a peek into the storage room to see if they left anything behind. After a bit of poking around, you actually do manage to find a lonely can of soda in one corner. It must have rolled under the shelf there while the pack were looting the place. There is nothing left for you here so you move on, eventually finding your way back to where you started.";
+			say "     You're not desperate enough to go around accepting strange deals from hyenas. Refusing the offer politely, you hope that she won't take it personally. With a shrug, the hyena turns around and walks away, the other hyenas following on her heel. You take a peek into the storage room to see if they left anything behind. After a bit of poking around, you actually do manage to find a lonely can of soda in one corner. It must have rolled under the shelf there while the pack were looting the place. There is nothing left for you here, so you move on, eventually finding your way back to where you started.";
 			increase carried of soda by 1;
 	else:
 		LineBreak;
-		say "     Curiosity got the cat fucked and you have no interest in getting fucked tonight. Doubling your pace you put as many feet between you and who, or what ever is making the noise.";
+		say "     Curiosity got the cat fucked, and you have no interest in getting fucked tonight. Doubling your pace, you put as many feet between you and whoever or whatever is making the noise.";
 
 Hyena Shoppers ends here.

@@ -2,7 +2,7 @@ Version 2 of Approaching the Capitol Building by Guest Writers begins here.
 [- Originally Authored By: Sweraptor -]
 [Version 2.1 - Event duplicated by finding initial room.]
 
-"This is an area which begins the player approach to the Capitol building. A skyscraper overrun with the Ash Brood, and the supposed nesting grounds for the largest dragons and the Ash God. Can you tell me how to make it so the monsters will appear randomly when the areas are explored?"
+"This is an area which begins the player approach to the Capitol building. A skyscraper overrun with the Ebonflame Brood, and the supposed nesting grounds for the largest dragons and the Ebonflame God. Can you tell me how to make it so the monsters will appear randomly when the areas are explored?"
 
 
 Section 1 - Discovering the Capitol Building Area

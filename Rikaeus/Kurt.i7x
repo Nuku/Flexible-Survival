@@ -99,7 +99,7 @@ to say KurtTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -115,16 +115,16 @@ to say KurtTalkMenu:
 				if (nam is "His Interest in Music"):
 					say "[KurtMusic]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KurtAtlantis:
@@ -159,7 +159,7 @@ to say KurtSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -173,16 +173,16 @@ to say KurtSexMenu:
 				if (nam is "Suck Kurt off"):
 					say "[KurtSex1]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You take a second to think and then decide against doing something sexy with your shark friend.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KurtSex1:
@@ -190,7 +190,7 @@ to say KurtSex1:
 	say "     You quite gladly unbutton the top of his shorts, unzip them, and yank them down, revealing a tight pair of speedos under them. While to others they might be odd, a few thoughts later make you realize that if he leaves the city often he wouldn't want to constantly have soaking underwear. Ignoring them for now you pull those down as well, letting them pool with the shorts and revealing his two large cocks, which emanate a masculine musk that cause you to let out a soft moan. Once more raising a brow in particular interest, Kurt directs his hands to your head before pulling you close to his dicks, bringing you right to the source of the pheromone-intense smell. Brought into a frenzy, you begin licking at both of his lengths, alternating back and forth in intense desire, ";
 	WaitLineBreak;
 	say "     While you're lavishly paying attention to his cocks, Kurt is leaning back, his guitar safely laying against the couch while he moans loudly, his head tilted toward the ceiling. By now though, you decide to focus on one of his lengths while you masturbate the other with your hands. You move your mouth to the left one and take it into your lips, swirling your tongue around, idle hands moving to the right dick to massage it. The taste of pre blooms into your mouth, making you moan loudly, almost in sync with your shark friend, which spurs you on to take him further into your mouth. This appears to trigger something in Kurt as he grabs a hold of your hair and begins to thrust in and out of your throat, fucking your face as thoroughly as he can.";
-	say "     'Mmm, fuck you're great at this, I'm already so close!' He growled, watching intensely as you take one of his cocks like a champ and as the other slides against your cheek. Sure enough you can feel the large dicks tensing as he gets nearer to his orgasm. As a last ditch interest in making him go wild you take a finger and position it at his hole before pushing it in roughly. That appears to set the male off as he let's out a loud roar before you feel hot salty liquid spill onto your tongue and warmth pool and splash against your cheek and head. You gladly slurp down the cum, enjoying the taste of the shark's seed, making sure to collect the amount that coated your outsides into your mouth. Once Kurt's climax tapers off, you pull off and give him a sperm-filled smile that makes him pull you up into a kiss.";
+	say "     'Mmm, fuck you're great at this, I'm already so close!' He growled, watching intensely as you take one of his cocks like a champ and as the other slides against your cheek. Sure enough you can feel the large dicks tensing as he gets nearer to his orgasm. As a last ditch interest in making him go wild you take a finger and position it at his hole before pushing it in roughly. That appears to set the male off as he lets out a loud roar before you feel hot salty liquid spill onto your tongue and warmth pool and splash against your cheek and head. You gladly slurp down the cum, enjoying the taste of the shark's seed, making sure to collect the amount that coated your outsides into your mouth. Once Kurt's climax tapers off, you pull off and give him a sperm-filled smile that makes him pull you up into a kiss.";
 	WaitLineBreak;
 	say "     After finishing the kiss he gives you a toothy grin. 'That was great! Didn't know you were so good at giving head. We may have to do this more often,' Kurt says to you, proceeding to pull up his speedos and shorts. You nod and swallow down the remaining cum you had left, telling him you'd be more than happy to take care of his problem any time. You then get up and dust off your knees before stretching your legs a bit, having gotten a bit sore on the floor. When you look at your friend he's still looking at you with interest but has gone back to his guitar. You may as well go back to what you were doing before though.";
 	now lastfuck is turns;

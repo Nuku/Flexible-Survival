@@ -5,7 +5,7 @@ Version 1 of Wild Mustang by Wahn begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Wild Mustang" } to infections of girl;
+	add { "Feral Mustang" } to infections of girl;
 
 to say WildMustangWins:
 	if HP of player > 0:
@@ -44,7 +44,7 @@ to say WildMustangLoses:
 
 to say LuciferSexMenu:
 	now sextablerun is 0;
-	setmonster "Wild Mustang";
+	setmonster "Feral Mustang";
 	choose row monster from the table of random critters;
 	blank out the whole of table of fucking options;
 	[]
@@ -91,7 +91,7 @@ to say LuciferSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -119,7 +119,7 @@ to say LuciferSexMenu:
 					say "[LuciferSex7]";
 				now lastfuck of Lucifer is turns;
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off?";
 			if player consents:
 				now sextablerun is 1;
@@ -127,9 +127,9 @@ to say LuciferSexMenu:
 				move player to Central Farm Square;
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say LuciferSex1: [fingering Lucifer's ass]
@@ -146,7 +146,7 @@ to say LuciferSex1: [fingering Lucifer's ass]
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 		now SelenaLucifer is 2; [saw the player and the mustang out of her window]
 ]
-	infect "Wild Mustang";
+	infect "Feral Mustang";
 
 to say LuciferSex2: [fucking Lucifer's ass]
 	say "     You slowly step up to the large horse, slowly stroking his long neck and patting his side[if HP of Lucifer is 0] to show that the fight is over[end if]. As he calms down a bit after the initial touch, you gently guide him over to the wooden three-step mounting block nearby, stopping Lucifer in just the right position beside it. Then you start walking around the mustang's body, stroking your hand along his muscled flank until you reach the rear end. Calmly telling the horse to relax, you set a hand on his equine rump, then start groping firm flesh of his ass, making the mustang give a curious and slightly aroused whinny as he turns his head to look back at you. Continuing in the same nonthreatening manner, you take hold of his long, dark brown tail and pull it up to reveal the horse's asshole. You lean forward and lick over the feral mustang's pucker, reveling in his pleased neigh at feeling you touch him like that. Running your tongue up and down his crack, then poking his hole with it, you make Lucifer whinny in what seems to be a request to keep going.";
@@ -164,7 +164,7 @@ to say LuciferSex2: [fucking Lucifer's ass]
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 		now SelenaLucifer is 2; [saw the player and the mustang out of her window]
 ]
-	infect "Wild Mustang";
+	infect "Feral Mustang";
 
 to say LuciferSex3: [player pussy fucked]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side[if HP of Lucifer is 0] to show that the fight is over[end if]. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then strip off your clothes and move under the horse, taking position on all fours with your ass raised high.";
@@ -181,7 +181,7 @@ to say LuciferSex3: [player pussy fucked]
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 		now SelenaLucifer is 2; [saw the player and the mustang out of her window]
 ]
-	infect "Wild Mustang";
+	infect "Feral Mustang";
 
 to say LuciferSex4: [player ass fucked]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side[if HP of Lucifer is 0] to show that the fight is over[end if]. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then strip off your clothes and move under the horse, taking position on all fours with your ass raised high.";
@@ -198,7 +198,7 @@ to say LuciferSex4: [player ass fucked]
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 		now SelenaLucifer is 2; [saw the player and the mustang out of her window]
 ]
-	infect "Wild Mustang";
+	infect "Feral Mustang";
 
 to say LuciferSex5: [suck him off]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side[if HP of Lucifer is 0] to show that the fight is over[end if]. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then strip off your clothes and move under the horse, taking a kneeling position right under his belly.";
@@ -210,7 +210,7 @@ to say LuciferSex5: [suck him off]
 		now HP of Lucifer is 1; [made 'friends' with him]
 		LineBreak;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
-	infect "Wild Mustang";
+	infect "Feral Mustang";
 	PlayerEat 3;
 	PlayerDrink 6;
 	SanLoss 5;
@@ -244,7 +244,7 @@ to say LuciferSex6: [watch him breed a mare]
 [
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
-	infect "Wild Mustang";
+	infect "Feral Mustang";
 	PlayerEat 3;
 	PlayerDrink 6;
 	decrease humanity of player by 5;
@@ -291,7 +291,7 @@ to say LuciferSex7: [player strapped under Lucifer with his cock inside them]
 				now HP of Lucifer is 1;
 				now SelenaLucifer is 1; [Selena will hear from this]
 			]
-			infect "Wild Mustang";
+			infect "Feral Mustang";
 			PlayerEat 3;
 			PlayerDrink 6;
 			decrease humanity of player by 5;
@@ -316,12 +316,15 @@ to say WildMustangDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Wild Mustang";
+	now name entry is "Feral Mustang";
+	now enemy title entry is "Wild Mustang";
+	now enemy name entry is "Lucifer";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]The feral mustang rushes forward and runs you down, making you fall and tumble into the thankfully cushioning grass.[or]The feral mustang charges at you, knocking you to the ground roughly![or]The mustang rears up and manages to land a heavy hoof on your shoulder![or]The mustang bites you with his blunt, but pretty big teeth![or]The stallion rears up, causing his semi-hard cock to slap against his equine belly and release a spurt of precum onto you and also giving you a good view of his impressive penis and bloated balls![at random]";
 	now defeated entry is "[WildMustangLoses]";
 	now victory entry is "[WildMustangWins]";
@@ -332,7 +335,7 @@ When Play begins:
 	now tail entry is "You have a long, thick, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "its mouth stretches forward, merging with a rapidly flattening nose to form an equine muzzle. A groan escapes your widening lips as your forehead flattens and both eyes shift their position to the sides of your head, creating a strange new perspective to see the world in. Meanwhile, your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "muscles seem to shift around underneath the skin. Cramps cause you to stumble slightly as your heels move up both legs, forcing you to assume a more digitigrade stance, while your toes flatten and merge together to form broad hooves. By the time you catch your balance again and can stand straight on now digitigrade legs, the rest of your body has finished changing as well - leaving you with hands bearing rather hoof-like nails and pretty broad shoulders"; [  format as "Your body feels funny as (your text)." ]
+	now body change entry is "muscles seem to shift around underneath the skin. Cramps cause you to stumble slightly as your heels move up both legs, forcing you to assume a more digitigrade stance, while your toes flatten and merge together to form broad hooves. By the time you catch your balance again and can stand straight on now digitigrade legs, the rest of your body has finished changing as well - leaving you with hands bearing rather hoof-like nails and pretty broad shoulders"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "coarse horse-like fur spreads all over your body, covering it in short dark brown fur"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it assumes a broad, well-rounded shape. Then long strands of thick hair begin to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail. It hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it grows erect and aroused before beginning to shift and change. The point of your cock broadens and flattens slightly into a rather blunt equine shape, while a proper sheath forms around its base, with a ribbed ring about halfway up your member"; [ format as "Your cock feels funny as (your text)." ]

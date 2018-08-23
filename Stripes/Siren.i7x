@@ -37,7 +37,7 @@ to say sirendesc:
 		else:
 			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag. You take [special-style-2]12[roman type] damage! You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock. You call out in search of the singer and are shocked as they appear.";
 			decrease HP of player by 12;
-		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared. With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over. This siren has a beautifully feminine face, but is otherwise entirely male. His body is mostly human and covered in smooth, perfect skin. But behind his back are a pair of white, feathery wings capable of supporting him in flight. His feet are taloned and bird-like, covered in golden-brown scales. Between his legs, he has a twin pair of very long cocks with a pair of football sized balls to accompany them. He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
+		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared. With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over. This siren has a beautifully feminine face, but is otherwise entirely male. His body is mostly human and covered in smooth, perfect skin. But behind his back are a pair of white, feathery wings capable of supporting him in flight. His feet are taloned and bird-like, covered in golden-brown scales. Between his legs, he has a twin pair of very long cocks with a pair of football-sized balls to accompany them. He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
 		increase sirenfight by 1;
 	else:
 		let bonus be ( Charisma of player - 20 ) divided by 2;
@@ -106,12 +106,15 @@ to say sirenattack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Siren"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[sirenattack]";
 	now defeated entry is "[beatthesiren]";
 	now victory entry is "[losetosiren]";

@@ -20,7 +20,7 @@ The earea of Boundary Street East is "Red".
 The description of Boundary Street East is "[RedLightBoundaryEastDesc]".
 
 to say RedLightBoundaryEastDesc:
-	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and towards the east, a modestly sized chapel rises above the surrounding buildings. Sadly, its white walls are marred by the signs of a recent fire within, with the flames having licked out of the shattered windows to blacken areas above and besides them. The large inverted pentagram that someone has clawed into the timbers of the wooden front door tells you that what befell the chapel wasn't an accident either.";
+	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and towards the east, a modestly sized chapel rises above the surrounding buildings. Sadly, its white walls are marred by the signs of a recent fire within, with the flames having licked out of the shattered windows to blacken areas above and besides them. The large inverted pentagram that someone has clawed into the timbers of the wooden front door tells you that what befell the chapel wasn't an accident either. To the southeast lies an apartment building with a busted front door, which nevertheless looks more lived-in than most of the other buildings all around.";
 
 instead of smelling Boundary Street East:
 	say "     The aroma of fire and ash is ever-present in your nose, so close to the burned chapel. Of course, this doesn't reduce the other scents present, so you can also smell sex, with a musky scent of arousal hanging thick in the air.";
@@ -49,13 +49,36 @@ The description of Sacristy is "     This sacristy has been... redecorated recen
 instead of sniffing Sacristy:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
 
-[
+
 Southeast of Boundary Street East is Darius's Crib. It is sleepsafe.
 The description of Darius's Crib is "[DariusCribDesc]".
 
 to say DariusCribDesc:
-	say "     Having passed through a short hallway after entering this building and walking past one door that is literally only held up by crime scene tape gluing it to its frame, you're in one of the other apartments of the building now. Or maybe two, as someone has knocked a large hole through the wall of next apartment. All in all, the place has a dingy and run-down feel to it and seems not particularly well cleaned up. Numerous mattresses lie on the floor, often stained by sexual fluids, and you can hear the barking of dog cubs from somewhere deeper in the other apartment. A table laden with little baggies seems to be Darius's inventory, all laid out for you to check over.";
-]
+	say "     Having passed through a short hallway after entering this building and walking past one door that is literally only held up by crime scene tape gluing it to its frame, you're in one of the other apartments of the building now. Or maybe two, as someone has knocked a large hole through the wall of next apartment. All in all, the place has a dingy and run-down feel to it and seems not particularly well cleaned up. Numerous mattresses lie on the floor, often stained by sexual fluids, and you can hear the barking of dog cubs from somewhere deeper in the other apartment. The kitchen counter seems to be where he lays out his stuff to sell, juding from a sign attached to it.";
+
+The Darius's Inventory is a backdrop. It is in Darius's Crib. The description of the Darius's Inventory is "[Darius's Inventory List]".
+
+to say Darius's Inventory List:
+	if Darius is visible: [he's in right now]
+		say "     Darius has a spread of various little baggies spread on his kitchen counter. A handwritten sign tells you that you need to pay with food for anything you want.";
+		say "To buy an item, type buy (name here)";
+		repeat through table of Darius Inventory:
+			follow allowed entry;
+			if rule failed:
+				next;
+			say "[link]Buy[as]buy [object entry][end link] ";
+			say "[name entry] - [price entry] food";
+	else:
+		say "     A handwritten sign on the kitchen counter tells you that you need to pay with food for anything you want, but it seems that Darius put away his stash before leaving the house. You'll have to wait till he is back if you want to buy something.";
+
+table of Darius Inventory
+name	price	object	allowed
+"bliss tablet"	1	bliss tablet	true rule
+"powerup tablet"	2	powerup tablet	true rule
+"pixie dust"	2	pixie dust	true rule
+"dalmatian cum"	1	dalmatian cum	true rule
+"dalmatian fur"	2	dalmatian fur	true rule
+
 
 West of Entrance to the Red Light District is Boundary Street West.
 The earea of Boundary Street West is "Red".

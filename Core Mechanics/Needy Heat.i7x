@@ -70,7 +70,7 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 				add X to hmonlist;
 				if name entry is "Alpha Husky" or name entry is "Female Husky":		[Huskies are more likely]
 					add X to hmonlist;
-		if hmonlist is empty and heatzone is not "Outside":		[If none valid found, default back to Outside]
+		if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
 			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 				choose row X from the table of random critters;
 				if there is no area entry, next;

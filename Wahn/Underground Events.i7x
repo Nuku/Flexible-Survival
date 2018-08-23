@@ -89,7 +89,7 @@ to say cuckold choice:
 		say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
 
 to say cuckold choice male:
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	if player is male:
 		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating his changed body with more of its offspring...";
@@ -417,7 +417,7 @@ to say CellFourSex:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -443,14 +443,14 @@ to say CellFourSex:
 				else if nam is "Fuck his ass":
 					say "[CellFour7]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -556,7 +556,7 @@ to say AlphaBirth:
 		say "     And it is just in time too, as the man lets out an almost shouted groan, then clenches his teeth together as he strains to push and push again. Down between his legs, the opening of his vagina stretches a little more, then three flexible appendages worm their way out of his body, feeling around and searching for something to hold on to. The tentacles do slither around between the folds of the bunched-up blankets until finally one attaches itself to the herm's left leg with a row of little suckers, finding a hold at last. Two more of them seem a bit lost even then, and as you watch, something about the situation does make you want to help a bit more actively - so you nudge them in the right direction with your fingers, carefully avoiding the suckers. Soon, all of the fleshy appendages have found a spot to hold on to or wrap around (the pregnant herm's thighs and one knee too), allowing the emerging creature to pull in concert with its parent's contractions.";
 		say "     A moment later, the next big push reveals the creature's head, looking... almost disturbingly cute, with relatively human features, large all-black eyes and what looks more like little tentacles than hair. As you meet its gaze, you're surprised about the intelligence and intensity of it and you somehow just know that this little tentacled newborn isn't an it - but a he. The small creature blinks at you in what you're sure is satisfaction, then he turns his attention back to his current predicament - half in, half out of a stretched pussy. After that, things proceed very fast, as he repositions his tentacles for a much improved grip, then pulls out of the moaning herm in a wet slurp of slick flesh and wiggling tentacles. As soon as the small creature is fully born, the former researcher pulls him into his arms, guiding the small-ish head to his chest and nipples.";
 		WaitLineBreak;
-		say "     In the typical rapid growth the nanites seem to be imposing almost universally these days, the young creature develops in leaps and bounds before your very eyes. Baby, toddler and kid stages are skipped in literally seconds, with growth only slowing down as he is almost as large as his herm 'mother' and nears physical maturity - giving a striking image of a young man indeed. His body did differentiate quickly from consisting mostly of tentacles to being just about half-human - the crossover point being his hips, with many tentacles below forming his 'legs'. The hybrid being nevertheless has a sexy bubble butt and good sized dick, and above that a well-shaped if not overly muscular chest. The only thing about his handsome face not completely human is the iris-less black eyes, while lots of small tentacles form 'hair' on top of his head. A short while later, after finally finished with alternating between his parent's left and right nipple, the tentacled young man soon pushes himself up into a sitting position on the bed, then clears his throat and speaks for the first time.";
+		say "     In the typical rapid growth the nanites seem to be imposing almost universally these days, the young creature develops in leaps and bounds before your very eyes. Baby, toddler and kid stages are skipped in literally seconds, with growth only slowing down as he is almost as large as his herm 'mother' and nears physical maturity - giving a striking image of a young man indeed. His body did differentiate quickly from consisting mostly of tentacles to being just about half-human - the crossover point being his hips, with many tentacles below forming his 'legs'. The hybrid being nevertheless has a sexy bubble butt and good-sized dick, and above that a well-shaped if not overly muscular chest. The only thing about his handsome face not completely human is the iris-less black eyes, while lots of small tentacles form 'hair' on top of his head. A short while later, after finally finished with alternating between his parent's left and right nipple, the tentacled young man soon pushes himself up into a sitting position on the bed, then clears his throat and speaks for the first time.";
 		say "     'Thank you, parent. I will cherish the memories of being in you - with you - but that time is over. Sleep. Now.' Using several tentacles to catch the naked herm as he instantly falls unconscious, the tentacled youth lowers him gently to the bed, then turns his attention to you. 'Greetings. I know your mind-taste. You have visited before,' he says, then draws his mouth into a first experimental smile. 'You may call me Alpha, as I am the firstborn of my progenitor. I know you have met him too...' Alpha says and [if carried of mindshield helmet is 0]you see a flash of the Thought Eater in your mind, his hairless head glistening wetly and four mouth-tentacles twitching with disconcerting sudden moves[else]mimes having a quartet of mouth-tentacles by bending some of his own upwards. It is clear he refers to the Thought Eater[end if]. A cold shiver runs down your spine at the memory, and Alpha nods in agreement. 'Exactly. He is the reason I had to put my other parent here to sleep for now,' the young man explains and pats the peacefully dozing herm's chest.";
 		WaitLineBreak;
 		say "     Indicating the blond researcher that gave birth to him just moments ago, Alpha explains, 'If you are as far gone as him, there is nothing my progenitor will not know as soon as he steps into range to taste his mind glow. And I can't let him know what we talk about - you see, the... early emergence was timed just so he wouldn't be here.' Focusing on you with an intense gaze, Alpha continues, 'He wanted to overwhelm my mind before it stabilized, make this body nothing but an extension of himself. But I have other plans.' With that said, the young man rises from the bed, effortlessly using his many tentacles as legs to come stand before you, face to face. 'It is time to leave here, hide until I am strong enough to fend him off, at a minimum. And I need a place to hole up.' [if carried of mindshield helmet is 0]Suddenly his voice continues to speak in your mind instead, 'I could just make you, but I wanna experiment a bit, see if I can find a helping hand without.'[else]A tentacle arches up to tap your helmet gently. 'I could just snatch that thing off and make you, but I wanna experiment a bit, see if I can find a helping hand without.'[end if]";

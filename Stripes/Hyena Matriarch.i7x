@@ -73,8 +73,8 @@ To say matriarch loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -82,6 +82,9 @@ When Play begins:
 	add "Hyena Matriarch" to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "Hyena Matriarch"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]";
 	now defeated entry is "[matriarch loss]";
 	now victory entry is "[matriarch attack]";
@@ -92,7 +95,7 @@ When Play begins:
 	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaching past your upper thigh."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]knotted[or]black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place. Finding your hands moving instinctively up to your ears, you feel them as they migrate up to the top of your skull. Making their new home on your scalp, they begin taking a more triangular shape, leaving you with hyena ears"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more paw like appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more pawlike appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it tightens noticeably and becomes attractively muscled. Given no time to rest, you feel a sharp pain as your tail bone starts grow out, lengthening out to a more animalistic norm. Pain subsiding you find a freshly grown brown-furred tail, a quick test shows that you have slight control over your new hyena tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it turns pitch black, a knot forming at the base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
@@ -106,7 +109,7 @@ When Play begins:
 	now HP entry is 100;
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
-	now area entry is "Hyena hideout"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Hyena hideout"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 7; [ Size of balls apparently ;) sneaky Nuku]

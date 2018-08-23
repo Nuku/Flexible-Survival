@@ -167,7 +167,7 @@ to say SizeEnvyMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -185,7 +185,7 @@ to say SizeEnvyMenu:
 				if (nam is "Step up and ask to join the competition"):
 					say "[SizeEnvy_Compete]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
@@ -193,9 +193,9 @@ to say SizeEnvyMenu:
 				now SizeEnvyTracker is 100; [just left]
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 	now Size Envy is resolved;
 	if MiltonRelationship < 1:
@@ -273,7 +273,7 @@ to say SizeEnvy_Compete:
 		now SizeEnvyTracker is 52; [player competed - third place]
 	else:
 		say "     Somewhat nervous about exposing yourself in what turned out to be a group of very big boys indeed, you pull out your own [cock of player] manhood, jerking its length before the gathered friends. 'Finally someone smal-' Rob starts to say, then clamps his hand in front of his mouth, getting red-faced. Nicholas simply gives you an encouraging smile and comes closer to measure your erection. '[cock length of player] inches, not bad at all, but that still leaves me the undisputed winner. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
-		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece too. No need to be self-conscious just because we're bigger. It all depends on how you use em, right?' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
+		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece too. No need to be self-conscious just because we're bigger. It all depends on how you use [']em, right?' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
 		LineBreak;
 		say "[bold type]You lose 1 water bottle![roman type][line break]";
 		decrease carried of water bottle by 1;
@@ -569,5 +569,18 @@ instead of resolving Prowling Macho:
 		LineBreak;
 		say "     With a shrug at the antics of some mall inhabitants, you just turn your back on the two of them, walking on in your tour to find anything that actually interests you.";
 	now Prowling Macho is resolved;
+
+SailboatPainting is a situation.
+The sarea of SailboatPainting is "Smith Haven".
+
+instead of resolving SailboatPainting:
+	say "     You are scanning around the stores and kiosks of the mall, when your attention stops on a heavy-set black-furred Mallrat standing in front of an art store. A gray knit cap covers his head, and his clothing consists of a blue heavily food-stained dress shirt, dirty khaki pants and a green Army jacket. He clutches a brown paper bag and a can of soda in his left paw. The closer you get to him, the more pungent his musk becomes. The slovenly rat-man stands stock still, not seeming to notice you or even twitching his tail. Between his horrible hygiene and the filthy state of his clothes, you wouldn't be surprised if he'd been standing there for days. Instead, he is intently focused on a framed gray-dot painting set on a display easel.";
+	say "     You are about to ask what he's looking for, when your eyes focus in just the right way to see a hidden picture. 'Oh, a sailboat,' you say out loud. A few seconds pass in silence, before the unkempt rodent bellows out a rage scream loud enough for the entire Mall to hear. He disdainfully throws aside his bag and soda before dejectedly kicking over the easel and storming away. Not quite sure of what you just did to set him off, you shrug, collect the lunch he left behind (waste not want not) and continue on your way.";
+	LineBreak;
+	say "     [bold type]You gain 1 soda![roman type][line break]";
+	increase carried of soda by 1;
+	say "     [bold type]You gain 1 food![roman type][line break]";
+	increase carried of food by 1;
+	now SailboatPainting is resolved;
 
 Inner Mall Events ends here.

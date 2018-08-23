@@ -8,6 +8,7 @@ Version 1 of Pericles by Rikaeus begins here.
 [   3: Has seen his third event                            ]
 [   4: Has seen his fourth event                           ]
 [   5: Has seen his fifth event, now available in room     ]
+[   6: Managed to convince Bjorn to apologize, share rooms ]
 
 Daily Training Session is a situation.
 Daily Training Session is resolved.
@@ -159,15 +160,23 @@ The conversation of Pericles is { "<This is nothing but a placeholder!>" }.
 The scent of Pericles is "     Pericles smells like sweat and hard work, something to be expected of the leader of the Spartans and Helots. Beyond that he smells like the pages of a book.".
 
 to say PericlesDesc:
-	say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Soon enough Pericles notices you staring at him and he smiles in your direction.";
+	if PericlesRelationship < 6:
+		say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Soon enough Pericles notices you staring at him and he smiles in your direction.";
+	else if PericlesRelationship is 6:
+		say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Pericles appears to be cautiously watching Bjorn as if expecting him to do something bad, though when he sees you looking at him he smiles half-heartedly and waves.";
+	else if PericlesRelationship > 6:
+		say "     Compared to what you've seen him wearing before, Pericles appears to be far more relaxed in both attire and attitude. First and foremost, his armor is no longer on him twenty-four-seven, having traded it for a toga-esque outfit for downtime. Although, he does keep the red cape that adorned the metal regalia he wore prior to the war and Bjorn cause he thinks it looks cool and you can't help but agree. With the helmet finally gone though, you can finally see his face and hair, revealing that he has brownish-red hair that nears an almost auburn color as well as dark green eyes. Overall he seems pretty happy and less stressed though, he doesn't look any less lethal or dominant. Especially when you catch him sending lustful looks over towards a studying Bjorn. However, those looks are also filled with a certain love that balances it out, though you don't doubt their intimate times are rough and rowdy. When he catches you looking his way he sends a confident smile and waves.";
 
 Section 2 - Talking with Pericles
 
 instead of conversing the Pericles:
 	if PericlesRelationship < 5: [should be not yet available]
 		say "     ERROR: Pericles shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [PericlesRelationship]";
-	else:
-		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' he asks, clearly happy to see you.";
+	else if PericlesRelationship > 6:
+		say "     When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' He asks, speaking in a warm tone.";
+		say "[PericlesTalkMenu]";
+	else :
+		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' He asks, clearly happy to see you.";
 		say "[PericlesTalkMenu]";
 
 to say PericlesTalkMenu:
@@ -189,7 +198,7 @@ to say PericlesTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -205,16 +214,16 @@ to say PericlesTalkMenu:
 				if (nam is "Current College Life"):
 					say "[PericlesCollege]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say PericlesApocalypse:
@@ -227,8 +236,16 @@ to say PericlesCollege:
 Section 3 - Sex
 
 instead of fucking Pericles:
-	if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+	if PericlesRelationship is 7:
+		say "     The Spartan gives you a disapproving look before shaking his head. 'I'm sorry friend, but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
+	else if BjornRelationship is 3:
+		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here.' Pericles says to you, making you rather dissapointed.";
+	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
+	else if PericlesRelationship > 7 and cocks of player > 0 and cunts of player < 1:
+		say "     Pericles eyes you up and then directs his attention towards Bjorn who's studying in his corner of the room. He gives you a smirk and asks what you had in mind.";
+		wait for any key;
+		say "[PericlesBjornSexMenu]";
 	else if cunts of player > 1: [Player has a vagina]
 		say "     The buff male shakes his head at you and apologizes. 'I'm sorry but womanly parts aren't my thing, sorry.' Pericles then tells you that if you wish to have fun with him then come back as a male.";
 	else if player is neuter: [Player is genderless]
@@ -253,13 +270,13 @@ to say PericlesSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Pericles off"; [only males can suck him off]
 		now sortorder entry is 2;
-		now description entry is "Gice Pericles a good time with your lips";
+		now description entry is "Give Pericles a good time with your lips";
 	[]
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -275,16 +292,16 @@ to say PericlesSexMenu:
 				if (nam is "Suck Pericles off"):
 					say "[PericlesSex2]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and decide against sexing up the buff Spartan leader.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say PericlesSex1:
@@ -302,7 +319,7 @@ to say PericlesSex1:
 		say "     The buff male grabs the hand on his crotch and drags you over to the bed where he pushes you onto it. Now on you're back you watch him strip down to absolutely nothing, getting the chance to ogle his naked body, something that you thoroughly enjoy. Of course you know that all these muscles were acquired from the nanites, you do also know that Pericles does maintain them with exercise. All the same, they suit the male, as well as the rather large cock and low hanging balls. When he approaches, you're startled when he reaches for you and starts depriving you of your own clothing, leaving you bare in front of him just like he is for you. You're even more surprised when he yanks you by the legs and pulls your ass to the edge of the bed and then kneels.";
 		WaitLineBreak;
 		say "     'Time for some preparation my friend,' he mutters before you let out a gasp when his head leans forward and goes right between your cheeks, with him starting to rim you. The sensation of his tongue on your hole is a welcome one, something that causes you to let out little moans with each swipe of his fleshy organ. Of course, the rimming isn't constant, as occasionally he replaces his mouth with two fingers that scissor and finger your hole to open it up more for insertions, something that you're grateful for because if he had just gone straight in with no prep it would hurt like a motherfucker. While Pericles swaps back and forth between tonguing you and thrusting his digits into your ass he uses his free hand to blindly feel around for what you assume to be his bedside drawer as when he manages to open it, he fishes out a bottle of lube.";
-		say "     To your surprise you hear the sound of a bottle cap hitting the wall, which leads you to assume the lube was opened. That implies a bit of skill on his part as you swear in your pleasure addled mind that it was a twist cap. A sharp shooting sensation of pleasure however quickly distracts you from that thought process. 'Ooh, looks like I found your prostate,' Pericles says with a smirk as he lubes up his own cock in preparation of fucking you. By now he's alternating between tonguing your hole and fingering you with a total of three digits, something that is already making you see stars, your cock fully rock hard. 'I think you're ready, don't you agree?' he asks, standing up and positioning himself at your hole.";
+		say "     To your surprise you hear the sound of a bottle cap hitting the wall, which leads you to assume the lube was opened. That implies a bit of skill on his part as you swear in your pleasure-addled mind that it was a twist cap. A sharp shooting sensation of pleasure however quickly distracts you from that thought process. 'Ooh, looks like I found your prostate,' Pericles says with a smirk as he lubes up his own cock in preparation of fucking you. By now he's alternating between tonguing your hole and fingering you with a total of three digits, something that is already making you see stars, your cock fully rock hard. 'I think you're ready, don't you agree?' he asks, standing up and positioning himself at your hole.";
 		WaitLineBreak;
 		say "     Before you can say anything, Pericles fully buries himself into your hole, the action causing you to grunt and moan loudly, your friend swearing on the other hand. 'Fuck, you feel wonderful!' the Spartan-Helot pants, letting his cock rest in you for a few seconds. And a few it was, as your friend soon pulls back, only to slam back in full force. Surprisingly enough with this thrust he manages to find your prostate again and jabs into it, causing your dick to leak copious amounts of precum. The male soon enough finds his rhythm, fucking you at hard and fast pace, the sounds of his balls slapping against your cheeks filling the room. As much as you'd love for this to continue for a lot longer, you're getting rather close, and by the fact that Pericles is leaking precum as well that means he's close too.";
 		say "     It's when the Spartan-Helot slams into you particularly hard that you can't take it anymore, letting out a gasp as you let loose your cum, it spraying all over the upper part of your partner due to the position the two of you are in. As you're climaxing, so does Pericles, the male swearing loudly as he hilts himself one last time into you before you feel yourself filling with his warm seed. He ends up cumming quite a lot, causing some of it to spill out of your hole and leak onto the floor. However, your friend doesn't care at all, instead he pulls out of you and slumps onto the empty spot on the bed beside you and sighs happily. 'Well, that was great,' he says, a dopey smile on his face. You nod blissfully at him, thinking just the same. It takes you guys about half an hour to recollect yourself and clean up but when you do, you get back to what you were doing before, promising to repeat the action again at a later time.";

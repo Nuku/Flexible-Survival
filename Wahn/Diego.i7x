@@ -1,7 +1,18 @@
 Version 2 of Diego by Wahn begins here.
 [ Original File by Sarokcat ]
 [ Version 1 - Breakup of Zoo People file ]
-[ Version 2 - Complete rewrite by Wahn - Talk Menu, Sex Menu, Gay Options, Expanded Endings]
+[ Version 2.0 - Complete rewrite by Wahn - Talk Menu, Sex Menu, Gay Options, Expanded Endings]
+[ Version 2.1 - Collar Quest expansion]
+
+[ XP of Diego - Collar Quest                                                ]
+[   0: Not started yet                                                      ]
+[   1: player has the mission to get the collar                             ]
+[   2: player went to the villa, didn't go through with it                  ]
+[   3: player went to the villa at night, grabbed the collar stealthily     ]
+[   4: player went to the villa in the day, grabbed the collar after fight  ]
+[  98: player lost/fled from Hunter in the fight                            ]
+[  99: player didn't show any interest so far                               ]
+[ 100: blocked/failed                                                       ]
 
 "Adds a coyote named Diego to Flexible Survival."
 
@@ -17,6 +28,7 @@ LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
 DiegoTricked is a number that varies. DiegoTricked is usually 0.
 
 Diego is a man.
+Diego has a list of texts called Traits.
 The description of Diego is "[DiegoDesc]".
 The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
@@ -25,7 +37,7 @@ The icon of Diego is Figure of Diego_icon.
 the linkaction of Diego is "[diegolinkaction]".
 
 to say diegolinkaction:
-	if diegotalk is 0:
+	if DiegoTalk is 0:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link][line break]";
 	else:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
@@ -35,6 +47,7 @@ the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if Di
 To say DiegoDesc:
 	if debugactive is 1:
 		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], DiegoTricked: [DiegoTricked], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
+		say "DEBUG -> (Traits of Diego) [traits of Diego][line break]";
 	if DiegoChanged is 2:
 		say "     The former coyote man is now a pretty tan furred coyote bitch instead, and is eyeing you eagerly as she leans up against the wall dividing the park from the rest of the city. You can see one of her paws slowly straying down to her furred pussy as you approach, a smile playing across her muzzle as she rubs herself teasingly.";
 	if DiegoChanged is 1:
@@ -42,7 +55,9 @@ To say DiegoDesc:
 	if DiegoChanged is 0:
 		say "     A tan-furred anthro coyote is leaning up against the wall dividing the park from the rest of the city, striking a relaxed, casual pose. It is quite obvious that he's a man - the guy doesn't wear any clothes on his wiry body, allowing open view of a pair of furry balls dangling between his legs, as well as a sheath just above. He eyes you curiously as you approach, one of his ears flicking in amusement as a small smile plays across his muzzle.";
 		if DiegoButtSlut > 0:
-			say "     You notice the antho canine's tail twitching upwards a little, as if he reflexively reacts to your presence by wanting to present his bare butt.";
+			say "     You notice the anthro canine's tail twitching upwards a little, as if he reflexively reacts to your presence by wanting to present his bare butt.";
+
+Section 2 - Conversation
 
 Instead of conversing the Diego:
 	if Diegotalk is 0:
@@ -87,11 +102,23 @@ to say DiegoTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Arrange for Diego to chug your bottle of orc cum";
 	[]
+	if XP of Diego is 99:
+		choose a blank row in table of fucking options;
+		now title entry is "Taking part in his secret plans after all";
+		now sortorder entry is 6;
+		now description entry is "Tell the coyote you want to join him in a closer partnership";
+	[]
+	if XP of Diego is 1 or XP of Diego is 2: [got the quest, didn't finish getting the collar yet]
+		choose a blank row in table of fucking options;
+		now title entry is "Cancelling your involvement in his special plan";
+		now sortorder entry is 7;
+		now description entry is "Tell the coyote you don't want to participate after all";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -112,18 +139,15 @@ to say DiegoTalkMenu:
 					say "[DiegoTalk4]";
 				if (nam is "Trick him into drinking orc cum"):
 					say "[DiegoTalk5]";
-				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro coyote woman, shaking your head slightly as [if DiegoChanged is 0]he[else]she[end if] gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				if (nam is "Taking part in his secret plans after all"):
+					say "[DiegoCollarQuest1]";
+				if (nam is "Cancelling your involvement in his special plan"):
+					say "[DiegoCollarQuestRefuse]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged is 0]he[else]she[end if] gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -138,6 +162,7 @@ to say DiegoTalk1:
 	else: [male]
 		project the figure of Diego_face_icon;
 		say "     Diego says, '[one of]Hmm, advice eh? How's this, always remember to brush your teeth after giving a blowjob, good hygiene is still important!'[or]Have you tried looking in some of the small lairs in the park? You might find something worthwhile, just be careful to wait until no ones home before you take a peek.'[or]Don't mess with badgers, seriously even I wouldn't kid you about those dangerous buggers.'[or]I hear there was a doe hanging around here at some point, if ya want her to go with ya just make sure to grab her right away.'[or]Have you seen those handsome felinoids out there? Maybe you should try petting one a few times, I'm sure you will find it educational.'[or]I hear if you play with the small felines enough, a big strong alpha lion will show up.'[or]If you see some wyverns fighting in the park, you should probably just watch and not interfere, not your business right?'[or]There's some weird skunks out there, but I hear the bigger beasts are lots of fun to play with.'[or]Happy with your current look? Then this is definitely not the place to be.'[or]Don't worry about any of the plants you see moving around the park, just go give them a pet they are pretty much harmless.'[or]Have you seen any little yellow rodents in the park? Seems to me like something you might be interested in.'[or]Don't hit the chinchillas! Hurting something that cute has to be against some kinda law, you wouldn't want to get in trouble now would you?'[or]The bitches love the nice thick coyote cock.'[or]Feel like a real trickster today? Why not try tricking me and see what happens?'[or]I bet you can't trick old Diego here, just give it a try!'[at random]";
+	say "[DiegoTalkMenu]"; [looping back for more talk]
 
 to say DiegoTalk2:
 	try Diegotricking;
@@ -215,6 +240,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			say "     You pull your hand back a little and feel around some more - there's Diego's prostate (making him twitch a little as you push against it), and further inside him... is that 'second pucker'? No matter what it is, the canine gasps in pleasure as you push against and through it with your finger, wiggling the fingertip in what seems to be some enclosed space in Diego's insides. As Diego's orgasm winds down eventually, you end your exploration and slip the fingers out of him, wiping them against his soft fur. After that, he sinks down on the floor, sitting down on a clean spot beside the cum puddle his orgasm left and pants loudly to cool his overheated body down.";
 			say "     'That was *pant* something else *pant*,' he says and looks up at you, a beaming grin spreading over his muzzle. 'I'm so glad you tricked me into drinking that first bottle. These feelings are just unbelievable!' For now, you decide to keep quiet about what you felt happening up his butt. Given the source of the trickster's creamy filling and the life-cycle of the all-male orc tribe, you do guess that your canine friend is due for quite a few more unbelievable things. Like a litter of puppies for example... not yet right now would be your guess, as the breeding pouch just formed, but quite likely after another anal adventure for Diego.";
 			decrease carried of orc cum by 1;
+			add "Mpreg" to traits of Diego;
 			now DiegoButtSlut is 3;
 		else: [nope, just easing]
 			LineBreak;
@@ -231,7 +257,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			say "     Handing the bottle to the unsuspecting coyote, you watch eagerly as Diego unscrews the top of the bottle and sniffs at it. His tail starts wagging slowly as he remarks, 'Hmm, smells good. Does it have almonds in there?' Grinning, you tell him that it's some sort of nut-milk, but don't expand into more detail. He raises the bottle and calls out 'Cheers!', then leans his head back and pours the thick liquid into his open maw, gulping it down thirstily. 'Damn that hit the spot, thanks bud. I love the taste,' Diego says as he hands the empty container back to you, before pausing with a strange look on his face.";
 			say "     'Oh wow,' the coyote man says as he has to brace himself against the wall as he sways a little. 'You didn't tell me it had alcohol in it. Got quite a kick after a moment, good stuff.' Slurring his last words just a bit, the coyote looks amused and pretty turned on - obviously so, as the reddish shaft of his cock starts to push out of Diego's sheath. Explaining that it isn't exactly alcohol that's giving your canine friend his buzz, you watch with amusement as he starts panting loudly and lowers a hand to rub his manhood. 'God, I'm so horny right now!' Diego moans and strokes his shaft up and down.";
 			WaitLineBreak;
-			say "     After a few more moments in which you can almost see the coyote's arousal build up higher and higher, Diego adds, 'And... there's this tingly feeling back here...' With that said, he reaches back to his tail, letting out a bark of, 'OH GOD! Tha's... wow!' as he brushes the quivering ring of his pucker with a finger. 'Why does this turn me on so much?' your tricked buddy asks himself, then turns his head to look at you with a wide eyes. 'Just what kind of milkshake did you give me?!' comes a somewhat breathless question next, followed by a lusty groan as he can't help but stroke over his tailstar once more.";
+			say "     After a few more moments in which you can almost see the coyote's arousal build up higher and higher, Diego adds, 'And... there's this tingly feeling back here...' With that said, he reaches back to his tail, letting out a bark of, 'OH GOD! That's... wow!' as he brushes the quivering ring of his pucker with a finger. 'Why does this turn me on so much?' your tricked buddy asks himself, then turns his head to look at you with a wide eyes. 'Just what kind of milkshake did you give me?!' comes a somewhat breathless question next, followed by a lusty groan as he can't help but stroke over his tailstar once more.";
 			say "     The jig's up - so you grin widely at Diego, explaining that he chugged down a whole bottle of orc cum. The canine gapes at you for a second, then closes his maw and lowers his head, coming back up with a wry grin on his muzzle. Chuckling, he admits, 'Well damn, that was a nice trick right here and now! Played this fool of a dog like a fiddle - and I thought I was milking you for a drink! And a damn tasty one at that - even if it left me with a downright weird sensation back under the tail.' Taking a deep breath, the coyote then reaches back again to calmly poke at his pucker again - which causes his whole body to shiver in arousal, complete with a little spurt of pre from his hard cock.";
 			LineBreak;
 			say "     [bold type]Do you leave the anthro dog to figure out his now much more sensitive back passage on his own, or do you want to introduce Diego to being fingered yourself?[roman type][line break]";
@@ -250,6 +276,8 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 		else: [nope, just easing]
 			LineBreak;
 			say "     'Damn - what a tease,' Diego remarks as you close up your pack and shift it back to hang over one shoulder. Licking his lips thirstily, he flicks an ear in amusement as he adds, 'I taught you too damn well it seems.'";
+
+Section 3 - Tricking
 
 Diegotricking is an action applying to nothing
 
@@ -285,9 +313,9 @@ carry out Diegotricking:
 			say "     [line break][line break]";
 			say "     Turning his attention back to you, the anthro canine licks his lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' He gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give him some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
-		if CoyoteTricks > 3 and prankevent is 0:
+		if CoyoteTricks > 3 and PrankEvent is 0:
 			now Prank Aftermath is not resolved;
-			now prankevent is 1;
+			now PrankEvent is 1;
 	else if diceroll > 12:
 		say "     As you lay out the plan you've come up with, Diego gives a happy grin and says, 'Dang that's a good one! Not quite up to my usual standards of course, but pretty damn good!' The coyote nods to you with [if DiegoChanged is 0]his[else]her[end if] canine head, then lets [if DiegoChanged is 0]his[else]her[end if] eyes roam over the city stretching out around you. 'I think I'll try your idea on some of the army scouts - might just earn ya a bit of time, and create fun for me.'";
 		extend game by 6;
@@ -296,12 +324,14 @@ carry out Diegotricking:
 			say "     [line break][line break]";
 			say "     Turning his attention back to you, the anthro canine licks his lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' He gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give him some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
-		if CoyoteTricks > 3 and prankevent is 0:
+		if CoyoteTricks > 3 and PrankEvent is 0:
 			now Prank Aftermath is not resolved;
-			now prankevent is 1;
+			now PrankEvent is 1;
 	else:
 		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [if DiegoChanged is 0]He[else]She[end if] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
 		decrease humanity of player by 10;
+
+Section 4 - Sex
 
 the fuckscene of Diego is "[SexWithDiego]".
 
@@ -334,19 +364,19 @@ to say DiegoSexMenu:
 	choose row monster from the table of random critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	[
-	if DiegoChanged < 2:
+	[]
+	if DiegoChanged < 2 and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Diego's cock";
 		now sortorder entry is 1;
 		now description entry is "Give [if DiegoChanged is 0]him[else]her[end if] a blow-job";
 	[]
-	if (player is male and (DiegoChanged > 0 or DiegoButtSlut > 0)):
+	if (player is male and (DiegoChanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]";
 		now sortorder entry is 2;
 		now description entry is "Use the coyote's mouth";
-	]
+	[]
 	if (player is female and DiegoChanged < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's dick (vaginal)";
@@ -399,7 +429,7 @@ to say DiegoSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -431,14 +461,14 @@ to say DiegoSexMenu:
 				else if (nam is "Take Diego's ass - From behind, against the wall"):
 					say "[DiegoSex10]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[else]he[end if] gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -453,14 +483,7 @@ to say DiegoSex1: [face-fuck Diego]
 		if DiegoButtSlut is 3: [Diego mpreg-able]
 			now DiegoButtSlut is 4; [Diego mpregged]
 	else:
-		say "     'Well you know, that is an interesting offer...' Diego says as the coyote eyes your proudly erect cock thoughtfully. He's trying to keep his composure, but you can easily tell that the male canine is getting excited by the way his tail twitched up and is slowly wagging behind his back. You can't help but grin as you press closer to his body and reach out, stroking his soft fur teasingly. 'I guess we could do that, I mean, you did trick me fair and square now didn't you...' Diego says in a slightly nervous tone, his tongue starting to hang out of his muzzle as the scent of an aroused male speaks to his new instincts.";
-		say "     Since the coyote male stays slightly on the fence about this, you slide your arm around his shoulder and run your fingers through the soft and thick fur over his neck, then grip it tightly, pulling his head back a little. The anthro canine reacts with an aroused grunt, allowing himself to be man-handled like this and wagging his tail. Looking down, you see that his cock even is starting to poke out of its sheath - the trickster is getting turned on by the rough treatment. Grinning at Diego, you tighten your grip a little more and then tell him that he should be a good dog and kneel.";
-		WaitLineBreak;
-		say "     Giving a lusty rumble from the depths of his throat, starts to sink to the ground, getting to just the right height in front of your crotch. Still keeping your hold on his neck-fur, you pull the canine towards your crotch and <...>";
-		WaitLineBreak;
-		say "     Eventually, you relax your grip on his neck, slowly drawing your rod out of his long muzzle, even as Diego is still lapping at it with his tongue. You can feel a grin tugging at your face as the coyote licks his lips and gives your manhood a hungry gaze. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
-		if DiegoButtSlut is 1: [anal OK Diego]
-			now DiegoButtSlut is 2; [Diego fucked anally by the player]
+		say "     ";
 	now lastfuck of Diego is turns;
 	coyotify;
 
@@ -608,6 +631,7 @@ to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
 		WaitLineBreak;
 		say "     'I never realized how much I would love being a butt-slut, and yours,' the coyote male says with a grin, as the two of you begin to untangle yourselves from each other. Standing up, you help your newly bred coyote trickster up as well, leaving him leaning up against the wall as he recovers, and somehow you know he will be right there waiting eagerly for you whenever you choose to return, willing and eager for you to take him like the prize slut he now is...";
 		if DiegoButtSlut is 3: [Diego mpreg-able]
+			add "Mpregnant" to traits of Diego;
 			now DiegoButtSlut is 4; [Diego mpregged]
 	else:
 		say "     'Well you know, that is an interesting offer...' Diego says as the male coyote eyes your proudly erect cock thoughtfully. You can easily tell though, that while he is trying to hide his excitement, he is getting more and more aroused. The way his tail twitched up and is slowly wagging behind his back is a clear sign for that. He even spreads his legs slightly as he leans back up against the wall behind him. You can't help but grin as you press closer to his lean and athletic body. Reaching out, you stroke his soft fur teasingly. 'I guess we might as well, I mean, you did trick me fair and square now didn't you...' Diego says in a slightly nervous tone, his tongue starting to hang out of his muzzle as the scent of an aroused male speaks to his new instincts.";
@@ -619,6 +643,7 @@ to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
 		say "     The sensations of having a strong male pumping his rod into him, washing over the coyote stud's lust-fogged mind, make him react instinctively as he grinds his ass against your crotch in order to push your rod deeper. With a broad grin on your face, you slide your arms up behind his soft-furred back, stroking him a little before gripping the scruff of him neck possessively. Moments of hard fucking later, Diego cries out, his legs wrapping even tighter around you as his body shudders in orgasm. The hard cock of the male coyote, with a fully swollen knot and all, stands straight up between the two of you and erupts with cum-shot after cum-shot, splattering both of your chests and even your chin with the coyote's load.";
 		say "     Meanwhile, Diego's inner muscles tremble and twitch around your erection, creating very pleasurable sensations that trigger your own orgasm mere moments later. You eagerly spill your seed into his waiting body, spurt after spurt of your cum filling the coyote male. After your spurts of cum eventually taper off, you relax your grip on his neck, slowly drawing your rod out of his dripping ass, even as his body trembles with the aftershocks of his intense submissive experience. You can feel a grin tugging at your face, as he clutches you tightly for a few moments more, then lets himself be lowered to stand on his own paws. Without your support, Diego has to lean heavily against the wall to keep standing. You have a feeling that the usually so cocky coyote won't be forgetting this particular trick anytime soon...";
 		if DiegoButtSlut is 1: [anal OK Diego]
+			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
 	now lastfuck of Diego is turns;
 	coyotify;
@@ -652,6 +677,7 @@ to say DiegoSex9: [Diego's ass fucked - Doggy style]
 		WaitLineBreak;
 		say "     Eventually, you relax your grip on his neck, slowly drawing your rod out of his cream-filled asshole, even as his body trembles with the aftershocks of his intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego collapses to the ground, lying on the soft grass for a minute before rolling over and sitting up still panting from the recent exertion. You have a feeling that the usually so cocky coyote won't be forgetting this particular trick anytime soon...";
 		if DiegoButtSlut is 1: [anal OK Diego]
+			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
 	now lastfuck of Diego is turns;
 	coyotify;
@@ -677,6 +703,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 		WaitLineBreak;
 		say "     Eventually, you relax your grip on his neck, slowly drawing your rod out of his cream-filled asshole, even as his body trembles with the aftershocks of his intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego slowly drops to his knees, leaning heavily against the wall to brace himself. In doing so, he is leaning right against the splatters of his own cum on the wall, leaving your freshly-fucked doggie a bit of a mess. You have a feeling that the usually so cocky coyote won't be forgetting this particular trick anytime soon...";
 		if DiegoButtSlut is 1: [anal OK Diego]
+			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
 	now lastfuck of Diego is turns;
 	coyotify;
@@ -745,5 +772,294 @@ when play ends:
 to say MaleDiegoSuccumbEnding:
 	say "     While you give in to your new instincts, Diego proves resistant to his more basic urges and keeps being the crafty trickster that you knew. Soon after, he spots you out in the streets and starts to think up an all new trick to involve his former associate in. It doesn't take all that long for him to arrange things, and before the next sunrise the trickster successfully lures you to a blind alley, at the end of which two rather worse-for-wear soldiers hide, a man and a woman. Disarmed, with ripped uniforms, and quite exhausted from fleeing the immensely dangerous - but relatively slow - hydra that Diego goaded into attacking them, the two of them aren't in any shape to fight back against anything at that moment.";
 	say "     As you pick up and devour the last piece of candy that the coyote laid down to lure you in, you hear a little bit of noise from the alley (an old can, casually dropped from an overlooking window by a familiar paw-hand) and move to investigate, soon finding the people Diego chose to put at your mercy. The coyote watches what happens next with a grin from up high, grinning all the while, then eventually gives a mock salute and quietly says, 'So long buddy, and have fun. I certainly will.' With that, he steps back into the darkness, already thinking up a new trick to play on someone...";
+
+Section 5 - Events
+
+instead of navigating Park Entrance while (DiegoTalk > 0 and player is not dominant and noncon is not banned and noncon is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Park Entrance]";
+	if NavCheckReturn is false, stop the action;
+	move player to Park Entrance;
+	project the figure of Diego_face_icon;
+	say "     Making your way to the entrance of the expansive city park, you find Diego waiting for you, leaning against the boundary wall. The coyote has a sly grin on his face as he waves to you and calls out, 'Hey [if player is not defaultnamed][name of player][else]there[end if]! I'd been hoping you'd come by sometime soon my friend.' He glances around for a second, as if to make sure that no one else is listening, then adds in a fairly quiet tone, 'You know, you and I have had quite a bit of fun together, coming up with awesome tricks to play on those stuffy soldiers and all the others out there. Makes me think that it's about time for making our teamwork a bit more of a permanent one. So how about it? Wanna be a part of all my extra special secret plans? Can't share those with just anyone, you know.'";
+	say "     [bold type]What's your reply?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure thing. You're all in.";
+	say "     ([link]N[as]n[end link]) - Better not, who knows what this devious canine has planned.";
+	if player consents:
+		LineBreak;
+		say "[DiegoCollarQuest1]";
+	else:
+		LineBreak;
+		say "     As you refuse, Diego lets out a sigh and looks at you with one eyebrow raised. 'You're not getting cold feet on me now, are you? It would be so much fun!' He keeps his gaze levelled at you for a moment, then shrugs and looks off to the side, trying to not show disappointment on his face. 'The offer is open, just so you know. Just tell me if you change your mind.'";
+		now XP of Diego is 99; [no interest from the player so far]
+
+to say DiegoCollarQuest1:
+	say "     As you agree, Diego flashes a beaming smile at you and holds out his hand for a fist-bump. 'I knew I could count on you! Okay then, now listen closely: There's one special item we need for a really neat thing I've got planned. Problem is, a former friend of mine stole it! You see, up on the upper Westside here, we got some celebrities homes, and he was supposed to - bah, that's not important anymore. Anyways, Hunter just blew off the plan and simply moved in there, keeping my special collar. It's an heirloom too, and now the bastard just has his bitch wearing it all the time.' A low growl escapes Diego's throat and he draws his lips back a little from his sharp canine teeth. 'Worse, the bastard's a husky and knows my scent, so there's no way he wouldn't sniff me out if I went to get the collar back myself.'";
+	say "     Looking at you and wiggling his eyebrows, the coyote adds, 'Good thing I have you now, eh? So, partner, how about you go and grab that collar? Better watch out though, Hunter's a tough guy. You might wanna sneak in at night or something.' After that, your coyote buddy gives you an accurate description of how to navigate from the Grey Abbey Library to the actress Garnet Johnson's villa, where Hunter is holed up now. It's on the west side of the sprawling expanse of this city, and you make a note of the safe route through several dangerous areas that Diego goes into some detail to explain. Time to get started [bold type]Hunting down Hunter[roman type].";
+	now XP of Diego is 1;
+	now Hunting down Hunter is not resolved;
+
+to say DiegoCollarQuestRefuse:
+	say "     As you tell him you don't want to do his plan after all, Diego lets out a sigh and looks at you with one eyebrow raised. 'You're not getting cold feet on me now, are you? It would be so much fun!' He keeps his gaze levelled at you for a moment, then shrugs and looks off to the side, trying to not show disappointment on his face. 'The offer is open, just so you know. Just tell me if you change your mind.'";
+	now XP of Diego is 99; [player knows of the plan, has no interest]
+	now Hunting down Hunter is resolved;
+
+Hunting down Hunter is a situation.
+Hunting down Hunter is resolved.
+The sarea of Hunting down Hunter is "Outside".
+
+Instead of resolving a Hunting down Hunter:
+	say "     Following Diego's waypoints through the city, you skip around several dens of dangerous creatures and eventually arrive in a high-class neighborhood that holds the homes of the rich and famous. Of course, that doesn't mean the people here were immune to the nanite apocalypse either, as demonstrated by Diego's warning that a whole roost of horny hawkmen is occupying one place down the road from where you're going. Good thing you knew the right direction to approach from. Coming to the right address, you see a tall brick wall enclosing its grounds, the only opening in it held shut by a sturdy wrought-iron gate. A chain holds both wings of the gate shut, connected on the inside by a shiny new padlock. Besides this, numerous empty cans have been tied to the gate, so that if someone wanted to climb the decorative metalwork, they'd make a whole lot of noise. Past the gate, you see a long driveway winding its way through a sprawling green lawn and leading up to a white-painted villa.";
+	say "     Recognizing that the front door isn't any place you'd care to try, you're thankful that Diego accounted for this too. Following the wall to the left, you duck around its corner and walk into the brush filling a narrow section of no man's land between this property and the next one over. And right where Diego described is the final help from your coyote buddy: a ladder, hidden from sight by a covering of branches. With it, you have a fairly easy time to climb on top of the wall, then pull the ladder up and set it on the other side to get safely down into the villa's garden. Quietly walking towards the building across its green lawn in the [if daytimer is day]bright sunlight[else]dim light of the moon[end if], you soon reach the decorative bushes planted along its walls. Beyond those, a large window is open all the way, most likely to allow some of the seaside breeze in, now that the power is out and aircon isn't a thing anymore.";
+	WaitLineBreak;
+	say "     Moving closer to the window, you cautiously peer over its windowsill and catch a glimpse of the lavishly furnished room beyond. Millions in Hollywood money sure can buy a lot of nice stuff, and you don't doubt that several designers made a fortune on supplying Garnet Johnson with everything she wanted for her private place. As you recognize the woman on the expansive sofa not too far away from the window, despite the fact that she's now an anthro husky, it becomes clear that her priorities have changed quite a bit these days though. You highly doubt that she'd have let the place become an alpha dog's fuckpad otherwise, or be ";
+	if daytimer is day:
+		say "on all fours on the cushions, panting in heat as she is being pounded doggy style by a tough-looking male husky. A dark brown leather collar with decorative brass studs along its length is pulled tight around her neck. It looks just like Diego described.";
+		say "     [bold type]Looking at Hunter, can't help but wonder if you should maybe avoid a fight with the canine and try this again at night.[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Shove aside the doubts and just take on that dog!";
+		say "     ([link]N[as]n[end link]) - Let's be smart about this and come back later.";
+		if player consents:
+			LineBreak;
+			say "     You duck out of sight again and then start to sneak around the house, soon arriving at a spacious veranda, overlooking a large pool in the garden. A sliding glass door stands open, allowing you access to the living room where Hunter and Garnet fucking wildly, so you step inside and move towards the sofa. Before you manage to met more than halfway there, the alpha husky notices you and looks up from his bitch with a scowl on his face. 'What the fuck do you think you're doing here? Garnet and this place are all mine!' He pulls out of her in a swift wrench, leaving the female husky whimpering at the sudden change from being fucked. Then the male husky throws himself at you, eager to fight!";
+			say "[VillaFightVsHunter]";
+			now Hunting down Hunter is resolved;
+		else:
+			LineBreak;
+			say "     You duck out of sight again and hurry back to the wall, thankfully without drawing any attention to yourself. Going up and over it, you're back on the outside soon after and hide away the ladder, then simply walk away.";
+	else: [night]
+		say "sleeping curled up to the side of a tough-looking male husky, his dried cum matting the fur between her legs and staining the sofa where it dripped down. A dark brown leather collar with decorative brass studs along its length is pulled tight around her neck.";
+		say "     [bold type]Looking at Hunter and his bitch sleeping there, you wonder if you'll be able to sneak in and out without them catching you.[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Just do it. They should be deep asleep.";
+		say "     ([link]N[as]n[end link]) - Hmm, maybe you should do this another time after all.";
+		if player consents:
+			LineBreak;
+			say "     You duck out of sight again and then start to sneak around the house, soon arriving at a spacious veranda, overlooking a large pool in the garden. A sliding glass door stands open, allowing you access to the living room where Hunter and Garnet are sleeping, so you step inside and move towards the sofa. Soon, you're standing just a few steps away from the two of them on a quite fluffy faux-fur carpet, your eyes on the prize around the female husky's neck.";
+			let bonus be (( Dexterity of player minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
+			if diceroll + bonus >= 18: [success]
+				say "     As you close in further, you step right on some sort of hard object lying hidden in the darkness before the sofa, mostly hidden by the carpet's fluff. Thankfully, you are dexterous enough to catch your balance and manage to choke down a curse at the sudden obstacle, leaving your targets none the wiser and still dozing peacefully. Letting out a relieved breath and waiting for your heartbeat to slow down from the racing tempo it shot up to, you then lean over the transformed movie star and gently tug at the fastening of her collar. It is some fiddly work to pull the leather strap open bit by bit, pausing several times as she moves lightly in her sleep, but you eventually pull the leather band off Garnet and clutch it in your hand as you sneak out of the room.";
+				say "[DiegoCollarQuestGotCollar]";
+			else: [fail]
+				say "     As you close in further, you step right on some sort of hard object lying hidden in the darkness before the sofa, mostly hidden by the carpet's fluff. It slips out from under your foot, causing you to lose your balance in this critical moment, and while you manage to avoid tumbling forwards and landing right on Hunter and Garnet, you fall on your ass instead. Landing on top of the thing you stepped on, it digs a rounded, but still very hard, corner into your thigh, drawing a pained shout from your lips. Wincing, you snatch the item out from under you and raise it into the moonlight, at which point you recognize it as a Benny award, a stylized golden man clutching a sword close to his chest. It is rather sticky and apparently has been used as an improvised sex toy. While you're still staring at the statuette, you hear an aggressive growl from above you, where Hunter is leaning forward and baring his teeth. 'What the fuck do you think you're doing here? Garnet and this place are mine!'";
+				say "[VillaFightVsHunter]";
+			now Hunting down Hunter is resolved;
+		else:
+			LineBreak;
+			say "     You duck out of sight again and hurry back to the wall, thankfully without drawing any attention to yourself. Going up and over it, you're back on the outside soon after and hide away the ladder, then simply walk away.";
+
+to say DiegoCollarQuestGotCollar:
+	say "     After quickly shoving the collar into your backpack to make sure you don't lose it, you make your way back to the wall. With the ladder, it's easy to get up and over it, and you take care to hide it under the branches once more, just in case Diego might need it again somewhere hereabouts. Then you hurry off down the street, making a successful getaway.";
+	increase carried of diego's heirloom collar by 1;
+	say "     [bold type]You gain Diego's heirloom collar![roman type][line break]";
+	now XP of Diego is 3; [got the collar sneakily]
+
+to SetHunterHuskyStats:
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Alpha Husky":
+			now monster is y;
+			break;
+	choose row monster from the table of random critters;
+	now HP entry is 100;
+	now monsterHP is 100;
+	now lev entry is 12;
+	now wdam entry is 12;
+
+to ResetAlphaHuskyStats:
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Alpha Husky":
+			now monster is y;
+			break;
+	choose row monster from the table of random critters;
+	now HP entry is 50;
+	now monsterHP is 50;
+	now lev entry is 8;
+	now wdam entry is 10;
+
+to say VillaFightVsHunter:
+	now inasituation is true;
+	SetHunterHuskyStats;
+	challenge "Alpha Husky";
+	ResetAlphaHuskyStats;
+	now inasituation is false;
+	if fightoutcome < 20: [player won]
+		say "     After one last punch, you manage to stun the alpha husky and Hunter crumples to the ground. It actually is quite impressive that he is even still conscious by this point, and you can't help but notice that he's trying to get back to his feet and continue the fight even now. Moving quickly before he manages to get a second wind, you close the distance to the actress transformed into Hunter's bitch, who is still on the sofa, looking wide-eyed at the person who just beat up her master.";
+		LineBreak;
+		say "     [bold type]You don't have much time. What do you want to do?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Just grab the collar and make a run for it.";
+		say "     [link](2)[as]2[end link] - Offer to free her and flee together.";
+		say "     [link](3)[as]3[end link] - Just grab her and drag her off to be your slave bitch now.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to get the collar, [link]2[end link] to liberate Garnet or [link]3[end link] to take her as yours.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     The female husky whimpers as you reach out for her, lifting her hands defensively, but you manage to convince her that you're not actually here to hurt her with some hastily said words. She still looks frightened, yet doesn't resist as you put your hands on her collar and undo it quickly. With Diego's prize in your hands, you run out of the building right after that, past Hunter who by now has rolled himself over to get on all fours and is shaking his head to clear it. You don't waste another second and just leg it across the lawn, reaching the ladder standing against the wall in short notice. Rushing up on it quickly, you climb on top of the high brick barrier and reach to pull up the ladder. Then suddenly, you hear a bang from the direction of the villa and a fiery line of pain runs up your leg. Hunter is after you, and he's just grazed you with a rifle shot!";
+			say "     You duck reflexively as he sends a follow up bullet your way, which narrowly misses, at the same time as overbalancing you and sending you tumbling off the wall towards the no man's land outside the property. As luck would have it, a big clump of bushes breaks your fall, meaning that you're still able to walk (and run), putting as much distance as possible between yourself and the angry alpha husky. You don't stop fleeing until you're halfway back to where you started from, then start to wind down a little and pack away the collar you had been tightly clutching all this time.";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Speaking quickly, you tell the beautiful canine woman that she can flee together with you and be free again. Garnet looks at you with a confused expression, then points to Hunter, who just rolled himself over and is trying to stand. 'But, but I'm his! He's my alpha and will breed me like I deserve to be!' the transformed actress whimpers in a somewhat monotonous tone of voice, as if repeating words that were drilled into her again and again. Seems like Hunter was successful in brainwashing her into his obedient bitch, and she doesn't seem to want to get up and follow you. You try to convince her for a few more moments, until Hunter finally shakes off his dizziness and stumbles off into the next room. For a second or two, the woman Garnet once was shines through and her eyes go wide, followed by the warning, 'He's got a rifle near the front door!' Seeing her eyes glaze over again almost instantly, you force yourself to focus on the goal of your mission now instead.";
+			say "     Hands scrambling to grab the collar around the husky female's neck, you quickly undo its fastening and then dash out of the room with Diego's prize in hand. As you sprint across the lawn and are just about to reach the wall, you hear the boom of a rifle behind you and see a piece of rock be blasted out of the bricks. Hunter only barely missed you! Rushing up the ladder quickly, you climb on top of the high wall and are just about to pull the ladder up when a fiery line of pain runs up your arm as a follow up bullet grazes your bicep. Wincing from the pain, you lose your balance and fall off the wall. As luck would have it, a big clump of bushes breaks your fall, meaning that you're still able to walk (and run), putting as much distance as possible between yourself and the angry alpha husky. You don't stop fleeing until you're halfway back to where you started from, then start to wind down a little and pack away the collar you had been tightly clutching all this time.";
+		else:
+			LineBreak;
+			say "     In harsh words, you tell the beautiful canine woman that you're her master now and she'll be coming with you. Garnet looks at you with a confused expression, then points to Hunter, who just rolled himself over and is trying to stand. 'But, but I'm his! He's my alpha and will breed me like I deserve to be!' the transformed actress whimpers in a somewhat monotonous tone of voice, as if repeating words that were drilled into her again and again. Seems like Hunter was successful in brainwashing her into his obedient bitch, and she doesn't seem to want to get up and follow you. Not wasting any more time, you just grab her arm and wrench the husky up from the sofa, then pull the struggling canine towards the open sliding door. Distracted as you are by dealing with her, you don't even notice that Hunter gets up and stumbles towards a door deeper into the house. Before he leaves the room, the husky barks to his bitch, 'Keep [ObjectPro of player] busy till I get the rifle!'";
+			say "     With the stakes upped now that you're having to fight Garnet too, and her alpha will soon come back with a firearm, you change plans and just concentrate on your primary goal. After a quick punch that dazes Garnet a little, your hands scramble to grab the collar around the husky female's neck, quickly undoing its fastening. With Diego's prize in hand, you then dash out of the room. As you sprint across the lawn and are just about to reach the wall, you hear the boom of a rifle behind you and see a piece of rock be blasted out of the bricks. Hunter only barely missed you! Rushing up the ladder quickly, you climb on top of the high wall and are just about to pull the ladder up when a fiery line of pain runs up your arm as a followup bullet grazes your bicep. Wincing from the pain, you lose your balance and fall off the wall.";
+			WaitLineBreak;
+			say "     As luck would have it, a big clump of bushes breaks your fall, meaning that you're still able to walk (and run), putting as much distance as possible between yourself and the angry alpha husky. You don't stop fleeing until you're halfway back to where you started from, then start to wind down a little and pack away the collar you had been tightly clutching all this time.";
+		increase carried of diego's heirloom collar by 1;
+		say "     [bold type]You gain Diego's heirloom collar![roman type][line break]";
+		now XP of Diego is 4; [got the collar after fight]
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		setmonster "Alpha Husky";
+		say "     Another punch from the alpha husky makes you sway on your feet, and you can see a grin spreading on the muscular male as he watches you crumple to the ground when the exhaustion of the fight catches up with you. Things go black for a little while, and by the time you manage to blink away the stars dancing before your eyes, you find yourself staring at some grey fur, just an inch in front of your face. You're on your back on a soft surface, the sofa if you're not mistaken, and apparently someone is kneeling over your head, their legs pushing down on your raised arms. Movement of the husky on top of you reveals more fur, matted around a wet pussy, telling you that it is Garnet who is straddling you. Which means that the hands on your legs that are pulling them apart right now are Hunter's. 'Someone came to again, eh? Just in time for the fun!' Something firm and warm smacks against the skin of your crotch, and it's not hard to guess that it is Hunter's erection.";
+		if player is female: [pussy available]
+			say "     You can feel the husky rub his dickhead up and down over your nether lips, then pushing in between them with a smooth thrust, sinking himself deep into your body. A helpless moan escapes your lips as you buck up under him, reflex driving you to raise your hips to allow the man to enter you fully. 'Yeah, that's a nice little bitch. Take it!' Hunter grunts roughly as he begins to fuck you in earnest. Meanwhile, Garnet spreads her knees a little bit further, lowering her crotch the rest of the way to literally cover your face. Her heat-scent is thick in your nose and you can't help but start breathing in more and more as Hunter's movements drive your arousal higher with every new thrust. Soon, you're panting like a bitch in heat, which doesn't remain unnoticed by the alpha husky on top of you. He pulls out of your pussy and hammers back into it all the way in a single hard thrust, then barks out, 'Like that, little bitch? Why don't you share some of that pleasure with Garnet. Lick her!'";
+			WaitLineBreak;
+			say "     In the lusty haze you find yourself in, husky pheromones in your nose and a hard canine shaft inside your body, you can't really imagine why you shouldn't just obey the man on top of you. Opening your mouth, you stick out your tongue and lick Garnet's nether lips, drawing a needy moan from the female husky and causing her to start grinding against your face. Hunter and his obedient bitch enjoy your body for all it is worth after that, taking their pleasure from both ends. You kinda lose track of time for a while, simply being carried along in a haze of arousal and pleasure. At some later point, there is a change in Hunter's rhythm of thrusts, with him slowing down a little as he concentrates on his favourite bitch. 'That's right baby, you like how I've taught you to feel, don't you?' the husky says in a firm tone, and as Garnet gyrates her hips, you catch a glimpse of his hand on her crotch, stroking the woman's clit.";
+			say "     'Yes Hunter! I love you, as my alpha and the future daddy of my puppies!' Garnet squeals in reply, giving the desired reply as he rubs her pleasure-button. Chuckling sounds are followed by what you can tell is Garnet bending over forwards, no doubt from her being drawn in to kiss her master. The two huskies eagerly make out with one another while Hunter still strokes and teases her clit, until her pleasure just becomes too much to be contained. A needy whimper gives way to a full-throated moan as she starts to tremble on top of you, and the next lick of your tongue is rewarded by a gush of femcum, trickling warm and sticky over your face and into your open mouth. Seeing his bitch get off apparently makes Hunter's own arousal soar, as the husky soon takes out all the stops and really rails you deep and without a second's rest.";
+			WaitLineBreak;
+			say "     Horny as this whole ordeal made you, the hard fucking drives you over the edge before much longer, and you thrash under the wildly thrusting man as you climax. Your pussy starts to literally drip with femcum, soaking Hunter's furry balls as the slap against your crotch again and again. [if player is male]At the same time, your own cock goes almost painfully erect, sticking straight up as it begins to throb, then shoot out long strings of creamy cum. Splatters of it land all over your chest, as well as likely Garnet's naked body too, making the strangely funny thought that you just came on a movie starlet bubble up in your mind. [end if]Focused on your own orgasm as you are, the fact that Hunter's grunts are getting more intense and urgent is completely lost on you, right until the point where he lets out a satisfied bark and grinds his crotch against yours. The bulgy knot at the base of the alpha husky swells up within just a few seconds, locking your bodies together as a deluge of cum begins to blast into you.";
+			say "     It almost feels like the husky wants to claim every last part of your insides, his cock going on and on to flood you with more canine seed. The knot keeps it all safely contained within you, preventing any leakage out of your pussy, so by the time his orgasm eventually ebbs, you're quite well-stuffed with cum. Yet despite the fact that you're serving as a receptive cum-dump for the canine male, Hunter doesn't really pay you much attention at all, his focus still being on Garnet, whom he makes out all throughout his orgasm. Even afterwards, when the high of completion has long run out and you're basically just waiting for his knot to go down, the man pays you no mind. Instead, you are a quiet witness of Hunter continuing to work on the transformed actress he claimed as his own, kissing, stroking and touching her, intermixed with repetitive, almost entrancing orders and commands to pay him total obedience.";
+			fimpregchance;
+			WaitLineBreak;
+			if Humanity of player > 30: [player is sane enough]
+				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your pussy. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'You weren't a half bad lay, but I got a really high class bitch to finish training. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky rushes you out of the house, towards the ladder you left standing at the boundary wall. He gruffly tells you to climb over the wall, grumbling as you're not quite fast enough to comply.";
+				say "     As you reach the top and crouch high on the brick barrier to catch your breath, the man takes hold of the ladder and shoves it right at you, pushing you to tumble off the wall to the other side. You land on top of some bushes, which is a mixed blessing as they soften your fall, yet have a few branches that come close to impaling you. Wounded and hurting, you get back to your feet and flee from the neighborhood. With Hunter now forewarned that someone wants to make a move on him and his bitch, as well as the ladder out of reach, there is pretty much nothing left for you but to return to Diego and admit defeat.";
+				PlayerWounded 30;
+				now XP of Diego is 98; [lost/fled]
+			else:
+				say "     Even though you're not the prime target of Hunter's indoctrination, in your current state of exhaustion, still with the shaft of the alpha husky inside your body and his massive load doing its best to impregnate you, his words find fertile ground in your mind. You're his bitch and belong to the alpha, that is made clear to you again and again, until it is engraved into your mind. Then, when the dominant male eventually demands for Garnet to give him his due as her alpha, you join the woman in her refrain of being his. Hunter is somewhat surprised, but nonetheless quite pleased at having yet another obedient bitch to enjoy, and he adds you to his pack.";
+				now bodyname of player is "Hunter's Bitch";
+				end the story saying "You've given in to being Hunter's bitch. Your future will be filled with being fucked by him and countless husky puppies.";
+		else: [no pussy available]
+			say "     'A bit lacking in the pussy department,' the alpha husky says in a condescending tone, brushing the tip of his erection against your body, right where a woman's opening would be. 'Gonna make you my bitch, no matter what. And a few loads might just transform you into a real too!' There is a bit of an odd slurping sound as he gathers some saliva, then lets it drip onto his shaft, followed by rubbing the slick dickhead up and down over your pucker. The horny male presses in against your muscle soon after, relentlessly overwhelming its try to keep him out and forcing your passage to stretch around his girth. A helpless groan escapes your lips as you buck up under him, with the try to escape the invading member doing nothing more but give Hunter an easier angle to thrust. He clamps his hands tightly on your legs, holding you firm in just that position, then quickly rams the rest of his length home.";
+			say "     'Yeah, take it you bastard! Thought you could move in on my bitch and me, didn't you? Tough luck, now you're just another slut I'll have has hard as I want!' Hunter grunts roughly as he begins to fuck you in a fast rhythm. Meanwhile, Garnet spreads her knees a little bit further, lowering her crotch the rest of the way to literally cover your face. Her heat-scent is thick in your nose and you can't help but start breathing in more and more as Hunter's movements drive your arousal higher with every new thrust. Soon, you're panting like a bitch in heat, which doesn't remain unnoticed by the alpha husky on top of you. He pulls out of your ass and hammers back into it all the way in a single hard thrust, then barks out, 'Like that, asshole? Why don't you share some of your pleasure with Garnet. Lick her!'";
+			WaitLineBreak;
+			say "     In the lusty haze you find yourself in, husky pheromones in your nose and a hard canine shaft inside your body, you can't really imagine why you shouldn't just obey the man on top of you. Opening your mouth, you stick out your tongue and lick Garnet's nether lips, drawing a needy moan from the female husky and causing her to start grinding against your face. Hunter and his obedient bitch enjoy your body for all it is worth after that, taking their pleasure from both ends. You kinda lose track of time for a while, simply being carried along in a haze of arousal and pleasure. At some later point, there is a change in Hunter's rhythm of thrusts, with him slowing down a little as he concentrates on his favourite bitch. 'That's right baby, you like how I've taught you to feel, don't you?' the husky says in a firm tone, and as Garnet gyrates her hips, you catch a glimpse of his hand on her crotch, stroking the woman's clit.";
+			say "     'Yes Hunter! I love you, as my alpha and the future daddy of my puppies!' Garnet squeals in reply, giving the desired reply as he rubs her pleasure-button. Chuckling sounds are followed by what you can tell is Garnet bending over forwards, no doubt from her being drawn in to kiss her master. The two huskies eagerly make out with one another while Hunter still strokes and teases her clit, until her pleasure just becomes too much to be contained. A needy whimper gives way to a full-throated moan as she starts to tremble on top of you, and the next lick of your tongue is rewarded by a gush of femcum, trickling warm and sticky over your face and into your open mouth. Seeing his bitch get off apparently makes Hunter's own arousal soar, as the husky soon takes out all the stops and really rails you deep and without a second's rest.";
+			WaitLineBreak;
+			say "     Horny as this whole ordeal made you, the hard fucking drives you over the edge before much longer, and you thrash under the wildly thrusting man as you climax. [if player is male]Your own cock goes almost painfully erect, sticking straight up as it begins to throb, then shoot out long strings of creamy cum. Splatters of it land all over your chest, as well as likely Garnet's naked body too, making the strangely funny thought that you just came on a movie starlet bubble up in your mind. [else]Your body tingles with pleasure that has no real outlet, simply coursing along your nerves and making you twitch and tremble helplessly in your genderless state. [end if]Focused on your own orgasm as you are, the fact that Hunter's grunts are getting more intense and urgent is completely lost on you, right until the point where he lets out a satisfied bark and grinds his crotch against your ass. The bulgy knot at the base of the alpha husky swells up within just a few seconds, locking your bodies together as a deluge of cum begins to blast into you.";
+			say "     It almost feels like the husky wants to claim every last part of your insides, his cock going on and on to flood you with more canine seed. The knot keeps it all safely contained within you, preventing any leakage out of your asshole, so by the time his orgasm eventually ebbs, you're quite well-stuffed with cum. Yet despite the fact that you're serving as a receptive cum-dump for the canine male, Hunter doesn't really pay you much attention at all, his focus still being on Garnet, whom he makes out all throughout his orgasm. Even afterwards, when the high of completion has long run out and you're basically just waiting for his knot to go down, the man pays you no mind. Instead, you are a quiet witness of Hunter continuing to work on the transformed actress he claimed as his own, kissing, stroking and touching her, intermixed with repetitive, almost entrancing orders and commands to pay him total obedience.";
+			mimpregchance;
+			WaitLineBreak;
+			if Humanity of player > 30: [player is sane enough]
+				say "     Despite your exhaustion, you are of ready enough mind to tune out the alpha husky's brainwashing commands. Thinking of everything and anything you can instead, you have to wait through quite a while of him indoctrinating Garnet, up to the point at which his shaft eventually softens enough to slip out of your well-bred asshole. Not long after that, both of them get off you and Hunter throws your equipment unceremoniously onto your stretched-out, sticky form. 'I'm half minded to keep working on you till you're a nice and subby bitch, but then... why go through the trouble if I have the most beautiful husky of all here already. I'd rather fuck her all day and breed some pups than waste my time with you. Get up, and out!' With that said, the alpha husky rushes you out of the house, towards the ladder you left standing at the boundary wall. He gruffly tells you to climb over the wall, grumbling as you're not quite fast enough to comply.";
+				say "     As you reach the top and crouch high on the brick barrier to catch your breath, the man takes hold of the ladder and shoves it right at you, pushing you to tumble off the wall to the other side. You land on top of some bushes, which is a mixed blessing as they soften your fall, yet have a few branches that come close to impaling you. Wounded and hurting, you get back to your feet and flee from the neighborhood. With Hunter now forewarned that someone wants to make a move on him and his bitch, as well as the ladder out of reach, there is pretty much nothing left for you but to return to Diego and admit defeat.";
+				PlayerWounded 30;
+				now XP of Diego is 98; [lost/fled]
+			else:
+				say "     Even though you're not the prime target of Hunter's indoctrination, in your current state of exhaustion, still with the shaft of the alpha husky inside your body and his massive load squishing around in your chute, the husky's words find fertile ground in your mind. You're his bitch and belong to the alpha, that is made clear to you again and again, until it is engraved into your mind. Then, when the dominant male eventually demands for Garnet to give him his due as her alpha, you join the woman in her refrain of being his. Hunter is somewhat surprised, but nonetheless quite pleased at having yet another obedient bitch to enjoy, and he adds you to his pack.";
+				now bodyname of player is "Hunter's Bitch";
+				end the story saying "You've given in to being Hunter's bitch. Your future will be filled with being fucked by him until you're an actual female and can give him countless husky puppies.";
+	else if fightoutcome is 30: [fled]
+		say "     You abandon the fight, taking your legs under your arms as you run from the villa. Hunter is quick to set after you, growling and barking as he chases you over the lawn. He catches up right as you are halfway up the ladder and tries to wrench you off it, but a swift kick to the face sends him reeling so you manage to get on top of the wall. That's where your luck ends though, as the guy grabs hold of the ladder when he gains his bearing again and thrusts it at you, sending you tumbling off the other side. You land on top of some bushes, which is a mixed blessing as they soften your fall, yet have a few branches that come close to impaling you. Wounded and hurting, you get back to your feet and flee from the neighborhood.";
+		say "     With Hunter now forewarned that someone wants to make a move on him and his bitch, as well as the ladder out of reach, there is pretty much nothing left for you but to return to Diego and admit defeat.";
+		PlayerWounded 30;
+		now XP of Diego is 98; [lost/fled]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"diego's heirloom collar"	"[DCollarDesc]."	1	diego's heirloom collar
+
+diego's heirloom collar is a grab object.
+the usedesc of diego's heirloom collar is "[DCollarUse]".
+it is part of the player.
+It is not temporary.
+
+diego's heirloom collar is a grab object.
+diego's heirloom collar is equipment.
+It is not temporary.
+The plural of diego's heirloom collar is false.
+The taur-compatible of diego's heirloom collar is true.
+The size of diego's heirloom collar is 0.
+The AC of diego's heirloom collar is 0.
+The effectiveness of diego's heirloom collar is 0.
+The placement of diego's heirloom collar is "neck".
+The descmod of diego's heirloom collar is "A sturdy leather collar with shiny brass studs on it is fastened tightly around your neck. You feel like you never want to take it off again.".
+The slot of diego's heirloom collar is "neck".
+
+to say DCollarDesc:
+	say "     You take the time to check out Diego's prized heirloom a little closer. The collar consists of a sturdy leather band decorated with round brass studs on the outside, shiny in the middle and with some fine detail etched around their rims. Flipping the band around, you see two bands of what looks like occult symbols on the inside surface, worked into the leather in gold paint. No wonder that Diego wants such a fancy thing back.";
+	if player is submissive:
+		let OtherCollarPresent be false;
+		repeat with z running through equipped equipment:
+			if slot of z is "neck":
+				now z is not equipped;
+				now OtherCollarPresent is true;
+		if OtherCollarPresent is true:
+			say "     Looking at the collar, you can't help but wonder how it would feel to have it on. Surely he won't mind if you try it on for just a little while, right? Quickly taking off what you already have on, you lift the leather band to your neck and fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
+		else:
+			say "     Looking at the collar, you can't help but wonder how it would feel to have it on. Surely he won't mind if you try it on for just a little while, right? Lifting the leather band to your neck, you fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
+		now diego's heirloom collar is equipped;
+
+instead of sniffing diego's heirloom collar:
+	say "     The collar smells like leather.";
+
+to say DCollarUse:
+	if diego's heirloom collar is equipped:
+		say "     You raise your hands and touch the leather collar around your neck, feeling around for its buckle. Yet even as you do so, the idea of how good the strap feels on your skin grows in your mind, together with the acceptance and need of having something nicely tight and proper around your neck. Your wish to be rid of it weakens by the second, and before you've done anything more than pulling a bit at the fastening, you've fully changed your mind. Fingers idly stroking along the symbol of submission around your neck, you can barely even remember why you wanted to take it off.";
+	else:
+		repeat with z running through equipped equipment:
+			if slot of z is "neck":
+				say "     [bold type]Your [z] is in the way![roman type][line break]";
+				continue the action;
+		say "     Looking at the collar, you can't help but wonder how it would feel to have it on. Surely Diego won't mind if you try it on for just a little while, right? Lifting the leather band to your neck, you fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
+		now diego's heirloom collar is equipped;
+
+[
+instead of navigating Park Entrance while (XP of Diego is 98 or XP of Diego is 3 or XP of Diego is 4):
+	say "[NavCheck Park Entrance]";
+	if NavCheckReturn is false, stop the action;
+	move player to Park Entrance;
+	project the figure of Diego_face_icon;
+	say "     As you arrive at the park, Diego's ears perk up and he glances expectantly in your direction. Tail wagging hopefully, the coyote saunters your way, then pauses for a second as he sees ";
+	if diego's heirloom collar is equipped:
+		say "the collar around your neck.";
+	else if XP of Diego is 3 and diego's heirloom collar is owned:
+		say "your sly grin. He chuckles heartily at the tale of how you stole the precious item from right under Hunter's nose, with the sleeping husky none the wiser. An eager gleam starts to fill his eyes when you pull the collar out of your pack during your report, and he accepts his property back with a broad smile on his face.";
+		say "[DiegoCollarAftermath]";
+	else if XP of Diego is 3:
+		say "your sly grin. He chuckles heartily at the tale of how you stole the precious item from right under Hunter's nose, with the sleeping husky none the wiser. An eager gleam starts to fill his eyes, and the coyote's hands raise up a bit, ready to accept the collar from you. Things get a little awkward as you have to admit to him that you don't actually have the collar along right now, with the coyote barking impatiently, 'What are you waiting for then? Go get it from where you've stashed it and bring it here!'";
+	else if XP of Diego is 4 and diego's heirloom collar is owned:
+		say "your confident grin. He gives a respectful nod at the tale of how you beat Hunter and took the collar as your prize. An eager gleam starts to fill his eyes when you pull the collar out of your pack during your report, and he accepts his property back with a broad smile on his face.";
+		say "[DiegoCollarAftermath]";
+	else if XP of Diego is 4:
+		say "your confident grin. He gives a respectful nod at the tale of how you beat Hunter and took the collar as your prize. An eager gleam starts to fill his eyes, and the coyote's hands raise up a bit, ready to accept the collar from you. Things get a little awkward as you have to admit to him that you don't actually have the collar along right now, with the coyote barking impatiently, 'What are you waiting for then? Go get it from where you've stashed it and bring it here!'";
+	else if XP of Diego is 98: [fail]
+		say "the grimace on your face. With the beating tail freezing in motion and his ears drooping, the anthro canine asks, 'What happened?' He sighs in disappointment as you recount your trip to the villa and how things with Hunter turned out. Diego is clearly less than pleased at this development and you can see him start to strain his devious mind for another plan of getting his heirloom back, but even the crafty trickster shakes his head after a little while and throws his hands up. 'Damn, no that won't work either. With Hunter forewarned and ready now, I don't think we'll be able to get the collar at all.' He looks glum and frustrated, grimacing as if he had a bad taste in his mouth. Diego gives you half-hearted thanks for trying, then wanders off into the park, seemingly wanting to put his mind on something else for the moment.";
+		now XP of Diego is 100; [Quest failed]
+
+to say DiegoCollarAftermath:
+	say "     ...";
+	say "     [bold type]Do you accept Diego's offer of trying the collar on?[roman type][line break]";	
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure thing! Diego said it's harmless after all.";
+	say "     ([link]N[as]n[end link]) - Err... better not. That expression on the coyote's face is too clever by half.";
+	if player consents:
+		LineBreak;
+		let OtherCollarPresent be false;
+		repeat with z running through equipped equipment:
+			if slot of z is "neck":
+				now z is not equipped;
+				now OtherCollarPresent is true;
+		if OtherCollarPresent is true:
+			say "     Quickly taking off what you already have on, you lift the leather band to your neck and fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
+		else:
+			say "     right? Lifting the leather band to your neck, you fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
+		now diego's heirloom collar is equipped;
+		say "     ...";
+	else:
+		LineBreak;
+		say "     <Scene for choice B>";
+]
 
 Diego ends here.

@@ -211,7 +211,7 @@ to say MTFRatSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -241,7 +241,7 @@ to say MTFRatSexMenu:
 				else if libido of Danny < 12:
 					increase libido of Danny by 1; [counting up on the transformations]
 				WaitLineBreak;
-		else if calcnumber is 100: [cancel sex menu]
+		else if calcnumber is 0: [cancel sex menu]
 			say "Just let Cole/Coura off scot free for now?";
 			if player consents:
 				now sextablerun is 1;
@@ -252,7 +252,7 @@ to say MTFRatSexMenu:
 				else: [freed Coura is sent back to work]
 					say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Turning her attention back to the mall rat standing ready before you, she barks out, 'The slut should get back to work now. Nermine wants [one of]to see the great gong polished to a mirror's shine[or]all of her canopic jars dusted[or]the third shelf sorted alphabetically[or]her living inventory fed[at random] before the mall rat leaves today.' As the jackaless goes to pull the door open once more and shoo Coura through, the mall rat rolls her eyes as soon as Nermine's back is turned, then gives you a little wave as she says goodbye and hurries after Nermine.";
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -275,7 +275,7 @@ to say CouraSex1: [oral for Nermine]
 			say "     ([link]N[as]n[end link]) - Nah, just continue fingering her.";
 			if player consents:
 				LineBreak;
-				say "     Quickly baring your crotch, you stroke the length of your [cock of player] shaft, moving your fingers up and down over its hard length. Coura's own juices work quite nicely to lube yourself up, and you're ready to take the sweet little rodent within moments. Guiding the glistening and slick dickhead to her drippingly wet opening, you step behind the young woman and rub up against her slightly spread nether lips, making her tremble in arousal from the sensations. Coura doesn't expect that this is anything other than just you rubbing her with your hand at first, and she even goes down on Nermine's pussy with a bit more enthusiasm than before, due to the extra stimulation. Only when you nudge apart those enticing folds with your erection and begin to enter her, the realization of what is going to happen strikes the young woman.";
+				say "     Quickly baring your crotch, you stroke the length of your [cock of player] shaft, moving your fingers up and down over its hard length. Coura's own juices work quite nicely to lube yourself up, and you're ready to take the sweet little rodent within moments. Guiding the glistening and slick dickhead to her dripping wet opening, you step behind the young woman and rub up against her slightly spread nether lips, making her tremble in arousal from the sensations. Coura doesn't expect that this is anything other than just you rubbing her with your hand at first, and she even goes down on Nermine's pussy with a bit more enthusiasm than before, due to the extra stimulation. Only when you nudge apart those enticing folds with your erection and begin to enter her, the realization of what is going to happen strikes the young woman.";
 				say "     In a moment of shock, Coura jolts upwards, lifting her head from between Nermine's legs and twisting her upper body to glance back at you as she lets out a surprised squeal. But of course, the most likely reason for that is because the movement actually pushed her hips back against you, meaning that she just impaled herself on another inch or two of you of your manhood all of her own! ";
 				if CouraVirginity is 0: [virgin]
 					say "The sexy little rodent's pussy is tight as a vice around your erection, which might have something to do with the fact that you feel a hymen inside her! The newly transformed girl is a virgin! Coura apparently only just realized this herself from the stretching sensation in her pussy, and she pants out the words, 'Be gentle, please!' You're not quite sure if you indulge the request because you don't want to be too hard on her, or just to savor to occasion. No matter which, you slow down for a moment and simply rest your shaft inside her, giving the young rodent some time to get used to it.";

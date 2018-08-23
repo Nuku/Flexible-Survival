@@ -19,9 +19,9 @@ Instead of Resolving a Mouse Taur Encounter:
 	if mtrp is 0:
 		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.' ";
 		if player is herm:
-			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression. 'Glad to run into someone who can talk. My name is Lisa. What's your name?'";
+			say "She looks you over critically, placing her pawlike hands on her hips and leaning a bit. 'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression. 'Glad to run into someone who can talk. My name is Lisa. What's your name?'";
 		else if player is male:
-			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit. 'I was hoping for something a little more...' she trails off, then shakes her head. 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand. 'Lisa. You are?'";
+			say "She looks you over critically, placing her pawlike hands on her hips and leaning a bit. 'I was hoping for something a little more...' she trails off, then shakes her head. 'Nevermind that, I am being rude. You will be just fine, I'm sure, with some work.' She smiles brilliantly and offers a hand. 'Lisa. You are?'";
 		else if player is female:
 			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment. 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		else:
@@ -119,7 +119,7 @@ Porn Store is a room. It is fasttravel. It is sleepsafe. It is private.
 The description of Porn Store is "[pornstoredesc]".
 
 Lisa is a person. Lisa is in Porn Store.
-The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
+The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.
 
 mousefucked is a number that varies. mousefucked is usually 0.

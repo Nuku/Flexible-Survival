@@ -142,12 +142,15 @@ to say beaver_pvsex3:	[f-oral]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Beaver"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]beaver[or]furry Canuck[or]pudgy beaver[or]too-friendly beaver[at random] [one of]gropes you with a big smile on his face[or]pulls you into a kiss, pressing his whiskered muzzle to your lips[or]turns quickly and slaps you with his big tail. 'Sorry, eh,' he says with a chuckle[or]laughs and punches you hard on the shoulder[or]presses his rotund body to yours and hugs you tight, grinding his chubby cock against you as he does[or]bites you with his sharp incisors, then blushes and covers his mouth. 'Sorry aboot that, eh? Beaver and all that,' he says. 'Lemme kiss it and make it allll better,' he adds[or]he rushes at you, body checking you like an aggressive defenseman so hard against a wall your teeth rattle[at random].";
 	now defeated entry is "[beatthebeaver]";
 	now victory entry is "[losetobeaver]";

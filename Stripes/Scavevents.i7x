@@ -196,7 +196,6 @@ Instead of resolving a Protected Supplies:
 			decrease morale of player by 1;
 	else:
 		say "You come across the scenes of a scuffle between two creatures. There are tufts of fur, feathers and blood scattered about, as well as other bodily fluids. In the middle of this mess [one of]are the few crumbs left from whatever food they appear to have been fighting over[or]the empty soda can they appear to have been fighting over[or]the empty and crushed water bottle they appear to have been fighting over[at random]. Unsure if you're disappointed that you got here too late or pleased that you didn't need to fight one or both of these vicious creatures to get it, you move on.";
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 3 - Dropped Handbag
@@ -239,7 +238,6 @@ Instead of resolving a Dropped Handbag:
 	else:
 		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 2 succeeds, mallrecall;
 	now Dropped Handbag is resolved;
 
 
@@ -271,7 +269,6 @@ Instead of resolving a Dented Bike:
 	say "Looking around, you find a few more tufts of fur and some messy splatters of cum leading away, but that's it.";
 	increase dentedbikecount by 1;
 	if dentedbikecount is 3, now Dented Bike is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 5 - Looted Supermarket (by Wahn)
@@ -336,7 +333,6 @@ Instead of resolving a Looted Supermarket:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	increase supermarketcount by 1;
 	if supermarketcount is 3, now Looted Supermarket is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 4 succeeds, mallrecall;
 
 
 Section 6 - Abandoned Cars (by Wahn)
@@ -363,7 +359,6 @@ Instead of resolving a Abandoned Cars:
 	else:
 		say "Try as you might, the trunk of this car is too damaged for you to break into it. You'll have to try looking elsewhere.";
 	now Abandoned Cars is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 7 - Gryphon Milkman (by Wahn)
@@ -522,7 +517,6 @@ Instead of resolving a Garden Veggies:
 	if girl is banned and guy is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		increase carried of food by 1;
-		if a random chance of 1 in 3 succeeds, mallrecall;
 		now Garden Veggies is resolved;
 	else if lastgardenveg - turns < 8:
 		say "     Finding yourself back in the neighborhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet. They seem to be growing rather quickly, but you'll have to wait a little longer.";
@@ -530,17 +524,14 @@ Instead of resolving a Garden Veggies:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home. It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather. And even better than that, they're fruiting. Only a little of the produce is ripe, but you snag what's ready to be picked. You try to remember to return here again once the rest of the veggies have had time to mature. Between the tomatoes, beans and peas, you should have enough for a meal. It'll certainly be more nutritious than some of your meals lately.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 1:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 2:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
 		increase carried of food by 2;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 3:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
@@ -765,7 +756,6 @@ Instead of resolving a Shattered House:
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";
 				fight;
-	if battleground is "Outside", mallrecall;
 	now Shattered House is resolved;
 
 Section 16 - Abandoned Milk (by cmacleod42)

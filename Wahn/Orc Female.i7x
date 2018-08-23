@@ -205,7 +205,7 @@ to say KatyaBeatenSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -229,14 +229,14 @@ to say KatyaBeatenSexMenu:
 				if KatyaResistance > 0:
 					decrease KatyaResistance by 1;
 				increase libido of Katya by 1;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -379,12 +379,15 @@ to say OrcFemDesc:
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Orc Female";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]orc[or]green-skinned amazon[or]muscular woman[or]brutish woman[or]muscled amazon[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]pounds you with a big fist[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[OrcFemBeaten]";
 	now victory entry is "[OrcFemVictorious]";
@@ -739,7 +742,7 @@ instead of conversing the Katya:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -755,14 +758,14 @@ instead of conversing the Katya:
 				if (nam is "The Dry Plains"):
 					say "[KatyaTalk2]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the towering orc, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -773,7 +776,7 @@ to say KatyaTalk1: [talk about her]
 		say "     'So. Bet you're curious where a female orc came from. Strange freak of nature and all that!' Katya begins her tale, then lifts a hand to her improvised bra and pulls out something shiny that she had tucked away under it. She turns it over in her hands, gleaming in the firelight - it is a police badge, polished to a mirror's sheen. 'Here, this was dad's. I loved how shiny it was from the start. There I was... barely born, suckling on his nipples and with my little green hands closing around this pretty shiny bauble. Hhmf - best thirty minutes of my life, I can tell you that.' She looks down at the badge and seems lost in thought for a moment...";
 		WaitLineBreak;
 		say "     'He told me he was proud to see me grow up so quickly. His little girl, becoming so strong and big. Hell, I wasn't even done growing then - just a narrow beanpole without real strength yet.' Katya goes on to tell you, then raises her arm to flex it and let her gaze wander over the muscles rippling under her green skin. Looking back at the badge, she strokes over the engraved name and reads it out loud, 'Virgil Lawrence - could have had a worse dad I guess. At least he loved me. But he was - is - weak. Typical breeder, you see. And then... they came.'";
-		say "     Katya gathers a big gob of saliva and spits it into the fire to sizzle away in a second, 'Three of the bastards, young orc warriors, dumb as rocks. Wrenched my out of dad's embrace and half-poured a mug of orc brew over my head while roaring about a new brother to join em. I swallowed what poured into my mouth, almost choking on it, and before I was done coughing that part up that went the wrong way... one of the fuckers called out, 'Ey - where's his dick?!' And with just those words, I wasn't one of them anymore. Just a freak.' The orc woman's face draws into an aggressive snarl and she throws another chunk of wood into the fire, raising a small burst of sparks.";
+		say "     Katya gathers a big gob of saliva and spits it into the fire to sizzle away in a second, 'Three of the bastards, young orc warriors, dumb as rocks. Wrenched my out of dad's embrace and half-poured a mug of orc brew over my head while roaring about a new brother to join [']em. I swallowed what poured into my mouth, almost choking on it, and before I was done coughing that part up that went the wrong way... one of the fuckers called out, 'Ey - where's his dick?!' And with just those words, I wasn't one of them anymore. Just a freak.' The orc woman's face draws into an aggressive snarl and she throws another chunk of wood into the fire, raising a small burst of sparks.";
 		WaitLineBreak;
 		say "     'I was poked and prodded by them among jeered comments about me being weak - fuck those assholes, I was still growing into this body! And those 'weird bumps' on my chest were strangely soft when being pinched...' she indicates her breasts with a scornful grunt. 'I screamed when one of them rammed a finger up my pussy, just to see what would happen. Hell of a way to lose your virginity, I can tell you that. The noise brought someone else into the room before long - the big kahuna, gold chain and all on that frigging big brute of an orc. He gave the snot-nosed warriors a stare and they let go of me, then sent them out of the room.";
 		say "     Katya crosses her arms over her chest. 'Tried to punch him when he reached for me. Of course he caught that easily, squeezing my fist till I was wincing in pain. So there I was, alone with daddy and the orc chief, naked and dripping with orc brew. He inspected me - not like them, just looking - then let go.' Turning the police badge over in her hands a few more times, she tugs it away once more. 'Daddy held me in his arms and pleaded, 'Boghrim, please. She's y-' But the big bad orc just waved him off and said, 'No. She can't stay. Half of the tribe has never even seen a woman. They'd never accept her. You saw what the brothers just did.'";
@@ -783,7 +786,7 @@ to say KatyaTalk1: [talk about her]
 		say "     'Curious, aren't you?' the muscular orc says gruffly, her mouth drawing into a little frown as she crosses her arms and looks at you. For a moment, you think she'll just leave it at that, then she gives a shrug and makes a throwing-away gesture with one muscular arm. 'Fine, I'll tell you about it.' With that said, she strides over to her fire pit and sits down next to it after throwing in a few fresh pieces of wood. The orc stares a moment into the flames, just watching them start to consume what they touch, then glances at you once more as you sit down not far from her. 'So. Bet you're curious where a female orc came from. Strange freak of nature and all that!' Katya begins her tale, then lifts a hand to her improvised bra and pulls out something shiny that she had tucked away under it.";
 		say "     She turns it over in her hands, gleaming in the firelight - it is a police badge, polished to a mirror's sheen. 'Here, this was dad's. I loved how shiny it was from the start. There I was... barely born, suckling on his nipples and with my little green hands closing around this pretty shiny bauble. Hhmf - best thirty minutes of my life, I can tell you that.' She looks down at the badge and seems lost in thought for a moment... then suddenly speaks up and says, 'He told me he was proud to see me grow up so quickly. His little girl, becoming so strong and big. Hell, I wasn't even done growing then - just a narrow beanpole without real strength yet.' Katya goes on to tell you, then raises her arm to flex it and let her gaze wander over the muscles rippling under her green skin.";
 		WaitLineBreak;
-		say "     Looking back at the badge, she strokes over the engraved name and reads it out loud, 'Virgil Lawrence - could have had a worse dad I guess. At least he loved me. But he was - is - weak. Typical breeder, you see. And then... they came.' Katya gathers a big gob of saliva and spits it into the fire to sizzle away in a second, 'Three of the bastards, young orc warriors, dumb as rocks. Wrenched my out of dad's embrace and half-poured a mug of orc brew over my head while roaring about a new brother to join em. I swallowed what poured into my mouth, almost choking on it, and before I was done coughing that part up that went the wrong way... one of the fuckers called out, 'Ey - where's his dick?!' And with just those words, I wasn't one of them anymore. Just a freak.' The orc woman's face draws into an aggressive snarl and she throws another chunk of wood into the fire, raising a small burst of sparks.";
+		say "     Looking back at the badge, she strokes over the engraved name and reads it out loud, 'Virgil Lawrence - could have had a worse dad I guess. At least he loved me. But he was - is - weak. Typical breeder, you see. And then... they came.' Katya gathers a big gob of saliva and spits it into the fire to sizzle away in a second, 'Three of the bastards, young orc warriors, dumb as rocks. Wrenched my out of dad's embrace and half-poured a mug of orc brew over my head while roaring about a new brother to join [']em. I swallowed what poured into my mouth, almost choking on it, and before I was done coughing that part up that went the wrong way... one of the fuckers called out, 'Ey - where's his dick?!' And with just those words, I wasn't one of them anymore. Just a freak.' The orc woman's face draws into an aggressive snarl and she throws another chunk of wood into the fire, raising a small burst of sparks.";
 		say "     'I was poked and prodded by them among jeered comments about me being weak - fuck those assholes, I was still growing into this body! And those 'weird bumps' on my chest were strangely soft when being pinched...' she indicates her breasts with a scornful grunt. 'I screamed when one of them rammed a finger up my pussy, just to see what would happen. Hell of a way to lose your virginity, I can tell you that. The noise brought someone else into the room before long - the big kahuna, gold chain and all on that frigging big brute of an orc. He gave the snot-nosed warriors a stare and they let go of me, then sent them out of the room. Katya crosses her arms over her chest. 'Tried to punch him when he reached for me. Of course he caught that easily, squeezing my fist till I was wincing in pain. So there I was, alone with daddy and the orc chief, naked and dripping with orc brew. He inspected me - not like them, just looking - then let go.'";
 		WaitLineBreak;
 		say "     Turning the police badge over in her hands a few more times, she tugs it away once more. 'Daddy held me in his arms and pleaded, 'Boghrim, please. She's y-' But the big bad orc just waved him off and said, 'No. She can't stay. Half of the tribe has never even seen a woman. They'd never accept her. You saw what the brothers just did.' Silence stretches out for a few seconds, then the orc goes on to say, 'With that said, he left, kicking the door shut behind him. I was in my daddy's arms crying until Boghrim came back, throwing a bundle of ragged fabric to the ground next to me. 'Take that and go,' he said gruffly, barely leaving me time to say goodbye and for dad to give me his badge. A few minutes later, I was outside the police station and a block away, with him stopping at a crossroad and pointing down the road - away. 'You're strong. You'll make it. Just stay away from the tribe's territory,' he said and gave me a push to start walking.";
@@ -882,7 +885,7 @@ to say KatyaSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -910,14 +913,14 @@ to say KatyaSexMenu:
 				now lastfuck of Katya is turns;
 				increase libido of Katya by 1;
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the proud orc woman, shrugging your shoulders as she gives you a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

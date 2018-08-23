@@ -45,7 +45,7 @@ Instead of conversing the Tyr:
 		if libido of player > 100, now libido of player is 100;
 		now Tyrtalk is 1;
 	else if Tyrtalk is 1:
-		say "[one of]'Good to see you today. You looking to train?'[or]Tyr nods to you before turning to survey his club again.[or]Barking at two Danes going at it too ferociously Tyr runs over into the Pit to break them up.[or]'I wonder what that scallywag Homaru is up to? Maybe I should go by and ruffle his feathers.' Tyr chuckles while rubbing a hand underneath his chin.[or]What's you name again? I keep forgetting.'[or]'I hope those military assholes get off their tails do something about this place.'[or]Tyr seems to be contemplating something and isn't paying you much attention.[or]Tyr busies himself with looking up at the ceiling, seemingly deep in thought.[or]'Do you think that you ever might want to join up with the military after this? You'd make a pretty good leader in my opinion.'[or]'That Omio chick, is she still working on her [italic type]research[roman type] out in the plains? I thought she'd have given up by now.'[or]'I so want to get up out of here and get back to Asg... ugh... never mind.'[or]'I wonder if the others have desce... ugh... come down this way yet.' Tyr chuckles while turning his head to the side.[or]'Just who are you?' Tyr looks to you with a curious glare covering his toughened features. 'You do not have the feeling of being a normal m...person.'[or]'I wish I had some honeyed wine right about now.' Tyr grunts as he rubs across his belly.[at random]";
+		say "[one of]'Good to see you today. You looking to train?'[or]Tyr nods to you before turning to survey his club again.[or]Barking at two Danes going at it too ferociously Tyr runs over into the Pit to break them up.[or]'I wonder what that scallywag Homaru is up to? Maybe I should go by and ruffle his feathers.' Tyr chuckles while rubbing a hand underneath his chin.[or]What's your name again? I keep forgetting.'[or]'I hope those military assholes get off their tails do something about this place.'[or]Tyr seems to be contemplating something and isn't paying you much attention.[or]Tyr busies himself with looking up at the ceiling, seemingly deep in thought.[or]'Do you think that you ever might want to join up with the military after this? You'd make a pretty good leader in my opinion.'[or]'That Omio chick, is she still working on her [italic type]research[roman type] out in the plains? I thought she'd have given up by now.'[or]'I so want to get up out of here and get back to Asg... ugh... never mind.'[or]'I wonder if the others have desce... ugh... come down this way yet.' Tyr chuckles while turning his head to the side.[or]'Just who are you?' Tyr looks to you with a curious glare covering his toughened features. 'You do not have the feeling of being a normal m...person.'[or]'I wish I had some honeyed wine right about now.' Tyr grunts as he rubs across his belly.[at random]";
 
 
 Part 2 - Sex Match with Tyr
@@ -93,7 +93,7 @@ Instead of fucking the Tyr:
 				say "[TyrWon_Training]";
 			else if player is female:
 				say "[TyrWon_Vaginal]";
-			else if player is puremale and ( a random chance of 2 in 5 succeeds or ( anallevel is 3 and a random chance of 1 in 3 succeeds ) ):
+			else if player is male and ( a random chance of 2 in 5 succeeds or ( anallevel is 3 and a random chance of 1 in 3 succeeds ) ):
 				say "[TyrWon_AnalPlay]";
 			else:
 				say "[TyrWon_NoSex]";
@@ -175,7 +175,7 @@ to TyrSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -217,7 +217,7 @@ to TyrSexMenu:
 					say "[TyrWon_AnalPlay]";
 				else if nam is "Lose: no sex":
 					say "[TyrWon_NoSex]";
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -227,7 +227,7 @@ to TyrSexMenu:
 				say "     You step back from the Tyr, shaking your head as he gives you a questioning look.";
 				wait for any key;
 		else:
-			say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -249,7 +249,7 @@ to say TyrLost_Vaginal:
 to say TyrLost_Anal:
 	if lust of Tyr is 0:
 		say "Telling the other that you want his ass Tyr gives you a scowl, but then sighs when you return his disapproving look. A sigh of '[italic type]Fine[roman type] as second later and the Doberman grumbles under his breath before he moves over to undo his shorts. At seeing the big and muscular canine looking so... despondent... about giving up his tail you move over to hug yourself up next to the Doberman just as he's about to take off his shorts. 'What are you...?' You don't give him time to wonder as soon you are running a hand across his black and brown fur and then rubbing your fingers along the crack of his rump.[line break]";
-		say "A yip of surprise from the other makes you smile and you lean over to tell Tyr that you'll be gentle... ish. 'I'm starting to think that...' You cut the Dobie off from whatever he was about to say as you shuck his shorts down off of his bubble shaped rump and then go to smack him across his brown furred rear. A yelp has you laughing, right up until Tyr growls warningly.[line break]";
+		say "A yip of surprise from the other makes you smile and you lean over to tell Tyr that you'll be gentle... ish. 'I'm starting to think that...' You cut the Dobie off from whatever he was about to say as you shuck his shorts down off of his bubble-shaped rump and then go to smack him across his brown furred rear. A yelp has you laughing, right up until Tyr growls warningly.[line break]";
 		say "Seeing that the other is only going to allow you so much leeway with his pride, you prepare the Doberman's tailhole by slipping a few of your [bodyname of player] fingers into him, after getting them wet with your [facename of player] tongue, while reaching down to unzip yourself to stroke your [cock of player] cock to full hardness. Once you've satisfactorily opened Tyr up, pressing on the pleasure button hiding inside of his rectum to make the other moan and push back onto your slick digits to help with this effort, you pull your fingers out of the Dobie and then line your cock up with his tailstar. A whimper from Tyr has you pausing and then sighing before flexing your arms up around his chest to hug him more tightly into you.[line break]";
 		say "Having not expected this Tyr blushes and then turns back to look at you. When your [facename of player] eyes meet the Dobie's own jade orbs the two of your share a silent understanding before you press your dick into his opened tailhole. The tightness of the other man makes a hiss stream out from between your teeth.[line break]";
 		say "Obviously, the Doberman doesn't take it up the rump too often. Not if the feeling of being gripped in almost too tight pressure can tell you anything about Tyr's subbing days. Another whine from him and you nip the Dobie onto his floppy ears to tell him to keep quiet. Continuing to move your cock inside of him you take care to move slowly so as to give Tyr ample time to adjust.[line break]";
@@ -272,7 +272,7 @@ to say TyrLost_Anal:
 		say "     'Cheeky bastard,' Tyr mumbles good-naturedly when you rub a hand across his rear and lean in to give the canine a kiss right on the muzzle. 'It looks like you got me again. I'm definitely going to have to keep training,' he says before getting up and heading off. 'Don't forget, that's your mess to clean up,' he teases. You watch him go, enjoying the sight of his cum-stained bottom and wagging tail.";
 		increase lust of Tyr by 1;
 	else if lust of Tyr is 2:
-		say "     Telling Tyr that you want another go at his ass, he grumbles a little, but again gets out of his shorts quite quickly. Despite the grumble, his tail wags quickly and raises itself in anticipation. Licking your lips at the thought of having another go at him, you press him up against the chain link fence and tell him to spread 'em. With him in such a position, you give him a quick kiss on the side of his muzzle before lowering yourself to your knees and nuzzling at his rear. Nuzzling between those strong, meaty glutes, you [if anallevel is 3]give his asshole a thorough licking, diving your tongue into it until he's nice and opened up[else]give his asshole a few quick licks to prep it[end if], enjoying his soft moans as you do.";
+		say "     Telling Tyr that you want another go at his ass, he grumbles a little, but again gets out of his shorts quite quickly. Despite the grumble, his tail wags quickly and raises itself in anticipation. Licking your lips at the thought of having another go at him, you press him up against the chain link fence and tell him to spread [']em. With him in such a position, you give him a quick kiss on the side of his muzzle before lowering yourself to your knees and nuzzling at his rear. Nuzzling between those strong, meaty glutes, you [if anallevel is 3]give his asshole a thorough licking, diving your tongue into it until he's nice and opened up[else]give his asshole a few quick licks to prep it[end if], enjoying his soft moans as you do.";
 		say "     After that quick prep, you move in behind him, guiding your cock to his wet pucker and hug him tightly. You nuzzle his shoulder and reassure him that you'll make him feel real good like last time. He smiles at this and nods, pushing his ass back onto your cock. You nibble his ear, saying 'Good doggy' to him. He playfully growls at this and warns you not to push your luck. You both laugh and you reach around to stroke his throbbing manhood as you continue to penetrate him.";
 		say "     You take it easy at first, sinking [if cock length of player > 3]a few inches [end if]into him slowly before picking up the pace and starting to hump him in earnest. Tyr responds by gripping the fencing tightly and pushing back into your thrusts, panting in growing arousal. From the feel of his stiff, leaking shaft in your hand, you can tell the Doberman's really getting into it. He's delightfully tight around your shaft, making fucking him very enjoyable for you as well. Soon enough, you're leaking more pre into his anus, acting as additional lube and easing your passage inside his sexy rump.";
 		WaitLineBreak;
@@ -566,7 +566,7 @@ to say ArenaFightCheck:
 		now description entry is "a mythological monstrocity";
 	if furry is not banned and girl is not banned:
 		choose a blank row in table of fucking options;
-		now title entry is "Great Dane Rouge";
+		now title entry is "Great Dane";
 		now sortorder entry is 4;
 		now description entry is "a female canine fighter";
 	if furry is not banned and hermaphrodite is not banned:
@@ -578,7 +578,7 @@ to say ArenaFightCheck:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -599,9 +599,9 @@ to say ArenaFightCheck:
 				else if nam is "Minotaur":
 					say "The beefy minotaur standing off to the side with his arms cross snorts as he turns to look decisively at you.";
 					challenge "Minotaur";
-				else if nam is "Great Dane Rouge":
+				else if nam is "Great Dane":
 					say "The unfamiliar Dane mutant growls at you while popping her neck from side to side. When she lifts up her lips to show you an impressive display of canines you gulp as you wonder what the hell have you gotten yourself into.";
-					challenge "Great Dane Rouge";
+					challenge "Great Dane";
 				else if nam is "Alpha Husky":
 					say "The alpha husky growls playfully as he looks over you with expectant eyes. He seems to think you're going to outright submit to him... but he's about to be proven wrong.";
 					challenge "Alpha Husky";
@@ -612,7 +612,7 @@ to say ArenaFightCheck:
 				say "Your battle over, you need to take a short break to recover.";
 				increase ArenaBattleCounter by 8;
 				follow the turnpass rule;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "[bold type]Exit the fighting menu?[roman type]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";

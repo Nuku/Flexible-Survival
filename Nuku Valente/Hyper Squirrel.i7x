@@ -17,6 +17,7 @@ when play begins:
 After resolving a Hyper Squirrel Girl, try looking;
 
 Instead of Resolving a Hyper Squirrel Girl:
+	project the figure of Snow_icon;
 	if hsrp is 0:
 		say "As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off... but you have a feeling she'll be back.";
 		increase hsrp by 1;
@@ -63,7 +64,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 				say "'Well shoot then, I can do just fine on my own,' she insists, and is gone in a trail of hyperactivity.";
 				now hyper squirrel girl is resolved;
 		else:
-			say "You think she won`t be able to find you here, in this dark corridor. You hear her footsteps echoing ever-closer, when they fall silent. Suddenly, she appears behind you, lightly tapping your back. As you curse in surprise, she laughs at your feeble attempt to grab her. 'Too slow again! Come on, catch me...' You follow her giggles outside, as she turns a corner, and vanishes.";
+			say "You think she won'`t be able to find you here, in this dark corridor. You hear her footsteps echoing ever-closer, when they fall silent. Suddenly, she appears behind you, lightly tapping your back. As you curse in surprise, she laughs at your feeble attempt to grab her. 'Too slow again! Come on, catch me...' You follow her giggles outside, as she turns a corner, and vanishes.";
 
 
 Section 2 - Snow
@@ -73,7 +74,12 @@ Squirrel Den is a room. It is private.	[This is just a holding spot and not a re
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
 Snow is a person.
-The description of Snow is "This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.".
+The description of Snow is "[SnowDesc]";
+
+to say SnowDesc:
+	project the figure of Snow_icon;
+	say "     This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.";
+
 Snow is in Squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
@@ -108,6 +114,7 @@ Check smithing:
 	if the noun is equipped, say "Stop wearing it first." instead;
 
 Carry out smithing:
+	project the figure of Snow_icon;
 	say "You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
 	if the noun is armament, increase the weapon damage of the noun by 1;
 	if the noun is nanite collector:
@@ -164,6 +171,7 @@ Carry out smithing:
 Section 4 - Sexing up Snow
 
 to say sexwithsnow00:
+	project the figure of Snow_icon;
 	if lastfuck of Snow - turns < 8:
 		say "She laughs loudly and gives you a shove, 'Hey, I want to keep it fresh. Go find something else to do huh?'";
 	else if skinname of player is "Hyper Squirrel" and HP of Snow > squirrelspot:
@@ -296,7 +304,7 @@ to say sexwithsnow03:	[Vaginal on player]
 	setmonster "Hyper Squirrel";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
-	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [bodyname of player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge, pink, member to pop free, bulging with thick veins along its human shaped but inhumanly pink and massive, length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit sized, balls. At least she's not as big as those panther taurs.";
+	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [bodyname of player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge pink member to pop free, bulging with thick veins along its human-shaped but inhumanly pink and massive length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit-sized balls. At least she's not as big as those panther taurs.";
 	say "     She brushes the tip of the member against your [cunt size desc of player] [cockname of player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
 	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [skin of player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [bodyname of player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
 	if baby is 0 and gestation of child is not 0:
@@ -419,7 +427,7 @@ Instead of resolving a wild squirrels:
 			say "     You manage to throw off the beast on top of you with a mighty shove! She squeaks in surprise and tumbles away even as the other grabs at you. Her soft white paw closes on your [if cocks of player > 1][cock size desc of player] [cock of player] dick[else]chest[end if] but you're having none of it, pulling away from her and fleeing to safety, their angry chitters echoing behind you as you leave the squirrels in your dust.";
 			stop the action;
 		else:
-			say "     Despite your protests and struggles, you find your mouth being guided to a large, pink, dick. The squirrel presses it into you as pre splashes across your tongue, and resistance seems to melt from you. As you start to nurse, she fills your mouth with that salty fluid, each gulp draining the will from you as you gulp down a few mouthfuls, now pliant and ready to play with the squirrels.";
+			say "     Despite your protests and struggles, you find your mouth being guided to a large, pink dick. The squirrel presses it into you as pre splashes across your tongue, and resistance seems to melt from you. As you start to nurse, she fills your mouth with that salty fluid, each gulp draining the will from you as you gulp down a few mouthfuls, now pliant and ready to play with the squirrels.";
 			decrease the humanity of player by 10 + HP of Snow;
 	if HP of Snow is even:
 		if player is female and cunt length of player > 8:
@@ -462,7 +470,7 @@ Instead of resolving a wild squirrels:
 				now cock length of player is 8;
 				now cock width of player is 5;
 		wait for any key;
-		end the story saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
+		end the story saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long, bushy tails before you all rise, satisfied, and hunt the city together.";
 	else:
 		setmonster "Hyper Squirrel";
 		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";

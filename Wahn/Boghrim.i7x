@@ -128,7 +128,7 @@ instead of conversing the Boghrim:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -148,7 +148,7 @@ instead of conversing the Boghrim:
 				if (nam is "Fighting"):
 					say "[BoghrimTalk4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -158,7 +158,7 @@ instead of conversing the Boghrim:
 				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -292,7 +292,7 @@ to say BoghrimTalk3: [go hunting]
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]100 - Nevermind[as]100[end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
 			while sextablerun is 0:
 				say "Pick the corresponding number> [run paragraph on]";
 				get a number;
@@ -312,16 +312,16 @@ to say BoghrimTalk3: [go hunting]
 							if HP of Boghrim < 3:
 								say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 						WaitLineBreak;
-				else if calcnumber is 100:
+				else if calcnumber is 0:
 					say "Break off the conversation?";
 					if player consents:
 						now sextablerun is 1;
 						say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
 						WaitLineBreak;
 					else:
-						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			clear the screen and hyperlink list;
 			now HP of Boghrim is 2;
 		now BoghrimHuntingTrip is 0;
@@ -339,7 +339,7 @@ to say BoghrimHydraSex1:
 	say "     [if anallevel is 3]Having gotten its back entrance ready, you[else]You[end if] move into position, lining up your cock with the hydra's [if anallevel is 3]slick [end if]hole and push your [cock size desc of player] shaft into the beast. It releases rumbling moans from its many heads and grinds itself back onto your cock. Meanwhile, you make use of its thick tail as a convenient handhold, putting an arm around its length as you start thrusting at the green beast's tailhole. As you fuck the mythical creature, its primary head twists back around, coming in to kiss you. Its long tongue dives into your mouth and down your throat, and you suck on it happily, thrusting all the harder as you do.";
 	say "     As you go on pounding into the hydra and making out with its main head at the same time, you become dimly aware that something changes after a short while - the pleased sounds of its other heads do start to sound a bit muffled. Curious what's going on, you break the kiss with your reptilian partner for a moment and look past its scaled visage - only to see Boghrim, standing at the creature's other end and pumping his massive prick into an elongated muzzle. The other side heads of the hydra aren't idle either, instead being put to good use lapping at the mighty orc's green skin and even eating out the crack of his ass. 'Yeah, that's what I'm talking about,' the orc roars in satisfaction and pumps into the vanquished beast, giving you a thumbs-up as his gaze meets yours.";
 	WaitLineBreak;
-	say "     After giving the mythic monster a good, hard pounding, you bury your [cock size desc of player] cock into it and moan in release. You shoot your [cum load size of player] into its clenching asshole[if player is male] and across its meaty backside[end if], blast after blast of potent orcish seed flooding the big beast. As he sees you breed the large creature, Boghrim bellows, 'Yeah, let's give this fucker a cream filling!' Then he pumps into the hydra's open mouth with new vigor, climaxing before much longer and pumping his potent orc cum directly down its throat. The sudden spike in arousal as a double load of orc cum starts to show its effects causes the creature's many heads to growl lustfully as it climaxes itself, spraying gushers of cum from each of its [hydraheadcount] penises. Much of its load is sucked up by its additional heads, but plenty ends up leaving a sticky mess on the ground. When you're done and pull out, the hydra's many heads set themselves to licking you clean before you give it another long, tongue-filled kiss. Then you send it on its away, staggering a little and still lust-drunk, while leaving a trail of white cum dripping from its well-bred rear[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
+	say "     After giving the mythic monster a good, hard pounding, you bury your [cock size desc of player] cock into it and moan in release. You shoot your [cum load size of player] load into its clenching asshole[if player is male] and across its meaty backside[end if], blast after blast of potent orcish seed flooding the big beast. As he sees you breed the large creature, Boghrim bellows, 'Yeah, let's give this fucker a cream filling!' Then he pumps into the hydra's open mouth with new vigor, climaxing before much longer and pumping his potent orc cum directly down its throat. The sudden spike in arousal as a double load of orc cum starts to show its effects causes the creature's many heads to growl lustfully as it climaxes itself, spraying gushers of cum from each of its [hydraheadcount] penises. Much of its load is sucked up by its additional heads, but plenty ends up leaving a sticky mess on the ground. When you're done and pull out, the hydra's many heads set themselves to licking you clean before you give it another long, tongue-filled kiss. Then you send it on its away, staggering a little and still lust-drunk, while leaving a trail of white cum dripping from its well-bred rear[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 	if HP of Boghrim < 3:
 		LineBreak;
 		say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
@@ -410,7 +410,7 @@ instead of fucking Boghrim:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -434,7 +434,7 @@ instead of fucking Boghrim:
 					if (nam is "Double-team Mul with Boghrim"):
 						say "[BoghrimSex6]";
 					WaitLineBreak;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Break off the conversation?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
@@ -444,9 +444,9 @@ instead of fucking Boghrim:
 					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
 					WaitLineBreak;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;
 
 to say BoghrimFirstFuck:
@@ -870,12 +870,15 @@ instead of sniffing Jason:
 Section 4 - Infection for combat purposes
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Orc Boss"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "Boghrim";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]Boghrim[or]The powerful orc[or]The green-skinned brute[or]The muscular orc[or]The brutish orc[or]The muscled brute[at random] [one of]throws himself on you, pushing you down on the mattress. You can feel his erect cock rub against your side hotly before you manage to wind your way out of his grasp.[or]gets a grip on your shoulder and pushes you down, putting you on all fours with your ass raised. When you feel one of this thick fingers brush over your asshole an eye-blink later, you barely manage to crawl away before he starts to finger-fuck you.[or]grabs you by the neck, pulling your head down against his crotch. His cock rests hotly against your cheek for a moment, leaving a string of precum when you manage to pull away.[or]gives you a light slap that dazes you for a second, then lets his large hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";
 	now defeated entry is "[line break]";
 	now victory entry is "[line break]";

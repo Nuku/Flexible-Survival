@@ -116,12 +116,15 @@ to say beatthelatexermine:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Ermine";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The latex ermine[or]The latex beauty[or]The curvy ermine[or]The sensual stoat[or]She[at random] [one of]gropes you before you can pull away from her eager grabbing[or]caresses her smooth hands over your [bodytype of player] body while suggesting you two have some fun together[or]manages to slide in close and rubs her sexy body against yours, tempting you to give in[or]presses her soft, tantalizing melons against you, weakening your resistance to just giving in and playing with her[or]shoves you roughly, calling you a meanie for not playing with her[or]runs her large tail across your [bodydesc of player] body. Its sensual touch feels very good, making you want to grab that sexy body of hers[at random].[le_libidoup]";
 	now defeated entry is "[beatthelatexermine]"; [ Text when monster loses. Change 'latexermine' as above. ]
 	now victory entry is "[losetolatexermine]"; [ Text when monster wins. Change 'latexermine' as above. ]
@@ -131,7 +134,7 @@ When Play begins:
 	now skin entry is "seamless white latex";
 	now tail entry is "Attached to your rear is a long, tubular tail of white latex that seamlessly changes to indigo at the tip. Your stoat tail feels thick and padded, just right for snuggling in your arms or around someone.";
 	now cock entry is "[one of]latex[or]ivory[or]smooth[or]white[or]dildo-like[at random]";
-	now face change entry is "your senses get all confused, your vision blurring and your mouth feeling like its full of something thick and syrupy. Your head seems to go soft and flow as it reforms into latex shaped like a happy ermine with a sexy smile and latex hair";
+	now face change entry is "your senses get all confused, your vision blurring and your mouth feeling like it's full of something thick and syrupy. Your head seems to go soft and flow as it reforms into latex shaped like a happy ermine with a sexy smile and latex hair";
 	now body change entry is "your insides seem to go soft and turn malleable as the transformation begins to take effect. Your body becomes slender and sexy with [if player is female]curvy hips and long legs[else]a strong physique[end if]. The pliant nature of your insides doesn't seem to quite go away though, leaving you quite flexible";
 	now skin change entry is "white latex spreads gradually from your every orifice. It covers your body, turning your skin into a seamless sheen of smooth, sensual ivory rubber[if breasts of player > 0]. Your nipples turn an indigo color[end if]. The sensation spreads gradually deeper and deeper into you, until you're left feeling like you're latex all the way through";
 	now ass change entry is "a thick tube of soft, padded latex forms from the base of your spine. It stretches and swells until you're left with a stoat's tail made of smooth, white latex with an indigo tip";

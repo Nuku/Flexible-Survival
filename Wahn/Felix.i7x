@@ -300,7 +300,7 @@ to say FelixTalk4:
 	say "     You walk up to Felix and tell him 'You can stop worrying - as it turns out, there isn't anything bad stalking you. It's just... a rather insecure lizard guy who really wants to meet you but didn't dare approaching.' The young centaur looks at you, then into the distance, where Andre is now visible over the level of the high grass, giving a small wave as he notices Felix looking. Seems like he's not sure how to react to this situation. You continue 'Oh, and he had something for you, here.' You pull out the leather pouch with Felix name on it and hand it to him. 'He found it and wanted to give it back.'";
 	say "     Opening up the bag, Felix looks through its contents - a book, a small plastic dragon, pens and various knickknacks come to light. 'This is everything I ever owned - my favorite toys and possessions from all the weeks of my childhood. One of my father's mares gave it to me when he threw me out.' He pulls the carrying strap of the pouch over one arm and his head to have it hanging at his side. 'And you say he saved it for me? What's his name anyways?' 'Andre. But how about we just call him over so you can talk with him yourself?' With that, you wave to the big lizard to call him over.";
 	LineBreak;
-	say "     Andre quickly comes over, spurned on by Felix joining you in waving to him. Then the two young men meet face to face for the first time, and you can almost hear an audible click as their eyes meet and lock. Caught in a seemingly irresistible pull, they walk closer and closer to each other, oblivious to the rest of the world. 'Hello.' 'H-Hi' 'So I've got you to thank for saving all my stuff?' 'I picked it up for you, but didn't know when, how to -' And that's the end of Andre's explanation as Felix pulls his head to his lips, kissing the horse-sized lizard deeply.";
+	say "     Andre quickly comes over, spurned on by Felix joining you in waving to him. Then the two young men meet face to face for the first time, and you can almost hear an audible click as their eyes meet and lock. Caught in a seemingly irresistible pull, they walk closer and closer to each other, oblivious to the rest of the world. 'Hello.' 'H-Hi.' 'So I've got you to thank for saving all my stuff?' 'I picked it up for you, but didn't know when, how to -' And that's the end of Andre's explanation as Felix pulls his head to his lips, kissing the horse-sized lizard deeply.";
 	LineBreak;
 	say "     Watching the making out that follows and seeing the two of them walk a bit away to talk and laugh with each other, it looks like you helped two people destined for each other to find together. It's a very comforting thought that love on first sight and affectionate feelings aren't quite dead in this sex-crazed new world. And who cares if it's between a rather unusual centaur-lizard gay couple - they're obviously quite happy together...";
 	now Libido of Felix is 6;
@@ -553,12 +553,15 @@ to say Plains Lizard loses:
 	say "     After having taken quite a few of your blows, the big lizard turns and flees, dashing off quickly through the high grass. With the beating you've given him, you don't think he'll be back anytime soon. Oh, and seems like he dropped something - a leather pouch, with Felix name written on it. You take it with you. Might be best to ask the young centaur about it.";
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Plains Lizard";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]He attacks you with a slash of his claws.[or]Ouch - you manage to pull away from a bite, but still lose some skin to sharp teeth scraping over your skin.[at random]";
 	now defeated entry is "[Plains Lizard loses]";
 	now victory entry is "[Plains Lizard wins]";
@@ -569,7 +572,7 @@ When Play begins:
 	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "ridged, reptilian"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into the elongated shape of a lizard, complete with snout and tooth-filled maw. Instead of hair, a spined crest forms on the top of your head, running down the back of your neck and ending between your shoulders"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [  format as "Your body feels funny as (your text)." ]
+	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "small scales form to cover all of it, giving you a sand-colored, reptilian skin"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long flexible tail grows out of your tailbone. After a few moments, it stops feeling strange and you start using the tail for balance as if you had been born with it"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more reptilian, a sheath forming inside your body to allow it to completely vanish inside as long as its soft"; [ format as "Your cock feels funny as (your text)." ]

@@ -80,7 +80,7 @@ to say beatthefruitbat:
 			say "Pick the corresponding number> ";
 			get a number;
 			if calcnumber is 0:
-				say "     You give the bat a threatening growl and spank that speedo'd ass of his a few times as a warning not to cross you again. The fruity boytoy gives a high pitched whimper and scrambles away a few feet once you let him go. '[one of]You big sourpuss[or]You're no fun[or]Hey, don't bruise the fruit[or]You're a rotten winner[or]You're rotten to the core, you spoilsport[at random],' he grumbles, rubbing his sore behind with a winghand. He takes to the air with an angry shriek and flies off in search of more agreeable fun.";
+				say "     You give the bat a threatening growl and spank that speedo'd ass of his a few times as a warning not to cross you again. The fruity boytoy gives a high-pitched whimper and scrambles away a few feet once you let him go. '[one of]You big sourpuss[or]You're no fun[or]Hey, don't bruise the fruit[or]You're a rotten winner[or]You're rotten to the core, you spoilsport[at random],' he grumbles, rubbing his sore behind with a winghand. He takes to the air with an angry shriek and flies off in search of more agreeable fun.";
 				now sextablerun is 1;
 			else if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
@@ -142,12 +142,15 @@ to say fruitbatdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Fruit Bat"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your [if player is breasted and a random chance of 1 in 4 succeeds]tits[else]groin[end if][at random].";
 	now defeated entry is "[beatthefruitbat]"; [ Text when monster loses. ]
 	now victory entry is "[losetofruitbat]"; [ Text when monster wins. ]

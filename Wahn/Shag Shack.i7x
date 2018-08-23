@@ -91,7 +91,7 @@ to say JeromeTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Never mind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -128,14 +128,14 @@ to say JeromeTalkMenu:
 				if (nam is "Ask about whoring yourself out"):
 					say "[JeromeTalk7]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro shark, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -370,7 +370,7 @@ to say ShagShackSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Never mind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -429,14 +429,14 @@ to say ShagShackSexMenu:
 					-- "Have fun with Gus, a male stork":
 						say "[ShagShackSex23]"; [by Hyliad]
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Change your mind after all and go out?";
 			if player consents:
 				now sextablerun is 1;
 				say "     As you pass Jerome on the way out, he gives you a look with one raised eyebrow, then says, 'No refunds.'";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -487,7 +487,7 @@ to say ShagShackSex3: [Simba]
 		WaitLineBreak;
 		say "     Thick throbs of cum gush into your insides as Simba finally can't hold back anymore, erupting hard into your pussy. His seed feels nicely warm and filling, heightening your own pleasure at mating with this hunk of a lion. You simply take everything he gives you, still straddling his hips and stretching your upper body out on his soft-furred shape. Tied up as he is, the lion can't wrap his arms around you - or roll the two of you over for a second fuck, who knows what he would do after all. What he can do is purr - loud as an idling motor and feeling very pleasant as it vibrates through your own chest. 'Best dream ever...' you can hear him murmur as he dozes off in exhaustion after a little while.";
 	else:
-		say "     Then the big moment comes - you position yourself over him, lining your asshole up with his cock and... Simba hammers himself home with a horny roar. Damn, that was quick! You're too lost in the sensations of having almost a foot of thick lion cock thrust into your back door to do anything but let out a lewd moan. Seems like this is what you get for teasing a poor tied-up kitty - and it is a hell of a lot of fun! Before you have more than a second or three to get to terms with the sudden penetration, he pulls back again... which scrapes the soft spines on his erection against your inner walls in a truly breathtaking followup.";
+		say "     Then the big moment comes - you position yourself over him, lining your asshole up with his cock and... Simba hammers himself home with a horny roar. Damn, that was quick! You're too lost in the sensations of having almost a foot of thick lion cock thrust into your back door to do anything but let out a lewd moan. Seems like this is what you get for teasing a poor tied-up kitty - and it is a hell of a lot of fun! Before you have more than a second or three to get to terms with the sudden penetration, he pulls back again... which scrapes the soft spines on his erection against your inner walls in a truly breathtaking follow-up.";
 		say "     Reduced to helpless moans in arousal, you sink yourself down on the feline soldier's cock to feel him back inside, then squeeze your inner muscles around his manhood. Simba is more than pleased with your reaction and the two of you start to fuck like wild beasts - or at least you are, riding a safely secured horny lion. The moans, grunts and sometimes roars between the two of you draw many a glance from other 'clients' and brothel staff alike. Between the wild gyrations caused by Simba's admirable stamina, you barely have the time to have a clear thought, and before much longer, an orgasm approaches rapidly. Bucking hard against your lion stud's crotch as you come, your whole body trembles around him, pushing him over the edge right with you.";
 		WaitLineBreak;
 		say "     Thick throbs of cum gush into your insides as Simba finally can't hold back anymore, erupting hard into your ass. His seed feels nicely warm and filling, heightening your own pleasure at mating with this hunk of a lion. You simply take everything he gives you, still straddling his hips and stretching your upper body out on his soft-furred shape. Tied up as he is, the lion can't wrap his arms around you - or roll the two of you over for a second fuck, who knows what he would do after all. What he can do is purr - loud as an idling motor and feeling very pleasant as it vibrates through your own chest. 'Best dream ever...' you can hear him murmur as he dozes off in exhaustion after a little while.";
@@ -553,7 +553,7 @@ to say SashaSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Never mind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -571,16 +571,16 @@ to say SashaSexMenu:
 				else if (nam is "Fuck Sasha in her eager mouth"):
 					say "[SashaSex3]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the tied-up mink, shaking your head slightly as she gives a disappointed look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SashaSex1: [Pussy Fuck]
@@ -633,7 +633,7 @@ to say ShagShackSex6: [Shirley the ape]
 		say "     Eventually, Shirley stops straddling your chest and holding your head between her thighs, then and flops on the bed, lying on her back. 'You may go now,' the ape grunts in a more than content tone and pats your side. Seems like your time with this simian mistress is over and there is no chance for a nonstop fuck-fest to go on right now. Of course, that doesn't mean you can't come back another time and get a fresh dose of the ape's sex appeal and discipline...";
 
 to say ShagShackSex7: [Ty the human breeder]
-	setmonster "human";
+	setmonster "Human";
 	choose row monster from the table of random critters;
 	say "     Walking between the rows of beds and mattresses, you come to the corner of the brothel that doesn't have any whores that let themselves be pounded into the mattress or tied up. No, the 'performers' over here are far more confident - following incoming customers with interested looks as they lean against the walls or lounge on their beds. Seems like they actually chose to work here, enjoying the nonstop sex and relative security from the chaos outside. A slender human male leans against a wall nearby and attracts your attention with the simple fact that he is still fully human, with no sign of any physical change on him at all. Due to everyone else changing wildly these days, his 'regular' appearance makes him exceptional all of itself.";
 	say "     Not that the young guy isn't attractive either - tall and quite slender, he is dressed in shorts and a black t-shirt with the logo of some band on it. His fairly handsome face shows boyish charm as he smiles at you from under a somewhat tousled blond page-boy haircut. 'Hey there,' the young man greets you with a wave, then steps up and gives you his hand to shake. 'I'm Ty, nice to meet you. Erm... I hope it's the first time at least - gotta admit that it's a bit hard to keep track with everyone else shifting so often,' he tells you, blushing a little bit and raising an arm to scratch the back of his neck. 'Anyways - to answer the usual questions: Yup, I'm a hundred percent pure human. Haven't changed one bit. And I can give you what you want - pretty much every kid I fathered was human. Down to the blue eyes in most cases too. Even those that hatched from eggs and whatnot.'";
@@ -683,7 +683,7 @@ to say ShagShackSex7: [Ty the human breeder]
 
 to say ShagShackSex8: [Penny]
 	project the Figure of Penny_icon;
-	say "     Walking towards the place where the anthro rottweiler has her bedding on the wide open sales floor of the former mattress store, you see her previous client (a [one of]slender crane) put on a his white briefs[or]massive black bear) pull up his heart-covered boxers[or]manly lion) put on a small black speedo[or]scaly herm drake) hike up her silky red g-string[at random] then pat the freshly fucked canine on the head. Wagging her stubby black tail and staying in character for pet-play, the canine bitch gives a friendly lick in response. With a mild chuckle the customer leaves her after that, giving you a thumbs-up as you walk past. Left behind, the rottweiler sits on the floor near the base of a queen sized mattress with a doggy bowl and a canine dildo with an inflatable knot close by. Around her neck, she has a spiked dog collar which is hooked to a long leash tied around one of the bed-posts. The name Penny is emblazoned on the dog tag.";
+	say "     Walking towards the place where the anthro rottweiler has her bedding on the wide open sales floor of the former mattress store, you see her previous client (a [one of]slender crane) put on a his white briefs[or]massive black bear) pull up his heart-covered boxers[or]manly lion) put on a small black speedo[or]scaly herm drake) hike up her silky red g-string[at random] then pat the freshly fucked canine on the head. Wagging her stubby black tail and staying in character for pet-play, the canine bitch gives a friendly lick in response. With a mild chuckle the customer leaves her after that, giving you a thumbs-up as you walk past. Left behind, the rottweiler sits on the floor near the base of a queen-sized mattress with a doggy bowl and a canine dildo with an inflatable knot close by. Around her neck, she has a spiked dog collar which is hooked to a long leash tied around one of the bed-posts. The name Penny is emblazoned on the dog tag.";
 	say "     When the John is far enough away, the attractive woman pushes herself up from the pose on all fours for a moment, stretching her arms and legs and looking around until she spots Jerome's assistant. Then the domestic canine calls out, 'Kaden I'm parched, can I get another refresher?' The cat-boy heads over and pours about half a bottle of creamy white orc cum into her bowl, then leaves after getting his hair tousled by the thankful prostitute. Dropping back to all fours, Penny leans down and starts to lap up the viscous fluid. After a couple of gulps her muscles visibly tighten up for a second then relax as she lets out a small moan. With the somewhat turned-around position in which she sits down next, you get a prime view of her naked form - heavy D cup breasts swaying in the air and a curvy booty. As you start to walk over, the black and brown coated rottweiler perks up an ear to follow the sound.";
 	WaitLineBreak;
 	say "     When you approach Penny's mattress, she greets you with a happy woof and a wag of her small tail. Then she pads closer on all fours and gives your body a thorough sniffing, focusing heavily on your crotch. It seems like she puts on the act of being a slutty pet when she is with a customer. Sitting on the mattress you begin to pet her black and brown fur coat. As your hands graze her ample breasts, she gives your forearm a couple of licks to encourage further touching. Happy to comply, you begin to grope and squeeze her breasts and trace a finger around the aureoles of the of the nipples. Letting out some satisfied moans at getting groped, the aroused rottie tilts her hips to give you a better view of her spade-like canine pussy. One of your hands strokes down the small of the turned-on doggy's back, over her shapely buttocks and around the canine's damp cunt.";
@@ -760,7 +760,7 @@ to say ShagShackSex12: [Ryan, by Mizu]
 			say "     'I-I'm, sorry, ah... I... I didn't see you there. Sir,' the fox babbles, shivering. With a faint smile, you tell him to relax and watch as the fennec's large ears flatten. He does his best to take a few deep breaths, and when he looks up to speak to you again, his voice is a little steadier. 'My... name's Ryan, sir,' he tells you, his eyes fixing on your face. 'I'm... new here.' You smile and reach out with a hand to gently rub at one of his ears. You tell him that it's a pleasure to meet such a cutie, and you watch him shudder at both the touch and the praise. Now that you're this close, you can easily tell that the little fox is horny as hell - whether due to his surroundings, or something to do with the nanites, you can't quite tell.";
 			WaitLineBreak;
 			say "     Your voice teasing, you motion to the pillow and ask slyly if Ryan would like some help with that? Blushing furiously, yet with his eyes filled with need, Ryan gives a little nod. 'Y-Yes... please, sir,' he answers huskily. Grinning, you shuffle a little closer to him and wrap an arm around his small shoulders, tugging him up against you. In return, his death grip on the pillow loosens, and gently, you tug it away. The fabric shifts, showing off exactly why Ryan is so nervous - between his legs isn't the cock you expected, but a tight, furry cunt. It's already slick, hot, and slightly red. It dawns on you that he must be in heat and too shy to realize it. Putting a hand on his thigh and getting a shudder out of the fennec, you ask him if he knows what's happening to him.";
-			say "     At your words, Ryan flushes, becoming even pinker. 'Well, I... I got, um... fucked by one of those monsters out there, and...' he swallows, 'ever since, I've just been... so... so horny. Nothing will do. I've tried my fingers, and-' You shush him, putting a finger on his lips. Swiftly, you move in,, and press your lips to his own, a muffled moan escaping from his throat. His body turns to putty in your arms, and you shift him around, lying him back on the bed,, facing you. You tell him not to worry and that you know just how to fix it for a while...";
+			say "     At your words, Ryan flushes, becoming even pinker. 'Well, I... I got, um... fucked by one of those monsters out there, and...' he swallows, 'ever since, I've just been... so... so horny. Nothing will do. I've tried my fingers, and-' You shush him, putting a finger on his lips. Swiftly, you move in and press your lips to his own, a muffled moan escaping from his throat. His body turns to putty in your arms, and you shift him around, lying him back on the bed, facing you. You tell him not to worry and that you know just how to fix it for a while...";
 		else:
 			say "     As you move through the myriad of beds and mattresses, a familiar flicker of color causes you to turn. Quietly, Ryan the fennec fox waits for permission to approach you, his paws clasped in front of himself and with a shy smile on his face. 'Hello again,' he greets you, softly, and at your gesture of approval, steps within your reach. Grinning widely, you reach out and tug him close, stroking over his large ears with your fingers. He shudders in your grip, and the scent of his arousal hits your nose. Chuckling, you push him away, just a bit, and peer down to his lower body. He's wearing feminine underwear, but there's a damp patch at the front, reeking of Ryan's juices. Teasingly, you ask him if he was waiting for you.";
 			say "     Ryan squirms a little at the question and then gives a little nod. 'A-A little, sir...' he admits, slightly breathlessly. 'I've had a... couple of patrons since the last time I saw you, but you're the one that really... put the fire out, so to speak.' He swallows nervously, averting his gaze. You laugh softly and stroke a hand down his belly, making him gasp and suck his fuzzy tummy in a little. So he'd like some more help with his heat, would he? You'd hate to leave the little fox alone to deal with it... You run your fingers around the hem of his undies, and with a small, eager grunt, Ryan presses his hips into your hand. 'Y-Yes, please, sir. I-I need help again. I r-really need you inside me.' You smile and lead him to one of the nearby beds, telling him to strip for you, while you loosen your pants. Bashfully, Ryan nods and tugs his thin panties down and off, settling back on the bed and baring his soft, furry body to you, ready for you to fuck.";
@@ -977,7 +977,7 @@ to say CliveSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Never mind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -995,16 +995,16 @@ to say CliveSexMenu:
 				else if (nam is "Choose the electrode pads"):
 					say "[clivesex3]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the swing and tell the goblin you're not interested right now.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say clivesex1:
@@ -1145,7 +1145,7 @@ to say AlyonaSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Never mind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -1163,7 +1163,7 @@ to say AlyonaSexMenu:
 				if (nam is "Ride Alyona's decently sized prick"):
 					say "[AlyonaRide]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -1173,7 +1173,7 @@ to say AlyonaSexMenu:
 				say "     You step back from Alyona, shaking your head as she gives you a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1233,7 +1233,7 @@ to say ShagShackSex22: [by Hierophant]
 			say "     Her playing begins to reach a crescendo with time, both of you approaching your very peaks. It feels just as good as last time as you reach the edge, anticipating the powerful climax you know is coming. And soon enough, the both of you share cries of pleasure as you climax into her yet again. You both come down from the bliss of release, Cassandra visibly dazed by the intensity of her orgasm. She breathes heavily, breasts heaving as she lies back on the mattress and tries to recover. 'Hhhfff... amazing. Thanks for that. Can't wait to do it again!' she adds, as you dress yourself and head out.";
 		else if player is female:
 			say "     You're not even remotely surprised as your cunt goes moist in an instant, well used to the Muse's odd effect on your biology. Instead, you relax yourself, getting ready for whatever she has in store... and then a spectral apparition of a dog's penis appears, bright-red and already drooling precum. 'I'm good at dog dicks, apparently,' Cassandra says, as the pointed tip begins probing at your entrance... then shoves half of itself in at once. The sensation of being fucked right off the bat by an animal's cock is intense, your legs instinctually trying to squeeze around a lover's hips but finding no purchase as it plunges in and out of your folds. With all the intensity of being roughly mounted by a real canine, you moan loudly, enjoying the animalistic coupling provided by the bird's magic.";
-			say "     You're not entirely sure how long the fucking goes on for, as you close your eyes and imagine a particularly handsome [one of]great dane[or]german shepherd[or]dalmation[or]husky[or]malamute[or]borzoi[at random] attached to the cock plowing you, but eventually, you feel a knot begin to bump against your lips. The thrusts get more intense... and then it pushes in to the hilt, the knot locking inside you, and the cock giving a rough throb before hot semen gushes into your folds. You're not entirely sure where it's all coming from, but you can hardly complain as the sensation of getting filled drives you hard over the edge.";
+			say "     You're not entirely sure how long the fucking goes on for, as you close your eyes and imagine a particularly handsome [one of]great dane[or]german shepherd[or]dalmatian[or]husky[or]malamute[or]borzoi[at random] attached to the cock plowing you, but eventually, you feel a knot begin to bump against your lips. The thrusts get more intense... and then it pushes in to the hilt, the knot locking inside you, and the cock giving a rough throb before hot semen gushes into your folds. You're not entirely sure where it's all coming from, but you can hardly complain as the sensation of getting filled drives you hard over the edge.";
 			say "     Cassandra ends the song as your climax ends, the cock inside of you... and its seed... disappearing into thin air entirely. Cassandra gives a cheeky, little bow, grinning at you. 'Thank you, thank you, I'm here all week,' she states. For a moment, you just lie there, enjoying the afterglow of your supernatural mating, while Cassandra idly plays out the bassline to a song you remember hearing on the radio once or twice. Seems even Muses appreciate pop, sometimes. 'Glad that you had a good time, sweetie. I'll see you soon, huh?' she asks, as you finally stand, dressing yourself and shakily leaving the room.";
 		else:
 			say "     'How've things been out there?' she asks, plucking out a few practice notes. 'Must be dangerous. You've been keeping out of trouble? Making friends, influencing people, not getting your ass violated by assorted psychos? I worry 'bout you sometimes, y'know!!!' she says, her cheeks puffing out a bit. But she begins playing a tune, and you let the warmth of her enchanted music fill you. You feel content and happy as she plays, her voice rising as she begins to sing to her own song. It feels near divine, the power of her music on you, a happiness you'd never thought you'd experience in a place like this filling your soul, slowly, but surely. You lean back onto the bed, relaxing, letting her work her magic on you. The moment you share is almost better than sex, stretching on, just the two of you and the music.";

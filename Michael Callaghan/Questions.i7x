@@ -876,7 +876,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 			else:
 				parse.
 
-	Room of requirements is a room. Room of requirements is down from the small cave. The description is "The room smells musty.[If unvisited]  An alien presence invades your mind and deep in your bones you hear a voice echo 'Welcome brave soul. You have passed the first hurdle. Before you proceed, you must answer the following questions.'"
+	Room of requirements is a room. Room of requirements is down from the small cave. The description is "The room smells musty.[if unvisited] An alien presence invades your mind and deep in your bones you hear a voice echo, 'Welcome brave soul. You have passed the first hurdle. Before you proceed, you must answer the following questions.'[end if]"
 
 	Instead of doing anything in the room of requirements when gathering is happening:
 		say "You are under a strange compulsion and unable to move.";

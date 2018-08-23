@@ -50,7 +50,7 @@ to say mothgirl defeat:
 		if player consents:
 			now mothgirlnosex is 0;
 			if player is male and a random chance of 3 in 5 succeeds:
-				say "     You push the mothgirl onto all fours, compliant to your will as you move behind her[if cock length of player > 20]. She looks back at you, not exactly sure how you intend to fit that thing in a little lady such as herself, but matters of practicality haven't stopped you yet, and you thrust heartily into her vulnerable cunt. It takes a little work, but eventually the influence of your infection forces the hole to accommodate your oversized organ, her belly visibly bulging with it once it's prominently engulfed within these considerably beleaguered confines[else if cock length of player > 8]. You briefly taunt her as you rub your gradually hardening cock between her legs, before thrusting the [cock size desc of player] meat into her hole. The diminutive portal is a little reluctant to accommodate your sizeable girth, but it only requires a bit of effort for it to eventually comply[else]. You briefly tease her as you rub your hardening cock between her legs, your victim moaning as you only briefly deny her. Promptly, you thrust your rod into her eager hole, your initial efforts slow and drawn out to better illicit the creature's inevitable arousal[end if].";
+				say "     You push the mothgirl onto all fours, compliant to your will as you move behind her[if cock length of player > 20]. She looks back at you, not exactly sure how you intend to fit that thing in a little lady such as herself, but matters of practicality haven't stopped you yet, and you thrust heartily into her vulnerable cunt. It takes a little work, but eventually the influence of your infection forces the hole to accommodate your oversized organ, her belly visibly bulging with it once it's prominently engulfed within these considerably beleaguered confines[else if cock length of player > 8]. You briefly taunt her as you rub your gradually hardening cock between her legs, before thrusting the [cock size desc of player] meat into her hole. The diminutive portal is a little reluctant to accommodate your sizeable girth, but it only requires a bit of effort for it to eventually comply[else]. You briefly tease her as you rub your hardening cock between her legs, your victim moaning as you only briefly deny her. Promptly, you thrust your rod into her eager hole, your initial efforts slow and drawn out to better elicit the creature's inevitable arousal[end if].";
 				say "     You waste no time as you begin to ride the mothgirl with an ever increasing pace, her initial protests drowned out by her own lusts as things progress, and in no time you're hit with the throes of your own orgasm[if cock width of player > 20]. The poor girl is nearly rocketed off your member from the sheer scale of your load, but you know well enough to hold her in place, her belly visibly inflated with your cum until the rest is force to spurt from her stuffed cunt[else]. She moans loudly as she feels your [bodytype of player] load flood her womb, writhing in her own orgasm against your throbbing cock[end if][if cock width of player > 20]. Eventually, you pull your [cock size desc of player] rod from her hole, a flood of your copious ejaculate spewing from the abused hole. She's completely knocked out by this point, and you decide to leave her as is[else]. Eventually, you pull your [cock size desc of player] rod from her hole, the fluttering about in dismay as she dizzly falls over. It'll be awhile before she gathers her proper senses, and you decide to leave her in this state[end if].";
 			else if player is not neuter and a random chance of 3 in 5 succeeds:
 				if player is male:
@@ -68,12 +68,15 @@ to say mothgirl defeat:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mothgirl"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "The mothgirl slumps onto the ground with a sigh and tries to protect herself with her fragile wings."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -98,7 +101,7 @@ When Play begins:
 	now HP entry is 25;
 	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
-	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 15; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 9; [ Size of balls apparently ;) sneaky Nuku]

@@ -657,8 +657,8 @@ Carry out reciting:
 						move Ronda Mallrat to Mall Atrium;
 						move Rod Mallrat to Mall FoodCourt;
 					if HP of Ronda is 100:
-						move Ronda Mallrat to SlutRat Den;
-						move Rod Mallrat to SlutRat Den;
+						move Ronda Mallrat to Slut Rat Den;
+						move Rod Mallrat to Slut Rat Den;
 					if HP of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -670,7 +670,7 @@ Carry out reciting:
 					if HP of Ronda is 6:
 						now Art Collector is unresolved;
 					if HP of Ronda >= 8:
-						now SlutRat Den is known;
+						now Slut Rat Den is known;
 			-- 93:	[Athanasia]
 				if the player's command matches "[number]":
 					now carried of phoenix egg is 0;
@@ -762,7 +762,7 @@ Carry out reciting:
 						now haroldtalk is 2;
 						now PALOMINO is known;
 					if tattoohunter >= 4:
-						now Findingkara is resolved;
+						now findingkara is resolved;
 						now Kara is in the Tattoo Parlor;
 					if tattoohunter >= 5:
 						now Haroldaroused is 1;

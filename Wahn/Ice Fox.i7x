@@ -37,12 +37,15 @@ Section 2 - Monster Responses
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ice Fox";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[NonCombatError]";
 	now defeated entry is "[NonCombatError]";
 	now victory entry is "[NonCombatError]";
@@ -146,7 +149,7 @@ Snow Fox Enclosure is a room.
 The description of Snow Fox Enclosure is "[SnowFoxEnclosureDesc]";
 
 to say SnowFoxEnclosureDesc:
-	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has what seems to be a miniature cliff molded out of its back wall, with a comfy fox-sized cave dug into it and a sloping path to the top up one side. All of this is covered in a liberal scattering of snow. Numerous snow-white foxes are moving around in this enclosure, yipping and with some chasing each other up to the lookout spot and down again. Aubrey the foxtaur is in their midst, playing with the little vulpines by throwing several rubber balls for her charges to run after and bring back. She seems totally focused on playtime with the foxes, barely registering you other than a friendly smile and wave as you come in. On your side of the ice wall, there is a big nest of warm blankets in one corner of the irregular shaped room. Looks like Aubrey and Barbara share it.";
+	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has what seems to be a miniature cliff molded out of its back wall, with a comfy fox-sized cave dug into it and a sloping path to the top up one side. All of this is covered in a liberal scattering of snow. Numerous snow-white foxes are moving around in this enclosure, yipping and with some chasing each other up to the lookout spot and down again. Aubrey the foxtaur is in their midst, playing with the little vulpines by throwing several rubber balls for her charges to run after and bring back. She seems totally focused on playtime with the foxes, barely registering you other than a friendly smile and wave as you come in. On your side of the ice wall, there is a big nest of warm blankets in one corner of the irregularly shaped room. Looks like Aubrey and Barbara share it.";
 	say "     The anthro fox Barbara doesn't seem to be in right now, most likely gathering supplies to feed the gang of refugees.";
 
 Section 5 - Events
@@ -382,7 +385,7 @@ instead of conversing the Miyuki:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -404,14 +407,14 @@ instead of conversing the Miyuki:
 					-- "Offer to help her with other things":
 						say "[MiyukiTalk5]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the ice fox, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -498,7 +501,7 @@ to say MiyukiSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -518,14 +521,14 @@ to say MiyukiSexMenu:
 					-- otherwise: say "Sex menu failed!";
 				wait for any key;
 				now lastfuck of Miyuki is turns;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the ice fox sorceress, shrugging your shoulders as she gives you a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

@@ -39,7 +39,7 @@ Instead of resolving Unusual Creature:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Just tell her to follow you.[as]100[end link][line break]";
+	say "[link]0 - Just tell her to follow you.[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -57,7 +57,7 @@ Instead of resolving Unusual Creature:
 				if (nam is "Do you follow your instincts and fuck her?"):
 					say "[Unsualfuck]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Just tell her to follow you.";
 			if player consents:
 				now sextablerun is 1;
@@ -68,7 +68,7 @@ Instead of resolving Unusual Creature:
 				move player to primary lab;
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -118,7 +118,7 @@ to say Susandesc:
 		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing a little over six feet tall. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She's grown in size since you first found her, her body a mix of masculine strength and feminine sensuality. She has broadened shoulders and chest, but a slender waist and girly hips. Her arms and legs are still slender and effeminate, but have gained increased strength to match her enlarged form.";
 		say "     Her head is now crowned by an impressive rack of antlers and Susan's face is somewhere between that of a strong buck and a delicate doe. Her male genitals have grown as part of her transformation, giving her a foot-long cock and balls the size of juicy lemons. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absent-mindedly. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else if HP of Susan < 52:
-		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6'. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy colored softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
+		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6'. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else if HP of Susan < 73:
 		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing a little over six feet tall. Her nose, eartips and hands are dark hues. She's grown in size since you first found her, her body a mix of masculine strength and feminine sensuality. She has broadened shoulders and chest, but a slender waist and girly hips. Her arms and legs are still slender and effeminate, but have gained increased strength to match her enlarged form. Atop her head is now an impressive rack of antlers and her face is somewhere between that of a strong buck and a delicate doe.";
 		say "     She's been provided a lab coat while working with Dr. Mouse. She's hemmed it slightly so better fit her altered body. It covers those large, black teated breasts of hers as well as her plump, ebon-black fleshed cock and creamy furred sheath and balls. Her male genitals have grown as part of her transformation, giving her a foot-long cock and balls the size of juicy lemons. She frequently slips a hooved hand into her coat to absentmindedly fondle her manhood. She looks at you with increased confidence, though she still has that hungry, lustful look in her eyes. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
@@ -290,7 +290,7 @@ to say SusanSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -316,7 +316,7 @@ to say SusanSexMenu:
 				else if nam is "Let Susan fuck your ass":
 					say "[SusanSex7]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "     [bold type]Break off the conversation?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -326,7 +326,7 @@ to say SusanSexMenu:
 				say "     You step back from the deer making her sigh with neediness.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -459,18 +459,19 @@ to say Susanlabcoatscene:
 Section 4 - Monster Table Data
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-[ Adds a blank row to the table, this is immediately filled ;) ]
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Deer"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "Susan";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[if level of player > 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][else][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]";
 	now defeated entry is "[if level of player > 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now.[else]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away.[end if]";
 	now victory entry is "[deer attack]";
-	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy colored softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player > 5] [doestats][end if]"; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player > 5] [doestats][end if]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a furry, [if Susan is in primary lab or Susan is in Hidden Lab]feminine[else]antlered[end if], head of an enchanting stag-doe. Your eyes burn with a smoldering lust as they look about from the end of your muzzled face";
 	now body entry is "feminine and graceful looking[if libido of Susan > 0], though your chest and shoulders become strong and masculine[end if]. You have long delicate arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
 	now skin entry is "brown furred"; [ skin Description, format as "You have (your text) skin"]
@@ -491,7 +492,7 @@ When Play begins:
 	now HP entry is 30;
 	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
-	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]

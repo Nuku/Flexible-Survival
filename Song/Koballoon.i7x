@@ -91,11 +91,11 @@ to say LoseToKoballoon:
 				say "continuing to lazily thrust your fingers back and forth in your sordid rear, focusing only on the pleasure roaring through you as their slimy seed soaks into your latex flesh.";
 			say "     After a while, enough air has escaped from the imperfect seal of the koballoons['] seed to disrupt the equilibrium keeping you afloat, leaving you to less-than-gracefully descend again until, at last, you make contact with the fairground floor. Once settled, you take several long, deep breaths of their potent sexual aroma before embarking toward their last known location. As you walk, you leave a trail of mixed seed in your wake, the sensation of that cool, damp trickle sending a fresh surge of arousal through your form. A hand strays back to dig into your well-stretched ass, swirling around your cum-soaked insides while ";
 			if player is herm:
-				say "your [if cunts of player > 1]cunts drip[else]cunt drips[end if] all over the ground beneath you your [if cocks of player > 1]lengths throb and twitch[else]length throbs and twitches[end if] ";
+				say "your cunt[sfn] drip[sfv] all over the ground beneath you your length[smn] throb[smv] and twitch[esmv] ";
 			else if player is male:
-				say "and [if cocks of player > 1]lengths throb and twitch[else]length throbs and twitches[end if] ";
+				say "and length[smn] throb[smv] and twitch[esmv] ";
 			else if player is female:
-				say "your [if cunts of player > 1]cunts drip[else]cunt drips[end if] all over the ground beneath you ";
+				say "your cunt[sfn] drip[sfv] all over the ground beneath you ";
 			else:
 				say "you moan ";
 			say "with wanton need. You shudder, putting all your focus into staying on course and not just breaking down in a fit of masturbatory bliss.";
@@ -364,13 +364,16 @@ to say KoballoonSexBadEnd:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Koballoon"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
 	now defeated entry is "[BeatTheKoballoon]";
 	now victory entry is "[LoseToKoballoon]";

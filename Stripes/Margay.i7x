@@ -109,12 +109,15 @@ to say margayoral:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
-	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Margay"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]";
 	now defeated entry is "[beatthemargay]";
 	now victory entry is "[losetomargay]";
@@ -139,7 +142,7 @@ When Play begins:
 	now HP entry is 55; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Midway"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Midway"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -250,7 +253,7 @@ when play ends:
 				say "     A cute delivery boy catches your eye, having picked up a partial feline infection when a leopard-like creature escaped the city and ran through his home town before being caught. You start to create opportunities to see the young man, arranging for deliveries and shipments to bring him in. You eye him appreciatively, smiling as you continue to sweet talk to the young man, enjoying how his feline urges increasingly respond to you. And then one day, you smear some of your pussy juices onto his nose and lick his ear, telling him to come back after hours to see you. He can't help but agree as your heat-laced scent fires up his feline instincts.";
 				say "     You make up an excuse as the others leave, feigning having work to catch up on, then let the young man in when he returns. Soon enough, your kissing and groping one another as you pull off each other's clothes. He is an inexperienced lover, but you adore even that about him, for he is so earnest and eager. ";
 				if humanity of player < 33:
-					say "     From somewhere deep inside, you feel a longing to be filled, needing more from your young lover. You guide him down to your wet, dripping [if cunts of player > 1]pussies[else]pussy[end if], which he quickly buries his face into. As he licks and kisses at your dripping folds, your pussy spreads wider and wider, soon pulling him into you. He never struggles or resists, only licking along your vaginal walls all the more eagerly. After a series of orgasms around his disappearing body, you feel him curl up in your overstuffed womb.";
+					say "     From somewhere deep inside, you feel a longing to be filled, needing more from your young lover. You guide him down to your wet, dripping puss[yfn], which he quickly buries his face into. As he licks and kisses at your dripping folds, your pussy spreads wider and wider, soon pulling him into you. He never struggles or resists, only licking along your vaginal walls all the more eagerly. After a series of orgasms around his disappearing body, you feel him curl up in your overstuffed womb.";
 					say "     After a long nap right there on the floor, your womb quivers and after a few pleasant minutes, the process reverses itself and you release your lover from your womb. He snuggles up to you, nursing from your breast and running his furry hands over his new mother's body. The process has made him a little more feline and added a little more. Tucked under his ballsack is a wet and waiting pussy that grows and matures further each time you take him over the next several months. With your infection only partially active, he gradually becomes more of a margay than a leopard, though few would recognize the differences. He doesn't gain breasts or the added weight, letting him hide his new gender to surprise unsuspecting playmates. You are always his favorite though and eagerly returns to your womb again and again.";
 				else:
 					say "     You have him mount you and mate you repeatedly, pumping his feline seed into you until, after several hours of hot, feline sex, he has no more to give. You snuggle up with your cute lover and purr happily, stroking your plump belly, happy in the knowledge it will soon swell with kittens to fill your empty womb. You play with him repeatedly, even after he's left his delivery job for bigger and better things, enjoying seeing him grow up and become a better lover under your mature guidance.";

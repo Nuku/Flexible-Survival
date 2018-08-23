@@ -48,7 +48,7 @@ to say SonnyDesc:
 		project the figure of Sonny_shaved_jeans_icon;
 	say "     Sonny is a rather adorable looking sheep boy. He doesn't have the full looks of a ram, as clearly evidenced by the tiny little nub-horns on his forehead. What he does have is fluffy looking white wool, blue eyes, and what appears to be a disposition to being shirtless. Because of his lack of a shirt, you can see that Sonny does exercise, as he has well defined muscles, but not so much that he looks like a bodybuilder. His pants are a rather simple pair of denim jeans that are worn in some places and his shoes are a worn pair of sneakers. All in all, you pretty much think he looks like a twink, though he sure doesn't act like it.";
 	if Sonny is in Half-Renovated Room:
-		say "     In the room, Sonny seems to have set up a cozy little sleep pad in one of the corners. The area consists of a mattress that the sheep boy has dragged up from the bunker, his shaving supplies, and oddly enough an open crate filled with all the shaven wool.[If Skarnoth is in Half-Renovated Room] He can be seen throwing nervous looks at the chained-up demon, which just results in Skarnoth returning lewd glances and suggestive hip-thrusts back.[end if]";
+		say "     In the room, Sonny seems to have set up a cozy little sleep pad in one of the corners. The area consists of a mattress that the sheep boy has dragged up from the bunker, his shaving supplies, and oddly enough an open crate filled with all the shaven wool[if Skarnoth is in Half-Renovated Room]. He can be seen throwing nervous looks at the chained-up demon, which just results in Skarnoth returning lewd glances and suggestive hip-thrusts back[end if].";
 	else if Sonny is in Mall Lockerroom:
 		say "     In the lockerroom it appears that Sonny has practically claimed the area in front of the mirror. His sleeping bag is currently sitting on the bench nearby, rolled up so it doesn't take up much space. To the right of the sleeping bag and under the bench, a number of items are scattered. They appear to be the sheep boy's shaving supplies, meticulously taken care of. Other than that, a plastic crate filled with tufts of his shorn-off wool strikes you as a bit of an odd sight.";
 
@@ -101,7 +101,7 @@ to say SonnyTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -123,16 +123,16 @@ to say SonnyTalkMenu:
 				if (nam is "Ask him about home"):
 					say "[SonnyTalk5]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro sheep, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SonnyTalk1: [talk about him]
@@ -215,7 +215,7 @@ to say SonnySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -239,16 +239,16 @@ to say SonnySexMenu:
 				if (nam is "Take Sonny's shaft in your ass"):
 					say "[SonnySex6]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro sheep, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SonnySex1: [oral on the player]
@@ -267,7 +267,7 @@ to say SonnySex3: [virgin Sonny fucked]
 	say "     The thing that caused the yelp was you slowly pushing the wet digit into his pucker. By the time you've done this, your mouth is back on his hard cock. The sheep is thrown into another haze of pleasure as you finger and suck him simultaneously. The spurts of precum from the ovine's manhood begin coming at a more frequent rate. So, you end up slowing down your motions on the prick, in order to not make him cum too early. When you slow down, you add another finger in and begin to scissor open his asshole, so he could take you with the smallest amount of pain possible. Though it appears that the scissoring does cause a wince of pain to show on his face for a second. This convinces you to find his prostate as fast as possible, which thankfully doesn't take too long. When you do, a large amount of precum spills into your mouth, Sonny moaning quite loudly. 'A-a-ah! That feels so good!' the sheep shouts in pleasure.";
 	WaitLineBreak;
 	say "     You continue to suck and scissor Sonny for a few minutes, bringing him to the edge before stopping quite a couple of times. However, you soon decide that it's time to take another step forward. So, you pick up the sheep and set him back first on the table. He's a bit confused until you undo your lower clothing, revealing your own cock, which you promptly put at his entrance. With a single push, you manage to pop the head of your cock into his pucker, causing a gasp of both pain and pleasure to come out of the ovine's mouth. 'P-please go slow,' he asks of you with eyes holding a glint that's a mix of begging and glassy pleasure. That makes you think that he's asking for two reasons. One, to make it so that it doesn't hurt too much. The second reason is because he doesn't want to cum too early. But nevertheless, you abide by your partner's request and very slowly push your shaft into his asshole.";
-	say "     It takes you about a minute or so to get balls deep, as you occasionally pause to let Sonny adjust to you. Once you are, though, you quickly pull back and position yourself in the direction that you found his post ate. It seems that the lack of your length in him causes him to whine out but that's quickly rectified when you slam back in, brushing against his sweet spot. That creates a scream of pleasure from Sonny as a large spurt of precum comes flying out of his cock and onto the ovine's belly, drenching a tiny bit of his wool. You begin to keep up a decent pace, repeatedly thrusting against the guy's prostate, turning the sheep into a veritable ball of goo, eyes fixed on his reflection in the mirror. Quickly though you feel your own climax coming so you pull your lover up to you as you continue to thrust and move into a sloppy kiss. The two of you trade spit as your own thrusting becomes erratic until Sonny let's out a shout.";
+	say "     It takes you about a minute or so to get balls deep, as you occasionally pause to let Sonny adjust to you. Once you are, though, you quickly pull back and position yourself in the direction that you found his post ate. It seems that the lack of your length in him causes him to whine out but that's quickly rectified when you slam back in, brushing against his sweet spot. That creates a scream of pleasure from Sonny as a large spurt of precum comes flying out of his cock and onto the ovine's belly, drenching a tiny bit of his wool. You begin to keep up a decent pace, repeatedly thrusting against the guy's prostate, turning the sheep into a veritable ball of goo, eyes fixed on his reflection in the mirror. Quickly though you feel your own climax coming so you pull your lover up to you as you continue to thrust and move into a sloppy kiss. The two of you trade spit as your own thrusting becomes erratic until Sonny lets out a shout.";
 	WaitLineBreak;
 	say "     That shout turned out to be the sheep cumming first, his anal muscles clamping down into a tight vice around your cock. That in turn sets you off, making you cum and release your load into the ovine. With the last of your strength before you collapse from pleasure, you move the two of you to Sonny's mattress, promptly falling onto it, the both of you now laying up against each other. You and the sheep settle into a post-coitus cuddle session, you nuzzling your face against Sonny's, enjoying the sweet bliss that occurs after orgasm. Your friend has a different idea, turning your face towards his before kissing you chastely, these kisses much different than the ones during sex. No, these ones were sweet and loving, which told you a lot about the sheep and made you question a few things. Like why didn't you romance him first? Sure, nowadays it's usually fucking with loving gestures being a rare occurrence.";
 	say "     You ponder this for a while as the two of you trade loving kisses between each other. About an hour later, you stand up, leaving a soft kiss on his cheek before getting dressed. Once you're dressed you watch Sonny get dressed, admiring the look of your cum leaking out of his ass. When the sheep is dressed you hug him and thank the guy for the time before heading off. As you're heading back to your journey, your cuddle session thoughts pop up. Maybe you should find a way to make this relationship go further, at least other than fucking?";

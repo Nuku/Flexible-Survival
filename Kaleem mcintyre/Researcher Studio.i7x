@@ -208,7 +208,7 @@ Kitchen is a room.
 
 The description of Kitchen is "Omio's kitchenette is made up of ashen walls with a white tiled floor housing a modern style stove and refrigerator with a single chrome sink resting next to said refrigerator. Large wooden cabinets sit on both the top and bottom sides of refrigerator and stove. More than likely the cupboards house a plentiful storage of food for Omio to cook with, yet from the lingering smells filling the area it would seem that the redhead prepares a lot more tea in here than food. Over by the side of the backdoor leading into the plains there stands a large dining table and two comfortable looking chairs with a Chinese styled tea set sitting atop the surface of the table.".
 
-The invent of Kitchen is { "water bottle" , "food" , "chips" , "tasty peach" }.
+The invent of Kitchen is { "water bottle", "food", "chips", "tasty peach" }.
 
 instead of sniffing Kitchen:
 	say "Omio's kitchen smells of herbs and spices all boiled together into various mixes to make soul calming tea.";

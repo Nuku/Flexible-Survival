@@ -204,6 +204,8 @@ Instead of resolving a Memories of the Mall:
 
 
 to mallrecall:
+	say "";
+[
 	LineBreak;
 	WaitLineBreak;
 	let recallchance be 0;
@@ -224,7 +226,7 @@ to mallrecall:
 				say "     As you start heading back to safe territory after your excursion, you find yourself thinking of the mall, wanting to head back there to hang out. The mall's a safe place, you remind yourself, and head back in that direction eagerly. You arrive safely and enter the shopping plaza[if the player is mallratbodied], feeling quite at home here[end if], and head to the central atrium.";
 			now battleground is "void";
 			move player to Mall Atrium;
-
+]
 
 Section 5 - Endings
 

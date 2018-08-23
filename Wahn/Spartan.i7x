@@ -172,12 +172,15 @@ to say SpartanDesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Spartan";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]With a quick sweep of his leg, he brings you crashing to the floor.[or]He grabs hold of you, taking you into a choke-hold that you only just manage to wind your way out of.[or]First throwing a handful of dirt into your face, the young Spartan strikes a painful blow to your side while you're off guard.[at random]";
 	now defeated entry is "[Spartan loses]";
 	now victory entry is "[Spartan wins]";
@@ -242,7 +245,7 @@ to HistoryLectureVisit:
 	if daytimer is night:
 		say "     The doors to the classroom are locked and you are unable to get in. You figure that even teachers need rest so you shrug your shoulders and turn around.";
 	else if daytimer is day:
-		say "     Coming up to a lecturing theater during your explorations, you spot a sign on a stand next to its entrance: 'Customs and History of Ancient Sparta - Guest Speaker: Professor Eudamias Leto' Hearing voices from the inside, your curiosity makes you pull open the door. Looks like there's still a lecture going on here, even with all that's been happening in the city - at the front of the room, an old man in a white tunic stands, the blackboard behind him covered in Greek writing, and in the two front rows there are several young men wearing nothing except helmets, red cloaks and sandals.";
+		say "     Coming up to a lecturing theater during your explorations, you spot a sign on a stand next to its entrance: 'Customs and History of Ancient Sparta - Guest Speaker: Professor Eudamias Leto'. Hearing voices from the inside, your curiosity makes you pull open the door. Looks like there's still a lecture going on here, even with all that's been happening in the city - at the front of the room, an old man in a white tunic stands, the blackboard behind him covered in Greek writing, and in the two front rows there are several young men wearing nothing except helmets, red cloaks and sandals.";
 		say "     All of them turn to look at you, standing there with the doorknob in your hand. So much for just having a quick look... while your thoughts still race in circles as you try to decide what to do next, the old man clears his throat and calls 'Were you raised in a barn? Come in and close the door, or go.'";
 		LineBreak;
 		say "     Well, that simplifies things - so what do you want to do? Enter ([link]Y[as]y[end link]) or leave ([link]N[as]n[end link])?";

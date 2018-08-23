@@ -79,7 +79,7 @@ to say JadakoTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -97,16 +97,16 @@ to say JadakoTalkMenu:
 				if (nam is "Sports"):
 					say "[JadakoTalk3]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JadakoTalk1:
@@ -150,7 +150,7 @@ to say JosephTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -168,16 +168,16 @@ to say JosephTalkMenu:
 				if (nam is "Sports"):
 					say "[JosephTalk3]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JosephTalk1:
@@ -232,7 +232,7 @@ to say CampusCoupleSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -250,16 +250,16 @@ to say CampusCoupleSexMenu:
 				if (nam is "Cockworship"):
 					say "[CampusCoupleSex3]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation";
 			if player consents:
 				now sextablerun is 1;
 				say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say CampusCoupleSex1:
@@ -271,7 +271,7 @@ to say CampusCoupleSex1:
 	LineBreak;
 	say "     Coach Weber slides out halfway, then pushes back in. He continues this motion, while you lap greedily at Jadako's barbed cock. Not content with standing by, the feline begins softly bucking his hips as he places his hands gently on your head. His claws lightly scratch the top of your head as his cock thrusts in and out of your mouth. You let these two lovers fuck you from both ends, relishing the feeling of being filled. Every time Joseph's large balls slap into the back of your ass, and the feeling of Jadako's barbs stimulates your mouth. You reach a hand under you to your [if player is male][cock of player] cock, and begin stroking it in ecstasy[else if player is female]cunt and stick your fingers in, desperately stirring around[else]nipples, twisting and pulling them[end if]. The coach's meaty hands grasp tightly at your backside as he thrusts, grunting with each one. 'Unf! You've got a-ugh- great ass, I don't think I can go much longer!' he exclaims whilst panting.";
 	LineBreak;
-	say "     Meanwhile, Jadako's teeth are gritted as he throat fucks you. His soft movements have accelerated into passionate thrusts. The coach let's out a loud moan as he finally rams all the way into you, his knot popping into your hole as he orgasms. You can feel warmth spread through you as his cock throbs. Simultaneously, Jadako cums as well, his cock twitching as he sends a stream of his warm feline spunk down your throat. Swallowing it all, the dual orgasms sends you off as well[if player is male], your cock shooting off ropes of cum below you, spraying right onto the cushions. Your prostate explodes with pleasure as it is sprayed directly with Joseph's cum, your ass hungrily milking his canine tool for more of that intoxicating seed[else if player is female]. Your pussy throbs with ecstasy as you orgasm, the muscles in your vagina contracting around your fingers[end if].";
+	say "     Meanwhile, Jadako's teeth are gritted as he throat fucks you. His soft movements have accelerated into passionate thrusts. The coach lets out a loud moan as he finally rams all the way into you, his knot popping into your hole as he orgasms. You can feel warmth spread through you as his cock throbs. Simultaneously, Jadako cums as well, his cock twitching as he sends a stream of his warm feline spunk down your throat. Swallowing it all, the dual orgasms sends you off as well[if player is male], your cock shooting off ropes of cum below you, spraying right onto the cushions. Your prostate explodes with pleasure as it is sprayed directly with Joseph's cum, your ass hungrily milking his canine tool for more of that intoxicating seed[else if player is female]. Your pussy throbs with ecstasy as you orgasm, the muscles in your vagina contracting around your fingers[end if].";
 	say "     Jadako slides his cock out of your mouth, sighing with contentment. Joseph's cock remains rock hard, knotted inside of you. It gives the occasional twitch, which only enhances the experience. He bends over you, resting his large bulky body on your back, the warmth from his fur feeling wonderful. 'You did such a great job,' he whispers to you as he wraps his arms around your chest. The meaty arms make you feel so... protected, as the canine rests on you. 'Let's move to somewhere more comfortable,' the hound suggests, as he straightens back up. Not waiting for you, he lifts you up effortlessly, carrying you whilst still attached via his knot. He brings you to Jadako's bed, and lays the two of you down on it. His cock in your backside, he spoons you with his arms wrapped around you, serving as a warm blanket. Jadako lays behind his coach, creating a spoon train as you all cuddle together on the bed, covered in sexual fluids, until you fall asleep.";
 	WaitLineBreak;
 	say "     You eventually wake up, still being spooned by the muscular coach, but you notice his cock is no longer inside of you. He must have taken it out at some point while you were asleep. Joseph notices you stirring, and he gently rubs your face. 'Waking up?' he asks softly. You yawn, stretching your arms. 'Well, I'm glad you had a great time. We certainly had a great time...' the canine rumbles. He sits up and leaves the bed, grabbing his athletic shorts and jacket. Coach Weber dresses himself, and sits down beside Jadako on the sofa, who was reading a book. You exit the bed, dress, and grab your stuff, prepared to head off.";
@@ -305,7 +305,7 @@ to say CampusCoupleSex2:
 		LineBreak;
 		say "     The cat's ass feels heavenly on your rod, massaging it expertly every second you are inside of him. The student clearly has had a lot of practice, maybe even before the apocalypse began. You run your hands up and down his thighs, appreciating the musculature on the lithe athlete. His fur feels wonderful to stroke, and it's beautiful black, orange, and white colors are pleasing to the eyes. The room quickly smells of your sex, and the sounds of Jadako moaning and the wet sounds of sex echo throughout. With the window open, you're sure anyone passing by would your romp, but the thought only arouses you further. Joseph has his hands on Jadako's head, throatfucking the student with his eyes closed and teeth clenched. It would seem he's getting close to orgasm, and you are as well. You quicken your thrusts into the well lubricated cat's passage, the wet feeling surrounding your cock bringing you further and further to climax.";
 		LineBreak;
-		say "     Pressure builds in your cock and your balls churn. You thrust forward one last time, and begin shooting off ropes of your seed into Jadako's rear, painting his insides white with your cum. Joseph is set off as well, as he let's out a growl as he pulls his head back and his cock out of Jadako's muzzle, shooting loads of his virile spunk onto the top of Jadako's head. The feline groans with pleasure as the sensations are too much for him, and his feline cock begins to cum as well, shooting off onto the coffee table below him. Joseph keeps cumming and cumming onto the feline's head, his dick twitching and knot swollen heavily as it spurts out more and more cum. The feline raises and hand and grabs a handful to rub into his chest, covering him with the coach's scent. Finally, all of you settle down, your orgasms over.";
+		say "     Pressure builds in your cock and your balls churn. You thrust forward one last time, and begin shooting off ropes of your seed into Jadako's rear, painting his insides white with your cum. Joseph is set off as well, letting out a growl as he pulls his head back and his cock out of Jadako's muzzle, shooting loads of his virile spunk onto the top of Jadako's head. The feline groans with pleasure as the sensations are too much for him, and his feline cock begins to cum as well, shooting off onto the coffee table below him. Joseph keeps cumming and cumming onto the feline's head, his dick twitching and knot swollen heavily as it spurts out more and more cum. The feline raises and hand and grabs a handful to rub into his chest, covering him with the coach's scent. Finally, all of you settle down, your orgasms over.";
 		LineBreak;
 		say "     Jadako removes himself from the table, and hugs him amorously. You lay down on the bed, spend, and Jadako lays behind you, wrapping his thin furred arms around you. He sticks one leg under your legs, and one over, clutching to you tightly. The feline straddles your back, rubbing his wet cheek against your neck. He lets out a purr as his hands make his way to your nipples as he begins to gently pay with them. Joseph flops down in front of you, perfectly position for you to wrap around him as well, resting your dick against his fluffy rear. You rest your face on his muscular back, rubbing up against his soft fur. Your hands rub against his well-toned chest, his pecks easily feelable. You rest there, sandwiched by the two lovely furs, until you fall asleep. You dream of being fucked by the two endlessly, until you eventually awaken in the bed alone. Both Jadako and Joseph rest on the sofa, cuddling whilst reading a book.";
 		now lastfuck of Joseph is turns;

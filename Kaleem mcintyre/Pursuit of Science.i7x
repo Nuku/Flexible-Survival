@@ -356,7 +356,7 @@ to say omioquest10:
 	if medallion is not owned:
 		say "'Please retrieve that medallion, the [bold type]Ouroboros[roman type], for me. I should be in the museum...unless someone has already stolen it.' Omio nibbles on the end of her fingernail as she says this.";
 	else:
-		say "The squeal Omio let's out upon seeing you holding onto the medallion is almost enough to make your ears hurt as the redhead's scrambles over to you and then gently takes the artifact she had so requested off of your hands. 'Thank you so much for this! Now I don't have to go through the effort of trying to craft one of these relics for myself.' Omio rubs the bronze metal against her tanned face and for a moment you almost think that you can see her golden eyes spark with an electric-like glow.'";
+		say "The squeal Omio lets out upon seeing you holding onto the medallion is almost enough to make your ears hurt as the redhead's scrambles over to you and then gently takes the artifact she had so requested off of your hands. 'Thank you so much for this! Now I don't have to go through the effort of trying to craft one of these relics for myself.' Omio rubs the bronze metal against her tanned face and for a moment you almost think that you can see her golden eyes spark with an electric-like glow.'";
 		say "'Thank you again. This will be a big help for me.' Omio looks to you with a smile that speaks of something you're not quite sure of as golden eyes seem to gleam almost like stars from within the redhead's face.";
 		say "     [bold type]'Now then, to pay you back I can give you some more information on the organization I work for, if you'd like?[roman type][line break]";
 		LineBreak;

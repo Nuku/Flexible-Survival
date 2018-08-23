@@ -44,12 +44,15 @@ to say infvulpdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Inflatable Vulpine"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheinfvulp]";
 	now victory entry is "[losetoinfvulp]";
@@ -63,7 +66,7 @@ When Play begins:
 	now body change entry is "[infvulpbodychange][infvulp_reset]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it becomes glossy and shifts like liquid plastic. You turn a bright orange in color, though areas of black and white start to distinguish themselves as well. These sections divide off into patches joined together by melted seams as your skin becomes a thin layer of colorful latex";
 	now ass change entry is "a sense of pressure grows there. This feeling builds up until finally, with a cartoonish 'Pop!' you suddenly gain a balloon-like fox tail";
-	now cock change entry is "it feels like its swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
+	now cock change entry is "it feels like it's swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
 	now str entry is 8; [ These are now the creature's stats... ]
 	now dex entry is 8; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 8; [ These values may be used as part of alternate combat.]

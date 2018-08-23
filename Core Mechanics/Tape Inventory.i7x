@@ -69,11 +69,15 @@ carry out tapeing:
 			say "[PizzaCarDashcamVid]";
 		-- "Dressing Room Spycam Vid":
 			say "[DressingRoomSpycamVid]";
+		-- "Darius's Home Vid 1":
+			say "[DariusHannahVid1]";
+		-- "Darius's Home Vid 2":
+			say "[DariusHannahVid2]";
 		-- "Traffic Drone #006 Footage":
 			say "[TrafficDrone#006Vid]";
 		-- "Urban Explorer Helmet Cam Vid #1": [Source: Wahn/Recordings.i7x]
 			say "[UrbanExplorerVid1]";
-		-- "Fitness Studio Security Vid Vid":
+		-- "Fitness Studio Security Vid":
 			say "[FitnessStudioVid]";
 [ Template to fill for new tapes ]
 [

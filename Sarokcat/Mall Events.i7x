@@ -118,7 +118,7 @@ The sarea of Strange symbol is "Mall".
 
 Instead of resolving a Strange symbol:
 	say "Moving through the sewers, you notice a strange white symbol painted on the wall. Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can't seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human than when you started.";
-	decrease humanity of player by 30;
+	SanLoss 30;
 	Now Strange symbol is resolved;
 
 Section 8- Goo Gathering

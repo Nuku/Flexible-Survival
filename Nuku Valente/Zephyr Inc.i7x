@@ -14,8 +14,8 @@ This is the zephyrad rule:
 	say "- Football Wolfman and Wrestling Wolf successfully relocated to the College Campus.";
 	say "- Other creatures having migrated to the Urban Forest include the following: Awesome Tree, City Sprite, Cougar, Dryad, Elf, Elk, Elven Hunter, and several varieties of Skunk.";
 	say "- As expected with the decrease in local wolves, the Ewe and Ram numbers have risen. Expect increased sightings.";
-	say "- Ash Whelp threat level reassessed to level 2.";
 	say "- Bunny Jock threat level reassessed to level 4.";
+	say "- Ebonflame Whelp threat level reassessed to level 2.";
 	say "- Panther Taur threat level reassessed to level 4.";
 	say "- Incubus and Succubus threat levels reassessed to level 8.";
 	say "- Wrestling Wolf threat level reassessed to level 15."; ]
@@ -140,36 +140,7 @@ to say price list:
 		if rule failed:
 			next;
 		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[name entry] - [price entry] Creds[line break]";
-
-understand the command "buy" as something new.
-ZephBuying is an action applying to one thing.
-
-Understand "buy [grab object]" as zephbuying.
-
-Does the player mean zephbuying the dirty water: It is very unlikely.
-
-Carry out zephbuying:
-	if the price sign is not visible:
-		say "I see no store here.";
-		continue the action;
-	if the noun is an object listed in the table of zephyr goods:
-		say "";
-	else:
-		say "That doesn't seem to be sold here.";
-		continue the action;
-	if price entry > freecred:
-		say "You can't afford the [name entry], it costs [price entry] freecred.";
-		continue the action;
-	say "You purchase [name entry] for [price entry] creds.";
-	if name entry is "Zephyr Personal Communicator":
-		now carried of zpc is carried of zpc + 1;
-	else:
-		add name entry to invent of player;
-	if name entry is "nanite collector", now nanitemeter is 2;
-	if name entry is "pepperspray", increase pepped by 1;
-	decrease freecred by price entry;
-[	decrease score by price entry divided by 5; ]
+		say "[name entry] - [price entry] Creds";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -348,7 +319,7 @@ Instead of resolving a High Rise Detector Site:
 		let T be a random number between 1 and 4;
 		if T is 1:
 			say ", but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
-			challenge "rabbit pack";
+			challenge "Rabbit";
 		else if T is 2:
 			say ", but run into a pair of cougars descending the stairs quietly on their padded paws.";
 			challenge "Cougar";
@@ -425,7 +396,7 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 		else if player is male and scalevalue of player is 1:
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
-			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently as he starts thrusting while a paw moves around to stroke your [if cocks of player > 1]shafts[else]shaft[end if]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
+			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently as he starts thrusting while a paw moves around to stroke your shaft[smn]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "Red Panda";
 				now bodyname of child is "Red Panda";

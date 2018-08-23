@@ -11,10 +11,59 @@ Section 1 - NPC
 [   4: gave the player his reward for returning Wendy                          ]
 [   5: player helped Shawn & Duke and got rewarded                             ]
 [   6: player got told about the missing Finn                                  ]
+[   7: player completed the Finn quest stage                                   ]
+[   8: unused as of yet                                                        ]
 
 [ libido of Anthony                                                            ]
 [   0: no sex with the player yet                                              ]
 [   1: reward sex with the player                                              ]
+
+[ FinnTrackingProgress                                   ]
+[   0: not found any tracks yet                          ]
+[   1: found the tracks, didn't follow                   ]
+[   2: found the tracks, followed                        ]
+[   3: Finn rescued, no sex                              ]
+[   4: Finn rescued, player fucked him                   ]
+[   5: Finn rescued, centaur fucked him                  ]
+[  99: Finn's dead                                       ]
+[ 100: Finn joined the stables                           ]
+
+to AnthonyQuestlog:
+	if HP of Anthony is:
+		-- 1:
+			say "[bold type]Farm Quests: [roman type]I've found Wendy the missing cow and returned her to the farm. Corbin mentioned a reward, so seeking out the farm's seems a good idea.";
+		-- 2:
+			say "[bold type]Farm Quests: [roman type]I've met Anthony, the owner of the farm. He has asked me to find their missing cow Wendy. She'll likely be somewhere out in the dry plains.";
+		-- 3:
+			say "[bold type]Farm Quests: [roman type]I've found Wendy the missing cow and returned her to the farm. Time to check back with Anthony about the reward he mentioned.";
+		-- 4:
+			if HP of Duke < 2:
+				say "[bold type]Farm Quests: [roman type]I've found Wendy the missing cow and returned her to the farm, getting a reward from Anthony for the trouble. Maybe there are other things he needs help with besides this...";
+			else if HP of Duke < 10:
+				say "[bold type]Farm Quests: [roman type]Duke, one of the shepherds on the farm, needs my help. He wants to turn his lover Shawn back from the feral ram he has become. Collecting a few clumps of tained wool from other anthro sheep in the city might help with that.";
+			else if HP of Duke > 9:
+				say "[bold type]Farm Quests: [roman type]I've helped reunite the shepherds in anthro form, earning their thanks. Anthony will want to learn about these good news too.";
+		-- 5:
+			say "[bold type]Farm Quests: [roman type]I've helped Anthony twice now, both with his missing cow and the gay couple of shepherds. Still, there could be more to do around the farm...";
+		-- 6:
+			if FinnTrackingProgress is 0:
+				say "[bold type]Farm Quests: [roman type]Anthony told me about a missing farmhand called Finn. There should hopefully be some trace or tracks of the [bold type]missing farm hand[roman type] to find near the farm in the dry plains.";
+			else if FinnTrackingProgress < 3:
+				say "[bold type]Farm Quests: [roman type]Some tracks that I found indicate Finn was abducted, but I haven't followed them yet. Might be a good idea to get back out there and search for the [bold type]missing farm hand[roman type] quickly, while the trail is fresh.";
+			else if FinnTrackingProgress is 3:
+				say "[bold type]Farm Quests: [roman type]I rescued Finn and brought him back to the farm safely. Anthony will want to know about this development.";
+			else if FinnTrackingProgress is 4:
+				say "[bold type]Farm Quests: [roman type]I rescued Finn and had some fun with him too. He is now safely back at the farm. Anthony will want to know about this development.";
+			else if FinnTrackingProgress is 5:
+				say "[bold type]Farm Quests: [roman type]I rescued Finn and brought him back to the farm, only a little bit worse for the wear after that centaur fucked him. He is now safely back at the farm. Anthony will want to know about this development.";
+			else if FinnTrackingProgress is 99:
+				say "[bold type]Farm Quests: [roman type]My rescue-attempt for Finn failed. There is little left but to return to Anthony and tell him his missing farmhand Finn is dead.";
+			else if FinnTrackingProgress is 100:
+				say "[bold type]Farm Quests: [roman type]I found Finn, but in the end he was taken away to the Stables Hotel. Nothing much left to do now except telling Anthony that he won't see him again.";
+		-- 7:
+			say "[bold type]Farm Quests: [roman type]I've informed Anthony about what became of Finn. Looks like that was the last quest he has right now, but there might be more things to do at the farm in the future...";
+		-- 8:
+			say "     ";
 
 Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]".
@@ -73,6 +122,9 @@ instead of conversing the Anthony:
 			LineBreak;
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if libido of Anthony > 0] - or... something more intimate, if you prefer[end if]. Just find our [bold type]missing farm hand[roman type] quickly please!'";
 			now Missing Farm Hand is not resolved;
+			now HP of Anthony is 6; [player got told about Finn]
+		else if HP of Anthony is 6:
+			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then asks, 'Thanks again for the offer. Have you found a trace of Finn yet? Please, you have to find our [bold type]missing farm hand[roman type]!'";
 		else:
 			say "     Clicking his claws together thoughtfully, he finally says 'I'll have to get back to you on that later, not sure what would be right for your skill-set at the moment. Just sending you to milk cows would be a waste of your time...' (further quests remain to be written - please have patience)";
 	else if calcnumber is 3: [break off talking]
@@ -112,9 +164,9 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 			increase carried of food by 4;
 		else:
 			LineBreak;
-			say "     [AnthonyRewardSex]";
+			say "[AnthonyRewardSex]";
 		now HP of Anthony is 5;
-	else if HP of Anthony is 5 and FinnTrackingProgress > 2:
+	else if HP of Anthony is 6 and FinnTrackingProgress > 2:
 		if FinnTrackingProgress < 90: [Finn got saved]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that you've brought his farmhand back. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm so glad you found him.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 			LineBreak;
@@ -128,14 +180,18 @@ instead of going northwest from Central Farm Square while (HP of Anthony is 0 or
 				increase carried of food by 4;
 			else:
 				LineBreak;
-				say "     [AnthonyRewardSex]";
+				say "[AnthonyRewardSex]";
 		else if FinnTrackingProgress is 99: [Finn is dead]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and its tragic conclusion. The farmhand won't be back, that's for sure. The friendly anteater is shocked at such dire news, raising a hand to cover his mouth. Tears well up in his eyes as he looks away, deep in thought. A long moment later, he takes a shuddering breath and gulps, then wipes his face with the backs of both clawed hands. Anthony murmurs something that might have been, 'Pull yourself together, everyone depends on you,' then sighs and focuses back on you. 'Thank you, for... at least trying to save him. I - I got to be alone right now, think about how I'll tell the men.' You leave the farmhouse after that, walking out onto the open square in the middle of the farm buildings.";
 			move player to Central Farm Square;
 		else if FinnTrackingProgress is 100: [Finn joined the stables]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that he joined their numbers in the end. The friendly anteater is visibly deflated at such news and gives a deep sigh. 'I - um, I hope he'll be happy there. Thank you for at least the knowledge what happened to him. I'll get you some food.' With that, the anthro anteater trots over to the kitchen and soon hands you a small bag with fresh fruit.";
 			increase carried of food by 2;
-		now HP of Anthony is 6;
+		now HP of Anthony is 7;
+		if "Farm Quests" is listed in OpenQuests of player:
+			remove "Farm Quests" from OpenQuests of player;
+			add "Farm Quests" to CompletedQuests of player;
+
 [
 	else if HP of Anthony is 5 and HP of Selena is 1 and SelenaDelivery - turns > 16:
 		say "     Entering the main room of the farmhouse, you are greeted by Anthony, who says, 'Hello my friend. Could I maybe ask you for a report about the newest spread of creatures out in the plains? We have to keep informed so we're not hit out of the blue when some new type of creature appears or any group expands their territory into the plains. So if -' His words are interrupted by a high-pitched voice calling out, 'Uncle Anthony! Can I ride one of the horses, today?' A small, spotted catgirl in an oversized t-shirt bounces into the room as she says the last words, which leads over to an 'Eep' as she notices you in the room too. Lightning-quick, the little feline flits to a spot behind Anthony, peeking out from behind him at you.";
@@ -227,7 +283,7 @@ to say AnthonySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -249,16 +305,16 @@ to say AnthonySexMenu:
 				if (nam is "Fuck Anthony"):
 					say "[AnthonySex5]";
 				WaitLineBreak;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
 				WaitLineBreak;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AnthonySex1: [oral on the player]
@@ -324,12 +380,15 @@ to say AnthonySex5: [fuck Anthony]
 Section 3 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Giant Anteater";
+	now enemy title entry is "";
+	now enemy name entry is "Anthony";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "<This infection should not fight>";
 	now defeated entry is "<This infection should not fight>";
 	now victory entry is "<This infection should not fight>";

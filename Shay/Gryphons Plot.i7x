@@ -223,7 +223,7 @@ instead of resolving a Gryphon's Plot:
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";
 	else if GryphPlotTracking is 50: [player helped the gryphons, soldiers are transformed]
-		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get em!' Seeing no other option than to fight, you ready your weapon.";
+		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get [']em!' Seeing no other option than to fight, you ready your weapon.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times or until the player loses or flees]
@@ -337,7 +337,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -354,7 +354,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
@@ -364,7 +364,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men. Distancing yourself from the scene, you leave the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 				clear the screen and hyperlink list;
@@ -398,7 +398,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -415,7 +415,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";

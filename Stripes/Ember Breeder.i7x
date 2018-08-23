@@ -1,18 +1,18 @@
-Version 3 of Ashen Breeder by Stripes begins here.
+Version 3 of Ember Breeder by Stripes begins here.
 [ Version 3.4 - Adding libido pill as drop item. ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
-"Adds Ashen Breeder to Flexible Survival."
+"Adds an Ember Breeder to Flexible Survival."
 
-ashenvicsex is a number that varies.
+embervicsex is a number that varies.
 
 Section 1 - Monster Responses
 
-to say ashenbreederdesc:
+to say emberbreederdesc:
 	setmongender 5;
 	say "     Before you is another strange mutant, a rather dog-like creature this time. Hir long, floppy ears perk up as she notices you. Shi has [one of]red[or]pink[at random] eyes and looks at you with obvious lust. Shi is completely unclothed and you can see just by looking at hir that shi is built to pleasure whoever shi comes in contact with; hir large breasts drip milk at a steady rate and shi has a cock that makes your mouth water. Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone shi fucks. Shi lets out a moan and strokes hirself for a moment before rushing at you.";
 
-to say ashen breeder attack:
+to say losttoemberbreeder:
 	if player is female and player is impreg_able:
 		if a random chance of 1 in 2 succeeds:
 			follow the breast descr rule;
@@ -27,48 +27,48 @@ to say ashen breeder attack:
 		say "     You're left locked with her for a while. She pants and licks at your neck and ears while gently grinding herself against you, spilling more of her milk across your body. Your thoughts are a pleasant blur, simply enjoying the feel of her delightful manhood and her potent seed locked inside you. When the haze lifts and you start to recover your senses, she has departed, leaving you with her sticky seed on your thighs to remind you of her.";
 	else:
 		if player is not male:
-			say "     Chirping triumphantly, the Ashen Breeder grabs you and pulls you tight to hir chest. Smiling, blissful in hir lusty haze, the Ashen Breeder quickly forces a nipple into your mouth and squeezes hard on hir own tit. Sweet, rich cream explodes from the abused nipple, a constant stream that forces you to swallow or be drowned. Smiling, the Ashen Breeder slowly strokes across your back, planting small, butterfly kisses across your brow until the flow tapers to a halt. Satisfied, the herm gently strokes your distended tummy until you fall asleep, giving a soft kiss goodnight before departing.";
+			say "     Chirping triumphantly, the ember breeder grabs you and pulls you tight to hir chest. Smiling, blissful in hir lusty haze, the ember breeder quickly forces a nipple into your mouth and squeezes hard on hir own tit. Sweet, rich cream explodes from the abused nipple, a constant stream that forces you to swallow or be drowned. Smiling, the ember breeder slowly strokes across your back, planting small, butterfly kisses across your brow until the flow tapers to a halt. Satisfied, the herm gently strokes your distended tummy until you fall asleep, giving a soft kiss goodnight before departing.";
 		else:
 			if a random chance of 1 in 2 succeeds:
-				say "     The Ashen Breeder lowers you gently to the ground and quickly removes your clothing. Shi very demurely crawls between your legs and licks your [cock size desc of player] dick until it's standing up straight in her delicate grip. Hir swollen tits drip milk on your skin as shi slides back up your body and lines hir dripping slit up with your rigid member and quickly impales hirself on you. Your shaft slips completely into hir with no resistance and shi chirps in pleasure and begins to fuck you with reckless abandon. You feel hir juices dripping down your thighs and pooling in between your legs while hir pre-cum splatters your chest as hir cock bounces up and down. Hir hips begin to slam into you hard enough to make you ache, but your own orgasm is close as shi shows no sign of stopping hirself. You try to hold back, but shi suddenly clamps down on your cock as both of hir sexual organs orgasm together; hir cock shoots cum all over your chest and face, leaving almost no inch clear of the sticky fluids. The clenching of hir tunnel around your shaft is more than you can take as your cock unloads into hir, splattering your seed against hir walls and into hir womb. Shi leans down and kisses you as hir orgasm subsides before getting up and walking shakily away, leaving you lying in a state of bliss on the ground.";
+				say "     The ember breeder lowers you gently to the ground and quickly removes your clothing. Shi very demurely crawls between your legs and licks your [cock size desc of player] dick until it's standing up straight in her delicate grip. Hir swollen tits drip milk on your skin as shi slides back up your body and lines hir dripping slit up with your rigid member and quickly impales hirself on you. Your shaft slips completely into hir with no resistance and shi chirps in pleasure and begins to fuck you with reckless abandon. You feel hir juices dripping down your thighs and pooling in between your legs while hir pre-cum splatters your chest as hir cock bounces up and down. Hir hips begin to slam into you hard enough to make you ache, but your own orgasm is close as shi shows no sign of stopping hirself. You try to hold back, but shi suddenly clamps down on your cock as both of hir sexual organs orgasm together; hir cock shoots cum all over your chest and face, leaving almost no inch clear of the sticky fluids. The clenching of hir tunnel around your shaft is more than you can take as your cock unloads into hir, splattering your seed against hir walls and into hir womb. Shi leans down and kisses you as hir orgasm subsides before getting up and walking shakily away, leaving you lying in a state of bliss on the ground.";
 			else:
 				say "     [if HP of player > 0]Giving in and letting hir do as shi well, you submit to hir lustful advances[else]Stumbling to the ground after that last blow, you're unable to resist[end if] when shi eagerly clambers atop you, paw going quickly to your groin to grope your [cock of player] manhood until its [cock length of player]-inch spire is hard and waiting for hir to climb upon. Grabbing your head, shi presses it between her milk-laden breasts as she lowers hirself down onto your cock with a moaning bark of pleasure. Hir milk drips down onto you and your head turns to one of hir nipples so you might suckle from it.";
-				say "Shi rides you eagerly, panting and barking at times whenever shi gets particularly worked up. Hir cock throbs and twitches, spurting precum onto your [bodydesc of player] chest at these times. Shi takes hir time for a while, enjoying having found a mate to breed her and intends to savor it for a while. Lost in a lustful, milk-induced haze, you suckle happily and let hir do as shi pleases. You lose track of time, but it feels like about a half hour before shi will wait no longer and rides you hard and fast, driving you both to powerful, messy climaxes that leave you sticky with semen and juices by the time you're done unloading your [cum load size of player] load into hir needy womb and shi's painted the front of you in hir cum in return. Reaking of sex by the time shi's done and leaves you, you lay there in a state of sexual bliss for a while to recover your senses.";
+				say "Shi rides you eagerly, panting and barking at times whenever shi gets particularly worked up. Hir cock throbs and twitches, spurting precum onto your [bodydesc of player] chest at these times. Shi takes hir time for a while, enjoying having found a mate to breed her and intends to savor it for a while. Lost in a lustful, milk-induced haze, you suckle happily and let hir do as shi pleases. You lose track of time, but it feels like about a half hour before shi will wait no longer and rides you hard and fast, driving you both to powerful, messy climaxes that leave you sticky with semen and juices by the time you're done unloading your [cum load size of player] load into hir needy womb and shi's painted the front of you in hir cum in return. Reeking of sex by the time shi's done and leaves you, you lay there in a state of sexual bliss for a while to recover your senses.";
 
 
-to say beattheashenbr:
-	say "     The Ashen Breeder moans with need, staggering as shi tries in vain to continue the struggle. Torn between hir lusts and exhaustion, hir paws roam all over hir body, playing with her breasts, cock and pussy as she stumbles to hir knees. ";
+to say beattheemberbreeder:
+	say "     The ember breeder moans with need, staggering as shi tries in vain to continue the struggle. Torn between hir lusts and exhaustion, hir paws roam all over hir body, playing with her breasts, cock and pussy as she stumbles to hir knees. ";
 	if player is male:
 		let diceroll be a random number between 40 and 125;
 		if cockname of player is listed in infections of Caninelist and diceroll < libido of player:
 			say "     Something about hir needy display arouses you and you feel an uncontrollable urge to mate with this strange beast welling up in your canine loins. Before you can suppress it, you push hir down onto all fours. Shi releases a series of pleasured chirps at this and raises hir ass, offering up hir juicy pussy. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
-			if ashenvicsex is odd:
-				say "[ashenbreedersex01]";
+			if embervicsex is odd:
+				say "[emberbreedersex01]";
 			else:
-				say "[ashenbreedersex02]";
-			increase ashenvicsex by 1;
+				say "[emberbreedersex02]";
+			increase embervicsex by 1;
 		else:
 			say "     Something about hir needy display arouses you and you feel a growing urge to mate with this strange beast. Shall you give into this desire?";
 			if player consents:
 				say "     Rather than resist this urge, you give into your lustful desire and approach the horny herm breeder. You push hir down onto all fours and shi releases a series of pleasured chirps, raising hir ass in the air. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight. ";
-				if ashenvicsex is odd:
-					say "[ashenbreedersex01]";
+				if embervicsex is odd:
+					say "[emberbreedersex01]";
 				else:
-					say "[ashenbreedersex02]";
-				increase ashenvicsex by 1;
+					say "[emberbreedersex02]";
+				increase embervicsex by 1;
 			else:
 				say "     Resisting the temptation, you take a few steps back to distance yourself from the whining herm's needy display. Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue. With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
 	else:
 		say "     Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue. With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
 
 
-to say ashenbreedersex01:
+to say emberbreedersex01:
 	if cock length of player > 18:
 		say "     Hir pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in. Shi brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
 	say "     You bring your hands to hir breasts, squeezing them, causing large spurts of milk to shoot from hir nipples onto the ground. You work at milking hir the whole time you breed hir, soaking the tunnel floor in a growing puddle of breast milk.";
 	say "     When you feel your orgasm about to arrive, you drive yourself fully into hir, pushing your cock into hir accommodating womb and releasing your thick seed to breed hir. Shi moans in delight, clamping down firmly on your cock and milking it for all you'll give[if cock width of player > 20]. Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if]. Hir penis twitches and hir balls pull up, spraying hir own seed into the puddle of hir milk, adding to the messy white stain. When you withdraw your cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
 
-to say ashenbreedersex02:
+to say emberbreedersex02:
 	if cock length of player > 18:
 		say "     Your [cock size desc of player] shaft stretches hir pussy open with ease, hir breeder body readily adjusting to accommodate you. Shi rubs a paw over the bulge you make in hir belly with happy chirps, pleased to have such a virile and well-hung stud atop hir.";
 	say "     You briefly manhandle hir leaking breasts, drawing spurts of hir milk before moving to hir hips to grab them so you can fuck hir all the harder.";
@@ -78,16 +78,19 @@ to say ashenbreedersex02:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Ashen Breeder"; [Name of your new Monster]
-	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Shi forces your mouth against it and squeezes hard, milk pouring down your throat[at random].";
-	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
-	now victory entry is "[Ashen Breeder Attack]";
-	now desc entry is "[ashenbreederdesc]"; [ Description of the creature when you encounter it.]
+	now name entry is "Ember Breeder"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "The ember breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Shi forces your mouth against it and squeezes hard, milk pouring down your throat[at random].";
+	now defeated entry is "[beattheemberbreeder]"; [Text or say command used when Monster is defeated.]
+	now victory entry is "[losttoemberbreeder]";
+	now desc entry is "[emberbreederdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate. Your arms are thick, with diminutive claws that yearn to hold and cuddle. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "smooth, tender, yearning"; [ skin Description, format as "You have (your text) skin."]
@@ -134,7 +137,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Ashen Breeder":
+	if bodyname of player is "Ember Breeder":
 		if humanity of player < 10:
 			say "     Unable to hold out any longer, the infection affects your mind enough that you succumb to your new instincts and head off into the city in search of sexual satisfaction. You wander directionless through the wild city until you are found by ";
 			let T be a random number between 1 and 3;
@@ -182,4 +185,4 @@ when play ends:
 			else if player is female:		[F non-breedable]
 				say "     You are directionless after your release, though you don't let it get you down. You become quite amorous with numerous transformed people, satiating your sexual desires and theirs. You continue like this for quite some time, eventually drifting to join a brothel for the infected, satisfying your need for lustful sex while making money while doing so. Unable to get pregnant, you always feel a longing in you that can only be briefly satisfied through sex. This makes you an enthusiastic slut for your clients, ensuring that they are fully satisfied after a visit with you.";
 
-Ashen Breeder ends here.
+Ember Breeder ends here.

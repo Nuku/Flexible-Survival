@@ -71,6 +71,10 @@ lastfightround is a number that varies.	[ Used to track the last round during wh
 
 Section 1 - Prepping for Combat
 
+when play begins:
+	if "Human" is not listed in EncounteredEnemies of player:
+		add "Human" to EncounteredEnemies of player;
+
 to prepforfight:		[Do all the pre-fight setup, reset values, and then display the image (if any) and the monster description]
 	choose row monster from table of random critters;
 	now combat abort is 0;
@@ -189,7 +193,20 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				project icon entry;
 				break; ]
 	choose row monster from table of random critters;
-	say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+	if enemy type entry is 0: [non-unique enemies]
+		if enemy title entry is empty or enemy title entry is "": [no special name for the enemy]
+			say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+		else: [specially named enemies]
+			say "[bold type]You run into a [enemy title entry in lower case].[roman type][line break][desc entry][line break]";
+	else if enemy type entry is 1: [unique enemies whose name is not known]
+		if enemy title entry is empty or enemy title entry is "": [no special name for the enemy]
+			say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
+		else: [specially named enemies]
+			say "[bold type]You run into a [enemy title entry in lower case].[roman type][line break][desc entry][line break]";
+	else if enemy type entry is 2: [unique enemies whose name is known]
+		say "[bold type]You run into [enemy name entry].[roman type][line break][desc entry][line break]";
+	if name entry is not listed in EncounteredEnemies of player:
+		add name entry to EncounteredEnemies of player;
 
 
 Section 2 - Combat
@@ -1605,28 +1622,28 @@ this is the firebreath rule:
 			let fbhit be 1; [Partial Hit]
 		else:
 			let fbhit be 0; [Missed]
-		if name entry is "Ash Dragator":
+		if name entry is "Ebonflame Dragator":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type]";
+				say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "The [one of]Dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]Dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
-		else if name entry is "Ash Drakenoid":
+				say "The [one of]dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
+		else if name entry is "Ebonflame Draken":
 			if fbhit is 2:
-				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type]";
+				say "[one of]She[or]The draken[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
+				say "[one of]She[or]The draken[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
 			else:
-				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
-		else if name entry is "Ash Whelp":
+				say "[one of]She[or]The draken[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
+		else if name entry is "Ebonflame Whelp":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type]";
+				say "[special-style-2]The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type]";
 			else if fbhit is 1:
-				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you. You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random]. You take [special-style-2][dam][roman type] damage!";
+				say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you. You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random]. You take [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]whelp[or]creature[or]Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. You manage to avoid the poorly aimed attack!";
-		else if name entry is "feral sea dragon" or name entry is "feral sea dragoness":
+				say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. You manage to avoid the poorly aimed attack!";
+		else if name entry is "Feral Sea Dragon" or name entry is "Feral Sea Dragoness":
 			if fbhit is 2:
 				say "The [one of]sea dragon[or]blue dragon[or][name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You are knocked over and scalded badly by the constant stream of steaming sea water. You take [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:

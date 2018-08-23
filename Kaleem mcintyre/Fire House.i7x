@@ -357,7 +357,7 @@ To say aidKenaz6:
 		say "     Quickly you help Kenaz to gather just enough food so that the military won't be suspicious of someone coming to take their hoard, adding a few jugs a water to go along with the five and a half pounds of food the two of you have nestled into your backpacks, and then hurriedly exit out of the room and thus the building before making your way back through the hole Kenaz had shown you. The two of your work quickly to fill up the small ditch the Dalmatian had made as best you can, praying in turn that no one will get suspicious and come along to have a look over your little entryway, and then haul ass back to the fire station.";
 		say "     'Well that was fun!' Kenaz chuckles at you as he lets his long tongue hang slightly out from between his muzzle. Jogging next to the other man while snickering slightly you ask Kenaz when the next time he and the others plan to play Robin Hood again. 'Not for a while. Like I said, we don't want to make things look to suspicious. So we...' Before Kenaz can say anything more the Dalmatian literally skids to a stop as he tries to put on the breaks. Not sure what's going on you have all of two seconds to turn your head before cursing as you notice a twelve foot tall Border Collie standing in your path.";
 		WaitLineBreak;
-		say "     When you crash into the other the giant sized canine stumbles a bit and then flips its head around to look at you questioningly. Upon seeing you the naked canine turns to reveal its half hard cock growing thick and hard out from its sheath as well as the ample tits filled with milk jiggling onto the mutant's chest. It would seem the other is quite excited to see you and wants to show you just how much in the usual way the mutants around these parts do.";
+		say "     When you crash into the other, the giant-sized canine stumbles a bit and then flips its head around to look at you questioningly. Upon seeing you the naked canine turns to reveal its half hard cock growing thick and hard out from its sheath as well as the ample tits filled with milk jiggling onto the mutant's chest. It would seem the other is quite excited to see you and wants to show you just how much in the usual way the mutants around these parts do.";
 		LineBreak;
 		say "     Before the shemale collie can move to grab you, you're suddenly vaulted to the side as Kenaz pushes you out of the way. It's only natural that in trying to save you he himself gets swept up into the larger canines hold, yet that doesn't stop you from growling and cursing as you watch the twelve foot mutant hoist your friend up into its sleek looking face. Struggling and whimpering Kenaz manages to shrug his pack off and then toss the heavily filled bag at you. 'Take that back to the others! I'll meet you back at the firehouse later!' Asking the other man if he's crazy you get a funny smile from Kenaz in return. 'I'd say something heroic like I can handle myself, but that'd be a lie, so instead I'll just say that getting the food and water to the others is more important that trying to stick around here to try and negotiate with this thing.' At that the shemale collie growls and then slams the Dalmatian onto the ground.";
 		WaitLineBreak;
@@ -399,7 +399,7 @@ to say aidKenaz7:
 	WaitLineBreak;
 	say "     Barking and growling while swinging his hips back and forth Kenaz's cock literally streams pre-cum out onto the ground in front of him - thankfully everyone was wise enough to keep well out of the way to avoid being shot at since no one knew that Kenaz's fluids might do to them at the moment. Balls growing heavy between his legs, plumping with new seed as his forming cunt continues to dribble between his spotted thighs, you and the rest could only watch in muted disbelief as Kenaz's tail broadens to almost double its normal width while the Dalmatian's fur grew more coarse as the firefighter continues trying to get himself off.";
 	WaitLineBreak;
-	say "     The last of the transformations taper off just as Kenaz thrust three of his fingers up into his fully formed snatch causing him to cum from two ends at once. Amazingly enough the Dal's pitch black cock doesn't just shot a load from up out of his balls, instead the now eight foot tall Dalmatian fired off several thick bullets of whitish-yellow cum so hard they when they hit the metal of the garage doors, which Kenaz just so happened to be facing, they actually caused the metal give slightly. Of course the now giant sized Dalmatian didn't notice this however, because just as soon as he came the fully changed firefighter howled his climax to the top of the ceiling as he wildly rocked his hips forward to aid the end of his orgasm. His cunt wasn't left out of the christening of his new growth because just as the fifth shot of cum blasted out of Kenaz's cock a literally fountain of clear nectar flooded out from the Dalmatian new pussy forming a small lake appear on the concrete.";
+	say "     The last of the transformations taper off just as Kenaz thrust three of his fingers up into his fully formed snatch causing him to cum from two ends at once. Amazingly enough the Dal's pitch black cock doesn't just shot a load from up out of his balls, instead the now eight foot tall Dalmatian fired off several thick bullets of whitish-yellow cum so hard they when they hit the metal of the garage doors, which Kenaz just so happened to be facing, they actually caused the metal give slightly. Of course the now giant-sized Dalmatian didn't notice this however, because just as soon as he came the fully changed firefighter howled his climax to the top of the ceiling as he wildly rocked his hips forward to aid the end of his orgasm. His cunt wasn't left out of the christening of his new growth because just as the fifth shot of cum blasted out of Kenaz's cock a literally fountain of clear nectar flooded out from the Dalmatian new pussy forming a small lake appear on the concrete.";
 	WaitLineBreak;
 	say "     It took maybe two minutes for Kenaz to lower his head back down from singing his praise to the sky, another couple of seconds for the other to release his fingers from around his onyx colored shaft while at the same time unsheathing his much thicker digits from inside of his feminine folds, and then another minute before anybody could think to say anything. Othala, ever the leader, was the one first who chose to speak.";
 	say "     'Kenaz...this might be a dumb question, but are you still you?' Nobody moved as the eight foot Dal turned his head to look at the six foot something spotted firefighter. Yet when Kenaz next spoke all present knew that another big change was in the wind. 'Go get me a mop, bucket and rag so I can clean this mess up.' It was the fact that Kenaz wasn't asking please that made the room go silent. Even Pertho stifled a whimper as he felt the rolling command wash over his furry backside. 'Did I stutter or didn't you hear me?' Kenaz next asked and like a flash Othala was gone to get the materials that had been requ...demanded. 'Don't the lot of you have something else to be doing with yourselves?'";
@@ -438,7 +438,7 @@ to say aidKenaz9:
 	if player consents:
 		say "     'Good. Then let's get to it! And thus begins your day of exercise with Kenaz.";
 		if a random chance of 1 in 20 succeeds:
-			say "     The workout with Kenaz proves to be grueling, not to mention exhausting as the hyper sized Dalmatian puts you through the physical course of training that most firefighters have to go through in order to make the grade. By the time you've finished [one of]doing your hundredth push-up[or]running five miles around the city with Kenaz[or]doing your hundredth crunch[or]jumping over the jumping rope Kenaz had given you for the thousandth time[or]being grilled on the course curriculum while having Kenaz spot you on the weight bench the other had rigged from some [italic type]borrowed[roman type] equipment[at random] you puff out of gasp of breath before slumping down into place as utter exhaustion overcomes you.";
+			say "     The workout with Kenaz proves to be grueling, not to mention exhausting as the hyper-sized Dalmatian puts you through the physical course of training that most firefighters have to go through in order to make the grade. By the time you've finished [one of]doing your hundredth push-up[or]running five miles around the city with Kenaz[or]doing your hundredth crunch[or]jumping over the jumping rope Kenaz had given you for the thousandth time[or]being grilled on the course curriculum while having Kenaz spot you on the weight bench the other had rigged from some [italic type]borrowed[roman type] equipment[at random] you puff out of gasp of breath before slumping down into place as utter exhaustion overcomes you.";
 			say "     'Not bad. Not as good as someone who's spent their formative years training for this sort of thing, but like I said before, not bad. Keep this up and you'll make an excellent firefighter in no time.' Panting and then nodding to Kenaz you lay your head back and close your eyes, right before you snap them open as you think over what Kenaz just said.";
 			if strength of player < 18:
 				increase strength of player by 1;
@@ -450,7 +450,7 @@ to say aidKenaz9:
 			follow the turnpass rule;
 		else:
 			say "     Working with Kenaz you end up going through a light workout with the muscular Dalmatian that ends with both you and your canine companion pleasantly tired once the two of you finish racing back towards the firehouse. The fact that Pertho had come along for your jog around the city made things a little less grueling, in your mind at least, as the feral Dalmatian made sure to keep you on your toes by barking at you whenever you slowed down too much. The nips he put onto your heels didn't feel so good though.";
-			infect "Dalmatian";
+			infect "Dalmatian Male";
 			increase thirst of player by 8;
 			increase hunger of player by 7;
 			decrease libido of player by 7;
@@ -475,7 +475,7 @@ to say aidKenaz11:
 	say "     'Oh, hello. Are you doing okay today?' Kenaz asks and you nod to the Dalmatian before telling him a little about what's going on with you. 'That's cool. Hey, want to do some training with me? It might help you to fill out just a bit! Do you want to train with Kenaz? (Y=yes, N=No)";
 	if player consents:
 		say "     Working with Kenaz you end up going through a light workout with the muscular Dalmatian that ends with both you and your canine companion pleasantly tired once the two of you finish racing back towards the firehouse. The fact that Pertho had come along for your jog around the city made things a little less grueling, in your mind at least, as the feral Dalmatian made sure to keep you on your toes by barking at you whenever you slowed down too much. The nips he put onto your heels didn't feel so good though.";
-		infect "Dalmatian";
+		infect "Dalmatian Male";
 		increase thirst of player by 8;
 		increase hunger of player by 7;
 		decrease libido of player by 7;
@@ -486,7 +486,7 @@ to say aidKenaz11:
 Section 5 - Fucking Kenaz
 
 Instead of fucking Kenaz:
-	setmonster "Dalmatian";
+	setmonster "Dalmatian Male";
 	if player is neuter:
 		say "     Lacking a gender of your own, you doubt you'd be able to entice him into some fun until that's resolved.";
 	else if KTO is 0:
@@ -510,9 +510,9 @@ Instead of fucking Kenaz:
 					WaitLineBreak;
 					say "     But the fun doesn't stop there because just as your legs are slowly pulled down from around the head of the firefighter whose neck you had been chocking someone else takes the previous Dal's place in between your legs. Panting and gasping like a freight you watch as the other Dalmatians smirk at you before rubbing their dripping cocks into your direction.[line break]";
 					say "     An hour later you shakily find yourself being helped up off the floor by a bleary eyed Kenaz. The both are you are disheveled and dripping with cum from just about everywhere, but at the same time neither of you are all too upset about this. The plucky smirks on both of your faces speaks of just how much fun the two of you had and when Kenaz reaches down to pat at your sore ass you growl at the Dal boy to let him know that it may be his ass which will be getting stuffed by you next time if he's not careful. A cocky wink from the other lets you know that the firefighter is far from frightened of your little [italic type]threat[roman type].[line break]";
-					infect "Dalmatian";
-					infect "Dalmatian";
-					infect "Dalmatian";
+					infect "Dalmatian Male";
+					infect "Dalmatian Male";
+					infect "Dalmatian Male";
 					now lastfuck of Kenaz is turns;
 				else:
 					say "     Waving the other off you let the firefighter know that, that will be alright. 'Suit yourself, but if you ever change your mind come back around. The rest of the guys and I will treat that pussy of yours to a real fine treat if you do.' A quick flick of a long and somewhat dexterous tongue has you blushing as you try and visualize what the Dalmatian is trying to hint at.";
@@ -532,8 +532,8 @@ Instead of fucking Kenaz:
 					WaitLineBreak;
 					say "     Ten more minutes of pumping and fucking and humping later and then everything suddenly comes to a head as Kenaz as jerk as the Dalmatian lifts up his head and then sounds off his orgasm to the high heavens while bucking up against you like a wild bronco. A chain reaction is set off a second later as Kenaz's rectum grips your cock with almost crushing force making you shudder and then groan as you spill your cum into the rump of your firefighter. Underneath him Kenaz's own seed is shooting out in small arcs as one...two...four until finally seven long shots of yellowish Dalmatian ropes now paint the covers underneath the shuddering Dal boy.[line break][line break]";
 					say "     Panting and gasping while sighing in euphoric bliss you hug Kenaz closer into you before kissing the firefighter across his spotted neck. 'T-That...was real good.' Kenaz whispers and you can only nod before telling the other man how warm and comfortable his tailhole feels still gripped around you. A blush covers Kenaz's muzzle but you can't see it from as the Dal boy buries his face into his sticky covers, however, you do note that the firefighter's tail is wagging happily across your chest again.[line break]";
-					infect "Dalmatian";
-					infect "Dalmatian";
+					infect "Dalmatian Male";
+					infect "Dalmatian Male";
 					now lastfuck of Kenaz is turns;
 				else:
 					say "     Telling Kenaz that you want him to breed you, you find yourself mildly surprised when the Dal boy barks into your face and then flips you over like a ragdoll[if strength of player < 17]. This is somewhat startling to you, given the disparity between you weight and the Dalmatian's, but then again Kenaz is a firefighter so he probably knows a few tricks about how to handle prone bodies[else]. The strength of the other man is somewhat of a comfort to you and you don't have any problem being [']manhandled['] by your eager lover[end if]. When Kenaz sets himself up so that he is sitting down onto his bed with his legs folded together you have only a second to try and figure out what's going to happen next before you are treated to the Dalmatian lifting you up and then setting him down into his lap.";
@@ -548,8 +548,8 @@ Instead of fucking Kenaz:
 					say "     When a furry hand comes around to grip at [if cocks of player > 1]one of your cocks[else]your cock[end if] you freeze and then hiss as Kenaz pumps you in an effort to get you to orgasm in time with him. Arching up and then crying out to the ceiling you spill your load into the Dal boy's furry hand after Kenaz sneaks a hand down to palm at your overly nuts. A minute or so after both you and the firefighter have come down from off of the twin peaks of ecstasy both you and Kenaz collapse back against the bed, well you on Kenaz and him on the bed.";
 					WaitLineBreak;
 					say "     'T-that was real good! Want to go again?' The happy Dalmatian asks and you can only chuckle before telling Kenaz to give you a minute. When a happy bark rings out into your ears you smile tiredly as you think of how good it feels to have the other man as your lover. The pulsing throb of Kenaz's cock inside of your body has you humming almost wantonly and reaching down to rub a hand across your belly you take note that you can actually feel some of the Dalmatian's cum rolling around inside of the lower area of your guts. Times like these you come to really love how complete Kenaz makes you feel. However, in about another ten minutes you come to really love having the firefighter as Kenaz is once again riding your ass for all you're worth.[mimpregchance][mimpregchance][line break]";
-					infect "Dalmatian";
-					infect "Dalmatian";
+					infect "Dalmatian Male";
+					infect "Dalmatian Male";
 					now lastfuck of Kenaz is turns;
 	else if KTO is 2:
 		if lastfuck of Kenaz - turns < 6:
@@ -582,8 +582,8 @@ Instead of fucking Kenaz:
 					say "     When your rectum suddenly starts to squeeze at the Dal's sixteen inch cock Kenaz throws back his head to howl to the ceiling as his cock hoses down your tender insides. The force of his orgasm is so great that your [bodyname of player] belly expands to an almost disproportional size as gallon after gallon of hot Dalmatian cum gushes inside of you. Thanks to his gargantuan knot plugged up your insides of you none of his semen can come back out so when you suddenly cough and taste his salty cream on your tongue you blush and then swallow vehemently to keep the spooge from leaking from down onto the side of your lips. 'Hope I wasn't too rough on you,' Kenaz whispers after he pulls his hands away from your thoroughly soaked cunt and dribbling cock.";
 					WaitLineBreak;
 					say "     Chuckling up at your lover you nuzzle your head back against the Dalmatian while humming pleasantly up at Kenaz to let him know about how well you enjoyed his efforts just now. The firefighter chuckles in return as he wraps his arms around you tightly while licking you across the back of the head. Your belly sloshing with the dregs of the herm Dal's load you can only sigh and rest your head back against Kenaz as you soak up the minutes of relief after such a powerful experience. The warm and pleasantly full feeling coming from both your ass takes you off to sleep a few minutes later.[mimpregchance][mimpregchance][line break]";
-					infect "Dalmatian";
-					infect "Dalmatian";
+					infect "Dalmatian Male";
+					infect "Dalmatian Male";
 					now lastfuck of Kenaz is turns;
 				else:
 					say "     Shuddering and spreading your legs wide you tell Kenaz that you want his dick buried inside of your oozing snatch. The alpha Dalmatian growls happily at that and quickly makes his way up the side of your body so as to give you what you want. With his eight foot body quickly hovering over your own [bodyname of player] form you smile at the Dalmatian before watching as Kenaz takes his cock into hand and then jerks it slowly inches above your feminine folds.[line break][line break]";
@@ -601,7 +601,7 @@ Instead of fucking Kenaz:
 							WaitLineBreak;
 							say "     Everything stops for a second as Kenaz holds himself steady while your fluttering cunt lips wrap taunt around the Dalmatian's sixteen inch cock. Trembles run through your body as you hug yourself against your lover at the same time small sobs spill out from your lips, however, before Kenaz can so much as dip his head down to look at you in concern you are slowly grinding your hips into the Dalmatian's groin. 'You don't have to do that...' Kenaz whispers but you simply ignore him in favor of pulling yourself up and down his thick jet black length, teasing his expanding knot all the while.";
 							WaitLineBreak;
-							say "     When your cunt has relaxed enough that you can actually slide yourself down all the way to the tip of Kenaz's cock the Dalmatian finally gets it through his head that you want this. Muttering something under his breath the firefighter grunts and then begins to swing his pelvis back and forth to counter your own continuous thrusts up into him. It doesn't take long before both you and he are fucking each other like mad. With your [if cocks of player > 1]cocks[else]cock[end if] liberally gushing between the two of you, you find yourself blushing slightly at the sticky sounds of your [skin of player] skin smacking heavily into Kenaz's sweaty fur permeate inside of the room.";
+							say "     When your cunt has relaxed enough that you can actually slide yourself down all the way to the tip of Kenaz's cock the Dalmatian finally gets it through his head that you want this. Muttering something under his breath the firefighter grunts and then begins to swing his pelvis back and forth to counter your own continuous thrusts up into him. It doesn't take long before both you and he are fucking each other like mad. With your cock[smn] liberally gushing between the two of you, you find yourself blushing slightly at the sticky sounds of your [skin of player] skin smacking heavily into Kenaz's sweaty fur permeate inside of the room.";
 							WaitLineBreak;
 							say "     As his fat orbs knock against the divide of your legs you groan as the heated weight promises you a full load of cum, the likes of which you just know you'll be gushing out when this is all over. However, the now fully swollen knot at the end of Kenaz's guarantees something else as the thickened bulb of flesh hits you again and again and again. Every pump threatens to seen the Dalmatian's fleshy orb into your soaked depths and breathlessly you gasp while trying to drive your nether lips over the mass of flesh. When Kenaz lifts his head up to howl you think that the moment is about to end, but instead the Dalmatian grabs you by the waist, flips the both of you over so that he is now on his back, and then proceeds to drive you up and down onto his cock with the kind of force that takes your breath away.";
 							WaitLineBreak;
@@ -612,19 +612,19 @@ Instead of fucking Kenaz:
 							say "     Panting from the feel of being stuffed so completely you find yourself blinking in surprise as you feel the warmth trickling down your thighs. Tilting your head down you realize that Kenaz didn't knot you so there's no plug to keep his load into you. Therefore, minutes after everything is over with and the Dalmatian is pulling out of you, you can only dip your head into the side of your lover's neck in embarrassment as you see your firefighter's cum literally spill out of your body. Kenaz simply chuckles and lick you across the back of your neck on up to the side of your head before whispering something unintelligible into your ears.";
 							WaitLineBreak;
 							say "     The two of you are slow to clean up afterwards as Kenaz seems to want to dote over you, he makes a special play of things by licking his cum up off of your body before handing you a towel, but once you both are ready to leave the two of your head out of the sleeping area and then back downstairs together. As expected half of the station is either snickering and nodding to you in respect.[impregchance][impregchance][line break]";
-							infect "Dalmatian";
-							infect "Dalmatian";
+							infect "Dalmatian Male";
+							infect "Dalmatian Male";
 							now lastfuck of Kenaz is turns;
 						else:
 							say "     Whimpering to the firefighter to let the other know of your feeling Kenaz slowly pulls himself up out of you. Just as you think the moment is over with you get a big surprise when a cool, moist nose buries itself in between your legs. While your Dalmatian lover might not have been able to fuck you the way he might have liked Kenaz is not to let you go without unsatisfied. Raising your legs up and then burying his face into your snatch Kenaz hungrily rolls his tongue throughout your pussy. The former subby firefighter shows no hesitation as he slides his tongue into your cervix only to pull out to lay tender kisses along your labia seconds later. When familiar digits return back inside of your tailstar to begin fingering your prostate, you find yourself smiling lovingly back at Kenaz.";
 							WaitLineBreak;
-							say "     With your [if cocks of player > 1]cocks[else]cock[end if] drooling down the length of your thighs onto your balls you know that it won't be long before you make a mess of things. The roving tongue drilling up inside of your cunt doesn't help as Kenaz almost literally swallow around your nethers after he opens his mouth wide you place gentle fangs around the flutter lips of your pussy. Trying to warn the other of your emending orgasm seems to mean nothing as Kenaz grunts into your body while moving his fingers more quickly inside of you.[line break][line break]";
+							say "     With your cock[smn] drooling down the length of your thighs onto your balls you know that it won't be long before you make a mess of things. The roving tongue drilling up inside of your cunt doesn't help as Kenaz almost literally swallow around your nethers after he opens his mouth wide you place gentle fangs around the flutter lips of your pussy. Trying to warn the other of your emending orgasm seems to mean nothing as Kenaz grunts into your body while moving his fingers more quickly inside of you.[line break][line break]";
 							say "     When a playful curl of the Dalmatian's tongue slides across your inner walk you scream out loud enough to be heard downstairs as you cum with enough force that you actually jump slightly off the bed. Kenaz takes your frantic movement with good grace as he grunts and then hisses before sucking down your honeyed fluids like a dog dying of thirst. The fact that your [if cocks of player > 1]cocks are spraying their load[else]cock is spraying its load[end if] onto the Dalmatian's snout means nothing to Kenaz as he continues to slurp and lick across you feminine folds.";
 							WaitLineBreak;
 							say "     It takes about a minute for you to calm down from your spectacular climax, but when you do you find that Kenaz is pulling his head up to look at you. His muzzle is dripping with your [cock of player] cum while his neck on down is matted with your honey. 'Next time, maybe I'll get to bury my bone inside of you all the way,' Kenaz says optimistically after pulling his fingers out of you to stand himself up onto the side of his bed. You try and tell him that you'll return the favor, but he just shakes his head at you. 'Nah. Besides, I've been itchin' to bury my bone inside of [one of]Birch's tail[or]Dagaz's tail[or]one of the other guy's tails[at random].'[line break][line break]";
 							say "     Chuckling at that you shakily get up off of the bed to go and get your clothes. A tender caress along the end of your rump has you turning to look back at Kenaz just as you are about to put on your shirt. The other smirks playfully at you once before going off about his way.[line break]";
-							infect "Dalmatian";
-							infect "Dalmatian";
+							infect "Dalmatian Male";
+							infect "Dalmatian Male";
 							now lastfuck of Kenaz is turns;
 					else:
 						say "     With such a wide and deep snatch you don't have to worry over being taken too roughly as Kenaz leans himself down over you and then slips his sixteen inch Dalmatian cock into your cunt. The firefighter is grunting and growling and moan in time with you as he humps you with all of the force his body can muster. Twining your legs around him you shudder and then gasp your snatch wraps wetly around the other, pulling him further and further into you so that even the growing orb of his knot is able to pop into your depths without trouble.";
@@ -633,12 +633,12 @@ Instead of fucking Kenaz:
 						WaitLineBreak;
 						say "     When Kenaz's knot fully inflates and then attempts to lock him into you the Dalmatian gets a slight surprise when his fully hard shaft pops out of you. 'Damn you're like the ocean.' You roll your eyes up at him and then tell him that if he can't ride you to go and play in the kiddy pool. At that the firefighter growls at then buries himself back into your cunt, just this time with enough strength to make you shudder slightly. There's little mercy given, and even less expected by you, as throw your head back and ride out the [italic type]wave[roman type] that have become Kenaz's furious thrusts.";
 						WaitLineBreak;
-						say "     Bucking and moaning while rocking the bed back against the wall both you and Kenaz fuck for almost a half an hour before the Dalmatian throws up his head to howl out his orgasm. Like a torrent the firefighter's cum literally pours into your depths as Kenaz grinds his hips into your crotch to get out every drop of cum his balls have to offer. Likewise, the heat of your lover's sticky male sap makes you shiver and then moan as your climax sneaks up onto you almost without warning. Between your [if cocks of player > 1]cocks[else]cock[end if] and your cunt you shed more than a litter's worth of juice as your drench both yourself and Kenaz down in the wash of your orgasm.";
+						say "     Bucking and moaning while rocking the bed back against the wall both you and Kenaz fuck for almost a half an hour before the Dalmatian throws up his head to howl out his orgasm. Like a torrent the firefighter's cum literally pours into your depths as Kenaz grinds his hips into your crotch to get out every drop of cum his balls have to offer. Likewise, the heat of your lover's sticky male sap makes you shiver and then moan as your climax sneaks up onto you almost without warning. Between your cock[smn] and your cunt[sfn], you shed more than a liter's worth of juice as your drench both yourself and Kenaz down in the wash of your orgasm.";
 						WaitLineBreak;
 						say "     Pulling back and then driving his knot into you one more time Kenaz plugs you fully and then does a very canine-like thing. Lifting one leg up and then spinning around you Kenaz gives you his back as the Dalmatian stimulates a true canine mating tie with you. Chuckling at the act you find yourself reaching out a hand to rub along the Dalmatian's gaping slit, which looks somewhat unfulfilled. A hiss and shudder follows a groan as Kenaz lets you touch him this way. Turning his head back to look at you the other has a funny look in his eye, but you're not sure what it means.";
 						say "     It doesn't matter though because when the last of his cum has trailed out of his cock Kenaz pops himself out of your cunt and then goes about looking for a towel or something to clean off with. Leaving you as you are you rub a hand down onto your overly full belly as your snatch leaks with the sticky trails of the Dalmatian's cum.[impregchance][line break]";
-						infect "Dalmatian";
-						infect "Dalmatian";
+						infect "Dalmatian Male";
+						infect "Dalmatian Male";
 						now lastfuck of Kenaz is turns;
 			else if player is female:		[female]
 				say "     Kenaz sniffs over your form and then chuffs slightly while looking down at your [bodyname of player] form. 'Well, it seems we're more like [']sisters['] than what I would have preferred.' The Dal doesn't say much after that, but by the penetrating look in his eyes you get the feeling that he's thinking over something. 'Want to try 69ing each other?' The out of the blue question makes you blink and then smile before nodding to your lover. Kenaz whuffs in front of your face and then proceeds to get himself into position to fuck you.";
@@ -653,8 +653,8 @@ Instead of fucking Kenaz:
 				WaitLineBreak;
 				say "     When you cum you don't just orgasm, instead you shoot your honeyed juices with the kind of force that nearly drowns Kenaz as you flood the Dalmatian's snout with your honey. White hot sparks of bliss trail throughout your body turning you into a livewire as you thrust and yowl and pump yourself into the firefighter like a bull fighting to unsaddle a rider. Consequently this causes your fingers to tense and your tongue to dig on up inside of Kenaz which forces the Dal's climax and sends the herm canine right off the edge of the map. Lifting his head slightly to let out a ferocious bark, Kenaz rains his cum down onto your face, drenching you the same as you did to him.[line break][line break]";
 				say "     The both of your climaxes have to last for almost five or so minutes, however, like all good things they finally do end and quickly you and Kenaz end up slumping down onto the bed while panting like freight trains. Of course, being so much heavier, not to mention on top, Kenaz is forced to roll off of you after you tap the side of his thighs in desperation for air. 'Well,' Kenaz beings while panting hotly next to you. 'That was fun. Want to go again in about twenty minutes?' And at that point all you can do is laugh at your lover.";
-				infect "Dalmatian";
-				infect "Dalmatian";
+				infect "Dalmatian Male";
+				infect "Dalmatian Male";
 				now lastfuck of Kenaz is turns;
 			else:		[male]
 				say "     Seeing the nice piece of meat swinging between your legs Kenaz doesn't waste time as he lays himself down on top of you, gripping both of your arms to hold you steadfast onto the bed, and then begins to grind sheath and balls into your body. 'Always like doing this, hope you don't mind.' Even if you did you have the strangest sensation that the larger Dalmatian wouldn't pay you much attention if you protested as Kenaz quickly frees his cock itself from its furry home by continuing to rub himself over you while his nuts grind themselves further into the underside of your taint. Feeling the weight of the firefighter using you for his own pleasure you smirk and then lift your head back into the pillows while moaning your submission loudly up to the other.";
@@ -663,8 +663,8 @@ Instead of fucking Kenaz:
 				WaitLineBreak;
 				say "     Whuffing and panting while growling and moaning to the sky both you and Kenaz end up cumming minutes later after the other takes you by the neck and then buries his fangs into your [skinname of player] skin. His climax, in turn, triggers your own and before long both you and the herm Dal are coating each other's chests in cum as you lose yourself to each other. It only takes ten minutes before the two of you are ready to come down from your respective zeniths, but once you do, Kenaz refuses to release the side of your neck. Not sure why you look up at the other and then see the reason glowing hot inside of the Dalmatian's shining green orbs.";
 				say "     You both don't make it back downstairs for another hour or two after that.";
-				infect "Dalmatian";
-				infect "Dalmatian";
+				infect "Dalmatian Male";
+				infect "Dalmatian Male";
 				now lastfuck of Kenaz is turns;
 
 
@@ -846,9 +846,9 @@ Instead of conversing the OtherDals:
 			follow the turnpass rule;
 		else:
 			say "     Trying to charm your way through the game nets you with a few casual smirks and growls from the others as the surrounding firefighters at the table see through your psychological gameplay. Cursing as you lose your last chip almost an hour later you find yourself having to bow out of the game with a sigh while looking over the mass of chips [one of]Mannaz[or]Dagaz[or]Kenaz[or]Birch[at random] has.";
-			if bodyname of player is not "Dalmatian":
+			if bodyname of player is not "Dalmatian Male":
 				say "     Not taking things too hard you're not prepared for Pertho to come up to you to give you a quick nip on the hand all of a sudden. Swearing at the feral mutt you bring your [bodyname of player] hand up to your face to look over the angry red circlular wound now framing your hand before turning your head to growl at the smirking Dalmatian.";
-				infect "Dalmatian";
+				infect "Dalmatian Male";
 				follow the turnpass rule;
 			else:
 				say "     Othala pats you onto the back for your loss and then smirks at you before shooing you away. You can only chuckle as you see how well the pack functions amongst one another as the former female quickly barks out for the others to deal the cards. Not more than a second later Othala is smirking as she looks over the hand she's just been dealt.";
@@ -883,9 +883,9 @@ Instead of conversing the DalmatianTroupe:
 			increase score by 1;
 		else:
 			say "     Trying to charm your way through the game nets you with a few casual smirks and growls from the others as the surrounding firefighters at the table see through your psychological gameplay. Cursing as you lose your last chip almost an hour later you find yourself having to bow out of the game with a sigh while looking over the mass of chips [one of]Mannaz[or]Dagaz[or]Kenaz[or]Birch[or]Othalla[at random] has.";
-			if bodyname of player is not "Dalmatian":
+			if bodyname of player is not "Dalmatian Male":
 				say "     Not taking things too hard you're not prepared for Pertho to come up to you to give you a quick nip on the hand all of a sudden. Swearing at the feral mutt you bring your [bodyname of player] hand up to your face to look over the angry red circlular wound now framing your hand before turning your head to growl at the smirking Dalmatian.";
-				infect "Dalmatian";
+				infect "Dalmatian Male";
 			else:
 				say "     Grumbling playfully at your loss you watch as the other Dals chuckle at you before telling you to come back later to play with them again, before each of them turns their heads to look at Kenaz to ask the larger Dal if that would be alright. When the other simply nods and then gives to a [italic type]woof[roman type] you realize that the pack's alpha is going to probably have the final say in a lot of things to come during the days that follow. Whether that will be good or bad...well the jury is still out in your mind.";
 		follow the turnpass rule;

@@ -76,12 +76,15 @@ to say beatthemegakitty:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
-	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Megakitty"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The Megakitty[or]Big Momma[or]The margay[or]The huge margay[or]The massive feline[or]The Rubenesque hulk[or]The full-figured feline[at random] [one of]bashes you atop the head with her vibrator-turned-club, making your brains rattle[or]clubs you in the side with the massive sextoy[or]jabs you in the face with the base of her dripping club[or]slams her massive body into you, knocking you back[or]squeezes you against a wall with her heavy body[or]tosses her vibrator up, freeing her hands briefly to rapidly slash you with her painted claws[or]knees you in the gut before shoving you to the ground[or]slams into you and pushes you down, trying to smother you under her ample figure[or]pins to against something with the juicy vibrator. As she holds you there, her other paw gropes and fondles you roughly[in random order]!";
 	now defeated entry is "[beatthemegakitty]";
 	now victory entry is "[losetomegakitty]";
@@ -106,7 +109,7 @@ When Play begins:
 	now HP entry is 98; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

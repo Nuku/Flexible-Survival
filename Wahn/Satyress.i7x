@@ -22,7 +22,7 @@ to say Satyress wins:
 			say "     As you give up and raise your hands in a consoling gesture, the satyress dances closer on lithe hooves and plants a kiss on your cheek. 'I knew you'd come around! Who wouldn't want all this...' she says in a happy giggle, taking both your hands and running them up her naked chest, moving them to cup her breasts. Animating you to fondle and stoke her perky boobs, the satyress meanwhile gets busy on your clothes - quickly loosening them and pulling them off you one by one. Soon, you're bare-ass naked in front of her, your pussy slightly swollen and moist from all her groping and touching. Next, the satyress takes you by the hand to walk a few steps on the green grass between the campus buildings and directs you to lie down.";
 		else:
 			say "     As you give up and raise your hands in a consoling gesture, the satyress dances closer on lithe hooves and plants a kiss on your cheek. 'I knew you'd come around! Who wouldn't want all this...' she says in a happy giggle, taking both your hands and running them up her naked chest, moving them to cup her breasts. Animating you to fondle and stoke her perky boobs, the satyress meanwhile gets busy on your clothes - quickly loosening them and pulling them off you one by one. Soon, you're bare-ass naked in front of her, your body all tingly from all her groping and touching. Next, the satyress takes you by the hand to walk a few steps on the green grass between the campus buildings and directs you to lie down.";
-		say "     As soon as you're stretched out on the ground, the very eager satyress steps over you and starts to crouch down, bringing her crotch into position just above face. It is clear what she wants, so you start licking over her folds and teasing the young woman's clit with your tongue. Your oral service soon expands into involving your fingers too, stroking her nether lips, then pushing one and another into her vagina, spreading and caressing her inner passage. Pleasing this attractive woman has your own libido rising to new heights, [if player is female]your cunt drippingly wet[else]your whole body tingling[end if], but you find yourself so drawn into servicing her that you don't really have time to take care of yourself.";
+		say "     As soon as you're stretched out on the ground, the very eager satyress steps over you and starts to crouch down, bringing her crotch into position just above face. It is clear what she wants, so you start licking over her folds and teasing the young woman's clit with your tongue. Your oral service soon expands into involving your fingers too, stroking her nether lips, then pushing one and another into her vagina, spreading and caressing her inner passage. Pleasing this attractive woman has your own libido rising to new heights, [if player is female]your cunt dripping wet[else]your whole body tingling[end if], but you find yourself so drawn into servicing her that you don't really have time to take care of yourself.";
 		say "     After a long while of eating out your half-goat partner's pussy, as well as fingering her and rubbing her clit, the sexy student's moaning and panting eventually rises higher until culminating in an almost shouted climax. With her hands holding your head tight against her crotch, the satyress comes, squirting splashes of femcum over your face and bucking her pussy against your wiggling tongue. Once her arousal starts to wind down again slowly, she pulls away from you and grabs her fallen cup, crawling over to it on all fours and also stopping a few times to show her messy pussy, still dripping with fluids. Looking over her shoulder and giving you a wink, the satyress says, 'Thanks! I really needed that. See you again soon, I hope!' And with that, she stands up and dashes off, looking to find a refill of wine.";
 
 To say Satyress loses:
@@ -67,7 +67,7 @@ to say SatyressSexSelection:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -87,14 +87,14 @@ to say SatyressSexSelection:
 				if (nam is "Tell her to get on her knees and service you"):
 					say "[SatyressFuck4]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the bare-breasted young woman, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -127,17 +127,20 @@ to say SatyressFuck4:
 
 to say SatyressDesc:
 	setmongender 4;
-	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from his forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?[or]Hey come join the party![or]You look like you need to lighten up![at random]' she says, dancing forward nimbly on his goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
+	say "     You hear the light clatter of hooves on the sidewalk behind you and on turning around see a young woman walk up towards you on goat-like legs. Indeed her whole lower body appears to be that of a goat and she has two small curved horns protruding from her forehead. The rest of her body is fully human, and fully female too, which you get quite an eyeful of as she doesn't wear clothing. Smooth pale skin complements her blond hair exceedingly well, her perky breasts are a sight to behold and surrounded by the blond curls of her leg-fur, the college student even shows off her pussy to anyone wanting to take a look. After your time spent in the Phi Alpha Nu frat-house, you have no problem recognizing her as a satyr. And a horny, slightly drunk one at that - she carries a red plastic cup full of sloshing liquid and has an aroused gleam in her eyes. '[one of]Hey there! Care for a bit of wine?' [or]Hey come join the party!' [or]You look like you need to lighten up!' [at random]she says, dancing forward nimbly on her goat-like hooves. Doesn't seem like she wants to listen to anything you might have to say, as she's got her eyes on your body the whole time.";
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Satyress";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She splashes you with some wine from her cup, giggling as the red liquid trickles down over your body.[or]She grins and whirls around, showing off her body with a wiggle off her ass. Your eyes are almost hypnotically drawn to where the pale soft skin of her back leads over to a very perky pair of buttocks, covered in the blond curls of her fur.[or]Her enticing goat-like musk distracts you for a minute as she dances around you.[or]Dancing around nimbly on her goat hooves, the satyress comes up close, brushing against your body and giving you a squeeze.[or]The satyress pulls out pipes from... somewhere, and starts to play a little tune. To your surprise you can't help but dance a little along with the music.[at random]";
 	now defeated entry is "[Satyress loses]";
 	now victory entry is "[Satyress wins]";
@@ -148,7 +151,7 @@ When Play begins:
 	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "your feet shift underneath you, cracking and fusing into large goat-like hooves as your legs assume a digitigrade stance. After a minute you find it almost natural to balance on your new appendages, and are surprised at how nimble they are, the fact that your upper body has become that of a slender and flexible young woman seems almost secondary to your new satyr's legs"; [  format as "Your body feels funny as (your text)." ]
+	now body change entry is "your feet shift underneath you, cracking and fusing into large goat-like hooves as your legs assume a digitigrade stance. After a minute you find it almost natural to balance on your new appendages, and are surprised at how nimble they are, the fact that your upper body has become that of a slender and flexible young woman seems almost secondary to your new satyr's legs"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your upper body's skin becomes very light, pale and smooth, while your lower body erupts with cute little curls of blond fur"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a small little goat-like tail bursts forth, settling in comfortably over your parky ass"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your aching member grows tight as it fits itself into a goat-like sheath hanging between your legs your balls hanging low below"; [ format as "Your cock feels funny as (your text)." ]
@@ -175,7 +178,7 @@ When Play begins:
 	now libido entry is 30;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "Satyress Wine";    [ Loot monster drops, ]
 	now lootchance entry is 30;           [ Chance of loot dropping 0-100 ]
-	now scale entry is 2;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]satyress[or]mythological[at random]";
 	now magic entry is true;

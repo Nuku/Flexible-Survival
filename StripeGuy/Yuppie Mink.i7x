@@ -13,15 +13,15 @@ ymgmode is a number that varies. ymgmode is usually 1.
 
 to say ymgdesc:
 	choose row monster from the table of random critters;
-	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+	if (guy is banned or guy is warded) and (girl is banned or girl is warded):		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     Your wandering feet bring you close enough to see an aristocratic mink, albino or just royal white, puttering around the deck of their yacht. With a haughty sniff, they turn their nose up at you and vanish belowdecks.";
 		blank out the whole row;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now ymgmode is 0;
-	else if guy is banned:
+	else if guy is banned or guy is warded:
 		now ymgmode is 1;
-	else if girl is banned:
+	else if girl is banned or girl is warded:
 		now ymgmode is 2;
 	else if a random chance of 1 in 2 succeeds:
 		now ymgmode is 1;
@@ -105,12 +105,15 @@ to say beattheymguy:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Yuppie Mink";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[ymgfight]";
 	now defeated entry is "[beattheymg]";
 	now victory entry is "[losetoymg]";

@@ -6,7 +6,7 @@ Version 5 of Medical Checkups by Stripes begins here.
 Section 1 - Pediatrics Office
 
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and south wall, jagged edges making the going difficult, but passable.".
-Pediatrics Lobby is a room. "The lobby for one of those medical clinics people go to find a doctor. This is the lobby, or was. The cushy seats are shattered, the wood splintered, and the floor cracked and gouged by huge claws. Cum lies everywhere, and you have to pick your way through the room carefully. The doors to the inner area are still shut and locked. Battered, but intact. Maybe there is someone hiding out there?".
+Pediatrics Lobby is a room. "You're in the lobby of a pediatrics clinic, surrounded by utter chaos. The formerly cushy seats have been ripped apart, their stuffing lying in heaps on the ground and even the wooden frames smashed to pieces. Claw-marks gouge the floor and walls. Patches of dried cum are almost everywhere, with even a steak of it on the ceiling. This makes moving around in here somewhat of an obstacle course, unless you want to step in something. A pair of metal doors to the deeper rooms of the clinic are still intact, battered but apparently resistant enough to ward off whatever creature or creatures did all this.".
 Pediatrics Lobby is fasttravel.
 The earea of Pediatrics Lobby is "Outside".
 Pediatrics door is dangerous.
@@ -21,7 +21,7 @@ the scent of the Doctors Office is "The doctor's office smells of antiseptic and
 the scent of Pediatrics Lobby is "With the numerous cum stains here, it hard to smell anything but that.".
 
 instead of going north from the Pediatrics Lobby while ( HP of doctor medea is 0 and medeaget is 0 ):
-	say "Examining the door to the north, you can hear some movement behind it and decide to risk knocking, asking if they need any assistance. 'Thank you, no. I've already been quite thoroughly taken care of, I think,' a female voice responds. Clarifying that you are a survivor and that you meant if they needed any help in there, you can hear the sounds of heavy objects being pushed aside, allowing you entrance. 'Well, perhaps I can be of assistance to you, then,' the voice responds. The female voice does seem a little strange and you pick up the sound of clicking claws as she moves around inside, making you reconsider actually going in.";
+	say "Examining the door to the north, you can hear some movement behind it and decide to risk knocking, asking if they need any assistance. 'Thank you, no. I've already been quite thoroughly taken care of, I think,' a female voice responds. Clarifying that you are a survivor and that you meant if they needed any help in there, you can hear the clatter of a bundle of keys, then the click of the door being unlocked, allowing you entrance. 'Well, perhaps I can be of assistance to you, then,' the voice responds. The female voice does seem a little strange and you pick up the sound of clicking claws as she moves around inside, making you reconsider actually going in.";
 	now HP of doctor medea is 1;
 
 Section 2 - Doctor Medea
@@ -43,7 +43,7 @@ The conversation of Doctor Medea is { "Babies!" }.
 
 instead of conversing the Doctor Medea:
 	if medeaget is 0:
-		say "     Doctor Medea is a relatively human lizard, clothed, with multicolored scales[if park entrance is known]. You suspect she got caught in the park initially[else]. You wonder where she got such an interesting infection[end if]. 'Hello. I am Doctor Medea. I used to work here, and am only still here because the monster that broke in was too dumb to think of doors as an entrance. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. Perhaps I could help you with something?' she asks with a helpful smile.";
+		say "     Doctor Medea is a relatively human lizard, clothed, with multicolored scales[if park entrance is known]. You suspect she got caught in the park initially[else]. You wonder where she got such an interesting infection[end if]. 'Hello. I am Doctor Medea. I used to work here, and am only still here because the monster that broke in was too dumb to read the [']Pull['] sign on the doors and just tried to ram its way in. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. Perhaps I could help you with something?' she asks with a helpful smile.";
 	else:
 		say "     You approach Doctor Medea again. All that is different is there is now a darker line running down her skirt to where some whitish cum is dripping. It looks like she came in herself, since the door is still dust covered except for your marks. 'Have you come looking for some help with your pregnancy needs?' she asks with more interest than a doctor perhaps should.";
 	if HP of Doctor Matt is 20:
@@ -489,7 +489,7 @@ to say medeaadjustments:
 						repeat with y running from 1 to number of filled rows in table of fucking options:
 							choose row y from the table of fucking options;
 							say "[link][y] - [title entry][as][y][end link][line break]";
-						say "[link]100 - Nevermind[as]100[end link][line break]";
+						say "[link]0 - Nevermind[as]0[end link][line break]";
 						while sextablerun is 0:
 							say "Pick the corresponding number> [run paragraph on]";
 							get a number;
@@ -510,14 +510,14 @@ to say medeaadjustments:
 									decrease carried of healing booster by 1;
 									increase carried of cunt pill by 1;
 								wait for any key;
-							else if calcnumber is 100:
+							else if calcnumber is 0:
 								say "Break off the conversation?";
 								if player consents:
 									now sextablerun is 1;
 									say "     You shake your head, stating that you can't afford to part with your medical supplies. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
 									wait for any key;
 								else:
-									say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+									say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 							else:
 								say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 					clear the screen and hyperlink list;
@@ -758,7 +758,7 @@ to say cunt pill use:
 [ 2 = Found truck		]
 [ 3 = Gave med supplies	]
 
-[ lust of doctor Medea  ]
+[ lust of Doctor Medea  ]
 [ Heat manipulation		]
 [ 0 = Not discussed		]
 [ 1 = Discussed heats	]

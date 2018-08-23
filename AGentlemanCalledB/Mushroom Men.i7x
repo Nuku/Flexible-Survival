@@ -38,13 +38,16 @@ to say MushroomMenFaceTF:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mushroom Men"; [ Infection/Creature name. Capitalized. ]
+	now name entry is "Mushroom Man"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "Mushroom Men";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The group cheers as several of their members run out towards you, shouting lewd comments and offers as they strikes at your lower body.[or]Several of the larger mushrooms grab one of their smaller brethren and toss him at you. [']How [']bout a kiss hun?['] shouts the flying mushroom man, just before he bounces off your face.[or]Several of the larger mushrooms grab one of the smaller members of their group and fling him at you, much to his disapproval. He makes several rude comments and gestures at his brethren as he flies through the air before bouncing off the top of your head.[or][']Why don't you let us show you a good time hot stuff?['] one of the mushrooms asks with a smirk, before several of them leap out of the pack and grab onto your legs, pinching and squeezing you wherever they can.[or]There is a sharp wolf whistle behind you, and you realize some of the group have split off to flank you. Before you have a chance to react several fungi from each group are launched into the air towards you. While most of them miss their target, one lands safely on your shoulder, grabbing your face and pulling you into a rough kiss before you can shake him off.[at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheMushroomMen]"; [ Text when monster loses. ]
 	now victory entry is "[losetoMushroomMen]"; [ Text when monster wins. ]
@@ -53,12 +56,12 @@ When Play begins:
 	now body entry is "that of a small mushroom person, with a slim[if player is female], feminine[end if] build and compact features. You are roughly three and a half feet tall from the ground to the top of your [if player is mushroomfaced]cap[else]head[end if]. While your hands are still mostly human, with the notable exception of your missing fingernails, your feet have lost much of their definition, leaving them looking not unlike the stalk of a mushroom"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "pale, spongy"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
 	now tail entry is "Despite its tight appearance, your cute little ass is actually quite soft and spongy feeling[if player is mushroombodied], much like the rest of your mushroom body[end if]."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "mushroom shaped"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now cock entry is "mushroom-shaped"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
 	now face change entry is "[MushroomMenFaceTF]"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "the world seems to enlarge around you. As your body continues shrinking you gain a slim[if player is female], feminine[end if] build, leaving you with a small, but mostly human looking form. Just as you think your changes are coming to an end, you find yourself struggling to stay upright as new changes begin in your feet. They rapidly lose their definition as they reshape into round, bulbous shapes, leaving them looking much like the stalk of a mushroom"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "any blemishes and hair are swept away. Slowly the color drains out of you, leaving you with smooth, pale, mushroom-like flesh"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it pulls into a small, tight form"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "it shifts to a vaguely mushroom-like shape, with a bulbous mushroom cap shaped head and a smooth stalk-like shaft"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now cock change entry is "it shifts to a vaguely mushroom-like shape, with a bulbous, mushroom cap-shaped head and a smooth, stalk-like shaft"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 15; [ These values may be used as part of alternate combat.]

@@ -46,7 +46,7 @@ to say RichardTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -62,16 +62,16 @@ to say RichardTalkMenu:
 				if (nam is "College"):
 					say "[RichardCollege]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, causing a confused look to form on Richard's face. He shrugs before getting back to work on his essay.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RichardSatyr:
@@ -126,7 +126,7 @@ to say RichardSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -148,23 +148,23 @@ to say RichardSexMenu:
 				if (nam is "Take Richard's shaft in your ass"):
 					say "[RichardSex5]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head and decide against sexing up the satyr boy.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RichardSex1:
 	say "     Spotting the dildo on the floor you pick it up and hide it behind your back. You walk up to Richard and get on your knees. The satyr boy looks down at you with a curious glance. 'Come on stop it, I need to finish my essay,' he whines. You ignore him rather easily and unbutton his cargo shorts revealing that he goes commando, his dick popping out and hitting you in the face. With your hot breath on his hard cock it makes it more and more difficult for the male to focus on his homework. With a mischievous idea, you promptly swallow the tip of his manhood into your mouth. As soon as you do this you can smell his manly musk[if player is female], making your pussy wet[else if player is male], making your cock rock hard[end if]. You inhale the scent and moan loudly on his cock.";
 	say "     Poor Richard is trying very hard to ignore your wonderful blowjob skills but you can tell that he is failing by the fact that the tappity tap tap of his keyboard has slowed down significantly. Seeing your chance you pull his shorts the rest of the way down and position a finger at his pucker. Before the satyr can protest, you penetrate his anal ring with your digit. The gesture makes him utter a moan and you swear he has slammed his hand on his keyboard. Simultaneously you give him a blowjob and finger him, quickly adding a second digit to his hole. It doesn't take you long to find his prostate, when appears to make him thrust deeper into your mouth. However, this is not what you had planned so you promptly remove your fingers and take your hidden surprise from behind your back.";
 	WaitLineBreak;
-	say "     Instantly you shove the dildo up his ass, making him bleat with pleasure. By now he is only able to focus on the sensations of you sucking his cock and fucking him with the toy. You make sure to angle your thrusts with the phallic shaped instrument so that you hit his prostate every time. Briefly you look up and see Richard leaned back in his chair, eyes rolled up and tongue lolling out in pleasure as you fuck him silly with the dildo. On top of that you make sure to deep throat his cock as much as you can, inhaling his manly musk the entire time. By now, the satyr boy is spilling copious amounts of precum into your gullet, something that makes you moan in ecstasy. It doesn't take long for the both of you to reach your climax.";
+	say "     Instantly you shove the dildo up his ass, making him bleat with pleasure. By now he is only able to focus on the sensations of you sucking his cock and fucking him with the toy. You make sure to angle your thrusts with the phallic-shaped instrument so that you hit his prostate every time. Briefly you look up and see Richard leaned back in his chair, eyes rolled up and tongue lolling out in pleasure as you fuck him silly with the dildo. On top of that you make sure to deep throat his cock as much as you can, inhaling his manly musk the entire time. By now, the satyr boy is spilling copious amounts of precum into your gullet, something that makes you moan in ecstasy. It doesn't take long for the both of you to reach your climax.";
 	say "     Richard's orgasm is rather instantaneous, shooting his jizz down your throat. However, you make sure to pull back to let some of it pool in your mouth. You on the other hand, feel a lot of pleasure shoot through your lower half[if player is female], causing you to orgasm violently, juices spilling from your pussy[else if player is male], causing your rock hard cock to cum violently, spilling your seed on the satyr's carpet[end if]. In his post-coitus bliss, the male pulls you up quickly and kisses you roughly, making sure to taste some of his own sperm. About a minute later the two of you pull back, a trail of cum linking your mouths together. Wiping it off, he smiles and thanks you. 'You were pretty damn good and I loved the use of my favorite toy,' he says, winking seductively at you. He then apologizes and tells you that he really needs to get back to work. Shrugging your shoulders you leave him be.";
 	now lastfuck of Richard is turns;
 

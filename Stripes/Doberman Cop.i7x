@@ -27,9 +27,9 @@ to say Dobermandesc:
 	now wdam entry is 10 + ( debit / 4 );
 	if dobielibido < 0:
 		say "     The female Doberman cop has found you again and growls firmly for you to halt and be searched. She strides over with confidence, a determined look upon her long muzzle. It doesn't appear like she's yet recognized you, seeming too focused on being the cop to realize that you've met before.";
-		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average sized rack on her under her shirt.";
+		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
 	else if dobielibido < 50:
-		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched. In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average sized rack on her under her shirt.";
+		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched. In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
 		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
 			say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
 		else:
@@ -373,6 +373,7 @@ to say beatthedobie1:			[low-lust cop player victory]
 			if player consents:
 				if player is male:
 					say "     You grab the dog-woman's hip and pull her ass up as you move atop her. A small part of her seems to still want to resist for a moment before giving in and she grinds her sexy bottom against your throbbing cock, her tail wagging excitedly. She moans and yips as you thrust into her, pounding away at her doggy cunt. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You fuck the policewoman bitch, making her cum repeatedly before you blast your hot load deep inside her. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
+					increase AlexandraCreampieCount by 1;
 					increase dobielibido by 20;
 				else:
 					say "     You grab the dog-woman's hip and pump your fingers into her faster. As a small part of her seems to want to resist for a moment before giving in and she presses her sexy bottom back against your stroking digits, her tail wagging excitedly. She moans and yips as you alternate between pumping your fingers into her doggy cunt and teasing her clit. Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released. You finger-fuck the policewoman bitch, making her cum repeatedly while working a few fingers into yourself with your free hand. As her final, powerful orgasm washes through her, she collapses to the ground, passing out after her much-needed release.";
@@ -408,6 +409,7 @@ to say beatthedobie2:			[mid-lust cop player victory]
 		if calcnumber is 1:
 			if player is male:
 				say "     Stroking your stiff cock, you grab the Doberman and pull her up. With her eyes locked hungrily on your hard penis, she obediently lets you push her over to a nearby wall. You get her to spread herself against the wall like a criminal and are pleased as she does so and even offers her ass to you, tail raised and tongue lolling out of her mouth. You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger. She yips and wags her tail, grinding back against your touch. Deciding she's had enough and that you'd rather get on to the main event, you line your cock up with her dripping slit and drive your throbbing cock into her. The canine officer barks and moans as you fuck her, lost in her lust for sex. You take perverse delight in seeing the once upstanding policewoman debase herself in her need for your cock. And you don't disappoint, cumming hard into her, pumping a hot and heavy load into the increasingly slutty bitch. When you're finished, you pull out, leaving her slumped against the wall in a pool of sexual fluids.";
+				increase AlexandraCreampieCount by 1;
 				increase dobielibido by 24;
 			else:
 				say "     Grabbing the Doberman female roughly, you pull her up and over to a nearby well, moaning in need as she lets you manhandle her. You order her up against the wall, spreading her arms and legs and telling her it's time for her cavity search. You are pleased as she lets you spread her like a criminal and even offers her ass to you, tail raised and tongue lolling out of her mouth. You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger. She yips and wags her tail, grinding back against your touch. Deciding she's had enough teasing and that you'd rather get on to the main event, you slide your fingers back down across her taint then dive a pair of them into her dripping snatch. The canine officer barks and moans as you finger-fuck her, lost in her lust for sex. You take perverse delight in seeing the once upstanding policewoman debase herself in response to you, working to make her cum repeatedly while working a few fingers into yourself with your other hand. After a powerful, final orgasm overwhelms her, she slides down to the ground and you leave her slumped against the wall in a pool of sexual fluids.";
@@ -444,6 +446,7 @@ to say beatthedobie3:			[high-lust cop player victory]
 			if player is male:
 				say "     Stroking your stiff cock, you move overtop of the doggy girl and let it brush against her wet folds. 'Does the bad doggy want her bone?' you ask, drawing a canine whimper and an eager nod from her. 'Then you guide it in,' you tell her, putting her paw on your [cock size desc of player] [cock of player] shaft. She strokes your maleness with her fingers before moving to get it lined up. 'Mmm... that's right. You're a bad dog, aren't you? My. slutty. bad. doggy. bitch.' you tell her, thrusting into her hot and juicy cunt to punctuate each word. She releases a few panting yips of pleasure in response as you fuck her.";
 				say "     You take your time with her, fucking her long and hard to really savor the cop's descent into lust. She moans and pants as you thrust into her, her tongue lapping over your face and even eagerly kissing you, diving her long canine tongue into your mouth. With her legs wrapped around your waist and her arms around your [bodytype of player] torso, she pulls you into every thrust, making sure you pound her good and hard like her body craves. The very cravings you've spent so long in getting her to release. With the image of how much you've changed this once stuffy cop into a horny slut in your mind, you drive hard into her again and cum. As your hot load shoots into her, she arches her back and orgasms with a howl of release. Her small claws dig into your shoulders and scratch down your back as her much-needed orgasm comes. When you're finished, you pull out and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
+				increase AlexandraCreampieCount by 1;
 				increase dobielibido by 1;
 			else:
 				say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears. You brush your fingertips over her wet folds. 'Does the bad doggy's bitch pussy need attention?' you ask, drawing a canine whimper and an eager nod from her. 'Then let me see you lick yourself like a proper bitch,' you order, giving her head a push towards her crotch. She only hesitates briefly before bending around like a normal dog and nuzzling at loins, giving her pussy a slow lick before diving her tongue into herself while you watch the show. 'Mmm... that's right. You're a bad dog, aren't you? My slutty bad doggy bitch,' you add, stroking her ears and petting her side.";
@@ -493,18 +496,21 @@ to say beatthedobie3:			[high-lust cop player victory]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Doberman";
+	now enemy title entry is "Doberman Cop";
+	now enemy name entry is "Alexandra";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[dobermanattack]";
 	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
 	now face entry is "that of a cunningly handsome looking Dobie"; [ Face. Format as Your face is [face of player]. ]
-	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog"; [ Body. Format as "Your body is [body of player]." ]
+	now body entry is "fit and toned without a trace of fat anywhere in sight, not to mention pecs that bulge out almost half an inch from your chest and torso with, count [']em, eight hard and cut abs. You are definitely a stud of a dog"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
 	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in color and curved upwards."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson colored[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]

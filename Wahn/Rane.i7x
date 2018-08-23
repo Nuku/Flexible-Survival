@@ -69,10 +69,10 @@ Instead of resolving a Rooftop Rumble:
 		LineBreak;
 		challenge "Human Gangmember";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-			say "     Unable to withstand the assailants blows, you collapse against the dumpster, the man continuing to whack you with the baton a few more times for good measure. Still conscious, you become aware of him sifting through your belongings. After a short while he seems done and let's out a humorous sigh. 'Huh. Go figure, I guess you really were just a random moron. Oh well. Let this be a lesson to you about curiosity and dead cats and all that.' He wickedly grins and moves on his way. After some time you manage to gather yourself up and leave the alley and continue on your way, having learnt quite a painful lesson indeed.";
+			say "     Unable to withstand the assailants blows, you collapse against the dumpster, the man continuing to whack you with the baton a few more times for good measure. Still conscious, you become aware of him sifting through your belongings. After a short while he seems done and lets out a humorous sigh. 'Huh. Go figure, I guess you really were just a random moron. Oh well. Let this be a lesson to you about curiosity and dead cats and all that.' He grins wickedly and moves on his way. After some time, you manage to gather yourself up and leave the alley to continue on your way, having learnt quite a painful lesson indeed.";
 			now HP of Rane is 3;
 		else if fightoutcome >= 30:[fled]
-			say "     Taking your legs under your arms, you dash out of the alley and manage shake your human attacker after a while. Well, one thing is certain - it seems like you're not the only one interested in the big blue guy you saw...";
+			say "     Taking your legs under your arms, you dash out of the alley and manage to shake your human attacker after a while. Well, one thing is certain - it seems like you're not the only one interested in the big blue guy you saw...";
 			now HP of Rane is 3;
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Deflecting the blows from your human assailant's baton, you manage to grapple his arm and fling him head first into the side of the dumpster, sending the weapon flying far away. He slumps to the ground against the wall and you decide to see if he's still in a chatty mood. Sadly, the blow on the head seems to have knocked his marbles around a bit, so all you get is a slurred '...they said... anyone who asks about devil... make them talk...' before the falls unconscious. Even more curious than before, you regard the comatose body of the assailant and decide to search him. There's not much on him at first glance, though you do acquire a bottle of water and some chips. In one of his pockets however is something really interesting - a bunch of blurry photos.";
@@ -201,12 +201,15 @@ Instead of resolving a The blue Oni:
 	now The blue Oni is resolved;
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Human Gangmember"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The young man gives you a kick.[or]He smacks his baton into your side.[or]You get hit in the face by the human's elbow.[or]He tries to knee you in the groin - even though you manage to turn in the last moment, it still smarts as his knee hits your leg.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
@@ -254,12 +257,15 @@ When Play begins:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Blue Oni"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "Rane";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "<should not fight>";
 	now defeated entry is "<should not fight>";
 	now victory entry is "<should not fight>";
@@ -325,6 +331,7 @@ instead of sniffing Rane:
 
 instead of conversing the Rane:
 	LineBreak;
+	project the Figure of Rane_face_icon;
 	say "What do you want to talk with Rane about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -361,7 +368,7 @@ instead of conversing the Rane:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -383,14 +390,14 @@ instead of conversing the Rane:
 				else if (nam is "Eric"):
 					say "[RaneTalk5]";
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "[bold type]Break off the conversation?[roman type][line break]";
 			if player consents:
 				now sextablerun is 1;
 				say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -517,7 +524,7 @@ Instead of fucking Rane:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -543,21 +550,21 @@ Instead of fucking Rane:
 						say "[RaneSex6]";
 					wait for any key;
 					now lastfuck of Rane is turns;
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "[bold type]Break off?[roman type][line break]";
 				if player consents:
 					now sextablerun is 1;
 					say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
 				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 
 to say RaneFirstFuck:
 	say "     You breathe in deeply then step up to Rane, pressing the lock of his belt, then watch it and the fabric around his hips fall to the ground. The blue oni gives a pleased sigh at your initiative, confidently standing bare-ass naked before you and allowing you to take in all of him. Under a thick bush of spiky white pubic hair, Rane's respectably big manhood dangles down between those chiseled legs of his - or at least at first it does. Reveling in your attention, the blue man's shaft rises and expands, getting harder and longer by the moment. Starting out big, it really becomes quite a sight to behold - thick and long to match the scale of the rest of him. For a moment you think it might not stop growing, but then it finally reaches its full extension, now standing erect pointing at you in a slight upward angle.";
-	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
+	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball-sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
 	WaitLineBreak;
 	say "     'Time to fuck,' Rane grunts, taking hold of you with a firm and somewhat rough grip. In a swift move, you're turned around and find yourself slumped over a stone railing. Looking up, you notice the shrine's round bronze mirror right in front of you, allowing you to see the blue oni standing not far away. He grins at your reflection, turning sideways to allow you to see him stroke his massively long and hard shaft past your own mirror image, then he takes position right behind you. You can feel the warmth of his manhood resting against your lower back, then slide deeper to nestle between your buttcheeks as Rane moves a bit. While playfully slapping his cock against your cheeks, he gathers a bit of spit and puts it on a hand, rubbing it over his shaft a moment later. The oni gropes your cheeks with both hands, then pulls them apart and sets the bulbous head of his manhood against your pucker.";
 	say "     Looking up at Rane's face as he tightly grips your hips, you for the first time see and feel his full inhuman nature and are reminded that oni are demons in Japanese mythology. There is something bestial about the wide, fang-showing grin on Rane's face, only strengthened by the way his eyes are glowing right now and the fact that there's a deep and lusty growl coming from him chest. Maybe giving yourself into the hands of this powerful and sexual beast wasn't such a great idea after all, a tiny tiny voice speaks up through the haze of sexual need in your mind. Too late, as in that very instant, the blue oni thrusts into you in a fluid move...";
@@ -593,7 +600,7 @@ to say RaneFirstFuck:
 
 to say RaneSex1: [player sucks him]
 	say "     Rane smiles broadly as he sees the lusty gleam in your eye and says 'Can't get enough of my cum, can you?' The tall oni waits for you to approach with his hands on his hips, humming in satisfaction as you rub his crotch, then let your hands wander to the release of his belt. With a quick push, the flexible metal band falls away, immediately followed by the now no longer secured white fabric of his loincloth. Now confidently standing bare-ass naked before you, the blue man allows you to take in all of him and even sinuously moves his hips a bit to show off. Under a thick bush of spiky white pubic hair, Rane's respectably big manhood dangles down between those chiseled legs of his - or at least at first it does. Reveling in your attention, the blue man's shaft rises and expands, getting harder and longer by the moment. Starting out big, it really becomes quite a sight to behold - thick and long to match the scale of the rest of him. For a moment you think it might not stop growing, but then it finally reaches its full extension, now standing erect pointing at you in a slight upward angle.";
-	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball sized testicles. With your eyes firmly riveted to his crotch, you don't notice the large oni putting his hands on your shoulders until he pushes down to get you to kneel, that is.";
+	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball-sized testicles. With your eyes firmly riveted to his crotch, you don't notice the large oni putting his hands on your shoulders until he pushes down to get you to kneel, that is.";
 	WaitLineBreak;
 	say "     Now eye-to-eye with his impressive manhood, you reach out and take the hard and throbbing cock into your hand, then bring your mouth forward and start licking and kissing at it, enjoying the satisfied grunts lithe blue demon. 'Yeah, lick the underside. Really wrap your tongue around it. Good little cocksucker...' You play your tongue across his blue shaft and up to his dark purple glans several times, lapping up the copious amounts of precum Rane is leaking. [one of]After nuzzling down to his balls and licking his firm sac[or]While rolling his hefty, softball-sized balls around in your hand[or]After a few teasing nibbles along his throbbing member[at random], you feel the oni's large hand on your head suddenly, pulling you back so he can point his massive cock right at your mouth.";
 	say "     A second later, he slowly but firmly pulls you towards it, allowing you just enough time to open your mouth wide and slide its stretched lips over his glans. The sexy oni releases a long groan of pleasure as he feels you going down on him, softening his grip, then letting go as you take the hint and start bobbing up and down a bit. You work your lips further down over his cock each time, taking his thick meat down your throat while your tongue plays along it. It is slow going at first given its size, but you manage to get it all in somehow. After taking a moment to enjoy the fullness in your mouth and throat, you really get to work on sucking that pulsing rod.";
@@ -633,7 +640,7 @@ to say RaneSex3: [player pussy licked]
 
 to say RaneSex4: [player pussy fucked]
 	say "     You breathe in deeply then step up to Rane, pressing the lock of his belt, then watch it and the fabric around his hips fall to the ground. The blue oni gives a pleased sigh at your initiative, confidently standing bare-ass naked before you and allowing you to take in all of him. Under a thick bush of spiky white pubic hair, Rane's respectably big manhood dangles down between those chiseled legs of his - or at least at first it does. Reveling in your attention, the blue man's shaft rises and expands, getting harder and longer by the moment. Starting out big, it really becomes quite a sight to behold - thick and long to match the scale of the rest of him. For a moment you think it might not stop growing, but then it finally reaches its full extension, now standing erect pointing at you in a slight upward angle.";
-	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
+	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball-sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
 	WaitLineBreak;
 	say "     'Time to fuck,' Rane grunts, taking hold of you with a firm and somewhat rough grip. In a swift move, he pushes you over to one of the reading areas of the library and bends you over a sofa. Just a moment later, you start feeling the warmth of his erect manhood resting against your lower back, then sliding deeper to nestle between your buttcheeks. While playfully slapping his cock against your cheeks, he gathers a bit of spit and puts it on a hand, rubbing it over his shaft. The oni gropes your cheeks with both hands, then pulls them apart and sets the bulbous head of his manhood against your pucker, teasingly pressing against it before repositioning himself lower, right at your by now open and wet pussy lips. A second later, the blue oni thrusts into you in a fluid move...";
 	say "     ...you can't help but gasp at Rane's sudden entry, feeling so good - so full from one moment to the next. His monstrously big, throbbing presence fills a void deep inside you that you didn't know you had, making it hard to imagine not feeling the pleasures of having your passage stretched around him. He really went all in, bottoming out inside you instantly, for you can feel his hips and the hair of his pubes right against your rear. And deep inside you, the very tip of his manhood nudges against your cervix, giving you a strange but pleasurable tingle.";
@@ -646,7 +653,7 @@ to say RaneSex4: [player pussy fucked]
 
 to say RaneSex5: [player ass fucked]
 	say "     You breathe in deeply then step up to Rane, pressing the lock of his belt, then watch it and the fabric around his hips fall to the ground. The blue oni gives a pleased sigh at your initiative, confidently standing bare-ass naked before you and allowing you to take in all of him. Under a thick bush of spiky white pubic hair, Rane's respectably big manhood dangles down between those chiseled legs of his - or at least at first it does. Reveling in your attention, the blue man's shaft rises and expands, getting harder and longer by the moment. Starting out big, it really becomes quite a sight to behold - thick and long to match the scale of the rest of him. For a moment you think it might not stop growing, but then it finally reaches its full extension, now standing erect pointing at you in a slight upward angle.";
-	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
+	say "     Well, it's big and blue, like its owner. Same color as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball-sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
 	WaitLineBreak;
 	say "     'Time to fuck,' Rane grunts, taking hold of you with a firm and somewhat rough grip. In a swift move, he pushes you over to one of the reading areas of the library and bends you over a sofa. Just a moment later, you start feeling the warmth of his erect manhood resting against your lower back, then sliding deeper to nestle between your buttcheeks. While playfully slapping his cock against your buttcheeks, he gathers a bit of spit and puts it on a hand, rubbing it over his shaft. The oni gropes your cheeks with both hands, then pulls them apart and sets the bulbous head of his manhood against your pucker. Knowing what to expect, you relax as good as you can, gripping the sofa tightly as the blue oni thrusts into you in a fluid move...";
 	say "     ...you can't help but groan at the pain of Rane's sudden entry, intermixed with the contrary signals of pleasure as sensitive spots in your insides are rubbed by his massive cock. Caught up in that swirl of confusion, your thought process lags behind a bit, only slowly registering what's going on. Firstly, you become aware of the very full feeling that his monstrously big, throbbing presence leaves deep inside you. The second thought that occurs is the confounding reality of Rane having somehow managed to insert that entire thing in one go, for you can feel his hips and the hair of his pubes right against your rear. Granted, it hurt like hell for a second, but still, all of it - just like that?";

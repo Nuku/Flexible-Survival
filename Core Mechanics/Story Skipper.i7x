@@ -30,7 +30,7 @@ To savetrix:
 		choose row x in the table of game objects;
 		if object entry is stored:
 			let num be stashed of object entry;
-			append "[name entry]|[num]}" to the File of invsave;
+			append "[name entry]|[num]}" to the File of storsave;
 
 
 Trixie is a person. Trixie is in Grey Abbey Library.
@@ -62,7 +62,7 @@ To say magic word:
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
+	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.'";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]"; ]
 	savetrix;
 	if wrcursestatus is 5:
@@ -812,7 +812,7 @@ To reciting2:
 			-- 195: [HP of Chris]
 				if the player's command matches "[number]":
 					now HP of Chris is the number understood;
-					if the HP of chris > 0 and the HP of chris < 100, move chris to Sitting Area;
+					if the HP of Chris > 0 and the HP of Chris < 100, move Chris to Sitting Area;
 			-- 196: [HP of Vanessa - status]
 				if the player's command matches "[number]":
 					now HP of Vanessa is the number understood;
@@ -2214,8 +2214,8 @@ to restorepart2:	[values 60 - 161]
 		now the icon of Rod Mallrat is figure of Rod_icon;
 		now the icon of Ronda is figure of pixel;
 	if HP of Ronda is 100:
-		move Ronda Mallrat to SlutRat Den;
-		move Rod Mallrat to SlutRat Den;
+		move Ronda Mallrat to Slut Rat Den;
+		move Rod Mallrat to Slut Rat Den;
 		now the icon of Rod Mallrat is figure of pixel;
 		now the icon of Ronda is figure of RondaSR_icon;
 	if HP of Ronda > 0:
@@ -2229,7 +2229,7 @@ to restorepart2:	[values 60 - 161]
 	if HP of Ronda is 6:
 		now Art Collector is unresolved;
 	if HP of Ronda >= 8:
-		now SlutRat Den is known;
+		now Slut Rat Den is known;
 [93:	[Athanasia]]
 	now carried of phoenix egg is 0;
 	remove Athanasia from play;
@@ -3329,7 +3329,6 @@ to restorepart-final:
 	if HP of Sven is 8 and Candy is in the bunker:
 		now lastSvendrink is turns;
 	now Sarah is in dark basement;
-	now Pet Shop is unresolved;
 	now SarahPregnant is 0;
 	if SarahTalk is 0 and SarahSlut is 0 and SarahCured is 0:
 		now Husky Pack is unresolved;

@@ -476,12 +476,15 @@ to say dolphinflatableattack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bottlenose Toy"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[dolphinflatableattack]"; [ Successful attack message ]
 	now defeated entry is "[beatthedolphinflatable]"; [ Text when monster loses. ]
 	now victory entry is "[losetodolphinflatable]"; [ Text when monster wins. ]
@@ -495,7 +498,7 @@ When Play begins:
 	now body change entry is "a strange lightness suffuses through your body. You start panting heavily, but only drawing in air, never exhaling. But your body doesn't swell up either, instead the air seems to be replacing the contents of your body. Your skin becomes smooth and plasticky, becoming an imitation of [skinname of player] flesh with seams between the sections and airbrushed markings and shading. Your body reforms into a smooth, slender shape with fin-like hands and feet, as well as an inflated dorsal fin on your back";
 	now skin change entry is "your skin becomes shiny and smooth, turning into flexible vinyl. Your front and inner thighs become a smooth, glossy white while the rest is a [if player is herm]royal purple[else if player is male]sky blue[else]bright pink[end if]";
 	now ass change entry is "you feel a pressure building before releasing with a soft squeak. For a moment you think you farted, but the squeaking sound continues as a plump dolphin tail grows from your ass. But it is not made of flesh, but is made of plastic and is inflated with air, yet moves all the same";
-	now cock change entry is "feels like its swelling and growing wildly. A quick look shows that it's not growing, but instead filling with air and becoming an inflatable cock, but still sensitive and fully functional, leaking a slick lubricant from its tip";
+	now cock change entry is "feels like it's swelling and growing wildly. A quick look shows that it's not growing, but instead filling with air and becoming an inflatable cock, but still sensitive and fully functional, leaking a slick lubricant from its tip";
 	now str entry is 8; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]

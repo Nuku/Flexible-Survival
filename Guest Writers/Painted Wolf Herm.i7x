@@ -79,19 +79,22 @@ to say beatpwh:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Painted Wolf Herm"; [Name of your new Monster]
-	now attack entry is "The painted wolf herm [one of]gouges you with hir claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in hir mouth, shi bites down hard leaving a muzzle shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]"; [Text used when the monster makes an Attack]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "The painted wolf herm [one of]gouges you with hir claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in hir mouth. Shi bites down hard, leaving a muzzle-shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatpwh]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a 'To say' block as the demonstration text shows.]
 	now victory entry is "[wolfherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]     Looking over the Painted Wolf Herm, hir body is covered in thick, fluffy, patchwork gold, gray, and black fur. Hir head is mostly canine, with rare smatterings of human and harsh, triangular ears. Hir body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Shi has four heavy breasts, hir first row is basketball sized and the second row is slightly smaller. Hir arms are still human, with the exception of tiny claws on the tips of the fingers. Hir legs are digitigrade, with powerful haunches and graceful calves. Shi has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As shi stands unabashed in the open you see shi has a thick, knotted 10 inch canine shaft. Two heavy balls rest above hir dripping female sex, the aroma of which lays thick and heady in the air around you."; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]     Looking over the Painted Wolf Herm, hir body is covered in thick, fluffy patchwork of gold, gray, and black fur. Hir head is mostly canine, with rare smatterings of human and harsh, triangular ears. Hir body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Shi has four heavy breasts, the first row the size of basketballs and the second row slightly smaller. Hir arms are still human, with the exception of tiny claws on the tips of the fingers. Hir legs are digitigrade, with powerful haunches and graceful calves. Shi has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As shi stands unabashed in the open, you see that shi has a thick, knotted, ten-inch canine shaft. Two heavy balls rest above hir dripping female sex, the aroma of which lays thick and heady in the air around you."; [ Description of the creature when you encounter it.]
 	now face entry is "mostly canine, with rare smatterings of human and harsh, triangular ears"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Your arms are still human, with the exception of tiny claws on the tips of the fingers. Your legs are digitigrade, with powerful haunches and graceful calves"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "thick, fluffy, patchwork gold, gray, and black fur that conceals the"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "thick, fluffy patchwork of gold, gray, and black fur that conceals the"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "You have a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]black[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your head crackles as it reforms, becoming large and canine, with harsh, triangular ears that subconsciously twist and flex"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -109,7 +112,7 @@ When Play begins:
 	now HP entry is 60; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Park"; [ Current options are 'Outside' and 'Mall' Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Park"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

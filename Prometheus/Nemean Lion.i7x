@@ -1,6 +1,6 @@
 Version 1 of Nemean Lion by Prometheus begins here.
 
-"Adds a Nemean Lion creature to Flexible Survival's Wandering Monsters table"
+"Adds a Nemean Lion creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -18,20 +18,24 @@ to say losetoNemeanLion:
 to say beattheNemeanLion:
 	say "     Battered and bloody, you stand victorious over your foe. The Nemean Lion lies on its side, slipping in and out of consciousness as it tries to recover. Amazingly, despite all the punishment it has just received, its hide is still undamaged with only a few smears of dirt marring the golden fur. If the sizable feline manages to recover you aren't sure you'd be able to defeat it again as you're exhausted too. That said, you aren't sure what you are supposed to do next. Are you meant to skin the still living animal?";
 
+
 to say NemeanLiondesc:
-	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. It's fur is a dull gold, undamaged by the centaurs['] arrows. An impressive, dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
+	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. It's fur is a dull gold, undamaged by the centaurs['] arrows. An impressive dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Nemean Lion";      [The creature's name as displayed and used in naming descriptions]
+	now enemy title entry is "Nemean Lion";
+	now enemy name entry is "Leo";
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]The Nemean Lion slashes at you with its claws![or]The Nemean Lion attempts to bite you![or]The Nemean Lion pounces on you![or]The Nemean Lion attempts to maul you![at random]";   [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheNemeanLion]";            [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetoNemeanLion]";               [ Text when monster wins. Change 'template' as above. ]

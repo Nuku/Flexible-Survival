@@ -1,5 +1,6 @@
 Version 1 of Savina by Kurainyx begins here.
 [ Version 1.0 - Created Savina - Kurainyx ]
+[ Version 1.1 - Added variant for Savina's victims and a hypnosis/coiling sex scene - Kurainyx ]
 
 "Adds a giant female snake NPC to Flexible Survival"
 
@@ -73,7 +74,7 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 				say "     'So glad that you can stay,' the snake says. 'We are going to have so much fun.' Up close, her dazzling eyes dominate your vision, their enchantment drawing you in even more than before. They seemingly radiate with some sort of otherworldly power, and it feels like that you're falling into those golden pools. 'You must be so weary from your travels,' the scaled charmer croons, her sweet voice drowning out everything around you until it and her gaze are all that you can focus on. 'Just relax. You are safe in my embrace. Take a deep breath, let out all of your stress. Every time you breathe out, empty your mind of all distractions.' You oblige your captor without thinking, and as you breathe in and out, you feel your thoughts, your worries, and everything else melt away. Soon, there is nothing left in your head except adoration for your serpentine mistress, and all you can do is gaze at her with a dopey grin.";
 				say "     'Excellent. Just listen and obey my every word,' the snake commands. 'It feels good to let everything go and let me do all of your thinking.' You nod dumbly, accepting her words without question. Being held in the snake's coils makes you feel safe, and you can't help but trust her as you stare into her warm, inviting gaze. 'Such an obedient pet. You belong to me now. That means I get to do whatever I wish with you.' Again, you nod without any hesitation, and the serpent leans even closer, her large, humanoid tongue flicking across most of your face with one swipe. 'And what I wish is for you to be my delicious little morsel, to become a part of something far greater, and nothing gives you more pleasure than serving me.'";
 				WaitLineBreak;
-				say "     The snake's jaws click as she unhinges them, opening her mouth to reveal a living tunnel into the abyss. In the back of your mind, a voice warns you of the danger, but the serpent's conditioning had worked its magic on you, suppressing that voice into nothing more than a tiny peep. You don't struggle at all when the ravenous maw descends upon you. Her coils relinquish you into her gullet, plunging you into darkness once again, but this time in a much more humid environment. Effortlessly sliding into the enormous predator, her insides welcome you into their embrace, pressing into you from every angle. You hear a satisfied hiss before it's drowned out by a symphony of squelches and gurgles as you are pulled deeper, all while the surrounding flesh continues to knead you. The walls constantly constrict you, and yet, the snake's interior feels strangely pleasant, even erotic, as they rub against your weary form. Whether its a result of the snake's hypnosis or your own carnal need, you lustfully moan from the never-ending stimulation.";
+				say "     The snake's jaws click as she unhinges them, opening her mouth to reveal a living tunnel into the abyss. In the back of your mind, a voice warns you of the danger, but the serpent's conditioning had worked its magic on you, suppressing that voice into nothing more than a tiny peep. You don't struggle at all when the ravenous maw descends upon you. Her coils relinquish you into her gullet, plunging you into darkness once again, but this time in a much more humid environment. Effortlessly sliding into the enormous predator, her insides welcome you into their embrace, pressing into you from every angle. You hear a satisfied hiss before it's drowned out by a symphony of squelches and gurgles as you are pulled deeper, all while the surrounding flesh continues to knead you. The walls constantly constrict you, and yet, the snake's interior feels strangely pleasant, even erotic, as they rub against your weary form. Whether it's a result of the snake's hypnosis or your own carnal need, you lustfully moan from the never-ending stimulation.";
 				if player is male:
 					say "     Your cock[smn] start[smv] to grow erect from the amorous touches, only to get pressed up against the sensuous walls. The increased caresses on your dick[smn] makes your arousal spike, and it doesn't take long for you to reach your climax, spraying your [cum load size of player] load all over the snake's interior. ";
 				else if player is female:
@@ -140,18 +141,23 @@ to say SavinaSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Get tail-pegged";
 	now sortorder entry is 1;
-	now description entry is "have Savina press her tail into your rear";
+	now description entry is "Have Savina press her tail into your rear";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get eaten";
-	now sortorder entry is 1;
-	now description entry is "let Savina eat you";
+	now sortorder entry is 2;
+	now description entry is "Let Savina eat you";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Get some pet training";
+	now sortorder entry is 3;
+	now description entry is "Have Savina's hypnosis and coils make you a better pet";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -167,16 +173,18 @@ to say SavinaSexMenu:
 					say "[SavinaSexAnal]";
 				if nam is "Get eaten":
 					say "[SavinaVore]";
+				if nam is "Get some pet training":
+					say "[SavinaPetTrain]";
 				now lastfuck of Savina is turns;
 				wait for any key;
-		else if calcnumber is 100:
+		else if calcnumber is 0:
 			say "Break off the conversation?";
 			if player consents:
 				now sextablerun is 1;
 				say "     Despite your muddled senses, you manage to tell the snake that you changed your mind about spending some time with her. Savina gives you an unamused glare and loosens her coils, unceremoniously dropping you to the ground. 'Fine then. Doesn't matter to me either way if my pet wants to play or not,' she says, annoyance clear in her tone. 'But I'm still counting it against you for wasting my time.'";
 				wait for any key;
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -198,13 +206,25 @@ to say SavinaVore:
 	WaitLineBreak;
 	say "     When you come to, you are lying on the forest floor. You shiver from the cold, both from the spittle covering you, as well as you missing the warm confines of the snake. 'Did I tire my pet out again?' Savina teases as her head moves into your view. 'I can't help it since you're so delicious. Do come back soon, whether if you're bringing me back another treat or offering me another taste of your delectable self.' As you get up and clean yourself off, Savina watches you with a hungry gaze, and you can't help but think about being inside of the giant snake once again.";
 
+to say SavinaPetTrain:
+	say "     'I think that you could use a little more obedience training,' Savina says, bringing you even closer to her face until her golden eyes completely encompass your vision. 'Now, pay attention. Your mistress is speaking, and you love listening to my angelic voice. After all, you are my obedient pet. I give you pleasure and safety, and all I ask in return is for you to obey my commands. Trust me, love me, obey me.' You nod automatically as every single one of the snake's enchanting words resonates in your mind, binding your devotion to her. Savina grins at your blind worship, and her coils shift to let her tail brush across your entranced face. 'Such a good pet. Just keep listening to my voice, and you'll get a treat from your mistress,' the serpent says before giving you a single squeeze, making you groan, not out of pain, but out of pleasure. 'You enjoy being held in my embrace, to let my beautiful scales caress you.'";
+	say "     Again and again you are squeezed, but not once does the reptile hurt you. Instead, you feel safe and comfortable within Savina's grip, trusting your mistress to take care of you. Your faith in the snake is so great that you don't worry at all when her tail wraps around your head, submerging the last part of you in the twisting coils. 'There you go, my pet,' Savina's voice reverberates within your cocoon of scales. 'Every squeeze you feel puts you deeper into my control, pushing out your thoughts. Let your mind be emptied of everything except your loyalty to me and the endless pleasure that I give you. Within my coils, you are safe from danger, experiencing nothing but pure bliss.' You moan wantonly, awash in a sea of ecstasy, as the supple walls constantly rub into your helpless form, the euphoric sensations of snakeskin massaging every inch of your body amplified by the darkness of your scaled confine.";
+	WaitLineBreak;
+	say "     Savina's honeyed words and irresistable touch overwhelm your feeble mind with pleasure, driving you to your climax[if player is male] as Savina smirks at your cum leaking out of the cracks of her coils[else if player is female]as Savina smirks at your juices dripping from the cracks of her coils[end if]. And yet, despite your release, the coils continue to slide across your body, the smooth scales exciting your senses and reigniting your lust for Savina's sensual touch. Unable to resist your mistress, she wrings orgasm after orgasm out of you, and you revel in her dominance over you. You are Savina's pet, and nothing brings you more joy than letting the snake use you as she sees fit.";
+	say "     Eventually, the marathon of pleasure comes to an end when the coils slowly recede, but as soon you lose the support of those strong muscles, your exhausted body crumples to the ground, much to Savina's amusement. Despite being sore all over, seeing the satisfied look on her face after using you brings you solace as you rest under the watchful eye of your mistress. By the time that you're finally able to get back on your feet, the snake's hypnotic hold on you has faded, but even though your senses had returned, the bliss that you felt within the cocoon of scales lingers in your mind, already making you crave for Savina's touch once again.";
+
 to say SavinaFeed:
 	increase lust of Savina by 4;
 	say "     With one final blow, you knock your opponent to the ground, rendering them unconscious. Fashioning some makeshift rope out of some vines, you tie up your victim and begin hauling them back to Savina. Despite the enormity of the forest, you somehow know the right direction to go, almost as if your reptilian mistress is calling to you like a beacon in the darkness. [if scalevalue of player < 3]Due to your smaller size, it takes a while, along with some ingenuity and luck, before you[else if scalevalue of player > 3]Thanks to your larger size, it's little trouble before you[else]It takes a bit of work, but you finally[end if]make it back to the clearing where Savina resides, her prize in tow.";
 	say "     'Splendid,' Savina says, her hungry gaze more focused on her soon-to-be meal. She swiftly lowers herself from her perch and slithers toward you, her eyes gleaming with delight. 'My pet has fetched me a little treat.' Her tail gives your head a few condescending pats. 'Good [if player is male]boy[else if player is female]girl[else]job[end if],' your mistress says as her tail gently drags down your cheek and ends with a few scritches under your chin. Even though the giant snake is treating you more like a housepet, you cannot deny the wondrous touch of her scales, nor the pleasure in hearing her praise. 'My pet deserves a reward for their service, but first...' Savina's attention suddenly shifts back to your fallen opponent, who just so happens to be stirring awake. 'I have business to attend to.'";
 	WaitLineBreak;
-	say "     The eyes of your victim bulge when they see Savina, but before they can get up and run away, the snake's tail shoots forward, ensnaring them in a cocoon of scales. Savina's prey struggles and whimpers within her grasp, but they promptly go still and silent when they are given a close-up of her hypnotic eyes. 'Hush, little one,' Savina croons. 'You are mine now. Just relax and let me welcome you into my embrace. Soon, you won't have to worry about a thing.' The captive slowly nods, and they barely flinch as Savina closes in on them with her hungry maw wide open. The serpent envelopes the entranced prisoner in her mouth, easily slipping her meal inside of her as she hums in satisfaction.";
-	say "     Noticing your staring, Savina makes a big show of tossing her head back and making an audible gulp when she swallows your tribute. You gulp as well, the scene somehow fascinating and even a bit arousing, and you intently watch the bulge that is the prey slowly travel down the serpent's throat. 'Rest now, my sweet,' Savina coos, rubbing the wriggling figure with her tail. 'Let yourself sink away in bliss as you become a part of something far greater.' You cannot take your eyes off of the figure as it moves through your mistress, and a part of you even wishes that you were the one under all of those scales and powerful muscles instead. Eventually, Savina's snack finally disappears somewhere in the mass of her thick coils. 'Simply divine,' the sated serpent says as she turns her attention back to you. With a smirk, her tail wraps around you, pulling you close to her face so that you get lost in those golden eyes of hers. 'You did a wonderful job, my pet. Now, it's your turn. How shall I reward you?'";
+	if a random chance of 1 in 2 succeeds:
+		say "     The eyes of your victim bulge when they see Savina, but before they can get up and run away, the snake's tail shoots forward, ensnaring them in a cocoon of scales. Savina's prey struggles and whimpers within her grasp, but they promptly go still and silent when they are given a close-up of her hypnotic eyes. 'Hush, little one,' Savina croons. 'You are mine now. Just relax and let me welcome you into my embrace. Soon, you won't have to worry about a thing.' The captive slowly nods, and they barely flinch as Savina closes in on them with her hungry maw wide open. The serpent envelopes the entranced prisoner in her mouth, easily slipping her meal inside of her as she hums in satisfaction.";
+		say "     Noticing your staring, Savina makes a big show of tossing her head back and making an audible gulp when she swallows your tribute. You gulp as well, the scene somehow fascinating and even a bit arousing, and you intently watch the bulge that is the prey slowly travel down the serpent's throat. 'Rest now, my sweet,' Savina coos, rubbing the wriggling figure with her tail. 'Let yourself sink away in bliss as you become a part of something far greater.' You cannot take your eyes off of the figure as it moves through your mistress, and a part of you even wishes that you were the one under all of those scales and powerful muscles instead. Eventually, Savina's snack finally disappears somewhere in the mass of her thick coils. 'Simply divine,' the sated serpent says as she turns her attention back to you. With a smirk, her tail wraps around you, pulling you close to her face so that you get lost in those golden eyes of hers. 'You did a wonderful job, my pet. Now, it's your turn. How shall I reward you?'";
+	else:
+		say "     The eyes of your victim bulge when they see Savina, and with surprising speed, they manage to scramble onto their feet and begin to run away from the giant reptile. However, they don't get far when a wall of scales crashes down right in front of them, blocking their escape. 'Now, now,' Savina chides. 'There's no need to run. I merely just want us to have some fun.' Another loop of the snake's coils moves, this time aiming to drop right on the runner. With nowhere to go, Savina's prey desperately puts their hands up right as the coil lands on them, and they actually manage to hold up the serpent's body, but with how small they are compared to the enormous snake, it's obvious that Savina is holding back. 'Let's play a game,' Savina croons with both seduction and mischief. 'If you can manage to hold me off for a full minute, then you are free to go. If you can't, well...' She chuckles darkly before smiling devilishly at the trapped person. 'Let us begin.'";
+		say "     The captive whimpers when the coil visibly presses down on them, resting on their shoulders and causing their legs to quiver while they desperately try to hold their ground. Time seems to slow to a crawl as you watch the victim's strained movements and ragged breathing, a clear sign that they were using all of their strength. The victim manages to keep Savina at bay for almost the entire fateful minute, but just as the last few seconds tick down, a lazy shift in the coil bearing down on the prisoner instantly smooshes them into the ground. There was no contest at all. Savina had been toying with her prey the entire time.";
+		say "     Exhausted and battered by the sadistic serpent's game, the victim can do no more than feebly twitch as the coil wraps around them and lifts them up to Savina's smirking face. 'It looks like that I win,' she mocks. 'And my prize is you.' But instead of eating them, Savina drops her snack in the midst of her coils, and it only takes a second for the poor soul to be lost in the sea of shifting scales. 'But I shall deal with you later,' the serpent says as she turns her attention back to you. With a smirk, her tail wraps around you, pulling you close to her face so that you get lost in those golden eyes of hers. 'I wish to reward my pet for doing a wonderful job. Now, what should I do with them?'";
 	say "[SavinaSexMenu]";
 
 Section 4 - Hunting for Savina

@@ -6,8 +6,8 @@ Version 2 of Palomino by Verath begins here.
 
 Section 1 - The Palomino Club
 
-The Palomino is a room. It is fasttravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
-Palomino Exit is a door. Palomino Exit is dangerous. The marea of Palomino Exit is "Outside". Palomino Exit is undescribed. Palomino Exit is southwest of The Palomino. Southwest of Palomino Exit is Outside Exploration.
+The Palomino is a room. It is fasttravel.
+The earea of The Palomino is "Outside".
 
 The description of The Palomino is "[palominodesc]".
 
@@ -16,7 +16,7 @@ to say palominodesc:
 	say "     Stepping around the corner of the hall, the room beyond is much bigger than you expected. It has a gothic theme going on - dark, with some rough, black, wooden tables and benches along the sides of the room and smaller, private booths with lower tables secreted away in the darker corners. There are coarse tapestries draped on the walls, one of them depicting a young man resting in the arms of a well-built anthropomorphic stallion. Looking closer at the tapestry, you can see that the young man's legs have started to shift from the knees down into digitigrade horse legs and a blond tail is just starting to grow from above his ass. There is also a random scattering of dark red cushions to offset the cellar dungeon look of the place.";
 	say "     A mirror ball sparkles and sends a shimmering wave of reflected colors over the foggy dance floor, where around thirty or so people are dancing to the beat of the music. At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
 
-The invent of The Palomino is { "soda" , "soda" }.
+The invent of The Palomino is { "soda", "soda" }.
 
 instead of sniffing Palomino:
 	say "The infected dance club smells strongly of aroused males, sweat and sex. Lots of sex.";
@@ -40,12 +40,15 @@ To say Palominoloses:
 
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Palomino";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
 	now defeated entry is "[Palominoloses]";
 	now victory entry is "[Palominowins]";

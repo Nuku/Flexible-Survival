@@ -48,7 +48,7 @@ Instead of resolving a Insect Hive:
 				now non-infectious entry is false; [Wasps unlocked]
 	else:
 		LineBreak;
-		say "     Deciding discretion is the better part of valour, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
+		say "     Deciding discretion is the better part of valor, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
 	Now Insect Hive is resolved;
 
 
@@ -101,7 +101,7 @@ an everyturn rule:
 								break;
 				else:
 					if HP of player < 1, now HP of player is 1;
-					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait. Soon enough, one of the black wasps is drawn in by your scent. Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large large insect with a lustful moan.";
+					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait. Soon enough, one of the black wasps is drawn in by your scent. Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large insect with a lustful moan.";
 					say "[losetoblackwasp]";
 			else if larvacounter is odd and a random chance of 1 in 2 succeeds:
 				say "[one of]You stifle a moan of pleasure as the larva inside you squirms.[or]Your insides feel strangely warm and needy and you find your mind wandering to those black wasps.[or]You feel an emptiness inside which you long for one of those wasps to fill.[or]You feel a warm splash of more goo across your insides. This unusual sensation only arouses you further.[or]You feel a painful sting inside you that is soon replaced by the warm rush of arousal. The scent of the hive grows stronger around you.[or]The larva rubs itself against your inner walls, resulting in a strangely pleasurable sensation, but one that also makes you long for something larger to fill you.[in random order]";
@@ -112,7 +112,7 @@ an everyturn rule:
 			if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, increase larvacounter by 1;
 			if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if larvacounter >= 36:
-				say "     You moan softly as you feel something wet inside you shift and start to move. Your bloated belly jostles around a little and you can feel the orbs inside you sliding into position. You quickly find a dark, private spot outside and lay down, rubbing your bloated belly. The wet shifting of the orbs inside you is oddly pleasurable even as you start pushing them [if player is female]out of your womb[else]along your bowels[end if] even as the larva inside you seems to be working to help them move along. As the strange labor continues, you groan and push hard, releasing a gush of slimy fluids that soak your thighs and the ground nearby. Feeling the tennis ball sized orbs shift around and the first of them sliding along your [if player is female]vagina[else]rectum[end if], you pant and push in waves, stretching yourself open to eventually release it. The others soon follow, coming with less effort than the first[if player is male]. This whole process is strangely arousing and your cock grows hard and is soon releasing a spurt of cum with each egg you press out[else if player is female]. This whole process is strangely arousing and your cunt quivers and leaks your feminine juices as each egg is expelled[end if].";
+				say "     You moan softly as you feel something wet inside you shift and start to move. Your bloated belly jostles around a little and you can feel the orbs inside you sliding into position. You quickly find a dark, private spot outside and lay down, rubbing your bloated belly. The wet shifting of the orbs inside you is oddly pleasurable even as you start pushing them [if player is female]out of your womb[else]along your bowels[end if] even as the larva inside you seems to be working to help them move along. As the strange labor continues, you groan and push hard, releasing a gush of slimy fluids that soak your thighs and the ground nearby. Feeling the tennis ball-sized orbs shift around and the first of them sliding along your [if player is female]vagina[else]rectum[end if], you pant and push in waves, stretching yourself open to eventually release it. The others soon follow, coming with less effort than the first[if player is male]. This whole process is strangely arousing and your cock grows hard and is soon releasing a spurt of cum with each egg you press out[else if player is female]. This whole process is strangely arousing and your cunt quivers and leaks your feminine juices as each egg is expelled[end if].";
 				say "     When this bizarre labor is over, you rub your hands over your belly, sighing satisfactorily as you watch your tummy shrink down and return to its normal size. You get up and look over the mound of sticky, gel eggs you've released and part of you is strangely pleased with yourself despite what should be a rather disturbing occurrence. You feel the larva inside you shift around, sending a ripple across your tummy and head off, wondering how long it will be before the process will begin anew. Just out of earshot, you can hear the faint buzz of one of the wasps, drawn by the scent of ready eggs to gather them.";
 				increase larvalaid by 1;
 				now larvacounter is 0;
@@ -179,17 +179,20 @@ to say beattheblackwasp:
 Chapter 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The wasp grabs at you with its insect legs, trying to shove you down![or]The black insect jabs its phallic stinger against you several times, leaking precum onto you![or]The bug nips at you with its mandibles![or][if scalevalue of player < 4]The insect grabs you flies up several feat before tossing you to the ground[else]The insect grabs onto your arm and flies frantically. While not able to lift you, it does drag you around, pulling you into something nearby[end if]![or]The wasp buzzes angrily and bashes its chitinous body against yours![or]The insects numerous feet scratch at you with their little claws![at random]";
 	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. ]
 	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. ]
 	now desc entry is "[blackwaspdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "insectile in apperance, with large, segmented eyes and a pair of antenna on your head";
+	now face entry is "insectile in appearance, with large, segmented eyes and a pair of antenna on your head";
 	now body entry is "has become segmented like that of an insect. Your arms and legs become partially insectile, with clawed digits and inhuman joints. You also possess an additional pair of vestigial insect legs pulled up against your sides. They twitch occasionally, and you can make them move if you concentrate, but they are still too weak and hard to control for proper use yet";
 	now skin entry is "plated chitin that is quite sensitive despite its hard appearance. It has an insectile appearance, is a glossy black and covers your";
 	now tail entry is "You possess a large, insectile abdomen that's grown from the end of your spine. It is covered in chitinous plate, but quite sensitive, even arousing, to the touch.";
