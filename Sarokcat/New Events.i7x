@@ -3,6 +3,7 @@ New Events by Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival with several different outcomes."
 
+
 Section 1 - Military presence
 
 Military presence is a situation
@@ -120,7 +121,6 @@ Instead of Resolving a Hyena Gang:
 		now battleground is "void";
 
 
-
 Section 6 - Locked utility room
 
 Locked utility room is a situation.
@@ -141,27 +141,25 @@ Instead of Resolving a Locked utility room:
 		now Locked utility room is resolved;
 
 
-
-
 Section 7 - Transformed Seals
 
 Transformed Seals is a situation.
 The sarea of Transformed Seals is "Beach";
 
-
 Instead of Resolving a Transformed Seals:
 	say "     While walking along the beach, you come across a shiny object half-buried in the sand, and dreams of treasure come over you as you as you quickly uncover it. You are surprised to find just a couple thin pieces of metal, but closer examination reveals that they're a pair of navy seal dog tags. Looking around more carefully, you notice the remains of several stretched and torn wet suits in the surf and a few other telltale signs of a struggle. Quickly brushing the sand off your hands, you move on down the beach before whatever happened to them happens to you.";
 	now Transformed Seals is resolved;
+
 
 Section 8 - Wrecked ships
 
 Wrecked ships is a situation.
 The sarea of Wrecked ships is "Beach".
 
-
 Instead of Resolving a Wrecked ships:
 	say "     You come across the wreckage of several smashed sailboats. It looks like they were broken apart by something trying to get at the people inside. You decide that maybe coming out here alone wasn't your best idea ever and quickly hurry on your way.";
 	now Wrecked ships is resolved;
+
 
 Section 9 - Dolphin lotion
 
@@ -185,13 +183,10 @@ Instead of Resolving a Broken fountain:
 	now Broken fountain is resolved;
 
 
-
-
-Section 10 - Scenic View
+Section 11 - Scenic View
 
 Scenic View is a situation.
 The sarea of Scenic View is "Park".
-
 
 Instead of Resolving a Scenic View:
 	say "     Wandering through the park trails, you come across a beautiful view of nature, almost unimpeded by the skyline of abandoned buildings. You pause in your searching for a minute to take in the view and relax before you have to head back into the city, feeling much better about yourself.";
@@ -199,7 +194,7 @@ Instead of Resolving a Scenic View:
 	now Scenic View is resolved;
 
 
-Section 11 - Twisted grove
+Section 12 - Twisted grove
 
 Twisted grove is a situation.
 The sarea of Twisted grove is "Park".
@@ -207,13 +202,12 @@ when play begins:
 	add Twisted grove to badspots of girl;
 	add Twisted grove to badspots of furry;
 
-
 Instead of Resolving a Twisted grove:
 	say "     Exploring the park trails, you hear muffled sounds from a distance. Deciding to investigate, you creep up over a small hill, only to stare in astonishment as what seems to be a small grove of animated plants violate a skunk-like woman, holding her suspended off the ground like some obscene fruit. As you watch, more and more cum drips off of her onto the ground as she is pounded by several vines into orgasm again and again. Your eye is quickly drawn to the patch of earth where some of the cum fell, the grass seeming to writhe and twitch and start to grow in obscene shapes as well. As there is nothing you can do for the skunkwoman against the growing grove of twisted plants, you decide to move on quickly before you end up joining her.";
 	now Twisted grove is resolved;
 
 
-Section 12 - Ominous hole
+Section 13 - Ominous hole
 
 Ominous hole is a situation.
 The sarea of Ominous hole is "Park".
@@ -222,7 +216,8 @@ Instead of Resolving a Ominous hole:
 	say "     As you wander through the park, you notice another survivor in the distance. Quickly waving, you begin to run towards each other. Suddenly, the other survivor seems to disappear into thin air mid-step, causing you to duck and look around. When nothing else happens, you cautiously approach the area you last saw the other person, only to find that there seems to be a large hole dug there that's surrounded by a small mound of dirt, as if made by some burrowing creature of almost human size. You would investigate further, but the loud moans and other noises coming from the hole tell you more than you probably wanted to know about what's happening, as well as the fact that you won't be seeing that person again... as a person, anyways.";
 	now Ominous hole is resolved;
 
-Section 13 - squatters den
+
+Section 14 - squatters den
 
 squatters den is a situation.
 The sarea of squatters den is "Mall".
@@ -234,7 +229,7 @@ Instead of resolving a squatters den:
 	now squatters den is resolved;
 
 
-Section 14 - Leaking pipe
+Section 15 - Leaking pipe
 
 leaking pipe is a situation.
 The sarea of leaking pipe is "Mall".
@@ -245,8 +240,7 @@ Instead of resolving a leaking pipe:
 	now leaking pipe is resolved;
 
 
-
-Section 15 - Library Visitor
+Section 16 - Library Visitor
 
 library visitor is a situation.
 libvis is a number that varies.
@@ -282,12 +276,10 @@ Instead of Resolving a library visitor:
 		now library visitor is resolved;
 
 
-
-Section 16 - ruined supplies
+Section 17 - ruined supplies
 
 ruined supplies is a situation.
 The sarea of ruined supplies is "Mall".
-
 
 Instead of resolving a ruined supplies:
 	say "     Searching the area under the mall again, you find a small pallet of food supplies, obviously intended for use above at the food court. Unfortunately, you were not the first person to find these supplies, as someone has been here before you and made a pig out of themselves. Boxes are ripped open, food was obviously messily consumed, and almost all of the drinks have been opened, leaving the area strewn with wrappers and empty bottles. Eyeing the mess dubiously, you wonder if it is even worth searching through it all to see if there is anything left. Do you?";
@@ -303,17 +295,13 @@ Instead of resolving a ruined supplies:
 		now ruined supplies is resolved;
 
 
-Section 17 - Strange preacher
+Section 18 - Strange preacher
 
 [Moved to Consolidated Outside Events]
 
 
 to piggyify:
 	Infect "Messy Pig";
-
-
-to gryphonify:
-	Infect "Hermaphrodite Gryphon";
 
 to hyenaify:
 	Infect "Herm Hyena";

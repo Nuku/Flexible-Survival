@@ -190,7 +190,7 @@ Instead of resolving Ice Cream Truck:
 	if player consents:
 		say "     Carefully digging through the mess returns a few bottles of milk that don't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find that the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
 		increase carried of gryphon milk by 2;
-		gryphonify;
+		infect "Hermaphrodite Gryphon";
 	else:
 		say "     Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
 	now Ice Cream Truck is resolved;

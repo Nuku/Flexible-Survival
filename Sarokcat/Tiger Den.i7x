@@ -4,7 +4,7 @@ Version 2 of Tiger Den by Sarokcat begins here.
 
 "Adds a tiger den to Flexible Survival with a few anthro tigers, and some small quests vs the tigertaurs..."
 
-Section 1- Tiger Den environment
+Section 1 - Tiger Den environment
 
 Tiger Den is a room. It is fasttravel. Tiger Den is sleepsafe. It is private.
 the scent of Tiger Den is "The enclosed basement hideout smells strongly of tigers.".
@@ -20,7 +20,8 @@ The invent of Washroom is { "dirty water" }.
 to say twashroom desc:
 	say "     Just a simple employee washroom. More than likely used for when people were on their way home from work, but not wanting to leave while covered in the grime of the day. Inspecting the room you can make out the usual things you would expect of a bathroom. Three toilet stalls line one side of the room, while on the opposite wall a huge mirror takes up most of the upper wall. Underneath the large mirror are a pair of sinks for washing your hands. Straight back from the entrance of the washroom however is a much larger stall with its door slightly ajar, you are able to see inside and notice it is a small shower. Heading west will take you back into the main area of the Tiger Den.";
 
-Section 2- TigerVSTaur
+
+Section 2 - TigerVSTaur
 
 TigerVSTaur is a situation. The level of TigerVSTaur is 9.
 The sarea of TigerVSTaur is "Zoo".
@@ -30,7 +31,7 @@ when play begins:
 	add TigerVSTaur to badspots of guy;
 
 Instead of Resolving a TigerVSTaur:
-	say "     Traveling down the zoo pathways, you hear a strange roaring noise nearby, followed by some violent sounds, after a few seconds the sounds fade somewhat, and you cautiously peek through the greenery to see a strange sight on one of the employee travel paths of the zoo. Two creatures appear to have been fighting here, strangely enough it appears to be a couple of the tigertaurs that have been plaguing the zoo. Closer inspection however, reveals that only one of the combatants happens to be a tigertaur, the other combatant appears to be merely an extremely tiger-like humanoid, with no tiger like lower body at all! The combat is quickly drawing to a close however, as the tigertaurs larger form seems to give it an advantage against the more human-like tiger, and indeed as you watch, the tigerman seems to be growing more and more aroused and less able to resist the tigertaurs advances. You could intervene if you wanted, but it truly doesn't look like the situation is any of your affair. Do you interfere?";
+	say "     Traveling down the zoo pathways, you hear a strange roaring noise nearby, followed by some violent sounds, after a few seconds the sounds fade somewhat, and you cautiously peek through the greenery to see a strange sight on one of the employee travel paths of the zoo. Two creatures appear to have been fighting here, strangely enough it appears to be a couple of the tigertaurs that have been plaguing the zoo. Closer inspection however, reveals that only one of the combatants happens to be a tigertaur, the other combatant appears to be merely an extremely tiger-like humanoid, with no tiger-like lower body at all! The combat is quickly drawing to a close however, as the tigertaurs larger form seems to give it an advantage against the more human-like tiger, and indeed as you watch, the tigerman seems to be growing more and more aroused and less able to resist the tigertaurs advances. You could intervene if you wanted, but it truly doesn't look like the situation is any of your affair. Do you interfere?";
 	if player consents:
 		say "     You quickly resolve to involve yourself in what is essentially not your conflict, but unable to see it continue without taking some action on your part. You rush from hiding and into the fray, startling both combatants into taking a step back for second startled by your sudden presence, you have only a few seconds however before the conflict will obviously resume, in which to decide just who to aid. The tigertaur seemed to be winning the fight so far, and it might make more sense for you to ally yourself with the obviously superior power, but you could also take the greater risk and try to aid the tiger against the strong tigertaur if you choose. Do you side with the Tigertaur?";
 		if player consents:
