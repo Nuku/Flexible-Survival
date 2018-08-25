@@ -4339,15 +4339,17 @@ This is the finish stats rule:
 [	try looking;]
 	rule succeeds;
 
-scavenging is an action applying to nothing.
+ScavengingAction is an action applying to nothing.
 tscavenging is an action applying to one topic.
 Scavengetarget is an indexed text that varies.
 A scavevent is a kind of situation.
 
-understand "Scavenge" as scavenging.
-understand "Scav" as scavenging.
-understand "Scavenge [text]" as tscavenging.
-understand "Scav [text]" as tscavenging.
+understand "Scavenge" as ScavengingAction.
+understand "Scav" as ScavengingAction.
+[
+understand "Scavenge [text]" as ScavengingAction.
+understand "Scav [text]" as ScavengingAction.
+]
 
 check tscavenging:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
@@ -4355,14 +4357,13 @@ check tscavenging:
 
 Carry out tscavenging:
 	now scavengetarget is the topic understood;
-	try scavenging;
+	try ScavengingAction;
 	now scavengetarget is "";
 
-
-check scavenging:
+check ScavengingAction:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
 
-carry out scavenging:
+carry out ScavengingAction:
 	let x be a random visible dangerous door;
 	if x is not nothing:
 		now battleground is marea of x;
@@ -4651,6 +4652,7 @@ Include Feats by Core Mechanics.
 include FS Graphics by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Hunting by Core Mechanics.
+Include Gametables by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Special Merchandize by Core Mechanics.
