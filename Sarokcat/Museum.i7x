@@ -3,7 +3,7 @@ Version 2 of Museum by Sarokcat begins here.
 
 "Adds an adventuring area to Flexible Survival with a Sphinx and some searching."
 
-Section 1- Museum environment
+Section 1 - Museum environment
 
 Museum Foyer is a room. It is fasttravel.
 The earea of Museum Foyer is "Museum".
@@ -12,7 +12,7 @@ The description of Museum Foyer is "[museumdesc]".
 
 to say museumdesc:
 	if HP of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is unresolved;  [Solstice's quest available after visiting the Museum]
-	say "You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting while dim, still appears to be functioning. The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery. Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now. More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot. Looking further into the area you can see a circular desk marked 'Information'.";
+	say "     You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting, while dim, still appears to be functioning. The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery. Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now. More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot. Looking further into the area you can see a circular desk marked 'Information'.";
 
 instead of sniffing Museum Foyer:
 	say "The museum smells of ancient things come to life once more.";

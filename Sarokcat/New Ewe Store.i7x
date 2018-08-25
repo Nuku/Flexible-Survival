@@ -23,6 +23,7 @@ Version 4 of New Ewe Store by Sarokcat begins here.
 [ 0 = Mary not chosen                   ]
 [ 1 = Mary chosen                       ]
 
+
 Section 1- The Situations
 
 New Ewe Store is a situation.
@@ -220,7 +221,7 @@ instead of conversing the Mary:
 				say "     'Oh, that's ok then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
 
 
-Section - Sex w/Leon or Mary
+Section 3 - Sex w/Leon or Mary
 
 RamFucked is a number that varies. RamFucked is usually 0.
 EweFucked is a number that varies. EweFucked is usually 0.

@@ -146,7 +146,7 @@ to say broodmother call:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 2;
 	else:
-		say "     [one of]'Come to me, my beautiful child. We await for your offering...'[or]'Join usssssss...'[or]'Resissssst no further...'[or]'We are waiting for you...'[at random] says the Broodmother from her hive, reaching out at you with waves of lust. Places and experiences from the past and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip to her blissful home.[line break]";
+		say "     [one of]'Come to me, my beautiful child. We await for your offering...' [or]'Join usssssss...' [or]'Resissssst no further...' [or]'We are waiting for you...' [at random]says the Broodmother from her hive, reaching out at you with waves of lust. Places and experiences from the past and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip to her blissful home.[line break]";
 		if bodyname of player is "Anthro Shaft Beast":
 			sharethebliss;
 		else if bodyname of player is "Feral Shaft Beast":

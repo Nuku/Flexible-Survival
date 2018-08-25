@@ -155,7 +155,7 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     Enticed by her dripping juices, you bury your face in her cunt and start licking away, making her squeal in pleasure. You fade further, your resistance continuing to wane. ";
+		say "     Enticed by her dripping juices, you bury your face in her cunt and start licking away, making her squeal in pleasure. You fade further, your resistance continuing to wane.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "     You take [special-style-2][dam][roman type] damage and grow more aroused!";
@@ -174,7 +174,7 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     You continue to lick the pig woman's wonderful pussy, growing more and more excited as you continue to do so. You happily work your tongue inside of her, growing more and more pleased by her squeals of pleasure. ";
+		say "     You continue to lick the pig woman's wonderful pussy, growing more and more excited as you continue to do so. You happily work your tongue inside of her, growing more and more pleased by her squeals of pleasure.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		say "     You take another [special-style-2][dam][roman type] damage as your lustful longing for her grows higher!";
@@ -193,10 +193,10 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     You dive your tongue in and out of her while rubbing her sticky folds and messy bottom with your hands. Her scent is leaving you reeling, and you're starting to oink and grunt in pleasure as well. ";
+		say "     You dive your tongue in and out of her while rubbing her sticky folds and messy bottom with your hands. Her scent is leaving you reeling, and you're starting to oink and grunt in pleasure as well.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 90; [111% dmg this round]
-		say "     You take another [special-style-2][dam][roman type] damage as your arousal continues to climb as does hers!";
+		say "     You take another [special-style-2][dam][roman type] damage as your arousal continues to climb while hers does!";
 		decrease HP of player by dam;
 		WaitLineBreak;
 	if messypigcaught is 1:															[still caught, aroused]
@@ -215,13 +215,11 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late. She grunts in frustration, you having managed to stop just before her climax.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     Your efforts finally pay off as you drive the porcine beauty to climax, spraying a fresh wave of her juices across your face and down your throat. You oink and squeal happily, lapping it all up even as it starts to seep into your skin and start changing you";
+		say "     Your efforts finally pay off as you drive the porcine beauty to climax, spraying a fresh wave of her juices across your face and down your throat. You oink and squeal happily, lapping it all up even as it starts to seep into your skin and start changing you.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 67; [150% dmg this round]
-		say "     . You take [special-style-2][dam][roman type] damage and are left sexually lustful yourself.";
+		say "     You take [special-style-2][dam][roman type] damage and are left sexually lustful yourself.";
 		decrease HP of player by dam;
-	else if messypigcaught is 1:													[still caught]
-		say "     .";
 	if messypigcaught is 1:															[completely caught, infected]
 		decrease humanity of player by a random number between 2 and 5;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
