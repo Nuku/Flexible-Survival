@@ -159,7 +159,7 @@ to say TameTehuantl:
 	move player to Grey Abbey 2F;
 	setmonster "Jaguar Warrior";
 	choose row monster from the table of random critters;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 	now TehuantlTimer is turns;
 
 Section 2 - Monster Insertion

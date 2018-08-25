@@ -17,12 +17,12 @@ to say rabpackdesc:
 	choose row monster from the table of random critters;
 	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked, it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
 	if "One Pair" is listed in feats of player:
-		now area entry is "nowhere"; [removes from random intercounters and infection]
+		now area entry is "Nowhere"; [removes from random intercounters and infection]
 		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the One Pair feat.)[combat abort]";
 		now fightoutcome is 19;
 	else if "Just One" is listed in feats of player:
-		now area entry is "nowhere"; [removes from random intercounters and infection]
+		now area entry is "Nowhere"; [removes from random intercounters and infection]
 		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the Just One feat.)[combat abort]";
 		now fightoutcome is 19;

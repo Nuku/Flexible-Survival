@@ -241,7 +241,7 @@ When Play begins:
 	now HP entry is 100;
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [ Amount of Damage monster Does when attacking. ]
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls ]

@@ -162,6 +162,7 @@ The player has a number called Hunger.
 A person has a number called Thirst.
 The player has a number called Morale.
 A person has a number called Lust.
+A person has a number called Loyalty.
 The player has a number called Humanity.
 The player has a number called Hunger.
 The player has a number called cocks.
@@ -204,6 +205,7 @@ A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
 A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
+A person has a list of text called Traits.
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
 The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
@@ -216,7 +218,7 @@ the player has a list of text called tapes.
 the player has a list of text called OpenQuests.
 the player has a list of text called CompletedQuests.
 Rooms has a list of text called invent.
-The player has a list of text called feats.
+The player has a list of text called Feats.
 The player has a list of text called EncounteredEnemies.
 The player has a list of text called BlockList.
 A person can be a trader.
@@ -235,6 +237,7 @@ A armament has a number called hitbonus.	[Rare, usually magic]
 An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
+Equipment can be cursed or not cursed. Equipment is usually not cursed. [can't take it off if cursed]
 Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
@@ -1674,9 +1677,10 @@ To process (x - a grab object):
 					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 2]small[else]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[else if objsize of x - scalevalue of player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
 			say ".";
 	if x is equipment:
-		if x is equipped:		[unequip]
-			say "     [bold type]You take off the [x].[roman type][line break]";
-			now x is not equipped;
+		if x is equipped: [unequip]
+			if x is not cursed: [explanation why the item can't be taken off is to be done in the item description]
+				say "     [bold type]You take off the [x].[roman type][line break]";
+				now x is not equipped;
 		else:
 			if slot of x is empty:
 				increase score by 0;
@@ -4733,11 +4737,11 @@ Include Candy Shop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
+Include CEOutside by Stripes.
 Include CEPark by Stripes.
 Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
-Include Consolidated Outside Events by Song.
 Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Dmitri the Peacock by Aureas Gigas.

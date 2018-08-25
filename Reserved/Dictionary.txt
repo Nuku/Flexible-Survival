@@ -3479,7 +3479,7 @@
 |Agentlemancalledb|Francois|20140908213124/19401:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Francois|Gourmet Treats|situation|
 |Agentlemancalledb|Francois|Bone-Appetit|room|
-|Agentlemancalledb|Francois|François|man|
+|Agentlemancalledb|Francois|Francois|man|
 |Agentlemancalledb|Francois|Boysenberry Blossom|Grab Object|
 |Agentlemancalledb|Francois|Bleuettonne|Grab Object|
 |Agentlemancalledb|Francois|Crème Abondante|Grab Object|
@@ -3491,11 +3491,11 @@
 |Agentlemancalledb|Francois|Gingerbread|Grab Object|
 |Agentlemancalledb|Francois|Cheesecake|Grab Object|
 |Agentlemancalledb|Francois|Francoismix|marker|
-|Agentlemancalledb|Francois|Françoistalk1|value|
+|Agentlemancalledb|Francois|Francoistalk1|value|
 |Agentlemancalledb|Francois|Francois_Undiscovered|value|
 |Agentlemancalledb|Francois|Francois_Discovered|value|
 |Agentlemancalledb|Francois|Francoismixcleaned|value|
-|Agentlemancalledb|Francois|françoisbaking|action|
+|Agentlemancalledb|Francois|Francoisbaking|action|
 |Agentlemancalledb|Karen|20140908213124/1730:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Karen|Retriever Girl|Pet|
 |Agentlemancalledb|Karen|Forgotten Past|situation|

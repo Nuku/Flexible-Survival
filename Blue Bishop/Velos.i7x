@@ -67,7 +67,7 @@ Instead of resolving Strange Serpent:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked again]
 							break;
 				if player consents:

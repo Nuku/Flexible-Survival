@@ -258,7 +258,7 @@ to say Doran_Beat:
 		say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
 	now the rocky outcropping is known;
 	choose row monster from the table of random critters;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 
 to say DoranDescription:
 	setmongender 3; [creature is male]

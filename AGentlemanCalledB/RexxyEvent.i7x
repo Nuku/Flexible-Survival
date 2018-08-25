@@ -64,7 +64,7 @@ Section 2 - Doggy Bone
 Table of Game Objects (continued)
 name	desc	weight	object
 "Dog Bone"	"An unusual looking sex toy with a pointed canine cock on one end, and a bone-shaped handle on the other."	1	Dog Bone
-"Dog Treats"	"A brown paper bag, emblazoned with the logo of François['] bakery, full of delicious, meaty smelling dog treats."	1	Dog Treats
+"Dog Treats"	"A brown paper bag, emblazoned with the logo of Francois['] bakery, full of delicious, meaty smelling dog treats."	1	Dog Treats
 
 Dog Treats is a grab object. It is not temporary.
 Dog Treats has a usedesc "[GourmetDogTreatsUse]".
