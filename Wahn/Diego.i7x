@@ -28,7 +28,6 @@ LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
 DiegoTricked is a number that varies. DiegoTricked is usually 0.
 
 Diego is a man.
-Diego has a list of texts called Traits.
 The description of Diego is "[DiegoDesc]".
 The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
@@ -775,7 +774,7 @@ to say MaleDiegoSuccumbEnding:
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (DiegoTalk > 0 and player is not dominant and noncon is not banned and noncon is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and DiegoTalk > 0 and player is not dominant and noncon is not banned and noncon is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;
@@ -977,7 +976,9 @@ It is not temporary.
 
 diego's heirloom collar is a grab object.
 diego's heirloom collar is equipment.
+diego's heirloom collar is cursed.
 It is not temporary.
+The printed name of diego's heirloom collar is "Diego's heirloom collar".
 The plural of diego's heirloom collar is false.
 The taur-compatible of diego's heirloom collar is true.
 The size of diego's heirloom collar is 0.
@@ -1014,6 +1015,7 @@ to say DCollarUse:
 				continue the action;
 		say "     Looking at the collar, you can't help but wonder how it would feel to have it on. Surely Diego won't mind if you try it on for just a little while, right? Lifting the leather band to your neck, you fasten it, nice and tight. It feels really neat on your skin, sturdy yet somehow soft, and you feel like you could wear it forever.";
 		now diego's heirloom collar is equipped;
+		add "Diego's Bitch" to Traits of player;
 
 [
 instead of navigating Park Entrance while (XP of Diego is 98 or XP of Diego is 3 or XP of Diego is 4):

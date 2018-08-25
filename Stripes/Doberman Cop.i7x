@@ -86,7 +86,7 @@ to say losetodobie1:		[low-lust player loss]
 					now fightoutcome is 19;
 					now Police Station is known;
 					now HP of Alexandra is 50;
-					now area entry is "nowhere";
+					now area entry is "Nowhere";
 					increase score by 20;
 				else:
 					say "Deciding to give it a shot, you try to strike up a conversation with her while responding to her questions. You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding. She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond.";
@@ -108,7 +108,7 @@ to say losetodobie1:		[low-lust player loss]
 				now dobielibido is -100;
 				now Police Station is known;
 				now HP of Alexandra is 50;
-				now area entry is "nowhere";
+				now area entry is "Nowhere";
 				increase score by 20;
 			else:
 				say "You attempt again to strike up a conversation with her while responding to her questions. You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding. She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond.";
@@ -490,7 +490,7 @@ to say beatthedobie3:			[high-lust cop player victory]
 	else:
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. 'Why would anyone want to keep a bad bitch like you? Get out of here, you slut. I don't want to see you again.' She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash. You doubt she'll be troubling you any more.";
 		now HP of Alexandra is 100;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 
 
 Section 2 - Monster Insertion

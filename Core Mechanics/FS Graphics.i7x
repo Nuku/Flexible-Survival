@@ -991,7 +991,7 @@ carry out artistcredits:
 	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Erin Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     François by Xenotropos @ furaffinity.net[line break]";
+	say "     Francois by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
 	say "     Gabriel by Darian821 @ y-gallery.net[line break]";

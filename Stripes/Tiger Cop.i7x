@@ -638,7 +638,7 @@ to say losetotigercop:
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
-			now area entry is "nowhere"; [deactivates Tiger Cop as a wandering monster]
+			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
 			say "     'Bah, I knew you were a no good punk.' The tiger cop shakes his head, seeming almost disappointed. 'Just leave, away from my turf. I won't be so nice the next time, so you better watch your back.' Not one to question your luck, you leave while you have the chance, wary of encountering the cop again.";
 			now pquest is 99;
@@ -704,7 +704,7 @@ To say beattigercop:
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
-			now area entry is "nowhere"; [deactivates Tiger Cop as a wandering monster]
+			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
 			say "     The cop looks surprised that you turned down his offer, and perhaps even disappointed, but he quickly regains his composure. 'I guess you were just a useless, good for nothing punk, no matter how good you are in a scrap. That's the last time I try being nice.' Before you have a chance to be fully alert again, the cop spins on his heel and sprints away, managing to get out of sight. You doubt he'll be any friendlier the next time you run into him.";
 			now pquest is 99;
@@ -760,7 +760,7 @@ When Play begins:
 	now HP entry is 90;
 	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere"; [ Location of monster, start nowhere, High if active]
+	now area entry is "Nowhere"; [ Location of monster, start nowhere, High if active]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]

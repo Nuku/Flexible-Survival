@@ -97,7 +97,7 @@ An everyturn rule:
 			choose row y in table of random critters;
 			if name entry is "Viking":
 				now monster is y;
-				now area entry is "nowhere";
+				now area entry is "Nowhere";
 				break;
 	else if VikingUltimatum is 8:
 		say "Time's ticking away if you want to fight for Sonya. The [bold type]chieftain's challenge[roman type] you can answer on the beach will run out today, so better grab your gear now and get moving - but watch out, the man will actually try to kill you...";

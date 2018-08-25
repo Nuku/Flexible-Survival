@@ -1,6 +1,9 @@
 Version 1 of Basic Locations by Core Mechanics begins here.
 [Version 1.5 - Library Expansion - Luneth]
 
+NPC Nexus is a room.
+The description of NPC Nexus is "This is the extradimensional storage room for unused npcs.".
+
 Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".

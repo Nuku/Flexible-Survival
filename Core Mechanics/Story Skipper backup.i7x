@@ -574,7 +574,7 @@ Carry out reciting:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
@@ -955,7 +955,7 @@ Carry out reciting:
 							choose row y in table of random critters;
 							if name entry is "Doberman":
 								now monster is y;
-								now area entry is "nowhere";
+								now area entry is "Nowhere";
 								break;
 					else:
 						remove Alexandra from play;

@@ -529,7 +529,7 @@ When play begins:
 	now HP entry is 45;
 	now lev entry is 5;
 	now wdam entry is 7;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 	now cocks entry is 1;
 	now cock length entry is 15;
 	now cock width entry is 6;
@@ -571,7 +571,7 @@ The marea of Junkyard Gate is "Junkyard".
 
 Section 2 - Junkyard Digups
 
-Junkyard digups is a situation. The printed name of Junkyard digups is "a pile of garbage".
+Junkyard digups is a situation. The printed name of Junkyard digups is "A pile of garbage".
 The sarea of junkyard digups is "Junkyard".
 jdigup is a number that varies.
 

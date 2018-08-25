@@ -110,6 +110,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	repeat with x running through equipped equipment:
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
+		increase plfleebonus by fleebonus of x;
 	if weapon object of player is unwieldy:
 		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player) to the nearest whole number;
 	if weapon object of player is bo staff or weapon object of player is wukongStaff:

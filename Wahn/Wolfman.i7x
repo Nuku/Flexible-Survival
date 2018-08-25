@@ -100,7 +100,7 @@ to say Wolfmandesc:
 		now lev entry is 12 + debit;
 		now wdam entry is 14 + ( ( debit * 3 ) / 10 );
 		now lootchance entry is 0;
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		say "     Septus and several of the nearest wolves move in to fight out, growling angrily and intent on throwing you out for good. The others clear the area and start cheering and howling in excitement like a rowdy crowd of football fans. At this point, the wolfmen aren't going to hold back like they have been during the recruitment and training, rushing at you like an offensive line. You growl back and flex your powerful, lupine body and charge as well, your wild instincts pumping adrenaline into your blood while a small corner of your mind hopes you haven't gotten in over your head.";
 		if jenniferwolves is 1:
 			say "     At least you do have at least one supporter out among the wolves encircling the fight and awaiting its outcome. The wolfman son you had with Jennifer is cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at him, eventually a fight breaking out between him and another";
@@ -118,12 +118,12 @@ to say Wolfmandesc:
 				increase HP of player by jenniferwolves * 3;
 	else if HP of Septus is 99:
 		say "ERROR-FW99: This creature should no longer be randomly encountered.";
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else if HP of Septus >= 7:
 		say "ERROR-FW[HP of Septus]: This creature should no longer be randomly encountered.";
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else:
@@ -998,7 +998,7 @@ When Play begins:
 	now HP entry is 1;
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 1;                [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;          [ Cock width, more commonly used for ball size. ]

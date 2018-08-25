@@ -44,7 +44,7 @@ To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
+	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of Francois]}[libido of Francois]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
 	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
@@ -673,7 +673,7 @@ To reciting2:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
@@ -1076,7 +1076,7 @@ To reciting2:
 							choose row y in table of random critters;
 							if name entry is "Doberman":
 								now monster is y;
-								now area entry is "nowhere";
+								now area entry is "Nowhere";
 								break;
 						if HP of Alexandra is 100:
 							now Police Station is unknown;
@@ -1256,22 +1256,22 @@ To reciting2:
 						now Retriever Girl is tamed;
 					else:
 						now Retriever Girl is not tamed;
-			-- 124:	[François]
+			-- 124:	[Francois]
 				if the player's command matches "[number]":
-					now HP of François is the number understood;
+					now HP of Francois is the number understood;
 					now Gourmet Treats is unresolved;
 					if girl is banned or guy is banned or furry is banned:
 						now Gourmet Treats is resolved;
-						now HP of François is 0;
-					if HP of François is 0:
+						now HP of Francois is 0;
+					if HP of Francois is 0:
 						now Bone-Appetit is unknown;
 					else:
 						now Gourmet Treats is resolved;
 						now Bone-Appetit is known;
-						say "[FrançoisListCompile]";
-			-- 125:	[François]
+						say "[FrancoisListCompile]";
+			-- 125:	[Francois]
 				if the player's command matches "[number]":
-					now libido of François is the number understood; [placeholder for second part to come]
+					now libido of Francois is the number understood; [placeholder for second part to come]
 			-- 126:	[Alexandra + Fang]
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
@@ -1352,7 +1352,7 @@ To reciting2:
 						if HP of Septus is 7 or HP of Septus is 99:
 							setmonster "Football Wolfman";
 							choose row monster from the table of random critters;
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 			-- 133: [Awesome Xerxes]
 				if the player's command matches "[number]":
 					now lust of Xerxes is the number understood;
@@ -1382,7 +1382,7 @@ To reciting2:
 						else:
 							setmonster "Blue Chaffinch";
 							choose row monster from the table of random critters;
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now Icarus is in Grey Abbey Library;
 					if HP of Icarus is 5 or HP of Icarus is 6:
 						now HP of Icarus is 4; [dialed back for sex]
@@ -1663,7 +1663,7 @@ To reciting2:
 						move Tehuantl to Grey Abbey 2F;
 						setmonster "Jaguar Warrior";
 						choose row monster from the table of random critters;
-						now area entry is "nowhere";
+						now area entry is "Nowhere";
 						now TehuantlTimer is turns;
 					else:
 						remove Tehuantl from play;
@@ -2122,16 +2122,16 @@ Carry out savetrix2:
 	replace the text "}" in invrecover with " ";
 	say "Recovering inventory...";
 	repeat with z running from 1 to number of words in invrecover:
-		let curword be word number z in invrecover;
-		replace the text "|" in curword with " ";
-		let cur be word number 1 in curword;
+		let CurrentWord be word number z in invrecover;
+		replace the text "|" in CurrentWord with " ";
+		let ObjectIdbe word number 1 in CurrentWord;
 		let amt be 0;
-		let amttext be word number 2 in curword;
+		let amttext be word number 2 in CurrentWord;
 		now amt is numerical value of amttext;
-		replace the text "`" in cur with " ";
+		replace the text "`" in ObjectIdwith " ";
 		repeat with Q running through grab objects:
 			let obname be printed name of q;
-			if cur matches the text obname, case insensitively:
+			if ObjectIdmatches the text obname, case insensitively:
 				now carried of q is amt;
 				break;
 	if carried of nanite collector > 0:
@@ -2768,7 +2768,7 @@ Carry out reciting:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
@@ -3166,7 +3166,7 @@ Carry out reciting:
 							choose row y in table of random critters;
 							if name entry is "Doberman":
 								now monster is y;
-								now area entry is "nowhere";
+								now area entry is "Nowhere";
 								break;
 						if HP of Alexandra is 100:
 							now Police Station is unknown;
@@ -3346,20 +3346,20 @@ Carry out reciting:
 						now Retriever Girl is tamed;
 					else:
 						now Retriever Girl is not tamed;
-			-- 124:	[François]
+			-- 124:	[Francois]
 				if the player's command matches "[number]":
-					now HP of François is the number understood;
+					now HP of Francois is the number understood;
 					now Gourmet Treats is unresolved;
 					if girl is banned or guy is banned or furry is banned:
 						now Gourmet Treats is resolved;
-						now HP of François is 0;
-					if HP of François is 0:
+						now HP of Francois is 0;
+					if HP of Francois is 0:
 						now Bone-Appetit is unknown;
-						now libido of François is 0;
+						now libido of Francois is 0;
 					else:
 						now Gourmet Treats is resolved;
 						now Bone-Appetit is known;
-			-- 125:	[François]
+			-- 125:	[Francois]
 				if the player's command matches "[number]":
 					let y be 0; [placeholder for second part to come]
 			-- 126:	[Alexandra + Fang]
@@ -3441,7 +3441,7 @@ Carry out reciting:
 						if HP of Septus is 7 or HP of Septus is 99:
 							setmonster "Football Wolfman";
 							choose row monster from the table of random critters;
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 			-- 133: [Awesome Xerxes]
 				if the player's command matches "[number]":
 					now lust of Xerxes is the number understood;
@@ -3471,7 +3471,7 @@ Carry out reciting:
 						else:
 							setmonster "Blue Chaffinch";
 							choose row monster from the table of random critters;
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now Icarus is in Grey Abbey Library;
 					if HP of Icarus is 5 or HP of Icarus is 6:
 						now HP of Icarus is 4; [dialed back for sex]
@@ -3740,7 +3740,7 @@ Carry out reciting:
 						move Tehuantl to Grey Abbey 2F;
 						setmonster "Jaguar Warrior";
 						choose row monster from the table of random critters;
-						now area entry is "nowhere";
+						now area entry is "Nowhere";
 						now TehuantlTimer is turns;
 					else:
 						remove Tehuantl from play;

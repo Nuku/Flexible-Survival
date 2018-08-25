@@ -86,8 +86,6 @@ Version 1 of Bad Alexandra by Wahn begins here.
 Section 0 - Basic Structure
 
 Alexandra is a person. Alexandra is in Police Station.
-Alexandra has a list of text called Traits.
-Alexandra has a number called Loyalty.
 AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.
@@ -905,7 +903,7 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	say "     You and Alexandra have earned the [']Top Dog['] feat, making her more fertile. Your [bold type]charisma[roman type] has also gone up by one.";
 	add "Top Dog" to feats of player;
 	add "Player's Bitch" to Traits of Alexandra;
-	now AlexandraPostFangEvent_PlayerBitch is not resolved;
+	now AlexandraPostFangEventPlayerBitch is not resolved;
 	increase perception of player by 1;
 	decrease HP of player by 10;
 	now level of Alexandra is 1; [unshared bitch]
@@ -1018,7 +1016,7 @@ To impregAlexandraChance with (x - text):
 		if debugactive is 1:
 			say "     Impregnation successful! [AlexandraGrowingPups] pups are growing in Alexandra now!";
 		if AlexandraPregCount is 2: [third time pregnant]
-			now AlexandraGainsBroodmotherTrait is not resolved; [she has become pregnant a third time -> event revealing extra nipples]
+			now AlexandraBroodmotherTrait is not resolved; [she has become pregnant a third time -> event revealing extra nipples]
 		increase HP of Alexandra by 1; [advances state from not preg to preg]
 		now lust of Alexandra is 1; [starts the pregnancy timer]
 		if x is: [father of the pups]
@@ -1121,25 +1119,25 @@ Section 6 - Events
 
 to AlexandraFeatAbsorb:
 	if "Horny Bastard" is listed in feats of player and "Horny" is not listed in Traits of Alexandra:
-		now AlexandraGainsHornyTrait is not resolved;
+		now AlexandraHornyTrait is not resolved;
 	else if "..." is listed in feats of player and "..." is not listed in Traits of Alexandra:
 		say "...";
 		[now AlexandraGains... is not resolved;]
 
-AlexandraGainsHornyTrait is a situation.
-AlexandraGainsHornyTrait is resolved.
-The sarea of AlexandraGainsHornyTrait is "Nowhere".
+AlexandraHornyTrait is a situation.
+AlexandraHornyTrait is resolved.
+The sarea of AlexandraHornyTrait is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraGainsHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
-	AlexandraGainsHornyTrait_Event;
+after going to Grey Abbey Library while (AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
+	AlexandraHornyTrait_Event;
 
-instead of navigating Grey Abbey Library while (AlexandraGainsHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	AlexandraGainsHornyTrait_Event;
+	AlexandraHornyTrait_Event;
 
-to AlexandraGainsHornyTrait_Event:
+to AlexandraHornyTrait_Event:
 	say "     As you walk into the entrance area of the Grey Abbey Library, you find Alexandra waiting for you there with a smirk on her face. 'Hey boss,' she calls out in a lusty tone, her tail wagging quickly as she lets her eyes wander up and down over your body. Before you can say anything, the sexy bitch is already pressing herself against your side with her leather jacket pulled open wide, pressing her full breasts against you and filling your nose with the scent of arousal that surrounds her. She gives you a fierce doggy-kiss, licking your neck and mouth, only pausing when you grab her furry nape and pull the quite eager female back a little. Asking what brought on this enthusiastic greeting, you earn an amused bark from the former cop. She gives you a provocative smile and takes hold of your free hand, then guides it to the crotch of her jeans. They're a little damp with arousal.";
 	say "     'Seems my body caught on to the fact that it's all yours now, and what better way to please the person who claimed me right out in the open than to be ready for sex as fast as possible? I've been fucking wet ever since!' She isn't kidding either, as you can see the need for a good rutting clearly written on her face. Seems like you hit the jackpot when you decided to literally fuck the police, earning yourself a nympho bitch in the progress.";
 	say "     [bold type]What's your reply to Alexandra's eager approach?[roman type][line break]";
@@ -1153,22 +1151,22 @@ to AlexandraGainsHornyTrait_Event:
 		LineBreak;
 		say "     Grabbing her a bit more firmly by the neck, you draw Alexandra close and give her a demanding kiss. Feeling her hands on your body, you smile inwardly at her eagerness for sex, then pull her away from you and proclaim that she should get back to guarding the door. The needy bitch looks at you in surprise, her breath coming in short pants from the arousal that flared up in her. She frowns at the refusal to sate her needs, but you can see from the fact that her tail is still wagging that she isn't really cross with you. 'Bastard,' she says more as an observation than a curse, followed by the words, 'Don't let me wait too long, boss. I'm fucking dripping here.' With that, she steps back from you, shaking her chest in a last-minute try to entice you with her well-rounded breasts. She then saunters over to where she was leaning against the wall when you came in.";
 	add "Horny" to Traits of Alexandra;
-	now AlexandraGainsHornyTrait is resolved;
+	now AlexandraHornyTrait is resolved;
 
-AlexandraGainsBroodmotherTrait is a situation.
-AlexandraGainsBroodmotherTrait is resolved.
-The sarea of AlexandraGainsBroodmotherTrait is "Nowhere".
+AlexandraBroodmotherTrait is a situation.
+AlexandraBroodmotherTrait is resolved.
+The sarea of AlexandraBroodmotherTrait is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraGainsBroodmotherTrait is not resolved and a random chance of 1 in 2 succeeds):
-	AlexandraGainsBroodmotherTrait_Event;
+after going to Grey Abbey Library while (AlexandraBroodmotherTrait is not resolved and a random chance of 1 in 2 succeeds):
+	AlexandraBroodmotherTrait_Event;
 
-instead of navigating Grey Abbey Library while (AlexandraGainsBroodmotherTrait is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraBroodmotherTrait is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	AlexandraGainsBroodmotherTrait_Event;
+	AlexandraBroodmotherTrait_Event;
 
-to AlexandraGainsBroodmotherTrait_Event:
+to AlexandraBroodmotherTrait_Event:
 	if lust of Alexandra is 0: [already gave birth]
 		say "     As you walk into the entrance area of the Grey Abbey Library, you find Alexandra there waiting for you with a smirk on her face. 'Hey boss,' she calls out in a teasing tone, her tail wagging quickly as she lets her eyes wander up and down over your body. Checking out the doberwoman bitch in turn, you notice that she's got her leather jacket zipped up to the top, which tells you something is up. Alexandra loves showing off her body and normally would already be wiggling her breasts at you provocatively. Angling your steps towards the waiting bitch, you see her lick the side of her muzzle in anticipation. She pounces on you as soon as you come close, throwing her arms around you and giving you a deep kiss. After some quite enjoyable tongue-wrestling with your sexy bitch, Alexandra eventually pulls back a little and says, 'I got something to show you.'";
 		say "     Grabbing the back of her neck to exchange another quick kiss before you let her go, you're treated to a little show in which the former cop swings her hips enticingly, followed by her right hand wandering up to the zipper of her jacket. Slowly, teasingly, the fastening is pulled down over her front, revealing her shapely breasts and their full, glorious curves. Yet that isn't all, as Alexandra keeps going with her playful show, and soon, you catch a glimpse of another pair of nipples some little distance beneath her breasts. As your eyes widen at the unexpected sight, the dobie bitch just grins wider, pulling the zipper the rest of the way down and revealing two more perky nipples. 'Seems my body isn't quite done changing, boss. After I got knocked up the third time, these started to appear.'";
@@ -1191,23 +1189,23 @@ to AlexandraGainsBroodmotherTrait_Event:
 		say "     From her tone, it is clear that she is joking about the last sentence. You actually know exactly who she was referring to: Dr. Medea, the lizardwoman in the pediatrics clinic you found. Given everything that you have done with (and to) Alexandra, taking her to get treatments to be an even better pet certainly doesn't seem that out of the ordinary. It might be worth talking to her about it sometime, then go visit Medea together. While you are still in your thoughts, contemplating the option, Alexandra gives you a playful grin and says, 'Definitively wouldn't mind getting fucked again sometime soon, you know. I'll be at my usual spot, waiting.' With that said, she saunters off, returning to her post near the entrance.";
 	add "Broodmother" to Traits of Alexandra;
 	add "Fertility Treatment Option" to Traits of Alexandra;
-	now AlexandraGainsBroodmotherTrait is resolved;
+	now AlexandraBroodmotherTrait is resolved;
 
 
-AlexandraPostFangEvent_PlayerBitch is a situation.
-AlexandraPostFangEvent_PlayerBitch is resolved.
-The sarea of AlexandraPostFangEvent_PlayerBitch is "Nowhere".
+AlexandraPostFangEventPlayerBitch is a situation.
+AlexandraPostFangEventPlayerBitch is resolved.
+The sarea of AlexandraPostFangEventPlayerBitch is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraPostFangEvent_PlayerBitch is not resolved and a random chance of 1 in 2 succeeds):
-	AlexandraPostFangEvent_PlayerBitch_Scene;
+after going to Grey Abbey Library while (AlexandraPostFangEventPlayerBitch is not resolved and a random chance of 1 in 2 succeeds):
+	AlexandraPostFangEventPlayerBitch_Scene;
 
-instead of navigating Grey Abbey Library while (AlexandraPostFangEvent_PlayerBitch is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraPostFangEventPlayerBitch is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	AlexandraPostFangEvent_PlayerBitch_Scene;
+	AlexandraPostFangEventPlayerBitch_Scene;
 
-to AlexandraPostFangEvent_PlayerBitch_Scene: [Fang & Alexandra Scene completed with player as top dog]
+to AlexandraPostFangEventPlayerBitch_Scene: [Fang & Alexandra Scene completed with player as top dog]
 	say "     As you walk into the entrance area of the Grey Abbey Library, you find Alexandra waiting for you there with a smirk on her face. 'Hey boss,' she calls out in a lusty tone, her tail wagging quickly as she lets her eyes wander up and down over your body. Before you can say anything, the sexy bitch is already pressing herself against your side with her leather jacket pulled open wide, pressing her full breasts against you and filling your nose with the scent of arousal that surrounds her. She gives you a fierce doggy-kiss, licking your neck and mouth, only pausing when you grab her furry nape and pull the quite eager female back a little. Asking what brought on this enthusiastic greeting, you earn an amused bark from the former cop. She gives you a provocative smile and takes hold of your free hand, then guides it to the crotch of her jeans. They're a little damp with arousal.";
 	say "     'I can't stop thinking of when you fucked me right outside in the street, like the bitch I am,' she says with a soft moan, sliding one her paw inside her jeans. 'Mmm... I've been feeling my cunt changing a little[if player is male and cockname of player is listed in infections of Knotlist] to conform better to your knot[else if player is male], becoming a better fit for your sexy cock[else], getting hotter and wetter at just the thought of you playing with me[end if][if player is male] and stretching out so it can give birth to as many pups as you want to breed in me[end if]. Mmm... just thinking about it's getting me all worked up again? Wanna fuck, boss?' she moans, pressing her body to yours.";
 	say "     [bold type]What's your reply to Alexandra's eager approach?[roman type][line break]";
@@ -1220,7 +1218,7 @@ to AlexandraPostFangEvent_PlayerBitch_Scene: [Fang & Alexandra Scene completed w
 	else:
 		LineBreak;
 		say "     Grabbing her a bit more firmly by the neck, you draw Alexandra close and give her a demanding kiss. Feeling her hands on your body, you smile inwardly at her eagerness for sex, then pull her away from you and proclaim that she should get back to guarding the door. The needy bitch looks at you in surprise, her breath coming in short pants from the arousal that flared up in her. She frowns at the refusal to sate her needs, but you can see from the fact that her tail is still wagging that she isn't really cross with you. 'Bastard,' she says more as an observation than a curse, followed by the words, 'Don't let me wait too long, boss. I'm fucking dripping here.' With that, she steps back from you, shaking her chest in a last-minute try to entice you with her well-rounded breasts. She then saunters over to where she was leaning against the wall when you came in.";
-	now AlexandraPostFangEvent_PlayerBitch is resolved;
+	now AlexandraPostFangEventPlayerBitch is resolved;
 
 [ Content of Good Alexandra moved to Good Alexandra.i7x ]
 

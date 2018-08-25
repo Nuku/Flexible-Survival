@@ -150,7 +150,7 @@ to say bluechaffcaught:
 		now icarus_lastpred is 1;
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 
 
 Part 3 - Feline Victory
@@ -212,7 +212,7 @@ to say bluechaffpounced:
 		now icarus_lastpred is 2;
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of other the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 
 
 Section 2 - Monster Insertion

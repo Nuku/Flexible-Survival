@@ -64,7 +64,7 @@ When Play begins:
 	now HP entry is 29;
 	now lev entry is 3; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+	now area entry is "Nowhere"; [ Location of monster, in this case nowhere]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku]

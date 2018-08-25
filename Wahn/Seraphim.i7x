@@ -162,7 +162,7 @@ to say SeraphDefeated:
 				choose row y in table of random critters;
 				if name entry is "Seraphim":
 					now monster is y;
-					now area entry is "nowhere";
+					now area entry is "Nowhere";
 					break;
 	else:
 		LineBreak;

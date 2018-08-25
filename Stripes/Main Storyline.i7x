@@ -370,7 +370,7 @@ Instead of conversing the doctor matt:
 		now non-infectious entry is true;
 		setmonster "Mismatched Chimera";
 		choose row monster from the table of random critters;
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now HP of Doctor Matt is 19;
 		now level of Doctor Matt is turns;
 	else if HP of Doctor Matt is 19 and level of Doctor Matt - turns >= 8:

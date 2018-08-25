@@ -96,7 +96,7 @@ an everyturn rule:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
 							if name entry is "Black Wasp":
-								now area entry is "nowhere";
+								now area entry is "Nowhere";
 								now non-infectious entry is true; [Wasps locked again]
 								break;
 				else:
@@ -212,7 +212,7 @@ When Play begins:
 	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]

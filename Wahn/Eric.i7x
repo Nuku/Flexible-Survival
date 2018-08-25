@@ -113,8 +113,6 @@ Version 5 of Eric by Wahn begins here.
 [   1: Eric and Ryo met                                              ]
 [   2: Eric listened to stories by Ryo                               ]
 
-Eric has a list of text called Traits.
-Eric has a number called Loyalty.
 Eric has a number called OrcPillMpreg. [able to be mpregged?]
 Eric has a text called CurrentBabyDaddy.
 Eric has a number called OffspringCount.

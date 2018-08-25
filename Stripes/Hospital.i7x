@@ -1653,7 +1653,7 @@ to say hospquestpt12:
 	now non-infectious entry is false;
 	setmonster "Mismatched Chimera";
 	choose row monster from the table of random critters;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 	now hospquest is 19;
 	now progress of doctor mouse is turns;
 

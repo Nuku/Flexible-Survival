@@ -6,32 +6,225 @@ Version 223 of Story Skipper by Core Mechanics begins here.
 The File of Trixsave (owned by another project) is called "txsave".
 The File of Trixsave2 (owned by another project) is called "txsave2".
 The File of Trixsave3 (owned by another project) is called "txsave3".
-The File of invsave (owned by another project) is called "invsave".
-The File of storsave (owned by another project) is called "storsave".
+The File of InventorySave (owned by another project) is called "InventorySave".
+The File of StoreSave (owned by another project) is called "StoreSave".
+The File of TraitSave (owned by another project) is called "TraitSave".
+The File of SituationSave (owned by another project) is called "SituationSave".
+The File of PersonSave (owned by another project) is called "PersonSave".
+The File of TableSave (owned by another project) is called "TableSave".
 trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
 trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
 trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save file found".
-invsavetext is an indexed text that varies. invsavetext is usually "no save file found".
-storsavetext is an indexed text that varies. invsavetext is usually "no save file found".
+InventorySaveText is an indexed text that varies. InventorySaveText is usually "no save file found".
+StoreSaveText is an indexed text that varies. StoreSaveText is usually "no save file found".
+TraitSaveText is an indexed text that varies. TraitSaveText is usually "no save file found".
+SituationSaveText is an indexed text that varies. SituationSaveText is usually "no save file found".
+PersonSaveText is an indexed text that varies. PersonSaveText is usually "no save file found".
+NumberSaveText is an indexed text that varies. NumberSaveText is usually "no save file found".
+TextSaveText is an indexed text that varies. TextSaveText is usually "no save file found".
 SavewordVersion is a number that varies. SavewordVersion is 223. [Saveword version to be outputted in part1. Update this number whenever there's an update to the saveword.]
 
 To savetrix:
+	now InventorySaveText is "";
+	now StoreSaveText is "";
+	now TraitSaveText is "";
+	now SituationSaveText is "";
+	now PersonSaveText is "";
+	[pets and the player himself are not saved in the person file]
+	let PersonExclusionList be { "yourself", "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger" };
 	write "[trixsavetext1]" to the File of Trixsave;
 	write "[trixsavetext2]" to the File of Trixsave2;
 	write "[trixsavetext3]" to the File of Trixsave3;
-	write "Soda|1}" to the File of invsave;
-	write "Soda|1}" to the File of storsave;
+	[saving inventory]
 	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is owned:
 			let num be carried of object entry;
-			append "[name entry]|[num]}" to the File of invsave;
+			now InventorySaveText is "[InventorySaveText][name entry]|[num]}[line break]";
+	[saving stored items]
 	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is stored:
 			let num be stashed of object entry;
-			append "[name entry]|[num]}" to the File of storsave;
+			now StoreSaveText is "[StoreSaveText][name entry]|[num]}[line break]";
+	[saving Traits for everyone]
+	repeat with x running through persons:
+		if Traits of x are not empty:
+			repeat with y running from 1 to the number of entries in Traits of x:
+				now TraitSaveText is "[TraitSaveText][printed name of x]|[entry y in Traits of x]}[line break]";
+	[saving situations for everyone]
+	repeat with x running through situations:
+		now SituationSaveText is "[SituationSaveText][printed name of x]|[if x is unresolved]unresolved[else]resolved[end if]}[line break]";
+	[saving locations for NPC]
+	repeat with x running through persons:
+		if printed name of x is not empty and printed name of x is not "" and printed name of x is not listed in PersonExclusionList: [only write people in the list that are supposed to move in the first place]
+			now PersonSaveText is "[PersonSaveText][printed name of x]|[location of x]}[line break]";
+	write "[InventorySaveText]" to the File of InventorySave;
+	write "[StoreSaveText]" to the File of StoreSave;
+	write "[TraitSaveText]" to the file of TraitSave;
+	write "[PersonSaveText]" to the file of PersonSave;
+	write "[SituationSaveText]" to the file of SituationSave;
 
+RoomSave is an action applying to nothing.
+
+understand "RoomSave" as RoomSave.
+
+carry out RoomSave:
+	write File of TableSave from the Table of GameRooms;
+
+RoomLoad is an action applying to nothing.
+
+understand "RoomLoad" as RoomLoad.
+
+carry out RoomLoad:
+	read File of TableSave into the Table of GameRooms;
+
+savetrix2 is an action applying to nothing.
+understand "load game" as savetrix2.
+
+Check savetrix2:
+	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
+
+Carry out savetrix2:
+	now trixsavetext1 is "[text of the File of Trixsave]";
+	now trixsavetext2 is "[text of the File of Trixsave2]";
+	now trixsavetext3 is "[text of the File of Trixsave3]";
+	reciting2;
+	[ ---------------------------------------------- ]
+	let StoreRecover be indexed text;
+	now StoreRecover is "[text of the File of StoreSave]";
+	replace the text " " in StoreRecover with "`";
+	replace the text " " in StoreRecover with "`";
+	replace the text "}" in StoreRecover with " ";
+	replace the text "-" in StoreRecover with "§";
+	replace the text "_" in StoreRecover with "°";
+	say "Recovering storage...";
+	repeat with z running from 1 to number of words in StoreRecover:
+		let CurrentWord be word number z in StoreRecover;
+		let ObjectId be word number 1 in CurrentWord;
+		replace the text "`" in ObjectId with " ";
+		replace the text "§" in ObjectId with "-";
+		replace the text "°" in ObjectId with "_";
+		let SavedValue be word number 2 in CurrentWord;
+		replace the text "`" in SavedValue with " ";
+		replace the text "§" in SavedValue with "-";
+		replace the text "°" in SavedValue with "_";
+		let NumericalValue be 0;
+		now NumericalValue is numerical value of SavedValue;
+		if there is a name of ObjectId in the table of game objects:
+			let StorageObject be the object corresponding to a name of ObjectId in the table of game objects;
+			now stashed of StorageObject is NumericalValue;
+	[ ---------------------------------------------- ]
+	let InventoryRecover be indexed text;
+	now InventoryRecover is "[text of the File of InventorySave]";
+	replace the text " " in InventoryRecover with "`";
+	replace the text " " in InventoryRecover with "`";
+	replace the text "}" in InventoryRecover with " ";
+	replace the text "-" in InventoryRecover with "§";
+	replace the text "_" in InventoryRecover with "°";
+	say "Recovering inventory...";
+	repeat with z running from 1 to number of words in InventoryRecover:
+		let CurrentWord be word number z in InventoryRecover;
+		let ObjectId be word number 1 in CurrentWord;
+		replace the text "`" in ObjectId with " ";
+		replace the text "§" in ObjectId with "-";
+		replace the text "°" in ObjectId with "_";
+		let SavedValue be word number 2 in CurrentWord;
+		replace the text "`" in SavedValue with " ";
+		replace the text "§" in SavedValue with "-";
+		replace the text "°" in SavedValue with "_";
+		let NumericalValue be 0;
+		now NumericalValue is numerical value of SavedValue;
+		if there is a name of ObjectId in the table of game objects:
+			let InventoryObject be the object corresponding to a name of ObjectId in the table of game objects;
+			now carried of InventoryObject is NumericalValue;
+	if carried of nanite collector > 0:
+		now nanitemeter is 2;
+	if carried of ancient tome > 1:
+		now carried of ancient tome is 1;
+	[ ---------------------------------------------- ]
+[
+	let TraitRecover be indexed text;
+	now TraitRecover is "[text of the File of TraitSave]";
+	replace the text " " in TraitRecover with "`";
+	replace the text " " in TraitRecover with "`";
+	replace the text "}" in TraitRecover with " ";
+	replace the text "-" in TraitRecover with "§";
+	say "Recovering traits...";
+	repeat with z running from 1 to number of words in TraitRecover:
+		let CurrentWord be word number z in TraitRecover;
+		replace the text "|" in CurrentWord with " ";
+		let ObjectId be word number 1 in CurrentWord;
+		replace the text "`" in ObjectId with " ";
+		let SavedValue be word number 2 in CurrentWord;
+		replace the text "`" in SavedValue with " ";
+		if there is a name of ObjectId in the Table of NPCs:
+			choose row with a name of ObjectId in the Table of NPCs;
+			add SavedValue to Traits of object entry;
+]
+	[ ---------------------------------------------- ]
+	let PersonRecover be indexed text;
+	now PersonRecover is "[text of the File of PersonSave]";
+	replace the text " " in PersonRecover with "`";
+	replace the text " " in PersonRecover with "`";
+	replace the text "}" in PersonRecover with " ";
+	replace the text "-" in PersonRecover with "§";
+	replace the text "_" in PersonRecover with "°";
+	say "Recovering Persons...";
+	repeat with z running from 1 to number of words in PersonRecover:
+		let CurrentWord be word number z in PersonRecover;
+		replace the text "|" in CurrentWord with " ";
+		let ObjectId be word number 1 in CurrentWord;
+		replace the text "`" in ObjectId with " ";
+		replace the text "§" in ObjectId with "-";
+		replace the text "°" in ObjectId with "_";
+		let SavedValue be word number 2 in CurrentWord;
+		replace the text "`" in SavedValue with " ";
+		replace the text "§" in SavedValue with "-";
+		replace the text "°" in SavedValue with "_";
+		let TargetRoom be dark basement; [stash room]
+		if debugactive is 1:
+			say "DEBUG -> #[z]; ObjectId: [ObjectId]; SavedValue: [SavedValue][line break]";
+		if SavedValue is not "Nowhere" and SavedValue is not "nothing" and SavedValue is not "dark basement": [don't have to do all this looping if its already nowhere]
+			repeat with r running through rooms:
+				let RoomName be printed name of r;
+				if SavedValue exactly matches the text RoomName:
+					now TargetRoom is r;
+					break; [found the target, break loop]
+		if there is a name of ObjectId in the Table of NPCs:
+			choose row with a name of ObjectId in the Table of NPCs;
+			if TargetRoom is dark basement:
+				now object entry is nowhere;
+			else:
+				move object entry to TargetRoom;
+	[ ---------------------------------------------- ]
+	let SituationRecover be indexed text;
+	now SituationRecover is "[text of the File of SituationSave]";
+	replace the text " " in SituationRecover with "`";
+	replace the text " " in SituationRecover with "`";
+	replace the text "}" in SituationRecover with " ";
+	replace the text "-" in SituationRecover with "§";
+	replace the text "_" in SituationRecover with "°";
+	say "Recovering Situations...";
+	repeat with z running from 1 to number of words in SituationRecover:
+		let CurrentWord be word number z in SituationRecover;
+		replace the text "|" in CurrentWord with " ";
+		let ObjectId be word number 1 in CurrentWord;
+		replace the text "`" in ObjectId with " ";
+		replace the text "§" in ObjectId with "-";
+		replace the text "°" in ObjectId with "_";
+		let SavedValue be word number 2 in CurrentWord;
+		replace the text "`" in SavedValue with " ";
+		replace the text "§" in SavedValue with "-";
+		replace the text "°" in SavedValue with "_";
+		if debugactive is 1:
+			say "DEBUG -> #[z]; ObjectId: [ObjectId]; SavedValue: [SavedValue][line break]";
+		if there is a name of ObjectId in the Table of GameEvents:
+			choose row with a name of ObjectId in the Table of GameEvents;
+			if SavedValue is "resolved":
+				now object entry is resolved;
+			else:
+				now object entry is not resolved;
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
@@ -44,7 +237,7 @@ to say trixiedesc:
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
 	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word. Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word. To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]load game[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 [
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
@@ -54,15 +247,12 @@ To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}[serial number]_[SavewordVersion]}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[NESProgress]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[HP of Susan]}[mattcollection]";
-	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
+	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of Francois]}[libido of Francois]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
 	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]}[HP of Macadamia]}[HP of Yolanda]}[SarahCured]}[libido of chris]}[dexterity of chris]";
-	say "[trixsavetext1][line break]";
-	say "[trixsavetext2][line break]";
-	say "[trixsavetext3][line break]";
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.'";
+	say "[line break]'An image of your reality now has been stored in some otherworldly storage caches called [']Files['] Don't ask me to explain what those are. It's magic, you know!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to come here to [bold type]load game[roman type] to restore your most recent magic files. Talking to me will make a new magic files every time, so be careful not to overwrite your magic files until you're ready.'";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]"; ]
 	savetrix;
 	if wrcursestatus is 5:
@@ -467,7 +657,7 @@ To reciting2:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
@@ -575,12 +765,12 @@ To reciting2:
 			-- 123:	[Karen]
 				if the player's command matches "[number]":
 					now HP of Karen is the number understood;
-			-- 124:	[François]
+			-- 124:	[Francois]
 				if the player's command matches "[number]":
-					now HP of François is the number understood;
-			-- 125:	[François]
+					now HP of Francois is the number understood;
+			-- 125:	[Francois]
 				if the player's command matches "[number]":
-					now libido of François is the number understood; [placeholder for second part to come]
+					now libido of Francois is the number understood; [placeholder for second part to come]
 			-- 126:	[Alexandra + Fang]
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
@@ -898,88 +1088,22 @@ To reciting2:
 			-- 224:	[SarahCured]
 				if the player's command matches "[number]":
 					now SarahCured is the number understood;
-			-- 225:	[libido of chris]
+			-- 225:	[libido of Chris]
 				if the player's command matches "[number]":
-					now libido of chris is the number understood;
-			-- 226:	[dexterity of chris]
+					now libido of Chris is the number understood;
+			-- 226:	[dexterity of Chris]
 				if the player's command matches "[number]":
-					now dexterity of chris is the number understood;
+					now dexterity of Chris is the number understood;
 	restorepart3; [adjust based on loaded values above: 162 - 224]
 	restorepart-final; [other adjustments based on overall results]
+[
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 5 is 0:
 			funfeatget;
-	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
+]
+	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'There, that takes care of yourself. Now for the rest of the city. This may take a while...'";
 	wait for any key;
 
-
-
-savetrix2 is an action applying to nothing.
-understand "load game" as savetrix2.
-
-Check savetrix2:
-	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
-
-Carry out savetrix2:
-	now trixsavetext1 is "[text of the File of Trixsave]";
-	now trixsavetext2 is "[text of the File of Trixsave2]";
-	now trixsavetext3 is "[text of the File of Trixsave3]";
-	reciting2;
-	let storecover be indexed text;
-	now storecover is "[text of the File of storsave]";
-	replace the text " " in storecover with "`";
-	replace the text " " in storecover with "`";
-	replace the text "}" in storecover with " ";
-	say "Recovering storage...";
-	repeat with z running from 1 to number of words in storecover:
-		let curword be word number z in storecover;
-		replace the text "|" in curword with " ";
-		let cur be word number 1 in curword;
-		let amt be 0;
-		let amttext be word number 2 in curword;
-		now amt is numerical value of amttext;
-		replace the text "`" in cur with " ";
-		repeat with Q running through grab objects:
-			let obname be printed name of q;
-			if cur matches the text obname, case insensitively:
-				now stashed of q is amt;
-				break;
-	let invrecover be indexed text;
-	now invrecover is "[text of the File of invsave]";
-	replace the text " " in invrecover with "`";
-	replace the text " " in invrecover with "`";
-	replace the text "}" in invrecover with " ";
-	say "Recovering inventory...";
-	repeat with z running from 1 to number of words in invrecover:
-		let curword be word number z in invrecover;
-		replace the text "|" in curword with " ";
-		let cur be word number 1 in curword;
-		let amt be 0;
-		let amttext be word number 2 in curword;
-		now amt is numerical value of amttext;
-		replace the text "`" in cur with " ";
-		repeat with Q running through grab objects:
-			let obname be printed name of q;
-			if cur matches the text obname, case insensitively:
-				now carried of q is amt;
-				break;
-	if carried of nanite collector > 0:
-		now nanitemeter is 2;
-		repeat with y running from 1 to number of filled rows in table of game objects:
-			choose row y in table of game objects;
-			if name entry is "nanite collector":
-				now weight entry is 25;
-				break;
-	if carried of ancient tome > 1:
-		now carried of ancient tome is 1;
-
-[
-testsven is an action applying to nothing.
-understand "tsven" as testsven;.
-carry out testsven:
-	now HP of Sven is 4;
-	move Sven to Bunker;
-]
 
 Reciting is an action applying to one topic.
 Understand "recite [text]" as reciting.
@@ -1386,7 +1510,7 @@ Carry out reciting:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
-							now area entry is "nowhere";
+							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked]
 					now insectlarva is false;
 			-- 90:	[Leonard]
@@ -1494,12 +1618,12 @@ Carry out reciting:
 			-- 123:	[Karen]
 				if the player's command matches "[number]":
 					now HP of Karen is the number understood;
-			-- 124:	[François]
+			-- 124:	[Francois]
 				if the player's command matches "[number]":
-					now HP of François is the number understood;
-			-- 125:	[François]
+					now HP of Francois is the number understood;
+			-- 125:	[Francois]
 				if the player's command matches "[number]":
-					now libido of François is the number understood; [placeholder for second part to come]
+					now libido of Francois is the number understood; [placeholder for second part to come]
 			-- 126:	[Alexandra + Fang]
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
@@ -2484,7 +2608,7 @@ to restorepart2:	[values 60 - 161]
 			choose row y in table of random critters;
 			if name entry is "Doberman":
 				now monster is y;
-				now area entry is "nowhere";
+				now area entry is "Nowhere";
 				break;
 		if HP of Alexandra is 100:
 			now Police Station is unknown;
@@ -2648,18 +2772,18 @@ to restorepart2:	[values 60 - 161]
 		now Retriever Girl is tamed;
 	else:
 		now Retriever Girl is not tamed;
-[124:	[François]]
+[124:	[Francois]]
 	now Gourmet Treats is unresolved;
 	if girl is banned or guy is banned or furry is banned:
 		now Gourmet Treats is resolved;
-		now HP of François is 0;
-	if HP of François is 0:
+		now HP of Francois is 0;
+	if HP of Francois is 0:
 		now Bone-Appetit is unknown;
 	else:
 		now Gourmet Treats is resolved;
 		now Bone-Appetit is known;
-		say "[FrançoisListCompile]";
-[125:	[François]]
+		say "[FrancoisListCompile]";
+[125:	[Francois]]
 [126:	[Alexandra + Fang]]
 	now XP of Alexandra is 0;
 	if HP of Alexandra is 0 or HP of Alexandra >= 50 or HP of Alexandra is 100:
@@ -2726,7 +2850,7 @@ to restorepart2:	[values 60 - 161]
 		if HP of Septus is 7 or HP of Septus is 99:
 			setmonster "Football Wolfman";
 			choose row monster from the table of random critters;
-			now area entry is "nowhere";
+			now area entry is "Nowhere";
 [133: [Awesome Xerxes]]
 	if HP of Xerxes is 0, now lust of Xerxes is 0;
 [134: [Awesomer Helen]]
@@ -2749,7 +2873,7 @@ to restorepart2:	[values 60 - 161]
 		else:
 			setmonster "Blue Chaffinch";
 			choose row monster from the table of random critters;
-			now area entry is "nowhere";
+			now area entry is "Nowhere";
 			now Icarus is in Garden View;
 	if HP of Icarus is 5 or HP of Icarus is 6:
 		now HP of Icarus is 4; [dialed back for sex]
@@ -2940,7 +3064,7 @@ to restorepart3:	[values 162 - 223]
 		move Tehuantl to Grey Abbey 2F;
 		setmonster "Jaguar Warrior";
 		choose row monster from the table of random critters;
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now TehuantlTimer is turns;
 	else:
 		remove Tehuantl from play;
@@ -3272,12 +3396,12 @@ to restorepart-final:
 		setmonster "Mismatched Chimera";
 		choose row monster from the table of random critters;
 		if name entry is "Mismatched Chimera":
-			now area entry is "nowhere";
+			now area entry is "Nowhere";
 	else:
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;
 		if name entry is "Enhanced Chimera":
-			now area entry is "nowhere";
+			now area entry is "Nowhere";
 			now non-infectious entry is true;
 		setmonster "Mismatched Chimera";
 		choose row monster from the table of random critters;

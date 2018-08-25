@@ -24,8 +24,6 @@ Version 1 of Skarnoth by Wahn begins here.
 Section 1 - Description
 
 Skarnoth is a man. The HP of Skarnoth is usually 0.
-Skarnoth has a list of text called Traits.
-Skarnoth has a number called Loyalty.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
 SkarnothLibraryEntry is a number that varies. [when he was brought in]
@@ -313,7 +311,7 @@ When Play begins:
 	now HP entry is 275;
 	now lev entry is 20;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35;              [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;         [ Cock width, more commonly used for ball size. ]
