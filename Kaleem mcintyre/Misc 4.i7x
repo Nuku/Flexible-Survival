@@ -134,7 +134,7 @@ Instead of resolving Spiritual Love:
 			now scalevalue of player is 3;
 			now bodydesc of player is "animalistic";
 			now bodytype of player is "lupine";
-			now daycycle of player is 0;
+			now SleepRhythm of player is 0;
 			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;

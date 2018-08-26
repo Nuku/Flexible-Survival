@@ -532,7 +532,7 @@ to say HorsePitFightAbuse:
 	now scalevalue of player is 3;
 	now bodydesc of player is "sultry";
 	now bodytype of player is "[one of]equine[or]horse-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	follow the turnpass rule;
 
 

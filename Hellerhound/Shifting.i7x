@@ -155,13 +155,12 @@ To transform:
 			now bodytype of player is type entry;
 		else:
 			now bodytype of player is name entry;
-		if there is a nocturnal in row monster of the table of random critters:
-			if nocturnal entry is true:
-				now daycycle of player is 2; [night-preferred]
-			if nocturnal entry is false:
-				now daycycle of player is 1; [day-preferred]
+		if DayCycle entry is 2:
+			now SleepRhythm of player is 2; [night-preferred]
+		if DayCycle entry is 1:
+			now SleepRhythm of player is 1; [day-preferred]
 		else:
-			now daycycle of player is 0; [standard]
+			now SleepRhythm of player is 0; [standard]
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
@@ -205,7 +204,7 @@ when play ends:
 		now scalevalue of player is 3;
 		now bodydesc of player is "shapeshifting";
 		now bodytype of player is "shapeshifter";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		say "((Being a shapeshifter, your normal ending for your body type is suppressed))";
 
 Shifting ends here.

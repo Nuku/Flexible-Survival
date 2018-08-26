@@ -25,7 +25,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
 		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
@@ -41,8 +41,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Pediatrics Lobby[close bracket][as]nav Pediatrics Lobby[end link] ";
 		if Pig Pen is known:
 			say "| [link][bracket]Pig Pen[close bracket][as]nav Pig Pen[end link] ";
-		if Police Station is known:
-			say "| [link][bracket]Police Station[close bracket][as]nav Police Station[end link] ";
+		if Police Station Twelve is known:
+			say "| [link][bracket]Police Station Twelve[close bracket][as]nav Police Station Twelve[end link] ";
 		if Rabbit Den is known:
 			say "| [link][bracket]Rabbit Den[close bracket][as]nav Rabbit Den[end link] ";
 		if Red Apartment is known:

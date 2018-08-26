@@ -2043,7 +2043,7 @@ to say de-demonify:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "Human";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	if isHellhound is true:
 		say "     Elijah sags onto his bunk with a sad, exhausted sigh, looking pale and tired. 'I tried, my friend, but I do not have the strength to break the pact you entered into with that fel beast. I wish I could help you further, but it is beyond my abilities now. Your reprieve from the effects of the curse will be brief. You shall have to seek proper absolution from your dark choice elsewhere.";
 

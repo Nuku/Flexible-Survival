@@ -650,7 +650,7 @@ Instead of resolving a Concession Stand:
 				now scalevalue of player is 3;
 				now bodydesc of player is "malleable";
 				now bodytype of player is "ever-changing";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				end the story saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
 				now battleground is "void";
 				wait for any key;

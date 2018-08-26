@@ -1537,7 +1537,7 @@ to dolboundstate:
 				now scalevalue of player is 3;
 				now bodydesc of player is "inflatable";
 				now bodytype of player is "dolphin";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				now breasts of player is 2;
 				now breast size of player is 0;
 				if hellHoundLevel is 0:
@@ -1780,7 +1780,7 @@ to say dolcheckA:		[empty]
 		now scalevalue of player is 3;
 		now bodydesc of player is "inflatable";
 		now bodytype of player is "dolphin";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now breasts of player is 2;
 		now breast size of player is 0;
 		if hellHoundLevel is 0:

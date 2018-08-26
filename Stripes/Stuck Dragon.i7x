@@ -357,7 +357,7 @@ to say dragonchange:
 		now scalevalue of player is 5;
 		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -433,7 +433,7 @@ to say dragonchange:
 		now scalevalue of player is 5;
 		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -921,7 +921,7 @@ to say dragonchange2:
 		now scalevalue of player is 5;
 		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -997,7 +997,7 @@ to say dragonchange2:
 		now scalevalue of player is 5;
 		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";

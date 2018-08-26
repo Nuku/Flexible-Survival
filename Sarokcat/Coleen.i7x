@@ -278,7 +278,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
@@ -296,7 +296,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 					stop the action;
@@ -319,7 +319,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 			else:
@@ -335,7 +335,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
@@ -351,7 +351,7 @@ carry out ColeenSpraying:
 			now scalevalue of player is 3;
 			now bodydesc of player is "unchanged";
 			now bodytype of player is "human";
-			now daycycle of player is 0;
+			now SleepRhythm of player is 0;
 			increase humanity of player by 20;
 			increase ColeenSpray by 1;
 	else if ColeenSpray is 1:
@@ -361,7 +361,7 @@ carry out ColeenSpraying:
 		now scalevalue of player is 3;
 		now bodydesc of player is "unchanged";
 		now bodytype of player is "human";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		increase humanity of player by 20;
 		increase ColeenSpray by 1;
 	else if ColeenSpray is 2:

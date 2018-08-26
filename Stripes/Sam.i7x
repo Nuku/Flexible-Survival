@@ -455,7 +455,7 @@ to assaultonminilab:
 				now scalevalue of player is 5;
 				now bodydesc of player is "silky";
 				now bodytype of player is "feline";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				end the story saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
 				wait for any key;
 				now battleground is "void";

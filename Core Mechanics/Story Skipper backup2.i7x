@@ -45,7 +45,7 @@ To say magic word:
 		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of Francois]}[libido of Francois]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]";
+	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station Twelve]}[infpop of Police Station Twelve]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -1066,7 +1066,7 @@ To reciting2:
 					now HP of Alexandra is the number understood;
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
-					move Alexandra to Police Station;
+					move Alexandra to Police Station Twelve;
 					if HP of Alexandra is 59 or HP of Alexandra is 60:
 						now HP of Alexandra is 58;
 						say "[special-style-2]NOTICE:[roman type] Your completion of the Automatons 2 task has been undone due to task order revisions.";
@@ -1079,11 +1079,11 @@ To reciting2:
 								now area entry is "Nowhere";
 								break;
 						if HP of Alexandra is 100:
-							now Police Station is unknown;
+							now Police Station Twelve is unknown;
 						else if HP of Alexandra >= 50:
-							now Police Station is known;
+							now Police Station Twelve is known;
 						else:
-							now Police Station is unknown;
+							now Police Station Twelve is unknown;
 							move Alexandra to Grey Abbey Library;
 						if HP of Alexandra >= 65 and HP of Alexandra <= 100:
 							now Master Mind is in Cell Block A;
@@ -1938,22 +1938,22 @@ To reciting2:
 			-- 209: [thirst of Erica]
 				if the player's command matches "[number]":
 					now thirst of Erica is the number understood;
-			-- 210:	[population of Police Station]
+			-- 210:	[population of Police Station Twelve]
 				if the player's command matches "[number]":
-					now population of Police Station is the number understood;
-					if population of Police Station > 50, now population of Police Station is 50;
-					if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
+					now population of Police Station Twelve is the number understood;
+					if population of Police Station Twelve > 50, now population of Police Station Twelve is 50;
+					if population of Police Station Twelve is not 0 and population of Police Station Twelve < 3, now population of Police Station Twelve is 3;
 					if HP of Alexandra < 63 or HP of Alexandra is 100:
-						now population of Police Station is 0;
-			-- 211:	[infpop of Police Station]
+						now population of Police Station Twelve is 0;
+			-- 211:	[infpop of Police Station Twelve]
 				if the player's command matches "[number]":
-					now infpop of Police Station is the number understood;
-					if infpop of Police Station > population of Police Station, now infpop of Police Station is population of Police Station;
-					if infpop of Police Station < ( ( 2 * population of Police Station ) / 3 ), now infpop of Police Station is ( ( 2 * population of Police Station ) / 3 );
-					if infpop of Police Station is not 0 and infpop of Police Station < 3, now infpop of Police Station is 3;
-			-- 212:	[placeholder for Police Station]
+					now infpop of Police Station Twelve is the number understood;
+					if infpop of Police Station Twelve > population of Police Station Twelve, now infpop of Police Station Twelve is population of Police Station Twelve;
+					if infpop of Police Station Twelve < ( ( 2 * population of Police Station Twelve ) / 3 ), now infpop of Police Station Twelve is ( ( 2 * population of Police Station Twelve ) / 3 );
+					if infpop of Police Station Twelve is not 0 and infpop of Police Station Twelve < 3, now infpop of Police Station Twelve is 3;
+			-- 212:	[placeholder for Police Station Twelve]
 				let xyz be 0;
-			-- 213:	[placeholder for Police Station]
+			-- 213:	[placeholder for Police Station Twelve]
 				let xyz be 0;
 			-- 214:	[HP of Hadiya]
 				if the player's command matches "[number]":
@@ -3156,7 +3156,7 @@ Carry out reciting:
 					now HP of Alexandra is the number understood;
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
-					move Alexandra to Police Station;
+					move Alexandra to Police Station Twelve;
 					if HP of Alexandra is 59 or HP of Alexandra is 60:
 						now HP of Alexandra is 58;
 						say "[special-style-2]NOTICE:[roman type] Your completion of the Automatons 2 task has been undone due to task order revisions.";
@@ -3169,11 +3169,11 @@ Carry out reciting:
 								now area entry is "Nowhere";
 								break;
 						if HP of Alexandra is 100:
-							now Police Station is unknown;
+							now Police Station Twelve is unknown;
 						else if HP of Alexandra >= 50:
-							now Police Station is known;
+							now Police Station Twelve is known;
 						else:
-							now Police Station is unknown;
+							now Police Station Twelve is unknown;
 							move Alexandra to Grey Abbey Library;
 						if HP of Alexandra >= 65 and HP of Alexandra <= 100:
 							now Master Mind is in Cell Block A;
@@ -4021,22 +4021,22 @@ Carry out reciting:
 			-- 209: [thirst of Erica]
 				if the player's command matches "[number]":
 					now thirst of Erica is the number understood;
-			-- 210:	[population of Police Station]
+			-- 210:	[population of Police Station Twelve]
 				if the player's command matches "[number]":
-					now population of Police Station is the number understood;
-					if population of Police Station > 50, now population of Police Station is 50;
-					if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
+					now population of Police Station Twelve is the number understood;
+					if population of Police Station Twelve > 50, now population of Police Station Twelve is 50;
+					if population of Police Station Twelve is not 0 and population of Police Station Twelve < 3, now population of Police Station Twelve is 3;
 					if HP of Alexandra < 63 or HP of Alexandra is 100:
-						now population of Police Station is 0;
-			-- 211:	[infpop of Police Station]
+						now population of Police Station Twelve is 0;
+			-- 211:	[infpop of Police Station Twelve]
 				if the player's command matches "[number]":
-					now infpop of Police Station is the number understood;
-					if infpop of Police Station > population of Police Station, now infpop of Police Station is population of Police Station;
-					if infpop of Police Station < ( ( 2 * population of Police Station ) / 3 ), now infpop of Police Station is ( ( 2 * population of Police Station ) / 3 );
-					if infpop of Police Station is not 0 and infpop of Police Station < 3, now infpop of Police Station is 3;
-			-- 212:	[placeholder for Police Station]
+					now infpop of Police Station Twelve is the number understood;
+					if infpop of Police Station Twelve > population of Police Station Twelve, now infpop of Police Station Twelve is population of Police Station Twelve;
+					if infpop of Police Station Twelve < ( ( 2 * population of Police Station Twelve ) / 3 ), now infpop of Police Station Twelve is ( ( 2 * population of Police Station Twelve ) / 3 );
+					if infpop of Police Station Twelve is not 0 and infpop of Police Station Twelve < 3, now infpop of Police Station Twelve is 3;
+			-- 212:	[placeholder for Police Station Twelve]
 				let xyz be 0;
-			-- 213:	[placeholder for Police Station]
+			-- 213:	[placeholder for Police Station Twelve]
 				let xyz be 0;
 			-- 214:	[HP of Hadiya]
 				if the player's command matches "[number]":

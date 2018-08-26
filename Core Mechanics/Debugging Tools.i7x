@@ -445,4 +445,18 @@ to DescriptionDisplay:
 	now looknow is 0;
 	rule succeeds;
 
+DebugCritterRow is an action applying to one topic.
+
+understand "DebugCritterRow [text]" as DebugCritterRow.
+
+carry out DebugCritterRow:
+	let NumericalValue be 0;
+	now NumericalValue is numerical value of topic understood;
+	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
+	if NumericalValue < the number of rows in the table of random critters:
+		choose row NumericalValue in the table of random critters;
+		say "Creature Entry: [name entry]";
+	else:
+		say "Row Number outside of the table!";
+
 Debugging Tools ends here.

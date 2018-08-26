@@ -322,7 +322,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 			now scalevalue of player is 3;
 			now bodydesc of player is "strong";
 		now bodytype of player is "lupine";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		wait for any key;
 		end the story saying "You have been turned into Zigor's latest leather wolf plaything.";
 		now battleground is "void";

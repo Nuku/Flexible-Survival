@@ -142,7 +142,7 @@ to say christy_ending:
 	now scalevalue of player is 3;
 	now bodydesc of player is "plump";
 	now bodytype of player is "[one of]plush[or]leonine[or]costume-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	end the story saying "You lose yourself to your new identity.";
 	follow the turnpass rule;
 	stop the action;

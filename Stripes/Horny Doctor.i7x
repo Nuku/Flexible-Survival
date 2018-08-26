@@ -40,7 +40,7 @@ to say hornydocdesc:
 		now hdmode is 2;
 	else if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     A dog in a doctor's coat passes by you in the hall, barely looking up from his chart. He looks you over briefly, gives you a quick sniff. 'The healthcare plan you've selected will not allow you to see a doctor here. You should consider not using banning so much and get a new provider.' And with that cryptic comment, the canine continues on his way. It seems they won't have any interest in you for some reason.";
-		blank out the whole row;
+		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now hdmode is 0;
@@ -69,6 +69,7 @@ to say hornydocdesc:
 		setmongender 4; [creature is female]
 		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this female [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by her canine nature[else]to suit her breed[end if]. With her coat hanging open, her [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering her whole body. This also gives you a clear view of her shapely breasts and the damp muff between her legs. Upon noticing you, her ears perk up and her [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and she moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or][if player is male]Oh, for a case of swelling like that, I'm going to have to prescribe a hot, juicy fucking[else if player is female]Oh, you seem to be seeping juices badly. Come here and I'll kiss it to make it all better[else]Oh my! It seems you've misplaced your genitals. Don't worry, you can lick mine until you're all better[end if][or]I've got the cure for what ails you right here[or]Here for your full physical exam? Now be a good patient and bend over. I promise I'll even warm up my hands first[or]I've got your medicine right here[at random],' she barks excitedly. You can see the dog's pussy start to drip with her juices as she talks to you. Clearly she's interested in more than your typical doctor-patient relationship.";
 		now altcombat entry is "default";
+	now BannedStatus entry is false;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -224,8 +225,8 @@ to say beatthehdfemale:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -277,8 +278,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Heat

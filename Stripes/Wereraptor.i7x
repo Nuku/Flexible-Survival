@@ -191,7 +191,7 @@ to say wereraptordesc:
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You spot a raptor-like creature looking at you from the distance. It stares at you long with its amber eyes, twitches its claws. 'Clever girl,' it hisses before turning away, leaving you be.";
 		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
-		blank out the whole row;
+		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now wrmode is 0;
@@ -326,8 +326,8 @@ to say wrvict3:		[69 w/male]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -378,8 +378,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 2; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -579,7 +580,7 @@ to wrbodysave:
 	now wrscalevalue is scalevalue of player;
 	now wrbodydesc is bodydesc of player;
 	now wrbodytype is bodytype of player;
-	now wrdaycycle is daycycle of player;
+	now wrdaycycle is SleepRhythm of player;
 	now bodyname of player is "Wereraptor";
 	now body of player is body entry;
 	attributeinfect;
@@ -627,7 +628,7 @@ to wrcurserecede:
 		now scalevalue of player is wrscalevalue;
 		now bodydesc of player is wrbodydesc;
 		now bodytype of player is wrbodytype;
-		now daycycle of player is wrdaycycle;
+		now SleepRhythm of player is wrdaycycle;
 	if facename of player is "Wereraptor":
 		now facename of player is wrfacename;
 		now face of player is wrface;

@@ -158,7 +158,7 @@ to say beegirlsaved:
 	increase score by 20;
 	now bee girl is tamed;
 	now HP of bee girl is 1;
-	move Honey to Garden;
+	move Honey to Grey Abbey Garden;
 	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
@@ -177,14 +177,14 @@ the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
 	remove Honey from play;
-	if player is in Garden and Honey is in Garden: [summoning while standing next to her]
+	if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden: [summoning while standing next to her]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 	else: [regular summoning]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 
 to say DismissHoney:
-	move Honey to Garden;
-	if player is not in Garden: [regular dismiss]
+	move Honey to Grey Abbey Garden;
+	if player is not in Grey Abbey Garden: [regular dismiss]
 		say "     Honey presses a quick kiss to your cheek before flying away.";
 	else: [dismissing her in the abbey]
 		say "     Honey just shrugs her shoulders, going back to work in the garden.";
@@ -203,7 +203,7 @@ to say HoneyDesc:
 		say "DEBUG -> HP of bee girl: [HP of bee girl] <- DEBUG[line break]";
 	project the figure of Honey_icon;
 	say "     The bee drone has a youthful appearance despite her maturity. Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress. She has a small pair of insect arms at her sides, which can be used to hold small things. The bee abdomen attached to her tight bottom lacks its stinger.";
-	if player is in Garden:
+	if player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
 		say "     At the moment the little bee girl is flying around, buzzing contently.";
@@ -215,7 +215,7 @@ to say HoneyScent:
 	say "     Honey, unsurprisingly, smells of honey.";
 
 instead of conversing the Honey:
-	if player is in Garden and Honey is in Garden:
+	if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 		say "[HoneyTalkMenu]";
 	else if companion of player is bee girl:
 		say "[HoneyTalkMenu]";
@@ -226,7 +226,7 @@ instead of conversing bee girl:
 	if bee girl is not tamed:
 		say "     Who?";
 	else:
-		if player is in Garden and Honey is in Garden:
+		if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 			say "[HoneyTalkMenu]";
 		else if companion of player is bee girl:
 			say "[HoneyTalkMenu]";

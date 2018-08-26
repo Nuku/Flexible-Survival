@@ -377,7 +377,7 @@ Larissa has a text called subjpro. The subjpro is usually "she".
 Larissa has a text called possadj_cap. The possadj_cap is usually "Her".
 Larissa has a text called possadj. The possadj is usually "her".
 Larissa has a text called objpro. The objpro is usually "her".
-Larissa has a number called daycycle.
+Larissa has a number called SleepRhythm.
 Larissa has a number called bodycat.
 Larissa has a number called lasttf. Lasttf is normally 255.
 Larissa has a number called oldgender. The oldgender is usually 2.
@@ -599,13 +599,12 @@ to Larissadata (x - text):
 				now bodytype of Larissa is type entry;
 			else:
 				now bodytype of Larissa is name entry;
-			if there is a nocturnal in row monster of the table of random critters:
-				if nocturnal entry is true:
-					now the daycycle of Larissa is 2; [night-preferred]
-				if nocturnal entry is false:
-					now the daycycle of Larissa is 1; [day-preferred]
+			if DayCycle entry is 2:
+				now the SleepRhythm of Larissa is 2; [night-preferred]
+			if DayCycle entry is 1:
+				now the SleepRhythm of Larissa is 1; [day-preferred]
 			else:
-				now the daycycle of Larissa is 0; [standard]
+				now the SleepRhythm of Larissa is 0; [standard]
 			break;
 	if found is 0, say "Error - Creature [x] not found.";
 
@@ -1374,7 +1373,7 @@ carry out Larissatesting:
 	say "Size: [scalevalue of Larissa]";
 	say "Body descriptor: [bodydesc of Larissa]";
 	say "Body type: [bodytype of Larissa]";
-	say "Daycycle: [daycycle of Larissa] = [if daycycle of Larissa is 0]Normal[else if daycycle is 1]Day[else]Night[end if]";
+	say "Daycycle: [SleepRhythm of Larissa] = [if SleepRhythm of Larissa is 0]Normal[else if daycycle is 1]Day[else]Night[end if]";
 	say "Body Category: [bodycat of Larissa] = [if bodycat of Larissa is 0]humanoid[else if bodycat of Larissa is 1]quadrupedal[else if bodycat of Larissa is 2]tauric[else if bodycat of Larissa is 3]legless[else]unknown![end if]";
 
 Larissa ends here.

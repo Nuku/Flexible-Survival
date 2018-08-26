@@ -81,10 +81,10 @@ to say losetodobie1:		[low-lust player loss]
 					say "Deciding to risk it, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her. At first, she remains curt with you, but her loneliness in this situation wins out and she starts to open up.";
 					say "     'My name's Officer Friedrich, but I guess you can call me Alexandra. It's good to run into someone who's sane and friendly. All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes. But I can't give up. Just before communications went down entirely, the emergency reports said that the military would be sent in. We've just got to hold out,' she says, a bit of desperation in her voice. You both fall silent for a while.";
 					say "     She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest. 'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.'";
-					say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
+					say "     She gives you some quick directions to the [bold type]Police Station Twelve[roman type] and tells you to stop by when you get a chance.";
 					now dobielibido is -100;
 					now fightoutcome is 19;
-					now Police Station is known;
+					now Police Station Twelve is known;
 					now HP of Alexandra is 50;
 					now area entry is "Nowhere";
 					increase score by 20;
@@ -106,7 +106,7 @@ to say losetodobie1:		[low-lust player loss]
 				say "     She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest. 'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.'";
 				say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
 				now dobielibido is -100;
-				now Police Station is known;
+				now Police Station Twelve is known;
 				now HP of Alexandra is 50;
 				now area entry is "Nowhere";
 				increase score by 20;
@@ -358,7 +358,7 @@ to say beattheDoberman:
 
 
 to say beatthedobie1:			[low-lust cop player victory]
-	if player is not neuter and libido of player > 25:
+	if player is not neuter:
 		say "     Looking her over, you can't help but find the canine woman's body more than a little sexy, especially in that cop uniform.";
 		say "     [bold type]Shall you take advantage of his opportunity to have some fun with the hot policewoman?[roman type][line break]";
 		LineBreak;
@@ -496,8 +496,8 @@ to say beatthedobie3:			[high-lust cop player victory]
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -548,8 +548,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "dobermancop"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat Rules

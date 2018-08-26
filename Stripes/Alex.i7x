@@ -403,7 +403,7 @@ to say brunchtimechange:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 [
 		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		say "[bold type]Your stamina has dropped by 1![roman type][line break]";
@@ -432,7 +432,7 @@ to say alexbodyreset:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 	if alexbrunch > 3 and cockname of player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now cockname of player is "Ferret";

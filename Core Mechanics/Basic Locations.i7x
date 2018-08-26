@@ -184,8 +184,8 @@ to say glargeshed desc:
 	project the figure of Library1stfloor_icon;
 	say "     Stepping into the shed, it's a little disconcerting how much bigger it is compared to its outward appearance. Inspecting the interior, the walls are made from basic cement, no drywall or anything, which makes sense since given that this was just a place to stow gardening equipment. Most of the floor is smooth cement as well[if Philip is booked]. Philip has turned the ruined back corner into a muddy wrestling ring to roll around in, the pig prepared for any challengers[else], except for a back corner where the cement has been broken up into jagged balls of rock[end if]. Counters and cabinets line the wall on the right hand side of the shed. To the south is the door leading back out to the courtyard.";
 
-South of Courtyard is Garden.
-Garden is a room. The description of Garden is "[ggarden desc]".
+South of Courtyard is Grey Abbey Garden.
+Grey Abbey Garden is a room. The description of Grey Abbey Garden is "[ggarden desc]".
 
 to say ggarden desc:
 	project the figure of Library1stfloor_icon;

@@ -142,9 +142,8 @@ Instead of resolving a Protected Supplies:
 		else:
 			next;
 		if area entry matches the text battleground:
-			if there is a nocturnal in row tt of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next; [skips if day/night doesn't match]
+			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
+				next; [skips if day/night doesn't match]
 			add tt to q;
 			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;

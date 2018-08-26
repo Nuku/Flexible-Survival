@@ -70,13 +70,9 @@ carry out bfanditesting:
 				say "This line appears for all infectious creatures.";
 			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 				say "This line appears for all non-infectious creatures. Eventually used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters. The shifting ability should not be able to gain these infections, nor should any source of random infection.";
-			if there is a nocturnal in row monster of the table of random critters:
-				say "nocturnal: [if nocturnal entry is true]TRUE[else]FALSE[end if]     The [name entry] is [bold type][if nocturnal entry is true]nocturnal[else]diurnal[end if][roman type]. They will only appear in random fights [bold type][if nocturnal entry is true]at night[else]during the day[end if][roman type].";
-			else:
-				say "nocturnal: [bold type]UNSET[roman type]     This is the [bold type]standard setting[roman type] for this variable, meaning the creature can be encountered both day and night.";
-			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is false:
+			if DayCycle is 0 or DayCycle is 2:
 				say "It is possible to encounter the [name entry] during the day.";
-			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is true:
+			if DayCycle is 0 or DayCycle is 1:
 				say "It is possible to encounter the [name entry] at night.";
 			if there is a altcombat in row monster of the table of random critters:
 				say "altcombat: [altcombat entry]     The [name entry] follows the [altcombat entry] rules for alternate combat.";
@@ -126,7 +122,7 @@ These will be used to describe the player during scenes and should be a single a
 
 [ NON-INFECTIOUS: A truth state to designate whether this creature cannot cause infection. It can eventually be used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters. The shifting ability should not be able to gain these infections, nor should any source of random infection. ]
 
-[ NOCTURNAL: A truth state to designate whether this creature is nocturnal (true) or diurnal (false). Nocturnal creatures will only be available for encounters during the night. Diurnal creatures will only be available for encounters during the night. An unset creature is treated as the normal case, able to be found both during the day and the night. As such, this variable will most often remain blank. ]
+[ DAYRHTHM: 0 = up at all times, 1 = nocturnal, 2 = diurnal ]
 
 [ ALTCOMBAT: An entry to detect whether the creature has any special behavior during combat. See the 'Alt Combat' document for the updated combat system. An unset creature is treated as using the 'default' combat system. ]
 

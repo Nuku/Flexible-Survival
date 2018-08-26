@@ -116,7 +116,7 @@ to Hellhound infect female:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "human";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now cunts of player is 1;
 	now cunt length of player is 6;
 	now cunt width of player is 4;
@@ -150,7 +150,7 @@ to Hellhound infect male:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "human";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now cocks of player is 1;
 	now cock length of player is 6;
 	now the cock width of the player is 4;
@@ -237,13 +237,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				else:
 					now body of player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				say "     Your body doubles over, not in pain, but simply as muscles spasm and reshape. Your form returns to the human body you were born with, plus the additions you sport due to the Hellhound's [']gift['].";
 			if maleHound is True:
 				if player is female:
@@ -297,13 +297,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				else:
 					now body of player is "that of a bipedal dog, paw-like feet, and stubby-fingered hands with pawpads and dull black claws.";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				say "     Your body doubles over, not in pain but simply because you can't remain upright as muscles spasm and reshape, your body reforming into a bipedal version of the infernal mutt you submitted to.";
 			if maleHound is True:
 				if player is female:
@@ -355,13 +355,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]quadrapedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 2;
+					now SleepRhythm of player is 2;
 				else:
 					now body of player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]quadrapedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 2;
+					now SleepRhythm of player is 2;
 				say "     Your bones seem to heat and grow soft, the action making you collapse onto the ground as they no longer seem to be able to bear your weight. You are forced to lie there for a few minutes as muscles shift and joints pop. Eventually, the changes seem to complete and you're able to pull yourself to your feet, all four feet. You now wear the form of the foul demonic hound that tainted you.";
 			if maleHound is True:
 				if player is female:

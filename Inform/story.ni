@@ -777,7 +777,7 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of random critters
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 "Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
 
 understand the command "feed" as something new.
@@ -2803,13 +2803,12 @@ to attributeinfect:		[sets the player values from the new attributes]
 		now bodytype of player is type entry;
 	else:
 		now bodytype of player is name entry;
-	if there is a nocturnal in row monster of the table of random critters:
-		if nocturnal entry is true:
-			now daycycle of player is 2; [night-preferred]
-		if nocturnal entry is false:
-			now daycycle of player is 1; [day-preferred]
+	if DayCycle entry is 2:
+		now SleepRhythm of player is 2; [night-preferred]
+	if DayCycle entry is 1:
+		now SleepRhythm of player is 1; [day-preferred]
 	else:
-		now daycycle of player is 0; [standard]
+		now SleepRhythm of player is 0; [standard]
 
 To attributeinfect (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -3045,6 +3044,10 @@ To fight:
 					break;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
+		if BannedStatus entry is true: [banned creatures can't be fought]
+			if debugactive is 1:
+				say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+			next;
 		if there is a lev entry:
 			if lev entry > level of player plus levelwindow and hardmode is false:
 				next;
@@ -3053,7 +3056,7 @@ To fight:
 		if there is no area entry, next;
 [		if area entry is "Everywhere":		[***]
 			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
+				if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night), next;
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of player:
 				if bodyname of player is name entry, add x to Q;
@@ -3063,7 +3066,7 @@ To fight:
 				if cockname of player is name entry, add x to Q; ]
 		if area entry matches the text battleground:
 			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
+				if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
 					next; [skips if day/night doesn't match]
 			let skipit be 0;
 			repeat with s running through warded flags:
@@ -3140,7 +3143,16 @@ To fight:
 	rule succeeds;
 
 To challenge:
-	choose row monster from the table of random critters;
+	if there is a row monster in the table of random critters:
+		choose row monster from the table of random critters;
+	else:
+		say "ERROR: There is no row [monster] in the table of random critters. Please report this message on the FS Discord.";
+		rule succeeds;
+		stop the action;
+	if BannedStatus entry is true:
+		now combat abort is 1;
+		if debugactive is 1:
+			say "DEBUG -> Combat Aborted because: [name entry] has Banned: [BannedStatus entry][line break]";
 	prepforfight;
 	if combat abort is 1:
 		now combat abort is 0;
@@ -4403,6 +4415,10 @@ carry out ScavengingAction:
 To Challenge (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y from the table of random critters;
+		if BannedStatus entry is true: [banned creatures can't be challenged]
+			if debugactive is 1:
+				say "DEBUG -> Can't challenge creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+			break;
 		let TargetFound be 0;
 		if name entry exactly matches the text x, case insensitively:
 			now TargetFound is 1;
@@ -4429,15 +4445,20 @@ To Infect (x - text):
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry exactly matches the text x, case insensitively:
-			now monster is y;
-			let reset be 0;
-			if researchbypass is 1 and non-infectious entry is true:
-				now reset is 1;
-				now non-infectious entry is false;
-			infect;
-			if reset is 1:
-				now non-infectious entry is true;
-			break;
+			if BannedStatus entry is true: [banned creatures can't infect]
+				if debugactive is 1:
+					say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+				break;
+			else:
+				now monster is y;
+				let reset be 0;
+				if researchbypass is 1 and non-infectious entry is true:
+					now reset is 1;
+					now non-infectious entry is false;
+				infect;
+				if reset is 1:
+					now non-infectious entry is true;
+				break;
 
 to randominfect: [bypasses researcher protection]
 	now researchbypass is 1;
@@ -4448,13 +4469,17 @@ to weakrandominfect: [does not bypass researcher protection]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	infect;
+	if BannedStatus entry is true: [banned creatures can't be challenged]
+		if debugactive is 1:
+			say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+	else:
+		while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			increase monster by 1;
+			choose row monster from table of random critters;
+			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+				next;
+			break;
+		infect;
 
 to setmonster ( x - text ): [puts an infection (named x) as lead monster for later use]
 	let found be 0;
@@ -5675,7 +5700,10 @@ To startcreatureban: [bans creatures, as requested]
 			if name entry is listed in infections of n:
 				now bad is 1;
 		if bad is 1:
+			now BannedStatus entry is true;
+[ replaced with the above line so that the table of random critters stays the same
 			blank out the whole row;
+]
 	say "Banning situations...";
 	repeat with n running through situations:
 		let bad be 0;

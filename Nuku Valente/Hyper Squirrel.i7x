@@ -389,7 +389,7 @@ to say snowsquirrelgivein:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
 	now bodytype of player is "[one of]rodent[or]squirrel-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now humanity of player is 0;
 	end the story saying "You and Snow have lost your minds to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take a turn with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	WaitLineBreak;
@@ -491,7 +491,7 @@ Instead of resolving a wild squirrels:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
 	now bodytype of player is "[one of]rodent[or]squirrel-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now wild squirrels is resolved;
 
 
