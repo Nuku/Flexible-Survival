@@ -1,9 +1,12 @@
 Version 1 of Pet Shop by Wahn begins here.
-[ Version 1.0 - New Content by Wahn]
+[ Version 1.0 - New Content - Wahn                    ]
+[ Version 1.1 - Added missing fur brush object - Song ]
 
 "Adds content for the pet store near the Grey Abbey Library"
 
 Section 1 - Chaotic Mess
+
+[George's Animal Emporium is defined in Basic Locations]
 
 Chaotic Mess is a person. Chaotic Mess is in George's Animal Emporium.
 The description of Chaotic Mess is "     Most of George's Animal Emporium is filled with a terrible mess, as the store's contents have been rifled through multiple times already. The looters were clearly not interested in putting things back into their original positions. This has resulted in a sprawling chaos of items scattered everywhere, ankle deep in places and hip high for a human in others. If you had a specific friend or pet in mind, you could very well find them a gift or something in here. Maybe you should try to [link]sort[as]sort chaotic mess[end link] through the chaotic mess?".
@@ -55,5 +58,8 @@ the usedesc of fur brush is "[fur brush use]";
 
 to say fur brush use:
 	say "     You play around a little with the wooden brush, stroking your hand over the nubs and bristles on it. Having it along should certainly be useful if you want to give a pet or furred companion some affection. The surprisingly ergonomic handle has several prominent ridges and a smooth texture, making you think of at least one extra use for the foot-long piece of wood.";
+
+when play begins:
+	add "fur brush" to the invent of George's Animal Emporium;
 
 Pet Shop ends here.
