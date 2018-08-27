@@ -8,7 +8,7 @@ Section 1 - Monster Responses
 
 Alpha Wolfdefeat is a number that varies.
 alphawolfbeaten is a number that varies.
-alphawolfreplaced is a truth state that varies. alphawolfreplaced is normally false.
+alphawolfreplaced is a truth state that varies. alphawolfreplaced is usually false.
 
 to say alphawolfdesc:
 	setmongender 3;  [creature is male]

@@ -5,10 +5,10 @@ Version 2 of Friendship Pony by Stripes begins here.
 
 Section 1 - Monster Responses
 
-rfponytype is a number that varies. rfponytype is normally 0.
-rfponycolor1 is a text that varies. rfponycolor1 is normally "pink".
-rfponycolor2 is a text that varies. rfponycolor2 is normally "lavender".
-rfponybm is a text that varies. rfponybm is normally "a cock".
+rfponytype is a number that varies. rfponytype is usually 0.
+rfponycolor1 is a text that varies. rfponycolor1 is usually "pink".
+rfponycolor2 is a text that varies. rfponycolor2 is usually "lavender".
+rfponybm is a text that varies. rfponybm is usually "a cock".
 nofponysex is a number that varies.
 rfpc1 is a number that varies.	[color 1]
 rfpc2 is a number that varies.	[color 2]
@@ -437,10 +437,10 @@ to say fptailchange:
 
 pfpclist is a list of numbers that varies. pfpclist is usually { 1, 2, 3, 4, 5, 6, 7, 8 }.
 pfptype is a number that varies. pfptype is usually 1.
-pfpskin is a text that varies. pfpskin is normally "baby blue".
-pfpcock is a text that varies. pfpcock is normally "blue".
-pfphair is a text that varies. pfphair is normally "turquoise".
-pfpbootymark is a text that varies. pfpbootymark is normally "a jar of cum".
+pfpskin is a text that varies. pfpskin is usually "baby blue".
+pfpcock is a text that varies. pfpcock is usually "blue".
+pfphair is a text that varies. pfphair is usually "turquoise".
+pfpbootymark is a text that varies. pfpbootymark is usually "a jar of cum".
 
 to ponystatuscheck:
 	if player is not fponybodied and player is not fponyfaced:

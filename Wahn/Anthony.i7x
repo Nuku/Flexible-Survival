@@ -65,7 +65,7 @@ to AnthonyQuestlog:
 		-- 8:
 			say "     ";
 
-Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
+Anthony is a man. The HP of Anthony is usually 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.

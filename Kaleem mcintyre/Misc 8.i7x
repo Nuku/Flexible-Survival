@@ -1,5 +1,5 @@
 Misc 8 by Kaleem mcintyre begins here.
-[Several events transferred to Consolidated Outside Events in Song's folder and CEPark in Stripes' folder]
+[Several events transferred to Consolidated Outside Events and Consolidated Park Events in Song's folder]
 
 [	[***temporarily turned off]
 
@@ -71,7 +71,7 @@ Instead of resolving a Cosplay:
 
 Section 5 - Fox hunt
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 6 - Fantasy

@@ -105,7 +105,7 @@ Sam is a man. Sam is in Mini-Lab.
 The description of Sam is "[samdesc]".
 The conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
-samformtalk is a truth state that varies. samformtalk is normally false.
+samformtalk is a truth state that varies. samformtalk is usually false.
 
 to say samscent:
 	if HP of Sam <= 4:
@@ -350,7 +350,7 @@ Instead of conversing the Sam:
 Section 4 - Confrontation at the Mini-Lab
 
 minilabfight is a number that varies.
-featherready is a truth state that varies. featherready is normally false.
+featherready is a truth state that varies. featherready is usually false.
 
 instead of navigating Mini-Lab while HP of Sam is 4:
 	if carried of eagle feather >= 2:

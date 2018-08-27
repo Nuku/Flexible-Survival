@@ -13,13 +13,13 @@ The assault of house cat is "[one of]Your opponent moves back from your attack, 
 the fuckscene of house cat is "With all the sex-crazed people out there, you're looking to fuck an ordinary house cat? You are one crazy pervert.".
 
 instead of sniffing house cat:
-	say "Your little kitty smells like a normal tom cat.";
+	say "Your little kitty smells like a normal tomcat.";
 
 Lost house cat is a situation.
 The sarea of Lost house cat is "Outside".
 
 Instead of resolving Lost house cat:
-	say "Heading through the streets of the city you spy a small form dart down an alleyway ahead of you, the shape moving too quickly for you to get anything more than an impression of four legs and fur. Curious, you pause for a minute, trying to decide whether you should investigate the shape further.";
+	say "Heading through the streets of the city, you spy a small form dart down an alleyway ahead of you, the shape moving too quickly for you to get anything more than an impression of four legs and fur. Curious, you pause for a minute, trying to decide whether you should investigate the shape further.";
 	if player consents:
 		say "Looking down the alleyway you don't see anything out of the usual at first, though the alley provides plenty of places for something to hide if it was small enough. Searching carefully down the alley, you are about to give up looking when you notice a small cardboard box trembling slightly as you pass close to it. Kneeling down and approaching the shaking box cautiously, you slowly lift the edge of the box up and look underneath it, only to be hissed at by a small cat, before it darts out from under the box and behind a nearby dumpster, its feline eyes shining out at you warily from the darkened space. You realize that the small cat seems to have been given a large enough scare recently that it is still terribly frightened. If you want it to calm down, perhaps you should offer it something cats like?";
 		blank out the whole of table of itemselection;

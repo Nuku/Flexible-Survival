@@ -4188,7 +4188,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies. restoreletter is normally "0".
+restoreletter is a text that varies. restoreletter is usually "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;

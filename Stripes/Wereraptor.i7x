@@ -168,7 +168,7 @@ Section 1 - Monster Responses
 wrmode is a number that varies.
 wrcursestatus is a number that varies.
 wrcursestart is a number that varies.
-wrcurseactivity is a truth state that varies. wrcurseactivity is normally false.
+wrcurseactivity is a truth state that varies. wrcurseactivity is usually false.
 
 when play begins:
 	add { "Wereraptor" } to infections of furry;

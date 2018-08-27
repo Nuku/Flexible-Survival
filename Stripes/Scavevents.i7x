@@ -508,7 +508,7 @@ Garden Veggies is a scavevent.
 The sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
-lastgardenveg is a number that varies. lastgardenveg is normally 255.
+lastgardenveg is a number that varies. lastgardenveg is usually 255.
 when play begins:
 	add Garden Veggies to badspots of furry;
 

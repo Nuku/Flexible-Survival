@@ -3,7 +3,7 @@ Version 2 of Mannequin by Wahn begins here.
 
 "Adds a Neuter Mannequin to Flexible Survival's Wandering Monsters table"
 
-MannequinFirstEncounter is a number that varies. MannequinFirstEncounter is normally 0.
+MannequinFirstEncounter is a number that varies. MannequinFirstEncounter is usually 0.
 
 Section 1 - Monster Responses
 

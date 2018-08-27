@@ -70,35 +70,35 @@ Version 1 of Nadia by Wahn begins here.
 
 Section 1 - Nadia, the bird of paradise
 
-Nadia is a woman. The HP of Nadia is normally 0.
+Nadia is a woman. The HP of Nadia is usually 0.
 The description of Nadia is "[NadiaDesc]".
 The conversation of Nadia is { "Mew!" }.
 
-NadiaDescription is a number that varies. NadiaDescription is normally 1.
-NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is normally 0.
-NadiaChickCounter is a number that varies. NadiaChickCounter is normally 0.
+NadiaDescription is a number that varies. NadiaDescription is usually 1.
+NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is usually 0.
+NadiaChickCounter is a number that varies. NadiaChickCounter is usually 0.
 NadiaPregCounter1 is a number that varies.
 NadiaPregCounter2 is a number that varies.
 NadiaPregCounter3 is a number that varies.
 NadiaPregVisibility is a number that varies.
 GreenTumbTurn is a number that varies.
 NadiaintCounter is a number that varies.
-lastNadiaSpotted is a number that varies. lastNadiaSpotted is normally 500.
+lastNadiaSpotted is a number that varies. lastNadiaSpotted is usually 500.
 
-npcNadiaint is an indexed text that varies. npcNadiaint is normally "0000000000000B". [SAVING]
-Nadia has a text called Char-A. Char-A of Nadia is normally "0". [Denise]
-Nadia has a text called Char-B. Char-B of Nadia is normally "0". [Icarus]
-Nadia has a text called Char-C. Char-C of Nadia is normally "0". [Amy]
-Nadia has a text called Char-D. Char-D of Nadia is normally "0". [Tehuantl]
-Nadia has a text called Char-E. Char-E of Nadia is normally "0". [Felinoid]
-Nadia has a text called Char-F. Char-F of Nadia is normally "0". [Fang]
-Nadia has a text called Char-G. Char-G of Nadia is normally "0". [Elijah]
-Nadia has a text called Char-H. Char-H of Nadia is normally "0". [Exotic Bird]
-Nadia has a text called Char-I. Char-I of Nadia is normally "0". [Avian Player]
-Nadia has a text called Char-J. Char-J of Nadia is normally "0". [Chicks]
-Nadia has a text called Char-K. Char-K of Nadia is normally "0". [unassigned]
-Nadia has a text called Char-L. Char-L of Nadia is normally "0". [unassigned]
-Nadia has a text called Char-M. Char-M of Nadia is normally "0". [unassigned]
+npcNadiaint is an indexed text that varies. npcNadiaint is usually "0000000000000B". [SAVING]
+Nadia has a text called Char-A. Char-A of Nadia is usually "0". [Denise]
+Nadia has a text called Char-B. Char-B of Nadia is usually "0". [Icarus]
+Nadia has a text called Char-C. Char-C of Nadia is usually "0". [Amy]
+Nadia has a text called Char-D. Char-D of Nadia is usually "0". [Tehuantl]
+Nadia has a text called Char-E. Char-E of Nadia is usually "0". [Felinoid]
+Nadia has a text called Char-F. Char-F of Nadia is usually "0". [Fang]
+Nadia has a text called Char-G. Char-G of Nadia is usually "0". [Elijah]
+Nadia has a text called Char-H. Char-H of Nadia is usually "0". [Exotic Bird]
+Nadia has a text called Char-I. Char-I of Nadia is usually "0". [Avian Player]
+Nadia has a text called Char-J. Char-J of Nadia is usually "0". [Chicks]
+Nadia has a text called Char-K. Char-K of Nadia is usually "0". [unassigned]
+Nadia has a text called Char-L. Char-L of Nadia is usually "0". [unassigned]
+Nadia has a text called Char-M. Char-M of Nadia is usually "0". [unassigned]
 
 An everyturn rule: [pregnancy progress every turn]
 	if NadiaPregCounter1 is 1:  [time to give birth]

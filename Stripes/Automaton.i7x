@@ -10,8 +10,8 @@ when play begins:
 	add { "Automaton" } to infections of guy;
 
 autogender is a number that varies.
-metalskin is a number that varies. metalskin is normally 1.
-playermetalskin is a number that varies. playermetalskin is normally 1.
+metalskin is a number that varies. metalskin is usually 1.
+playermetalskin is a number that varies. playermetalskin is usually 1.
 automatonending is a number that varies.
 
 to say automatondesc:

@@ -1031,7 +1031,7 @@ Section 5 - NPC Sonya
 If you can add Sonya to the viking longboat, along with discussion topics and a sex scene, just fingers and body contact for women, the guy on top for the other gender. I'd like her to have some scaling conversation about how many children she and the PC have had, some conversations and pointers about interesting events at the Beach for the player to look for. I'm keeping this one simple for the time being.
 ]
 
-Sonya is a woman. The HP of Sonya is normally 0.
+Sonya is a woman. The HP of Sonya is usually 0.
 Sonya is in Sonya's Cabin.
 The description of Sonya is "[SonyaDesc]".
 The conversation of Sonya is { "Mew!" }.

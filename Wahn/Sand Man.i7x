@@ -3,7 +3,7 @@ Version 1 of Sand Man by Wahn begins here.
 
 "Adds a Male Sand Man to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-SandManFirstEncounter is a number that varies. SandManFirstEncounter is normally 0.
+SandManFirstEncounter is a number that varies. SandManFirstEncounter is usually 0.
 
 when play begins:
 	add { "Sand Man" } to infections of guy;

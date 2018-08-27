@@ -1,4 +1,4 @@
-Random Events by hiccup begins here.
+Random Events by Hiccup begins here.
 [Several events transferred to Consolidated Outside Events in Song's folder]
 
 "Adds several new random events that can trigger while exploring. These events have no effect on the gameplay, but they do add more detail to the game world."

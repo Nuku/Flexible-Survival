@@ -15,7 +15,7 @@ Version 1 of Chris by Wahn begins here.
 [   0: nothing yet                                 ]
 [   1: fucked the guy                              ]
 
-Chris is a man. The HP of Chris is normally 0.
+Chris is a man. The HP of Chris is usually 0.
 The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.

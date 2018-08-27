@@ -40,10 +40,10 @@ to say SvenPlaceDesc:
 
 Section 2 - Sven the Snowmeow
 
-Sven is a man. Sven is in Sven's Place. The HP of Sven is normally 0.
+Sven is a man. Sven is in Sven's Place. The HP of Sven is usually 0.
 The description of Sven is "[SvenDesc]".
 The conversation of Sven is { "Mew!" }.
-lastSvendrink is a number that varies. lastSvendrink is normally 555.
+lastSvendrink is a number that varies. lastSvendrink is usually 555.
 SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
 SvenStory1 is a truth state that varies. SvenStory1 is usually false.
 

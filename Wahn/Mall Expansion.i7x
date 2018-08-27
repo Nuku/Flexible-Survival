@@ -85,7 +85,7 @@ instead of going northwest from Smith Haven Mall Lot South while (HP of Zoe is 0
 		say "     You take care to quickly get out of dodge too before the wolverine recovers, putting some of the wrecked cars and then the mall itself between the two of you so he can't get a good look at you. Best if he doesn't know whom to 'thank' for his situation...";
 		now HP of Zoe is 1; [the player helped her escape, still virgin]
 
-Zoe is a woman. The HP of Zoe is normally 0. The Dexterity of Zoe is normally 0.
+Zoe is a woman. The HP of Zoe is usually 0. The Dexterity of Zoe is usually 0.
 The description of Zoe is "[ZoeDesc]".
 The conversation of Zoe is { "Mew!" }.
 

@@ -117,7 +117,7 @@ Instead of resolving Important Treasure:
 								now opcl is 4;
 								increase score by 10;
 							else:
-								say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
+								say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city, you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 								now opcl is 4;
 								increase score by 10;
 						else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -125,7 +125,7 @@ Instead of resolving Important Treasure:
 							now opcl is 4;
 							increase score by 10;
 						else:
-							say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
+							say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city, you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 							now opcl is 4;
 							increase score by 10;
 					else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -133,7 +133,7 @@ Instead of resolving Important Treasure:
 						now opcl is 4;
 						increase score by 10;
 					else:
-						say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
+						say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city, you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 						now opcl is 4;
 						increase score by 10;
 				else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -141,7 +141,7 @@ Instead of resolving Important Treasure:
 					now opcl is 4;
 					increase score by 10;
 				else:
-					say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
+					say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city, you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 					now opcl is 4;
 					increase score by 10;
 			else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -149,22 +149,22 @@ Instead of resolving Important Treasure:
 				now opcl is 4;
 				increase score by 10;
 			else:
-				say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
+				say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city, you find yourself coming back to check on the iguana policeman afterwards... only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 				now opcl is 4;
 				increase score by 10;
 	else if opcl is 4:
-		say "Making your way throughout the red light district you stumble across the trench coat wearing raptor from before talking to the blonde by the side of an overturned pickup truck. 'So, this is it?' The much taller reptile asks while looking over something in his hands. You can't tell exactly what it is from where you are hiding behind a lamp post, but it appears to be a clear white vial... or maybe not. The blonde, who currently has her hood down from off of her head, nods to the man and then reaches out with her open hand, as if expecting something.";
+		say "Making your way throughout the red light district, you stumble across the trench coat wearing raptor from before talking to the blonde by the side of an overturned pickup truck. 'So, this is it?' The much taller reptile asks while looking over something in his hands. You can't tell exactly what it is from where you are hiding behind a lamp post, but it appears to be a clear white vial... or maybe not. The blonde, who currently has her hood down from off of her head, nods to the man and then reaches out with her open hand, as if expecting something.";
 		WaitLineBreak;
 		say "You watch as the raptor gives the female something small and black and then goes about his way without so much as another word to the other. Following the path the raptor's takes until the other disappears out of sight you wonder about what anomalous item the lizard could have received from the blonde. When nothing important comes to mind you turn to find that the little female is gone.[line break]";
 		now opcl is 5;
 		increase score by 7;
 	else if opcl is 5:
-		say "A out of place whistle stops you in your tracks. Turning around you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure colored eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
+		say "A out of place whistle stops you in your tracks. Turning around, you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure colored eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
 		WaitLineBreak;
-		say "Assuming that this is the package that Omio had been expecting you thank the blonde and then turn to go about your way. However, you find yourself pausing midstep when you hear the other woman speak up suddenly. 'You should go see about them.' Tilting your head to the side you ask the female who she's talking about. 'The two lizards. They need some help right about now, so go and see them.'[line break]";
+		say "Assuming that this is the package that Omio had been expecting, you thank the blonde and then turn to go about your way. However, you find yourself pausing midstep when you hear the other woman speak up suddenly. 'You should go see about them.' Tilting your head to the side you ask the female who she's talking about. 'The two lizards. They need some help right about now, so go and see them.'[line break]";
 		say "Confusion rips through your mind as you try and figure out what you are being asked. It's not like you're actually friends with the two reptiles, right? So why should you go see about two grown men who can probably take care of themselves well enough? You find your answer coming, not from a sudden epiphany, but from the human woman as she glares cool ice blue eyes at you pointedly.";
 		WaitLineBreak;
-		say "Smiling nervously you ask the other where the two would be at the moment. 'They're warehouse district over by the beach. You may want to get there as soon as possible.' The words are cryptic, but seem to hold the weight of deadly seriousness. You sigh painstakingly at all the trouble that you seem to be coming across right about now, but bow your head as you think to yourself the quickest way to get to the warehouse area of the city.[line break]";
+		say "Smiling nervously, you ask the other where the two would be at the moment. 'They're warehouse district over by the beach. You may want to get there as soon as possible.' The words are cryptic, but seem to hold the weight of deadly seriousness. You sigh painstakingly at all the trouble that you seem to be coming across right about now, but bow your head as you think to yourself the quickest way to get to the warehouse area of the city.[line break]";
 		now carried of lumpy box is 1;
 		now Warehouse District is known;
 		now tpfs is 5;

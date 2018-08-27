@@ -16,7 +16,7 @@ Section 1 - Serenity in Dry Plains
 
 Naga Hybrid is a situation.
 The sarea of Naga Hybrid is "Plains".
-Serenity is a woman. The HP of Serenity is normally 0.
+Serenity is a woman. The HP of Serenity is usually 0.
 
 when play begins:
 	add Naga Hybrid to badspots of girl;

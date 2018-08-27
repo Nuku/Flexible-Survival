@@ -122,7 +122,7 @@ instead of conversing Hadiya:
 Section 4 - Sex with Hadiya
 
 hadiyafucked is a number that varies. hadiyafucked is usually 0.
-hadiyahyg is a truth state that varies. hadiyahyg is normally false.
+hadiyahyg is a truth state that varies. hadiyahyg is usually false.
 
 to say sexwithHadiya:
 	setmonster "Herm Hyena";

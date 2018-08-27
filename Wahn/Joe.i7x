@@ -47,8 +47,8 @@ Instead of resolving a Road Wanderer:
 				say "Invalid choice. Type [link]1[end link] to talk, [link]2[end link] to fight or [link]3[end link] to avoid the guy.";
 		if calcnumber is 1: [talk]
 			LineBreak;
-			say "     As you approach him, the skimpily dressed man offers his hand to shake without hestitation and says, 'Hey there, I'm Joe. Nice to meet a friendly face for once. Not that I had any problems dealing with the others...' He boasts good-naturedly about what creatures he fought recently, and that none could stand against him. After that, Joe offers to flex his arms for you so you can give his bicep a squeeze, being all in all very happy to show off his body to you.";
-			
+			say "     As you approach him, the skimpily dressed man offers his hand to shake without hesitation and says, 'Hey there, I'm Joe. Nice to meet a friendly face for once. Not that I had any problems dealing with the others...' He boasts good-naturedly about what creatures he fought recently, and that none could stand against him. After that, Joe offers to flex his arms for you so you can give his bicep a squeeze, being all in all very happy to show off his body to you.";
+
 			now HP of Joe is 1;
 			say "[bold type]Your sanity has increased by 15![roman type][line break]";
 			increase humanity of player by 15;
@@ -104,7 +104,7 @@ to say JoeSexMenu:
 	now title entry is "Why he's still human";
 	now sortorder entry is 2;
 	now description entry is "Ask how he remained unchanged by the nanites";
-	[]	
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Having sex with him";
 	now sortorder entry is 3;

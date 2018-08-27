@@ -4,8 +4,8 @@ Version 4 of Fucking by Core Mechanics begins here.
 
 Section 1 - Fucking action and table
 
-A person has a number called lastfuck. lastfuck is normally 255.
-A person has a text called fuckscene. fuckscene is normally "".
+A person has a number called lastfuck. lastfuck is usually 255.
+A person has a text called fuckscene. fuckscene is usually "".
 
 Fucking is an action applying to one thing.
 
@@ -47,7 +47,7 @@ with 40 blank rows.
 This is the sexytable rule:
 	say "I'm a placeholder! :)";
 
-sextablerun is a number that varies. sextablerun is normally 0.
+sextablerun is a number that varies. sextablerun is usually 0.
 
 
 Section 2 - Demonstration Example
@@ -59,7 +59,7 @@ Testerbot is a person.
 [ Testerbot is in Primary Lab.	]			[Removed again - testing over]
 The description of Testerbot is "[testerbotdesc]".
 The conversation of Testerbot is { "Disgusting!" }.
-lastfuck of Testerbot is normally 555.
+lastfuck of Testerbot is usually 555.
 
 to say testerbotdesc:				[Description]
 	say "Testerbot is a boxy robot with a collection of orifices and probes built in, created as part of Dr Matt's continued testing of the infection. There are several buttons, dials and lights on its chest, as well as a pair of handles built onto its sides and another handle of the top of its head. There are several sticky stains on the robot's aluminum chassis. Despite the grin stickered on its face, it is quite aggressively slumped in the corner.";

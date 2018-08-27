@@ -161,7 +161,7 @@ The conversation of François is { "Numnum!" }.
 The icon of François is Figure of Francois_icon.
 understand "Francis" as François.
 understand "Francois" as François.
-Françoistalk1 is a truth state that varies. Françoistalk1 is normally false.
+Françoistalk1 is a truth state that varies. Françoistalk1 is usually false.
 
 the linkaction of François is "Possible Actions: [link]talk[as]talk François[end link], [link]smell[as]smell François[end link], [link]fuck[as]fuck François[end link], [link]Bake[as]Bake François[end link][line break]".
 

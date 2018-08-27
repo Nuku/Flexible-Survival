@@ -63,7 +63,7 @@ JackalBoyTF is a number that varies.
 JackalManTF is a number that varies.
 Nerminehelpstatus is a number that varies.
 wrcurseNermine is a number that varies.
-wrlastNermine is a number that varies. wrlastNermine is normally 255.
+wrlastNermine is a number that varies. wrlastNermine is usually 255.
 AngryHorguth is a number that varies.
 NermineFennecTurn is a number that varies.
 NermineBukkakeTurn is a number that varies.

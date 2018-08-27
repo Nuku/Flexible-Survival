@@ -1,24 +1,24 @@
-Version 1 of Ebonflame Draken by Blue Bishop begins here.
+Version 1 of Ebonflame Drake by Blue Bishop begins here.
 [ Version 1.0 - Initial replacement for Ash Drakenoid - Blue Bishop ]
 
-"Adds an Ebonflame Draken to Flexible Survival."
+"Adds an Ebonflame Drake to Flexible Survival."
 [Inspired by the Ash Drakenoid]
 
 blanchefight is a truth state that varies. blanchefight is usually false.
 
 When Play begins:
-	add { "Ebonflame Draken" } to infections of hermaphrodite;
-	add { "Ebonflame Draken" } to infections of furry;
+	add { "Ebonflame Drake" } to infections of hermaphrodite;
+	add { "Ebonflame Drake" } to infections of furry;
 
 Section 1 - Monster Responses
 
-to say ebdrakenvic:
+to say ebdrakevic:
 	if HP of player > 0:
-		say "     Some part of you questions the sanity of submitting to one of these horrors, but you do it all the same. It takes a moment for the draken to catch on that you're offering yourself, before she breaks out in shrill laughter.";
+		say "     Some part of you questions the sanity of submitting to one of these horrors, but you do it all the same. It takes a moment for the drake to catch on that you're offering yourself, before she breaks out in shrill laughter.";
 		say "     '[one of]Oh[or]Hmpf[or]Ha[at random], [one of]you're hardly worth my energy[or]such a pitiful creature[or]you're at least an amusing piece of fuckmeat[at random]!' Immediately, she strikes you down to leave you doubled over, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish you.";
 		say "     '[one of]Before you turn, all you'll remember of your past life is agony[or]So soft, you practically ask for pain[or]Have you forgotten already?[run paragraph on] You want for every bit of this suffering[at random]";
 	else:
-		say "     Having fallen to the ground, you desperately try to crawl away from the draken, either to flee or to try and get your footing. She seems to just cackle at you and strut alongside you until you finally can't go any further, laying there exhausted.";
+		say "     Having fallen to the ground, you desperately try to crawl away from the drake, either to flee or to try and get your footing. She seems to just cackle at you and strut alongside you until you finally can't go any further, laying there exhausted.";
 		say "     '[one of]Idiot[or]Fool[or]Whelp[at random], [one of]playtime's over[or]you will know your place, you walking piece of fuckmeat[or]was that even supposed to be a challenge?[run paragraph on] Ha[at random]!' With one hand she pulls your rear exposed into the open air, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish your failure.";
 		say "     '[one of]No amount of suffering will suffice[or]So soft, you're hardly worth the energy[or]Hmpf, I should toss you to the whelps[at random]";
 	say "!' She continues to harshly threaten you until your rear is glowing red with her constant abuse. Every time you think she might be satisfied, she lashes you again, just to watch you writhe.";
@@ -56,15 +56,15 @@ to say ebdrakenvic:
 		say "     As things progress, you become increasingly concerned about the monster's imminent bliss, the dragoness becoming increasingly feral and desperate for release with each passing second, until she's practically clawing at you to give it to her.";
 		say "     '[one of]F-faster -- fuck[or]I'm -- going to burn a hole straight through you[or]If you don't make me cum r-right now, you can't even imagine -- [at random]!' You're instinctively worried about when she finally climaxes, but your desperate attempts to pull away fail with her plunging you back on the burning rod. Your struggle is ultimately in vain as she finally lets out a deafening, shrill howl, pinning your lips firm against her crotch as she sputters thick, successive gouts of her fiery load down your throat.";
 		if blanchefight is true:
-			say "     You feel like you briefly black out from the intense sensation. You quicky regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
+			say "     You feel like you briefly black out from the intense sensation. You quickly regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
 		else:
 			say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
 
-to say ebdrakendef:
-	say "     The draken reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";
+to say ebdrakedef:
+	say "     The drake reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";
 	say "     '[one of]Nng[or]Hmpf[or]Damnit[or]Asshole[at random], [one of]this is merely a setback[or]you only delay the inevitable[or]we will inherit our birthright[or]your world will be ours[or]we will have our vengeance[or]I am only one of an infinite many[at random]!' Before you can get any closer, she climbs back to her feet and takes flight, billowing up a gust of ash and dirt in her wake as she retreats into the sky. Once the dust settles and she's no longer visible you catch your breath before going about your business once more.";
 
-to say ebdrakendesc:
+to say ebdrakedesc:
 	setmongender 5;      [creature is herm]
 	choose row monster from the table of random critters;
 	now firebreathcount is 0;
@@ -87,20 +87,20 @@ name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	sk
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Ebonflame Draken";
+	now name entry is "Ebonflame Drake";
 	now enemy title entry is "";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]The draken[or]The terrifying reptile[or]She[or]The dragoness[at random] [one of]lets out a savage howl and charges at you, raking you with one of her savage talons and sending you reeling[or]grabs your [if scalevalue of player > 4]larger, [bodytype of player] form, displaying her superior strength as she lifts you into the ground before slamming you against the ground, causing the earth to tremble under your heavy impact[else][bodytype of player] form, easily lifting you into the air before slamming you against the ground with an audible thud[end if][or]pounces you and assaults you with a barrage of tooth and claw, until you finally push her off and back away[or]manages to lash you with her powerful tail, singing through the air before assaulting you with a sharp and terrible pain[at random].";
-	now defeated entry is "[ebdrakendef]";
-	now victory entry is "[ebdrakenvic]";
-	now desc entry is "[ebdrakendesc]";
+	now attack entry is "[one of]The drake[or]The terrifying reptile[or]She[or]The dragoness[at random] [one of]lets out a savage howl and charges at you, raking you with one of her savage talons and sending you reeling[or]grabs your [if scalevalue of player > 4]larger, [bodytype of player] form, displaying her superior strength as she lifts you into the ground before slamming you against the ground, causing the earth to tremble under your heavy impact[else][bodytype of player] form, easily lifting you into the air before slamming you against the ground with an audible thud[end if][or]pounces you and assaults you with a barrage of tooth and claw, until you finally push her off and back away[or]manages to lash you with her powerful tail, singing through the air before assaulting you with a sharp and terrible pain[at random].";
+	now defeated entry is "[ebdrakedef]";
+	now victory entry is "[ebdrakevic]";
+	now desc entry is "[ebdrakedesc]";
 	now face entry is "distinctly draconic head, a pair of horns sprouting from its sides, curving back such that the tips nearly connect behind you. A set of faintly glowing, fiery eyes match your fierce set of teeth arraying your";
 	now body entry is "tall and powerful. Your hands wield a fearsome set of claws, though they can be sheathed to not obstruct your articulation, and a similar set adorn your now-digitigrade feet. A set of under-developed wings also adorn your back";
 	now skin entry is "an array of [one of]deep[or]abyssally[at random] dark, purple scales for";
 	now tail entry is "You have a long and powerful tail. Quite prehensile, it narrows to a sharp tip that sings as it moves through the air.";
 	now cock entry is "[one of]barbed[or]fearsome[or]intimidating[at random], [one of]draconic[or]reptilian[at random]";
-	now face change entry is "a searing pain wracks your face. You cry out as bone and skin cracks and stretches to accommodate a new shape. Once the pain subsides, your head is revealed to have taken on the reptilian form of an ebonflame draken, elongated snout adorned with an array of razor-sharp teeth and a pair of glowing, fire-red eyes. A long pair of horns seem to have erupted from the back of your head, curving such that the tips almost touch";
+	now face change entry is "a searing pain wracks your face. You cry out as bone and skin cracks and stretches to accommodate a new shape. Once the pain subsides, your head is revealed to have taken on the reptilian form of an ebonflame drake, elongated snout adorned with an array of razor-sharp teeth and a pair of glowing, fire-red eyes. A long pair of horns seem to have erupted from the back of your head, curving such that the tips almost touch";
 	now body change entry is "it suddenly becomes engulfed in a terrible, burning pain. Falling to your knees, you nearly pass out from the intense sensation as limbs both old and new undergo a very aggressive transformation. When you recover, you find that you taken on a tall, humanoid form, hands and feet transformed into fierce talons that take you a while to acclimate to. Additionally, you appear to have grown a set of wings on your back, but they seem under-developed and you're too inexperienced to really make much use of them";
 	now skin change entry is "it undergoes a transformation. Suddenly, you feel like you're engulfed in flames, blood boiling as you're covered in a set of deeply dark purple scales, melting away the remnants of your prior surface. As you recover, you feel as though your blood is constantly on fire, which seems to get you pumped up, but makes you anxious and impatient whenever you're not doing anything";
 	now ass change entry is "it begins to burn terribly, causing you to fall to your knees until it subsides. Checking behind you, you now accommodate a large, powerful reptilian tail. Strong enough to support your weight, the end narrows to a sharp tip, whistling as it's lashed through the air";
@@ -140,7 +140,7 @@ When Play begins:
 Section 3 - Miscellaneous
 
 when play ends:
-	if bodyname of player is "Ebonflame Draken":
+	if bodyname of player is "Ebonflame Drake":
 		if humanity of player < 10:
 			say "     Overcome by your powerful, draconic infection, you're pulled inexorably towards your kin, informed by your dark, fiery strain on how you must act";
 			if player is submissive:
@@ -166,10 +166,10 @@ name	desc	weight	object
 "ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 
 ebonflame scale is a grab object.
-ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Draken".
+ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Drake".
 the usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
 
 instead of sniffing ebonflame scale:
 	say "It smells of something burnt to a crisp.";
 
-Ebonflame Draken ends here.
+Ebonflame Drake ends here.

@@ -23,7 +23,7 @@ to say WYVDESC:
 		malepronouns;
 	if guy is banned and girl is banned:
 		setmongender 19; [creatures are mixed/variable]
-		say "     As you explore the city you look up to the sky, watching as a pair of wyverns circle the sky. You're not rightly sure if they're minding you, but something inevitably set them off and, with a disdainful screech, they fly off into the distance. Strange, and you get the odd impression that you won't be seeing them again.";
+		say "     As you explore the city, you look up to the sky, watching as a pair of wyverns circle overhead. You're not rightly sure if they're minding you, but something inevitably sets them off, and with a disdainful screech, they fly off into the distance. Very strange. You get the odd impression that you won't be seeing them again.";
 		blank out the whole row;
 		now fightoutcome is 19;
 		now combat abort is 1;
