@@ -5,7 +5,7 @@ Disorganization by Kaleem mcintyre begins here.
 Section 1- Disorganization in the ranks
 
 Disorganization is a situation. The level of Disorganization is 9.
-DRS is a number that varies.
+DRS is a number that varies.[@Tag:NotSaved]
 when play begins:
 	add Disorganization to badspots of furry;
 	add Disorganization to badspots of guy;

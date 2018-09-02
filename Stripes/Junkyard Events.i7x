@@ -60,8 +60,8 @@ Instead of resolving a Raiding Party:
 					if player consents:
 						now junknum is 1;
 						[puts Tigress Hooker as lead monster in case of impregnation]
-						repeat with y running from 1 to number of filled rows in table of random critters:
-							choose row y in table of random critters;
+						repeat with y running from 1 to number of filled rows in Table of Random Critters:
+							choose row y in Table of Random Critters;
 							if name entry is "Tigress Hooker":
 								now monster is y;
 								break;
@@ -115,14 +115,14 @@ Instead of resolving a Scattered Trash:
 	else:
 		say "     As you're trying to maneuver around the scattered trash, you place your foot on something slick just as you're turning to look at something shiny. Your foot comes out from under you and you fall onto your back, landing among the trash in something sticky. Getting up quickly, you notice it is a puddle of sexual fluids from some kind of creature. You try to wipe it off, but it's clearly too late as the tingles and prickles of spreading infection start.";
 		if a random chance of 1 in 2 succeeds:			[Trash Coon]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Trash Coon":
 					now monster is y;
 					break;
 		else:								[Pit Bull]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pit Bull":
 					now monster is y;
 					break;
@@ -168,8 +168,8 @@ to say dirtysnow:
 	say "     Quickly pulling off your pack, you reach into it and pull out a jug of dirty water. You toss it to the charging feline, who swats at it with his paw before realizing what it is. The container breaks open, sending the water over him. Startled, he comes to a stop and shakes his head before realizing it's water and he starts licking it from his fur. As you start to back away, his body starts to change, altered by the dirty water.";
 	say "     Fascinated, you watch as he starts to mewl softly as the sensations wash over him, causing him to fall to his knees. From the strength of his reactions, you are very grateful that you didn't end up drinking that water yourself. His body grows taller and thinner, but with a strong chest and shoulders. His shoulders and back twitch and bulge before a pair of large, fully-formed bat wings burst from them. The pain (or pleasure?) of this causes him to mrowl loudly. With his head raised to cry out, you can see his face and muzzle changing, growing longer and narrower. His ears enlarge, becoming big and pointed as he turns into some feline-bat hybrid.";
 	say "     His bat-like ears twitch as he mrowls again and they lock on you. Hearing your echo with his heightened senses, he starts to get up. This breaks the spell of watching his transformation and you turn to get away from this new and potentially dangerous creature you've spawned. You run around one mound, then dash down another path in the hopes of evading him. You start to make a third turn when he comes swooping out of the air, already able to fly on his new wings. Cut off, you will have to face him.";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Snow Bat":
 			now area entry is "Junkyard";
 			now non-infectious entry is false;

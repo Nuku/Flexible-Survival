@@ -49,7 +49,7 @@ to say Donkeywoman wins:
 
 
 To say Donkeywoman loses:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase donkeywomanbeaten by 1;
 	if ( cocks of player is 0 ) or ( nodonkeywomansex > 2 and the remainder after dividing nodonkeywomansex by 5 is not 0 ) or ( donkeywomanbeaten < 3 ):
 		say "     The powerful-looking mistress seems somewhat less sure of herself as you drive her back[if donkeywomanbeaten > 1] again[end if] with your blows. 'I think you might just be a bit too stubborn for me to train right now,' she says with a sigh as she back off down the passageway carefully. 'Though you certainly would make a good jenny from the looks of things. Don't worry though, I'm sure we will bump into each other again soon, and then I can give you that lesson I promised,' she adds with a smirk as she vanishes down the dimly lit corridors, leaving you standing victorious in the middle of the hallway.";
@@ -77,12 +77,12 @@ To say Donkeywoman loses:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Donkeywoman";
 	now enemy title entry is "";
 	now enemy name entry is "";

@@ -17,6 +17,10 @@ to say sunnysnacksdesc:
 
 Section 2 - Cindy
 
+Table of GameCharacterIDs (continued)
+object	name
+Cindy	"Cindy"
+
 Cindy is a woman. Cindy is in Sunny Snacks.
 The description of Cindy is "[cindydesc]".
 The conversation of Cindy is { "What can I get you?" }.
@@ -222,6 +226,10 @@ instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chan
 
 
 Section 5 - Circe
+
+Table of GameCharacterIDs (continued)
+object	name
+Circe	"Circe"
 
 Circe is a woman.
 The description of Circe is "[circedesc]".

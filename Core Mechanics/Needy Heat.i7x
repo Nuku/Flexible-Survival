@@ -63,16 +63,16 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 		let heatzone be "Outside";
 		let zz be a random visible dangerous door;
 		if zz is not nothing, now heatzone is the marea of zz;
-		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
-			choose row X from the table of random critters;
+		repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
+			choose row X from the Table of Random Critters;
 			if there is no area entry, next;
 			if area entry is heatzone:
 				add X to hmonlist;
 				if name entry is "Alpha Husky" or name entry is "Female Husky":		[Huskies are more likely]
 					add X to hmonlist;
 		if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
-			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry is "Outside":
 					add X to hmonlist;
@@ -80,7 +80,7 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 						add X to hmonlist;
 		sort hmonlist in random order;
 		now monster is entry 1 of hmonlist;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		say "The enticing scent leads to a [name entry]. Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 		wait for any key;
 		follow the cock descr rule;

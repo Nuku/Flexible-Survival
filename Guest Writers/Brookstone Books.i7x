@@ -29,6 +29,10 @@ Section 2 - Beverly
 Bevtalk is a number that varies.
 Bevkitty is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Beverly	"Beverly"
+
 Beverly is a woman.
 The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
 The conversation of Beverly is { "Squeak!" }.
@@ -69,6 +73,10 @@ Instead of fucking the Beverly:
 		say "     'You look like a nice person and all, but I'm not ready for any kind of relationship.'";
 
 Section 3 - Book Browsing
+
+Table of GameCharacterIDs (continued)
+object	name
+Bookshelves	"Bookshelves"
 
 Bookshelves is a man
 

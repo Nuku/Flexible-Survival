@@ -29,6 +29,10 @@ To say jadakoroomdesc:
 
 Section 2 - Declaring Jadako and Joseph
 
+Table of GameCharacterIDs (continued)
+object	name
+Jadako	"Jadako"
+
 Jadako is a man.
 The description of Jadako is "[jadakodesc]".
 The conversation of Jadako is { "<This is nothing but a placeholder!>" }.
@@ -36,6 +40,10 @@ The scent of Jadako is "The lithe feline smells of exotic cologne, covering a he
 
 To say jadakodesc:
 	say "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sizes testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Joseph	"Joseph"
 
 Joseph is a man.
 The description of Joseph is "[josephdesc]".

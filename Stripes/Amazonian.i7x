@@ -16,7 +16,7 @@ to say amazoniandesc:
 	say "     Raising her weapon, she glares at you[if player is not female]. 'You are unneeded here, worthless male. You will be shown your place,' she growls[else if player is herm]. 'Ahh, another warrior woman to test myself against. Come, prove your might and you may be my mate,' she says with a lustful grin[else if player is female]. 'Come here, sweet lass. Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
 
 to say losetoamazonian:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now noamazoniansex is 0;
 	if wslevel is 3 and a random chance of 1 in 3 succeeds:
 		if HP of player > 0:
@@ -63,12 +63,12 @@ to say beattheamazonian:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Amazonian"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

@@ -27,6 +27,10 @@ DiegoButtSlut is a number that varies.
 LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
 DiegoTricked is a number that varies. DiegoTricked is usually 0.
 
+Table of GameCharacterIDs (continued)
+object	name
+Diego	"Diego"
+
 Diego is a man.
 The description of Diego is "[DiegoDesc]".
 The conversation of Diego is { "Fooled you!" }.
@@ -360,7 +364,7 @@ to say DiegoSexMenu:
 		project the figure of DiegoFem_icon;
 	else:
 		project the figure of Diego_icon;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -856,24 +860,24 @@ to say DiegoCollarQuestGotCollar:
 	now XP of Diego is 3; [got the collar sneakily]
 
 to SetHunterHuskyStats:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Alpha Husky":
 			now monster is y;
 			break;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now HP entry is 100;
 	now monsterHP is 100;
 	now lev entry is 12;
 	now wdam entry is 12;
 
 to ResetAlphaHuskyStats:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Alpha Husky":
 			now monster is y;
 			break;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now HP entry is 50;
 	now monsterHP is 50;
 	now lev entry is 8;
@@ -1042,7 +1046,7 @@ instead of navigating Park Entrance while (XP of Diego is 98 or XP of Diego is 3
 
 to say DiegoCollarAftermath:
 	say "     ...";
-	say "     [bold type]Do you accept Diego's offer of trying the collar on?[roman type][line break]";	
+	say "     [bold type]Do you accept Diego's offer of trying the collar on?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure thing! Diego said it's harmless after all.";
 	say "     ([link]N[as]n[end link]) - Err... better not. That expression on the coyote's face is too clever by half.";

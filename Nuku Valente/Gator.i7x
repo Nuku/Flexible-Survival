@@ -91,12 +91,12 @@ to say GatorVoreOffer:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Sewer Gator"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -171,8 +171,8 @@ when play ends:
 				say "     Life as a gator is somewhat interesting. Most expect you to be rough and cold blooded, and everyone is surprised when they touch you to find soft, almost silky skin that's warm to the touch. You secure a deal with a cosmetics firm, becoming a spokesperson for their [']beat the gator['] campaign that proves wildly successful.";
 
 to gatorfy:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Sewer Gator":
 			now monster is y;
 			break;
@@ -180,6 +180,10 @@ to gatorfy:
 	infect;
 
 Section 3 - Gator Den
+
+Table of GameCharacterIDs (continued)
+object	name
+Sewer Gator	"Sewer Gator"
 
 Sewer Gator is a woman. The HP of Sewer Gator is normally 0.
 The description of Sewer Gator is "[GatorDesc]".
@@ -369,8 +373,8 @@ Section 4 - Bound State
 to GatorBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -393,8 +397,8 @@ to GatorBind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [GatorStruggle]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Sewer Gator":
 					now monster is y;
 					break;
@@ -409,7 +413,7 @@ to GatorBind:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You got eaten by a gator";
 		else:
 			let k be 0;
@@ -434,7 +438,7 @@ to GatorBind:
 					else:
 						say "     You push your way back up her stomach and esophagus until you are finally spat out by the gator and onto the ground. For a moment, she looks really angry, but maybe because of the fight you had put out, the reptile woman then looks kind of pleased. 'Maybe you are not that weak,' she jokes and winks at you as you go back to your adventures.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;

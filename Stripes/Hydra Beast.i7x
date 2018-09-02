@@ -20,7 +20,7 @@ hydramaulcount is a number that varies.
 
 to say hydrabeastdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 12, let debit be level of player - 12;
 	now lev entry is 12 + debit;
@@ -216,12 +216,12 @@ to say beathydrabeast99:	[no sex - leave]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hydra Beast"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -281,7 +281,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "hydrabeast"	hydrabeast rule	--	--	--	--	--	--	--	hydrahead rule	--
 
 this is the hydrahead rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if ( monsterHP * 4 ) <= HP entry and hydraheadcheck3 is false:
 		if hydraheadregrowth is true:
 			increase hydraheadcount by 1;
@@ -333,7 +333,7 @@ this is the hydrahead rule:
 	now hydraheadregrowth is true;
 
 this is the hydrabeast rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase hydramaulcount by 1;
 	if hydramaulcount is 4:				[tries special attack every fourth time]
 		now hydramaulcount is 0;
@@ -344,7 +344,7 @@ this is the hydrabeast rule:
 			standardstrike;
 			say "Head [x]: ";
 			if monsterhit is true:
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				let rangenum be ( 80 - ( peppereyes * 4 ) );
 				now hbdmg is 0;
 				now hbdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 166 ); [dmg/hit at 60%]

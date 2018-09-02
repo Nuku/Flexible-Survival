@@ -16,11 +16,17 @@ Definition: A person is not lonely:
 	if companion of player is nullpet, no;
 
 before examining a pet (called x):
+	if debugactive is 1:
+		say "DEBUG -> Traits of [x]: [Traits of x][line break]";
 	if x is the companion of the player:
 		increase score by 0;
 	else:
 		say "I don't see any [x] around here at the moment.";
 		stop the action;
+
+Table of GameCharacterIDs (continued)
+object	name
+Nullpet	"Nullpet"
 
 Nullpet is a pet. Nullpet is a part of the player;
 
@@ -69,6 +75,9 @@ carry out calling a pet (called x):
 	else:
 		say "They are already your current companion.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Latex Vixen	"Latex Vixen"
 
 Latex Vixen is a pet. The description of Latex Vixen is "Sleek latex lines run over hir bright green and black form. Shi has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.". Latex Vixen is a part of the player.
 The weapon damage of latex vixen is 10.

@@ -4,6 +4,10 @@ Version 2 of Kristen by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameCharacterIDs (continued)
+object	name
+Kristen	"Kristen"
+
 FindingKristen is a situation.
 The sarea of FindingKristen is "Outside".
 when play begins:

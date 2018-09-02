@@ -129,6 +129,10 @@ to say hpkdesc:
 
 Section 3 - Dominick
 
+Table of GameCharacterIDs (continued)
+object	name
+Dominick	"Dominick"
+
 Dominick is a person. Dominick is in Happy Puppy Kennel.
 The description of Dominick is "[dominickdesc]".
 The conversation of Dominick is { "Bitches love me!" }.
@@ -182,7 +186,7 @@ the fuckscene of Dominick is "[sexwithDominick]".
 
 to say sexwithDominick:
 	setmonster "Breederslut";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Dominick < 2:
 		say "     With the way his cock's standing tall, you're sure he'd be up for it, but it's still best to talk to him first.";
 	else if lastfuck of Dominick - turns < 4:

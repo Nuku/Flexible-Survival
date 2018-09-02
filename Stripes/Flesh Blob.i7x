@@ -11,7 +11,7 @@ when play begins:
 
 to say fleshblobdesc:
 	setmongender 9; [creature is variable]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let qq be a random number between 5 and 8; [full range 5-10]
 	if level of player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
 	if level of player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
@@ -41,7 +41,7 @@ to say fleshblobdesc:
 	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly. These are of both men and women and have varied expressions of horror, terror, delight and lust. Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
 
 to say losetofleshblob:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     You are grabbed by several hands growing from the blob of warm flesh and pulled down atop it. Its skin undulates against your body, sending shivers through you. You should be horrified, but you are no longer. There's something about its touch, its scent, its movement that is arousing you such that you don't resist as your clothes are pulled away, leaving your [bodydesc of player] body rubbing against the breasts and genitals it forms.";
 	if ( player is female or ( anallevel > 1 and player is male ) ) and a random chance of 1 in 3 succeeds:
 		say "     You are rolled over onto your back by the undulating flesh beneath you. You are held there by shifting limbs and elongating tongues, new ones appearing and disappearing while you're held down. You can feel the warm, slick flesh beneath you rippling and rubbing against you, often with phallic bulges, juicy folds or cushioning breasts. Transitory and ever-changing, this brings a myriad of sensations for your pacified mind to enjoy.";
@@ -69,7 +69,7 @@ to say losetofleshblob:
 	now wdam entry is 5;
 
 to say beatthefleshblob:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Driven back by your blows, it emits moans and whimpers. It backs off, clearly not wanting to continue to confront you at this time. The blob of changing flesh withdraws, oozing down the shadowy halls until it's out of sight.";
 	now lev entry is 6;
 	now wdam entry is 5;
@@ -77,12 +77,12 @@ to say beatthefleshblob:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Flesh Blob"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";

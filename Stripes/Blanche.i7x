@@ -69,6 +69,10 @@ to say officedendesc:
 
 Section 2 - Blanche the Wolf
 
+Table of GameCharacterIDs (continued)
+object	name
+Blanche	"Blanche"
+
 Blanche is a woman. Blanche is in Office Den.
 The description of Blanche is "[blanchedesc]".
 The conversation of Blanche is { "Thanks." }.

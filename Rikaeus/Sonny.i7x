@@ -36,6 +36,10 @@ SonnyQuest is a number that varies.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Sonny	"Sonny"
+
 Sonny is a man. The HP of Sonny is usually 0.
 The description of Sonny is "[SonnyDesc]".
 The conversation of Sonny is { "<This is nothing but a placeholder!>" }.

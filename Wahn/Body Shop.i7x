@@ -25,6 +25,10 @@ to say BodyShopDesc:
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Moreau	"Moreau"
+
 Moreau is a man.
 The description of Moreau is "[MoreauDesc]".
 The icon of Moreau is Figure of Moreau_soft_icon.
@@ -59,13 +63,13 @@ to say MoreauTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and MannequinFirstEncounter is 0)):
+	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and "Mannequin" is not listed in EncounteredEnemies of player)):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the mannequins";
 		now sortorder entry is 1;
 		now description entry is "Try to learn about his store";
 	[]
-	if (FirstMannequinTalk is 1 and MannequinFirstEncounter > 0):
+	if (FirstMannequinTalk is 1 and "Mannequin" is listed in EncounteredEnemies of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask for the truth about the mannequins";
 		now sortorder entry is 2;
@@ -234,7 +238,7 @@ to say MoreauFaceSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your face to it, giving what you can only describe as a hungry stare. Then it stretches out a hand and touches you, a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the very neutral face of your counterpart start to shift, taking on features that seem more and more like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if facename of player is not name entry:
 				say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 				now facename of player is name entry;
@@ -256,7 +260,7 @@ to say MoreauBodySale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you feel your counterpart shift, taking on body features that seem more and more like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if bodyname of player is not name entry:
 				say "     Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
@@ -279,7 +283,7 @@ to say MoreauSkinSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, the parts you see of your counterpart shift, taking on a skin very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if skinname of player is not name entry:
 				say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 				now skinname of player is name entry;
@@ -301,7 +305,7 @@ to say MoreauAssSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance over the shoulder of your counterpart, seeing its rear end taking on a shape very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if tailname of player is not name entry:
 				say "     Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 				now tailname of player is name entry;
@@ -323,7 +327,7 @@ to say MoreauDickSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and lays a hand on your chest, stroking it down your front almost sexually before it comes to cup your genitals. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance down between your bodies, seeing its own crotch taking on a shape very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if cocks of player > 1:
 				say "     Sudden pleasure runs through your doomed [cock of player] cock[smn] as [ittheym] spray[smv] the last of [itstheirm] seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember [itthemm] by as you cease to be a male altogether.";
 			if cunts of player > 1:
@@ -528,7 +532,7 @@ to MoreauFaceSelection:
 					setmonster "Succubus";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
@@ -552,7 +556,7 @@ to say MoreauFaceBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your face to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the facial features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if facename of player is not name entry:
@@ -644,7 +648,7 @@ to MoreauBodySelection:
 					setmonster "Succubus";
 				-- "Anthro snow leopard":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
@@ -668,7 +672,7 @@ to say MoreauBodyBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your body to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you feel your counterpart shift, taking on body features that seem more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if bodyname of player is not name entry:
@@ -761,7 +765,7 @@ to MoreauSkinSelection:
 					setmonster "Succubus";
 				-- "Snow leopard fur":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
@@ -785,7 +789,7 @@ to say MoreauSkinBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your skin to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the facial features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if skinname of player is not name entry:
@@ -877,7 +881,7 @@ to MoreauTailSelection:
 					setmonster "Succubus";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
@@ -901,7 +905,7 @@ to say MoreauTailBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your tail to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if tailname of player is not name entry:
@@ -993,7 +997,7 @@ to MoreauCockSelection:
 					setmonster "Succubus";
 				-- "A snow leopard groin":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
@@ -1017,7 +1021,7 @@ to say MoreauCrotchBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your cock to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		follow the sex change rule;
@@ -1123,7 +1127,7 @@ An everyturn rule:
 		else if facename of player is not BodyShopGuaranteedFace:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your head to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedFace;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now facename of player is name entry;
 			now face of player is face entry;
@@ -1134,7 +1138,7 @@ An everyturn rule:
 		else if bodyname of player is not BodyShopGuaranteedBody:
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your body to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedBody;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
@@ -1149,7 +1153,7 @@ An everyturn rule:
 		else if skinname of player is not BodyShopGuaranteedSkin:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your skin to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedSkin;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now skinname of player is name entry;
 			now skin of player is skin entry;
@@ -1163,7 +1167,7 @@ An everyturn rule:
 		else if tailname of player is not BodyShopGuaranteedtail:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your tail to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedtail;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now tailname of player is name entry;
 			now tail of player is tail entry;
@@ -1177,7 +1181,7 @@ An everyturn rule:
 		else if cockname of player is not BodyShopGuaranteedCrotch:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your cock to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedCrotch;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your crotch [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now cockname of player is name entry;
 			now cock of player is cock entry;

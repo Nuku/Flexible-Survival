@@ -15,6 +15,10 @@ nmformswitch is a truth state that varies.
 fancymfcount is a number that varies.	[controls cycling through the various M/F sex scenes]
 fancyffcount is a number that varies.	[controls cycling through the various F/F sex scenes]
 
+Table of GameCharacterIDs (continued)
+object	name
+Fancy	"Fancy"
+
 Fancy is a woman.
 The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more than they conceal. Her body is well built and nicely rounded in all the right places. The horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs parted teasingly to give you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hoof-like hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.".
 the conversation of Fancy is { "Grumble!" }.
@@ -374,7 +378,7 @@ to quietrestorenightmareform:
 	if bodyname of player is not "Nightmare" or the player is not pure:
 		now nmformswitch is true;
 		setmonster "Nightmare";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if name entry is "Nightmare":
 			now bodyname of player is "Nightmare";
 			now facename of player is "Nightmare";

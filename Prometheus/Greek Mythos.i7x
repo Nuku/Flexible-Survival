@@ -31,7 +31,9 @@ Section 1 - Events
 [Labors of Herakles]
 Labors Introduction is a situation.
 The sarea of Labors Introduction is "Museum".
+The Level of Labors Introduction is 30.
 
+[This can stay here, for the time when we eventually make more rooms in the museum. One thing that should be remembered is that _Navigation_ is not _Going_ - it's a completely different command that moves the player by a code command, not the act of walking that would trigger the code below]
 after going to Museum Foyer while (Labors Introduction is not resolved and level of player > 30 and a random chance of 1 in 2 succeeds):
 	move player to Museum Foyer;
 	LaborsIntroductionEvent;

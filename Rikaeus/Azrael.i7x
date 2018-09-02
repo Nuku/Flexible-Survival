@@ -38,6 +38,10 @@ instead of going up from College Administration Building while AzraelRelationshi
 
 Section 2 - Declaring Azrael
 
+Table of GameCharacterIDs (continued)
+object	name
+Azrael	"Azrael"
+
 Azrael is a man.
 The description of Azrael is "[AzraelDesc]".
 The conversation of Azrael is { "<This is nothing but a placeholder>" }.

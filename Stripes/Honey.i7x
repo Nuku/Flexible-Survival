@@ -111,7 +111,7 @@ Instead of resolving a Smashed Hive:
 						now HP of bee girl is 5;
 						increase score by 25;
 						setmonster "Queen Bee";
-						choose row monster from the table of random critters;
+						choose row monster from the Table of Random Critters;
 						now non-infectious entry is false;
 						now tailname of player is "Queen Bee";
 						now facename of player is "Queen Bee";
@@ -157,12 +157,17 @@ to say beegirlsaved:
 	increase carried of honeycomb by 2;
 	increase score by 20;
 	now bee girl is tamed;
+	add "Tamed" to Traits of bee girl;
 	now HP of bee girl is 1;
 	move Honey to Grey Abbey Garden;
 	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
 Section 2 - Bee Girl NPC/Pet
+
+Table of GameCharacterIDs (continued)
+object	name
+bee girl	"bee girl"
 
 bee girl is a pet. bee girl is a part of the player.
 understand "Honey" as bee girl.
@@ -188,6 +193,10 @@ to say DismissHoney:
 		say "     Honey presses a quick kiss to your cheek before flying away.";
 	else: [dismissing her in the abbey]
 		say "     Honey just shrugs her shoulders, going back to work in the garden.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Honey	"Honey"
 
 Honey is a woman.
 The description of Honey is "[HoneyDesc]".

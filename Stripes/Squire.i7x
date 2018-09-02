@@ -16,7 +16,7 @@ Section 1 - Description
 to say squiredesc:
 	setmongender 3; [creature is male]
 	now kpstatus is 0;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -133,7 +133,7 @@ to say losetosquire:
 
 
 to say squirewins_vaginal_shift:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is herm:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Lifting your [cock size desc of player] cock[if cockname of player is not listed in infections of InternalList] and balls[end if], he smiles as he confirms the presence of your juicy pussy. 'This encounter gets better and better. This fallen knight has a scabbard as well as a sword. ";
 	else:
@@ -175,7 +175,7 @@ to say squirewins_vaginal_shift:
 
 
 to say squirewins_anal_shift:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is neuter:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Your genderless crotch gives him momentary pause and he's drawn to rub across your nullpatch. 'What kind of knight has neither sword nor scabbard? No wonder you're unworthy to be a knight and [if HP of player > 0]surrendered so easily[else]lost[end if]. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
 	else:
@@ -277,12 +277,12 @@ to say beatthesquire:
 
 Section 4 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Squire"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";

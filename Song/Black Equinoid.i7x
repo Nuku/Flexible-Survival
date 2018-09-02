@@ -57,12 +57,12 @@ to say beattheequinoid:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Black Equinoid"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -140,9 +140,9 @@ to say lucky horseshoe use:
 	say "You hurl the horseshoe over your [one of]left[or]right[at random] shoulder and don't look back, hoping for the best.";
 	if a random chance of 1 in 20 succeeds:
 		say "As you walk away, you trip over something!";
-		sort table of random critters in random order;
-		repeat with x running from 1 to the number of rows in table of random critters:
-			choose row x in table of random critters;
+		sort Table of Random Critters in random order;
+		repeat with x running from 1 to the number of rows in Table of Random Critters:
+			choose row x in Table of Random Critters;
 			if lootchance entry is 0, next;
 			let z be loot entry;
 			say "Wow, a [z]! It really was lucky!";

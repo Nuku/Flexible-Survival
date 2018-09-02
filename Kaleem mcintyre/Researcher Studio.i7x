@@ -33,6 +33,10 @@ Section 3 - Omio
 Omiotalk is a number that varies.
 omq is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Omio	"Omio"
+
 Omio is a woman.
 The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more... cute in a girlish like way.".
 The conversation of Omio is { "Research and Development!" }.
@@ -116,7 +120,7 @@ Check Omioteatime:
 	If Omio is not visible, say "Excuse me?" instead;
 
 LastOmioteatime is a number that varies. LastOmioteatime is usually 777.
-[Omioteatime is a number that varies.][Does not compile]
+[Omioteatime is a number that varies.][@Tag:NotSaved][Does not compile]
 
 carry out Omioteatime:
 	if lastOmioteatime - turns < 6:

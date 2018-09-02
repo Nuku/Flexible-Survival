@@ -158,8 +158,8 @@ to say SeraphDefeated:
 				say "     Elijah's pointed stare at the cum and femcum staining Gabriel's crotch makes the angel flush bright red, looking down over himself in shame. Then he stammers, 'I - I... yes. I like it. I need it. My [if player is female]mistress said she'd[else]master said he'd[end if] fuck me all the time from now on.' The other angel just gives you an approving nod, 'Nice work training the little slut. Seems you've got Gabe turned into a subby pet, don't you. I'll have to tap that ass myself too sometime...' Before you can reply anything, Elijah then saunters out of the room, going up, most likely to hunt down something to fuck outside.";
 			move Gabriel to bunker;
 			move player to bunker;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Seraphim":
 					now monster is y;
 					now area entry is "Nowhere";
@@ -214,12 +214,12 @@ to say SeraphDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Seraphim";
 	now enemy title entry is "";
 	now enemy name entry is "Gabriel";
@@ -272,6 +272,10 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Section 3 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Gabriel	"Gabriel"
 
 Gabriel is a man.
 The HP of Gabriel is normally 0.

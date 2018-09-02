@@ -17,7 +17,7 @@ to say xenodesc:
 
 
 to say losetoxeno:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     You are knocked down by the powerful creature and pinned beneath it. It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent. ";
 	if player is female:
 		say "     The xenomorphic creature, as if scenting what it wants, pushes your legs apart with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your pussy and sliding up to your womb. The black flesh pulses and shoots a thick, green goo into your cunt, making it slick and easy to penetrate. At your cervix, its tendrils squirm and rub, working your cervix until it opens and allows it entry. Once inside your womb, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your womb. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if player is male]. As these push past your clit, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
@@ -37,7 +37,7 @@ to say losetoxeno:
 
 
 to say beatthexeno:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Victorious over the alien creature, you knock the hissing black creature to the ground. Its tail thrashes and green goo leaks from its phallic probe. ";
 	if cockname of player is "Xeno" and player is herm:
 		say "     Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to pull its into your wet, vaginal hole. Your ovipositor squeeze and sucks at the cock inside it, milking at the black creature until it cums again and again, draining its internal balls into you to feed and fertilize the Xeno eggs inside you.";
@@ -60,12 +60,12 @@ to say beatthexeno:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Xeno"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

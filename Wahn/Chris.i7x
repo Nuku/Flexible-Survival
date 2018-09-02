@@ -15,6 +15,10 @@ Version 1 of Chris by Wahn begins here.
 [   0: nothing yet                                 ]
 [   1: fucked the guy                              ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Chris	"Chris"
+
 Chris is a man. The HP of Chris is normally 0.
 The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.

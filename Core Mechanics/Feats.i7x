@@ -15,7 +15,6 @@ boosterfeats is a number that varies. boosterfeats is usually 0.
 muggerison is a truth state that varies. muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
-
 The player has a number called featgained.
 
 Featgetting is an action applying to nothing.

@@ -83,6 +83,10 @@ Section 2 - NPC
 [ 2: hunting event successfully done              ]
 [ 3: player fucked Boghrim before                 ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Boghrim	"Boghrim"
+
 Boghrim is a man. Boghrim is in Main Hall.
 The description of Boghrim is "[BoghrimDesc]".
 The conversation of Boghrim is { "Mew!" }.
@@ -504,23 +508,23 @@ to say BoghrimSex1: [get fucked]
 			say "     Swallowing reflexively as your gaze wanders over the bulging muscles of the monstrously built orc, you steel your resolve and step down from Boghrim's platform, walking towards your designated target. On the way, you pick up an empty beer stein, nice and heavy - perfect to assist in a sucker punch. As you step up to the hulking orc and tap him on the shoulder, you smash the mug over his head as soon as he turns around - which only dents the mug and leaves the orc pretty unimpressed. Uh Oh. This won't be over as quickly as you hoped... ";
 			now inasituation is true;
 			now OrcSpecialFightNumber is 2;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Orc Warrior":
 					now monster is y;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now HP entry is 250;
 			now monsterHP is 250;
 			now lev entry is 16;
 			now wdam entry is 25;
 			challenge "Orc Warrior";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Orc Warrior":
 					now monster is y;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now HP entry is 125;
 			now monsterHP is 125;
 			now lev entry is 14;
@@ -853,6 +857,10 @@ to say BoghrimSex6: [Hunting trip with Mul]
 
 Section 3 - Boghrim's favorite slave, Jason
 
+Table of GameCharacterIDs (continued)
+object	name
+Jason	"Jason"
+
 Jason is a man. Jason is in Main Hall.
 The description of Jason is "[JasonDesc]".
 The icon of Jason is Figure of Jason_clothed_icon.
@@ -869,12 +877,12 @@ instead of sniffing Jason:
 
 Section 4 - Infection for combat purposes
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Orc Boss"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "Boghrim";

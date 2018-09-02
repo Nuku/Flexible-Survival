@@ -60,6 +60,10 @@ An everyturn rule:
 
 Section 2 - Declaring Bjorn
 
+Table of GameCharacterIDs (continued)
+object	name
+Bjorn	"Bjorn"
+
 Bjorn is a man.
 The description of Bjorn is "[BjornDesc]".
 The conversation of Bjorn is { "<This is nothing but a placeholder!>" }.

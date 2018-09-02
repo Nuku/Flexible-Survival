@@ -54,6 +54,10 @@ DogHouse is resolved.
 Save the Dame is a situation.
 Save the Dame is resolved.
 
+Table of GameCharacterIDs (continued)
+object	name
+Homaru	"Homaru"
+
 Homaru is a man.
 The description of Homaru is "A young man with spiky brown hair and black hooded coat on sits at his desk while [one of]going over some interesting looking notes[or]leafing through information on his computer[or]surveying files that look to be giving him a hard time[or]eating a sandwich[or]chuckling while reading a comic book[at random]. Homaru looks to be somewhere in his twenties, but the feel of the other man makes him seem as though he's about fifty or something. Sharp brown eyes filled with wisdom look up at you as you walk by Homaru and you find it hard not to freeze in place from the look given to you by those dark and seemingly ageless orbs.".
 Homaru is in Agency.

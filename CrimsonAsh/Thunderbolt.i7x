@@ -107,6 +107,10 @@ An everyturn rule:
 
 Section 3 - Thunderbolt NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Thunderbolt	"Thunderbolt"
+
 Thunderbolt is a man. Thunderbolt is in Thunderbolt's Stable.
 The description of Thunderbolt is "[ThunderboltDesc]".
 The conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
@@ -211,6 +215,10 @@ to say ThunderboltSex3: [ass fuck]
 
 Section 4 - Ariana NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Ariana	"Ariana"
+
 Ariana is a woman.
 The description of Ariana is "[ArianaDesc]".
 The conversation of Ariana is { "<This is nothing but a placeholder!>" }.
@@ -266,6 +274,10 @@ instead of fucking Ariana:
 	clear the screen and hyperlink list;
 
 Section 5 - Eres NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Eres	"Eres"
 
 Eres is a woman.
 The description of Eres is "[EresDesc]".

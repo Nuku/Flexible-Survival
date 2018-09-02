@@ -23,7 +23,7 @@ Section 1 - Events
 
 SlaveRaidEncounters is a number that varies.
 OrcSlaverStatus is a number that varies. OrcSlaverStatus is usually 0.
-OrcSlaverCaptureTime is a number that varies.
+OrcSlaverCaptureTime is a number that varies. OrcSlaverCaptureTime is usually 10000.
 Koghhstatus is a number that varies.
 
 Orcish Slave Raid is a situation.
@@ -705,7 +705,7 @@ before opening Cell Door 2:
 		now Cell Door 2 is unlocked;
 		say "You use your key to unlock the door.";
 
-CellDoorStatus is a number that varies;
+CellDoorStatus is a number that varies.
 
 [CellDoorStatus                                   ]
 [ 0: both intact                                  ]
@@ -1306,6 +1306,10 @@ Section 3 - NPCs
 [  0: no rounds in the competition won                             ]
 [  1: won one round                                                ]
 [  2: etc.                        ]
+
+Table of GameCharacterIDs (continued)
+object	name
+Orc Mob	"Orc Mob"
 
 Orc Mob is a man.
 The description of Orc Mob is "[OrcMobDesc]".

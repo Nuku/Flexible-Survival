@@ -4,6 +4,10 @@ Version 3 of Orthas by Stripes begins here.
 
 Section 0 - Orthas
 
+Table of GameCharacterIDs (continued)
+object	name
+Orthas	"Orthas"
+
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
 The description of Orthas is "[orthasNPCdesc]".
 The conversation of Orthas is { "Eggses!" }.
@@ -429,7 +433,7 @@ to say beatorthas:
 	say "     You manage to knock the dragoness senseless and look over her and the transforming Dr Matt.";
 
 to say orthasdesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 12, let debit be level of player - 12;
 	now lev entry is 12 + debit;
@@ -447,12 +451,12 @@ to say orthasdesc:
 
 Section 6 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dragon"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

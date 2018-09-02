@@ -1767,7 +1767,7 @@
 |Nuku Valente|Story Skipper|Reciting|action|
 |Stripes|Settings Menus|20140908213124/4130:Mon 8 September 2014 21:31|indexing|
 |Stripes|Settings Menus|weakwilled|value|
-|Stripes|Settings Menus|trixiecheating|action|
+|Stripes|Settings Menus|Trixiecheating|action|
 |Stripes|Settings Menus|analadjusting|action|
 |Stripes|Settings Menus|WSadjusting|action|
 |Stripes|Settings Menus|voremenuing|action|
@@ -3410,7 +3410,6 @@
 |Stripes|G-Shep Squad|K9 Vans|room|
 |Stripes|G-Shep Squad|Buster|person|
 |Stripes|G-Shep Squad|gshepsquad|value|
-|Stripes|G-Shep Squad|gshepmood|value|
 |Stripes|G-Shep Squad|busterstory1|value|
 |Stripes|G-Shep Squad|busterstory2|value|
 |Nuku Valente|Alpha Fang Scenes|20140908213124/2497:Mon 8 September 2014 21:31|indexing|
@@ -3499,7 +3498,7 @@
 |Agentlemancalledb|Karen|20140908213124/1730:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Karen|Retriever Girl|Pet|
 |Agentlemancalledb|Karen|Forgotten Past|situation|
-|Agentlemancalledb|Karen|KarenTimer|value|
+|Agentlemancalledb|Karen|Libido of Karen|value|
 |Agentlemancalledb|Karen|KarenTalking|action|
 |Agentlemancalledb|Karen|KarenFucking|action|
 |Wahn|Felix|20140908213124/10919:Mon 8 September 2014 21:31|indexing|

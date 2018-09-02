@@ -96,7 +96,7 @@ to say beatimpalaguy:
 		say "You leave the impala to his humiliation.";
 
 to say impaladesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now impalamode is a random number between 0 and 1;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across the impala-morph wandering the plains, but instead of engaging you the impala flees; something about you seems to be scaring them off.";
@@ -149,12 +149,12 @@ to say impaladesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Impala";
 	now enemy title entry is "";
 	now enemy name entry is "";

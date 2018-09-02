@@ -14,7 +14,7 @@ wyvernbias is a number that varies. [Used in recording player bias for wyvern. 1
 to say WYVDESC:
 	if WYVSF is 0:
 		now WYVSF is 2;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if a random chance of 1 in 2 succeeds:
 		now WYVGEN is 1;
 		femalepronouns;
@@ -343,8 +343,8 @@ Section 1-2 - Victory Sex Trees
 to wyvmalevic:
 	now calcnumber is -1;
 	say "     What will you do?";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [if player is male][link]Mount him[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(2) [if player is male][link]Have him suck your dick[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
@@ -366,43 +366,43 @@ to wyvmalevic:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvgen_1]"; [Anal Pitching]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 2:
 			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvgen_2]"; [Oral Receiving Cock]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 3:
 			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvgen_3]"; [Oral Receiving Cunt]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 4:
 			if player is not female or cunt length of player < 16:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvmale_1]"; [Cunt Catching]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 5:
 			if scalevalue of player < 1: [4 or (scalevalue of player is 3 and player is not twistcapped)]
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvmale_2]"; [Anal Catching]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 6:
 			say "[wyvmale_3]"; [Oral Giving Cock]
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			say "     You have some second thoughts and decide to depart, instead."; [turn down]
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to wyvfemvic:
 	now calcnumber is -1;
 	say "     What will you do?";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [if player is male][link]Mount her[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(2) [if player is male][link]Mount her anally[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
@@ -423,31 +423,31 @@ to wyvfemvic:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvfem_1]"; [Cunt Pitching]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		if calcnumber is 2:
 			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvgen_1]"; [Anal Pitching]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 3:
 			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvgen_2]"; [Oral Receiving Cock]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 4:
 			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[wyvgen_3]"; [Oral Receiving Cunt]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 5:
 			say "[wyvfem_2]"; [Oral Giving Cock]
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			say "     You have some second thoughts and decide to depart, instead."; [turn down]
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 callwyvernbias is an action applying to nothing.
 understand "wyvern bias" as callwyvernbias;
@@ -637,13 +637,13 @@ to say wyvfem_2: [Oral Giving Cunt]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wyvern"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -714,8 +714,8 @@ to say wyvorescene:
 to wyvore:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -748,8 +748,8 @@ to wyvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [wyvstrugglebar][line break][run paragraph on]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Wyvern":
 					now monster is y;
 					break;
@@ -764,7 +764,7 @@ to wyvore:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			now voreloss is true;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You became a Wyvern's meal!";
 		else:
 			let k be 0;
@@ -790,7 +790,7 @@ to wyvore:
 						say "     [if WYVGEN is 1]She[else]He[end if] only pursues you briefly, trying to retrieve you once more, but [ghe]'s clearly frustrated enough with you that [ghe] eventually just gives up, turning off and taking flight once more to find easier prey. Catching your breath for a moment, you eventually, cautiously step out from hiding, going back to your own business once it's clear you're in no immediate danger.";
 						cleanboundmemory;
 						now pewtergenitalcap is 0;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 						follow the turnpass rule;
 				else:
 					if struggleatt < 3:
@@ -809,7 +809,7 @@ to wyvore:
 							say "     Your continued protests eventually causes the wyvern's stomach to groan and churn, your quivering prison soon constricting around your [bodytype of player] form you squeeze you out, downwards into the beast's fleshy tubes. Your captor rumbling lowly in displeasure, you're strung along these tight, slick confines until you're greeted once more with the dry, open air.";
 							say "     The rest of you following quickly thereafter, you collapse unceremoniously onto the ground with an audibly wet sound. Taking a moment to acclimate to the outside world once more, you're eyes fall on the wyvern, who can only snort at you in disdain before turning to take flight once more, no doubt having had enough of your trouble. It takes you a while to clean yourself off and make your less-than-dignified escape.";
 							cleanboundmemory;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 							follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -1037,8 +1037,8 @@ to wyvorgy:
 	say " as they approach, easily overtaking and pinning you to the ground. Bickering between each other on who should go first, you'll likely want to pull yourself out of this pile of junk before they have their way with you, or worse yet, their [if WYVGEN is 0]'matron'[else]matron[end if] return...";
 	wait for any key;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -1086,8 +1086,8 @@ to wyvorgy:
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on][bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on][bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on] Sanity: [humanity of player]/ 100	Lust: [lustatt]/100 [bold type]A:[roman type] [if wyvkin1gen is 1]Male[else]Female[end if]: [wyvkin1lib]/100 [bold type]B:[roman type] [if wyvkin2gen is 1]Male[else]Female[end if]: [wyvkin2lib]/100 [bold type]C[roman type] [if wyvkinocc < 1]--[else if wyvkin3gen is 1]Male[else]Female[end if]: [wyvkin3lib]/100 [bold type]D:[roman type] [if wyvkinocc < 2]--[else if wyvkin4gen is 1]Male[else]Female[end if]: [wyvkin4lib]/100	Struggle: _-[if struggleatt > 2][bold type]X[roman type][else]-[end if][if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if]_[line break][run paragraph on]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Wyvern":
 					now monster is y;
 					break;
@@ -1101,7 +1101,7 @@ to wyvorgy:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -1126,7 +1126,7 @@ to wyvorgy:
 					say "     Finally managing to pull yourself free, you scramble over to the nest's edge and climb out, the wyvern kin screeching as they try to follow pursuit. Situated at the top of a skyscraper, you manage to find an entrance into the building, quickly [if scalevalue of player < 4]forcing[else]squeezing[end if] your way inside and slamming the door shut behind you, pinning yourself against the door as the beasts cry and bang at it.";
 					say "     Eventually, they concede and return back to the nest, allowing you to go through the ordeal of making your way down the ruined tower and back onto the streets. You manage to avoid any additional problems on your way out, other than the whole trip is a tad time-consuming, and you go about your business once more, free of the strange occurrence.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -1902,8 +1902,8 @@ when play ends:
 
 to wyvernbiasrequest:
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [link]Female Exclusive[as]1[end link][line break]";
 		say "(2) [link]Female Bias[as]2[end link][line break]";
@@ -1923,35 +1923,35 @@ to wyvernbiasrequest:
 				say "[italic type]Set. If you need to change this at any time, simply say [bold type]wyvern bias[roman type].";
 				wait for any key;
 				now wyvernbias is 1;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		if calcnumber is 2:
 			say "     [italic type]Female Bias: Only encounter female wyverns at random, when hunting females are most likely. Is this your choice?[roman type][line break]";
 			if player consents:
 				say "[italic type]Set. If you need to change this at any time, simply say [bold type]wyvern bias[roman type].";
 				wait for any key;
 				now wyvernbias is 2;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 3:
 			say "     [italic type]Ambivalent: It's always a 50/50 chance, hunting or no. Is this your choice?[roman type][line break]";
 			if player consents:
 				say "[italic type]Set. If you need to change this at any time, simply say [bold type]wyvern bias[roman type].";
 				wait for any key;
 				now wyvernbias is 3;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 4:
 			say "     [italic type]Male Bias: Only encounter male wyverns at random, when hunting male are most likely. Is this your choice?[roman type][line break]";
 			if player consents:
 				say "[italic type]Set. If you need to change this at any time, simply say [bold type]wyvern bias[roman type].";
 				wait for any key;
 				now wyvernbias is 4;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 5:
 			say "     [italic type]Male Exclusive: Only encounter Male wyverns. Is this your choice?[roman type][line break]";
 			if player consents:
 				say "[italic type]Set. If you need to change this at any time, simply say [bold type]wyvern bias[roman type].";
 				wait for any key;
 				now wyvernbias is 5;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 
 Table of Game Objects (continued)
 name	desc	weight	object

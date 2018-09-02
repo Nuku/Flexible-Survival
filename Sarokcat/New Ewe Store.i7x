@@ -130,11 +130,19 @@ The description of New Ewe Storeroom is "This small family grocery store is now 
 
 The invent of New Ewe Storeroom is { "chips", "food", "water bottle", "soda" }.
 
+Table of GameCharacterIDs (continued)
+object	name
+Leon	"Leon"
+
 Leon is a man.
 The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you. You recall his name was Leon.".
 The conversation of Leon is { "Baa, baby!" }.
 the fuckscene of Leon is "[sexwithleon]".
 Leon is in New Ewe Storeroom.
+
+Table of GameCharacterIDs (continued)
+object	name
+Mary	"Mary"
 
 Mary is a woman.
 The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
@@ -225,12 +233,12 @@ Section 3 - Sex w/Leon or Mary
 
 RamFucked is a number that varies. RamFucked is usually 0.
 EweFucked is a number that varies. EweFucked is usually 0.
-[ marytalked is a number that varies. ]
+[ marytalked is a number that varies. ][@Tag:NotSaved]
 
 
 to say sexwithLeon:
 	setmonster "Ram";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is neuter:
 		say "     You're ill-equipped to play with him right now.";
 	else if EweFucked is 0 and RamFucked is 0:
@@ -344,7 +352,7 @@ to say sexwithLeon:
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more. All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass. Confident that you're fully his now, he leaves you there to return to the store. Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind. It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
 					if girl is not banned and "Male Preferred" is not listed in feats of player:
 						setmonster "Ewe";
-						choose row monster from the table of random critters;
+						choose row monster from the Table of Random Critters;
 						now tailname of player is "Ewe";
 						now facename of player is "Ewe";
 						now skinname of player is "Ewe";
@@ -358,7 +366,7 @@ to say sexwithLeon:
 						attributeinfect;
 					else:
 						setmonster "Ram";
-						choose row monster from the table of random critters;
+						choose row monster from the Table of Random Critters;
 						now tailname of player is "Ram";
 						now facename of player is "Ram";
 						now skinname of player is "Ram";

@@ -142,6 +142,10 @@ to say RunFromCentaurs:
 
 Section 2 - Thomas, the herm centaur
 
+Table of GameCharacterIDs (continued)
+object	name
+Thomas	"Thomas"
+
 Thomas is a man. The HP of Thomas is normally 0.
 The description of Thomas is "[ThomasDesc]".
 The conversation of Thomas is { "Mew!" }.
@@ -566,8 +570,8 @@ Section 3 - Fucking Thomas
 
 Instead of fucking the Thomas:
 	[puts Centaur Stallion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Centaur Stallion":
 			now monster is y;
 			break;

@@ -53,7 +53,7 @@ to say VixenHermNurseGetAnal:
 	say "     A";
 
 to say LoseToVixenNurse:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if vixgender is 0:
 		if player is herm:
 			if a random chance of 1 in 2 succeeds:
@@ -103,7 +103,7 @@ to say LoseToVixenNurse:
 	now lev entry is 4;
 
 to say BeatTheVixenNurse:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "The vixen nurse stops fighting and you move in to catch her, it seems you have a slutty vixen nurse on your hands [bold type]What would you like to do?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -172,12 +172,12 @@ to say BeatTheVixenNurse:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 	[value reset]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now lev entry is 4;
 
 
 to say VixenNurseDesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now lootchance entry is 20;
 	let debit be 0;
 	now vixgender is 0;
@@ -210,12 +210,12 @@ to say VixenNurseDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Vixen Nurse"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -272,7 +272,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "vixennurse"	vixhealboost rule	--	--	--	--	--	--	--	--	--
 
 this is the vixhealboost rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if monsterHP <= ( HP entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
 		let healed be 25;
 		increase monsterHP by healed;

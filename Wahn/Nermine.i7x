@@ -63,10 +63,10 @@ JackalBoyTF is a number that varies.
 JackalManTF is a number that varies.
 Nerminehelpstatus is a number that varies.
 wrcurseNermine is a number that varies.
-wrlastNermine is a number that varies. wrlastNermine is normally 255.
+wrlastNermine is a number that varies. wrlastNermine is normally 10000.
 AngryHorguth is a number that varies.
-NermineFennecTurn is a number that varies.
-NermineBukkakeTurn is a number that varies.
+NermineFennecTurn is a number that varies. NermineFennecTurn is usually 10000.
+NermineBukkakeTurn is a number that varies. NermineBukkakeTurn is usually 10000.
 
 Section 1 - The Mysterious Shop
 
@@ -82,6 +82,10 @@ Bargain Bin is in The Mysterious Shop.
 the scent of Mysterious Shop is "The mysterious shop smells of scented candles and ancient secrets.".
 
 Section 2 - Nermine
+
+Table of GameCharacterIDs (continued)
+object	name
+Nermine	"Nermine"
 
 Nermine is a woman.
 The description of Nermine is "[NermineDesc]".

@@ -27,7 +27,7 @@ when play begins:
 	add { "Tiger Shark" } to infections of guy;
 	add { "Tiger Shark" } to infections of furry;
 
-ts_warrior is truth state that varies.		[registers if the player is fighting the shark warrior or not.]
+ts_warrior is a truth state that varies.		[registers if the player is fighting the shark warrior or not.]
 ts_warrior is usually false.
 tsw_victory is a truth state that varies.	[registers whether Tiger Shark Warrior won or not.]
 tsw_victory is usually false.
@@ -37,7 +37,7 @@ tsw_relationship is a number that varies.	[The standing of the shark warrior tow
 
 to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark is non-infective because of the Tiger Shark Warrior]
 	Setmonster "Tiger Shark";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now non-infectious entry is false;
 	infect "Tiger Shark";
 	now non-infectious entry is true;
@@ -109,7 +109,7 @@ Section 2 - Monster Responses
 
 to say TigerSharkDesc:
 	setmongender 3; [male]
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	if ts_warrior is true:
 		if bodyname of player is "Feral Sea Dragon":	[Check body of player]
 			now tsw_fsd is 1;
@@ -304,12 +304,12 @@ To say tsw_ride:
 
 Section 4 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Tiger Shark";
 	now enemy title entry is "";
 	now enemy name entry is "";

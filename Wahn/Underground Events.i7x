@@ -90,7 +90,7 @@ to say cuckold choice:
 
 to say cuckold choice male:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is male:
 		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating his changed body with more of its offspring...";
 		say "     [bold type]Do you follow the urge?[roman type][line break]";
@@ -335,7 +335,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
 		LineBreak;
 		setmonster "Thought Eater";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now area entry is "Sealed";
 		challenge "Thought Eater";
 		increase CellFourVisits by 1;

@@ -32,6 +32,10 @@ BrianOral is a number that varies.
 
 Section 1- Brian
 
+Table of GameCharacterIDs (continued)
+object	name
+Brian	"Brian"
+
 Brian is a man.
 The description of Brian is "[BrianNPCDesc]".
 The conversation of Brian is { "Ouch!" }.
@@ -121,7 +125,7 @@ to say attemptsexwithbrian:
 
 to say briansexmenu:
 	setmonster "Rhino";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     What do you want to do with Brian?";
 	LineBreak;
 	now sextablerun is 0;
@@ -251,7 +255,7 @@ to say sexwithBrian04:		[anal on player]
 
 to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked before]
 	setmonster "Rhino";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if XP of Brian is 0:		[not suggested before]
 		say "     When you suggest the rhino take a turn as bottom, he edges back a step. 'Hey now. I don't know about that. I mean, aside from that other rhino, there ain't been nobody in there...' he starts to protest. As you're pondering a way to convince him, he snaps his fingers. 'We'll wrassle for it. That seems fair,' he says with a big smile on his face. Looking at his bulging muscles, you have trouble seeing how that's quite fair. You don't even get a chance to refuse before he's coming at you.";
 	else:					[trying again]
@@ -320,15 +324,6 @@ Check CheckingBrian:
 carry out CheckingBrian:
 	say "     The sweaty rhino stands there watching you with his gleaming, blue eyes. His shoulders raise and lower as he pants, still not taking his eyes off you for a second, all too content to glare at you with a mix of lust and intrigue. Even though he breathes almost straight towards your face, you smell nothing foul, in fact, it smells a little good, as if he's managed to keep his oral hygiene up. However, it doesn't look like he has any kind of supplies other than food in his vast....homey field. You chock it up to nanites....or something even stranger, and move on.";
 	say "     You see his form in all its glory when you look over the rest of his ripped form; down his eight-pack, over his Adonis belt that points right to his almost equine cock, eyes hovering over it before they continue to sweep over his muscled thighs, and finally down his defined legs and to his glossy, gray hooves. He's a hunk, that's for sure, and his chitinous shoulder 'pads' make him seem almost like a football player. And even though you can't see him from behind right now, you already have his muscled back and bubble-butt ingrained in your memory."; [Not needed at the moment]
-]
-[NPCs have these listed as stats by default, can be used for various purposes as variables]
-[
-A person has a number called HP.
-A person has a number called XP.
-A person has a number called Level.
-A person has a number called Dexterity.
-A person has a number called libido.
-A person has a text called linkaction.
 ]
 
 Brian ends here.

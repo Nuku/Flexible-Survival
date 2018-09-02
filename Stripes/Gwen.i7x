@@ -20,6 +20,10 @@ Section 1 - Event
 
 Section 2 - Gwen the Foal
 
+Table of GameCharacterIDs (continued)
+object	name
+Gwen	"Gwen"
+
 Gwen is a woman.
 The description of Gwen is "[gwendesc]".
 The conversation of Gwen is { "Mama!" }.

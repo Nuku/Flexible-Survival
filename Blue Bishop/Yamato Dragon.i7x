@@ -349,7 +349,7 @@ to yamatbiasshift:
 
 to say yamato dragon desc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
@@ -401,8 +401,8 @@ Section 1-2 - Player Victory Sex
 to yamatmalesexmenu:
 	now calcnumber is -1;
 	say "     What will you do?";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [if player is male][link]Mount him[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(2) [if player is male][link]Have him suck your dick[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
@@ -446,7 +446,7 @@ to yamatmalesexmenu:
 				yamatbiasshift;
 				now tempnum is 0;
 				yamatdomshift;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 2:
 			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -456,7 +456,7 @@ to yamatmalesexmenu:
 				yamatbiasshift;
 				now tempnum is 0;
 				yamatdomshift;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 3:
 			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -466,7 +466,7 @@ to yamatmalesexmenu:
 				yamatbiasshift;
 				now tempnum is 0;
 				yamatdomshift;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 4:
 			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -504,7 +504,7 @@ to yamatmalesexmenu:
 				yamatbiasshift;
 				now tempnum is 0;
 				yamatdomshift;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 5:
 			if scalevalue of player < 3:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -514,17 +514,17 @@ to yamatmalesexmenu:
 				yamatbiasshift;
 				now tempnum is 0;
 				yamatdomshift;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 6:
 			say "[YamatM_6]"; [Oral Giving Cock]
 			now tempnum is 1;
 			yamatbiasshift;
 			now tempnum is 0;
 			yamatdomshift;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			say "     You have some second thoughts and choose to turn the dragon down, leaving you to go about your business once more."; [turn down]
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to say YamatM_1: [Anal Pitching]
 	say "     You decide upon taking the massive serpent for a ride, a request he doesn't seem to mind obliging. His form slowly descends to meet you more closely.";
@@ -884,12 +884,12 @@ to yamatbiasshift:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Yamato Dragon";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -953,7 +953,7 @@ the scent of dragon scale is "The yellow scale smells strange and otherworldly."
 The usedesc of dragon scale is "[usedragonscale]";
 
 to say usedragonscale:		[only alters sizes, not gender]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	setmonster "Yamato Dragon";
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -976,7 +976,7 @@ the scent of dragon hair is "The golden hair smells of exotic, otherworldly scen
 The usedesc of dragon hair is "[usedragonhair]";
 
 to say usedragonhair:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	setmonster "Yamato Dragoness"; [only alters sizes, not gender]
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -999,8 +999,8 @@ Section 4 - Vore Bound State
 to YamatMvore:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -1036,7 +1036,7 @@ to YamatMvore:
 			now cockname of player is "Yamato Dragon";
 			now voreloss is true;
 			now tempnum is 1;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -1058,7 +1058,7 @@ to YamatMvore:
 						say "     Unable to keep you down any longer, you feel the dragon loudly begin to hack as you're squeezed out from the stomach's confines and back up through his throat. Quickly flung from his maw, the creature grabs you with one of his talon. Gripping you with disdain, he leers at you before tossing you back down to the earth.";
 						say "     '[one of]Hmpf[or]Ugh[or]Disgusting[at random], [one of]perhaps I shall find a prey that respects its meal[or]you were hardly worth my time anyways[or]you just can't help but be an annoyance, I see now[at random]...' Sneering at you, he floats off into the distance, leaving you to recover. Exhausted and saliva soaked, it takes you a while to find your things and return from whence you came.";
 						cleanboundmemory;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 						follow the turnpass rule;
 					else if boundsegment is 1:
 						now boundmod is 0;
@@ -1075,7 +1075,7 @@ to YamatMvore:
 						say "     Grabbing you before you can fall to the earth, the beast's grip is nonetheless fairly limp, glaring at you with mild contempt before tossing you to earth once more.";
 						say "     '[one of]Hmpf[or]Ugh[or]Disgusting[at random], [one of]perhaps I shall find a prey that respects its meal[or]I suppose I got all I can from this writhing little worm[or]you just can't help but be an annoyance, I see now[at random]...' Sneering at you, he floats off into the distance, leaving you to recover. Exhausted and saliva soaked, it takes you a while to find your things and return from whence you came.";
 						cleanboundmemory;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 						follow the turnpass rule;
 				wait for any key;
 				next;

@@ -15,7 +15,12 @@ Section 1 - Abandoned Camp
 
 Abandoned Camp is a situation.
 The sarea of Abandoned Camp is "Forest".
-Savina is a woman. The HP of Savina is normally 0. The lust of Savina is normally 0.
+
+Table of GameCharacterIDs (continued)
+object	name
+Savina	"Savina"
+
+Savina is a woman.
 
 when play begins:
 	add Abandoned Camp to badspots of girl;

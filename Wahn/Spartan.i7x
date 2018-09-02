@@ -171,12 +171,12 @@ to say SpartanDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Spartan";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -298,7 +298,7 @@ to HistoryLectureVisit:
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you ready to go again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 							else:[let him fuck you]
 								setmonster "Helot";
-								choose row monster from the table of random critters;
+								choose row monster from the Table of Random Critters;
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you pull him away from your nether lips with a sigh and look into his eyes as you tell him 'I want you fuck me. Pound my pussy with your hard cock...' Eagerly, the Helot stands up again, his shaft erect and ready to go. Without delay, he moves forward to put its head between your pussy lips, then sinks into your body. You can feel his manhood spreading your inner passage around it, pleasure tingling through you from the touch of his hard rod against the walls of your vagina. Driving into you with a quick stroke, the slave servant starts fucking you deeply, obviously very horny and happy to be the active partner during sex for once.";
 								say "     Being penetrated by the Helot, his balls slapping against your hips as he thrusts in and out, you give yourself to the feeling of having him inside you. A lustful haze rises in your mind and you lose track of time for a while, not caring for much else except getting fucked. After you don't know how long, you orgasm messily, lots of femcum dripping from your pussy and squirting out around the slave's cock as it thrusts in and out. Grunting urgently, the Helot isn't far behind, grinding his hips against yours as he blasts his fertile seed deep into you. A very satisfied grin on his face as he waits for his cock to finish shooting, the servant then pulls out and goes back to his other duties, leaving you leaning back on your seat with his cum dripping your of your pussy.[impregchance]";
 								infect "Spartan";

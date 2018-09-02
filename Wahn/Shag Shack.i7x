@@ -16,6 +16,10 @@ CassandraFucked is a number that varies.
 
 Section 1 - Jerome
 
+Table of GameCharacterIDs (continued)
+object	name
+Jerome	"Jerome"
+
 Jerome is a man.
 The description of Jerome is "[JeromeDesc]".
 The conversation of Jerome is { "Pay up!" }.
@@ -236,7 +240,7 @@ the fuckscene of Jerome is "     As you make an amorous offer to the shark, Jero
 
 to say ShagShackSexMenu:
 	say "     Which member of Jerome's 'entertainment staff' do you want to pick and have some fun with?";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -495,7 +499,7 @@ to say ShagShackSex3: [Simba]
 
 to say ShagShackSex4: [Zane the incubus]
 	setmonster "Incubus";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Walking between the rows of beds and mattresses, you come to one that is unoccupied right now. Though clearly not for long, judging from the still-wet puddle of cum on the ground next to it. The 'owner' of this fuck-pad is casually leaning against the wall right next to it, confidently presenting his naked body to anyone looking his way. It is an incubus, and a handsome one at that - well-toned body, a studly face and red hair, accentuated very nicely by his horns, large red leathery wings and tail. His cock stands erect and ready, with the attractive stud demonstratively stroking up and down along its length. 'Hey there baby,' he calls out to you in an oh so smooth and enticing voice. 'I can see you wanna spend some time with the best fuck in this place. Good pick, Zane will take care of your needs.'";
 	say "     With that said, the handsome man pushes himself off the wall with his wings and saunters towards you, his cock swinging side by side as he sways his hips. Next you know, Zane's hand is sliding slowly up your arm in a teasing stroke, then down your side and around as he pulls you into an embrace. An attractive masculine scent fills your nostrils as he pushes his naked form up against yours, his hard cock brushing against your hip. Then the incubus leans his head close and looks deep into your eyes, his mouth pulling into a smile that reveals slightly elongated canines. 'Trust me,' he says in his rich voice and plants a hot kiss on your lips that makes you swoon, 'Just lay back and enjoy.'";
 	WaitLineBreak;
@@ -634,7 +638,7 @@ to say ShagShackSex6: [Shirley the ape]
 
 to say ShagShackSex7: [Ty the human breeder]
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Walking between the rows of beds and mattresses, you come to the corner of the brothel that doesn't have any whores that let themselves be pounded into the mattress or tied up. No, the 'performers' over here are far more confident - following incoming customers with interested looks as they lean against the walls or lounge on their beds. Seems like they actually chose to work here, enjoying the nonstop sex and relative security from the chaos outside. A slender human male leans against a wall nearby and attracts your attention with the simple fact that he is still fully human, with no sign of any physical change on him at all. Due to everyone else changing wildly these days, his 'regular' appearance makes him exceptional all of itself.";
 	say "     Not that the young guy isn't attractive either - tall and quite slender, he is dressed in shorts and a black t-shirt with the logo of some band on it. His fairly handsome face shows boyish charm as he smiles at you from under a somewhat tousled blond page-boy haircut. 'Hey there,' the young man greets you with a wave, then steps up and gives you his hand to shake. 'I'm Ty, nice to meet you. Erm... I hope it's the first time at least - gotta admit that it's a bit hard to keep track with everyone else shifting so often,' he tells you, blushing a little bit and raising an arm to scratch the back of his neck. 'Anyways - to answer the usual questions: Yup, I'm a hundred percent pure human. Haven't changed one bit. And I can give you what you want - pretty much every kid I fathered was human. Down to the blue eyes in most cases too. Even those that hatched from eggs and whatnot.'";
 	WaitLineBreak;
@@ -702,7 +706,7 @@ to say ShagShackSex8: [Penny]
 
 to say ShagShackSex9: [Bryce the wolftaur]
 	setmonster "Wolftaur";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if BryceFucked is 0: [no sexual contact with the taur before]
 		say "     Walking among the many mattresses filling the floor, you find one with an inhabitant that catches your eye. Standing astride the mattress is a tall wolftaur, his large, canine lower body stretching behind him, complete with a distinctly wolf-like tail. His upper body is covered in soft gray fur, with a face that is definitely more lupine than human. Easily visible between his legs is a very large knotted canine dick, clearly erect. As you look back up, you meet his eyes - it seems he noticed your stares. The wolftaur grins at you and speaks. 'I think you've found what you're looking for. The name's Bryce. Care to join me?'";
 		say "     You nod as you move up to the wolftaur, still enamored with his appearance. He gently takes a hold of you, bringing you fully onto the mattress and embracing you, the warm fur brushing tantalizingly against your skin. 'Since you seemed so interested in my cock, maybe you should give it a closer look?' he whispers, his mouth mere inches from your ear. His hands gently guide you along the path you would have taken regardless, as you fall to your knees atop the mattress, bringing your eyes level with the prize hanging below him.";
@@ -892,7 +896,7 @@ to say ShagShackSex15: [Ziera, by CrimsonAsh]
 
 to say ShagShackSex16: [Small otter dominatrix, by Fwuffymouse]
 	setmonster "Sea Otter";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Sitting near a wall on a high barstool is a short, slim otteress that is watching you with steely eyes mostly hidden under the brim of a small, black leather cap. Her gaze follows you, and she slaps a riding crop against her tiny paw. She's almost the shape of an ordinary otter, with a diminutive, sleek body and only the barest suggestion of breasts hidden under her small leather vest. The tiny dominatrix is more dressed than most of the people here and apparently well-equipped to handle a specific sort of customer. You stop, not yet sure if you're that sort of customer. A sour look crosses her face as you pause, and the slap of leather against wood shocks you to attention.";
 	say "     'Stop staring, runt!' barks the mustelid. Gaze snapping downward, you stammer an apology. She snarls again, demanding that you kneel before her. As you comply, the sleek domme brings the crop down across your arm. The otter is poised above you, suddenly seeming much bigger than you remember. The commanding, little woman growls again, ordering you to apologize again, properly. [if player is submissive]'I'm sorry, mistress, forgive me!' you cry, letting your submissive instincts take over. She seems satisfied, bringing the crop down to your cheek and gently tapping it against your face[else]'I'm sorry, mistress,' you mutter, and you get a quick, sharp slap of leather against your other arm.[end if]";
 	say "     [bold type]the slinky little dominatrix scoots on the barstool and presents you with one of her paws. [bold type]Give her a foot-worship?[roman type][line break]";
@@ -944,7 +948,7 @@ to say ShagShackSex17: [Natalie, by Mirvanna]
 
 to say ShagShackSex18: [Clive the hole stretcher, by EnFin]
 	setmonster "Goblin";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Besides one wall, you see a sex swing hanging almost to the floor by chains from the ceiling. It looks somewhat roughly constructed, probably built by the equally rough-looking goblin beside it. You assume the swing is so low to accommodate its owner's stature. As you get closer, the small creature notices you and stands proudly beside the swing on top of a wooden box to boost his height a couple of feet and wave you over. He has the usual leathery and mud-green skin of other goblins, and he was fully exposed, save a pair of goggles resting on his temples, a pair of black rubber gloves, and black rubber briefs. His underwear is filled by a large pair of testes, with the sides peeking from the stretched material, which stand out from his diminutive frame. A small indent in the upper part of the rubber hinted at a prick, but it is barely noticeable compared to the melon-sized globes being pushed forward.";
 	if CliveFuck is 0:
 		say "     The goblin's grin exposes tiny, pointed teeth and a metal tongue piercing as he addresses you. 'So, you wanting some of Clive's magic touch, are ya? Well, there's a reason they keep little, old me around,' he says, slapping one of his massive balls with emphasis at the word little. 'Working here sure beats scrounging and sneaking out in the about, and Clive even gets to tinker and experiment with all of Clive's toys.' Enthusiasm beams from Clive as he hops from the box and opens it to reveal all sorts of strange contraptions with phallic shapes, all slicked from recent use. He turns to watch your surprised reaction at his bizarre collection with an even wider grin than before. He starts pulling some of the items out and onto the swing beside you while speaking. 'Clive's toys are great for filling asses, and Clive knows just how to make it feel extra good. So, what can Clive fill you up with today?' The goblin clicks his tongue piercing against his teeth, already rubbing a gloved hand against your backside as you look at the options laid out before you.";

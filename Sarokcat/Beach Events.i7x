@@ -15,8 +15,8 @@ Instead of resolving a Beach bum:
 		say "     The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items. Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach. Unfortunately, the people he usually deals with for food have all pretty much become too changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
 		if player consents:
 			say "     The strange bum seems rather happy to hear it, and you imagine he is smiling underneath all that cloth as he offers you a bit of something to take away with you as a sign of your partnership... admittedly not something you would usually have chosen for yourself though, but it would be rude to refuse.";
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -33,8 +33,8 @@ Instead of resolving a Beach bum:
 		if chips is owned:
 			say "     Spying something he definitely wants, the beach bum moves more swiftly than you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word. In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease. Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
 			delete chips;
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -42,8 +42,8 @@ Instead of resolving a Beach bum:
 				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -54,8 +54,8 @@ Instead of resolving a Beach bum:
 		else if food is owned:
 			say "     Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;

@@ -20,7 +20,7 @@ when play begins:
 to say enhancedchimeradesc:
 	setmongender 5; [creature is herm]
 	say "[ec_mixnmatch]";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     [if showlocale is true]As you're snooping around in the hospital, you're[else]You[end if] are come across by one of those enhanced chimeras of Dr. Mouse's. The hybrid herm could be one of those from the photos or she might be an offspring of theirs. This one is [if lev entry < 13]a little over eight feet tall[else if lev entry < 15]roughly eight and a half feet tall[else]almost nine feet tall[end if] with a powerful and imposing body typical of the designed infection.";
 	say "     The creature's face and muzzle are [headdata]-like, but with a leonine mane that cascades over her broad shoulders and the horns of a [horndata]. Her chest is armored with thick, scaly hide that follows the curves of her big breasts to preserve their buxom form and show off her perky nipples. The remainder of her body and limbs are covered in [furdata] fur, save for some armored plates on the exterior of the arms and legs. Her paw-like hands and feet have plated digits ending in claws and thicker tufts of fur at the wrists and ankles. Growing from the base of her spine is a thick tail with scale and spiny ridges. Protruding from her sheath and resting above her plump ballsack is her big, meaty cock. It is blood red in color, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick as she eyes you with arousal, moving closer. ";
 	if bodyname of player is "Enhanced Chimera" or facename of player is "Enhanced Chimera":
@@ -44,7 +44,7 @@ to say enhancedchimeradesc:
 
 to say ec_mixnmatch:
 	say "[randombaseform]";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let qq be a random number between 11 and 15;
 	let zz be a random number between 1 and 16;
 	if hardmode is true and level of player > 13:		[Hard Mode Version!]
@@ -129,7 +129,7 @@ to say randombaseform:
 
 to say ec_reset:
 	[reset creature stats for next encounter]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now dex entry is 18; [ reset dexterity for random infection ]
 	now lev entry is 12; [ reset level for random encounter availability ]
 
@@ -169,10 +169,10 @@ to say ec_sex:
 	else:
 		weakrandominfect;
 		increase monster by 1;
-		choose row monster from table of random critters;
-		while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			increase monster by 1;
-			choose row monster from table of random critters;
+			choose row monster from Table of Random Critters;
 
 to say beattheenhancedchimera:
 	say "[ec_reset]";
@@ -181,12 +181,12 @@ to say beattheenhancedchimera:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Enhanced Chimera"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";

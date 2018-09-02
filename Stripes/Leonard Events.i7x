@@ -920,8 +920,8 @@ to say leoparkscene11:
 
 to felinebodyshift:
 	[puts Feline as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Feline":
 			now monster is y;
 			break;

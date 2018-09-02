@@ -22,6 +22,10 @@ OfficeGirlsFriendship is a number that varies.
 
 Section 1 - Melanie
 
+Table of GameCharacterIDs (continued)
+object	name
+Melanie	"Melanie"
+
 Melanie is a woman.
 The description of Melanie is "[MelanieDesc]".
 The conversation of Melanie is { "Hello" }.

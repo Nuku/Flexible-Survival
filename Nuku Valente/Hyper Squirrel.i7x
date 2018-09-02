@@ -73,6 +73,10 @@ Squirrel Den is a room. It is private.	[This is just a holding spot and not a re
 
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
+Table of GameCharacterIDs (continued)
+object	name
+Snow	"Snow"
+
 Snow is a person.
 The description of Snow is "[SnowDesc]";
 

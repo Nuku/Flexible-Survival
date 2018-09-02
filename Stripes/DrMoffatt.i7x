@@ -118,6 +118,10 @@ the scent of Psych Department is "The room smells strongly of its sexy skunk occ
 
 Section 3 - Doctor Moffatt
 
+Table of GameCharacterIDs (continued)
+object	name
+Doctor Moffatt	"Doctor Moffatt"
+
 Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
 The description of Doctor Moffatt is "[drmoffattdesc]".
 The conversation of Doctor Moffatt is { "..." }.
@@ -145,8 +149,8 @@ to say drmoffattdesc:
 
 Instead of conversing the Doctor Moffatt:
 	[puts Hyperskunk as lead monster in case of infection/impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hyperskunk":
 			now monster is y;
 			break;
@@ -212,8 +216,8 @@ to say skunkPathDialogue:
 		say "     With the changes continuing, but this time in an upward direction, your waist grows fuller. You'd not be called fat, but there's a little extra padding there to flow into those wide hips. Continuing up, your upper body again shifts to more normal proportions for your torso, shoulder and arms, again making your caboose stand out. They almost seem slender in comparison, but are quite lovely and would suit a model or actress, which you say to Dr. Moffatt. She continues to take note of your answers, only pausing on occasion to rub her cock and balls or tweak a nipple.";
 		wait for any key;
 		now bodyname of player is "Hyperskunk";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Hyperskunk":
 				now monster is y;
 				break;
@@ -305,8 +309,8 @@ to say sexwithDrMoffattHypnoPath:
 		say "     'Right now?' If you do not mind, I would like to work with you some more. Once you are in the proper state of mind... Who knows?'";
 
 to say sexwithDrMoffattSkunkPath:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hyperskunk":
 			now monster is y;
 			break;
@@ -629,8 +633,8 @@ an everyturn rule:
 
 to hyperskunkdose:
 	[puts Hyperskunk as lead monster in case of infection/impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hyperskunk":
 			now monster is y;
 			break;

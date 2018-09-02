@@ -2,14 +2,13 @@ Version 2 of Fighting by Core Mechanics begins here.
 [- Originally Authored By: Nuku Valente -]
 [Version 2 - Transplant and partial rewrite from story.ni - Wahn]
 
-
-Before combat is a number that varies.
+BeforeCombat is a number that varies.
 
 To fight:
-	let PossibleEncounters be a list of texts;
+	let PossibleEncounters be a list of text;
 	if debugactive is 1:
 		say "     DEBUG: Random Monster Choosing Started[line break]";
-	now monster is a random number from 1 to number of filled rows in the table of random critters;
+	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
 	if "Unerring Hunter" is not listed in feats of player: [only adds random monsters if the player isn't an unerring hunter]
 		if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and companion of player is not mouse girl:	[hunted by the mouse collective]
@@ -28,11 +27,11 @@ To fight:
 					if larvacounter > 3:
 						repeat with x running from 1 to ( larvacounter / 3 ):
 							add "Black Wasp" to PossibleEncounters;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if BannedStatus entry is true: [banned creatures can't be fought]
 			if debugactive is 1:
-				say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+				say "DEBUG -> Can't fight with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
 		if there is a lev entry:
 			if lev entry > level of player plus levelwindow and hardmode is false:
@@ -86,16 +85,16 @@ To fight:
 					follow the continuous entry;
 				follow the combat entry;
 				if HP of player < 1 or lost is 1, stop the action;
-		choose row monster from table of random critters;
+		choose row monster from Table of Random Critters;
 		if weapon object of player is ranged:
 			now bonus is ( perception of player minus 10 ) divided by 2;
 			decrease bonus by ( dex entry minus 10 ) divided by 2;
 			increase bonus by a random number from 1 to 20;
 			if bonus > 15:
 				say "You manage to fire your [weapon object of player] quickly before the melee can begin!";
-				now before combat is 1;
+				now BeforeCombat is 1;
 				follow the player attack rule;
-				now before combat is 0;
+				now BeforeCombat is 0;
 		wait for any key;
 		Combat Menu;
 		now inafight is 0;
@@ -116,7 +115,7 @@ To fight:
 	rule succeeds;
 
 To challenge:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	prepforfight;
 	if BannedStatus entry is true:
 		now combat abort is 1;
@@ -144,8 +143,8 @@ To challenge:
 	rule succeeds;
 
 To Challenge (x - text):
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y from the table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y from the Table of Random Critters;
 		if BannedStatus entry is true: [banned creatures can't be challenged]
 			if debugactive is 1:
 				say "DEBUG -> Can't challenge creature [name entry] because it has Banned: [BannedStatus entry][line break]";
@@ -171,7 +170,7 @@ To Challenge (x - text):
 
 to hardmodeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
 	let debit be 0;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if lev entry < level of player and hardmode is true:
 		now debit is ( level of player ) - lev entry;
 		increase lev entry by debit;

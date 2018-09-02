@@ -7,6 +7,10 @@ LastTehuantlKorvinScene is a number that varies. LastTehuantlKorvinScene is usua
 
 Section 1 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Tehuantl	"Tehuantl"
+
 Tehuantl is a person.
 The description of Tehuantl is "[TehuantlDesc]".
 The conversation of Tehuantl is { "Me-ow!" }.
@@ -368,7 +372,7 @@ to say TehuantlandSarah:
 Section 5 - Heat, pregnancy and assorted gimmicks
 
 TehuantlStatus is a number that varies. [1 normal, 2 in heat, 3 pregnant]
-TehuantlTimer is a number that varies.
+TehuantlTimer is a number that varies. TehuantlTimer is usually 10000.
 TehuantlSnowStatus is a number that varies.
 SarahTehuantl is a truth state that varies. SarahTehuantl is usually false.
 

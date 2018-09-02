@@ -205,7 +205,7 @@ to say mre05_prey:
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 	setmonster "Caveman";
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now tailname of player is "Caveman";
 	now facename of player is "Caveman";
 	now skinname of player is "Caveman";
@@ -251,7 +251,7 @@ to say mre05_hunter:
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 	setmonster "Caveman";
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now tailname of player is "Caveman";
 	now facename of player is "Caveman";
 	now skinname of player is "Caveman";
@@ -325,7 +325,7 @@ to say mrevent08:
 			get a number;
 		if calcnumber is 1:
 			setmonster "Clockwork Fox";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now sex entry is "Female";
 			if "Male Preferred" is listed in the feats of player, now sex entry is "Male";
 			if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";
@@ -374,7 +374,7 @@ to say mrevent08:
 				infect "Clockwork Fox";
 		else if calcnumber is 2:
 			setmonster "Clockwork Fox";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now sex entry is "Male";
 			if "Female Preferred" is listed in the feats of player, now sex entry is "Female";
 			if "Herm Preferred" is listed in the feats of player, now sex entry is "Both";

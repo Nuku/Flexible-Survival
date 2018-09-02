@@ -507,6 +507,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						say "     With skilled fingers, Nermine clamps the tooth into a small metal socket with a loop on the back and pulls a leather string through that. She hands you your new demontooth amulet and leans close to whisper some magical words you can use to summon the captured demon from within.";
 						now DBCaptureQuestVar is 5;   [captured and controlled]
 						now demon brute is tamed;
+						add "Tamed" to Traits of demon brute;
 						LineBreak;
 						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 				else:
@@ -548,6 +549,10 @@ to say ChurchDemonCleanse:
 		say "     Since you don't have enough water, you can do nothing but to thank the priestess and maybe come back later once you've collected some more.";
 
 Section 2 - Amulet, Pet & Sex
+
+Table of GameCharacterIDs (continued)
+object	name
+demon brute	"demon brute"
 
 demon brute is a pet. demon brute is a part of the player.
 understand "Brutus" as demon brute.
@@ -1436,13 +1441,13 @@ to say DemonBruteSex9: [player ass fucked]
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add {"Demon Brute"} to infections of hellspawn;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Brute";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -1521,7 +1526,7 @@ this is the brfoinc rule: [increasing likelihood of bruteforce attack]
 this is the bruteforce rule:
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 5;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );  [double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:

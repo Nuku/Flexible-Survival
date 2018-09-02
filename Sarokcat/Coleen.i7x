@@ -61,6 +61,10 @@ ColeenAlpha is a number that varies.
 ColeenSlut is a number that varies.
 ColeenSpray is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Coleen	"Coleen"
+
 Coleen is a woman.
 The description of Coleen is "[CollenStatus]".
 The conversation of Coleen is { "Woof!" }.

@@ -157,12 +157,12 @@ to say JoeTalk3:
 
 Section 3 - Enemy Definition
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Human Martial Artist";
 	now attack entry is "[one of]Joe kicks you right in the face.[or]The martial artist kicks your knee.[or]For a second, you think you got him, but Joe elbows you in the stomach and sends you stumbling back.[or]Joe's balled fist hits your side![at random]";
 	now defeated entry is "";

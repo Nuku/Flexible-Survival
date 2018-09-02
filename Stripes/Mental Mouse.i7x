@@ -17,12 +17,12 @@ when play begins:
 
 to say mousedesc:
 	setmongender 15; [creatures are herm]
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Mental Mouse":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	say "     As you are traveling along, you find your path cut off by a trio of small mice. Well, short mice would be more accurate, as these herms are quite well endowed, despite being only three feet tall. They have large breasts with perky nipples poking from their gray fur. Between their legs, they have a set of male organs that would be good size on a normal man. The mice have lovely, feminine bodies with slender waists and curvy hips. Their nipples and cocks are a soft pink and their ballsacks are covered in soft, gray fur like their bodies. The small rodents grin happily and start to move towards you, speaking in unison. '[one of]Join us!'[or]Come join us in mousedom.'[or]You shall be one of us.'[or]The mouse-lective has chosen you.'[or]Come, be a beautiful mousie with us.'[or]It is wonderful to be a mouse. As you will see.'[or]We shall welcome you into mousehood with us.'[at random]";
 	if level of player > 4:
 		say "[mousebuff]";
@@ -31,7 +31,7 @@ to say mousedesc:
 		say "     Rachel moves in close beside you. 'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit. 'We should not wait any longer. This one is meant to be with us,' they others respond, moving in. It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
 to say mousebuff:
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now lev entry is level of player minus 1;
 	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
 		increase lev entry by ( ( a random number between 0 and 250 ) / 100 ); [ +0-2 lvls in Red, lower chance of +2 ]
@@ -167,12 +167,12 @@ to say mouseyvicsex:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Mental Mouse"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "One";
@@ -233,7 +233,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 
 this is the mentalmouse rule:
-	choose row monster from table of Random Critters;
+	choose row monster from Table of Random Critters;
 	if a random chance of 5 in 8 succeeds:	[normal]
 		retaliate;
 	else:						[mental whammy]

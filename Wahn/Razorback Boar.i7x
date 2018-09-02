@@ -36,8 +36,8 @@ Instead of resolving a Razorback Fury:
 	now Razorback Fury is resolved;
 	now Boar Payback is not resolved;
 	now RazorbackBoarEvents is 1;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Razorback Boar":
 			now monster is y;
 			now area entry is "Forest";
@@ -403,8 +403,8 @@ to say BoarAlphaChoice:
 		if player consents:
 			LineBreak;
 			say "     Garth grins broadly around his jutting tusks as you agree. He runs his hand down your front in a slightly possessive manner, then says, 'Glad you recognize the proper way for things to be. And just in case you're the worrying type - I'm not gonna make any of my people here become drooling sex slaves or anything. That messed up stuff is for the sick fucks in that damned city outside the forest. We got a new start here, so feel free to do your own thing - just be ready to give your alpha some love.' With a wiggle of his furry eyebrows, the anthro boar stands up and walks off, his still half-hard cock dangling between his legs and dipping cum.";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Razorback Boar":
 					now monster is y;
 					now area entry is "Nowhere";
@@ -426,12 +426,12 @@ to say RazorbackBoarDesc:
 	else:
 		say "     Walking through the forest, you run into Garth, the razorback boar. Unheard and unnoticed till he suddenly steps out from behind a thick tree nearby, he proves that he's completely at home in this patch of 'wilderness'. The anthro furry male looks you up and down and gives a grunt, then says, 'So, what makes you think you can just stomp through my forest? Civilization's gone - it's back to survival of the fittest! So I'm your boss here and now - or do you seriously think you can take me, eh?' He leaves you little time to make up your mind, instead charging at you right away.";
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Razorback Boar";
 	now enemy title entry is "";
 	now enemy name entry is "";

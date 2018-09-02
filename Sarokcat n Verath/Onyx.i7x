@@ -183,6 +183,10 @@ onyxlapdance is a number that varies.	[number of lap dances from Onyx]
 fonyxvagcount is a number that varies.	[number of vaginal sex with Onyx]
 fonyxanalcount is a number that varies.	[number of anal sex with Onyx]
 
+Table of GameCharacterIDs (continued)
+object	name
+Onyx	"Onyx"
+
 Onyx is a man.
 The description of Onyx is "[onyxappearance]".
 The conversation of Onyx is { "Help me!" }.
@@ -340,10 +344,10 @@ Section 3 - Sexy Times
 Instead of fucking the Onyx:
 	if guy is not banned:		[Default to Horseman]
 		setmonster "Horseman";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	else:				[Using Mareslut in case guy is banned]
 		setmonster "Mareslut";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	if player is neuter:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
 	else if XP of Onyx is 9:
@@ -905,7 +909,7 @@ to say onyxbsubvag1:
 
 to say onyxbsubanalride1:
 	setmonster "Horseman";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Putting Onyx onto his back, you straddle the submissive stud and grind down onto his equine pole. Rising quickly for his dominant friend, he moans happily you take hold of it and get lined up. With a gentle squeeze of his balls to remind him of who's in charge, you can't help but moan a little as you sink your ass down onto his satisfyingly large cock. It pulses and throbs inside you with virility, further exciting you. You run your hands over his strong chest and order him to start thrusting. With permission given, the obedient stallion grabs your hips and presses his hips up rhythmically. Each thrust draws a pleasured shiver from you[if player is male], making your cock[smn] twitch and throb[else if player is female], making your cunt wet with arousal[end if].";
 	say "     You work your hips and squeeze your anal walls down around his meat, thoroughly enjoying taking a ride on it. Having his equine shaft buried inside your ass, knowing it is yours to do with as you wish, is a very satisfying feeling. He's become such a fine, strong stallion, but also an obedient and submissive lover. Having such a big, virile male as your sub to play with as you will is invigorating, adding to the thrill of getting vigorously pounded by him.";
 	WaitLineBreak;
@@ -963,8 +967,8 @@ to femonyxsex:
 		say "     Eager to oblige your need, Onyx is already lowering herself[if scalevalue of player > 3] under you[end if] to more easily access your assets, eager digits parting any obstruction in her way to expose your [cock size desc of player] dick[smn] before her curious gaze.";
 		say "     '[one of]Oh[or]Hm[or]Ah[at random], [if cock length of player > 12][one of]somebody's been eating their vegetables[or]don't think you'll be able to keep this much from me, honey[or]I wonder if it'll even fit[at random][else][one of]somebody's eager to see me[or]looks like you're all ready for a bit of fun[or]lets get this party started[at random][end if]!' Grinning, her tongue caresses along [if cocks of player > 2]the length of two of them[else if cocks of player is 2]the length of both of them[else]its length[end if], eagerly oozing by her touch as [if cocks of player > 1]they're[else]it's[end if] driven to full arousal.";
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Choices:[roman type][line break]";
 			say "(1) [link]Continue Oral[as]1[end link][line break]";
 			say "(2) [link]Fuck her[as]2[end link] [if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
@@ -988,22 +992,22 @@ to femonyxsex:
 						say "Invalid entry.";
 			if calcnumber is 1:
 				femonyxsex1;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else if calcnumber is 2:
 				if cock length of player > 15:
 					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
 				else:
 					femonyxsex2;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 3:
 				if cock length of player > 15:
 					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
 				else:
 					femonyxsex3;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else:
 				femonyxsex4;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 	else:
 		femonyxsex4;
 

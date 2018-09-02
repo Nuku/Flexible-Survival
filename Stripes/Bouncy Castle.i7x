@@ -23,7 +23,7 @@ Section 1 - Starting Event
 
 vixcountdown is a number that varies. [Amount of turns allotted before the vixen (Bubble) can no longer be saved]
 dolphinbundle is a number that varies. [Increases the difficulty of escaping the Inflatable Dolphin bound state, ranging from 0-2]
-dolphinlist is a list of text that varies. [Creates a quasi-random pool of dolphins to check while searching for Bubble]
+dolphinlist is a list of text that varies.[@Tag:NotSaved] [Creates a quasi-random pool of dolphins to check while searching for Bubble]
 dolcastlefight is a number that varies. [Determines Bottlenose Toy scenes. 1 = win, 2 = loss (normal), 3 = loss (in castle)]
 bclatearrival is a number that varies. [Normally 0, set to 1 when visiting the castle after vixcountdown ends while away. Hides initial prompt after agreeing]
 bcuntethered is a number that varies. [Determines whether or not the Bouncy Castle is still tethered]
@@ -110,7 +110,7 @@ to say bcnavigate:
 		now battleground is "Outside";
 		if a random number from 1 to 20 < 10 minus bonus:
 			say ", encountering an enemy on the way there.";
-			if there is a area of Battleground in the table of random critters:
+			if there is a area of Battleground in the Table of Random Critters:
 				Fight;
 				if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 					say "As you are trying to recover from your last encounter, another roving creature finds you.";
@@ -647,7 +647,7 @@ to say bckingchair_accept:
 Chapter 8 - Punching Pillars
 
 bcseenpunchingpillars is a truth state that varies. bcseenpunchingpillars is usually false.
-primarycolorlist is a list of text that varies. primarycolorlist is usually {"red", "yellow", "blue"}.
+primarycolorlist is a list of text that varies.[@Tag:NotSaved] primarycolorlist is usually {"red", "yellow", "blue"}.
 ppcolor is a text that varies. ppcolor is usually "green".
 bcfinalpillarform is a text that varies. bcfinalpillarform is usually "black knight".
 
@@ -954,8 +954,8 @@ to chairboundstate:
 	if companion of player is not nullpet, increase compnumber by 1;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if tempnum2 is 5 or humanity of player < 50:
 			now obliging is true;
@@ -1026,7 +1026,7 @@ to chairboundstate:
 			now cockname of player is "Captured";
 			now humanity of player is 0;
 			end the story saying "You are imprisoned by the Bouncy Castle.";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -1047,7 +1047,7 @@ to chairboundstate:
 					say "     Your effort[if boundsegment > 1] finally[end if] pays off as you're able to pull a [if boundsegment > 0]hand[else]leg[end if] free[if boundsegment > 1]. You grab the back of the mask and pull it from your face, popping the thick, rubbery phallus from your mouth. Gasping in the fresh sea air, your head starts to clear and you turn your focus to getting out of this trap[end if]. [if boundsegment > 0]Grabbing the inflated tube around your other hand, you squeeze it firmly, partially deflating it. When you release it, it is loose momentarily, allowing you to pull your arm free. You do the same for your legs and push yourself off the seat before it can devise some new means to hold you[else]With a little work, you're able to pull your other leg free, scrambling to put some distance between you and the holes[end if][if boundsegment > 2]. There is a wet, slick sound as you pull your groin free of the sticky seat and its stimulating devices[end if][if compnumber > 1]. You quickly rush over and assist your companions, who have been making headway in freeing themselves thanks to the distraction your escape has caused and finish pulling them free[end if][if weapon object of player is not journal]. Moving quickly, you grab your weapon and consider your possible exits from the room[end if].";
 					LineBreak;
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					say "     A quick glances shows none of the red spots located in the other rooms. Shall you head [link]northeast (1)[as]1[end link] to the [if bcseenthroneroom is true]throne room[else]next room[end if], [link]east (2)[as]2[end link] back to the upper hall or [link]take the slide (3)[end link] to leave this place?";
 					now calcnumber is 0;
 					while calcnumber < 1 or calcnumber > 3:
@@ -1472,15 +1472,15 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 
 to dolboundstate:
 	let partialengulf be 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if tempnum2 is 5 or humanity of player < 50:
 			now obliging is true;
@@ -1507,7 +1507,7 @@ to dolboundstate:
 			say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[else]some[end if] while [if dolphinbundle < 2]you're ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[else]you manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
 			if dolphinbundle < 2, increase dolphinbundle by 1;
 			cleanboundmemory;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			if partialengulf is 0:
 				say "     Enveloped entirely within the vinyl suit's confines, your vision blurred and tinted green through the eyes of this form-fitting attire. [one of]You can barely move, aroused, [if player is male][cock size desc of player] dick[smn] grinding firmly against the precum-slicked[else]sweat-slicked body grinding against the slippery[end if] walls, you can barely contain yourself[or]These tight, movement-restricting walls command such an overwhelming influence on your arousal, barely able to hold yourself back[or]The sounds of your moans and panting muffled and vibrating against the constricting walls, forcing you to face your intense need[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself free, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if], or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
@@ -1548,7 +1548,7 @@ to dolboundstate:
 				now battleground is "void";
 				now combat abort is 1;
 				WaitLineBreak;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 			else:
 				let k be 0;
@@ -1598,7 +1598,7 @@ to dolboundstate:
 							if dolphinbundle < 2, increase dolphinbundle by 1;
 							cleanboundmemory;
 							WaitLineBreak;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 					if dolphinbundle is 0:
 						increase boundmod by 1;
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
@@ -1683,8 +1683,8 @@ to say bottlestrugglebar:
 
 to say dolcheckA:		[empty]
 	[puts Bottlenose Toy as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;

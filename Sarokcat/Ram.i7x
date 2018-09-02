@@ -31,7 +31,7 @@ to say ramdesc:
 
 to cmbtshift:
 	let debit be 0;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if hardmode is true and level of player > 6, let debit be level of player - 6;
 	now HP entry is 50 + ( debit * 4 );
 	now monsterHP is HP entry;
@@ -258,14 +258,14 @@ to say subramsex2: [Get blown]
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Ram" to infections of guy;
 	add "Ram" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ram";
 	now enemy title entry is "";
 	now enemy name entry is "";

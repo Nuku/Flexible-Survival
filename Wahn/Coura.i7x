@@ -104,6 +104,10 @@ CouraFriendDevelopments is a number that varies.
 
 Section 1 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Cole	"Cole"
+
 Cole is a man.
 The description of Cole is "[ColeDesc]".
 The conversation of Cole is { "<This is nothing but a placeholder!>" }.
@@ -111,6 +115,10 @@ The scent of Cole is "     ....".
 
 to say ColeDesc:
 	say "     ...";
+
+Table of GameCharacterIDs (continued)
+object	name
+Coura	"Coura"
 
 Coura is a woman.
 The description of Coura is "[CouraDesc]".
@@ -162,7 +170,7 @@ to say NermineCouraSpell: [this is called from Nermine's talk menu]
 to say MTFRatSexMenu:
 	setmonster "Mall Rat";
 	say "     What kind of fun do you want to have with the young adult mall rat?";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

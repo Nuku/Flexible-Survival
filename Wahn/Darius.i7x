@@ -105,6 +105,10 @@ after going to Darius's Crib while (Joshiro Tales 1 is not resolved and a random
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Darius	"Darius"
+
 Darius is a man.
 Darius is in Darius's Crib.
 The description of Darius is "[DariusDesc]".

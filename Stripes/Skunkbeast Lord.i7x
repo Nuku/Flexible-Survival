@@ -31,8 +31,8 @@ Instead of resolving a Skunkbeast Battle:
 			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
 			now humanity of player is 0;
 			[puts Skunk as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Skunk":
 					now monster is y;
 					break;
@@ -70,15 +70,15 @@ Instead of resolving a Skunkbeast Battle:
 			say "     The black mess splatters and gives way as you slam into it, melting and flowing around you. Your body is suddenly awash with lustful excitement, feeling the skunkbeast's gooey flesh bonding with you. Even as most of it continues to melt away, much of it flows into you instead, joining with you and transforming you further. But this change is different than before. You can feel an increased power growing inside you, and along with it, lustful, instinctual urges. When the rest of the fallen skunkbeast lord melts away, you emerge, large and powerful in your new, skunkbeast form.";
 			WaitLineBreak;
 			[puts Skunk as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Skunk":
 					now monster is y;
 					break;
 			now non-infectious entry is true; [reg. Skunk infection closed]
 			[puts Skunkbeast Lord as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Skunkbeast Lord":
 					now monster is y;
 					break;
@@ -161,7 +161,7 @@ when play begins:
 
 to say sbldesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 15, let debit be level of player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
@@ -183,12 +183,12 @@ to say losetosbl:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Skunkbeast Lord"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -245,8 +245,8 @@ Section 5 - Infection Controls
 
 to sblinfect:
 	[puts Skunkbeast Lord as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Skunkbeast Lord":
 			now monster is y;
 			break;

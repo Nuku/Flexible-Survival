@@ -45,7 +45,7 @@ to say Alpha Husky attack:
 				if humanity of player < 10:
 					end the story saying "[alpha husky bitch]";
 		else:
-			choose row monster from table of random critters;
+			choose row monster from Table of Random Critters;
 			if HP of player > 1 and sex entry is "Male":
 				say "     The alpha stands over you as you cower before him. 'Giving up?' he asks. 'You're not suited to be a bitch, but then again...' He moves about you and grabs your hips, lifting you up onto all fours, then leaving you there as he stares for a moment, perhaps considering the possibilities. As the tension grows, he crouches in front of you, and his thick canine shaft dangles from its sheath, half-full with promise of what is to come. 'Be a good doll,' he huffs. He thrusts his hips forward, and the shaft bobs in motion, tapping against your face. You hesitate a moment, and his paws seize your ears, pulling you into the half-firmed flesh. You take the slick, red pecker in your mouth and taste its saltiness, your tongue flicking over the tip to his immediate growl of approval.";
 				say "     'Deeper,' he commands, grinding his furry groin to your face as the shaft slides across your tongue, growing firmer by the moment. Your eagerness builds as his scent fills your nose. You draw back and plunge down along the shaft as he rocks up against you, fucking your mouth with an increasingly fast tempo. You can feel the start of his knot swelling with each motion. He shudders and pushes you back roughly, 'Not yet.'";
@@ -115,7 +115,7 @@ to say alpha huskypack lost:
 
 
 to say alpha huskypack victory:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if player is not submissive:
 		say "     You stand victorious as the huskies whimper in defeat. They know who the one in charge is, for now at least. One of the downed dogs rolls over in front of you, paws in the air and wagging his tail. The others join in with soft yelps and whines, endeavoring to win your favor.";
 		if humanity of player > 60 or libido of player < 50:
@@ -283,12 +283,12 @@ to say alphahuskyreleased:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	add "Alpha Husky" to infections of guy;
 	add "Alpha Husky" to infections of furry;
 	now name entry is "Alpha Husky";

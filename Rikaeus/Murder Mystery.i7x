@@ -154,7 +154,11 @@ instead of going East from Mall Foyer while (JennaRelationship is 4 and MurderMy
 	move Barry to Wolverine Lockup;
 	move Cane to Wolverine Lockup;
 
-Dead Body is man.
+Table of GameCharacterIDs (continued)
+object	name
+Dead Body	"Dead Body"
+
+Dead Body is a man.
 The description of Dead Body is "[TylerBodyDesc]".
 The conversation of Dead Body is { "<This is nothing but a placeholder!>" }.
 The scent of Dead Body is "     The body smells like a dead body would, disgusting and like copper. Though you think the last bit is due to all the blood.".
@@ -233,6 +237,10 @@ to say TylerBody2:
 
 instead of fucking Dead Body:
 	say "     'It's a dead body and you're in public. What are you expecting?";
+
+Table of GameCharacterIDs (continued)
+object	name
+Tawnya	"Tawnya"
 
 Tawnya is a woman.
 The description of Tawnya is "[TawnyaDesc]".
@@ -389,6 +397,10 @@ to say TawnyaMotive:
 instead of fucking Tawnya:
 	say "     'Ahaha, no. You can try better than just asking me to fuck,' she says with a roll of her eyes.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Cane	"Cane"
+
 Cane is a man.
 The description of Cane is "[CaneDesc]".
 The conversation of Cane is { "<This is nothing but a placeholder!>" }.
@@ -470,6 +482,10 @@ to say CaneMotive:
 
 instead of fucking Cane:
 	say "     '...Sorry but I have a husband and wife,' he says, shocking you with that statement. You shake your head and step back away from him.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Barry	"Barry"
 
 Barry is a man.
 The description of Barry is "[BarryDesc]".

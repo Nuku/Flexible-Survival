@@ -251,8 +251,8 @@ Instead of resolving Panther Trap:
 	say "     You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately, the gray and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you swear will be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
 	if a random number between one and 20 < 12: [the felitaur heard]
 		[puts Panther Taur as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Panther Taur":
 				now monster is y;
 				break;
@@ -261,14 +261,14 @@ Instead of resolving Panther Trap:
 	else:
 		if a random chance of one in 3 succeeds: [fight a monster instead of being raped]
 			let Q be a list of numbers;
-			repeat with X running from 1 to number of rows in table of random critters:
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if name entry matches the text battleground, case insensitively:
 					add x to Q;
 			sort Q in random order;
 			repeat with Z running through Q:
-				choose row Z from the table of random critters;
+				choose row Z from the Table of Random Critters;
 				if there is a name entry:
 					now monster is Z;
 				else:

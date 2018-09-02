@@ -201,12 +201,12 @@ to say Spidertaur_Desc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Spidertaur";
 	now enemy title entry is "";
 	now enemy name entry is "Aelias";
@@ -276,8 +276,8 @@ to say spidertaur hair use:
 	SpidertaurInfect;
 
 to SpidertaurInfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Spidertaur":
 			now monster is y;
 			break;
@@ -305,6 +305,10 @@ to say WebDesc:
 Instead of sniffing Spider's Web:
 	say "     The air smells fresh, with a slight undertone of wood and wax. Seems like Aelias from time to time puts in the work to maintain the polished surface of his home's hardwood floor.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Aelias	"Aelias"
+
 Aelias is a man.
 Aelias is in Spider's Web.
 The description of Aelias is "[AeliasDesc]".
@@ -322,7 +326,7 @@ instead of sniffing Aelias:
 
 Instead of fucking Aelias:
 	setmonster "Spidertaur";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if (lastfuck of Aelias - turns < 5):
 		say "     Aelias chuckles and says 'Just give me a moment to catch my breath, little fly...'";
 	else:

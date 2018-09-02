@@ -13,7 +13,7 @@ toystoreoverride is a truth state that varies. toystoreoverride is usually false
 
 instead of resolving a toy store:
 	setmonster "Latex Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now non-infectious entry is true;
 	say "     During your travels, you come across [if toystoreseen is true]the abandoned toy store again[else]an old-fashioned toy store[end if]. The building is surprisingly intact, standing in stark contrast to the ruins that surround it. A pair of curtains has been drawn together behind the windows, making it difficult to see what's inside. [if toystoreseen is true]Unfortunately, you still see some movement inside the store, suggesting that whoever was here last has made it their home[else]As you approach, you catch a flash of a orange through a gap in the fabric, and you immediately stop yourself to think this through[end if].";
 	say "     [bold type]Do you still wish to enter now that you know that someone - or something - is waiting inside the store?[roman type][line break]";
@@ -111,7 +111,7 @@ to say toystoreloss:
 		say "     Eventually, his knot shrinks enough for him to pull out, his cum-slick cocks prying free with a loud squelch while a cascade of cool, rubbery semen flows down your chin. The rest of the males in the room don't give you much of a chance to recover, another soon stuffing your mouth. You're subjected to this ritual over and over again, countless canids using you for their pleasure, [if player is male]bringing you to myriad mind-rending climaxes and [end if]slightly bloating your form with their seed. Eventually, you feel your consciousness slipping away, and everything fades to black.";
 		say "     When you come to, the twisted creatures are gone, leaving you lying alone in a pool of their cum, your stomach still swollen from all the latex seed they pumped into you. You can't help but lick your lips, your body still trembling in the aftershocks of pleasure.";
 	setmonster "Latex Fox"; [Redundant code here because Inform throws a fit otherwise!]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now non-infectious entry is false; [Allows the fox to infect again]
 	infect "Latex Fox";
 	infect "Latex Fox";

@@ -23,6 +23,10 @@ Version 1 of Skarnoth by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Skarnoth	"Skarnoth"
+
 Skarnoth is a man. The HP of Skarnoth is usually 0.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
@@ -107,7 +111,7 @@ Instead of fucking the Skarnoth:
 to say SkarnothSexMenu:
 	project the figure of Skarnoth_naked_icon;
 	setmonster "Demon Prince";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -277,12 +281,12 @@ instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 
 Section 5 - Infection for combat purposes
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Prince";
 	now enemy title entry is "";
 	now enemy name entry is "Skarnoth";

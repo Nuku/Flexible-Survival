@@ -20,6 +20,10 @@ Section 1.1 - Fox Kit NPC/Pet
 
 FangDashRel is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Little fox	"Little fox"
+
 Little fox is a pet. little fox is a part of the player.
 understand "Dash" as little fox.
 The description of the little fox is "[DashDesc]".
@@ -32,7 +36,7 @@ The assault of little fox is "[one of]The little fox darts forward quickly and t
 The fuckscene of little fox is "The little fox kit is both too small and too young for such shenanigans. There are plenty of fox-people running around; go find some of them if that's what you're into.".
 
 to say SummonDash:
-	remove Dash from play;
+	now Dash is nowhere;
 	if player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
 		say "     Going up to Dash, you crouch down and gently rub his ears. After showing your little fox kit some love, he gets super excited and begins to jump all over the place. Once he has calmed down a bit, he scrambles into your pack ready for a brand new journey!";
 	else: [regular summoning]
@@ -44,6 +48,10 @@ to say DismissDash:
 		say "     Opening your bag, Dash makes a beeline for it, only to trip over his paws and tumbling inside. You quickly check over him afterwards, only to find he decided it was nap time.";
 	else: [dismissing him in the Computer Lab]
 		say "     Opening your bag, you notice Dash is fast asleep. Trying your best to be gentle, you reach inside and take him out and him in his little box bed. Reaching over you give him a soft little kiss on the head, gaining you a happy little purr from the tiny vulpine.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Dash	"Dash"
 
 Dash is a man.
 The description of Dash is "[Dashdesc]".
@@ -141,6 +149,7 @@ Instead of resolving Abandoned Fox:
 				say "     Unable to bear hearing the poor things cries going unanswered, you carefully kneel down and pull out some food (-1 food), cautiously at first, then with increasing enthusiasm the half starved fox kit tears at the food, ripping and playing with it until it is all gone. You smile at the cute sight before standing up and getting ready to leave, though you haven't gone more than a few steps when you hear something behind you. Turning round, you see the fox kit you helped is valiantly trying to keep up with you, its large vulpine eyes staring at you adoringly. Trying to shoo it back to the empty den seems pointless, and the cute little fox seems to have taken a strong fancy to you now, shrugging you give in and let it come with you. The little fox kit bouncing along in your wake and occasionally darting off to pounce on and threaten one of the nearby leaves on the ground.";
 				say "     You lean down next to your new little friend, deciding it might be best to check some things that will help in the future. Tapping the little fox on its side, it quickly rolls over onto its back still chewing on one of the leaves it was [italic type]hunting[roman type]. Mildly embarrassed, you begin to rub its tummy and glance down further... well alright, so apparently your new little friend is a boy! Glad that that's over, you gently begin to scrub his ears. Now to think of a name for him, while your busy thinking the little fox begins to dash around at various targets, then it clicks. Dash, you try the name out seeing how it feels and how he responds to it. Truth be told the little fox doesn't seem to have any feeling on the matter, but it's better than nothing. As you head back to the park trail, you make him a little nest in your backpack, making sure he will be comfortable while you travel.";
 				now little fox is tamed;
+				add "Tamed" to Traits of little fox;
 				move Dash to Computer Lab;
 				say "(The little fox is now tamed! You can make it your active pet by typing [bold type][link]pet little fox[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 				now Abandoned Fox is resolved;
@@ -205,6 +214,10 @@ when play ends:
 
 Section 2.1 - Skunk Kit NPC/Pet
 
+Table of GameCharacterIDs (continued)
+object	name
+skunk kit	"skunk kit"
+
 skunk kit is a pet. skunk kit is a part of the player.
 understand "Peppy" as little fox.
 The description of the skunk kit is "[Peppydesc]".
@@ -217,7 +230,7 @@ The assault of skunk kit is "[one of]The little skunk viciously launches itself 
 the fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
 
 to say SummonPeppy:
-	remove Peppy from play;
+	now Peppy is nowhere;
 	if player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
 		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it. ";
 	else: [regular summoning]
@@ -229,6 +242,10 @@ to say DismissPeppy:
 		say "     You crouch down and attempt to explain to Peppy that he needs to stick close, but that he doesn't have to fight anymore, leaving him free to explore. Churring happily, the young mephit decides to check out everything he can.";
 	else: [dismissing him in the Computer Lab]
 		say "     Explaining to Peppy that he has had enough adventures for now, the little skunk rolls up into a ball, covering his face with his tail. He has apparently decided that a nap sounds great right about now.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Peppy	"Peppy"
 
 Peppy is a man.
 The description of Peppy is "[Peppydesc]".
@@ -343,6 +360,7 @@ Instead of resolving Lost skunk kit:
 					say "     Deciding somewhat sadly that you need to keep moving before another skunk follows the smell and finds you with the little kit, you sadly say goodbye and try to leave. After a few steps you realize the little skunk is following right behind you, and when you try to convince it to stay behind and wait for other skunks, it gives you a sad look and starts whimpering at you again, afraid it offended you in some way. Sighing slightly, you realize the little creature has imprinted itself on you and thinks you are its family now. Unable to take the pathetic look it sends you any longer, you gesture for it to follow you as you head back to the forest trail, its happy noises as it bounces along behind making you smile. It looks like you have a skunk kit of your very own now.";
 					say "     As you continue on, you cant help but notice how powerful the skunks scent is. As you turn around to make a comment to your new little friend, you stop dead in your tracks. The skunk kit at the moment is busy attempting to hump a fallen sign that reads [italic type]Warning: Skunks in the area and will spray if they feel threatened[roman type], with a huge picture of a skunk at the bottom. You can't help but let out a burst of laughter. The whole scene reminds you of one of those old cartoons, with a skunk being attracted to something that may look like a skunk but clearly isnt. The kit having finished wobbles up to your side, seemingly proud of his... conquest. You decide that if he is going to be joining you from now on he needs a name and you have a perfect one, Peppy. Reaching down to give him a little scrub behind the ears, you tell Peppy that it's time to go.";
 					now skunk kit is tamed;
+					add "Tamed" to Traits of skunk kit;
 					move Peppy to Computer Lab;
 					if skunkbeaststatus is 1:
 						sblinfect;
@@ -363,6 +381,7 @@ Instead of resolving Lost skunk kit:
 					say "     As you continue on, you cant help but notice how powerful the skunks scent is. As you turn around to make a comment to your new little friend, you stop dead in your tracks. The skunk kit at the moment is busy attempting to hump a fallen sign that reads [italic type]Warning: Skunks in the area and will spray if they feel threatened[roman type], with a huge picture of a skunk at the bottom. You can't help but let out a burst of laughter. The whole scene reminds you of one of those old cartoons, with a skunk being attracted to something that may look like a skunk but clearly isnt. The kit having finished wobbles up to your side, seemingly proud of his... conquest. You decide that if he is going to be joining you from now on he needs a name and you have a perfect one, Peppy. Reaching down to give him a little scrub behind the ears, you tell Peppy that it's time to go.";
 					delete Skunk Goo;
 					now skunk kit is tamed;
+					add "Tamed" to Traits of skunk kit;
 					if skunkbeaststatus is 1:
 						sblinfect;
 					else:
@@ -389,6 +408,7 @@ Instead of resolving Lost skunk kit:
 				say "     Deciding somewhat sadly that you need to keep moving before another skunk follows the smell and finds you with the little kit, you sadly say goodbye and try to leave. After a few steps you realize the little skunk is following right behind you, and when you try to convince it to stay behind and wait for other skunks, it gives you a sad look and starts whimpering at you again, afraid it offended you in some way. Sighing slightly, you realize the little creature has imprinted itself on you and thinks you are its family now. Unable to take the pathetic look it sends you any longer, you gesture for it to follow you as you head back to the forest trail, its happy noises as it bounces along behind making you smile. It looks like you have a skunk kit of your very own now.";
 				say "     As you continue on, you cant help but notice how powerful the skunks scent is. As you turn around to make a comment to your new little friend, you stop dead in your tracks. The skunk kit at the moment is busy attempting to hump a fallen sign that reads [italic type]Warning: Skunks in the area and will spray if they feel threatened[roman type], with a huge picture of a skunk at the bottom. You can't help but let out a burst of laughter. The whole scene reminds you of one of those old cartoons, with a skunk being attracted to something that may look like a skunk but clearly isnt. The kit having finished wobbles up to your side, seemingly proud of his... conquest. You decide that if he is going to be joining you from now on he needs a name and you have a perfect one, Peppy. Reaching down to give him a little scrub behind the ears, you tell Peppy that it's time to go.";
 				now skunk kit is tamed;
+				add "Tamed" to Traits of skunk kit;
 				if skunkbeaststatus is 1:
 					sblinfect;
 				else:
@@ -408,6 +428,7 @@ Instead of resolving Lost skunk kit:
 				say "     As you continue on, you cant help but notice how powerful the skunks scent is. As you turn around to make a comment to your new little friend, you stop dead in your tracks. The skunk kit at the moment is busy attempting to hump a fallen sign that reads [italic type]Warning: Skunks in the area and will spray if they feel threatened[roman type], with a huge picture of a skunk at the bottom. You can't help but let out a burst of laughter. The whole scene reminds you of one of those old cartoons, with a skunk being attracted to something that may look like a skunk but clearly isnt. The kit having finished wobbles up to your side, seemingly proud of his... conquest. You decide that if he is going to be joining you from now on he needs a name and you have a perfect one, Peppy. Reaching down to give him a little scrub behind the ears, you tell Peppy that it's time to go.";
 				delete Skunk Goo;
 				now skunk kit is tamed;
+				add "Tamed" to Traits of skunk kit;
 				if skunkbeaststatus is 1:
 					sblinfect;
 				else:

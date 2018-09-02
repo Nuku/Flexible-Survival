@@ -54,8 +54,8 @@ Instead of resolving a Suddenly Ninjas:
 	Now Suddenly Ninjas is resolved;
 
 to say lostninjahorde:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Ninja Cat":
 			now monster is y;
 			break;
@@ -224,7 +224,7 @@ when play begins:
 	add Lovers Bench to badspots of guy;
 	add Lovers Bench to badspots of girl;
 
-lbcomplist is a list of pets that varies.
+lbcomplist is a list of text that varies.
 
 Instead of resolving a Lovers Bench:
 	if loversbench is 0:				[first visit]
@@ -248,7 +248,7 @@ Instead of resolving a Lovers Bench:
 		increase loversbench by 1;
 	else if loversbench is 2:		[third+ visit]
 		say "     Returning to the area around the lovers['] bench, you decide to search around it again. Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items. Sadly, you are unable to locate anything new or of any use.";
-	if loversbench is 2 and companion of player is not listed in lbcomplist and player is not neuter:
+	if loversbench is 2 and printed name of companion of player is not listed in lbcomplist and player is not neuter:
 		if companion of player is pink raccoon:
 			WaitLineBreak;
 			setmonster "Raccoon";
@@ -270,8 +270,8 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is Gryphoness:
 			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Hermaphrodite Gryphon":
 					now monster is y;
 					break;
@@ -292,8 +292,8 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is Felinoid companion:
 			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Felinoid":
 					now monster is y;
 					break;
@@ -332,8 +332,8 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is mouse girl:
 			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Mental Mouse":
 					now monster is y;
 					break;
@@ -386,8 +386,8 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is demon brute and DBCaptureQuestVar > 5:
 			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Demon Brute":
 					now monster is y;
 					break;
@@ -424,7 +424,7 @@ Instead of resolving a Lovers Bench:
 		else:
 			increase libido of player by ( 100 - libido of player ) / 4;
 			say "     Aroused by the lingering scent of sex around the area, your eyes are drawn to the bench. You find yourself thinking that it might be more fun if you were to bring some [if lbcomplist is not empty]new [end if]companionship here next time.";
-		add companion of player to lbcomplist;
+		add printed name of companion of player to lbcomplist;
 
 [
 		now Lovers Bench is resolved;
@@ -771,8 +771,8 @@ Instead of resolving a Beach Party:
 		decrease humanity of player by 20;
 		increase morale of player by 5;
 		[puts Bottlenose Toy as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Bottlenose Toy":
 				now monster is y;
 				break;

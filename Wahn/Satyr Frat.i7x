@@ -116,7 +116,7 @@ to say SatyrFratSex:
 			now SatyrFratPartyStage is 5;
 		else if calcnumber is 2: [Fuck]
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at actually being intimate with [if player is not female]another male[else]a herm[end if] for the first time and he freezes for a second, then quickly gets over his shock and happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
 			WaitLineBreak;
@@ -150,7 +150,7 @@ to say SatyrFratSex:
 			now SatyrFratPartyStage is 5;
 		else if calcnumber is 2: [Fuck]
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at the sudden intimacy and he happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
 			WaitLineBreak;
@@ -308,7 +308,7 @@ to say SatyrFratSex1: [drinking]
 
 to say SatyrFratSex2:
 	setmonster "Satyr";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Leaning in close over the counter, you ask him where the next shower in here is - as it turns out, just down one short hallway behind the door at the end. Equipped with that important knowledge for your plan, you let Kerr fill two plastic cups. One with the most sticky and sweet drink he has in his repertoire, the other with pure, undiluted satyr wine. Holding both cups in your hands, you then set out to find a mark. Moving through the big living room, then the adjoining kitchen, it doesn't take long till you spot a handsome stud of a college jock - leaning against a wall with a pretty indifferent expression towards all the people enjoying themselves all around. Perfect.";
 	say "     You let your feet carry you towards the guy, then 'accidentally' stumble when you get next to him. Splashing the young man with the contents of both cups, you're even fairly accurate - hitting his chest with the satyr wine and his face and neck with the soda. 'What the hell? Eww - I'm all sticky - and you got this crap in my eyes,' your hapless victim shouts, wiping at his face with both hands and keeping his eyes clenched. Apologizing profusely, you take him by the arm and say that you'll of course help him clean up, then guide the student down the hall and into the thankfully empty bathroom. Locking the door behind you so you're not disturbed, you tell the college athlete to stand still for a moment and get a shower running, nice and warm, then get into the cabin right with him.";
 	WaitLineBreak;
@@ -363,15 +363,15 @@ to say SatyrFratSex2:
 to say SatyrFratSex3:
 	setmonster "Satyress";
 	if SatyressStage is 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Satyress":
 				now monster is y;
 				now area entry is "Campus";
 				now non-infectious entry is false;
 				break;
 		now SatyressStage is 1;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Leaning in close over the counter, you ask him where the next shower in here is - as it turns out, just down one short hallway behind the door at the end. Equipped with that important knowledge for your plan, you let Kerr fill two plastic cups. One with the most sticky and sweet drink he has in his repertoire, the other with pure, undiluted satyr wine. Holding both cups in your hands, you then set out to find a mark. Moving through the big living room, then the adjoining kitchen, it doesn't take long till you spot a blond beauty of a sorority girl - leaning against a wall with a pretty indifferent expression towards all the people enjoying themselves all around. Perfect.";
 	say "     You let your feet carry you towards the young woman, then 'accidentally' stumble when you get next to her. Splashing the attractive student with the contents of both cups, you're even fairly accurate - hitting her chest with the satyr wine and her face and neck with the soda. 'You klutz! Eww - I'm all sticky - and you got this crap in my eyes,' your hapless victim shouts, wiping at her face with both hands and keeping her eyes tightly clenched. Apologizing profusely, you take her by the arm and say that you'll of course help to clean up, then guide the student down the hall and into the thankfully empty bathroom. Locking the door behind you so you're not disturbed, you tell the sorority girl to stand still for a moment and get a shower running, nice and warm, then get into the cabin right with her.";
 	WaitLineBreak;

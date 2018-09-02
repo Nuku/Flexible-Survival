@@ -78,8 +78,8 @@ to say BakeryHusky:
 to say BakeryGShep:
 	challenge "German Shepherd";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "German Shepherd":
 				now monster is y;
 				break;
@@ -154,6 +154,10 @@ to say BoneAppetitdesc:
 		say "     The small bakery looks like it has been cleaned up considerably since the first time you were here. Though the windows are still boarded up, Francois has cleaned most of the clutter and debris out of the front room and arranged the remaining tables and chairs neatly around the space. The counters and displays are all bare, but clean, and he has even [if daytimer is day]opened a skylight[else]gathered some candles[end if] to light the space.";
 
 Section 3 - Francois
+
+Table of GameCharacterIDs (continued)
+object	name
+Francois	"Francois"
 
 Francois is a man. Francois is in Bone-Appetit.
 The description of Francois is "[Francoisdesc]".
@@ -997,7 +1001,7 @@ the scent of dragon moelleux is "     The small chocolate cake smells rich and s
 
 to say dragonmoelleuxuse:
 	if inafight is 1:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let dam be a random number between 80 and ( 120 + level of player );   [base between 8-12+ after later division by 10]
 		increase dam by ( level of player * 8 ) + ( a random number between 2 and level of player * 2 );   [+0.8-1.0/lvl after div by 10]
 		let playerfireresist be 0;
@@ -1071,8 +1075,8 @@ to say gingerbread Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 to gingerbreadinfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Gingerbread":
 			now monster is y;
 			break;
@@ -1114,8 +1118,8 @@ to say cheesecake Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 to cheesecakeinfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Cheesecake":
 			now monster is y;
 			break;

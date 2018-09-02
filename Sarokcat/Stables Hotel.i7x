@@ -105,6 +105,10 @@ Fancy is in Mares Quarters.
 Daisy is in Mares Quarters.
 Feeding Table is in Mares Quarters.
 
+Table of GameCharacterIDs (continued)
+object	name
+Feeding Table	"Feeding Table"
+
 Feeding Table is a man.
 The description of Feeding Table is "     A large table has been set up to the side of the room, and it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labeled as 'Mare's Milk'. Looking around, you note that some of the mares are eyeing you with curiosity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food'. Maybe it wouldn't hurt to 'Try the Horsefood' set out on the table?".
 

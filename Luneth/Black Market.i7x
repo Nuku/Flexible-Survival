@@ -33,6 +33,10 @@ to say zephyrstoreroom desc:
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Barrett	"Barrett"
+
 Barrett is a man. He is in Zephyr Storeroom.
 The description of Barrett is "[BarrettDesc]".
 The conversation of Barrett is { "Arrg" }.

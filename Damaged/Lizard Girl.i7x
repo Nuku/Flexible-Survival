@@ -11,7 +11,7 @@ lizgirlinheat is a number that varies.
 lizgirlangry is a number that varies.
 
 to say lizgirl herm:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sex entry is "Both";
 	now cocks entry is 1;
 	now cock length entry is 8;
@@ -19,7 +19,7 @@ to say lizgirl herm:
 	infect;
 
 to say lizgirl female:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sex entry is "Female";
 	now cocks entry is 0;
 	now cock length entry is 0;
@@ -115,12 +115,12 @@ to say lizgirl desc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Lizard Girl"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -192,8 +192,8 @@ When Play begins:
 
 to say liz impreg:
 	let found be 0;
-	repeat with Z running from 1 to number of rows in table of random critters:
-		choose row Z from the table of random critters;
+	repeat with Z running from 1 to number of rows in Table of Random Critters:
+		choose row Z from the Table of Random Critters;
 		if name entry matches the text "Lizard Girl":
 			now monster is z;
 			now found is 1;

@@ -79,17 +79,17 @@ To say Septus loses:
 
 to say Wolfmandesc:
 	setmongender 3;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Septus is 100:
 		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";
 		say "     He nods his lupine head at you, saying 'I'm Septus, the talent scout of the Fairhaven Wolves. You don't look half bad - but are you worth joining the best football team of this changed world?' He gives you a toothy grin, then pounces at you.";
 		now HP of Septus is 0;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Football Wolfman":
 				now monster is y;
 				break;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now enemy type entry is 2; [name known]
 	else if HP of Septus is 6:
 		let debit be 0;
@@ -138,12 +138,12 @@ to say fw_attack:
 
 Section A - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Football Wolfman";
 	now enemy title entry is "Football Wolfman Recruiter";
 	now enemy name entry is "Septus";
@@ -215,8 +215,8 @@ instead of sniffing sports drink:
 	say "The drink smells of sugar end electrolytes - perfect to give you some quick energy.";
 
 to wolfmaninfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
@@ -295,6 +295,10 @@ instead of navigating Wolfman Lair while (Jenniferfucked > 0 and HP of Jennifer 
 Section 4 - Jennifer, the Cheerleader
 
 [Smells, Description, Conversation and NPC Interaction]
+
+Table of GameCharacterIDs (continued)
+object	name
+Jennifer	"Jennifer"
 
 Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
@@ -766,6 +770,9 @@ An everyturn rule:
 Section 5 - Septus, the wolfman talent scout
 
 
+Table of GameCharacterIDs (continued)
+object	name
+Septus	"Septus"
 
 Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
 The description of Septus is "[Septusdesc]".
@@ -789,8 +796,8 @@ instead of conversing Septus:
 
 Instead of fucking Septus:
 	[puts Football Wolfman as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
@@ -965,12 +972,12 @@ to say WolfTeamManager:
 
 Section 7 - Cheerleading
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wolfman Cheerleader";
 	now enemy title entry is "";
 	now enemy name entry is "";

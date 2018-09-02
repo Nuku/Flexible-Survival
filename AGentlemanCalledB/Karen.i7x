@@ -23,14 +23,20 @@ Karen by AGentlemanCalledB begins here.
 [ 7 = Met Francois, locker event opened                                         ]
 [ 8 = Completed locker event                                                    ]
 
+[ Libido of Karen - last turn fucked by Rex                                     ]
+
 Section 1 - Karen as a pet/NPC
 
-KarenTimer is a number that Varies.
+Libido of Karen is usually 10000.
 
 the linkaction of Karen is "[Karenlinkaction]".
 
 to say Karenlinkaction:
 	say "Possible Actions: [link]talk[as]talk Karen[end link], [link]smell[as]smell Karen[end link], [link]fuck[as]fuck Karen[end link][line break]";
+
+Table of GameCharacterIDs (continued)
+object	name
+Retriever Girl	"Retriever Girl"
 
 Retriever Girl is a pet. Retriever Girl is a part of the player.
 understand "Karen" as Retriever Girl.
@@ -44,7 +50,7 @@ The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling
 the fuckscene of Retriever Girl is "[SexWithKaren]".
 
 to say SummonKaren:
-	remove Karen from play;
+	now Karen is nowhere;
 	if player is in Breakroom and Karen is in Breakroom: [summoning while standing next to her]
 		say "     ...";
 	else: [regular summoning]
@@ -56,6 +62,10 @@ to say DismissKaren:
 		say "     Telling Karen that you're going to go forward solo she quickly nods and starts to run back towards the library on all fours.";
 	else: [dismissing her in the abbey]
 		say "     ...";
+
+Table of GameCharacterIDs (continued)
+object	name
+Karen	"Karen"
 
 Karen is a woman.
 The description of Karen is "[KarenDesc]".
@@ -149,7 +159,7 @@ to say KarenTalk1:
 		else:
 			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and you're pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 	else if companion of player is Retriever Girl or Karen is in Breakroom:
-		if HP of Karen is 5 and ( KarenTimer - turns > 8 ):
+		if HP of Karen is 5 and ( Libido of Karen - turns > 8 ):
 			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that Francois seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
 			now HP of Karen is 6;
 		else:

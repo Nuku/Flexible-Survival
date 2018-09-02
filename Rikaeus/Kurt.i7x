@@ -63,6 +63,10 @@ to SecondKurtEvent:
 	move Kurt to Kurt's Abode;
 	move player to Atlantis City Market;
 
+Table of GameCharacterIDs (continued)
+object	name
+Kurt	"Kurt"
+
 Kurt is a man.
 The description of Kurt is "[KurtDesc]".
 The conversation of Kurt is { "<This is nothing but a placeholder!>" }.

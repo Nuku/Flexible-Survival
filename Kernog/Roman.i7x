@@ -38,6 +38,10 @@ to FootballTeamAdditionsQuestLog:
 	if HP of Roman is 11:
 		say "[bold type]Football team additions (COMPLETED)[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He does not need me to investigate further, for the time being.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Team Captain Roman	"Team Captain Roman"
+
 Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 
 The description of Team Captain Roman is "[RomanDesc]";

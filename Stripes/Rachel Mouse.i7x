@@ -87,6 +87,7 @@ to say mouseapts:
 		if the player is not lonely:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
+		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
 		now the companion of the player is mouse girl;
 		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
@@ -95,8 +96,8 @@ to say mouseapts:
 
 to say fullmousification:
 	[puts Mental Mouse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Mental Mouse":
 			now monster is y;
 			break;
@@ -120,6 +121,10 @@ the linkaction of Rachel is "[rachellinkaction]".
 to say rachellinkaction:
 	say "Possible Actions: [link]talk[as]talk Rachel[end link], [link]smell[as]smell Rachel[end link], [link]fuck[as]fuck Rachel[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+mouse girl	"mouse girl"
+
 mouse girl is a pet. mouse girl is a part of the player.
 understand "Rachel" as mouse girl.
 The description of mouse girl is "[RachelDesc]".
@@ -134,7 +139,7 @@ rachelfuck is a number that varies.
 The icon of mouse girl is Figure of Rachel_icon.
 
 to say SummonRachel:
-	remove Rachel from play;
+	now Rachel is nowhere;
 	if player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
 		say "     Rachel stands up from where she was meditating and without a word comes to stand by your side.";
 	else: [regular summoning]
@@ -147,6 +152,10 @@ to say DismissRachel:
 	else: [dismissing her in the abbey]
 		say "     Rachel goes back to her meditating claiming she will continue to commune with the rest of the collective.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Rachel	"Rachel"
+
 Rachel is a woman.
 The description of Rachel is "[RachelDesc]".
 
@@ -158,7 +167,7 @@ instead of fucking Rachel:
 
 
 to say RachelAttack:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if name entry is "Mental Mouse":
 		say "[one of]The mouse girl glares angrily at one of the mice facing you, causing her to reel back from your mate's mental assault![or]The psychic mouse girl clenches her paw in a squeezing motion and tenses her face in concentration. While not held or hurt by this, one of the mice is slowed momentarily, allowing you to get in a glancing blow![or]Pressing her fingertips to her temples, Rachel focuses hard, causing one of them to groan in mental pain![or]The mouse girl makes firm, grabbing motions with her hands and one of the mice collapses to her knees and cums hard, as if groped from afar![or]Rachel moves up behind one of the mice and pinches her ear. Your enemy becomes glassy-eyed and wobbles as your mate's mind slams into hers![at random]";
 	else:
@@ -251,8 +260,8 @@ to say sexwithmousegirl:
 		say "     Drawn as you are to the mouse girl and her mental link to you, you're a little worried about losing yourself if you go at it too often. You decide to hold off, at least for the moment.";
 	else:
 		[puts Mental Mouse as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Mental Mouse":
 				now monster is y;
 				break;

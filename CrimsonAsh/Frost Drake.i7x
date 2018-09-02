@@ -145,12 +145,12 @@ To say FuckFrostDrake:
 		say "     You shove your large prey unto his scaly stomach and slap his muscled draconic ass. The drake lets out an undignified hiss, but after another slap to his ass, he quiets down. You caress the pale white scales of his ass before feeling under his tail for his clenching asshole. You finger and diddle his anal passage, fishing out your member while you do. You lick your finger and stick it deep into the drake's anal walls, and the drake lets out a groan as you stroke yourself to readiness. You withdraw your finger from his tight confines and align your cock with his pronounced anus. Without any delay, you thrust into the draconic drake. Your drake prey lets out another hiss, this one in raw delight.";
 		say "     Pushing as far as you can go into his tight cavity, you pull back until just the tip remains before slamming back into the warm confines of the drake's ass. You hammer back and forth, holding the tail of the drake as an anchor while your hips slam into his. You squeeze at the shaking muscled asscheeks you're currently pounding into and feel an unnatural warmth flow over yourself. With a jolt of energy, you speed up, and before you realize it, you're bottoming out in the drake's tight stretched ass and emptying your entire load into his gut. He lets out a squeal and collapses downward, clenching around your thrusting member, you hear the dribble of seed spilling onto to ground as the drake lets out a few last humps before he stops moving. You smile down at your unconscious drake before withdrawing your meat from the dragon ass and tucking your slimy member away. You watch as you cum leaks from the drake's dominated ass before you turn and walk off.";
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Frost Drake";
 	now enemy title entry is "";
 	now enemy name entry is "";

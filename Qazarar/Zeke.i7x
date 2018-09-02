@@ -9,6 +9,10 @@ ZekeRelationship is a number that varies. ZekeRelationship is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Zeke	"Zeke"
+
 Zeke is a man. The hp of Zeke is usually 0.
 The description of Zeke is "[ZekeDesc]".
 The conversation of Zeke is { "<This is nothing but a placeholder!>" }.

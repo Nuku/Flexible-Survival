@@ -443,6 +443,9 @@ When play ends:
 
 Section 6- Rare Item case
 
+Table of GameCharacterIDs (continued)
+object	name
+Rare Counter	"Rare Counter"
 
 Rare Counter is a man.
 The description of Rare Counter is "[RareCounterDesc]".

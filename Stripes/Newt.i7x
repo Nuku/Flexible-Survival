@@ -5,6 +5,10 @@ Version 1 of Newt by Stripes begins here.
 
 Section 1 - Newt
 
+Table of GameCharacterIDs (continued)
+object	name
+Newt	"Newt"
+
 Newt is a woman.
 The description of Newt is "[newtdesc]".
 The conversation of Newt is { "Hiss" }.
@@ -30,7 +34,7 @@ the fuckscene of Newt is "[sexwithNewt]".
 to say sexwithNewt:
 	if HP of Newt < 4:
 		say "ERROR-Newt-[HP of Newt]T: You should not be here. Poof!";
-		remove Newt from play;
+		now Newt is nowhere;
 	else if player is neuter:
 		say "     Lacking a gender, there's no fun to be had with Newt yet.";
 	else if lastfuck of Newt - turns < 6:

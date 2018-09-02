@@ -40,6 +40,10 @@ to say cuerolobodesc:
 
 Section 2 - Zigor the Leather Wolf
 
+Table of GameCharacterIDs (continued)
+object	name
+Zigor	"Zigor"
+
 Zigor is a man. Zigor is in Cuero Lobo.
 The description of Zigor is "[zigordesc]".
 The conversation of Zigor is { "Hola!" }.

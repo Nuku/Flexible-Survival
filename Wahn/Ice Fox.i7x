@@ -36,12 +36,12 @@ Section 2 - Monster Responses
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ice Fox";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -339,6 +339,10 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 
 Section 6 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Miyuki	"Miyuki"
+
 Miyuki is a woman. Miyuki is in Ice Fox's Den.
 The description of Miyuki is "[MiyukiDesc]".
 The conversation of Miyuki is { "placeholder" }.
@@ -551,7 +555,7 @@ to say MiyukiSex1: [BJ for Miyuki]
 
 to say MiyukiSex2: [Miyuki fucks player pussy]
 	setmonster "Ice Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Sliding your fingers down over the band of scales on Miyuki's belly, you rub the narrow slit between the flexible little plates down at her crotch. Then you plant a kiss on the white fox's muzzle and tell her that you want to see - and feel - her cock. With a broad smile, she gives you an affectionate lick in return and nods, prompting you to slip a finger between the ridges of her slit, feeling the warm flesh inside as it starts to push out in a growing erection. A pointy dickhead slides right into your waiting palm, with the shaft to go with it hardening even quicker than that as you start to fondle and stroke her sex. Soon, Miyuki is fully erect - including the pre-knot bulge at the base of her shaft, just outside her slit.";
 	say "     'Now what a certain someone has woken my little fox, I wonder that I should do with it...' the ice sorceress adds playfully in almost a purr. Seeing the deep need to be fucked in your gaze, she gives an amused yip and licks her muzzle in anticipation. 'About time I sank myself into a sweet pussy again,' she says with a chuckle, then strokes your cheek and beckons to follow you with one of her nine tails as she walks over towards her warm nest. Arriving at the large ring of blankets and pillows just a step behind the fox, you are helped out of your clothes by her eager hands, then climb into the her soft camp, lying back in its very comfortable expanse.";
 	WaitLineBreak;
@@ -571,7 +575,7 @@ to say MiyukiSex2: [Miyuki fucks player pussy]
 
 to say MiyukiSex3: [Miyuki fucks player pussy - doggy style and ovi]
 	setmonster "Ice Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Sliding your fingers down over the band of scales on Miyuki's belly, you rub the narrow slit between the flexible little plates down at her crotch. Then you plant a kiss on the white fox's muzzle and tell her that you want her to take you as she pleases. With a broad smile, the sorceress gives you an affectionate lick in return and says, 'Stroke me.' Eager to follow her order, you to slip a finger between the ridges of her slit, feeling the warm flesh inside as it starts to push out. A blunt-headed tube of flesh slides right into your waiting palm, with the shaft to go with it hardening rapidly start to fondle and stroke her appendage. It looks fairly interesting - with a relatively rigid shaft, but a flexible opening instead of a dickhead at the end. Your curiosity pushes you to experiment a little with it and as you push the tip of your index finger into the fleshy tube, you realize that it is hollow and quite stretchy.";
 	say "     'Do you like playing with my ovipositor? Wait till you feel it inside you! Mmmm, I can't wait to lay some eggs in that sexy [if player is female]pussy[else]ass[end if] of yours!' the ice sorceress adds playfully in almost a purr. Seeing the deep need to be fucked in your gaze, she gives an amused yip and licks her muzzle in anticipation. 'About time I sank myself into a sweet [if player is female]pussy[else]ass[end if] again,' she says with a chuckle, then strokes your cheek and beckons to follow you with one of her nine tails as she walks over towards her warm nest. Arriving at the large ring of blankets and pillows just a step behind the fox, you are helped out of your clothes by her eager hands, then climb into the her soft camp, getting onto all fours in its very comfortable expanse.";
 	WaitLineBreak;

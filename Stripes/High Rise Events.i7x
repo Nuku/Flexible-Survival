@@ -283,7 +283,7 @@ Instead of resolving a Veterinary Hospital:
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if player is impreg_ok] with a belly full of her cubs[end if].";
 				setmonster "Panther Taur";
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				now humanity of player is 0;
 				if libido of player < 90, now libido of player is 90;
 				now tailname of player is "Panther Taur";
@@ -538,8 +538,8 @@ Instead of resolving a Cameo:
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Chocolate Lab":
 				now monster is y;
 				break;

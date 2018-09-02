@@ -17,7 +17,7 @@ to say MonkeyKingdesc:
 		say "";
 	else:
 		setmongender 3; [creature is male]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if "Female Preferred" is listed in feats of player:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of player:
@@ -131,12 +131,12 @@ to say beattheMonkeyKing:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Monkey";
 	now enemy title entry is "Monkey King";
 	now enemy name entry is "Wukong";
@@ -445,6 +445,11 @@ wukongStaff is an armament. It is part of the player. It has a weapon "[one of]y
 Section 6 - NPC/Pet
 
 [Temporary ally for now, but could be developped into a full-fledge companion?]
+
+Table of GameCharacterIDs (continued)
+object	name
+wukong	"wukong"
+
 wukong is a pet. wukong is a part of the player.
 [The description of royal tiger is "[WukongDesc]".]
 The weapon damage of wukong is 9.

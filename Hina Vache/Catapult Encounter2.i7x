@@ -2,7 +2,7 @@ Catapult Encounter2 by Hina Vache begins here.
 
 Diego has a Grab Object called Bait.
 The Bait of Diego is usually journal.
-BaitList is a list of objects that varies.
+BaitList is a list of objects that varies.[@Tag:NotSaved]
 the BaitList is {medkit, water bottle, soda, chips, food}.
 
 Loaded Catapult is a situation.

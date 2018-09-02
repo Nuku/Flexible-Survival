@@ -154,6 +154,10 @@ to FourthPericlesEvent:
 	change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
 	change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
 
+Table of GameCharacterIDs (continued)
+object	name
+Pericles	"Pericles"
+
 Pericles is a man.
 The description of Pericles is "[PericlesDesc]".
 The conversation of Pericles is { "<This is nothing but a placeholder!>" }.

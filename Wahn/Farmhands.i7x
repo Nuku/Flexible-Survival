@@ -12,6 +12,10 @@ FriesianRelationship is a number that varies.
 
 Section 1 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Farmhand Horsemen	"Farmhand Horsemen"
+
 Farmhand Horsemen is a man. The HP of Farmhand Horsemen is usually 0. Farmhand Horsemen is in Worker Barracks.
 The description of Farmhand Horsemen is "[FarmhandsDesc]".
 The conversation of Farmhand Horsemen is { "<This is nothing but a placeholder!>" }.

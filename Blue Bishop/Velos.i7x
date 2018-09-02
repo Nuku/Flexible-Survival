@@ -64,8 +64,8 @@ Instead of resolving Strange Serpent:
 					if humanity of player > 100, now humanity of player is 100;
 					now libido of player is libido of player / 2;
 					now preghijack is false;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Black Wasp":
 							now area entry is "Nowhere";
 							now non-infectious entry is true; [Wasps locked again]
@@ -91,6 +91,10 @@ Instead of resolving Strange Serpent:
 
 
 Section 2 - Velos the AssSSSSssserpent
+
+Table of GameCharacterIDs (continued)
+object	name
+Velos	"Velos"
 
 Velos is a person.
 The description of Velos is "[velosdesc]".

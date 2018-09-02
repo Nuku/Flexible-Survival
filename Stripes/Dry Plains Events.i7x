@@ -178,7 +178,7 @@ to say prairiedogfight:
 		increase morale of player by 3;
 
 to say prairiedogsex:
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	setmonster "Prairie Dog";
 	say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him. He struggles a little, but superior numbers have him down soon enough. Numerous little paws grab at his clothes and strip him bare. The one prairie dog you spoke with motions for you to pick a spot to have a go at him";
 	if player is herm:
@@ -215,7 +215,7 @@ when play begins:
 
 
 Instead of resolving a Watering Hole:
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	setmonster "Bald Eagle";
 	say "     In a depression in the grassy plains, you find a greener spot around a small pond. But there is an eagle man bathing himself in the water and clearly enjoying it. The avian creature strokes his hard cock, leaking precum into the water. Focused on his own fun, he hasn't spotted you yet. Shall you approach the bathing bird (Y) or take this opportunity to leave (N) while you still can?";
 	if player consents:
@@ -265,8 +265,8 @@ Instead of resolving a Watering Hole:
 
 to say eaglefulltf:
 	[puts Bald Eagle as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bald Eagle":
 			now monster is y;
 			break;

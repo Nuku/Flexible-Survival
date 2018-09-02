@@ -27,6 +27,10 @@ Version 1 of Kyrverth by Speedlover begins here.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Kyrverth	"Kyrverth"
+
 Kyrverth is a man. The HP of Kyrverth is usually 0.
 The description of Kyrverth is "[KyrverthDesc]".
 The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.

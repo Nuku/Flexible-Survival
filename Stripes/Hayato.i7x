@@ -93,11 +93,15 @@ to say disusedgaragedesc:
 
 Section 3 - Hayato the Oni
 
+Table of GameCharacterIDs (continued)
+object	name
+Hayato	"Hayato"
+
 Hayato is a man. Hayato is in Disused Garage.
 The description of Hayato is "[halonidesc]".
 The icon of Hayato is Figure of Hayato_icon.
 The conversation of Hayato is { "Hai!" }.
-Hayato has a number called hunger.
+HayatoHunger is a number that varies.
 
 understand "Hal" as Hayato.
 
@@ -232,7 +236,7 @@ to say sexwithHayato:
 		say "     You imagine for a moment all the fun you'll be able to have with the demon ogre once you've removed that chastity belt. Thinking about it starts to get you rather excited. You'd best get that mask to Nermine so you can get the key and get down and dirty with him.";
 	else if HP of Hayato is 15:
 		setmonster "Red Oni";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		say "     Having gotten the key this time, you move in on Hayato again. Longing for company, he remained seated as you slide in beside him. You take it slow at first, a few casual touches and an arm around his waist. He moans softly as you brush your fingertips across one of his red nipples, his need for stimulation building as his unsatiated arousal grows. Pressing your chest to his[if breast size of player > 0], rubbing your bosom against his firm abs[end if], you suck on one of his nipples while sliding a hand down to his covered crotch.";
 		say "     'Oh, I really wish I'd kept that key right now,' he moans, running a hand down your back as the other steadies himself on a metal pipe. You grin up at him and reveal the key to him, smiling wider at his gasp and look of longing. He starts to mutter a halfhearted objection, so you silence it with a passionate kiss while your fingers work the key into the lock.";
 		say "     Despite its obvious age, it turns easily and the gears in the mechanism run smoothly. The bands around his waist and between his legs steps out further with each turn of the key until they finally release. And that's not all that is released. Free from its bonds, his crimson cock surges to full erection, sending the unlatched metal clattering across the ground.";
@@ -254,7 +258,7 @@ to say sexwithHayato:
 
 to say hayatosexmenu:
 	setmonster "Red Oni";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Looking over the oni's large, muscular form gets you aroused. In the mood for some fun, you approach him with a smile which he readily returns. Moving next to him, you press your body to his and slip a hand under his striped loincloth, grabbing his erecting maleness. The fearsome ogre gives you a tender kiss. Having got the compliant oni by the horn, you consider what you'd like to do for fun with him.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -323,7 +327,7 @@ to say hayatosex2:
 
 to say hayatosex3:
 	setmonster "Red Oni";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if lust of hayato is even:
 		say "     Deciding you want another ride on the oni's thick pole, you climb up into his lap facing him and pull his loincloth up, giving you free access to his impressive manhood. With it hard and throbbing between your legs, you [if scalevalue of player < 3]nuzzle at the oni's manly chest[else if scalevalue of player is 3]nuzzle at his strong shoulders and neck[else]press your [bodydesc of player] body against his mighty chest and kiss his fearsome face[end if], enjoying the soft moan he gives as you do. 'Oh, I want you so bad. Please, let me fuck you,' he pants. His cock pulses with obvious need as it dribbles precum against your ass as you grind against it.";
 		say "     [one of]After some more teasing grinding against his cock that has him clawing at the floor and begging you to be let in[or]After tantalizing him with several passes of your pussy along his shaft[or]After faking changing your mind and moving to pull away[at random], you guide his cock to your dripping folds and ease yourself down onto it. You work your pussy lips slowly down over his cock, taking his thick meat into your vagina gradually[if cunt width of player < 8 or cunt length of player < 13]. It is slow going at first given its size, but you eventually manage to get it all stuffed into you somehow[else]. Your [cunt size desc of player] cunt is able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[end if]. Your slow progress turns the muscled oni into putty in your hands, the buff guy moaning and panting as his red rocket throbs and spurts precum into you.";
@@ -338,7 +342,7 @@ to say hayatosex3:
 
 to say hayatosex4:
 	setmonster "Red Oni";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if libido of hayato is even:
 		say "     Deciding you want another ride on the oni's thick pole, you climb up into his lap facing him and pull his loincloth up, giving you free access to his impressive manhood. With it hard and throbbing between your legs, you [if scalevalue of player < 3]nuzzle at the oni's manly chest[else if scalevalue of player is 3]nuzzle at his strong shoulders and neck[else]press your [bodydesc of player] body against his mighty chest and kiss his fearsome face[end if], enjoying the soft moan he gives as you do. 'Oh, I want you so bad. Please, let me fuck you,' he pants. His cock pulses with obvious need as it dribbles precum against your ass as you grind against it.";
 		say "     [one of]After some more teasing grinding against his cock that has him clawing at the floor and begging you to be let in[or]After tantalizing him with several passes of your pucker across his tip[or]After faking changing your mind and moving to pull away[at random], you guide his cock to your crinkled hole and ease yourself down onto it. You work your asshole slowly down over his cock, taking his thick meat into your back passage gradually[if scalevalue of player < 4 and the player is not twistcapped]. It is slow going at first given its size, but you eventually manage to get it all stuffed into you somehow[else if player is twistcapped]. Your stretchable insides are able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[else]. Your enlarged body is able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[end if]. Your slow progress turns the muscled oni into putty in your hands, the buff guy moaning and panting as his red rocket throbs and spurts precum into you.";
@@ -352,13 +356,13 @@ to say hayatosex4:
 	increase libido of Hayato by 1;
 
 to say hayatosex5:
-	if hunger of Hayato is 0:
+	if HayatoHunger is 0:
 		say "     Deciding it's time for you to take your turn atop the docile oni, you keep stroking his cock as you gently guide him over onto all fours. It is not until you're moving your own erection against his ass that he realizes your intent and shifts to get back up. Giving his cock a firm squeeze, you tell him that you'd let him be on top the first time, so it's only fair that you get a turn. Whether it's his good nature or lingering effects of the chastity belt is unclear, but he relents and accepts taking a turn on bottom when you tease his manhood a little longer.";
 	else:
 		say "     In the mood to have another go at the docile oni's ass, you continue playing with his cock while guiding him over onto all fours. He shows little reluctance this time, accepting your unspoken request by raising his red-skinned bottom and bracing his strong body. You smile at this and caress his enlarged cock, [one of]telling him that you appreciate the view[or]teasing about what a fine bottom he's becoming[or]causing him to moan with need[or][if anallevel is 3]slipping a lubed finger into his anus to spread him open[else]teasing his crinkled hole[end if][or]tantalizing him with your shaft between those muscled cheeks until he begs for it[in random order].";
-	say "     You press your cock against his back door, taking your time to coax it open slowly[if hunger of Hayato is 0] for his first time[end if]. You're quite hard and throbbing as you ease [if cock length of player > 2]inch after inch[else]your small shaft[end if] into him, letting your pre get his hole slick. He whimpers [if cock length of player < 12]a little[else]momentarily[end if] at first while balling his clawed hands into fists as he grows used to the penetration, but pushes back onto your manhood all the same. Keeping a grip on his cock the whole time, you continue stroking him, further encouraging him to press on. And from how rock hard it's gotten, you can tell he's enjoying it quite a lot.";
+	say "     You press your cock against his back door, taking your time to coax it open slowly[if HayatoHunger is 0] for his first time[end if]. You're quite hard and throbbing as you ease [if cock length of player > 2]inch after inch[else]your small shaft[end if] into him, letting your pre get his hole slick. He whimpers [if cock length of player < 12]a little[else]momentarily[end if] at first while balling his clawed hands into fists as he grows used to the penetration, but pushes back onto your manhood all the same. Keeping a grip on his cock the whole time, you continue stroking him, further encouraging him to press on. And from how rock hard it's gotten, you can tell he's enjoying it quite a lot.";
 	say "     [if cock length of player > 36]After managing to sink fully into him, even his large, muscular torso's been stretched somewhat by your massive manhood[else if cock length of player > 24]After managing to sink fully into him, you can feel a roundness pressing his strong abs outwards as they're stretched outwards by your hefty manhood[else]With your manhood sunk fully into him, you can feel his tight hole squeezing down around you[end if][one of]. Draping yourself across his back and gripping your free arm around his chest, you throw yourself into action and start pounding away at that ass of his. Taking delight in how he moans, growls and pants with excitement, you [if scalevalue of player > 3]lick and nibble at his ear[else if scalevalue of player is 3]nuzzle and kiss along his neck and shoulders[else]nuzzle against his back[end if][or]. Gripping his meaty rear, you knead the firm buttock as you slowly build up the speed of your thrusts. You ease him from thrusts that are frustratingly slow that have him longing for more, up through a steady and enjoyable rhythm until you're pounding him hard and fast near the end[or]. Placing your other hand on his heavy ballsack, you rub and caress them while you thrust into him with a good, steady rhythm that soon has him panting with excitement[if cockname of player is not listed in infections of internallist]. You even rub his scrotum against your own, teasingly making the balls touch to get him to blush a deeper crimson[end if][in random order]. Your continued pumping of his pre-drooling penis is finally rewarded when he growls and blasts thick streams of gooey seed across the floor. As he climaxes, Hayato's rectum spasms and clenches like a vice around your cock, driving you to paint his insides with your [cum load size of player] load. Left sticky and panting, he flops onto the floor when you pull out of him, the scary demon ogre reduced to orgasmic bliss by the ass-fucking he's received.";
-	if hunger of Hayato is 0, now hunger of Hayato is 1;
+	if HayatoHunger is 0, now HayatoHunger is 1;
 
 
 Section 4 - Events
@@ -545,7 +549,7 @@ to say onilairassault:
 to say onilairlost1:
 	now HP of Hayato is 96;
 	setmonster "Red Oni";
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now tailname of player is "Red Oni";
 	now facename of player is "Red Oni";
 	now skinname of player is "Red Oni";
@@ -571,7 +575,7 @@ to say onilairlost1:
 
 to unleashredoni:
 	setmonster "Red Oni";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if name entry is "Red Oni":
 		now area entry is "Capitol";
 		now non-infectious entry is false;
@@ -610,7 +614,7 @@ to unleashredoni:
 [ libido of Hayato            ]
 [ # player rec'd anal         ]
 
-[ hunger of Hayato            ]
+[ HayatoHunger            ]
 [ 0 = anal virgin             ]
 [ 1 = had anal                ]
 

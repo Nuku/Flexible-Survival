@@ -85,8 +85,8 @@ Instead of resolving a Policeman:
 				say "     You are struck firmly across the jaw by the hard club. (15 dmg)";
 			say "[line break]     'And here I thought you were smarter than that, but I guess you're just another stupid, punk looter? I guess I'll have to teach you a hard lesson,' the tiger cop growls, readying to strike again if you get up.";
 			wait for any key;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
@@ -167,6 +167,9 @@ to say policecardesc:
 			increase score by 10;
 			now mqpickup is 1;
 
+Table of GameCharacterIDs (continued)
+object	name
+Sgt Marks	"Sgt Marks"
 
 Sgt Marks is a man. Sgt Marks is in Police Car.
 The description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.".
@@ -321,8 +324,8 @@ to say mqlostfight:
 to say totalTH:
 	if libido of player < 70:
 		now libido of player is 70;
-	repeat with y running from 1 to number of filled rows in table of random critters:	[puts Tigress Hooker as lead monster...]
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Tigress Hooker as lead monster...]
+		choose row y in Table of Random Critters;
 		if name entry is "Tigress Hooker":
 			now monster is y;
 			break;
@@ -604,7 +607,7 @@ when play begins:
 
 to say tigercopdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 8, let debit be level of player - 8; [Boss hard mode growth rates]
 	now HP entry is 90 + ( debit * 6 );
@@ -633,8 +636,8 @@ to say losetotigercop:
 			now pquest is 1;
 			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
@@ -653,8 +656,8 @@ to say losetotigercop:
 				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
 		if player is female:
 			[puts Tigress Hooker as lead monster in case of impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tigress Hooker":
 					now monster is y;
 					break;
@@ -699,8 +702,8 @@ To say beattigercop:
 			now pquest is 1;
 			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
@@ -726,12 +729,12 @@ To say beattigercop:
 
 Section 9 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Tiger Cop"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

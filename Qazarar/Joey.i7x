@@ -16,6 +16,10 @@ Version 1 of Joey by Qazarar begins here.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Joey	"Joey"
+
 Joey is a man. The hp of Joey is usually 3.
 The libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".

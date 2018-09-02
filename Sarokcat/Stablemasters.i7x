@@ -24,6 +24,10 @@ Slutslavetalk is a number that varies.
 LastSlutslavefucked is a number that varies. LastSlutslavefucked is usually 250.
 Slutslavefucked is a number that varies. Slutslavefucked is usually 0.
 
+Table of GameCharacterIDs (continued)
+object	name
+Slutslave	"Slutslave"
+
 Slutslave is a man. [or woman]
 The description of Slutslave is "     Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your [']slut[']. Her tight, well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all than a master... and she seems to enjoy her new lot in life quite a bit as well. Looking at her closely however you can still see a glimmer of dark intelligence within her eyes, showing that while she has become a submissive pet like she always should have been, there is still quite a bit of knowledge there to be acquired. Perhaps you should take time out to [bold type]learn from slut[roman type] sometime, or maybe just spend some time enjoying [bold type]training[roman type] your slave.".
 The conversation of Slutslave is { "Fuck me!" }.
@@ -69,8 +73,8 @@ Check Slavelearning:
 
 Carry out Slavelearning:
 	[puts Nightmare as lead monster for comparison]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Nightmare":
 			now monster is y;
 			break;

@@ -323,6 +323,10 @@ instead of resolving Medkit Parts:
 		say "     [bold type]Sarah[roman type] should be able to help you sort the good from the bad and put together a usable medkit if you got enough of this stuff.";
 	increase HasParts by 1;
 
+Table of GameCharacterIDs (continued)
+object	name
+Sarah	"Sarah"
+
 Sarah is a woman.
 The description of Sarah is "[SarahDesc]";
 
@@ -427,13 +431,9 @@ to say SarahTalkMenu:
 				wait for any key;
 				say "[SarahTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

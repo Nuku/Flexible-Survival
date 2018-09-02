@@ -89,12 +89,12 @@ to say Great Dane Rougedesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Great Dane Rouge"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The Great Dane Rouge attacks with a blinding series of punches![or]The Great Dane Rouge kicks you hard enough that spit flies free from your [facename of player] mouth![or]The Great Dane Rouge uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane Rouge sends a right hook firmly across your jaw![or]The Great Dane Rouge slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane Rouge kick you in the chest forcing air to gush out from your lungs![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheGreat Dane Rouge]"; [ Text when monster loses. Change 'Great Dane Rouge' as above. ]

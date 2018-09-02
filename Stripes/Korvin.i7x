@@ -26,6 +26,10 @@ to say korvinlinkaction:
 
 Section 0 - GShep Pet
 
+Table of GameCharacterIDs (continued)
+object	name
+gshep	"gshep"
+
 gshep is a pet. gshep is a part of the player.
 understand "Korvin" as gshep.
 The description of gshep is "[Korvindesc]".
@@ -38,10 +42,10 @@ The dismissdesc of gshep is "[DismissKorvin]".
 The assault of gshep is "[gshep_attack]".
 the scent of the gshep is "Korvin has a masculine scent of canine arousal.".
 The fuckscene of gshep is "[korvinsexmenu]".
-gshep has a number called lastscene. lastscene is usually 255.
+GShepLastScene is a number that varies. GShepLastScene is usually 255.
 
 to say SummonKorvin:
-	remove Korvin from play;
+	now Korvin is nowhere;
 	if player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room: [summoning while standing next to him]
 		say "     Calling for Korvin, the German Shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
 	else: [regular summoning]
@@ -60,6 +64,10 @@ gshep_sexscene is a number that varies. [sex-role argument]
 gshep_bed_scene is a number that varies. [discipline argument]
 gshep_inactive is a number that varies. [inactivity argument]
 gshep_scarscene is a truth state that varies. gshep_scarscene is usually false. [scar dialog]
+
+Table of GameCharacterIDs (continued)
+object	name
+Korvin	"Korvin"
 
 Korvin is a man.
 The description of Korvin is "[Korvindesc]".
@@ -89,7 +97,7 @@ instead of conversing gshep:
 to say Korvindesc:
 	if debugactive is 1:
 		say "DEBUG - Korvin | LVL: [level of gshep], XP: [XP of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
-		say "DEBUG - Korvin | gsd_pet: [gsd_pet], lastfuck: [lastfuck of gshep], lastscene: [lastscene of gshep].";
+		say "DEBUG - Korvin | gsd_pet: [gsd_pet], lastfuck: [lastfuck of gshep], lastscene: [GShepLastScene].";
 		say "DEBUG - Korvin | Scenes | Post-Fight: [gshep_postfight], Sex: [gshep_sexscene], Bed: [gshep_bed_scene], Inactive: [gshep_inactive].";
 	if gsd_pet < 20:
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the rope leash you've put around his neck[if gsd_pet is 15]. You should really look for a [bold type]pet shop[roman type] to find a replacement for that[else if gsd_pet is 16]. You recall that you've got a replacement for that. Go have a [bold type]talk[roman type] to him about it[end if]. Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain quite an independent streak.";
@@ -105,7 +113,7 @@ to say Korvindesc:
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
 
 to say gshep_attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "[one of]Your dog[or]Korvin[or]Your German Shepherd[at random] [one of]growls and swipes at your enemy with an open paw-like hand, leaving scratching with his dull claws[or]clamps down with his teeth on your foe with a growl[or]charges at your foe, bashing into [ghim][or]lands a fast punch on the [name entry][or]barks and growls at your opponent while taking swings at them[at random].";
 
 Section 1 - Dialog
@@ -193,7 +201,7 @@ to say gshep_postfightargue:		[Post-fight argument]
 		now gshep_postfight is 1;
 	increase dexterity of gshep by 1;
 	increase weapon damage of gshep by 1;
-	now lastscene of gshep is turns;
+	now GShepLastScene is turns;
 	if gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14:
 		if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 			say "[gshep_collar_prompt]";
@@ -246,11 +254,11 @@ to say gshep_sexargue:				[Sex role argument]
 			say "     After working each other over for quite a while, you're both about ready to pop. Sucking firmly on his meat, you fondle his balls, urging him to feed you his hot load. His rod pulses in your mouth before sending spurt after spurt of gooey seed across your tongue. The taste of the musky treat is that last bit you need to drive you to a powerful final orgasm that has your cunt quivering around his tongue, soaking it in your femcum.";
 			say "     You lick each other's loins clean before separating and getting up. You give the g-shep's ass a light swat and his tail gives a happy wag, sending him on his way. You take your time gathering up your clothes and equipment, enjoying the blissful afterglow.";
 		now gshep_sexscene is 1;
-		now lastscene of gshep is turns;
+		now GShepLastScene is turns;
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
-instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and player is not neuter and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
+instead of going down from the Grey Abbey Library while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and GShepLastScene - turns >= 4 and player is not neuter and (gshep_bed_scene is 0 or gshep_inactive is 0) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
 	move player to bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Korvin scene on bunker entry - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";
@@ -312,12 +320,12 @@ to say gshep_bedcrumbs:
 			say "     While you may have started with just the teasing grinding, you soon move to give his pulsing rod entry and start riding him hard. By the point you release his muzzle to better support yourself on his strong chest, he can only pant, whimper and moan like the horny hound he is. He thrusts up into you as you slam down, finally pressing his knot into your juicy cunt. Grabbing him by the rope collar, you order him to cum and, already at the edge of release, his body obeys. Feeling his hot load shooting into your cunt, you orgasm after the first few spurts and end up milking on his pulsing rod for all he's got.";
 			say "     As soon as you're able to pull free from the knot, you pull off of the dog's dick. The excess semen flows out, much of it making a mess on and between his thighs as well as your bunk. Giving his rope collar a tug, you order him to clean up the mess he's made of your bed when he's recovered. 'And no more getting crumbs on my bed. When I want to fuck you, you'll know it, you slut,' you add with a light bap on his nose. Korvin climbs out of the bed and obediently cleans up your bunk and the floor around it without delay or backtalk.";
 		now gshep_bed_scene is 1;
-	now lastscene of gshep is turns;
+	now GShepLastScene is turns;
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
 to say gshep_inactive_scene:
-	now lastscene of gshep is turns;
+	now GShepLastScene is turns;
 	say "     Korvin had been staring out a window in the library, but rushes over to you as you enter the bunker. Grabbing your shoulder as you step onto the stairwell landing, he turns you around. 'What do you think you're doing going inside? The action's out there,' he growls, pointing toward the exit to the outdoors. 'Look! I agreed to this because I thought I'd get some action - and not just sex. I want a fight. My talents are wasted just sitting around.'";
 	say "     [bold type]What do you want to do with him?[roman type][line break]";
 	LineBreak;
@@ -564,11 +572,12 @@ carry out gsdpettesting:
 	say "Now set to test Korvin.";
 	now gsd_pet is 12;
 	now gshep is tamed;
+	add "Tamed" to Traits of gshep;
 	now weapon damage of gshep is 5;
 	now level of gshep is 3;
 	now dexterity of gshep is 13;
 	now lastfight of gshep is turns;
-	now lastscene of gshep is turns;
+	now GShepLastScene is turns;
 	now lastfuck of gshep is turns + 6;
 	now gshep_fights is 0;
 	now gshep_postfight is 0; [post-fight argument]

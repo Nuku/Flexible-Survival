@@ -12,7 +12,9 @@ The description of Pirate Island is "     Finally, the island with the treasure 
 instead of sniffing Pirate Island:
 	say "The island smells of the ocean and fetid sea caves.";
 
-
+Table of GameCharacterIDs (continued)
+object	name
+Treasure cave	"Treasure cave"
 
 Treasure cave is a man.
 The description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
@@ -90,8 +92,8 @@ carry out treasurehunt:
 					stop the action;
 				if T is 5:
 					say "     Wandering through the dark tunnels, you eventually trip over something as you explore one of the alcoves, reaching down you find a small item, hoping it is part of the treasure you decide to take it with you as you explore. Eventually you find your way back out of the caves, without finding the treasure and rather tired, and examine the site you found... well it may not be part of the treasure, but at least it will make a nice souvenir.";
-					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
-					choose row minortreasure from the table of random critters;
+					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							say "[bold type]You acquired 1 [loot entry].[roman type][line break]";
@@ -123,8 +125,8 @@ carry out treasurehunt:
 					challenge "Pirate Shark";
 					challenge "Pirate Shark";
 					say "     After a long and exhausting ordeal, the sharks have finally left, leaving you in the cave by yourself. Sighing, you lie down to rest for a minute, only to find something uncomfortable underneath you. Glancing down, you realize they left behind the items they were dicing over! While it may not be actual treasure, it certainly isn't anything to sniff at you think as you tuck the items into your pack.";
-					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
-					choose row minortreasure from the table of random critters;
+					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;
@@ -137,8 +139,8 @@ carry out treasurehunt:
 					else:
 						increase carried of food by 1;
 						say "You acquired some seafood!";
-					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
-					choose row minortreasure from the table of random critters;
+					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;

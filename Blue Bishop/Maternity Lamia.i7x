@@ -147,13 +147,13 @@ to say mlamiavsex04:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Lamia"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -223,7 +223,7 @@ this is the lamiaboobinc rule:			[increasing likelihood of alt attack]
 this is the lamiaboob rule:	[***]
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 6;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let matlamiacaught be 1;
 	let playernum be 50 + ( level of player * 2 ) + strength of player; [strength test]
 	let matlamianum be 50 + ( lev entry * 2 ) + str entry;

@@ -251,29 +251,29 @@ to say orgyoutcome:
 	randominfect; [4 different infections]
 	now researchbypass is 1;
 	increase monster by 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	infect;
 	increase monster by 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	infect;
 	increase monster by 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	infect;

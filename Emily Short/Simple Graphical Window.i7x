@@ -205,17 +205,17 @@ Section 4 - Inform 7 Wrappers for Defining Window and Colors
 
 Include Glulx Text Effects by Emily Short. [This makes colors available to us.]
 
-Currently shown picture is a figure-name that varies. [This the author may set during the course of the source.]
+Currently shown picture is a figure-name that varies.[@Tag:NotSaved] [This the author may set during the course of the source.]
 
-Internally selected picture is a figure-name that varies. [This is the picture selected by the picture selection rules, which might be the 'currently shown picture' (by default) or might be, say, the current frame of an animation in progress. The author should not set this directly, but instead write additional picture selection rules if he wants to change it.]
+Internally selected picture is a figure-name that varies.[@Tag:NotSaved] [This is the picture selected by the picture selection rules, which might be the 'currently shown picture' (by default) or might be, say, the current frame of an animation in progress. The author should not set this directly, but instead write additional picture selection rules if he wants to change it.]
 
-Graphics window pixel count is a number that varies. Graphics window proportion is a number that varies.
+Graphics window pixel count is a number that varies.[@Tag:NotSaved] Graphics window proportion is a number that varies.[@Tag:NotSaved]
 
-Graphics background color is a glulx color value that varies.
+Graphics background color is a glulx color value that varies.[@Tag:NotSaved]
 
 Glulx window position is a kind of value. The Glulx window positions are g-null, g-above, g-below, g-left, and g-right.
 
-Graphics window position is Glulx window position that varies.
+Graphics window position is Glulx window position that varies.[@Tag:NotSaved]
 
 
 Section 4a - More Wrappers (for use without Collage Tools by Emily Short)
@@ -250,7 +250,7 @@ Section 6 - Inform 7 Wrapper Phrases and Rules for Drawing
 To build graphics window:
 	(- MakeGraphicsWindow(); -)
 
-Current graphics drawing rule is a rule that varies. The current graphics drawing rule is the standard placement rule.
+Current graphics drawing rule is a rule that varies.[@Tag:NotSaved] The current graphics drawing rule is the standard placement rule.
 
 [By default we want to clear the screen to the established background color, then draw our image centered in the window, scaling it down to fit if necessary.]
 
@@ -301,9 +301,9 @@ Simple Graphical Window creates one graphics window, and provides some different
 
 **** Rules for drawing in windows ****
 
-Whenever Inform needs to re-fill the window -- at the start of the game, or when a saved game is restored, or when the player resizes the window manually -- Simple Graphical Window will follow a rule that varies, the "current graphics drawing rule". The author may set this to any of the following:
+Whenever Inform needs to re-fill the window -- at the start of the game, or when a saved game is restored, or when the player resizes the window manually -- Simple Graphical Window will follow a rule, the "current graphics drawing rule". The author may set this to any of the following:
 
-	(1) (The default.) The standard placement rule. The standard placement rule fills the window with a background color, then draws the currently shown picture (a figure-name that varies, and which the author can reset during the game). The picture is centered in the available screen space, unless it is too large, in which case it is scaled down proportionally to fit. A picture is never scaled up, on the grounds that upscaling images usually produces unattractively fuzzy results. Note that this and rules 2-4 will all behave incorrectly if we don't have at least one figure defined in our game source. In that case, see rule 5.
+	(1) (The default.) The standard placement rule. The standard placement rule fills the window with a background color, then draws the currently shown picture (a figure-name, and which the author can reset during the game). The picture is centered in the available screen space, unless it is too large, in which case it is scaled down proportionally to fit. A picture is never scaled up, on the grounds that upscaling images usually produces unattractively fuzzy results. Note that this and rules 2-4 will all behave incorrectly if we don't have at least one figure defined in our game source. In that case, see rule 5.
 
 	(2) The fully scaled image rule. Fills the window completely with the currently shown picture, regardless of proportion. This is unlikely to look good with images of any complexity, but is included for completeness.
 

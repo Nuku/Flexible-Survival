@@ -79,6 +79,10 @@ ChaseOffspring is a number that varies.
 
 Section 1 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Chase	"Chase"
+
 Chase is a man.
 The description of Chase is "[ChaseDesc]".
 The conversation of Chase is { "mew" }.

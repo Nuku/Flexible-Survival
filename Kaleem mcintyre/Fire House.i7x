@@ -50,6 +50,10 @@ KTO is a number that varies.
 Kenazaroused is a number that varies.
 rsc is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Kenaz	"Kenaz"
+
 Kenaz is a man. Kenaz is in FireHouse.
 The description of Kenaz is "[Kenazcurrentform]".
 The conversation of Kenaz is { "Be on alert!" }.
@@ -821,6 +825,10 @@ Section 11 - OtherDals
 
 Kto is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+OtherDals	"OtherDals"
+
 OtherDals is a man.
 The description of OtherDals is "[Dalboys1]".
 The conversation of OtherDals is { "Playtime!" }.
@@ -858,6 +866,10 @@ Instead of conversing the OtherDals:
 
 
 Section 12 - DalmatianTroupe
+
+Table of GameCharacterIDs (continued)
+object	name
+DalmatianTroupe	"DalmatianTroupe"
 
 DalmatianTroupe is a man.
 The description of DalmatianTroupe is "[Dalboys2]".

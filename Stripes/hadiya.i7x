@@ -77,6 +77,10 @@ the scent of Hyena Shack is "[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and H
 
 Section 3 - Hadiya
 
+Table of GameCharacterIDs (continued)
+object	name
+Hadiya	"Hadiya"
+
 Hadiya is a person. Hadiya is in Hyena Shack.
 The description of Hadiya is "[hadiyadesc]".
 The conversation of Hadiya is { "Bend over!" }.
@@ -355,6 +359,10 @@ Instead of resolving Goblin Thief:
 
 Section 6 - Gobby
 
+Table of GameCharacterIDs (continued)
+object	name
+Gobby	"Gobby"
+
 Gobby is a man.
 The description of Gobby is "[gobbydesc]".
 The conversation of Gobby is { "Yes, O Great-Red-Toothy-Beast!" }.
@@ -415,8 +423,8 @@ Section 8 - Infection by Hadiya
 to hadiyahyenaify:
 	if HP of Hadiya >= 50:
 		[puts Herm Hyena as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Herm Hyena":
 				now monster is y;
 				now sex entry is "Male";

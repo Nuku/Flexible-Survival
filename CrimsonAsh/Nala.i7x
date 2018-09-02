@@ -95,6 +95,10 @@ to say KickNala:
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Nala	"Nala"
+
 Nala is a woman. The HP of Nala is usually 0.
 The description of Nala is "[NalaDesc]".
 The conversation of Nala is { "<This is nothing but a placeholder!>" }.

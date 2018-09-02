@@ -1,1229 +1,65 @@
 Version 1 of GameTables by Core Mechanics begins here.
 
 
-Table of PlayerData
-Name	Energy	HP	MaxHP	XP	Level	Strength	Dexterity	Stamina	Charisma	Intelligence	Perception	Hunger	Thirst	Morale	Lust	Loyalty	Libido	Humanity	cocks	testes	breasts	cunts	Breast Size	Cock length	Cock Width	Cunt length	Cunt width	armor	capacity	skin	skinname	cock	cockname	face	facename	tail	tailname	body	bodyname	Cock Size Desc	Cunt Size Desc	Breast Size Desc	Short Breast Size Desc	scalevalue	Traits	bodydesc	bodytype	SleepRhythm	invent	vials	tapes	OpenQuests	CompletedQuests	Feats	EncounteredEnemies	BlockList	scent
-"Player"	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	100	1	0	0	0	0	0	0	0	0	0	50	"human"	"human"	"human"	"human"	"human"	"human"	"human"	"human"	"human"	"human"	""	""	""	""	3	{ "Chosen One" }	"human"	"human"	0	{ "Journal" }	{ "Goo Girl" }	{ "" }	{ "" }	{ "" }	{ "" }	{ "" }	{ "" }	"human"
-
-Table of NPCs
-name	LocationName	HP	XP	Level	Dexterity	Thirst	Lust	Loyalty	Libido	Weapon Damage	Traits
-"Adam"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Aelias"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked" }
-"Alana"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Alex"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Alexandra"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Amaryllis"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Ammy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Amuran"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Amy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Andre"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Andrew"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Andromeda"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Angie"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Anthony"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Ares"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Ariana"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Artemis"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Athanasia"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Aurora"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Azari"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Azrael"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bargain Bin"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Barrett"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Barry"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bastet"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"bee girl"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Beverly"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bjorn"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Blake"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Blanche"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Blot"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Blue Speaker"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Boghrim"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bookshelves"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Boris the lion"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bradford"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Brennan"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Brian"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bronze Crab"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Brooke"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bryony"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Bubble"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Buster"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"ButterflyBaby"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Candy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Cane"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Carl"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Carnival game"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Chaotic Mess"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Chase"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"child"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Chirpy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Chris"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Christy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Cindy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Circe"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Clothing Shelf"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Cole"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Coleen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Collar Rack"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Corbin"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Coura"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Currentmonster"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Cute Crab"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Daisy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"DalmatianTroupe"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Dan"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Danny"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Darius"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Dash"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"David"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Dead Body"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"demon brute"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Denise"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Diego"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Dinah"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Discarded Dolphin"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Dmitri"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Doctor Matt"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Doctor Medea"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Doctor Moffatt"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Doctor Mouse"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Doctor Utah"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Dominick"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Doran"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"dragoness"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Drink bar"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Duke"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Elaine"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Elijah"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"equinoid warrior"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Eres"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Eric"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Erica"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Erin"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Exotic Bird"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Fancy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Fang"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Farmhand Horsemen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Feeding Table"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Felinoid companion"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Felix"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Finn"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Florence"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Francois"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Frank"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"frat members"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"frost giantess"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gabriel"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gang members"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Garrett"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gerty"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gillian"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gina"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gobby"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gordon"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gorilla Team-Members"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Grant"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Greg"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gryphoness"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"gshep"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Gwen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Hadiya"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Harold"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Hayato"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Helen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"helper dog"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Hobo"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Homaru"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Honey"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"house cat"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"human dog"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Icarus"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Inflatable Otter Suit"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jadako"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Janice"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jason"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jay"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jenna"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jennifer"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jerome"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Jimmy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Joanna"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Joey"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Joseph"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Julian"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kara"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Karen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Katya"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kenaz"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kitsune"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Klauz"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Korvin"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Krampus"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kristen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kurt"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kyle"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Kyrverth"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lance"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Larissa"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Latex Vixen"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lea"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Leon"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Leonard"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Liliana"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lilith"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lindsey"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lisa"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Little fox"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lucifer"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Lucy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Macadamia"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Major Padgett"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Mark"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Mary"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Master Mind"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Matriarch"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Melanie"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Meredith"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Micaela"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Midnight"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Mike"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Military Radio"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Miyuki"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Moreau"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"mouse girl"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Mul"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Nadia"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Nakoma"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Nala"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Nermine"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Newt"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Nullpet"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Oliver"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Omio"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Onyx"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Orc Mob"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Orthas"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"OtherDals"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Otto"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Paula"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Peppy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Pericles"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"philip"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"pink raccoon"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Pool Table"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Poseidon"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Private Cooper"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Private Marc Orwell"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Rachel"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Randy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Rane"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Rare Counter"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Receptionist"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Retriever Girl"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Rex"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Richard"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Rod Mallrat"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Ronda Mallrat"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"royal tiger"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"rubber tigress"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Ryousei"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sally"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sam"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sandra"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Santa Claws"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sarah"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Savina"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Septus"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Serenity"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sergeant Alexander"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sewer Gator"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sgt Marks"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Shawn"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sidney"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Skarnoth"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"skunk kit"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Slutslave"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Snips"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Snow"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Solstice"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sonny"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sonya"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Stella"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Steven"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Stewart"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"strange doll"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Stuffed Otter Suit"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Susan"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sven"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Svetlana"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Sylvia"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Tawnya"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Team Captain Roman"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Tehuantl"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Testerbot"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Thomas"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Thunderbolt"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Timothy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Tiny Tim"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Tobias"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Treasure cave"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Tristian"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Triton"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Trixie"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Tyr"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Urik"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Val"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Valerie"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Vanessa"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Velos"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Vent"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Violet"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Wendy"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"wukong"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Xerxes"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Yolanda"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"yourself"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Zeke"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Zephias"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Zigor"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-"Zoe"	"NPC Nexus"	0	0	0	0	0	0	0	0	0	{ "Stranger", "Unfucked", "Virgin", "Anal Virgin", "Oral Virgin" }
-
-Table of NPCIDs
-object	name
-Adam	"Adam"
-Aelias	"Aelias"
-Alana	"Alana"
-Alex	"Alex"
-Alexandra	"Alexandra"
-Amaryllis	"Amaryllis"
-Ammy	"Ammy"
-Amuran	"Amuran"
-Amy	"Amy"
-Andre	"Andre"
-Andrew	"Andrew"
-Andromeda	"Andromeda"
-Angie	"Angie"
-Anthony	"Anthony"
-Ares	"Ares"
-Ariana	"Ariana"
-Artemis	"Artemis"
-Athanasia	"Athanasia"
-Aurora	"Aurora"
-Azari	"Azari"
-Azrael	"Azrael"
-Bargain Bin	"Bargain Bin"
-Barrett	"Barrett"
-Barry	"Barry"
-Bastet	"Bastet"
-bee girl	"bee girl"
-Beverly	"Beverly"
-Bjorn	"Bjorn"
-Blake	"Blake"
-Blanche	"Blanche"
-Blot	"Blot"
-Blue Speaker	"Blue Speaker"
-Boghrim	"Boghrim"
-Bookshelves	"Bookshelves"
-Boris the lion	"Boris the lion"
-Bradford	"Bradford"
-Brennan	"Brennan"
-Brian	"Brian"
-Bronze Crab	"Bronze Crab"
-Brooke	"Brooke"
-Bryony	"Bryony"
-Bubble	"Bubble"
-Buster	"Buster"
-ButterflyBaby	"ButterflyBaby"
-Candy	"Candy"
-Cane	"Cane"
-Carl	"Carl"
-Carnival game	"Carnival game"
-Chaotic Mess	"Chaotic Mess"
-Chase	"Chase"
-child	"child"
-Chirpy	"Chirpy"
-Chris	"Chris"
-Christy	"Christy"
-Cindy	"Cindy"
-Circe	"Circe"
-Clothing Shelf	"Clothing Shelf"
-Cole	"Cole"
-Coleen	"Coleen"
-Collar Rack	"Collar Rack"
-Corbin	"Corbin"
-Coura	"Coura"
-Currentmonster	"Currentmonster"
-Cute Crab	"Cute Crab"
-Daisy	"Daisy"
-DalmatianTroupe	"DalmatianTroupe"
-Dan	"Dan"
-Danny	"Danny"
-Darius	"Darius"
-Dash	"Dash"
-David	"David"
-Dead Body	"Dead Body"
-demon brute	"demon brute"
-Denise	"Denise"
-Diego	"Diego"
-Dinah	"Dinah"
-Discarded Dolphin	"Discarded Dolphin"
-Dmitri	"Dmitri"
-Doctor Matt	"Doctor Matt"
-Doctor Medea	"Doctor Medea"
-Doctor Moffatt	"Doctor Moffatt"
-Doctor Mouse	"Doctor Mouse"
-Doctor Utah	"Doctor Utah"
-Dominick	"Dominick"
-Doran	"Doran"
-dragoness	"dragoness"
-Drink bar	"Drink bar"
-Duke	"Duke"
-Elaine	"Elaine"
-Elijah	"Elijah"
-equinoid warrior	"equinoid warrior"
-Eres	"Eres"
-Eric	"Eric"
-Erica	"Erica"
-Erin	"Erin"
-Exotic Bird	"Exotic Bird"
-Fancy	"Fancy"
-Fang	"Fang"
-Farmhand Horsemen	"Farmhand Horsemen"
-Feeding Table	"Feeding Table"
-Felinoid companion	"Felinoid companion"
-Felix	"Felix"
-Finn	"Finn"
-Florence	"Florence"
-Francois	"Francois"
-Frank	"Frank"
-frat members	"frat members"
-frost giantess	"frost giantess"
-Gabriel	"Gabriel"
-Gang members	"Gang members"
-Garrett	"Garrett"
-Gerty	"Gerty"
-Gillian	"Gillian"
-Gina	"Gina"
-Gobby	"Gobby"
-Gordon	"Gordon"
-Gorilla Team-Members	"Gorilla Team-Members"
-Grant	"Grant"
-Greg	"Greg"
-Gryphoness	"Gryphoness"
-gshep	"gshep"
-Gwen	"Gwen"
-Hadiya	"Hadiya"
-Harold	"Harold"
-Hayato	"Hayato"
-Helen	"Helen"
-helper dog	"helper dog"
-Hobo	"Hobo"
-Homaru	"Homaru"
-Honey	"Honey"
-house cat	"house cat"
-human dog	"human dog"
-Icarus	"Icarus"
-Inflatable Otter Suit	"Inflatable Otter Suit"
-Jadako	"Jadako"
-Janice	"Janice"
-Jason	"Jason"
-Jay	"Jay"
-Jenna	"Jenna"
-Jennifer	"Jennifer"
-Jerome	"Jerome"
-Jimmy	"Jimmy"
-Joanna	"Joanna"
-Joey	"Joey"
-Joseph	"Joseph"
-Julian	"Julian"
-Kara	"Kara"
-Karen	"Karen"
-Katya	"Katya"
-Kenaz	"Kenaz"
-Kitsune	"Kitsune"
-Klauz	"Klauz"
-Korvin	"Korvin"
-Krampus	"Krampus"
-Kristen	"Kristen"
-Kurt	"Kurt"
-Kyle	"Kyle"
-Kyrverth	"Kyrverth"
-Lance	"Lance"
-Larissa	"Larissa"
-Latex Vixen	"Latex Vixen"
-Lea	"Lea"
-Leon	"Leon"
-Leonard	"Leonard"
-Liliana	"Liliana"
-Lilith	"Lilith"
-Lindsey	"Lindsey"
-Lisa	"Lisa"
-Little fox	"Little fox"
-Lucifer	"Lucifer"
-Lucy	"Lucy"
-Macadamia	"Macadamia"
-Major Padgett	"Major Padgett"
-Mark	"Mark"
-Mary	"Mary"
-Master Mind	"Master Mind"
-Matriarch	"Matriarch"
-Melanie	"Melanie"
-Meredith	"Meredith"
-Micaela	"Micaela"
-Midnight	"Midnight"
-Mike	"Mike"
-Military Radio	"Military Radio"
-Miyuki	"Miyuki"
-Moreau	"Moreau"
-mouse girl	"mouse girl"
-Mul	"Mul"
-Nadia	"Nadia"
-Nakoma	"Nakoma"
-Nala	"Nala"
-Nermine	"Nermine"
-Newt	"Newt"
-Nullpet	"Nullpet"
-Oliver	"Oliver"
-Omio	"Omio"
-Onyx	"Onyx"
-Orc Mob	"Orc Mob"
-Orthas	"Orthas"
-OtherDals	"OtherDals"
-Otto	"Otto"
-Paula	"Paula"
-Peppy	"Peppy"
-Pericles	"Pericles"
-philip	"philip"
-pink raccoon	"pink raccoon"
-Pool Table	"Pool Table"
-Poseidon	"Poseidon"
-Private Cooper	"Private Cooper"
-Private Marc Orwell	"Private Marc Orwell"
-Rachel	"Rachel"
-Randy	"Randy"
-Rane	"Rane"
-Rare Counter	"Rare Counter"
-Receptionist	"Receptionist"
-Retriever Girl	"Retriever Girl"
-Rex	"Rex"
-Richard	"Richard"
-Rod Mallrat	"Rod Mallrat"
-Ronda Mallrat	"Ronda Mallrat"
-royal tiger	"royal tiger"
-rubber tigress	"rubber tigress"
-Ryousei	"Ryousei"
-Sally	"Sally"
-Sam	"Sam"
-Sandra	"Sandra"
-Santa Claws	"Santa Claws"
-Sarah	"Sarah"
-Savina	"Savina"
-Septus	"Septus"
-Serenity	"Serenity"
-Sergeant Alexander	"Sergeant Alexander"
-Sewer Gator	"Sewer Gator"
-Sgt Marks	"Sgt Marks"
-Shawn	"Shawn"
-Sidney	"Sidney"
-Skarnoth	"Skarnoth"
-skunk kit	"skunk kit"
-Slutslave	"Slutslave"
-Snips	"Snips"
-Snow	"Snow"
-Solstice	"Solstice"
-Sonny	"Sonny"
-Sonya	"Sonya"
-Stella	"Stella"
-Steven	"Steven"
-Stewart	"Stewart"
-strange doll	"strange doll"
-Stuffed Otter Suit	"Stuffed Otter Suit"
-Susan	"Susan"
-Sven	"Sven"
-Svetlana	"Svetlana"
-Sylvia	"Sylvia"
-Tawnya	"Tawnya"
-Team Captain Roman	"Team Captain Roman"
-Tehuantl	"Tehuantl"
-Testerbot	"Testerbot"
-Thomas	"Thomas"
-Thunderbolt	"Thunderbolt"
-Timothy	"Timothy"
-Tiny Tim	"Tiny Tim"
-Tobias	"Tobias"
-Treasure cave	"Treasure cave"
-Tristian	"Tristian"
-Triton	"Triton"
-Trixie	"Trixie"
-Tyr	"Tyr"
-Urik	"Urik"
-Val	"Val"
-Valerie	"Valerie"
-Vanessa	"Vanessa"
-Velos	"Velos"
-Vent	"Vent"
-Violet	"Violet"
-Wendy	"Wendy"
-wukong	"wukong"
-Xerxes	"Xerxes"
-Yolanda	"Yolanda"
-yourself	"yourself"
-Zeke	"Zeke"
-Zephias	"Zephias"
-Zigor	"Zigor"
-Zoe	"Zoe"
+Table of TestTable
+Name(text)	ListOfText (list of text)
+with 1000 blank rows
 
 Table of GameEvents
-Name	State (text)	Sarea (text)	Level (number)	Minscore (number)
-"Grumpy Old Men"	"unresolved"	"Nowhere"	0	0
-"Fleeing Minotaur"	"unresolved"	"Nowhere"	0	0
-"Scavenging Dalmatian"	"unresolved"	"Nowhere"	0	0
-"Captured Wyvern"	"unresolved"	"Nowhere"	0	0
-"School Spirit"	"unresolved"	"Nowhere"	0	0
-"Another Survivor"	"unresolved"	"Nowhere"	0	0
-"Masturbating Fox"	"unresolved"	"Nowhere"	0	0
-"Giant Egg"	"unresolved"	"Nowhere"	0	0
-"Ice Cream Truck"	"unresolved"	"Nowhere"	0	0
-"Wyvern Flight"	"unresolved"	"Nowhere"	0	0
-"Strange Preacher"	"unresolved"	"Nowhere"	0	0
-"Hyena Kill"	"unresolved"	"Nowhere"	0	0
-"Panther Trap"	"unresolved"	"Nowhere"	0	0
-"CatsandDogs"	"unresolved"	"Nowhere"	0	0
-"Consolidated Events Park CEP1"	"unresolved"	"Nowhere"	0	0
-"Consolidated Events Park CEP2"	"unresolved"	"Nowhere"	0	0
-"Poppy field"	"unresolved"	"Nowhere"	0	0
-"Abandoned Camp"	"unresolved"	"Nowhere"	0	0
-"Abandoned Cars"	"unresolved"	"Nowhere"	0	0
-"Abandoned Fitness Dojo"	"unresolved"	"Nowhere"	0	0
-"Abandoned Fox"	"unresolved"	"Nowhere"	0	0
-"Abandoned Milk"	"unresolved"	"Nowhere"	0	0
-"Abandoned Pizza Delivery Car"	"unresolved"	"Nowhere"	0	0
-"Abandoned truck"	"unresolved"	"Nowhere"	0	0
-"Abandoned Uniform"	"unresolved"	"Nowhere"	0	0
-"Abandonedplayer"	"unresolved"	"Nowhere"	0	0
-"Adventurer"	"resolved"	"Nowhere"	0	0
-"AlexandraBroodmTrait"	"resolved"	"Nowhere"	0	0
-"AlexandraHornyTrait"	"resolved"	"Nowhere"	0	0
-"AlexandraPlayersBitch"	"resolved"	"Nowhere"	0	0
-"Alternative Entry"	"unresolved"	"Nowhere"	0	0
-"Ambulance Dock"	"unresolved"	"Nowhere"	0	0
-"Anal Probing"	"unresolved"	"Nowhere"	0	0
-"Angel vs Demons"	"unresolved"	"Nowhere"	0	0
-"AngieTrapped"	"unresolved"	"Nowhere"	0	0
-"Angry Snake"	"resolved"	"Nowhere"	0	0
-"Anime Club"	"unresolved"	"Nowhere"	0	0
-"Annoyed Hyena"	"unresolved"	"Nowhere"	0	0
-"Anomaly"	"unresolved"	"Nowhere"	0	0
-"Another Doctor"	"unresolved"	"Nowhere"	0	0
-"Another Ladder"	"unresolved"	"Nowhere"	0	0
-"Another Researcher"	"unresolved"	"Nowhere"	0	0
-"Anubis Statue"	"unresolved"	"Nowhere"	0	0
-"Apartment 319"	"resolved"	"Nowhere"	0	0
-"Apple Tree"	"unresolved"	"Nowhere"	0	0
-"Arctic Enclosure"	"resolved"	"Nowhere"	0	0
-"Army Convoy"	"unresolved"	"Nowhere"	0	0
-"Art appreciation"	"unresolved"	"Nowhere"	0	0
-"Art Collector"	"resolved"	"Nowhere"	0	0
-"Arts Department"	"unresolved"	"Nowhere"	0	0
-"Assault On The Gym"	"resolved"	"Nowhere"	0	0
-"Atropis"	"resolved"	"Nowhere"	0	0
-"Aussie Pub"	"unresolved"	"Nowhere"	0	0
-"Auto Shop"	"unresolved"	"Nowhere"	0	0
-"Automaton Activity"	"resolved"	"Nowhere"	0	0
-"Avian Tent"	"resolved"	"Nowhere"	0	0
-"B&R"	"unresolved"	"Nowhere"	0	0
-"Bacchus Wine"	"unresolved"	"Nowhere"	0	0
-"Back at the Camp"	"resolved"	"Nowhere"	0	0
-"Bad Breakup"	"resolved"	"Nowhere"	0	0
-"Badminton One"	"resolved"	"Nowhere"	0	0
-"Barricaded Lockerroom"	"unresolved"	"Nowhere"	0	0
-"Battle For Tenvale Campus"	"resolved"	"Nowhere"	0	0
-"Beach bum"	"unresolved"	"Nowhere"	0	0
-"Beach Detector Site"	"resolved"	"Nowhere"	0	0
-"Beach Field Research"	"resolved"	"Nowhere"	0	0
-"Beach Party"	"unresolved"	"Nowhere"	0	0
-"Bestial Pheromones"	"unresolved"	"Nowhere"	0	0
-"Biker Hangout"	"resolved"	"Nowhere"	0	0
-"Bird Masturbation"	"unresolved"	"Nowhere"	0	0
-"Bird Troubles"	"unresolved"	"Nowhere"	0	0
-"Birthing Time"	"unresolved"	"Nowhere"	0	0
-"Blind Boy's Love"	"unresolved"	"Nowhere"	0	0
-"blue Oni"	"resolved"	"Nowhere"	0	0
-"Boar Encounter"	"resolved"	"Nowhere"	0	0
-"Boar Payback"	"resolved"	"Nowhere"	0	0
-"Body Choice Dilemma"	"unresolved"	"Nowhere"	0	0
-"Body Poke Poke"	"unresolved"	"Nowhere"	0	0
-"Body Popularity"	"resolved"	"Nowhere"	0	0
-"Body Supplications"	"unresolved"	"Nowhere"	0	0
-"Bounty Hunter"	"unresolved"	"Nowhere"	0	0
-"Breeding Pack"	"unresolved"	"Nowhere"	0	0
-"Brennan Shower Walkin"	"unresolved"	"Nowhere"	0	0
-"Broken fences"	"unresolved"	"Nowhere"	0	0
-"Broken fountain"	"unresolved"	"Nowhere"	0	0
-"Bunny Eavesdropper"	"resolved"	"Nowhere"	0	0
-"Bunny Frat Invite"	"resolved"	"Nowhere"	0	0
-"Business as Usual"	"unresolved"	"Nowhere"	0	0
-"Cafeteria"	"unresolved"	"Nowhere"	0	0
-"Cameo"	"unresolved"	"Nowhere"	0	0
-"Campus Lovers"	"unresolved"	"Nowhere"	0	0
-"Campus Patrol"	"resolved"	"Nowhere"	0	0
-"Campus Racing"	"resolved"	"Nowhere"	0	0
-"Campus Rooftop"	"unresolved"	"Nowhere"	0	0
-"Campus Thunder"	"unresolved"	"Nowhere"	0	0
-"CandyShop"	"unresolved"	"Nowhere"	0	0
-"Canine Indecision"	"resolved"	"Nowhere"	0	0
-"Canine Patrol"	"unresolved"	"Nowhere"	0	0
-"Captivating Plumage"	"unresolved"	"Nowhere"	0	0
-"Captive Breeding"	"unresolved"	"Nowhere"	0	0
-"Captive rat"	"unresolved"	"Nowhere"	0	0
-"Captured Bird"	"unresolved"	"Nowhere"	0	0
-"Captured Demon"	"unresolved"	"Nowhere"	0	0
-"Captured Soldier"	"resolved"	"Nowhere"	0	0
-"Carambola Tree"	"resolved"	"Nowhere"	0	0
-"Cat Toy Vendors"	"unresolved"	"Nowhere"	0	0
-"CatsVSDogs"	"unresolved"	"Nowhere"	0	0
-"Caught Glider"	"resolved"	"Nowhere"	0	0
-"Centaur Gangbang"	"unresolved"	"Nowhere"	0	0
-"Central Library"	"unresolved"	"Nowhere"	0	0
-"Challenge of the Alphas"	"unresolved"	"Nowhere"	0	0
-"Chance Meeting"	"unresolved"	"Nowhere"	0	0
-"Chaplaincy"	"unresolved"	"Nowhere"	0	0
-"Charming Picnic"	"resolved"	"Nowhere"	0	0
-"Charred Pickets"	"unresolved"	"Nowhere"	0	0
-"Cheat's Retribution"	"resolved"	"Nowhere"	0	0
-"Cheerleader vs Furling"	"unresolved"	"Nowhere"	0	0
-"Cheetah Cheater"	"unresolved"	"Nowhere"	0	0
-"Cheetah Trade"	"unresolved"	"Nowhere"	0	0
-"Chieftain's Challenge"	"resolved"	"Nowhere"	0	0
-"Chocolate Treat"	"unresolved"	"Nowhere"	0	0
-"Circle of Life"	"unresolved"	"Nowhere"	0	0
-"City Hall Offices"	"resolved"	"Nowhere"	0	0
-"Clothing Store"	"unresolved"	"Nowhere"	0	0
-"Clotho"	"unresolved"	"Nowhere"	0	0
-"Concert Hall"	"resolved"	"Nowhere"	0	0
-"Concession Stand"	"unresolved"	"Nowhere"	0	0
-"Conchien"	"unresolved"	"Nowhere"	0	0
-"Containment Barrier"	"unresolved"	"Nowhere"	0	0
-"contract hyenegotiation"	"unresolved"	"Nowhere"	0	0
-"Corporate Fat Cats"	"unresolved"	"Nowhere"	0	0
-"Corrupt Kennel"	"unresolved"	"Nowhere"	0	0
-"Course Advice"	"unresolved"	"Nowhere"	0	0
-"Cow Hunting"	"unresolved"	"Nowhere"	0	0
-"Crashing The Satyr Party"	"resolved"	"Nowhere"	0	0
-"crate shuffle"	"unresolved"	"Nowhere"	0	0
-"Cream stand"	"unresolved"	"Nowhere"	0	0
-"Creeping Grass"	"unresolved"	"Nowhere"	0	0
-"Daily Training Session"	"resolved"	"Nowhere"	0	0
-"Dangerous Load"	"unresolved"	"Nowhere"	0	0
-"DbLD"	"unresolved"	"Nowhere"	0	0
-"Defenseless old lady"	"unresolved"	"Nowhere"	0	0
-"Demon Chase"	"unresolved"	"Nowhere"	0	0
-"Dented Bike"	"unresolved"	"Nowhere"	0	0
-"Despairing Biologist"	"unresolved"	"Nowhere"	0	0
-"Destroyed Bushes"	"unresolved"	"Nowhere"	0	0
-"Destroyed Records"	"unresolved"	"Nowhere"	0	0
-"Dinosaur Nest"	"resolved"	"Nowhere"	0	0
-"Dinosaur Skeleton"	"resolved"	"Nowhere"	0	0
-"Divine Wine-Cellar"	"resolved"	"Nowhere"	0	0
-"Diving Contest"	"unresolved"	"Nowhere"	0	0
-"dock team"	"unresolved"	"Nowhere"	0	0
-"Doctor & Soldier"	"resolved"	"Nowhere"	0	0
-"Doctor Through the City"	"resolved"	"Nowhere"	0	0
-"Dog Chase"	"unresolved"	"Nowhere"	0	0
-"Dog Walking"	"unresolved"	"Nowhere"	0	0
-"DogAndPony Show"	"unresolved"	"Nowhere"	0	0
-"DogHouse"	"resolved"	"Nowhere"	0	0
-"Dolphin lotion"	"unresolved"	"Nowhere"	0	0
-"Donkey Chat"	"resolved"	"Nowhere"	0	0
-"Donkey Needs"	"resolved"	"Nowhere"	0	0
-"Dorms Part One"	"unresolved"	"Nowhere"	0	0
-"Dorms Part Three"	"unresolved"	"Nowhere"	0	0
-"Dorms Part Two"	"unresolved"	"Nowhere"	0	0
-"dragatorspot"	"unresolved"	"Nowhere"	0	0
-"Dragon Prey"	"resolved"	"Nowhere"	0	0
-"Dragon voyeurism"	"unresolved"	"Nowhere"	0	0
-"Dragonian Trial"	"unresolved"	"Nowhere"	0	0
-"Dream of a Unicorn"	"unresolved"	"Nowhere"	0	0
-"Dressing Room Crisis"	"unresolved"	"Nowhere"	0	0
-"Dressing Room Rampage"	"unresolved"	"Nowhere"	0	0
-"Dressing Room Spycam"	"unresolved"	"Nowhere"	0	0
-"Drone Wreckage"	"unresolved"	"Nowhere"	0	0
-"Dropped Handbag"	"unresolved"	"Nowhere"	0	0
-"Drunk Change Party"	"unresolved"	"Nowhere"	0	0
-"Drunken satyrs"	"unresolved"	"Nowhere"	0	0
-"Eager Dal"	"unresolved"	"Nowhere"	0	0
-"Easter Eggs"	"unresolved"	"Nowhere"	0	0
-"Ebonflame Nest"	"unresolved"	"Nowhere"	0	0
-"Egged Tigress"	"unresolved"	"Nowhere"	0	0
-"Egyptian Wing"	"unresolved"	"Nowhere"	0	0
-"Electric shockers"	"unresolved"	"Nowhere"	0	0
-"Electronics Store"	"unresolved"	"Nowhere"	0	0
-"Elven Issues"	"resolved"	"Nowhere"	0	0
-"Elven Mount"	"unresolved"	"Nowhere"	0	0
-"Entrance Checks"	"resolved"	"Nowhere"	0	0
-"Entrance to the Lair"	"resolved"	"Nowhere"	0	0
-"Equineguardpost"	"resolved"	"Nowhere"	0	0
-"Escaped Wolf Pack"	"unresolved"	"Nowhere"	0	0
-"Evangelist"	"unresolved"	"Nowhere"	0	0
-"Examination Room"	"resolved"	"Nowhere"	0	0
-"Failed Escape"	"unresolved"	"Nowhere"	0	0
-"Failed Experiments"	"resolved"	"Nowhere"	0	0
-"Failed Survivor"	"unresolved"	"Nowhere"	0	0
-"fair food cart"	"unresolved"	"Nowhere"	0	0
-"Fallen Kunoichi"	"unresolved"	"Nowhere"	0	0
-"Fallen Survivor"	"unresolved"	"Nowhere"	0	0
-"Family Fun"	"unresolved"	"Nowhere"	0	0
-"Fashion statement"	"unresolved"	"Nowhere"	0	0
-"Feeding time"	"unresolved"	"Nowhere"	0	0
-"Feeding Wolves"	"unresolved"	"Nowhere"	0	0
-"Feline Friend"	"unresolved"	"Nowhere"	0	0
-"Feline Relief"	"resolved"	"Nowhere"	0	0
-"Felinoid lair"	"unresolved"	"Nowhere"	0	0
-"Female Dorm Five"	"unresolved"	"Nowhere"	0	0
-"Female Dorm Four"	"unresolved"	"Nowhere"	0	0
-"Female Dorm One"	"unresolved"	"Nowhere"	0	0
-"Female Dorm Six"	"unresolved"	"Nowhere"	0	0
-"Female Dorm Three"	"unresolved"	"Nowhere"	0	0
-"Female Dorm Two"	"unresolved"	"Nowhere"	0	0
-"Ferris fun time"	"unresolved"	"Nowhere"	0	0
-"Fetish Store"	"unresolved"	"Nowhere"	0	0
-"Find Building"	"unresolved"	"Nowhere"	0	0
-"Find Lorenda"	"resolved"	"Nowhere"	0	0
-"Find Porn Store"	"unresolved"	"Nowhere"	0	0
-"Finding a Way in"	"resolved"	"Nowhere"	0	0
-"Finding Mack"	"unresolved"	"Nowhere"	0	0
-"Finding Winged Orb"	"resolved"	"Nowhere"	0	0
-"Findingboat"	"unresolved"	"Nowhere"	0	0
-"findingkara"	"unresolved"	"Nowhere"	0	0
-"FindingKristen"	"unresolved"	"Nowhere"	0	0
-"FindingMidnight"	"unresolved"	"Nowhere"	0	0
-"FireAndIce"	"resolved"	"Nowhere"	0	0
-"Flashing fair lights"	"unresolved"	"Nowhere"	0	0
-"floating balloons"	"unresolved"	"Nowhere"	0	0
-"Flooded Street"	"unresolved"	"Nowhere"	0	0
-"Flotsam bits"	"unresolved"	"Nowhere"	0	0
-"Fool Me Once"	"unresolved"	"Nowhere"	0	0
-"Fool Me Twice"	"unresolved"	"Nowhere"	0	0
-"For the Future"	"unresolved"	"Nowhere"	0	0
-"ForcedAdoption"	"unresolved"	"Nowhere"	0	0
-"Forgotten Past"	"resolved"	"Nowhere"	0	0
-"Fountain Discussion"	"resolved"	"Nowhere"	0	0
-"Fountain Naiad"	"unresolved"	"Nowhere"	0	0
-"Frat House"	"unresolved"	"Nowhere"	0	0
-"Frat Party Recruiter"	"resolved"	"Nowhere"	0	0
-"Free Catch"	"unresolved"	"Nowhere"	0	0
-"Free Drink"	"unresolved"	"Nowhere"	0	0
-"Free Handouts"	"unresolved"	"Nowhere"	0	0
-"Free Milk"	"unresolved"	"Nowhere"	0	0
-"FreshFish"	"unresolved"	"Nowhere"	0	0
-"Friendship's Proof"	"unresolved"	"Nowhere"	0	0
-"Full Litter"	"resolved"	"Nowhere"	0	0
-"Game crazy"	"unresolved"	"Nowhere"	0	0
-"Garage Demon"	"unresolved"	"Nowhere"	0	0
-"Garden Veggies"	"unresolved"	"Nowhere"	0	0
-"Gazelle Breeding Bitch"	"unresolved"	"Nowhere"	0	0
-"Generator Parts"	"unresolved"	"Nowhere"	0	0
-"Getting the Knife"	"resolved"	"Nowhere"	0	0
-"Giant battleaxe"	"unresolved"	"Nowhere"	0	0
-"Giant's Frozen Yogurt"	"unresolved"	"Nowhere"	0	0
-"Gill Fruits Tree"	"unresolved"	"Nowhere"	0	0
-"Girl Time"	"unresolved"	"Nowhere"	0	0
-"Goblin Thief"	"resolved"	"Nowhere"	0	0
-"Goblin Trap"	"unresolved"	"Nowhere"	0	0
-"goldenfocushunt"	"unresolved"	"Nowhere"	0	0
-"Golf Store"	"unresolved"	"Nowhere"	0	0
-"Goo Gathering"	"unresolved"	"Nowhere"	0	0
-"Gourmet Treats"	"unresolved"	"Nowhere"	0	0
-"Government Assistance"	"unresolved"	"Nowhere"	0	0
-"Greenhouse"	"resolved"	"Nowhere"	0	0
-"Grizzly gone"	"unresolved"	"Nowhere"	0	0
-"Grocery Store Security Camera"	"unresolved"	"Nowhere"	0	0
-"Gryphon Milkman"	"unresolved"	"Nowhere"	0	0
-"Gryphoness nest"	"resolved"	"Nowhere"	0	0
-"Gryphon's Plot"	"unresolved"	"Nowhere"	0	0
-"Guard Gryphon"	"unresolved"	"Nowhere"	0	0
-"Guess that Character One"	"unresolved"	"Nowhere"	0	0
-"Guess that Character Three"	"unresolved"	"Nowhere"	0	0
-"Hang Ten"	"unresolved"	"Nowhere"	0	0
-"Hanging out on the Green"	"resolved"	"Nowhere"	0	0
-"Hanu"	"unresolved"	"Nowhere"	0	0
-"Happy silly feeling"	"unresolved"	"Nowhere"	0	0
-"Harbor Swap Meet"	"resolved"	"Nowhere"	0	0
-"Hardware Fort"	"resolved"	"Nowhere"	0	0
-"Hardware Store Ruins"	"unresolved"	"Nowhere"	0	0
-"Harmless Joke"	"unresolved"	"Nowhere"	0	0
-"Hidden Fucknest"	"unresolved"	"Nowhere"	0	0
-"Hidden Kitty"	"unresolved"	"Nowhere"	0	0
-"Hidden Sublevel"	"unresolved"	"Nowhere"	0	0
-"High Rise Detector Site"	"resolved"	"Nowhere"	0	0
-"History Class Lesson"	"resolved"	"Nowhere"	0	0
-"History Lecture"	"unresolved"	"Nowhere"	0	0
-"History Video"	"resolved"	"Nowhere"	0	0
-"Holding Cell Four"	"resolved"	"Nowhere"	0	0
-"Horn Removal"	"unresolved"	"Nowhere"	0	0
-"Horse Sense"	"unresolved"	"Nowhere"	0	0
-"Horsegarden"	"unresolved"	"Nowhere"	0	0
-"Horsepitfight"	"unresolved"	"Nowhere"	0	0
-"horsepowering"	"unresolved"	"Nowhere"	0	0
-"hot stepping"	"unresolved"	"Nowhere"	0	0
-"How High"	"unresolved"	"Nowhere"	0	0
-"Human Urges"	"unresolved"	"Nowhere"	0	0
-"Hung Like A"	"unresolved"	"Nowhere"	0	0
-"Hungry dog"	"unresolved"	"Nowhere"	0	0
-"Hungry Piggy"	"unresolved"	"Nowhere"	0	0
-"Hunt Of Mammoth Proportions"	"resolved"	"Nowhere"	0	0
-"Hunted Survivor"	"unresolved"	"Nowhere"	0	0
-"Hunting down Hunter"	"resolved"	"Nowhere"	0	0
-"Hunting Party"	"unresolved"	"Nowhere"	0	0
-"Hunting Prides"	"resolved"	"Nowhere"	0	0
-"Hurting"	"unresolved"	"Nowhere"	0	0
-"Husky Gang"	"unresolved"	"Nowhere"	0	0
-"husky gathering"	"resolved"	"Nowhere"	0	0
-"Husky Pack"	"unresolved"	"Nowhere"	0	0
-"Hyena Bikers"	"unresolved"	"Nowhere"	0	0
-"Hyena cages"	"unresolved"	"Nowhere"	0	0
-"Hyena Challenge"	"unresolved"	"Nowhere"	0	0
-"Hyena Gang"	"unresolved"	"Nowhere"	0	0
-"Hyena Shoppers"	"unresolved"	"Nowhere"	0	0
-"Hyenahorsemeet"	"unresolved"	"Nowhere"	0	0
-"Hyper Squirrel Girl"	"unresolved"	"Nowhere"	0	0
-"HypnoGeeks"	"unresolved"	"Nowhere"	0	0
-"Ignored Memos"	"unresolved"	"Nowhere"	0	0
-"Important Treasure"	"unresolved"	"Nowhere"	0	0
-"Infernal Offer"	"resolved"	"Nowhere"	0	0
-"Informant"	"unresolved"	"Nowhere"	0	0
-"Injured Felinoid"	"unresolved"	"Nowhere"	0	0
-"Inner Predator"	"unresolved"	"Nowhere"	0	0
-"Insect Hive"	"unresolved"	"Nowhere"	0	0
-"Instructional video"	"unresolved"	"Nowhere"	0	0
-"Intact Fountain"	"unresolved"	"Nowhere"	0	0
-"Intercepted Bike Courier"	"unresolved"	"Nowhere"	0	0
-"Interruption"	"unresolved"	"Nowhere"	0	0
-"Jam Session"	"unresolved"	"Nowhere"	0	0
-"Janitor's Closet"	"unresolved"	"Nowhere"	0	0
-"Jewel Heist"	"resolved"	"Nowhere"	0	0
-"Jewelry Box"	"unresolved"	"Nowhere"	0	0
-"Joshiro Tales 1"	"unresolved"	"Nowhere"	0	0
-"June Mermaid"	"unresolved"	"Nowhere"	0	0
-"Jungle Chase"	"unresolved"	"Nowhere"	0	0
-"A pile of garbage"	"unresolved"	"Nowhere"	0	0
-"junkyard home"	"unresolved"	"Nowhere"	0	0
-"Kitchenkegger"	"unresolved"	"Nowhere"	0	0
-"Labors Introduction"	"unresolved"	"Nowhere"	0	0
-"Lackadaisical"	"unresolved"	"Nowhere"	0	0
-"Lady Surrounded by Butterflies"	"unresolved"	"Nowhere"	0	0
-"Languages Department"	"unresolved"	"Nowhere"	0	0
-"Large Cave"	"resolved"	"Nowhere"	0	0
-"Lazy River"	"unresolved"	"Nowhere"	0	0
-"leaking pipe"	"unresolved"	"Nowhere"	0	0
-"Leather Daddy Kitty"	"unresolved"	"Nowhere"	0	0
-"Leather Wolves"	"unresolved"	"Nowhere"	0	0
-"Lemur Conga Gangbang"	"unresolved"	"Nowhere"	0	0
-"Lemur Jerks"	"unresolved"	"Nowhere"	0	0
-"Let's Party"	"resolved"	"Nowhere"	0	0
-"library visitor"	"unresolved"	"Nowhere"	0	0
-"Lion modifying"	"unresolved"	"Nowhere"	0	0
-"Little Lost Lamb"	"resolved"	"Nowhere"	0	0
-"Little trouble"	"unresolved"	"Nowhere"	0	0
-"Loaded Catapult"	"unresolved"	"Nowhere"	0	0
-"Locked lockers"	"unresolved"	"Nowhere"	0	0
-"Locked utility room"	"unresolved"	"Nowhere"	0	0
-"Lone Soldier"	"unresolved"	"Nowhere"	0	0
-"Lone Survivor"	"unresolved"	"Nowhere"	0	0
-"Lonely Gryphoness"	"unresolved"	"Nowhere"	0	0
-"Looted Supermarket"	"unresolved"	"Nowhere"	0	0
-"Losing It"	"unresolved"	"Nowhere"	0	0
-"Lost Camera"	"unresolved"	"Nowhere"	0	0
-"Lost Chick"	"resolved"	"Nowhere"	0	0
-"Lost Crab"	"unresolved"	"Nowhere"	0	0
-"Lost Explorer"	"unresolved"	"Nowhere"	0	0
-"lost gear"	"unresolved"	"Nowhere"	0	0
-"Lost house cat"	"unresolved"	"Nowhere"	0	0
-"Lost skunk kit"	"unresolved"	"Nowhere"	0	0
-"Lost Trident"	"unresolved"	"Nowhere"	0	0
-"Lovers Bench"	"unresolved"	"Nowhere"	0	0
-"Loving Bond"	"unresolved"	"Nowhere"	0	0
-"Lucky seashell"	"unresolved"	"Nowhere"	0	0
-"Lupine visit"	"unresolved"	"Nowhere"	0	0
-"Lusty Skunk"	"unresolved"	"Nowhere"	0	0
-"Magic Cap"	"unresolved"	"Nowhere"	0	0
-"Magical Girl"	"unresolved"	"Nowhere"	0	0
-"Mall Optitian"	"resolved"	"Nowhere"	0	0
-"Mall Orgy"	"unresolved"	"Nowhere"	0	0
-"Mall Wandering"	"unresolved"	"Nowhere"	0	0
-"Manicotti Shopping"	"resolved"	"Nowhere"	0	0
-"Manna from Heaven"	"unresolved"	"Nowhere"	0	0
-"Marching Band"	"unresolved"	"Nowhere"	0	0
-"Mark's Dinner Invite"	"resolved"	"Nowhere"	0	0
-"Masturbation In Private"	"resolved"	"Nowhere"	0	0
-"Maternity Ward"	"unresolved"	"Nowhere"	0	0
-"Medkit Parts"	"unresolved"	"Nowhere"	0	0
-"Meerkat Patrol"	"unresolved"	"Nowhere"	0	0
-"Meet Alex"	"unresolved"	"Nowhere"	0	0
-"Meet the Nemean Lion"	"resolved"	"Nowhere"	0	0
-"Meeting Malakhi"	"resolved"	"Nowhere"	0	0
-"Meeting Sidney"	"unresolved"	"Nowhere"	0	0
-"Memories of the Mall"	"resolved"	"Nowhere"	0	0
-"Mephitness"	"unresolved"	"Nowhere"	0	0
-"Microchip Factory"	"resolved"	"Nowhere"	0	0
-"Military presence"	"unresolved"	"Nowhere"	0	0
-"Mindshield Storage"	"resolved"	"Nowhere"	0	0
-"Missing Cow"	"resolved"	"Nowhere"	0	0
-"Missing Farm Hand"	"resolved"	"Nowhere"	0	0
-"Missing lamp"	"unresolved"	"Nowhere"	0	0
-"Missing Powder"	"unresolved"	"Nowhere"	0	0
-"Missing Sabretooth"	"unresolved"	"Nowhere"	0	0
-"Monkey Duel"	"resolved"	"Nowhere"	0	0
-"Monkey King Service"	"unresolved"	"Nowhere"	0	0
-"Mournful Dog"	"unresolved"	"Nowhere"	0	0
-"Mouse Taur Encounter"	"unresolved"	"Nowhere"	0	0
-"Moving painting"	"unresolved"	"Nowhere"	0	0
-"Mushroom cave"	"unresolved"	"Nowhere"	0	0
-"Music Store"	"resolved"	"Nowhere"	0	0
-"Mutt Pack Attack"	"resolved"	"Nowhere"	0	0
-"Mutt Pack Submission"	"resolved"	"Nowhere"	0	0
-"My Own Zoo Playset"	"unresolved"	"Nowhere"	0	0
-"Mysterious Briefcase"	"unresolved"	"Nowhere"	0	0
-"Naga Hybrid"	"unresolved"	"Nowhere"	0	0
-"Needy Rabbit Girl"	"unresolved"	"Nowhere"	0	0
-"New Ewe Store"	"unresolved"	"Nowhere"	0	0
-"New Roommates"	"resolved"	"Nowhere"	0	0
-"Night Watchmen Uniform"	"unresolved"	"Nowhere"	0	0
-"Noh Mask"	"resolved"	"Nowhere"	0	0
-"Noteinbottle"	"unresolved"	"Nowhere"	0	0
-"Noteworthy Ruin"	"unresolved"	"Nowhere"	0	0
-"Obstetrics Department"	"resolved"	"Nowhere"	0	0
-"Ogre Encounter"	"unresolved"	"Nowhere"	0	0
-"Old rail system"	"unresolved"	"Nowhere"	0	0
-"Old Record Store"	"unresolved"	"Nowhere"	0	0
-"Ominous hole"	"unresolved"	"Nowhere"	0	0
-"One flew into the Cuckoos Nest"	"unresolved"	"Nowhere"	0	0
-"Oni Lair"	"resolved"	"Nowhere"	0	0
-"Onyx Crow"	"resolved"	"Nowhere"	0	0
-"Onyxroom"	"unresolved"	"Nowhere"	0	0
-"Operating Room"	"unresolved"	"Nowhere"	0	0
-"Operation Horny Bunny"	"resolved"	"Nowhere"	0	0
-"Orc Researcher"	"unresolved"	"Nowhere"	0	0
-"Orc Tag Team"	"unresolved"	"Nowhere"	0	0
-"Orca Volleyball Player"	"unresolved"	"Nowhere"	0	0
-"Orcish Slave Raid"	"unresolved"	"Nowhere"	0	0
-"Orthas's House"	"resolved"	"Nowhere"	0	0
-"otter view"	"unresolved"	"Nowhere"	0	0
-"OtterBoi Meeting"	"resolved"	"Nowhere"	0	0
-"Ouroboros"	"unresolved"	"Nowhere"	0	0
-"Overrun Garden"	"unresolved"	"Nowhere"	0	0
-"Pachyderm predicament"	"unresolved"	"Nowhere"	0	0
-"Pack Bang"	"unresolved"	"Nowhere"	0	0
-"Paleontology Professor"	"unresolved"	"Nowhere"	0	0
-"Panda parade"	"unresolved"	"Nowhere"	0	0
-"Panda Shepherd"	"unresolved"	"Nowhere"	0	0
-"Parasol nap"	"unresolved"	"Nowhere"	0	0
-"Paratrooper"	"resolved"	"Nowhere"	0	0
-"Park Detector Site"	"resolved"	"Nowhere"	0	0
-"Partial Ruin"	"unresolved"	"Nowhere"	0	0
-"Pathology"	"unresolved"	"Nowhere"	0	0
-"Patient Rooms"	"unresolved"	"Nowhere"	0	0
-"Peace Between Communities"	"resolved"	"Nowhere"	0	0
-"PeachTree"	"unresolved"	"Nowhere"	0	0
-"PeepingRoman"	"unresolved"	"Nowhere"	0	0
-"Pegasus"	"unresolved"	"Nowhere"	0	0
-"Pertho"	"resolved"	"Nowhere"	0	0
-"Petting zoo"	"unresolved"	"Nowhere"	0	0
-"PewterPet"	"unresolved"	"Nowhere"	0	0
-"Pharmaceutical Storage"	"unresolved"	"Nowhere"	0	0
-"Picture striping"	"unresolved"	"Nowhere"	0	0
-"Pigging Out"	"unresolved"	"Nowhere"	0	0
-"Pirate Standoff"	"unresolved"	"Nowhere"	0	0
-"Pit Trap"	"unresolved"	"Nowhere"	0	0
-"Plains Scavenging"	"unresolved"	"Nowhere"	0	0
-"Plundered boat"	"unresolved"	"Nowhere"	0	0
-"Policeman"	"unresolved"	"Nowhere"	0	0
-"Politics"	"unresolved"	"Nowhere"	0	0
-"Pool Hall"	"resolved"	"Nowhere"	0	0
-"Poor Kitty"	"unresolved"	"Nowhere"	0	0
-"Portrait"	"unresolved"	"Nowhere"	0	0
-"potential resources"	"unresolved"	"Nowhere"	0	0
-"Prank Aftermath"	"resolved"	"Nowhere"	0	0
-"Predator's Lunch"	"resolved"	"Nowhere"	0	0
-"Pregnant Friend"	"unresolved"	"Nowhere"	0	0
-"PridePark"	"resolved"	"Nowhere"	0	0
-"Prize winning toss"	"unresolved"	"Nowhere"	0	0
-"Protected Supplies"	"unresolved"	"Nowhere"	0	0
-"Prowling Macho"	"unresolved"	"Nowhere"	0	0
-"Public Hitching Post"	"unresolved"	"Nowhere"	0	0
-"puddle of goo"	"unresolved"	"Nowhere"	0	0
-"Pure pool"	"unresolved"	"Nowhere"	0	0
-"Quiet Apartment Building"	"unresolved"	"Nowhere"	0	0
-"Rabid Lawyers"	"unresolved"	"Nowhere"	0	0
-"Radiology"	"unresolved"	"Nowhere"	0	0
-"Raid On The Fountain"	"resolved"	"Nowhere"	0	0
-"Raided Corner Store"	"unresolved"	"Nowhere"	0	0
-"Raiding Party"	"unresolved"	"Nowhere"	0	0
-"Ranch House"	"unresolved"	"Nowhere"	0	0
-"Rane's Good Deed"	"resolved"	"Nowhere"	0	0
-"Rat Twins Invitation"	"unresolved"	"Nowhere"	0	0
-"Ravaged power plant"	"unresolved"	"Nowhere"	0	0
-"Raven Key Fob"	"resolved"	"Nowhere"	0	0
-"Razorback Fury"	"unresolved"	"Nowhere"	0	0
-"Reaching the College"	"unresolved"	"Nowhere"	0	0
-"Records Room"	"unresolved"	"Nowhere"	0	0
-"Red Light Detector Site"	"resolved"	"Nowhere"	0	0
-"Red Light Requisition"	"unresolved"	"Nowhere"	0	0
-"Refugee Mare"	"resolved"	"Nowhere"	0	0
-"relaxing scene"	"unresolved"	"Nowhere"	0	0
-"Restaurateur's Office"	"resolved"	"Nowhere"	0	0
-"Riptide"	"unresolved"	"Nowhere"	0	0
-"Ritual Location"	"unresolved"	"Nowhere"	0	0
-"Road Fuck Aftermath"	"unresolved"	"Nowhere"	0	0
-"Roaming spots"	"unresolved"	"Nowhere"	0	0
-"Rooftop Rumble"	"unresolved"	"Nowhere"	0	0
-"Rubber tigerchase"	"unresolved"	"Nowhere"	0	0
-"ruined supplies"	"unresolved"	"Nowhere"	0	0
-"Rumors"	"unresolved"	"Nowhere"	0	0
-"Runaway"	"unresolved"	"Nowhere"	0	0
-"SailboatPainting"	"unresolved"	"Nowhere"	0	0
-"Salty taffy"	"unresolved"	"Nowhere"	0	0
-"Sandwich Shop"	"unresolved"	"Nowhere"	0	0
-"Satisfied customer"	"unresolved"	"Nowhere"	0	0
-"Save the Dame"	"resolved"	"Nowhere"	0	0
-"Scared bird"	"unresolved"	"Nowhere"	0	0
-"Scattered Clothing"	"unresolved"	"Nowhere"	0	0
-"Scattered Trash"	"unresolved"	"Nowhere"	0	0
-"Scenic View"	"unresolved"	"Nowhere"	0	0
-"Scopaesthesia"	"unresolved"	"Nowhere"	0	0
-"Sealed wing"	"unresolved"	"Nowhere"	0	0
-"Secure Area"	"unresolved"	"Nowhere"	0	0
-"Security Station"	"unresolved"	"Nowhere"	0	0
-"Sewer worker"	"unresolved"	"Nowhere"	0	0
-"Shark Warrior"	"unresolved"	"Nowhere"	0	0
-"SharkFountain"	"unresolved"	"Nowhere"	0	0
-"Shattered House"	"unresolved"	"Nowhere"	0	0
-"Shipping Container"	"unresolved"	"Nowhere"	0	0
-"Siege Of The Belltower"	"resolved"	"Nowhere"	0	0
-"signs of a scuffle"	"unresolved"	"Nowhere"	0	0
-"Size Envy"	"unresolved"	"Nowhere"	0	0
-"Skunkbeast Battle"	"unresolved"	"Nowhere"	0	0
-"Slave Hunter"	"resolved"	"Nowhere"	0	0
-"Slaver Caravan"	"resolved"	"Nowhere"	0	0
-"Slumbering Giant"	"unresolved"	"Nowhere"	0	0
-"Small Cave"	"unresolved"	"Nowhere"	0	0
-"Small Park"	"unresolved"	"Nowhere"	0	0
-"Smashed boat"	"unresolved"	"Nowhere"	0	0
-"Smashed Hive"	"unresolved"	"Nowhere"	0	0
-"Snake Charmer"	"unresolved"	"Nowhere"	0	0
-"Snake knot"	"unresolved"	"Nowhere"	0	0
-"Snared Vixen"	"unresolved"	"Nowhere"	0	0
-"Soaring Eagle"	"unresolved"	"Nowhere"	0	0
-"Soldier Questions"	"unresolved"	"Nowhere"	0	0
-"Soldier Squad"	"unresolved"	"Nowhere"	0	0
-"Soldiers & Snowmeows"	"unresolved"	"Nowhere"	0	0
-"Soldierstabling"	"unresolved"	"Nowhere"	0	0
-"Special Delivery"	"unresolved"	"Nowhere"	0	0
-"Spiritual Love"	"unresolved"	"Nowhere"	0	0
-"squatters den"	"unresolved"	"Nowhere"	0	0
-"Stabled Situation"	"unresolved"	"Nowhere"	0	0
-"Stablestoreroom"	"resolved"	"Nowhere"	0	0
-"Staff Lounge"	"unresolved"	"Nowhere"	0	0
-"Stairwell"	"unresolved"	"Nowhere"	0	0
-"Standard Maintenance"	"resolved"	"Nowhere"	0	0
-"Stolen Jewelry"	"unresolved"	"Nowhere"	0	0
-"Strange barker"	"unresolved"	"Nowhere"	0	0
-"strange bell"	"resolved"	"Nowhere"	0	0
-"Strange castle"	"unresolved"	"Nowhere"	0	0
-"Strange drums"	"unresolved"	"Nowhere"	0	0
-"Strange echo"	"unresolved"	"Nowhere"	0	0
-"Strange Fox"	"unresolved"	"Nowhere"	0	0
-"Strange Island"	"unresolved"	"Nowhere"	0	0
-"Strange Meeting"	"unresolved"	"Nowhere"	0	0
-"Strange Serpent"	"unresolved"	"Nowhere"	0	0
-"Strange Shop"	"unresolved"	"Nowhere"	0	0
-"Strange Sighting"	"unresolved"	"Nowhere"	0	0
-"Strange symbol"	"unresolved"	"Nowhere"	0	0
-"Strange tide"	"unresolved"	"Nowhere"	0	0
-"Strange wave"	"unresolved"	"Nowhere"	0	0
-"Stray Cat"	"unresolved"	"Nowhere"	0	0
-"Stray Catboy"	"unresolved"	"Nowhere"	0	0
-"Strip Bar"	"unresolved"	"Nowhere"	0	0
-"Stripped Car"	"unresolved"	"Nowhere"	0	0
-"Sudden stampede"	"unresolved"	"Nowhere"	0	0
-"Suddenly Ninjas"	"unresolved"	"Nowhere"	0	0
-"Sugar Shack"	"unresolved"	"Nowhere"	0	0
-"Surprise Shark Encounter"	"unresolved"	"Nowhere"	0	0
-"Surrounding Area"	"unresolved"	"Nowhere"	0	0
-"Survivor Group"	"resolved"	"Nowhere"	0	0
-"Sweet Exchange"	"unresolved"	"Nowhere"	0	0
-"Sweet Surprise"	"resolved"	"Nowhere"	0	0
-"Sword Nest"	"unresolved"	"Nowhere"	0	0
-"Tack room"	"unresolved"	"Nowhere"	0	0
-"Tainted yacht"	"unresolved"	"Nowhere"	0	0
-"Take My Royal Word For Granite"	"resolved"	"Nowhere"	0	0
-"Tasty Treats"	"unresolved"	"Nowhere"	0	0
-"tattoonpiercing"	"unresolved"	"Nowhere"	0	0
-"Teachers Lounge"	"unresolved"	"Nowhere"	0	0
-"technicalbookstore"	"unresolved"	"Nowhere"	0	0
-"Temple of Hera"	"resolved"	"Nowhere"	0	0
-"Thankful Soldier"	"resolved"	"Nowhere"	0	0
-"Thanks & Cherries"	"resolved"	"Nowhere"	0	0
-"Thief's Punishment"	"unresolved"	"Nowhere"	0	0
-"Thief's Reformation"	"resolved"	"Nowhere"	0	0
-"Tidepool Treasure"	"unresolved"	"Nowhere"	0	0
-"Tied Rat Twins"	"resolved"	"Nowhere"	0	0
-"Tiger Trick"	"resolved"	"Nowhere"	0	0
-"TigerVSTaur"	"unresolved"	"Nowhere"	0	0
-"Tight Fit"	"unresolved"	"Nowhere"	0	0
-"Tight space"	"unresolved"	"Nowhere"	0	0
-"totally lost"	"unresolved"	"Nowhere"	0	0
-"Tour Bus"	"unresolved"	"Nowhere"	0	0
-"Toy Store"	"unresolved"	"Nowhere"	0	0
-"Tracks"	"unresolved"	"Nowhere"	0	0
-"Training Room"	"unresolved"	"Nowhere"	0	0
-"Transformationledger"	"unresolved"	"Nowhere"	0	0
-"Transformed Seals"	"unresolved"	"Nowhere"	0	0
-"Trashed Refuge"	"unresolved"	"Nowhere"	0	0
-"Treasure Hunters"	"unresolved"	"Nowhere"	0	0
-"Trickster"	"unresolved"	"Nowhere"	0	0
-"Trickster's Masterpiece"	"unresolved"	"Nowhere"	0	0
-"Trip to the Water Tower"	"resolved"	"Nowhere"	0	0
-"Tristbrother"	"resolved"	"Nowhere"	0	0
-"Twisted fruit grove"	"unresolved"	"Nowhere"	0	0
-"Twisted grove"	"unresolved"	"Nowhere"	0	0
-"Two Crash into the Cuckoos Nest"	"resolved"	"Nowhere"	0	0
-"Undie Race"	"unresolved"	"Nowhere"	0	0
-"Unidentified sex scene"	"unresolved"	"Nowhere"	0	0
-"union break"	"unresolved"	"Nowhere"	0	0
-"Unlucky elevator"	"unresolved"	"Nowhere"	0	0
-"Unorthodox Sight"	"unresolved"	"Nowhere"	0	0
-"unused tool"	"unresolved"	"Nowhere"	0	0
-"Unusual Creature"	"resolved"	"Nowhere"	0	0
-"Updating artwork"	"unresolved"	"Nowhere"	0	0
-"Useful pamphlet"	"unresolved"	"Nowhere"	0	0
-"Vet supplies"	"unresolved"	"Nowhere"	0	0
-"Veterinary Hospital"	"unresolved"	"Nowhere"	0	0
-"Victim"	"unresolved"	"Nowhere"	0	0
-"Videoshow"	"unresolved"	"Nowhere"	0	0
-"Viking Longboat"	"resolved"	"Nowhere"	0	0
-"Waitingcustomer"	"unresolved"	"Nowhere"	0	0
-"Wandering beasts"	"unresolved"	"Nowhere"	0	0
-"Wandering the Campus"	"unresolved"	"Nowhere"	0	0
-"War Declaration"	"unresolved"	"Nowhere"	0	0
-"Watering Hole"	"unresolved"	"Nowhere"	0	0
-"Werewolf Surprise"	"unresolved"	"Nowhere"	0	0
-"Wet Clothes"	"unresolved"	"Nowhere"	0	0
-"whelpspot"	"unresolved"	"Nowhere"	0	0
-"Wild Kingdom"	"unresolved"	"Nowhere"	0	0
-"Wild Squirrels"	"resolved"	"Nowhere"	0	0
-"Wish"	"unresolved"	"Nowhere"	0	0
-"Wolf Whisperer"	"resolved"	"Nowhere"	0	0
-"Wolfrape"	"unresolved"	"Nowhere"	0	0
-"Wolf's Invitation"	"resolved"	"Nowhere"	0	0
-"WomanFruitTree"	"unresolved"	"Nowhere"	0	0
-"Working Out"	"unresolved"	"Nowhere"	0	0
-"Wounded Civilian"	"unresolved"	"Nowhere"	0	0
-"Wrecked ships"	"unresolved"	"Nowhere"	0	0
-"Zookeepers at Play"	"resolved"	"Nowhere"	0	0
-"Zookeepers at Work"	"resolved"	"Nowhere"	0	0
+Name(text)	State (text)
+with 1000 blank rows
+
+Table of GameRooms
+Name(text)	Reachability(text)	ExplorationStatus(text)	RestSafety(text)
+with 1000 blank rows
+
+Table of GamePossessions
+Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)
+with 1000 blank rows
+
+Table of GameCharacters
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Length(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerFucked(truth state)	PlayerRomanced(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
+with 1000 blank rows
+
+Table of PlayerData
+skin(text)	skinname(text)	cock(text)	cockname(text)	face(text)	facename(text)	tail(text)	tailname(text)	body(text)	bodyname(text)	scent(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	bodydesc(text)	bodytype(text)
+with 1 blank row
+
+Table of PlayerLists
+ListName(text)	EntryText(text)
+with 2000 blank rows
+
+Table of GameBeasts
+Name(text)	Area(text)	non-infectious(truth state)	sex(text)
+with 1000 blank rows
+
+Table of GameTraits
+OwnerName(text)	TraitText(text)
+with 2500 blank rows
+
+Table of GameTexts
+TextVarName(text)	TextVarValue(text)
+with 500 blank rows
+
+Table of GameNumbers
+NumberVarName(text)	NumberVarValue(number)
+with 2000 blank rows
+
+Table of GameTruths
+TruthVarName(text)	TruthVarValue(truth state)
+with 500 blank rows
+
+Table of GameIndexedTexts
+IndexedTextVarName(text)	IndexedTextVarValue(indexed text)
+with 50 blank rows
+
+Table of GameTextLists
+TextListVarName(text)	TextListVarValue(text)
+with 500 blank rows
+
+Table of GameNumberLists
+NumberListVarName(text)	NumberListVarValue(number)
+with 500 blank rows
 
 Table of GameEventIDs
 Object	Name
@@ -1875,375 +711,6 @@ Wrecked ships	"Wrecked ships"
 Zookeepers at Play	"Zookeepers at Play"
 Zookeepers at Work	"Zookeepers at Work"
 
-Table of GameRooms
-Name	Reachability	ExplorationStatus	TravelStatus	HuntArea	RestSafety
-"Agency"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"2F Trevor Labs"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"A Volcanic Crater"	"Public"	"Unknown"	"Nontravel"	"Capitol"	"Unsafe"
-"Abandoned Lot"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Abandoned Storage Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Abandoned Storefront"	"Private"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Administration Offices"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Alex's Condo"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Ammy's Flatlet"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Approaching the Capitol Building"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Argos Antiques"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Astroslide Field Locker-room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Astroslide Field Showers"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Astroslide Football Field"	"Private"	"Unknown"	"Fasttravel"	"Campus"	"Unsafe"
-"Athletic Street"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"Atlantis City Center"	"Public"	"Unknown"	"Nontravel"	"Atlantis"	"Unsafe"
-"Atlantis City Entrance"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Atlantis City Market"	"Public"	"Unknown"	"Nontravel"	"Atlantis"	"Unsafe"
-"Atlantis City Residential"	"Public"	"Unknown"	"Nontravel"	"Atlantis"	"Unsafe"
-"Attic"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"B&P Company Offices"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Back Alley"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Back Of The Library"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Back Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Ball Pit Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Barn Hayloft"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bathroom Stalls"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"End of the Beach"	"Public"	"Unknown"	"Nontravel"	"Beach"	"Unsafe"
-"Beach Plaza"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"BeachDummyRoom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bedroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bird Enclosure"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Bird House"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Boardwalk"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Body Shop"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bone-Appetit"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Border Wall"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Bouncing Play Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bouncy Castle"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"BouncyCastleExit"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"BouncyCastleSlideExit"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Boundary Street East"	"Public"	"Unknown"	"Nontravel"	"Red"	"Unsafe"
-"Boundary Street West"	"Public"	"Unknown"	"Nontravel"	"Red"	"Unsafe"
-"Bradford's Camp"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Branson & Partner Reception"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Breakroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Breeder Lockup A"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Brennan's Bathroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Brennan's Bedroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bright Alley"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Bright Hallway 1"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bright Hallway 2"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Brookstone Books"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bunker"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Bunny House"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Burned-Out Chapel"	"Public"	"Unknown"	"Fasttravel"	"Red"	"Unsafe"
-"Butterfly Grove"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Camp Bravo Entrance"	"Private"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Campus Gym"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Campus Walkway Northeast"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"Capitol Ruins"	"Public"	"Unknown"	"Nontravel"	"Capitol"	"Unsafe"
-"Castle Throne Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Cat Walk"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Cell Block A"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Central Farm Square"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Charred Streets"	"Public"	"Unknown"	"Nontravel"	"Capitol"	"Unsafe"
-"cheetah habitat"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Christmas Village"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Church Hall"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"City Hospital"	"Public"	"Unknown"	"Fasttravel"	"Hospital"	"Unsafe"
-"Club Lockerroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"College Administration Building"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"College Belltower"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"College Campus Entrance"	"Private"	"Unknown"	"Fasttravel"	"Campus"	"Unsafe"
-"College Fountain"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"College Walkway East"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"College Walkway Northeast"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"College Walkway Northwest"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"College Walkway West"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"Comic Shop"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Communal Shower"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Computer Lab"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Control Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Courtyard"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Cuero Lobo"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Darius's Crib"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"dark basement"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Dark Hallway 1"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Dark Hallway 2"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"darkbasement2"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Darkened Alcove"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Dean's Office"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Deep Forest"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Dirty Alley"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Dirty Sheds"	"Public"	"Unknown"	"Nontravel"	"Beach"	"Unsafe"
-"Disused Garage"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Doctors Office"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Dog Kennels"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Dorm Street"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"Down Under Pub"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Dragons Den"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Dry Plains"	"Public"	"Unknown"	"Fasttravel"	"Plains"	"Unsafe"
-"Eastern Parapets"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Egypt Wing Entrance"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Egyptian Wing Foyer"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Employee Access"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Entrance to the High Rise District"	"Public"	"Unknown"	"Fasttravel"	"High"	"Unsafe"
-"Entrance to the Red Light District"	"Public"	"Unknown"	"Fasttravel"	"Red"	"Unsafe"
-"Equinoid Camp"	"Private"	"Unknown"	"Fasttravel"	"Park"	"Sleepsafe"
-"Exploring the Campus"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Farm Pathway"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Farmhouse Main Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Fence Path"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Fencing Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"FightPit"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Financial Sector"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Fire Station 86"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Firehouse"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Flower Garden"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Forest Cave Entrance"	"Public"	"Unknown"	"Nontravel"	"Forest"	"Unsafe"
-"Foxy Hideaway"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Frozen Cave Tunnel"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Game Store"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Gaming Den"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Grey Abbey Garden"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Garden View"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Gator Den"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Gator Pit"	"Public"	"Unknown"	"Nontravel"	"Mall"	"Unsafe"
-"George's Animal Emporium"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Gillian's Flat"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Gloomy Warehouse"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Gloomy Warehouses"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Golden Doors"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Goo Refuge"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Great Hall"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Greek Street"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"Green Apartment Building"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Green Lobby"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Grey Abbey 2F"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Grey Abbey Library"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Sleepsafe"
-"Gryphon nest"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Half-Renovated Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Happy Puppy Kennel"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Haven Community Center"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Hidden Camp"	"Public"	"Unknown"	"Nontravel"	"Plains"	"Sleepsafe"
-"Hidden Lab"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Holding Pens"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Hospital interior"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Hotel Stable"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Hotel Stalls"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Hyena Hideout"	"Private"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Hyena Shack"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Ice Fox's Den"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Inconspicuous Trail"	"Public"	"Unknown"	"Nontravel"	"Plains"	"Unsafe"
-"Island Forest"	"Public"	"Unknown"	"Nontravel"	"Island"	"Unsafe"
-"Island Pier"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Isolated Street"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Jadako's Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Julian's Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Junkyard Entrance"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Junkyard Interior"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"K9 Vans"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"King's Chambers"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Kitchen"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Kitty Sex Dungeon"	"Private"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Knight's Chambers"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Krampus's Cave"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Kristen's Hideout"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Kurt's Abode"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Large Shed"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Lecture Dummy Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Lecture Street"	"Public"	"Unknown"	"Nontravel"	"Campus"	"Unsafe"
-"Lee's Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Lee's Shed"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Lingerie Store"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Lion's Den"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Lizard Parlor"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Loading Dock"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Looted Shops"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Lost in the Woods"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Lower Tower"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Main & 7th Street"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Main Hall"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Main Path 1"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Main Path 2"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"MainRoom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Maintenance Closet"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Maintenance Garage"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Major's Tent"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Makeshift Rec Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mall Atrium"	"Public"	"Unknown"	"Nontravel"	"Smith Haven"	"Sleepsafe"
-"Mall East Wing"	"Public"	"Unknown"	"Nontravel"	"Smith Haven"	"Sleepsafe"
-"Mall Foodcourt"	"Public"	"Unknown"	"Nontravel"	"Smith Haven"	"Sleepsafe"
-"Mall Foyer"	"Public"	"Unknown"	"Nontravel"	"Smith Haven"	"Sleepsafe"
-"Mall Lockerroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mall Restroom"	"Public"	"Unknown"	"Nontravel"	"Mall"	"Unsafe"
-"Mall West Wing"	"Public"	"Unknown"	"Nontravel"	"Smith Haven"	"Sleepsafe"
-"Mares Quarters"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Master's Office"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"McDermott Barn"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"McDermott Farm Entrance"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Midway"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mike's Home"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Mike's Office"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Milking Shed Main Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mini-Lab"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Museum Foyer"	"Public"	"Unknown"	"Fasttravel"	"Museum"	"Unsafe"
-"Museum interior"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mustang Paddock"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mysterious Shop"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Mythical Murals"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Nakoma's Tent"	"Private"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"NeverNeverland"	"Private"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"New Ewe Storeroom"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Northern Docks"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"NPC Nexus"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Nutso Factory"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Observation Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Office Den"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Old Building"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Open Ocean"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Orc Lair Side Entrance"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Otto's Apartment"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Outside Exploration"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Outside Trevor Labs"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Overgrown Area"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Overgrown Rooftop"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Overgrown Street"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Packaging Warehouse"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Paleontology Office"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"PALOMINO"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Pantry"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Parade Ground"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Park Entrance"	"Public"	"Unknown"	"Fasttravel"	"Park"	"Unsafe"
-"Park Trail"	"Public"	"Unknown"	"Nontravel"	"Park"	"Unsafe"
-"Path of Ashes"	"Public"	"Unknown"	"Nontravel"	"Capitol"	"Unsafe"
-"Pediatrics Lobby"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Pericles' Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Phi Iota Gamma"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Picnic Area"	"Public"	"Unknown"	"Nontravel"	"Park"	"Unsafe"
-"Pig Pen"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Pirate Island"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"PlaceholderforDUP"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"PlaceholderforRLD"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Plant Lobby"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Plant Overview"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Police Car"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Police Lockerroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Police Station Twelve"	"Private"	"Unknown"	"Fasttravel"	"Outside"	"Sleepsafe"
-"Police Station Lockerroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Porn Store"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Power Lines"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Pretty Kitty"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Primary Lab"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Private Booths"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Private club room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Psych Department"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Public Beach"	"Public"	"Unknown"	"Nontravel"	"Beach"	"Unsafe"
-"Punching Pillars"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Quartermaster's Tent"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Qytat Plaza"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Rabbit Den"	"Private"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Raven Nest"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Red Apartment"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Researcher Studio"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Restaurant"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Rex's Place"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Richard's Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Rock Arch"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Rocky Cliff"	"Public"	"Unknown"	"Nontravel"	"Beach"	"Unsafe"
-"Rocky Outcropping"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Royal Bed Chambers"	"Public"	"Unknown"	"Nontravel"	"Atlantis"	"Unsafe"
-"Royal Palace Entrance"	"Public"	"Unknown"	"Nontravel"	"Atlantis"	"Unsafe"
-"Royal Throne Room"	"Public"	"Unknown"	"Nontravel"	"Atlantis"	"Unsafe"
-"Rusty Walkways"	"Public"	"Unknown"	"Nontravel"	"Capitol"	"Unsafe"
-"S Harbor"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sacristy"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sanctum of Horus"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Satyr Frat Dummy Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Second Floor Male Dorms"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sewers A7"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Shag Shack Alley"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Shag Shack Entrance"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Shallow Bay"	"Public"	"Unknown"	"Nontravel"	"Beach"	"Unsafe"
-"Sheep Meadow NE"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sheep Meadow NW"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sheep Meadow SE"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sheep Meadow SW"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Shifting Room"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Shinto Shrine"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sitting Area"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Slave Cell 1"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Slave Cell 2"	"Public"	"Unknown"	"Nontravel"	"void"	"Sleepsafe"
-"Sleeping Quarters"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Slut Rat Den"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Small Dark Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Smith Haven Mall Lot East"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Smith Haven Mall Lot North"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Smith Haven Mall Lot South"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Smith Haven Mall Lot West"	"Public"	"Unknown"	"Nontravel"	"Outside"	"Unsafe"
-"Snake house"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Snow Fox Enclosure"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Snow Rabbit's Warren"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Snowy Forest Trail"	"Public"	"Unknown"	"Nontravel"	"Forest"	"Unsafe"
-"Sonya's Cabin"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Spartan Dummy Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Spider's Web"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Sports Arena Lockerroom"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Squirrel Den"	"Private"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Stables Hotel"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Staircase Entry"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Stairs"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"State Fair"	"Public"	"Unknown"	"Fasttravel"	"Midway"	"Unsafe"
-"Steven's Home"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Steven's Office"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Stewart's Room"	"Private"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"storage room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sunken Ship"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sunny Snacks"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Survivor Refuge"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Sven's Place"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Sweet Tooth"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Sylvia's Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Tattoo Parlor"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Temple of Set"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Tenvale College Female Dorms"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Tenvale College Library"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Tenvale College Male Dorms"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"The Clouds"	"Private"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Thunderbolt's Stable"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Tiger Den"	"Private"	"Unknown"	"Fasttravel"	"void"	"Sleepsafe"
-"Topless Lounge"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Tower Turret"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Toy Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Trevor Labs Lobby"	"Public"	"Unknown"	"Nontravel"	"Sealed"	"Unsafe"
-"Tyr's Club"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Underground Restroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Upper Hall"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Upper Tower"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Urban Forest"	"Public"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Vacant Upstairs"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"VacantUpstairs"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Viking Ship"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Volcanic Cave"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Wandering Around"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Wandering the City"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"wandering the plains"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Warehouse District"	"Public"	"Unknown"	"Fasttravel"	"Warehouse"	"Unsafe"
-"Washroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Western Parapets"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Wild Fringe"	"Public"	"Unknown"	"Nontravel"	"Beach"	"Unsafe"
-"Wolfman Lair"	"Private"	"Unknown"	"Fasttravel"	"void"	"Unsafe"
-"Wolverine Guard Station"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Wolverine Lockup"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Worker Barracks"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Wyvern Nest"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Your Dorm Room"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Zephyr Lobby"	"Private"	"Unknown"	"Fasttravel"	"High"	"Unsafe"
-"Zephyr Storeroom"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Zoo Entrance"	"Public"	"Unknown"	"Fasttravel"	"Outside"	"Unsafe"
-"Zoo Entryway"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Zoo Exploration"	"Public"	"Unknown"	"Nontravel"	"void"	"Unsafe"
-"Zoo Giftshop"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Zoo Parking"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Zoo Rest Area"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-"Zoo Restrooms"	"Public"	"Unknown"	"Nontravel"	"Zoo"	"Unsafe"
-
 Table of GameRoomIDs
 Object	Name
 2F Trevor Labs	"2F Trevor Labs"
@@ -2462,6 +929,8 @@ NeverNeverland	"NeverNeverland"
 New Ewe Storeroom	"New Ewe Storeroom"
 Northern Docks	"Northern Docks"
 NPC Nexus	"NPC Nexus"
+NPC Nexus	"nothing"
+NPC Nexus	"nowhere"
 Nutso Factory	"Nutso Factory"
 Observation Room	"Observation Room"
 Office Den	"Office Den"
@@ -2612,5 +1081,1815 @@ Zoo Giftshop	"Zoo Giftshop"
 Zoo Parking	"Zoo Parking"
 Zoo Rest Area	"Zoo Rest Area"
 Zoo Restrooms	"Zoo Restrooms"
+
+Table of GameVariableIDs
+Name(text)	Type(text)
+"AbandonedRoomStatus"	"number"
+"absorb"	"number"
+"acquaintedWithHanu"	"number"
+"acquaintedWithWukong"	"number"
+"addedlibido"	"number"
+"afsmread"	"number"
+"aidKenaz"	"number"
+"AlanaRelationship"	"number"
+"AlexandraAmySex"	"number"
+"AlexandraBackstory"	"number"
+"AlexandraBrutusInteraction"	"number"
+"AlexandraBrutusPups"	"number"
+"AlexandraCarlInteraction"	"number"
+"AlexandraCarlPups"	"number"
+"AlexandraCreampieCount"	"number"
+"AlexandraEricInteraction"	"number"
+"AlexandraFangPups"	"number"
+"AlexandraGrowingPups"	"number"
+"AlexandraKorvinInteraction"	"number"
+"AlexandraKorvinPups"	"number"
+"AlexandraPlayerPups"	"number"
+"AlexandraPregCount"	"number"
+"AlexandraPupDaddy"	"number"
+"AlexandraSarahInteraction"	"number"
+"alexbrunch"	"number"
+"alexdiego"	"number"
+"alexleeinfo"	"number"
+"AlexProgress"	"number"
+"AlexTalk"	"number"
+"Alpha Wolfdefeat"	"number"
+"Alphahuskypet"	"number"
+"alphawolfbeaten"	"number"
+"altattackmade"	"number"
+"AmirRelationship"	"number"
+"AmmyAffection"	"number"
+"AmmyLastEvent"	"number"
+"AmuranAwoken"	"number"
+"AmyMaturityCounter"	"number"
+"AmyNewPuppies"	"number"
+"AmyShyness"	"number"
+"anallevel"	"number"
+"AnatomyCourse"	"number"
+"AngieAroused"	"number"
+"AngieHappy"	"number"
+"AngieTalk"	"number"
+"AngryHorguth"	"number"
+"anubisrequest"	"number"
+"AptAid"	"number"
+"ArcherFucked"	"number"
+"ArenaBattleCounter"	"number"
+"AresDannyEncounters"	"number"
+"artattempt"	"number"
+"artleopardfight"	"number"
+"AtticusCounter"	"number"
+"auto2entry"	"number"
+"autoattackmode"	"number"
+"autogender"	"number"
+"automaticcombatcheck"	"number"
+"automatonending"	"number"
+"avoidance"	"number"
+"Awesome_boredom"	"number"
+"Awesome_counter"	"number"
+"Awesome_forcesex"	"number"
+"Awesome_noreward"	"number"
+"Awesome_sex"	"number"
+"AxelLastBJ"	"number"
+"AxelRelationship"	"number"
+"Azari_Corruption"	"number"
+"AzraelRelationship"	"number"
+"balloversize"	"number"
+"bananapeeled"	"number"
+"bargainbinusagetotal"	"number"
+"BarnabasRelationship"	"number"
+"BarryFurSuspicion"	"number"
+"BarryMotive"	"number"
+"BastetApproval"	"number"
+"BastetSexBattleCount"	"number"
+"battleitem"	"number"
+"bbum"	"number"
+"bcending"	"number"
+"Bch"	"number"
+"bclatearrival"	"number"
+"bcuntethered"	"number"
+"beatgrnymph"	"number"
+"beatsatyr"	"number"
+"beatSatyress"	"number"
+"BeforeCombat"	"number"
+"BehaviorandCustoms"	"number"
+"Bevkitty"	"number"
+"Bevtalk"	"number"
+"bikedest"	"number"
+"BjornRelationship"	"number"
+"BlissDrugTrip"	"number"
+"blotintense"	"number"
+"bluechaffrape"	"number"
+"boatfound"	"number"
+"BodyRelationship"	"number"
+"BoghrimHuntingTrip"	"number"
+"BoghrimMet"	"number"
+"bonelust"	"number"
+"bonusattack"	"number"
+"bookfound"	"number"
+"boosterfeats"	"number"
+"bopdefeated"	"number"
+"bopsongcount"	"number"
+"borisfucked"	"number"
+"Borismate"	"number"
+"Borisquest"	"number"
+"boristalk"	"number"
+"boundcounter"	"number"
+"boundmod"	"number"
+"boundmod2"	"number"
+"boundsegment"	"number"
+"Bovine_type"	"number"
+"bradfordbounty"	"number"
+"bradfordBountyNum"	"number"
+"bradfordstory"	"number"
+"breastdata"	"number"
+"BrennanRelationship"	"number"
+"BrianOral"	"number"
+"BrianRelationship"	"number"
+"BrianVisit"	"number"
+"BridgetPowellEventVar"	"number"
+"brookeanal"	"number"
+"BrutusAmySex"	"number"
+"BrutusEscalationTimer"	"number"
+"BryceFucked"	"number"
+"BryonyBearFuckWatched"	"number"
+"bsextimer"	"number"
+"BullMaster"	"number"
+"BullTerrierSiblingsVar"	"number"
+"bunnyjocknosex"	"number"
+"ButterflyBabyGestation"	"number"
+"ButterflyEncounters"	"number"
+"ButterflyRaped"	"number"
+"ByronRelationship"	"number"
+"CampBravoWomenAllowed"	"number"
+"CampusCoupleRelationship"	"number"
+"CampusLoversProgressTurn"	"number"
+"CampusLoversTrackingVariable"	"number"
+"campuswanderfight"	"number"
+"candytalk"	"number"
+"CandyUrikInteraction"	"number"
+"CaneFurSuspicion"	"number"
+"CaneMotive"	"number"
+"cannonprep"	"number"
+"CaptiveBreederEncounter"	"number"
+"CarlAmySex"	"number"
+"CarlEricaInteraction"	"number"
+"CarlEricInteraction"	"number"
+"CarlLibraryEntry"	"number"
+"CarlSarahInteraction"	"number"
+"CarlSarahSex"	"number"
+"CarlShower"	"number"
+"CassandraFucked"	"number"
+"catadiff"	"number"
+"catafire"	"number"
+"catdogstate"	"number"
+"CatgirlFucked"	"number"
+"catnum"	"number"
+"CatsVSDogsCounter"	"number"
+"cboyEricSarahInteraction"	"number"
+"cclosscount"	"number"
+"ccmiss"	"number"
+"CellDoorStatus"	"number"
+"CellFourVisits"	"number"
+"centaurmate"	"number"
+"CenterVisits"	"number"
+"centrallib"	"number"
+"cerberusarousal"	"number"
+"cerbfight"	"number"
+"cerbmaulcount"	"number"
+"cfgmode"	"number"
+"charcounter"	"number"
+"chargeup"	"number"
+"ChaseMarking"	"number"
+"ChaseOffspring"	"number"
+"ChasePetplay"	"number"
+"ChasePetplayTraining"	"number"
+"ChaseSexCounter"	"number"
+"CheerleaderFirstEncounter"	"number"
+"Cheesecakemode"	"number"
+"cheetahmate"	"number"
+"choclabfight"	"number"
+"ChrisPlayerOffspring"	"number"
+"Christyquest"	"number"
+"churchenter"	"number"
+"clearnomore"	"number"
+"CliveFuck"	"number"
+"CloudKnowledge"	"number"
+"CocoRelationship"	"number"
+"ColeenAlpha"	"number"
+"ColeenCollared"	"number"
+"ColeenDeclined"	"number"
+"ColeenFound"	"number"
+"ColeenSarahInteraction"	"number"
+"ColeenSlut"	"number"
+"ColeenSpray"	"number"
+"ColeenTalk"	"number"
+"CollegeLibraryBrutusEncounter"	"number"
+"CollegeLibraryRyouseiEncounter"	"number"
+"colliedefeat"	"number"
+"combat abort"	"number"
+"compressedcock"	"number"
+"ConclaveKnowledge"	"number"
+"ConfSvenEricInteraction"	"number"
+"consortinsight"	"number"
+"ContainmentBarrierEncounters"	"number"
+"coonsex"	"number"
+"coonstatus"	"number"
+"CorbinKidCounter"	"number"
+"CorbinPregCounter"	"number"
+"CorbinPregnancy"	"number"
+"corrvicchange1"	"number"
+"corrvicchange2"	"number"
+"cougarfight"	"number"
+"CouraFriendDevelopments"	"number"
+"CouraVirginity"	"number"
+"CowBully"	"number"
+"CoyoteTricks"	"number"
+"CuckooWatched"	"number"
+"cumgirlfed"	"number"
+"cuntsmall"	"number"
+"daisyimpreg"	"number"
+"Daisytalk"	"number"
+"Dam"	"number"
+"damagein"	"number"
+"damageout"	"number"
+"DariusLostItems"	"number"
+"darkdays"	"number"
+"DavidBrutusMarcVar"	"number"
+"DavidBunkerEntry"	"number"
+"DavidSarahInteraction"	"number"
+"DBCaptureQuestVar"	"number"
+"deerconsent"	"number"
+"Delaymilcount"	"number"
+"demandIndex"	"number"
+"DemonBruteStatus"	"number"
+"DemonFoxInteractions"	"number"
+"DemonFoxStatus"	"number"
+"demonseedfound"	"number"
+"dentedbikecount"	"number"
+"DianaRelationship"	"number"
+"DianaTransformationProgress"	"number"
+"didsubmit"	"number"
+"DiegoBitched"	"number"
+"DiegoButtSlut"	"number"
+"DiegoChanged"	"number"
+"DiegoFucked"	"number"
+"Diegotalk"	"number"
+"DiegoTricked"	"number"
+"dinonest"	"number"
+"dnfightresult"	"number"
+"dobielibido"	"number"
+"dobieresist"	"number"
+"DoctorMouseProgress"	"number"
+"dogfoodcount"	"number"
+"doggyboned"	"number"
+"doggyness"	"number"
+"dogmilkfound"	"number"
+"dolcastlefight"	"number"
+"dolinfloss"	"number"
+"dollfound"	"number"
+"dolphinbundle"	"number"
+"dolphinconsent"	"number"
+"dolphindefeat"	"number"
+"dolphinflatablefight"	"number"
+"dolphinmode"	"number"
+"dolphintricked"	"number"
+"dolphinwantmate"	"number"
+"donkeywomanbeaten"	"number"
+"donkeywomanfucked"	"number"
+"DoranAutofireIntensity"	"number"
+"DoranBallModStatus"	"number"
+"DoranDiscussion_var1"	"number"
+"DoranDiscussionExit"	"number"
+"DoranDiscussionExit2"	"number"
+"DoranDiscussionProgress"	"number"
+"DoranDominanceTopic"	"number"
+"DoranFoodTimer"	"number"
+"DoranFoodType"	"number"
+"DoranGenderTopic"	"number"
+"DoranLastBallMod"	"number"
+"DoranLastDiscussion"	"number"
+"DoranLastInternalMod"	"number"
+"DoranLastTitMod"	"number"
+"DoranModificationDiscussed"	"number"
+"DoranNeutralRole"	"number"
+"DoranRimmingStatus"	"number"
+"DoranRole"	"number"
+"DoranRoleIntensity"	"number"
+"DoranRoleplayInSession"	"number"
+"DoranRP_var1"	"number"
+"DoranRP_var2"	"number"
+"DoranRP_var3"	"number"
+"DoranRP_var4"	"number"
+"DoranRPRevealRegard"	"number"
+"DoranSelfBlueballing"	"number"
+"DoranTitModStatus"	"number"
+"DoranVoreDischarge"	"number"
+"DoranVoreDuration"	"number"
+"DoranVoreStatus"	"number"
+"dragonessfuck"	"number"
+"dragontaurcatch"	"number"
+"dragontype"	"number"
+"Dre"	"number"
+"Drinkserved"	"number"
+"dronevict"	"number"
+"DVtaurcatch"	"number"
+"DylanFucked"	"number"
+"DylanSucked"	"number"
+"eagledefeatnum"	"number"
+"ebgatorcarrying"	"number"
+"ebgatord"	"number"
+"ebgatorhijack"	"number"
+"ebheat_egg"	"number"
+"ebwhelphijack"	"number"
+"ec_fullcount"	"number"
+"eggplanted"	"number"
+"EgyptianRiddle"	"number"
+"ElainePregnant"	"number"
+"Electricprodstatus"	"number"
+"ElfEncounters"	"number"
+"ElfRimming"	"number"
+"emap"	"number"
+"embervicsex"	"number"
+"EnrollmentTokens"	"number"
+"eprecharge"	"number"
+"eptarget"	"number"
+"equinoiddefeat"	"number"
+"equinoidstatus"	"number"
+"EricAnalCounter"	"number"
+"EricFleeingCountdown"	"number"
+"EricOffspringCount"	"number"
+"EricOrcPillMpreg"	"number"
+"EricPregCount"	"number"
+"EricPregTimer"	"number"
+"EricSarahInteraction"	"number"
+"EricVirginityTaken"	"number"
+"erminecolor"	"number"
+"EweFucked"	"number"
+"Fancyaroused"	"number"
+"fancyffcount"	"number"
+"Fancyfucked"	"number"
+"fancymfcount"	"number"
+"Fancyquest"	"number"
+"Fancytalk"	"number"
+"fangcount"	"number"
+"FangDashRel"	"number"
+"FangSarahInteraction"	"number"
+"FangWS"	"number"
+"fashionfight"	"number"
+"Featqualified"	"number"
+"featunlock"	"number"
+"Feline_attached"	"number"
+"Feline_encountered"	"number"
+"Feline_meow"	"number"
+"feline_status"	"number"
+"Feline_type"	"number"
+"FelinoidRescued"	"number"
+"FelixSaved"	"number"
+"fellforward"	"number"
+"femalecatHP"	"number"
+"femonyxq"	"number"
+"FeralBirths"	"number"
+"FeralMuttDominance"	"number"
+"FeralMuttFurColorNumber"	"number"
+"FeralWolfdefeat"	"number"
+"FeralWolfSpecialFightNumber"	"number"
+"ferretvisit"	"number"
+"fertiletime"	"number"
+"ffrivalry"	"number"
+"fgryphon_TFcount"	"number"
+"fightoutcome"	"number"
+"fightstatus"	"number"
+"Fin"	"number"
+"findablestairs"	"number"
+"Findfirefighter"	"number"
+"findwires"	"number"
+"FinnTrackingProgress"	"number"
+"FionaCarlStatus"	"number"
+"FionaFangStatus"	"number"
+"firebreathcount"	"number"
+"FireSpritemode"	"number"
+"FirstAtlantisVisit"	"number"
+"FirstDescOuter"	"number"
+"FirstMannequinTalk"	"number"
+"fixedgens"	"number"
+"flotintense"	"number"
+"fonyxanalcount"	"number"
+"fonyxvagcount"	"number"
+"foodcount"	"number"
+"foodneed"	"number"
+"foodvendor"	"number"
+"foodwaterbonus"	"number"
+"ForcedBreederslutBoyTF"	"number"
+"ForcedBreederslutTF"	"number"
+"foundparts"	"number"
+"FoxMasterEncounters"	"number"
+"frankmalesex"	"number"
+"franksex"	"number"
+"FratPartyRecruiterProgression"	"number"
+"frbatbeaten"	"number"
+"freecred"	"number"
+"Freefeats"	"number"
+"FriesianRelationship"	"number"
+"fsdbias"	"number"
+"fsddom"	"number"
+"fsdfeedmemory"	"number"
+"FSDOPEN"	"number"
+"fsdsub"	"number"
+"fsnovel"	"number"
+"FuckedByRazorbackBoar"	"number"
+"FuckedBySpartan"	"number"
+"FYDM"	"number"
+"FYDTBMM"	"number"
+"gameplay"	"number"
+"gardenveg"	"number"
+"GarthRelationship"	"number"
+"gascloud"	"number"
+"gatherdemonseed"	"number"
+"gatherdogmilk"	"number"
+"gatherspottedfur"	"number"
+"gathertaintedwool"	"number"
+"gatherwolfcum"	"number"
+"gatorconsent"	"number"
+"gatordefeat"	"number"
+"gazellesbeaten"	"number"
+"gb_gatling_chance"	"number"
+"gb_gatling_counter"	"number"
+"gb_gun"	"number"
+"gb_hair"	"number"
+"generationConflictFlag"	"number"
+"generatorfixing"	"number"
+"GertyQuest"	"number"
+"GertyRelationship"	"number"
+"gettinglee"	"number"
+"giantheight"	"number"
+"GibsonRelationship"	"number"
+"ginafucked"	"number"
+"Ginaslut"	"number"
+"Ginatalk"	"number"
+"givingupton"	"number"
+"GloryFate"	"number"
+"glshiftstart"	"number"
+"glstart"	"number"
+"gobgender"	"number"
+"goblinfight"	"number"
+"GooColossusProgress"	"number"
+"GordonApprehended"	"number"
+"GordonFurSuspicion"	"number"
+"GordonMotive"	"number"
+"GorillasMember"	"number"
+"GorillasMemberQuestCounter"	"number"
+"GorillasRep"	"number"
+"gotcatares"	"number"
+"gotsword"	"number"
+"gotwhip"	"number"
+"grantbitch"	"number"
+"grantfucked"	"number"
+"grantsex"	"number"
+"granttalk"	"number"
+"GreenTumbTurn"	"number"
+"gryphoncomforted"	"number"
+"GryphonessKnowpreg"	"number"
+"GryphPlotTracking"	"number"
+"gsd_encounters"	"number"
+"gsd_pet"	"number"
+"gsd_var"	"number"
+"gsexit"	"number"
+"gsgl"	"number"
+"gsgt"	"number"
+"gshep_bed_scene"	"number"
+"gshep_fights"	"number"
+"gshep_inactive"	"number"
+"gshep_postfight"	"number"
+"gshep_sexscene"	"number"
+"GShepLastScene"	"number"
+"gshepsquad"	"number"
+"gsms"	"number"
+"gspg"	"number"
+"GusTalkProgress"	"number"
+"hadiyafucked"	"number"
+"hagfeat"	"number"
+"halodestroyed"	"number"
+"Haroldaroused"	"number"
+"Haroldfucked"	"number"
+"Haroldtalk"	"number"
+"Harpyconsent"	"number"
+"Harpydefeat"	"number"
+"harpyfight"	"number"
+"hasgills"	"number"
+"HasParts"	"number"
+"hawkmanbeaten"	"number"
+"HayatoHunger"	"number"
+"HBMR"	"number"
+"hdform"	"number"
+"hdmode"	"number"
+"hdog"	"number"
+"heatdrive"	"number"
+"HeatedPoodle"	"number"
+"heatform"	"number"
+"heatlevel"	"number"
+"HelenPregnant"	"number"
+"hellgatherquest"	"number"
+"hellHoundLevel"	"number"
+"HelpKenazOut"	"number"
+"HermaidSub"	"number"
+"hermlvconsent"	"number"
+"hermlvmeet"	"number"
+"hfgbread"	"number"
+"HG_Flashback_Turns"	"number"
+"HG_Stage"	"number"
+"hgryphon_TGcount"	"number"
+"hgryphonwin"	"number"
+"hgsqc"	"number"
+"hijackgestation"	"number"
+"hobo-food-reminder"	"number"
+"hobo-grmilkhelp"	"number"
+"hobo-journal"	"number"
+"hobo-medical"	"number"
+"hobo-medical-gift"	"number"
+"hobo-water-reminder"	"number"
+"Homarusearch"	"number"
+"Homarusearching"	"number"
+"Homarutalk"	"number"
+"horsefight"	"number"
+"hospbattlelost"	"number"
+"hospcountdown"	"number"
+"hospfight"	"number"
+"hospnav"	"number"
+"hospquest"	"number"
+"hospstairs"	"number"
+"hpF of Sylvia"	"number"
+"hpM of Sylvia"	"number"
+"hsrp"	"number"
+"huntfeat"	"number"
+"hvorecount"	"number"
+"hvorelevel"	"number"
+"hydraheadcount"	"number"
+"hydramaulcount"	"number"
+"hyenaintel"	"number"
+"hyenastabledeal"	"number"
+"HyenaTrailing"	"number"
+"HYG"	"number"
+"hypernull"	"number"
+"HyperSerumTracker"	"number"
+"icarus_cbt"	"number"
+"icarus_cumstuff"	"number"
+"icarus_lastpred"	"number"
+"IcarusAmySex"	"number"
+"icarussex6_variant"	"number"
+"impalamode"	"number"
+"ImpPlayerMarkingTurn"	"number"
+"inafight"	"number"
+"incubusnosex"	"number"
+"InflatableOtterSuitBindStage"	"number"
+"InflatableOtterSuitMode"	"number"
+"infvulpstate"	"number"
+"invcolumns"	"number"
+"invlinklistfilled"	"number"
+"isTwinHere"	"number"
+"JackalBoyTF"	"number"
+"JackalManTF"	"number"
+"JaksEncounters"	"number"
+"jamesfed"	"number"
+"jamessex"	"number"
+"Janicearoused"	"number"
+"Janicequest"	"number"
+"Janicetalk"	"number"
+"JayMarkRelationship"	"number"
+"jbfound"	"number"
+"jdigup"	"number"
+"JennaRelationship"	"number"
+"Jenniferfucked"	"number"
+"Jenniferpregnant"	"number"
+"Jenniferwolves"	"number"
+"JewelHeistCaught"	"number"
+"joannaharoldtalk"	"number"
+"joannaoffernum"	"number"
+"joannatalk"	"number"
+"junknum"	"number"
+"JustinRelationship"	"number"
+"kangaroodefeat"	"number"
+"KatyaDildoTaken"	"number"
+"KatyaRelationship"	"number"
+"KatyaResistance"	"number"
+"keepbody"	"number"
+"keepcock"	"number"
+"keepface"	"number"
+"keepskin"	"number"
+"keeptail"	"number"
+"Kenazaroused"	"number"
+"Kenazdes"	"number"
+"Kenaztalk"	"number"
+"keycollection"	"number"
+"KinksandFetishes"	"number"
+"Kitsunearoused"	"number"
+"Kitsunetalk"	"number"
+"kittyness"	"number"
+"knightcrestnum"	"number"
+"KoballoonLossCounter"	"number"
+"KoballoonMet"	"number"
+"KoballoonSexBadEnd"	"number"
+"koboldgangmet"	"number"
+"koboldgangsubs"	"number"
+"Koghhstatus"	"number"
+"KorvinSubmitCounter"	"number"
+"kpstatus"	"number"
+"KTO"	"number"
+"KTP"	"number"
+"ktspeciesbonus"	"number"
+"KurtEvent"	"number"
+"KurtRelationship"	"number"
+"KyleRelationship"	"number"
+"KyrverthMaleBoning"	"number"
+"KyrverthQuestGiven"	"number"
+"KyrverthStage"	"number"
+"KyrverthTimer"	"number"
+"labhost"	"number"
+"labtimerA"	"number"
+"labtimerB"	"number"
+"lairconsent"	"number"
+"LampVariable"	"number"
+"LarissaBodycat"	"number"
+"LarissaLastTF"	"number"
+"LarissaOldgender"	"number"
+"LarissTFcost"	"number"
+"larvacounter"	"number"
+"larvaegg"	"number"
+"larvaexpel"	"number"
+"larvalaid"	"number"
+"last_infvulp_airhead"	"number"
+"lastABEncounter"	"number"
+"lastAlexandraPast"	"number"
+"lastAlexandraSarahInteraction"	"number"
+"lastAmySpotted"	"number"
+"lastAndreTalk"	"number"
+"LastAngieLearned"	"number"
+"lastArtemisglomp"	"number"
+"lastArtemisplay"	"number"
+"LastAtlantisCenterWalkin"	"number"
+"lastbcchair"	"number"
+"lastbcduobeaten"	"number"
+"lastBodyShopEvent"	"number"
+"lastbookshelves"	"number"
+"lastBrennanWolfScene"	"number"
+"LastCampusWalkin"	"number"
+"lastCandyfucked"	"number"
+"lastCandyUrikInteraction"	"number"
+"LastCandyWalkin"	"number"
+"lastCarlEricInteraction"	"number"
+"lastCarlSarahInteraction"	"number"
+"LastCatgirlFuck"	"number"
+"lastcheetahturns"	"number"
+"lastChristyfucked"	"number"
+"lastchurchattempt"	"number"
+"lastColeenSarahInteraction"	"number"
+"lastconfession"	"number"
+"lastConfSvenEricInteraction"	"number"
+"lastDavidSarahInteraction"	"number"
+"Lastdelaymilitary"	"number"
+"lastdenevent"	"number"
+"LastDiegoTricked"	"number"
+"lastdobiemess"	"number"
+"LastDrinkserved"	"number"
+"lastDrMousefucked"	"number"
+"lastEricSarahInteraction"	"number"
+"lastFangSarahInteraction"	"number"
+"lastFelixTalk"	"number"
+"lastfgryphon_TF"	"number"
+"lastfightround"	"number"
+"lastflowersmell"	"number"
+"Lastfoodrun"	"number"
+"lastfsdfeeding"	"number"
+"Lastgameplay"	"number"
+"lastgardenveg"	"number"
+"lastGuardBeg"	"number"
+"LastHelenTalk"	"number"
+"LastHelpKenazOut"	"number"
+"lasthgryphon_TG"	"number"
+"LastImpMeeting"	"number"
+"lastinvfoundindex"	"number"
+"LastJaksEncounter"	"number"
+"LastJenniferSoda"	"number"
+"lastjoannajuice"	"number"
+"Lastjournaluse"	"number"
+"LastKenazdes"	"number"
+"lastleomidcoitus"	"number"
+"lastlibrarybrowse"	"number"
+"lastLilithTalk"	"number"
+"LastLockerroomTrioMeet"	"number"
+"lastMallInteriorScene"	"number"
+"Lastmarefed"	"number"
+"LastMarketWalkin"	"number"
+"Lastmidnightmimiced"	"number"
+"lastmilking"	"number"
+"lastMKoutcome"	"number"
+"LastMoreauPartSale"	"number"
+"lastNadiaSpotted"	"number"
+"lastoctofight"	"number"
+"LastOmioteatime"	"number"
+"lastorcabeat"	"number"
+"lastPaulahealing"	"number"
+"Lastpigfed"	"number"
+"lastPolicePatrol"	"number"
+"lastpolicerepair"	"number"
+"lastpoolgame"	"number"
+"lastpubvisit"	"number"
+"lastrandomharold"	"number"
+"lastRaneEricInteraction"	"number"
+"lastratdartthrow"	"number"
+"lastratvisit"	"number"
+"LastResidentialWalkin"	"number"
+"LastRiddle"	"number"
+"Lastriddlesphinx"	"number"
+"lastRyouseiDavidInteraction"	"number"
+"lastRyouseiEricInteraction"	"number"
+"lastSallyfucked"	"number"
+"lastsealfight"	"number"
+"lastSeptusfucked"	"number"
+"lastShowerUse"	"number"
+"Lastskunkfuck"	"number"
+"LastSlutslavefucked"	"number"
+"lastSlutslavelearned"	"number"
+"lastSnowStarGiven"	"number"
+"laststellamove"	"number"
+"lastSvendrink"	"number"
+"LastTehuantlCarlScene"	"number"
+"LastTehuantlKorvinScene"	"number"
+"lasttentaclebattleoutcome"	"number"
+"lastThomasTalk"	"number"
+"LastTimothymilked"	"number"
+"lastTomeInteraction"	"number"
+"Lasttreasurehunt"	"number"
+"LastTSEvent"	"number"
+"lastturn"	"number"
+"lastUrikEricInteraction"	"number"
+"Lastvixenposing"	"number"
+"Lastwaterrun"	"number"
+"LastWerewolfFuck"	"number"
+"lastworkout"	"number"
+"LastXerxesTalk"	"number"
+"laundryProgress"	"number"
+"lavalamplick"	"number"
+"lbfight"	"number"
+"LectureCheck"	"number"
+"Leonardtimer"	"number"
+"leosupplies"	"number"
+"lessontime"	"number"
+"Levelwindow"	"number"
+"lgnumber"	"number"
+"libfight"	"number"
+"libidomemory"	"number"
+"libstealth"	"number"
+"libsuppcount"	"number"
+"libvis"	"number"
+"lilianabathsex"	"number"
+"LilithKidCounter"	"number"
+"LilithPregCounter"	"number"
+"LilithPregnancy"	"number"
+"lisaartemiscount1"	"number"
+"lisaartemiscount2"	"number"
+"Lisacheat"	"number"
+"littlelostskunk"	"number"
+"lizgirlangry"	"number"
+"lizgirlimpreg"	"number"
+"lizgirlinheat"	"number"
+"lizgirlmarked"	"number"
+"LockerroomTrioRelationship"	"number"
+"LoganCommand"	"number"
+"LOK"	"number"
+"longboatfind"	"number"
+"looknow"	"number"
+"Lost"	"number"
+"losttoalphahusky"	"number"
+"LostToZebra"	"number"
+"loversbench"	"number"
+"LURM"	"number"
+"lustadjust"	"number"
+"lustatt"	"number"
+"lwcounter"	"number"
+"MalakhiRelationship"	"number"
+"malecatHP"	"number"
+"mammoth_cv_count"	"number"
+"marefed"	"number"
+"margaydancecount"	"number"
+"margaymet"	"number"
+"margayubed"	"number"
+"MarkedSeraphisCum"	"number"
+"MarketVisits"	"number"
+"mateable"	"number"
+"matriarchdefeated"	"number"
+"matriarchowned"	"number"
+"mattcollection"	"number"
+"mattintel"	"number"
+"mdasslevel"	"number"
+"mdl"	"number"
+"mdmaxlossscene"	"number"
+"mdrakeanal"	"number"
+"mdrakebeaten"	"number"
+"mdrakeloss"	"number"
+"mdrakeoversized"	"number"
+"medeaget"	"number"
+"MenuRiddleNumber"	"number"
+"metalskin"	"number"
+"micaela_bf"	"number"
+"MichaelGholeMeetings"	"number"
+"Midnightmimiced"	"number"
+"midnightsighted"	"number"
+"MiltonRelationship"	"number"
+"minilabfight"	"number"
+"missskip"	"number"
+"MiyukiRelationship"	"number"
+"MKloss"	"number"
+"MKmet"	"number"
+"MKwin"	"number"
+"mlamiabeaten"	"number"
+"mlamialoss"	"number"
+"MMC"	"number"
+"MMP"	"number"
+"mondodgebonus"	"number"
+"monhitbonus"	"number"
+"monmindbonus"	"number"
+"monstercom"	"number"
+"monsterHP"	"number"
+"monstermemory"	"number"
+"monsterpoison"	"number"
+"monsterpowerup"	"number"
+"Mooed"	"number"
+"Mooing"	"number"
+"Mothdefeat"	"number"
+"mothgirlnosex"	"number"
+"mousecounter"	"number"
+"mousecurse"	"number"
+"mousefucked"	"number"
+"mouseintel"	"number"
+"mousespot"	"number"
+"mousevic"	"number"
+"MovingOrwell"	"number"
+"mpregcount"	"number"
+"mqcountdown"	"number"
+"mqfightresult"	"number"
+"mqpickup"	"number"
+"mqstatus"	"number"
+"mre01"	"number"
+"mre02"	"number"
+"MSStorageVisited"	"number"
+"MTP"	"number"
+"mtrp"	"number"
+"MulAnalAcceptance"	"number"
+"multicunt"	"number"
+"MurderMystery"	"number"
+"MushroomCaveVisited"	"number"
+"MYDAM"	"number"
+"MYDGM"	"number"
+"MYDTBMM"	"number"
+"myseread"	"number"
+"NadiaChickCounter"	"number"
+"NadiaDescription"	"number"
+"NadiaFertilityCounter"	"number"
+"NadiaintCounter"	"number"
+"NadiaPregCounter1"	"number"
+"NadiaPregCounter2"	"number"
+"NadiaPregCounter3"	"number"
+"NadiaPregVisibility"	"number"
+"nanitemeter"	"number"
+"NatalieFucked"	"number"
+"ndmhigh"	"number"
+"NerdMeetings"	"number"
+"NereidRelationship"	"number"
+"NermineAroused"	"number"
+"NermineBukkakeTurn"	"number"
+"NermineFeat"	"number"
+"NermineFennecTurn"	"number"
+"NermineFucked"	"number"
+"Nerminehelpstatus"	"number"
+"nerminepackage"	"number"
+"nerminepackagematt"	"number"
+"NermineQuest"	"number"
+"NermineTalk"	"number"
+"NESProgress"	"number"
+"nesteddino"	"number"
+"NewGraphicsInteger"	"number"
+"NewGraphicsRatio"	"number"
+"NGRP"	"number"
+"nightcheck"	"number"
+"Nightmaremastery"	"number"
+"Nightmareslavery"	"number"
+"nightmaretf"	"number"
+"no_AlexandraNPC"	"number"
+"no_AlexandraTask"	"number"
+"noamazoniansex"	"number"
+"noanimebabesex"	"number"
+"nobeaversex"	"number"
+"nobirdofparadisesex"	"number"
+"nobluechaffinchsex"	"number"
+"nocandycoonsex"	"number"
+"nochinchillasex"	"number"
+"nodonkeywomansex"	"number"
+"noeaglesex"	"number"
+"noelksex"	"number"
+"nofponysex"	"number"
+"nogiraffesex"	"number"
+"nogunbunnysex"	"number"
+"nohawkmansex"	"number"
+"nohgryphonsex"	"number"
+"NoIntroduction"	"number"
+"nolatexerminesex"	"number"
+"noocelotbtsex"	"number"
+"noocelotldsex"	"number"
+"nopiratesharksex"	"number"
+"noplionsex"	"number"
+"nopoodlesex"	"number"
+"nosnowmeowsex"	"number"
+"nosugarglidersex"	"number"
+"noteddybearsex"	"number"
+"notrashcoonsex"	"number"
+"novicsex"	"number"
+"NPCintCounter"	"number"
+"nsgained"	"number"
+"numOfBountiesLeft"	"number"
+"numwater"	"number"
+"ocelotchoice"	"number"
+"ocelotsize"	"number"
+"OfficeGirlsDominance"	"number"
+"OfficeGirlsFriendship"	"number"
+"OgreMeetings"	"number"
+"Ointerrogate"	"number"
+"OliverRelationship"	"number"
+"Omiotalk"	"number"
+"omq"	"number"
+"Onyxboislut"	"number"
+"onyxdma"	"number"
+"onyxdmc"	"number"
+"onyxdmra"	"number"
+"onyxfinale"	"number"
+"onyxlapdance"	"number"
+"Onyxmareslut"	"number"
+"opcl"	"number"
+"orcadom"	"number"
+"orcafdom"	"number"
+"orcaintense"	"number"
+"OrcFemSpecialFightNumber"	"number"
+"OrcSlaverCaptureTime"	"number"
+"OrcSlaverStatus"	"number"
+"OrcSpecialFightNumber"	"number"
+"Otterconsent"	"number"
+"Otterdefeat"	"number"
+"OttoForm"	"number"
+"ovipreglevel"	"number"
+"partner1Choice"	"number"
+"partner2Choice"	"number"
+"patrooms"	"number"
+"peachtreefight"	"number"
+"peacockcontrol"	"number"
+"Peacocked"	"number"
+"pepped"	"number"
+"peppereyes"	"number"
+"PericlesRelationship"	"number"
+"petchance"	"number"
+"pethitbonus"	"number"
+"pewterassocc"	"number"
+"pewterassvar1"	"number"
+"pewterassvar2"	"number"
+"pewterbodycap"	"number"
+"pewterbodyocc"	"number"
+"pewtercockocc"	"number"
+"pewtercockvar1"	"number"
+"pewtercockvar2"	"number"
+"pewtercuntocc"	"number"
+"pewtercuntvar1"	"number"
+"pewtercuntvar2"	"number"
+"pewtergenitalcap"	"number"
+"pewterheadcap"	"number"
+"pewterheadocc"	"number"
+"pewterheadvar1"	"number"
+"pewterheadvar2"	"number"
+"pewterheadvar3"	"number"
+"pfptype"	"number"
+"PhilipMudWrestleCount"	"number"
+"PhilipWrestleEnd"	"number"
+"piercesave"	"number"
+"piercestatus"	"number"
+"piercingquest"	"number"
+"Pigfed"	"number"
+"Pigfucked"	"number"
+"piginitiation"	"number"
+"pitbullgender"	"number"
+"plantdefeat"	"number"
+"plantwin"	"number"
+"playercrestnum"	"number"
+"PlayerInformed"	"number"
+"playermetalskin"	"number"
+"playerpoison"	"number"
+"playon"	"number"
+"pldamagebonus"	"number"
+"pldodgebonus"	"number"
+"plfleebonus"	"number"
+"plhitbonus"	"number"
+"plionvic"	"number"
+"plionvored"	"number"
+"plmindbonus"	"number"
+"plnatarmor"	"number"
+"PLRLooted"	"number"
+"plushleoloss"	"number"
+"plweaknatarmor"	"number"
+"policerepair"	"number"
+"PoliceStationTwelveInfpop"	"number"
+"PoliceStationTwelvePopulation"	"number"
+"poodleapproved"	"number"
+"PoseidonRelationship"	"number"
+"PowerUpDrugTrip"	"number"
+"pquest"	"number"
+"pr_completion"	"number"
+"prankevent"	"number"
+"pregtype"	"number"
+"provingstallionhood"	"number"
+"psycheadjust"	"number"
+"pubvisit"	"number"
+"purfeat"	"number"
+"purpol"	"number"
+"purpolu"	"number"
+"quitter"	"number"
+"rabbitfucked"	"number"
+"rabbitmulticock"	"number"
+"rabbitsibling"	"number"
+"rachelfuck"	"number"
+"RamFucked"	"number"
+"ramlosstick"	"number"
+"ramtraining"	"number"
+"ramvar"	"number"
+"RandallBradRelationship"	"number"
+"RandomItemPick"	"number"
+"RaneDeedsTracker"	"number"
+"RareQuesting"	"number"
+"ratdartcount"	"number"
+"RazorbackBoarEvents"	"number"
+"ReceptionistTalk"	"number"
+"recoverchance"	"number"
+"Recoveredhardware"	"number"
+"RegChaseHelp"	"number"
+"Researchbypass"	"number"
+"Resevquest"	"number"
+"ResidentialVisits"	"number"
+"restaurantpig"	"number"
+"restoration"	"number"
+"riddlesphinx"	"number"
+"Riddlewin"	"number"
+"rodhosp"	"number"
+"RomanceBooksFound"	"number"
+"rondafight"	"number"
+"rondahosp"	"number"
+"rsc"	"number"
+"RTWinCounter"	"number"
+"RyanFucked"	"number"
+"RyouseiDavidInteraction"	"number"
+"RyouseiEricInteraction"	"number"
+"RyouseiHayato"	"number"
+"RyouseiRane"	"number"
+"RyouseiXerxes"	"number"
+"sabtoothed"	"number"
+"sabtoothedmatt"	"number"
+"SandySaved"	"number"
+"SarahCured"	"number"
+"SarahPregnant"	"number"
+"SarahPups"	"number"
+"SarahShower"	"number"
+"SarahSlut"	"number"
+"SarahTalk"	"number"
+"SatisfiedTanuki"	"number"
+"SatyressStage"	"number"
+"SatyrFratPartyStage"	"number"
+"SatyrFratRichardRelationship"	"number"
+"scaledr"	"number"
+"scopnum"	"number"
+"ScottyRelationship"	"number"
+"scufflecount"	"number"
+"sdbook"	"number"
+"SeraphisContent"	"number"
+"SeraphisNeedy"	"number"
+"SeraphisRelationship"	"number"
+"SerenityHunger"	"number"
+"SethFucked"	"number"
+"SethTempleNumber"	"number"
+"sextablerun"	"number"
+"sgtimer"	"number"
+"sgtmarkstalk"	"number"
+"ShadowBeastEventState"	"number"
+"shadowy"	"number"
+"SharkFountainCounter"	"number"
+"shiftable"	"number"
+"shiftcatch"	"number"
+"sierramem"	"number"
+"SilverToken"	"number"
+"sirenfight"	"number"
+"SizeEnvyTracker"	"number"
+"SkarnothLibraryEntry"	"number"
+"SkarnothMasterSlave"	"number"
+"skipturnblocker"	"number"
+"skrp"	"number"
+"Skunk_type"	"number"
+"skunkbeaststatus"	"number"
+"skunkfight"	"number"
+"skunkfucked"	"number"
+"skunkmulticock"	"number"
+"skunkready"	"number"
+"skunksister"	"number"
+"skunkspot"	"number"
+"SlaveRaidEncounters"	"number"
+"Sleeptimercount"	"number"
+"slutfucked"	"number"
+"Slutratcor"	"number"
+"SlutRatDenPoolTable"	"number"
+"SlutRatDenVisitTimes"	"number"
+"SlutratSub"	"number"
+"Slutslavefucked"	"number"
+"Slutslavelearned"	"number"
+"Slutslavetalk"	"number"
+"smf"	"number"
+"snakecap"	"number"
+"snakedomm"	"number"
+"snakehijack"	"number"
+"snakehijacktimer"	"number"
+"snakeocc"	"number"
+"snakesubm"	"number"
+"SnowAmySex"	"number"
+"snowbatfight"	"number"
+"SnowmeowSoldierStatus"	"number"
+"Soldierhorsetf"	"number"
+"solsticefsex"	"number"
+"solsticemsex"	"number"
+"SonnyFood"	"number"
+"SonnyQuest"	"number"
+"SonnyRelationship"	"number"
+"SpidertaurRelationship"	"number"
+"spiritlove"	"number"
+"spottedfurfound"	"number"
+"Spriteconsent"	"number"
+"Spritedefeat"	"number"
+"SquadEncounters"	"number"
+"squidcolor"	"number"
+"squirefeature"	"number"
+"squirrelfucked"	"number"
+"squirrelspot"	"number"
+"ssstash"	"number"
+"Stablesearchstatus"	"number"
+"staircaselocation"	"number"
+"Started"	"number"
+"statuequest"	"number"
+"steriletime"	"number"
+"Stevenfood"	"number"
+"StevenFuckcount"	"number"
+"Stevenmm"	"number"
+"Stevenremoved"	"number"
+"StevenSwayed"	"number"
+"Steventrust"	"number"
+"Stevenwater"	"number"
+"StewartLocationCounter"	"number"
+"StewartRelationship"	"number"
+"stiffedpayment"	"number"
+"strangebottledrink"	"number"
+"stripbarcounter"	"number"
+"strongbacked"	"number"
+"struggleatt"	"number"
+"sugarferretfight"	"number"
+"supermarketcount"	"number"
+"survfeat"	"number"
+"Susanfirsttime"	"number"
+"SvenAmySex"	"number"
+"SvenCandyMsg"	"number"
+"SylviaConv"	"number"
+"SylviaTrapVar"	"number"
+"SylviaVirginCheck"	"number"
+"taintedwoolfound"	"number"
+"Targetturns"	"number"
+"tatsave"	"number"
+"tatstatus"	"number"
+"tattoohunter"	"number"
+"TawnyaFurSuspicion"	"number"
+"TawnyaMotive"	"number"
+"tcopfight"	"number"
+"teddyvored"	"number"
+"TehuantlKorvinRelationship"	"number"
+"TehuantlSnowStatus"	"number"
+"TehuantlStatus"	"number"
+"TehuantlTimer"	"number"
+"TempClearBypass"	"number"
+"tempGorillaGender"	"number"
+"templust"	"number"
+"tempnum"	"number"
+"tempnum2"	"number"
+"tempthirst"	"number"
+"TentacleInteractions"	"number"
+"tentaclerape"	"number"
+"TentacleStatus"	"number"
+"tentsubmit"	"number"
+"thabread"	"number"
+"ThomasPregnancy"	"number"
+"ThomasQuestVar"	"number"
+"ThomasSaved"	"number"
+"ThunderTrackingVariable"	"number"
+"tightfitcount"	"number"
+"tigressclient"	"number"
+"tigressfucked"	"number"
+"tigresswinner"	"number"
+"TimekeepingVar"	"number"
+"timetillrampage"	"number"
+"Timothyfucked"	"number"
+"tmapfound"	"number"
+"tmonster"	"number"
+"TomeFound"	"number"
+"TomeInfluence"	"number"
+"TomeInfluenceTimer"	"number"
+"TomeInteractions"	"number"
+"TomeTimer"	"number"
+"Tpfs"	"number"
+"Treasurefound"	"number"
+"treasurehunt"	"number"
+"triclamped"	"number"
+"triclampedmatt"	"number"
+"TritonRelationship"	"number"
+"TryoutScore"	"number"
+"TSEventCounter"	"number"
+"tsw_fsd"	"number"
+"tsw_relationship"	"number"
+"tti_scene"	"number"
+"ttIcarus"	"number"
+"ttransform"	"number"
+"Turns"	"number"
+"turns in heat"	"number"
+"TwelveLaborsStage"	"number"
+"twpimpbeaten"	"number"
+"twpimploss"	"number"
+"Tyraffection"	"number"
+"TyrDefeated"	"number"
+"Tyrtalk"	"number"
+"ubchoice"	"number"
+"ubcount"	"number"
+"UBlevel"	"number"
+"UrikEricInteraction"	"number"
+"UrsineDefeatCount"	"number"
+"UtahGender"	"number"
+"valhosp"	"number"
+"ValPregCounter"	"number"
+"ValPregnancy"	"number"
+"Valtalk"	"number"
+"veggiegardenfight"	"number"
+"VentDomSize"	"number"
+"VentFluidAmount"	"number"
+"VentFoxContentLevel"	"number"
+"VentFoxEncounterCount"	"number"
+"VentFoxLastFed"	"number"
+"VentFoxRelationship"	"number"
+"VentOviAmount"	"number"
+"VentSubSize"	"number"
+"VentWSAmount"	"number"
+"vetcheater"	"number"
+"vgeckoanal"	"number"
+"vgeckobeaten"	"number"
+"vgeckoloss"	"number"
+"VictoryOverDaBull"	"number"
+"VikingKidCounter"	"number"
+"VikingKidGender"	"number"
+"VikingPregCounter"	"number"
+"VikingPregnancy"	"number"
+"VikingRelationship"	"number"
+"VikingSpartanWar"	"number"
+"VikingUltimatum"	"number"
+"VikingWar"	"number"
+"Vinetrapped"	"number"
+"violinfound"	"number"
+"vixcountdown"	"number"
+"vixentaurcatch"	"number"
+"vixgender"	"number"
+"vorechoice"	"number"
+"vorecount"	"number"
+"vorelevel"	"number"
+"vpostmusenum"	"number"
+"waiterhater"	"number"
+"WallStanding"	"number"
+"WarLossCounter"	"number"
+"WarriorChrisDominance"	"number"
+"WarriorChrisPlayerFucked"	"number"
+"wasfertile"	"number"
+"wasfertilef"	"number"
+"washerenest"	"number"
+"wassterile"	"number"
+"wassterilef"	"number"
+"watercount"	"number"
+"waterneed"	"number"
+"waterworks"	"number"
+"weaselcount"	"number"
+"WellRestedTimer"	"number"
+"werewolfcostumenosex"	"number"
+"WerewolfRelationship"	"number"
+"whelpspotnum"	"number"
+"WhiptailLossCount"	"number"
+"WhoringExperience"	"number"
+"WineFound"	"number"
+"wolfcumfound"	"number"
+"wolffight"	"number"
+"wolfhermdefeat"	"number"
+"wolfhermvictory"	"number"
+"WolfHorseMallCouple"	"number"
+"wolvfightresult"	"number"
+"workoutprice"	"number"
+"wrcurseholdback"	"number"
+"wrcurseMoffatt"	"number"
+"wrcurseNermine"	"number"
+"wrcursestart"	"number"
+"wrcursestatus"	"number"
+"wrdaycycle"	"number"
+"wrestlechance"	"number"
+"wrestlingwolfdefeat"	"number"
+"wrlastNermine"	"number"
+"wrmode"	"number"
+"wrscalevalue"	"number"
+"wrwolfanal"	"number"
+"wrwolfbeaten"	"number"
+"WSlevel"	"number"
+"wwheal"	"number"
+"wyvernbias"	"number"
+"WYVGEN"	"number"
+"wyvkin1att"	"number"
+"wyvkin1gen"	"number"
+"wyvkin1lib"	"number"
+"wyvkin2att"	"number"
+"wyvkin2gen"	"number"
+"wyvkin2lib"	"number"
+"wyvkin3att"	"number"
+"wyvkin3gen"	"number"
+"wyvkin3lib"	"number"
+"wyvkin4att"	"number"
+"wyvkin4gen"	"number"
+"wyvkin4lib"	"number"
+"wyvkinassign"	"number"
+"wyvkinatt"	"number"
+"wyvkinocc"	"number"
+"WYVLEV"	"number"
+"wyvorgyroll"	"number"
+"WYVSF"	"number"
+"yamatdom"	"number"
+"ydcolor"	"number"
+"YDSF"	"number"
+"ymgmode"	"number"
+"ZebraLossCount"	"number"
+"ZekeRelationship"	"number"
+"zephyrpests"	"number"
+"zephyrtask"	"number"
+"ZieraFucked"	"number"
+"zigseat"	"number"
+"zpc_Zc"	"number"
+"battleground"	"text"
+"bcfinalchairform"	"text"
+"bcfinalpillarform"	"text"
+"BlueDesignator"	"text"
+"bodyselector"	"text"
+"BodyShopGuaranteedBody"	"text"
+"BodyShopGuaranteedCrotch"	"text"
+"BodyShopGuaranteedFace"	"text"
+"BodyShopGuaranteedSkin"	"text"
+"BodyShopGuaranteedTail"	"text"
+"ButterflyAttire"	"text"
+"ButterflyBabyBodyName"	"text"
+"ButterflyBabyCockName"	"text"
+"ButterflyBabyFaceName"	"text"
+"ButterflyBabySkinName"	"text"
+"ButterflyBabyTailName"	"text"
+"ButterflyBreastDesc"	"text"
+"ButterflyTummy"	"text"
+"cockdata"	"text"
+"CorbinImpregnatingCock"	"text"
+"descr"	"text"
+"DoranPlayerRegard"	"text"
+"ElijahChar-A"	"text"
+"ElijahChar-B"	"text"
+"ElijahChar-C"	"text"
+"ElijahChar-D"	"text"
+"ElijahChar-E"	"text"
+"ElijahChar-F"	"text"
+"ElijahChar-G"	"text"
+"ElijahChar-H"	"text"
+"ElijahChar-I"	"text"
+"ElijahChar-J"	"text"
+"ElijahChar-K"	"text"
+"ElijahChar-L"	"text"
+"ElijahChar-M"	"text"
+"EricCurrentBabyDaddy"	"text"
+"FeralMuttCurrentBreed"	"text"
+"FeralMuttDetailedLook"	"text"
+"FeralMuttFurColor"	"text"
+"freefeatfun"	"text"
+"freefeatgeneral"	"text"
+"furdata"	"text"
+"gche"	"text"
+"gchim"	"text"
+"gchis"	"text"
+"gchishers"	"text"
+"gdragon"	"text"
+"ghe"	"text"
+"ghim"	"text"
+"ghis"	"text"
+"ghishers"	"text"
+"gmasculine"	"text"
+"hdformname"	"text"
+"headadjdata"	"text"
+"headdata"	"text"
+"HighestPlayerStat"	"text"
+"horndata"	"text"
+"JenniferFirstKidSpecialStat"	"text"
+"keychar"	"text"
+"LarissaBody"	"text"
+"LarissaBodyDesc"	"text"
+"LarissaBodyType"	"text"
+"LarissaCock"	"text"
+"LarissaFace"	"text"
+"LarissaFootForm"	"text"
+"LarissaForm"	"text"
+"LarissaGeneralLook"	"text"
+"LarissaHandForm"	"text"
+"LarissaInfName"	"text"
+"LarissaMouth"	"text"
+"LarissaSkin"	"text"
+"LarissaTail"	"text"
+"LarissaTFText"	"text"
+"larmdata"	"text"
+"llegdata"	"text"
+"Lusting"	"text"
+"musicmessage"	"text"
+"NadiaChar-A"	"text"
+"NadiaChar-B"	"text"
+"NadiaChar-C"	"text"
+"NadiaChar-D"	"text"
+"NadiaChar-E"	"text"
+"NadiaChar-F"	"text"
+"NadiaChar-G"	"text"
+"NadiaChar-H"	"text"
+"NadiaChar-I"	"text"
+"NadiaChar-J"	"text"
+"NadiaChar-K"	"text"
+"NadiaChar-L"	"text"
+"NadiaChar-M"	"text"
+"pfpbootymark"	"text"
+"pfpcock"	"text"
+"pfphair"	"text"
+"pfpskin"	"text"
+"ppcolor"	"text"
+"rarmdata"	"text"
+"ridemessage"	"text"
+"rlegdata"	"text"
+"sangr"	"text"
+"Scenario"	"text"
+"sh-descr"	"text"
+"siamesegender"	"text"
+"slutname"	"text"
+"StellaNPCInt"	"text"
+"tempGorillaName1"	"text"
+"tempGorillaName2"	"text"
+"torsodata"	"text"
+"ubpreg"	"text"
+"VikingKidShape"	"text"
+"weaselcolor"	"text"
+"wolvloc"	"text"
+"wrbody"	"text"
+"wrbodydesc"	"text"
+"wrbodyname"	"text"
+"wrbodytype"	"text"
+"wrcock"	"text"
+"wrcockname"	"text"
+"wrface"	"text"
+"wrfacename"	"text"
+"wrskin"	"text"
+"wrskinname"	"text"
+"wrtail"	"text"
+"wrtailname"	"text"
+"A_Candy"	"truth state"
+"A_Coleen"	"truth state"
+"A_David"	"truth state"
+"A_Elijah"	"truth state"
+"A_Fang"	"truth state"
+"A_Helen"	"truth state"
+"A_Icarus"	"truth state"
+"A_Mack"	"truth state"
+"A_Onyx"	"truth state"
+"A_Philip"	"truth state"
+"A_Sally"	"truth state"
+"A_Sam"	"truth state"
+"A_Sandra"	"truth state"
+"A_Sarah"	"truth state"
+"A_Sarah2"	"truth state"
+"A_Snow"	"truth state"
+"A_Solstice"	"truth state"
+"A_Sven"	"truth state"
+"A_Xerxes"	"truth state"
+"Alexandracoffee"	"truth state"
+"alexandragshep1"	"truth state"
+"Alexandrastory"	"truth state"
+"Alexandrastory2"	"truth state"
+"Alexandrastory3"	"truth state"
+"alphaHuskyBountyState"	"truth state"
+"alphawolfreplaced"	"truth state"
+"altsealedentrance"	"truth state"
+"animal heat"	"truth state"
+"animeclubfight"	"truth state"
+"artemisstatefairrt"	"truth state"
+"AT_Diego"	"truth state"
+"AT_Jimmy"	"truth state"
+"AT_Lisa"	"truth state"
+"AT_Marks"	"truth state"
+"AT_Matt"	"truth state"
+"AT_Mouse"	"truth state"
+"AT_Patrol"	"truth state"
+"at_patrol_01"	"truth state"
+"AT_Paula"	"truth state"
+"AT_Philip"	"truth state"
+"AT_Qytat"	"truth state"
+"AT_Repair"	"truth state"
+"AT_RLD"	"truth state"
+"AT_Sandra"	"truth state"
+"AT_Sarah"	"truth state"
+"AT_Snow"	"truth state"
+"AT_Stella"	"truth state"
+"AT_Sven"	"truth state"
+"autofeatloading"	"truth state"
+"Azari_Met"	"truth state"
+"BastetSexOrTalk"	"truth state"
+"bcduofightfled"	"truth state"
+"bcduofightlost"	"truth state"
+"bcplayroomlast"	"truth state"
+"bcseenhugeorca"	"truth state"
+"bcseenkingchair"	"truth state"
+"bcseenkingknight"	"truth state"
+"bcseenplayroom"	"truth state"
+"bcseenpunchingpillars"	"truth state"
+"bcseenthroneroom"	"truth state"
+"bcswordplay"	"truth state"
+"beachrape"	"truth state"
+"beauceronmet"	"truth state"
+"birthedwhelp"	"truth state"
+"blanchefight"	"truth state"
+"blanchetalk1"	"truth state"
+"blanchetalk2"	"truth state"
+"blanchetalk3"	"truth state"
+"blindmode"	"truth state"
+"bloblost"	"truth state"
+"bopseen"	"truth state"
+"BorisArtemistalk"	"truth state"
+"boundrecover"	"truth state"
+"boundstate"	"truth state"
+"bradfordstory1"	"truth state"
+"bradfordstory2"	"truth state"
+"bradfordstory3"	"truth state"
+"bradfordstory4"	"truth state"
+"brookeandrewtalk"	"truth state"
+"busterstory1"	"truth state"
+"busterstory2"	"truth state"
+"ButterflyForeplay"	"truth state"
+"ButterflyHasNegligee"	"truth state"
+"ButterflyLikesYou"	"truth state"
+"ButterflyLove"	"truth state"
+"ButterflyNegligeeTorn"	"truth state"
+"ButterflyPantiesFound"	"truth state"
+"ButterflyPregnant"	"truth state"
+"ButterflyProcreated"	"truth state"
+"ButterflyRevenge"	"truth state"
+"callovi"	"truth state"
+"cclosttarget"	"truth state"
+"cheetah_mpreg"	"truth state"
+"chindem"	"truth state"
+"christysausage"	"truth state"
+"ClassPaymentAccepted"	"truth state"
+"cuptrick"	"truth state"
+"demonBruteBountyState"	"truth state"
+"DemonFox_Apologized"	"truth state"
+"DemonFox_Encountered"	"truth state"
+"DemonFox_PlayerDefeated"	"truth state"
+"DemonFox_PlayerFled"	"truth state"
+"DemonFox_PlayerSubmitted"	"truth state"
+"DemonFox_PlayerWon"	"truth state"
+"DemonFox_PlayerWon_Fucked"	"truth state"
+"DemonFoxRead"	"truth state"
+"dobieanal"	"truth state"
+"DoranAnnoyed"	"truth state"
+"DoranAutofired"	"truth state"
+"DoranAutofireDiscussed"	"truth state"
+"DoranCumFilled"	"truth state"
+"DoranFirstTalk"	"truth state"
+"DoranInternal"	"truth state"
+"DoranPlayerBlueballing"	"truth state"
+"DoranPlayerCumFilled"	"truth state"
+"DoranPlayerGenderRegard"	"truth state"
+"DoranRefusedSex"	"truth state"
+"DoranSelfGender"	"truth state"
+"drutah_msg1"	"truth state"
+"duckyactive"	"truth state"
+"ebheat_msg"	"truth state"
+"ebneuterswitch"	"truth state"
+"enduring"	"truth state"
+"eprodused"	"truth state"
+"facecheck"	"truth state"
+"fangsidney"	"truth state"
+"FangToy"	"truth state"
+"fangvelos1"	"truth state"
+"featherready"	"truth state"
+"feline_pride_defeat"	"truth state"
+"FFSDUBM"	"truth state"
+"firebreathready"	"truth state"
+"firstgarg"	"truth state"
+"floatertaken"	"truth state"
+"flotmarked"	"truth state"
+"Francoismixcleaned"	"truth state"
+"Francoistalk1"	"truth state"
+"fsnakevalid"	"truth state"
+"garrettinfo1"	"truth state"
+"gobdem"	"truth state"
+"graphics"	"truth state"
+"grhouse"	"truth state"
+"gsbm"	"truth state"
+"gsd_attack"	"truth state"
+"gsd_fled"	"truth state"
+"gsd_male"	"truth state"
+"gsd_slut"	"truth state"
+"gsd_special"	"truth state"
+"gshep_scarscene"	"truth state"
+"gshm"	"truth state"
+"gsnhm"	"truth state"
+"HadGusBackgroundTalk"	"truth state"
+"hadiyahyg"	"truth state"
+"Hardmode"	"truth state"
+"heat enabled"	"truth state"
+"heatturnskipper"	"truth state"
+"hobo-food-gift"	"truth state"
+"hobo-grmilk"	"truth state"
+"hobo-libidosupp"	"truth state"
+"hobo-water-gift"	"truth state"
+"honeygiven"	"truth state"
+"houndfromhell"	"truth state"
+"hvoreoffer"	"truth state"
+"hydraheadcheck1"	"truth state"
+"hydraheadcheck2"	"truth state"
+"hydraheadcheck3"	"truth state"
+"hydraheadregrowth"	"truth state"
+"HyenaMatVore"	"truth state"
+"icarusrim"	"truth state"
+"icarusscene1"	"truth state"
+"icarusscene2"	"truth state"
+"impregnatevalid"	"truth state"
+"inasituation"	"truth state"
+"inheat"	"truth state"
+"insectlarva"	"truth state"
+"internalbypass"	"truth state"
+"isHellhound"	"truth state"
+"ishunting"	"truth state"
+"joannadogsaved"	"truth state"
+"karahbtalk"	"truth state"
+"kristenmsg1"	"truth state"
+"kristenmsg2"	"truth state"
+"kristenmsg3"	"truth state"
+"kristenmsg4"	"truth state"
+"kristenmsg5"	"truth state"
+"kristentf3fuck"	"truth state"
+"ktcockmatch"	"truth state"
+"LarissaTailed"	"truth state"
+"LarissaWinged"	"truth state"
+"LastTurnDay"	"truth state"
+"latexErmineBountyState"	"truth state"
+"latexhuskymode"	"truth state"
+"leodinner"	"truth state"
+"Leonardcabinet"	"truth state"
+"Leonardcaraway"	"truth state"
+"Leonardwrdesk"	"truth state"
+"leopocketwatch"	"truth state"
+"leoshadowmet"	"truth state"
+"LindseyMPregDetected"	"truth state"
+"lindseyws"	"truth state"
+"maleHound"	"truth state"
+"mchristyanal"	"truth state"
+"mchristybottom"	"truth state"
+"mchristytop"	"truth state"
+"mdstaffface"	"truth state"
+"medeapanda"	"truth state"
+"medeapill"	"truth state"
+"medeaub"	"truth state"
+"Meredith_anal"	"truth state"
+"Meredith_Coleen_fun1"	"truth state"
+"Meredith_Vanessa_fun1"	"truth state"
+"Meredith_Vanessa_fun2"	"truth state"
+"messypigaltorgasm"	"truth state"
+"MFSDUBM"	"truth state"
+"micaelastory1"	"truth state"
+"MKunleashed"	"truth state"
+"mlamiaboobmash"	"truth state"
+"mlamiamet"	"truth state"
+"monsterhit"	"truth state"
+"MoreauDiscount"	"truth state"
+"MoreauPaymentAccepted"	"truth state"
+"mpreghijack"	"truth state"
+"mre04"	"truth state"
+"msnakevalid"	"truth state"
+"muggerison"	"truth state"
+"nagawarning"	"truth state"
+"NavCheckReturn"	"truth state"
+"ndmLisa"	"truth state"
+"NewGraphics"	"truth state"
+"NewGraphicsDebugMode"	"truth state"
+"NewGraphicsOpened"	"truth state"
+"nmformswitch"	"truth state"
+"nohealmode"	"truth state"
+"nosquirrelanal"	"truth state"
+"obliging"	"truth state"
+"onyxhappytalk"	"truth state"
+"onyxsmra"	"truth state"
+"onyxsmro"	"truth state"
+"onyxsmrv"	"truth state"
+"ovipregalways"	"truth state"
+"ovipregmedeatalk"	"truth state"
+"ovipregnant"	"truth state"
+"pewtertorsosuppress"	"truth state"
+"playercanub"	"truth state"
+"playercanvore"	"truth state"
+"PlayerPigBodied"	"truth state"
+"ppatt"	"truth state"
+"pr_task01"	"truth state"
+"pr_task02"	"truth state"
+"pr_task03"	"truth state"
+"pr_task04"	"truth state"
+"preghijack"	"truth state"
+"rabbitified"	"truth state"
+"rambjvirg"	"truth state"
+"ramslut"	"truth state"
+"RestoreMode"	"truth state"
+"rkrcheck"	"truth state"
+"rlingfound"	"truth state"
+"roughing"	"truth state"
+"rowing"	"truth state"
+"sa_otteress"	"truth state"
+"sa_redvixen"	"truth state"
+"sa_wusky"	"truth state"
+"saberKittyBountyState"	"truth state"
+"samformtalk"	"truth state"
+"sangenreg"	"truth state"
+"SarahTehuantl"	"truth state"
+"sblzephyr"	"truth state"
+"SerenityVore"	"truth state"
+"showlocale"	"truth state"
+"sidneyanal"	"truth state"
+"sidneyformtalk"	"truth state"
+"sidneytalk1"	"truth state"
+"sidneytalk2"	"truth state"
+"sidneytalk3"	"truth state"
+"sidneytalk4"	"truth state"
+"sierramale"	"truth state"
+"sierrapure"	"truth state"
+"skipcockchange"	"truth state"
+"skipretaliate"	"truth state"
+"spidergirlBountyState"	"truth state"
+"ssbpg"	"truth state"
+"ssgbii"	"truth state"
+"ssgpd"	"truth state"
+"sshh"	"truth state"
+"ssmb"	"truth state"
+"ssos"	"truth state"
+"ssxpa"	"truth state"
+"stellapsurv"	"truth state"
+"sugarglidernote"	"truth state"
+"sugferretjoke"	"truth state"
+"Susanoversize"	"truth state"
+"SvenStory1"	"truth state"
+"TentacleRead"	"truth state"
+"Terminatorsleep"	"truth state"
+"TerminatorSleepActivated"	"truth state"
+"thmpregdetect"	"truth state"
+"TomeEventPending"	"truth state"
+"toystoreoverride"	"truth state"
+"toystoreseen"	"truth state"
+"ts_warrior"	"truth state"
+"tsw_victory"	"truth state"
+"twistedPimpBountyState"	"truth state"
+"twistfsdfeedmemory"	"truth state"
+"TyrTraining"	"truth state"
+"ubspecial1"	"truth state"
+"utahmet"	"truth state"
+"vampiric"	"truth state"
+"velosapology"	"truth state"
+"velosfleepenalty"	"truth state"
+"velosheadstalk"	"truth state"
+"velosparasitetalk"	"truth state"
+"velossaved"	"truth state"
+"velossavedtalk"	"truth state"
+"velossavedyes"	"truth state"
+"vgeckoboost"	"truth state"
+"violinspritefight"	"truth state"
+"voreloss"	"truth state"
+"vorespecial1"	"truth state"
+"weakwilled"	"truth state"
+"WerewolfWatching"	"truth state"
+"wrcurseactivity"	"truth state"
+"wrdinoskel"	"truth state"
+"wrknifefight"	"truth state"
+"wrwolfseen"	"truth state"
+"yolandakeyfob"	"truth state"
+"yolandaqytat"	"truth state"
+"yolandatreasure"	"truth state"
+"zigorcycle"	"truth state"
+"zigorhadiyaquest"	"truth state"
+"zpc_inzone"	"truth state"
 
 GameTables ends here.

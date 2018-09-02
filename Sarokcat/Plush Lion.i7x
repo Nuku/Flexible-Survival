@@ -47,7 +47,7 @@ to say Plush Lion attack:
 		plushleoify;
 
 to plushlionvored:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now fightoutcome is 23;
 	increase plionvored by 1;
 	decrease humanity of player by 6;
@@ -171,12 +171,12 @@ to say plionsex_05:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Plush Lion";
 	now enemy title entry is "";
 	now enemy name entry is "";

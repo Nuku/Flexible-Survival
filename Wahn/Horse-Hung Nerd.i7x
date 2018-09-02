@@ -4,7 +4,7 @@ Version 1 of Horse-Hung Nerd by Wahn begins here.
 
 "Adds a Horse Hung Nerd to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-NerdMeetings is number that varies.
+NerdMeetings is a number that varies.
 
 when play begins:
 	add { "Horse-Hung Nerd" } to infections of guy;
@@ -13,7 +13,7 @@ Section 1 - Monster Responses
 
 to say HHNerd wins:
 	setmonster "Horseman";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of player > 0: [player submits]
 		if anallevel is 1 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
 			say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
@@ -148,12 +148,12 @@ to say HHNerdDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Horse-Hung Nerd";
 	now enemy title entry is "";
 	now enemy name entry is "Clyde";

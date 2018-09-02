@@ -13,7 +13,7 @@ when play begins:
 
 to say elkdesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -125,12 +125,12 @@ to say beattheelk_4:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Elk"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -203,7 +203,7 @@ It is temporary.
 to say elkantleruse:
 	say "     Looking over the antler, you feel a strange compulsion that you don't resist[if player is elkfaced and player is male]. Placing the piece of horn against one of your own antlers, there is a strange, crunchy sound as they fuse together. This is soon followed by the tingle of the nanites spreading through you[else]. Placing the piece of horn against the side of your head, there is a strange, crunching sound as they fuse together. You can feel the bony chunk sinking into you even as the tingles of nanites begin[end if].";
 	setmonster "Elk";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:

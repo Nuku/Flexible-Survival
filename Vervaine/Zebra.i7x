@@ -136,8 +136,8 @@ to say Zebra loses:
 				say "     Curious and more than a little eager to make him uncomfortable, you ask several questions of your cocksucker, rhetorically of course. Did he catch some males and practice on them? Or did he crawl to the nearest cock and beg to suck it? You hold him to your groin, finally getting him to choke on the full length of your prick. You decide that his rapid improvement means that he has obviously offered his services to anyone who'd let him. You withdraw your rod fully, causing your zebra to gasp, and you slap him a few times across the muzzle with it. You ask if he begged to suck dick until he got his wish before slamming back into the zebra's welcoming maw. You hold him flush against your groin for a long minute until he nods.";
 				WaitLineBreak;
 				say "     The knowledge that it was you that has changed this once dominant stallion into the sub kneeling before you pushes you almost to the edge of orgasm. A few more thrusts pushes you over, and as you start to cum, you slowly pull him off you, filling his mouth with cum before you spend your last blasts on his face. The zebra shudders, and you grin as his massive pole flares and cums all over the ground in front of him, some of it landing on your thighs and legs. You scoop some up and rub it between your fingers. Telling him that he's changed for the better now that he's your little slut, you turn and walk away, leaving the zebra sitting in his own mess, with your cum drying on his face.";
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Zebra":
 						now monster is y;
 						break;
@@ -149,8 +149,8 @@ to say Zebra loses:
 				WaitLineBreak;
 				say "     He pants, tongue lolling out of his mouth as he finds his rhythm, and his massive pole of horseflesh is now partially obscuring your vision. You remove one hand from behind your head to play with his flared head; making it jiggle a bit, rubbing his precum over his it, little touches along his length, anything to make him moan louder. Suddenly, he throws his head back, and you feel his hole begin to clench, and he yells, 'Ahhhh, [master], I'm cumming!' You feel his cock throb in your hand as it begins to spurt zebra cum all over your face. He continues to fuck himself as he rides out his orgasm as you wipe your face so that you can see again, licking your fingers clean as he finishes.";
 				say "     You grab the zebra's cock, hard, drawing a yelp from him as you tell him that you're not finished yet. He nods and begins to bounce again on your shaft. Bathed in his cum, nestled in his tight ass, it's not much longer before you're shooting your seed into him, asking if he's ready to bear [italic type]your[roman type] young. 'Y-yes, [master], fill me with your foals,' he replies, and he shudders, cumming again though his cock, but only dribbles this time. He pulls himself off of you and helps you up. After you finish dressing, you smile and caress his muzzle, saying that he's a good boy for coming a long way in such a short time. You abruptly turn and walk away, leaving the zebra with your load in his ass behind you.";
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Zebra":
 						now monster is y;
 						break;
@@ -226,8 +226,8 @@ to say Zebra loses:
 					WaitLineBreak;
 					say "     Before much longer, you feel a familiar tingling rise up inside of your balls and pull back a bit until only the tip of your cock is inside the zebra's mouth. It's quite satisfying to see the proud stallion's eyes go wide as the first blast of cum shoots out onto his tongue, and you hold him tight as he tries to pull away. You growl that he'd best keep it all in his mouth. Trying not to moan, you warn him that he won't like it if he dares spit it out as spurt after spurt of your seed fill the zebra's mouth.";
 					say "     After you're done cumming, you pull out and grin down at the defeated stallion holding your cum behind his closed lips. You order him to swish your cum around a bit, taste it, then show you his tongue. You pull on his mane a bit until he complies and finally sticks his tongue out, covered with your white cum. Pleased with his obedience, you tell him to swallow and show you. With an unhappy expression, he swallows down everything and shows you his cum-free tongue as you ask him to. Praising your stripey slut for his efforts, you tell him that maybe you'll add him as your boy mare. As he squirms, you say you look forward to next time then leave him kneeling at that spot and walk away.";
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Zebra":
 							now monster is y;
 							break;
@@ -241,8 +241,8 @@ to say Zebra loses:
 					WaitLineBreak;
 					say "     Moving your hips forward, you rub your rock-hard cock up and down his crack, then push against his hole until you pop in. He's nice and tight like a virgin, gripping your shaft with his anal muscles. Holding on to the powerful equine's hips, you thrust deep, plunging all the way into his body. With the incredible feeling of being inside of his tight love tunnel and the arousing fact that you have the formerly dominant stallion moaning as he's being fucked, you don't think you'll last much longer.";
 					say "     You pound his ass, accompanied by slapping noises as your hips meet his cheeks, and soon, you feel a familiar feeling rise in your balls. Shouting for him to take your load, you cross the line with one last deep thrust, shooting long blasts of cum deep inside of his ass. There's something especially satisfying about filling up this proud stallion who had originally planned to make you his mare. As you finish cumming inside of him and pull out, you smile even more as you see his equine shaft dangling erect between his legs. You mock him, using his throbbing member as proof that he loves getting fucked. Ordering your bitch to jerk himself off, you say that you see a great future as a boy mare for him, then watch as he jerks off shame-faced and blows his load onto the ground. Grinning, you walk away after that.";
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Zebra":
 							now monster is y;
 							break;
@@ -294,8 +294,8 @@ to say zebrasex_ride:
 		WaitLineBreak;
 		say "     By the time you're ready to cum, you've got him thoroughly blue-balled and aching for release. Taking pity on your pet, you command him to fuck you. The zebra wastes no time, eagerly thrusting into your stretched ass, causing you to moan loudly. Crying out, he cums hard, blasting shot after gooey shot of his virile seed up into your bowels. Feeling this sends you over the top, driving you to a crashing orgasm that milks his needy shaft all the harder. Once you've drained his balls[if scalevalue of player <= 3] and rounded your belly by an inch or three, thanks to all of that semen[end if], you rise up off of him. A good amount of his messy load ends up flowing out of you, splattering across his lap. The zebra, thoroughly drained, moans and collapses backwards onto the ground as you leave him.";
 		mimpregchance;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Zebra":
 				now monster is y;
 				break;
@@ -385,8 +385,8 @@ to say ZebraDommingPlayerSex1: [Face Fuck]
 	WaitLineBreak;
 	say "     His rhythm fully established, your hands begin to slide down the zebra's muscled thighs towards your own dick. As you begin to masturbate feverishly, you hear a chuckle from above. 'Wow, you're really into this, aren't you? When the [one of]huskies[or]wolves[or]German Shepherds[at random] would talk about how good fucking a beta bitch was, I didn't believe them. But I'm starting to.' You hear him smack his lips. 'Seeing you get so hard while you choke on my cock, I can't wait until you join my herd full time.' With that, he speeds up, slapping his balls against your chin.";
 	say "     You groan around the rod in your throat in response to your master's words, jacking yourself off even faster. With a loud whinny, the stallion slams his horsecock home, and you feel it shooting his cum into your stomach. You can feel your belly swell as it's filled with your stallion's virile seed. As your vision begins to dim, you cum as well, shooting your seed onto the ground, pushed to orgasm with your purpose as a cum dump fulfilled. Your stallion pulls free and kicks you over, pumping the last few spurts of seed onto your crumpled form. 'You'll have to teach my mares how to do that. Otherwise, I'll never leave you alone.' He grins and trots away.";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Zebra":
 			now monster is y;
 			break;
@@ -399,8 +399,8 @@ to say ZebraDommingPlayerSex2: [Mounted]
 	say "     Your stallion switches his grip, moving his hands from your hips to your shoulders. He steps back and pulls you back a step, forcing you down as he does so that your torso is parallel with the ground below. Grabbing your hips again, the zebra man switches back to short, quick thrusts, his groin barely separating from your ass. He begins to snort, and his hands tighten their grip, letting you know that he's getting close to his peak. He yells as you feel his prick twitch, pumping his seed into your depths. Your master steps back, abruptly pulling his still pulsing dick from your wrecked hole, and you feel his cum coat your back and ass. His hand rubs your ass, spreading his seed over your skin, and you can feel a familiar tingle as your nanites react. You hear a chuckle from behind you as he gives your butt a slap. 'And here I'd always considered myself a boob man.'";
 	say "     Before you can reply, you feel his rod against your hole again, and he slips back into you. His hands find your mouth, and your [cock of player] dick, sticking his cum-slick fingers into your mouth while roughly jerking you off. 'I'm told bitch males need a cock in them, or they can't get off. Judging by how hard your dick is, I'd say that's true.' A moan escapes around his thick fingers as he fucks you lazily, the stimulation reaching unbearable levels. Each time you think you're going to orgasm, the zebra stops moving, simply holding his horseflesh inside of you. Once he feels you begin to calm, he starts thrusting again. Finally, his pole softens and pops out of you, and that's the final straw. As his seed gushes out of your hole, you begin shooting your own seed on the ground in front of you, allowed to cum at last. Your master lets you go, and you collapse to your knees, absolutely drenched in cum, your stomach still swollen from the stallion's load. He gives you a wave and a wink as he struts away.";
 	mimpregchance;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Zebra":
 			now monster is y;
 			break;
@@ -412,8 +412,8 @@ to say ZebraDommingPlayerSex3: [Face Sit]
 	WaitLineBreak;
 	say "     'Oh shit, keep doing that!' your master groans, and you take a deep breath before diving back in, intent on pleasing him. You lick around his hole as you continue to finger blast his prostate, and you can tell that he's getting close. Suddenly, he steps away from you, nickering as your fingers slip out of him. He turns around and is pumping his shaft right at your face. 'Enjoy your reward, boy.' He closes his eyes and throws his head back as he blasts your face with his cum, his hand slowing its furious pumping. Leaning forward, you try to suck on his cock head, but you feel his hand on your head, holding you back. You stick out your tongue and are just able to reach your prize; straining against your stallion's strong hold, you manage to get the faintest taste of him. He holds you in this tantalizing position until his prick softens, falling away from your cum-drenched face. He releases you, stepping back as you fall to the ground.";
 	say "     'Those [one of]huskies[or]wolves[or]German Shepherds[at random] were right about you beta bitches. You really are obsessed with dick. And you are truly obsessed with [italic type]my[roman type] dick,' he says as he slaps your face with a loud smack. Your own prick throbbing with unfulfilled lust, you plead with him, asking if you can suck him, jack him off, or even just touch his rod while you finish yourself off. He laughs as he walks away, leaving you to pull yourself together. You try to get yourself off alone, but without your master present, your heart isn't in it. Giving up in spite of the desperate need within you, you get dressed to face survival in this dangerous new world.";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Zebra":
 			now monster is y;
 			break;
@@ -430,8 +430,8 @@ to say ZebraDommingPlayerSex4: [Mating Rut]
 	mimpregchance;
 	mimpregchance;
 	mimpregchance;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Zebra":
 			now monster is y;
 			break;
@@ -447,12 +447,12 @@ to say ZebraDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Zebra";
 	now enemy title entry is "";
 	now enemy name entry is "";

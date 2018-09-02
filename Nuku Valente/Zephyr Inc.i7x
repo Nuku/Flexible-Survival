@@ -96,17 +96,17 @@ Carry out vialselling:
 			if found > 4:
 				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
 				continue the action;
-	[locates target within the table of random critters]
+	[locates target within the Table of Random Critters]
 	now monster is 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is target:
 			now monster is y;
 			break;
 	if monster is 0:
 		say ", but she shakes her head. 'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
 		continue the action;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now basevalue is ( ( lev entry * 7 ) / 4 );
 	if found is 1:
 		now basevalue is ( basevalue * 2 ) / 3;

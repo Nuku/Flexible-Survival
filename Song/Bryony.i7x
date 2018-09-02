@@ -1,6 +1,10 @@
 Version 1 of Bryony by Song begins here.
 [ Version 1.0 - Initial talk options and events - Song                          ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Bryony	"Bryony"
+
 Bryony is a woman. Bryony is in Equinoid Camp.
 The description of Bryony is "[BryonyDesc]".
 The conversation of Bryony is { "Watch yourself." }.

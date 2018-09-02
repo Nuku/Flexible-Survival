@@ -79,8 +79,8 @@ the phoenix egg has a truth state called shownermine. shownermine of phoenix egg
 [other show scenes could be created for other NPCs whom the player might show it to]
 
 instead of conversing the Nermine while phoenix egg is owned and shownermine of phoenix egg is false:
-	say "     Pulling out the phoenix egg, you put in on the counter in the hopes that Nermine's expertise may be of use. She remains her normal demeanor, but her golden eyes lock onto it with a hungry greed you've not seen from her before. 'Is that pretty egg for trading with Nermine? Is nothing special... but maybe Nermine can be giving you a small trinket for it,' she says with an alluring smile. You shake your head, telling her you're just looking for information. 'It is phoenix egg, but I am seeing you are knowing that. Nermine live long time, but egg would help her live even longer still,' she says softly. 'Nermine would be trading you...' she starts to say. Catching her tongue slipping across her lips as she eyes the golden egg with a hunger beyond simple greed, you snatch it from the counter and slide it back into your pack.";
-	say "     The jackal woman is clearly disappointed as you take the object of her hunger away. 'Fine! I am telling you this much because I am being nice. Phoenix egg is normally hatching shortly after phoenix is burning to ashes. If not hatched yet, phoenix is weak and needing great heat to be regaining power. It is bird of fire, of sun. Powerful heat is being needed to restore it. Sounds like too much trouble for you. Nermine could be taking care of that for you,' she says, that hungry look in her eye again. You clutch your pack tightly and step back. It's clear you won't be able to trust Nermine on this matter and decide not to mention it to her again.";
+	say "     Pulling out the phoenix egg, you put in on the counter in the hopes that Nermine's expertise may be of use. She remains her normal demeanor, but her golden eyes lock onto it with a hungry greed you've not seen from her before. 'Does the dear visitor want to trade this pretty egg with Nermine? It sadly is nothing special... but maybe Nermine can part with a small trinket for it,' she says with an alluring smile. You shake your head, telling her you're just looking for information. 'It is a phoenix egg, but the jackaless sees that her visitor knows this already. Nermine has been alive for a long time, and the egg would help her live even longer still,' she says softly. 'Nermine would be trading...' she starts to say. Catching her tongue slipping across her lips as she eyes the golden egg with a hunger beyond simple greed, you snatch it from the counter and slide it back into your pack.";
+	say "     The jackal woman is clearly disappointed as you take the object of her hunger away. 'Fine! Keep it then. But Nermine will share some knowledge nonetheless, as not to be called a poor host. Phoenix eggs normally hatch shortly after the phoenix burns to ashes. If it has not yet hatched, the phoenix is weak and needs great heat to regain its power. It is a bird of fire, of the sun. Powerful heat is being needed to restore it. Surely supplying this would be much trouble for the dear visitor. Nermine could be taking care of that instead,' she says, that hungry look in her eye again. You clutch your pack tightly and step back. It's clear you won't be able to trust Nermine on this matter and decide not to mention it to her again.";
 	now shownermine of phoenix egg is true;
 
 
@@ -135,6 +135,10 @@ an everyturn rule:
 
 
 Section 4 - Athanasia
+
+Table of GameCharacterIDs (continued)
+object	name
+Athanasia	"Athanasia"
 
 Athanasia is a woman.
 The description of Athanasia is "[athanasiadesc]".
@@ -464,7 +468,7 @@ to say salamanderraid:
 		say "     Beaten and abused by the victorious salamanders, you're dragged off by them as another prize as they escape the furious phoenix. In her desire to protect her nest, she must not notice you gone until it's far too late. You end up dragged back to the ruins where this group is nesting. There, you're fucked and molested until there's nothing left of you but another horny salamander.";
 		now humanity of player is 0;
 		setmonster "Salamander";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now tailname of player is "Salamander";
 		now facename of player is "Salamander";
 		now skinname of player is "Salamander";
@@ -499,12 +503,12 @@ Section 7 - Gender Shifting
 
 to athanasiasexchange:
 	[puts Snow Leopard as lead monster for gender change (appropriate size)]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Snow Leopard":
 			now monster is y;
 			break;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 		if cunt length of player < cunt length entry and scenario is not "Researcher", follow the sex change rule;

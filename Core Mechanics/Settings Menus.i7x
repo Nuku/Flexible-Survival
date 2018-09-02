@@ -2,24 +2,24 @@ Version 3 of Settings Menus by Core Mechanics begins here.
 [Version 3.3 - Inventory columns option added]
 [- Originally Authored By: Stripes -]
 
-trixiecheating is an action applying to nothing.
+Trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
 
-understand "trixiecheat" as trixiecheating.
-understand "iwannacheat" as trixiecheating.
-understand "i wanna cheat" as trixiecheating.
+understand "Trixiecheat" as Trixiecheating.
+understand "iwannacheat" as Trixiecheating.
+understand "i wanna cheat" as Trixiecheating.
 
-check trixiecheating:
+check Trixiecheating:
 	if Trixie is not visible, say "Only Trixie can help you with that." instead;
 
-carry out trixiecheating:
+carry out Trixiecheating:
 	let Unerring Hunter be "Unerring Hunter";
 	let Automatic Survival be "Automatic Survival";
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
 	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that. It doesn't come for free though. You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area. [bold type]Automatic Survival[roman type] removes your need for food and water. [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC). [bold type]Lil Better[roman type] gives +1 to all stats. [bold type]Booster Feats[roman type] gives you one additional basic and fun feats. [bold type]Play On[roman type] removes the time limit to the game. [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat. You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 		say "[bold type]Cheats:[roman type][line break]";
 		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[else]Inactive[end if][line break]";
@@ -195,13 +195,13 @@ carry out trixiecheating:
 			new ban menu;
 		else if calcnumber is 0:
 			say "Exiting menu.";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		wait for any key;
 		clear the screen and hyperlink list;
 
 [-----]
 
-[anallevel is a number that varies. anallevel is usually 2.]		[normal]
+[anallevel is a number that varies. anallevel is usually 2.][@Tag:NotSaved]		[normal]
 
 analadjusting is an action applying to nothing.
 
@@ -243,7 +243,7 @@ carry out analadjusting:
 
 [-----]
 
-[WSlevel is a number that varies. WSlevel is usually 2.]		[normal]
+[WSlevel is a number that varies.[@Tag:NotSaved] WSlevel is usually 2.]		[normal]
 
 WSadjusting is an action applying to nothing.
 
@@ -279,9 +279,9 @@ carry out WSadjusting:
 
 [-----]
 
-[vorelevel is a number that varies. vorelevel is usually 2.]		[normal]
-[hvorelevel is a number that varies. hvorelevel is usually 1.]		[no hard vore]
-[UBlevel is a number that varies. UBlevel is usually 2.]			[normal]
+[vorelevel is a number that varies.[@Tag:NotSaved] vorelevel is usually 2.]		[normal]
+[hvorelevel is a number that varies.[@Tag:NotSaved] hvorelevel is usually 1.]		[no hard vore]
+[UBlevel is a number that varies.[@Tag:NotSaved] UBlevel is usually 2.]			[normal]
 
 voremenuing is an action applying to nothing.
 
@@ -375,7 +375,7 @@ carry out voremenuing:
 
 [-----]
 
-[ovipreglevel is a number that varies. ovipreglevel is usually 2.]		[normal]
+[ovipreglevel is a number that varies.[@Tag:NotSaved] ovipreglevel is usually 2.]		[normal]
 
 oviadjusting is an action applying to nothing.
 
@@ -473,10 +473,10 @@ check huntinglisting:
 		say "I don't see any good hunting grounds around here." instead;
 
 carry out huntinglisting:
-	sort table of random critters in lev order;
+	sort Table of Random Critters in lev order;
 	now battleground is the earea of location of player;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if there is no area entry, next;
 		if there is no name entry, next;
 		if area entry matches the text battleground, case insensitively:

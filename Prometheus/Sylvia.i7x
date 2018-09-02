@@ -117,6 +117,10 @@ to say SylviasRoomDesc:
 
 Section 2 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Sylvia	"Sylvia"
+
 Sylvia is a woman. The hp of Sylvia is usually 0.
 hpM of Sylvia is a number that varies. hpM of Sylvia is usually 0.
 hpF of Sylvia is a number that varies. hpF of Sylvia is usually 0.

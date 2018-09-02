@@ -16,6 +16,10 @@ Section 1 - Dog-Walking Event
 
 Chapter 1 - Ares Basics
 
+Table of GameCharacterIDs (continued)
+object	name
+Ares	"Ares"
+
 Ares is a man. HP of Ares is usually 0.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
@@ -145,7 +149,7 @@ to say AresWalk_Park:
 
 to say AresParkMounting:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, though obviously the concept of clothing being in the way did escape Ares.";
 		LineBreak;
@@ -228,7 +232,7 @@ to say AresHelenWalk:
 
 to say AresHelenParkMounting:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
 		LineBreak;
@@ -280,7 +284,7 @@ to say AresHelenParkMounting:
 
 to say AresHelenParkFuck:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     [if player is male]Seeing Ares thrust into Helen's welcoming pussy has your own cock hard as a rock. [else if player is female]Seeing Ares thrust into Helen's welcoming pussy has your own sex swollen and dripping wet. [else]Seeing Ares thrust into Helen's welcoming pussy has you all tingly inside. [end if][bold type]Thoughts of joining in for some fun rise to the forefront of your mind. Do you do so?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -412,7 +416,7 @@ to say AresXerxesWalk:
 
 to say AresXerxesParkMounting:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		LineBreak;
@@ -464,7 +468,7 @@ to say AresXerxesParkMounting:
 
 to say AresXerxesParkFuck:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     [if player is male]Seeing Ares thrust into Xerxes['] welcoming hole has your own cock hard as a rock. [else if player is female]Seeing Ares thrust into Xerxes['] welcoming hole has your own sex swollen and dripping wet. [else]Seeing Ares thrust into Xerxes['] welcoming hole has you all tingly inside. [end if][bold type]Thoughts of joining in for some fun rise to the forefront of your mind. Do you do so?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -698,6 +702,10 @@ to say DannyFucksAresRepeat:
 
 
 Chapter 3 - Pet Ares
+
+Table of GameCharacterIDs (continued)
+object	name
+human dog	"human dog"
 
 human dog is a pet. human dog is a part of the player.
 understand "ares" as human dog.

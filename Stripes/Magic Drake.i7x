@@ -32,7 +32,7 @@ to say magicdrakedesc:
 	if mdasslevel is 0, now mdasslevel is 1; [met her]
 
 to say losetomagicdrake:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if tailname of player is not "Magic Drake":
 		if mdasslevel < 2:	[first loss]
 			say "     [if HP of player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. Her clawed hands squeeze, pinch and fondle you all over, inspecting your [bodydesc of player] body, especially your ass. While this is going on, she is also grinding her throbbing cock, a five foot pillar of green flesh that drools precum over you. 'Mmm... yes... I can work with this.'";
@@ -178,7 +178,7 @@ p-victory possibilities:
 ]
 
 to say beatthemagicdrake:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if mdrakebeaten is 0:
 		say "     The dragoness hisses in frustration and waves her staff in a wide arc. A wall of colorful energy ripples between you both, allowing her the opportunity to make her escape. 'Oh, don't think that this will be the last of it. I shall have you as mine. A strong familiar is an even better one, once it's been properly [']broken in['],' she laughs before leaving.";
 	else:
@@ -395,7 +395,7 @@ to say beatthemagicdrake:
 								if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 							else:
 								say "     The tingly energy floods your senses and flows into you, causing your head to transform. You can feel your cranium pulse and throb, building up until there comes a loud snap. More pops and snaps follow as your head shifts and reshapes itself. A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
-								choose row monster from the table of random critters;
+								choose row monster from the Table of Random Critters;
 								now facename of player is "Magic Drake";
 								now face of player is face entry;
 							say "     The dragoness laughs at your feeble attempt to use her magic.";
@@ -433,7 +433,7 @@ to say beatthemagicdrake:
 							else if mdstaffaction <= 10:		[sexual growth/reduction]
 								if cockname of player is not "Magic Drake":
 									say "     The magic doesn't quite end up working as expected though, spraying all across your groin. It seeps into your crotch with a pleasant tingle that suffuses your [if player is herm]cock[smn] and cunt[sfn][else if player is male]cock[smn][else]cunt[sfn][end if]. The magical energy clings to your sensitive loins and sinks right into them, causing them to shift and change[if player is herm]. The flesh of your loins changes and your manhood and your pussy lips are transformed[else if player is male]. The flesh of your loins changes and your manhood is transformed[else]. The flesh of your loins changes and your pussy lips are transformed[end if], taking on a rich, green hue as you become infected, much to the dragoness's amused delight.";
-									choose row monster from the table of random critters;
+									choose row monster from the Table of Random Critters;
 									now cockname of player is "Magic Drake";
 									now cock of player is cock entry;
 									increase libido of player by 5;
@@ -488,7 +488,7 @@ to say mdrake_pvictory_02:
 	say "     'Such a naughty familiar, doing this to your poor, stranded mistress,' she says with a moan, making it hard to tell if she's truly upset or playfully teasing. Regardless, you forge on, pounding your [cock size desc of player] penis into the warm embrace of her bosom. Placing your hands on her massive nipples, you grab them and start pinching and rubbing them, making the dragoness moan all the more. Each are a handful on their own, full, plump and sensitive. Her mighty cock is hard and slaps along your back as it twitches and throbs with excitement as if goading you on. With all this sexy flesh around you, it doesn't take you long before you're ready to blow and paint a sticky white picture of semen across and between her green tits. Having had your fun, you get up, leaving her to crane her muzzle to try and lick up the tasty treat you've left her.";
 
 to say mdrake_pvictory_03:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Deciding you need some relief after your vigorous battle, your eyes fall to her massive manhood and its drooling slit. The sight of that large, slick and juicy opening has a kinky idea pop into your mind. You stride over to her and, as she struggles to get back up, you grab her cock stroke it firmly. This causes her to moan and distracts her in part from her attempts to rise. Her titanic penis throbs as you run your hands over it, coaxing more precum from its tip. Angling her meaty rod into position, you get your [cock of player] shaft lined up and thrust right into its leaking urethra, causing the dragoness to moan in lustful surprise.";
 	say "     With your hands gripping the rim of her glans, you pound into her juicy cock. Her cum slit is hot and wet with draconic pre, making your [cock size desc of player] shaft's passage smooth and slick. The feel of this penile penetration is delightfully different from other sex you've had, this kinky violation very arousing. And it seems to be having a similar effect on your foe as well, the sorceress moaning and panting as her manhood is stuffed with yours. The flow of precum increases as you continue, soaking your crotch as you plough into that virile pillar.";
 	WaitLineBreak;
@@ -591,7 +591,7 @@ to say mdstaff_overgrown:
 	if libido of player > 100, now libido of player is 100;
 	if mdrakeoversized >= 5 and inasituation is false:
 		now mdrakeoversized is 100;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now humanity of player is 0;
 		now tailname of player is "Magic Drake";
 		now facename of player is "Magic Drake";
@@ -618,12 +618,12 @@ to say mdstaff_overgrown:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -681,15 +681,15 @@ to say mdtaildesc:
 to say mdtailtf:
 	say "[if mdasslevel < 3]your ass reforms into a cute, fuckable bubble butt with a long, reptilian tail above it[else if mdasslevel is 3]your ass reforms into a plump and rounded booty. Above your meaty backside is a long, reptilian tail[else if mdasslevel is 4]your hips widen as your ass reforms into an impressively large booty. Above your hefty backside is a long, reptilian tail[else if mdasslevel is 5]your hips widen markedly to deal with your growing ass. It swells up and out, becoming huge and heavy. Above your super-meaty backside is a long, reptilian tail[else]your hips widen greatly to deal with your swelling ass. It grows and grows comically large, passing the point you'd be able to putting your arms fully around it. Above your mega-booty is a long, reptilian tail that swishes excitedly with every swaying step you take[end if]";
 	if mdasslevel > 4 and bodyname of player is "Magic Drake":
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now scale entry is 4;
 		now scalevalue of player is 4;
 	else if bodyname of player is not "Magic Drake":
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now scale entry is 3;
 
 to say mdscaletweak:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if bodyname of player is not "Magic Drake":
 		now scale entry is 3;
 		now scalevalue of player is 3;

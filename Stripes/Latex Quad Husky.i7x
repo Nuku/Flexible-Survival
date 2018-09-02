@@ -36,8 +36,8 @@ Instead of resolving a Shipping Container:
 			let monm be 1;
 			if girl is not banned:		[Adjust Female Husky]
 				[puts Female Husky as lead monster for infection and impregnation]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Female Husky":
 						now monster is y;
 						break;
@@ -48,8 +48,8 @@ Instead of resolving a Shipping Container:
 				now monf is monster;
 			if guy is not banned:		[Adjust Alpha Husky]
 				[puts Alpha Husky as lead monster for infection and impregnation]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Alpha Husky":
 						now monster is y;
 						break;
@@ -62,7 +62,7 @@ Instead of resolving a Shipping Container:
 				now libido entry is 90;
 				now monm is monster;
 			if ( "Female Preferred" is listed in feats of player and girl is not banned ) or guy is banned:
-				choose row monf from table of random critters;
+				choose row monf from Table of Random Critters;
 				now tailname of player is "Female Husky";
 				now facename of player is "Female Husky";
 				now skinname of player is "Female Husky";
@@ -79,7 +79,7 @@ Instead of resolving a Shipping Container:
 					follow the sex change rule;
 					follow the sex change rule;
 			else:
-				choose row monm from table of random critters;
+				choose row monm from Table of Random Critters;
 				now tailname of player is "Alpha Husky";
 				now facename of player is "Alpha Husky";
 				now skinname of player is "Alpha Husky";

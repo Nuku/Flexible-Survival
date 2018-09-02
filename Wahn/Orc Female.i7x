@@ -378,12 +378,12 @@ to say OrcFemDesc:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Orc Female";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -699,7 +699,7 @@ to say KatyaTrailFightFlee:
 	say "     Something tells you that you won't be seeing Katya again after this...";
 	wait for any key;
 	move player to Dry Plains;
-	remove Katya from play;
+	now Katya is nowhere;
 
 to say KatyaTrailFightVictory:
 	say "     Overpowering the large cat - tentacles or none, you kick its butt - you eventually get a good grip of its neck-fur, holding the large cat as you land a heavy punch between its eyes. With a groan, its eyes cross and flutter closed, followed by the creature sinking down into unconsciousness. With your own opponent dealt with, you stand up straight and look for Katya - who is standing over two other vanquished shadow beasts. They were no match for her, even two on one. 'Thanks for distracting him,' she calls out to you, nodding towards your own opponent, then strolling over to you and giving you a friendly punch on the shoulder. 'Let's get out of here,' Katya tells you and the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
@@ -709,6 +709,10 @@ to say KatyaTrailFightVictory:
 	move player to Hidden Camp;
 
 Section 6 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Katya	"Katya"
 
 Katya is a woman. Katya is in Hidden Camp.
 The description of Katya is "[KatyaDesc]".

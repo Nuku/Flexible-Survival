@@ -189,12 +189,12 @@ to say CollieDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Shemale Smooth Collie"; [Name of your new Monster]
 	now enemy title entry is "Giant Collie";
 	now enemy name entry is "Sharlene";
@@ -283,8 +283,8 @@ When Play begins:
 to say collieheatstart:
 	if heatform is 0:
 		[puts Shemale Smooth Collie as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Shemale Smooth Collie":
 				now monster is y;
 				break;
@@ -298,8 +298,8 @@ to say collieheatend:
 	if heatform is 0:
 		say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
 		[puts Shemale Smooth Collie as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Shemale Smooth Collie":
 				now monster is y;
 				break;
@@ -324,8 +324,8 @@ to say collieinheat:
 			say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs. Unable to control your lust, you strike out in the direction of your body's desired mate's scent.";
 			now slutfucked is 0;
 			[puts Shemale Smooth Collie as lead monster in case of impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Shemale Smooth Collie":
 					now monster is y;
 					break;

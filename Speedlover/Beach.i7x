@@ -19,6 +19,10 @@ East of Beach Exit is Outside Exploration.
 instead of sniffing the beach plaza:
 	say "The seashore is near. There is salt in the air.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Bronze Crab	"Bronze Crab"
+
 Bronze Crab is a man. Bronze Crab is in Beach Plaza.
 The description of Bronze Crab is "[BronzeCrabDesc]".
 The conversation of Bronze Crab is { "<This is nothing but a placeholder!>" }.

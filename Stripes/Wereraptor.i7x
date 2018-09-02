@@ -154,8 +154,8 @@ Instead of resolving a Paleontology Professor:
 
 to raptorrelease:
 	[puts Wereraptor as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Wereraptor":
 			now monster is y;
 			now area entry is "Campus";
@@ -167,7 +167,7 @@ Section 1 - Monster Responses
 
 wrmode is a number that varies.
 wrcursestatus is a number that varies.
-wrcursestart is a number that varies.
+wrcursestart is a number that varies. wrcursestart is usually 10000.
 wrcurseactivity is a truth state that varies. wrcurseactivity is normally false.
 
 when play begins:
@@ -176,7 +176,7 @@ when play begins:
 	add { "Wereraptor" } to infections of Reptilelist;
 
 to say wereraptordesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	now dex entry is 19;
 	now HP entry is 45;
@@ -325,12 +325,12 @@ to say wrvict3:		[69 w/male]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wereraptor"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -513,8 +513,8 @@ this is the wereraptor curse rule:
 
 to wrcursesave:
 	[puts Wereraptor as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Wereraptor":
 			now monster is y;
 			break;
@@ -544,10 +544,10 @@ to wrcursesave:
 
 to wrcurserestore:
 	[puts Wereraptor as lead monster]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if name entry is not "Wereraptor":
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Wereraptor":
 				now monster is y;
 				break;
@@ -574,7 +574,7 @@ to wrcurserestore:
 
 
 to wrbodysave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrbodyname is bodyname of player;
 	now wrbody is body of player;
 	now wrscalevalue is scalevalue of player;
@@ -587,7 +587,7 @@ to wrbodysave:
 	say ". Your body contorts painfully as [body change entry]";
 
 to wrfacesave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrfacename is facename of player;
 	now wrface is face of player;
 	now facename of player is "Wereraptor";
@@ -595,7 +595,7 @@ to wrfacesave:
 	say ". Your face cracks and pops as [face change entry]";
 
 to wrskinsave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrskinname is skinname of player;
 	now wrskin is skin of player;
 	now skinname of player is "Wereraptor";
@@ -603,7 +603,7 @@ to wrskinsave:
 	say ". Your skin feels tight and raw as [skin change entry]";
 
 to wrtailsave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrtailname is tailname of player;
 	now wrtail is tail of player;
 	now tailname of player is "Wereraptor";
@@ -611,7 +611,7 @@ to wrtailsave:
 	say ". Your hindquarters stiffens with a harsh pop as [ass change entry]";
 
 to wrcocksave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrcockname is cockname of player;
 	now wrcock is cock of player;
 	now cockname of player is "Wereraptor";

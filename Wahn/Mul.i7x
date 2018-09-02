@@ -4,6 +4,10 @@ Version 1 of Mul by Wahn begins here.
 
 Section 1 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Mul	"Mul"
+
 Mul is a man. Mul is in Main Hall.
 The description of Mul is "[MulDesc]".
 The conversation of Mul is { "Mew!" }.
@@ -521,7 +525,7 @@ to say ObservationRoomFuckMulAnal:
 	say "     Do you want to watch what happens next in the interrogation room?";
 	if player consents:
 		LineBreak;
-		project the figure of Mul_naked_icon;		
+		project the figure of Mul_naked_icon;
 		say "     You watch the breeder slave worship Mul's cock, lapping at it and suckling on the thick head while massaging Mul's weighty balls. Even though a bit smaller in comparison to the brutish orc warrior, the green-skinned man kneeling between Mul's legs is quite a sight to behold himself - with an enviable stature and trained muscles to compliment his dashing good looks and flowing black hair. Even the 'pretty-boy' orcs are fit enough to make a good showing with the best of regular humans in a fitness studio. And his ass is simply a top's dream - presented in all its rounded, grope-able glory as he kneels, with the emerald green ring of his pucker winking in anticipation of taking a thick orc cock. A small trickle of white from the inviting hole shows that he's been fucked today already - and maybe a few times, at that.";
 		say "     Mul gets serviced expertly by his green-skinned slut, but even so you notice that he's not fully hard yet - his thick prick falling short of the raging pillar you've had in your hands before. Could it be that he's... Your thoughts are interrupted by the big orc grunting, 'Orbul! Go - go lock the door.' As the breeder raises his head from nuzzling against Mul's balls to look at him curiously, Mul reaches to his loincloth and fumbles with a knotted strap holding the key before impatiently just snapping the leather band and thrusting it into Orbul's hand. Nothing if not obedient, the smaller orc immediately goes to the entrance and locks it with a definite click, then returns to his master and gets back to kneeling on the floor, looking up at him expectantly, waiting for his next command.";
 		WaitLineBreak;

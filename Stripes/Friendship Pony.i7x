@@ -5,16 +5,16 @@ Version 2 of Friendship Pony by Stripes begins here.
 
 Section 1 - Monster Responses
 
-rfponytype is a number that varies. rfponytype is normally 0.
-rfponycolor1 is a text that varies. rfponycolor1 is normally "pink".
-rfponycolor2 is a text that varies. rfponycolor2 is normally "lavender".
-rfponybm is a text that varies. rfponybm is normally "a cock".
+rfponytype is a number that varies.[@Tag:NotSaved] rfponytype is normally 0.
+rfponycolor1 is a text that varies.[@Tag:NotSaved] rfponycolor1 is normally "pink".
+rfponycolor2 is a text that varies.[@Tag:NotSaved] rfponycolor2 is normally "lavender".
+rfponybm is a text that varies.[@Tag:NotSaved] rfponybm is normally "a cock".
 nofponysex is a number that varies.
-rfpc1 is a number that varies.	[color 1]
-rfpc2 is a number that varies.	[color 2]
-rfpbm is a number that varies.	[booty mark]
+rfpc1 is a number that varies.[@Tag:NotSaved]	[color 1]
+rfpc2 is a number that varies.[@Tag:NotSaved]	[color 2]
+rfpbm is a number that varies.[@Tag:NotSaved]	[booty mark]
 
-pfpbmlist is a list of numbers that varies.
+pfpbmlist is a list of numbers that varies.[@Tag:NotSaved]
 
 [	rfponytype	]
 [ 1 = earth pony	]
@@ -23,13 +23,13 @@ pfpbmlist is a list of numbers that varies.
 
 [  -- simplified to decrease strain on memory --
 [ color list 1: body ]
-rfpclist1 is a list of text that varies. rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "gray", "cream" }.
+rfpclist1 is a list of text that varies.[@Tag:NotSaved] rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "gray", "cream" }.
 
 [ color list 2: hair ]
-rfpclist2 is a list of text that varies. rfpclist2 is usually { "blue", "cobalt blue", "cyan", "azure", "turquoise", "black", "golden yellow", "neon yellow", "sunglow", "maroon", "pink", "hot pink", "carnation", "cerise", "green", "emerald green", "neon green", "light orange", "apricot", "peach", "royal purple", "deep purple", "indigo", "carmine", "flame red", "candy apple red" }.
+rfpclist2 is a list of text that varies.[@Tag:NotSaved] rfpclist2 is usually { "blue", "cobalt blue", "cyan", "azure", "turquoise", "black", "golden yellow", "neon yellow", "sunglow", "maroon", "pink", "hot pink", "carnation", "cerise", "green", "emerald green", "neon green", "light orange", "apricot", "peach", "royal purple", "deep purple", "indigo", "carmine", "flame red", "candy apple red" }.
 
 [ booty mark list ]
-rfpbmlist is a list of text that varies. rfpbmlist is usually { "a dildo", "a vibrator", "an egg vibrator", "a horsecock", "a mare's pussy", "a horsecock being licked", "a pussy being licked", "a cum-slick cock", "an overflowing pussy", "an ejaculating cock", "a cock stuffing an anus", "two humping dogs", "a necklace of pearls", "a pair of tits", "a pair of cum-coated tits", "a pony head sucking cock", "a swallow", "a raised tail", "a leather whip", "a broken bed", "a set of furred handcuffs", "a pair of cocks rubbing together", "an extra-thick dildo", "a pair of nipple clamps", "a burst condom", "a strap-on", "a gimp mask", "the shocker handsign", "a finger-stuffed pussy", "a butt plug", "a ball gag", "a dripping candle", "a leather harness", "anal beads" }.
+rfpbmlist is a list of text that varies.[@Tag:NotSaved] rfpbmlist is usually { "a dildo", "a vibrator", "an egg vibrator", "a horsecock", "a mare's pussy", "a horsecock being licked", "a pussy being licked", "a cum-slick cock", "an overflowing pussy", "an ejaculating cock", "a cock stuffing an anus", "two humping dogs", "a necklace of pearls", "a pair of tits", "a pair of cum-coated tits", "a pony head sucking cock", "a swallow", "a raised tail", "a leather whip", "a broken bed", "a set of furred handcuffs", "a pair of cocks rubbing together", "an extra-thick dildo", "a pair of nipple clamps", "a burst condom", "a strap-on", "a gimp mask", "the shocker handsign", "a finger-stuffed pussy", "a butt plug", "a ball gag", "a dripping candle", "a leather harness", "anal beads" }.
 ]
 
 
@@ -42,7 +42,7 @@ when play begins:
 
 to say fponydesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -331,12 +331,12 @@ to say beatthefpony:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 [	sort rfpclist1 in random order;
 	sort rfpclist2 in random order;]
 	sort pfpclist in random order;
@@ -399,7 +399,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "fpony"	retaliation rule	--	fpony rule	--	--	--	--	--	--	--
 
 this is the fpony rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if a random chance of 2 in 5 succeeds:
 		decrease HP of player by wdam entry / 2;
 		let libgrowth be wdam entry / 2;
@@ -655,7 +655,7 @@ pony cider is a grab object. It is a part of the player. pony cider is infectiou
 The usedesc of pony cider is "[drinkponycider]";
 
 to say drinkponycider:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		setmonster "Friendship Pony";
 		now sex entry is "Male";

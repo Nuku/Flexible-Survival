@@ -93,8 +93,8 @@ An everyturn rule:
 		say "You remember the [bold type]challenge of the viking chieftain[roman type] against you - running out right about now, your time being up. With you not even showing up, now they'll see Sonya as doubly dishonored - losing in combat against an outlander (with most of them suspecting you of magic or some trickery), who additionally isn't even brave enough to fight her father. Hopefully, you won't run into any of them again, as this'll enrage all of them - even Sonya - a lot. She'd likely try to kill you...";
 		now VikingUltimatum is 0;
 		now Chieftain's Challenge is resolved;
-		repeat with y running from 1 to number of filled rows in Table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Viking":
 				now monster is y;
 				now area entry is "Nowhere";
@@ -746,12 +746,12 @@ to say VikingAttacks:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Viking";
 	now enemy title entry is "Viking Warrioress";
 	now enemy name entry is "Sonya";
@@ -822,12 +822,12 @@ Instead of resolving a Chieftain's Challenge:
 		say "     Everyone goes silent as a large and muscular man steps forward into the ring of people, pretty imposing in scale-mail armor. He's got the bearing of a seasoned fighter and is armed with a wickedly sharp-looking axe and a large round shield. From his scowl at you and the similar looks, this must be Sonya's father.";
 	LineBreak;
 	now VikingRelationship is 9;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;
-	choose row monster from the table of random critters;   [the chieftain is stronger than Sonya]
+	choose row monster from the Table of Random Critters;   [the chieftain is stronger than Sonya]
 	now HP entry is 275;
 	now monsterHP is 275;
 	now lev entry is 15;
@@ -840,12 +840,12 @@ Instead of resolving a Chieftain's Challenge:
 		say "     [VikingDuelEscape]";
 	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		say "     [VikingDuelVictory]";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now HP entry is 80;
 	now monsterHP is 80;
 	now lev entry is 9;
@@ -865,8 +865,8 @@ to say VikingDuelEscape:
 	say "     After you showed up to fight, it seems the Vikings assumed you had the honor to see it through till the end - which is why you totally managed to surprise them when you suddenly took off. You broke out of the circle of watchers, bowling two of them over and running away before they even realized what was happening. After a moment of shock, the gathered onlookers took up chase, throwing rocks and even one or two axes after you, resulting in many bruises and even a moderately severe cut.";
 	say "     Followed by shouts of 'Coward', 'Wimp' and lots of worse terms, you're hunted almost to exhaustion by the enraged mob. Only by dashing through what looked like some talk or negotiation between the hyenas and leopardmen did you finally manage the lose them. Before the representatives of the two gangs managed to react with anything but growls at your sudden appearance, the viking lynch-mob ran straight into them, causing a free for all fight. Not even looking back to check what was happening there or if anyone was still following you, you just kept going until you finally arrived at the library, bloodied and exhausted.";
 	now HP of player is 1;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;
@@ -1031,6 +1031,10 @@ Section 5 - NPC Sonya
 [
 If you can add Sonya to the viking longboat, along with discussion topics and a sex scene, just fingers and body contact for women, the guy on top for the other gender. I'd like her to have some scaling conversation about how many children she and the PC have had, some conversations and pointers about interesting events at the Beach for the player to look for. I'm keeping this one simple for the time being.
 ]
+
+Table of GameCharacterIDs (continued)
+object	name
+Sonya	"Sonya"
 
 Sonya is a woman. The HP of Sonya is normally 0.
 Sonya is in Sonya's Cabin.
@@ -1502,8 +1506,8 @@ to say mead horn use:
 	VikingInfect;
 
 to VikingInfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;

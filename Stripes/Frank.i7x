@@ -81,6 +81,10 @@ to say comicshopdesc:
 
 Section 2 - Frank the Skunk
 
+Table of GameCharacterIDs (continued)
+object	name
+Frank	"Frank"
+
 Frank is a man. Frank is in Comic Shop.
 The description of Frank is "[frankdesc]".
 The conversation of Frank is { "NERD!" }.
@@ -463,8 +467,8 @@ Section 8 - Male Skunk Infection Mechanics
 to say maleskunkinfect:
 	if skunkbeaststatus is 1:
 		[puts Skunkbeast Lord as lead monster]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Skunkbeast Lord":
 				now monster is y;
 				break;
@@ -476,8 +480,8 @@ to say maleskunkinfect:
 			now sex entry is "Both";
 	else:
 		[puts Skunk as lead monster for possible impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Skunk":
 				now monster is y;
 				break;

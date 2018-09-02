@@ -11,6 +11,10 @@ the linkaction of Liliana is "[LilianaLinkAction]".
 to say LilianaLinkAction:
 	say "Possible Actions: [link]talk[as]talk Liliana[end link], [link]smell[as]smell Liliana[end link], [link]fuck[as]fuck Liliana[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+equinoid warrior	"equinoid warrior"
+
 equinoid warrior is a pet. equinoid warrior is a part of the player.
 understand "Liliana" as equinoid warrior.
 The description of equinoid warrior is "[LilianaDesc]".
@@ -22,6 +26,10 @@ The dismissdesc of equinoid warrior is "[DismissLiliana]".
 The assault of equinoid warrior is "[LilianaAttack]".
 The fuckscene of equinoid warrior is "[SexWithLiliana]".
 lilianabathsex is a number that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+Liliana	"Liliana"
 
 Liliana is a woman.
 The description of Liliana is "[LilianaDesc]".
@@ -47,7 +55,7 @@ to say SummonLiliana:
 		say "     You inform Liliana that it's time to head out. She slams her fist into a hoofed hand, showing that she is ready for a fight.";
 	else: [regular summoning]
 		say "     Liliana strides up to your side with a determined look on her equine face.";
-	remove Liliana from play;
+	now Liliana is nowhere;
 
 to say DismissLiliana:
 	move Liliana to Courtyard;

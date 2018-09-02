@@ -175,6 +175,10 @@ the linkaction of Rex is "[rexlinkaction]".
 to say rexlinkaction:
 	say "Possible Actions: [link]talk[as]talk Rex[end link], [link]smell[as]smell Rex[end link], [link]fuck[as]fuck Rex[end link], [link]beg for treat[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+Rex	"Rex"
+
 Rex is a man.
 The description of Rex is "[Rexdescribing]".
 The conversation of Rex is { "rextalk" }.
@@ -212,10 +216,11 @@ instead of conversing the Rex:
 				say "     Reaching out to wipe away the tear welling in her eye, you do your best to comfort the poor girl. Leaning into your hand, a smile creeps across Karen's face. 'Thank you,' she says again quietly. 'Do you think... I could come with you? I can't stay here in case Rex comes back, but I don't know if I would fare any better against the other monsters out there. Please?' Wiping the fresh tear from her face, you consider her request for a moment and come to the same conclusion, she's far too vulnerable right now to leave alone, and so you agree to bring her with you.";
 				say "     With an excited squeal, she pulls you in for another quick hug before dashing around the house to collect a small bag of supplies. After gathering your own things and preparing to head out, you pause for a moment, considering finding and bringing that strange bone with you, but when a quick glance around the room doesn't reveal it, you decide it's probably best to leave it behind anyway.'";
 				now Retriever Girl is tamed;
+				add "Tamed" to Traits of Retriever Girl;
 				move Karen to Breakroom;
 				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
-				now KarenTimer is turns;
+				now Libido of Karen is turns;
 				now HP of Rex is 50;
 				now HP of Karen is 5;
 				now Rex's Place is unknown;
@@ -273,8 +278,8 @@ instead of conversing the Rex:
 
 Instead of fucking the Rex:
 	[puts Retriever as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Retriever":
 			now monster is y;
 			break;
@@ -365,8 +370,8 @@ Section 7 - ALL the scenes
 
 to say fullRetrieverTF:
 	[puts Retriever as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Retriever":
 			now monster is y;
 			break;

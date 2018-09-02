@@ -35,8 +35,8 @@ Instead of resolving a Cow Hunting:
 	else if calcnumber is 2: [rape]
 		LineBreak;
 		say "     The cowboy shouts out a 'No! What the hell's wrong with you fu-', then you land the first blow and the conversation comes to a crashing halt.";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Cowboy Cuntboy":
 				now monster is y;
 				now area entry is "Plains";
@@ -120,6 +120,9 @@ to say WendyGryphonAftermath:
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Wendy	"Wendy"
 
 Wendy is a woman. The HP of Wendy is normally 0.
 The description of Wendy is "[WendyDesc]".

@@ -24,6 +24,10 @@ East of Museum entry is Museum interior.
 
 The marea of Museum entry is "Museum".
 
+Table of GameCharacterIDs (continued)
+object	name
+Valerie	"Valerie"
+
 Valerie is a woman.
 The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.".
 The conversation of Valerie is { "Riddle me this!" }.
@@ -83,8 +87,8 @@ carry out riddlesphinxing:
 		increase riddlewin by 1;
 		if riddlewin > 2:
 			say "     'I'll also be going around the museum to do some of my rounds soon. I wouldn't mind a little companionship on these trips. If you'd like to tag along, perhaps we might even find something interesting to do,' she says with an coy smile and a swish of her tail.";
-		let prizegift be a random number from 1 to number of filled rows in the table of random critters;
-		choose row prizegift from the table of random critters;
+		let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
+		choose row prizegift from the Table of Random Critters;
 		if there is a loot entry:
 			if loot entry is not "" and loot entry is not " ":
 				add loot entry to invent of player;

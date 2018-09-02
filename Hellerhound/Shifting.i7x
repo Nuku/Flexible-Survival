@@ -88,8 +88,8 @@ carry out shifting:
 		stop the action;]
 	let critter be the topic understood;
 	let critter list be a list of text;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		add name entry to critter list;
 		if name entry matches the regular expression "^[critter]$", case insensitively:
 			now monster is X;
@@ -98,8 +98,8 @@ carry out shifting:
 			break;
 	if ttransform is 0:
 		now critter list is {};
-		repeat with X running from 1 to number of filled rows in table of random critters:
-			choose row X from the table of random critters;
+		repeat with X running from 1 to number of filled rows in Table of Random Critters:
+			choose row X from the Table of Random Critters;
 			add name entry to critter list;
 			if name entry matches the regular expression ".*[critter].*", case insensitively:
 				now monster is X;
@@ -110,7 +110,7 @@ carry out shifting:
 	repeat with x running through critter list:
 		say "[x]";]
 	if ttransform is 1:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		say "[line break]You concentrate on becoming one with the [name entry]s.";
 	if ttransform is 0:
 		say "You don't know any such beast.";
@@ -125,7 +125,7 @@ Section 3 -transform
 
 
 To transform:
-	choose row tmonster from the table of random critters;
+	choose row tmonster from the Table of Random Critters;
 	if skinname of player is not name entry:
 		say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 		now skinname of player is name entry;
@@ -143,15 +143,15 @@ To transform:
 		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 		now bodyname of player is name entry;
 		now body of player is body entry;
-		if there is a scale in row monster of the table of random critters:
+		if there is a scale in row monster of the Table of Random Critters:
 			now scalevalue of player is scale entry;
 		else:
 			now scalevalue of player is 3;
-		if there is a body descriptor in row monster of the table of random critters:
+		if there is a body descriptor in row monster of the Table of Random Critters:
 			now bodydesc of player is body descriptor entry;
 		else:
 			now bodydesc of player is name entry;
-		if there is a type in row monster of the table of random critters:
+		if there is a type in row monster of the Table of Random Critters:
 			now bodytype of player is type entry;
 		else:
 			now bodytype of player is name entry;

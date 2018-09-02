@@ -30,6 +30,11 @@ to say FootFieldLockerdesc:
 
 
 [NPCs]
+
+Table of GameCharacterIDs (continued)
+object	name
+Gorilla Team-Members	"Gorilla Team-Members"
+
 Gorilla Team-Members is a man.
 The description of Gorilla Team-Members is "A highly variable number of gorillas is present at all times in their team locker-room, in all states of dress and undress, as well as sexual arousal. It would be an understatement to say that all these hunky guys, girls and in between are 'just interested' in football - it's more like the whole center of their existence, as you can see from the fact that an adjoining storage room has been totally cleared out to set up numerous bunk beds. Looks like they now live right here next to the field. The gorillas are a definitively are a jovial bunch, and you can hear almost constant chatting, laughing and more than a few aroused moans from all around you.".
 The conversation of Gorilla Team-Members is { "Yap!" }.

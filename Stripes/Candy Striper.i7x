@@ -26,7 +26,7 @@ to say candycoondesc:
 	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The uniform is a bright pink with a white apron and skirt. It has a few white stains scattered on it. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 to say losetocandycoon:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now nocandycoonsex is 0;
 	if player is male:
 		say "     Victorious, the girlish coon giggles happily and pushes you to the ground. Working off your remaining clothes with nimble fingers, the candy striper raises his skirt, exposing his hot-pink erection.[line break]";
@@ -82,13 +82,13 @@ to say beatthecandycoon:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Raccoon"; [Name of your new Monster]
 	now enemy title entry is "Candy Striper Raccoon";
 	now enemy name entry is "Candy";
@@ -143,6 +143,10 @@ When Play begins:
 
 Section 3 - Raccoon Pet
 
+Table of GameCharacterIDs (continued)
+object	name
+pink raccoon	"pink raccoon"
+
 pink raccoon is a pet. pink raccoon is a part of the player.
 The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
 The weapon damage of pink raccoon is 4.
@@ -156,8 +160,8 @@ the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousa
 
 to say sexwithpinkraccoonpet:
 	[puts Raccoon as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Raccoon":
 			now monster is y;
 			break;
@@ -272,8 +276,8 @@ to say coonpetsex11:		[f paw him off]
 
 to say coonpreg:
 	[puts Raccoon as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Raccoon":
 			now monster is y;
 			break;
@@ -282,6 +286,11 @@ to say coonpreg:
 
 
 Section 4 - Raccoon at Bunker
+
+
+Table of GameCharacterIDs (continued)
+object	name
+Candy	"Candy"
 
 Candy is a man.
 The description of Candy is "[coondesc]".
@@ -340,8 +349,8 @@ to say sexwithCandy:
 		say "     The coon smiles and kisses your cheek. 'I'm sorry, sweetie. I need a little time to recover. I want to make the most of our playtime.'";
 	else:
 		[puts Raccoon as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Raccoon":
 				now monster is y;
 				break;
@@ -425,7 +434,7 @@ to say sexwithcandy_01:
 
 to say sexwithcandy_02:
 	setmonster "Raccoon";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if bodyname of player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the equally raccoonish body he's given you and runs his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweety. I'm glad you appreciate it. And now I'm going to show you how much I appreciate it, too,' he adds with a nibble to your ear as he takes a hold of your stiff erection.";
 	if player is submissive:
@@ -605,8 +614,8 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 Section 7 - Total Coonification
 
 to say totalcoonification:		[version 1 - direct shift, no gender controls]
-	repeat with y running from 1 to number of filled rows in table of random critters:	[puts Raccoon as lead monster...]
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Raccoon as lead monster...]
+		choose row y in Table of Random Critters;
 		if name entry is "Raccoon":
 			now monster is y;
 			break;

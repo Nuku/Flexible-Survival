@@ -198,8 +198,8 @@ Instead of Resolving a Chocolate Treat:
 			increase hunger of player by 12;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Chocolate Lab":
 				now monster is y;
 				break;

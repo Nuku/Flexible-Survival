@@ -46,13 +46,13 @@ Instead of Resolving a Hidden Fucknest:
 		else:
 			say "     You dig around inside, finding cut-up bits of burlap and ropes that function as bedding. Bits of odd, mismatched clothing and old shoes are tightly wound into a bundle, all useless. A broken compass and dildos carved from driftwood are also stacked up in the corner. You realize how dire a mistake you've made when you shove the dildos aside to search under them, the whittled sex-toys well coated in infectious secretions from their last use. The tingles running from your fingertips to elbow confirm your fears, a sure sign those fluids were contagious.";
 			LineBreak;
-			sort table of random critters in random order;
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
+			sort Table of Random Critters in random order;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
+				if area entry matches the text battleground and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
 					now monster is X;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			infect;
 			SanLoss 5;
 	else:

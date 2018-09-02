@@ -154,6 +154,10 @@ an everyturn rule:
 
 Section 2 - Solstice the Vulpogryph		[coming soon]
 
+Table of GameCharacterIDs (continued)
+object	name
+Solstice	"Solstice"
+
 Solstice is a woman.
 The description of Solstice is "[solsticedesc]".
 The conversation of Solstice is { "Treasure!" }.

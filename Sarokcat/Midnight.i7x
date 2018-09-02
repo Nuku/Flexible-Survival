@@ -8,6 +8,10 @@ section 1- Midnight
 Lastmidnightmimiced is a number that varies. Lastmidnightmimiced is usually 250.
 Midnightmimiced is a number that varies. Midnightmimiced is usually 0.
 
+Table of GameCharacterIDs (continued)
+object	name
+Midnight	"Midnight"
+
 Midnight is a man.[or woman]
 The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
 The conversation of Midnight is { "Mrowl!" }.

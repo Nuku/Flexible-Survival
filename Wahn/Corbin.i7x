@@ -35,6 +35,10 @@ Version 1 of Corbin by Wahn begins here.
 [ CorbinKidCounter - number of children with the player                 ]
 [ CorbinPregCounter - timer for the next birth (48h from start)         ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Corbin	"Corbin"
+
 Corbin is a man. The HP of Corbin is normally 0. Corbin is in Worker Barracks.
 The description of Corbin is "[CorbinDesc]".
 The conversation of Corbin is { "Mew!" }.

@@ -24,6 +24,10 @@ Version 5 of Fang by Stripes begins here.
 
 Section 1 - Fang the Feral Wolf
 
+Table of GameCharacterIDs (continued)
+object	name
+Fang	"Fang"
+
 Fang is a person.
 The description of Fang is "[fangdesc]".
 The conversation of Fang is { "Grrrr!" }.
@@ -56,8 +60,8 @@ the fuckscene of Fang is "[sexwithFang]";
 
 to say sexwithFang:
 	[puts Feral Wolf as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Feral Wolf":
 			now monster is y;
 			break;

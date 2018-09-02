@@ -42,6 +42,10 @@ to say JuliansRoomDesc:
 
 Section 2 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Julian	"Julian"
+
 Julian is a man. The hp of Julian is usually 0.
 The description of Julian is "[JulianDesc]".
 The conversation of Julian is { "Woof grrr" }.

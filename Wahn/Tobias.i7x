@@ -172,6 +172,10 @@ to say TobiasTalk17: [Ask if you can fuck his dogs]
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Tobias	"Tobias"
+
 Tobias is a man.
 The description of Tobias is "[TobiasDesc]".
 The conversation of Tobias is { "<This is nothing but a placeholder!>" }.

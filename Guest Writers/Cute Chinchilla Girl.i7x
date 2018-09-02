@@ -69,7 +69,7 @@ to say chinloss: [Placeholder, player victory scenes expected to be added in lat
 
 to say chindesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	setmonster "Chinchilla";
 	if a random chance of 1 in 2 succeeds:
 		now chindem is true;
@@ -88,12 +88,12 @@ to say chindesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Chinchilla";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -164,7 +164,7 @@ instead of sniffing tuft of chin fur:
 the usedesc of tuft of chin fur is "[tuft of chin fur use]";
 
 to say tuft of chin fur use:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	setmonster "Chinchilla";
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";

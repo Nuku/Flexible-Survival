@@ -27,11 +27,9 @@ AFFECTION TABLE
 
 Section 0 - Variables and Items
 
-Ammy has a number called affection.
-affection of Ammy usually is 0.
-
-Ammy has a number called lastevent.
-lastevent of Ammy usually is 666.
+AmmyAffection is a number that varies.
+AmmyLastEvent is a number that varies.
+AmmyLastEvent usually is 666.
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -81,6 +79,10 @@ The description of 'Employees Only' Door is "     Hidden beyond some curtains th
 
 Section 2 - Ammy
 
+Table of GameCharacterIDs (continued)
+object	name
+Ammy	"Ammy"
+
 Ammy is a woman. Ammy is in Topless Lounge.
 The description of Ammy is "[ammy_desc]".
 
@@ -93,8 +95,8 @@ to say ammyscent:
 	increase libido of player by 5;
 
 Instead of asking Ammy about "DEBUG":
-	say "My affection now is [affection of Ammy][line break]";
-	say "My last event was at [lastevent of Ammy] turns[line break]";
+	say "My affection now is [AmmyAffection][line break]";
+	say "My last event was at [AmmyLastEvent] turns[line break]";
 	say "My last sexevent was at [lastfuck of Ammy] turns![line break]";
 	say "Current turns are [turns] turns";
 
@@ -106,27 +108,27 @@ Instead of asking Ammy about "DEBUG_INFECTME":
 Section 3 - Conversation
 
 Instead of conversing Ammy:
-	if lastevent of Ammy is not turns:
-		if affection of Ammy is:
+	if AmmyLastEvent is not turns:
+		if AmmyAffection is:
 			-- 0:
 				say "     As you approach her she gets up and starts talking to you. 'Hey there sweetheart, glad to see someone new around~' she says with a rather curious voice. 'You can call me Ammy, I help out at various things and dance on the pole there from time to time so I'm allowed to stay here.' You try to say something, but find yourself investigating her curves further until she laughs you off.";
 				say "     'Maybe I can dance for you too?' she says teasingly. 'Nyehehee... well, maybe later~' and turns away again.";
-				now affection of Ammy is 1;
-				now lastevent of Ammy is turns;
+				now AmmyAffection is 1;
+				now AmmyLastEvent is turns;
 			-- 1:
 				say "     'Oooh, it's you again! Still around, hmmm? Why don't you sit next to me?' she says, offering you the chair next to her couch.";
 				say "     'So, stranger. What are you doing here? Have business to do? Or are you just strolling around in search for company in this broken world? I remember the time before all of this had started... I never ever thought I'd be able to work in a place like this. But nowadays things seem to change rather... quickly. Nyahahaa~' she laughs. Being close to your new found friend you're finally able to talk to her, still you simply have to continue eying her body further while you do.";
 				say "     Just as you finally want to say something to Ammy you hear a glass breaking in the other room and the horse's ears rise suddenly, saying 'Sorry pal, gotta look after that! We'll pick up from here later, alright?' She quickly gets up and walks away, her hooves clopping muffled as they hit the soft floor. You cannot else but stare after her as she walks - feeling mesmerized by the graceful swaying of her hips and the way her purple tail moves along with it. Enjoying the view a sudden thought strikes you, this is a topless lounge, isn't it? Possibly you should ASK her ABOUT TAKING OFF the BRA if you dare next time you see her.";
-				now affection of Ammy is 2;
-				now lastevent of Ammy is turns;
+				now AmmyAffection is 2;
+				now AmmyLastEvent is turns;
 			-- 2:
 				say "[one of][ammy_idletalk][or]     'Oh hi there again! Hope you're having fun here at the Palomino... with me?' the equine tells you with a wink of her eye. You surely do! Yet you somewhat wonder if Ammy would TAKE OFF her BRA if you'd ASK her... after all this should be a topless lounge![at random]";
 			-- 3:
 				say "     'Oooh, hi there again lovely!' the white equine greets you with a smile before approaching you, 'I'm glad you found your way back here again.'";
 				say "     The curvy horse lady looks to the side before she continues, 'I was wondering... do you see this dancing pole over there on my favorite couch? I kinda... thought you might enjoy a little 'show'? - I need to practice anyway, and after all I think I might like making you happy?' - tilting her head to the side a bit while speaking to you.";
 				if player consents:
-					now affection of Ammy is 4;
-					now lastevent of Ammy is turns;
+					now AmmyAffection is 4;
+					now AmmyLastEvent is turns;
 					say "     Ammy cheers and nuzzles at you before taking you by the wrist, pulling you with her a bit as she heads towards the pole on her special corner.";
 					say "[ammy_poledance]";
 				else:
@@ -137,25 +139,25 @@ Instead of conversing Ammy:
 				say "     Do you want Ammy to perform a lapdance for you?";
 				if player consents:
 					say "[ammy_lapdance]";
-					now affection of Ammy is 5;
+					now AmmyAffection is 5;
 					now 'Employees Only' Door is openable;
 				else:
 					say "     'Oooh, I see you're busy with something else,' Ammy says in a sad voice. 'I think I also should get going. Talk to you again later sweetheart!'";
 			-- otherwise:
-				say "[if lastfuck of Ammy is not turns][one of]     'Ooh there you are again lovely! What are you up to? Having something 'special' in mind?' Ammy asks you with one of her eyebrows raised.[or]     The white equine falls into you, arms embracing your body while giving your forehead a kiss with her muzzle, 'Where have you been? I was missing you!'[or][ammy_idletalk][at random][else if affection of Ammy > 4][one of]     If you want me to dance for you again, you can always ask me to, sweetheart.[or][ammy_idletalk][at random][else][ammy_idletalk][end if]";
+				say "[if lastfuck of Ammy is not turns][one of]     'Ooh there you are again lovely! What are you up to? Having something 'special' in mind?' Ammy asks you with one of her eyebrows raised.[or]     The white equine falls into you, arms embracing your body while giving your forehead a kiss with her muzzle, 'Where have you been? I was missing you!'[or][ammy_idletalk][at random][else if AmmyAffection > 4][one of]     If you want me to dance for you again, you can always ask me to, sweetheart.[or][ammy_idletalk][at random][else][ammy_idletalk][end if]";
 	else:
 		say "[ammy_idletalk]";
 
 
 Instead of asking Ammy about "Poledance":
-	if affection of Ammy > 4:
+	if AmmyAffection > 4:
 		say "     'You want me to do that again? Well... sure! Just come here.' Ammy smiles and teasingly points to her favorite spot. Of course you take a seat there quickly.";
 		say "[ammy_poledance]";
 	else:
 		say "     'Hrm. What exactly makes you think I'd give you a free show?' the equine states and smiles and sticks her tongue out playfully at you.";
 
 Instead of asking Ammy about "Lapdance":
-	if affection of Ammy >= 5:
+	if AmmyAffection >= 5:
 		if lastfuck of Ammy is not turns:
 			say "     'Ooh... I see where you are hinting lovely!' the equine whispers into your ear and points at the 'Employees Only' door. Of course you eagerly wait at her flatlet for the 'entertainment'";
 			say "[ammy_lapdance]";
@@ -176,18 +178,18 @@ Instead of asking Ammy about "help":
 
 Instead of asking Ammy about "DEBUG_STARTOVER":
 	say "I'll pretend I have never met you before lovely <3";
-	now affection of Ammy is 0;
+	now AmmyAffection is 0;
 
 Instead of asking Ammy about "take/taking off bra":
-	if affection of Ammy is 2:
+	if AmmyAffection is 2:
 		say "     'Nyahahahahaa,' she laughs. 'Well, I see what you mean... and technically you are totally right of course! I wasn't paying much attention because no one really was around before...' she says, turning her head a bit to the side while looking at you. 'Any special reason why you ask about that?' she asks with a broad grins.";
 		say "     'Oh I think I know what you want...' she asks teasingly, then turns her back to you and fondles around the snaps of her bra with her soft hands. You can hear a faint click as you start watching black silky bra sliding off her body, falling to the ground as she turns around again slowly.";
 		say "     With huge eyes you look at her ample bosom slowly drifting into view as she turns to you again. The view of her soft breasts moving while the equine turns around towards you is just delightful! Pink nipples on top of white boobs staring at you, it just makes such a perfect sight! - Still gazing in awe you catch a glimpse of her smile as she leans forward now, poking at your shoulder with one finger. 'I'm glad you enjoy the sight, but you forgot one thing,' she says in a soft voice, 'you're also still wearing something up there!' Not being able to compete to that logic you grinningly take off your upper clothes, exposing your [ammy_playerchestdesc]. It looks like Ammy's also pleased by what she sees... 'You're quite a saucy one, aren't you?' Nyehee, here - take my bra as a gift,' she laughs, putting it on the table next to you before walking off again, leaving you standing with your literal drooling mouth open.";
 		say "     Obeying the rules of the club, you drop your upper clothes every time you enter the lounge now as well.";
 		add "black bra" to invent of topless lounge;
-		now affection of Ammy is 3;
-		now lastevent of Ammy is turns;
-	else if affection of Ammy < 2:
+		now AmmyAffection is 3;
+		now AmmyLastEvent is turns;
+	else if AmmyAffection < 2:
 		say "     'Why would I do that?' the horsey lady asks you teasingly, but getting kind of nervous now you don't want to bug her further.";
 	else:
 		say "     'I've dropped it already! What more could you possible want? Nyehehehee~' she tells you with a smile while intentionally giving you a wonderful view of her bare chest.";
@@ -209,9 +211,9 @@ Instead of asking Ammy about "Rarity":
 Section 4 - Sexy Times
 
 Instead of fucking Ammy:
-	If affection of Ammy <= 2:
+	If AmmyAffection <= 2:
 		say "     'Uhm. I'm flattered by your offer... and I know things tend to go very fast here... but... NO!' the equine states slightly annoyed and pushes you away.";
-	else if affection of Ammy <= 4:
+	else if AmmyAffection <= 4:
 		say "     'Oh... oh my, I... I don't know. You're sure kinda cute! But... no, I'm sorry,' Ammy tells you in her sweet voice, obviously being not completely uninterested.";
 	else:
 		if lastfuck of Ammy is not turns:
@@ -230,9 +232,9 @@ to say ammy_sexengine:
 
 
 to say ammy_sex_lap:
-	say "     Smilingly, you look down at your partner's crotch in your tight embrace, pleased by the growing bulge in her ever so tight panties, her white arms resting on your shoulders. Bringing your hands around her back, you find yourself exploring the equine's body downwards until you reach her flickering tail and round arse. [if affection of Ammy <= 5]'Oh my... I'm happy you finally give in to my tease,' Ammy says in slow, chanting words, looking[else]Looking[end if] at you with a sensual expression, the horse lady then suddenly leans forward and kisses you deeply. The thick equine tongue invading your mouth as one arm slides off your shoulder and frantically gropes at your crotch and starts caressing your equipment. The other hand explores your [bodyname of player] body, while you explore her's.";
+	say "     Smilingly, you look down at your partner's crotch in your tight embrace, pleased by the growing bulge in her ever so tight panties, her white arms resting on your shoulders. Bringing your hands around her back, you find yourself exploring the equine's body downwards until you reach her flickering tail and round arse. [if AmmyAffection <= 5]'Oh my... I'm happy you finally give in to my tease,' Ammy says in slow, chanting words, looking[else]Looking[end if] at you with a sensual expression, the horse lady then suddenly leans forward and kisses you deeply. The thick equine tongue invading your mouth as one arm slides off your shoulder and frantically gropes at your crotch and starts caressing your equipment. The other hand explores your [bodyname of player] body, while you explore her's.";
 	say "     You suddenly hear a snap and then feel something moving in your thighs, breaking the long kiss and looking down. What you see -and feel- there is her engorging shaft, that just ripped the tight black panties apart.";
-	say "     'Aww, that keeps happening,' she says, removing the remains of the panties. [if affection of Ammy <= 5]'So you finally get to see me without any clothes after all, hmm?' [else]'Nyehehee~ looks like sometimes I can even have a third horn,' she tells you with a one eyed wink. [end if]Her huge cock is growing harder by the moment. It's mostly equine in shape with a medial ring on half of its length and just as bright and pink from that ring upwards as the nipples on her fantastic breasts. [if affection of Ammy <= 5]'Don't worry, I've got all you might want,' she says with a faint giggling nicker[else]A faint giggling nicker escaping her mouth[end if] as her large cock rubs against your crotch.";
+	say "     'Aww, that keeps happening,' she says, removing the remains of the panties. [if AmmyAffection <= 5]'So you finally get to see me without any clothes after all, hmm?' [else]'Nyehehee~ looks like sometimes I can even have a third horn,' she tells you with a one eyed wink. [end if]Her huge cock is growing harder by the moment. It's mostly equine in shape with a medial ring on half of its length and just as bright and pink from that ring upwards as the nipples on her fantastic breasts. [if AmmyAffection <= 5]'Don't worry, I've got all you might want,' she says with a faint giggling nicker[else]A faint giggling nicker escaping her mouth[end if] as her large cock rubs against your crotch.";
 	say "     While you were distracted, the herm's soft hands were fondling around your waist, getting rid of whatever you might have worn, revealing your [if player is male]hard [cockname of player] cock[else if player is female]wet folds[end if].";
 	say "     After spending a few more moments in this hot embrace you find the idea of grabbing her cock enticing. Will you?";
 	if player consents:
@@ -336,10 +338,10 @@ to say ammy_sex_cowgirl:
 Section 5 - Variable Text Blocks
 
 to say ammy_desc:
-	if affection of Ammy <= 2:
+	if AmmyAffection <= 2:
 		say "     Looking around you spot a curvy figure laying there on one of the cherry-red leather couches. She's an anthropomorphic horse... well, for the most part at least. Lights are reflecting fuzzily from her silky white fur that covers her whole form. Her neck is long and strong, a soft equine head on top of it. In a row two curly white horns standing out from her forehead. Fine hairs form the equine's mane, deep purple in hue. Her tail's got the same purple hue, reaching down long legs tipped with hooves that support her sensually curved body.";
 		say "     She's wearing a skimpy black bra surrounding her ample breasts and tight black panties around her wide hips. Slowly getting a view of her crotch you also notice the sizable bulge in her panties, making you wonder how much of a female she actually is... as suddenly you notice that she spotted you eying her body, looking back into your direction with her blue eyes, smiling widely.";
-	else if affection of Ammy <= 5:
+	else if AmmyAffection <= 5:
 		say "     Ammy is laying there on one of the cherry-red leather couches, looking stunningly beautiful. She's an anthropomorphic horse, or more an odd kind of unicorn. Lights are reflecting fuzzily from her silky white fur, that covers her whole form. Her neck is long and strong, a soft equine head on top of it, looking into your direction. A pentagram pendant with a gem in the middle of it is hanging around her horse neck, resting on her chest. Fine hairs form the equine's mane, deep purple in hue. Her tail's got the same purple hue, reaching down her long legs that are tipped with hooves to support her sensually curved body.";
 		say "     The view of her naked breasts is something very enjoyable, even mesmerizing a bit... She's wearing tight black panties around her wide hips. A sizable bulge in her panties is making you wonder what's hiding under it, however, you enjoy what you can already visualize in your imagination.";
 	else:
@@ -347,7 +349,7 @@ to say ammy_desc:
 		say "     [one of]Ammy is also wearing a few ribbons, wrapped around her thighs. They seem to be part of some lacy underwear set.[or]The horse's also wearing some long black leather gloves and similar leather stockings around her juicy legs... you wonder if she also hide a whip somewhere.[or]Ammy also is wearing [one of]pink[or]red[at random]-black striped stockings, they seem to be a bit vintage in style.[at random]";
 
 to say ammy_idletalk:
-	say "     [one of]Hey there sweetheart~[or]Nyeheheee~ this is the best apocalypse ever![or]DO NEVER EVER call me a PONY!!![or]Hmm... people called me a duocorn or bicorn already, but I guess it's up for your liking what you prefer.[or]This body still keeps surprising me, suppose there still are things left to explore, she tells you with a seductive grin.[or]I wonder how I got this weird colors in my fur...[or]Hey! Will you get off my favorite couch please?![line break]     ...or at least make some room for me![or][if affection of Ammy > 3]Hey, hey! Eyes are up here! [else]You like my outfit? [end if][or]If you need any help you can always ask me for it sweetheart![line break]     (type 'ask Ammy about help')[at random]";
+	say "     [one of]Hey there sweetheart~[or]Nyeheheee~ this is the best apocalypse ever![or]DO NEVER EVER call me a PONY!!![or]Hmm... people called me a duocorn or bicorn already, but I guess it's up for your liking what you prefer.[or]This body still keeps surprising me, suppose there still are things left to explore, she tells you with a seductive grin.[or]I wonder how I got this weird colors in my fur...[or]Hey! Will you get off my favorite couch please?![line break]     ...or at least make some room for me![or][if AmmyAffection > 3]Hey, hey! Eyes are up here! [else]You like my outfit? [end if][or]If you need any help you can always ask me for it sweetheart![line break]     (type 'ask Ammy about help')[at random]";
 
 
 to say ammy_playerchestdesc:
@@ -399,7 +401,7 @@ to say ammy_lapdance:
 	say "     (Yes = Grab them, No = back up)";
 	if player consents:
 		say "     'Ahh... I'm glad you approve lovely.' Ammy whispers into your ear in a slow, chanting voice.";
-		now affection of Ammy is 6;
+		now AmmyAffection is 6;
 		now lastfuck of Ammy is turns;
 		say "[ammy_sex_lap]";
 	else:

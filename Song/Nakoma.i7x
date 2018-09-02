@@ -1,6 +1,10 @@
 Version 1 of Nakoma by Song begins here.
 [ Version 1.0 - Initial talk options and sex scenes - Song                      ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Nakoma	"Nakoma"
+
 Nakoma is a woman. Nakoma is in Nakoma's Tent.
 The description of Nakoma is "[NakomaDesc]".
 The conversation of Nakoma is { "I like plains." }.

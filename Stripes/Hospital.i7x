@@ -445,12 +445,15 @@ Instead of resolving a Finding a Way in:
 	else:
 		say "     You continue searching the hospital, but are unable to find your way through, reaching another dead end. It seems you will have to continue to explore the hospital further to learn your way around.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Doctor Mouse	"Doctor Mouse"
 
 Doctor Mouse is a person. Doctor Mouse is in Hidden Lab.
 lastDrMousefucked is a number that varies. lastDrMousefucked is usually 500.
 understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
-Doctor Mouse has a number called progress.
+DoctorMouseProgress is a number that varies.
 
 The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears. He's only about three feet tall, and that's to the top of his ears. He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it. He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
 The icon of Doctor Mouse is the figure of DrMouse_icon.
@@ -510,7 +513,7 @@ Instead of conversing the Doctor Mouse:
 		if girl is banned or guy is banned or furry is banned or hermaphrodite is banned:
 			say "     'I had hoped to obtain some samples, but the creatures cannot be located. I don't have anything further for you,' the mouse says, shaking his head.";
 			say "     (Unable to proceed with current creature blocks. Girl, guy, herm and furry are all needed for subsequent segments.)";
-		else if progress of doctor mouse minus turns < 8:
+		else if DoctorMouseProgress minus turns < 8:
 			say "     'Please leave me to my research for the moment. I believe I shall have more need for you once I am done,' Doctor Mouse says as he waves you off dismissively while standing one of the lab stools to use one of the microscopes to examine a sample.";
 		else:
 			extend game by 16;
@@ -640,7 +643,7 @@ to say hospquestpt2:
 	increase carried of healing booster by 1;
 	increase carried of libido suppressant by 1;
 	increase carried of water bottle by 1;
-	now progress of Doctor Mouse is turns;
+	now DoctorMouseProgress is turns;
 	extend game by 6;
 	LineBreak;
 	increase score by 25;
@@ -656,7 +659,7 @@ to say hospquestpt3:
 	if dog milk is owned:
 		say "     'What is this?' he exclaims as you pull out the bottle of dog milk. 'You already have some? Astonishing! I knew you would make a fine assistant, but this is most impressive. There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments. Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.'";
 		delete dog milk;
-		now progress of Doctor Mouse is turns;
+		now DoctorMouseProgress is turns;
 		extend game by 6;
 		increase score by 25;
 		now hospquest is 6;
@@ -667,14 +670,14 @@ to say hospquestpt4:
 	if dog milk is owned:
 		say "     'You have it? Excellent work. I knew when you showed up that you'd make a fine assistant. There was just something about you.' He takes the jar of dog milk and starts drawing samples from it, putting them into beakers for testing. 'It will take some time to complete my tests, but I expect I'll have something for you once the results are in.'";
 		delete dog milk;
-		now progress of Doctor Mouse is turns;
+		now DoctorMouseProgress is turns;
 		extend game by 6;
 		increase score by 20;
 		LineBreak;
 		now hospquest is 6;
 
 to say hospquestpt5:
-	if progress of doctor mouse minus turns < 12:
+	if DoctorMouseProgress minus turns < 12:
 		say "     'Please leave me to my research for the moment. I believe I shall have something special for you when I am done.'";
 	else:
 		say "     'I have been able to perform some research on the sample you brought back. While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature. This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results. And I do believe I said I'd have a reward for you.'";
@@ -725,14 +728,14 @@ to say hospquestpt7:
 		say "     'Excellent work, my assistant. Now I have much to do. I hope you will understand if I ask you to leave me to my investigations for a time. But as a reward, you may have this for the moment,' the small mouse says as he passes you a medkit.";
 		say "     'For the reward to come, I would like to make an analysis of your nanites to better help you out there.' You start to mumble an objection, but he brushes it off. 'Now, now. You aren't afraid of a little needle, are you? I am a doctor, after all.' And then, while you start to consider the matter further, he pricks you with the needle and withdraws some blood. 'There. All done. Now, that wasn't so bad, was it?' he says, like a doctor speaking to a young patient.";
 		say "     'Give me a couple of days to work on all this. I hope to have a suitable reward for you at that time.'";
-		now progress of Doctor Mouse is turns;
+		now DoctorMouseProgress is turns;
 		extend game by 8;
 		increase score by 40;
 		LineBreak;
 		now hospquest is 9;
 
 to say hospquestpt8:
-	if progress of doctor mouse minus turns < 16:
+	if DoctorMouseProgress minus turns < 16:
 		say "     'Please leave me to my research for the moment. I believe I shall have something special for you when I am done.'";
 	else:
 		say "     As you start to converse with Dr Mouse, one of the jaguar orderlies comes in signals for the little mouse's attention. Dr Mouse goes over to him and speaks to him. As you watch, you can't help noticing the jaguar's huge fangs, familiarly like those of the sabertooth tigers you faced. He also seems to be larger and more muscled. His shirt doesn't quite fit right and has popped its seams at the shoulders. Dr Mouse eventually sends him off in frustration.";
@@ -743,17 +746,17 @@ to say hospquestpt8:
 		waitlinebreak;
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting. 'Oh, I wasn't too upset about the news. It's just harder to understand them now that they've got those big teeth. There's a little pest running around the hospital, distracting the other staff at times. Nothing you need concern yourself with, though. They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable. 'I have to get back to things now. I don't think I'll have anything for you for at least a few days. Please give me some time to process all of these results.'";
-		now progress of Doctor Mouse is turns;
+		now DoctorMouseProgress is turns;
 [		NanofabRewardReprogrammer; [places piece for nanofab in room. move this line if/when a better place is found]	]
 		now hospquest is 10;
 
 to say hospquestpt9:
-	if progress of doctor mouse minus turns < 12:
+	if DoctorMouseProgress minus turns < 12:
 		say "     'I do not have any tasks for you at the moment, but please check back again later,' he white mouse replies to your enquiries about his research.";
 	else:
 		now Staff Lounge is resolved;
-		repeat with y running from 1 to number of filled rows in table of random critters:	[removes Raccoon monster from Hospital]
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:	[removes Raccoon monster from Hospital]
+			choose row y in Table of Random Critters;
 			if name entry is "Raccoon":
 				now monster is y;
 				break;
@@ -788,6 +791,7 @@ to say hospquestpt9:
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it. His pink cock is quite hard, leaking pre onto the floor. Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle. He swallows it all down and licks you clean like a good little pet, churring happily.";
 			now pink raccoon is tamed;
+			add "Tamed" to Traits of pink raccoon;
 			say "     (The pink raccoon is now tamed! You can make it your active pet by typing [bold type][link]pet pink raccoon[as]pet pink raccoon[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck pink raccoon[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 		else:
 			increase score by 20;
@@ -1038,28 +1042,28 @@ to say hosploss:
 
 
 to say hosptfscene:
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from the table of random critters;
-	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player:
-		sort table of random critters in random order;
+	choose row monster from the Table of Random Critters;
+	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player:
+		sort Table of Random Critters in random order;
 		now monster is 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	now tailname of player is name entry;
 	now tail of player is tail entry;
 	say "     'The first injection will adjust the volunteer's lower spine. We shall begin there, as the changes may be the least visible, depending on the outcome.' The mouse the jabs a second needle, quite painfully, into your ass. As he watches, the doctor comments to the group about how your ass becomes malleable as [ass change entry].";
-	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player:
-		sort table of random critters in random order;
+	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player:
+		sort Table of Random Critters in random order;
 		now monster is 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	now facename of player is name entry;
 	now face of player is face entry;
 	waitlinebreak;
 	say "     'We shall now move on to the head,' he states, motioning for the orderly to step up. He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head. As a burning sensation courses through your head, the doctor discusses how [face change entry]. As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
-	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
-		sort table of random critters in random order;
+	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
+		sort Table of Random Critters in random order;
 		now monster is 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	now skinname of player is name entry;
 	now skin of player is skin entry;
 	waitlinebreak;
@@ -1072,10 +1076,10 @@ to say hosptfscene:
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. Another of the vixen nurses is on her knees, licking and kissing the large cock. Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl. She takes it in eagerly, playing with his heavy balls until he cums down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
 	else:		[Dr Mouse is mouse]
 		say "     You can see that the albino mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. His cock is small, perhaps about four inches to match his small height. But his balls are quite large, perhaps each the size of a peach. One of the vixen nurses is on her knees, licking and kissing his cock before taking it into her muzzle. She fondles his balls and sucks his shaft obediently until he sends his ample load down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
-	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
-		sort table of random critters in random order;
+	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
+		sort Table of Random Critters in random order;
 		now monster is 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	now bodyname of player is name entry;
 	now body of player is body entry;
 	attributeinfect;
@@ -1087,10 +1091,10 @@ to say hosptfscene:
 	LineBreak;
 	waitlinebreak;
 	if player is male:
-		while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
-			sort table of random critters in random order;
+		while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
+			sort Table of Random Critters in random order;
 			now monster is 1;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience. 'There is one final injection to make, my colleagues. And I'm sure this is the one you've all been anxiously awaiting. He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze. Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
 		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper. You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin. As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
 		now cockname of player is name entry;
@@ -1111,8 +1115,8 @@ to say hosptfscene:
 
 to say drmousesex:
 	[puts Albino Mouse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Albino Mouse":
 			now monster is y;
 			break;
@@ -1392,7 +1396,7 @@ to say posttlscene:
 	increase maxHP of player by ( level of player + 1 );
 	increase HP of player by (level of player + 1);
 	now hospcountdown is turns;
-	now progress of Doctor Mouse is turns;
+	now DoctorMouseProgress is turns;
 	say "[bold type]Your Strength, Dexterity and Stamina are all increased by 2.[roman type][line break]";
 
 
@@ -1595,7 +1599,7 @@ Section 8 - Hospital Quest 2
 
 to say hospquestpt11:
 	if hospquest is 14:
-		if progress of doctor mouse - turns < 20:
+		if DoctorMouseProgress - turns < 20:
 			say "     'I don't have anything more for you to assist me with at the moment,' the white mouse replies to you inquiry. 'I have a lot of material to study. It should be very enlightening. I'll need more time to figure out what can be done with all of this,' he adds with a dismissive wave as he checks some readings.";
 			if HP of Susan is 50:
 				say "     'Why not talk to your doe friend? Perhaps you could entertain her for a bit,' he adds, not looking up from his work.";
@@ -1648,14 +1652,14 @@ to say hospquestpt12:
 		LineBreak;
 		say "     Resisting the impulse, you thank the doctor for the offer, but tell him you're happy as you are for the moment. He nods and puts the [bold type]activator[roman type] away, reminding you that you can ask him for it at any time.";
 	setmonster "Enhanced Chimera";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now area entry is "Hospital";
 	now non-infectious entry is false;
 	setmonster "Mismatched Chimera";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now area entry is "Nowhere";
 	now hospquest is 19;
-	now progress of doctor mouse is turns;
+	now DoctorMouseProgress is turns;
 
 ec_activating is an action applying to nothing.
 understand "activator" as ec_activating.
@@ -1671,7 +1675,7 @@ carry out ec_activating:
 to say ec_activation:
 	increase ec_fullcount by 1;
 	setmonster "Enhanced Chimera";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Receiving a dose of the activator from Doctor Mouse, you feel a rush of energy run through you. It's as if you can feel the excitement of the dormant infection inside you rushing into action. An aching warmth spreads across your body, making you tingle from head to food. Your head throbs and your vision goes blurry as the process goes on. You can feel a myriad of shifts and changes going on all over you, so many it's hard to focus on any one of them at a time. It's almost as if several different transformations are all taking place together or in sequence, building you up through several successive infections.";
 	if the remainder after dividing ec_fullcount by 4 is 0 and player is male:
 		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if cocks of player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if cock length of player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if cock width of player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if cock width of player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
@@ -1716,7 +1720,7 @@ to say ec_activation:
 
 
 to say hospquestpt13:
-	if progress of doctor mouse minus turns < 8:
+	if DoctorMouseProgress minus turns < 8:
 		say "     'I'm still working through the data obtained from Zephyr, but there are constant distractions,' he grumbles. 'I told you to give me at least a day to review this material.' You don't recall him specifying that, but you decide to leave him be for a while longer.";
 	else:
 		say "     'I'm still reviewing the data provided by Zephyr. The information is quite promising though it contains several obvious gaps. It is clear that information is being withheld from us and I suspect they know much more about this event than they are disclosing - which is perfectly understandable if they had even a small hand in this. Not everyone would understand the benefits such an opportunity provides and would focus on the perceived negatives that have occurred rather than the exceptional potentials the future now holds. Regardless, my research is advancing quickly though I still need more time to explore the new avenues of research that are now accessible.";

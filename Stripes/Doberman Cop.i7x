@@ -17,7 +17,7 @@ when play begins:
 
 to say Dobermandesc:
 	setmongender 4; [creature is female]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 7, let debit be level of player - 7;
 	now dobieresist is 0;
@@ -65,7 +65,7 @@ to say losetoDoberman:
 		say "[losetodobie3]";
 
 to say losetodobie1:		[low-lust player loss]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if dobieresist is 0:
 		if dobielibido is 0:
 			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name? Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it. Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?";
@@ -161,7 +161,7 @@ to say losetodobie1:		[low-lust player loss]
 
 
 to say losttodobie2:		[mid-lust player loss]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let fine be 0;
 	let timepenalty be 0;
 	if dobieresist is 0:
@@ -202,7 +202,7 @@ to say losttodobie2:		[mid-lust player loss]
 
 
 to say losetodobie3:		[high-lust player loss]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let fine be 0;
 	let timepenalty be 0;
 	if dobieresist is 0:
@@ -428,7 +428,7 @@ to say beatthedobie2:			[mid-lust cop player victory]
 
 
 to say beatthedobie3:			[high-lust cop player victory]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     The female Doberman moans and sags to the ground, her increased lust taking hold. She pulls open her pants, revealing her lack of panties as she starts fingering herself. She looks up at you with a pure lust in her eyes as she spreads her legs and parts the dark lips of her canine pussy with fingers. 'Come on, take me! I don't care anymore. Just give it to me and make me yours,' she moans and pants while holding herself in wanton display for you. You can't help but smile at what a fine slut you've made this cop into and try to decide how you'd like to use her. ";
 	if player is not neuter:
 		LineBreak;
@@ -495,12 +495,12 @@ to say beatthedobie3:			[high-lust cop player victory]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Doberman";
 	now enemy title entry is "Doberman Cop";
 	now enemy name entry is "Alexandra";

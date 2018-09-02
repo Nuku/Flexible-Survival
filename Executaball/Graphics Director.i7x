@@ -6,7 +6,7 @@ Section 1 - Declarations and variables
 
 [New Graphics modifier]
 The graphics window position is g-right. The graphics window proportion is 30.
-ngraphics_currentartist is a text that varies. ngraphics_currentartist is usually "None".
+ngraphics_currentartist is a text that varies.[@Tag:NotSaved] ngraphics_currentartist is usually "None".
 TempClearBypass is a number that varies. TempClearBypass is usually 0.
 [Because of new system, setting this to 1 is needed for making projections work when applied in a 'look' order]
 
@@ -80,8 +80,8 @@ carry out graphicmoding:
 	if NewGraphicsOpened is true:
 		follow the ngraphics_blank rule;
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphics Settings:[roman type][line break]";
 			say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'INLINE ONLY' or 'OFF' will no longer generate a side window.[line break]";
@@ -112,11 +112,11 @@ carry out graphicmoding:
 				-- 2:
 					say "Exit graphics menu?";
 					if player consents:
-						now trixieexit is 1;
+						now Trixieexit is 1;
 	else:
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphic Settings:[roman type][line break]";
 			say "NOTE: The graphics window has not been opened yet. To enable the new side-window graphics, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
@@ -142,7 +142,7 @@ carry out graphicmoding:
 				-- 2:
 					say "Exit graphics menu?";
 					if player consents:
-						now trixieexit is 1;
+						now Trixieexit is 1;
 
 Section 5 - Debug Commands
 

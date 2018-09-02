@@ -85,7 +85,11 @@ Version 1 of Bad Alexandra by Wahn begins here.
 
 Section 0 - Basic Structure
 
-Alexandra is a person. Alexandra is in Police Station.
+Table of GameCharacterIDs (continued)
+object	name
+Alexandra	"Alexandra"
+
+Alexandra is a woman. Alexandra is in Police Station.
 AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.

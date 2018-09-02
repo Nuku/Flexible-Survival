@@ -14,7 +14,7 @@ when play begins:
 
 Instead of resolving a Sugar Shack:
 	setmonster "Sugar Glider";
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";
 	say "     When you step up to the counter there's no sign of the glider who was here moments ago. Peering over the counter, you see the shelves of the stall have been picked clean, but there is a large cotton candy machine in the back that appears mostly undisturbed. 'Isn't it great!?' You whip around to find the source of the voice behind you, finding yourself face to face with the grinning sugar glider. 'And it still works!' she cheers, grabbing your arm and pulling you around to the door at the back of the stall, then inside.";
 	WaitLineBreak;
@@ -73,8 +73,8 @@ Instead of resolving a Sugar Shack:
 
 to say fullSugarGliderTF:
 	[puts Sugar Glider as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Sugar Glider":
 			now monster is y;
 			break;

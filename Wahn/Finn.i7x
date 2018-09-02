@@ -189,6 +189,10 @@ Section 2 - NPC
 [  99: Finn's dead                                       ]
 [ 100: Finn joined the stables                           ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Finn	"Finn"
+
 Finn is a man. The HP of Finn is usually 0.
 The description of Finn is "[FinnDesc]".
 The conversation of Finn is { "<This is nothing but a placeholder!>" }.

@@ -19,6 +19,10 @@ Section 1 - NPC
 CandyUrikInteraction is a number that varies.
 lastCandyUrikInteraction is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Urik	"Urik"
+
 Urik is a man.
 The description of Urik is "[UrikDesc]".
 The icon of Urik is Figure of Urik_clothed_icon.

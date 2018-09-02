@@ -5,6 +5,10 @@ Version 1 of Pet Shop by Wahn begins here.
 
 Section 1 - Chaotic Mess
 
+Table of GameCharacterIDs (continued)
+object	name
+Chaotic Mess	"Chaotic Mess"
+
 Chaotic Mess is a person. Chaotic Mess is in George's Animal Emporium.
 The description of Chaotic Mess is "     Most of George's Animal Emporium is filled with a terrible mess, as the store's contents have been rifled through multiple times already. The looters were clearly not interested in putting things back into their original positions. This has resulted in a sprawling chaos of items scattered everywhere, ankle deep in places and hip high for a human in others. If you had a specific friend or pet in mind, you could very well find them a gift or something in here. Maybe you should try to [link]sort[as]sort chaotic mess[end link] through the chaotic mess?".
 

@@ -22,12 +22,12 @@ to say beatSlimeCube:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Slime Cube";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -96,8 +96,8 @@ to say slimeCubeVoreScene:
 to slimeCubeVore:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -125,7 +125,7 @@ to slimeCubeVore:
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [maneatingPlantStruggleBar][line break][run paragraph on]";
 		if humanity of player < 1:
 			now voreloss is true;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			now bodyname of player is "Slime Cube";
 			end the story saying "Digested by a slime.";
 		else:
@@ -153,7 +153,7 @@ to slimeCubeVore:
 				else:
 					say "     Your arms eventually escape the confines of the slime. The firmer outer skin of the slime acts against it, and gives you additional leeway to push yourself out. You instinctively run as fast as you can away from the much slower slime.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":

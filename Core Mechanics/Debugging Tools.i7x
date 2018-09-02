@@ -9,8 +9,8 @@ Version 2 of Debugging Tools by Core Mechanics begins here.
 [ debugactive 0 = Debug off]
 [ debugactive 1 = Debug on]
 
-debugactive is a number that varies. debugactive is 0.
-RandomGenNumber is a number that varies.
+debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
+RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
 debugmode is an action applying to nothing.
 understand "npcdebug" as debugmode.
@@ -22,9 +22,13 @@ understand "debug" as debugmode.
 carry out debugmode:
 	if debugactive is 0:
 		say "NPC DEBUG MODE ACTIVATED.";
+		if "Debugger" is not listed in Traits of player:
+			add "Debugger" to Traits of player;
 		now debugactive is 1;
 	else:
 		say "NPC DEBUG MODE DISABLED.";
+		if "Debugger" is listed in Traits of player:
+			remove "Debugger" from Traits of player;
 		now debugactive is 0;
 
 turncountdisplay is an action applying to nothing.
@@ -37,7 +41,7 @@ carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]";
 
 TestMode is an action applying to nothing.
-TestingActive is a truth state that varies.
+TestingActive is a truth state that varies.[@Tag:NotSaved]
 understand "iwannatest" as TestMode.
 
 check TestMode:
@@ -294,8 +298,8 @@ check impregwith:
 	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out impregwith:
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if name entry exactly matches the text topic understood, case insensitively:
 			impregnate with name entry;
 			break;
@@ -308,8 +312,8 @@ check infectwith:
 	if debugactive is 0, say "You aren't currently debugging.";
 
 carry out infectwith:
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if name entry exactly matches the text topic understood, case insensitively:
 			infect name entry;
 			break;
@@ -344,8 +348,8 @@ InfectionOverview is an action applying to nothing.
 understand "infectionoverview" as InfectionOverview.
 
 carry out InfectionOverview:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		now cocks of player is 1;
 		now cunts of player is 1;
 		now cock length of player is 10;
@@ -453,8 +457,8 @@ carry out DebugCritterRow:
 	let NumericalValue be 0;
 	now NumericalValue is numerical value of topic understood;
 	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
-	if NumericalValue < the number of rows in the table of random critters:
-		choose row NumericalValue in the table of random critters;
+	if NumericalValue < the number of rows in the Table of Random Critters:
+		choose row NumericalValue in the Table of Random Critters;
 		say "Creature Entry: [name entry]";
 	else:
 		say "Row Number outside of the table!";

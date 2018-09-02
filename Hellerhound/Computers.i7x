@@ -902,8 +902,8 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 
 	Price is a kind of value. $99.99 specifies a price.
 
-	Checking account balance is a price that varies. Checking account balance is $2894.82.
-	Cash in hand is a price that varies. Cash in hand is $15.97.
+	Checking account balance is a price that varies. Checking account balance is $2894.82.[@Tag:NotSaved]
+	Cash in hand is a price that varies. Cash in hand is $15.97.[@Tag:NotSaved]
 
 	After taking inventory:
 		say "You are carrying [cash in hand] in cash."

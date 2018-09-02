@@ -46,7 +46,7 @@ check HuntAction:
 		say "I don't see any good hunting grounds around here." instead;
 
 carry out HuntAction:
-	let PossibleEncounters be a list of texts;
+	let PossibleEncounters be a list of text;
 	let Found be 0;
 	let HuntId be "Target Name";
 	now HuntID is topic understood;
@@ -102,14 +102,18 @@ carry out HuntAction:
 				move player to object entry;
 				now object entry is known;
 				now Found is 20; [room found]
-	else if there is a name of HuntId in the Table of GameEvents: [exact situation name match]
-		choose a row with name of HuntId in the Table of GameEvents;
+	else if there is a name of HuntId in the Table of GameEventIDs: [exact situation name match]
+		choose a row with name of HuntId in the Table of GameEventIDs;
 		if debugactive is 1:
 			say "DEBUG -> Situation found: [name entry] by matching with [HuntId] (EXACT MATCH).[line break]";
 		if object entry is resolved:
 			if debugactive is 1:
 				say "DEBUG -> Already resolved![line break]";
 			now Found is 34; [found, but it is resolved]
+		else if object entry is not PrereqisiteComplete:
+			if debugactive is 1:
+				say "DEBUG -> Prerequisite Tag not found.[line break]";
+			now Found is 36; [found, but the prerequisite is not in Traits of player]
 		else if score < minscore of object entry:
 			if debugactive is 1:
 				say "DEBUG -> Player's score is too low![line break]";
@@ -221,55 +225,9 @@ carry out HuntAction:
 					now z is known;
 					now Found is 20; [room found]
 				break;
-		if Found is 0: [no simple room match, moving on to events]
-			if debugactive is 1:
-				say "DEBUG -> Checking [HuntId] against events now. (SIMPLE MATCH)[line break]";
-			repeat with z running through unresolved situations:
-				if printed name of z matches the text HuntId, case insensitively:
-					if debugactive is 1:
-						say "DEBUG -> Situation found: [HuntId] by matching with [HuntId].[line break]";
-					if score < minscore of z:
-						now Found is 33; [found, score too low]
-						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; Player's score is too low![line break]";
-					else if level of player < level of z:
-						now Found is 32; [found, level too low]
-						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
-					else if z is not close:
-						now Found is 31; [found, wrong area]
-						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; In another area![line break]";
-					else:
-						now Found is 30; [event found]
-						say "It should be somewhere...";
-						if "Unerring Hunter" is not listed in feats of player:
-							let bonus be (( the Perception of the player minus 10 ) divided by 2);
-							if "Curious" is listed in feats of player, increase bonus by 2;
-							let diceroll be a random number from 1 to 20;
-							say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
-							increase diceroll by bonus;
-							if diceroll >= 15:
-								now inasituation is true;
-								say "You manage to find your way to [z]!";
-								try resolving z;
-								now inasituation is false;
-							else:
-								now inasituation is false;
-								say "Despite your searches, you fail to find it.[line break]";
-								huntingfightchance;
-								now Found is 35; [event found, perception check fail]
-								if debugactive is 1:
-									say "DEBUG -> Found: [Found], perception check fail.[line break]";
-						else:
-							now inasituation is true;
-							say "You manage to find your way to [z]!";
-							try resolving z;
-							now inasituation is false;
-					break;
-		if Found is 0 or Found is 10 or Found > 30 and Found < 35: [last ditch effort to find the target, also fills the random encounter list]
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
+		if Found is 0 or Found is 10 or (Found > 30 and Found < 40): [last ditch effort to find the target, also fills the random encounter list]
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next; [broken creatures / empty lines get ignored]
 				if there is no name entry, next; [broken creatures / empty lines get ignored]
 				if Found is not 10 and (name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy name entry matches the text HuntId, case insensitively): [no target creature found yet]
@@ -339,6 +297,56 @@ carry out HuntAction:
 					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
 					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
 					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
+		if Found is 0: [no simple room match, moving on to events]
+			if debugactive is 1:
+				say "DEBUG -> Checking [HuntId] against events now. (SIMPLE MATCH)[line break]";
+			repeat with z running through unresolved situations:
+				if printed name of z matches the text HuntId, case insensitively:
+					if debugactive is 1:
+						say "DEBUG -> Situation found: [HuntId] by matching with [HuntId].[line break]";
+					if z is not PrereqisiteComplete:
+						if debugactive is 1:
+							say "DEBUG -> Prerequisite Tag not found.[line break]";
+						now Found is 36; [found, but the prerequisite is not in Traits of player]
+					else if score < minscore of z:
+						now Found is 33; [found, score too low]
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found]; Player's score is too low![line break]";
+					else if level of player < level of z:
+						now Found is 32; [found, level too low]
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
+					else if z is not close:
+						now Found is 31; [found, wrong area]
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found]; In another area![line break]";
+					else:
+						now Found is 30; [event found]
+						say "It should be somewhere...";
+						if "Unerring Hunter" is not listed in feats of player:
+							let bonus be (( the Perception of the player minus 10 ) divided by 2);
+							if "Curious" is listed in feats of player, increase bonus by 2;
+							let diceroll be a random number from 1 to 20;
+							say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
+							increase diceroll by bonus;
+							if diceroll >= 15:
+								now inasituation is true;
+								say "You manage to find your way to [z]!";
+								try resolving z;
+								now inasituation is false;
+							else:
+								now inasituation is false;
+								say "Despite your searches, you fail to find it.[line break]";
+								huntingfightchance;
+								now Found is 35; [event found, perception check fail]
+								if debugactive is 1:
+									say "DEBUG -> Found: [Found], perception check fail.[line break]";
+						else:
+							now inasituation is true;
+							say "You manage to find your way to [z]!";
+							try resolving z;
+							now inasituation is false;
+						break;
 	if the number of entries in PossibleEncounters is not 0 and Found is 10: [got list of creatures in the area & found the target creature]
 		sort PossibleEncounters in random order; [the one who gets put on #1 is the winner]
 		if debugactive is 1:
@@ -367,6 +375,8 @@ carry out HuntAction:
 			say "[bold type]Error. No area specified for a '[HuntId]'. Please report this on the FS discord.[roman type][line break]";
 		-- 14:
 			say "[bold type]The creature you are hunting has been banned from the game.[roman type][line break]";
+		-- 21:
+			say "[bold type]You don't think you can find a way there without help...[roman type][line break]";
 		-- 22:
 			say "[bold type]Maybe you should train to be a bit more perceptive to find it...[roman type][line break]";
 		-- 31:
@@ -377,6 +387,8 @@ carry out HuntAction:
 			say "[bold type]You're not ready to find this yet. Go have some accomplishments elsewhere and come back when you have gained experience...[roman type][line break]";
 		-- 35:
 			say "[bold type]Maybe you should train to be a bit more perceptive to find it...[roman type][line break]";
+		-- 36:
+			say "[bold type]Seems you're missing a prerequisite for this. Maybe look around a bit to find that first...[roman type][line break]";
 	follow the turnpass rule;
 
 to huntingfightchance:
@@ -385,7 +397,7 @@ to huntingfightchance:
 	if "Curious" is listed in feats of player, increase bonus by 2;
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
 	if a random number from 1 to 20 < 7 plus bonus and battleground is not "void":
-		if there is a area of Battleground in the table of random critters:
+		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";

@@ -49,7 +49,7 @@ to say peacockattack:
 
 to say peacockvictory:
 	now peacockcontrol is 0;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is female:
 		say "     You are unable to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him, and you have no choice but to walk with him until you arrive at what seems to be a well-maintained apartment. You can think more clearly by now, as if the leash in your brain has been loosened. However, you doubt that you could actually oppose whatever the bird has in mind for you.";
 		say "     He motions you towards the bed in the middle of the room. You obediently lie on the mattress while he looks over your [bodydesc of player] body with unmistakable lust, his tapered cock already poking out of his slit. He slides over your [skin of player] body... it feels like a light, warm blanket. His hands explore your every curve, stroking and groping you teasingly. Your thoughts start to drift and grow dull, and when his long, sleek cock sinks into your yearning petals, any will to resist melts away in shuddering waves of pleasure. You give in completely to the alluring peafowl...[fimpregchance]";
@@ -79,14 +79,14 @@ to say peacockvictory:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Peacock" to infections of guy;
 	add "Peacock" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Peacock";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -146,7 +146,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "pchypno"	peacockhypno rule	--	--	--	--	--	--	--	--	intstrike rule
 
 this is the peacockhypno rule:
-	choose row monster from table of Random Critters;
+	choose row monster from Table of Random Critters;
 	now monsterhit is false;
 	follow the intstrike rule;
 	if monsterhit is true:

@@ -30,12 +30,12 @@ to say beateasterbunny:
 
 Section 4 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Easter Bunny";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -129,7 +129,7 @@ to say ebheat:
 		now ebheat_msg is true;
 	else if ebheat_egg > 9 and ebheat_msg is true and Micaela is visible and ( lastfuck of Micaela - turns ) >= 9 and a random chance of libido of player in 150 succeeds:
 		setmonster "Easter Bunny";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		LineBreak;
 		say "     There's a small shifting of weight in your lower belly that feels so nice you have to stifle a moan. Looking over at Micaela, your [if player is female]cunt grows wet and quivers with a need to be filled[else]asshole feels empty and in need of filling[end if]. The colorful bunny's nose twitches and she grins at you, as if able to smell your arousal. You also see a bulge forming under her skirt and, knowing what lies beneath, your insides flutter again with heated desire. Unable to resist, you head over to her, tossing aside your clothing and gear as you go.";
 		say "     Seeing that lustful look in your eyes, Micaela flips up the front of her skirt, revealing her erection and plump balls. 'Mmm... come on, honeybunny. I know what you need,' she says, stroking her tantalizing manhood. 'Let's give that [if player is female]heated bunny-cunny[else]heated boi-bunny butt[end if] of yours the fucking it deserves.' You climb eagerly into the sexy Easter bunny's lap, grinding down on that throbbing shaft[if player is female]. Grabbing your hips, she lowers you down onto her cock. You moan long and with satisfaction as you feel that pulsing rod slide into your juicy cunt[else]. Spreading your cheeks, she lowers you down onto her cock. You moan long and with satisfaction as you feel that pulsing rod slide into your welcoming pucker[end if].";

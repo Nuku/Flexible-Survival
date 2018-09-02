@@ -71,12 +71,12 @@ to say beatthecockcannon:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Cock Cannon"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -141,7 +141,7 @@ ccmiss is a number that varies.
 cclosttarget is a truth state that varies. cclosttarget is usually false.
 
 this is the cockcannon rule:
-	choose row monster from table of Random Critters;
+	choose row monster from Table of Random Critters;
 	let playernum be 10;
 	let ccnum be 10;
 	now monsterhit is false;

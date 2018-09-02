@@ -18,6 +18,10 @@ Version 1 of Gordon by Rikaeus begins here.
 [   2: Tawnya says that Gordon is Tyler's ex               ]
 [   3: Says that he would've killed Kevin instead          ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Gordon	"Gordon"
+
 Gordon is a man.
 The description of Gordon is "[GordonDesc]".
 The conversation of Gordon is { "<this is a placeholder!>" }.

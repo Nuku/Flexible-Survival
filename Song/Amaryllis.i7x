@@ -1,6 +1,10 @@
 Version 1 of Amaryllis by Song begins here.
 [ Version 1.0 - Initial talk options and sex scenes - Song                      ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Amaryllis	"Amaryllis"
+
 Amaryllis is a woman. Amaryllis is in Equinoid Camp.
 The description of Amaryllis is "[AmaryllisDesc]".
 The conversation of Amaryllis is { "I choose you, playerchu!" }.

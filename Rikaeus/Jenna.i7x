@@ -32,6 +32,10 @@ LoganCommand is a number that varies.
 
 Section 1 - Declaring Jenna
 
+Table of GameCharacterIDs (continued)
+object	name
+Jenna	"Jenna"
+
 Jenna is a woman.
 The description of Jenna is "[JennaDesc]".
 The conversation of Jenna is { "<This is nothing but a placeholder!>" }.

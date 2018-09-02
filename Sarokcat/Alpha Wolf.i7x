@@ -22,8 +22,8 @@ to say alphawolfdesc:
 to say Alpha Wolf attack:
 	if wolffight is 3:		[ Trickster event fight ]
 		say "     The alpha wolf growls and pushes you to the ground. He presses his partially-shaved body down atop you and pulls off your remaining clothes before grinding his cock into your face. His throbbing meat is red and canine, dripping alluringly scented precum. As you try to resist, he grabs your head and pushes himself into your mouth. 'Mmm... take it, you little bitch. This'll teach you to get some cur to try shaving me,' he growls. You moan softly around it as he starts to fuck your face hard and fast. His hot meat twitches inside your muzzle, leaking precum steadily as he pounds into you. As its taste fills your mouth and his scent fills your nose, you find yourself no longer resisting and soon you're licking and sucking that throbbing shaft greedily. He releases a howling chuckle and keeps pumping, forcing his long shaft down your throat and pounding his knot against your lips. He eventually cums with a loud howl and sends his thick seed flowing down your throat to warm your belly with the tingles of infection.";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feral Wolf":
 				now monster is y;
 				break;
@@ -157,12 +157,12 @@ To say Alpha Wolf loss:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Alpha Wolf";
 	now enemy title entry is "";
 	now enemy name entry is "";

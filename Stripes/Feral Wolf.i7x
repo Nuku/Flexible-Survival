@@ -165,7 +165,7 @@ to say FeralWolfVictorySex:
 		WaitLineBreak;
 		say "     Deciding against it, you turn around and head off, leaving the wolf to the mercy of any other creature that might come across it.";
 
-FeralWolfSpecialFightNumber is a number that varies;
+FeralWolfSpecialFightNumber is a number that varies.
 
 to say FeralWolfDesc:
 	setmongender 3;
@@ -183,14 +183,14 @@ to say FeralWolfDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Feral Wolf" to infections of guy;
 	add "Feral Wolf" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Wolf"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

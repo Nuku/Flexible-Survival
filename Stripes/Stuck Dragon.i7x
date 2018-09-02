@@ -56,7 +56,11 @@ Section 2 - Trapped Dragon Rear
 lastChristyfucked is a number that varies. lastChristyfucked is normally 300.
 NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
-dragoness is in Old Building. dragoness is a person.
+Table of GameCharacterIDs (continued)
+object	name
+dragoness	"dragoness"
+
+dragoness is a person. dragoness is in Old Building.
 The description of dragoness is "[dragonessdesc]".
 The conversation of dragoness is { "Poot!" }.
 dragonessfuck is a number that varies.
@@ -219,6 +223,10 @@ instead of sniffing Back Room:
 
 
 Section 4 - Trapped Dragon Front
+
+Table of GameCharacterIDs (continued)
+object	name
+Christy	"Christy"
 
 Christy is a woman. Christy is in Back Room. The description of Christy is "[christydesc]".
 The conversation of Christy is { "Rawr!" }.
@@ -1352,8 +1360,8 @@ to say sldrheat:
 			now battleground is marea of y;
 		if battleground is not "void":
 			let cmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in table of random critters:	[scans for all reptiles in the area]
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[scans for all reptiles in the area]
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if there is no name entry, next;
 				if area entry is battleground:
@@ -1363,7 +1371,7 @@ to say sldrheat:
 				now slutfucked is 0;
 				sort cmonlist in random order;
 				now monster is entry 1 of cmonlist;
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "Hearing your lustful calls being answered in the distance, you rush off to find this reptilian creature hoping it can help satisfy your sexual cravings. You find the [name entry] soon enough, drawn to your calls. Immediately upon seeing the creature, you submit yourself, offering your [bodytype of player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
 				WaitLineBreak;
 				follow the cock descr rule;

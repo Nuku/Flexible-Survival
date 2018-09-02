@@ -72,10 +72,6 @@ Version 2 of Amy by Wahn begins here.
 [   1: Carl learned she's his daughter and stopped himself              ]
 [  51: player pushed Carl to fuck Amy                                   ]
 
-Amy is a woman. The HP of Amy is usually 0.
-The icon of Amy is Figure of Amy_icon.
-The description of Amy is "[AmyDesc]".
-The conversation of Amy is { "Woof." }.
 AmyNewPuppies is a number that varies. AmyNewPuppies is usually 0.
 lastAmySpotted is a number that varies. lastAmySpotted is usually 255.
 AmyShyness is a number that varies. AmyShyness is usually 1.
@@ -86,6 +82,15 @@ SnowAmySex is a number that varies.
 IcarusAmySex is a number that varies.
 AlexandraAmySex is a number that varies.
 CarlAmySex is a number that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+Amy	"Amy"
+
+Amy is a woman. The HP of Amy is usually 0.
+The icon of Amy is Figure of Amy_icon.
+The description of Amy is "[AmyDesc]".
+The conversation of Amy is { "Woof." }.
 
 instead of conversing the Amy:
 	project the figure of Amy_face_icon;
@@ -189,9 +194,8 @@ instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and 
 	now lastAmySpotted is turns;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA TEACHING WALKIN [line break]";
-	if Char-C of Nadia is "0":
-		now Char-C of Nadia is "1";
-		say "[npcNadiaintUpdate]";
+	if NadiaChar-C is "0":
+		now NadiaChar-C is "1";
 	move player to Grey Abbey Library;
 	say "     Entering the library, you're treated to the sight of Nadia having descended to the library's first floor, the colorful avian woman having left the familiar comforts of her nest. The reason for that soon becomes clear: massed in front of her in what used to be an old reading area are a number of both Amy and Nadia's younger children, and the latter is putting her education to good use, holding an impromptu class of sorts. She reads to the youngsters from an array of books, teaching them some basic mathematics while Amy acts as her teaching assistant, nipping rowdy canine and avian kids alike into line and supplying her with class materials from the stacks. The husky herself watches the class between such activities, clearly intent on learning as much as she can, too.";
 	say "     The sight of the odd impromptu class, carried out by the two mothers, is quite encouraging. Compared to the numerous feral mutants in the city, it's nice to know that at least some of the next generation are having what humanity they were born with reinforced as opposed to the other way around.";
@@ -1217,7 +1221,7 @@ to say AmySex6: [Xerxes+Amy+Player Threesome]
 			say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you, just as you pound the very enthusiastic Amy in front of yourself. In between moans and pants, she groans 'Harder. Harder!', only satisfied when your balls smack against her buttcheeks with an audible thud each time you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[end if]. Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's womb. The feeling of a male's cum flooding her insides gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her orgasm.";
 			say "     In the grip of your own climax, your anal muscles twitch around Xerxes cock, which obviously excites him, making his growls of lust increase and him speed up before plunging in one last time and filling your asshole with his human seed. As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, the other one on Amy, you pull your little trio down to lie on the mattress, where you enjoy each other's warmth and closeness for a while as you come down from your respective orgasms[if lust of Xerxes >= 4]. 'Mmm... Master good fuck,' he mumbles softly, snuggling up to your back lovingly[end if].";
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     [mimpregchance]";
 		else: [Xerxes gets sucked off by Amy]
 			LineBreak;

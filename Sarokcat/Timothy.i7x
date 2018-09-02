@@ -25,6 +25,10 @@ Section 2 - Timothy
 LastTimothymilked is a number that varies. LastTimothymilked is usually 250.
 Timothyfucked is a number that varies. Timothyfucked is usually 0.
 
+Table of GameCharacterIDs (continued)
+object	name
+Timothy	"Timothy"
+
 Timothy is a man.
 The description of Timothy is "[TimothyDesc]".
 

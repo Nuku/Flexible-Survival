@@ -34,6 +34,10 @@ Section 1 - Erin
 
 Part A - Declaration and Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Erin	"Erin"
+
 Erin is a person.
 the description of Erin is "[ErinDesc]".
 
@@ -216,6 +220,10 @@ to say ErinVoyeurKo:
 Section 2 - Violet
 
 Part A - Declaration and Description
+
+Table of GameCharacterIDs (continued)
+object	name
+Violet	"Violet"
 
 Violet is a person.
 the description of Violet is "[VioletDesc]".

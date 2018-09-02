@@ -255,6 +255,10 @@ Instead of resolving a Restaurateur's Office:
 
 Section 2 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Bastet	"Bastet"
+
 Bastet is a woman.
 The description of Bastet is "[BastetDesc]".
 The conversation of Bastet is { "Mew!" }.

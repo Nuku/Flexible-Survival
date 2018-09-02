@@ -33,7 +33,7 @@ To say shark loss:
 	if inasituation is true:
 		say "";
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if ( hardmode is false and level of player < ( lev entry + 2 ) ) or dexterity of player < ( dex entry + 2 ) or cocks of player is 0:
 			say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Before you can press the advantage though, the shark-like pirate turns and dives into the water again, her tail and her fin cutting through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";
 		else if nopiratesharksex > 2 and ( the remainder after dividing nopiratesharksex by 5 is not 0 ):
@@ -53,12 +53,12 @@ To say shark loss:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Pirate Shark";
 	now enemy title entry is "";
 	now enemy name entry is "";

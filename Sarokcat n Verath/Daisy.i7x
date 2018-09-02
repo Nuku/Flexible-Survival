@@ -8,7 +8,11 @@ Section 1
 Daisytalk is a number that varies.
 daisyimpreg is a number that varies. daisyimpreg is usually 255.
 
-Daisy is a woman.[or woman]
+Table of GameCharacterIDs (continued)
+object	name
+Daisy	"Daisy"
+
+Daisy is a woman.
 The description of Daisy is "[Daisydescribing]".
 The conversation of Daisy is { "Ooo!" }.
 The fuckscene of Daisy is "[sexwithdaisy]".

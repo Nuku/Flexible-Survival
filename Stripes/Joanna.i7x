@@ -34,7 +34,7 @@ Instead of resolving a Overrun Garden:
 		LineBreak;
 		now inasituation is true;
 		setmonster "Parasitic Plant";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let debit be 0;
 		if hardmode is true and level of player > 10, let debit be level of player - 10;
 		now dex entry is 16 + ( debit / 5 );
@@ -88,8 +88,8 @@ to say losejoannafight:
 	say "     Held by the steely vines, you can feel them probing at your body. When the vine in your [if player is female]cunt[else]ass[end if] throbs painfully large, you cry out in a mix of pain and pleasure. Your open mouth is quickly filled by one of the bulbous fruits and sticky sap flows into your mouth[if player is not female]. Another finds its way into your ass, spreading you open wide[end if]. It is sticky and sweet and makes you more passive[if cunts of player > 1]. Having more cunts to fill, more vines and bulbous fruits push into you, making you moan in delight[end if]. All your available holes are filled with pumping, thrusting, leaking tendrils that stuff you over and over again. They start pulling you towards one of the large, vaginal flowers. The slender, white tendrils rise up and start waving around, as if in anticipation, but you no longer care about what's coming, too lost in the drugged pleasure as your belly[if player is female] and womb[end if] swells with the plant's sweet sap.";
 	say "     Some motion beside you draws your eyes to the transforming kinkajou woman as the flower is closing around her swollen body. She still tries to struggle a little, foolishly pushing against the closing petals. Why would anyone want to stop this? It just feels so wonderful. Released into the flower, the white tendrils wrap around you and slide all over your body. These are lovely caresses as you start to drift off to sleep while the plant's nectar flows over you and more tendrils slip into your body from every orifice, bonding with you. You cum repeatedly through this experience, even as you're passing out.";
 	[puts Parasitic Plant as lead monster for infection]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Parasitic Plant":
 			now monster is y;
 			break;
@@ -144,6 +144,10 @@ to say flowergardenscent:
 
 
 Section 3 - Joanna the Kinkajou-Plant
+
+Table of GameCharacterIDs (continued)
+object	name
+Joanna	"Joanna"
 
 Joanna is a woman. Joanna is in Flower Garden.
 The description of Joanna is "[joannadesc]".
@@ -411,12 +415,12 @@ This is the joannasexy rule:
 		clear the screen;
 		[puts Parasitic Plant as lead monster for sex change]
 		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Parasitic Plant":
 				now monster is y;
 				break;
-		choose row monster from table of random critters;
+		choose row monster from Table of Random Critters;
 		if nam is "Bukkake":
 			say "[joannasex1]";
 		else if nam is "Fellatio":

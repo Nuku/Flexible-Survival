@@ -19,6 +19,10 @@ GertyRelationship is a number that varies. GertyRelationship is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Gerty	"Gerty"
+
 Gerty is a man. The hp of Gerty is usually 0.
 [Gerty will be moved to the Tenvale College Library through Kyle content]
 The description of Gerty is "[GertyDesc]".

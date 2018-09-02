@@ -44,7 +44,7 @@ Instead of resolving Easter Eggs:
 
 to say micaelaintro_01:
 	setmonster "Easter Bunny";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Deciding to just go with it, you brace yourself against a nearby tree and grind back against the humping bunny. 'Oh, you're so friendly,' she giggles happily. She pushes aside any obstructive clothing or gear you may have and presses her drooling glans against your [if player is female]juicy pussy[else]tight pucker[end if]. Despite her obvious eagerness, she shows some consideration for her partner and thrusts into you slowly at first. You both moan in lustful pleasure at the penetration, the bunny's shapely cock slipping in like it belongs in you.";
 	say "     'Mmm... it's good to take a turn on top for a change. You're such a sweetie for letting me,' she adds, kissing your cheek even as she starts humping harder. This sets her plump, overfilled balls slapping against your [if player is female]thighs[else]butt[end if]. Her nine-inch cock throbs inside you as it [if player is female]slides across your slick vaginal walls[else]pushes in and out of your bowels, grinding against your prostate[end if].";
 	WaitLineBreak;
@@ -78,6 +78,10 @@ to say bunnyhousedesc:
 
 
 Section 3 - Micaela
+
+Table of GameCharacterIDs (continued)
+object	name
+Micaela	"Micaela"
 
 Micaela is a person. Micaela is in Bunny House.
 The description of Micaela is "[micaeladesc]".
@@ -134,7 +138,7 @@ the fuckscene of Micaela is "[sexwithMicaela]".
 
 to say sexwithMicaela:
 	setmonster "Easter Bunny";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Micaela < 3:
 		say "     [if HP of Micaela < 2]She certainly seemed eager earlier, but[else]Despite having sex earlier,[end if] you should probably talk to her first.";
 	else if lastfuck of Micaela - turns < 4:
@@ -213,7 +217,7 @@ to say sexwithMicaela_01:
 
 to say sexwithMicaela_02:
 	setmonster "Easter Bunny";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Micaela giggles happily and snuggles up to you, running her gloved paws over your [bodytype of player] body. She pushes you back onto the padded carpet and pushes your legs apart. You land in a sticky spot, but a passionate kiss from her has you forget about that minor detail. You can also feel the warm press of her large breasts [if lust of Micaela > 8]and her egg-filled belly [end if]upon you. In short order, her throbbing cock is pressed to your wet folds. She smiles as you moan for her to take you, which she does with a merry giggle.";
 	say "     'Ah yeah! Let's [if lust of Micaela > 8]give you some eggs, too[else]make some eggs[end if],' she says cheerfully as she sheathes her hard shaft inside your wet cunt. And soon she's humping away like the horny bunny she is, powerful thighs driving her plump rod into your needy hole. Your [cunt size desc of player] cunt squeezes and quivers around that rocking rabbit rod. You moan and groan in delight beneath the eager bunny pounding away at you.";
 	WaitLineBreak;
@@ -223,7 +227,7 @@ to say sexwithMicaela_02:
 
 to say sexwithMicaela_03:
 	setmonster "Easter Bunny";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Micaela grins at the prospect of doing you in the ass. She flips up the front of her skirt and openly strokes her stiff erection eagerly. 'Come on, honeybunny, let's give you a warm, creamy filling.' She spreads the precum from this exciting warm-up across her length as lube while you get yourself ready for her. Thus prepared, she motions for you to get into her lap. You take your place atop the randy Easter bunny, letting her get her cock lined up with your pucker before you sit down fully. Her throbbing rod pops smoothly into you, causing you both to release satisfied moans when this happens.";
 	say "     While she pauses a moment to let you adjust to her above-average size, she puts her gloved arms around you and cuddles you[if lust of Micaela > 8]. You can feel her rounded belly and the firm eggs resting inside it pressed against your back[end if]. Her paws wander over your body, caressing and teasing you. And with a [if breasts of player > 0 and a random chance of 1 in 3 succeeds]playful pinch of a nipple[else if player is male and a random chance of 2 in 3 succeeds]teasing stroke of your cock[else if player is female and a random chance of 2 in 3 succeeds]rub across your clit[else]nibble on your neck[end if], she pulls back and thrusts into you again. Only the initial few are slow, after that you're riding hard and fast in the bunny's lap as she bounces you up and down on her nine-inch pole.";
 	WaitLineBreak;
@@ -243,7 +247,7 @@ to say sexwithMicaela_04:
 
 to say sexwithMicaela_bf:
 	setmonster "Easter Bunny";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let ebcheck be false;
 	if bodyname of player is "Easter Bunny", now ebcheck is true;
 	if micaela_bf is even:

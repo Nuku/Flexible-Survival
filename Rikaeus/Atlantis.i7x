@@ -235,6 +235,10 @@ instead of going to Atlantis City Residential while ResidentialVisits is 1 and (
 
 Section 4 - NPCs
 
+Table of GameCharacterIDs (continued)
+object	name
+Triton	"Triton"
+
 Triton is a man. Triton is in Atlantis City Entrance.
 The description of Triton is "[TritonDesc]".
 The conversation of Triton is { "<This is nothing but a placeholder!>" }.
@@ -317,6 +321,10 @@ to say TritonTalk3:
 instead of fucking Triton:
 	say "     The buff male raises a brow at you, not offended by your offer but rather intrigued. 'As much as I would love to, Alana here would murder me if I scampered off to have fun with you,' he says.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Alana	"Alana"
+
 Alana is a woman. Alana is in Atlantis City Entrance.
 The description of Alana is "[AlanaDesc]".
 The conversation of Alana is { "<This is nothing but a placeholder!>" }.
@@ -389,9 +397,13 @@ instead of fucking Alana:
 
 An everyturn rule:
 	if daytimer is night:
-		remove Poseidon from play;
+		now Poseidon is nowhere;
 	else if daytimer is day:
 		move Poseidon to Royal Throne Room;
+
+Table of GameCharacterIDs (continued)
+object	name
+Poseidon	"Poseidon"
 
 Poseidon is a man.
 The description of Poseido is "[PoseidonDesc]".

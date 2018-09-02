@@ -114,7 +114,7 @@ to say Meredith_rescue:
 			say ". You go about your own business, though you do notice as time wears on that she's not returned. Eventually you have to presume she simply won't be coming back at all.";
 		now HP of Meredith is 100;
 		now HP of Vanessa is 51;
-		remove Vanessa from play;
+		now Vanessa is nowhere;
 	now inasituation is false;
 
 
@@ -143,7 +143,7 @@ to say Meredithrescue_fail:
 	say "     It's painfully clear to you that Vanessa will not be returning at all.";
 	now HP of Meredith is 100;
 	now HP of Vanessa is 51;
-	remove Vanessa from play;
+	now Vanessa is nowhere;
 
 to say Meredithrescue_flee:
 	say "     Making your escape from the kangaroos, you have to withdraw and hope the others will be alright. You make your way back to the library to wait and recover. ";
@@ -154,10 +154,14 @@ to say Meredithrescue_flee:
 	say "     It's painfully clear to you that Vanessa will not be returning at all.";
 	now HP of Meredith is 100;
 	now HP of Vanessa is 51;
-	remove Vanessa from play;
+	now Vanessa is nowhere;
 
 
 Section 1 - Meredith the Mare
+
+Table of GameCharacterIDs (continued)
+object	name
+Meredith	"Meredith"
 
 Meredith is a woman.
 The description of Meredith is "[Meredithdesc]".
@@ -168,7 +172,7 @@ the scent of the Meredith is "[if HP of Meredith is 1]Meredith still has the sta
 to say Meredithdesc:
 	if HP of Meredith is 0 or HP of Meredith is 100:
 		say "ERROR-Meredith-[HP of Meredith]L: You should not be able to find me!";
-		remove Meredith from play;
+		now Meredith is nowhere;
 	else if HP of Meredith is 1 or HP of Meredith is 2 or HP of Meredith is 3:
 		say "     Meredith is a researcher that Vanessa's scouting team was to escort during their failed mission. Having been found and rescued, she's been brought back here to await recovery by the military. She's a rather plain young woman with an average build, though the occasional peek you've snuck show her to have some nice tits and a cute ass. She's fairly pretty in a geeky sort of way once you look past her nerdy glasses and the plain haircut her ginger hair's been given. She's wearing a gray shirt and khaki cargo pants. Her many pockets hold a collection of technical and scientific instruments, which she fiddles with frequently. Having found an old binder in the library, she's stuffed her crumpled notes into it and can often be found adding to them.";
 	else if HP of Meredith is 4:
@@ -201,7 +205,7 @@ Section 2 - Conversation
 instead of conversing the Meredith:
 	if HP of Meredith is 0 or HP of Meredith is 100:
 		say "ERROR-Meredith-[HP of Meredith]T: You should not be able to talk to me!";
-		remove Meredith from play;
+		now Meredith is nowhere;
 	else if HP of Meredith is 1:
 		say "     'I want to thank you for helping Vanessa find me. I was really afraid those kangaroos would get me in the end. Aside from something about a pub, I didn't really catch what they were talking about when they came after me. I was too focused on avoiding spending the rest of my days as a horny marsupial.' Meredith adjusts her glasses, using the motion to try and obscure her blushing.";
 		say "     'But I should be pretty safe here,' she says, looking around the library. 'Secluded, fortified and built to house lots of survivors over the long term - this should be a secure place to await rescue. Staying here will limit my research... unless you can keep finding more survivors got me to examine and observe.'";
@@ -318,7 +322,7 @@ the fuckscene of Meredith is "[sexwithMeredith]".
 to say sexwithMeredith:
 	if HP of Meredith is 0 or HP of Meredith is 100:
 		say "ERROR-Meredith-[HP of Meredith]F: You should not be able to fuck me!";
-		remove Meredith from play;
+		now Meredith is nowhere;
 	else if player is neuter:
 		say "     Lacking a gender of your own, you see little point in making out with Meredith.";
 	else if HP of Meredith is 3 and lastfuck of Meredith - turns >= 4:

@@ -9,6 +9,10 @@ An everyturn rule:
 	else if daytimer is day:
 		move Richard to Richard's Room;
 
+Table of GameCharacterIDs (continued)
+object	name
+Richard	"Richard"
+
 Richard is a man.
 The description of Richard is "[RichardDesc]".
 The conversation of Richard is { "<This is nothing but a placeholder!>" }.

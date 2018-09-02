@@ -13,7 +13,6 @@ Instead of resolving a Riptide:
 	now Riptide is resolved;
 
 Hang Ten is a situation. The sarea of Hang Ten is "Beach".
-NereidRelationship is a number that varies. NereidRelationship is usually 0.
 
 when play begins:
 	add Hang Ten to badspots of girl;

@@ -124,7 +124,6 @@ The description of Golden Doors is "[GoldenDoorsDesc]".
 
 EgyptianRiddle is a number that varies.
 MenuRiddleNumber is a number that varies.
-calcnumber is a number that varies.
 LastRiddle is a number that varies.
 
 to say GoldenDoorsDesc:
@@ -434,6 +433,10 @@ instead of conversing Amuran:
 	else:
 		say "     [one of]Amuran looks to be, as usual, meditating in front of the pool of water.[or]'Greetings, young one. Your explorations go well, I hope.'[or]Surprisingly enough, Amuran looks to be reading a thick tome. From what you can see, the book is a treatise on [']modern['] history; modern to Amuran, at least. Where he got the book from, you're not entirely sure. Did he find the library?[or]A low humming permeates the room, the source of which you soon see; Amuran's wings are out, buzzing periodically in the warm air. Even an immortal insect's wings get tired of being confined all the time.[or]'My appreciation for your assistance cannot be overstated, mortal; many thanks to you, once again.'[or]'Have you encountered anything of note in this diseased city, young one?'[or]Amuran can be seen cleaning one of the many priceless relics that are scattered amongst the room; keeping this room clean is obviously a point of pride to him.[at random]";
 
+Table of GameCharacterIDs (continued)
+object	name
+Amuran	"Amuran"
+
 Amuran is a man.
 The description of Amuran is "[AmuranDescription]";
 
@@ -532,8 +535,6 @@ to say FinalQuestConclusion:
 	say "     Approaching you, it's easy to tell that he's rather happy, if the display a moment ago wasn't enough. Again giving you that odd, bugman [']smile['], he begins to speak, the tone of his voice conveying the pleased state he's in.";
 	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the forseeable future.";
 	now AmuranAwoken is 5;
-
-calcnumber is a number that varies.
 
 to say AmuranSexMenu:
 	now calcnumber is -1;

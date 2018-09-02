@@ -27,6 +27,10 @@ instead of going to Mall FoodCourt while ( HP of Ronda is 10 and HP of Lucy is 0
 
 Section 2 - Lucy
 
+Table of GameCharacterIDs (continued)
+object	name
+Lucy	"Lucy"
+
 Lucy is a woman.
 The description of Lucy is "[lucydesc]".
 The conversation of Lucy is { "Hey baby!" }.

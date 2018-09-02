@@ -111,12 +111,12 @@ To say cheetah victory:
 
 Section 2 - Infection Details
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Cheetah"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -189,8 +189,8 @@ to say cheetahheat:
 			say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs. Unable to control your lust you strike out in the direction of and immediately upon seeing the infected monster that you scented drop onto you immediately submit, offering yourself freely.";
 			say "[cheetahreset]";
 			let hmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ]
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear "outside" ]
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry is "Zoo":
 					add X to hmonlist;
@@ -198,7 +198,7 @@ to say cheetahheat:
 			repeat with Z running through hmonlist:		[Pick one of the monsters at random]
 				now monster is Z;
 				break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			follow the cock descr rule;
 			follow the breast descr rule;
 			say "[victory entry]";

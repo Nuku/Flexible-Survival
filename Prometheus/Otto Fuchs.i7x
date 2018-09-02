@@ -32,6 +32,10 @@ to say OttosApartmentDesc:
 
 Section 2 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Otto	"Otto"
+
 Otto is a man. The hp of Otto is usually 0.
 OttoForm is a number that varies. OttoForm is usually 0.
 The description of Otto is "[OttoDesc]".

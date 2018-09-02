@@ -13,7 +13,7 @@ when play begins:
 	add { "Teddy Bear" } to infections of furry;
 
 to say teddy bear attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if scalevalue of player <= 3 and a random chance of 2 in 5 succeeds:
 		if HP of player > 0:
 			say "     You are pulled into a soft hug by the stuffed bear";
@@ -86,7 +86,7 @@ to say teddybear69:
 		now libido of player is ( 2 * libido of player ) / 3;
 
 to teddybearvored:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now fightoutcome is 23;
 	increase teddyvored by 1;
 	decrease humanity of player by 6;
@@ -124,12 +124,12 @@ to teddybearvored:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Teddy Bear";
 	now enemy title entry is "";
 	now enemy name entry is "";

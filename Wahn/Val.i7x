@@ -17,6 +17,10 @@ Version 1 of Val by Wahn begins here.
 [  3: big bulge                                                ]
 [  4: kid born and taken while the player was out              ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Val	"Val"
+
 Val is a man. The HP of Val is normally 0.
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.

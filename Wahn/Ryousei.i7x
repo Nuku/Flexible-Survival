@@ -36,8 +36,8 @@ instead of going northwest from Park Trail while (level of player > 10 and RTWin
 	say "     Passing the last tall bamboo plants, you realize that there's already someone at the shrine. A muscular male tiger is kneeling before the large mirror disc forming the center of the shrine, dressed in a traditional Japanese kimono. A long striped tail gently waves through the air behind him as the being murmurs to the shrine, then eventually puts his hands together and bows before it. After finishing his prayer, the tiger rises to his feet, standing imposingly tall with a quite regal bearing.";
 	project the figure of Ryousei_face_icon;
 	say "     'Hajimemashite, stranger. I was just finished...' he says, indicating the spot in front of the shrine with a flourish of his clawed hand. 'It is... refreshing, to see that not all creatures in this land are base beasts. Maybe there is still hope for this nether-realm. So do not let me stand in your way to enlightenment - but before I go, know that you have met Ryousei, first general of the mighty shogun Aki. Which I will be again, once I have escaped this banishment plane.' And with that, the tiger brushes past you without waiting for a reply, walking over the gravel path to the rest of the park and leaving you standing alone at the Shinto shrine.";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Royal Tiger":
 			now monster is y;
 			now area entry is "Park";
@@ -64,13 +64,14 @@ to say RTiger loses:
 		-- 6:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 			say "(Ryousei, the royal tiger is now tamed! You can make him your active pet by typing [bold type]pet royal tiger[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])[line break]";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Royal Tiger":
 					now monster is y;
 					now area entry is "Nowhere";
 					break;
 			now royal tiger is tamed;
+			add "Tamed" to Traits of royal tiger;
 			move Ryousei to Grey Abbey Library;
 
 to say RTigerDesc:
@@ -78,12 +79,12 @@ to say RTigerDesc:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Royal Tiger";
 	now enemy title entry is "Tiger Warrior";
 	now enemy name entry is "Ryousei";
@@ -137,6 +138,10 @@ When Play begins:
 
 Section 4 - NPC/Pet
 
+Table of GameCharacterIDs (continued)
+object	name
+royal tiger	"royal tiger"
+
 royal tiger is a pet. royal tiger is a part of the player.
 understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
@@ -150,7 +155,7 @@ The assault of royal tiger is "[one of]Ryousei wades into the fight with sure st
 the fuckscene of royal tiger is "[sexwithRyousei]".
 
 to say SummonRyousei:
-	remove Ryousei from play;
+	now Ryousei is nowhere;
 	if player is in Grey Abbey Library and Ryousei is in Grey Abbey Library: [summoning while standing next to him]
 		say "     Walking a few steps over to where your tiger companion currently resides, you tell him that you'd like him to accompany you. The muscular feline stands up and smiles, then puts the palms of his hands together and gives a little bow. 'Of course, my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";
 	else: [regular summoning]
@@ -162,6 +167,10 @@ to say DismissRyousei:
 		say "     Putting a hand on Ryousei's arm, you give him a companionable squeeze, then go on to say that you have to do without his companionship for a while. He doesn't ask why you are sending him away, just nods and gives a small bow. 'Do what you must, my friend. I will be there if you have a need of me.' With that, he walks off in a calm and unhurried stride, exploring the for him unfamiliar world on his own.";
 	else: [dismissing him in the abbey]
 		say "     Putting a hand on Ryousei's arm, you give him a companionable squeeze, then go on to say that you have to do without his companionship for a while. He doesn't ask why you are sending him away, just nods and gives a small bow. 'Do what you must, my friend. I will be here for a while to rest for a while. But even if I set out for exploration at some later point, you know how to call me and I will be there if you have a need of me.' With that, he strolls over to one of the bookshelves and starts to browse the knowledge of this for him unfamiliar world.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Ryousei	"Ryousei"
 
 Ryousei is a man.
 The description of Ryousei is "[RyouseiDesc]".
@@ -266,8 +275,8 @@ to say RyouseiTalkMenu:
 
 to say RyouseiTalk1:
 	say "     Ryousei looks at you with surprise on his face and strokes his furry chin. 'You want to... be like me? This strange world still surprises me, no matter how many creatures I see change before my very eyes. But if that is your custom, I am willing to help. May bringing more tiger-folk into this place lead to greater wisdom and restraint. Your native beasts certainly lack both.' With that, he curls his clawed fingers, looking at the cup of his hand in intense concentration, then suddenly presses his palm flat against your chest. 'There, that should do it from what I have observed.'";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Royal Tiger":
 			now monster is y;
 			break;
@@ -459,7 +468,7 @@ to say RyouseiSexMenu:
 
 to say RyouseiSex1: [player gets fucked in the ass]
 	setmonster "Royal Tiger";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Letting Ryousei take the lead, you lean into his touch as he puts his arms around you, drawing you close against his furred body. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. A rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state. 'I want to be inside you,' Ryousei grunts lustily as he draws back for a breather, then starts to slide his hands under your clothes and pulls them off.";
 	say "     Eager to feel his touch, you readily help the anthro tiger to strip you, then watch as he himself quickly shrugs out of the kimono he wears. Putting an arm around you, Ryousei then moves to gently lower your naked form on top of the resulting small pile of discarded clothing, giving you a soft place to lie as he leans over you. The tiger general makes out with you for a quite pleasurable time before he eventually brings up a hand to lick over his fingers with broad swipes of his tongue. Once he has got his fingers nice and wet, the purring tiger moves them down between your legs and brushes teasingly over your pucker, then starts to worm a slick finger in against the clenched muscle, gaining entry after just a short moment of reflexive resistance from your body.";
 	WaitLineBreak;
@@ -474,7 +483,7 @@ to say RyouseiSex1: [player gets fucked in the ass]
 
 to say RyouseiSex2: [player gets fucked in the pussy]
 	setmonster "Royal Tiger";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Letting Ryousei take the lead, you lean into his touch as he puts his arms around you, drawing you close against his furred body. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. A rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state. 'I want to be inside you,' Ryousei grunts lustily as he draws back for a breather, then starts to slide his hands under your clothes and pulls them off.";
 	say "     Eager to feel his touch, you readily help the anthro tiger to strip you, then watch as he himself quickly shrugs out of the kimono he wears. Putting an arm around you, Ryousei then moves to gently lower your naked form on top of the resulting small pile of discarded clothing, giving you a soft place to lie as he leans over you. The tiger general makes out with you for a quite pleasurable time before he eventually brings up a hand to lick over his fingers with broad swipes of his tongue. Once he has got his fingers nice and wet, the purring tiger moves them down between your legs and brushes teasingly over your nether lips, then starts to focus on your clit, rubbing it with a gentle, steady touch. Man, that feels good. You can't help but squirm and tremble under his touch, straining to raise your hips towards him - and the tiger reacts to your unvoiced invitation, sliding two fingers into your pussy a moment later.";
 	WaitLineBreak;
@@ -489,7 +498,7 @@ to say RyouseiSex2: [player gets fucked in the pussy]
 
 to say RyouseiSex3: [player fucks Ryo]
 	setmonster "Royal Tiger";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Taking the lead, you lean into Ryousei's touch and slide an arm around his hips, drawing him close against your own body. His furred form feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. A rumbling purr from his broad chest vibrates throughout your body, filling you with a pleasant feeling and soaring arousal.";
 	say "     Sliding your hands down behind his back, you place them on the muscular tiger's firm buttocks and give them a squeeze through the thin fabric of his kimono. A rumbling chuckle comes from your feline partner as you tell him that you want to fuck. 'Sure of yourself, are you not, my friend?! More than one of my enemies had to learn that attempts to dominate Ryousei are perilous at best!' Showing his impressive set of fangs and teeth in a wide smile, the tiger leans his head towards your ear and adds in an amused whisper, 'But for my compatriots, other rules apply. I am not averse to enjoying a proud warrior's hard spear in my tailhole.' With a lust-filled mrowl, Ryousei licks the side of your neck and allows you to fondle him some more, then gently extracts himself from your embrace and starts to strip.";
 	WaitLineBreak;
@@ -517,7 +526,7 @@ to say RyouseiSex3: [player fucks Ryo]
 
 to say RyouseiSex4: [player's pussy is licked by Ryo]
 	setmonster "Royal Tiger";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Letting Ryousei take the lead, you lean into his touch as he puts his arms around you, drawing you close against his furred body. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. A rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state.";
 	say "     As you pant into his mouth that you are dripping wet from arousal because of him, the tiger gives a teasing smile and replies, 'Let us see about that. I can not leave my favorite companion wanting.' With that said, he starts to slide his hands under your clothes, caressing your body and pulling them off piece by piece. Eager to feel his touch, you readily help the anthro tiger to strip you, then watch as he himself quickly shrugs out of the kimono he wears. Putting an arm around you, Ryousei then moves to gently lower your naked form on top of the resulting small pile of discarded clothing, giving you a soft place to lie as he leans over you.";
 	WaitLineBreak;
@@ -537,7 +546,7 @@ to say RyouseiSex4: [player's pussy is licked by Ryo]
 
 to say RyouseiSex5: [player goes down on Ryousei's dick]
 	setmonster "Royal Tiger";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Taking the lead, you slide a hand through the soft, mid-length fur on the back of his neck and hook it behind his head, drawing the statuesque tiger to you to meet his muzzle with your mouth. A deep purr rumbles in the depth of his throat as Ryousei eagerly gives in to the kiss, opening his muzzle to let his tongue wrestle with yours. Your other arm more or less automatically slides around his side, holding on to the muscled form of the tall cat. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. The rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state. 'You are one sexy being - a shining star in this dreary place,' Ryousei grunts lustily as you draw back for a breather.";
 	say "     Eager to touch the tiger and take care of him, your hands move to his hips and pull away the cloth belt bound around them. As the knot of fabric at the front is undone, it falls to the ground, leaving Ryousei's kimono to be pulled open by you. Doing so, you reveal the muscled tiger's cream-colored front, its glorious fur short enough to let his impressive physique show clearly - muscled pecs and rock hard abs above the longer fur of his pubes, nestled around a proper feline sheath from which his rigid cock protrudes, hard and ready for you. Very well sized even for a large being such as Ryousei, the erection stands straight out, thick and weighty above his dangling furry balls. It tapers sharply near the end, coming to a point that promises many interesting sensations - as do the numerous small, nubby spines along its shaft. You can't help but want to touch it, so you do - fingers closing around the firm length and feeling over the spines, finding them pretty soft, with just enough rigidity to rub someone in just the right way when they get fucked by Ryousei.";
 	WaitLineBreak;
@@ -548,7 +557,7 @@ to say RyouseiSex5: [player goes down on Ryousei's dick]
 
 to say RyouseiSex6: [Ryousei, Xerxes & the player have fun]
 	setmonster "Royal Tiger";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Giving your tiger companion a smile, you put two fingers into your mouth and give a sharp whistle, attracting the attention of your pet Xerxes. The human dog eagerly jumps up from his bedding, then rushes towards you on all fours in a flash, greeting you with [if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]an enthusiastic, 'Master play?' [else]a friendly bark. [end if]A happy grin never leaves his face as you tousle his hair and the young man leans into your touch. Clearing your throat, you turn to Ryousei while still stroking Xerxes head, asking the proud tiger if he would like to have some fun with your pet. As he raises his eyebrow and looks at the naked form of the crouching young man, you call out one of the 'special' commands Mike trained into his transformed animals - and Xerxes immediately reacts, pushing his head and chest down to the ground and raising the very shapely ass on his lithely muscled body. With his legs spreading a little too, he's the very image of a receptive bottom.";
 	say "     Ryousei lets an appreciative gaze wander over the young man's form, then gives a nod of his head in your direction as he says, 'A well-behaved pet. My compliments to you as his master.' There is a slight bulge at the crotch of Ryousei's kimono, making it obvious that Xerxes charms haven't been without effect - and so it is just an eye-blink later that the otherworldly feline gives a rumbling purr and adds, 'Domo arigato, my friend. I accept the very generous offer.' As the tiger's hands move to undo the knot of his kimono's belt, he formally adds, 'It pleases me quite a lot to have such a courteous host, offering delicious treats to pass the time. And that despite my - temporary - exile and reduced status. You are a truly deserving being.'";
 	WaitLineBreak;

@@ -118,6 +118,10 @@ Section 2 - Porn Store and Lisa
 Porn Store is a room. It is fasttravel. It is sleepsafe. It is private.
 The description of Porn Store is "[pornstoredesc]".
 
+Table of GameCharacterIDs (continued)
+object	name
+Lisa	"Lisa"
+
 Lisa is a person. Lisa is in Porn Store.
 The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.

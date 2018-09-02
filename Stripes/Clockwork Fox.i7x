@@ -14,7 +14,7 @@ Section 1 - Monster Responses
 cfgmode is a number that varies. cfgmode is usually 1.
 
 to say cfgdesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now cfgmode is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across a strange, mechanical fox. The mechanical fox whirrs and clicks as it looks you over, eyes scanning you in some strange manner. As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
@@ -111,12 +111,12 @@ to say beatthecfguy:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Clockwork Fox"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

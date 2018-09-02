@@ -64,6 +64,10 @@ an everyturn rule:
 	if StewartLocationCounter is 9:
 		now StewartLocationCounter is 1;
 
+Table of GameCharacterIDs (continued)
+object	name
+Stewart	"Stewart"
+
 Stewart is a man.
 The description of Stewart is "[StewartDesc]".
 The conversation of Stewart is { "<this is nothing but a placeholder!>" }.

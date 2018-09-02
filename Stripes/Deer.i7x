@@ -105,6 +105,10 @@ deerconsent is a number that varies.
 Susanoversize is a truth state that varies. Susanoversize is usually false.
 Susanfirsttime is a number that varies. Susanfirsttime is usually 0
 
+Table of GameCharacterIDs (continued)
+object	name
+Susan	"Susan"
+
 Susan is a person. "Susan, a bipedal deer.". The description of Susan is "[Susandesc]".
 The conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
@@ -240,7 +244,7 @@ to say sexwithSusan:
 
 to say SusanSexMenu:
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -404,7 +408,7 @@ to say SusanSex7: [Susan fucks ass]
 to say Susanlabcoatscene:
 	let x be 1; [default = accept]
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     What do you think, hon?' Susan asks, posing in the new lab coat she's wearing. It is a typical one, clean and white, though the back's been adjusted to let her puff of deer tail poke out. 'After a little incident, the doc thought it best I have something on while helping him. Lab chemicals can be dangerous.'";
 	say "     She moves in closer to you, rubbing her body against yours. 'I was hoping you'd come by to play. I've been feeling pretty randy,' she whispers throatily in your ear. She grinds the hard bulge of her covered erection against your [if scalevalue of player < 3]side[else if scalevalue of player > 3]thigh[else]hip[end if]. 'Come on. Let's have some fun,' she says, pulling you off to her bunk in the corner. Dr Mouse notices this, but quietly smiles and says nothing.";
 	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
@@ -458,12 +462,12 @@ to say Susanlabcoatscene:
 
 Section 4 - Monster Table Data
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Deer"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "Susan";
@@ -517,12 +521,12 @@ When Play begins:
 
 
 To say doestats:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Deer":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now lev entry is level of player minus 1;
 	if lev entry < 15:
 		now dex entry is lev entry + 6; [quick dex and HP growth early on]

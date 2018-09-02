@@ -13,6 +13,10 @@ instead of sniffing Foxy Hideaway:
 
 Section 2 - Kitsune
 
+Table of GameCharacterIDs (continued)
+object	name
+Kitsune	"Kitsune"
+
 Kitsune is a man.
 The description of Kitsune is "A beautiful silver vulpine stands on two digitigrade legs while looking at you with heated, but controlled eyes. Nine tails dance teasingly behind the fox-man's back as he smiles at you good-naturedly. His long and lithe form seems to almost sway slightly with the subtle motions of Kitsune rocking his hips from side to side. His smile soon turns saucy as Kitsune looks you up and down, his eyes lingering a particularly long time on your groin as though studying a tempting morsel, before he looks up into your face once again. With a predatory grin crossing his muzzle, you can't help but feel slightly on edge as the feral nature of the other shines through the graceful visage that the vulpine puts on for you. Though somewhat human-like in appearance there can be no doubt of the animal nature of the fox-man as Kitsune stares at you with a growing hunger. A slow sweep of a red tongue along full and pale lips lets you know not to forget this.".
 The conversation of Kitsune is { "Hmmm!" }.
@@ -47,10 +51,10 @@ Understand "ask for food" as kitfoodrequest.
 kitwaterrequest is an action applying to nothing.
 Understand "ask for water" as kitwaterrequest.
 
-Lastfoodrun is a number that varies. Lastfoodrun is usually 250.
-Kitsunefood is a number that varies.
-Lastwaterrun is a number that varies. Lastwaterrun is usually 250.
-Kitsunewater is a number that varies.
+Lastfoodrun is a number that varies.[@Tag:NotSaved] Lastfoodrun is usually 250.
+Kitsunefood is a number that varies.[@Tag:NotSaved]
+Lastwaterrun is a number that varies.[@Tag:NotSaved] Lastwaterrun is usually 250.
+Kitsunewater is a number that varies.[@Tag:NotSaved]
 
 Check kitfoodrequest:
 	if Kitsune is not visible:
@@ -85,12 +89,12 @@ Section 4 - Fucking Kitsune
 
 Instead of fucking Kitsune:
 	[puts Kitsune as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Kitsune":
 			now monster is y;
 			break;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if lastfuck of Kitsune - turns < 6:
 		say "'Forgive me little one, but I'm afraid my energy reserves are a bit low at the moment.' Kitsune bows to you somewhat sadly. 'If you'll come back, then I'll be ready to [']wrestle['] under the covers with you again.' A devious smile plays out across the handsome kitsune's face, and you get the feeling that something is going on behind those azure eyes of his. 'Perhaps when we do, I can give you a more suitable form to play with?' A slow caress of one of the silver vulpine's tails across your shoulder lets you know what the other means by this.";
 	else if Kitsunearoused is 0:
@@ -189,8 +193,8 @@ Instead of fucking Kitsune:
 
 to kitsuneinfect:
 	[puts Kitsune as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Kitsune":
 			now monster is y;
 			break;
@@ -207,12 +211,12 @@ to say Kitsune loss:
 to say Kitsune attack:
 	say "These are filler messages and should not be seen, as there's no fight with Kitsune.";
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Kitsune";
 	now enemy title entry is "Kitsune";
 	now enemy name entry is "Honoka";

@@ -36,6 +36,10 @@ to say lionsdendesc:
 
 Section 2 - Leonard the Lion
 
+Table of GameCharacterIDs (continued)
+object	name
+Leonard	"Leonard"
+
 Leonard is a man. Leonard is in Lion's Den.
 The description of Leonard is "[Leonarddesc]".
 The conversation of Leonard is { "Tut Tut!" }.
@@ -708,8 +712,8 @@ Instead of resolving Concert Hall:
 		say "     You become like the other rabbits living here, several who are one. In truth, there are only a few individuals living here, but each having several bodies all with one same mind. You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others. And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
 		now humanity of player is 0;
 		[puts Rabbit Pack as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Rabbit":
 				now monster is y;
 				break;
@@ -845,8 +849,8 @@ Instead of resolving Hunting Prides:
 		now humanity of player is 0;
 		now feline_pride_defeat is true;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feline":
 				now monster is y;
 				break;
@@ -927,8 +931,8 @@ to say Leonardrivalfight:
 		say "     You and Leonard have a delightful time making increasingly subservient kitties out of the once strong and virile males. This orgy and training session doesn't end until you and they have all been filled until bloated with the handsome lion's semen and he's fully spent in a way he hasn't been since the recital. The nine of you, your trio of girls and their new dark-haired member having joined you at some point later on, curl up to rest together on and beside the large bed in a warm bundle of feline happiness and briefly sated lust.[impregchance][impregchance]";
 		decrease humanity of player by 25;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feline":
 				now monster is y;
 				break;
@@ -987,8 +991,8 @@ to say Leonardrivalfight:
 		now humanity of player is 0;
 		now HP of Leonard is 100;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feline":
 				now monster is y;
 				break;

@@ -51,6 +51,10 @@ The description of Kitty Sex Dungeon is "[DungeonDesc]"
 to say DungeonDesc:
 	say "     The room is a stereotypical sex dungeon. There is a sex bench in the middle of the room, stocks against the wall, sex toys on shelves and so much more. On top of that, the entire place smells of sex and sweat, something that fills you with warmth as you think of the many things that have happened in this area. Interesting enough, there are no items for punishment via pain like flogs or whips. Perhaps Oliver punishes with pleasure rather than pain?[if player is not neuter] You shudder at the thought of being denied orgasm.[end if]";
 
+Table of GameCharacterIDs (continued)
+object	name
+Oliver	"Oliver"
+
 Oliver is a man.
 The description of Oliver is "[OliverDesc]".
 The conversation of Oliver is { "<this is nothing but a placeholder!>" }.

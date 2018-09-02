@@ -52,6 +52,10 @@ to say HavenCCRoomDesc:
 
 Section 3 - Florence
 
+Table of GameCharacterIDs (continued)
+object	name
+Florence	"Florence"
+
 Florence is a woman. Florence is in Haven Community Center.
 The description of Florence is "[FlorenceDesc]".
 The conversation of Florence is { "<This is nothing but a placeholder!>" }.

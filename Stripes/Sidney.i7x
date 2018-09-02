@@ -36,6 +36,10 @@ Version 1 of Sidney by Stripes begins here.
 
 Section 0 - Basic NPC Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Sidney	"Sidney"
+
 Sidney is a woman.
 The description of Sidney is "[sidneydesc]".
 The conversation of Sidney is { "Thanks." }.
@@ -377,7 +381,7 @@ to say sexwithSidney:
 	if HP of Sidney < 3:
 		say "ERROR-Sidney-[HP of Sidney]F: You should not be able to find me yet. Resetting.";
 		now HP of Sidney is 0;
-		remove Sidney from play;
+		now Sidney is nowhere;
 		if girl is not banned and furry is not banned, now Meeting Sidney is unresolved;
 	else if player is neuter:
 		say "     You should settle on a gender of your own before trying to sex up the gender-shifted soldier.";

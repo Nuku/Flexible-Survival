@@ -37,10 +37,10 @@ The glulx object-updating rules is a rulebook.
 
 Section - Global variables
 
-Current glulx rock is a number that varies.
-Current glulx rock-ref is a number that varies.
+Current glulx rock is a number that varies.[@Tag:NotSaved]
+Current glulx rock-ref is a number that varies.[@Tag:NotSaved]
 
-Glulx replacement command is some indexed text that varies.
+Glulx replacement command is some indexed text that varies.[@Tag:NotSaved]
 
 Library input context is a number variable. [This describes the event context in which input was received, e.g. whether the Inform library was awaiting line input or char input. If 0, the library was awaiting line input, if 0, char input. This is not as useful as an event-typed value would be; with such a value, we could detect any input context--e.g., we are waiting for hyperlink input.]
 

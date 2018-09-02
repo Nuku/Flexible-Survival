@@ -128,6 +128,10 @@ to say nutsofactorydesc:
 
 Section 4 - Macadamia the Squirrel
 
+Table of GameCharacterIDs (continued)
+object	name
+Macadamia	"Macadamia"
+
 Macadamia is a man. Macadamia is in Nutso Factory.
 The description of Macadamia is "[macadamiadesc]".
 The conversation of Macadamia is { "Chitr!" }.
@@ -175,8 +179,8 @@ to say sexwithMacadamia:
 		say "     You're ill-equipped to play with the squirrel right now.";
 	else:
 		[puts Gray Squirrel as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Gray Squirrel":
 				now monster is y;
 				break;

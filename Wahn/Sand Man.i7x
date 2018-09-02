@@ -3,8 +3,6 @@ Version 1 of Sand Man by Wahn begins here.
 
 "Adds a Male Sand Man to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-SandManFirstEncounter is a number that varies. SandManFirstEncounter is normally 0.
-
 when play begins:
 	add { "Sand Man" } to infections of guy;
 
@@ -106,24 +104,23 @@ to say sandman fucked:
 
 to say sandmanDesc:
 	setmongender 3;
-	if SandManFirstEncounter is 0:
+	if "Sand Man" is not listed in EncounteredEnemies of player: [first encounter]
 		say "     Walking over the beach, you come upon a large towel on which a handsome man lies sleeping, wearing nothing but a pair of stylish sunglasses and tight speedos. He has a ripped body and nice muscles - and is sculpted from sand. Amazingly life-like, even up to the hairs which almost look like they consist out of single strands. He's got even the smallest details a human would have...";
 		LineBreak;
 		say "     Stepping closer and closer to look at this amazing work of beach sculpture, your looks invariably wander down towards the bulge in its speedos as you wonder if the sculpture might even be fully anatomically correct. Then suddenly, he starts to move, turning his head towards you as one hand suggestively grabs the front of his speedo. 'What a delightful creature wakes me from my slumber. Wanna see it? How about a private demonstration here on my towel...'";
 		LineBreak;
 		say "     With that, he gets up and walks towards you, a lustful smile on his face.";
-		now SandManFirstEncounter is 1;
 	else:
 		say "     You cross paths with a handsome beach stud wearing nothing but a pair of stylish sunglasses and a pair of tight speedos on his sculpted body. Perfectly sculpted into an Adonis-like shape that is - out of finely grained sand. He takes a striking pose in front of you and runs a hand through shoulder-length hair. '[one of]Wanna make out in the dunes, baby?'[or]You're even more beautiful up close. Let's do it - right here.'[or]Hey baby, you're hot. I can't wait to hold you in my arms.'[or]How about a little fling in the sand? No strings attached.'[or]Beach Patrol. Do you know mouth-to-mouth resuscitation? Come here and I'll show you how it's done.'[at random]";
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Sand Man";
 	now enemy title entry is "";
 	now enemy name entry is "";

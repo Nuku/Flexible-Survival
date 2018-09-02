@@ -26,6 +26,10 @@ Version 1 of Danny by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Danny	"Danny"
+
 Danny is a man. The HP of Danny is usually 0. Danny is in Mall Foodcourt.
 The icon of Danny is Figure of Danny_clothed_icon.
 The description of Danny is "[DannyDesc]".
@@ -294,7 +298,7 @@ to say DannySexMenu:
 	setmonster "Mall Rat";
 	project the figure of Danny_naked_icon;
 	say "     What do you want to do with the young adult mall rat?";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

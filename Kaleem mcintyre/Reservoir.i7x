@@ -11,6 +11,17 @@ waterworks is a number that varies.
 [ *** Content removed due to size issues and need for repairs ]
 [
 
+ldoor is a number that varies.[@Tag:NotSaved]
+rdoor is a number that varies.[@Tag:NotSaved]
+doorsearch is a number that varies.[@Tag:NotSaved]
+descriptionmessage is a text that varies.[@Tag:NotSaved]
+lastResevoirfix is a number that varies.[@Tag:NotSaved]
+lastResevoirfix is a number that varies.[@Tag:NotSaved]
+oozing is a number that varies.[@Tag:NotSaved]
+waterworks is a number that varies.[@Tag:NotSaved]
+resevquest is a number that varies.[@Tag:NotSaved]
+bookfind is a number that varies.[@Tag:NotSaved]
+
 Reservoir is a room. It is fasttravel.
 
 The description of Reservoir is "[reservoirdesc]".
@@ -58,8 +69,6 @@ The marea of Reservoir Main Pathway entry is "Reservoir".
 
 Section 2 - Reservoir Events
 
-resevquest is a number that varies.
-
 For Purity's Sake is a situation. The Level of For Purity's Sake is 18.
 
 Technical Assistance is a situation. Technical Assistance is resolved.
@@ -93,8 +102,6 @@ Instead of resolving For Purity's Sake:
 
 Technical Assistance is a situation.
 The sarea of Technical Assistance is a "Reservoir".
-
-bookfind is a number that varies.
 
 Instead of resolving a Technical Assistance:
 	If resevquest is 1:
@@ -200,17 +207,11 @@ ThreeDoors is a situation;
 
 The sarea of ThreeDoors is "Reservoir".
 
-ldoor is a number that varies.
-rdoor is a number that varies.
-doorsearch is a number that varies.
-
 Instead of Resolving ThreeDoors:
 	If resevquest is 4:
 		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room... then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is.";
 		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way. It's not like you can you really go back and ask one of the creatures here for help. Well, not and expect to get a useful answer anyway. You have something of a dilemma on your hands.";
 		say "[doorcheck]";
-
-descriptionmessage is a text that varies.
 
 to say doorcheck:
 	say "Looking over the doors you wonder which you should chose.";
@@ -311,8 +312,6 @@ Section 3 - Reservoir Fight (Preparation)
 The beast of the tainted waters is a situation.
 The sarea of The beast of the tainted waters is "Reservoir".
 
-lastResevoirfix is a number that varies.
-
 Instead of Resolving a The beast of the tainted waters:
 	if resevquest is 5:
 		If lastResevoirfix - turns > 10:
@@ -334,9 +333,6 @@ Section 4 - Reservoir (Fight)
 
 A Fight to remember is a situation.
 The sarea of A Fight to remember is "Reservoir".
-
-lastResevoirfix is a number that varies.
-oozing is a number that varies.
 
 Instead of resolving a A Fight to remember:
 	if resevquest is 6:
@@ -447,13 +443,10 @@ Instead of resolving a A Fight to remember:
 						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
 						now lastResevoirfix is turns;
 
-
 Section 5 - Water At Last
 
 PassionAfterTheBattle is a situation.
 The sarea of PassionAfterTheBattle is "Reservoir".
-
-waterworks is a number that varies.
 
 Instead of resolving a PassionAfterTheBattle:
 	If resevquest is 7:

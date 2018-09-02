@@ -15,7 +15,7 @@ zpc_inzone is a truth state that varies. zpc_inzone is false.
 [ true if player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
 
 zpc_Zc is a number that varies.
-zpc_Zf is a figure name that varies.
+zpc_Zf is a figure name that varies.[@Tag:NotSaved]
 
 Section 2 - Master Referencing Table
 

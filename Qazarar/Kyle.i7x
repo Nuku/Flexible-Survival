@@ -42,6 +42,10 @@ GertyQuest is a number that varies. GertyQuest is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Kyle	"Kyle"
+
 Kyle is a man. The hp of Kyle is usually 0.
 The description of Kyle is "[KyleDesc]".
 The conversation of Kyle is { "<This is nothing but a placeholder!>" }.

@@ -277,6 +277,10 @@ instead of going east from Gillian's Flat:
 
 Section 5 - Gillian
 
+Table of GameCharacterIDs (continued)
+object	name
+Gillian	"Gillian"
+
 Gillian is a woman. Gillian is in Gillian's Flat.
 The description of Gillian is "[gilliandesc]".
 The conversation of Gillian is { "Work!" }.

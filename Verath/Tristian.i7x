@@ -4,6 +4,10 @@ Version 2 of Tristian by Verath begins here.
 
 Section 1 - Tristian Basics
 
+Table of GameCharacterIDs (continued)
+object	name
+Tristian	"Tristian"
+
 Tristian is a man.
 The description of Tristian is "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.".
 The conversation of Tristian is { "Neigh!" }.
@@ -146,7 +150,7 @@ to say sexwithtristian:
 
 
 to palominoinfect:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	setmonster "Palomino";
 	now non-infectious entry is false;
 	infect;

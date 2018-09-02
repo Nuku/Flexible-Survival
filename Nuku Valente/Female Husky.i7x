@@ -104,14 +104,12 @@ to say fhuskybeaten:
 				else if nam is "Lick her cunt":
 					say "[fhuskybeaten_04]";
 		else if calcnumber is 0:
-			say "Let her go: Shall you send the poor creature on her way?";
-			if player consents:
-				if libido of player > humanity of player:
-					say "You want to let her go, but your aroused body and nanite-addled mind are far too gone to allow it!";
-					now luststuck is 1;
-				else:
-					say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature. You simply push her away and decide against harming her further, simply leaving her there.";
-					now sextablerun is 1;
+			if libido of player > humanity of player:
+				say "     You want to let her go, but your aroused body and nanite-addled mind are far too gone to allow it!";
+				now luststuck is 1;
+			else:
+				say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature. You simply push her away and decide against harming her further, simply leaving her there.";
+				now sextablerun is 1;
 
 [
 to say fhuskybeaten_00:
@@ -160,12 +158,12 @@ to say fhuskybeaten_dom:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Female Husky"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";

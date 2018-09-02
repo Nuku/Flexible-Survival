@@ -90,6 +90,10 @@ Instead of resolving a Paratrooper:
 
 Section 1 - Vanessa the Centaur
 
+Table of GameCharacterIDs (continued)
+object	name
+Vanessa	"Vanessa"
+
 Vanessa is a woman.
 The description of Vanessa is "[Vanessadesc]".
 The conversation of Vanessa is { "Neigh!" }.

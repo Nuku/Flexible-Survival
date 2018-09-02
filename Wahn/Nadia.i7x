@@ -36,39 +36,43 @@ Version 1 of Nadia by Wahn begins here.
 [  5: one egg ready to lay, two more on the way                                     ]
 
 [ npcNadiaint (npc-Nadia-interaction state) = ABCDEFGHIJKLMN                        ]
-[ Character A - Denise Interaction: (Char-A of Nadia)                               ]
+[ Character A - Denise Interaction: (NadiaChar-A)                                   ]
 [   0: Nothing happened                                                             ]
 [   1: met and talked with Denise                                                   ]
-[ Character B - Icarus Interaction: (Char-B of Nadia)                               ]
+[ Character B - Icarus Interaction: (NadiaChar-B)                                   ]
 [   0: Nothing happened                                                             ]
 [   1: nursed subby Icarus                                                          ]
-[ Character C - Amy Interaction: (Char-C of Nadia)                                  ]
+[ Character C - Amy Interaction: (NadiaChar-C)                                      ]
 [   0: Nothing happened                                                             ]
 [   1: had a play-date with Amy                                                     ]
-[ Character D - Tehuantl Interaction: (Char-D of Nadia)                             ]
+[ Character D - Tehuantl Interaction: (NadiaChar-D)                                 ]
 [   0: Nothing happened                                                             ]
-[ Character E - Felinoid Interaction: (Char-E of Nadia)                             ]
+[ Character E - Felinoid Interaction: (NadiaChar-E)                                 ]
 [   0: Nothing happened                                                             ]
-[ Character F - Fang Interaction: (Char-F of Nadia)                                 ]
+[ Character F - Fang Interaction: (NadiaChar-F)                                     ]
 [   0: Nothing happened                                                             ]
-[ Character G - Elijah Interaction: (Char-G of Nadia)                               ]
+[ Character G - Elijah Interaction: (NadiaChar-G)                                   ]
 [   0: Nothing happened                                                             ]
-[ Character H - Exotic Bird Interaction: (Char-H of Nadia)                          ]
+[ Character H - Exotic Bird Interaction: (NadiaChar-H)                              ]
 [   0: Nothing happened                                                             ]
 [   1: met the bird and sang with him                                               ]
-[ Character I - Player in AvianPred Form Interaction: (Char-I of Nadia)             ]
+[ Character I - Player in AvianPred Form Interaction: (NadiaChar-I)                 ]
 [   0: Nothing happened                                                             ]
 [   1: Player had sex with Nadia as an avian predator                               ]
-[ Character J - Chick Interaction: (Char-J of Nadia)                                ]
+[ Character J - Chick Interaction: (NadiaChar-J)                                    ]
 [   0: Nothing happened                                                             ]
 [   1: Green Thumb Event (2 chicks)                                                 ]
 [   2: Green Thumb Event II                                                         ]
 [   3: Beauty Treatment Event (>10 chicks)                                          ]
-[ Character K - Unassigned Interaction: (Char-K of Nadia)                           ]
-[ Character L - Unassigned Interaction: (Char-L of Nadia)                           ]
-[ Character M - Unassigned Interaction: (Char-M of Nadia)                           ]
+[ Character K - Unassigned Interaction: (NadiaChar-K)                               ]
+[ Character L - Unassigned Interaction: (NadiaChar-L)                               ]
+[ Character M - Unassigned Interaction: (NadiaChar-M)                               ]
 
 Section 1 - Nadia, the bird of paradise
+
+Table of GameCharacterIDs (continued)
+object	name
+Nadia	"Nadia"
 
 Nadia is a woman. The HP of Nadia is normally 0.
 The description of Nadia is "[NadiaDesc]".
@@ -85,20 +89,19 @@ GreenTumbTurn is a number that varies.
 NadiaintCounter is a number that varies.
 lastNadiaSpotted is a number that varies. lastNadiaSpotted is normally 500.
 
-npcNadiaint is an indexed text that varies. npcNadiaint is normally "0000000000000B". [SAVING]
-Nadia has a text called Char-A. Char-A of Nadia is normally "0". [Denise]
-Nadia has a text called Char-B. Char-B of Nadia is normally "0". [Icarus]
-Nadia has a text called Char-C. Char-C of Nadia is normally "0". [Amy]
-Nadia has a text called Char-D. Char-D of Nadia is normally "0". [Tehuantl]
-Nadia has a text called Char-E. Char-E of Nadia is normally "0". [Felinoid]
-Nadia has a text called Char-F. Char-F of Nadia is normally "0". [Fang]
-Nadia has a text called Char-G. Char-G of Nadia is normally "0". [Elijah]
-Nadia has a text called Char-H. Char-H of Nadia is normally "0". [Exotic Bird]
-Nadia has a text called Char-I. Char-I of Nadia is normally "0". [Avian Player]
-Nadia has a text called Char-J. Char-J of Nadia is normally "0". [Chicks]
-Nadia has a text called Char-K. Char-K of Nadia is normally "0". [unassigned]
-Nadia has a text called Char-L. Char-L of Nadia is normally "0". [unassigned]
-Nadia has a text called Char-M. Char-M of Nadia is normally "0". [unassigned]
+NadiaChar-A is a text that varies. NadiaChar-A is normally "0". [Denise]
+NadiaChar-B is a text that varies. NadiaChar-B is normally "0". [Icarus]
+NadiaChar-C is a text that varies. NadiaChar-C is normally "0". [Amy]
+NadiaChar-D is a text that varies. NadiaChar-D is normally "0". [Tehuantl]
+NadiaChar-E is a text that varies. NadiaChar-E is normally "0". [Felinoid]
+NadiaChar-F is a text that varies. NadiaChar-F is normally "0". [Fang]
+NadiaChar-G is a text that varies. NadiaChar-G is normally "0". [Elijah]
+NadiaChar-H is a text that varies. NadiaChar-H is normally "0". [Exotic Bird]
+NadiaChar-I is a text that varies. NadiaChar-I is normally "0". [Avian Player]
+NadiaChar-J is a text that varies. NadiaChar-J is normally "0". [Chicks]
+NadiaChar-K is a text that varies. NadiaChar-K is normally "0". [unassigned]
+NadiaChar-L is a text that varies. NadiaChar-L is normally "0". [unassigned]
+NadiaChar-M is a text that varies. NadiaChar-M is normally "0". [unassigned]
 
 An everyturn rule: [pregnancy progress every turn]
 	if NadiaPregCounter1 is 1:  [time to give birth]
@@ -111,24 +114,6 @@ An everyturn rule: [pregnancy progress every turn]
 		decrease NadiaPregCounter2 by 1;
 	if NadiaPregCounter3 > 1:
 		decrease NadiaPregCounter3 by 1;
-
-To npcNadiaintAlter (N - number) with (L - text):
-	replace character number N in npcNadiaint with L.
-
-to say npcNadiaintUpdate:
-	npcNadiaintAlter 1 with Char-A of Nadia;
-	npcNadiaintAlter 2 with Char-B of Nadia;
-	npcNadiaintAlter 3 with Char-C of Nadia;
-	npcNadiaintAlter 4 with Char-D of Nadia;
-	npcNadiaintAlter 5 with Char-E of Nadia;
-	npcNadiaintAlter 6 with Char-F of Nadia;
-	npcNadiaintAlter 7 with Char-G of Nadia;
-	npcNadiaintAlter 8 with Char-H of Nadia;
-	npcNadiaintAlter 9 with Char-I of Nadia;
-	npcNadiaintAlter 10 with Char-J of Nadia;
-	npcNadiaintAlter 11 with Char-K of Nadia;
-	npcNadiaintAlter 12 with Char-L of Nadia;
-	npcNadiaintAlter 13 with Char-M of Nadia;
 
 to say NadiaEggBirth: [time to give birth]
 	now NadiaPregCounter1 is 0;          [empty place for an egg]
@@ -237,7 +222,7 @@ instead of sniffing Nadia: [how she smells]
 
 to say NadiaDesc: [how she looks]
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility], NPCNADIAINT: [npcNadiaint] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility] <- DEBUG[line break]";
 	if (HP of Nadia is 0 or HP of Nadia is 99): [not yet met or refused]
 		say "ERROR-Nadia-001L: She should not be around yet anywhere where players can see her.";
 	else:
@@ -357,7 +342,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock.";
 		now toggle entry is NadiaSex rule;
-	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and Char-I of Nadia is "1"):
+	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;
@@ -390,9 +375,9 @@ This is the NadiaSex rule:
 		else if (nam is "Eat Nadia out"):
 			say "[NadiaSex3]";
 		else if (nam is "Fuck her pussy"):
-			if (Char-I of Nadia is "0" and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
+			if (NadiaChar-I is "0" and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
 				say "[NadiaSex5]";
-				now Char-I of Nadia is "1";
+				now NadiaChar-I is "1";
 			else:
 				say "[NadiaSex4]";
 		else if (nam is "Fly with her (and fuck her)"):
@@ -581,27 +566,26 @@ Instead of resolving a Bird Troubles:
 		move Nadia to Garden View;
 		move player to Garden View;
 		now HP of Nadia is 1;
-		now npcNadiaint is "0000000000000B";
-		now Char-A of Nadia is "0";
-		now Char-B of Nadia is "0";
-		now Char-C of Nadia is "0";
-		now Char-D of Nadia is "0";
-		now Char-E of Nadia is "0";
-		now Char-F of Nadia is "0";
-		now Char-G of Nadia is "0";
-		now Char-H of Nadia is "0";
-		now Char-I of Nadia is "0";
-		now Char-J of Nadia is "0";
-		now Char-K of Nadia is "0";
-		now Char-L of Nadia is "0";
-		now Char-M of Nadia is "0";
+		now NadiaChar-A is "0";
+		now NadiaChar-B is "0";
+		now NadiaChar-C is "0";
+		now NadiaChar-D is "0";
+		now NadiaChar-E is "0";
+		now NadiaChar-F is "0";
+		now NadiaChar-G is "0";
+		now NadiaChar-H is "0";
+		now NadiaChar-I is "0";
+		now NadiaChar-J is "0";
+		now NadiaChar-K is "0";
+		now NadiaChar-L is "0";
+		now NadiaChar-M is "0";
 		[Testing Fertile Pills]
 		[increase carried of fertile pill by 50;]
 	else:
 		LineBreak;
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
 		now HP of Nadia is 99;  [refused her]
-		remove Nadia from play;
+		now Nadia is nowhere;
 	now Bird Troubles is resolved;
 
 Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is Resolved.
@@ -708,28 +692,25 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and NadiaChar-H is "0"):
 	move player to Garden View;
 	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cozying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
 	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
-	now Char-H of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-H is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (NadiaChar-A is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second story railings and singing to herself.";
 	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
 	say "     The conversation mostly stays on topic at first, although you catch Nadia giving Denise's cock the occasional embarrassed glance as they discuss the possibility of a recital and perhaps singing a duet some time in the future. Inevitably, though, the discussion slowly turns from music to their experiences of being fucked and bred by you. As with their vocal talents, although the two avians are in general consensus, they don't quite agree on the finer points, with Denise preferring the former and Nadia favoring the latter. Still, with all the talk on the details of your exploits with each of them and the two avian breeders giggling as they compare notes, you decide it's probably best to leave them be for now and come back a little later when they're done.";
-	now Char-A of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-A is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and NadiaChar-B is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you walk up to the library's second floor, you're treated to a curious sight. Icarus isn't in his usual place in the rafters - instead, your little bird-slut is in Nadia's nest, a spot of blue amongst red, and he's suckling from her, the sight of a full-grown adult doing just that a little odd even in these times, especially when Nadia usually reserves her generous bounty for her own. Nadia, on the other hand, doesn't seem to mind, mothering the chaffinch and cradling him in her lap as if he were just a big baby. Neither of them seem to notice you as you step closer, and it's not until you're close enough to hear Nadia's soft murmurings that you realize what this is all about.";
 	say "     'Pain is not necessarily bad,' she whispers to Icarus as the chaffinch continues to nurse from her ample breasts. 'Each and every one of my brood was brought into the world with pain... and I love them all. At first, there was pain in the breeding, pain in the birthing, and now...I don't regret a single moment of it. Suffering changes us... sometimes for the better.'";
 	say "     Swallowing hard, you wonder if she knows how he got some of his scars, and if she'd be so calm if she did. It seems like you're not going to get much out of them for the moment, and you decide to leave them be until they're done.";
-	now Char-B of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-B is "1";
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and HP of Nadia is 1 and NadiaChickCounter > 9):
 	move player to Garden View;
@@ -755,18 +736,17 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and N
 	increase carried of feathered cloak by 1;
 	now HP of Nadia is 5;
 
-instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and NadiaChar-J is "0"):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "     Upon your return to the library, you notice that someone's added a couple of potted plants next to the doorway and across from the stairwell - you quickly step back, but relax when you realize that they aren't horrible mutants, but just plain ordinary plants, as far as their outward appearance goes. There are a couple of more common veggies - tomatoes and various peppers on stakes, as well as a few leafy greens, but about a third of the pots are filled with colorful flowers. It's over one of these tropical blossoms that you find Nadia kneeling, humming softly to herself as she tends to its wilted leaves and petals, her chicks watching on interestedly.";
 	say "     'Oh, hello!' she chirps, seeing you arrive. 'I was taking the chicks out for a walk some time ago when I came across some of these in a backyard. They were in pretty bad shape when I took them in, but at least they've perked up some now. A little water, a little mulch and care, and they'll just be as good as new. It's a pity the library doesn't have any planters for them to have a proper home, though. I looked up what some of them were in the library books, and they're apparently called birds of paradise, just like me. I can only hope they turn out even prettier than they are.'";
 	say "     Right now, it would be sensible for Nadia to plant just veggies considering the apocalypse and all, but she seems so happy tending to all the plants... and beside, if she's as good a gardener as she claims to be, then the harvest should be good enough to spare her a few indulgences, right?";
-	now Char-J of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-J is "1";
 	now	GreenTumbTurn is turns;
 
-instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (GreenTumbTurn - turns > 12)):
+instead of navigating Grey Abbey Library while (NadiaChar-J is "1" and (GreenTumbTurn - turns > 12)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -779,18 +759,16 @@ instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (Gree
 	say "     That said, Nadia calls over one of her chicks and presses an armful of fresh veggies into your hands. 'I'm not exactly a big fan of raw vegetables, but it's not as if there's a stove in here, is there? In any case, do enjoy the fruits of the harvest. There's more than enough for everyone.' She giggles a little at some private joke, then gives you a wave before turning back to her work.";
 	say "     ([bold type]3 food gained[roman type])";
 	increase carried of food by 3;
-	now Char-J of Nadia is "2";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-J is "2";
 
-instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and NadiaChar-J is "2"):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "     As you enter the library, you notice birdsong wafting down from the second floor; it seems that Nadia's particularly pleased about something today. Stepping upstairs to investigate, you're greeted by the sight of Nadia snuggled in her nest as she's being pampered. Two of Nadia's daughters are brushing her hair and wings, easing out tangles and ruffled feathers, while she herself preens her colorful plumage in a particularly birdlike manner. Nadia makes happy, contented noises in the back of her throat as her daughters preen and pamper her, and they only grow more so as she opens her eyes and notices you staring at her.";
 	say "     'Oh! Welcome back. Say hello to your father, girls,' she says with a giggle, and shakes bits of fluff from her beak. 'Don't mind us - I'm just trying to look my best for you, after all. I'd ask you to join in, if you'd like, but that would ruin the surprise. Please come back later when we're finished and I'll show you just how prettied up I can be, okay?'";
 	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you're bred her. Thinking about it, it must certainly be quite some effort to get her all cleaned up after each session...";
-	now Char-J of Nadia is "3";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-J is "3";
 
 
 Table of Game Objects (continued)

@@ -9,7 +9,7 @@ Book 1 - CEP1 (Kaleem)
 Consolidated Events Park CEP1 is a situation.
 The sarea of Consolidated Events Park CEP1 is "Park".
 
-cepark1list is a list of numbers that varies. cepark1list is usually {1, 2, 3, 4, 5}.
+cepark1list is a list of numbers that varies.[@Tag:NotSaved] cepark1list is usually {1, 2, 3, 4, 5}.
 
 Instead of resolving Consolidated Events Park CEP1:
 	if furry is banned or hermaphrodite is banned or girl is banned, remove 3 from cepark1list, if present;

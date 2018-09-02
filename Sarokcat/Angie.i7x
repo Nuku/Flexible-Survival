@@ -199,6 +199,10 @@ to say SimpleFelineMast:
 
 Section 3 - Angie
 
+Table of GameCharacterIDs (continued)
+object	name
+Angie	"Angie"
+
 Angie is a woman.
 The description of Angie is "[AngieAppearance]".
 The conversation of Angie is { "Mewl!" }.
@@ -831,7 +835,7 @@ to say AngieSex4: [Angie rides the player's cock]
 
 to say AngieSex5: [Angie fucks the player]
 	setmonster "Pantherherm";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is herm:
 		say "     As you step up to Angie ant tell her you want to get fucked, the pantheress draws you into an eager kiss, then pants, 'Of course, my love. Do you want to take my cock in your pussy, or rather that tight and sexy ass of yours? (Y = pussy, N = ass)'";
 		if player consents:
@@ -958,7 +962,7 @@ to say AngieSex6: [giving her a blowjob]
 
 to say AngieSex7:
 	setmonster "Pantherherm";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is herm: [herms]
 		say "     <just a placeholder for herm players for now, sorry>";
 	else if player is male:
@@ -985,8 +989,8 @@ to say AngieSex7:
 
 [Angie + Panther Taur fun]
 to say AngiePTFun:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Pantherherm":
 			now monster is y;
 			break;

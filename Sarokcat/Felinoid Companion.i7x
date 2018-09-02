@@ -67,7 +67,8 @@ Instead of resolving Injured Felinoid:
 					say "     Well that answers that at least. With him having at least a decent amount of intelligence, it does seem kinda weird to keep call him [italic type]felinoid[roman type]. Asking him his name rewards you with a something between a growl and a chuckle. You decide to try a different approach, instead now you ask what he would like to be called? Fully prepared to get another growly laugh, you are surprised when he once again stops and turns back to you, one eyebrow raised in a very human way. Quickly he swipes his paw at you with his claws extended, afterwards baring his teeth at you in what could be seen as a smile.";
 					WaitLineBreak;
 					say "     Thinking on what just happened you attempt to think of a name that might match up with him. Claws... attempting to feel out a name with that in mind lead you to the idea of maybe claus, but that doesn't seem to fit either. Then it hits you, what about Klauz? It has a feral feel to it, while still sounding like an actual name. Asking the felinoid how he feels about the name only leads to another growl and a shrug of his shoulders.";
-					now Felinoid companion is tamed;
+					now Felinoid Companion is tamed;
+					add "Tamed" to Traits of Felinoid Companion;
 					move Klauz to Back Of The Library;
 					infect "Felinoid";
 					say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
@@ -86,7 +87,8 @@ Instead of resolving Injured Felinoid:
 			WaitLineBreak;
 			say "     Purely out of curiosity, you ask the large predatory cat if he is able to understand what you say? The felinoid stops and just stares at you for a moment, before he quickly nods his head before continuing on his way. Well that answers that at least. With him having at least a decent amount of intelligence, it does seem kinda weird to keep call him [italic type]felinoid[roman type]. Asking him his name rewards you with a something between a growl and a chuckle. You decide to try a different approach, instead now you ask what he would like to be called? Fully prepared to get another growly laugh, you are surprised when he once again stops and turns back to you, one eyebrow raised in a very human way.";
 			say "     Quickly he swipes his paw at you with his claws extended, afterwards baring his teeth at you in what could be seen as a smile. Thinking on what just happened you attempt to think of a name that might match up with him. Claws... attempting to feel out a name with that in mind lead you to the idea of maybe claus, but that doesn't seem to fit either. Then it hits you, what about Klauz? It has a feral feel to it, while still sounding like an actual name. Asking the felinoid how he feels about the name only leads to another growl and a shrug of his shoulders.";
-			now Felinoid companion is tamed;
+			now Felinoid Companion is tamed;
+			add "Tamed" to Traits of Felinoid Companion;
 			infect "Felinoid";
 			say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 			now Injured Felinoid is resolved;
@@ -96,20 +98,24 @@ Instead of resolving Injured Felinoid:
 
 Section 2 - Felinoid companion
 
-Felinoid companion is a pet. Felinoid companion is a part of the player.
-understand "Klauz" as Felinoid companion.
-The description of Felinoid companion is "[Klauzdesc]".
-The weapon damage of Felinoid companion is 9.
-The level of Felinoid companion is 6.
-The Dexterity of Felinoid companion is 15.
-The summondesc of Felinoid companion is "[SummonKlauz]".
-The dismissdesc of Felinoid companion is "[DismissKlauz]".
-The assault of Felinoid companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]".
-the fuckscene of felinoid companion is "[sexwithfelinoidpet]".
+Table of GameCharacterIDs (continued)
+object	name
+Felinoid Companion	"Felinoid Companion"
+
+Felinoid Companion is a pet. Felinoid Companion is a part of the player.
+understand "Klauz" as Felinoid Companion.
+The description of Felinoid Companion is "[Klauzdesc]".
+The weapon damage of Felinoid Companion is 9.
+The level of Felinoid Companion is 6.
+The Dexterity of Felinoid Companion is 15.
+The summondesc of Felinoid Companion is "[SummonKlauz]".
+The dismissdesc of Felinoid Companion is "[DismissKlauz]".
+The assault of Felinoid Companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]".
+the fuckscene of felinoid Companion is "[sexwithfelinoidpet]".
 
 
 to say SummonKlauz:
-	remove Klauz from play;
+	now Klauz is nowhere;
 	if player is in Back Of The Library and Klauz is in Back Of The Library: [summoning while standing next to him]
 		say "     ...";
 	else: [regular summoning]
@@ -121,6 +127,10 @@ to say DismissKlauz:
 		say "     Turning back to Klauz you inform you got it from here, earning you a slight glare from the felinoid. Attempting to make it up to him, you mention that he should make sure to find someone to knock up on his way home. That apparently puts him in a decent mood, giving you some sort of wink he continues on back towards the library.";
 	else: [dismissing him in Back Of The Library]
 		say "     ...";
+
+Table of GameCharacterIDs (continued)
+object	name
+Klauz	"Klauz"
 
 Klauz is a man.
 The description of Klauz is "[Klauzdesc]".

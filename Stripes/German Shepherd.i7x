@@ -16,9 +16,9 @@ gsd_slut is usually false.
 gsd_fled is a truth state that varies.		[tracks if player fled previous encounter w/special GSD.]
 gsd_fled is usually false.
 gsd_var is a number that varies.			[temporary variable for tracking between scenes.]
-gsd_attack is truth state that varies.		[registers if the player fought back or not against the special GSD.]
+gsd_attack is a truth state that varies.		[registers if the player fought back or not against the special GSD.]
 gsd_attack is usually false.
-gsd_male is truth state that varies.		[registers if the player is being trained to be a male packmate.]
+gsd_male is a truth state that varies.		[registers if the player is being trained to be a male packmate.]
 gsd_male is usually false.
 KorvinSubmitCounter is a number that varies.
 
@@ -38,7 +38,7 @@ Section 1 - Monster Description
 
 to say gsd_desc:
 	setmongender 3; [male]
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	now gsd_attack is false;
 	if gsd_male is true:
 		gsd_set_male;
@@ -232,7 +232,7 @@ to say KorvinCentaurFight:
 Section 2 - Monster Victory
 
 to say losetogsd:
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	if gsd_special is false:
 		now gsd_var is 0;
 		if a random chance of 1 in 3 succeeds:
@@ -384,12 +384,12 @@ to say gsd_special_lsex_00:
 			say "     'Next time, submit to your elder without me having to beat you, bitch,' he calls over his shoulder as he vanishes into a dark, dingy alleyway.";
 
 To gsd_set_male:
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	now sex entry is "Male";
 	now breasts entry is 2;
 
 To gsd_unset_male:
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	now sex entry is "Female";
 	now breasts entry is 8;
 
@@ -399,7 +399,7 @@ Section 3 - Player Victory
 to say beatthegsd:
 	if zephyrtask is 2, increase zephyrpests by 1;
 	now gsd_attack is false; [Encounter over, reset for the next time!]
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	if gsd_special is false:
 		if player is not neuter:
 			say "[gsd_generic_vsex_00]";
@@ -726,9 +726,10 @@ to say gsd_special_final_05:
 to say gsd_recruited:
 	increase score by 20;
 	now gshep is tamed;
+	add "Tamed" to Traits of gshep;
 	move Korvin to Makeshift Rec Room;
 	now HP of gshep is 1;
-	now lastscene of gshep is turns;
+	now GShepLastScene is turns;
 	say "     Looking around, you find some heavy rope and use that to make a temporary leash for the muzzle-scarred German Shepherd. He tugs at it a few times, but leaves it alone when you tell him to stop pawing at it. You ask him if he's got a name he can remember, which throws him for a loop. 'What a stupid question? Of course I remember... my... name...' He ends up bemused for a time, scratching his ear with one paw as he tries to think. 'K-... Ka-? Ko-? Korvin? I think it was, I mean, it is Korvin.' He seems a little more self-assured again now that he's got a name.";
 	say "     (The gshep is now tamed! You can make it your active pet by typing [bold type][link]pet gshep[as]pet gshep[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck gshep[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
@@ -739,12 +740,12 @@ to say attk gsd:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "German Shepherd"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";

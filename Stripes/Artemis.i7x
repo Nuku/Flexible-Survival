@@ -69,6 +69,7 @@ Instead of resolving a Poor Kitty:
 			increase carried of cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
+			add "Tamed" to Traits of rubber tigress;
 			move Artemis to Courtyard;
 			now HP of rubber tigress is 3;
 			now libido of rubber tigress is 30;
@@ -82,6 +83,7 @@ Instead of resolving a Poor Kitty:
 		say "ERROR-Artemis-[HP of rubber tigress]PK: HP outside of range for the event!";
 		increase carried of cup stack by 1;
 		now rubber tigress is tamed;
+		add "Tamed" to Traits of rubber tigress;
 		now Poor Kitty is resolved;
 
 
@@ -91,6 +93,10 @@ the linkaction of Artemis is "[artemislinkaction]".
 
 to say artemislinkaction:
 	say "Possible Actions: [link]talk[as]talk Artemis[end link], [link]smell[as]smell Artemis[end link], [link]fuck[as]fuck Artemis[end link][line break]";
+
+Table of GameCharacterIDs (continued)
+object	name
+rubber tigress	"rubber tigress"
 
 rubber tigress is a pet. rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
@@ -104,15 +110,9 @@ The assault of rubber tigress is "[ArtemisAttack]".
 the fuckscene of rubber tigress is "[SexWithArtemis]".
 templust is a number that varies.
 tempthirst is a number that varies.
-The rubber tigress has a number called cocks.
-The rubber tigress has a number called cunts.
-The rubber tigress has a number called Cock length.
-The rubber tigress has a number called Cock Width.
-The rubber tigress has a number called Cunt length.
-The rubber tigress has a number called Cunt width.
 
 to say SummonArtemis:
-	remove Artemis from play;
+	now Artemis is nowhere;
 	if player is in Courtyard and Artemis is in Courtyard: [summoning while standing next to her]
 		say "     With a sharp whistle you call Artemis over to you, rubbing her head gently the two of you begin to make your way back out into the city.";
 	else: [regular summoning]
@@ -124,6 +124,10 @@ to say DismissArtemis:
 		say "     Letting Artemis know that she can head home, she ends up rubbing her smooth rubbering skin against you almost like a parting hug. Then with a soft growl begins to run back towards the library.";
 	else: [dismissing her in the abbey]
 		say "     Taking a seat on the rim of the fountain Artemis come to lay down at your feet. You tell her it would prolly be best for her to take a little break and stick around the library, her only response is to shrug her shoulders and lay her head down.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Artemis	"Artemis"
 
 Artemis is a woman.
 The description of Artemis is "[ArtemisDesc]".
@@ -978,7 +982,7 @@ to say artemissf_sex:
 
 to artemisinfect:
 	setmonster "Rubber tigress";
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let holdertext be "";
 	now holdertext is sex entry;
 	now sex entry is "nochange";

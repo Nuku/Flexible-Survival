@@ -7,6 +7,10 @@ Version 1 of Bubble by Stripes begins here.
 
 Section 0 - Basic Structure
 
+Table of GameCharacterIDs (continued)
+object	name
+Bubble	"Bubble"
+
 Bubble is a person.
 The description of Bubble is "[bubbledesc]".
 The conversation of Bubble is { "Yay!" }.

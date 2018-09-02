@@ -24,6 +24,10 @@ Version 1 of Lilith by Wahn begins here.
 
 Section 1 - Lilith, the succubus
 
+Table of GameCharacterIDs (continued)
+object	name
+Lilith	"Lilith"
+
 Lilith is a woman. Lilith is in Sacristy. The HP of Lilith is normally 0.
 The description of Lilith is "[LilithDesc]".
 The conversation of Lilith is { "Mew!" }.

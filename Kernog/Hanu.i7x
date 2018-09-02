@@ -107,8 +107,8 @@ Instead of resolving Monkey Duel:
 			say "'With his new bitch?'";
 			say "'Heh heh. Nothing better than to twist the knife in the wound, right?'";
 			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type]";
-		now the area corresponding to a name of "Monkey" in the Table of random critters is "Nowhere";
-		now the area corresponding to a name of "Wukong Thugs" in the Table of random critters is "Zoo";
+		now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
+		now the area corresponding to a name of "Wukong Thugs" in the Table of Random Critters is "Zoo";
 	else:
 		LineBreak;
 		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction.";
@@ -123,12 +123,12 @@ when play begins:
 	add { "Wukong Thugs" } to infections of hermaphrodite;
 	add { "Wukong Thugs" } to infections of furry;
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wukong Thugs";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -182,7 +182,7 @@ When Play begins:
 
 
 to say WukongThugsdesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Male Preferred" is listed in feats of player:
