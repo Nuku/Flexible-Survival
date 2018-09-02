@@ -13,7 +13,7 @@ Version 1 of Duke by Wahn begins here.
 [   1: Sheep Meadow SW                                                  ]
 [   2: Sheep Meadow SE                                                  ]
 
-Duke is a man. The HP of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
+Duke is a man. The HP of Duke is usually 0. The thirst of Duke is usually 2. Duke is in Sheep Meadow SE.
 The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
 
@@ -320,7 +320,7 @@ to say DukeSex5: [Player fucked in the ass]
 	if HP of Duke is 10:
 		now HP of Duke is 11;
 
-Shawn is a man. The HP of Shawn is normally 0.
+Shawn is a man. The HP of Shawn is usually 0.
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
 

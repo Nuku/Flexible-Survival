@@ -31,13 +31,13 @@ This will give you syntax highlighting, so you can tell which parts are text tha
 
 Install packages by going to: File -> Settings -> Install
 
-### c. install the Atom package `symbol-gen`
+### c. install the Atom package `atom-ctags`
 This package lets you index the Flexible Survival definitions to make searching easier. Ever wonder what `player is male` is actually defined as? `CTRL+SHIFT+R` and type `male` to find out!
 
-You will have to copy the `.ctags` file in the Flexible-Survival folder into your `Users` folder for this package to work. How do you get to that? Press `WIN+R` (WIN is the windows key) and type `%HOMEPATH%`. Then copy the Flexible-Survival file called `.ctags` into that folder. In Atom, press `CTRL+ALT+G` and the bottom right corner should say `Generating symbols`.
+You will have to copy the `.ctags` file in the Flexible-Survival folder into your `Users` folder for this package to work. How do you get to that? Press `WIN+R` (WIN is the windows key) and type `%HOMEPATH%`. Then copy the Flexible-Survival file called `.ctags` into that folder. If you want to do this automatically, run the `sync.bat` script (described below) and you can ignore this part.
 
 Package Keyboard Shortcuts:
-`CTRL+ALT+G`: Regenerate the definitions list. This should happen automatically every time you save a file but you will have to do this when you first install this package and every time you pull changes from the repository that you didn't make in Atom.
+`CTRL+SHIFT+P`: and type `Atom Ctags: Rebuild` to rebuild the symbols for your project. You will have to do this periodically to update the list (if you cannot find a symbol, try this first)
 `CTRL+R`: Search definitions within the currently opened file
 `CTRL+SHIFT+R`: Search definitions within the entire Flexible Survival repository
 

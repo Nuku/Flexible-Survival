@@ -6,7 +6,7 @@ Version 2 of Hulking Cheerleader by Wahn begins here.
 when play begins:
 	add { "Hulking Cheerleader" } to infections of Transgender; [Futanari]
 
-CheerleaderFirstEncounter is a number that varies. CheerleaderFirstEncounter is normally 0.
+CheerleaderFirstEncounter is a number that varies. CheerleaderFirstEncounter is usually 0.
 
 Section 1 - Monster Responses
 

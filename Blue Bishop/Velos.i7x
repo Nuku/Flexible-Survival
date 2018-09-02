@@ -462,7 +462,7 @@ to say valeriemusing:
 Part 9 - Fang
 
 the vmusings of Fang is "[fangmusing]".
-fangvelos1 is a truth state that varies. fangvelos1 is normally false.
+fangvelos1 is a truth state that varies. fangvelos1 is usually false.
 
 to say fangmusing:
 	if HP of Fang is 1 or HP of Fang is 2:		[Beta-Fang message]

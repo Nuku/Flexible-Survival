@@ -10,8 +10,8 @@ Section 1 - Monster Responses
 fsddom is a number that varies.
 lastfsdfeeding is a number that varies. lastfsdfeeding is usually 255.
 fsdfeedmemory is a number that varies.
-FFSDUBM is a truth state that varies. FFSDUBM is normally false.
-FSDOPEN is a number that varies. FSDOPEN is normally 0.
+FFSDUBM is a truth state that varies. FFSDUBM is usually false.
+FSDOPEN is a number that varies. FSDOPEN is usually 0.
 
 to say fsdf attack:
 	if guy is not banned: [change target to male for infection if valid]

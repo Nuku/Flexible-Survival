@@ -10,7 +10,7 @@ when play begins:
 	add { "Sugar Ferret" } to infections of guy;
 	add { "Sugar Ferret" } to infections of furry;
 
-sugferretjoke is truth state that varies. sugferretjoke is normally false.
+sugferretjoke is truth state that varies. sugferretjoke is usually false.
 
 to say losetosugarferret:
 	if sugarferretfight is 3:

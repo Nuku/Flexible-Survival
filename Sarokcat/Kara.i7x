@@ -6,7 +6,7 @@ Version 2 of Kara by Sarokcat begins here.
 
 Section 1 - Kara
 
-karahbtalk is a truth state that varies. karahbtalk is normally false.
+karahbtalk is a truth state that varies. karahbtalk is usually false.
 
 Kara is a woman.[or woman]
 The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have colored the hyena fur as it grew in. Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..".

@@ -273,7 +273,7 @@ When Play begins:
 Section 3 - NPC
 
 Gabriel is a man.
-The HP of Gabriel is normally 0.
+The HP of Gabriel is usually 0.
 The description of Gabriel is "[Gabrieldesc]".
 The icon of Gabriel is Figure of Gabriel_icon.
 The conversation of Gabriel is { "Mew!" }.

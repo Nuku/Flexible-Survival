@@ -57,7 +57,7 @@ The sarea of Back at the Camp is "Outside".
 when play begins:
 	add Back at the Camp to badspots of guy; [male soldiers]
 
-lastGuardBeg is a number that varies. lastGuardBeg is normally 555.
+lastGuardBeg is a number that varies. lastGuardBeg is usually 555.
 
 Instead of resolving a Back at the Camp:
 	say "     Following your memory through the chaotic streets of the city, you try to find the military camp where you observed all those men taking a minotaur in the ass before. You think it was somewhere around the block you're right now, and... ah - there it is. Coming round a corner, you see the first of the olive green tents of the camp. And what you also see are two soldiers standing guard, who notice you and give you suspicious looks as they click off the safety of their rifles.";
@@ -261,7 +261,7 @@ Major Padgett is a man. Major Padgett is in Major's Tent.
 The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of graying hair. He's sitting at a field desk and looks busy with scouting reports and other paperwork.".
 The conversation of Major Padgett is { "Attention!" }.
 thirst of Major Padgett usually is 555. [ The thirst value is used for the turn-number the player last tried to talk the Major into allowing women with the minotaur ]
-CampBravoWomenAllowed is a number that varies. CampBravoWomenAllowed is normally 0.
+CampBravoWomenAllowed is a number that varies. CampBravoWomenAllowed is usually 0.
 
 instead of sniffing Major Padgett:
 	say "     He smells of Old Spice.";

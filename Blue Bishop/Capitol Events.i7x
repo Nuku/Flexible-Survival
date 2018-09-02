@@ -131,7 +131,7 @@ The sarea of Strange Meeting is "Capitol".
 
 Instead of resolving Strange Meeting:
 	say "     Traveling through the ruined area, you happen upon what appears to be a set of ebonflame dragonkin in the distance. Thankfully not being spotted, you duck behind some rubble, watching what they do.";
-	say "     They appear to just be standing there, one draken flanked by a pair of dragators, their intent soon made somewhat clear when a new party - a set of dark elves - calmly advance upon them. You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
+	say "     They appear to just be standing there, one drake flanked by a pair of dragators, their intent soon made somewhat clear when a new party - a set of dark elves - calmly advance upon them. You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
 	say "     Too far to hear what they actually say, they seem to be arguing over something, tossing accusations left and right and not really coming to any agreement. It would appear that tension is running high enough that they might turn on each other before they're interrupted when a sound from the open area, opposite to you, draws their attention.";
 	say "     You're not exactly sure what has them so ill at ease, both parties conceding into retreating. Chances are, you don't want to stay and find out, and thusly you move to depart yourself.";
 	now Strange Meeting is resolved;

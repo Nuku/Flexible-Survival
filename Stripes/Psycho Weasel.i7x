@@ -6,7 +6,7 @@ Version 1 of Psycho Weasel by Stripes begins here.
 Section 1 - Monster Responses
 
 weaselcount is a number that varies.
-weaselcolor is a text that varies. weaselcolor is normally "tan".
+weaselcolor is a text that varies. weaselcolor is usually "tan".
 
 when play begins:
 	add { "Psycho Weasel" } to infections of guy;

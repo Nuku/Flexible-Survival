@@ -1,4 +1,4 @@
-Version 1 of Cannon by hiccup begins here.
+Version 1 of Cannon by Hiccup begins here.
 [Version 1.3 - Bounty for Bradford - Stripes]
 
 "Adds a Cock Cannon to Flexible Survival's Wandering Monsters table"

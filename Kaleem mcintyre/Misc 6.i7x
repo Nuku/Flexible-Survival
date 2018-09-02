@@ -83,7 +83,7 @@ Instead of resolving a Scopaesthesia:
 		now level of Scopaesthesia is 9;
 		increase score by 5;
 	else if scopnum is 3:
-		say "Deciding to relax a bit at the park you find yourself quickly being accosted by several Leopardmen. The growling and snarling felines seem to have a bone to pick with you, preferably the ones both within your body.";
+		say "Deciding to relax a bit at the park, you find yourself quickly being accosted by several Leopardmen. The growling and snarling felines seem to have a bone to pick with you, preferably the ones both within your body.";
 		challenge "Leopardman";
 		challenge "Leopardman";
 		challenge "Leopardman";

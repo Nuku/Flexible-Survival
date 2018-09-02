@@ -1,5 +1,5 @@
 Park Events by Sarokcat begins here.
-[Several events transferred to Consolidated Outside Events in Song's folder and CEPark in Stripes' folder]
+[Several events transferred to Consolidated Outside Events and Consolidated Park Events in Song's folder]
 
 "Adds a series of random events to Flexible Survival to enhance the park."
 
@@ -27,12 +27,12 @@ Instead of Resolving a Poppy field:
 
 Section 2 - Empty jeep
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 3 - small fire
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 4 - fallen tree
@@ -113,22 +113,22 @@ Instead of Resolving a Felinoid lair:
 
 Section 6 - Torn vegetation
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 7 - Abandoned picnic
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 8 - Groundskeepers cabin
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 9 - Badger sighting
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Park Events ends here.

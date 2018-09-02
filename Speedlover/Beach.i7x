@@ -5,10 +5,10 @@ Section 1 - Basic Setup [of rooms]
 [Beach plaza]
 Beach Plaza is a Room.
 The Beach Plaza is fasttravel. The Beach Plaza is not known.
-The description of beach plaza is "[BeachplazaDesc]".
+The description of beach plaza is "[BeachPlazaDesc]".
 earea of Beach Plaza is "Outside".
 
-to say BeachplazaDesc:
+to say BeachPlazaDesc:
 	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff that way, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
 	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.";
 
@@ -170,7 +170,7 @@ to say BeachEndDesc:
 instead of sniffing the BeachEnd:
 	say "     All you can smell out here is the strong scent of the ocean.";
 
-[Rock Arch - *****Swimming is defined in Hellerhounds file - Underwater zone*****]
+[Rock Arch - *****Swimming is defined in Hellerhound's file - Underwater zone*****]
 Southwest of BeachEnd is Rock Arch.
 Rock Arch is a Room.
 The description of Rock Arch is "[RockArchDesc]".

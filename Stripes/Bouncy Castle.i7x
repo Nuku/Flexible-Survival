@@ -125,7 +125,7 @@ to say bcnavigate:
 		say "     Returning to the rowboat you found, you drag it into the water and start your journey. It is hard work rowing the boat, but it certainly beats swimming the whole way. As you're making your way through the rocking outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
 		now rowing is true;
 		if a random number between 1 and 20 > the perception of the player:
-			swimmingfight; [details in Hellerhound\underwater zone.i7x]
+			swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		now rowing is false;
 		say "     Eventually, you make it out to the buoyant castle, rowing up close to it. Your arms are sore from all the rowing, but you have managed to arrive at your destination. Worried your boat might scrape a hole in its rubbery hide, you moor your boat to one of the tethers tying the castle between the rocks. You swim the short distance to the floating castle and make your way inside.";
 		let dam be 16 - ( strength of player / 2 ) - (stamina of player / 2 );
@@ -135,7 +135,7 @@ to say bcnavigate:
 		follow the turnpass rule;
 	else if hasgills is 1: [swam there]
 		say "     Returning to the section of beach near the floating castle, you swim out into the waters. While your aquatic affinity makes the swim easier, you still struggle against the turbulent waters in this area. As you're making your way through the rocky outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
-		swimmingfight; [details in Hellerhound\underwater zone.i7x]
+		swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		say "     Eventually, you make it to the buoyant castle, managing to swim to one of the lines that is keeping it tethered between the rocky outcroppings. You follow that line up to the castle and climb inside, quite tired, but having reached your destination.";
 		let dam be 20 - ( strength of player / 2 ) - (stamina of player / 2 );
 		if dam < 0, now dam is 0;

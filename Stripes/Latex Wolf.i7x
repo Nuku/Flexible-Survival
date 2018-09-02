@@ -130,7 +130,7 @@ When Play begins:
 
 Section 3 - Progressive Infection
 
-lwcounter is a number that varies. lwcounter is normally 240.
+lwcounter is a number that varies. lwcounter is usually 240.
 
 an every turn rule:
 	if bodyname of player is "Latex Wolf" and lwcounter - turns > 3:

@@ -26,7 +26,7 @@ boristalk is a number that varies.
 Borisquest is a number that varies.
 Christyquest is a number that varies.
 borisfucked is a number that varies. borisfucked is usually 0.
-BorisArtemistalk is a truth state that varies. BorisArtemistalk is normally false.
+BorisArtemistalk is a truth state that varies. BorisArtemistalk is usually false.
 
 Boris the lion is a man.
 The description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".

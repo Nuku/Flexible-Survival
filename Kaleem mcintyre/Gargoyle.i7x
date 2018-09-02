@@ -3,7 +3,7 @@ Version 1 of Gargoyle by Kaleem mcintyre begins here.
 
 "Adds a Gargoyle to Flexible Survival's Wandering Monsters table."
 
-firstgarg is a truth state that varies. firstgarg is normally true. [tracks for short/long desc.]
+firstgarg is a truth state that varies. firstgarg is usually true. [tracks for short/long desc.]
 
 Section 1 - Monster Responses
 

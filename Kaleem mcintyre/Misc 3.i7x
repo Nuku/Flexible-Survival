@@ -1,11 +1,11 @@
 Misc 3 by Kaleem mcintyre begins here.
-[Several events transferred to Consolidated Outside Events in Song's folder and CEPark in Stripes' folder.]
+[Several events transferred to Consolidated Outside Events and Consolidated Park Events in Song's folder]
 
 "Adds a series of random events to Flexible Survival."
 
-Section 1- Mysterious Girl
+Section 1 - Mysterious Girl
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 2 - Jam Session

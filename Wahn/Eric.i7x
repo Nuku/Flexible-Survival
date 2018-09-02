@@ -200,7 +200,7 @@ Section 2 - Eric the Cuntboy Athlete
 
 [Smells, Description, Conversation and NPC Interaction]
 
-Eric is a man. Eric is in Sports Arena Lockerroom. The HP of Eric is normally 0.
+Eric is a man. Eric is in Sports Arena Lockerroom. The HP of Eric is usually 0.
 The description of Eric is "[EricDesc]".
 The conversation of Eric is { "Mew!" }.
 EricFleeingCountdown is a number that varies.

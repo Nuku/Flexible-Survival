@@ -1181,7 +1181,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies. restoreletter is normally "0".
+restoreletter is a text that varies. restoreletter is usually "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;
@@ -1225,7 +1225,7 @@ to npcEint-Read (c - a number):	[converts the indexed text back to regular text]
 	if character number c in npcEint is "9", now restoreletter is "9";
 
 [
-trixienotice is a truth state that varies. trixienotice is normally false.
+trixienotice is a truth state that varies. trixienotice is usually false.
 
 after going outside from the bunker while trixienotice is false:
 	now trixienotice is true;

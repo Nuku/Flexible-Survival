@@ -379,9 +379,9 @@ Larissa has a text called possadj. The possadj is usually "her".
 Larissa has a text called objpro. The objpro is usually "her".
 Larissa has a number called daycycle.
 Larissa has a number called bodycat.
-Larissa has a number called lasttf. Lasttf is normally 255.
+Larissa has a number called lasttf. Lasttf is usually 255.
 Larissa has a number called oldgender. The oldgender is usually 2.
-lar_tfcost is a number that varies. lar_tfcost is normally 50.
+lar_tfcost is a number that varies. lar_tfcost is usually 50.
 
 Part 2 - Transformation Dialog and Scene
 

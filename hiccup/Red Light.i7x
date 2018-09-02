@@ -1,4 +1,4 @@
-Red Light by hiccup begins here.
+Red Light by Hiccup begins here.
 
 [Description text for this Extension.]
 "Adds a new area called the Red Light District. The player can hunt, scavenge, and explore here."

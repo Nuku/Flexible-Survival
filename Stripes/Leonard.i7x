@@ -41,8 +41,8 @@ The description of Leonard is "[Leonarddesc]".
 The conversation of Leonard is { "Tut Tut!" }.
 feline_status is a number that varies.
 violinfound is a number that varies.
-Leonardtimer is a number that varies. Leonardtimer is normally 255.
-feline_pride_defeat is a truth state that varies. feline_pride_defeat is normally false.
+Leonardtimer is a number that varies. Leonardtimer is usually 255.
+feline_pride_defeat is a truth state that varies. feline_pride_defeat is usually false.
 
 the scent of Leonard is "The feline smells strong and manly.".
 

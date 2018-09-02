@@ -1510,11 +1510,6 @@
 |Stripes|Latex Quad Husky|20140908213124/1554:Mon 8 September 2014 21:31|indexing|
 |Stripes|Latex Quad Husky|Shipping Container|situation|
 |Stripes|Latex Quad Husky|latexhuskymode|value|
-|Stripes|Cepark|20140908213124/3172:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cepark|Consolidated Events Park CEP1|situation|
-|Stripes|Cepark|Consolidated Events Park CEP2|situation|
-|Stripes|Cepark|cepark1list|value|
-|Stripes|Cepark|cepark2list|value|
 |Sarokcat|New Events|20140908213124/6229:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|New Events|Military presence|situation|
 |Sarokcat|New Events|Abandonedplayer|situation|
