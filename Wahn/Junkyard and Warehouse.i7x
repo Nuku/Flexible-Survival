@@ -603,10 +603,10 @@ Steven's Home is a room. "You are in a more cozy and more private part of the ju
 instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
 
-a junkyard home is a situation.
-The sarea of a junkyard home is "Junkyard".
+Junkyard Home is a situation.
+The sarea of Junkyard Home is "Junkyard".
 
-Instead of resolving a junkyard home:
+Instead of resolving Junkyard Home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 	else:

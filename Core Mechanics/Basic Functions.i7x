@@ -494,8 +494,4 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 				now non-infectious entry is true;
 			break;
 
-to Finish (GivenSituation - situation):
-	now GivenSituation is resolved; [removed from being able to come up again]
-	now GivenSituation is completed; [marked as "the player has done this one"]
-
 Basic Functions ends here.

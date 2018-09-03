@@ -5,6 +5,7 @@ Version 224 of Story Skipper by Core Mechanics begins here.
 
 The File of EventSave (owned by another project) is called "FSEventSave".
 The File of RoomSave (owned by another project) is called "FSRoomSave".
+The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
 The File of PossessionSave (owned by another project) is called "FSPossessionSave".
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
 The File of TraitSave (owned by another project) is called "FSTraitSave".
@@ -123,9 +124,14 @@ to EventSave:
 		choose a blank row in the table of GameEvents;
 		now name entry is printed name of x;
 		if x is resolved:
-			now State entry is "Resolved";
+			now ResolveState entry is "Resolved";
 		else:
-			now State entry is "Unresolved";
+			now ResolveState entry is "Unresolved";
+		if x is active:
+			now ActiveState entry is "Active";
+		else:
+			now ActiveState entry is "Inactive";
+		now Resolution entry is Resolution of x;
 	write File of EventSave from the Table of GameEvents; [freshly made table gets saved to file]
 	if debugactive is 1:
 		say "DEBUG -> File of EventSave written.[line break]";
@@ -139,12 +145,17 @@ to EventRestore:
 			let EventIdName be name entry;
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
-				if State entry is "Resolved":
+				if ResolveState entry is "Resolved":
 					now EventObject is resolved;
 				else:
-					now EventObject is not resolved;
+					now EventObject is unresolved;
+				if ActiveState entry is "Active":
+					now EventObject is active;
+				else:
+					now EventObject is inactive;
+				now Resolution of EventObject is Resolution entry;
 				if debugactive is 1:
-					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [State entry]";
+					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 			else:
 				if debugactive is 1:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
@@ -171,7 +182,13 @@ to RoomSave:
 			now RestSafety entry is "Safe";
 		else:
 			now RestSafety entry is "Unsafe";
+		if the number of entries in Invent of x is not 0:
+			repeat with y running from 1 to the number of entries in Invent of x: [rebuilds the table of RoomInventory with current data]
+				choose a blank row in the table of GameRoomInventories;
+				now RoomName entry is printed name of x;
+				now ItemName entry is entry y in Invent of x;
 	write File of RoomSave from the Table of GameRooms; [freshly made table gets saved to file]
+	write File of RoomInventorySave from the Table of GameRoomInventories; [freshly made table gets saved to file]
 	if debugactive is 1:
 		say "DEBUG -> File of RoomSave written.[line break]";
 
@@ -201,6 +218,20 @@ to RoomRestore:
 			else:
 				if debugactive is 1:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+	if the File of RoomInventorySave exists:
+		repeat with x running through rooms:
+			truncate Invent of x to 0 entries; [cleaning out the old data]
+		say "Restoring RoomInventories...";
+		read File of RoomInventorySave into the Table of GameRoomInventories;
+		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
+			choose row x in the Table of GameRoomInventories;
+			let RoomIdName be RoomName entry;
+			if there is a name of RoomIdName in the Table of GameRoomIDs:
+				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
+				add ItemName entry to Invent of RoomObject;
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
 	else:
 		say "No Room Save File Found!";
 
@@ -216,7 +247,7 @@ to PossessionSave:
 		if object entry is owned:
 			now PossessionCarriedNumber is carried of object entry;
 		if object entry is stored:
-			now PossessionCarriedNumber is stashed of object entry;
+			now PossessionStoredNumber is stashed of object entry;
 		if object entry is Equipment:
 			if object entry is equipped:
 				now PossessionEquipped is true;
@@ -302,6 +333,7 @@ to CharacterSave:
 			now Breasts entry is Breasts of x;
 			now Breast Size entry is Breast Size of x;
 			now PlayerMet entry is PlayerMet of x;
+			now PlayerRomanced entry is PlayerRomanced of x;
 			now PlayerFucked entry is PlayerFucked of x;
 			now OralVirgin entry is OralVirgin of x;
 			now Virgin entry is Virgin of x;
@@ -374,6 +406,7 @@ to CharacterRestore:
 				now Breasts of CharacterObject is Breasts entry;
 				now Breast Size of CharacterObject is Breast Size entry;
 				now PlayerMet of CharacterObject is PlayerMet entry;
+				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
 				now PlayerFucked of CharacterObject is PlayerFucked entry;
 				now OralVirgin of CharacterObject is OralVirgin entry;
 				now Virgin of CharacterObject is Virgin entry;

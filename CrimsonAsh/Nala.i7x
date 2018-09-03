@@ -8,14 +8,14 @@ Version 1 of Nala by CrimsonAsh begins here.
 
 Section 1 - Events
 
-A Harmless Joke is a situation.
-The sarea of A Harmless Joke is "Nowhere".
+Harmless Joke is a situation.
+The sarea of Harmless Joke is "Nowhere".
 
 when play begins:
-	add A Harmless Joke to badspots of girl;
-	add A Harmless Joke to badspots of hellspawn;
+	add Harmless Joke to badspots of girl;
+	add Harmless Joke to badspots of hellspawn;
 
-instead of navigating Grey Abbey Library while (A Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
 	move player to Grey Abbey Library;
@@ -23,7 +23,7 @@ instead of navigating Grey Abbey Library while (A Harmless Joke is not resolved 
 		say "     DEBUG: First Nala Trick on the player - HP of Nala: [HP of Nala][line break]";
 	say "     Walking up to the entrance the library, you reach to open the door leading in. But as you pull it open, you are suddenly drenched in cold water from a bucket set up over the door, soaking you through to the skin. You let out a loud yelp in surprise and start shivering while the bucket makes a hell of a racket as it clatters onto the floor. The whole situation is accompanied by a high-pitched giggling coming from somewhere inside the library. Glancing in that direction, you spot a small figure dart out of a partially opened window and out into the city. Rushing over, you look out after what must have been the trickster who set this trap for you, yet find them nowhere in sight. Grunting and cursing, you reluctantly accept your defeat and head down to the bunker to dry yourself off, now far more weary of doorways.";
 	now HP of Nala is 1; [flag set to remember the progress]
-	now A Harmless Joke is resolved; [event won't happen again]
+	now Harmless Joke is resolved; [event won't happen again]
 
 Fool Me Once is a situation.
 The sarea of Fool Me Once is "Nowhere".

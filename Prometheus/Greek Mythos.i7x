@@ -57,7 +57,7 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 
 Meet the Nemean Lion is a situation.
 Meet the Nemean Lion is resolved.
-The level of Meet the Nemean Lion is 0.
+The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
 
 instead of going to Dry Plains while (TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):

@@ -463,4 +463,56 @@ carry out DebugCritterRow:
 	else:
 		say "Row Number outside of the table!";
 
+to PrereqAnalyze (x - situation):
+	if Prereq1 of X is not nothing:
+		say "Prereq1: [Prereq1 of X] - ";
+		if Prereq1 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq1Resolution: [Prereq1Resolution of X][line break]";
+		say "Resolution of Prereq1: [Resolution of Prereq1 of X][line break]";
+		if Resolution of Prereq1 of X is not listed in Prereq1Resolution of X:
+			say "[Resolution of Prereq1 of X] not listed in [Prereq1Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq1 of X] is listed in [Prereq1Resolution of X][line break]";
+		LineBreak;
+		say "Prereq2: [Prereq2 of X] - ";
+		if Prereq2 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq2Resolution: [Prereq2Resolution of X][line break]";
+		say "Resolution of Prereq2: [Resolution of Prereq2 of X][line break]";
+		if Resolution of Prereq2 of X is not listed in Prereq2Resolution of X:
+			say "[Resolution of Prereq2 of X] not listed in [Prereq2Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq2 of X] is listed in [Prereq2Resolution of X][line break]";
+		LineBreak;
+		say "Prereq3: [Prereq3 of X] - ";
+		if Prereq3 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq3Resolution: [Prereq3Resolution of X][line break]";
+		say "Resolution of Prereq3: [Resolution of Prereq3 of X][line break]";
+		if Resolution of Prereq3 of X is not listed in Prereq3Resolution of X:
+			say "[Resolution of Prereq3 of X] not listed in [Prereq3Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq3 of X] is listed in [Prereq3Resolution of X][line break]";
+
+
+RoomEmptying is an action applying to nothing.
+understand "NukeRoomInvents" as RoomEmptying.
+
+carry out RoomEmptying:
+	repeat with x running through rooms:
+		truncate Invent of x to 0 entries; [cleaning out the old data]
+
 Debugging Tools ends here.

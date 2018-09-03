@@ -81,7 +81,7 @@ ThreeDoors is a situation. ThreeDoors is resolved.
 
 The beast of the tainted waters is a situation. The beast of the tainted waters is resolved.
 
-A Fight to remember is a situation. A fight to remember is resolved.
+Fight to remember is a situation. Fight to remember is resolved.
 
 PassionAfterTheBattle is a situation. PassionAfterTheBattle is resolved.
 
@@ -331,8 +331,8 @@ Instead of Resolving a The beast of the tainted waters:
 
 Section 4 - Reservoir (Fight)
 
-A Fight to remember is a situation.
-The sarea of A Fight to remember is "Reservoir".
+Fight to remember is a situation.
+The sarea of Fight to remember is "Reservoir".
 
 Instead of resolving a A Fight to remember:
 	if resevquest is 6:

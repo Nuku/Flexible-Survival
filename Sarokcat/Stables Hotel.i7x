@@ -2,15 +2,15 @@ Stables Hotel by Sarokcat begins here.
 
 "Adds a new area to Flexible Survival with a variety of NPCs."
 
-Section 1 - A Stabled Situation
+Section 1 - Stabled Situation
 [For locating the Stables Hotel]
 
-A Stabled Situation is a situation.
+Stabled Situation is a situation.
 Stablesearchstatus is a number that varies.
 when play begins:
-	add A Stabled Situation to badspots of furry;
+	add Stabled Situation to badspots of furry;
 
-Instead of Resolving a A Stabled Situation:
+Instead of Resolving Stabled Situation:
 	if Stablesearchstatus is 0:
 		say "     Wandering through the streets of the city, you hear a strange noise echoing through the streets, like the sound of numerous hooves hitting the sidewalk repeatedly. As the sound seems to be getting closer, you decide to take cover inside of a nearby abandoned car, peeking out through the windows carefully to see just what is making such a racket. You appear to have gotten under cover just in the nick of time, as a small group of horse-like men come trotting down the street, their equine faces scanning the street carefully as they continue along, most likely looking for a new playmate or two.";
 		say "     The horsemen pass your hiding spot without noticing you fortunately, and continue on their way down the streets. Getting out of the car carefully, you find yourself curious as to just where such a group of horses came from, and after considering for a minute, you follow them to find out, only to sigh as you realize that as alert as that group was, trying to follow them would likely only result in you getting caught by them.";
@@ -33,7 +33,7 @@ Instead of Resolving a A Stabled Situation:
 				Move player to The Stables Hotel;
 				now battleground is "void";
 				Now The Stables Hotel is known;
-				now A Stabled Situation is resolved;
+				now Stabled Situation is resolved;
 			else:
 				LineBreak;
 				say "     Sighing as you search through your pack, the two guards look on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange-looking place, you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food, right?";
@@ -57,7 +57,7 @@ Instead of Resolving a A Stabled Situation:
 				Move player to The Stables Hotel;
 				now battleground is "void";
 				Now The Stables Hotel is known;
-				now A Stabled Situation is resolved;
+				now Stabled Situation is resolved;
 			else:
 				LineBreak;
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously and with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange-looking place, you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food, right?";

@@ -6814,667 +6814,667 @@ to VariableTruthLoad:
 				say "Restoring Truth [TruthVarName entry].";
 			if TruthVarName entry is:
 				-- "A_Candy":
-					now A_Candy is TruthVarValue  entry;
+					now A_Candy is TruthVarValue entry;
 				-- "A_Coleen":
-					now A_Coleen is TruthVarValue  entry;
+					now A_Coleen is TruthVarValue entry;
 				-- "A_David":
-					now A_David is TruthVarValue  entry;
+					now A_David is TruthVarValue entry;
 				-- "A_Elijah":
-					now A_Elijah is TruthVarValue  entry;
+					now A_Elijah is TruthVarValue entry;
 				-- "A_Fang":
-					now A_Fang is TruthVarValue  entry;
+					now A_Fang is TruthVarValue entry;
 				-- "A_Helen":
-					now A_Helen is TruthVarValue  entry;
+					now A_Helen is TruthVarValue entry;
 				-- "A_Icarus":
-					now A_Icarus is TruthVarValue  entry;
+					now A_Icarus is TruthVarValue entry;
 				-- "A_Mack":
-					now A_Mack is TruthVarValue  entry;
+					now A_Mack is TruthVarValue entry;
 				-- "A_Onyx":
-					now A_Onyx is TruthVarValue  entry;
+					now A_Onyx is TruthVarValue entry;
 				-- "A_Philip":
-					now A_Philip is TruthVarValue  entry;
+					now A_Philip is TruthVarValue entry;
 				-- "A_Sally":
-					now A_Sally is TruthVarValue  entry;
+					now A_Sally is TruthVarValue entry;
 				-- "A_Sam":
-					now A_Sam is TruthVarValue  entry;
+					now A_Sam is TruthVarValue entry;
 				-- "A_Sandra":
-					now A_Sandra is TruthVarValue  entry;
+					now A_Sandra is TruthVarValue entry;
 				-- "A_Sarah":
-					now A_Sarah is TruthVarValue  entry;
+					now A_Sarah is TruthVarValue entry;
 				-- "A_Sarah2":
-					now A_Sarah2 is TruthVarValue  entry;
+					now A_Sarah2 is TruthVarValue entry;
 				-- "A_Snow":
-					now A_Snow is TruthVarValue  entry;
+					now A_Snow is TruthVarValue entry;
 				-- "A_Solstice":
-					now A_Solstice is TruthVarValue  entry;
+					now A_Solstice is TruthVarValue entry;
 				-- "A_Sven":
-					now A_Sven is TruthVarValue  entry;
+					now A_Sven is TruthVarValue entry;
 				-- "A_Xerxes":
-					now A_Xerxes is TruthVarValue  entry;
+					now A_Xerxes is TruthVarValue entry;
 				-- "Alexandracoffee":
-					now Alexandracoffee is TruthVarValue  entry;
+					now Alexandracoffee is TruthVarValue entry;
 				-- "alexandragshep1":
-					now alexandragshep1 is TruthVarValue  entry;
+					now alexandragshep1 is TruthVarValue entry;
 				-- "Alexandrastory":
-					now Alexandrastory is TruthVarValue  entry;
+					now Alexandrastory is TruthVarValue entry;
 				-- "Alexandrastory2":
-					now Alexandrastory2 is TruthVarValue  entry;
+					now Alexandrastory2 is TruthVarValue entry;
 				-- "Alexandrastory3":
-					now Alexandrastory3 is TruthVarValue  entry;
+					now Alexandrastory3 is TruthVarValue entry;
 				-- "alphaHuskyBountyState":
-					now alphaHuskyBountyState is TruthVarValue  entry;
+					now alphaHuskyBountyState is TruthVarValue entry;
 				-- "alphawolfreplaced":
-					now alphawolfreplaced is TruthVarValue  entry;
+					now alphawolfreplaced is TruthVarValue entry;
 				-- "altsealedentrance":
-					now altsealedentrance is TruthVarValue  entry;
+					now altsealedentrance is TruthVarValue entry;
 				-- "animal heat":
-					now animal heat is TruthVarValue  entry;
+					now animal heat is TruthVarValue entry;
 				-- "animeclubfight":
-					now animeclubfight is TruthVarValue  entry;
+					now animeclubfight is TruthVarValue entry;
 				-- "artemisstatefairrt":
-					now artemisstatefairrt is TruthVarValue  entry;
+					now artemisstatefairrt is TruthVarValue entry;
 				-- "AT_Diego":
-					now AT_Diego is TruthVarValue  entry;
+					now AT_Diego is TruthVarValue entry;
 				-- "AT_Jimmy":
-					now AT_Jimmy is TruthVarValue  entry;
+					now AT_Jimmy is TruthVarValue entry;
 				-- "AT_Lisa":
-					now AT_Lisa is TruthVarValue  entry;
+					now AT_Lisa is TruthVarValue entry;
 				-- "AT_Marks":
-					now AT_Marks is TruthVarValue  entry;
+					now AT_Marks is TruthVarValue entry;
 				-- "AT_Matt":
-					now AT_Matt is TruthVarValue  entry;
+					now AT_Matt is TruthVarValue entry;
 				-- "AT_Mouse":
-					now AT_Mouse is TruthVarValue  entry;
+					now AT_Mouse is TruthVarValue entry;
 				-- "AT_Patrol":
-					now AT_Patrol is TruthVarValue  entry;
+					now AT_Patrol is TruthVarValue entry;
 				-- "at_patrol_01":
-					now at_patrol_01 is TruthVarValue  entry;
+					now at_patrol_01 is TruthVarValue entry;
 				-- "AT_Paula":
-					now AT_Paula is TruthVarValue  entry;
+					now AT_Paula is TruthVarValue entry;
 				-- "AT_Philip":
-					now AT_Philip is TruthVarValue  entry;
+					now AT_Philip is TruthVarValue entry;
 				-- "AT_Qytat":
-					now AT_Qytat is TruthVarValue  entry;
+					now AT_Qytat is TruthVarValue entry;
 				-- "AT_Repair":
-					now AT_Repair is TruthVarValue  entry;
+					now AT_Repair is TruthVarValue entry;
 				-- "AT_RLD":
-					now AT_RLD is TruthVarValue  entry;
+					now AT_RLD is TruthVarValue entry;
 				-- "AT_Sandra":
-					now AT_Sandra is TruthVarValue  entry;
+					now AT_Sandra is TruthVarValue entry;
 				-- "AT_Sarah":
-					now AT_Sarah is TruthVarValue  entry;
+					now AT_Sarah is TruthVarValue entry;
 				-- "AT_Snow":
-					now AT_Snow is TruthVarValue  entry;
+					now AT_Snow is TruthVarValue entry;
 				-- "AT_Stella":
-					now AT_Stella is TruthVarValue  entry;
+					now AT_Stella is TruthVarValue entry;
 				-- "AT_Sven":
-					now AT_Sven is TruthVarValue  entry;
+					now AT_Sven is TruthVarValue entry;
 				-- "autofeatloading":
-					now autofeatloading is TruthVarValue  entry;
+					now autofeatloading is TruthVarValue entry;
 				-- "Azari_Met":
-					now Azari_Met is TruthVarValue  entry;
+					now Azari_Met is TruthVarValue entry;
 				-- "BastetSexOrTalk":
-					now BastetSexOrTalk is TruthVarValue  entry;
+					now BastetSexOrTalk is TruthVarValue entry;
 				-- "bcduofightfled":
-					now bcduofightfled is TruthVarValue  entry;
+					now bcduofightfled is TruthVarValue entry;
 				-- "bcduofightlost":
-					now bcduofightlost is TruthVarValue  entry;
+					now bcduofightlost is TruthVarValue entry;
 				-- "bcplayroomlast":
-					now bcplayroomlast is TruthVarValue  entry;
+					now bcplayroomlast is TruthVarValue entry;
 				-- "bcseenhugeorca":
-					now bcseenhugeorca is TruthVarValue  entry;
+					now bcseenhugeorca is TruthVarValue entry;
 				-- "bcseenkingchair":
-					now bcseenkingchair is TruthVarValue  entry;
+					now bcseenkingchair is TruthVarValue entry;
 				-- "bcseenkingknight":
-					now bcseenkingknight is TruthVarValue  entry;
+					now bcseenkingknight is TruthVarValue entry;
 				-- "bcseenplayroom":
-					now bcseenplayroom is TruthVarValue  entry;
+					now bcseenplayroom is TruthVarValue entry;
 				-- "bcseenpunchingpillars":
-					now bcseenpunchingpillars is TruthVarValue  entry;
+					now bcseenpunchingpillars is TruthVarValue entry;
 				-- "bcseenthroneroom":
-					now bcseenthroneroom is TruthVarValue  entry;
+					now bcseenthroneroom is TruthVarValue entry;
 				-- "bcswordplay":
-					now bcswordplay is TruthVarValue  entry;
+					now bcswordplay is TruthVarValue entry;
 				-- "beachrape":
-					now beachrape is TruthVarValue  entry;
+					now beachrape is TruthVarValue entry;
 				-- "beauceronmet":
-					now beauceronmet is TruthVarValue  entry;
+					now beauceronmet is TruthVarValue entry;
 				-- "birthedwhelp":
-					now birthedwhelp is TruthVarValue  entry;
+					now birthedwhelp is TruthVarValue entry;
 				-- "blanchefight":
-					now blanchefight is TruthVarValue  entry;
+					now blanchefight is TruthVarValue entry;
 				-- "blanchetalk1":
-					now blanchetalk1 is TruthVarValue  entry;
+					now blanchetalk1 is TruthVarValue entry;
 				-- "blanchetalk2":
-					now blanchetalk2 is TruthVarValue  entry;
+					now blanchetalk2 is TruthVarValue entry;
 				-- "blanchetalk3":
-					now blanchetalk3 is TruthVarValue  entry;
+					now blanchetalk3 is TruthVarValue entry;
 				-- "blindmode":
-					now blindmode is TruthVarValue  entry;
+					now blindmode is TruthVarValue entry;
 				-- "bloblost":
-					now bloblost is TruthVarValue  entry;
+					now bloblost is TruthVarValue entry;
 				-- "bopseen":
-					now bopseen is TruthVarValue  entry;
+					now bopseen is TruthVarValue entry;
 				-- "BorisArtemistalk":
-					now BorisArtemistalk is TruthVarValue  entry;
+					now BorisArtemistalk is TruthVarValue entry;
 				-- "boundrecover":
-					now boundrecover is TruthVarValue  entry;
+					now boundrecover is TruthVarValue entry;
 				-- "boundstate":
-					now boundstate is TruthVarValue  entry;
+					now boundstate is TruthVarValue entry;
 				-- "bradfordstory1":
-					now bradfordstory1 is TruthVarValue  entry;
+					now bradfordstory1 is TruthVarValue entry;
 				-- "bradfordstory2":
-					now bradfordstory2 is TruthVarValue  entry;
+					now bradfordstory2 is TruthVarValue entry;
 				-- "bradfordstory3":
-					now bradfordstory3 is TruthVarValue  entry;
+					now bradfordstory3 is TruthVarValue entry;
 				-- "bradfordstory4":
-					now bradfordstory4 is TruthVarValue  entry;
+					now bradfordstory4 is TruthVarValue entry;
 				-- "brookeandrewtalk":
-					now brookeandrewtalk is TruthVarValue  entry;
+					now brookeandrewtalk is TruthVarValue entry;
 				-- "busterstory1":
-					now busterstory1 is TruthVarValue  entry;
+					now busterstory1 is TruthVarValue entry;
 				-- "busterstory2":
-					now busterstory2 is TruthVarValue  entry;
+					now busterstory2 is TruthVarValue entry;
 				-- "ButterflyForeplay":
-					now ButterflyForeplay is TruthVarValue  entry;
+					now ButterflyForeplay is TruthVarValue entry;
 				-- "ButterflyHasNegligee":
-					now ButterflyHasNegligee is TruthVarValue  entry;
+					now ButterflyHasNegligee is TruthVarValue entry;
 				-- "ButterflyLikesYou":
-					now ButterflyLikesYou is TruthVarValue  entry;
+					now ButterflyLikesYou is TruthVarValue entry;
 				-- "ButterflyLove":
-					now ButterflyLove is TruthVarValue  entry;
+					now ButterflyLove is TruthVarValue entry;
 				-- "ButterflyNegligeeTorn":
-					now ButterflyNegligeeTorn is TruthVarValue  entry;
+					now ButterflyNegligeeTorn is TruthVarValue entry;
 				-- "ButterflyPantiesFound":
-					now ButterflyPantiesFound is TruthVarValue  entry;
+					now ButterflyPantiesFound is TruthVarValue entry;
 				-- "ButterflyPregnant":
-					now ButterflyPregnant is TruthVarValue  entry;
+					now ButterflyPregnant is TruthVarValue entry;
 				-- "ButterflyProcreated":
-					now ButterflyProcreated is TruthVarValue  entry;
+					now ButterflyProcreated is TruthVarValue entry;
 				-- "ButterflyRevenge":
-					now ButterflyRevenge is TruthVarValue  entry;
+					now ButterflyRevenge is TruthVarValue entry;
 				-- "callovi":
-					now callovi is TruthVarValue  entry;
+					now callovi is TruthVarValue entry;
 				-- "cclosttarget":
-					now cclosttarget is TruthVarValue  entry;
+					now cclosttarget is TruthVarValue entry;
 				-- "cheetah_mpreg":
-					now cheetah_mpreg is TruthVarValue  entry;
+					now cheetah_mpreg is TruthVarValue entry;
 				-- "chindem":
-					now chindem is TruthVarValue  entry;
+					now chindem is TruthVarValue entry;
 				-- "christysausage":
-					now christysausage is TruthVarValue  entry;
+					now christysausage is TruthVarValue entry;
 				-- "ClassPaymentAccepted":
-					now ClassPaymentAccepted is TruthVarValue  entry;
+					now ClassPaymentAccepted is TruthVarValue entry;
 				-- "cuptrick":
-					now cuptrick is TruthVarValue  entry;
+					now cuptrick is TruthVarValue entry;
 				-- "demonBruteBountyState":
-					now demonBruteBountyState is TruthVarValue  entry;
+					now demonBruteBountyState is TruthVarValue entry;
 				-- "DemonFox_Apologized":
-					now DemonFox_Apologized is TruthVarValue  entry;
+					now DemonFox_Apologized is TruthVarValue entry;
 				-- "DemonFox_Encountered":
-					now DemonFox_Encountered is TruthVarValue  entry;
+					now DemonFox_Encountered is TruthVarValue entry;
 				-- "DemonFox_PlayerDefeated":
-					now DemonFox_PlayerDefeated is TruthVarValue  entry;
+					now DemonFox_PlayerDefeated is TruthVarValue entry;
 				-- "DemonFox_PlayerFled":
-					now DemonFox_PlayerFled is TruthVarValue  entry;
+					now DemonFox_PlayerFled is TruthVarValue entry;
 				-- "DemonFox_PlayerSubmitted":
-					now DemonFox_PlayerSubmitted is TruthVarValue  entry;
+					now DemonFox_PlayerSubmitted is TruthVarValue entry;
 				-- "DemonFox_PlayerWon":
-					now DemonFox_PlayerWon is TruthVarValue  entry;
+					now DemonFox_PlayerWon is TruthVarValue entry;
 				-- "DemonFox_PlayerWon_Fucked":
-					now DemonFox_PlayerWon_Fucked is TruthVarValue  entry;
+					now DemonFox_PlayerWon_Fucked is TruthVarValue entry;
 				-- "DemonFoxRead":
-					now DemonFoxRead is TruthVarValue  entry;
+					now DemonFoxRead is TruthVarValue entry;
 				-- "dobieanal":
-					now dobieanal is TruthVarValue  entry;
+					now dobieanal is TruthVarValue entry;
 				-- "DoranAnnoyed":
-					now DoranAnnoyed is TruthVarValue  entry;
+					now DoranAnnoyed is TruthVarValue entry;
 				-- "DoranAutofired":
-					now DoranAutofired is TruthVarValue  entry;
+					now DoranAutofired is TruthVarValue entry;
 				-- "DoranAutofireDiscussed":
-					now DoranAutofireDiscussed is TruthVarValue  entry;
+					now DoranAutofireDiscussed is TruthVarValue entry;
 				-- "DoranCumFilled":
-					now DoranCumFilled is TruthVarValue  entry;
+					now DoranCumFilled is TruthVarValue entry;
 				-- "DoranFirstTalk":
-					now DoranFirstTalk is TruthVarValue  entry;
+					now DoranFirstTalk is TruthVarValue entry;
 				-- "DoranInternal":
-					now DoranInternal is TruthVarValue  entry;
+					now DoranInternal is TruthVarValue entry;
 				-- "DoranPlayerBlueballing":
-					now DoranPlayerBlueballing is TruthVarValue  entry;
+					now DoranPlayerBlueballing is TruthVarValue entry;
 				-- "DoranPlayerCumFilled":
-					now DoranPlayerCumFilled is TruthVarValue  entry;
+					now DoranPlayerCumFilled is TruthVarValue entry;
 				-- "DoranPlayerGenderRegard":
-					now DoranPlayerGenderRegard is TruthVarValue  entry;
+					now DoranPlayerGenderRegard is TruthVarValue entry;
 				-- "DoranRefusedSex":
-					now DoranRefusedSex is TruthVarValue  entry;
+					now DoranRefusedSex is TruthVarValue entry;
 				-- "DoranSelfGender":
-					now DoranSelfGender is TruthVarValue  entry;
+					now DoranSelfGender is TruthVarValue entry;
 				-- "drutah_msg1":
-					now drutah_msg1 is TruthVarValue  entry;
+					now drutah_msg1 is TruthVarValue entry;
 				-- "duckyactive":
-					now duckyactive is TruthVarValue  entry;
+					now duckyactive is TruthVarValue entry;
 				-- "ebheat_msg":
-					now ebheat_msg is TruthVarValue  entry;
+					now ebheat_msg is TruthVarValue entry;
 				-- "ebneuterswitch":
-					now ebneuterswitch is TruthVarValue  entry;
+					now ebneuterswitch is TruthVarValue entry;
 				-- "enduring":
-					now enduring is TruthVarValue  entry;
+					now enduring is TruthVarValue entry;
 				-- "eprodused":
-					now eprodused is TruthVarValue  entry;
+					now eprodused is TruthVarValue entry;
 				-- "facecheck":
-					now facecheck is TruthVarValue  entry;
+					now facecheck is TruthVarValue entry;
 				-- "fangsidney":
-					now fangsidney is TruthVarValue  entry;
+					now fangsidney is TruthVarValue entry;
 				-- "FangToy":
-					now FangToy is TruthVarValue  entry;
+					now FangToy is TruthVarValue entry;
 				-- "fangvelos1":
-					now fangvelos1 is TruthVarValue  entry;
+					now fangvelos1 is TruthVarValue entry;
 				-- "featherready":
-					now featherready is TruthVarValue  entry;
+					now featherready is TruthVarValue entry;
 				-- "feline_pride_defeat":
-					now feline_pride_defeat is TruthVarValue  entry;
+					now feline_pride_defeat is TruthVarValue entry;
 				-- "FFSDUBM":
-					now FFSDUBM is TruthVarValue  entry;
+					now FFSDUBM is TruthVarValue entry;
 				-- "firebreathready":
-					now firebreathready is TruthVarValue  entry;
+					now firebreathready is TruthVarValue entry;
 				-- "firstgarg":
-					now firstgarg is TruthVarValue  entry;
+					now firstgarg is TruthVarValue entry;
 				-- "floatertaken":
-					now floatertaken is TruthVarValue  entry;
+					now floatertaken is TruthVarValue entry;
 				-- "flotmarked":
-					now flotmarked is TruthVarValue  entry;
+					now flotmarked is TruthVarValue entry;
 				-- "Francoismixcleaned":
-					now Francoismixcleaned is TruthVarValue  entry;
+					now Francoismixcleaned is TruthVarValue entry;
 				-- "Francoistalk1":
-					now Francoistalk1 is TruthVarValue  entry;
+					now Francoistalk1 is TruthVarValue entry;
 				-- "fsnakevalid":
-					now fsnakevalid is TruthVarValue  entry;
+					now fsnakevalid is TruthVarValue entry;
 				-- "garrettinfo1":
-					now garrettinfo1 is TruthVarValue  entry;
+					now garrettinfo1 is TruthVarValue entry;
 				-- "gobdem":
-					now gobdem is TruthVarValue  entry;
+					now gobdem is TruthVarValue entry;
 				-- "graphics":
-					now graphics is TruthVarValue  entry;
+					now graphics is TruthVarValue entry;
 				-- "grhouse":
-					now grhouse is TruthVarValue  entry;
+					now grhouse is TruthVarValue entry;
 				-- "gsbm":
-					now gsbm is TruthVarValue  entry;
+					now gsbm is TruthVarValue entry;
 				-- "gsd_attack":
-					now gsd_attack is TruthVarValue  entry;
+					now gsd_attack is TruthVarValue entry;
 				-- "gsd_fled":
-					now gsd_fled is TruthVarValue  entry;
+					now gsd_fled is TruthVarValue entry;
 				-- "gsd_male":
-					now gsd_male is TruthVarValue  entry;
+					now gsd_male is TruthVarValue entry;
 				-- "gsd_slut":
-					now gsd_slut is TruthVarValue  entry;
+					now gsd_slut is TruthVarValue entry;
 				-- "gsd_special":
-					now gsd_special is TruthVarValue  entry;
+					now gsd_special is TruthVarValue entry;
 				-- "gshep_scarscene":
-					now gshep_scarscene is TruthVarValue  entry;
+					now gshep_scarscene is TruthVarValue entry;
 				-- "gshm":
-					now gshm is TruthVarValue  entry;
+					now gshm is TruthVarValue entry;
 				-- "gsnhm":
-					now gsnhm is TruthVarValue  entry;
+					now gsnhm is TruthVarValue entry;
 				-- "HadGusBackgroundTalk":
-					now HadGusBackgroundTalk is TruthVarValue  entry;
+					now HadGusBackgroundTalk is TruthVarValue entry;
 				-- "hadiyahyg":
-					now hadiyahyg is TruthVarValue  entry;
+					now hadiyahyg is TruthVarValue entry;
 				-- "Hardmode":
-					now Hardmode is TruthVarValue  entry;
+					now Hardmode is TruthVarValue entry;
 				-- "heat enabled":
-					now heat enabled is TruthVarValue  entry;
+					now heat enabled is TruthVarValue entry;
 				-- "heatturnskipper":
-					now heatturnskipper is TruthVarValue  entry;
+					now heatturnskipper is TruthVarValue entry;
 				-- "hobo-food-gift":
-					now hobo-food-gift is TruthVarValue  entry;
+					now hobo-food-gift is TruthVarValue entry;
 				-- "hobo-grmilk":
-					now hobo-grmilk is TruthVarValue  entry;
+					now hobo-grmilk is TruthVarValue entry;
 				-- "hobo-libidosupp":
-					now hobo-libidosupp is TruthVarValue  entry;
+					now hobo-libidosupp is TruthVarValue entry;
 				-- "hobo-water-gift":
-					now hobo-water-gift is TruthVarValue  entry;
+					now hobo-water-gift is TruthVarValue entry;
 				-- "honeygiven":
-					now honeygiven is TruthVarValue  entry;
+					now honeygiven is TruthVarValue entry;
 				-- "houndfromhell":
-					now houndfromhell is TruthVarValue  entry;
+					now houndfromhell is TruthVarValue entry;
 				-- "hvoreoffer":
-					now hvoreoffer is TruthVarValue  entry;
+					now hvoreoffer is TruthVarValue entry;
 				-- "hydraheadcheck1":
-					now hydraheadcheck1 is TruthVarValue  entry;
+					now hydraheadcheck1 is TruthVarValue entry;
 				-- "hydraheadcheck2":
-					now hydraheadcheck2 is TruthVarValue  entry;
+					now hydraheadcheck2 is TruthVarValue entry;
 				-- "hydraheadcheck3":
-					now hydraheadcheck3 is TruthVarValue  entry;
+					now hydraheadcheck3 is TruthVarValue entry;
 				-- "hydraheadregrowth":
-					now hydraheadregrowth is TruthVarValue  entry;
+					now hydraheadregrowth is TruthVarValue entry;
 				-- "HyenaMatVore":
-					now HyenaMatVore is TruthVarValue  entry;
+					now HyenaMatVore is TruthVarValue entry;
 				-- "icarusrim":
-					now icarusrim is TruthVarValue  entry;
+					now icarusrim is TruthVarValue entry;
 				-- "icarusscene1":
-					now icarusscene1 is TruthVarValue  entry;
+					now icarusscene1 is TruthVarValue entry;
 				-- "icarusscene2":
-					now icarusscene2 is TruthVarValue  entry;
+					now icarusscene2 is TruthVarValue entry;
 				-- "impregnatevalid":
-					now impregnatevalid is TruthVarValue  entry;
+					now impregnatevalid is TruthVarValue entry;
 				-- "inasituation":
-					now inasituation is TruthVarValue  entry;
+					now inasituation is TruthVarValue entry;
 				-- "inheat":
-					now inheat is TruthVarValue  entry;
+					now inheat is TruthVarValue entry;
 				-- "insectlarva":
-					now insectlarva is TruthVarValue  entry;
+					now insectlarva is TruthVarValue entry;
 				-- "internalbypass":
-					now internalbypass is TruthVarValue  entry;
+					now internalbypass is TruthVarValue entry;
 				-- "isHellhound":
-					now isHellhound is TruthVarValue  entry;
+					now isHellhound is TruthVarValue entry;
 				-- "ishunting":
-					now ishunting is TruthVarValue  entry;
+					now ishunting is TruthVarValue entry;
 				-- "joannadogsaved":
-					now joannadogsaved is TruthVarValue  entry;
+					now joannadogsaved is TruthVarValue entry;
 				-- "karahbtalk":
-					now karahbtalk is TruthVarValue  entry;
+					now karahbtalk is TruthVarValue entry;
 				-- "kristenmsg1":
-					now kristenmsg1 is TruthVarValue  entry;
+					now kristenmsg1 is TruthVarValue entry;
 				-- "kristenmsg2":
-					now kristenmsg2 is TruthVarValue  entry;
+					now kristenmsg2 is TruthVarValue entry;
 				-- "kristenmsg3":
-					now kristenmsg3 is TruthVarValue  entry;
+					now kristenmsg3 is TruthVarValue entry;
 				-- "kristenmsg4":
-					now kristenmsg4 is TruthVarValue  entry;
+					now kristenmsg4 is TruthVarValue entry;
 				-- "kristenmsg5":
-					now kristenmsg5 is TruthVarValue  entry;
+					now kristenmsg5 is TruthVarValue entry;
 				-- "kristentf3fuck":
-					now kristentf3fuck is TruthVarValue  entry;
+					now kristentf3fuck is TruthVarValue entry;
 				-- "ktcockmatch":
-					now ktcockmatch is TruthVarValue  entry;
+					now ktcockmatch is TruthVarValue entry;
 				-- "LarissaTailed":
-					now LarissaTailed is TruthVarValue  entry;
+					now LarissaTailed is TruthVarValue entry;
 				-- "LarissaWinged":
-					now LarissaWinged is TruthVarValue  entry;
+					now LarissaWinged is TruthVarValue entry;
 				-- "LastTurnDay":
-					now LastTurnDay is TruthVarValue  entry;
+					now LastTurnDay is TruthVarValue entry;
 				-- "latexErmineBountyState":
-					now latexErmineBountyState is TruthVarValue  entry;
+					now latexErmineBountyState is TruthVarValue entry;
 				-- "latexhuskymode":
-					now latexhuskymode is TruthVarValue  entry;
+					now latexhuskymode is TruthVarValue entry;
 				-- "leodinner":
-					now leodinner is TruthVarValue  entry;
+					now leodinner is TruthVarValue entry;
 				-- "Leonardcabinet":
-					now Leonardcabinet is TruthVarValue  entry;
+					now Leonardcabinet is TruthVarValue entry;
 				-- "Leonardcaraway":
-					now Leonardcaraway is TruthVarValue  entry;
+					now Leonardcaraway is TruthVarValue entry;
 				-- "Leonardwrdesk":
-					now Leonardwrdesk is TruthVarValue  entry;
+					now Leonardwrdesk is TruthVarValue entry;
 				-- "leopocketwatch":
-					now leopocketwatch is TruthVarValue  entry;
+					now leopocketwatch is TruthVarValue entry;
 				-- "leoshadowmet":
-					now leoshadowmet is TruthVarValue  entry;
+					now leoshadowmet is TruthVarValue entry;
 				-- "LindseyMPregDetected":
-					now LindseyMPregDetected is TruthVarValue  entry;
+					now LindseyMPregDetected is TruthVarValue entry;
 				-- "lindseyws":
-					now lindseyws is TruthVarValue  entry;
+					now lindseyws is TruthVarValue entry;
 				-- "maleHound":
-					now maleHound is TruthVarValue  entry;
+					now maleHound is TruthVarValue entry;
 				-- "mchristyanal":
-					now mchristyanal is TruthVarValue  entry;
+					now mchristyanal is TruthVarValue entry;
 				-- "mchristybottom":
-					now mchristybottom is TruthVarValue  entry;
+					now mchristybottom is TruthVarValue entry;
 				-- "mchristytop":
-					now mchristytop is TruthVarValue  entry;
+					now mchristytop is TruthVarValue entry;
 				-- "mdstaffface":
-					now mdstaffface is TruthVarValue  entry;
+					now mdstaffface is TruthVarValue entry;
 				-- "medeapanda":
-					now medeapanda is TruthVarValue  entry;
+					now medeapanda is TruthVarValue entry;
 				-- "medeapill":
-					now medeapill is TruthVarValue  entry;
+					now medeapill is TruthVarValue entry;
 				-- "medeaub":
-					now medeaub is TruthVarValue  entry;
+					now medeaub is TruthVarValue entry;
 				-- "Meredith_anal":
-					now Meredith_anal is TruthVarValue  entry;
+					now Meredith_anal is TruthVarValue entry;
 				-- "Meredith_Coleen_fun1":
-					now Meredith_Coleen_fun1 is TruthVarValue  entry;
+					now Meredith_Coleen_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun1":
-					now Meredith_Vanessa_fun1 is TruthVarValue  entry;
+					now Meredith_Vanessa_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun2":
-					now Meredith_Vanessa_fun2 is TruthVarValue  entry;
+					now Meredith_Vanessa_fun2 is TruthVarValue entry;
 				-- "messypigaltorgasm":
-					now messypigaltorgasm is TruthVarValue  entry;
+					now messypigaltorgasm is TruthVarValue entry;
 				-- "MFSDUBM":
-					now MFSDUBM is TruthVarValue  entry;
+					now MFSDUBM is TruthVarValue entry;
 				-- "micaelastory1":
-					now micaelastory1 is TruthVarValue  entry;
+					now micaelastory1 is TruthVarValue entry;
 				-- "MKunleashed":
-					now MKunleashed is TruthVarValue  entry;
+					now MKunleashed is TruthVarValue entry;
 				-- "mlamiaboobmash":
-					now mlamiaboobmash is TruthVarValue  entry;
+					now mlamiaboobmash is TruthVarValue entry;
 				-- "mlamiamet":
-					now mlamiamet is TruthVarValue  entry;
+					now mlamiamet is TruthVarValue entry;
 				-- "monsterhit":
-					now monsterhit is TruthVarValue  entry;
+					now monsterhit is TruthVarValue entry;
 				-- "MoreauDiscount":
-					now MoreauDiscount is TruthVarValue  entry;
+					now MoreauDiscount is TruthVarValue entry;
 				-- "MoreauPaymentAccepted":
-					now MoreauPaymentAccepted is TruthVarValue  entry;
+					now MoreauPaymentAccepted is TruthVarValue entry;
 				-- "mpreghijack":
-					now mpreghijack is TruthVarValue  entry;
+					now mpreghijack is TruthVarValue entry;
 				-- "mre04":
-					now mre04 is TruthVarValue  entry;
+					now mre04 is TruthVarValue entry;
 				-- "msnakevalid":
-					now msnakevalid is TruthVarValue  entry;
+					now msnakevalid is TruthVarValue entry;
 				-- "muggerison":
-					now muggerison is TruthVarValue  entry;
+					now muggerison is TruthVarValue entry;
 				-- "nagawarning":
-					now nagawarning is TruthVarValue  entry;
+					now nagawarning is TruthVarValue entry;
 				-- "NavCheckReturn":
-					now NavCheckReturn is TruthVarValue  entry;
+					now NavCheckReturn is TruthVarValue entry;
 				-- "ndmLisa":
-					now ndmLisa is TruthVarValue  entry;
+					now ndmLisa is TruthVarValue entry;
 				-- "NewGraphics":
-					now NewGraphics is TruthVarValue  entry;
+					now NewGraphics is TruthVarValue entry;
 				-- "NewGraphicsDebugMode":
-					now NewGraphicsDebugMode is TruthVarValue  entry;
+					now NewGraphicsDebugMode is TruthVarValue entry;
 				-- "NewGraphicsOpened":
-					now NewGraphicsOpened is TruthVarValue  entry;
+					now NewGraphicsOpened is TruthVarValue entry;
 				-- "nmformswitch":
-					now nmformswitch is TruthVarValue  entry;
+					now nmformswitch is TruthVarValue entry;
 				-- "nohealmode":
-					now nohealmode is TruthVarValue  entry;
+					now nohealmode is TruthVarValue entry;
 				-- "nosquirrelanal":
-					now nosquirrelanal is TruthVarValue  entry;
+					now nosquirrelanal is TruthVarValue entry;
 				-- "obliging":
-					now obliging is TruthVarValue  entry;
+					now obliging is TruthVarValue entry;
 				-- "onyxhappytalk":
-					now onyxhappytalk is TruthVarValue  entry;
+					now onyxhappytalk is TruthVarValue entry;
 				-- "onyxsmra":
-					now onyxsmra is TruthVarValue  entry;
+					now onyxsmra is TruthVarValue entry;
 				-- "onyxsmro":
-					now onyxsmro is TruthVarValue  entry;
+					now onyxsmro is TruthVarValue entry;
 				-- "onyxsmrv":
-					now onyxsmrv is TruthVarValue  entry;
+					now onyxsmrv is TruthVarValue entry;
 				-- "ovipregalways":
-					now ovipregalways is TruthVarValue  entry;
+					now ovipregalways is TruthVarValue entry;
 				-- "ovipregmedeatalk":
-					now ovipregmedeatalk is TruthVarValue  entry;
+					now ovipregmedeatalk is TruthVarValue entry;
 				-- "ovipregnant":
-					now ovipregnant is TruthVarValue  entry;
+					now ovipregnant is TruthVarValue entry;
 				-- "pewtertorsosuppress":
-					now pewtertorsosuppress is TruthVarValue  entry;
+					now pewtertorsosuppress is TruthVarValue entry;
 				-- "playercanub":
-					now playercanub is TruthVarValue  entry;
+					now playercanub is TruthVarValue entry;
 				-- "playercanvore":
-					now playercanvore is TruthVarValue  entry;
+					now playercanvore is TruthVarValue entry;
 				-- "PlayerPigBodied":
-					now PlayerPigBodied is TruthVarValue  entry;
+					now PlayerPigBodied is TruthVarValue entry;
 				-- "ppatt":
-					now ppatt is TruthVarValue  entry;
+					now ppatt is TruthVarValue entry;
 				-- "pr_task01":
-					now pr_task01 is TruthVarValue  entry;
+					now pr_task01 is TruthVarValue entry;
 				-- "pr_task02":
-					now pr_task02 is TruthVarValue  entry;
+					now pr_task02 is TruthVarValue entry;
 				-- "pr_task03":
-					now pr_task03 is TruthVarValue  entry;
+					now pr_task03 is TruthVarValue entry;
 				-- "pr_task04":
-					now pr_task04 is TruthVarValue  entry;
+					now pr_task04 is TruthVarValue entry;
 				-- "preghijack":
-					now preghijack is TruthVarValue  entry;
+					now preghijack is TruthVarValue entry;
 				-- "rabbitified":
-					now rabbitified is TruthVarValue  entry;
+					now rabbitified is TruthVarValue entry;
 				-- "rambjvirg":
-					now rambjvirg is TruthVarValue  entry;
+					now rambjvirg is TruthVarValue entry;
 				-- "ramslut":
-					now ramslut is TruthVarValue  entry;
+					now ramslut is TruthVarValue entry;
 				-- "RestoreMode":
-					now RestoreMode is TruthVarValue  entry;
+					now RestoreMode is TruthVarValue entry;
 				-- "rkrcheck":
-					now rkrcheck is TruthVarValue  entry;
+					now rkrcheck is TruthVarValue entry;
 				-- "rlingfound":
-					now rlingfound is TruthVarValue  entry;
+					now rlingfound is TruthVarValue entry;
 				-- "roughing":
-					now roughing is TruthVarValue  entry;
+					now roughing is TruthVarValue entry;
 				-- "rowing":
-					now rowing is TruthVarValue  entry;
+					now rowing is TruthVarValue entry;
 				-- "sa_otteress":
-					now sa_otteress is TruthVarValue  entry;
+					now sa_otteress is TruthVarValue entry;
 				-- "sa_redvixen":
-					now sa_redvixen is TruthVarValue  entry;
+					now sa_redvixen is TruthVarValue entry;
 				-- "sa_wusky":
-					now sa_wusky is TruthVarValue  entry;
+					now sa_wusky is TruthVarValue entry;
 				-- "saberKittyBountyState":
-					now saberKittyBountyState is TruthVarValue  entry;
+					now saberKittyBountyState is TruthVarValue entry;
 				-- "samformtalk":
-					now samformtalk is TruthVarValue  entry;
+					now samformtalk is TruthVarValue entry;
 				-- "sangenreg":
-					now sangenreg is TruthVarValue  entry;
+					now sangenreg is TruthVarValue entry;
 				-- "SarahTehuantl":
-					now SarahTehuantl is TruthVarValue  entry;
+					now SarahTehuantl is TruthVarValue entry;
 				-- "sblzephyr":
-					now sblzephyr is TruthVarValue  entry;
+					now sblzephyr is TruthVarValue entry;
 				-- "SerenityVore":
-					now SerenityVore is TruthVarValue  entry;
+					now SerenityVore is TruthVarValue entry;
 				-- "showlocale":
-					now showlocale is TruthVarValue  entry;
+					now showlocale is TruthVarValue entry;
 				-- "sidneyanal":
-					now sidneyanal is TruthVarValue  entry;
+					now sidneyanal is TruthVarValue entry;
 				-- "sidneyformtalk":
-					now sidneyformtalk is TruthVarValue  entry;
+					now sidneyformtalk is TruthVarValue entry;
 				-- "sidneytalk1":
-					now sidneytalk1 is TruthVarValue  entry;
+					now sidneytalk1 is TruthVarValue entry;
 				-- "sidneytalk2":
-					now sidneytalk2 is TruthVarValue  entry;
+					now sidneytalk2 is TruthVarValue entry;
 				-- "sidneytalk3":
-					now sidneytalk3 is TruthVarValue  entry;
+					now sidneytalk3 is TruthVarValue entry;
 				-- "sidneytalk4":
-					now sidneytalk4 is TruthVarValue  entry;
+					now sidneytalk4 is TruthVarValue entry;
 				-- "sierramale":
-					now sierramale is TruthVarValue  entry;
+					now sierramale is TruthVarValue entry;
 				-- "sierrapure":
-					now sierrapure is TruthVarValue  entry;
+					now sierrapure is TruthVarValue entry;
 				-- "skipcockchange":
-					now skipcockchange is TruthVarValue  entry;
+					now skipcockchange is TruthVarValue entry;
 				-- "skipretaliate":
-					now skipretaliate is TruthVarValue  entry;
+					now skipretaliate is TruthVarValue entry;
 				-- "spidergirlBountyState":
-					now spidergirlBountyState is TruthVarValue  entry;
+					now spidergirlBountyState is TruthVarValue entry;
 				-- "ssbpg":
-					now ssbpg is TruthVarValue  entry;
+					now ssbpg is TruthVarValue entry;
 				-- "ssgbii":
-					now ssgbii is TruthVarValue  entry;
+					now ssgbii is TruthVarValue entry;
 				-- "ssgpd":
-					now ssgpd is TruthVarValue  entry;
+					now ssgpd is TruthVarValue entry;
 				-- "sshh":
-					now sshh is TruthVarValue  entry;
+					now sshh is TruthVarValue entry;
 				-- "ssmb":
-					now ssmb is TruthVarValue  entry;
+					now ssmb is TruthVarValue entry;
 				-- "ssos":
-					now ssos is TruthVarValue  entry;
+					now ssos is TruthVarValue entry;
 				-- "ssxpa":
-					now ssxpa is TruthVarValue  entry;
+					now ssxpa is TruthVarValue entry;
 				-- "stellapsurv":
-					now stellapsurv is TruthVarValue  entry;
+					now stellapsurv is TruthVarValue entry;
 				-- "sugarglidernote":
-					now sugarglidernote is TruthVarValue  entry;
+					now sugarglidernote is TruthVarValue entry;
 				-- "sugferretjoke":
-					now sugferretjoke is TruthVarValue  entry;
+					now sugferretjoke is TruthVarValue entry;
 				-- "Susanoversize":
-					now Susanoversize is TruthVarValue  entry;
+					now Susanoversize is TruthVarValue entry;
 				-- "SvenStory1":
-					now SvenStory1 is TruthVarValue  entry;
+					now SvenStory1 is TruthVarValue entry;
 				-- "TentacleRead":
-					now TentacleRead is TruthVarValue  entry;
+					now TentacleRead is TruthVarValue entry;
 				-- "Terminatorsleep":
-					now Terminatorsleep is TruthVarValue  entry;
+					now Terminatorsleep is TruthVarValue entry;
 				-- "TerminatorSleepActivated":
-					now TerminatorSleepActivated is TruthVarValue  entry;
+					now TerminatorSleepActivated is TruthVarValue entry;
 				-- "thmpregdetect":
-					now thmpregdetect is TruthVarValue  entry;
+					now thmpregdetect is TruthVarValue entry;
 				-- "TomeEventPending":
-					now TomeEventPending is TruthVarValue  entry;
+					now TomeEventPending is TruthVarValue entry;
 				-- "toystoreoverride":
-					now toystoreoverride is TruthVarValue  entry;
+					now toystoreoverride is TruthVarValue entry;
 				-- "toystoreseen":
-					now toystoreseen is TruthVarValue  entry;
+					now toystoreseen is TruthVarValue entry;
 				-- "ts_warrior":
-					now ts_warrior is TruthVarValue  entry;
+					now ts_warrior is TruthVarValue entry;
 				-- "tsw_victory":
-					now tsw_victory is TruthVarValue  entry;
+					now tsw_victory is TruthVarValue entry;
 				-- "twistedPimpBountyState":
-					now twistedPimpBountyState is TruthVarValue  entry;
+					now twistedPimpBountyState is TruthVarValue entry;
 				-- "twistfsdfeedmemory":
-					now twistfsdfeedmemory is TruthVarValue  entry;
+					now twistfsdfeedmemory is TruthVarValue entry;
 				-- "TyrTraining":
-					now TyrTraining is TruthVarValue  entry;
+					now TyrTraining is TruthVarValue entry;
 				-- "ubspecial1":
-					now ubspecial1 is TruthVarValue  entry;
+					now ubspecial1 is TruthVarValue entry;
 				-- "utahmet":
-					now utahmet is TruthVarValue  entry;
+					now utahmet is TruthVarValue entry;
 				-- "vampiric":
-					now vampiric is TruthVarValue  entry;
+					now vampiric is TruthVarValue entry;
 				-- "velosapology":
-					now velosapology is TruthVarValue  entry;
+					now velosapology is TruthVarValue entry;
 				-- "velosfleepenalty":
-					now velosfleepenalty is TruthVarValue  entry;
+					now velosfleepenalty is TruthVarValue entry;
 				-- "velosheadstalk":
-					now velosheadstalk is TruthVarValue  entry;
+					now velosheadstalk is TruthVarValue entry;
 				-- "velosparasitetalk":
-					now velosparasitetalk is TruthVarValue  entry;
+					now velosparasitetalk is TruthVarValue entry;
 				-- "velossaved":
-					now velossaved is TruthVarValue  entry;
+					now velossaved is TruthVarValue entry;
 				-- "velossavedtalk":
-					now velossavedtalk is TruthVarValue  entry;
+					now velossavedtalk is TruthVarValue entry;
 				-- "velossavedyes":
-					now velossavedyes is TruthVarValue  entry;
+					now velossavedyes is TruthVarValue entry;
 				-- "vgeckoboost":
-					now vgeckoboost is TruthVarValue  entry;
+					now vgeckoboost is TruthVarValue entry;
 				-- "violinspritefight":
-					now violinspritefight is TruthVarValue  entry;
+					now violinspritefight is TruthVarValue entry;
 				-- "voreloss":
-					now voreloss is TruthVarValue  entry;
+					now voreloss is TruthVarValue entry;
 				-- "vorespecial1":
-					now vorespecial1 is TruthVarValue  entry;
+					now vorespecial1 is TruthVarValue entry;
 				-- "weakwilled":
-					now weakwilled is TruthVarValue  entry;
+					now weakwilled is TruthVarValue entry;
 				-- "WerewolfWatching":
-					now WerewolfWatching is TruthVarValue  entry;
+					now WerewolfWatching is TruthVarValue entry;
 				-- "wrcurseactivity":
-					now wrcurseactivity is TruthVarValue  entry;
+					now wrcurseactivity is TruthVarValue entry;
 				-- "wrdinoskel":
-					now wrdinoskel is TruthVarValue  entry;
+					now wrdinoskel is TruthVarValue entry;
 				-- "wrknifefight":
-					now wrknifefight is TruthVarValue  entry;
+					now wrknifefight is TruthVarValue entry;
 				-- "wrwolfseen":
-					now wrwolfseen is TruthVarValue  entry;
+					now wrwolfseen is TruthVarValue entry;
 				-- "yolandakeyfob":
-					now yolandakeyfob is TruthVarValue  entry;
+					now yolandakeyfob is TruthVarValue entry;
 				-- "yolandaqytat":
-					now yolandaqytat is TruthVarValue  entry;
+					now yolandaqytat is TruthVarValue entry;
 				-- "yolandatreasure":
-					now yolandatreasure is TruthVarValue  entry;
+					now yolandatreasure is TruthVarValue entry;
 				-- "zigorcycle":
-					now zigorcycle is TruthVarValue  entry;
+					now zigorcycle is TruthVarValue entry;
 				-- "zigorhadiyaquest":
-					now zigorhadiyaquest is TruthVarValue  entry;
+					now zigorhadiyaquest is TruthVarValue entry;
 				-- "zpc_inzone":
-					now zpc_inzone is TruthVarValue  entry;
+					now zpc_inzone is TruthVarValue entry;
 			if debugactive is 1:
 				say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";
 	else:

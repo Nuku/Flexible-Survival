@@ -106,26 +106,27 @@ carry out HuntAction:
 		choose a row with name of HuntId in the Table of GameEventIDs;
 		if debugactive is 1:
 			say "DEBUG -> Situation found: [name entry] by matching with [HuntId] (EXACT MATCH).[line break]";
-		if object entry is resolved:
+		if object entry is inactive:
+			now Found is 37; [found, but the event was banned]
+			if debugactive is 1:
+				say "DEBUG -> Event banned.[line break]";
+		else if object entry is resolved:
+			now Found is 34; [found, but it is resolved]
 			if debugactive is 1:
 				say "DEBUG -> Already resolved![line break]";
-			now Found is 34; [found, but it is resolved]
-		else if object entry is not PrereqisiteComplete:
+		else if object entry is not PrereqComplete:
+			now Found is 36; [found, but the prerequisite is not done]
 			if debugactive is 1:
-				say "DEBUG -> Prerequisite Tag not found.[line break]";
-			now Found is 36; [found, but the prerequisite is not in Traits of player]
-		else if score < minscore of object entry:
-			if debugactive is 1:
-				say "DEBUG -> Player's score is too low![line break]";
-			now Found is 33; [found, score too low]
+				say "DEBUG -> Prerequisites not fulfilled.[line break]";
+				PrereqAnalyze object entry;
 		else if level of player < level of object entry:
+			now Found is 32; [found, level too low]
 			if debugactive is 1:
 				say "DEBUG -> Player's level is too low![line break]";
-			now Found is 32; [found, level too low]
 		else if object entry is not close:
+			now Found is 31; [found, wrong area]
 			if debugactive is 1:
 				say "DEBUG -> In another area![line break]";
-			now Found is 31; [found, wrong area]
 		else:
 			now Found is 30; [event found]
 			say "It should be somewhere...";
@@ -297,21 +298,22 @@ carry out HuntAction:
 					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
 					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
 					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
-		if Found is 0: [no simple room match, moving on to events]
+		if Found is 0: [no simple room or creature match, moving on to events]
 			if debugactive is 1:
 				say "DEBUG -> Checking [HuntId] against events now. (SIMPLE MATCH)[line break]";
 			repeat with z running through unresolved situations:
 				if printed name of z matches the text HuntId, case insensitively:
 					if debugactive is 1:
 						say "DEBUG -> Situation found: [HuntId] by matching with [HuntId].[line break]";
-					if z is not PrereqisiteComplete:
+					if z is inactive:
+						now Found is 37; [found, but the event was banned]
 						if debugactive is 1:
-							say "DEBUG -> Prerequisite Tag not found.[line break]";
-						now Found is 36; [found, but the prerequisite is not in Traits of player]
-					else if score < minscore of z:
-						now Found is 33; [found, score too low]
+							say "DEBUG -> Event banned.[line break]";
+					else if z is not PrereqComplete:
+						now Found is 36; [found, but the prerequisite is not done]
 						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; Player's score is too low![line break]";
+							say "DEBUG -> Prerequisites not fulfilled.[line break]";
+							PrereqAnalyze z;
 					else if level of player < level of z:
 						now Found is 32; [found, level too low]
 						if debugactive is 1:
@@ -365,30 +367,32 @@ carry out HuntAction:
 			say "As you are trying to recover from your last encounter, another roving creature finds you.";
 			Fight;
 	if Found is:
-		-- 0:
+		-- 0: [creature: nothing found]
 			say "[bold type]You don't think that something like that can be found here...[roman type][line break]";
-		-- 11:
+		-- 11: [creature: day/night mismatch]
 			say "[bold type]There doesn't seem to be any of them around right now. Maybe it's the wrong time to go hunting for such creatures...[roman type][line break]";
-		-- 12:
+		-- 12: [creature: other area]
 			say "[bold type]Doesn't look like the creature you are hunting roams around in this area. Maybe you should check elsewhere...[roman type][line break]";
-		-- 13:
+		-- 13: [creature: no area entry at all]
 			say "[bold type]Error. No area specified for a '[HuntId]'. Please report this on the FS discord.[roman type][line break]";
-		-- 14:
+		-- 14: [creature: banned]
 			say "[bold type]The creature you are hunting has been banned from the game.[roman type][line break]";
-		-- 21:
-			say "[bold type]You don't think you can find a way there without help...[roman type][line break]";
-		-- 22:
+		-- 21: [room: private rooms]
+			say "[bold type]You don't think you can find a way there without help. The path may be well hidden or you could need a guide.[roman type][line break]";
+		-- 22: [room: perception check fail]
 			say "[bold type]Maybe you should train to be a bit more perceptive to find it...[roman type][line break]";
-		-- 31:
+		-- 31: [event: wrong area]
 			say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type][line break]";
-		-- 32:
+		-- 32: [event: level too low]
 			say "[bold type]You're not ready to find this yet. Go have some accomplishments elsewhere and come back when you have gained experience...[roman type][line break]";
-		-- 33:
-			say "[bold type]You're not ready to find this yet. Go have some accomplishments elsewhere and come back when you have gained experience...[roman type][line break]";
-		-- 35:
+		-- 34: [event: already resolved]
+			say "[bold type]This is already resolved for the current playthrough.[roman type][line break]";
+		-- 35: [event: perception check fail]
 			say "[bold type]Maybe you should train to be a bit more perceptive to find it...[roman type][line break]";
-		-- 36:
-			say "[bold type]Seems you're missing a prerequisite for this. Maybe look around a bit to find that first...[roman type][line break]";
+		-- 36: [event: prerequisite missing]
+			say "[bold type]Seems you're missing a prerequisite for this. Maybe look around a bit to find that first, or make different choices in your next playthrough...[roman type][line break]";
+		-- 37: [event: banned]
+			say "[bold type]Sadly, this was banned by your ban settings. You'll have to loosen your ban settings in the next playthrough if you want to experience it...[roman type][line break]";
 	follow the turnpass rule;
 
 to huntingfightchance:

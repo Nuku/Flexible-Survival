@@ -79,7 +79,7 @@ to say losetowolverine:
 	else if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if HP of player > 0, now HP of player is HP of player / 2;
-	else if inasituation is false:
+	else if inasituation is true:
 		say ""; [Dealt with at the event source]
 	else:
 		[Normal encounter]

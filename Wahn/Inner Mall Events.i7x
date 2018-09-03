@@ -82,20 +82,24 @@ Instead of resolving a Dressing Room Rampage:
 			WaitLineBreak;
 			say "     After you introduce yourself[if player is not defaultnamed] as [name of player][end if], the three of you chat a little while longer until Mark grows soft enough that his dick slips out of his lover all on its own. What doesn't come out though is cum, as all of it is apparently so deeply planted into the elven bottom that there is no danger of leakage from his tight behind. The two of them start picking up clothes to get dressed again, which actually is a bit of a difficult task with all three of you in the small dressing room. After bumping into each other a few times, you are actually allowed to go first at getting dressed, so you can step out and give them a bit more space. As you are about to pull the curtain shut behind yourself, Mark gives you an eager grin, while Jay cheerfully calls out, 'Have a nice day. Hope to see you again sometime [mister].'";
 			now JayMarkRelationship is 3; [fucked around with the two of them, player knows the names]
+			now Resolution of Dressing Room Rampage is 1; [fucked around in the dressing room]
 		else:
 			LineBreak;
 			say "     Face burning in embarrassment, you murmur an apology and step back, drawing the curtain closed again. The sounds of sex from the other side continue without even a hint of an interruption. Shrugging, you turn around, quietly leaving the store again. The rest of your current trip through the building doesn't reveal any particularly interesting situations, so you eventually end up where you started.";
 			now JayMarkRelationship is 1; [saw the two of them]
+			now Resolution of Dressing Room Rampage is 2; [saw them naked in the dressing room]
 	else:
 		LineBreak;
 		say "     The men in the dressing booth seem to be making the best of the whole refugee situation in the mall right now. You wish them well in your mind and turn around, quietly leaving the store again. Moving on, you follow one side of the mall wing, checking out some of the former businesses to pass the time. As you make your way forward, you eventually double back on the other side of the wide mall hallway, and fate leads you past the very store where you heard the commotion from the dressing room just as what must have been the participants walk out of it. Visually, the gay couple couldn't be more different: a towering polar bear in a checkered flannel shirt and jeans, accompanied by what is clearly a Christmas elf, complete with the stereotypical red and green outfit and sharply pointed ears that stick out through the long brown hair cascading over his shoulders.";
 		say "     Yet the fact that one of them is only half as tall as the other doesn't stop them from being together, as evident by their very open affection for one another. Patting the thick and sturdy ursine leg beside him, the elf calls out, 'How about a goodbye kiss, big guy?' With a grin, the large anthro bear picks his boyfriend up for a deep and hungry kiss. Arms wrapped partially around the much bigger man's broad chest, the elf tells him, 'Be careful out there. You may be my big, strong bear now, but I worry sometimes.' With a consoling grunt, his ursine partner replies, 'Of course, hon. Nothing will keep me from coming back to you.' Following another kiss between them, the big polar bear sets his lover down, then walks off towards the mall entrance. Looking after him, you manage to lose track of his diminutive partner. Being only about four feet tall, he is quite easy to lose in the crowds of people populating the mall.";
 		now JayMarkRelationship is 1; [saw the two of them]
+		now Resolution of Dressing Room Rampage is 3; [saw them outside the dressing room]
 	add "Tag: Met Jay&Mark" to Traits of player;
 	now Dressing Room Rampage is resolved;
 
 Elven Issues is a situation.
-The Prerequisite of Elven Issues is { "Tag: Met Jay&Mark" }.
+The Prereq1 of Elven Issues is Dressing Room Rampage.
+The Prereq1Resolution of Elven Issues is { 1, 2, 3 }.
 The sarea of Elven Issues is "Smith Haven".
 
 Instead of resolving a Elven Issues:
@@ -109,16 +113,16 @@ Instead of resolving a Elven Issues:
 		project the figure of Jay_elf_outfit_icon;
 		say "     Holding out your foot at just the right moment, you pull the legs out under the thieving marsupial, sending her to fall flat on her face. The four foot tall elf chasing after her calls out in vindication, rushing to stand over the kangaroo with his arms crossed in front of his chest. 'Just because I'm small doesn't mean you can just take whatever you want. Give it back.' Looking up defiantly, she doesn't reply for a long moment. [if JayMarkRelationship is 3]Jay[else]The elf[end if] suddenly grabs a handful of hair, pulling her head up sharply. He meets the woman's eyes with a steely gaze and says in a low tone, 'I am not some weak little victim, stupid bitch. Now give it back, or I'll tell the wolverines all about a certain petty thief disturbing the peace. You'll be out on the street before you know it.' With a growl under her breath, the kangaroo reaches into her pouch, pulling out a thin leather strap tied into a loop. A heavy gold ring dangles from it, clearly belonging to a man. Pulling the band over his head and stuffing the ring under his clothing to let the ring dangle over his breastbone, Jay takes a deep breath and lets it out slowly.";
 		say "     After that, he hisses to the kangaroo, 'Get out of here, and I better not see you causing trouble again.' After pushing herself up to stand, the woman runs off without looking back. As soon as she is gone, the diminutive man turns to you and says, [if JayMarkRelationship is 1]'Thank you, [mister]. I'm Jay, by the way. It's a pleasure to meet you.' [else]'Thank you, [mister].' [end if]You introduce yourself [if player is not defaultnamed]as [name of player][else]in turn[end if] and nod for him to continue. 'I don't have much left from my life before. This was one of the commitment rings I got for myself and Mark. It doesn't even fit me anymore like this, and he's the provider now, but one should always remember where you come from.' With the way he says this, you sense that he has accepted his new self, but he clearly still gets frustrated when bigger people pick on him. Reaching out, the elf shakes your hand and smiles, then adds, 'I'll make sure to return the favor sometime. For now, I need to head to the entrance court to meet up with Mark. Since I can't exactly help him scavenge out there, the least I can do is give him a warm welcome when he returns.' With that said, he ducks into the crowd and is gone a moment later.";
-		now Mark's Dinner Invite is not resolved;
-		add "Tag: Helped Jay vs Kangaroo" to Traits of player;
+		now Resolution of Elven Issues is 1; [helped Jay]
 	else:
 		LineBreak;
 		say "     Just after the kangaroo rushes past you, a whole crowd of mall rats rushes out of a video game store, swamping the hallway completely. This stops [if JayMarkRelationship is 3]Jay's[else]the elf's[end if] pursuit cold, preventing him from following the thief any further. By the time the crowd disperses enough for the elf to continue on, the kangaroo is gone without a trace. The slender male pulls himself to his full four foot height and puts his hands on his hips, staring at the people ahead and giving a deep sigh. 'Well, fuck!' he grumbles, then whirls around and stalks off, back the way he came. In his huff, he doesn't even notice you as he dashes past.";
-		add "Tag: Ignored Jay vs Kangaroo" to Traits of player;
+		now Resolution of Elven Issues is 2; [didn't help Jay]
 	now Elven Issues is resolved;
 
 Mark's Dinner Invite is a situation.
-The Prerequisite of Mark's Dinner Invite is { "Tag: Helped Jay vs Kangaroo" }.
+The Prereq1 of Mark's Dinner Invite is Elven Issues.
+The Prereq1Resolution of Mark's Dinner Invite is { 1 }. [must have helped Jay]
 The sarea of Mark's Dinner Invite is "Smith Haven".
 
 Instead of resolving a Mark's Dinner Invite:
@@ -129,7 +133,6 @@ Instead of resolving a Mark's Dinner Invite:
 	now thirst of Mark is 1; [dinner invite extended]
 	now XP of Mark is 1; [starting his daily rhythm]
 	now XP of Jay is 1; [starting his daily rhythm]
-	add "Tag: DinnerInvite from Mark" to Traits of player;
 
 [ End of Jay + Mark content, other events below ]
 
