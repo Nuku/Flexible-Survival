@@ -181,7 +181,7 @@ Instead of conversing the Francois:
 		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
 		say "     'Well, it's more than I knew before,' Karen responds. 'Thank you, Francois, for everything. I might not even be here if not for you helping our friend here escape from Rex,' she says, smiling at you before leaning in and giving him a timid kiss on the cheek. Soon after the conversation draws to a close, you and Karen gather your things and prepare to head back out into the city as Francois returns to his work behind the counter.";
 		now HP of Karen is 7;
-		now Forgotten Past is unresolved;
+		now Forgotten Past is active;
 	else if HP of Karen is 2:
 		say "     Realizing Francois and his bakery must be the place Karen mentioned, you decide to explain your situation to Francois, recounting the entire story that lead you to your position with Rex and your plot to escape.";
 		say "     'Mon Dieu, poor Karen,' Francois replies solemnly after hearing your tale, 'but at least it is not too late [if libido of Francois >= 3]for you, mon petit chou[else]to repay mon héro[end if].";

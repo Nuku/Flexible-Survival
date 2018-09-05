@@ -27,8 +27,13 @@ Instead of Resolving a Egyptian Wing:
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
 
-Finding Winged Orb is a situation. Finding Winged Orb is resolved.
+Finding Winged Orb is a situation.
+Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
 The sarea of Finding Winged Orb is "Park".
+
+an everyturn rule:
+	if Finding Winged Orb is inactive and (AmuranAwoken is 2 or AmuranAwoken > 3):
+		now Finding Winged Orb is active;
 
 instead of resolving Finding Winged Orb:
 	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar gling catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
@@ -357,7 +362,7 @@ instead of conversing Amuran:
 		if player consents:
 			say "[AmuranQuestAccept]";
 			now AmuranAwoken is 2;
-			now Finding Winged Orb is unresolved;
+			now Finding Winged Orb is active;
 		else:
 			say "[AmuranQuestReject]";
 			now AmuranAwoken is 3;
@@ -483,7 +488,7 @@ to say AmuranQuestAccept:
 	say "     Thinking over it for a few more moments and ultimately deciding to offer your assistance to him, you approach the sitting beetle-man and patiently wait for him to notice you. As the minutes tick by, however, it seems that he's too deep in meditation to notice you standing next to him. Politely, you tap him on his chitinous shoulder, trying to get his attention; and with a heavy shift, you do. He swivels his head to look at you, antennae twitching systematically in the sunlight of the sanctuary. A few moments of uncomfortable silence later, you speak up, informing him that you're willing to help him with his predicament.";
 	say "     You let loose a yelp and step back as Amuran reveals his wings, opening up the massive appendages to the cool air. Twitching them rapidly and wildly, he stares ahead a few seconds before folding his wings back against him. 'It appears that I may be indebted to you, young one, if your offer is genuine. It will likely prove the quicker solution, if you truly do wish to help.' Looking at you, it takes a minute for you to realize that Amuran is waiting for an affirmative answer. Confirming that you do, in fact, wish to assist, he bows his head to you as a sign of thanks. 'Your help is quite welcome, and your offer is accepted. One conduit calls from nearby, a place of ancients and living history; another sings from a cultivated wild, soon to be reclaimed by nature; I cannot get a clearer impression as limited as I am. If you are able to find them, please return them to me forthwith; then I shall be able to complete my task.' Having said his piece, Amuran returns to his meditations. Your task now set before you, there are a few places within the city that sound like what he described...";
 	now AmuranAwoken is 2;
-	now Finding Winged Orb is unresolved;
+	now Finding Winged Orb is active;
 
 to say AmuranQuestReject:
 	say "     Deciding against offering Amuran help for now, you leave the insect-man to his meditating and consider coming back later to help.";

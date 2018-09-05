@@ -114,19 +114,19 @@ carry out HuntAction:
 			now Found is 34; [found, but it is resolved]
 			if debugactive is 1:
 				say "DEBUG -> Already resolved![line break]";
+		else if object entry is not close:
+			now Found is 31; [found, wrong area]
+			if debugactive is 1:
+				say "DEBUG -> In another area![line break]";
+		else if level of player < level of object entry:
+			now Found is 32; [found, level too low]
+			if debugactive is 1:
+				say "DEBUG -> Player's level is too low![line break]";
 		else if object entry is not PrereqComplete:
 			now Found is 36; [found, but the prerequisite is not done]
 			if debugactive is 1:
 				say "DEBUG -> Prerequisites not fulfilled.[line break]";
 				PrereqAnalyze object entry;
-		else if level of player < level of object entry:
-			now Found is 32; [found, level too low]
-			if debugactive is 1:
-				say "DEBUG -> Player's level is too low![line break]";
-		else if object entry is not close:
-			now Found is 31; [found, wrong area]
-			if debugactive is 1:
-				say "DEBUG -> In another area![line break]";
 		else:
 			now Found is 30; [event found]
 			say "It should be somewhere...";
@@ -298,7 +298,7 @@ carry out HuntAction:
 					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
 					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
 					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
-		if Found is 0: [no simple room or creature match, moving on to events]
+		if Found is 0 or (Found > 10 and Found < 20): [no simple room or creature match, moving on to events]
 			if debugactive is 1:
 				say "DEBUG -> Checking [HuntId] against events now. (SIMPLE MATCH)[line break]";
 			repeat with z running through unresolved situations:
@@ -309,19 +309,19 @@ carry out HuntAction:
 						now Found is 37; [found, but the event was banned]
 						if debugactive is 1:
 							say "DEBUG -> Event banned.[line break]";
+					else if z is not close:
+						now Found is 31; [found, wrong area]
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found]; In another area![line break]";
+					else if level of player < level of z:
+						now Found is 32; [found, level too low]
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
 					else if z is not PrereqComplete:
 						now Found is 36; [found, but the prerequisite is not done]
 						if debugactive is 1:
 							say "DEBUG -> Prerequisites not fulfilled.[line break]";
 							PrereqAnalyze z;
-					else if level of player < level of z:
-						now Found is 32; [found, level too low]
-						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
-					else if z is not close:
-						now Found is 31; [found, wrong area]
-						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; In another area![line break]";
 					else:
 						now Found is 30; [event found]
 						say "It should be somewhere...";
@@ -392,7 +392,7 @@ carry out HuntAction:
 		-- 36: [event: prerequisite missing]
 			say "[bold type]Seems you're missing a prerequisite for this. Maybe look around a bit to find that first, or make different choices in your next playthrough...[roman type][line break]";
 		-- 37: [event: banned]
-			say "[bold type]Sadly, this was banned by your ban settings. You'll have to loosen your ban settings in the next playthrough if you want to experience it...[roman type][line break]";
+			say "[bold type]Sadly, this event is inactive. It might have been banned by your settings, or turned off because of some other reason.[roman type][line break]";
 	follow the turnpass rule;
 
 to huntingfightchance:

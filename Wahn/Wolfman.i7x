@@ -73,9 +73,8 @@ To say Septus loses:
 		say "     [if (HP of Septus is 0 or HP of Septus is 1 or HP of Septus is 2)]'Keep this up, and you'll have a place in the team soon.' He gives your shoulder a squeeze, then walks off to find more candidates out in the city.[else if (HP of Septus is 3 or HP of Septus is 4)]'You've shown your strength and skill. Why don't you join us in our base camp? It's in a warehouse over near 11th street. Just look for the [bold type]entrance[roman type] of our wolfman [bold type]lair[roman type] - there's a large wolf's head painted on the front wall too, you can barely miss it.'[else if HP of Septus is 5]'See you later at the lair. I'm off to find some new candidates.'[end if]";
 		if HP of Septus < 4:
 			increase HP of Septus by 1;
-		if HP of Septus is 4:
-			now Entrance to the Lair is unresolved;
-
+		if Entrance to the Lair is not resolved and HP of Septus > 3 and HP of Septus < 99:
+			now Entrance to the Lair is active;
 
 to say Wolfmandesc:
 	setmongender 3;
@@ -226,7 +225,7 @@ to wolfmaninfect:
 
 Section 3 - Event and Wolfman Lair
 
-Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is resolved.
+Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
 The sarea of Entrance to the Lair is "Outside".
 
 Instead of resolving a Entrance to the Lair:
@@ -303,7 +302,7 @@ Jennifer	"Jennifer"
 Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
-Jenniferfucked is a number that varies. Jenniferfucked is usually 0.
+Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
 
 instead of sniffing Jennifer:
 	say "Jennifer has a pretty nice female smell.";
@@ -774,11 +773,11 @@ Table of GameCharacterIDs (continued)
 object	name
 Septus	"Septus"
 
-Septus is a man. Septus is in Wolfman Lair. The HP of Septus is usually 100.
+Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
 The description of Septus is "[Septusdesc]".
 The conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.
-lastSeptusfucked is a number that varies. lastSeptusfucked is usually 555.
+lastSeptusfucked is a number that varies. lastSeptusfucked is normally 555.
 
 instead of sniffing Septus:
 	say "Septus has a strong, musky male smell.";

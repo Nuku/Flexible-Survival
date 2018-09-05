@@ -188,8 +188,13 @@ to say SexWithKaren:
 
 Section 2- Karen Quest
 
-Forgotten Past is a situation. Forgotten Past is Resolved.
+Forgotten Past is a situation.
+Forgotten Past is inactive. [Disabled for reactivation after the player talked to Francois]
 The sarea of Forgotten Past is "Campus".
+
+an everyturn rule:
+	if Forgotten Past is inactive and HP of Karen > 6 and HP of Karen < 100:
+		now Forgotten Past is active;
 
 Instead of resolving a Forgotten Past:
 	if HP of Karen is 7 and companion of player is Retriever Girl:

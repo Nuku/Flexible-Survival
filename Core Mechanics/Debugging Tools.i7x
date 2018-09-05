@@ -463,7 +463,10 @@ carry out DebugCritterRow:
 	else:
 		say "Row Number outside of the table!";
 
-to PrereqAnalyze (x - situation):
+to PrereqAnalyze (X - situation):
+	if PrereqCompanion of X is not nothing:
+		say "PrereqCompanion: [PrereqCompanion of X][line break]";
+		LineBreak;
 	if Prereq1 of X is not nothing:
 		say "Prereq1: [Prereq1 of X] - ";
 		if Prereq1 of X is resolved:
@@ -479,6 +482,7 @@ to PrereqAnalyze (x - situation):
 		else:
 			say "[Resolution of Prereq1 of X] is listed in [Prereq1Resolution of X][line break]";
 		LineBreak;
+	if Prereq2 of X is not nothing:
 		say "Prereq2: [Prereq2 of X] - ";
 		if Prereq2 of X is resolved:
 			say "resolved";
@@ -493,6 +497,7 @@ to PrereqAnalyze (x - situation):
 		else:
 			say "[Resolution of Prereq2 of X] is listed in [Prereq2Resolution of X][line break]";
 		LineBreak;
+	if Prereq2 of X is not nothing:
 		say "Prereq3: [Prereq3 of X] - ";
 		if Prereq3 of X is resolved:
 			say "resolved";
