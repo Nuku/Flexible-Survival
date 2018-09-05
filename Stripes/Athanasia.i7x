@@ -75,7 +75,7 @@ instead of using phoenix egg:
 
 the scent of the phoenix egg is "     The egg smells faintly of ashes.".
 
-the phoenix egg has a truth state called shownermine. shownermine of phoenix egg is normally false.
+the phoenix egg has a truth state called shownermine. shownermine of phoenix egg is usually false.
 [other show scenes could be created for other NPCs whom the player might show it to]
 
 instead of conversing the Nermine while phoenix egg is owned and shownermine of phoenix egg is false:

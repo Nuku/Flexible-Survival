@@ -126,8 +126,8 @@ The sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to badspots of guy; [male soldier]
 
-TSEventCounter is a number that varies. TSEventCounter is normally 0.
-LastTSEvent is a number that varies. LastTSEvent is normally 555.
+TSEventCounter is a number that varies. TSEventCounter is usually 0.
+LastTSEvent is a number that varies. LastTSEvent is usually 555.
 
 Instead of resolving a Thankful Soldier:
 	if (LastTSEvent - turns < 4):

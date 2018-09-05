@@ -171,11 +171,11 @@ section 1 - Onyx
 onyxdma is a number that varies.	[rescued Onyx / dom male / anal on player]
 onyxdmc is a number that varies.	[rescued Onyx / dom male / vaginal on player]
 onyxdmra is a number that varies.	[rescued Onyx / dom male / reciprocal anal for dom players ]
-onyxsmro is a truth state that varies.	onyxsmro is usually false. [rescued Onyx / sub male / player opted to give oral ]
-onyxsmrv is a truth state that varies.	onyxsmrv is usually false. [rescued Onyx / sub male / player opted for vaginal ]
-onyxsmra is a truth state that varies.	onyxsmra is usually false. [rescued Onyx / sub male / player opted to receive anal ]
+onyxsmro is a truth state that varies. onyxsmro is usually false. [rescued Onyx / sub male / player opted to give oral ]
+onyxsmrv is a truth state that varies. onyxsmrv is usually false. [rescued Onyx / sub male / player opted for vaginal ]
+onyxsmra is a truth state that varies. onyxsmra is usually false. [rescued Onyx / sub male / player opted to receive anal ]
 onyxfinale is a number that varies.	[rescued Onyx / sub male / cycling endings for oral scenes ]
-onyxhappytalk is a truth state that varies. onyxhappytalk is normally false.
+onyxhappytalk is a truth state that varies. onyxhappytalk is usually false.
 Onyxmareslut is a number that varies.	[Stables Onyx / dom male / player into mareslut]
 Onyxboislut is a number that varies.	[Stables Onyx / dom male / player into stallionboi]
 femonyxq is a number that varies.	[Quest variable for fem onyx]

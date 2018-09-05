@@ -6,7 +6,7 @@ Version 2 of Kara by Sarokcat begins here.
 
 Section 1 - Kara
 
-karahbtalk is a truth state that varies. karahbtalk is normally false.
+karahbtalk is a truth state that varies. karahbtalk is usually false.
 
 Table of GameCharacterIDs (continued)
 object	name

@@ -133,7 +133,7 @@ Instead of resolving a Angel vs Demons:
 				now monster is y;
 				now area entry is "Red";
 				break;
-		Now Angel vs Demons is resolved;
+		now Angel vs Demons is resolved;
 
 Section 2 - Elijah the Seraphim
 
@@ -141,7 +141,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Elijah	"Elijah"
 
-Elijah is a man. The HP of Elijah is normally 0.
+Elijah is a man. The HP of Elijah is usually 0.
 The description of Elijah is "[Elijahdesc]".
 The conversation of Elijah is { "Mew!" }.
 NPCintCounter is a number that varies. NPCintCounter is normally 555.

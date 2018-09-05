@@ -168,8 +168,8 @@ name	price	object	allowed
 "pepperspray"	320	pepperspray	pepper rule
 "water bottle"	100	water bottle	true rule
 
-nanitemeter is a number that varies. nanitemeter is normally 0.	[marks if player bought a nanite collector]
-pepped is a number that varies. pepped is normally 0.	[marks how many pepperspray a player's bought]
+nanitemeter is a number that varies. nanitemeter is usually 0.	[marks if player bought a nanite collector]
+pepped is a number that varies. pepped is usually 0.	[marks how many pepperspray a player's bought]
 
 This is the true rule:
 	rule succeeds;
@@ -353,7 +353,7 @@ Park Detector Site is a situation. It is resolved.
 The sarea of Park Detector Site is "Park".
 
 Instead of resolving a Park Detector Site:
-	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
+	say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
 	if nanite density monitor is not owned:
 		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	else:
@@ -410,7 +410,7 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 	now Beach Detector Site is resolved;
 	say "[onelessndm]";
 
-ndmLisa is a truth state that varies. ndmLisa is normally false.
+ndmLisa is a truth state that varies. ndmLisa is usually false.
 
 instead of conversing the Lisa while "Red Light District" is listed in ndmlist and nanite density monitor is owned and ndmLisa is false:
 	say "     You decide to ask Lisa if it would be okay to put the detector on top of her porn store. It might be as tall as some of the other buildings, but it would certainly be a safer spot, so you're willing to give it a try. As you start to bring up the topic, the mousetaur gets very upset. 'Zephyr? You're helping those greedy bastards? I've been hearing stuff about them and you shouldn't get involved with them. They're bad news and it's going to get messy when the infected people around here have had enough of their money-grubbing scientists.'";

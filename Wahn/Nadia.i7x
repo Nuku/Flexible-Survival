@@ -78,9 +78,9 @@ Nadia is a woman. The HP of Nadia is normally 0.
 The description of Nadia is "[NadiaDesc]".
 The conversation of Nadia is { "Mew!" }.
 
-NadiaDescription is a number that varies. NadiaDescription is normally 1.
-NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is normally 0.
-NadiaChickCounter is a number that varies. NadiaChickCounter is normally 0.
+NadiaDescription is a number that varies. NadiaDescription is usually 1.
+NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is usually 0.
+NadiaChickCounter is a number that varies. NadiaChickCounter is usually 0.
 NadiaPregCounter1 is a number that varies.
 NadiaPregCounter2 is a number that varies.
 NadiaPregCounter3 is a number that varies.

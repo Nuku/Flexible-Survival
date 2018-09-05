@@ -328,7 +328,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Shawn	"Shawn"
 
-Shawn is a man. The HP of Shawn is normally 0.
+Shawn is a man.
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
 

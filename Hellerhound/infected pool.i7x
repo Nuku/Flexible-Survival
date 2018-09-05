@@ -1,89 +1,81 @@
-Version 1 of infected pool by Hellerhound begins here.
+Version 1 of Infected Pool by Hellerhound begins here.
 
 
 Section 1 - Pure Pool
 
-Pure pool is a situation.
+Pure Pool is a situation.
 The sarea of Pure Pool is "Park".
-purpol is a number that varies.
-purpolu is a number that varies.
+PurePoolSeen is a truth state that varies. PurePoolSeen is usually false.
+PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false.
+PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.
+
 when play begins:
 	add Pure Pool to badspots of girl;
 
-
-to say stop wyvern:
-	say "Do you try to stop them?";
-	if player consents:
-		challenge "Wyvern";
-		say "After you finish with the first wyvern, the second attacks!";
-		wait for any key;
-		challenge "Wyvern";
-		say "After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park. It seems to head in the direction of the city.";
-		say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
-		WaitLineBreak;
-		say "You drink away your thirst.";
-		now thirst of player is 0;
-	else:
-		say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
+instead of resolving Pure Pool:
+	if PurePoolSeen is false:
+		say "     You smell in the air a slight difference, seeming cleaner, more pure. You look around for the source.";
+		say "     You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink and feel less thirsty.";
+		PlayerDrink 10;
+		now PurePoolSeen is true;
+	else if PurePoolSeen is true:
+		say "     Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
+		say "     Do you check out the situation?";
 		if player consents:
-			challenge "Wyvern";
-			say "After you finish with the first wyvern, the second attacks!";
-			wait for any key;
-			challenge "Wyvern";
-			say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
-			WaitLineBreak;
-			say "You drink away your thirst.";
-			now thirst of player is 0;
-		else:
-			say "You watch as the wyvern screams just like it did before.";
-			if the Perception of the player > 12:
-				decrease perception of the player by 4;
-				say "The blast damages your eardrums. (perception -4)";
-			say "Then the wyvern blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
-			now purpol is 4;
-
-
-instead of resolving a pure pool:
-	if purpol is 0:
-		say "You smell in the air a slight difference, seeming cleaner, more pure. You look around for the source.";
-		say "You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink, and feel less thirsty.";
-		decrease thirst of player by 10;
-		increase purpol by 1;
-	else if purpol is 1:
-		say "Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
-		say "Do you check out the situation?";
-		if player consents:
-			say "You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
-			if player is male and libido of player > 50:
+			say "     You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
+			if player is male and libido of player > 49:
 				if cockname of player is "Wyvern":
-					say "You could help resolve the situation by corrupting the pond yourself. Do you wish to?";
+					say "     You could help resolve the situation by corrupting the pond yourself. Do you wish to do so?";
 					if player consents:
-						say "You begin stroking your [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if], moaning as you do so. By the time the wyverns turn around and notice you, you are about to blow your load.";
-						if a random chance of one in 2 succeeds:
-							say "They begin stroking as well, rushing to come before you.";
+						say "     You begin stroking your [cock size desc of player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load";
+						if a random chance of 1 in 2 succeeds:
+							say ". They begin stroking as well, rushing to come before you.";
 						else:
-							say "They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
-						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
-						now purpol is 4;
-						now purpolu is 1;
+							say ". They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
+						say "     You blow your load into the pool, thick streams of seed spraying from your [cock of player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
+						now PurePoolPolluted is true;
+						now PurePoolPollutedByPlayer is true;
 				else:
 					say "[stop wyvern]";
 			else:
 				say "[stop wyvern]";
-	else if purpol is 4:
-		say "You find the infected pool";
-		if purpolu > 0:
-			say " that you infected before.";
+	else if PurePoolPolluted is true:
+		say "     You come across the same pool that you ";
+		if PurePoolPollutedByPlayer is true:
+			say "infected before";
 		else:
-			say " that you watched the wyvern infect.";
-		say "Do you wish to drink from it?";
+			say "watched the wyvern infect earlier";
+		say ". Do you wish to drink from it?";
 		if player consents:
-			say "You dip your head into the cloudy pool and drink deeply.";
+			say "     You dip your head into the cloudy pool and drink deeply.";
 			infect "Wyvern";
 			infect "Wyvern";
 			infect "Wyvern";
-			now thirst of player is 0;
+			ThirstReset;
 		else:
-			say "You keep clear of the infected water.";
+			say "     You keep clear of the infected water.";
 
-infected pool ends here.
+
+to say stop wyvern:
+	say "     Do you try to stop them?";
+	if player consents:
+		challenge "Wyvern";
+		say "     After you finish with the first wyvern, the second attacks!";
+		wait for any key;
+		challenge "Wyvern";
+		say "     After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park that leads in the direction of the city. Now that you've saved the pool from the danger of infection, you decide that it owes you a good drink and dip your head into the clear water.";
+		ThirstReset;
+	else:
+		say "     You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
+		if player consents:
+			challenge "Wyvern";
+			say "     After you finish with the first wyvern, the second attacks!";
+			wait for any key;
+			challenge "Wyvern";
+			say "     After freeing the pool from the danger of infection, you decide that it owes you a good drink.";
+			ThirstReset;
+		else:
+			say "     You watch as the wyvern screams like it did before, then blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
+			now PurePoolPolluted is true;
+
+Infected Pool ends here.

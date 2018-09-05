@@ -118,13 +118,12 @@ to say WendyGryphonAftermath:
 	move Wendy to McDermott Barn;
 	now Missing Cow is resolved;
 
-Section 2 - NPC
 
 Table of GameCharacterIDs (continued)
 object	name
 Wendy	"Wendy"
 
-Wendy is a woman. The HP of Wendy is normally 0.
+Wendy is a woman. The HP of Wendy is usually 0.
 The description of Wendy is "[WendyDesc]".
 The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 

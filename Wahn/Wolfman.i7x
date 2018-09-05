@@ -303,7 +303,7 @@ Jennifer	"Jennifer"
 Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
-Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
+Jenniferfucked is a number that varies. Jenniferfucked is usually 0.
 
 instead of sniffing Jennifer:
 	say "Jennifer has a pretty nice female smell.";
@@ -774,11 +774,11 @@ Table of GameCharacterIDs (continued)
 object	name
 Septus	"Septus"
 
-Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
+Septus is a man. Septus is in Wolfman Lair. The HP of Septus is usually 100.
 The description of Septus is "[Septusdesc]".
 The conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.
-lastSeptusfucked is a number that varies. lastSeptusfucked is normally 555.
+lastSeptusfucked is a number that varies. lastSeptusfucked is usually 555.
 
 instead of sniffing Septus:
 	say "Septus has a strong, musky male smell.";

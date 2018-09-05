@@ -180,7 +180,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Erica	"Erica"
 
-Erica is a woman. The HP of Erica is normally 0. The Dexterity of Erica is normally 0.
+Erica is a woman. The HP of Erica is usually 0. The Dexterity of Erica is usually 0.
 The description of Erica is "[Ericadesc]".
 The conversation of Erica is { "Mew!" }.
 

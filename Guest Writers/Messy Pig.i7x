@@ -350,7 +350,7 @@ to say MessyPigStruggle:
 
 Section 6 - Endings
 
-[See Philip: 'Hungry Boar Man' by hiccup for endings]
+[See Philip: 'Hungry Boar Man' by Hiccup for endings]
 
 [ Edit this to have the correct name as well]
 Messy Pig ends here.

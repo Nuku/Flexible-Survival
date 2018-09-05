@@ -400,8 +400,8 @@ Section 3 - Sexxxings and Playtime
 
 Chapter 0 - Everyturn Mechanics
 
-lastArtemisplay is a number that varies. lastArtemisplay is normally 255.
-artemisstatefairrt is a truth state that varies. artemisstatefairrt is normally false.
+lastArtemisplay is a number that varies. lastArtemisplay is usually 255.
+artemisstatefairrt is a truth state that varies. artemisstatefairrt is usually false.
 
 An everyturn rule:
 	if companion of player is rubber tigress and skipturnblocker is 0:
@@ -800,7 +800,7 @@ name	desc	weight	object
 cup stack is a grab object.
 it is part of the player.
 It is not temporary.
-cuptrick is a truth state that varies. cuptrick is normally false.
+cuptrick is a truth state that varies. cuptrick is usually false.
 
 instead of using cup stack:
 	if companion of player is rubber tigress:

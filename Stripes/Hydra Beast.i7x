@@ -11,11 +11,11 @@ when play begins:
 	add { "Hydra Beast" } to infections of Reptilelist; [list of reptile infections]
 	add { "Hydra Beast" } to infections of VoreExclusion; [list of critters not to be vored]
 
-hydraheadcount is a number that varies. hydraheadcount is normally 6.
-hydraheadcheck1 is a truth state that varies. hydraheadcheck1 is normally false.
-hydraheadcheck2 is a truth state that varies. hydraheadcheck2 is normally false.
-hydraheadcheck3 is a truth state that varies. hydraheadcheck3 is normally false.
-hydraheadregrowth is a truth state that varies. hydraheadregrowth is normally true.
+hydraheadcount is a number that varies. hydraheadcount is usually 6.
+hydraheadcheck1 is a truth state that varies. hydraheadcheck1 is usually false.
+hydraheadcheck2 is a truth state that varies. hydraheadcheck2 is usually false.
+hydraheadcheck3 is a truth state that varies. hydraheadcheck3 is usually false.
+hydraheadregrowth is a truth state that varies. hydraheadregrowth is usually true.
 hydramaulcount is a number that varies.
 
 to say hydrabeastdesc:

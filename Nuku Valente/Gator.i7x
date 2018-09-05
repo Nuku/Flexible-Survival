@@ -185,7 +185,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Sewer Gator	"Sewer Gator"
 
-Sewer Gator is a woman. The HP of Sewer Gator is normally 0.
+Sewer Gator is a woman.
 The description of Sewer Gator is "[GatorDesc]".
 The conversation of Sewer Gator is { "Gator stuff" }.
 The scent of the Sewer Gator is "The gator smells strongly of sex and the sewers.";

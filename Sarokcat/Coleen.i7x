@@ -49,7 +49,7 @@ Instead of resolving a WomanFruitTree:
 			say "     You decide not to interfere with the dangling woman. After all, the military is obviously not doing much for you right now - so why should you climb a tree for one of them. You could fall down, or some sort of critter could arrive while you're up in the branches. Turning your back on the woman and tuning her calls for help out, you keep walking. As you wander through the woods, you do find yourself rather curious as to just what creature will eventually manage to reach that woman up in the tree and just what she will look like afterwards. Maybe you should come back and see later...";
 			now ColeenDeclined is 1;
 	else:
-		say "     Traveling through the park you come across a rather large tree, its branches spreading out to cover a wide area and providing excellent shade and protection from the elements. You stop for a minute to enjoy the nice shady cover the tree provides as you look out over the park. Eventually though, you realize you need to keep moving and continue on down the trail, leaving the tree behind.";
+		say "     Traveling through the park, you come across a rather large tree, its branches spreading out to cover a wide area and providing excellent shade and protection from the elements. You stop for a minute to enjoy the nice shady cover the tree provides as you look out over the park. Eventually, though, you realize you need to keep moving and continue on down the trail, leaving the tree behind.";
 
 
 Section 2 - Coleen the Husky Paratrooper

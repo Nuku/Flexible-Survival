@@ -10,7 +10,7 @@ Sally	"Sally"
 Sally is a woman.
 The description of Sally is "[sallydesc]".
 The conversation of Sally is { "Fuck me!" }.
-lastSallyfucked is a number that varies. lastSallyfucked is normally 555.
+lastSallyfucked is a number that varies. lastSallyfucked is usually 555.
 the icon of Sally is figure of Sally_icon.
 
 the scent of Sally is "The cute, little huskybunny herm smells of arousal and sex.".

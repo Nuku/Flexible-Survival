@@ -1,4 +1,4 @@
-Version 2 of underwater zone by Hellerhound begins here.
+Version 2 of Underwater Zone by Hellerhound begins here.
 [Version 2.1 - Adjusted for new Beach layout]
 
 Section 1 - Gill Fruit Tree
@@ -118,4 +118,4 @@ to swimmingfight:
 		else:
 			challenge "Siren";
 
-underwater zone ends here.
+Underwater Zone ends here.

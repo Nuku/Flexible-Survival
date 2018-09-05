@@ -9,7 +9,7 @@ when play begins:
 	add { "Bird of Paradise" } to infections of furry;
 
 nobirdofparadisesex is a number that varies.
-bopseen is a truth state that varies. bopseen is normally false.
+bopseen is a truth state that varies. bopseen is usually false.
 bopdefeated is a number that varies.
 
 to say birdofparadisedesc:

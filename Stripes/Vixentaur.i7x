@@ -4,7 +4,7 @@ Version 1 of Vixentaur by Stripes begins here.
 
 Section 1 - Monster Responses
 
-vixentaurcatch is a number that varies. vixentaurcatch is normally -35.
+vixentaurcatch is a number that varies. vixentaurcatch is usually -35.
 
 when play begins:
 	add { "Vixentaur" } to infections of girl;

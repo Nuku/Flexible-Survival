@@ -4,7 +4,7 @@ Version 1 of Dracovixentaur by Stripes begins here.
 
 Section 1 - Monster Responses
 
-DVtaurcatch is a number that varies. DVtaurcatch is normally -40.
+DVtaurcatch is a number that varies. DVtaurcatch is usually -40.
 
 when play begins:
 	add { "Dracovixentaur" } to infections of hermaphrodite;

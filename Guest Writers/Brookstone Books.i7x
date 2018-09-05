@@ -212,10 +212,10 @@ huntfeat is a number that varies.
 purfeat is a number that varies.
 sdbook is a number that varies.
 fsnovel is a number that varies.
-afsmread is a number that varies. afsmread is normally 255.
-thabread is a number that varies. thabread is normally 255.
-myseread is a number that varies. myseread is normally 255.
-hfgbread is a number that varies. hfgbread is normally 255.
+afsmread is a number that varies. afsmread is usually 255.
+thabread is a number that varies. thabread is usually 255.
+myseread is a number that varies. myseread is usually 255.
+hfgbread is a number that varies. hfgbread is usually 255.
 
 To say afsm:
 	If afsmread - turns < 12 and survfeat is 1:

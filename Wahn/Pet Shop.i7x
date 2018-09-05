@@ -1,5 +1,6 @@
 Version 1 of Pet Shop by Wahn begins here.
-[ Version 1.0 - New Content by Wahn]
+[ Version 1.0 - New Content - Wahn                    ]
+[ Version 1.1 - Added missing fur brush object - Song ]
 
 "Adds content for the pet store near the Grey Abbey Library"
 
@@ -59,5 +60,8 @@ the usedesc of fur brush is "[fur brush use]";
 
 to say fur brush use:
 	say "     You play around a little with the wooden brush, stroking your hand over the nubs and bristles on it. Having it along should certainly be useful if you want to give a pet or furred companion some affection. The surprisingly ergonomic handle has several prominent ridges and a smooth texture, making you think of at least one extra use for the foot-long piece of wood.";
+
+when play begins:
+	add "fur brush" to the invent of George's Animal Emporium;
 
 Pet Shop ends here.

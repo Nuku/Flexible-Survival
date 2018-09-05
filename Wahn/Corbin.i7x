@@ -26,7 +26,7 @@ Version 1 of Corbin by Wahn begins here.
 [   2: felinoid fucked Corbin                                           ]
 
 [ CorbinPregnancy - pregnancy progress variable                         ]
-[  0: not preggers                                                      ]
+[  0: not pregnant                                                      ]
 [  1: male player knocked him up (invisible)                            ]
 [  2: male player knocked him up (slightly visible)                     ]
 [  3: male player knocked him up (bulging belly)                        ]

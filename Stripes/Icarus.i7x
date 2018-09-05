@@ -53,8 +53,8 @@ The conversation of Icarus is { "Wilder!" }.
 icarusscene1 is a truth state that varies. icarusscene1 is usually false.
 icarusscene2 is a truth state that varies. icarusscene2 is usually false.
 tti_scene is a number that varies.
-ttIcarus is a number that varies. ttIcarus is normally 255.
-icarussex6_variant is a number that varies. icarussex6_variant is normally 1.
+ttIcarus is a number that varies. ttIcarus is usually 255.
+icarussex6_variant is a number that varies. icarussex6_variant is usually 1.
 icarus_cumstuff is a number that varies.
 icarus_cbt is a number that varies. icarus_cbt is usually 2.
 icarus_lastpred is a number that varies. icarus_lastpred is usually 1.

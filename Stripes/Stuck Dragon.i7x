@@ -53,7 +53,7 @@ to say dragoneggs:
 
 Section 2 - Trapped Dragon Rear
 
-lastChristyfucked is a number that varies. lastChristyfucked is normally 300.
+lastChristyfucked is a number that varies. lastChristyfucked is usually 300.
 NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
 Table of GameCharacterIDs (continued)

@@ -297,7 +297,7 @@ The description of Candy is "[coondesc]".
 The conversation of Candy is { "Cock!" }.
 The icon of Candy is figure of Candy_icon.
 candytalk is a number that varies.
-lastCandyfucked is a number that varies. lastCandyfucked is normally 555.
+lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
 coonsex is a number that varies.
 [ lust of Candy controls his interaction w/Fang]
 

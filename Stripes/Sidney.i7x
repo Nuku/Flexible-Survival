@@ -44,12 +44,12 @@ Sidney is a woman.
 The description of Sidney is "[sidneydesc]".
 The conversation of Sidney is { "Thanks." }.
 the scent of Sidney is "[sidneyscent]".
-sidneyformtalk is a truth state that varies. sidneyformtalk is normally false.
-sidneyanal is a truth state that varies. sidneyanal is normally false.
-sidneytalk1 is a truth state that varies. sidneytalk1 is normally false.
-sidneytalk2 is a truth state that varies. sidneytalk2 is normally false.
-sidneytalk3 is a truth state that varies. sidneytalk3 is normally false.
-sidneytalk4 is a truth state that varies. sidneytalk4 is normally false.
+sidneyformtalk is a truth state that varies. sidneyformtalk is usually false.
+sidneyanal is a truth state that varies. sidneyanal is usually false.
+sidneytalk1 is a truth state that varies. sidneytalk1 is usually false.
+sidneytalk2 is a truth state that varies. sidneytalk2 is usually false.
+sidneytalk3 is a truth state that varies. sidneytalk3 is usually false.
+sidneytalk4 is a truth state that varies. sidneytalk4 is usually false.
 fangsidney is a truth state that varies. fangsidney is usually false.
 
 Section 1 - Event

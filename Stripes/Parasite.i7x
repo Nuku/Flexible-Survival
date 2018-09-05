@@ -2,7 +2,7 @@ Version 1 of Parasite by Stripes begins here.
 
 "Adds an event to gain the larva parasite and unlock the Black Wasp breeder insects."
 
-insectlarva is a truth state that varies. insectlarva is normally false.
+insectlarva is a truth state that varies. insectlarva is usually false.
 larvacounter is a number that varies.	[counts time for the various stages]
 larvaegg is a number that varies.		[0 = no eggs, 1 = unfertilized, 2 = fertilized]
 larvalaid is a number that varies.		[how many times a player's laid eggs]

@@ -6,7 +6,7 @@ Version 1 of Inflatable Orca by Song begins here.
 Section 1 - Monster Reponses
 
 orcaintense is a number that varies. orcaintense is usually -1.
-lastorcabeat is a number that varies. lastorcabeat is normally 255.
+lastorcabeat is a number that varies. lastorcabeat is usually 255.
 
 [Unlike other bound states, the orca will automatically result in a game over if you orgasm 5 times in one sitting. This is intentionally difficult to do, but not impossible.]
 

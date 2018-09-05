@@ -26,7 +26,7 @@ boristalk is a number that varies.
 Borisquest is a number that varies.
 Christyquest is a number that varies.
 borisfucked is a number that varies. borisfucked is usually 0.
-BorisArtemistalk is a truth state that varies. BorisArtemistalk is normally false.
+BorisArtemistalk is a truth state that varies. BorisArtemistalk is usually false.
 
 Table of GameCharacterIDs (continued)
 object	name

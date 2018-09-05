@@ -4,7 +4,7 @@ Version 1 of Dragontaur by Stripes begins here.
 
 Section 1 - Monster Responses
 
-dragontaurcatch is a number that varies. dragontaurcatch is normally -45.
+dragontaurcatch is a number that varies. dragontaurcatch is usually -45.
 
 when play begins:
 	add { "Dragontaur" } to infections of guy;

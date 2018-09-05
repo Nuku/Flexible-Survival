@@ -544,7 +544,7 @@ When Play begins:
 Book 4 - Return to the Church
 
 churchenter is a number that varies.
-lastchurchattempt is a number that varies. lastchurchattempt is normally 248.
+lastchurchattempt is a number that varies. lastchurchattempt is usually 248.
 
 instead of going north from the Beach Plaza while hellhoundlevel > 0:
 	if churchenter is 0:

@@ -187,7 +187,7 @@ to say nogging:
 
 Section 4 - Holiday Madness
 
-heatturnskipper is a truth state that varies. heatturnskipper is normally false.	[skips a second heat roll if the player loses a turn]
+heatturnskipper is a truth state that varies. heatturnskipper is usually false.	[skips a second heat roll if the player loses a turn]
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger

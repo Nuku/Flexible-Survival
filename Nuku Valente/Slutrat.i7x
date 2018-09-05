@@ -598,7 +598,7 @@ Pool Table	"Pool Table"
 Pool Table is a person. "There is the pool table you helped retrieve at one end of the spacious rat den, available for play when not in use by the others. Despite being new, it's already picked up a few stains from rather [']enthusiastic['] play. To see if anyone wants a game, simply [bold type]talk pool[roman type]."
 The description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] of see if you can convince someone to have a game with you[end if].".
 The conversation of Pool Table is { "Scratch!" }.
-lastpoolgame is a number that varies. lastpoolgame is normally 555.
+lastpoolgame is a number that varies. lastpoolgame is usually 555.
 
 the scent of the Pool Table is "The pool table smalls of the rats that have been playing it and of the stains they've left on it.".
 

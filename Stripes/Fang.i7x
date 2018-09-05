@@ -31,8 +31,8 @@ Fang	"Fang"
 Fang is a person.
 The description of Fang is "[fangdesc]".
 The conversation of Fang is { "Grrrr!" }.
-libido of Fang is normally 0.		[represents status w/fucking Sandra - saved]
-lust of Fang is normally 0.		[tracks sex w/Fang in this play through (controls Sandra variations)]
+libido of Fang is usually 0.		[represents status w/fucking Sandra - saved]
+lust of Fang is usually 0.		[tracks sex w/Fang in this play through (controls Sandra variations)]
 FangWS is a number that varies.
 FangToy is a truth state that varies. FangToy is usually false.
 [See Feral Wolf file for collecting Fang.]

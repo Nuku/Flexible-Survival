@@ -11,7 +11,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Blake	"Blake"
 
-Blake is a man. Blake is in Dirty Alley. The HP of Blake is normally 0.
+Blake is a man.
+Blake is in Dirty Alley.
 The description of Blake is "[BlakeDesc]".
 The conversation of Blake is { "Mew!" }.
 

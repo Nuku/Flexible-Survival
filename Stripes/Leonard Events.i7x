@@ -486,8 +486,8 @@ Section 1 - Park
 Part 0 - Core Event
 
 leoparklist is a list of numbers that varies. leoparklist is usually {1, 2, 5, 6, 9}.
-Leonardwrdesk is a truth state that varies. Leonardwrdesk is normally false.
-Leonardcabinet is a truth state that varies. Leonardcabinet is normally false.
+Leonardwrdesk is a truth state that varies. Leonardwrdesk is usually false.
+Leonardcabinet is a truth state that varies. Leonardcabinet is usually false.
 
 PridePark is a situation. PridePark is resolved.
 The sarea of PridePark is "Park".

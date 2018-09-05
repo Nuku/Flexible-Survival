@@ -21,7 +21,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Serenity	"Serenity"
 
-Serenity is a woman. The HP of Serenity is normally 0.
+Serenity is a woman.
 
 when play begins:
 	add Naga Hybrid to badspots of girl;
