@@ -1,7 +1,7 @@
 Version 1 of Lola by Wahn begins here.
 [ Version 1.0 - New NPC - by Wahn  ]
 
-Lola is a woman. The HP of Lola is usually 0.
+Lola is a woman.
 The description of Lola is "[LolaDesc]".
 The conversation of Lola is { "<This is nothing but a placeholder!>" }.
 The scent of Lola is "     Lola has a light, floral scent with an underlying note of clean fur.".

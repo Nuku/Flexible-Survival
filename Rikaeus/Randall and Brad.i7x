@@ -98,8 +98,10 @@ to ThirdRandallEvent:
 		WaitLineBreak;
 		say "     The room is filled with the sound of slurping as Brad begins to thrust in and out Randall's throat, eagerly facefucking him. While this is happening you're wondering how the hell Coco is keeping Jennifer distracted for so long. Nevertheless you continue to star on as your friend takes the throat rape eagerly, occassionally slipping his tongue out to lick at the bunny jock's balls whenever the male is balls deep in his mouth. However, it's very clear that Brad hasn't had any sex in a while by how much he is coming apart only with a blowjob. He's moaning wantonly like a slut, clearly enjoying Randall's tight throat.";
 		say "     However, because of not having sex in a while, it doesn't take much for the basketball player to cum. When he does, it's in such large amounts that it starts to spill out of the bunny boy's mouth. Even then, Brad pulls out and continues to shoot, but this time on Randall's face, coating it in jizz. When the male's done, his partner takes his cock in his mouth, proceeding to clean him off before letting it out of his mouth with a pop. 'Fuck dude, that was brilliant.' The bunny jock mutters. However he quickly notices that he's later for his next class. 'Shit! Maybe we could do this again some other time?' he asks before running off. Randall just sits there in bliss with a happy smile as he pushes the cum coating him into his mouth. Deciding to leave the boy on his own, you head off, making sure to look for him later.";
+		now Resolution of Operation Horny Bunny is 1; [watched em fuck]
 	else:
 		say "     You shake your head and decide against it. You'd rather not interrupt a moment for the bunny boy himself. Instead you turn and make your way elsewhere. Perhaps you'll see them later.";
+		now Resolution of Operation Horny Bunny is 2; [didn't watch em fuck]
 	now RandallBradRelationship is 3;
 	now Operation Horny Bunny is resolved;
 
@@ -139,8 +141,10 @@ to FourthRandallEvent:
 		say "     Sounds of heavy balls slapping against bunny boy's cheeks fill the room, something that you can clearly hear from the window you're watching at. Randall is moaning like a wanton whore at the moment, showing how much he loves dick. By now he's reached his paw down to his smaller, yet still big dick and has started to masturbate. Brad on the other hand is grunting as he thrusts into his boyfriend. The two of their sounds get louder and louder, signifying that they're nearing orgasm. It isn't until the bunny jock lets out a loud groan and slams into his lover hard that they both cum. Randall shoots his load all over his body, some of it landing in his mouth whereas Brad dumps his jizz into your friend's hole.";
 		WaitLineBreak;
 		say "     Seconds later Randall catches you in the corner of his eye and smiles, waving at you from his blissed out position on the bed. That causes Brad to turn towards you and his eyes widen. With a grunt, the bunny boy gets off the bed, cum leaking out of his hole as he wanders over to the window, opening it wide. 'Hey there! Did you like the show?' he asks with a large grin. You nod at him with matching emotions. 'Good! If you want to visit us later and... maybe have some fun together then come see us in the morning. If you can't tell, my room's to the southwest of the entrance to the building,' he tells you. You let out an assent of agreement and head off on your own, hearing an eep as the window shuts.";
+		now Resolution of New Roommates Bunny is 1; [watched em fuck]
 	else:
 		say "     You shake your head. You're in a public place and would rather not be spotted spying on a couple having sex. Instead you turn and head back the way you came, maybe you'll visit later.";
+		now Resolution of New Roommates Bunny is 2; [didn't watch em fuck]
 	now RandallBradRelationship is 5;
 	now New Roommates is resolved;
 

@@ -40,9 +40,11 @@ Instead of resolving a Canine Patrol:
 			say "     The dog-woman moans in response, growing flush. 'But... puppies?' she starts to push his muzzle away, but is cut short as her arousal increases. A few more licks has her panting and spreading her legs for the dog, her pussy lips growing fuller and more like a canine with each pass of the dog's tongue. 'Well... I guess you do deserve a reward for saving me,' she says with a giggle.";
 			say "     'That's a good girl,' the officer you were speaking to says, his own cock rising from its sheath as he rubs it. 'You're free to go, citizen. We'll take it from here,' he says in conclusion, turning momentarily back to you. [if catdogstate is 2]While a part of you wants to join in, you're[else]You're[end if] overall a little stunned by the odd turn of events and decide to head off for the moment.";
 			now gshepsquad is 2;
+			now Resolution of Canine Patrol is 1; [talked to the squad]
 		else:
 			say "     Not wanting to get distracted or caught up in something that doesn't involve you, you slip back the way you came and find another street to take.";
 			now gshepsquad is 1;
+			now Resolution of Canine Patrol is 99; [desinterest]
 			now Canine Patrol is resolved;
 	else if gshepsquad is 2:
 		say "     While searching the city, you spot an Airedale terrier behaving oddly, digging at some rubble while panting heavily. Shifting some of it aside, he pulls out a hidden water bottle. The thirsty terrier is just about to open it up when a bird-winged mutant swoops in and makes a grab for it. Wrestling the bottle from his hands, the sharp-toothed humanoid bowls the exhausted dog over with a hiss and starts to run off. 'Ahh... my water... you thief!' comes the dog's raspy yell.";
@@ -50,6 +52,7 @@ Instead of resolving a Canine Patrol:
 		WaitLineBreak;
 		say "     The cop returns to the victim and you decide to approach as well, hoping to see if there's any chance of police assistance[if catdogstate is 2]. Seeing another canine approaching, he gives a smile and wag[else if catdogstate is 1]. Seeing you approaching, he gives you a nod[else]. Taking in your feline features, he gives you a suspicious glare[end if] before turning his attention back to the Airedale. From what you hear, it seems that was the last of the dog's hidden water stash.";
 		say "     'Well, we can't have good dogs dying of thirst, now can we? Here, take a suck on this then,' he says, rubbing his swelling sheath to expose his growing erection. His canine prick, dripping with pre, draws the eyes of the thirsty terrier and makes him salivate. Dropping to his knees, he licks and sucks that doggy cock with a thirsty need for its watery load. Seeing how the cop is clearly occupied, you'll have to try talking to him later.";
+		now Resolution of Canine Patrol is 2; [Second meeting]
 		now gshepsquad is 3;
 	else if gshepsquad is 3:
 		say "     From somewhere up ahead of you, you hear some commotion. Approaching cautiously, you slip into a nearby alleyway and check out what's going on at a distance. The noise seems to be coming from a jewelry store that's been broken into, which is confirmed as a hyena is tossed out the open door into the street. It scrambles to try and get up, but is grabbed by a German shepherd in a police uniform. He slams the herm against the wall, kicking her legs apart with her hands against the brick building. He's soon followed out by his partner, who's dragging out another hyena by the scruff of her neck while carrying a satchel of loot in his other paw. The second hyena's forced to join her cohort against the wall. A couple of other canine cops appear, searching the building and documenting evidence.";
@@ -62,6 +65,7 @@ Instead of resolving a Canine Patrol:
 		say "     You hadn't noticed at first, but now you can see that the two cops who'd caught the hyenas are humping them vigorously, pounding them hard against the wall. The other cops are lining up, getting ready for their turn at [']punishing['] the criminals. Your exclamation causes the cop near you to look back and notice the scene unfolding. 'Oh dammit. They're starting already. Look, you're free to go but I want to talk to you some more,' he barks quickly and pointing back down the alley from which you came, his attention clearly focused on the sex as his cock pokes from his sheath in anticipation. He hurriedly gives you an intersection and tells you to go there [if catdogstate is 2]if you want to see him[else if catdogstate is 1]to continue this[else]for further questions[end if], telling you to ask for [']Buster[']. And with that, Buster dashes off towards the others. 'Hey! Don't leave your commander out of this,' he calls out to his fellow officers. 'Save me a spot, you mangy horndogs. I want to teach these gang delinquents a good, hard lesson.'";
 		say "     With the canines busy dishing out some sexy justice, you can only shake your head at how this city's clearly gone to the dogs.";
 		say "     [bracket]Now [bold type]K9 Vans[roman type] location is known.[close bracket][line break]";
+		now Resolution of Canine Patrol is 3; [invite to the Vans]
 		now gshepsquad is 4;
 		now K9 Vans is known;
 		increase score by 5;

@@ -71,14 +71,14 @@ to say Alpha Husky attack:
 			else:
 				say "     'You think someone like you can stand up to an alpha?' The victorious husky growls at you, snapping his teeth in your face and making you cringe backwards in submission. 'Better you know your place as the lowly little bitch you should be,' he says with a grin full of canine amusement as he pounces you, pinning you down with his teeth on your neck until he is satisfied with your increasingly nervous body's surrender. Backing off, he sniffs in your direction several times, before stalking off with his tail held high in the air behind him. 'Come back and see me when you are ready to be a proper bitch,' the taunting male calls over his shoulder as you lie there, panting, feeling like you just survived a narrow escape.";
 			infect "Female Husky";
-		if husky gathering is resolved and fertile pill is owned:
+		if Husky Gathering is inactive and Husky Gathering is not resolved and fertile pill is owned:
 			say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers, and you proceed back to safer grounds.";
 			delete fertile pill;
-			now husky gathering is active;
+			now Husky Gathering is active;
 
-husky gathering is a situation. It is inactive.
+Husky Gathering is a situation. It is inactive.
 
-Instead of resolving husky gathering:
+Instead of resolving Husky Gathering:
 	say "     A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you. Approaching with a joyous war cry, they move to try and cut off your escape.";
 	Challenge "Alpha Husky";
 	if fightoutcome >= 20 and fightoutcome <= 29:

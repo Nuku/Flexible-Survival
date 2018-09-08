@@ -125,6 +125,7 @@ to SecondVikingWarEvent:
 		say "     Prior to you having to even think about helping, you hear a voice shout 'Let me help you there friend,' before a figure passes you by and starts picking up the barbells and chucking them at the enemies. Seeing as this gives you a second to look over the person who ran by you, instantly you recognize them. It's none other than Richard, your human-turned-satyr friend! With the impressive strength granted to the half-goat people there's no surprise that he can easily repeatedly throw metal weight one after another. Practically at this point the fight is heavily geared in your favor as the Vikings are dropping like flies. However, soon enough though he runs out of ammo but that doesn't appear to deter him as he dashes forward and practically bullrushes a still standing enemy. To your shock he picks him up by the shirt and swings him over his back before spinning and throwing them into another conscious Viking.";
 		say "     Richard looks to be about to do something else but one of the few left shouts a retreat and all the ones not on the ground run. The Spartans grab the others while your friend walks up to you with a smile. 'So, what did you think? Did I do good?' he asks, holding his arms behind his head, looking proud of himself. You tell him he did, that you're rather grateful for the help as it did save a lot of the other students. That appears to make his grin widen even more as he replies with a request for you to visit him sometime perhaps, either at his room or the frat. When he leaves a Spartan walks up to you and says that Pericles feels that the next place to be attacked within the next hour is the fountain once more, as they have broken through the entrance. You nod and head on your way, leaving them to their work.";
 		now VikingSpartanWar is 2;
+		now Resolution of Assault On The Gym is 1; [won with Richard's help]
 		now Assault On The Gym is resolved;
 		now Raid On The Fountain is active;
 		now VikingWar is turns;
@@ -138,6 +139,7 @@ to SecondVikingWarEvent:
 			say "     With a push of energy to your feet you propel yourself towards one of the dumbbells on the floor. Picking it up, you throw it at one of the enemies, the power behind the launch making the Viking it hit go flying back and into another one. Moving to the next one nearest, you chuck it at another of the Norse warriors still standing. Thankfully your aim is good and it lands, sending them to the ground, surprisingly unconscious from the force. You proceed to keep at tossing the dumbbells but as you do this you notice that you're starting to run out of ammo. Getting a determined look on your face, you dash forward towards the remaining Vikings. Throwing your fist forward, you land an uppercut into one of the warrior's chins. This sends him flying and into another one. Getting a sense of danger to your back you spin around and swing your leg into a kick.";
 			say "     Seconds later you end up catching the tip of your foot into the side of the Viking behind you, causing her to double over in pain. Taking advantage of his temporary weakness you yank her by the arm and throw her into a group of enemies, practically bowling them over. Looking over all of them you see that they're eyeing you with slight fear and that thought is further cemented when one of them steps forward and shouts a retreat. The remaining standing Vikings turn and run, leaving the others to their fates. This prompts one of the Spartans to walk towards you and nod at your impressive feats of strength before speaking. 'General Pericles wants you to make your way to the fountain as he thinks that they'll strike there within the hour,' he says to you. You nod and turn around, smiling at the many students who thank you as you leave.";
 			now VikingSpartanWar is 2;
+			now Resolution of Assault On The Gym is 2; [won through strength]
 			now VikingWar is turns;
 			now Assault On The Gym is resolved;
 			now Raid On The Fountain is active;
@@ -148,6 +150,7 @@ to SecondVikingWarEvent:
 			increase WarLossCounter by 1;
 			if WarLossCounter > 3:
 				now WarLossCounter is 3;
+			now Resolution of Assault On The Gym is 3; [lost]
 			now VikingWar is turns;
 			now Assault On The Gym is resolved;
 			now Raid On The Fountain is active;
@@ -177,6 +180,7 @@ to ThirdVikingWarEvent:
 		say "     You give a laugh at that, knowing that the Spartans were probably a tad bit confused at Syvlia inquiring about what's going on. Soon enough though the Vikings seem to give up and retreat, leaving behind their trapped comrades. As this happens, your canine friend pushes herself off of the fountain and gives you a wave. 'Alright! My job's done here. Now you don't be a stranger friend, come visit me whenever you can,' she says with a smile as she heads off to the dorms, whistling all the way. As she leaves, Spartans approach the trapped enemies, one of the Greek warriors approaching you with a nod. 'General Pericles has another instruction for you. He thinks they're going to strike at the Bell Tower next in an hour or so and wishes for you to get there when you can,' the buff male says to you. You nod and tell him you'll be there when it happens and head off.";
 		now VikingSpartanWar is 3;
 		now VikingWar is turns;
+		now Resolution of Raid On The Fountain is 1; [won with Sylvia]
 		now Raid On The Fountain is resolved;
 		now Siege Of The Belltower is active;
 	else:
@@ -191,6 +195,7 @@ to ThirdVikingWarEvent:
 			say "     You guys have just enough time to get in a defensible position on the fountain when the Vikings arrive. Prepped with basketballs that some of the students had grabbed a hold of just in case as you guys watch on in hope that the traps succeed. To all of your joy many of the Norse warriors yelp as they get caught in them, some of them being pulled up in a net, others slipping and falling on their asses. Some of the students take this opportunity to chuck their weapons at the prone enemies, dealing massive damage to them. All this chaos ends up throwing the Vikings into a panic, not having expected a trapped battlefield. As the enemies['] numbers dwindle more and more, their morale fell as well. One of the Norse warriors who had yet to run forward sounded a retreat. The others still standing followed the call and turned tail, leaving their fallen allies to your tender mercies.";
 			say "     A minute or two after they leave, the Spartans show up, one of them approaching you while the rest round up the Vikings. The Greek male looks over you guys and nods, telling you all that you did great and that they'll take it from here. He then turns to you and gives you a missive from Pericles. Opening it and reading it to yourself you see that the next conflict should be at the belltower, seeing that it's on the other end of the campus. He also lets you know that he's almost done planning the final battle and that after the next it should be time to end it all. Closing the note you nod and head off, wondering what'll come up next.";
 			now Raid On The Fountain is resolved;
+			now Resolution of Raid On The Fountain is 2; [won through intelligence]
 			now Siege Of The Belltower is active;
 			now VikingWar is turns;
 		else:
@@ -203,6 +208,7 @@ to ThirdVikingWarEvent:
 			increase WarLossCounter by 1;
 			if WarLossCounter > 3:
 				now WarLossCounter is 3;
+			now Resolution of Raid On The Fountain is 2; [lost]
 			now Raid On The Fountain is resolved;
 			now Siege Of The Belltower is active;
 			now VikingWar is turns;
@@ -232,6 +238,7 @@ to FourthVikingWarEvent:
 		say "     One of the students is very recognizable to you, it being Stewart after all who flaps his wings as he lands right in front of you with a smile. 'Hey there! Saw you out here and figured you needed help so I called in some buddies of mine,' he says rubbing the back of his head with his de-transformed hand. You return his facial expression and thank him, saying that you weren't entirely sure if your plan was going to succeed so you are glad that you didn't have to try it. He nods and gives you a serious look that is rather odd on his face for you. 'So... Pericles told me to tell you that the final battle is next as he just finished his plan. Within the next hour they'll be gathering at the entrance and he hopes to see you there,' Stewart says to you before giving you another warm smile prior to leaving. You wave him goodbye and head off as well, mentally prepping yourself for the final conflict.";
 		now VikingSpartanWar is 4;
 		now VikingWar is turns;
+		now Resolution of Siege of The Belltower is 1; [won through Stewart]
 		now Siege of The Belltower is resolved;
 		now Battle For Tenvale Campus is active;
 	else:
@@ -246,6 +253,7 @@ to FourthVikingWarEvent:
 			WaitLineBreak;
 			say "     You do this quite a few times, before it appears that the Norse warriors finally give up, turning and running tail, leaving you victorious in your practical sniping spot. Giving yourself a mental pat on the back you head on down and when you get there, you're met with multiple Spartans. Some of them are dragging away the unconscious Vikings while one steps forward, more than likely to talk to you, which he does so. 'General Pericles wished for me to let you know that the final battle is at hand and is going to be taking place at the entrance in the next hour. He hopes that you'll be there,' the warrior says giving you a nod as he turns to go help his fellow comrades. You yourself head on your own way, thinking about how the final battle will go.";
 			now VikingWar is turns;
+			now Resolution of Siege of The Belltower is 2; [won through dexterity]
 			now Siege of The Belltower is resolved;
 			now Battle For Tenvale Campus is active;
 		else:
@@ -256,6 +264,7 @@ to FourthVikingWarEvent:
 			if WarLossCounter > 3:
 				now WarLossCounter is 3;
 			now VikingWar is turns;
+			now Resolution of Siege of The Belltower is 3; [lost]
 			now Siege of The Belltower is resolved;
 			now Battle For Tenvale Campus is active;
 
@@ -294,6 +303,7 @@ to FifthVikingWarEvent:
 			now WarLossCounter is 0;
 		now VikingSpartanWar is 5;
 		now VikingWar is turns;
+		now Resolution of Battle For Tenvale Campus is 1; [took the blow]
 		now Battle For Tenvale Campus is resolved;
 		now Peace Between Communities is active;
 	else:
@@ -303,6 +313,7 @@ to FifthVikingWarEvent:
 		say "     Very hesitantly the Norse warrior he just knocked down raises his arms and nods, vocalizing their surrender, allowing Bjorn to return to your side with Pericles. 'What'll you have them do?' he asks the Spartan-Helot with a softer expression as if deferring to him. 'I think I'll have them sign a peace treaty in the library,' he says with a grunt before turning to you. 'I'd appreciate it if you could be there, as I do have some things to talk to you about,' the Greek male says nodding in your direction. You return the gesture and say you'll try your best to get there on time and as soon as you finish saying this the two appear to be in a conversation only between them. So instead you shrug and head on your way, deciding you'd catch up at the library.";
 		now VikingSpartanWar is 5;
 		now VikingWar is turns;
+		now Resolution of Battle For Tenvale Campus is 2; [didn't take the blow]
 		now Battle For Tenvale Campus is resolved;
 		now Peace Between Communities is active;
 
@@ -332,7 +343,7 @@ to SixthVikingWarEvent:
 		now PericlesRelationship is 8;
 		now BjornRelationship is 5;
 		now VikingSpartanWar is 6;
-		now Peace Between Communities is resolved;
+		now Resolution of Peace Between Communities is 1; [victory]
 	else:
 		say "     As you walk along the pathways of the campus you notice that there appear to be quite a few people gathering near the library. Then it hits you, the peace treaty was supposed to be signed quite soon after the ending of the war. With a facepalm to your forehead you head on into the library, pushing your way through the crowd. When you get in you see Pericles sitting at a table, with Bjorn standing behind him, and a large Viking sitting at the other end. In the middle of the table is a piece of paper and a pen, which you assume to be the treaty. However, looking closer at your two friends you notice that their attire is quite different.";
 		say "     Pericles appears to have dropped his armor for now and is wearing what looks like a toga and a wreath-like laurel crown on his head. Bjorn on the other hand has dropped the armor that he was made to wear completely and is wearing a black tank top and tight leather pants, looking very much like a college student right now, though you're not entirely sure why. Quickly redirecting your attention over to the table when they start moving you see the Spartan-Helot push the paper and pen forward. 'Signing this treating declares that you will not attack us and that Bjorn will be your representative by going to classes here and staying with me, do you understand?' Pericles asks. The Viking grunts and pulls the paper towards him and quickly signs before standing up and leaving, not saying anything. When he's gone, Pericles notices you and waves you over.";
@@ -341,7 +352,8 @@ to SixthVikingWarEvent:
 		now PericlesRelationship is 7;
 		now BjornRelationship is 4;
 		now VikingSpartanWar is 6;
-		now Peace Between Communities is resolved;
+		now Resolution of Peace Between Communities is 2; [bitter end]
+	now Peace Between Communities is resolved;
 
 to say PericlesBjornSexMenu:
 	LineBreak;

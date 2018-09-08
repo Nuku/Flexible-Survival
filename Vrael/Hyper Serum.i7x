@@ -21,9 +21,11 @@ instead of resolving Mysterious Briefcase:
 		say "     Stuffing everything back in the briefcase, you grab your new acquisition and make a beeline for the Grey Abbey Library since it would be a bit much to lug around during further exploration. After arriving at the library, you stash the briefcase in one of the shelves for now, making a mental note to check back on it some other time.";
 		move player to Grey Abbey Library;
 		now HyperSerumTracker is 1;
+		now Resolution of Mysterious Briefcase is 1; [briefcase taken]
 	else:
 		LineBreak;
 		say "     With a shrug, you drop the papers and briefcase, then go to check over the car itself. Sadly, there isn't anything worthwhile inside, so you continue on your way.";
+		now Resolution of Mysterious Briefcase is 2; [briefcase ignored]
 	now Mysterious Briefcase is resolved;
 
 instead of navigating Grey Abbey Library while (Fang is in Grey Abbey Library and HP of Fang > 2 and HyperSerumTracker is 1): [alpha Fang present, Serum Found]

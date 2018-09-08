@@ -25,6 +25,7 @@ Instead of resolving a Leather Daddy Kitty:
 		say "     With a sigh, the chubby yet fit kitty gets off of you. 'As much as I'd like to take you here and now, you need to learn that you must come to me,' the ocelot says, starting to walk away. However, before he leaves your line of sight, the male turns towards you and smiles. 'Two things you need to know. One, your soon-to-be master's name is Oliver, I give you permission to call me by that. Two, if you wish to explore this further, make your way to the Kitty Sex Dungeon.' The dominant guy informs, winking at you before he leaves you there to muse on the brand new information you have.";
 		change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
 		change southwest exit of Kitty Sex Dungeon to (Entrance to the High Rise District);
+		now Resolution of Leather Daddy Kitty is 1; [auto-agreed to be a sub]
 		now OliverRelationship is 2;
 		now Leather Daddy Kitty is resolved;
 		move Oliver to Kitty Sex Dungeon;
@@ -35,11 +36,13 @@ Instead of resolving a Leather Daddy Kitty:
 			say "     You nod your head at the big ocelot, causing him to purr happily before giving you a rough kiss on the lips. It sends shots of pleasure throughout you and makes you whine when the male stops and sets you down. 'Don't worry my little kitty, there'll be more where that came from later,' he whispers huskily in your ear, sending shivers down your spine. The big guy sets you down and starts to walk away. However, he stops just shy of leaving your sights and turns to you. 'My name is Oliver, little kitty, something that I give you permission to call me. Lastly, if you wish to continue, come see me at my Kitty Sex Dungeon.' Your soon to be dom informs you before leaving";
 			change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
 			change southwest exit of Kitty Sex Dungeon to (Entrance to the High Rise District);
+			now Resolution of Leather Daddy Kitty is 2; [agreed to be a sub]
 			now OliverRelationship is 2;
 			now Leather Daddy Kitty is resolved;
 			move Oliver to Kitty Sex Dungeon;
 		else:
 			say "     The big kitty sets you down and sighs at you before turning away. 'Alright then, I won't bother you anymore,' he says before walking away from you. You muse inwardly that had you said otherwise it might have been the start of something interesting but... you're not one to relent to another dominant. So, instead, you turn and head in the opposite direction to the one that the big kitty had left in.";
+			now Resolution of Leather Daddy Kitty is 100; [refused]
 			now OliverRelationship is 100;
 			now Leather Daddy Kitty is resolved;
 

@@ -4,13 +4,11 @@ Beach Events by Sarokcat begins here.
 
 Section 1 - Beach bum
 
-Beach bum is a situation.
-The sarea of Beach bum is "Beach".
+Beach Bum is a situation.
+The sarea of Beach Bum is "Beach".
 
-bbum is a number that varies.
-
-Instead of resolving a Beach bum:
-	if bbum is 0:
+Instead of resolving a Beach Bum:
+	if Resolution of Beach Bum is 0:
 		say "     Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach. The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
 		say "     The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items. Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach. Unfortunately, the people he usually deals with for food have all pretty much become too changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
 		if player consents:
@@ -24,11 +22,12 @@ Instead of resolving a Beach bum:
 				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-			increase bbum by 1;
+			now Resolution of Beach Bum is 1; [player traded]
 		else:
 			say "     The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
+			now Resolution of Beach Bum is 99; [desinterest]
 			Now Beach bum is resolved;
-	else if bbum is 1:
+	else if Resolution of Beach Bum is 1:
 		say "     Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum. Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if chips is owned:
 			say "     Spying something he definitely wants, the beach bum moves more swiftly than you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word. In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease. Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
@@ -165,13 +164,13 @@ Instead of resolving a Plundered boat:
 
 Section 9 - Tainted yacht
 
-Tainted yacht is a situation.
-The sarea of Tainted yacht is "Beach".
+Tainted Yacht is a situation.
+The sarea of Tainted Yacht is "Beach".
 when play begins:
-	add Tainted yacht to badspots of hermaphrodite;
-	add Tainted yacht to badspots of furry;
+	add Tainted Yacht to badspots of hermaphrodite;
+	add Tainted Yacht to badspots of furry;
 
-Instead of resolving a Tainted yacht:
+Instead of resolving a Tainted Yacht:
 	say "     While moving along the nearly deserted coast, you spot a small, sixty foot yacht anchored nearby. You think with a bit of effort you might be able to swim out to the anchored boat. Do you try?";
 	if player consents:
 		fight;
@@ -180,9 +179,11 @@ Instead of resolving a Tainted yacht:
 		increase carried of dirty water by 2;
 		infect "Sewer Gator";
 		infect "Sewer Gator";
+		now Resolution of Tainted Yacht is 1; [got in the yacht]
 	else:
 		say "     Deciding some things are best left alone, you continue your nice walk along the sands.";
-	now Tainted yacht is resolved;
+		now Resolution of Tainted Yacht is 99; [desinterest]
+	now Tainted Yacht is resolved;
 
 
 Section 10 - Strange castle
@@ -224,8 +225,10 @@ Instead of resolving a Cream stand:
 		challenge "Hermaphrodite Gryphon";
 		say "     The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
+		now Resolution of Cream stand is 1; [got ice cream]
 	else:
 		say "     Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
+		now Resolution of Cream stand is 99; [no ice cream]
 	now Cream stand is resolved;
 
 
@@ -256,6 +259,5 @@ Instead of resolving a Lucky seashell:
 		say "     Taking the shell along with you, you find that it seems to make the day brighter as you carry it and makes you feel a bit more human just to have it with you. Eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		SanBoost 20;
 	now Lucky seashell is resolved;
-
 
 Beach Events ends here.

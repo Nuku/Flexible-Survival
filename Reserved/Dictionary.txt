@@ -1569,7 +1569,6 @@
 |Sarokcat|Beach Events|otter view|situation|
 |Sarokcat|Beach Events|Cream stand|situation|
 |Sarokcat|Beach Events|Lucky seashell|situation|
-|Sarokcat|Beach Events|bbum|value|
 |Sarokcat|Park Events|20140908213124/2101:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Park Events|Poppies field|situation|
 |Sarokcat|Park Events|Felinoid lair|situation|
@@ -2052,7 +2051,7 @@
 |Xeylef|Parasitic Plant|keepbody|value|
 |Xeylef|Parasitic Plant|keepcock|value|
 |Sarokcat|Alpha Husky|20140908213124/7722:Mon 8 September 2014 21:31|indexing|
-|Sarokcat|Alpha Husky|husky gathering|situation|
+|Sarokcat|Alpha Husky|Husky Gathering|situation|
 |Sarokcat|Alpha Husky|Alphahuskypet|value|
 |Sarokcat|Alpha Husky|losttoalphahusky|value|
 |Sarokcat|Hyena Matriarch|20140908213124/6690:Mon 8 September 2014 21:31|indexing|

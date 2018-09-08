@@ -489,8 +489,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is BastetSexBattleCount;
 		-- "battleitem":
 			now NumberVarValue entry is battleitem;
-		-- "bbum":
-			now NumberVarValue entry is bbum;
 		-- "bcending":
 			now NumberVarValue entry is bcending;
 		-- "Bch":
@@ -4247,8 +4245,6 @@ to VariableNumberLoad:
 					now BastetSexBattleCount is numberVarValue entry;
 				-- "battleitem":
 					now battleitem is numberVarValue entry;
-				-- "bbum":
-					now bbum is numberVarValue entry;
 				-- "bcending":
 					now bcending is numberVarValue entry;
 				-- "Bch":

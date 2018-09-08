@@ -71,6 +71,7 @@ Instead of resolving a Lost Trident:
 	if player consents:
 		LineBreak;
 		say "     Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure rising up out of the sea to take the trident into one of his meaty bronze hands.";
+		now Resolution of Lost Trident is 2; [threw it away]
 	else:
 		LineBreak;
 		say "     Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
@@ -91,6 +92,7 @@ Instead of resolving a Lost Trident:
 						now Lost Trident is resolved;
 		if fightoutcome >= 20:
 			say "     Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
+			now Resolution of Lost Trident is 3; [lost]
 
 Section 1a - Trident (Weapon)
 
